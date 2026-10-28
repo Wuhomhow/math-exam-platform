@@ -469,22 +469,71 @@
       const relsExtra = [];
       let imgCounter = 1;
 
+      // Pre-fetch all images used in selected questions
+      const imageBufferCache = new Map();
+      const imageSrcList = new Set();
+
+      function collectSrcs(text) {
+        if (!text) return;
+        const re = /<img[^>]+src=["']([^"']+)["']/gi;
+        let m;
+        while ((m = re.exec(text)) !== null) {
+          imageSrcList.add(m[1]);
+        }
+      }
+
+      for (const q of selected) {
+        collectSrcs(q.stem);
+        if (q.image) imageSrcList.add(q.image);
+        if (q.options) q.options.forEach(collectSrcs);
+        collectSrcs(q.answer);
+        collectSrcs(q.analysis);
+        collectSrcs(q.detail);
+      }
+
+      await Promise.all(Array.from(imageSrcList).map(async (src) => {
+        try {
+          if (src.startsWith('data:image/')) {
+            const m = src.match(/data:image\/[^;]+;base64,([A-Za-z0-9+/=]+)/);
+            if (m) {
+              imageBufferCache.set(src, base64ToUint8Array(m[1]));
+            }
+          } else {
+            const res = await fetch(src);
+            if (res.ok) {
+              const buf = await res.arrayBuffer();
+              imageBufferCache.set(src, new Uint8Array(buf));
+            }
+          }
+        } catch (err) {
+          console.warn('Word export: unable to load image:', src, err);
+        }
+      }));
+
       function registerImageTag(imgTag, maxCx = 3200000) {
-        const srcM = imgTag.match(/src="data:image\/png;base64,([^"]+)"/);
+        const srcM = imgTag.match(/src=["']([^"']+)["']/i);
         if (!srcM) return '';
+        const src = srcM[1];
+        let imgBytes = imageBufferCache.get(src);
+        if (!imgBytes && src.startsWith('data:image/')) {
+          const m = src.match(/base64,([A-Za-z0-9+/=]+)/);
+          if (m) imgBytes = base64ToUint8Array(m[1]);
+        }
+        if (!imgBytes) return '';
+
         const cxM = imgTag.match(/data-cx="(\d+)"/);
         const cyM = imgTag.match(/data-cy="(\d+)"/);
-        let cx = cxM ? parseInt(cxM[1], 10) : 2000000;
+        let cx = cxM ? parseInt(cxM[1], 10) : 2200000;
         let cy = cyM ? parseInt(cyM[1], 10) : 600000;
         if (cx > maxCx) {
           const ratio = maxCx / cx;
           cx = Math.round(cx * ratio);
           cy = Math.round(cy * ratio);
         }
-        const imgBytes = base64ToUint8Array(srcM[1]);
         const idNum = imgCounter++;
         const rId = `rIdImg${idNum}`;
-        const fileName = `image${idNum}.png`;
+        const isJpg = src.toLowerCase().endsWith('.jpg') || src.toLowerCase().endsWith('.jpeg');
+        const fileName = `image${idNum}.${isJpg ? 'jpeg' : 'png'}`;
         mediaFiles.push({ name: `word/media/${fileName}`, data: imgBytes });
         relsExtra.push(`<Relationship Id="${rId}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="media/${fileName}"/>`);
         return makeDrawingXml(rId, String(cx), String(cy), idNum);
@@ -671,7 +720,7 @@
             { before: 120, after: 40 }
           );
 
-          if (q.image && q.image.startsWith('data:image/')) {
+          if (q.image) {
             out += makeParagraph(registerImageTag(`<img src="${q.image}" data-cx="2232000" data-cy="600923">`), { indent: 360, before: 60, after: 60 });
           }
 

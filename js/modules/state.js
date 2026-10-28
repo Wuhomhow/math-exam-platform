@@ -9,7 +9,7 @@
       if (legacyGrade7) {
         return { grade: '初一', semester: '上册', label: value };
       }
-      if (/^(14|15)\./.test(value)) {
+      if (/^(13|14|15)\./.test(value)) {
         return { grade: '初二', semester: '上册', label: value };
       }
 

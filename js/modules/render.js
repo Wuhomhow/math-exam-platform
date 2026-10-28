@@ -240,7 +240,7 @@
       container.innerHTML = selectedQuestions.map((q, index) => {
         const sameTypeQuestions = selectedQuestions.filter(item => item.type === q.type);
         const typePosition = sameTypeQuestions.findIndex(item => item.id === q.id);
-        const chapShort = q.chapter.includes('加法') ? '加法' : q.chapter.includes('减法') ? '减法' : q.chapter.includes('除法') ? '除法' : q.chapter.includes('混合') ? '混合' : q.chapter.includes('角平分线') ? '角平分线' : (q.chapter.includes('等腰') || q.chapter.includes('等边对等角')) ? '等边对等角' : '乘方';
+        const chapShort = q.chapter.includes('13.1') ? '三角形' : q.chapter.includes('加法') ? '加法' : q.chapter.includes('减法') ? '减法' : q.chapter.includes('除法') ? '除法' : q.chapter.includes('混合') ? '混合' : q.chapter.includes('角平分线') ? '角平分线' : (q.chapter.includes('等腰') || q.chapter.includes('等边对等角')) ? '等边对等角' : '乘方';
         const chapBadgeCls = getGradeSemesterTagClass(q.chapter);
         return `
         <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl space-y-2">

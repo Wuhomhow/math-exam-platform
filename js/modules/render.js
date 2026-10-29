@@ -379,8 +379,8 @@
       }
 
       // Part 3: Calc / Answer
-      if (calcs.length > 0) {
-        let questionIndex = 1;
+if (calcs.length > 0) {
+  let questionIndex = choices.length + blanks.length + 1;
         html += `
           <div class="question-part mt-6 pt-4 border-t border-slate-300">
             <h3 class="font-bold text-base border-b border-slate-900 pb-1 mb-4 flex items-center justify-between">

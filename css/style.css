@@ -147,3 +147,18 @@
     .answer-option-wide { grid-column: 1 / -1; }
     .answer-option img { max-width: 100%; height: auto; }
     @media print { .answer-space-resizable { resize: none; overflow: hidden; } }
+
+/* Responsive catalog sidebar: Always visible on PC (>= 1024px), collapsible on Mobile (< 1024px) */
+@media (min-width: 1024px) {
+  #catalogBodyContainer {
+    display: block !important;
+  }
+}
+@media (max-width: 1023px) {
+  #catalogBodyContainer {
+    display: none;
+  }
+  #catalogBodyContainer.is-open {
+    display: block !important;
+  }
+}

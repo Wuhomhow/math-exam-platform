@@ -80,16 +80,26 @@
       <aside class="lg:col-span-1 space-y-4 lg:sticky lg:top-20 lg:self-start lg:max-h-[calc(100vh-5.5rem)] lg:overflow-y-auto">
         <!-- Unified grade / semester navigation -->
         <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4">
-          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+          <!-- Clickable Header on Mobile for folding -->
+          <div id="catalogHeaderToggle" class="flex items-center justify-between pb-3 border-b border-slate-100 cursor-pointer lg:cursor-default select-none">
             <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2">
               <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
               </svg>
               <span>题库目录</span>
             </h3>
+            <!-- Mobile Toggle Indicator & Active Chapter Badge -->
+            <div class="flex items-center gap-2 lg:hidden">
+              <span id="mobileActiveChapterBadge" class="text-xs text-blue-600 bg-blue-50 px-2 py-0.5 rounded font-medium max-w-[130px] truncate">已选题库</span>
+              <span class="text-xs text-slate-400 font-normal">点击展开/收起</span>
+              <svg id="mobileCatalogChevron" class="w-4 h-4 text-slate-400 transition-transform duration-200 -rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
           </div>
 
-          <div class="mt-3 space-y-3">
+          <!-- Catalog Body: Hidden by default on mobile (<lg), block on PC (lg) -->
+          <div id="catalogBodyContainer" class="mt-3 space-y-3">
             <button id="treeChapterAll" type="button" class="chapter-tree-btn is-active w-full flex items-center justify-between gap-3 px-3 py-2.5 rounded-lg border border-slate-100 text-sm font-semibold" data-chapter="all">
               <span>已选题库</span>
               <span id="allQuestionCount" class="text-xs font-bold">586 题</span>

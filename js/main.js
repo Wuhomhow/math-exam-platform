@@ -1,5 +1,16 @@
 // Synchronize UI buttons and inputs to restored state
+function updateMobileCatalogBadge() {
+  const badge = document.getElementById('mobileActiveChapterBadge');
+  if (!badge) return;
+  if (!state.chapterFilter || state.chapterFilter === 'all') {
+    badge.textContent = '已选题库';
+  } else {
+    badge.textContent = state.chapterFilter.replace(/^[0-9.]+\s*/, '').slice(0, 8);
+  }
+}
+
 function syncUiToState() {
+  updateMobileCatalogBadge();
   // 1. Chapter tree active state & expand parent details
   const activeChapter = state.chapterFilter || 'all';
   document.querySelectorAll('.chapter-tree-btn').forEach(btn => {
@@ -69,6 +80,7 @@ purgeOldModals();
 class HandInHandTour {
   constructor() {
     this.currentStep = 0;
+    this.trackingRaf = null;
     this.steps = [
       {
         target: '#typeFilters',
@@ -131,8 +143,9 @@ class HandInHandTour {
       box-shadow: 0 0 0 9999px rgba(15, 23, 42, 0.72);
       border: 2px solid #3b82f6;
       pointer-events: none;
-      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
       display: none;
+      box-sizing: border-box;
     `;
 
     this.popover = document.createElement('div');
@@ -144,7 +157,7 @@ class HandInHandTour {
       border-radius: 12px;
       box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.25), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
       padding: 14px 16px;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
       display: none;
       font-family: system-ui, -apple-system, sans-serif;
       box-sizing: border-box;
@@ -155,11 +168,20 @@ class HandInHandTour {
   }
 
   bindEvents() {
-    window.addEventListener('resize', () => {
+    const handleRealign = () => {
       if (this.spotlight.style.display === 'block') {
         this.positionToTarget();
       }
-    });
+    };
+
+    window.addEventListener('resize', handleRealign);
+    window.addEventListener('scroll', handleRealign, { passive: true });
+
+    // Listen to scroll inside basket drawer if present
+    const drawerList = document.getElementById('basketItemsList');
+    if (drawerList) {
+      drawerList.addEventListener('scroll', handleRealign, { passive: true });
+    }
 
     document.addEventListener('keydown', (e) => {
       if (this.spotlight.style.display === 'block') {
@@ -177,6 +199,10 @@ class HandInHandTour {
   }
 
   stop() {
+    if (this.trackingRaf) {
+      cancelAnimationFrame(this.trackingRaf);
+      this.trackingRaf = null;
+    }
     this.spotlight.style.display = 'none';
     this.popover.style.display = 'none';
     localStorage.setItem('math_exam_tour_done', 'true');
@@ -198,12 +224,33 @@ class HandInHandTour {
     }
   }
 
+  startTracking(targetEl, durationMs = 650) {
+    if (this.trackingRaf) {
+      cancelAnimationFrame(this.trackingRaf);
+    }
+    const startTime = performance.now();
+    const frame = (now) => {
+      this.positionToTarget(targetEl);
+      if (now - startTime < durationMs && this.spotlight.style.display === 'block') {
+        this.trackingRaf = requestAnimationFrame(frame);
+      } else {
+        this.trackingRaf = null;
+        this.positionToTarget(targetEl);
+      }
+    };
+    this.trackingRaf = requestAnimationFrame(frame);
+  }
+
   showStep() {
     purgeOldModals();
     const step = this.steps[this.currentStep];
     if (step.actionBefore) {
       step.actionBefore();
     }
+
+    // Wait slightly for DOM visibility & drawer transition to begin
+    const isDrawerTarget = step.target === '#btnDrawerGoPaper';
+    const initDelay = isDrawerTarget ? 180 : 100;
 
     setTimeout(() => {
       const el = document.querySelector(step.target);
@@ -212,8 +259,20 @@ class HandInHandTour {
         return;
       }
 
-      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      this.positionToTarget(el);
+      // Smooth scroll if element is outside comfortable viewport
+      if (!isDrawerTarget) {
+        const rect = el.getBoundingClientRect();
+        const inView = rect.top >= 60 && rect.bottom <= (window.innerHeight - 60);
+        if (!inView) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+
+      this.spotlight.style.display = 'block';
+      this.popover.style.display = 'block';
+
+      // Start continuous RAF tracking while transitions/scrolls occur
+      this.startTracking(el, isDrawerTarget ? 500 : 650);
 
       const isLast = this.currentStep === this.steps.length - 1;
       this.popover.innerHTML = `
@@ -239,31 +298,46 @@ class HandInHandTour {
       document.getElementById('tourBtnNext').onclick = () => this.next();
       const prevBtn = document.getElementById('tourBtnPrev');
       if (prevBtn) prevBtn.onclick = () => this.prev();
-
-      this.spotlight.style.display = 'block';
-      this.popover.style.display = 'block';
-    }, 120);
+    }, initDelay);
   }
 
   positionToTarget(targetEl) {
-    const el = targetEl || document.querySelector(this.steps[this.currentStep].target);
+    const el = targetEl || document.querySelector(this.steps[this.currentStep]?.target);
     if (!el) return;
 
     const rect = el.getBoundingClientRect();
-    const pad = window.innerWidth < 640 ? 4 : 6;
-
-    this.spotlight.style.top = `${Math.max(0, rect.top - pad)}px`;
-    this.spotlight.style.left = `${Math.max(0, rect.left - pad)}px`;
-    this.spotlight.style.width = `${Math.min(window.innerWidth, rect.width + pad * 2)}px`;
-    this.spotlight.style.height = `${rect.height + pad * 2}px`;
-
     const isMobile = window.innerWidth < 640;
+    const pad = isMobile ? 4 : 6;
+
+    // Viewport-safe coordinates for spotlight
+    const spotLeft = Math.max(0, rect.left - pad);
+    const spotTop = Math.max(0, rect.top - pad);
+    const maxAllowedWidth = window.innerWidth - spotLeft;
+    const spotWidth = Math.min(maxAllowedWidth, rect.width + pad * 2);
+    const spotHeight = rect.height + pad * 2;
+
+    this.spotlight.style.top = `${spotTop}px`;
+    this.spotlight.style.left = `${spotLeft}px`;
+    this.spotlight.style.width = `${Math.max(20, spotWidth)}px`;
+    this.spotlight.style.height = `${Math.max(20, spotHeight)}px`;
+
+    // Smart Popover Positioning: avoid covering the target on small screens
     if (isMobile) {
       this.popover.style.width = 'auto';
       this.popover.style.left = '12px';
       this.popover.style.right = '12px';
-      this.popover.style.bottom = '16px';
-      this.popover.style.top = 'auto';
+
+      // If target center is in lower half of screen, popover goes to TOP
+      const targetCenterY = rect.top + rect.height / 2;
+      const isInLowerHalf = targetCenterY > (window.innerHeight / 2);
+
+      if (isInLowerHalf) {
+        this.popover.style.top = '16px';
+        this.popover.style.bottom = 'auto';
+      } else {
+        this.popover.style.top = 'auto';
+        this.popover.style.bottom = '16px';
+      }
     } else {
       const popWidth = 280;
       const popHeight = 130;
@@ -312,6 +386,20 @@ function closeDrawerGlobal() {
 // 3. 核心交互事件绑定
 // ==========================================
 function initEvents() {
+  // Mobile Catalog Toggle
+  const catalogToggle = document.getElementById('catalogHeaderToggle');
+  const catalogBody = document.getElementById('catalogBodyContainer');
+  const catalogChevron = document.getElementById('mobileCatalogChevron');
+
+  if (catalogToggle && catalogBody) {
+    catalogToggle.addEventListener('click', (e) => {
+      if (window.innerWidth >= 1024) return; // PC is always expanded
+      const isOpen = catalogBody.classList.toggle('is-open');
+      if (catalogChevron) {
+        catalogChevron.classList.toggle('-rotate-90', !isOpen);
+      }
+    });
+  }
   document.addEventListener('pointerup', () => {
     let changed = false;
     document.querySelectorAll('.answer-space-resizable').forEach(element => {

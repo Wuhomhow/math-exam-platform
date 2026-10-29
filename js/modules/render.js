@@ -207,7 +207,7 @@
         const imgHtml = q.image ? `<div class="my-3"><img src="${q.image}" class="max-w-md h-auto border border-slate-200 rounded p-1 bg-white"></div>` : '';
 
         return `
-          <div title="双击查看答案解析" class="bg-white rounded-xl border ${isSelected ? 'border-blue-300 ring-1 ring-blue-100 shadow-sm' : 'border-slate-200'} p-5 transition-all hover:shadow-md question-card" data-id="${q.id}">
+          <div class="bg-white rounded-xl border ${isSelected ? 'border-blue-300 ring-1 ring-blue-100 shadow-sm' : 'border-slate-200'} p-5 transition-all hover:shadow-md question-card" data-id="${q.id}">
             <!-- Header Row -->
             <div class="flex flex-wrap items-center justify-between pb-3 border-b border-slate-100 gap-2">
               <div class="flex flex-wrap items-center gap-2">

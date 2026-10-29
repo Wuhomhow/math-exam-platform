@@ -1,3 +1,56 @@
+// Synchronize UI buttons and inputs to restored state
+function syncUiToState() {
+  // 1. Chapter tree active state & expand parent details
+  const activeChapter = state.chapterFilter || 'all';
+  document.querySelectorAll('.chapter-tree-btn').forEach(btn => {
+    const isAct = btn.getAttribute('data-chapter') === activeChapter;
+    btn.classList.toggle('is-active', isAct);
+    if (isAct) {
+      const parentCard = btn.closest('.nav-grade-card');
+      if (parentCard) parentCard.open = true;
+    }
+  });
+
+  // 2. Type filter buttons
+  document.querySelectorAll('.filter-type-btn').forEach(btn => {
+    const isAct = btn.getAttribute('data-type') === state.typeFilter;
+    btn.className = isAct
+      ? 'filter-type-btn px-3 py-1 rounded-md bg-blue-600 text-white font-medium'
+      : 'filter-type-btn px-3 py-1 rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200';
+  });
+
+  // 3. Diff filter buttons
+  document.querySelectorAll('.filter-diff-btn').forEach(btn => {
+    const isAct = btn.getAttribute('data-diff') === state.diffFilter;
+    btn.className = isAct
+      ? 'filter-diff-btn px-3 py-1 rounded-md bg-blue-600 text-white font-medium'
+      : 'filter-diff-btn px-3 py-1 rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200';
+  });
+
+  // 4. Search input
+  const searchEl = document.getElementById('searchInput');
+  if (searchEl && state.searchKeyword) {
+    searchEl.value = state.searchKeyword;
+  }
+
+  // 5. Paper view mode
+  const studentBtn = document.getElementById('viewModeStudent');
+  const teacherBtn = document.getElementById('viewModeTeacher');
+  if (studentBtn && teacherBtn) {
+    const isTeacher = state.paperViewMode === 'teacher';
+    studentBtn.className = isTeacher ? 'px-3 py-1 rounded-md text-slate-600 hover:text-slate-900' : 'px-3 py-1 rounded-md bg-white text-blue-700 font-semibold shadow-xs';
+    teacherBtn.className = isTeacher ? 'px-3 py-1 rounded-md bg-white text-blue-700 font-semibold shadow-xs' : 'px-3 py-1 rounded-md text-slate-600 hover:text-slate-900';
+  }
+
+  // 6. Paper layout mode
+  const layoutSingle = document.getElementById('btnLayoutSingle');
+  const layoutDouble = document.getElementById('btnLayoutDouble');
+  if (layoutSingle && layoutDouble) {
+    layoutSingle.className = state.isDoubleColumn ? 'px-3 py-1 rounded-md text-slate-600 hover:text-slate-900' : 'px-3 py-1 rounded-md bg-white text-blue-700 font-semibold shadow-xs';
+    layoutDouble.className = state.isDoubleColumn ? 'px-3 py-1 rounded-md bg-white text-blue-700 font-semibold shadow-xs' : 'px-3 py-1 rounded-md text-slate-600 hover:text-slate-900';
+  }
+}
+
 // ==========================================
 // 1. 自动清除旧弹窗（彻底根治共存问题）
 // ==========================================
@@ -361,10 +414,16 @@ function initEvents() {
   });
 
   // Search
-  document.getElementById('searchInput').addEventListener('input', (e) => {
-    state.searchKeyword = e.target.value.trim();
-    renderQuestionList();
-  });
+  let searchDebounceTimer = null;
+      document.getElementById('searchInput').addEventListener('input', (e) => {
+        clearTimeout(searchDebounceTimer);
+        searchDebounceTimer = setTimeout(() => {
+          state.searchKeyword = e.target.value.trim();
+          state.currentPage = 1;
+          saveUiPreferences();
+          renderQuestionList();
+        }, 300);
+      });
 
   // 教师解析模式（精简复选框交互）
   const teacherToggle = document.getElementById('toggleTeacherMode');
@@ -420,11 +479,27 @@ function bootstrapApp() {
   purgeOldModals();
   buildChapterNavigation();
   initEvents();
+  syncUiToState();
   updateStats();
   renderQuestionList();
   renderBasketDrawer();
   switchView(state.currentView);
   setTimeout(renderMath, 80);
+
+  // Restore scroll position if saved
+  if (state.savedScrollY > 0) {
+    setTimeout(() => {
+      window.scrollTo({ top: state.savedScrollY, behavior: 'auto' });
+    }, 120);
+  }
+
+  // Periodic and beforeunload scroll position tracking
+  let scrollSaveTimer = null;
+  window.addEventListener('scroll', () => {
+    clearTimeout(scrollSaveTimer);
+    scrollSaveTimer = setTimeout(saveUiPreferences, 250);
+  }, { passive: true });
+  window.addEventListener('beforeunload', saveUiPreferences);
 
   tourInstance = new HandInHandTour();
 

@@ -12,6 +12,9 @@
       if (/^(13|14|15|16)\./.test(value)) {
         return { grade: '初二', semester: '上册', label: value };
       }
+      if (/^25\./.test(value)) {
+        return { grade: '初三', semester: '上册', label: value };
+      }
 
       const m = value.match(/^(初一|初二|初三|高一|高二|高三|七年级|八年级|九年级)\s*(上册|下册)\s*(.*)$/);
       if (m) {
@@ -108,6 +111,47 @@
     const BASKET_STORAGE_KEY = 'mathQuestionBank:selectedIds:v1';
     const ANSWER_SPACE_STORAGE_KEY = 'mathQuestionBank:answerSpaceHeights:v1';
     const LAST_VIEW_STORAGE_KEY = 'mathQuestionBank:lastView:v1';
+    const UI_PREFS_STORAGE_KEY = 'mathQuestionBank:uiPreferences:v2';
+
+    function saveUiPreferences() {
+      try {
+        const prefs = {
+          currentView: state.currentView,
+          chapterFilter: state.chapterFilter,
+          typeFilter: state.typeFilter,
+          diffFilter: state.diffFilter,
+          searchKeyword: state.searchKeyword || '',
+          currentPage: state.currentPage || 1,
+          paperViewMode: state.paperViewMode,
+          isDoubleColumn: Boolean(state.isDoubleColumn),
+          scrollY: Math.round(window.scrollY || 0)
+        };
+        localStorage.setItem(UI_PREFS_STORAGE_KEY, JSON.stringify(prefs));
+        localStorage.setItem(LAST_VIEW_STORAGE_KEY, state.currentView);
+      } catch (error) {
+        // Continue if storage is restricted
+      }
+    }
+
+    function restoreUiPreferences() {
+      try {
+        const saved = localStorage.getItem(UI_PREFS_STORAGE_KEY);
+        if (!saved) return;
+        const p = JSON.parse(saved);
+        if (!p || typeof p !== 'object') return;
+        if (p.currentView === 'bank' || p.currentView === 'paper') state.currentView = p.currentView;
+        if (typeof p.chapterFilter === 'string') state.chapterFilter = p.chapterFilter;
+        if (typeof p.typeFilter === 'string') state.typeFilter = p.typeFilter;
+        if (typeof p.diffFilter === 'string') state.diffFilter = p.diffFilter;
+        if (typeof p.searchKeyword === 'string') state.searchKeyword = p.searchKeyword;
+        if (Number.isInteger(p.currentPage) && p.currentPage >= 1) state.currentPage = p.currentPage;
+        if (p.paperViewMode === 'student' || p.paperViewMode === 'teacher') state.paperViewMode = p.paperViewMode;
+        if (typeof p.isDoubleColumn === 'boolean') state.isDoubleColumn = p.isDoubleColumn;
+        if (Number.isFinite(p.scrollY)) state.savedScrollY = Math.max(0, p.scrollY);
+      } catch (error) {
+        // Keep defaults if storage read fails
+      }
+    }
 
     function restoreBasketFromStorage() {
       try {
@@ -167,6 +211,8 @@
       searchKeyword: '',
       paperViewMode: 'student', // 'student' | 'teacher'
       isDoubleColumn: false,
+      currentPage: 1,
+      pageSize: 15,
       quizAnswers: {},
       quizSubmitted: false,
       quizStartTime: null,
@@ -174,6 +220,7 @@
     };
     restoreBasketFromStorage();
     restoreAnswerSpaceHeights();
+    restoreUiPreferences();
     try {
       const lastView = localStorage.getItem(LAST_VIEW_STORAGE_KEY);
       if (lastView === 'bank' || lastView === 'paper') state.currentView = lastView;

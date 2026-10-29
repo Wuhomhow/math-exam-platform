@@ -28,6 +28,7 @@
         ? 'flex-1 py-2 rounded-lg text-center text-sm font-semibold text-blue-700 bg-white shadow-sm transition-all'
         : 'flex-1 py-2 rounded-lg text-center text-sm font-medium text-slate-600 transition-all';
 
+      saveUiPreferences();
       if (viewName === 'paper') renderPaper();
       window.scrollTo({ top: 0, behavior: 'smooth' });
       setTimeout(renderMath, 50);
@@ -85,15 +86,110 @@
         });
       }
       const filtered = getCurrentFilteredQuestions();
+      const pagEl = document.getElementById('questionPagination');
 
       if (filtered.length === 0) {
         container.innerHTML = '';
         emptyState.classList.remove('hidden');
+        if (pagEl) pagEl.classList.add('hidden');
         return;
       }
       emptyState.classList.add('hidden');
 
-      container.innerHTML = filtered.map(q => {
+      // Pagination calculations
+      const totalCount = filtered.length;
+      const pageSize = state.pageSize || 15;
+      const totalPages = Math.max(1, Math.ceil(totalCount / pageSize));
+      if (state.currentPage > totalPages) state.currentPage = totalPages;
+      if (state.currentPage < 1) state.currentPage = 1;
+      const startIndex = (state.currentPage - 1) * pageSize;
+      const endIndex = Math.min(startIndex + pageSize, totalCount);
+      const pageQuestions = filtered.slice(startIndex, endIndex);
+
+      // Render pagination toolbar
+      if (pagEl) {
+        if (totalPages <= 1) {
+          pagEl.classList.add('hidden');
+        } else {
+          pagEl.classList.remove('hidden');
+          let pageBtnsHtml = '';
+          const maxVisiblePages = 5;
+          let startPage = Math.max(1, state.currentPage - Math.floor(maxVisiblePages / 2));
+          let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+          if (endPage - startPage + 1 < maxVisiblePages) {
+            startPage = Math.max(1, endPage - maxVisiblePages + 1);
+          }
+
+          if (startPage > 1) {
+            pageBtnsHtml += `<button class="page-nav-btn px-2.5 py-1 rounded border border-slate-200 hover:bg-slate-50 text-slate-700" data-page="1">1</button>`;
+            if (startPage > 2) pageBtnsHtml += `<span class="px-1 text-slate-400">...</span>`;
+          }
+
+          for (let p = startPage; p <= endPage; p++) {
+            const isActive = p === state.currentPage;
+            pageBtnsHtml += `<button class="page-nav-btn px-2.5 py-1 rounded font-medium transition ${
+              isActive ? 'bg-blue-600 text-white shadow-xs' : 'border border-slate-200 hover:bg-slate-50 text-slate-700'
+            }" data-page="${p}">${p}</button>`;
+          }
+
+          if (endPage < totalPages) {
+            if (endPage < totalPages - 1) pageBtnsHtml += `<span class="px-1 text-slate-400">...</span>`;
+            pageBtnsHtml += `<button class="page-nav-btn px-2.5 py-1 rounded border border-slate-200 hover:bg-slate-50 text-slate-700" data-page="${totalPages}">${totalPages}</button>`;
+          }
+
+          pagEl.innerHTML = `
+            <div class="flex items-center space-x-2 text-slate-500">
+              <span>显示第 <b class="text-slate-800">${startIndex + 1}-${endIndex}</b> 题</span>
+              <span>·</span>
+              <span>共 <b class="text-blue-600 font-semibold">${totalCount}</b> 题</span>
+            </div>
+            <div class="flex items-center space-x-1.5">
+              <button id="btnPrevPage" class="px-2.5 py-1 rounded border border-slate-200 text-slate-700 hover:bg-slate-50 disabled:opacity-30 disabled:pointer-events-none font-medium flex items-center space-x-1" ${state.currentPage <= 1 ? 'disabled' : ''}>
+                <span>&larr;</span><span>上一页</span>
+              </button>
+              <div class="flex items-center space-x-1">
+                ${pageBtnsHtml}
+              </div>
+              <button id="btnNextPage" class="px-2.5 py-1 rounded border border-slate-200 text-slate-700 hover:bg-slate-50 disabled:opacity-30 disabled:pointer-events-none font-medium flex items-center space-x-1" ${state.currentPage >= totalPages ? 'disabled' : ''}>
+                <span>下一页</span><span>&rarr;</span>
+              </button>
+            </div>
+          `;
+
+          // Event listeners for pagination
+          pagEl.querySelectorAll('.page-nav-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+              const p = parseInt(btn.getAttribute('data-page'), 10);
+              if (p && p !== state.currentPage) {
+                state.currentPage = p;
+                saveUiPreferences();
+                renderQuestionList();
+                window.scrollTo({ top: Math.max(0, document.getElementById('viewQuestionBank').offsetTop - 60), behavior: 'smooth' });
+              }
+            });
+          });
+
+          pagEl.querySelector('#btnPrevPage')?.addEventListener('click', () => {
+            if (state.currentPage > 1) {
+              state.currentPage--;
+              saveUiPreferences();
+              renderQuestionList();
+              window.scrollTo({ top: Math.max(0, document.getElementById('viewQuestionBank').offsetTop - 60), behavior: 'smooth' });
+            }
+          });
+
+          pagEl.querySelector('#btnNextPage')?.addEventListener('click', () => {
+            if (state.currentPage < totalPages) {
+              state.currentPage++;
+              saveUiPreferences();
+              renderQuestionList();
+              window.scrollTo({ top: Math.max(0, document.getElementById('viewQuestionBank').offsetTop - 60), behavior: 'smooth' });
+            }
+          });
+        }
+      }
+
+      container.innerHTML = pageQuestions.map(q => {
         const isSelected = state.selectedIds.has(q.id);
         const diffColor = q.difficulty === '容易' ? 'text-emerald-600 bg-emerald-50 border-emerald-200' :
                           q.difficulty === '中等' ? 'text-amber-600 bg-amber-50 border-amber-200' :

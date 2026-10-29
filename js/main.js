@@ -1,153 +1,253 @@
 // ==========================================
-// 1. 新手引导卡片配置与业务逻辑
+// 1. 聚光灯“手把手”交互式漫游引擎 (Spotlight Tour)
 // ==========================================
-const guideSteps = [
-  {
-    title: "第一步：挑选试题",
-    icon: "🔍",
-    desc: "在左侧【题库目录】切换章节，或在顶部筛选单选题、填空题、解答题及难度，也可以在搜索框输入考点关键词快速检索。",
-    tip: "💡 支持按难度标签与题干公式快速定位目标题目"
-  },
-  {
-    title: "第二步：加入试题篮",
-    icon: "➕",
-    desc: "每道试题均已通过 KaTeX 渲染出清晰的数学公式。确认题目符合要求后，点击题卡下方的【加入试卷】或顶部【本页全选入篮】。",
-    tip: "💡 试题入篮后，右上角试题篮红色角标会实时更新题数"
-  },
-  {
-    title: "第三步：检查试题篮",
-    icon: "🧺",
-    desc: "点击右上角【试题篮】按钮展开抽屉，在此可核对所选题目的数量，确认无误后点击【生成排版试卷 →】。",
-    tip: "💡 若需重新挑选，也可以在抽屉中随时清空或移除单题"
-  },
-  {
-    title: "第四步：试卷排版与预览",
-    icon: "📄",
-    desc: "进入预览视图后，支持自由切换【学生作答卷 / 教师答案解析卷】，并可在【A4 标准单栏】与【A4/A3 双栏排版】之间一键切换。",
-    tip: "💡 所见即所得，排版效果与最终打印效果完全一致"
-  },
-  {
-    title: "第五步：一键导出与打印",
-    icon: "🖨️",
-    desc: "预览满意后，点击【导出 Word (.doc)】可直接下载可编辑文档；点击【打印 / 另存为 PDF】即可调用打印机或保存为高清试卷 PDF！",
-    tip: "🎉 全流程已掌握！点击下方按钮开始组装你的第一份试卷吧！"
+class HandInHandTour {
+  constructor() {
+    this.currentStep = 0;
+    this.steps = [
+      {
+        target: '#typeFilters',
+        title: '👉 第一步：按需筛选题目',
+        desc: '在此处点击题型（单选、填空、解答），或者在左侧目录选择知识点，页面会实时筛选题目。',
+        tip: '💡 也可以在搜索框输入考点或公式关键词搜索',
+        actionBefore: () => {
+          switchView('bank');
+          closeDrawerGlobal();
+        }
+      },
+      {
+        target: '#btnSelectAll',
+        title: '👉 第二步：将题目加入试题篮',
+        desc: '公式均由 KaTeX 高清渲染。确认题目无误后，可以点击每道题下方的【加入试卷】，也可以点这里【本页全选入篮】。',
+        tip: '💡 选中的题目会自动放进你的试题篮',
+        actionBefore: () => {
+          switchView('bank');
+          closeDrawerGlobal();
+        }
+      },
+      {
+        target: '#btnOpenBasket',
+        title: '👉 第三步：打开试题篮核对',
+        desc: '右上角红色角标会显示当前挑选的题目数。点击这个按钮即可展开右侧试题篮抽屉。',
+        tip: '💡 随时可以查看、删除或清空已选题目',
+        actionBefore: () => {
+          switchView('bank');
+          closeDrawerGlobal();
+        }
+      },
+      {
+        target: '#btnDrawerGoPaper',
+        title: '👉 第四步：生成排版试卷',
+        desc: '核对好题目后，直接点击这个按钮！系统会自动将所有题目排版为标准化试卷。',
+        tip: '💡 自动为你调整大题序号与格式',
+        actionBefore: () => {
+          switchView('bank');
+          openDrawerGlobal();
+        }
+      },
+      {
+        target: '#btnPrintPaper',
+        title: '👉 第五步：一键导出与打印',
+        desc: '已自动切换到试卷排版预览！你可以切换【学生卷/教师解析卷】，点击这里直接【打印 / 另存为 PDF】，或者点击左侧【导出 Word】！',
+        tip: '🎉 太棒了！全套流程已亲身体验完毕，现在开始组装你的第一套试卷吧！',
+        actionBefore: () => {
+          closeDrawerGlobal();
+          switchView('paper');
+        }
+      }
+    ];
+
+    this.createDom();
+    this.bindEvents();
   }
-];
 
-let guideCurrentStep = 0;
+  createDom() {
+    // 聚光灯遮罩框（利用巨大 box-shadow 实现平滑移动的挖孔高亮效果）
+    this.spotlight = document.createElement('div');
+    this.spotlight.id = 'tourSpotlight';
+    this.spotlight.style.cssText = `
+      position: fixed;
+      z-index: 9998;
+      border-radius: 10px;
+      box-shadow: 0 0 0 9999px rgba(15, 23, 42, 0.72);
+      border: 2px solid #3b82f6;
+      pointer-events: none;
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      display: none;
+    `;
 
-function renderGuideStep() {
-  const contentBody = document.getElementById("guideContentBody") || document.getElementById("guideStepContent");
-  const dots = document.querySelectorAll(".guide-dot");
-  const prevBtn = document.getElementById("guidePrevBtn") || document.getElementById("prevGuideBtn");
-  const nextBtn = document.getElementById("guideNextBtn") || document.getElementById("nextGuideBtn");
-  if (!contentBody) return;
+    // 提示气泡框
+    this.popover = document.createElement('div');
+    this.popover.id = 'tourPopover';
+    this.popover.style.cssText = `
+      position: fixed;
+      z-index: 9999;
+      width: 320px;
+      max-width: 90vw;
+      background: #ffffff;
+      border-radius: 14px;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.25), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+      padding: 18px 20px;
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      display: none;
+      font-family: system-ui, -apple-system, sans-serif;
+    `;
 
-  const s = guideSteps[guideCurrentStep];
-  contentBody.innerHTML = `
-    <div class="w-16 h-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-3xl mb-3 shadow-inner mx-auto">
-      ${s.icon}
-    </div>
-    <h4 class="text-base sm:text-lg font-bold text-slate-900 mb-2">${s.title}</h4>
-    <p class="text-xs sm:text-sm text-slate-600 max-w-sm leading-relaxed mb-3 mx-auto">${s.desc}</p>
-    <div class="inline-block text-xs text-blue-700 bg-blue-50/80 border border-blue-100 px-3 py-1.5 rounded-full font-medium">
-      ${s.tip}
-    </div>
-  `;
-
-  dots.forEach((dot, index) => {
-    if (index === guideCurrentStep) {
-      dot.className = "guide-dot h-1.5 rounded-full transition-all duration-300 w-6 bg-blue-600";
-    } else {
-      dot.className = "guide-dot h-1.5 rounded-full transition-all duration-300 w-2 bg-slate-200";
-    }
-  });
-
-  if (prevBtn) {
-    prevBtn.style.display = guideCurrentStep > 0 ? "inline-block" : "none";
+    document.body.appendChild(this.spotlight);
+    document.body.appendChild(this.popover);
   }
-  if (nextBtn) {
-    if (guideCurrentStep === guideSteps.length - 1) {
-      nextBtn.textContent = "开始使用";
-      nextBtn.className = "px-4 py-1.5 text-xs font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg shadow-sm transition";
-    } else {
-      nextBtn.textContent = "下一步";
-      nextBtn.className = "px-4 py-1.5 text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-sm transition";
-    }
-  }
-}
 
-function openOnboardingGuide() {
-  const modal = document.getElementById("quickGuideModal") || document.getElementById("onboardingModal");
-  if (!modal) return;
-  guideCurrentStep = 0;
-  renderGuideStep();
-  modal.style.display = "flex";
-  modal.classList.remove("hidden");
-}
+  bindEvents() {
+    window.addEventListener('resize', () => {
+      if (this.spotlight.style.display === 'block') {
+        this.positionToTarget();
+      }
+    });
 
-function closeOnboardingGuide() {
-  const modal = document.getElementById("quickGuideModal") || document.getElementById("onboardingModal");
-  const noRepeatCheck = document.getElementById("guideNoRepeat") || document.getElementById("neverShowAgain");
-  if (modal) {
-    modal.style.display = "none";
-    modal.classList.add("hidden");
-  }
-  if (noRepeatCheck && noRepeatCheck.checked) {
-    localStorage.setItem("math_exam_guide_dismissed", "true");
-  }
-}
-
-function initOnboardingGuide() {
-  const modal = document.getElementById("quickGuideModal") || document.getElementById("onboardingModal");
-  if (!modal) return;
-
-  const nextBtn = document.getElementById("guideNextBtn") || document.getElementById("nextGuideBtn");
-  const prevBtn = document.getElementById("guidePrevBtn") || document.getElementById("prevGuideBtn");
-  const closeX = document.getElementById("closeGuideX") || document.getElementById("closeGuideBtn");
-  const openBtn = document.getElementById("btnOpenGuide") || document.getElementById("openGuideBtn");
-
-  if (nextBtn) {
-    nextBtn.addEventListener("click", () => {
-      if (guideCurrentStep < guideSteps.length - 1) {
-        guideCurrentStep++;
-        renderGuideStep();
-      } else {
-        closeOnboardingGuide();
+    document.addEventListener('keydown', (e) => {
+      if (this.spotlight.style.display === 'block') {
+        if (e.key === 'Escape') this.stop();
+        if (e.key === 'ArrowRight') this.next();
+        if (e.key === 'ArrowLeft') this.prev();
       }
     });
   }
 
-  if (prevBtn) {
-    prevBtn.addEventListener("click", () => {
-      if (guideCurrentStep > 0) {
-        guideCurrentStep--;
-        renderGuideStep();
-      }
-    });
+  start() {
+    this.currentStep = 0;
+    this.showStep();
   }
 
-  if (closeX) closeX.addEventListener("click", closeOnboardingGuide);
-  if (openBtn) openBtn.addEventListener("click", openOnboardingGuide);
+  stop() {
+    this.spotlight.style.display = 'none';
+    this.popover.style.display = 'none';
+    localStorage.setItem('math_exam_tour_done', 'true');
+  }
 
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) closeOnboardingGuide();
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modal.style.display === "flex") {
-      closeOnboardingGuide();
+  next() {
+    if (this.currentStep < this.steps.length - 1) {
+      this.currentStep++;
+      this.showStep();
+    } else {
+      this.stop();
     }
-  });
+  }
 
-  // 首次访问自动唤起
-  if (!localStorage.getItem("math_exam_guide_dismissed")) {
-    setTimeout(openOnboardingGuide, 450);
+  prev() {
+    if (this.currentStep > 0) {
+      this.currentStep--;
+      this.showStep();
+    }
+  }
+
+  showStep() {
+    const step = this.steps[this.currentStep];
+    if (step.actionBefore) {
+      step.actionBefore();
+    }
+
+    // 稍微延迟 80ms 等待抽屉滑动或视图切换完成
+    setTimeout(() => {
+      const el = document.querySelector(step.target);
+      if (!el) {
+        if (this.currentStep < this.steps.length - 1) this.next();
+        return;
+      }
+
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      this.positionToTarget(el);
+
+      const isLast = this.currentStep === this.steps.length - 1;
+      this.popover.innerHTML = `
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+          <span style="font-size: 11px; font-weight: 700; color: #2563eb; background: #eff6ff; padding: 2px 8px; border-radius: 999px;">
+            教程 ${this.currentStep + 1} / ${this.steps.length}
+          </span>
+          <button id="tourBtnClose" style="background: transparent; border: none; font-size: 16px; color: #94a3b8; cursor: pointer; padding: 2px 4px;">✕</button>
+        </div>
+        <h4 style="font-size: 15px; font-weight: 700; color: #0f172a; margin: 0 0 6px 0;">${step.title}</h4>
+        <p style="font-size: 13px; color: #475569; line-height: 1.55; margin: 0 0 10px 0;">${step.desc}</p>
+        <div style="font-size: 12px; color: #1e40af; background: #f8fafc; border: 1px solid #e2e8f0; padding: 6px 10px; border-radius: 8px; margin-bottom: 14px;">
+          ${step.tip}
+        </div>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <button id="tourBtnSkip" style="font-size: 12px; color: #64748b; background: transparent; border: none; cursor: pointer;">跳过教程</button>
+          <div style="display: flex; gap: 6px;">
+            ${this.currentStep > 0 ? '<button id="tourBtnPrev" style="padding: 5px 12px; font-size: 12px; color: #475569; background: #f1f5f9; border-radius: 6px; border: none; cursor: pointer;">上一步</button>' : ''}
+            <button id="tourBtnNext" style="padding: 5px 14px; font-size: 12px; font-weight: 600; color: #ffffff; background: ${isLast ? '#059669' : '#2563eb'}; border-radius: 6px; border: none; cursor: pointer;">
+              ${isLast ? '完成并开始体验' : '下一步 👉'}
+            </button>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('tourBtnClose').onclick = () => this.stop();
+      document.getElementById('tourBtnSkip').onclick = () => this.stop();
+      document.getElementById('tourBtnNext').onclick = () => this.next();
+      const prevBtn = document.getElementById('tourBtnPrev');
+      if (prevBtn) prevBtn.onclick = () => this.prev();
+
+      this.spotlight.style.display = 'block';
+      this.popover.style.display = 'block';
+    }, 120);
+  }
+
+  positionToTarget(targetEl) {
+    const el = targetEl || document.querySelector(this.steps[this.currentStep].target);
+    if (!el) return;
+
+    const rect = el.getBoundingClientRect();
+    const pad = 6;
+
+    // 定位聚光灯框
+    this.spotlight.style.top = `${Math.max(0, rect.top - pad)}px`;
+    this.spotlight.style.left = `${Math.max(0, rect.left - pad)}px`;
+    this.spotlight.style.width = `${rect.width + pad * 2}px`;
+    this.spotlight.style.height = `${rect.height + pad * 2}px`;
+
+    // 定位气泡浮窗（优先放在元素下方，若底部空间不够则放在上方）
+    const popWidth = 320;
+    const popHeight = 220;
+    let top = rect.bottom + 12;
+    let left = rect.left + rect.width / 2 - popWidth / 2;
+
+    if (top + popHeight > window.innerHeight) {
+      top = Math.max(10, rect.top - popHeight - 12);
+    }
+    if (left + popWidth > window.innerWidth - 12) {
+      left = window.innerWidth - popWidth - 12;
+    }
+    if (left < 12) {
+      left = 12;
+    }
+
+    this.popover.style.top = `${top}px`;
+    this.popover.style.left = `${left}px`;
+  }
+}
+
+// 辅助全局函数（供引导漫游调用）
+let tourInstance = null;
+function openDrawerGlobal() {
+  const drawer = document.getElementById('basketDrawer');
+  const overlay = document.getElementById('basketDrawerOverlay');
+  if (drawer && overlay) {
+    drawer.classList.remove('translate-x-full');
+    overlay.classList.remove('hidden');
+    renderBasketDrawer();
+  }
+}
+function closeDrawerGlobal() {
+  const drawer = document.getElementById('basketDrawer');
+  const overlay = document.getElementById('basketDrawerOverlay');
+  if (drawer && overlay) {
+    drawer.classList.add('translate-x-full');
+    overlay.classList.add('hidden');
   }
 }
 
 // ==========================================
-// 2. 平台核心事件绑定
+// 2. 核心交互事件绑定
 // ==========================================
 function initEvents() {
   document.addEventListener('pointerup', () => {
@@ -173,23 +273,11 @@ function initEvents() {
   document.getElementById('btnBackToBank').addEventListener('click', () => switchView('bank'));
 
   // Drawer Open/Close
-  const drawer = document.getElementById('basketDrawer');
-  const overlay = document.getElementById('basketDrawerOverlay');
-  const openDrawer = () => {
-    drawer.classList.remove('translate-x-full');
-    overlay.classList.remove('hidden');
-    renderBasketDrawer();
-  };
-  const closeDrawer = () => {
-    drawer.classList.add('translate-x-full');
-    overlay.classList.add('hidden');
-  };
-
-  document.getElementById('btnOpenBasket').addEventListener('click', openDrawer);
-  document.getElementById('btnCloseBasket').addEventListener('click', closeDrawer);
-  overlay.addEventListener('click', closeDrawer);
+  document.getElementById('btnOpenBasket').addEventListener('click', openDrawerGlobal);
+  document.getElementById('btnCloseBasket').addEventListener('click', closeDrawerGlobal);
+  document.getElementById('basketDrawerOverlay').addEventListener('click', closeDrawerGlobal);
   document.getElementById('btnDrawerGoPaper').addEventListener('click', () => {
-    closeDrawer();
+    closeDrawerGlobal();
     switchView('paper');
   });
 
@@ -310,26 +398,38 @@ function initEvents() {
   // Guide Button Trigger
   const guideBtn = document.getElementById('btnOpenGuide') || document.getElementById('openGuideBtn');
   if (guideBtn) {
-    guideBtn.addEventListener('click', openOnboardingGuide);
+    guideBtn.addEventListener('click', () => {
+      if (tourInstance) tourInstance.start();
+    });
   }
 }
 
 // ==========================================
-// 3. 应用自启动与初始化
+// 3. 应用自启动与手把手新手引导触发
 // ==========================================
 let appBootstrapped = false;
 function bootstrapApp() {
   if (appBootstrapped) return;
   if (!document.getElementById('questionList')) return;
   appBootstrapped = true;
+
   buildChapterNavigation();
   initEvents();
-  initOnboardingGuide();
   updateStats();
   renderQuestionList();
   renderBasketDrawer();
   switchView(state.currentView);
   setTimeout(renderMath, 80);
+
+  // 初始化手把手漫游实例
+  tourInstance = new HandInHandTour();
+
+  // 首次访问时，延迟 500ms 自动开启聚光灯手把手教学
+  if (!localStorage.getItem('math_exam_tour_done')) {
+    setTimeout(() => {
+      tourInstance.start();
+    }, 500);
+  }
 }
 
 bootstrapApp();

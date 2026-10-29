@@ -1,5 +1,5 @@
 // ==========================================
-// 1. 自动清除旧弹窗（彻底根治两个弹窗共存问题）
+// 1. 自动清除旧弹窗（彻底根治共存问题）
 // ==========================================
 function purgeOldModals() {
   const oldModalIds = ['quickGuideModal', 'onboardingModal', 'onboardingCard', 'guideModalCard'];
@@ -11,7 +11,7 @@ function purgeOldModals() {
 purgeOldModals();
 
 // ==========================================
-// 2. 极简“手把手”聚光灯漫游引擎 (言简意赅 + 全端适配)
+// 2. 极简“手把手”聚光灯漫游引擎 (言简意赅)
 // ==========================================
 class HandInHandTour {
   constructor() {
@@ -69,7 +69,6 @@ class HandInHandTour {
   }
 
   createDom() {
-    // 聚光灯遮罩框
     this.spotlight = document.createElement('div');
     this.spotlight.id = 'tourSpotlight';
     this.spotlight.style.cssText = `
@@ -83,7 +82,6 @@ class HandInHandTour {
       display: none;
     `;
 
-    // 轻量紧凑气泡框
     this.popover = document.createElement('div');
     this.popover.id = 'tourPopover';
     this.popover.style.cssText = `
@@ -207,16 +205,13 @@ class HandInHandTour {
     this.spotlight.style.height = `${rect.height + pad * 2}px`;
 
     const isMobile = window.innerWidth < 640;
-
     if (isMobile) {
-      // 移动端沉底紧凑显示
       this.popover.style.width = 'auto';
       this.popover.style.left = '12px';
       this.popover.style.right = '12px';
       this.popover.style.bottom = '16px';
       this.popover.style.top = 'auto';
     } else {
-      // 桌面端紧凑浮动
       const popWidth = 280;
       const popHeight = 130;
       let top = rect.bottom + 10;
@@ -284,7 +279,9 @@ function initEvents() {
   document.getElementById('mobileNavBank').addEventListener('click', () => switchView('bank'));
   document.getElementById('mobileNavPaper').addEventListener('click', () => switchView('paper'));
 
-  document.getElementById('btnBackToBank').addEventListener('click', () => switchView('bank'));
+  // 返回按钮
+  const backBtn = document.getElementById('btnBackToBank');
+  if (backBtn) backBtn.addEventListener('click', () => switchView('bank'));
 
   // Drawer Open/Close
   document.getElementById('btnOpenBasket').addEventListener('click', openDrawerGlobal);
@@ -306,7 +303,7 @@ function initEvents() {
   document.getElementById('btnClearBasket').addEventListener('click', clearBasket);
   document.getElementById('btnClearBasketDrawer').addEventListener('click', clearBasket);
 
-  // Helper: set active chapter filter and sync the sidebar
+  // Chapter filter
   function applyChapterFilter(chapVal) {
     state.chapterFilter = chapVal;
     document.querySelectorAll('.chapter-tree-btn').forEach(b => {
@@ -314,7 +311,6 @@ function initEvents() {
     });
     renderQuestionList();
   }
-
   document.querySelectorAll('.filter-chapter-btn').forEach(btn => {
     btn.addEventListener('click', () => applyChapterFilter(btn.getAttribute('data-chapter')));
   });
@@ -322,7 +318,7 @@ function initEvents() {
     btn.addEventListener('click', () => applyChapterFilter(btn.getAttribute('data-chapter')));
   });
 
-  // Select All currently filtered questions
+  // Select All
   document.getElementById('btnSelectAll').addEventListener('click', () => {
     const currentPool = QUESTION_BANK.filter(q => {
       if (state.chapterFilter !== 'all') {
@@ -341,7 +337,7 @@ function initEvents() {
     showToast(`已将当前筛选的 ${currentPool.length} 道题目全部加入试题篮！`, 'success');
   });
 
-  // Filter: Type
+  // Filters: Type & Difficulty
   document.querySelectorAll('.filter-type-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.filter-type-btn').forEach(b => {
@@ -353,7 +349,6 @@ function initEvents() {
     });
   });
 
-  // Filter: Difficulty
   document.querySelectorAll('.filter-diff-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.filter-diff-btn').forEach(b => {
@@ -365,51 +360,46 @@ function initEvents() {
     });
   });
 
-  // Search input
+  // Search
   document.getElementById('searchInput').addEventListener('input', (e) => {
     state.searchKeyword = e.target.value.trim();
     renderQuestionList();
   });
 
-  // Paper view modes
-  const studentBtn = document.getElementById('viewModeStudent');
-  const teacherBtn = document.getElementById('viewModeTeacher');
-  studentBtn.addEventListener('click', () => {
-    state.paperViewMode = 'student';
-    studentBtn.className = 'px-3 py-1 rounded-md bg-white text-blue-700 font-semibold shadow-xs';
-    teacherBtn.className = 'px-3 py-1 rounded-md text-slate-600 hover:text-slate-900';
-    renderPaper();
-  });
-  teacherBtn.addEventListener('click', () => {
-    state.paperViewMode = 'teacher';
-    teacherBtn.className = 'px-3 py-1 rounded-md bg-white text-blue-700 font-semibold shadow-xs';
-    studentBtn.className = 'px-3 py-1 rounded-md text-slate-600 hover:text-slate-900';
-    renderPaper();
-  });
+  // 教师解析模式（精简复选框交互）
+  const teacherToggle = document.getElementById('toggleTeacherMode');
+  if (teacherToggle) {
+    teacherToggle.addEventListener('change', (e) => {
+      state.paperViewMode = e.target.checked ? 'teacher' : 'student';
+      renderPaper();
+    });
+  }
 
-  // Layout columns
+  // 单双栏排版切换
   const layoutSingle = document.getElementById('btnLayoutSingle');
   const layoutDouble = document.getElementById('btnLayoutDouble');
-  layoutSingle.addEventListener('click', () => {
-    state.isDoubleColumn = false;
-    layoutSingle.className = 'px-3 py-1 rounded-md bg-white text-blue-700 font-semibold shadow-xs';
-    layoutDouble.className = 'px-3 py-1 rounded-md text-slate-600 hover:text-slate-900';
-    renderPaper();
-  });
-  layoutDouble.addEventListener('click', () => {
-    state.isDoubleColumn = true;
-    layoutDouble.className = 'px-3 py-1 rounded-md bg-white text-blue-700 font-semibold shadow-xs';
-    layoutSingle.className = 'px-3 py-1 rounded-md text-slate-600 hover:text-slate-900';
-    renderPaper();
-  });
+  if (layoutSingle && layoutDouble) {
+    layoutSingle.addEventListener('click', () => {
+      state.isDoubleColumn = false;
+      layoutSingle.className = 'px-2.5 py-1 rounded-md bg-white text-blue-700 font-semibold shadow-xs';
+      layoutDouble.className = 'px-2.5 py-1 rounded-md text-slate-600 hover:text-slate-900';
+      renderPaper();
+    });
+    layoutDouble.addEventListener('click', () => {
+      state.isDoubleColumn = true;
+      layoutDouble.className = 'px-2.5 py-1 rounded-md bg-white text-blue-700 font-semibold shadow-xs';
+      layoutSingle.className = 'px-2.5 py-1 rounded-md text-slate-600 hover:text-slate-900';
+      renderPaper();
+    });
+  }
 
-  // Print and Word export
+  // 打印与 Word 导出
   document.getElementById('btnPrintPaper').addEventListener('click', () => {
     window.print();
   });
   document.getElementById('btnExportWord').addEventListener('click', exportWordDoc);
 
-  // Guide Button Trigger
+  // 引导按钮
   const guideBtn = document.getElementById('btnOpenGuide') || document.getElementById('openGuideBtn');
   if (guideBtn) {
     guideBtn.addEventListener('click', () => {

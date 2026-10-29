@@ -1,5 +1,17 @@
 // ==========================================
-// 1. 聚光灯“手把手”交互式漫游引擎 (Spotlight Tour)
+// 1. 自动清除旧弹窗（彻底根治两个弹窗共存问题）
+// ==========================================
+function purgeOldModals() {
+  const oldModalIds = ['quickGuideModal', 'onboardingModal', 'onboardingCard', 'guideModalCard'];
+  oldModalIds.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.remove();
+  });
+}
+purgeOldModals();
+
+// ==========================================
+// 2. 响应式“手把手”聚光灯漫游引擎 (全屏幕适配)
 // ==========================================
 class HandInHandTour {
   constructor() {
@@ -8,7 +20,7 @@ class HandInHandTour {
       {
         target: '#typeFilters',
         title: '👉 第一步：按需筛选题目',
-        desc: '在此处点击题型（单选、填空、解答），或者在左侧目录选择知识点，页面会实时筛选题目。',
+        desc: '在此处点击题型（单选、填空、解答），或在左侧目录选择知识点，页面会实时筛选题目。',
         tip: '💡 也可以在搜索框输入考点或公式关键词搜索',
         actionBefore: () => {
           switchView('bank');
@@ -62,13 +74,13 @@ class HandInHandTour {
   }
 
   createDom() {
-    // 聚光灯遮罩框（利用巨大 box-shadow 实现平滑移动的挖孔高亮效果）
+    // 聚光灯遮罩框
     this.spotlight = document.createElement('div');
     this.spotlight.id = 'tourSpotlight';
     this.spotlight.style.cssText = `
       position: fixed;
       z-index: 9998;
-      border-radius: 10px;
+      border-radius: 8px;
       box-shadow: 0 0 0 9999px rgba(15, 23, 42, 0.72);
       border: 2px solid #3b82f6;
       pointer-events: none;
@@ -76,21 +88,20 @@ class HandInHandTour {
       display: none;
     `;
 
-    // 提示气泡框
+    // 响应式提示气泡框
     this.popover = document.createElement('div');
     this.popover.id = 'tourPopover';
     this.popover.style.cssText = `
       position: fixed;
       z-index: 9999;
-      width: 320px;
-      max-width: 90vw;
       background: #ffffff;
-      border-radius: 14px;
+      border-radius: 16px;
       box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.25), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-      padding: 18px 20px;
-      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      padding: 16px 18px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       display: none;
       font-family: system-ui, -apple-system, sans-serif;
+      box-sizing: border-box;
     `;
 
     document.body.appendChild(this.spotlight);
@@ -114,6 +125,7 @@ class HandInHandTour {
   }
 
   start() {
+    purgeOldModals();
     this.currentStep = 0;
     this.showStep();
   }
@@ -141,12 +153,13 @@ class HandInHandTour {
   }
 
   showStep() {
+    purgeOldModals();
     const step = this.steps[this.currentStep];
     if (step.actionBefore) {
       step.actionBefore();
     }
 
-    // 稍微延迟 80ms 等待抽屉滑动或视图切换完成
+    // 稍微延迟 100ms 等待抽屉滑动或标签页切换渲染完成
     setTimeout(() => {
       const el = document.querySelector(step.target);
       if (!el) {
@@ -154,28 +167,29 @@ class HandInHandTour {
         return;
       }
 
+      // 保证目标元素滚入视野上三分之一区域，防止在移动端被底栏遮挡
       el.scrollIntoView({ behavior: 'smooth', block: 'center' });
       this.positionToTarget(el);
 
       const isLast = this.currentStep === this.steps.length - 1;
       this.popover.innerHTML = `
-        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+        <div style="display: flex; items-center: center; justify-content: space-between; margin-bottom: 6px;">
           <span style="font-size: 11px; font-weight: 700; color: #2563eb; background: #eff6ff; padding: 2px 8px; border-radius: 999px;">
             教程 ${this.currentStep + 1} / ${this.steps.length}
           </span>
-          <button id="tourBtnClose" style="background: transparent; border: none; font-size: 16px; color: #94a3b8; cursor: pointer; padding: 2px 4px;">✕</button>
+          <button id="tourBtnClose" style="background: transparent; border: none; font-size: 16px; color: #94a3b8; cursor: pointer; padding: 2px 4px; line-height: 1;">✕</button>
         </div>
-        <h4 style="font-size: 15px; font-weight: 700; color: #0f172a; margin: 0 0 6px 0;">${step.title}</h4>
-        <p style="font-size: 13px; color: #475569; line-height: 1.55; margin: 0 0 10px 0;">${step.desc}</p>
-        <div style="font-size: 12px; color: #1e40af; background: #f8fafc; border: 1px solid #e2e8f0; padding: 6px 10px; border-radius: 8px; margin-bottom: 14px;">
+        <h4 style="font-size: 14px; font-weight: 700; color: #0f172a; margin: 0 0 6px 0;">${step.title}</h4>
+        <p style="font-size: 12px; color: #475569; line-height: 1.5; margin: 0 0 8px 0;">${step.desc}</p>
+        <div style="font-size: 11px; color: #1e40af; background: #f8fafc; border: 1px solid #e2e8f0; padding: 5px 8px; border-radius: 8px; margin-bottom: 12px;">
           ${step.tip}
         </div>
         <div style="display: flex; align-items: center; justify-content: space-between;">
-          <button id="tourBtnSkip" style="font-size: 12px; color: #64748b; background: transparent; border: none; cursor: pointer;">跳过教程</button>
+          <button id="tourBtnSkip" style="font-size: 11px; color: #64748b; background: transparent; border: none; cursor: pointer; padding: 4px;">跳过</button>
           <div style="display: flex; gap: 6px;">
-            ${this.currentStep > 0 ? '<button id="tourBtnPrev" style="padding: 5px 12px; font-size: 12px; color: #475569; background: #f1f5f9; border-radius: 6px; border: none; cursor: pointer;">上一步</button>' : ''}
-            <button id="tourBtnNext" style="padding: 5px 14px; font-size: 12px; font-weight: 600; color: #ffffff; background: ${isLast ? '#059669' : '#2563eb'}; border-radius: 6px; border: none; cursor: pointer;">
-              ${isLast ? '完成并开始体验' : '下一步 👉'}
+            ${this.currentStep > 0 ? '<button id="tourBtnPrev" style="padding: 5px 10px; font-size: 11px; color: #475569; background: #f1f5f9; border-radius: 6px; border: none; cursor: pointer;">上一步</button>' : ''}
+            <button id="tourBtnNext" style="padding: 5px 12px; font-size: 11px; font-weight: 600; color: #ffffff; background: ${isLast ? '#059669' : '#2563eb'}; border-radius: 6px; border: none; cursor: pointer;">
+              ${isLast ? '完成教程' : '下一步 👉'}
             </button>
           </div>
         </div>
@@ -197,36 +211,53 @@ class HandInHandTour {
     if (!el) return;
 
     const rect = el.getBoundingClientRect();
-    const pad = 6;
+    const pad = window.innerWidth < 640 ? 4 : 6;
 
-    // 定位聚光灯框
+    // 定位聚光灯高亮框
     this.spotlight.style.top = `${Math.max(0, rect.top - pad)}px`;
     this.spotlight.style.left = `${Math.max(0, rect.left - pad)}px`;
-    this.spotlight.style.width = `${rect.width + pad * 2}px`;
+    this.spotlight.style.width = `${Math.min(window.innerWidth, rect.width + pad * 2)}px`;
     this.spotlight.style.height = `${rect.height + pad * 2}px`;
 
-    // 定位气泡浮窗（优先放在元素下方，若底部空间不够则放在上方）
-    const popWidth = 320;
-    const popHeight = 220;
-    let top = rect.bottom + 12;
-    let left = rect.left + rect.width / 2 - popWidth / 2;
+    // 智能屏幕宽度适配
+    const isMobile = window.innerWidth < 640;
 
-    if (top + popHeight > window.innerHeight) {
-      top = Math.max(10, rect.top - popHeight - 12);
-    }
-    if (left + popWidth > window.innerWidth - 12) {
-      left = window.innerWidth - popWidth - 12;
-    }
-    if (left < 12) {
-      left = 12;
-    }
+    if (isMobile) {
+      // 移动端：吸附屏幕底部，留出上半部看清楚高亮元素
+      this.popover.style.width = 'auto';
+      this.popover.style.left = '14px';
+      this.popover.style.right = '14px';
+      this.popover.style.bottom = '16px';
+      this.popover.style.top = 'auto';
+    } else {
+      // 桌面端：智能判断放在下方还是上方
+      const popWidth = 330;
+      const popHeight = 210;
+      let top = rect.bottom + 12;
+      let left = rect.left + (rect.width / 2) - (popWidth / 2);
 
-    this.popover.style.top = `${top}px`;
-    this.popover.style.left = `${left}px`;
+      // 若下方空间不足，则翻转到上方
+      if (top + popHeight > window.innerHeight - 10) {
+        top = Math.max(10, rect.top - popHeight - 12);
+      }
+      // 左右防溢出
+      if (left + popWidth > window.innerWidth - 16) {
+        left = window.innerWidth - popWidth - 16;
+      }
+      if (left < 16) {
+        left = 16;
+      }
+
+      this.popover.style.width = `${popWidth}px`;
+      this.popover.style.left = `${left}px`;
+      this.popover.style.top = `${top}px`;
+      this.popover.style.bottom = 'auto';
+      this.popover.style.right = 'auto';
+    }
   }
 }
 
-// 辅助全局函数（供引导漫游调用）
+// 供漫游模块调用的全局抽屉控制
 let tourInstance = null;
 function openDrawerGlobal() {
   const drawer = document.getElementById('basketDrawer');
@@ -247,7 +278,7 @@ function closeDrawerGlobal() {
 }
 
 // ==========================================
-// 2. 核心交互事件绑定
+// 3. 核心交互事件绑定
 // ==========================================
 function initEvents() {
   document.addEventListener('pointerup', () => {
@@ -405,7 +436,7 @@ function initEvents() {
 }
 
 // ==========================================
-// 3. 应用自启动与手把手新手引导触发
+// 4. 应用自启动与手把手新手引导触发
 // ==========================================
 let appBootstrapped = false;
 function bootstrapApp() {
@@ -413,6 +444,7 @@ function bootstrapApp() {
   if (!document.getElementById('questionList')) return;
   appBootstrapped = true;
 
+  purgeOldModals();
   buildChapterNavigation();
   initEvents();
   updateStats();
@@ -424,11 +456,11 @@ function bootstrapApp() {
   // 初始化手把手漫游实例
   tourInstance = new HandInHandTour();
 
-  // 首次访问时，延迟 500ms 自动开启聚光灯手把手教学
+  // 首次访问时，延迟 450ms 自动开启聚光灯手把手教学
   if (!localStorage.getItem('math_exam_tour_done')) {
     setTimeout(() => {
       tourInstance.start();
-    }, 500);
+    }, 450);
   }
 }
 

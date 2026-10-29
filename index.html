@@ -45,6 +45,12 @@
 
         <!-- Right Quick Actions -->
         <div class="flex items-center space-x-2 sm:space-x-3">
+          <!-- Guide Trigger Button -->
+          <button id="btnOpenGuide" type="button" class="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-sm font-medium border border-slate-200 text-slate-700 bg-white hover:bg-slate-50 hover:text-blue-600 transition shadow-xs">
+            <span>💡</span>
+            <span class="hidden sm:inline">使用指引</span>
+          </button>
+
           <!-- Basket Trigger Button -->
           <button id="btnOpenBasket" class="relative inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-lg text-sm font-medium bg-blue-600 text-white hover:bg-blue-700 transition shadow-sm shadow-blue-500/25">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -69,7 +75,7 @@
   <!-- VIEW 1: 题库选题中心 (Question Bank) -->
   <main id="viewQuestionBank" class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 no-print">
     <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
-      
+
       <!-- Left Sidebar: Chapter & Knowledge Point Tree -->
       <aside class="lg:col-span-1 space-y-4 lg:sticky lg:top-20 lg:self-start lg:max-h-[calc(100vh-5.5rem)] lg:overflow-y-auto">
         <!-- Unified grade / semester navigation -->
@@ -82,19 +88,20 @@
               <span>题库目录</span>
             </h3>
           </div>
+
           <div class="mt-3 space-y-3">
             <button id="treeChapterAll" type="button" class="chapter-tree-btn is-active w-full flex items-center justify-between gap-3 px-3 py-2.5 rounded-lg border border-slate-100 text-sm font-semibold" data-chapter="all">
-              <span>已更题数</span>
+              <span>已选题库</span>
               <span id="allQuestionCount" class="text-xs font-bold">509 题</span>
             </button>
             <div id="chapterNavigationTree" class="space-y-3" aria-label="按年级和册次浏览题目"></div>
           </div>
         </div>
-</aside>
+      </aside>
 
       <!-- Center & Right: Question Filtering and Question Cards List -->
       <section class="lg:col-span-3 space-y-4">
-        
+
         <!-- Filter Toolbar -->
         <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 space-y-3">
 
@@ -139,6 +146,7 @@
               </button>
             </div>
           </div>
+
         </div>
 
         <!-- Question Cards Container -->
@@ -151,61 +159,57 @@
           <svg class="w-12 h-12 text-slate-300 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
           </svg>
-          <p class="text-sm text-slate-500">未检索到符合条件的题目，请尝试调整筛选标签或搜索词</p>
+          <p class="text-sm text-slate-500">未检索到符合条件的题目，请尝试调整筛选标签或检索词</p>
         </div>
       </section>
 
     </div>
   </main>
 
-  <!-- VIEW 2: 试卷排版与预览中心 (Exam Paper Preview & Print) -->
+ <!-- VIEW 2: 试卷排版与预览中心 (Exam Paper Preview & Print) -->
   <main id="viewPaperPreview" class="hidden flex-1 max-w-5xl w-full mx-auto px-4 py-6">
-    <!-- Top Action Toolbar (No-Print) -->
-    <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 mb-6 no-print space-y-4">
-      <div class="flex flex-wrap items-center justify-between gap-3">
-        <!-- View Mode Switch -->
-        <div class="flex items-center space-x-2 text-xs">
-          <span class="text-slate-500 font-medium">试卷视图：</span>
-          <div class="inline-flex rounded-lg border border-slate-200 p-0.5 bg-slate-50">
-            <button id="viewModeStudent" class="px-3 py-1 rounded-md bg-white text-blue-700 font-semibold shadow-xs">学生作答卷</button>
-            <button id="viewModeTeacher" class="px-3 py-1 rounded-md text-slate-600 hover:text-slate-900">教师答案解析卷</button>
-          </div>
+    <!-- Top Action Toolbar (精简单行版) -->
+    <div class="bg-white rounded-xl border border-slate-200 shadow-xs px-4 py-3 mb-6 no-print flex flex-wrap items-center justify-between gap-3">
+      <!-- 左侧：返回与版式配置 -->
+      <div class="flex items-center flex-wrap gap-3">
+        <!-- 返回按钮 -->
+        <button id="btnBackToBank" type="button" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50 text-xs font-medium transition">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+          <span>返回选题</span>
+        </button>
+
+        <div class="h-4 w-px bg-slate-200 hidden sm:block"></div>
+
+        <!-- 单/双栏排版模式 -->
+        <div class="inline-flex rounded-lg border border-slate-200 p-0.5 bg-slate-100/80 text-xs">
+          <button id="btnLayoutSingle" class="px-2.5 py-1 rounded-md bg-white text-blue-700 font-semibold shadow-xs">单栏</button>
+          <button id="btnLayoutDouble" class="px-2.5 py-1 rounded-md text-slate-600 hover:text-slate-900">双栏</button>
         </div>
 
-        <!-- Layout Mode Switch -->
-        <div class="flex items-center space-x-2 text-xs">
-          <span class="text-slate-500 font-medium">排版版式：</span>
-          <div class="inline-flex rounded-lg border border-slate-200 p-0.5 bg-slate-50">
-            <button id="btnLayoutSingle" class="px-3 py-1 rounded-md bg-white text-blue-700 font-semibold shadow-xs">A4 标准单栏</button>
-            <button id="btnLayoutDouble" class="px-3 py-1 rounded-md text-slate-600 hover:text-slate-900">A4/A3 双栏排版</button>
-          </div>
-        </div>
-
-        <!-- Print & Export Buttons -->
-        <div class="flex items-center space-x-2">
-          <button id="btnBackToBank" class="px-3 py-1.5 rounded-lg border border-slate-200 text-slate-700 hover:bg-slate-50 text-xs font-medium">
-            &larr; 返回题库继续挑题
-          </button>
-          <button id="btnExportWord" class="inline-flex items-center space-x-1 px-3 py-1.5 rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 text-xs font-semibold shadow-sm transition">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-            </svg>
-            <span>导出 Word (.doc)</span>
-          </button>
-          <button id="btnPrintPaper" class="inline-flex items-center space-x-1 px-4 py-1.5 rounded-lg bg-blue-600 text-white hover:bg-blue-700 text-xs font-semibold shadow-sm transition">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path>
-            </svg>
-            <span>打印 / 另存为 PDF</span>
-          </button>
-        </div>
+        <!-- 教师解析版勾选开关（默认不勾选，即默认学生卷） -->
+        <label class="inline-flex items-center gap-1.5 text-xs text-slate-600 hover:text-slate-900 cursor-pointer select-none ml-1">
+          <input type="checkbox" id="toggleTeacherMode" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+          <span>包含答案与解析 (教师版)</span>
+        </label>
       </div>
 
-    </div>
+      <!-- 右侧：导出与打印核心操作 -->
+      <div class="flex items-center gap-2">
+        <button id="btnExportWord" type="button" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-white text-xs font-semibold shadow-xs transition hover:opacity-90">
+          <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          <span>导出 Word</span>
+        </button>
 
+        <button id="btnPrintPaper" type="button" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-blue-600 text-white hover:bg-blue-700 text-xs font-semibold shadow-xs transition">
+          <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+          <span>打印 / 保存 PDF</span>
+        </button>
+      </div>
+    </div>
+    
     <!-- Paper Sheet Container (Realistic A4) -->
     <div id="printArea" class="paper-sheet mx-auto p-8 sm:p-12 border border-slate-200 rounded-lg text-slate-900 font-serif-sc">
-      
+
       <!-- Paper header removed by request -->
 
       <!-- Paper Body Columns Container -->
@@ -215,7 +219,7 @@
 
       <!-- Footer Info -->
       <div class="mt-12 pt-4 border-t border-slate-200 text-center text-xs text-slate-400 font-sans">
-        —— 第 1 页（共 1 页） · 学科网组卷系统自动编排 ——
+        第 1 页 (共 1 页) · 学科网组卷系统自动编排
       </div>
     </div>
   </main>
@@ -245,7 +249,7 @@
 
     <!-- Drawer Footer -->
     <div class="p-4 border-t border-slate-200 bg-slate-50 space-y-3">
-      <div class="text-xs text-slate-600">当前选入题目：<b id="drawerSummaryCount" class="text-blue-600">0</b> 题</div>
+      <div class="text-xs text-slate-600">当前选题题目：<b id="drawerSummaryCount" class="text-blue-600">0</b> 题</div>
       <div class="grid grid-cols-2 gap-2">
         <button id="btnClearBasketDrawer" class="py-2 px-3 border border-red-200 text-red-600 bg-red-50 hover:bg-red-100 rounded-lg text-xs font-semibold transition">
           清空试题篮
@@ -259,6 +263,50 @@
 
   <!-- Toast Container -->
   <div id="toastContainer" class="fixed bottom-5 right-5 z-50 space-y-2 pointer-events-none no-print"></div>
+
+  <!-- ================== 新手快速指引弹窗（全流程 5 步引导） ================== -->
+  <div id="quickGuideModal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-xs transition-opacity duration-300 no-print" style="display: none;">
+    <div class="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl overflow-hidden mx-4 transform transition-all duration-300" id="guideModalCard">
+      <!-- 弹窗顶栏 -->
+      <div class="bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-4 flex items-center justify-between text-white">
+        <div class="flex items-center space-x-2">
+          <span class="text-xl">📐</span>
+          <h3 class="font-bold text-base sm:text-lg">组卷与导出快速指引</h3>
+        </div>
+        <button id="closeGuideX" type="button" class="text-white/80 hover:text-white p-1 rounded-lg hover:bg-white/10 transition text-xl leading-none">✕</button>
+      </div>
+
+      <!-- 步骤圆点指示器 -->
+      <div class="flex items-center justify-center space-x-1.5 pt-6 pb-2" id="guideDots">
+        <span class="guide-dot h-1.5 rounded-full transition-all duration-300 w-6 bg-blue-600"></span>
+        <span class="guide-dot h-1.5 rounded-full transition-all duration-300 w-2 bg-slate-200"></span>
+        <span class="guide-dot h-1.5 rounded-full transition-all duration-300 w-2 bg-slate-200"></span>
+        <span class="guide-dot h-1.5 rounded-full transition-all duration-300 w-2 bg-slate-200"></span>
+        <span class="guide-dot h-1.5 rounded-full transition-all duration-300 w-2 bg-slate-200"></span>
+      </div>
+
+      <!-- 卡片内容区域 -->
+      <div class="p-6 text-center min-h-[220px] flex flex-col items-center justify-center" id="guideContentBody">
+        <!-- JS 动态注入步骤 -->
+      </div>
+
+      <!-- 弹窗底栏 -->
+      <div class="px-6 py-3.5 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
+        <label class="flex items-center text-xs text-slate-500 cursor-pointer select-none">
+          <input type="checkbox" id="guideNoRepeat" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500 mr-1.5">
+          下次不再自动弹出
+        </label>
+        <div class="flex space-x-2">
+          <button id="guidePrevBtn" type="button" class="px-3.5 py-1.5 text-xs font-semibold text-slate-600 bg-slate-200 hover:bg-slate-300 rounded-lg transition" style="display: none;">
+            上一步
+          </button>
+          <button id="guideNextBtn" type="button" class="px-4 py-1.5 text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-sm transition">
+            下一步
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- INLINE DATA & APPLICATION LOGIC -->
   <!-- 1. 题库数据与初始化映射 -->
@@ -277,5 +325,131 @@
 
   <!-- 5. 事件绑定与主程序启动 -->
   <script src="js/main.js"></script>
+
+  <!-- 6. 新手引导卡片专属交互脚本 -->
+  <script>
+    (function() {
+      const guideSteps = [
+        {
+          title: "第一步：挑选试题",
+          icon: "🔍",
+          desc: "在左侧【题库目录】切换章节，或在顶部筛选单选题、填空题、解答题及难度，也可以在搜索框输入考点关键词检索。",
+          tip: "💡 支持按难度标签与题干公式快速定位目标题目"
+        },
+        {
+          title: "第二步：加入试题篮",
+          icon: "➕",
+          desc: "每道试题均已通过 KaTeX 渲染出清晰的数学公式。确认题目符合要求后，点击题卡下方的【加入试卷】或顶部【本页全选入篮】。",
+          tip: "💡 试题入篮后，右上角试题篮红色角标会实时更新题数"
+        },
+        {
+          title: "第三步：检查试题篮",
+          icon: "🧺",
+          desc: "点击右上角【试题篮】按钮展开抽屉，在此可核对所选题目的数量，确认无误后点击【生成排版试卷 →】。",
+          tip: "💡 若需重新挑选，也可以在抽屉中随时清空或移除单题"
+        },
+        {
+          title: "第四步：试卷排版与预览",
+          icon: "📄",
+          desc: "进入预览视图后，支持自由切换【学生作答卷 / 教师答案解析卷】，并可在【A4 标准单栏】与【A4/A3 双栏排版】之间一键切换。",
+          tip: "💡 所见即所得，排版效果与最终打印效果完全一致"
+        },
+        {
+          title: "第五步：一键导出与打印",
+          icon: "🖨️",
+          desc: "预览满意后，点击【导出 Word (.doc)】可直接下载可编辑文档；点击【打印 / 另存为 PDF】即可调用打印机或保存为高清试卷 PDF！",
+          tip: "🎉 全流程已掌握！点击下方按钮开始组装你的第一份试卷吧！"
+        }
+      ];
+
+      let currentStep = 0;
+      const modal = document.getElementById("quickGuideModal");
+      const contentBody = document.getElementById("guideContentBody");
+      const dots = document.querySelectorAll(".guide-dot");
+      const prevBtn = document.getElementById("guidePrevBtn");
+      const nextBtn = document.getElementById("guideNextBtn");
+      const closeX = document.getElementById("closeGuideX");
+      const openBtn = document.getElementById("btnOpenGuide");
+      const noRepeatCheck = document.getElementById("guideNoRepeat");
+
+      function renderStep() {
+        const s = guideSteps[currentStep];
+        contentBody.innerHTML = `
+          <div class="w-16 h-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-3xl mb-3 shadow-inner">
+            ${s.icon}
+          </div>
+          <h4 class="text-base sm:text-lg font-bold text-slate-900 mb-2">${s.title}</h4>
+          <p class="text-xs sm:text-sm text-slate-600 max-w-sm leading-relaxed mb-3">${s.desc}</p>
+          <div class="text-xs text-blue-700 bg-blue-50/80 border border-blue-100 px-3 py-1.5 rounded-full font-medium">
+            ${s.tip}
+          </div>
+        `;
+
+        dots.forEach((dot, index) => {
+          if (index === currentStep) {
+            dot.className = "guide-dot h-1.5 rounded-full transition-all duration-300 w-6 bg-blue-600";
+          } else {
+            dot.className = "guide-dot h-1.5 rounded-full transition-all duration-300 w-2 bg-slate-200";
+          }
+        });
+
+        prevBtn.style.display = currentStep > 0 ? "inline-block" : "none";
+        if (currentStep === guideSteps.length - 1) {
+          nextBtn.textContent = "开始使用";
+          nextBtn.className = "px-4 py-1.5 text-xs font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg shadow-sm transition";
+        } else {
+          nextBtn.textContent = "下一步";
+          nextBtn.className = "px-4 py-1.5 text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-sm transition";
+        }
+      }
+
+      function openModal() {
+        currentStep = 0;
+        renderStep();
+        modal.style.display = "flex";
+      }
+
+      function closeModal() {
+        modal.style.display = "none";
+        if (noRepeatCheck && noRepeatCheck.checked) {
+          localStorage.setItem("math_exam_guide_dismissed", "true");
+        }
+      }
+
+      nextBtn.addEventListener("click", function() {
+        if (currentStep < guideSteps.length - 1) {
+          currentStep++;
+          renderStep();
+        } else {
+          closeModal();
+        }
+      });
+
+      prevBtn.addEventListener("click", function() {
+        if (currentStep > 0) {
+          currentStep--;
+          renderStep();
+        }
+      });
+
+      closeX.addEventListener("click", closeModal);
+      if (openBtn) openBtn.addEventListener("click", openModal);
+
+      modal.addEventListener("click", function(e) {
+        if (e.target === modal) closeModal();
+      });
+
+      document.addEventListener("keydown", function(e) {
+        if (e.key === "Escape" && modal.style.display === "flex") {
+          closeModal();
+        }
+      });
+
+      // 首次访问自动弹出
+      if (!localStorage.getItem("math_exam_guide_dismissed")) {
+        setTimeout(openModal, 450);
+      }
+    })();
+  </script>
 </body>
 </html>

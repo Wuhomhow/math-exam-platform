@@ -785,7 +785,7 @@
           textWithMathAndImgToRuns(`三、解答题（本大题共 ${calcs.length} 小题。解答应写出文字说明、演算步骤或推证过程）`, { sz: 22, bold: true, font: '黑体' }),
           { before: 200, after: 80 }
         );
-        bodyXml += renderQuestionListXml(calcs, false, true);
+bodyXml += renderQuestionListXml(calcs, false, true, choices.length + blanks.length + 1);
       }
 
       const colsXml = isDouble ? `<w:cols w:num="2" w:sep="1" w:space="425"/>` : '';

@@ -5,11 +5,11 @@
 
     function inferAcademicLocation(chapter) {
       const value = String(chapter || '').trim();
-      const legacyGrade7 = /^[12]\./.test(value);
+      const legacyGrade7 = /^[123]\./.test(value);
       if (legacyGrade7) {
         return { grade: '初一', semester: '上册', label: value };
       }
-      if (/^(13|14|15)\./.test(value)) {
+      if (/^(13|14|15|16)\./.test(value)) {
         return { grade: '初二', semester: '上册', label: value };
       }
 

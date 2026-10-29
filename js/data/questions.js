@@ -3277,7 +3277,7 @@
         "sectionNumber": 3,
         "type": "blank",
         "typeName": "填空题",
-        "difficulty": "较难",
+        "difficulty": "中等",
         "knowledge": "三角形内角和定理的应用",
         "chapter": "13.1三角形单元测试卷",
         "stem": "将一个三角板$ABC$和圆规按如图方式摆放在同一水平桌面上，圆规的两脚恰好接触三角板的一组邻直角边。已知$\\angle 1=16^\\circ$，$\\angle 2=31^\\circ$，则$\\angle 3=$______度。<br><img src=\"assets/images/ch13_1_q15_stem.png\" data-cx=\"1900000\" data-cy=\"1824000\" style=\"width:200px;height:auto;margin:8px 0\" class=\"block\">",

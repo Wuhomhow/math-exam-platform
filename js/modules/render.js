@@ -138,11 +138,6 @@
           }
 
           pagEl.innerHTML = `
-            <div class="flex items-center space-x-2 text-slate-500">
-              <span>显示第 <b class="text-slate-800">${startIndex + 1}-${endIndex}</b> 题</span>
-              <span>·</span>
-              <span>共 <b class="text-blue-600 font-semibold">${totalCount}</b> 题</span>
-            </div>
             <div class="flex items-center space-x-1.5">
               <button id="btnPrevPage" class="px-2.5 py-1 rounded border border-slate-200 text-slate-700 hover:bg-slate-50 disabled:opacity-30 disabled:pointer-events-none font-medium flex items-center space-x-1" ${state.currentPage <= 1 ? 'disabled' : ''}>
                 <span>&larr;</span><span>上一页</span>

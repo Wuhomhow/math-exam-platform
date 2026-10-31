@@ -123,6 +123,7 @@
           searchKeyword: state.searchKeyword || '',
           currentPage: state.currentPage || 1,
           paperViewMode: state.paperViewMode,
+          paperOrderMode: state.paperOrderMode || 'added',
           isDoubleColumn: Boolean(state.isDoubleColumn),
           scrollY: Math.round(window.scrollY || 0)
         };
@@ -146,6 +147,7 @@
         if (typeof p.searchKeyword === 'string') state.searchKeyword = p.searchKeyword;
         if (Number.isInteger(p.currentPage) && p.currentPage >= 1) state.currentPage = p.currentPage;
         if (p.paperViewMode === 'student' || p.paperViewMode === 'teacher') state.paperViewMode = p.paperViewMode;
+        if (p.paperOrderMode === 'added' || p.paperOrderMode === 'type') state.paperOrderMode = p.paperOrderMode;
         if (typeof p.isDoubleColumn === 'boolean') state.isDoubleColumn = p.isDoubleColumn;
         if (Number.isFinite(p.scrollY)) state.savedScrollY = Math.max(0, p.scrollY);
       } catch (error) {
@@ -210,6 +212,7 @@
       diffFilter: 'all',
       searchKeyword: '',
       paperViewMode: 'student', // 'student' | 'teacher'
+      paperOrderMode: 'added', // 'added' | 'type'
       isDoubleColumn: false,
       currentPage: 1,
       pageSize: 15,
@@ -235,17 +238,24 @@
 
     function moveSelectedQuestion(id, offset) {
       const orderedIds = [...state.selectedIds];
-      const questionById = new Map(QUESTION_BANK.map(question => [question.id, question]));
       const index = orderedIds.indexOf(id);
-      const movingType = questionById.get(id)?.type;
-      if (index < 0 || !movingType) return;
-      const sameTypePositions = orderedIds
-        .map((questionId, position) => questionById.get(questionId)?.type === movingType ? position : -1)
-        .filter(position => position >= 0);
-      const typePosition = sameTypePositions.indexOf(index);
-      const targetTypePosition = typePosition + offset;
-      if (targetTypePosition < 0 || targetTypePosition >= sameTypePositions.length) return;
-      const targetIndex = sameTypePositions[targetTypePosition];
+      if (index < 0) return;
+      let targetIndex = -1;
+      if (state.paperOrderMode === 'added') {
+        targetIndex = index + offset;
+        if (targetIndex < 0 || targetIndex >= orderedIds.length) return;
+      } else {
+        const questionById = new Map(QUESTION_BANK.map(question => [question.id, question]));
+        const movingType = questionById.get(id)?.type;
+        if (!movingType) return;
+        const sameTypePositions = orderedIds
+          .map((questionId, position) => questionById.get(questionId)?.type === movingType ? position : -1)
+          .filter(position => position >= 0);
+        const typePosition = sameTypePositions.indexOf(index);
+        const targetTypePosition = typePosition + offset;
+        if (targetTypePosition < 0 || targetTypePosition >= sameTypePositions.length) return;
+        targetIndex = sameTypePositions[targetTypePosition];
+      }
       [orderedIds[index], orderedIds[targetIndex]] = [orderedIds[targetIndex], orderedIds[index]];
       state.selectedIds = new Set(orderedIds);
       updateStats();

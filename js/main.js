@@ -57,8 +57,23 @@ function syncUiToState() {
   const layoutSingle = document.getElementById('btnLayoutSingle');
   const layoutDouble = document.getElementById('btnLayoutDouble');
   if (layoutSingle && layoutDouble) {
-    layoutSingle.className = state.isDoubleColumn ? 'px-3 py-1 rounded-md text-slate-600 hover:text-slate-900' : 'px-3 py-1 rounded-md bg-white text-blue-700 font-semibold shadow-xs';
-    layoutDouble.className = state.isDoubleColumn ? 'px-3 py-1 rounded-md bg-white text-blue-700 font-semibold shadow-xs' : 'px-3 py-1 rounded-md text-slate-600 hover:text-slate-900';
+    layoutSingle.className = state.isDoubleColumn ? 'px-2.5 py-1 rounded-md text-slate-600 hover:text-slate-900' : 'px-2.5 py-1 rounded-md bg-white text-blue-700 font-semibold shadow-xs';
+    layoutDouble.className = state.isDoubleColumn ? 'px-2.5 py-1 rounded-md bg-white text-blue-700 font-semibold shadow-xs' : 'px-2.5 py-1 rounded-md text-slate-600 hover:text-slate-900';
+  }
+
+  // 7. Paper order mode
+  const isAddedOrder = state.paperOrderMode !== 'type';
+  const orderAddedBtn = document.getElementById('btnOrderByAdded');
+  const orderTypeBtn = document.getElementById('btnOrderByType');
+  if (orderAddedBtn && orderTypeBtn) {
+    orderAddedBtn.className = isAddedOrder ? 'px-2.5 py-1 rounded-md bg-white text-blue-700 font-semibold shadow-xs' : 'px-2.5 py-1 rounded-md text-slate-600 hover:text-slate-900';
+    orderTypeBtn.className = !isAddedOrder ? 'px-2.5 py-1 rounded-md bg-white text-blue-700 font-semibold shadow-xs' : 'px-2.5 py-1 rounded-md text-slate-600 hover:text-slate-900';
+  }
+  const drawerOrderAddedBtn = document.getElementById('btnDrawerOrderByAdded');
+  const drawerOrderTypeBtn = document.getElementById('btnDrawerOrderByType');
+  if (drawerOrderAddedBtn && drawerOrderTypeBtn) {
+    drawerOrderAddedBtn.className = isAddedOrder ? 'px-2 py-0.5 rounded-md bg-white text-blue-700 font-semibold shadow-xs' : 'px-2 py-0.5 rounded-md text-slate-600 hover:text-slate-900';
+    drawerOrderTypeBtn.className = !isAddedOrder ? 'px-2 py-0.5 rounded-md bg-white text-blue-700 font-semibold shadow-xs' : 'px-2 py-0.5 rounded-md text-slate-600 hover:text-slate-900';
   }
 }
 
@@ -549,15 +564,31 @@ function initEvents() {
       state.isDoubleColumn = false;
       layoutSingle.className = 'px-2.5 py-1 rounded-md bg-white text-blue-700 font-semibold shadow-xs';
       layoutDouble.className = 'px-2.5 py-1 rounded-md text-slate-600 hover:text-slate-900';
+      saveUiPreferences();
       renderPaper();
     });
     layoutDouble.addEventListener('click', () => {
       state.isDoubleColumn = true;
       layoutDouble.className = 'px-2.5 py-1 rounded-md bg-white text-blue-700 font-semibold shadow-xs';
       layoutSingle.className = 'px-2.5 py-1 rounded-md text-slate-600 hover:text-slate-900';
+      saveUiPreferences();
       renderPaper();
     });
   }
+
+  // 题目排列顺序切换（按加入顺序 / 按题型分组）
+  function setPaperOrderMode(mode) {
+    state.paperOrderMode = mode === 'type' ? 'type' : 'added';
+    syncUiToState();
+    saveUiPreferences();
+    renderBasketDrawer();
+    renderPaper();
+    showToast(state.paperOrderMode === 'added' ? '已切换为：按加入顺序排列' : '已切换为：按题型分组排列', 'info');
+  }
+  document.getElementById('btnOrderByAdded')?.addEventListener('click', () => setPaperOrderMode('added'));
+  document.getElementById('btnOrderByType')?.addEventListener('click', () => setPaperOrderMode('type'));
+  document.getElementById('btnDrawerOrderByAdded')?.addEventListener('click', () => setPaperOrderMode('added'));
+  document.getElementById('btnDrawerOrderByType')?.addEventListener('click', () => setPaperOrderMode('type'));
 
   // 打印与 Word 导出
   document.getElementById('btnPrintPaper').addEventListener('click', () => {

@@ -712,6 +712,8 @@
         let questionIndex = startAt;
         for (const q of list) {
           const num = questionIndex++;
+          const qIsChoice = isChoice !== null ? isChoice : q.type === 'choice';
+          const qIsCalc = isCalc !== null ? isCalc : q.type === 'calc';
           out += renderRichContentToWordXml(
             q.stem,
             textWithMathAndImgToRuns(`${num}. `, { sz: 21, bold: true }),
@@ -724,11 +726,11 @@
             out += makeParagraph(registerImageTag(`<img src="${q.image}" data-cx="2232000" data-cy="600923">`), { indent: 360, before: 60, after: 60 });
           }
 
-          if (isChoice && q.options && q.options.length > 0) {
+          if (qIsChoice && q.options && q.options.length > 0) {
             out += makeOptionsTable(q.options);
           }
 
-          if (isCalc && !isTeacher) {
+          if (qIsCalc && !isTeacher) {
             const answerSpaceTwips = Math.round((state.answerSpaceHeights[q.id] || 112) * 15);
             out += `<w:p><w:pPr><w:spacing w:before="0" w:after="0" w:line="${answerSpaceTwips}" w:lineRule="exact"/></w:pPr><w:r><w:rPr><w:sz w:val="21"/></w:rPr><w:t xml:space="preserve"> </w:t></w:r></w:p>`;
           }
@@ -764,28 +766,32 @@
         return out;
       }
 
-      if (choices.length > 0) {
-        bodyXml += makeParagraph(
-          textWithMathAndImgToRuns(`一、选择题（本大题共 ${choices.length} 小题，在每小题列出的选项中，选出符合题目的一项）`, { sz: 22, bold: true, font: '黑体' }),
-          { before: 180, after: 80 }
-        );
-        bodyXml += renderQuestionListXml(choices, true, false);
-      }
+      if (state.paperOrderMode === 'added') {
+        bodyXml += renderQuestionListXml(selected, null, null, 1);
+      } else {
+        if (choices.length > 0) {
+          bodyXml += makeParagraph(
+            textWithMathAndImgToRuns(`一、选择题（本大题共 ${choices.length} 小题，在每小题列出的选项中，选出符合题目的一项）`, { sz: 22, bold: true, font: '黑体' }),
+            { before: 180, after: 80 }
+          );
+          bodyXml += renderQuestionListXml(choices, true, false);
+        }
 
-      if (blanks.length > 0) {
-        bodyXml += makeParagraph(
-          textWithMathAndImgToRuns(`二、填空题（本大题共 ${blanks.length} 小题）`, { sz: 22, bold: true, font: '黑体' }),
-          { before: 200, after: 80 }
-        );
-        bodyXml += renderQuestionListXml(blanks, false, false, choices.length + 1);
-      }
+        if (blanks.length > 0) {
+          bodyXml += makeParagraph(
+            textWithMathAndImgToRuns(`二、填空题（本大题共 ${blanks.length} 小题）`, { sz: 22, bold: true, font: '黑体' }),
+            { before: 200, after: 80 }
+          );
+          bodyXml += renderQuestionListXml(blanks, false, false, choices.length + 1);
+        }
 
-      if (calcs.length > 0) {
-        bodyXml += makeParagraph(
-          textWithMathAndImgToRuns(`三、解答题（本大题共 ${calcs.length} 小题。解答应写出文字说明、演算步骤或推证过程）`, { sz: 22, bold: true, font: '黑体' }),
-          { before: 200, after: 80 }
-        );
-bodyXml += renderQuestionListXml(calcs, false, true, choices.length + blanks.length + 1);
+        if (calcs.length > 0) {
+          bodyXml += makeParagraph(
+            textWithMathAndImgToRuns(`三、解答题（本大题共 ${calcs.length} 小题。解答应写出文字说明、演算步骤或推证过程）`, { sz: 22, bold: true, font: '黑体' }),
+            { before: 200, after: 80 }
+          );
+          bodyXml += renderQuestionListXml(calcs, false, true, choices.length + blanks.length + 1);
+        }
       }
 
       const colsXml = isDouble ? `<w:cols w:num="2" w:sep="1" w:space="425"/>` : '';

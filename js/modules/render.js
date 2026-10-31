@@ -422,23 +422,27 @@
       }
 
       const selectedQuestions = getSelectedQuestions();
+      const isAddedOrder = state.paperOrderMode === 'added';
       container.innerHTML = selectedQuestions.map((q, index) => {
         const sameTypeQuestions = selectedQuestions.filter(item => item.type === q.type);
         const typePosition = sameTypeQuestions.findIndex(item => item.id === q.id);
+        const isFirst = isAddedOrder ? index === 0 : typePosition === 0;
+        const isLast = isAddedOrder ? index === selectedQuestions.length - 1 : typePosition === sameTypeQuestions.length - 1;
         const chapShort = String(q.chapter || "").replace(/^[0-9.]+\s*/, "").slice(0, 6) || q.chapter;
         const chapBadgeCls = getGradeSemesterTagClass(q.chapter);
         return `
         <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
           <div class="flex items-center justify-between text-xs">
             <div class="flex items-center space-x-1.5">
+              <span class="px-1.5 py-0.5 rounded bg-blue-50 text-blue-700 text-[11px] font-bold">#${index + 1}</span>
               <span class="px-1.5 py-0.5 rounded text-[11px] font-medium ${chapBadgeCls}">${chapShort}</span>
               <span class="font-bold text-slate-800">第 ${q.number} 题 (${q.typeName})</span>
             </div>
             <div class="flex items-center gap-1">
-              <button class="drawer-move-btn text-slate-500 hover:text-teal-700 p-1 disabled:opacity-30" data-id="${q.id}" data-offset="-1" aria-label="上移题目" title="上移" ${typePosition === 0 ? 'disabled' : ''}>
+              <button class="drawer-move-btn text-slate-500 hover:text-teal-700 p-1 disabled:opacity-30" data-id="${q.id}" data-offset="-1" aria-label="上移题目" title="上移" ${isFirst ? 'disabled' : ''}>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19V5m-7 7 7-7 7 7"></path></svg>
               </button>
-              <button class="drawer-move-btn text-slate-500 hover:text-teal-700 p-1 disabled:opacity-30" data-id="${q.id}" data-offset="1" aria-label="下移题目" title="下移" ${typePosition === sameTypeQuestions.length - 1 ? 'disabled' : ''}>
+              <button class="drawer-move-btn text-slate-500 hover:text-teal-700 p-1 disabled:opacity-30" data-id="${q.id}" data-offset="1" aria-label="下移题目" title="下移" ${isLast ? 'disabled' : ''}>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7-7 7-7-7"></path></svg>
               </button>
               <button class="drawer-remove-btn text-slate-400 hover:text-red-600 p-1 ml-1" data-id="${q.id}" title="移出">
@@ -473,6 +477,7 @@
       const container = document.getElementById('paperContentContainer');
       const isTeacher = state.paperViewMode === 'teacher';
       const isDouble = state.isDoubleColumn;
+      const isAddedOrder = state.paperOrderMode === 'added';
 
       const selected = getSelectedQuestions();
       if (selected.length === 0) {
@@ -484,12 +489,67 @@
         return;
       }
 
+      let html = '';
+
+      if (isAddedOrder) {
+        html += `
+          <div class="question-part">
+            <div class="${isDouble ? 'grid grid-cols-2 gap-x-8 gap-y-4' : 'space-y-5'}">
+              ${selected.map((q, index) => {
+                const idx = index + 1;
+                const imgHtml = q.image ? `<div class="my-2"><img src="${q.image}" class="max-w-xs h-auto"></div>` : '';
+                const optsHtml = (q.type === 'choice' && q.options && q.options.length > 0) ? `
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 mt-3 text-sm">
+                    ${q.options.map(opt => `<div class="answer-option ${getOptionLayoutClass(opt)}">${formatMathHtml(opt)}</div>`).join('')}
+                  </div>
+                ` : '';
+
+                let bottomHtml = '';
+                if (q.type === 'calc') {
+                  bottomHtml = isTeacher ? `
+                    <div class="mt-3 p-3 bg-slate-50 border border-slate-200 rounded text-xs text-slate-700 font-sans space-y-1.5">
+                      <div><b>【参考答案与解析】</b></div>
+                      <div class="leading-relaxed pl-2 border-l-2 border-blue-400">${formatMathHtml(q.detail)}</div>
+                    </div>
+                  ` : `
+                    <!-- Student Answer Blank Box -->
+                    <div class="answer-space-resizable border border-dashed border-slate-200 rounded mt-3 p-2 pr-4 text-xs text-slate-300 flex items-end justify-start" data-question-id="${q.id}" title="拖动答题框底边调整高度" style="height:${state.answerSpaceHeights[q.id] || 112}px">
+                      请在此空白区域内书写解题过程与答案
+                    </div>
+                  `;
+                } else if (isTeacher) {
+                  bottomHtml = `
+                    <div class="mt-2 p-2.5 bg-slate-50 border border-slate-200 rounded text-xs text-slate-700 font-sans space-y-1">
+                      <div><b>【答案】</b><span class="text-blue-700 font-bold">${formatMathHtml(q.answer)}</span></div>
+                      <div><b>【解析】</b>${formatMathHtml(q.detail)}</div>
+                    </div>
+                  `;
+                }
+
+                return `
+                  <div class="question-item text-sm leading-relaxed mb-4">
+                    <div>
+                      <span class="font-bold mr-1">${idx}.</span><span>${formatMathHtml(q.stem)}</span>
+                      ${imgHtml}
+                      ${optsHtml}
+                      ${bottomHtml}
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+        `;
+
+        container.innerHTML = html;
+        renderMath();
+        return;
+      }
+
       // Group by Part
       const choices = selected.filter(q => q.type === 'choice');
       const blanks = selected.filter(q => q.type === 'blank');
       const calcs = selected.filter(q => q.type === 'calc');
-
-      let html = '';
 
       // Part 1: Choice
       if (choices.length > 0) {

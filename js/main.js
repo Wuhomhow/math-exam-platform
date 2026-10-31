@@ -447,10 +447,25 @@ function initEvents() {
   // Chapter filter
   function applyChapterFilter(chapVal) {
     state.chapterFilter = chapVal;
+    state.currentPage = 1;
+    saveUiPreferences();
+    updateMobileCatalogBadge();
     document.querySelectorAll('.chapter-tree-btn').forEach(b => {
       b.classList.toggle('is-active', b.getAttribute('data-chapter') === chapVal);
     });
     renderQuestionList();
+    const bankSection = document.getElementById('viewQuestionBank');
+    if (bankSection) {
+      window.scrollTo({ top: Math.max(0, bankSection.offsetTop - 60), behavior: 'smooth' });
+    }
+    if (window.innerWidth < 1024) {
+      const catalogBody = document.getElementById('catalogBodyContainer');
+      const catalogChevron = document.getElementById('mobileCatalogChevron');
+      if (catalogBody && catalogBody.classList.contains('is-open')) {
+        catalogBody.classList.remove('is-open');
+        if (catalogChevron) catalogChevron.classList.add('-rotate-90');
+      }
+    }
   }
   document.querySelectorAll('.filter-chapter-btn').forEach(btn => {
     btn.addEventListener('click', () => applyChapterFilter(btn.getAttribute('data-chapter')));
@@ -486,6 +501,8 @@ function initEvents() {
       });
       btn.className = 'filter-type-btn px-3 py-1 rounded-md bg-blue-600 text-white font-medium';
       state.typeFilter = btn.getAttribute('data-type');
+      state.currentPage = 1;
+      saveUiPreferences();
       renderQuestionList();
     });
   });
@@ -497,6 +514,8 @@ function initEvents() {
       });
       btn.className = 'filter-diff-btn px-3 py-1 rounded-md bg-blue-600 text-white font-medium';
       state.diffFilter = btn.getAttribute('data-diff');
+      state.currentPage = 1;
+      saveUiPreferences();
       renderQuestionList();
     });
   });

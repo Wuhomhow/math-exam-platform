@@ -235,11 +235,15 @@
             </div>
 
             <!-- Bottom Actions -->
-            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
-              <div class="flex items-center space-x-3 text-xs">
-                <button class="btn-toggle-analysis text-slate-500 hover:text-blue-600 flex items-center space-x-1" data-id="${q.id}">
+            <div data-html2canvas-ignore="true" class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+              <div class="flex items-center space-x-4 text-xs">
+                <button class="btn-toggle-analysis text-slate-500 hover:text-blue-600 flex items-center space-x-1 transition" data-id="${q.id}">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
                   <span class="analysis-btn-text">查看答案解析</span>
+                </button>
+                <button class="btn-screenshot-question text-slate-500 hover:text-blue-600 flex items-center space-x-1 transition" data-id="${q.id}" data-number="${q.number}">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"></path></svg>
+                  <span class="screenshot-btn-text">截图复制</span>
                 </button>
               </div>
 
@@ -280,6 +284,14 @@
         });
       });
 
+      container.querySelectorAll('.btn-screenshot-question').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const card = btn.closest('.question-card');
+          const qNum = btn.getAttribute('data-number') || '';
+          if (card) captureQuestionCard(card, btn, qNum);
+        });
+      });
+
       container.querySelectorAll('.btn-toggle-cart').forEach(btn => {
         btn.addEventListener('click', () => {
           const id = btn.getAttribute('data-id');
@@ -288,6 +300,88 @@
       });
 
       renderMath();
+    }
+
+    // Capture Question Card as PNG and Copy to Clipboard
+    async function captureQuestionCard(cardEl, btnEl, qNumber) {
+      if (typeof window.html2canvas !== 'function') {
+        showToast('截图组件正在加载中，请稍后再试', 'warn');
+        return;
+      }
+      if (btnEl.disabled) return;
+      const textSpan = btnEl.querySelector('.screenshot-btn-text');
+      const origText = textSpan ? textSpan.textContent : '截图复制';
+      btnEl.disabled = true;
+      if (textSpan) textSpan.textContent = '截图中...';
+
+      try {
+        const renderCanvas = async () => {
+          return await window.html2canvas(cardEl, {
+            scale: Math.min(window.devicePixelRatio || 2, 3),
+            backgroundColor: '#ffffff',
+            useCORS: true,
+            logging: false,
+            ignoreElements: (el) => {
+              if (!el || !el.classList) return false;
+              return el.classList.contains('katex-mathml') || el.hasAttribute('data-html2canvas-ignore');
+            }
+          });
+        };
+
+        const canvasToBlob = (canvas) => new Promise((resolve, reject) => {
+          canvas.toBlob((blob) => {
+            if (blob) resolve(blob);
+            else reject(new Error('Canvas toBlob failed'));
+          }, 'image/png');
+        });
+
+        const hasAnalysis = !cardEl.querySelector('[id^="analysis_"]')?.classList.contains('hidden');
+        const modeLabel = hasAnalysis ? '（含答案解析）' : '';
+
+        if (navigator.clipboard && typeof window.ClipboardItem !== 'undefined') {
+          const blobPromise = renderCanvas().then(canvasToBlob);
+          await navigator.clipboard.write([
+            new ClipboardItem({ 'image/png': blobPromise })
+          ]);
+          showToast(`第 ${qNumber} 题截图${modeLabel}已复制到剪贴板！`, 'success');
+        } else {
+          const canvas = await renderCanvas();
+          const blob = await canvasToBlob(canvas);
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = `第${qNumber}题截图${hasAnalysis ? '_含解析' : ''}.png`;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+          showToast(`当前环境限制剪贴板，已为您自动下载第 ${qNumber} 题高清截图！`, 'info');
+        }
+      } catch (err) {
+        console.warn('Screenshot capture fallback:', err);
+        try {
+          const canvas = await window.html2canvas(cardEl, {
+            scale: 2,
+            backgroundColor: '#ffffff',
+            useCORS: true,
+            logging: false,
+            ignoreElements: (el) => el && el.classList && (el.classList.contains('katex-mathml') || el.hasAttribute('data-html2canvas-ignore'))
+          });
+          const url = canvas.toDataURL('image/png');
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = `第${qNumber}题截图.png`;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          showToast(`已为您导出第 ${qNumber} 题高清截图文件！`, 'info');
+        } catch (fallbackErr) {
+          showToast('截图失败，请在线上环境或本地服务下使用', 'warn');
+        }
+      } finally {
+        btnEl.disabled = false;
+        if (textSpan) textSpan.textContent = origText;
+      }
     }
 
     // Toggle Cart Item

@@ -199,7 +199,7 @@
           `;
         }
 
-        const imgHtml = q.image ? `<div class="my-3"><img src="${q.image}" class="max-w-md h-auto border border-slate-200 rounded p-1 bg-white"></div>` : '';
+        const imgHtml = q.image ? `<div class="my-2"><img src="${q.image}" class="max-h-40 max-w-xs h-auto border border-slate-200 rounded p-1 bg-white object-contain"></div>` : '';
 
         return `
           <div class="bg-white rounded-xl border ${isSelected ? 'border-blue-300 ring-1 ring-blue-100 shadow-sm' : 'border-slate-200'} p-5 transition-all hover:shadow-md question-card" data-id="${q.id}">
@@ -673,7 +673,7 @@
             <div class="${isDouble ? 'grid grid-cols-2 gap-x-8 gap-y-4' : 'space-y-5'}">
               ${selected.map((q, index) => {
                 const idx = index + 1;
-                const imgHtml = q.image ? `<div class="my-2"><img src="${q.image}" class="max-w-xs h-auto"></div>` : '';
+                const imgHtml = q.image ? `<div class="my-1.5"><img src="${q.image}" class="max-h-32 max-w-[200px] h-auto object-contain"></div>` : '';
                 const optsHtml = (q.type === 'choice' && q.options && q.options.length > 0) ? `
                   <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 mt-3 text-sm">
                     ${q.options.map(opt => `<div class="answer-option ${getOptionLayoutClass(opt)}">${formatMathHtml(opt)}</div>`).join('')}
@@ -738,7 +738,7 @@
             <div class="${isDouble ? 'grid grid-cols-2 gap-x-8 gap-y-4' : 'space-y-4'}">
               ${choices.map(q => {
                 const idx = questionIndex++;
-                const imgHtml = q.image ? `<div class="my-2"><img src="${q.image}" class="max-w-xs h-auto"></div>` : '';
+                const imgHtml = q.image ? `<div class="my-1.5"><img src="${q.image}" class="max-h-32 max-w-[200px] h-auto object-contain"></div>` : '';
                 const optsHtml = q.options ? `
                   <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 mt-3 text-sm">
                     ${q.options.map(opt => `<div class="answer-option ${getOptionLayoutClass(opt)}">${formatMathHtml(opt)}</div>`).join('')}

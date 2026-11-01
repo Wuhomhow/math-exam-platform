@@ -148,7 +148,46 @@
     .answer-space-resizable { resize: vertical; overflow: auto; min-height: 56px; max-height: 600px; }
     .answer-option { min-width: 0; overflow-wrap: anywhere; }
     .answer-option-wide { grid-column: 1 / -1; }
-    .answer-option img { max-width: 100%; height: auto; }
+    
+    /* Proportional & compact math illustrations */
+    .question-card img {
+      max-height: 160px !important;
+      max-width: 260px !important;
+      width: auto !important;
+      height: auto !important;
+      object-fit: contain;
+      border-radius: 0.375rem;
+    }
+    .question-card img.inline-block {
+      max-height: 28px !important;
+      max-width: 80px !important;
+      display: inline-block !important;
+      vertical-align: middle !important;
+    }
+    .answer-option img {
+      max-height: 75px !important;
+      max-width: 140px !important;
+      width: auto !important;
+      height: auto !important;
+      object-fit: contain;
+      display: inline-block !important;
+      vertical-align: middle !important;
+      margin: 2px 0 !important;
+    }
+    .question-card [id^="analysis_"] img {
+      max-height: 140px !important;
+      max-width: 240px !important;
+      width: auto !important;
+      height: auto !important;
+      object-fit: contain;
+    }
+    .paper-sheet .question-item img {
+      max-height: 125px !important;
+      max-width: 210px !important;
+      width: auto !important;
+      height: auto !important;
+      object-fit: contain;
+    }
     @media print { .answer-space-resizable { resize: none; overflow: hidden; } }
 
 /* Responsive catalog sidebar: Always visible on PC (>= 1024px), collapsible on Mobile (< 1024px) */

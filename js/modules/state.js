@@ -44,6 +44,11 @@
       return gradeSemesterColors[grade]?.[semester] || 'bg-slate-100 text-slate-700';
     }
 
+    function getChapterDisplayLabel(chapter) {
+      const loc = inferAcademicLocation(chapter);
+      return loc?.label || chapter;
+    }
+
     function buildChapterNavigation() {
       const container = document.getElementById('chapterNavigationTree');
       if (!container) return;

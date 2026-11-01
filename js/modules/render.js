@@ -207,7 +207,7 @@
             <div class="flex flex-wrap items-center justify-between pb-3 border-b border-slate-100 gap-2">
               <div class="flex flex-wrap items-center gap-2">
                 <span class="font-bold text-slate-900 text-sm">第 ${q.number} 题</span>
-                <span class="text-xs px-2 py-0.5 rounded font-medium ${getGradeSemesterTagClass(q.chapter)}">${q.chapter}</span>
+                <span class="text-xs px-2 py-0.5 rounded font-medium ${getGradeSemesterTagClass(q.chapter)}">${getChapterDisplayLabel(q.chapter)}</span>
                 <span class="text-xs px-2 py-0.5 rounded font-medium bg-blue-100 text-blue-700">${q.typeName}</span>
                 <span class="text-xs px-2 py-0.5 rounded font-medium border ${diffColor}">难度：${q.difficulty}</span>
               </div>

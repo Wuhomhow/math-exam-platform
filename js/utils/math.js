@@ -51,7 +51,11 @@
     function formatMathHtml(str) {
       if (str === null || str === undefined) return '';
       return String(str).replace(/\$([^$]+)\$/g, (_, tex) => {
-        const cleanTex = tex.replace(/&lt;/g, '<').replace(/&gt;/g, '>').trim();
+        const cleanTex = tex
+          .replace(/&lt;/g, '<')
+          .replace(/&gt;/g, '>')
+          .replace(/(?<!\\)%/g, '\\%')
+          .trim();
         if (!cleanTex) return '';
         if (window.katex) {
           try {

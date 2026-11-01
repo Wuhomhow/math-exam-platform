@@ -205,6 +205,8 @@
       // Word's native math format does not understand raw TeX command names such as \angle or \circ.
       let s = normalizeCompactFractions(String(tex)
         .replace(/\\(?:dfrac|tfrac)\b/g, '\\frac'))
+        .replace(/\\%/g, '%')
+        .replace(/\\dot\{([^{}]*)\}/g, '$1\u0307')
         .replace(/\\,/g, ' ')
         .replace(/\\(?:qquad|quad|enspace)\b/g, '  ')
         .replace(/\\[;:!]/g, ' ')

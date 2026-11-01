@@ -16,9 +16,9 @@
         return { grade: '初三', semester: '上册', label: value };
       }
 
-      const m = value.match(/^(初一|初二|初三|高一|高二|高三|七年级|八年级|九年级)\s*(上册|下册)\s*(.*)$/);
+      const m = value.match(/^(六年级|小学六年级|初一|初二|初三|高一|高二|高三|七年级|八年级|九年级)\s*(上册|下册)\s*(.*)$/);
       if (m) {
-        const gradeMap = { '七年级': '初一', '八年级': '初二', '九年级': '初三' };
+        const gradeMap = { '小学六年级': '六年级', '七年级': '初一', '八年级': '初二', '九年级': '初三' };
         return {
           grade: gradeMap[m[1]] || m[1],
           semester: m[2],
@@ -33,6 +33,7 @@
     function getGradeSemesterTagClass(chapter) {
       const { grade, semester } = inferAcademicLocation(chapter);
       const gradeSemesterColors = {
+        '六年级': { '上册': 'bg-orange-100 text-orange-800', '下册': 'bg-amber-100 text-amber-800' },
         '初一': { '上册': 'bg-teal-100 text-teal-800', '下册': 'bg-cyan-100 text-cyan-800' },
         '初二': { '上册': 'bg-indigo-100 text-indigo-800', '下册': 'bg-violet-100 text-violet-800' },
         '初三': { '上册': 'bg-amber-100 text-amber-800', '下册': 'bg-orange-100 text-orange-800' },
@@ -47,7 +48,7 @@
       const container = document.getElementById('chapterNavigationTree');
       if (!container) return;
 
-      const gradeOrder = ['初一', '初二', '初三', '高一', '高二', '高三', '其他年级'];
+      const gradeOrder = ['六年级', '初一', '初二', '初三', '高一', '高二', '高三', '其他年级'];
       const semesterOrder = ['上册', '下册', '未分类'];
       const gradeMap = new Map();
 

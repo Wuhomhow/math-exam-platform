@@ -1,11 +1,10 @@
-// Synchronize UI buttons and inputs to restored state
 function updateMobileCatalogBadge() {
   const badge = document.getElementById('mobileActiveChapterBadge');
   if (!badge) return;
   if (!state.chapterFilter || state.chapterFilter === 'all') {
     badge.textContent = '已选题库';
   } else {
-    badge.textContent = state.chapterFilter.replace(/^[0-9.]+\s*/, '').slice(0, 8);
+    badge.textContent = state.chapterFilter.replace(/^(?:六年级|小学六年级|初一|初二|初三|高一|高二|高三)?\s*(?:上册|下册)?\s*[0-9.]*\s*/, '').slice(0, 8);
   }
 }
 

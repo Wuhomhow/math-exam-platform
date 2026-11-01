@@ -231,7 +231,7 @@
                 <span class="text-blue-700 font-mono text-sm">${formatMathHtml(q.answer)}</span>
               </div>
               <div class="text-slate-600"><b class="text-slate-800">【分析】</b>${formatMathHtml(q.analysis)}</div>
-              <div class="text-slate-700 pt-1 border-t border-slate-200/60 leading-relaxed"><b class="text-slate-800">【详解】</b>${formatMathHtml(q.detail)}</div>
+              <div class="text-slate-700 pt-1 border-t border-slate-200 leading-relaxed"><b class="text-slate-800">【详解】</b>${formatMathHtml(q.detail)}</div>
             </div>
 
             <!-- Bottom Actions -->
@@ -304,7 +304,7 @@
 
     // Capture Question Card as PNG and Copy to Clipboard
     async function captureQuestionCard(cardEl, btnEl, qNumber) {
-      if (typeof window.html2canvas !== 'function') {
+      if (typeof window.html2canvas !== 'function' && typeof window.htmlToImage !== 'object') {
         showToast('截图组件正在加载中，请稍后再试', 'warn');
         return;
       }
@@ -315,38 +315,81 @@
       if (textSpan) textSpan.textContent = '截图中...';
 
       try {
-        const renderCanvas = async () => {
-          return await window.html2canvas(cardEl, {
-            scale: Math.min(window.devicePixelRatio || 2, 3),
-            backgroundColor: '#ffffff',
-            useCORS: true,
-            logging: false,
-            ignoreElements: (el) => {
-              if (!el || !el.classList) return false;
-              return el.classList.contains('katex-mathml') || el.hasAttribute('data-html2canvas-ignore');
-            }
-          });
-        };
-
-        const canvasToBlob = (canvas) => new Promise((resolve, reject) => {
-          canvas.toBlob((blob) => {
-            if (blob) resolve(blob);
-            else reject(new Error('Canvas toBlob failed'));
-          }, 'image/png');
-        });
-
         const hasAnalysis = !cardEl.querySelector('[id^="analysis_"]')?.classList.contains('hidden');
         const modeLabel = hasAnalysis ? '（含答案解析）' : '';
+        const isFileProtocol = window.location.protocol === 'file:';
 
+        let blob = null;
+
+        // Strategy 1: Use html2canvas / html2canvas-pro
+        if (typeof window.html2canvas === 'function') {
+          try {
+            const canvas = await window.html2canvas(cardEl, {
+              scale: Math.min(window.devicePixelRatio || 2, 2.5),
+              backgroundColor: '#ffffff',
+              useCORS: !isFileProtocol,
+              allowTaint: false,
+              logging: false,
+              imageTimeout: 10000,
+              ignoreElements: (el) => {
+                if (!el || !el.classList) return false;
+                return el.classList.contains('katex-mathml') || el.hasAttribute('data-html2canvas-ignore');
+              }
+            });
+            blob = await new Promise((resolve) => {
+              canvas.toBlob((b) => resolve(b), 'image/png');
+            });
+          } catch (h2cErr) {
+            console.warn('html2canvas capture failed, trying htmlToImage fallback:', h2cErr);
+          }
+        }
+
+        // Strategy 2: Fallback to htmlToImage (uses browser native SVG foreignObject)
+        if (!blob && typeof window.htmlToImage === 'object' && typeof window.htmlToImage.toBlob === 'function') {
+          try {
+            blob = await window.htmlToImage.toBlob(cardEl, {
+              backgroundColor: '#ffffff',
+              pixelRatio: Math.min(window.devicePixelRatio || 2, 2.5),
+              filter: (node) => {
+                if (node.hasAttribute && node.hasAttribute('data-html2canvas-ignore')) return false;
+                if (node.classList && node.classList.contains('katex-mathml')) return false;
+                return true;
+              }
+            });
+          } catch (h2iErr) {
+            console.warn('htmlToImage capture failed:', h2iErr);
+          }
+        }
+
+        if (!blob) {
+          throw new Error('未能生成试题截图');
+        }
+
+        // Write directly to clipboard
+        let copied = false;
         if (navigator.clipboard && typeof window.ClipboardItem !== 'undefined') {
-          const blobPromise = renderCanvas().then(canvasToBlob);
-          await navigator.clipboard.write([
-            new ClipboardItem({ 'image/png': blobPromise })
-          ]);
-          showToast(`第 ${qNumber} 题截图${modeLabel}已复制到剪贴板！`, 'success');
+          try {
+            // Standard approach: pass actual Blob
+            const item = new ClipboardItem({ 'image/png': blob });
+            await navigator.clipboard.write([item]);
+            copied = true;
+          } catch (clipErr) {
+            console.warn('Standard ClipboardItem(blob) write failed, trying with Promise fallback:', clipErr);
+            try {
+              // Safari fallback: pass Promise<Blob>
+              const item = new ClipboardItem({ 'image/png': Promise.resolve(blob) });
+              await navigator.clipboard.write([item]);
+              copied = true;
+            } catch (clipErr2) {
+              console.warn('Promise ClipboardItem write failed:', clipErr2);
+            }
+          }
+        }
+
+        if (copied) {
+          showToast(`第 ${qNumber} 题截图${modeLabel}已成功复制到剪贴板！`, 'success');
         } else {
-          const canvas = await renderCanvas();
-          const blob = await canvasToBlob(canvas);
+          // Fallback: automatically download image if browser denies clipboard write (e.g. file:// protocol restriction)
           const url = URL.createObjectURL(blob);
           const a = document.createElement('a');
           a.href = url;
@@ -354,30 +397,12 @@
           document.body.appendChild(a);
           a.click();
           document.body.removeChild(a);
-          URL.revokeObjectURL(url);
-          showToast(`当前环境限制剪贴板，已为您自动下载第 ${qNumber} 题高清截图！`, 'info');
+          setTimeout(() => URL.revokeObjectURL(url), 1000);
+          showToast(`当前浏览器环境限制直接写入剪贴板，已为您自动下载第 ${qNumber} 题截图！`, 'info');
         }
       } catch (err) {
-        console.warn('Screenshot capture fallback:', err);
-        try {
-          const canvas = await window.html2canvas(cardEl, {
-            scale: 2,
-            backgroundColor: '#ffffff',
-            useCORS: true,
-            logging: false,
-            ignoreElements: (el) => el && el.classList && (el.classList.contains('katex-mathml') || el.hasAttribute('data-html2canvas-ignore'))
-          });
-          const url = canvas.toDataURL('image/png');
-          const a = document.createElement('a');
-          a.href = url;
-          a.download = `第${qNumber}题截图.png`;
-          document.body.appendChild(a);
-          a.click();
-          document.body.removeChild(a);
-          showToast(`已为您导出第 ${qNumber} 题高清截图文件！`, 'info');
-        } catch (fallbackErr) {
-          showToast('截图失败，请在线上环境或本地服务下使用', 'warn');
-        }
+        console.error('Screenshot capture failed:', err);
+        showToast('截图生成失败，请检查浏览器权限或刷新重试', 'warn');
       } finally {
         btnEl.disabled = false;
         if (textSpan) textSpan.textContent = origText;
@@ -428,7 +453,7 @@
         const typePosition = sameTypeQuestions.findIndex(item => item.id === q.id);
         const isFirst = isAddedOrder ? index === 0 : typePosition === 0;
         const isLast = isAddedOrder ? index === selectedQuestions.length - 1 : typePosition === sameTypeQuestions.length - 1;
-        const chapShort = String(q.chapter || "").replace(/^[0-9.]+\s*/, "").slice(0, 6) || q.chapter;
+        const chapShort = String(q.chapter || "").replace(/^(?:六年级|小学六年级|初一|初二|初三|高一|高二|高三)?\s*(?:上册|下册)?\s*[0-9.]*\s*/, "").slice(0, 6) || q.chapter;
         const chapBadgeCls = getGradeSemesterTagClass(q.chapter);
         return `
         <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl space-y-2">

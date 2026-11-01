@@ -495,8 +495,12 @@
 
       await Promise.all(Array.from(imageSrcList).map(async (src) => {
         try {
-          if (src.startsWith('data:image/')) {
-            const m = src.match(/data:image\/[^;]+;base64,([A-Za-z0-9+/=]+)/);
+          const cleanKey = src.replace(/^\.?\//, '');
+          const mappedDataUri = (window.IMAGE_BASE64_MAP && (window.IMAGE_BASE64_MAP[cleanKey] || window.IMAGE_BASE64_MAP[src]))
+            ? (window.IMAGE_BASE64_MAP[cleanKey] || window.IMAGE_BASE64_MAP[src])
+            : src;
+          if (mappedDataUri.startsWith('data:image/')) {
+            const m = mappedDataUri.match(/data:image\/[^;]+;base64,([A-Za-z0-9+/=]+)/);
             if (m) {
               imageBufferCache.set(src, base64ToUint8Array(m[1]));
             }

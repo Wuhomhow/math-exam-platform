@@ -10,13 +10,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
   <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
-  <!-- HTML Screenshot Engines: html2canvas-pro (supports modern CSS / Tailwind colors) & html-to-image fallback -->
-  <script src="https://cdn.jsdelivr.net/npm/html2canvas-pro@1.5.8/dist/html2canvas-pro.min.js"></script>
-  <script>
-    if (typeof window.html2canvas !== 'function') {
-      document.write('<script src="https://unpkg.com/html2canvas-pro@1.5.8/dist/html2canvas-pro.min.js"><\\/script>');
-    }
-  </script>
+  <!-- Question Card Screenshot Engines (Multi-CDN + Native Fallback) -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js"></script>
 
   <link rel="stylesheet" href="css/style.css">
@@ -344,7 +341,8 @@
   </div>
 
   <!-- INLINE DATA & APPLICATION LOGIC -->
-  <!-- 1. 题库数据与初始化映射 -->
+  <!-- 1. 题库数据与离线图片 Base64 映射 -->
+  <script src="js/data/images-base64.js"></script>
   <script src="js/data/questions.js"></script>
 
   <!-- 2. 状态管理与存储 -->

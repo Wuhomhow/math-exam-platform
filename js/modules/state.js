@@ -71,6 +71,28 @@
       return FINISHED_PAPER_CHAPTERS.has(String(chapter || '').trim());
     }
 
+    // 自定义成品试卷配置（原题库索引模式：零重复题目、保留原知识点）
+    window.CUSTOM_FINISHED_PAPERS = [
+      {
+        id: 'div_pow_paper',
+        title: '有理数除法和乘方',
+        grade: '初一',
+        semester: '上册',
+        questionIds: [
+          'div_2', 'div_3', 'div_4', 'div_8', 'div_10', 'div_11',
+          'op_oct30_3', 'op_oct30_34', 'op_oct30_43',
+          'exp_1', 'exp_2', 'exp_3', 'exp_4', 'exp_8', 'exp_10', 'exp_13', 'exp_14',
+          'op_oct30_28', 'op_oct30_29',
+          'mix_2', 'mix_6', 'mix_9', 'mix_11', 'mix_12', 'mix_13', 'mix_14',
+          'op_oct30_10', 'op_oct30_17', 'op_oct30_22', 'op_oct30_50'
+        ]
+      }
+    ];
+
+    function getCustomPaperById(id) {
+      return (window.CUSTOM_FINISHED_PAPERS || []).find(p => p.id === id);
+    }
+
     function getChapterGroup(grade, chapter) {
       const ch = String(chapter || '').trim();
       if (grade === '初一') {
@@ -145,7 +167,16 @@
       container.innerHTML = orderedGrades.map(grade => {
         const { finishedPapers, semesters } = gradeMap.get(grade);
         const finishedList = [...finishedPapers.entries()].sort((a, b) => a[1].firstOrder - b[1].firstOrder);
-        const finishedTotal = finishedList.reduce((sum, entry) => sum + entry[1].count, 0);
+
+        // Custom finished papers for this grade
+        const gradeCustomPapers = (window.CUSTOM_FINISHED_PAPERS || []).filter(p => p.grade === grade);
+        const customPapersList = gradeCustomPapers.map(p => [
+          `custom:${p.id}`,
+          { label: p.title, count: p.questionIds.length }
+        ]);
+
+        const allFinishedList = [...customPapersList, ...finishedList];
+        const finishedTotal = allFinishedList.reduce((sum, entry) => sum + entry[1].count, 0);
 
         let regularTotal = 0;
         for (const [, semEntry] of semesters) {
@@ -156,17 +187,17 @@
         }
         const gradeTotal = finishedTotal + regularTotal;
 
-        const finishedHtml = finishedList.length > 0 ? `
+        const finishedHtml = allFinishedList.length > 0 ? `
           <details class="nav-finished-paper-card mb-2.5">
             <summary>
               <span class="flex items-center gap-1.5">
                 <svg class="w-3.5 h-3.5 text-teal-700 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                 <span>成品试卷</span>
               </span>
-              <span class="nav-finished-badge">${finishedList.length} 卷 · ${finishedTotal} 题</span>
+              <span class="nav-finished-badge">${allFinishedList.length} 卷 · ${finishedTotal} 题</span>
             </summary>
             <div class="nav-finished-paper-content space-y-1">
-              ${finishedList.map(([chapter, meta]) => `
+              ${allFinishedList.map(([chapter, meta]) => `
                 <button type="button" class="chapter-tree-btn nav-topic-button" data-chapter="${escapeNavText(chapter)}">
                   <span class="nav-topic-label">${escapeNavText(meta.label)}</span>
                   <span class="nav-topic-count">${meta.count}</span>

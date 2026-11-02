@@ -3,6 +3,9 @@ function updateMobileCatalogBadge() {
   if (!badge) return;
   if (!state.chapterFilter || state.chapterFilter === 'all') {
     badge.textContent = '已选题库';
+  } else if (state.chapterFilter.startsWith('custom:')) {
+    const paper = typeof getCustomPaperById === 'function' ? getCustomPaperById(state.chapterFilter.slice(7)) : null;
+    badge.textContent = paper ? paper.title.slice(0, 8) : '成品试卷';
   } else {
     badge.textContent = state.chapterFilter.replace(/^(?:六年级|小学六年级|初一|初二|初三|高一|高二|高三)?\s*(?:上册|下册)?\s*[0-9.]*\s*/, '').slice(0, 8);
   }
@@ -494,16 +497,30 @@ function initEvents() {
 
   // Select All
   document.getElementById('btnSelectAll').addEventListener('click', () => {
-    const currentPool = QUESTION_BANK.filter(q => {
-      if (state.chapterFilter !== 'all') {
-        if (state.chapterFilter === '2.3') {
-          if (!q.chapter.startsWith('2.3')) return false;
-        } else if (q.chapter !== state.chapterFilter) return false;
+    let currentPool = [];
+    if (state.chapterFilter.startsWith('custom:')) {
+      const paper = typeof getCustomPaperById === 'function' ? getCustomPaperById(state.chapterFilter.slice(7)) : null;
+      if (paper) {
+        const byId = new Map(QUESTION_BANK.map(q => [q.id, q]));
+        currentPool = paper.questionIds.map(id => byId.get(id)).filter(q => {
+          if (!q) return false;
+          if (state.typeFilter !== 'all' && q.type !== state.typeFilter) return false;
+          if (state.diffFilter !== 'all' && q.difficulty !== state.diffFilter) return false;
+          return true;
+        });
       }
-      if (state.typeFilter !== 'all' && q.type !== state.typeFilter) return false;
-      if (state.diffFilter !== 'all' && q.difficulty !== state.diffFilter) return false;
-      return true;
-    });
+    } else {
+      currentPool = QUESTION_BANK.filter(q => {
+        if (state.chapterFilter !== 'all') {
+          if (state.chapterFilter === '2.3') {
+            if (!q.chapter.startsWith('2.3')) return false;
+          } else if (q.chapter !== state.chapterFilter) return false;
+        }
+        if (state.typeFilter !== 'all' && q.type !== state.typeFilter) return false;
+        if (state.diffFilter !== 'all' && q.difficulty !== state.diffFilter) return false;
+        return true;
+      });
+    }
     currentPool.forEach(q => state.selectedIds.add(q.id));
     updateStats();
     renderQuestionList();

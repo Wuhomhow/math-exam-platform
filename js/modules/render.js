@@ -44,6 +44,10 @@
       const chapPool = QUESTION_BANK.filter(q => {
         if (state.chapterFilter === 'all') return true;
         if (state.chapterFilter === '2.3') return q.chapter.startsWith('2.3');
+        if (state.chapterFilter.startsWith('custom:')) {
+          const paper = typeof getCustomPaperById === 'function' ? getCustomPaperById(state.chapterFilter.slice(7)) : null;
+          return paper ? paper.questionIds.includes(q.id) : false;
+        }
         return q.chapter === state.chapterFilter;
       });
       const typeMap = { all: chapPool.length, choice: 0, blank: 0, calc: 0 };
@@ -64,6 +68,26 @@
       });
 
       function getCurrentFilteredQuestions() {
+        if (state.chapterFilter.startsWith('custom:')) {
+          const paper = typeof getCustomPaperById === 'function' ? getCustomPaperById(state.chapterFilter.slice(7)) : null;
+          if (paper) {
+            const byId = new Map(QUESTION_BANK.map(q => [q.id, q]));
+            return paper.questionIds.map(id => byId.get(id)).filter(q => {
+              if (!q) return false;
+              if (state.typeFilter !== 'all' && q.type !== state.typeFilter) return false;
+              if (state.diffFilter !== 'all' && q.difficulty !== state.diffFilter) return false;
+              if (state.searchKeyword) {
+                const kw = state.searchKeyword.toLowerCase();
+                const matchStem = q.stem.toLowerCase().includes(kw);
+                const matchKp = q.knowledge.toLowerCase().includes(kw);
+                const matchAnswer = q.answer.toLowerCase().includes(kw);
+                const matchChap = q.chapter.toLowerCase().includes(kw);
+                if (!matchStem && !matchKp && !matchAnswer && !matchChap) return false;
+              }
+              return true;
+            });
+          }
+        }
         return QUESTION_BANK.filter(q => {
           if (state.chapterFilter !== 'all') {
             if (state.chapterFilter === '2.3') {

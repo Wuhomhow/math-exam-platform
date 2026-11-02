@@ -119,6 +119,14 @@
     .nav-grade-card > summary::after { content: '⌄'; color: #94a3b8; font-size: .95rem; transition: transform .15s ease; }
     .nav-grade-card:not([open]) > summary::after { transform: rotate(-90deg); }
     .nav-grade-content { padding: .65rem; }
+    .nav-finished-paper-card { border: 1px solid #ccfbf1; border-radius: .6rem; overflow: hidden; background: #f0fdfa; }
+    .nav-finished-paper-card > summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: .4rem; padding: .48rem .6rem; background: #f0fdfa; font-size: .76rem; font-weight: 700; color: #115e59; transition: background-color .15s ease; }
+    .nav-finished-paper-card > summary:hover { background: #ccfbf1; }
+    .nav-finished-paper-card > summary::-webkit-details-marker { display: none; }
+    .nav-finished-paper-card > summary::after { content: '⌄'; color: #0f766e; font-size: .85rem; transition: transform .15s ease; }
+    .nav-finished-paper-card:not([open]) > summary::after { transform: rotate(-90deg); }
+    .nav-finished-badge { margin-left: auto; margin-right: .25rem; padding: .08rem .38rem; border-radius: .35rem; background: #ccfbf1; color: #0f766e; font-size: .68rem; font-weight: 700; }
+    .nav-finished-paper-content { padding: .4rem .45rem .45rem; background: #ffffff; border-top: 1px solid #ccfbf1; }
     .nav-semester-label { display: flex; align-items: center; justify-content: space-between; padding: .15rem .25rem .45rem; margin-bottom: .35rem; border-bottom: 1px solid #f1f5f9; font-size: .72rem; font-weight: 700; color: #64748b; letter-spacing: .02em; }
     .nav-topic-button { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: .5rem; text-align: left; padding: .55rem .6rem; border: 1px solid transparent; border-radius: .55rem; color: #475569; font-size: .78rem; line-height: 1.35; }
     .nav-topic-button .nav-topic-label { min-width: 0; }

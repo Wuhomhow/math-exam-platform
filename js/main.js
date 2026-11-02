@@ -18,6 +18,8 @@ function syncUiToState() {
     if (isAct) {
       const parentCard = btn.closest('.nav-grade-card');
       if (parentCard) parentCard.open = true;
+      const finishedCard = btn.closest('.nav-finished-paper-card');
+      if (finishedCard) finishedCard.open = true;
     }
   });
 

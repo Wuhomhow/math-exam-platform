@@ -49,6 +49,15 @@
       return loc?.label || chapter;
     }
 
+    const FINISHED_PAPER_CHAPTERS = new Set([
+      '2.3.1 有理数的加法',
+      '13.1三角形单元测试卷'
+    ]);
+
+    function isFinishedPaperChapter(chapter) {
+      return FINISHED_PAPER_CHAPTERS.has(String(chapter || '').trim());
+    }
+
     function buildChapterNavigation() {
       const container = document.getElementById('chapterNavigationTree');
       if (!container) return;
@@ -60,14 +69,28 @@
       QUESTION_BANK.forEach((question, order) => {
         const chapter = String(question.chapter || '未命名专题');
         const location = inferAcademicLocation(chapter);
-        if (!gradeMap.has(location.grade)) gradeMap.set(location.grade, new Map());
-        const semesterMap = gradeMap.get(location.grade);
-        if (!semesterMap.has(location.semester)) semesterMap.set(location.semester, new Map());
-        const chapterMap = semesterMap.get(location.semester);
-        if (!chapterMap.has(chapter)) {
-          chapterMap.set(chapter, { label: location.label, count: 0, firstOrder: order });
+        if (!gradeMap.has(location.grade)) {
+          gradeMap.set(location.grade, {
+            finishedPapers: new Map(),
+            semesters: new Map()
+          });
         }
-        chapterMap.get(chapter).count++;
+        const gradeEntry = gradeMap.get(location.grade);
+        if (isFinishedPaperChapter(chapter)) {
+          if (!gradeEntry.finishedPapers.has(chapter)) {
+            gradeEntry.finishedPapers.set(chapter, { label: location.label, count: 0, firstOrder: order });
+          }
+          gradeEntry.finishedPapers.get(chapter).count++;
+        } else {
+          if (!gradeEntry.semesters.has(location.semester)) {
+            gradeEntry.semesters.set(location.semester, new Map());
+          }
+          const chapterMap = gradeEntry.semesters.get(location.semester);
+          if (!chapterMap.has(chapter)) {
+            chapterMap.set(chapter, { label: location.label, count: 0, firstOrder: order });
+          }
+          chapterMap.get(chapter).count++;
+        }
       });
 
       const orderedGrades = [...gradeMap.keys()].sort((a, b) => {
@@ -77,9 +100,33 @@
       });
 
       container.innerHTML = orderedGrades.map(grade => {
-        const semesters = gradeMap.get(grade);
-        const gradeTotal = [...semesters.values()].reduce((sum, chapterMap) =>
+        const { finishedPapers, semesters } = gradeMap.get(grade);
+        const finishedList = [...finishedPapers.entries()].sort((a, b) => a[1].firstOrder - b[1].firstOrder);
+        const finishedTotal = finishedList.reduce((sum, entry) => sum + entry[1].count, 0);
+        const regularTotal = [...semesters.values()].reduce((sum, chapterMap) =>
           sum + [...chapterMap.values()].reduce((acc, chapter) => acc + chapter.count, 0), 0);
+        const gradeTotal = finishedTotal + regularTotal;
+
+        const finishedHtml = finishedList.length > 0 ? `
+          <details class="nav-finished-paper-card mb-2.5">
+            <summary>
+              <span class="flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5 text-teal-700 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                <span>成品试卷</span>
+              </span>
+              <span class="nav-finished-badge">${finishedList.length} 卷 · ${finishedTotal} 题</span>
+            </summary>
+            <div class="nav-finished-paper-content space-y-1">
+              ${finishedList.map(([chapter, meta]) => `
+                <button type="button" class="chapter-tree-btn nav-topic-button" data-chapter="${escapeNavText(chapter)}">
+                  <span class="nav-topic-label">${escapeNavText(meta.label)}</span>
+                  <span class="nav-topic-count">${meta.count}</span>
+                </button>
+              `).join('')}
+            </div>
+          </details>
+        ` : '';
+
         const orderedSemesters = [...semesters.keys()].sort((a, b) => {
           const ai = semesterOrder.indexOf(a) < 0 ? 999 : semesterOrder.indexOf(a);
           const bi = semesterOrder.indexOf(b) < 0 ? 999 : semesterOrder.indexOf(b);
@@ -107,7 +154,7 @@
         return `
           <details class="nav-grade-card" open>
             <summary><span>${escapeNavText(grade)}</span><span class="text-xs font-semibold text-slate-500">${gradeTotal} 题</span></summary>
-            <div class="nav-grade-content">${semesterHtml}</div>
+            <div class="nav-grade-content">${finishedHtml}${semesterHtml}</div>
           </details>
         `;
       }).join('');

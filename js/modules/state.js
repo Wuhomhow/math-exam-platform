@@ -5,7 +5,7 @@
 
     function inferAcademicLocation(chapter) {
       const value = String(chapter || '').trim();
-      const legacyGrade7 = /^[123]\./.test(value) || value.includes('第二章');
+      const legacyGrade7 = /^[123456]\./.test(value) || /第[一二三四五六]章/.test(value);
       if (legacyGrade7) {
         return { grade: '初一', semester: '上册', label: value };
       }

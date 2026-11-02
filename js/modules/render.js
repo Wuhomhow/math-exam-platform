@@ -208,7 +208,8 @@
         }
       }
 
-      container.innerHTML = pageQuestions.map(q => {
+      container.innerHTML = pageQuestions.map((q, pageIdx) => {
+        const qNumber = startIndex + pageIdx + 1;
         const isSelected = state.selectedIds.has(q.id);
         const diffColor = q.difficulty === '容易' ? 'text-emerald-600 bg-emerald-50 border-emerald-200' :
                           q.difficulty === '中等' ? 'text-amber-600 bg-amber-50 border-amber-200' :
@@ -230,7 +231,7 @@
             <!-- Header Row -->
             <div class="flex flex-wrap items-center justify-between pb-3 border-b border-slate-100 gap-2">
               <div class="flex flex-wrap items-center gap-2">
-                <span class="font-bold text-slate-900 text-sm">第 ${q.number} 题</span>
+                <span class="font-bold text-slate-900 text-sm">第 ${qNumber} 题</span>
                 <span class="text-xs px-2 py-0.5 rounded font-medium ${getGradeSemesterTagClass(q.chapter)}">${getChapterDisplayLabel(q.chapter)}</span>
                 <span class="text-xs px-2 py-0.5 rounded font-medium bg-blue-100 text-blue-700">${q.typeName}</span>
                 <span class="text-xs px-2 py-0.5 rounded font-medium border ${diffColor}">难度：${q.difficulty}</span>
@@ -265,7 +266,7 @@
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
                   <span class="analysis-btn-text">查看答案解析</span>
                 </button>
-                <button class="btn-screenshot-question text-slate-500 hover:text-blue-600 flex items-center space-x-1 transition" data-id="${q.id}" data-number="${q.number}">
+                <button class="btn-screenshot-question text-slate-500 hover:text-blue-600 flex items-center space-x-1 transition" data-id="${q.id}" data-number="${qNumber}">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"></path></svg>
                   <span class="screenshot-btn-text">截图复制</span>
                 </button>

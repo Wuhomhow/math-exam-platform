@@ -197,12 +197,15 @@
               <span class="nav-finished-badge">${allFinishedList.length} 卷 · ${finishedTotal} 题</span>
             </summary>
             <div class="nav-finished-paper-content space-y-1">
-              ${allFinishedList.map(([chapter, meta]) => `
+              ${allFinishedList.map(([chapter, meta], idx) => {
+                const cleanLabel = meta.label.replace(/^[0-9.]+\s*/, '').trim();
+                const displayTitle = `${idx + 1}. ${cleanLabel}`;
+                return `
                 <button type="button" class="chapter-tree-btn nav-topic-button" data-chapter="${escapeNavText(chapter)}">
-                  <span class="nav-topic-label">${escapeNavText(meta.label)}</span>
+                  <span class="nav-topic-label">${escapeNavText(displayTitle)}</span>
                   <span class="nav-topic-count">${meta.count}</span>
                 </button>
-              `).join('')}
+              `;}).join('')}
             </div>
           </details>
         ` : '';

@@ -71,6 +71,21 @@
       return FINISHED_PAPER_CHAPTERS.has(String(chapter || '').trim());
     }
 
+    function getChapterGroup(grade, chapter) {
+      const ch = String(chapter || '').trim();
+      if (grade === '初一') {
+        if (ch.startsWith('2.') || ch.includes('第二章')) return '第二章 有理数的运算';
+        if (ch.startsWith('3.') || ch.includes('第三章')) return '第三章 代数式';
+        if (ch.startsWith('4.') || ch.includes('第四章')) return '第四章 整式的加减法';
+      } else if (grade === '初二') {
+        if (ch.startsWith('15.') || ch.includes('第十五')) return '第15章 等腰三角形';
+        if (ch.startsWith('16.') || ch.includes('第十六')) return '第16章 幂的运算';
+      } else if (grade === '初三') {
+        if (ch.startsWith('25.') || ch.includes('第二十五')) return '第25章 一元二次方程';
+      }
+      return null;
+    }
+
     function buildChapterNavigation() {
       const container = document.getElementById('chapterNavigationTree');
       if (!container) return;
@@ -96,13 +111,28 @@
           gradeEntry.finishedPapers.get(chapter).count++;
         } else {
           if (!gradeEntry.semesters.has(location.semester)) {
-            gradeEntry.semesters.set(location.semester, new Map());
+            gradeEntry.semesters.set(location.semester, {
+              groups: new Map(),
+              standalone: new Map()
+            });
           }
-          const chapterMap = gradeEntry.semesters.get(location.semester);
-          if (!chapterMap.has(chapter)) {
-            chapterMap.set(chapter, { label: location.label, count: 0, firstOrder: order });
+          const semEntry = gradeEntry.semesters.get(location.semester);
+          const grp = getChapterGroup(location.grade, chapter);
+          if (grp) {
+            if (!semEntry.groups.has(grp)) {
+              semEntry.groups.set(grp, { chapters: new Map(), firstOrder: order });
+            }
+            const grpInfo = semEntry.groups.get(grp);
+            if (!grpInfo.chapters.has(chapter)) {
+              grpInfo.chapters.set(chapter, { label: location.label, count: 0, firstOrder: order });
+            }
+            grpInfo.chapters.get(chapter).count++;
+          } else {
+            if (!semEntry.standalone.has(chapter)) {
+              semEntry.standalone.set(chapter, { label: location.label, count: 0, firstOrder: order });
+            }
+            semEntry.standalone.get(chapter).count++;
           }
-          chapterMap.get(chapter).count++;
         }
       });
 
@@ -116,8 +146,14 @@
         const { finishedPapers, semesters } = gradeMap.get(grade);
         const finishedList = [...finishedPapers.entries()].sort((a, b) => a[1].firstOrder - b[1].firstOrder);
         const finishedTotal = finishedList.reduce((sum, entry) => sum + entry[1].count, 0);
-        const regularTotal = [...semesters.values()].reduce((sum, chapterMap) =>
-          sum + [...chapterMap.values()].reduce((acc, chapter) => acc + chapter.count, 0), 0);
+
+        let regularTotal = 0;
+        for (const [, semEntry] of semesters) {
+          for (const [, grp] of semEntry.groups) {
+            for (const [, c] of grp.chapters) regularTotal += c.count;
+          }
+          for (const [, c] of semEntry.standalone) regularTotal += c.count;
+        }
         const gradeTotal = finishedTotal + regularTotal;
 
         const finishedHtml = finishedList.length > 0 ? `
@@ -147,19 +183,49 @@
         });
 
         const semesterHtml = orderedSemesters.map(semester => {
-          const chapterMap = semesters.get(semester);
-          const chapters = [...chapterMap.entries()].sort((a, b) => a[1].firstOrder - b[1].firstOrder);
-          const semesterTotal = chapters.reduce((sum, entry) => sum + entry[1].count, 0);
-          const topicsHtml = chapters.map(([chapter, meta]) => `
+          const semEntry = semesters.get(semester);
+          const groupList = [...semEntry.groups.entries()].sort((a, b) => a[1].firstOrder - b[1].firstOrder);
+          const standaloneList = [...semEntry.standalone.entries()].sort((a, b) => a[1].firstOrder - b[1].firstOrder);
+
+          let semesterTotal = 0;
+          for (const [, grp] of groupList) {
+            for (const [, c] of grp.chapters) semesterTotal += c.count;
+          }
+          for (const [, c] of standaloneList) semesterTotal += c.count;
+
+          const groupsHtml = groupList.map(([grpTitle, grpInfo]) => {
+            const chapList = [...grpInfo.chapters.entries()].sort((a, b) => a[1].firstOrder - b[1].firstOrder);
+            const grpTotal = chapList.reduce((acc, entry) => acc + entry[1].count, 0);
+            return `
+              <details class="nav-chapter-group-card mb-2">
+                <summary>
+                  <span>${escapeNavText(grpTitle)}</span>
+                  <span class="nav-chapter-group-badge">${chapList.length} 节 · ${grpTotal} 题</span>
+                </summary>
+                <div class="nav-chapter-group-content space-y-1">
+                  ${chapList.map(([chapter, meta]) => `
+                    <button type="button" class="chapter-tree-btn nav-topic-button" data-chapter="${escapeNavText(chapter)}">
+                      <span class="nav-topic-label">${escapeNavText(meta.label)}</span>
+                      <span class="nav-topic-count">${meta.count}</span>
+                    </button>
+                  `).join('')}
+                </div>
+              </details>
+            `;
+          }).join('');
+
+          const standaloneHtml = standaloneList.map(([chapter, meta]) => `
             <button type="button" class="chapter-tree-btn nav-topic-button" data-chapter="${escapeNavText(chapter)}">
               <span class="nav-topic-label">${escapeNavText(meta.label)}</span>
               <span class="nav-topic-count">${meta.count}</span>
             </button>
           `).join('');
+
           return `
             <div class="mb-2 last:mb-0">
               <div class="nav-semester-label"><span>${escapeNavText(semester)}</span><span>${semesterTotal} 题</span></div>
-              <div class="space-y-1">${topicsHtml}</div>
+              ${groupsHtml}
+              ${standaloneHtml ? `<div class="space-y-1">${standaloneHtml}</div>` : ''}
             </div>
           `;
         }).join('');

@@ -20,6 +20,8 @@ function syncUiToState() {
       if (parentCard) parentCard.open = true;
       const finishedCard = btn.closest('.nav-finished-paper-card');
       if (finishedCard) finishedCard.open = true;
+      const chapterGroupCard = btn.closest('.nav-chapter-group-card');
+      if (chapterGroupCard) chapterGroupCard.open = true;
     }
   });
 

@@ -226,6 +226,15 @@
 
         const imgHtml = q.image ? `<div class="my-2"><img src="${q.image}" class="max-h-40 max-w-xs h-auto border border-slate-200 rounded p-1 bg-white object-contain"></div>` : '';
 
+        // Check if this question has >= 80% similar questions based on conditional & procedural knowledge
+        const similarList = typeof window.getSimilarQuestionsFor === 'function' ? window.getSimilarQuestionsFor(q.id, 3) : [];
+        const similarBtnHtml = similarList.length > 0 ? `
+          <button class="btn-open-similar text-indigo-600 hover:text-indigo-700 bg-indigo-50/80 hover:bg-indigo-100/80 border border-indigo-200/80 px-2.5 py-1 rounded-md flex items-center space-x-1 font-semibold transition" data-id="${q.id}" data-number="${qNumber}">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            <span>举一反三 (${similarList.length})</span>
+          </button>
+        ` : '';
+
         return `
           <div class="bg-white rounded-xl border ${isSelected ? 'border-blue-300 ring-1 ring-blue-100 shadow-sm' : 'border-slate-200'} p-5 transition-all hover:shadow-md question-card" data-id="${q.id}">
             <!-- Header Row -->
@@ -260,8 +269,8 @@
             </div>
 
             <!-- Bottom Actions -->
-            <div data-html2canvas-ignore="true" class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
-              <div class="flex items-center space-x-4 text-xs">
+            <div data-html2canvas-ignore="true" class="mt-4 pt-3 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2">
+              <div class="flex flex-wrap items-center gap-3 text-xs">
                 <button class="btn-toggle-analysis text-slate-500 hover:text-blue-600 flex items-center space-x-1 transition" data-id="${q.id}">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
                   <span class="analysis-btn-text">查看答案解析</span>
@@ -270,6 +279,7 @@
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"></path></svg>
                   <span class="screenshot-btn-text">截图复制</span>
                 </button>
+                ${similarBtnHtml}
               </div>
 
               <!-- Cart Toggle Button -->
@@ -317,6 +327,14 @@
         });
       });
 
+      container.querySelectorAll('.btn-open-similar').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const id = btn.getAttribute('data-id');
+          const qNum = btn.getAttribute('data-number') || '';
+          openSimilarQuestionsModal(id, qNum);
+        });
+      });
+
       container.querySelectorAll('.btn-toggle-cart').forEach(btn => {
         btn.addEventListener('click', () => {
           const id = btn.getAttribute('data-id');
@@ -326,6 +344,211 @@
 
       renderMath();
     }
+
+    // Open Similar Questions Modal ("举一反三")
+    let currentSimilarOriginId = null;
+    let currentSimilarOriginNumber = '';
+
+    function openSimilarQuestionsModal(questionId, qNumber = '') {
+      const modal = document.getElementById('similarQuestionsModal');
+      if (!modal) return;
+      const originQ = QUESTION_BANK.find(q => q.id === questionId);
+      if (!originQ) return;
+
+      currentSimilarOriginId = questionId;
+      currentSimilarOriginNumber = qNumber || originQ.number || '';
+
+      const similarItems = typeof window.getSimilarQuestionsFor === 'function'
+        ? window.getSimilarQuestionsFor(questionId, 3)
+        : [];
+      if (similarItems.length === 0) return;
+
+      const cogProfile = typeof window.getQuestionCognitiveProfile === 'function'
+        ? window.getQuestionCognitiveProfile(questionId)
+        : null;
+
+      // Update Header
+      const titleEl = document.getElementById('similarModalTitle');
+      const badgeEl = document.getElementById('similarModalCountBadge');
+      if (titleEl) {
+        titleEl.textContent = `举一反三 · 第 ${currentSimilarOriginNumber} 题相似变式推荐`;
+      }
+      if (badgeEl) {
+        badgeEl.textContent = `精选 ${similarItems.length} 题`;
+      }
+
+      // Render Origin Cognitive Banner
+      const bannerEl = document.getElementById('similarModalOriginBanner');
+      if (bannerEl && cogProfile) {
+        bannerEl.innerHTML = `
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="px-2 py-0.5 rounded bg-indigo-600 text-white font-bold text-[11px]">原题认知诊断</span>
+            <span class="font-bold text-indigo-950">【条件性策略】${cogProfile.condTitle}</span>
+            <span class="text-slate-400">|</span>
+            <span class="text-indigo-800"><b>【程序性步骤链】</b>${cogProfile.procChain}</span>
+          </div>
+          <div class="text-slate-600 text-[11px] leading-relaxed">
+            💡 <b>触发机制：</b>${cogProfile.condTrigger}
+          </div>
+        `;
+      }
+
+      // Render Similar Question Cards
+      renderSimilarModalCards(similarItems, originQ);
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      renderMath();
+    }
+
+    function renderSimilarModalCards(similarItems, originQ) {
+      const bodyEl = document.getElementById('similarModalBody');
+      if (!bodyEl) return;
+
+      bodyEl.innerHTML = similarItems.map((item, idx) => {
+        const sq = item.question;
+        const isSelected = state.selectedIds.has(sq.id);
+        const diffColor = sq.difficulty === '容易' ? 'text-emerald-600 bg-emerald-50 border-emerald-200' :
+                          sq.difficulty === '中等' ? 'text-amber-600 bg-amber-50 border-amber-200' :
+                          'text-rose-600 bg-rose-50 border-rose-200';
+        const isSameType = sq.type === originQ.type;
+        const typeRelationBadge = isSameType
+          ? `<span class="text-[11px] px-2 py-0.5 rounded bg-blue-50 text-blue-700 font-semibold border border-blue-200">同题型巩固 · ${sq.typeName}</span>`
+          : `<span class="text-[11px] px-2 py-0.5 rounded bg-purple-50 text-purple-700 font-semibold border border-purple-200">跨题型迁移 · ${sq.typeName}</span>`;
+
+        let optionsHtml = '';
+        if (sq.options && sq.options.length > 0) {
+          optionsHtml = `
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-2 mt-3 pt-2 text-sm text-slate-800">
+              ${sq.options.map(opt => `<div class="answer-option ${getOptionLayoutClass(opt)} p-2 bg-slate-50 rounded border border-slate-100">${formatMathHtml(opt)}</div>`).join('')}
+            </div>
+          `;
+        }
+
+        const imgHtml = sq.image ? `<div class="my-2"><img src="${sq.image}" class="max-h-40 max-w-xs h-auto border border-slate-200 rounded p-1 bg-white object-contain"></div>` : '';
+
+        return `
+          <div class="bg-white rounded-xl border ${isSelected ? 'border-blue-300 ring-1 ring-blue-100' : 'border-slate-200'} p-4 sm:p-5 shadow-xs transition-all similar-question-card" data-id="${sq.id}">
+            <!-- Card Top Meta -->
+            <div class="flex flex-wrap items-center justify-between gap-2 pb-2.5 border-b border-slate-100">
+              <div class="flex flex-wrap items-center gap-1.5">
+                <span class="px-2 py-0.5 rounded-md bg-indigo-600 text-white text-xs font-bold">变式 ${idx + 1}</span>
+                <span class="text-xs px-2 py-0.5 rounded font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">同构匹配度 ${item.similarityPercent}%</span>
+                ${typeRelationBadge}
+                <span class="text-xs px-2 py-0.5 rounded font-medium ${getGradeSemesterTagClass(sq.chapter)}">${getChapterDisplayLabel(sq.chapter)}</span>
+                <span class="text-xs px-2 py-0.5 rounded font-medium border ${diffColor}">难度：${sq.difficulty}</span>
+              </div>
+              <div class="text-[11px] text-slate-400">
+                考点：<span class="text-slate-600 font-medium">${sq.knowledge}</span>
+              </div>
+            </div>
+
+            <!-- Cognitive Match Tag -->
+            <div class="mt-2 px-3 py-1.5 rounded-lg bg-slate-50 border border-slate-200/80 flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-slate-600">
+              <span><b class="text-indigo-700">条件策略：</b>${item.condLabel}</span>
+              <span class="text-slate-300">|</span>
+              <span><b class="text-indigo-700">程序步骤：</b>${item.procLabel}</span>
+            </div>
+
+            <!-- Question Stem -->
+            <div class="pt-3 text-sm leading-relaxed text-slate-900">
+              ${formatMathHtml(sq.stem)}
+              ${imgHtml}
+              ${optionsHtml}
+            </div>
+
+            <!-- Analysis Accordion -->
+            <div id="sim_analysis_${sq.id}" class="hidden mt-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs space-y-2">
+              <div class="flex items-center space-x-2 font-bold text-slate-900">
+                <span class="w-2 h-2 rounded-full bg-indigo-600"></span>
+                <span>参考答案：</span>
+                <span class="text-indigo-700 font-mono text-sm">${formatMathHtml(sq.answer)}</span>
+              </div>
+              <div class="text-slate-600"><b class="text-slate-800">【分析】</b>${formatMathHtml(sq.analysis)}</div>
+              <div class="text-slate-700 pt-1 border-t border-slate-200 leading-relaxed"><b class="text-slate-800">【详解】</b>${formatMathHtml(sq.detail)}</div>
+            </div>
+
+            <!-- Card Footer Actions -->
+            <div class="mt-3.5 pt-2.5 border-t border-slate-100 flex items-center justify-between">
+              <button class="btn-sim-toggle-analysis text-xs text-slate-500 hover:text-indigo-600 flex items-center space-x-1 font-medium transition" data-id="${sq.id}">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                <span class="sim-analysis-btn-text">查看答案解析</span>
+              </button>
+
+              <div class="flex items-center space-x-2">
+                <button class="btn-sim-toggle-cart px-3 py-1.5 rounded-lg text-xs font-semibold transition-all flex items-center space-x-1 ${
+                  isSelected ? 'bg-red-50 text-red-600 border border-red-200 hover:bg-red-100' : 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-xs'
+                }" data-id="${sq.id}">
+                  ${isSelected ? `
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path></svg>
+                    <span>移出试题篮</span>
+                  ` : `
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                    <span>加入试题篮</span>
+                  `}
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      // Attach listeners inside modal
+      bodyEl.querySelectorAll('.btn-sim-toggle-analysis').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const id = btn.getAttribute('data-id');
+          const panel = document.getElementById(`sim_analysis_${id}`);
+          const textSpan = btn.querySelector('.sim-analysis-btn-text');
+          if (!panel) return;
+          const isHidden = panel.classList.contains('hidden');
+          panel.classList.toggle('hidden', !isHidden);
+          if (textSpan) textSpan.textContent = isHidden ? '收起答案解析' : '查看答案解析';
+        });
+      });
+
+      bodyEl.querySelectorAll('.btn-sim-toggle-cart').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const id = btn.getAttribute('data-id');
+          toggleCartItem(id);
+          // Re-render modal buttons to reflect updated cart state
+          if (currentSimilarOriginId) {
+            const originQ = QUESTION_BANK.find(q => q.id === currentSimilarOriginId);
+            const similarItems = window.getSimilarQuestionsFor(currentSimilarOriginId, 3);
+            if (originQ && similarItems.length) {
+              renderSimilarModalCards(similarItems, originQ);
+              renderMath();
+            }
+          }
+        });
+      });
+    }
+
+    function closeSimilarQuestionsModal() {
+      const modal = document.getElementById('similarQuestionsModal');
+      if (!modal) return;
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      currentSimilarOriginId = null;
+    }
+
+    // Bind global modal close events once
+    (function initSimilarModalEvents() {
+      document.addEventListener('click', (e) => {
+        const modal = document.getElementById('similarQuestionsModal');
+        if (!modal || modal.classList.contains('hidden')) return;
+        if (e.target === modal || e.target.closest('#closeSimilarModalBtn') || e.target.closest('#closeSimilarModalFooterBtn')) {
+          closeSimilarQuestionsModal();
+        }
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          const modal = document.getElementById('similarQuestionsModal');
+          if (modal && !modal.classList.contains('hidden')) {
+            closeSimilarQuestionsModal();
+          }
+        }
+      });
+    })();
 
     // Inline any local images on the card using window.IMAGE_BASE64_MAP so canvas is never tainted on file://
     function inlineCardImagesWithBase64(rootEl) {

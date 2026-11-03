@@ -340,6 +340,44 @@
     </div>
   </div>
 
+  <!-- ================== 举一反三 · 相似题推荐弹窗 ================== -->
+  <div id="similarQuestionsModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-900/60 backdrop-blur-xs p-3 sm:p-6 no-print">
+    <div class="relative w-full max-w-3xl max-h-[90vh] bg-white rounded-2xl shadow-2xl border border-slate-200 flex flex-col overflow-hidden" id="similarModalCard">
+      <!-- 弹窗顶栏 -->
+      <div class="bg-gradient-to-r from-indigo-600 via-blue-600 to-indigo-700 px-5 py-4 flex items-center justify-between text-white shrink-0">
+        <div class="flex items-center space-x-2.5">
+          <span class="w-8 h-8 rounded-lg bg-white/15 flex items-center justify-center text-lg shadow-xs">🎯</span>
+          <div>
+            <div class="flex items-center gap-2">
+              <h3 class="font-bold text-base sm:text-lg" id="similarModalTitle">举一反三 · 相似题变式训练</h3>
+              <span id="similarModalCountBadge" class="text-[11px] bg-white/20 px-2 py-0.5 rounded-full font-semibold">0 题</span>
+            </div>
+            <p class="text-xs text-blue-100 mt-0.5" id="similarModalSubtitle">基于「条件性知识（情境策略）」与「程序性知识（解题步骤链）」同构匹配</p>
+          </div>
+        </div>
+        <button id="closeSimilarModalBtn" type="button" class="text-white/80 hover:text-white p-1.5 rounded-lg hover:bg-white/10 transition text-xl leading-none" title="关闭 (Esc)">✕</button>
+      </div>
+
+      <!-- 原题认知模型诊断条 -->
+      <div id="similarModalOriginBanner" class="px-5 py-3 bg-indigo-50/70 border-b border-indigo-100 text-xs space-y-1.5 shrink-0">
+        <!-- JS 动态渲染原题条件性知识与程序性步骤链 -->
+      </div>
+
+      <!-- 相似题卡片滚动列表 -->
+      <div id="similarModalBody" class="flex-1 overflow-y-auto p-4 sm:p-5 space-y-4 bg-slate-50/60">
+        <!-- JS 动态渲染相似题卡片 -->
+      </div>
+
+      <!-- 弹窗底栏 -->
+      <div class="px-5 py-3 bg-white border-t border-slate-200 flex items-center justify-between text-xs text-slate-500 shrink-0">
+        <span>提示：点击题卡中的【加入试题篮】可直接将变式题编入当前试卷</span>
+        <button id="closeSimilarModalFooterBtn" type="button" class="px-4 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold transition">
+          关闭窗口
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- INLINE DATA & APPLICATION LOGIC -->
   <!-- 1. 题库数据与离线图片 Base64 映射 -->
   <script src="js/data/images-base64.js"></script>
@@ -351,6 +389,7 @@
   <!-- 3. 通用工具库与数学渲染 -->
   <script src="js/utils/toast.js"></script>
   <script src="js/utils/math.js"></script>
+  <script src="js/utils/similarity.js"></script>
 
   <!-- 4. 业务视图渲染与 Word 导出引擎 -->
   <script src="js/modules/render.js"></script>

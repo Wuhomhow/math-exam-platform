@@ -13904,16 +13904,16 @@
         "difficulty": "容易",
         "knowledge": "解一元一次方程（一）——合并同类项与移项、已知同类项求指数中字母或代数式的值",
         "chapter": "第四章 整式的加减 单元检测",
-        "stem": "若<img src=\"assets/images/img_docx_ba305faeb30a.png\" data-cx=\"361950\" data-cy=\"161925\" style=\"width:38px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">与<img src=\"assets/images/img_docx_fd6205d2911f.png\" data-cx=\"466725\" data-cy=\"161925\" style=\"width:49px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">是同类项，则<img src=\"assets/images/img_docx_d14d6e51601a.png\" data-cx=\"76200\" data-cy=\"85725\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">的值为（ ）",
+        "stem": "若 $a^3b^{n+7}$ 与 $-3a^3b^4$ 是同类项，则 $n$ 的值为（ ）",
         "options": [
             "A. 4",
             "B. 3",
-            "C. <img src=\"assets/images/img_docx_1b457a55fdde.png\" data-cx=\"219075\" data-cy=\"114300\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">",
-            "D. 4"
+            "C. -3",
+            "D. -4"
         ],
         "answer": "C",
-        "analysis": "根据同类项的定义，即所含字母相同，并且相同字母的指数也相同的项叫做同类型，来确定$n$的值．本题主要考查了同类项的定义，熟练掌握同类项中相同字母的指数相同是解题的关键．",
-        "detail": "解：$\\because a^{3}b^{n+7}$与$-3a^{3}b^{4}$是同类项<br>$\\therefore n+7=4$<br>$\\therefore n=4-7$<br>$\\therefore n=-3$<br>故选：$C$．"
+        "analysis": "根据同类项的定义，即所含字母相同，并且相同字母的指数也相同的项叫做同类项，来确定 $n$ 的值．本题主要考查了同类项的定义，熟练掌握同类项中相同字母的指数相同是解题的关键．",
+        "detail": "解：$\\because a^{3}b^{n+7}$ 与 $-3a^{3}b^{4}$ 是同类项，<br>$\\therefore n+7=4$，<br>$\\therefore n=4-7$，<br>$\\therefore n=-3$．<br>故选：C．"
     },
     {
         "id": "ch4_test_2",
@@ -13927,14 +13927,14 @@
         "chapter": "第四章 整式的加减 单元检测",
         "stem": "下列计算结果正确的是（ ）",
         "options": [
-            "A. <img src=\"assets/images/img_docx_bc65429e17b0.png\" data-cx=\"771525\" data-cy=\"123825\" style=\"width:81px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
-            "B. <img src=\"assets/images/img_docx_8372f6661c66.png\" data-cx=\"790575\" data-cy=\"142875\" style=\"width:83px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
-            "C. <img src=\"assets/images/img_docx_7f6aa1f80e13.png\" data-cx=\"923925\" data-cy=\"152400\" style=\"width:97px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
-            "D. <img src=\"assets/images/img_docx_f8b91625ea69.png\" data-cx=\"771525\" data-cy=\"123825\" style=\"width:81px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">"
+            "A. $4x^2-2x^2=2$",
+            "B. $2x+3y=5xy$",
+            "C. $7x^2y-7yx^2=0$",
+            "D. $2x+4x=6x^2$"
         ],
         "answer": "C",
-        "analysis": "本题考查了合并同类项，解题关键是掌握合并同类项法则．<br>分别根据合并同类项法则，对四个式子作出计算，再作出判断．",
-        "detail": "解：$4x^{2}-2x^{2}=2x^{2}$，故A错误；<br>$2x+3y$中没有同类项，不能合并，故B错误；<br>$7x^{2}y-7yx^{2}=0$，故C正确；<br>$2x+4x=6x$，故D错误，<br>故选：C．"
+        "analysis": "本题考查了合并同类项，解题关键是掌握合并同类项法则．分别根据合并同类项法则，对四个式子作出计算，再作出判断．",
+        "detail": "解：$4x^2-2x^2=2x^2$，故A错误；<br>$2x+3y$中没有同类项，不能合并，故B错误；<br>$7x^2y-7yx^2=0$，故C正确；<br>$2x+4x=6x$，故D错误，<br>故选：C．"
     },
     {
         "id": "ch4_test_3",
@@ -13948,14 +13948,14 @@
         "chapter": "第四章 整式的加减 单元检测",
         "stem": "下列说法正确的是（ ）",
         "options": [
-            "A. <img src=\"assets/images/img_docx_7732b0738fe5.png\" data-cx=\"323850\" data-cy=\"266700\" style=\"width:34px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">不是整式",
-            "B. <img src=\"assets/images/img_docx_e7663fc528a9.png\" data-cx=\"323850\" data-cy=\"180975\" style=\"width:34px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">的次数是6",
-            "C. 数字0是单项式",
-            "D. <img src=\"assets/images/img_docx_ab88c98b3756.png\" data-cx=\"762000\" data-cy=\"152400\" style=\"width:80px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">是四次二项式"
+            "A. $\\frac{m^4n^2}{7}$ 不是整式",
+            "B. $2^3x^2y$ 的次数是 6",
+            "C. 数字 0 是单项式",
+            "D. $x^2y^2+xy-1$ 是四次二项式"
         ],
         "answer": "C",
         "analysis": "本题考查了单项式和多项式的相关概念，依据概念对选项逐一判断，注意单项式的次数是字母指数的和．",
-        "detail": "解：A、$\\frac{m^{4}n^{2}}{7}$是整式，故A错误；<br>B、$2^{3}x^{2}y$的次数是3，故B错误；<br>C、数字0是单项式，故C正确；<br>D、$x^{2}y^{2}+xy-1$是四次三项式，故D错误；<br>故选：C．"
+        "detail": "解：A、$\\frac{m^4n^2}{7}$ 是整式，故A错误；<br>B、$2^3x^2y$ 的次数是 3，故B错误；<br>C、数字 0 是单项式，故C正确；<br>D、$x^2y^2+xy-1$ 是四次三项式，故D错误；<br>故选：C．"
     },
     {
         "id": "ch4_test_4",
@@ -13967,7 +13967,7 @@
         "difficulty": "容易",
         "knowledge": "多项式系数、指数中字母求值",
         "chapter": "第四章 整式的加减 单元检测",
-        "stem": "如果整式<img src=\"assets/images/img_docx_754ed93537c1.png\" data-cx=\"695325\" data-cy=\"123825\" style=\"width:73px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">是关于x的三次三项式，那么n等于（ ）",
+        "stem": "如果整式 $x^{n-1}-5x+2$ 是关于 $x$ 的三次三项式，那么 $n$ 等于（ ）",
         "options": [
             "A. 3",
             "B. 4",
@@ -13975,8 +13975,8 @@
             "D. 6"
         ],
         "answer": "B",
-        "analysis": "本题主要考查了多项式的次数和项的定义，多项式中每个单项式都叫做多项式的项，次数最高项的次数叫做多项式的次数，据此可得$n-1=3$，解之即可得到答案．",
-        "detail": "解：∵整式$x^{n-1}-5x+2$是关于x的三次三项式，<br>∴$n-1=3$，<br>∴$n=4$，<br>故选：B．"
+        "analysis": "本题主要考查了多项式的次数和项的定义，多项式中每个单项式都叫做多项式的项，次数最高项的次数叫做多项式的次数，据此可得 $n-1=3$，解之即可得到答案．",
+        "detail": "解：$\\because$ 整式 $x^{n-1}-5x+2$ 是关于 $x$ 的三次三项式，<br>$\\therefore n-1=3$，<br>$\\therefore n=4$．<br>故选：B．"
     },
     {
         "id": "ch4_test_5",
@@ -13988,16 +13988,16 @@
         "difficulty": "容易",
         "knowledge": "合并同类项",
         "chapter": "第四章 整式的加减 单元检测",
-        "stem": "化简<img src=\"assets/images/img_docx_16b9b644941c.png\" data-cx=\"933450\" data-cy=\"123825\" style=\"width:98px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">的结果是（ ）",
+        "stem": "化简 $3a+2b-5a-b$ 的结果是（ ）",
         "options": [
-            "A. <img src=\"assets/images/img_docx_3bafaaca3aaf.png\" data-cx=\"504825\" data-cy=\"123825\" style=\"width:53px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
-            "B. <img src=\"assets/images/img_docx_4f4d69497177.png\" data-cx=\"352425\" data-cy=\"123825\" style=\"width:37px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">",
-            "C. <img src=\"assets/images/img_docx_3ebcdc60a6ff.png\" data-cx=\"523875\" data-cy=\"123825\" style=\"width:55px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
-            "D. <img src=\"assets/images/img_docx_8dd4ebed5e10.png\" data-cx=\"371475\" data-cy=\"123825\" style=\"width:39px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">"
+            "A. $-2a+b$",
+            "B. $2a+b$",
+            "C. $-2a-b$",
+            "D. $2a-b$"
         ],
         "answer": "A",
         "analysis": "本题考查合并同类项，根据合并同类项的法则，进行计算即可．",
-        "detail": "解：原式$=(3-5)a+(2-1)b=-2a+b$；<br>故选A．"
+        "detail": "解：原式 $=(3-5)a+(2-1)b=-2a+b$；<br>故选A．"
     },
     {
         "id": "ch4_test_6",
@@ -14009,16 +14009,16 @@
         "difficulty": "容易",
         "knowledge": "列代数式、整式加减的应用",
         "chapter": "第四章 整式的加减 单元检测",
-        "stem": "某批发商以每件50元购进品牌衬衣100件，预计每件70元售出．在实际销售过程中，他按预售价将x件衬衣售出后，决定将剩下的衬衣打九折销售，全部售完后，共可以获得的利润是（ ）",
+        "stem": "某批发商以每件50元购进品牌衬衣100件，预计每件70元售出．在实际销售过程中，他按预售价将 $x$ 件衬衣售出后，决定将剩下的衬衣打九折销售，全部售完后，共可以获得的利润是（ ）",
         "options": [
-            "A. <img src=\"assets/images/img_docx_3fbeb495f984.png\" data-cx=\"219075\" data-cy=\"114300\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">元",
-            "B. <img src=\"assets/images/img_docx_8c9568a89115.png\" data-cx=\"771525\" data-cy=\"152400\" style=\"width:81px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">元",
-            "C. <img src=\"assets/images/img_docx_b1bb776c893c.png\" data-cx=\"762000\" data-cy=\"152400\" style=\"width:80px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">元",
-            "D. <img src=\"assets/images/img_docx_1137f0cb8dea.png\" data-cx=\"771525\" data-cy=\"152400\" style=\"width:81px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">元"
+            "A. $20x$ 元",
+            "B. $(7x+1300)$ 元",
+            "C. $(5x+1300)$ 元",
+            "D. $13(100-x)$ 元"
         ],
         "answer": "B",
-        "analysis": "本题主要考查列代数式，理解数量关系是关键，总利润由两部分组成：按原价售出x件的利润和打九折售出剩余件的利润，分别计算后相加即可．",
-        "detail": "解：总成本为 $50\\times 100=5000$ 元，<br>原价销售利润：前x件每件售价70元，利润为 $(70-50)x=20x$ 元，<br>打折销售利润：剩余 $(100-x)$ 件打九折，售价为 $70\\times 0.9=63$ 元/件，利润为 $(63-50)(100-x)=13(100-x)$ 元，<br>∴总利润：将两部分利润相加，得 $20x+13(100-x)=20x+1300-13x=7x+1300$（元），<br>∴总利润为 $(7x+1300)$ 元，<br>故选：B．"
+        "analysis": "本题主要考查列代数式，理解数量关系是关键，总利润由两部分组成：按原价售出 $x$ 件的利润和打九折售出剩余件的利润，分别计算后相加即可．",
+        "detail": "解：总成本为 $50\\times 100=5000$ 元，<br>原价销售利润：前 $x$ 件每件售价70元，利润为 $(70-50)x=20x$ 元，<br>打折销售利润：剩余 $(100-x)$ 件打九折，售价为 $70\\times 0.9=63$ 元/件，利润为 $(63-50)(100-x)=13(100-x)$ 元，<br>$\\therefore$ 总利润：将两部分利润相加，得 $20x+13(100-x)=20x+1300-13x=7x+1300$（元），<br>$\\therefore$ 总利润为 $(7x+1300)$ 元．<br>故选：B．"
     },
     {
         "id": "ch4_test_7",
@@ -14030,16 +14030,16 @@
         "difficulty": "容易",
         "knowledge": "整式的加减中的化简求值",
         "chapter": "第四章 整式的加减 单元检测",
-        "stem": "若<img src=\"assets/images/img_docx_def91cb97075.png\" data-cx=\"619125\" data-cy=\"142875\" style=\"width:65px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">，则<img src=\"assets/images/img_docx_34d05f54aff4.png\" data-cx=\"1571625\" data-cy=\"152400\" style=\"width:165px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">的值为（ ）",
+        "stem": "若 $a=1, b=2$，则 $2(a-3b)-(2b-3a)+1$ 的值为（ ）",
         "options": [
-            "A. <img src=\"assets/images/img_docx_628f5ffeb349.png\" data-cx=\"304800\" data-cy=\"114300\" style=\"width:32px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">",
-            "B. <img src=\"assets/images/img_docx_27923ac6968e.png\" data-cx=\"304800\" data-cy=\"114300\" style=\"width:32px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">",
+            "A. -16",
+            "B. -10",
             "C. 8",
             "D. 10"
         ],
         "answer": "B",
         "analysis": "本题考查整式的加减—化简求值，先将式子根据整式的加减运算法则化简，再代入计算即可．",
-        "detail": "解：原式$=2a-6b-2b+3a+1$<br>$=5a-8b+1$，<br>当$a=1$，$b=2$时，<br>原式$=5\\times 1-8\\times 2+1$<br>$=5-16+1$<br>$=-10$．<br>故选：B．"
+        "detail": "解：原式 $=2a-6b-2b+3a+1=5a-8b+1$，<br>当 $a=1, b=2$ 时，<br>原式 $=5\\times 1-8\\times 2+1=5-16+1=-10$．<br>故选：B．"
     },
     {
         "id": "ch4_test_8",
@@ -14051,16 +14051,16 @@
         "difficulty": "容易",
         "knowledge": "数字类规律探索",
         "chapter": "第四章 整式的加减 单元检测",
-        "stem": "按一定规律排列的代数式：<img src=\"assets/images/img_docx_803af19ebfd7.png\" data-cx=\"285750\" data-cy=\"123825\" style=\"width:30px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">，<img src=\"assets/images/img_docx_5b9974cba056.png\" data-cx=\"409575\" data-cy=\"123825\" style=\"width:43px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">，<img src=\"assets/images/img_docx_97b1450e98da.png\" data-cx=\"400050\" data-cy=\"123825\" style=\"width:42px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">，<img src=\"assets/images/img_docx_59ec175725d5.png\" data-cx=\"409575\" data-cy=\"123825\" style=\"width:43px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">，……，第n个代数式是（ ）",
+        "stem": "按一定规律排列的代数式：$a+b$，$a^2+2b$，$a^3+3b$，$a^4+4b$，……，第 $n$ 个代数式是（ ）",
         "options": [
-            "A. <img src=\"assets/images/img_docx_17c15d573ae2.png\" data-cx=\"409575\" data-cy=\"123825\" style=\"width:43px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">",
-            "B. <img src=\"assets/images/img_docx_a2d57059ba96.png\" data-cx=\"514350\" data-cy=\"123825\" style=\"width:54px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
-            "C. <img src=\"assets/images/img_docx_86aaf7ef35a2.png\" data-cx=\"514350\" data-cy=\"123825\" style=\"width:54px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
-            "D. <img src=\"assets/images/img_docx_457a85833130.png\" data-cx=\"790575\" data-cy=\"152400\" style=\"width:83px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">"
+            "A. $a^n+nb$",
+            "B. $a^{n-1}+nb$",
+            "C. $a^{n+1}+nb$",
+            "D. $a^n+(n+1)b$"
         ],
         "answer": "A",
         "analysis": "本题考查代数式的规律探索．根据所给多项式，观察各部分的变化，发现规律即可解决问题．",
-        "detail": "解：由所给多项式可知，<br>$a$的次数依次为$1$，$2$，$3$，…，<br>所以第$n$个多项式中$a$的次数为$n$；<br>$b$的系数依次为$1$，$2$，$3$，…，<br>所以第$n$个多项式为$a^{n}+nb$．<br>故选：A．"
+        "detail": "解：由所给多项式可知，<br>$a$ 的次数依次为 1, 2, 3, …，所以第 $n$ 个多项式中 $a$ 的次数为 $n$；<br>$b$ 的系数依次为 1, 2, 3, …，所以第 $n$ 个多项式中 $b$ 的系数为 $n$；<br>所以第 $n$ 个多项式为 $a^n+nb$．<br>故选：A．"
     },
     {
         "id": "ch4_test_9",
@@ -14072,16 +14072,16 @@
         "difficulty": "容易",
         "knowledge": "已知字母的值 ，求代数式的值、整式加减中的无关型问题",
         "chapter": "第四章 整式的加减 单元检测",
-        "stem": "多项式<img src=\"assets/images/img_docx_ba2771a9cb23.png\" data-cx=\"2600325\" data-cy=\"152400\" style=\"width:273px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">的值与x的取值无关，则<img src=\"assets/images/img_docx_659eabd40beb.png\" data-cx=\"371475\" data-cy=\"123825\" style=\"width:39px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">的值为（ ）",
+        "stem": "多项式 $(2x^2+ax-y+4)+(-2bx^2+3x-5y+1)$ 的值与 $x$ 的取值无关，则 $b-2a$ 的值为（ ）",
         "options": [
-            "A. <img src=\"assets/images/img_docx_59bdbee52343.png\" data-cx=\"161925\" data-cy=\"114300\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">",
-            "B. <img src=\"assets/images/img_docx_0a5e6b8ff842.png\" data-cx=\"171450\" data-cy=\"104775\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">",
-            "C. <img src=\"assets/images/img_docx_68a45b76838f.png\" data-cx=\"161925\" data-cy=\"104775\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">",
+            "A. -5",
+            "B. -4",
+            "C. -1",
             "D. 7"
         ],
         "answer": "D",
-        "analysis": "本题考查整式的加减，代数式求值，解题的关键是掌握去括号、合并同类项的法则．先根据整式的加减运算法则化简，再根据含x的项的系数为0，得出$2-2b=0$，$a+3=0$，即可解出a、b的值，再代入所求式子运算即可．",
-        "detail": "解： $(2x^{2}+ax-y+4)+(-2bx^{2}+3x-5y+1)$<br>$=2x^{2}+ax-y+4-2bx^{2}+3x-5y+1$<br>$=(2-2b)x^{2}+(a+3)x-6y+5$<br>因多项式的值与x无关，故含x项的系数均为零：<br>∴$2-2b=0$，解得$b=1$；<br>$a+3=0$，解得$a=-3$；<br>∴$b-2a=1-2\\times (-3)=1+6=7$，<br>故选：D．"
+        "analysis": "本题考查整式的加减，代数式求值，解题的关键是掌握去括号、合并同类项的法则．先根据整式的加减运算法则化简，再根据含 $x$ 的项的系数为 0，得出 $2-2b=0$，$a+3=0$，即可解出 $a, b$ 的值，再代入所求式子运算即可．",
+        "detail": "解：$(2x^2+ax-y+4)+(-2bx^2+3x-5y+1)$<br>$=2x^2+ax-y+4-2bx^2+3x-5y+1$<br>$=(2-2b)x^2+(a+3)x-6y+5$<br>因多项式的值与 $x$ 无关，故含 $x$ 项的系数均为零：<br>$\\therefore 2-2b=0$，解得 $b=1$；<br>$a+3=0$，解得 $a=-3$；<br>$\\therefore b-2a=1-2\\times (-3)=1+6=7$．<br>故选：D．"
     },
     {
         "id": "ch4_test_10",
@@ -14093,16 +14093,16 @@
         "difficulty": "中等",
         "knowledge": "已知式子的值，求代数式的值、整式的加减运算",
         "chapter": "第四章 整式的加减 单元检测",
-        "stem": "已知<img src=\"assets/images/img_docx_42e3427d6984.png\" data-cx=\"904875\" data-cy=\"123825\" style=\"width:95px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">，<img src=\"assets/images/img_docx_a06c89e5d9fe.png\" data-cx=\"933450\" data-cy=\"123825\" style=\"width:98px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">，则<img src=\"assets/images/img_docx_007df24bdd49.png\" data-cx=\"1000125\" data-cy=\"123825\" style=\"width:105px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">的值是（ ）",
+        "stem": "已知 $m^2+mn+2=0$，$n^2+3mn+9=0$，则 $2m^2+11mn+3n^2$ 的值是（ ）",
         "options": [
-            "A. <img src=\"assets/images/img_docx_40b4b81868b5.png\" data-cx=\"285750\" data-cy=\"114300\" style=\"width:30px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">",
-            "B. <img src=\"assets/images/img_docx_e963aef00c0f.png\" data-cx=\"304800\" data-cy=\"114300\" style=\"width:32px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">",
-            "C. <img src=\"assets/images/img_docx_9ac1bca40eb4.png\" data-cx=\"295275\" data-cy=\"114300\" style=\"width:31px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">",
-            "D. <img src=\"assets/images/img_docx_d443e8e1381a.png\" data-cx=\"228600\" data-cy=\"104775\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">"
+            "A. -31",
+            "B. -27",
+            "C. -23",
+            "D. -4"
         ],
         "answer": "A",
-        "analysis": "本题考查代数式求值，根据$m^{2}+mn+2=0$，$n^{2}+3mn+9=0$，得到$m^{2}=-mn-2,n^{2}=-3mn-9$，整体代入法，进行求解即可．",
-        "detail": "解：∵$m^{2}+mn+2=0$，$n^{2}+3mn+9=0$，<br>∴$m^{2}=-mn-2,n^{2}=-3mn-9$，<br>∴$2m^{2}+11mn+3n^{2}$<br>$=2(-mn-2)+11mn+3(-3mn-9)$<br>$=-2mn-4+11mn-9mn-27$<br>$=-31$；<br>故选A．"
+        "analysis": "本题考查了代数式求值，利用整体代入的方法是解题的关键．",
+        "detail": "解：$\\because m^2+mn+2=0$，$n^2+3mn+9=0$，<br>$\\therefore m^2=-mn-2, n^2=-3mn-9$，<br>$\\therefore 2m^2+11mn+3n^2$<br>$=2(-mn-2)+11mn+3(-3mn-9)$<br>$=-2mn-4+11mn-9mn-27=-31$．<br>故选：A．"
     },
     {
         "id": "ch4_test_11",
@@ -14114,7 +14114,7 @@
         "difficulty": "中等",
         "knowledge": "整式加减的应用",
         "chapter": "第四章 整式的加减 单元检测",
-        "stem": "嘉嘉和淇淇对5个正整数进行规律探究，嘉嘉写出三个连续偶数：<img src=\"assets/images/img_docx_2476c58cf24b.png\" data-cx=\"1447800\" data-cy=\"161925\" style=\"width:152px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">，淇祺写出两个连续奇数：<img src=\"assets/images/img_docx_ececce560bcd.png\" data-cx=\"952500\" data-cy=\"161925\" style=\"width:100px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">，若<img src=\"assets/images/img_docx_ee99d5f5a26d.png\" data-cx=\"1171575\" data-cy=\"142875\" style=\"width:123px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">，则<img src=\"assets/images/img_docx_45459eb52896.png\" data-cx=\"1876425\" data-cy=\"257175\" style=\"width:197px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">的值一定能（ ）",
+        "stem": "嘉嘉和淇淇对5个正整数进行规律探究，嘉嘉写出三个连续偶数：$a_1, a_2, a_3 (a_1 < a_2 < a_3)$，淇祺写出两个连续奇数：$a_4, a_5 (a_4 < a_5)$，若 $a_1+a_2+a_3 = a_4+a_5$，则 $\\frac{1}{3}(2a_1+a_3+a_4)+\\frac{1}{2}(a_2+2a_5)$ 的值一定能（ ）",
         "options": [
             "A. 被6整除",
             "B. 被7整除",
@@ -14122,8 +14122,8 @@
             "D. 被9整除"
         ],
         "answer": "B",
-        "analysis": "本题考查的是整式的加减运算的应用，将三个连续偶数和两个连续奇数用代数式表示，利用已知条件建立方程，化简目标表达式，结合奇偶性分析得出结果.",
-        "detail": "解：∵三个连续偶数：$a_{1}, a_{2}, a_{3}(a_{1}<a_{2}<a_{3})$，两个连续奇数：$a_{4}, a_{5}(a_{4}<a_{5})$<br>则 $a_{2}=a_{1}+2,a_{3}=a_{1}+4$，$a_{5}=a_{4}+2$，<br>$\\therefore a_{1}+a_{1}+2+a_{1}+4=a_{4}+a_{4}+2$，<br>∴$3a_{1}+6=2a_{4}+2$，<br>∴$a_{4}=\\frac{1}{2}(3a_{1}+4)$，<br>∴$\\frac{1}{3}(2a_{1}+a_{3}+a_{4})+\\frac{1}{2}(a_{2}+2a_{5})$<br>$=\\frac{1}{3}(2a_{1}+a_{1}+4+\\frac{3}{2}a_{1}+2)+\\frac{1}{2}(a_{1}+2+2a_{4}+4)$<br>$=\\frac{1}{3}(\\frac{9}{2}a_{1}+6)+\\frac{1}{2}(a_{1}+2+3a_{1}+4+4)$<br>$=\\frac{3}{2}a_{1}+2+2a_{1}+5$<br>$=\\frac{7}{2}a_{1}+7$，<br>设$a_{1}=2k$，$a_{4}=\\frac{1}{2}(3a_{1}+4)=3k+2$为奇数，则$k$为正奇数，<br>∴$\\frac{7}{2}a_{1}+7=7k+7=7(k+1)$，<br>∴$\\frac{1}{3}(2a_{1}+a_{3}+a_{4})+\\frac{1}{2}(a_{2}+2a_{5})$的值一定能被$7$整除，<br>故选：B"
+        "analysis": "本题考查了整式的加减应用，解题关键是掌握奇数、偶数的表示方法及整式的化简求值．",
+        "detail": "解：$\\because$ 三个连续偶数：$a_1, a_2, a_3 (a_1 < a_2 < a_3)$，两个连续奇数：$a_4, a_5 (a_4 < a_5)$，<br>则 $a_2=a_1+2, a_3=a_1+4, a_5=a_4+2$，<br>$\\therefore a_1+a_1+2+a_1+4=a_4+a_4+2$，<br>$\\therefore 3a_1+6=2a_4+2$，<br>$\\therefore a_4=\\frac{1}{2}(3a_1+4)$，<br>$\\therefore \\frac{1}{3}(2a_1+a_3+a_4)+\\frac{1}{2}(a_2+2a_5)$<br>$=\\frac{1}{3}(2a_1+a_1+4+\\frac{3}{2}a_1+2)+\\frac{1}{2}(a_1+2+2a_4+4)$<br>$=\\frac{1}{3}(\\frac{9}{2}a_1+6)+\\frac{1}{2}(a_1+2+3a_1+4+4)$<br>$=\\frac{3}{2}a_1+2+2a_1+5=\\frac{7}{2}a_1+7$，<br>设 $a_1=2k$，$a_4=\\frac{1}{2}(3a_1+4)=3k+2$ 为奇数，则 $k$ 为正奇数，<br>$\\therefore \\frac{7}{2}a_1+7=7k+7=7(k+1)$，<br>$\\therefore$ 原式的值一定能被 7 整除．<br>故选：B．"
     },
     {
         "id": "ch4_test_12",
@@ -14135,16 +14135,16 @@
         "difficulty": "中等",
         "knowledge": "多个有理数的乘法运算、带有字母的绝对值化简问题、有理数加法运算",
         "chapter": "第四章 整式的加减 单元检测",
-        "stem": "已知：<img src=\"assets/images/img_docx_25f843cc5ad1.png\" data-cx=\"1952625\" data-cy=\"295275\" style=\"width:205px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">，且<img src=\"assets/images/img_docx_711836162771.png\" data-cx=\"438150\" data-cy=\"123825\" style=\"width:46px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">，<img src=\"assets/images/img_docx_0e54111088c3.png\" data-cx=\"704850\" data-cy=\"123825\" style=\"width:74px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">，<img src=\"assets/images/img_docx_a7b4e69c7ee1.png\" data-cx=\"104775\" data-cy=\"85725\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">的最大值是（ ）",
+        "stem": "已知：$m=\\frac{|a+b|}{c}+\\frac{2|b+c|}{a}+\\frac{3|a+c|}{b}$，且 $abc>0$，$a+b+c=0$，$m$ 的最大值是（ ）",
         "options": [
             "A. 0",
             "B. 3",
             "C. 5",
-            "D. －4"
+            "D. -4"
         ],
         "answer": "A",
-        "analysis": "本题考查了有理数的乘法、绝对值的意义、有理数的加法，根据题意可得$a$，$b$，$c$中有两个负数，一个正数，$a+b=-c$，$b+c=-a$，$a+c=-b$，求出$m=\\frac{|-c|}{c}+\\frac{2|-a|}{a}+\\frac{3|-b|}{b}$，再分三种情况，结合绝对值的意义求解即可，采用分类讨论的思想是解此题的关键．",
-        "detail": "解：∵$abc>0$，$a+b+c=0$，<br>∴$a$，$b$，$c$中有两个负数，一个正数，$a+b=-c$，$b+c=-a$，$a+c=-b$，<br>∴$m=\\frac{|a+b|}{c}+\\frac{2|b+c|}{a}+\\frac{3|a+c|}{b}=\\frac{|-c|}{c}+\\frac{2|-a|}{a}+\\frac{3|-b|}{b}$，<br>当$a<0$，$b<0$，$c>0$时，$m=1-2-3=-4$，<br>当$a>0$，$b<0$，$c<0$时，$m=-1+2-3=-2$，<br>当$a<0$，$b>0$，$c<0$时，$m=-1-2+3=0$，<br>综上所述，$m$的最大值是$0$，<br>故选：A．"
+        "analysis": "本题考查了有理数的加法、乘法与绝对值化简，分类讨论是解决本题的关键．",
+        "detail": "解：$\\because abc>0, a+b+c=0$，<br>$\\therefore a, b, c$ 中有两个负数，一个正数，$a+b=-c, b+c=-a, a+c=-b$，<br>$\\therefore m=\\frac{|-c|}{c}+\\frac{2|-a|}{a}+\\frac{3|-b|}{b}$，<br>当 $a<0, b<0, c>0$ 时，$m=1-2-3=-4$；<br>当 $a>0, b<0, c<0$ 时，$m=-1+2-3=-2$；<br>当 $a<0, b>0, c<0$ 时，$m=-1-2+3=0$；<br>综上所述，$m$ 的最大值是 0．<br>故选：A．"
     },
     {
         "id": "ch4_test_13",
@@ -14156,11 +14156,11 @@
         "difficulty": "容易",
         "knowledge": "合并同类项、同类项的判断",
         "chapter": "第四章 整式的加减 单元检测",
-        "stem": "写出一个能与<img src=\"assets/images/img_docx_a93baa5eb522.png\" data-cx=\"457200\" data-cy=\"257175\" style=\"width:48px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">合并的单项式________．",
+        "stem": "写出一个能与 $-\\frac{1}{2}ab^2$ 合并的单项式________．",
         "options": [],
-        "answer": "$ab^{2}$（答案不唯一）",
-        "analysis": "本题主要考查了合并同类项，掌握所含字母相同且相同字母的指数也相同的项叫做同类项，是本题的解题关键． 根据同类项的定义求解即可．",
-        "detail": "解：能与$-\\frac{1}{2}ab^{2}$合并的单项式有$ab^{2}$，$-2ab^{2}$等，<br>故答案为：$ab^{2}$（答案不唯一）．"
+        "answer": "$ab^2$（答案不唯一）",
+        "analysis": "本题考查同类项的定义，所含字母相同，并且相同字母的指数也相同的项叫做同类项．",
+        "detail": "解：能与 $-\\frac{1}{2}ab^2$ 合并的单项式有 $ab^2, -2ab^2$ 等，<br>故答案为：$ab^2$（答案不唯一）．"
     },
     {
         "id": "ch4_test_14",
@@ -14172,11 +14172,11 @@
         "difficulty": "容易",
         "knowledge": "列代数式、整式加减的应用",
         "chapter": "第四章 整式的加减 单元检测",
-        "stem": "为了增强学生体质，加强体育锻炼，学校组织了春季运动会；某班有47名同学分成三组进行列队表演，第一组有<img src=\"assets/images/img_docx_d29ec2e5711f.png\" data-cx=\"838200\" data-cy=\"152400\" style=\"width:88px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">人，第二组比第一组的一半多6人，求第三组的人数为________（用含<img src=\"assets/images/img_docx_e5b8dbcc945e.png\" data-cx=\"219075\" data-cy=\"95250\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">的式子表示）．",
+        "stem": "为了增强学生体质，加强体育锻炼，学校组织了春季运动会；某班有47名同学分成三组进行列队表演，第一组有 $(3m+4n+2)$ 人，第二组比第一组的一半多6人，求第三组的人数为________（用含 $m, n$ 的式子表示）．",
         "options": [],
-        "answer": "$(38-\\frac{9}{2}m-6n)$人",
-        "analysis": "本题考查了列代数式，整式加减的应用，正确理解题中的数量关系是解题的关键；由第一组人数可表示出第二组人数，再根据三组总人数为47人，即可表示出第三组的人数，最后化简即可．",
-        "detail": "解：第二组人数为：$\\frac{1}{2}(3m+4n+2)+6=(\\frac{3}{2}m+2n+7)$人，<br>第三组人数为：$47-(3m+4n+2)-(\\frac{3}{2}m+2n+7)$<br>$=47-3m-4n-2-\\frac{3}{2}m-2n-7$<br>$=(38-\\frac{9}{2}m-6n)$人<br>故答案为：$(38-\\frac{9}{2}m-6n)$人．"
+        "answer": "$(38-\\frac{9}{2}m-6n)$ 人",
+        "analysis": "本题考查了列代数式和整式的加减，解题关键是正确表示出第二组和第三组的人数．",
+        "detail": "解：第二组人数为：$\\frac{1}{2}(3m+4n+2)+6=(\\frac{3}{2}m+2n+7)$ 人，<br>第三组人数为：$47-(3m+4n+2)-(\\frac{3}{2}m+2n+7)$<br>$=47-3m-4n-2-\\frac{3}{2}m-2n-7$<br>$=(38-\\frac{9}{2}m-6n)$ 人．<br>故答案为：$(38-\\frac{9}{2}m-6n)$ 人．"
     },
     {
         "id": "ch4_test_15",
@@ -14188,11 +14188,11 @@
         "difficulty": "容易",
         "knowledge": "已知式子的值，求代数式的值、多项式的项、项数或次数、合并同类项",
         "chapter": "第四章 整式的加减 单元检测",
-        "stem": "若多项式<img src=\"assets/images/img_docx_1f0a4d383152.png\" data-cx=\"742950\" data-cy=\"123825\" style=\"width:78px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">与多项式<img src=\"assets/images/img_docx_60d45f764eb1.png\" data-cx=\"1019175\" data-cy=\"123825\" style=\"width:107px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">相加后不含二次项，则多项式<img src=\"assets/images/img_docx_1da16ab5d635.png\" data-cx=\"981075\" data-cy=\"114300\" style=\"width:103px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">的值为_______．",
+        "stem": "若多项式 $(5x^3-8x^2+x)$ 与多项式 $(4x^3-2mx^2-10x)$ 相加后不含二次项，则多项式 $(m-5n+7m+5n)$ 的值为_______．",
         "options": [],
-        "answer": "$-32$",
-        "analysis": "本题考查了多项式的加法运算、合并同类项以及解方程求参数的值．通过多项式相加后不含某项，根据不含某项即含某项的系数为$0$，可以得到关于参数的方程，解出参数的值，然后代入到相关的表达式中求值．",
-        "detail": "解：将多项式$5x^{3}-8x^{2}+x$与多项式$4x^{3}-2mx^{2}-10x$中的二次项合并，<br>得$-8x^{2}-2mx^{2}=-(8+2m)x^{2}$.<br>∵两个多项式相加后不含二次项，<br>∴$-(8+2m)=0$，<br>解得$m=-4$<br>$\\because m-5n+7m+5n=8m$，<br>$\\therefore 8m=8\\times (-4)=-32$．<br>故答案为∶$-32$．"
+        "answer": "-32",
+        "analysis": "本题考查了多项式不含某项的问题以及代数式求值，将二次项系数令为0是关键．",
+        "detail": "解：将两多项式相加后二次项为：$-8x^2-2mx^2=-(8+2m)x^2$，<br>$\\because$ 相加后不含二次项，<br>$\\therefore -(8+2m)=0$，解得 $m=-4$．<br>$\\because m-5n+7m+5n=8m$，<br>$\\therefore 8m=8\\times (-4)=-32$．<br>故答案为：-32．"
     },
     {
         "id": "ch4_test_16",
@@ -14204,11 +14204,11 @@
         "difficulty": "中等",
         "knowledge": "倒数、已知式子的值，求代数式的值、求一个数的绝对值、整式加减中的无关型问题",
         "chapter": "第四章 整式的加减 单元检测",
-        "stem": "下列四个说法：①如果<img src=\"assets/images/img_docx_44d38930e5f3.png\" data-cx=\"76200\" data-cy=\"85725\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">大于<img src=\"assets/images/img_docx_935f3767b7cb.png\" data-cx=\"76200\" data-cy=\"123825\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">，那么<img src=\"assets/images/img_docx_44d38930e5f3.png\" data-cx=\"76200\" data-cy=\"85725\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">的倒数小于<img src=\"assets/images/img_docx_935f3767b7cb.png\" data-cx=\"76200\" data-cy=\"123825\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">的倒数；②多项式<img src=\"assets/images/img_docx_6ca9669ff9fd.png\" data-cx=\"2505075\" data-cy=\"152400\" style=\"width:263px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">的值与<img src=\"assets/images/img_docx_8b74c67da637.png\" data-cx=\"200025\" data-cy=\"114300\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">都无关；③已知<img src=\"assets/images/img_docx_0373f83953e0.png\" data-cx=\"914400\" data-cy=\"152400\" style=\"width:96px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">，且<img src=\"assets/images/img_docx_337fda5a7c6f.png\" data-cx=\"381000\" data-cy=\"142875\" style=\"width:40px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">，则<img src=\"assets/images/img_docx_227f40f44428.png\" data-cx=\"295275\" data-cy=\"133350\" style=\"width:31px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">的值等于<img src=\"assets/images/img_docx_57f046480447.png\" data-cx=\"152400\" data-cy=\"104775\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">；④若<img src=\"assets/images/img_docx_9975d72c88a7.png\" data-cx=\"942975\" data-cy=\"123825\" style=\"width:99px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">，则<img src=\"assets/images/img_docx_153563b3c01e.png\" data-cx=\"200025\" data-cy=\"123825\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\"><img src=\"assets/images/img_docx_78694ab6d090.png\" data-cx=\"809625\" data-cy=\"114300\" style=\"width:85px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">．其中正确的是______（填写序号）",
+        "stem": "下列四个说法：<br>①如果 $a$ 大于 $b$，那么 $a$ 的倒数小于 $b$ 的倒数；<br>②多项式 $-x^2y-8x^3+3x^3+2x^3y+x^2y-2x^3y+5x^3$ 的值与 $x, y$ 都无关；<br>③已知 $|x|=4, |y|=5$，且 $xy<0$，则 $x+y$ 的值等于 $\\pm 1$；<br>④若 $a^2-4a-12=0$，则 $2a^2-8a-8=16$．<br>其中正确的是______（填写序号）．",
         "options": [],
         "answer": "②③④",
-        "analysis": "本题考查整式的加减，倒数，有理数的大小比较方法，绝对值，代数式求值，熟练掌握知识点的应用．逐一分析判断，即可解答．",
-        "detail": "解：①当$a=1$，$b=-1$时，$\\frac{1}{a}=1,\\frac{1}{b}=-1$，有$\\frac{1}{a}>\\frac{1}{b}$，故该项错误；<br>②$-x^{2}y-8x^{3}+3x^{3}+2x^{3}y+x^{2}y-2x^{3}y+5x^{3}=-x^{2}y+x^{2}y-8x^{3}+3x^{3}+5x^{3}+2x^{3}y-2x^{3}y=0$，多项式的值与x，y都无关，故该项正确；<br>③∵$|x|=4,|y|=5$，<br>∴$x=\\pm 4,y=\\pm 5$，<br>∵$xy<0$，<br>∴$x=4,y=-5$或$x=-4,y=5$，<br>则$x+y=4-5=-1$或$x+y=-4+5=1$，<br>∴$x+y$的值等于$\\pm 1$；故该项正确；<br>④∵$a^{2}-4a-12=0$，<br>∴$a^{2}-4a=12$，<br>∴$2a^{2}-8a-8=2(a^{2}-4a)-8=2\\times 12-8=16$，故该项正确．<br>故答案为：②③④．"
+        "analysis": "本题考查倒数性质、整式的加减无关型问题、绝对值化简求值及整体代入求值．",
+        "detail": "解：①当 $a=1, b=-1$ 时，$\\frac{1}{a}=1, \\frac{1}{b}=-1$，有 $\\frac{1}{a}>\\frac{1}{b}$，故该项错误；<br>②$-x^2y-8x^3+3x^3+2x^3y+x^2y-2x^3y+5x^3=(-x^2y+x^2y)+(-8x^3+3x^3+5x^3)+(2x^3y-2x^3y)=0$，多项式的值与 $x, y$ 均无关，故该项正确；<br>③$\\because |x|=4, |y|=5, xy<0$，$\\therefore x=4, y=-5$ 或 $x=-4, y=5$，则 $x+y=\\pm 1$，故该项正确；<br>④$\\because a^2-4a-12=0$，$\\therefore a^2-4a=12$，$\\therefore 2a^2-8a-8=2(a^2-4a)-8=2\\times 12-8=16$，故该项正确．<br>故答案为：②③④．"
     },
     {
         "id": "ch4_test_17",
@@ -14220,10 +14220,10 @@
         "difficulty": "容易",
         "knowledge": "去括号",
         "chapter": "第四章 整式的加减 单元检测",
-        "stem": "去括号：<br>(1)<img src=\"assets/images/img_docx_d8cc7a247e3c.png\" data-cx=\"685800\" data-cy=\"152400\" style=\"width:72px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">；<br>(2)<img src=\"assets/images/img_docx_3be01755a420.png\" data-cx=\"838200\" data-cy=\"152400\" style=\"width:88px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">；<br>(3)<img src=\"assets/images/img_docx_f2babf3c5807.png\" data-cx=\"1085850\" data-cy=\"152400\" style=\"width:114px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">；<br>(4)<img src=\"assets/images/img_docx_49331d2a886a.png\" data-cx=\"1390650\" data-cy=\"152400\" style=\"width:146px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">．",
+        "stem": "去括号：<br>(1) $a+(b-c)$；<br>(2) $a-(-b+c)$；<br>(3) $(a-b)+(c+d)$；<br>(4) $-(a+b)-(-c+d)$．",
         "options": [],
-        "answer": "(1)$a+b-c$<br>(2)$a+b-c$<br>(3)$a-b+c+d$<br>(4)$-a-b+c-d$",
-        "analysis": "本题考查去括号的法则，括号前是“$+$”号，把括号和它前面的“$+$”号去掉，括号里各项的符号都不改变；括号前是“$-$”号，把括号和它前面的“$-$”号去掉，括号里各项的符号都改变．运用这一法则去掉括号．根据去括号的法则直接求解即可．",
+        "answer": "(1) $a+b-c$<br>(2) $a+b-c$<br>(3) $a-b+c+d$<br>(4) $-a-b+c-d$",
+        "analysis": "本题考查去括号法则：括号前面是“+”号，去掉括号和正号，括号里的各项都不改变符号；括号前面是“-”号，去掉括号和负号，括号里的各项都改变符号．",
         "detail": "（1）解：$a+(b-c)=a+b-c$；<br>（2）解：$a-(-b+c)=a+b-c$；<br>（3）解：$(a-b)+(c+d)=a-b+c+d$；<br>（4）解：$-(a+b)-(-c+d)=-a-b+c-d$．"
     },
     {
@@ -14236,11 +14236,11 @@
         "difficulty": "容易",
         "knowledge": "已知字母的值 ，求代数式的值、合并同类项、绝对值非负性、整式的加减中的化简求值",
         "chapter": "第四章 整式的加减 单元检测",
-        "stem": "先化简，后求值：<img src=\"assets/images/img_docx_cb83b4381af1.png\" data-cx=\"2695575\" data-cy=\"152400\" style=\"width:283px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">，其中<img src=\"assets/images/img_docx_128a99d2f32f.png\" data-cx=\"1190625\" data-cy=\"190500\" style=\"width:125px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">．",
+        "stem": "先化简，后求值：$-x^2+5xy-y^2-2xy+6x^2+6y^2-3xy$，其中 $|x-1|+(y+2)^2=0$．",
         "options": [],
-        "answer": "$5x^{2}+5y^{2}$，25",
-        "analysis": "本题考查整式加减的化简求值，绝对值和平方的非负性．<br>先运用去括号法则，合并同类项法则对式子进行化简，再根据绝对值和平方的非负性求出x，y的值，代入化简后的式子即可．",
-        "detail": "解：原式$=-x^{2}+5xy-y^{2}-2xy+6x^{2}+6y^{2}-3xy$<br>$=5x^{2}+5y^{2}$，<br>∵$|x-1|+{(y+2)}^{2}=0$，<br>∴$x=1, y=-2$，<br>∴原式$=5\\times 1^{2}+5\\times {(-2)}^{2}=5+20=25$．"
+        "answer": "$5x^2+5y^2$，$25$",
+        "analysis": "本题考查整式的化简求值以及非负数的性质，熟练掌握整式加减法则是解题关键．",
+        "detail": "解：原式 $=-x^2+5xy-y^2-2xy+6x^2+6y^2-3xy$<br>$=5x^2+5y^2$，<br>$\\because |x-1|+(y+2)^2=0$，<br>$\\therefore x=1, y=-2$，<br>$\\therefore$ 原式 $=5\\times 1^2+5\\times (-2)^2=5+20=25$．"
     },
     {
         "id": "ch4_test_19",
@@ -14252,11 +14252,11 @@
         "difficulty": "中等",
         "knowledge": "倒数、含乘方的有理数混合运算、单项式的系数、次数、多项式的项、项数或次数",
         "chapter": "第四章 整式的加减 单元检测",
-        "stem": "运算能力 已知a，b互为相反数，c，d互为倒数，多项式<img src=\"assets/images/img_docx_bedcb28b91be.png\" data-cx=\"1638300\" data-cy=\"257175\" style=\"width:172px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">是六次四项式，单项式<img src=\"assets/images/img_docx_138dfa217a2e.png\" data-cx=\"552450\" data-cy=\"257175\" style=\"width:58px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">的次数与这个多项式的次数相同，求<img src=\"assets/images/img_docx_92e683ee0c24.png\" data-cx=\"1666875\" data-cy=\"190500\" style=\"width:175px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">的值．",
+        "stem": "运算能力 已知 $a, b$ 互为相反数，$c, d$ 互为倒数，多项式 $-5x^2y^{m+1}+\\frac{1}{3}xy^2-\\frac{1}{4}x^3+6$ 是六次四项式，单项式 $\\frac{7}{2}x^{2n}y^{5-m}$ 的次数与这个多项式的次数相同，求 $(a+b)m+m^n-(cd-n)^{2025}$ 的值．",
         "options": [],
         "answer": "10",
-        "analysis": "此题主要考查了相反数，倒数，多项式的项数与次数，单项式的系数与次数，以及有理数的混合运算，解题的关键是正确确定m和n的值．<br>利用单项式的次数、多项式次数和项数的确定方法可得m和n的值，然后再结合相反数和互为倒数的定义进行计算即可．",
-        "detail": "解：因为多项式$-5x^{2}y^{m+1}+\\frac{1}{3}xy^{2}-\\frac{1}{4}x^{3}+6$是六次四项式，<br>所以$2+m+1=6$，<br>所以$m=3$．<br>因为单项式$\\frac{7}{2}x^{2n}y^{5-m}$的次数与这个多项式的次数<br>相同，所以$2n+5-m=6$，<br>所以$2n+5-3=6$，<br>所以$n=2$．<br>因为a，b互为相反数，c，d互为倒数，<br>所以$a+b=0,cd=1$，<br>所以$(a+b)m+m^{n}-{(cd-n)}^{2025}=0+9-{(1-2)}^{2025}=9-(-1)=10$．"
+        "analysis": "本题考查了多项式的次数、单项式的次数、相反数与倒数的性质以及有理数混合运算．",
+        "detail": "解：$\\because$ 多项式 $-5x^2y^{m+1}+\\frac{1}{3}xy^2-\\frac{1}{4}x^3+6$ 是六次四项式，<br>$\\therefore 2+m+1=6$，解得 $m=3$．<br>$\\because$ 单项式 $\\frac{7}{2}x^{2n}y^{5-m}$ 的次数为 6，<br>$\\therefore 2n+5-m=6$，即 $2n+5-3=6$，解得 $n=2$．<br>$\\because a, b$ 互为相反数，$c, d$ 互为倒数，<br>$\\therefore a+b=0, cd=1$，<br>$\\therefore (a+b)m+m^n-(cd-n)^{2025}=0+3^2-(1-2)^{2025}=9-(-1)=10$．"
     },
     {
         "id": "ch4_test_20",
@@ -14268,11 +14268,11 @@
         "difficulty": "容易",
         "knowledge": "已知字母的值 ，求代数式的值、整式的加减运算、整式的加减中的化简求值",
         "chapter": "第四章 整式的加减 单元检测",
-        "stem": "小马虎做一道数学题“两个多项式A，B，已知<img src=\"assets/images/img_docx_7fa2c4df810c.png\" data-cx=\"942975\" data-cy=\"123825\" style=\"width:99px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">，试求<img src=\"assets/images/img_docx_a781f1dd0808.png\" data-cx=\"409575\" data-cy=\"104775\" style=\"width:43px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">的值”．小马虎将<img src=\"assets/images/img_docx_a781f1dd0808.png\" data-cx=\"409575\" data-cy=\"104775\" style=\"width:43px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">看成<img src=\"assets/images/img_docx_3c1a5edab234.png\" data-cx=\"400050\" data-cy=\"104775\" style=\"width:42px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">，计算结果为<img src=\"assets/images/img_docx_2d1e2688cba9.png\" data-cx=\"695325\" data-cy=\"123825\" style=\"width:73px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">．<br>(1)求多项式A；<br>(2)求出当<img src=\"assets/images/img_docx_1b26e4466ca0.png\" data-cx=\"438150\" data-cy=\"114300\" style=\"width:46px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">时，<img src=\"assets/images/img_docx_219077cdd9a6.png\" data-cx=\"342900\" data-cy=\"104775\" style=\"width:36px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">的值．",
+        "stem": "小马虎做一道数学题“两个多项式 $A, B$，已知 $B=2x^2-3x+6$，试求 $A-B$ 的值”．小马虎将 $A-B$ 看成 $A+2B$，计算结果为 $5x^2-2x+8$．<br>(1) 求多项式 $A$；<br>(2) 求出当 $x=-1$ 时，$A-B$ 的值．",
         "options": [],
-        "answer": "(1)$x^{2}+4x-4$<br>(2)$-18$",
-        "analysis": "本题考查了整式的加减运算，代数式求值，注意计算的准确性即可．<br>(1)由题意得$A=5x^{2}-2x+8-2B$，即可求解；<br>(2)计算$A-B$，再将$x=-1$代入即可求解；",
-        "detail": "（1）解：(1)由题意得：<br>$A=5x^{2}-2x+8-2B$<br>$=5x^{2}-2x+8-2(2x^{2}-3x+6)$<br>$=x^{2}+4x-4;$<br>（2）∵$A-B=x^{2}+4x-4-(2x^{2}-3x+6)$<br>$=x^{2}+4x-4-2x^{2}+3x-6$<br>$=-x^{2}+7x-10;$<br>∴当$x=-1$时，$A-B=-{(-1)}^{2}+7\\times (-1)-10=-18$"
+        "answer": "(1) $x^2+4x-4$<br>(2) $-18$",
+        "analysis": "本题考查了整式的加减运算及化简求值，根据题意列出正确的代数式是解题关键．",
+        "detail": "（1）解：由题意得：<br>$A=5x^2-2x+8-2B$<br>$=5x^2-2x+8-2(2x^2-3x+6)$<br>$=5x^2-2x+8-4x^2+6x-12$<br>$=x^2+4x-4$；<br>（2）解：$A-B=(x^2+4x-4)-(2x^2-3x+6)$<br>$=x^2+4x-4-2x^2+3x-6$<br>$=-x^2+7x-10$；<br>当 $x=-1$ 时，原式 $=-(-1)^2+7\\times (-1)-10=-1-7-10=-18$．"
     },
     {
         "id": "ch4_test_21",
@@ -14284,11 +14284,11 @@
         "difficulty": "中等",
         "knowledge": "根据点在数轴的位置判断式子的正负、带有字母的绝对值化简问题、整式的加减运算",
         "chapter": "第四章 整式的加减 单元检测",
-        "stem": "已知有理数a，b，c在数轴上的位置如图所示：<br><img src=\"assets/images/img_docx_43a95cb1fa10.png\" data-cx=\"2105025\" data-cy=\"190500\" style=\"width:221px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)用<img src=\"assets/images/img_docx_1ca515609f33.png\" data-cx=\"152400\" data-cy=\"95250\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">，<img src=\"assets/images/img_docx_399fa468b4ad.png\" data-cx=\"152400\" data-cy=\"95250\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">，<img src=\"assets/images/img_docx_dba6630ba002.png\" data-cx=\"152400\" data-cy=\"66675\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\"> 填空：<img src=\"assets/images/img_docx_3540a2653ca0.png\" data-cx=\"190500\" data-cy=\"152400\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">_____0，<img src=\"assets/images/img_docx_24c30b5d5ba8.png\" data-cx=\"276225\" data-cy=\"104775\" style=\"width:29px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">_____0，<img src=\"assets/images/img_docx_e8d318f2d5ee.png\" data-cx=\"295275\" data-cy=\"123825\" style=\"width:31px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">_____0，<img src=\"assets/images/img_docx_9f56651da270.png\" data-cx=\"209550\" data-cy=\"123825\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">____0；<br>(2)化简：<img src=\"assets/images/img_docx_cffaf12b5b7e.png\" data-cx=\"1781175\" data-cy=\"152400\" style=\"width:187px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">．",
+        "stem": "已知有理数 $a, b, c$ 在数轴上的位置如图所示：<br><img src=\"assets/images/img_docx_43a95cb1fa10.png\" data-cx=\"2105025\" data-cy=\"190500\" style=\"width:221px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1) 用“$>$”，“$<$”，“$=$”填空：$|b|$_____0，$a+c$_____0，$c-b$_____0，$abc$_____0；<br>(2) 化简：$2|a-b|-3|a+c|+|c-b|+|b|$．",
         "options": [],
-        "answer": "(1)$>$，$<$，$>$，$>$；<br>(2)$a+4c$",
-        "analysis": "本题考查数轴、绝对值、整式的加减等知识的综合运用，解题的关键是能够根据数轴上的信息，判断出a，b，c的取值范围，同时解决此题时也要注意绝对值性质的运用．<br>（1）根据数轴，判断出a，b，c的取值范围，进而求解；<br>（2）根据绝对值的性质，去绝对值号，合并同类项即可．",
-        "detail": "（1）解：由数轴可知，$a<b<0<c$，且$|a|>|b|>|c|>0$，<br>$\\therefore |b|>0$，$a+c<0$，$c-b>0$，$abc>0$，<br>故答案为：$>$，$<$，$>$，$>$；<br>（2）解：由数轴可知，$a<b<0<c$，且$|a|>|b|>|c|>0$，<br>∴$a-b<0$，$a+c<0$，$c-b>0$，<br>∴$2|a-b|-3|a+c|+|c-b|+|b|$<br>$=2(b-a)-3(-a-c)+c-b-b$<br>$=2b-2a+3a+3c+c-2b$<br>$=a+4c$"
+        "answer": "(1) $>$，$<$，$>$，$>$；<br>(2) $a+4c$",
+        "analysis": "本题考查了数轴、绝对值的几何意义及整式的加减，由数轴确定各式的正负是解题的关键．",
+        "detail": "（1）解：由数轴可知，$a<b<0<c$，且 $|a|>|b|>|c|>0$，<br>$\\therefore |b|>0, a+c<0, c-b>0, abc>0$；<br>故答案为：$>$，$<$，$>$，$>$；<br>（2）解：由数轴可知 $a-b<0, a+c<0, c-b>0, b<0$，<br>$\\therefore 2|a-b|-3|a+c|+|c-b|+|b|$<br>$=2(b-a)-3(-a-c)+(c-b)+(-b)$<br>$=2b-2a+3a+3c+c-2b$<br>$=a+4c$．"
     },
     {
         "id": "ch4_test_22",
@@ -14300,11 +14300,11 @@
         "difficulty": "容易",
         "knowledge": "整式的加减中的化简求值、整式加减的应用",
         "chapter": "第四章 整式的加减 单元检测",
-        "stem": "一辆公交车上原有乘客<img src=\"assets/images/img_docx_68e11ad30d5a.png\" data-cx=\"628650\" data-cy=\"152400\" style=\"width:66px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">人，中途有一半人下车，又上来<img src=\"assets/images/img_docx_f7ba7286f14d.png\" data-cx=\"609600\" data-cy=\"152400\" style=\"width:64px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">人．<br>(1)求这时车上的乘客共有多少人？（用含a，b的代数式表示）<br>(2)若<img src=\"assets/images/img_docx_def22692e730.png\" data-cx=\"762000\" data-cy=\"142875\" style=\"width:80px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">，则这时车上的乘客共有多少人？",
+        "stem": "一辆公交车上原有乘客 $(6a-4b)$ 人，中途有一半人下车，又上来 $(5a-3b)$ 人．<br>(1) 求这时车上的乘客共有多少人？（用含 $a, b$ 的代数式表示）<br>(2) 若 $a=10, b=8$，则这时车上的乘客共有多少人？",
         "options": [],
-        "answer": "(1)$(8a-5b)$人<br>(2)40人",
-        "analysis": "本题考查整式的加减，解题的关键是根据题意列出算式．<br>（1）用原有人数减去下车人数，再加上上车人数求解即可；<br>（2）将$a=10,b=8$代入计算即可．",
-        "detail": "（1）由题意，得<br>$(6a-4b)-\\frac{1}{2}(6a-4b)+(5a-3b)$<br>$=\\frac{1}{2}(6a-4b)+(5a-3b)$<br>$=3a-2b+5a-3b$<br>$=(8a-5b)$人；<br>（2）当$a=10,b=8$时，<br>$8a-5b=8\\times 10-5\\times 8=40$人．"
+        "answer": "(1) $(8a-5b)$ 人<br>(2) 40 人",
+        "analysis": "本题考查了整式加减的应用，正确列出代数式并化简是解题的关键．",
+        "detail": "（1）解：由题意得：<br>$(6a-4b)-\\frac{1}{2}(6a-4b)+(5a-3b)$<br>$=\\frac{1}{2}(6a-4b)+(5a-3b)$<br>$=3a-2b+5a-3b=(8a-5b)$ 人；<br>（2）解：当 $a=10, b=8$ 时，<br>$8a-5b=8\\times 10-5\\times 8=80-40=40$（人）．<br>答：这时车上的乘客共有 40 人．"
     },
     {
         "id": "ch4_test_23",
@@ -14316,11 +14316,11 @@
         "difficulty": "中等",
         "knowledge": "列代数式、已知字母的值 ，求代数式的值、整式加减的应用",
         "chapter": "第四章 整式的加减 单元检测",
-        "stem": "如图，是由3种大小不同的5个正方形和一个长方形（阴影部分）拼成的大长方形<img src=\"assets/images/img_docx_5967af4459b4.png\" data-cx=\"409575\" data-cy=\"114300\" style=\"width:43px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">，若<img src=\"assets/images/img_docx_a5e8771b4055.png\" data-cx=\"428625\" data-cy=\"114300\" style=\"width:45px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">，最小的正方形的边长为x．<br><img src=\"assets/images/img_docx_b643aec7c60d.png\" data-cx=\"1200150\" data-cy=\"1000125\" style=\"width:126px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)<img src=\"assets/images/img_docx_9d4922aef3ec.png\" data-cx=\"342900\" data-cy=\"104775\" style=\"width:36px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">_________，<img src=\"assets/images/img_docx_fd86563cf86f.png\" data-cx=\"390525\" data-cy=\"114300\" style=\"width:41px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">_________（用含x的式子表示）；<br>(2)求长方形<img src=\"assets/images/img_docx_5967af4459b4.png\" data-cx=\"409575\" data-cy=\"114300\" style=\"width:43px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">的周长（用含x的式子表示）；<br>(3)若<img src=\"assets/images/img_docx_d72c0c936b51.png\" data-cx=\"295275\" data-cy=\"114300\" style=\"width:31px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">，请直接写出三角形<img src=\"assets/images/img_docx_b96d5033b335.png\" data-cx=\"323850\" data-cy=\"104775\" style=\"width:34px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">的面积是_________．",
+        "stem": "如图，是由3种大小不同的5个正方形和一个长方形（阴影部分）拼成的大长方形 $ABCD$，若 $AB=2$，最小的正方形的边长为 $x$．<br><img src=\"assets/images/img_docx_b643aec7c60d.png\" data-cx=\"1200150\" data-cy=\"1000125\" style=\"width:126px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1) $AE=$_________，$CH=$_________（用含 $x$ 的式子表示）；<br>(2) 求长方形 $ABCD$ 的周长（用含 $x$ 的式子表示）；<br>(3) 若 $x=3$，请直接写出三角形 $DEF$ 的面积是_________．",
         "options": [],
-        "answer": "(1)$2x+2$，$\\frac{3}{2}x+1$<br>(2)$13x+10$<br>(3)22",
-        "analysis": "本题主要考查了列代数式，代数式求值，熟练掌握三角形面积公式和长方形周长公式，是解题的关键．<br>（1）根据图形可得结合线段的和差、正方形的性质即可解答；<br>（2）分别表示出$AB$和$BC$，然后再表示出周长，<br>（3）根据三角形的面积公式，结合$x=3$，即可求解．",
-        "detail": "（1）解：由图可知：$AE=2x+2$，<br>$CH=\\frac{1}{2}(AE+BE)=\\frac{1}{2}(2x+2+x)=\\frac{3}{2}x+1$；<br>（2）解：长方形的宽为：$2(\\frac{3}{2}x+1)=3x+2$，<br>长为：$2x+2+\\frac{3}{2}x+1=\\frac{7}{2}x+3$，<br>则长方形$ABCD$的周长为：<br>$2\\times (3x+2+\\frac{7}{2}x+3)=13x+10$．<br>（3）解：当$x=3$时，<br>$S_{\\triangle DEF}=\\frac{1}{2}DF\\times AE$<br>$=\\frac{1}{2}\\times (\\frac{3}{2}x+1)(2x+2)$<br>$=\\frac{1}{2}\\times (\\frac{3}{2}\\times 3+1)\\times (2\\times 3+2)$<br>$=\\frac{1}{2}\\times \\frac{11}{2}\\times 8$<br>$=22$．"
+        "answer": "(1) $2x+2$，$3/2x+1$<br>(2) $13x+10$<br>(3) 22",
+        "analysis": "本题考查列代数式、整式的加减及几何图形的面积计算，理清各线段之间的几何关系是解题关键．",
+        "detail": "（1）解：由图可知，$AE=2x+2$；<br>$CH=\\frac{1}{2}(AE+BE)=\\frac{1}{2}(2x+2+x)=\\frac{3}{2}x+1$；<br>故答案为：$2x+2$，$3/2x+1$；<br>（2）解：长方形的宽为：$2(\\frac{3}{2}x+1)=3x+2$，<br>长为：$(2x+2)+(\\frac{3}{2}x+1)=\\frac{7}{2}x+3$，<br>则长方形 $ABCD$ 的周长为：$2\\times [(3x+2)+(\\frac{7}{2}x+3)]=13x+10$；<br>（3）解：当 $x=3$ 时，<br>$S_{\\triangle DEF}=\\frac{1}{2}DF\\times AE=\\frac{1}{2}(\\frac{3}{2}x+1)(2x+2)$<br>$=\\frac{1}{2}(\\frac{3}{2}\\times 3+1)(2\\times 3+2)=\\frac{1}{2}\\times \\frac{11}{2}\\times 8=22$．"
     },
     {
         "id": "ch4_test_24",
@@ -14332,11 +14332,11 @@
         "difficulty": "中等",
         "knowledge": "多项式的项、项数或次数、整式加减的应用",
         "chapter": "第四章 整式的加减 单元检测",
-        "stem": "定义：若一个多项式的各项系数之和为7的整数倍，则称这个多项式为“<img src=\"assets/images/img_docx_82e0ee7c71ce.png\" data-cx=\"152400\" data-cy=\"114300\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">标准多项式”．例如：多项式<img src=\"assets/images/img_docx_14100e735bda.png\" data-cx=\"504825\" data-cy=\"142875\" style=\"width:53px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">的系数和为<img src=\"assets/images/img_docx_bb6806409d78.png\" data-cx=\"1076325\" data-cy=\"114300\" style=\"width:113px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">，所以多项式<img src=\"assets/images/img_docx_14100e735bda.png\" data-cx=\"504825\" data-cy=\"142875\" style=\"width:53px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">是“<img src=\"assets/images/img_docx_82e0ee7c71ce.png\" data-cx=\"152400\" data-cy=\"114300\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">标准多项式”．请根据这个定义解答下列问题：<br>(1)在下列多项式中，属于“<img src=\"assets/images/img_docx_82e0ee7c71ce.png\" data-cx=\"152400\" data-cy=\"114300\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">标准多项式”的是______；（填写序号）<br>①<img src=\"assets/images/img_docx_c2dc95c1eec2.png\" data-cx=\"438150\" data-cy=\"123825\" style=\"width:46px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">；②<img src=\"assets/images/img_docx_ecd707f93b1b.png\" data-cx=\"419100\" data-cy=\"123825\" style=\"width:44px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">；③<img src=\"assets/images/img_docx_31e44902f3d5.png\" data-cx=\"1162050\" data-cy=\"152400\" style=\"width:122px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">．<br>(2)若多项式<img src=\"assets/images/img_docx_0b3ad1a3900b.png\" data-cx=\"552450\" data-cy=\"142875\" style=\"width:58px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">是关于x，y的“<img src=\"assets/images/img_docx_82e0ee7c71ce.png\" data-cx=\"152400\" data-cy=\"114300\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">标准多项式”（其中m、n均为整数），则多项式<img src=\"assets/images/img_docx_9c58d59d04fd.png\" data-cx=\"600075\" data-cy=\"142875\" style=\"width:63px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">也是关于x，y的“<img src=\"assets/images/img_docx_82e0ee7c71ce.png\" data-cx=\"152400\" data-cy=\"114300\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">标准多多项式”吗？若是，请说明理由；若不是，请举出反例．<br>(3)已知<img src=\"assets/images/img_docx_a2629fc2bbd9.png\" data-cx=\"609600\" data-cy=\"123825\" style=\"width:64px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">，<img src=\"assets/images/img_docx_4f2e55ae5cd5.png\" data-cx=\"609600\" data-cy=\"123825\" style=\"width:64px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">，<img src=\"assets/images/img_docx_4421a3109378.png\" data-cx=\"561975\" data-cy=\"123825\" style=\"width:59px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">，且<img src=\"assets/images/img_docx_9d0203c08196.png\" data-cx=\"1819275\" data-cy=\"123825\" style=\"width:191px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">（其中m，<img src=\"assets/images/img_docx_d14d6e51601a.png\" data-cx=\"76200\" data-cy=\"85725\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">，t均为整数），请证明多项式<img src=\"assets/images/img_docx_56046de690df.png\" data-cx=\"942975\" data-cy=\"142875\" style=\"width:99px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">也是关于x，y的“<img src=\"assets/images/img_docx_82e0ee7c71ce.png\" data-cx=\"152400\" data-cy=\"114300\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">标准多项式”．",
+        "stem": "定义：若一个多项式的各项系数之和为7的整数倍，则称这个多项式为“$7S$ 标准多项式”．例如：多项式 $2x^2-9x$ 的系数和为 $2+(-9)=-7=-1\\times 7$，所以多项式 $2x^2-9x$ 是“$7S$ 标准多项式”．请根据这个定义解答下列问题：<br>(1) 在下列多项式中，属于“$7S$ 标准多项式”的是______；（填写序号）<br>① $2x^2-9x$；② $3a+5b$；③ $19x^2-4x+2y-3xy$．<br>(2) 若多项式 $4mx-ny$ 是关于 $x, y$ 的“$7S$ 标准多项式”（其中 $m, n$ 均为整数），则多项式 $2mx+3ny$ 也是关于 $x, y$ 的“$7S$ 标准多项式”吗？若是，请说明理由；若不是，请举出反例．<br>(3) 已知 $A=a-2b, B=2b-c, C=c-d$，且 $mA+nB+tC=a-6b+5c-3d$（其中 $m, n, t$ 均为整数），请证明多项式 $mx+7ny+2txy$ 也是关于 $x, y$ 的“$7S$ 标准多项式”．",
         "options": [],
-        "answer": "(1)①③<br>(2)<br>解：是，理由如下：<br>$\\because$多项式$4mx-ny$是关于$x$，$y$的“$7S$标准多项式”，<br>$\\therefore4m-n$为$7$的整数倍，<br>设$4m-n=7z$（$z$为整数，$z\\neq 0$），<br>则$n=4m-7z$，<br>$\\because$多项式$2mx+3ny$的系数和为$2m+3n$，<br>$\\therefore2m+3n=2m+3(4m-7z)=14m-21z$，<br>$\\because14m-21z=7(2m-3z)$，<br>$\\therefore14m-21z$是$7$的整数倍，即$2m+3n$是$7$的整数倍，<br>$\\therefore$多项式$4mx-ny$是关于$x$，$y$的“$7S$标准多项式”（其中$m$，$n$均为整数），则多项式$2mx+3ny$也是关于$x$，$y$的“$7S$标准多项式”；<br>(3)<br>证明：∵$A=a-2b$，$B=2b-c$，$C=c-d$，<br>∴$mA+nB+tC$<br>$=m(a-2b)+n(2b-c)+t(c-d)$<br>$=ma-2mb+2nb-nc+tc-td$<br>$=ma+(2n-2m)b+(t-n)c-td$<br>∵$mA+nB+tC=a-6b+5c-3d$，<br>∴$ma+(2n-2m)b+(t-n)c-td=a-6b+5c-3d$，<br>∴$m=1,2n-2m=-6,t-n=5,t=3$，<br>∴$m=1,n=-2,t=3$，<br>∴多项式$mx+7ny+2txy$为$x-14y+6xy$，<br>$\\because$多项式$x-14y+6xy$的系数和为$1-14+6=-7=-1\\times 7$，<br>∴多项式$mx+7ny+2txy$也是关于x，y的“$7S$标准多项式”．",
-        "analysis": "本题考查了新定义“$7S$标准多项式”，整式的加减运算，理解定义是解题的关键．<br>（1）根据“$7S$标准多项式”的定义求解即可；<br>（2）根据多项式$4mx-ny$是关于$x$，$y$的“$7S$标准多项式”，可设$4m-n=7z$（$z$为整数，$z\\neq 0$），则$n=4m-7z$，多项式$2mx+3ny$的系数和为$2m+3n$，得到$2m+3n=14m-21z$，即可求解；<br>（3）先根据整式加减预算法则求出$m=1,n=-2,t=3$，再结合“$7S$标准多项式”的定义证明即可．",
-        "detail": "（1）解：①$\\because$多项式$2x^{2}-9x$的系数和为$2+(-9)=-7=-1\\times 7$，<br>$\\therefore$该多项式是“$7S$标准多项式”，<br>②$\\because$多项式$3a+5b$的系数和为$3+5=8$，$8$不是$7$的整数倍，<br>$\\therefore$该多项式不是“$7S$标准多项式”，<br>③$\\because$多项式$19x^{2}-4x+2y-3xy$的系数和为$19+(-4)+2+(-3)=14=2\\times 7$，<br>$\\therefore$该多项式是“$7S$标准多项式”，<br>故答案为：①③；<br>（2）略<br>（3）略"
+        "answer": "(1) ①③<br>(2) 是，理由见解析<br>(3) 证明见解析",
+        "analysis": "本题考查了新定义概念及整式的加减与多项式系数和的运算，理解“$7S$标准多项式”的定义是解题关键．",
+        "detail": "（1）解：①多项式 $2x^2-9x$ 的系数和为 $2+(-9)=-7=-1\\times 7$，是“$7S$标准多项式”；<br>②多项式 $3a+5b$ 的系数和为 $3+5=8$，不是7的倍数；<br>③多项式 $19x^2-4x+2y-3xy$ 的系数和为 $19-4+2-3=14=2\\times 7$，是“$7S$标准多项式”；<br>故答案为：①③；<br>（2）解：多项式 $2mx+3ny$ 也是关于 $x, y$ 的“$7S$标准多项式”．理由如下：<br>$\\because 4mx-ny$ 是“$7S$标准多项式”，$\\therefore 4m-n=7z$（$z$ 为整数），即 $n=4m-7z$．<br>$\\therefore 2m+3n=2m+3(4m-7z)=14m-21z=7(2m-3z)$，<br>$\\because m, z$ 为整数，$\\therefore 7(2m-3z)$ 为7的倍数，即 $2mx+3ny$ 也是“$7S$标准多项式”；<br>（3）证明：$\\because mA+nB+tC=m(a-2b)+n(2b-c)+t(c-d)=ma+(2n-2m)b+(t-n)c-td$，<br>又 $\\because mA+nB+tC=a-6b+5c-3d$，<br>$\\therefore m=1, 2n-2m=-6, t-n=5, t=3$，解得 $m=1, n=-2, t=3$．<br>$\\therefore mx+7ny+2txy=x-14y+6xy$，其系数和为 $1-14+6=-7=-1\\times 7$，<br>$\\therefore mx+7ny+2txy$ 也是关于 $x, y$ 的“$7S$标准多项式”．"
     },
     {
         "id": "ch4_test_25",
@@ -14348,11 +14348,11 @@
         "difficulty": "较难",
         "knowledge": "整式的加减运算",
         "chapter": "第四章 整式的加减 单元检测",
-        "stem": "定义新运算“△”和“□”：<br>①定义新运算“△”：给定有理数a、b，对于整式A、B，规定<img src=\"assets/images/img_docx_541c84d21cdf.png\" data-cx=\"981075\" data-cy=\"123825\" style=\"width:103px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">，等式右边是通常的减法、乘法运算；<br>②定义新运算“□”：给定正整数n（<img src=\"assets/images/img_docx_be32db49010a.png\" data-cx=\"295275\" data-cy=\"123825\" style=\"width:31px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">），对于整式M，规定<img src=\"assets/images/img_docx_b2a258c86fbc.png\" data-cx=\"1562100\" data-cy=\"295275\" style=\"width:164px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">（按从左到右的顺序依次做“△”运算）例如：当<img src=\"assets/images/img_docx_ec16c3523329.png\" data-cx=\"285750\" data-cy=\"114300\" style=\"width:30px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">、<img src=\"assets/images/img_docx_e1fc00690f84.png\" data-cx=\"295275\" data-cy=\"123825\" style=\"width:31px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">，<img src=\"assets/images/img_docx_3c60098ef7dc.png\" data-cx=\"295275\" data-cy=\"114300\" style=\"width:31px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">时，对于<img src=\"assets/images/img_docx_3ccb5b5c1a4a.png\" data-cx=\"314325\" data-cy=\"114300\" style=\"width:33px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">，<img src=\"assets/images/img_docx_5508db480bbf.png\" data-cx=\"333375\" data-cy=\"142875\" style=\"width:35px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">，则有<img src=\"assets/images/img_docx_fe18f8f00037.png\" data-cx=\"1428750\" data-cy=\"142875\" style=\"width:150px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">，<img src=\"assets/images/img_docx_6e1f21caec6f.png\" data-cx=\"1638300\" data-cy=\"114300\" style=\"width:172px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">．<br>(1)当<img src=\"assets/images/img_docx_4d7895e76303.png\" data-cx=\"295275\" data-cy=\"114300\" style=\"width:31px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">，<img src=\"assets/images/img_docx_e1fc00690f84.png\" data-cx=\"295275\" data-cy=\"123825\" style=\"width:31px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">时，若<img src=\"assets/images/img_docx_6bf022eaf0e9.png\" data-cx=\"609600\" data-cy=\"142875\" style=\"width:64px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">，<img src=\"assets/images/img_docx_cdb8ae151cc3.png\" data-cx=\"685800\" data-cy=\"142875\" style=\"width:72px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">，求<img src=\"assets/images/img_docx_a4304e71a8bd.png\" data-cx=\"352425\" data-cy=\"104775\" style=\"width:37px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">和<img src=\"assets/images/img_docx_f4c6c56d67d8.png\" data-cx=\"247650\" data-cy=\"114300\" style=\"width:26px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">．<br>(2)直接写出一组a，b的值，使得对任意一个正整数n（<img src=\"assets/images/img_docx_be32db49010a.png\" data-cx=\"295275\" data-cy=\"123825\" style=\"width:31px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">）和任意—个整式M，都有<img src=\"assets/images/img_docx_f43730683663.png\" data-cx=\"600075\" data-cy=\"114300\" style=\"width:63px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">成立．<br>(3)当<img src=\"assets/images/img_docx_ec16c3523329.png\" data-cx=\"285750\" data-cy=\"114300\" style=\"width:30px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">，<img src=\"assets/images/img_docx_e1fc00690f84.png\" data-cx=\"295275\" data-cy=\"123825\" style=\"width:31px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">时，若<img src=\"assets/images/img_docx_3d03d5b13ce7.png\" data-cx=\"1123950\" data-cy=\"152400\" style=\"width:118px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">，<img src=\"assets/images/img_docx_050f4617a8e8.png\" data-cx=\"1438275\" data-cy=\"152400\" style=\"width:151px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">，若<img src=\"assets/images/img_docx_42bbead286a9.png\" data-cx=\"923925\" data-cy=\"152400\" style=\"width:97px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">（p、q为正整数，且<img src=\"assets/images/img_docx_17dbbe86f382.png\" data-cx=\"314325\" data-cy=\"142875\" style=\"width:33px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">、<img src=\"assets/images/img_docx_b0cca639ee60.png\" data-cx=\"295275\" data-cy=\"142875\" style=\"width:31px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">）中不含<img src=\"assets/images/img_docx_1d0b5d0e9173.png\" data-cx=\"133350\" data-cy=\"123825\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">项，直接写出满足条件的一组p、q的值．",
+        "stem": "定义新运算“△”和“□”：<br>① 定义新运算“△”：给定有理数 $a, b$，对于整式 $A, B$，规定 $A \\triangle B = aA - bB$，等式右边是通常的减法、乘法运算；<br>② 定义新运算“□”：给定正整数 $n$（$n \\ge 2$），对于整式 $M$，规定 $n\\ \\square\\ M = \\underbrace{M \\triangle M \\triangle \\cdots \\triangle M}_{n\\text{个}M}$（按从左到右的顺序依次做“△”运算）．例如：当 $a=2, b=1, n=3$ 时，对于 $A=x+1, B=2x-1$，则有 $A \\triangle B = 2(x+1)-(2x-1) = 3$，$3\\ \\square\\ A = A \\triangle A \\triangle A = 3$．<br>(1) 当 $a=2, b=2$ 时，若 $A=x+2y, B=2x-3y$，求 $A \\triangle B$ 和 $3\\ \\square\\ A$．<br>(2) 直接写出一组 $a, b$ 的值，使得对任意一个正整数 $n$（$n \\ge 2$）和任意一个整式 $M$，都有 $n\\ \\square\\ M = M$ 成立．<br>(3) 当 $a=1, b=2$ 时，若 $A=4x^2+3xy+5y^2, B=10x^2-7xy+6y^2+8$，若 $(p\\ \\square\\ A) \\triangle (q\\ \\square\\ B)$（$p, q$ 为正整数，且 $p \\ge 2, q \\ge 2$）中不含 $x^2$ 项，直接写出满足条件的一组 $p, q$ 的值．",
         "options": [],
-        "answer": "<img src=\"assets/images/img_docx_6f339b6d8c09.jpg\" data-cx=\"5274945\" data-cy=\"7032265\" style=\"width:420px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
-        "analysis": "",
-        "detail": ""
+        "answer": "(1) $-2x+10y$，$-2x-4y$<br>(2) $a=1, b=0$<br>(3) $p=4, q=2$",
+        "analysis": "本题考查的是新定义运算的含义，整式的加减运算，理解新定义是解本题的关键；<br>（1）由题意可得 $A \\triangle B = 2A-2B$，再根据新定义运算法则计算即可；<br>（2）令 $a=1, b=0$，可得 $A \\triangle B = 1 \\times A - 0 \\times B = A$，再根据新定义推导即可；<br>（3）由 $a=1, b=2$，可得 $A \\triangle B = A-2B$，结合 $A=4x^2+3xy+5y^2, B=10x^2-7xy+6y^2+8$，$(p\\ \\square\\ A) \\triangle (q\\ \\square\\ B)$ 中不含 $x^2$ 项，可得运算中只考虑 $x^2$ 项，再进一步利用新定义探索即可．",
+        "detail": "（1）解：当 $a=2, b=2$ 时，$\\therefore A \\triangle B = 2A-2B$．<br>$\\because A=x+2y, B=2x-3y$，<br>$\\therefore A \\triangle B = 2(x+2y)-2(2x-3y)=2x+4y-4x+6y=-2x+10y$；<br>$3\\ \\square\\ A = A \\triangle A \\triangle A = [2(x+2y)-2(x+2y)] \\triangle (x+2y)$<br>$=0 \\triangle (x+2y)=2\\times 0-2(x+2y)=-2x-4y$；<br>（2）解：当 $a=1, b=0$ 时，<br>$\\therefore A \\triangle B = 1\\times A - 0\\times B = A$，<br>$\\therefore n\\ \\square\\ M = M \\triangle M \\triangle \\cdots \\triangle M = M$；<br>（3）解：当 $a=1, b=2$ 时，$\\therefore A \\triangle B = A-2B$．<br>$\\because A=4x^2+3xy+5y^2, B=10x^2-7xy+6y^2+8$，<br>$(p\\ \\square\\ A) \\triangle (q\\ \\square\\ B)$ 中不含 $x^2$ 项，运算中只考虑 $x^2$ 项：<br>$\\because 2\\ \\square\\ A = A \\triangle A = A-2A = -A = -4x^2$，<br>$3\\ \\square\\ A = (-A) \\triangle A = -3A = -12x^2$，<br>$4\\ \\square\\ A = (-3A) \\triangle A = -5A = -20x^2$；<br>$2\\ \\square\\ B = B \\triangle B = B-2B = -B = -10x^2$；<br>$\\therefore (4\\ \\square\\ A) \\triangle (2\\ \\square\\ B) = (-20x^2) \\triangle (-10x^2) = -20x^2 - 2\\times (-10x^2) = 0$，<br>$\\therefore p=4, q=2$ 满足条件．"
     },
     {
         "id": "tri13_1",

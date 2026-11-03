@@ -229,7 +229,7 @@
         // Check if this question has >= 80% similar questions based on conditional & procedural knowledge
         const similarList = typeof window.getSimilarQuestionsFor === 'function' ? window.getSimilarQuestionsFor(q.id, 3) : [];
         const similarBtnHtml = similarList.length > 0 ? `
-          <button class="btn-open-similar text-indigo-600 hover:text-indigo-700 bg-indigo-50/80 hover:bg-indigo-100/80 border border-indigo-200/80 px-2.5 py-1 rounded-md flex items-center space-x-1 font-semibold transition" data-id="${q.id}" data-number="${qNumber}">
+          <button class="btn-open-similar text-blue-600 hover:text-blue-700 bg-blue-50/90 hover:bg-blue-100 border border-blue-200 px-2.5 py-1 rounded-md flex items-center space-x-1 font-medium transition" data-id="${q.id}" data-number="${qNumber}">
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
             <span>举一反三 (${similarList.length})</span>
           </button>
@@ -371,25 +371,20 @@
       const titleEl = document.getElementById('similarModalTitle');
       const badgeEl = document.getElementById('similarModalCountBadge');
       if (titleEl) {
-        titleEl.textContent = `举一反三 · 第 ${currentSimilarOriginNumber} 题相似变式推荐`;
+        titleEl.textContent = `举一反三 · 第 ${currentSimilarOriginNumber} 题相似变式`;
       }
       if (badgeEl) {
-        badgeEl.textContent = `精选 ${similarItems.length} 题`;
+        badgeEl.textContent = `${similarItems.length} 题`;
       }
 
-      // Render Origin Cognitive Banner
+      // Render Origin Cognitive Banner (精简考法摘要，去掉长段说明)
       const bannerEl = document.getElementById('similarModalOriginBanner');
       if (bannerEl && cogProfile) {
         bannerEl.innerHTML = `
-          <div class="flex flex-wrap items-center gap-2">
-            <span class="px-2 py-0.5 rounded bg-indigo-600 text-white font-bold text-[11px]">原题认知诊断</span>
-            <span class="font-bold text-indigo-950">【条件性策略】${cogProfile.condTitle}</span>
-            <span class="text-slate-400">|</span>
-            <span class="text-indigo-800"><b>【程序性步骤链】</b>${cogProfile.procChain}</span>
-          </div>
-          <div class="text-slate-600 text-[11px] leading-relaxed">
-            💡 <b>触发机制：</b>${cogProfile.condTrigger}
-          </div>
+          <span class="font-medium text-slate-500">原题考法：</span>
+          <span class="px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 font-semibold border border-blue-100">${cogProfile.condTitle}</span>
+          <span class="text-slate-300">|</span>
+          <span class="text-slate-600 truncate">${cogProfile.procChain}</span>
         `;
       }
 
@@ -411,10 +406,6 @@
         const diffColor = sq.difficulty === '容易' ? 'text-emerald-600 bg-emerald-50 border-emerald-200' :
                           sq.difficulty === '中等' ? 'text-amber-600 bg-amber-50 border-amber-200' :
                           'text-rose-600 bg-rose-50 border-rose-200';
-        const isSameType = sq.type === originQ.type;
-        const typeRelationBadge = isSameType
-          ? `<span class="text-[11px] px-2 py-0.5 rounded bg-blue-50 text-blue-700 font-semibold border border-blue-200">同题型巩固 · ${sq.typeName}</span>`
-          : `<span class="text-[11px] px-2 py-0.5 rounded bg-purple-50 text-purple-700 font-semibold border border-purple-200">跨题型迁移 · ${sq.typeName}</span>`;
 
         let optionsHtml = '';
         if (sq.options && sq.options.length > 0) {
@@ -429,25 +420,18 @@
 
         return `
           <div class="bg-white rounded-xl border ${isSelected ? 'border-blue-300 ring-1 ring-blue-100' : 'border-slate-200'} p-4 sm:p-5 shadow-xs transition-all similar-question-card" data-id="${sq.id}">
-            <!-- Card Top Meta -->
+            <!-- Card Top Meta (匹配网页蓝绿标签规范) -->
             <div class="flex flex-wrap items-center justify-between gap-2 pb-2.5 border-b border-slate-100">
-              <div class="flex flex-wrap items-center gap-1.5">
-                <span class="px-2 py-0.5 rounded-md bg-indigo-600 text-white text-xs font-bold">变式 ${idx + 1}</span>
-                <span class="text-xs px-2 py-0.5 rounded font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">同构匹配度 ${item.similarityPercent}%</span>
-                ${typeRelationBadge}
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="px-2 py-0.5 rounded bg-blue-600 text-white text-xs font-semibold">变式 ${idx + 1}</span>
+                <span class="text-xs px-2 py-0.5 rounded font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">相似度 ${item.similarityPercent}%</span>
+                <span class="text-xs px-2 py-0.5 rounded font-medium bg-blue-100 text-blue-700">${sq.typeName}</span>
                 <span class="text-xs px-2 py-0.5 rounded font-medium ${getGradeSemesterTagClass(sq.chapter)}">${getChapterDisplayLabel(sq.chapter)}</span>
                 <span class="text-xs px-2 py-0.5 rounded font-medium border ${diffColor}">难度：${sq.difficulty}</span>
               </div>
-              <div class="text-[11px] text-slate-400">
+              <div class="text-xs text-slate-400">
                 考点：<span class="text-slate-600 font-medium">${sq.knowledge}</span>
               </div>
-            </div>
-
-            <!-- Cognitive Match Tag -->
-            <div class="mt-2 px-3 py-1.5 rounded-lg bg-slate-50 border border-slate-200/80 flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-slate-600">
-              <span><b class="text-indigo-700">条件策略：</b>${item.condLabel}</span>
-              <span class="text-slate-300">|</span>
-              <span><b class="text-indigo-700">程序步骤：</b>${item.procLabel}</span>
             </div>
 
             <!-- Question Stem -->
@@ -460,24 +444,24 @@
             <!-- Analysis Accordion -->
             <div id="sim_analysis_${sq.id}" class="hidden mt-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs space-y-2">
               <div class="flex items-center space-x-2 font-bold text-slate-900">
-                <span class="w-2 h-2 rounded-full bg-indigo-600"></span>
+                <span class="w-2 h-2 rounded-full bg-blue-600"></span>
                 <span>参考答案：</span>
-                <span class="text-indigo-700 font-mono text-sm">${formatMathHtml(sq.answer)}</span>
+                <span class="text-blue-700 font-mono text-sm">${formatMathHtml(sq.answer)}</span>
               </div>
               <div class="text-slate-600"><b class="text-slate-800">【分析】</b>${formatMathHtml(sq.analysis)}</div>
               <div class="text-slate-700 pt-1 border-t border-slate-200 leading-relaxed"><b class="text-slate-800">【详解】</b>${formatMathHtml(sq.detail)}</div>
             </div>
 
-            <!-- Card Footer Actions -->
+            <!-- Card Footer Actions (统一网页蓝色调) -->
             <div class="mt-3.5 pt-2.5 border-t border-slate-100 flex items-center justify-between">
-              <button class="btn-sim-toggle-analysis text-xs text-slate-500 hover:text-indigo-600 flex items-center space-x-1 font-medium transition" data-id="${sq.id}">
+              <button class="btn-sim-toggle-analysis text-xs text-slate-500 hover:text-blue-600 flex items-center space-x-1 font-medium transition" data-id="${sq.id}">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
                 <span class="sim-analysis-btn-text">查看答案解析</span>
               </button>
 
               <div class="flex items-center space-x-2">
-                <button class="btn-sim-toggle-cart px-3 py-1.5 rounded-lg text-xs font-semibold transition-all flex items-center space-x-1 ${
-                  isSelected ? 'bg-red-50 text-red-600 border border-red-200 hover:bg-red-100' : 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-xs'
+                <button class="btn-sim-toggle-cart px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all flex items-center space-x-1.5 ${
+                  isSelected ? 'bg-red-50 text-red-600 border border-red-200 hover:bg-red-100' : 'bg-blue-600 text-white hover:bg-blue-700 shadow-sm'
                 }" data-id="${sq.id}">
                   ${isSelected ? `
                     <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path></svg>

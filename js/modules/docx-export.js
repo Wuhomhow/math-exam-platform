@@ -234,8 +234,15 @@
         .replace(/\\because/g, '∵')
         .replace(/\\therefore/g, '∴')
         .replace(/\\triangle/g, '△')
+        .replace(/\\Delta\b/g, '△')
+        .replace(/\\square\b/g, '□')
+        .replace(/\\Box\b/g, '□')
         .replace(/\\dots/g, '…')
         .replace(/\\cdots/g, '⋯')
+        .replace(/\\underbrace\{([^{}]*)\}_\{([^{}]*)\}/g, '$1（共 $2）')
+        .replace(/\\underbrace\{([^{}]*)\}/g, '$1')
+        .replace(/\\\s+/g, ' ')
+        .replace(/\\\\/g, ' ')
         .trim();
 
       function readBraceGroup(str, i) {

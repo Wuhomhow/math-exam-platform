@@ -167,7 +167,7 @@
         "options": [],
         "answer": "见详解",
         "analysis": "根据题干可知，让求三月份用水多少吨，先看①，三月份的用水量是一月份的$\\frac{5}{6}$，单位“1”是一月份的用水量，单位“1”已知，用乘法，即420×$\\frac{5}{6}$；②先根据题干，二月份的用水量是一月份的$\\frac{6}{7}$，单位“1”是一月份的用水量，单位“1”已知，用乘法，即420×$\\frac{6}{7}$求出二月份的用水量，由于第二个说三月份的用水量是二月份的$\\frac{5}{6}$，单位“1”是二月份的用水量，单位“1”已知，用乘法，即用二月份的用水量×$\\frac{5}{6}$，即420×$\\frac{6}{7}$×$\\frac{5}{6}$；③由于二月份的用水量是420×$\\frac{6}{7}$，三月份的比二月份的少8吨，用2月份的用水量减8即可求解，据此即可连线。",
-        "detail": "如下图所示：<br><img src=\"assets/images/img_docx_f2dacac7d011.png\" data-cx=\"6118600\" data-cy=\"1623527\" style=\"width:420px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">"
+        "detail": "如下图所示：<br><img src=\"assets/images/img_docx_f2dacac7d011.png\" data-cx=\"6118600\" data-cy=\"1623527\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">"
     },
     {
         "id": "g6_up_74",
@@ -703,13 +703,13 @@
         "chapter": "六年级上册 1. 分数乘法与应用",
         "stem": "计算$\\frac{4}{5}\\div 2$可以用图（       ）表示。",
         "options": [
-            "A. <img src=\"assets/images/img_docx_697c3ca23824.png\" data-cx=\"800100\" data-cy=\"371475\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\">",
-            "B. <img src=\"assets/images/img_docx_520c889e7015.png\" data-cx=\"771525\" data-cy=\"361950\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\">",
-            "C. <img src=\"assets/images/img_docx_2bd612237b4e.png\" data-cx=\"809625\" data-cy=\"361950\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\">",
-            "D. <img src=\"assets/images/img_docx_cefe702e0b76.png\" data-cx=\"790575\" data-cy=\"342900\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\">"
+            "A. <img src=\"assets/images/img_docx_697c3ca23824.png\" data-cx=\"800100\" data-cy=\"371475\" style=\"width:84px;max-width:100%;height:auto\" class=\"block my-2 rounded\">",
+            "B. <img src=\"assets/images/img_docx_520c889e7015.png\" data-cx=\"771525\" data-cy=\"361950\" style=\"width:81px;max-width:100%;height:auto\" class=\"block my-2 rounded\">",
+            "C. <img src=\"assets/images/img_docx_2bd612237b4e.png\" data-cx=\"809625\" data-cy=\"361950\" style=\"width:85px;max-width:100%;height:auto\" class=\"block my-2 rounded\">",
+            "D. <img src=\"assets/images/img_docx_cefe702e0b76.png\" data-cx=\"790575\" data-cy=\"342900\" style=\"width:83px;max-width:100%;height:auto\" class=\"block my-2 rounded\">"
         ],
         "answer": "B",
-        "analysis": "$\\frac{4}{5}\\div 2$＝$\\frac{4}{5}\\times \\frac{1}{2}$，$\\frac{4}{5}\\times \\frac{1}{2}$表示$\\frac{4}{5}$的$\\frac{1}{2}$是多少。即把长方形看作单位“1”，平均分成5份，其中的4份用分数表示是$\\frac{4}{5}$，再把$\\frac{4}{5}$平均分成2份，取其中的1份。也就是把长方形平均分成（5×2）份，取其中的4份。即<img src=\"assets/images/img_docx_520c889e7015.png\" data-cx=\"771525\" data-cy=\"361950\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\">。<br>",
+        "analysis": "$\\frac{4}{5}\\div 2$＝$\\frac{4}{5}\\times \\frac{1}{2}$，$\\frac{4}{5}\\times \\frac{1}{2}$表示$\\frac{4}{5}$的$\\frac{1}{2}$是多少。即把长方形看作单位“1”，平均分成5份，其中的4份用分数表示是$\\frac{4}{5}$，再把$\\frac{4}{5}$平均分成2份，取其中的1份。也就是把长方形平均分成（5×2）份，取其中的4份。即<img src=\"assets/images/img_docx_520c889e7015.png\" data-cx=\"771525\" data-cy=\"361950\" style=\"width:81px;max-width:100%;height:auto\" class=\"block my-2 rounded\">。<br>",
         "detail": "A．图A表示了1的$\\frac{5}{10}$是多少，A选项错误。<br>B．图B表示$\\frac{4}{5}$的$\\frac{1}{2}$是多少，B选项正确。<br>C．图C无意义，C选项错误。<br>D．图D表示了1的$\\frac{1}{10}$是多少，D选项错误。<br>故答案为：B<br>【点睛】<br>此题考查了分数除以整数的计算方法、分数乘分数的画图方法。"
     },
     {
@@ -1313,11 +1313,11 @@
         "difficulty": "中等",
         "knowledge": "根据方向、角度和距离确定物体的位置、面积单位间的进率及换算、圆的面积、画圆",
         "chapter": "六年级上册 2. 位置与方向（二）",
-        "stem": "人工智能（AI）给我们的生活、工作带来诸多便利，AI机器狗更可借助热成像仪和声呐系统，高效协助完成搜索和救援工作。某天，AI机器狗正在A园区开展日常巡逻，突然接到紧急召回指令，立即返回指挥中心补充专用救援设备及应急能源，随后从指挥中心向东偏南40°方向奔跑600米抵达事故现场，再以事故现场为中心，在半径400米的范围内全面展开搜索。<br>（1）A园区位于指挥中心（    ）偏（    ）（    ）°方向上（    ）米处。<br>（2）请你在下图中画出AI机器狗从指挥中心到事故现场的路线。<br>（3）画出AI机器狗搜索的范围，该范围的覆盖面积是（    ）公顷。<br><img src=\"assets/images/img_docx_14d970665c04.png\" data-cx=\"6118600\" data-cy=\"2636634\" style=\"width:420px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "人工智能（AI）给我们的生活、工作带来诸多便利，AI机器狗更可借助热成像仪和声呐系统，高效协助完成搜索和救援工作。某天，AI机器狗正在A园区开展日常巡逻，突然接到紧急召回指令，立即返回指挥中心补充专用救援设备及应急能源，随后从指挥中心向东偏南40°方向奔跑600米抵达事故现场，再以事故现场为中心，在半径400米的范围内全面展开搜索。<br>（1）A园区位于指挥中心（    ）偏（    ）（    ）°方向上（    ）米处。<br>（2）请你在下图中画出AI机器狗从指挥中心到事故现场的路线。<br>（3）画出AI机器狗搜索的范围，该范围的覆盖面积是（    ）公顷。<br><img src=\"assets/images/img_docx_14d970665c04.png\" data-cx=\"6118600\" data-cy=\"2636634\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [],
         "answer": "（1）北；东；30；400；<br>（2）见详解；<br>（3）图见详解；50.24",
         "analysis": "（1）把量角器的中心对准指挥中心，用量角器的0刻度线对准北坐标线，看A园区所在的线对准的刻度，据此量出角度，以指挥中心为观测点，据此判断A园区位于北偏东多少度方向，再用直尺量出A园区距指挥中心的线段长度，根据图上1厘米代表实际200米求出实际距离。<br>（2）以指挥中心为观测点，在东偏南40°方向上画出3厘米长的线段（600÷200＝3厘米），标注事故现场。<br>（3）以事故现场为圆心，2厘米为半径（400÷200＝2厘米）画圆，此圆即AI机器狗搜索的范围，利用圆的面积公式S＝πr$^{2}$，代入半径400米，求出覆盖面积，并根据1公顷＝10000平方米换算成公顷。",
-        "detail": "（1）按照上述方法，测量出A园区位于指挥中心北偏东30°方向上，图上距离为2厘米。那么实际距离为2×200＝400米，即A园区位于指挥中心北偏东30°方向上400米处（答案不唯一，也可以说成东偏北60°400米处）。<br>（2）按东偏南40°方向画3厘米线段，标出事故现场如下所示。<br>（3）以事故现场为圆心，2厘米为半径画出搜索范围，如下图所示：<br>3.14×400$^{2}$<br>＝3.14×160000<br>＝502400（平方米）<br>502400÷10000＝50.24（公顷）<br><img src=\"assets/images/img_docx_df23be26f38b.png\" data-cx=\"6118600\" data-cy=\"2700555\" style=\"width:420px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">"
+        "detail": "（1）按照上述方法，测量出A园区位于指挥中心北偏东30°方向上，图上距离为2厘米。那么实际距离为2×200＝400米，即A园区位于指挥中心北偏东30°方向上400米处（答案不唯一，也可以说成东偏北60°400米处）。<br>（2）按东偏南40°方向画3厘米线段，标出事故现场如下所示。<br>（3）以事故现场为圆心，2厘米为半径画出搜索范围，如下图所示：<br>3.14×400$^{2}$<br>＝3.14×160000<br>＝502400（平方米）<br>502400÷10000＝50.24（公顷）<br><img src=\"assets/images/img_docx_df23be26f38b.png\" data-cx=\"6118600\" data-cy=\"2700555\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">"
     },
     {
         "id": "g6_up_94",
@@ -1329,9 +1329,9 @@
         "difficulty": "中等",
         "knowledge": "根据方向、角度和距离描述路线图",
         "chapter": "六年级上册 2. 位置与方向（二）",
-        "stem": "小明玩一种变向跑步游戏，由起点出发往东偏南30°方向走30米，再向东走40米，最后往南偏西45°方向走20米到达终点。根据描述，把小明走的路线图画出来。<br><img src=\"assets/images/img_docx_73022719e36f.png\" data-cx=\"2867025\" data-cy=\"1247775\" style=\"width:301px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "小明玩一种变向跑步游戏，由起点出发往东偏南30°方向走30米，再向东走40米，最后往南偏西45°方向走20米到达终点。根据描述，把小明走的路线图画出来。<br><img src=\"assets/images/img_docx_73022719e36f.png\" data-cx=\"2867025\" data-cy=\"1247775\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [],
-        "answer": "<img src=\"assets/images/img_docx_45ccc1fb1baf.png\" data-cx=\"2952750\" data-cy=\"1285875\" style=\"width:310px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+        "answer": "<img src=\"assets/images/img_docx_45ccc1fb1baf.png\" data-cx=\"2952750\" data-cy=\"1285875\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "analysis": "根据图可知，1厘米相当于10米，即30米在图上画3厘米，40米在图上画4厘米，20米在图上画2厘米；根据地图上的方向，上北下南左西右东，东偏南30°，是从东的方向往南转30°，然后画3厘米，之后在这个位置向东走40米，就是向右画4厘米，之后在往南偏西45°方向，也就是从南面往西的方向偏45°，再画2厘米的线段长即可。",
         "detail": "作图略"
     },
@@ -1365,11 +1365,11 @@
         "difficulty": "中等",
         "knowledge": "根据方向、角度和距离确定物体的位置与描述路线图",
         "chapter": "六年级上册 2. 位置与方向（二）",
-        "stem": "王老师家在学校东偏北60°的方向上，且距离学校45千米。请你在平面图上确定王老师家的位置。（1厘米表示15千米）<br><img src=\"assets/images/img_docx_867c7fc40fc5.png\" data-cx=\"2771775\" data-cy=\"2628900\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\">",
+        "stem": "王老师家在学校东偏北60°的方向上，且距离学校45千米。请你在平面图上确定王老师家的位置。（1厘米表示15千米）<br><img src=\"assets/images/img_docx_867c7fc40fc5.png\" data-cx=\"2771775\" data-cy=\"2628900\" style=\"width:165px;max-width:100%;height:auto\" class=\"block my-2 rounded\">",
         "options": [],
         "answer": "见详解",
         "analysis": "由题意可知，图上1厘米表示15千米，则王老师家到学校的距离为45÷15＝3厘米，再根据“上北下南，左西右东”及角度信息作图即可。<br>",
-        "detail": "45÷15＝3（厘米）<br>如图所示：<br><img src=\"assets/images/img_docx_219ec104a31f.png\" data-cx=\"2771775\" data-cy=\"2628900\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\"><br><br>【点睛】<br>本题考查方向和位置，明确“上北下南，左西右东”及角度信息是解题的关键。"
+        "detail": "45÷15＝3（厘米）<br>如图所示：<br><img src=\"assets/images/img_docx_219ec104a31f.png\" data-cx=\"2771775\" data-cy=\"2628900\" style=\"width:165px;max-width:100%;height:auto\" class=\"block my-2 rounded\"><br><br>【点睛】<br>本题考查方向和位置，明确“上北下南，左西右东”及角度信息是解题的关键。"
     },
     {
         "id": "g6_2_2",
@@ -1402,7 +1402,7 @@
         "difficulty": "中等",
         "knowledge": "根据方向、角度和距离确定物体的位置与描述路线图",
         "chapter": "六年级上册 2. 位置与方向（二）",
-        "stem": "如图，学校在小红家（       ）方向上。<br><img src=\"assets/images/img_docx_5ac4e042abb8.png\" data-cx=\"2209800\" data-cy=\"1005780\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\">",
+        "stem": "如图，学校在小红家（       ）方向上。<br><img src=\"assets/images/img_docx_5ac4e042abb8.png\" data-cx=\"2209800\" data-cy=\"1005780\" style=\"width:232px;max-width:100%;height:auto\" class=\"block my-2 rounded\">",
         "options": [
             "A. 北偏东30°",
             "B. 北偏东60°",
@@ -1423,11 +1423,11 @@
         "difficulty": "较难",
         "knowledge": "根据方向、角度和距离确定物体的位置与描述路线图",
         "chapter": "六年级上册 2. 位置与方向（二）",
-        "stem": "根据下面的描述，完成下列各题。<br>（1）商场在小玲家（                    ）方向（             ）米处。<br>（2）小红家在小玲家南偏西45°方向600米处，请你在图中标出小红家的位置。<br>（3）请你描述小玲从书店出发回家所走的路线：小玲从书店出发，沿东偏北45°方向走400米到商场，再沿（                                   ）到小玲家。<br>（4）小玲从书店回家每分钟走70米，那么她从书店回到家需要步行（          ）分钟。<br><img src=\"assets/images/img_docx_fbdaa8ec8ca0.png\" data-cx=\"3476625\" data-cy=\"2186136\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\">",
+        "stem": "根据下面的描述，完成下列各题。<br>（1）商场在小玲家（                    ）方向（             ）米处。<br>（2）小红家在小玲家南偏西45°方向600米处，请你在图中标出小红家的位置。<br>（3）请你描述小玲从书店出发回家所走的路线：小玲从书店出发，沿东偏北45°方向走400米到商场，再沿（                                   ）到小玲家。<br>（4）小玲从书店回家每分钟走70米，那么她从书店回到家需要步行（          ）分钟。<br><img src=\"assets/images/img_docx_fbdaa8ec8ca0.png\" data-cx=\"3476625\" data-cy=\"2186136\" style=\"width:220px;max-width:100%;height:auto\" class=\"block my-2 rounded\">",
         "options": [],
         "answer": "（1）西偏北30°；1000；<br>（2）见详解<br>（3）东偏南30°方向走1000米；<br>（4）20",
         "analysis": "（1）西偏北30°；1000；<br>（2）见详解<br>（3）东偏南30°方向走1000米；<br>（4）20<br><br><br>以图上的“上北下南，左西右东”为准，图例表示图上1厘米相当于实际距离200米。<br>（1）以小玲家为观测点，商场在小玲家的西偏北30°方向，与小玲家相距（200×5）米；<br>（2）在小玲家南偏西45°方向上画600÷200＝3厘米长的线段，即是小红家；<br>（3）描述路线时，注意起始点与目的地，起始点是观测点，在地图上按照“上北下南，左西右东”确定方向，用方向和距离描述路线。<br>（4）从图中可知，书店与小玲家相距（200×7）米，根据“时间＝路程÷速度”，即可求出她从书店回到家需要步行的时间。<br>",
-        "detail": "<br>（1）200×5＝1000（米）<br>商场在小玲家西偏北30°方向1000米处。<br>（2）600÷200＝3（厘米）<br>如图：<br><img src=\"assets/images/img_docx_c4be0baed6f4.png\" data-cx=\"3476625\" data-cy=\"2266950\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>（3）小玲从书店出发回家所走的路线：小玲从书店出发，沿东偏北45°方向走400米到商场，再沿东偏南30°方向走1000米到小玲家。<br>（4）200×（2＋5）<br>＝200×7<br>＝1400（米）<br>1400÷70＝20（分钟）<br>她从书店回到家需要步行20分钟。<br>【点睛】<br>本题考查方向与位置的知识以及行程问题，找准观测点，根据方向、角度和距离确定物体的位置及描述路线，利用速度、时间、路程之间的关系解答。"
+        "detail": "<br>（1）200×5＝1000（米）<br>商场在小玲家西偏北30°方向1000米处。<br>（2）600÷200＝3（厘米）<br>如图：<br><img src=\"assets/images/img_docx_c4be0baed6f4.png\" data-cx=\"3476625\" data-cy=\"2266950\" style=\"width:220px;max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>（3）小玲从书店出发回家所走的路线：小玲从书店出发，沿东偏北45°方向走400米到商场，再沿东偏南30°方向走1000米到小玲家。<br>（4）200×（2＋5）<br>＝200×7<br>＝1400（米）<br>1400÷70＝20（分钟）<br>她从书店回到家需要步行20分钟。<br>【点睛】<br>本题考查方向与位置的知识以及行程问题，找准观测点，根据方向、角度和距离确定物体的位置及描述路线，利用速度、时间、路程之间的关系解答。"
     },
     {
         "id": "g6_2_14",
@@ -1439,11 +1439,11 @@
         "difficulty": "较难",
         "knowledge": "根据方向、角度和距离确定物体的位置与描述路线图",
         "chapter": "六年级上册 2. 位置与方向（二）",
-        "stem": "中国人民解放军海军在索马里海域执行为商船护航的任务，突然收到附近商船的求救信息，一艘海盗船正向他们逼近，急需救援。<br><img src=\"assets/images/img_docx_0693a7796a4c.png\" data-cx=\"3762375\" data-cy=\"3771900\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>（1）海盗船在商船的（       ）偏（       ）（       ）方向上，距离是（       ）海里；军舰在商船的（       ）偏（       ）（       ）方向上，距离是（       ）海里。<br>（2）军舰航速为70海里/时，商船航速为30海里/时，军舰全速靠近商船的同时，命令商船也急速向军舰靠近，经过（       ）小时，军舰和商船相遇。<br>（3）一艘搜救船在商船的北偏西$20^\\circ$方向400海里处，请在图中表示出搜救船的位置。",
+        "stem": "中国人民解放军海军在索马里海域执行为商船护航的任务，突然收到附近商船的求救信息，一艘海盗船正向他们逼近，急需救援。<br><img src=\"assets/images/img_docx_0693a7796a4c.png\" data-cx=\"3762375\" data-cy=\"3771900\" style=\"width:165px;max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>（1）海盗船在商船的（       ）偏（       ）（       ）方向上，距离是（       ）海里；军舰在商船的（       ）偏（       ）（       ）方向上，距离是（       ）海里。<br>（2）军舰航速为70海里/时，商船航速为30海里/时，军舰全速靠近商船的同时，命令商船也急速向军舰靠近，经过（       ）小时，军舰和商船相遇。<br>（3）一艘搜救船在商船的北偏西$20^\\circ$方向400海里处，请在图中表示出搜救船的位置。",
         "options": [],
         "answer": "（1）南；西；30°；300；东；北；40°；700；（2）7；（3）见详解",
         "analysis": "（1）根据平面图上方向的规定：上北下南，左西右东，以商船为观测点即可确定海盗船、军舰的方向；再量出商船到海盗船、商船到军舰的图上距离，根据图中所标注的比例尺即可求出对应的实际距离。<br>（2）根据相遇时间＝路程÷速度和即可求出经过几小时相遇。<br>（3）图上距离1厘米表示实际距离100海里，据此即可分别求出它们之间的图上距离，再根据它们之间方向关系，即可在图上标出搜救船的位置。<br>",
-        "detail": "（1）3×100＝300（海里）<br>7×100＝700（海里）<br>海盗船在商船的南偏西30°方向上，距离是300海里；军舰在商船的东偏北40°方向上，距离是700海里。<br>（2）700÷（30＋70）<br>＝700÷100<br>＝7（小时）<br>经过7小时，军舰和商船相遇。<br>（3）400÷100＝4（厘米）<br>如图：<br><img src=\"assets/images/img_docx_7e272f374798.png\" data-cx=\"3762375\" data-cy=\"3771900\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\"><br><br>【点睛】<br>此题主要考查依据方向（角度）和距离确定物体位置的方法。"
+        "detail": "（1）3×100＝300（海里）<br>7×100＝700（海里）<br>海盗船在商船的南偏西30°方向上，距离是300海里；军舰在商船的东偏北40°方向上，距离是700海里。<br>（2）700÷（30＋70）<br>＝700÷100<br>＝7（小时）<br>经过7小时，军舰和商船相遇。<br>（3）400÷100＝4（厘米）<br>如图：<br><img src=\"assets/images/img_docx_7e272f374798.png\" data-cx=\"3762375\" data-cy=\"3771900\" style=\"width:165px;max-width:100%;height:auto\" class=\"block my-2 rounded\"><br><br>【点睛】<br>此题主要考查依据方向（角度）和距离确定物体位置的方法。"
     },
     {
         "id": "g6_3_87",
@@ -1455,11 +1455,11 @@
         "difficulty": "容易",
         "knowledge": "根据方向、角度和距离确定物体的位置与描述路线图",
         "chapter": "六年级上册 2. 位置与方向（二）",
-        "stem": "按要求在图中确定文化馆、图书馆、银行的位置。<br><img src=\"assets/images/img_docx_6779a0d36e18.png\" data-cx=\"2400300\" data-cy=\"1581150\" style=\"width:252px;max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>（1）文化馆在超市正东方向400m处。<br>（2）图书馆在超市东偏北30°方向，离超市600m处。<br>（3）银行在超市（       ）方向200米处。",
+        "stem": "按要求在图中确定文化馆、图书馆、银行的位置。<br><img src=\"assets/images/img_docx_6779a0d36e18.png\" data-cx=\"2400300\" data-cy=\"1581150\" style=\"width:220px;max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>（1）文化馆在超市正东方向400m处。<br>（2）图书馆在超市东偏北30°方向，离超市600m处。<br>（3）银行在超市（       ）方向200米处。",
         "options": [],
         "answer": "（1）（2）见详解；<br>（3）西偏北45°",
         "analysis": "（1）图上每个单位长度表示200m，以超市为观测点，根据“上北下南，左西右东”在超市正东方向截取400÷200＝2个单位长度，终点处标注文化馆；<br>（2）在超市正东偏北30°方向上截取600÷200＝3个单位长度，标出角度，终点处标注图书馆；<br>（3）由图上角度可知，银行在超市正西偏北45°方向或正北偏西45°方向，距离超市200米处。<br>",
-        "detail": "（1）（2）<img src=\"assets/images/img_docx_f7fb4fe4f8e8.png\" data-cx=\"2409825\" data-cy=\"1581150\" style=\"width:253px;max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>（3）银行在超市西偏北45°方向200米处。<br>【点睛】<br>掌握根据方向、角度、距离确定物体位置的方法是解答题目的关键。"
+        "detail": "（1）（2）<img src=\"assets/images/img_docx_f7fb4fe4f8e8.png\" data-cx=\"2409825\" data-cy=\"1581150\" style=\"width:220px;max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>（3）银行在超市西偏北45°方向200米处。<br>【点睛】<br>掌握根据方向、角度、距离确定物体位置的方法是解答题目的关键。"
     },
     {
         "id": "g6_3_88",
@@ -1471,7 +1471,7 @@
         "difficulty": "中等",
         "knowledge": "根据方向、角度和距离确定物体的位置与描述路线图",
         "chapter": "六年级上册 2. 位置与方向（二）",
-        "stem": "小明家在学校的(        )偏(        )30°方向距离(        )m处。<br><img src=\"assets/images/img_docx_39c225d05e0e.png\" data-cx=\"3209925\" data-cy=\"1524000\" style=\"width:337px;max-width:100%;height:auto\" class=\"block my-2 rounded\">",
+        "stem": "小明家在学校的(        )偏(        )30°方向距离(        )m处。<br><img src=\"assets/images/img_docx_39c225d05e0e.png\" data-cx=\"3209925\" data-cy=\"1524000\" style=\"width:280px;max-width:100%;height:auto\" class=\"block my-2 rounded\">",
         "options": [],
         "answer": "东；北；900",
         "analysis": "先根据图上一个单位长度表示实际的300m，计算出小明家离学校的实际距离。再以学校为观测点，看夹角与方向，根据上北下南，左西右东判断方向。据此解答。<br>",
@@ -1487,10 +1487,10 @@
         "difficulty": "较难",
         "knowledge": "根据方向、角度和距离确定物体的位置与描述路线图",
         "chapter": "六年级上册 2. 位置与方向（二）",
-        "stem": "填一填，说一说。<br><img src=\"assets/images/img_docx_b515d3781f02.png\" data-cx=\"1790700\" data-cy=\"1552575\" style=\"width:188px;max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>（1）书店在李老师家的（       ）偏（       ）（       ）°方向上，距离是（       ）米。<br>（2）王老师家在李老师家的西偏北30°方向上，距离是300米，在图上标出王老师家的位置。",
+        "stem": "填一填，说一说。<br><img src=\"assets/images/img_docx_b515d3781f02.png\" data-cx=\"1790700\" data-cy=\"1552575\" style=\"width:165px;max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>（1）书店在李老师家的（       ）偏（       ）（       ）°方向上，距离是（       ）米。<br>（2）王老师家在李老师家的西偏北30°方向上，距离是300米，在图上标出王老师家的位置。",
         "options": [],
         "answer": "（1）东，北，35°，200；",
-        "analysis": "（1）东，北，35°，200；<br>（2）<img src=\"assets/images/img_docx_81524e91b543.png\" data-cx=\"2019300\" data-cy=\"1552575\" style=\"width:212px;max-width:100%;height:auto\" class=\"block my-2 rounded\"><br><br><br>根据“上北下南，左西右东”以及比例尺确定物体的位置即可解答。<br>",
+        "analysis": "（1）东，北，35°，200；<br>（2）<img src=\"assets/images/img_docx_81524e91b543.png\" data-cx=\"2019300\" data-cy=\"1552575\" style=\"width:208px;max-width:100%;height:auto\" class=\"block my-2 rounded\"><br><br><br>根据“上北下南，左西右东”以及比例尺确定物体的位置即可解答。<br>",
         "detail": "<br>由分析得，<br>（1）书店在李老师家的东偏北35°方向上，距离是200米。<br>（2）300÷100＝3（段）<br>画图略。<br>【点睛】<br>此题考查的是位置与方向，掌握“上北下南，左西右东”以及比例尺确定物体的位置是解题关键。"
     },
     {
@@ -1519,7 +1519,7 @@
         "difficulty": "容易",
         "knowledge": "根据方向、角度和距离确定物体的位置与描述路线图",
         "chapter": "六年级上册 2. 位置与方向（二）",
-        "stem": "根据路线图填空。<br><img src=\"assets/images/img_docx_f2f2c05637c7.png\" data-cx=\"3943350\" data-cy=\"1481138\" style=\"width:414px;max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>（1）从小刚家向(        )偏(        )(        )゜走(        )米到达广场。<br>（2）从银行向(        )偏(        )(        )゜走(        )米到达超市。<br>（3）从公园向(        )偏(        )(        )゜走(        )米到达超市。",
+        "stem": "根据路线图填空。<br><img src=\"assets/images/img_docx_f2f2c05637c7.png\" data-cx=\"3943350\" data-cy=\"1481138\" style=\"width:280px;max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>（1）从小刚家向(        )偏(        )(        )゜走(        )米到达广场。<br>（2）从银行向(        )偏(        )(        )゜走(        )米到达超市。<br>（3）从公园向(        )偏(        )(        )゜走(        )米到达超市。",
         "options": [],
         "answer": "东；北；30；200；东；北；15；250；北；西；40；230",
         "analysis": "东     北     30     200     东     北     15     250     北     西     40     230<br><br><br>根据地图上的方向“上北下南，左西右东”及其他信息（角度、距离）来确定位置即可。<br>",
@@ -1551,11 +1551,11 @@
         "difficulty": "中等",
         "knowledge": "根据方向、角度和距离确定物体的位置与描述路线图",
         "chapter": "六年级上册 2. 位置与方向（二）",
-        "stem": "如图是小丽以自己家为观测点，画出的一张平面图。<br><img src=\"assets/images/img_docx_986e9e2260a3.png\" data-cx=\"1638300\" data-cy=\"1800225\" style=\"width:172px;max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>（1）汽车站在小丽家______方向______米处。<br>（2）商店在小丽家______偏______度方向______米处。<br>（3）学校在小丽家南偏西$45^\\circ$方向600米处，请标出学校的位置。",
+        "stem": "如图是小丽以自己家为观测点，画出的一张平面图。<br><img src=\"assets/images/img_docx_986e9e2260a3.png\" data-cx=\"1638300\" data-cy=\"1800225\" style=\"width:150px;max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>（1）汽车站在小丽家______方向______米处。<br>（2）商店在小丽家______偏______度方向______米处。<br>（3）学校在小丽家南偏西$45^\\circ$方向600米处，请标出学校的位置。",
         "options": [],
         "answer": "见详解",
         "analysis": "<br>根据图例可知本题中的方向是上北下南左西右东，角度已知，可确定方向，根据图上距离÷比例尺＝实际距离，量出图上距离，求出实际距离，即可解答。<br>",
-        "detail": "<br>（1）东；800<br>【解析】根据地图上的方向，可得汽车站在小丽家东边，<br>因为$200\\times 4=800$（米），<br>所以汽车站在小丽家东边800米处；<br>（2）北；西30；400<br>【解析】因为$200\\times 2=400$（米）<br>所以商店在小丽家北偏西30度方向400米处；<br>（3）图见详解<br>【解析】根据学校在小丽家南偏西$45^\\circ$方向600米处，<br>因为$600\\div 200=3$（个）<br>所以学校距离小丽家在图上为3个格，<br>因此学校的位置为：<br><img src=\"assets/images/img_docx_bf9edf8f30e8.png\" data-cx=\"1638300\" data-cy=\"1800225\" style=\"width:172px;max-width:100%;height:auto\" class=\"block my-2 rounded\"><br><br>【点睛】<br>此题考查了在平面图上标出物体的位置，根据方向和距离确定物体的位置，锻炼了学生的动手操作能力。"
+        "detail": "<br>（1）东；800<br>【解析】根据地图上的方向，可得汽车站在小丽家东边，<br>因为$200\\times 4=800$（米），<br>所以汽车站在小丽家东边800米处；<br>（2）北；西30；400<br>【解析】因为$200\\times 2=400$（米）<br>所以商店在小丽家北偏西30度方向400米处；<br>（3）图见详解<br>【解析】根据学校在小丽家南偏西$45^\\circ$方向600米处，<br>因为$600\\div 200=3$（个）<br>所以学校距离小丽家在图上为3个格，<br>因此学校的位置为：<br><img src=\"assets/images/img_docx_bf9edf8f30e8.png\" data-cx=\"1638300\" data-cy=\"1800225\" style=\"width:150px;max-width:100%;height:auto\" class=\"block my-2 rounded\"><br><br>【点睛】<br>此题考查了在平面图上标出物体的位置，根据方向和距离确定物体的位置，锻炼了学生的动手操作能力。"
     },
     {
         "id": "g6_3_94",
@@ -2934,7 +2934,7 @@
         "difficulty": "中等",
         "knowledge": "比的应用与按比分配实际问题",
         "chapter": "六年级上册 4. 比与按比分配",
-        "stem": "如图，两个正方形重叠部分的面积相当于大正方形面积的$\\frac{1}{4}$，相当于小正方形面积的$\\frac{1}{3}$，则大正方形空白部分和小正方形空白部分的面积的比是（       ）。<br><img src=\"assets/images/img_docx_805441b2df80.png\" data-cx=\"771525\" data-cy=\"781050\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\">",
+        "stem": "如图，两个正方形重叠部分的面积相当于大正方形面积的$\\frac{1}{4}$，相当于小正方形面积的$\\frac{1}{3}$，则大正方形空白部分和小正方形空白部分的面积的比是（       ）。<br><img src=\"assets/images/img_docx_805441b2df80.png\" data-cx=\"771525\" data-cy=\"781050\" style=\"width:81px;max-width:100%;height:auto\" class=\"block my-2 rounded\">",
         "options": [
             "A. 3∶4",
             "B. 4∶3",
@@ -2976,11 +2976,11 @@
         "difficulty": "中等",
         "knowledge": "比的应用与按比分配实际问题",
         "chapter": "六年级上册 4. 比与按比分配",
-        "stem": "在方格纸上画出大小不同的两个平行四边形，且使每个平行四边形的底和高的比是3∶2。<br><img src=\"assets/images/img_docx_f5b920804796.png\" data-cx=\"3686175\" data-cy=\"1094780\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\">",
+        "stem": "在方格纸上画出大小不同的两个平行四边形，且使每个平行四边形的底和高的比是3∶2。<br><img src=\"assets/images/img_docx_f5b920804796.png\" data-cx=\"3686175\" data-cy=\"1094780\" style=\"width:280px;max-width:100%;height:auto\" class=\"block my-2 rounded\">",
         "options": [],
         "answer": "见详解",
         "analysis": "根据平行四边形的底和高的比是3∶2，可以画出一个底为9，高为6的平行四边形，也可以画一个底为6，高为4的平行四边形。<br>",
-        "detail": "如图：<br><img src=\"assets/images/img_docx_a60fa1a3bd02.png\" data-cx=\"4057650\" data-cy=\"1237208\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\">（答案不唯一）<br><br>【点睛】<br>解答本题的关键是要保证所画的平行四边形的底和高的比为3∶2。"
+        "detail": "如图：<br><img src=\"assets/images/img_docx_a60fa1a3bd02.png\" data-cx=\"4057650\" data-cy=\"1237208\" style=\"width:280px;max-width:100%;height:auto\" class=\"block my-2 rounded\">（答案不唯一）<br><br>【点睛】<br>解答本题的关键是要保证所画的平行四边形的底和高的比为3∶2。"
     },
     {
         "id": "g6_3_41",
@@ -3309,11 +3309,11 @@
         "difficulty": "中等",
         "knowledge": "正方形的概念及特点、垂直的特征、圆的概念及特点、画圆",
         "chapter": "六年级上册 5.1 圆的认识与周长",
-        "stem": "（1）在空白的圆中画出左面的图案。<br><img src=\"assets/images/img_docx_acbcfe3174b0.png\" data-cx=\"2828925\" data-cy=\"1238250\" style=\"width:297px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>（2）下面给出的画图步骤顺序是错的。正确的顺序是：<br>（    ）→（    ）→（    ）→（    ）<br>①依次连接2条直径的4个端点成正方形。<br>②画出两条相互垂直的直径。<br>③分别以正方形每条边的中点为圆心，正方形边长的一半为半径。分别画4个半圆。<br>④擦去多余的作图线并涂色。",
+        "stem": "（1）在空白的圆中画出左面的图案。<br><img src=\"assets/images/img_docx_acbcfe3174b0.png\" data-cx=\"2828925\" data-cy=\"1238250\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>（2）下面给出的画图步骤顺序是错的。正确的顺序是：<br>（    ）→（    ）→（    ）→（    ）<br>①依次连接2条直径的4个端点成正方形。<br>②画出两条相互垂直的直径。<br>③分别以正方形每条边的中点为圆心，正方形边长的一半为半径。分别画4个半圆。<br>④擦去多余的作图线并涂色。",
         "options": [],
         "answer": "（$1$）如图：<br><img src=\"assets/images/img_docx_e5d03e4257c0.png\" data-cx=\"1019175\" data-cy=\"1009650\" style=\"width:107px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>（$2$）②①③④",
         "analysis": "（$1$）分析图案构成，明确作图的基础是先确定圆内的基准辅助线，因为要得到正方形的四个顶点，所以首先需要画出两条互相垂直的直径。<br>（$2$）得到直径的四个端点后，连接端点得到正方形，因为后续半圆的圆心和半径都依赖正方形的边长，所以这一步要在画半圆之前完成。<br>（$3$）确定正方形后，以各边中点为圆心、边长一半为半径画四个半圆，因为基础图形绘制完成后才可以处理辅助线和涂色，所以最后进行擦线和涂色操作。",
-        "detail": "（$1$）如图：<br><img src=\"assets/images/img_docx_1494f29491c7.png\" data-cx=\"1000125\" data-cy=\"4152900\" style=\"width:105px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>（$2$）画图的顺序是：<br>②画出两条相互垂直的直径<br>①依次连接$2$条直径的$4$个端点成正方形。<br>③分别以正方形每条边长的中点为圆心，正方形边长的一半为半径，画4个半圆。<br>④擦去多余的作图线并涂色。"
+        "detail": "（$1$）如图：<br><img src=\"assets/images/img_docx_1494f29491c7.png\" data-cx=\"1000125\" data-cy=\"4152900\" style=\"width:40px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>（$2$）画图的顺序是：<br>②画出两条相互垂直的直径<br>①依次连接$2$条直径的$4$个端点成正方形。<br>③分别以正方形每条边长的中点为圆心，正方形边长的一半为半径，画4个半圆。<br>④擦去多余的作图线并涂色。"
     },
     {
         "id": "g6_up_2",
@@ -3452,7 +3452,7 @@
         "difficulty": "中等",
         "knowledge": "含圆的组合图形的周长、圆的概念及特点、周长的认识和大小比较",
         "chapter": "六年级上册 5.1 圆的认识与周长",
-        "stem": "小明和小红用纸芯做笔筒，他们的打捆方式如下图所示（打结处不计）。若纸芯的直径为d（厚度忽略不计），那么小明的捆法所用绳子的长度比小红的（    ）。<br><img src=\"assets/images/img_docx_bea392ecf1f5.png\" data-cx=\"3324225\" data-cy=\"752475\" style=\"width:349px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "小明和小红用纸芯做笔筒，他们的打捆方式如下图所示（打结处不计）。若纸芯的直径为d（厚度忽略不计），那么小明的捆法所用绳子的长度比小红的（    ）。<br><img src=\"assets/images/img_docx_bea392ecf1f5.png\" data-cx=\"3324225\" data-cy=\"752475\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [
             "A. 多1d",
             "B. 多2d",
@@ -3482,7 +3482,7 @@
         ],
         "answer": "B",
         "analysis": "根据轴对称图形和对称轴的定义，分别找出四个选项中图形的对称轴条数，再进行比较。如果一个图形沿着一条直线对折后两部分完全重合，这条直线就是它的对称轴。",
-        "detail": "<img src=\"assets/images/img_docx_37ba1e165e3a.png\" data-cx=\"4343400\" data-cy=\"876300\" style=\"width:420px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>A．有3条对称轴；<br>B．同心圆有无数条对称轴；<br>C．有3条对称轴；<br>D．有4条对称轴。"
+        "detail": "<img src=\"assets/images/img_docx_37ba1e165e3a.png\" data-cx=\"4343400\" data-cy=\"876300\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>A．有3条对称轴；<br>B．同心圆有无数条对称轴；<br>C．有3条对称轴；<br>D．有4条对称轴。"
     },
     {
         "id": "g6_up_26",
@@ -3558,7 +3558,7 @@
         "difficulty": "中等",
         "knowledge": "圆的特征与周长计算应用",
         "chapter": "六年级上册 5.1 圆的认识与周长",
-        "stem": "下图是某学校操场的形状，跑道最内侧边缘由正方形的一组对边和两个半圆组成。学校操场的跑道是多少米？<br><img src=\"assets/images/img_docx_01aef58fa36a.png\" data-cx=\"2038350\" data-cy=\"1219795\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\">",
+        "stem": "下图是某学校操场的形状，跑道最内侧边缘由正方形的一组对边和两个半圆组成。学校操场的跑道是多少米？<br><img src=\"assets/images/img_docx_01aef58fa36a.png\" data-cx=\"2038350\" data-cy=\"1219795\" style=\"width:214px;max-width:100%;height:auto\" class=\"block my-2 rounded\">",
         "options": [],
         "answer": "400.92米",
         "analysis": "观察图形可知，两个半圆可以组成一个圆；圆的直径等于正方形的边长，为78米，学校操场跑道的长度＝圆的周长＋两条直跑道的长度；根据圆的周长公式C＝$\\pi d$，代入数据计算即可。<br>",
@@ -3590,7 +3590,7 @@
         "difficulty": "中等",
         "knowledge": "圆的特征与周长计算应用",
         "chapter": "六年级上册 5.1 圆的认识与周长",
-        "stem": "下图是某公园的一块草坪，已知每平方米草皮5元。<br><img src=\"assets/images/img_docx_5151ed84635c.png\" data-cx=\"1228725\" data-cy=\"1106239\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>（1）绕着这块草地走1圈的路程是多少米？<br>（2）若草坪种满这种草皮则需要多少钱？",
+        "stem": "下图是某公园的一块草坪，已知每平方米草皮5元。<br><img src=\"assets/images/img_docx_5151ed84635c.png\" data-cx=\"1228725\" data-cy=\"1106239\" style=\"width:129px;max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>（1）绕着这块草地走1圈的路程是多少米？<br>（2）若草坪种满这种草皮则需要多少钱？",
         "options": [],
         "answer": "（1）141.4米<br>（2）4285元",
         "analysis": "（1）141.4米<br>（2）4285元<br><br><br>（1）半径为20÷2＝10m。绕着这块草地走1圈的路程＝圆的半径×π＋长方形的宽×2＋半径×2；<br>（2）若草坪种满这种草皮需要的总价＝单价×数量；其中，数量＝π×半径$^{2}$÷2＋长×宽。<br>",
@@ -3792,7 +3792,7 @@
         "difficulty": "中等",
         "knowledge": "多边形的内角和、圆的概念及特点、圆的面积、扇形的周长和面积",
         "chapter": "六年级上册 5.2 圆的面积与扇形",
-        "stem": "下面各个选项中圆的半径都是$2cm$，圆心都分别在四边形的四个顶点上，比较每个选项的涂色部分面积之和，下面说法正确的是（    ）。<br><img src=\"assets/images/img_docx_db85b0578ec7.png\" data-cx=\"4429125\" data-cy=\"981075\" style=\"width:420px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "下面各个选项中圆的半径都是$2cm$，圆心都分别在四边形的四个顶点上，比较每个选项的涂色部分面积之和，下面说法正确的是（    ）。<br><img src=\"assets/images/img_docx_db85b0578ec7.png\" data-cx=\"4429125\" data-cy=\"981075\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [
             "A. $S_{①}=S_{②}=S_{③}=S_{④}=3.14\\times 2^{2}$",
             "B. 只有$S_{①}=3.14\\times 2^{2}$",
@@ -3845,9 +3845,9 @@
         "difficulty": "中等",
         "knowledge": "画扇形、圆的概念及特点、画圆、弧、圆心角、扇形的认识",
         "chapter": "六年级上册 5.2 圆的面积与扇形",
-        "stem": "请在下面的正方形里画一个最大的圆，并标出圆心$O$（要保留找圆心的痕迹）；再在圆中画一个圆心角是${80}^{\\circ }$的扇形。（要标出角度）<br><img src=\"assets/images/img_docx_48ff06e41401.png\" data-cx=\"1628775\" data-cy=\"1619250\" style=\"width:171px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "请在下面的正方形里画一个最大的圆，并标出圆心$O$（要保留找圆心的痕迹）；再在圆中画一个圆心角是${80}^{\\circ }$的扇形。（要标出角度）<br><img src=\"assets/images/img_docx_48ff06e41401.png\" data-cx=\"1628775\" data-cy=\"1619250\" style=\"width:165px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [],
-        "answer": "如图：<br><img src=\"assets/images/img_docx_86ac8ebcb597.png\" data-cx=\"1676400\" data-cy=\"1666875\" style=\"width:176px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+        "answer": "如图：<br><img src=\"assets/images/img_docx_86ac8ebcb597.png\" data-cx=\"1676400\" data-cy=\"1666875\" style=\"width:165px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "analysis": "（$1$）首先确定正方形内最大圆的圆心位置，因为正方形的对角线交点是其中心，也是最大圆的圆心，所以通过画出正方形的两条对角线，交点即为圆心O，保留作图痕迹。<br>（$2$）接着确定最大圆的半径，因为正方形内最大圆的直径等于正方形的边长，所以以O为圆心，边长的一半为半径画圆。<br>（$3$）最后画圆心角80°的扇形，以圆心O为顶点，任取一条半径为起始边，用量角器量出80°画出另一条半径，两条半径和对应的圆弧围成所需扇形，标注80°角度。",
         "detail": "图略："
     },
@@ -3861,7 +3861,7 @@
         "difficulty": "中等",
         "knowledge": "长方形的面积、圆的面积、含圆的组合图形的面积、扇形的周长和面积",
         "chapter": "六年级上册 5.2 圆的面积与扇形",
-        "stem": "如图，四边形$ABCD$是长方形，扇形$ABE$的半径$AB=AE=6$厘米，扇形$CBF$的半径$BC=CF=4$厘米，求涂色部分的面积。（π取值为3）<br><img src=\"assets/images/img_docx_ad79efe561ca.png\" data-cx=\"1409700\" data-cy=\"1581150\" style=\"width:148px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "如图，四边形$ABCD$是长方形，扇形$ABE$的半径$AB=AE=6$厘米，扇形$CBF$的半径$BC=CF=4$厘米，求涂色部分的面积。（π取值为3）<br><img src=\"assets/images/img_docx_ad79efe561ca.png\" data-cx=\"1409700\" data-cy=\"1581150\" style=\"width:147px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [],
         "answer": "$15$平方厘米",
         "analysis": "（$1$）观察图形面积组成，涂色部分面积等于两个扇形的面积之和减去长方形﻿$ABCD$ ﻿的面积。<br>（$2$）因为$ABCD$是长方形，扇形$ABE$、$CBF$都是圆心角为$90^\\circ$的扇形，即两个扇形均为四分之一圆，所以可分别计算两个扇形的面积，用公式 $S=\\pi r^{2}\\times \\frac{1}{4}$来计算。<br>（$3$）计算长方形$ABCD$的面积，用$长方形的面积=长\\times 宽$计算。<br>（$4$）把两个扇形的面积加起来再减去长方形的面积即可得到涂色部分的面积。",
@@ -3877,7 +3877,7 @@
         "difficulty": "中等",
         "knowledge": "圆的面积",
         "chapter": "六年级上册 5.2 圆的面积与扇形",
-        "stem": "如图，农田里一个自动旋转喷灌装置的喷水头转动一周，浇灌农田的面积是多少平方米？<br><img src=\"assets/images/img_docx_ffb10e3d4197.png\" data-cx=\"3352800\" data-cy=\"1181100\" style=\"width:352px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "如图，农田里一个自动旋转喷灌装置的喷水头转动一周，浇灌农田的面积是多少平方米？<br><img src=\"assets/images/img_docx_ffb10e3d4197.png\" data-cx=\"3352800\" data-cy=\"1181100\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [],
         "answer": "28.26平方米",
         "analysis": "喷水头转一周浇出的是圆，射程就是圆的半径，利用圆的面积公式S＝πr$^{2}$，π取3.14，求出面积。",
@@ -3935,7 +3935,7 @@
         "difficulty": "中等",
         "knowledge": "含圆的组合图形的周长、含多边形的组合图形的周长、含多边形的组合图形的面积、扇形的周长和面积",
         "chapter": "六年级上册 5.2 圆的面积与扇形",
-        "stem": "如图的中间是正方形，四周是4个扇形，求这个图形的周长和面积。<br><img src=\"assets/images/img_docx_435ebbfbedad.png\" data-cx=\"1905000\" data-cy=\"1609725\" style=\"width:200px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "如图的中间是正方形，四周是4个扇形，求这个图形的周长和面积。<br><img src=\"assets/images/img_docx_435ebbfbedad.png\" data-cx=\"1905000\" data-cy=\"1609725\" style=\"width:165px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [],
         "answer": "这个图形的周长为102.8cm，面积为414cm$^{2}$",
         "analysis": "这个图形的周长为4段长为10cm的线段长再加上半径为10cm的圆的周长，根据圆的周长＝$2\\pi r$即可求出周长；<br>这个图形的面积为边长为10cm的正方形的面积再加上半径为10cm的圆的面积，根据正方形的面积＝边长×边长和圆的面积＝$\\pi r^{2}$即可求解。",
@@ -4078,11 +4078,11 @@
         "difficulty": "较难",
         "knowledge": "圆与扇形的面积计算及实际应用",
         "chapter": "六年级上册 5.2 圆的面积与扇形",
-        "stem": "以下是珠海市和北京市在第七次全国人口普查中人口受教育情况的统计图。<br><img src=\"assets/images/img_docx_eb63c1b406ce.png\" data-cx=\"4819650\" data-cy=\"2212628\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>根据统计图回答下面的问题。<br>（1）请你补充完整北京市人口受教育情况统计图。<br>（2）珠海市与北京市相比，（       ）市拥有大学文化程度的人口所占百分比更高。<br>（3）在珠海市中，平均每100人中有（       ）人拥有大学文化程度。拥有（       ）文化程度的人最多。<br>（4）下面的说法正确吗？正确的在括号里打“√”，错误的打“×”。<br>①两个统计图都是把全国人口总数看作单位“1”。（       ）<br>②在北京市人口受教育情况统计图中，拥有初中文化程度统计图呈扇形，这个扇形的圆心角度数为90°。（       ）",
+        "stem": "以下是珠海市和北京市在第七次全国人口普查中人口受教育情况的统计图。<br><img src=\"assets/images/img_docx_eb63c1b406ce.png\" data-cx=\"4819650\" data-cy=\"2212628\" style=\"width:280px;max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>根据统计图回答下面的问题。<br>（1）请你补充完整北京市人口受教育情况统计图。<br>（2）珠海市与北京市相比，（       ）市拥有大学文化程度的人口所占百分比更高。<br>（3）在珠海市中，平均每100人中有（       ）人拥有大学文化程度。拥有（       ）文化程度的人最多。<br>（4）下面的说法正确吗？正确的在括号里打“√”，错误的打“×”。<br>①两个统计图都是把全国人口总数看作单位“1”。（       ）<br>②在北京市人口受教育情况统计图中，拥有初中文化程度统计图呈扇形，这个扇形的圆心角度数为90°。（       ）",
         "options": [],
         "answer": "（1）见详解；（2）北京；（3）28；初中；（4）①×；②√",
         "analysis": "（1）整个圆代表的是2020年北京市的总人口，相当于单位“1”，用1减去小学、初中、高中学历所占的百分比可求出大学学历所占的百分比，即1－17%－25%－19%＝39%。<br>（2）珠海市大学文化程度占28%，北京大学文化程度占39%，比较两个百分数的大小可知哪个城市大学文化程度的人口所占百分比更高。<br>（3）求一个数的百分之几是多少的解题方法：一个数（单位“1”）×百分率＝部分量，据此列式100×28%可求出平均每100人中大学文化程度的人数；比较小学、初中、高中、大学文化程度的百分比的大小可知哪种文化程度的人数最多。<br>（4）①两个扇形统计图分别把两个城市的总人口看作单位“1”，据此判断即可。<br>②圆周角是360°，用360°乘初中文化程度所占的百分率可求出这个扇形的圆心角度数，据此判断即可。<br>",
-        "detail": "（1）1－17%－25%－19%<br>＝1－（17%＋25%＋19%）<br>＝1－61%<br>＝39%<br>如下图：<br><img src=\"assets/images/img_docx_1ba0d667c065.png\" data-cx=\"2352675\" data-cy=\"2241054\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>（2）因为28%＜39%，所以北京市拥有大学文化程度的人口所占百分比更高。<br>（3）100×28%＝28（人）<br>17%＜24%＜28%＜31%<br>所以在珠海市中，平均每100人中有28人拥有大学文化程度。拥有初中文化程度的人最多。<br>（4）①珠海市受教育情况的统计图把珠海总人口看作单位“1”，北京市受教育情况的统计图把北京市总人口看作单位“1”。所以原题说法错误。<br>故答案为：×<br>②360°×25%＝90°，所以原题说法正确。<br>故答案为：√<br>【点睛】<br>利用扇形统计图解决问题，就是解决有关不同类型的百分数问题，按照百分数问题的解题思路和解题方法进行解答。"
+        "detail": "（1）1－17%－25%－19%<br>＝1－（17%＋25%＋19%）<br>＝1－61%<br>＝39%<br>如下图：<br><img src=\"assets/images/img_docx_1ba0d667c065.png\" data-cx=\"2352675\" data-cy=\"2241054\" style=\"width:165px;max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>（2）因为28%＜39%，所以北京市拥有大学文化程度的人口所占百分比更高。<br>（3）100×28%＝28（人）<br>17%＜24%＜28%＜31%<br>所以在珠海市中，平均每100人中有28人拥有大学文化程度。拥有初中文化程度的人最多。<br>（4）①珠海市受教育情况的统计图把珠海总人口看作单位“1”，北京市受教育情况的统计图把北京市总人口看作单位“1”。所以原题说法错误。<br>故答案为：×<br>②360°×25%＝90°，所以原题说法正确。<br>故答案为：√<br>【点睛】<br>利用扇形统计图解决问题，就是解决有关不同类型的百分数问题，按照百分数问题的解题思路和解题方法进行解答。"
     },
     {
         "id": "g6_2_69",
@@ -4094,7 +4094,7 @@
         "difficulty": "中等",
         "knowledge": "圆与扇形的面积计算及实际应用",
         "chapter": "六年级上册 5.2 圆的面积与扇形",
-        "stem": "如图，阴影部分的面积相当于甲圆面积的$\\frac{1}{6}$，相当于乙圆面积的$\\frac{1}{5}$，那么乙的空白部分与甲的空白部分的面积比是（       ）。<br><img src=\"assets/images/img_docx_a5fbbdec560a.png\" data-cx=\"1247775\" data-cy=\"847725\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\">",
+        "stem": "如图，阴影部分的面积相当于甲圆面积的$\\frac{1}{6}$，相当于乙圆面积的$\\frac{1}{5}$，那么乙的空白部分与甲的空白部分的面积比是（       ）。<br><img src=\"assets/images/img_docx_a5fbbdec560a.png\" data-cx=\"1247775\" data-cy=\"847725\" style=\"width:131px;max-width:100%;height:auto\" class=\"block my-2 rounded\">",
         "options": [
             "A. 6∶1",
             "B. 5∶4",
@@ -4115,7 +4115,7 @@
         "difficulty": "中等",
         "knowledge": "圆与扇形的面积计算及实际应用",
         "chapter": "六年级上册 5.2 圆的面积与扇形",
-        "stem": "如图所示，阴影部分的面积是(        )cm$^{2}$。<br><img src=\"assets/images/img_docx_c2a561f1c987.png\" data-cx=\"1343025\" data-cy=\"1317427\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\">",
+        "stem": "如图所示，阴影部分的面积是(        )cm$^{2}$。<br><img src=\"assets/images/img_docx_c2a561f1c987.png\" data-cx=\"1343025\" data-cy=\"1317427\" style=\"width:141px;max-width:100%;height:auto\" class=\"block my-2 rounded\">",
         "options": [],
         "answer": "25.12",
         "analysis": "图中的阴影部分通过平移，可以组成两个直径为4cm的圆，根据圆的面积公式：S＝$\\pi r^{2}$，代入数据求出其中一个圆的面积，再乘2即可求出阴影部分的面积。<br>",
@@ -4131,7 +4131,7 @@
         "difficulty": "中等",
         "knowledge": "圆与扇形的面积计算及实际应用",
         "chapter": "六年级上册 5.2 圆的面积与扇形",
-        "stem": "海滨公园中有一种“围树座椅”，形状如下图，这种“围树座椅”椅面的面积是多少平方米？<br><img src=\"assets/images/img_docx_9dbc187e8e53.png\" data-cx=\"2362200\" data-cy=\"1065014\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\">",
+        "stem": "海滨公园中有一种“围树座椅”，形状如下图，这种“围树座椅”椅面的面积是多少平方米？<br><img src=\"assets/images/img_docx_9dbc187e8e53.png\" data-cx=\"2362200\" data-cy=\"1065014\" style=\"width:248px;max-width:100%;height:auto\" class=\"block my-2 rounded\">",
         "options": [],
         "answer": "9.42平方米",
         "analysis": "观察图形可知，这种“围树座椅”椅面的面积就是圆环的面积，根据圆环的面积公式：S＝π（R$^{2}$－r$^{2}$），据此计算即可。<br>",
@@ -4147,7 +4147,7 @@
         "difficulty": "中等",
         "knowledge": "圆与扇形的面积计算及实际应用",
         "chapter": "六年级上册 5.2 圆的面积与扇形",
-        "stem": "如图，一个圆形花坛直径6米，在它的周围修一条宽2米的小路，小路的面积是(        )平方米。<br><img src=\"assets/images/img_docx_b0102d5663d6.png\" data-cx=\"952500\" data-cy=\"1081236\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\">",
+        "stem": "如图，一个圆形花坛直径6米，在它的周围修一条宽2米的小路，小路的面积是(        )平方米。<br><img src=\"assets/images/img_docx_b0102d5663d6.png\" data-cx=\"952500\" data-cy=\"1081236\" style=\"width:100px;max-width:100%;height:auto\" class=\"block my-2 rounded\">",
         "options": [],
         "answer": "50.24",
         "analysis": "根据圆环的面积公式：S＝π（R$^{2}$－r$^{2}$），求出小路的面积即可。<br>",
@@ -4163,11 +4163,11 @@
         "difficulty": "中等",
         "knowledge": "圆与扇形的面积计算及实际应用",
         "chapter": "六年级上册 5.2 圆的面积与扇形",
-        "stem": "下面一个小方格边长是1厘米，请在方格图里按要求画图。<br><img src=\"assets/images/img_docx_0a1326b6f1cf.png\" data-cx=\"2905125\" data-cy=\"1725364\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>（1）画出圆心在（5，4），半径另一端在（7，4）的圆；<br>（2）在画出的圆中画一个圆心角是100°的扇形。",
+        "stem": "下面一个小方格边长是1厘米，请在方格图里按要求画图。<br><img src=\"assets/images/img_docx_0a1326b6f1cf.png\" data-cx=\"2905125\" data-cy=\"1725364\" style=\"width:220px;max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>（1）画出圆心在（5，4），半径另一端在（7，4）的圆；<br>（2）在画出的圆中画一个圆心角是100°的扇形。",
         "options": [],
         "answer": "（1）见详解；（2）见详解",
         "analysis": "（1）用数对表示位置时，前面一个数表示第几列，后面一个数表示第几行；列数一般从左往右数，行数一般从前往后数；根据题意可知，圆的半径是（7－5）厘米，则以（5，4）为圆心，半径为2厘米画圆； <br>（2）以画出的圆的圆心为扇形的顶点，然后画出一条半径，再利用量角器画出另一条半径即可画出圆心角是100°的扇形。<br>",
-        "detail": "（1）7－5＝2（厘米）<br>画圆如下：<br><img src=\"assets/images/img_docx_6f550555bea2.png\" data-cx=\"2886075\" data-cy=\"1700808\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>（2）扇形如下图：<br><img src=\"assets/images/img_docx_a2b9f2062434.png\" data-cx=\"2838450\" data-cy=\"1697682\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\"><br><br>【点睛】<br>本题考查了根据数对找位置的方法以及画圆和扇形的方法。"
+        "detail": "（1）7－5＝2（厘米）<br>画圆如下：<br><img src=\"assets/images/img_docx_6f550555bea2.png\" data-cx=\"2886075\" data-cy=\"1700808\" style=\"width:220px;max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>（2）扇形如下图：<br><img src=\"assets/images/img_docx_a2b9f2062434.png\" data-cx=\"2838450\" data-cy=\"1697682\" style=\"width:220px;max-width:100%;height:auto\" class=\"block my-2 rounded\"><br><br>【点睛】<br>本题考查了根据数对找位置的方法以及画圆和扇形的方法。"
     },
     {
         "id": "g6_2_86",
@@ -4179,7 +4179,7 @@
         "difficulty": "中等",
         "knowledge": "圆与扇形的面积计算及实际应用",
         "chapter": "六年级上册 5.2 圆的面积与扇形",
-        "stem": "如图，将一个圆沿半径平均分成若干份，剪开后，拼成一个近似的长方形，周长增加了4cm，原来的圆的面积约是(          )cm$^{2}$。<br><img src=\"assets/images/img_docx_6f46a2d2e98c.png\" data-cx=\"2828925\" data-cy=\"991195\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\">",
+        "stem": "如图，将一个圆沿半径平均分成若干份，剪开后，拼成一个近似的长方形，周长增加了4cm，原来的圆的面积约是(          )cm$^{2}$。<br><img src=\"assets/images/img_docx_6f46a2d2e98c.png\" data-cx=\"2828925\" data-cy=\"991195\" style=\"width:280px;max-width:100%;height:auto\" class=\"block my-2 rounded\">",
         "options": [],
         "answer": "12.56",
         "analysis": "把一个圆等分成若干个小扇形后拼成一个近似的长方形，周长比原来增加了4cm，是因为近似的长方形的周长比圆的周长多了圆的两个半径。可求出圆的半径，然后根据圆的面积公式解答即可。<br>",
@@ -4195,7 +4195,7 @@
         "difficulty": "中等",
         "knowledge": "圆与扇形的面积计算及实际应用",
         "chapter": "六年级上册 5.2 圆的面积与扇形",
-        "stem": "下面运用了“转化”方法解决问题的有（       ）。<br>①分数除法$\\frac{1}{2}$÷$\\frac{1}{3}$＝$\\frac{1}{2}$×3<br>②圆的周长<img src=\"assets/images/img_docx_da30947c0fa3.png\" data-cx=\"2724150\" data-cy=\"1049982\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>③分数乘法<img src=\"assets/images/img_docx_76937763b21a.png\" data-cx=\"2647950\" data-cy=\"836861\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>④圆的面积<img src=\"assets/images/img_docx_ef64de13ad0e.png\" data-cx=\"2571750\" data-cy=\"938510\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\">",
+        "stem": "下面运用了“转化”方法解决问题的有（       ）。<br>①分数除法$\\frac{1}{2}$÷$\\frac{1}{3}$＝$\\frac{1}{2}$×3<br>②圆的周长<img src=\"assets/images/img_docx_da30947c0fa3.png\" data-cx=\"2724150\" data-cy=\"1049982\" style=\"width:280px;max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>③分数乘法<img src=\"assets/images/img_docx_76937763b21a.png\" data-cx=\"2647950\" data-cy=\"836861\" style=\"width:278px;max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>④圆的面积<img src=\"assets/images/img_docx_ef64de13ad0e.png\" data-cx=\"2571750\" data-cy=\"938510\" style=\"width:270px;max-width:100%;height:auto\" class=\"block my-2 rounded\">",
         "options": [
             "A. 只有②④",
             "B. 只有①②④",
@@ -4216,7 +4216,7 @@
         "difficulty": "中等",
         "knowledge": "圆与扇形的面积计算及实际应用",
         "chapter": "六年级上册 5.2 圆的面积与扇形",
-        "stem": "有一块菜地呈半圆形，依墙而建（如图），半径是4米。<br>（1）围这块菜地需要多长的栅栏？<br>（2）如果爸爸要扩建这块菜地，把它的直径增加2米，菜地的面积增加多少平方米？<br><img src=\"assets/images/img_docx_0451c0e14739.png\" data-cx=\"1647825\" data-cy=\"764232\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\">",
+        "stem": "有一块菜地呈半圆形，依墙而建（如图），半径是4米。<br>（1）围这块菜地需要多长的栅栏？<br>（2）如果爸爸要扩建这块菜地，把它的直径增加2米，菜地的面积增加多少平方米？<br><img src=\"assets/images/img_docx_0451c0e14739.png\" data-cx=\"1647825\" data-cy=\"764232\" style=\"width:173px;max-width:100%;height:auto\" class=\"block my-2 rounded\">",
         "options": [],
         "answer": "（1）12.56米<br>（2）14.13平方米",
         "analysis": "（1）12.56米<br>（2）14.13平方米<br><br><br>（1）由题意可知，栅栏的长度等于半径是4米圆的周长的一半，根据圆的周长公式：C＝2πr，据此进行计算即可；<br>（2）原来这块菜地的直径是4×2＝8米，把它的直径增加2米，此时菜地的直径是8＋2＝10米，根据圆的面积公式：S＝πr$^{2}$，据此求出扩建前后菜地的面积，再相减即可。<br>",
@@ -4232,7 +4232,7 @@
         "difficulty": "中等",
         "knowledge": "圆与扇形的面积计算及实际应用",
         "chapter": "六年级上册 5.2 圆的面积与扇形",
-        "stem": "下面两个图形中阴影部分都是扇形，它们的半径都相等，比较它们阴影部分，（       ）。<br><img src=\"assets/images/img_docx_21cafb6627bb.png\" data-cx=\"1571625\" data-cy=\"895350\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\">",
+        "stem": "下面两个图形中阴影部分都是扇形，它们的半径都相等，比较它们阴影部分，（       ）。<br><img src=\"assets/images/img_docx_21cafb6627bb.png\" data-cx=\"1571625\" data-cy=\"895350\" style=\"width:165px;max-width:100%;height:auto\" class=\"block my-2 rounded\">",
         "options": [
             "A. 周长与面积都相等",
             "B. 周长不相等，面积相等",
@@ -4269,11 +4269,11 @@
         "difficulty": "中等",
         "knowledge": "圆与扇形的面积计算及实际应用",
         "chapter": "六年级上册 5.2 圆的面积与扇形",
-        "stem": "在下面的长方形中画一个最大的圆，并计算圆的周长和面积。<br><img src=\"assets/images/img_docx_a446e3cae992.png\" data-cx=\"2809875\" data-cy=\"1809750\" style=\"width:295px;max-width:100%;height:auto\" class=\"block my-2 rounded\">",
+        "stem": "在下面的长方形中画一个最大的圆，并计算圆的周长和面积。<br><img src=\"assets/images/img_docx_a446e3cae992.png\" data-cx=\"2809875\" data-cy=\"1809750\" style=\"width:220px;max-width:100%;height:auto\" class=\"block my-2 rounded\">",
         "options": [],
         "answer": "图见解析；12.56厘米；12.56平方厘米",
         "analysis": "以长方形的对角线的交点为圆心，以4÷2＝2厘米为半径，画圆即可；根据圆的周长＝$\\pi d$，圆的面积＝$\\pi {r}^{2}$，代入数据进行解答。<br>",
-        "detail": "<img src=\"assets/images/img_docx_c53871b9d9c2.png\" data-cx=\"2847975\" data-cy=\"1819275\" style=\"width:299px;max-width:100%;height:auto\" class=\"block my-2 rounded\">3.14×4＝12.56（厘米）<br>3.14×2$^{2}$＝12.56（平方厘米）<br>答：圆的周长是12.56厘米，圆的面积是12.56平方厘米<br>【点睛】<br>本题考查画圆和圆的面积、周长公式计算。"
+        "detail": "<img src=\"assets/images/img_docx_c53871b9d9c2.png\" data-cx=\"2847975\" data-cy=\"1819275\" style=\"width:220px;max-width:100%;height:auto\" class=\"block my-2 rounded\">3.14×4＝12.56（厘米）<br>3.14×2$^{2}$＝12.56（平方厘米）<br>答：圆的周长是12.56厘米，圆的面积是12.56平方厘米<br>【点睛】<br>本题考查画圆和圆的面积、周长公式计算。"
     },
     {
         "id": "g6_3_75",
@@ -4341,7 +4341,7 @@
             "D. 圆的周长的一半"
         ],
         "answer": "D",
-        "analysis": "如图<img src=\"assets/images/img_docx_8a786fc0d0ff.png\" data-cx=\"3600450\" data-cy=\"3600450\" style=\"width:378px;max-width:100%;height:auto\" class=\"block my-2 rounded\">，把一个圆剪拼成近似的长方形，这个长方形的长等于圆的周长的一半（πr），宽等于圆的半径（r），长方形面积＝圆的面积，长方形面积＝长×宽，所以圆的面积＝πr×r＝πr$^{2}$，据此分析。<br>",
+        "analysis": "如图<img src=\"assets/images/img_docx_8a786fc0d0ff.png\" data-cx=\"3600450\" data-cy=\"3600450\" style=\"width:165px;max-width:100%;height:auto\" class=\"block my-2 rounded\">，把一个圆剪拼成近似的长方形，这个长方形的长等于圆的周长的一半（πr），宽等于圆的半径（r），长方形面积＝圆的面积，长方形面积＝长×宽，所以圆的面积＝πr×r＝πr$^{2}$，据此分析。<br>",
         "detail": "根据分析，把一个圆平均分成若干个扇形（偶数个），可以拼成一个近似的长方形，近似的长方形的长相当于圆的周长的一半。<br>故答案为：D<br>【点睛】<br>关键是熟悉并理解圆的面积公式推导过程。"
     },
     {
@@ -4646,7 +4646,7 @@
         "difficulty": "中等",
         "knowledge": "百分数的意义、互化与百分率应用",
         "chapter": "六年级上册 6. 百分数（一）",
-        "stem": "如下图，第5个图形是由（       ）个小正方形拼成的。<br><img src=\"assets/images/img_docx_b844f1356a3c.png\" data-cx=\"1504950\" data-cy=\"522982\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\">",
+        "stem": "如下图，第5个图形是由（       ）个小正方形拼成的。<br><img src=\"assets/images/img_docx_b844f1356a3c.png\" data-cx=\"1504950\" data-cy=\"522982\" style=\"width:158px;max-width:100%;height:auto\" class=\"block my-2 rounded\">",
         "options": [
             "A. 16",
             "B. 20",
@@ -4667,7 +4667,7 @@
         "difficulty": "中等",
         "knowledge": "百分数的意义、互化与百分率应用",
         "chapter": "六年级上册 6. 百分数（一）",
-        "stem": "观察下图，照这样的规律截下去，第4次截去后剩下(        )，第(        )次截去后剩下$\\frac{1}{64}$。<br><table class=\"border-collapse border border-slate-300 my-2 text-xs\"><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">第1次截去后剩下<br><img src=\"assets/images/img_docx_a4a4a3af227c.png\" data-cx=\"1285875\" data-cy=\"722709\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\"></td><td class=\"border border-slate-300 px-2 py-1 text-center\">第2次截去后剩下<br><img src=\"assets/images/img_docx_0681950d3413.png\" data-cx=\"1285875\" data-cy=\"722709\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\"></td><td class=\"border border-slate-300 px-2 py-1 text-center\">第3次截去后剩下<br><img src=\"assets/images/img_docx_0e54f75e776c.png\" data-cx=\"1285875\" data-cy=\"722709\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\"></td><td class=\"border border-slate-300 px-2 py-1 text-center\">……</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">1×$\\frac{1}{2}$＝$\\frac{1}{2}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$\\frac{1}{2}$×$\\frac{1}{2}$＝$\\frac{1}{4}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$\\frac{1}{4}$×$\\frac{1}{2}$＝$\\frac{1}{8}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\"></td></tr></table>",
+        "stem": "观察下图，照这样的规律截下去，第4次截去后剩下(        )，第(        )次截去后剩下$\\frac{1}{64}$。<br><table class=\"border-collapse border border-slate-300 my-2 text-xs\"><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">第1次截去后剩下<br><img src=\"assets/images/img_docx_a4a4a3af227c.png\" data-cx=\"1285875\" data-cy=\"722709\" style=\"width:135px;max-width:100%;height:auto\" class=\"block my-2 rounded\"></td><td class=\"border border-slate-300 px-2 py-1 text-center\">第2次截去后剩下<br><img src=\"assets/images/img_docx_0681950d3413.png\" data-cx=\"1285875\" data-cy=\"722709\" style=\"width:135px;max-width:100%;height:auto\" class=\"block my-2 rounded\"></td><td class=\"border border-slate-300 px-2 py-1 text-center\">第3次截去后剩下<br><img src=\"assets/images/img_docx_0e54f75e776c.png\" data-cx=\"1285875\" data-cy=\"722709\" style=\"width:135px;max-width:100%;height:auto\" class=\"block my-2 rounded\"></td><td class=\"border border-slate-300 px-2 py-1 text-center\">……</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">1×$\\frac{1}{2}$＝$\\frac{1}{2}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$\\frac{1}{2}$×$\\frac{1}{2}$＝$\\frac{1}{4}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$\\frac{1}{4}$×$\\frac{1}{2}$＝$\\frac{1}{8}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\"></td></tr></table>",
         "options": [],
         "answer": "$\\frac{1}{16}$；6",
         "analysis": "把整个图形看作单位“1”，每次剪掉部分和剩下部分相同，第1次剩下$\\frac{1}{2}$，第2次剩下$\\frac{1}{4}$＝$\\frac{1}{2^{2}}$，第3次剩下$\\frac{1}{8}$＝$\\frac{1}{2^{3}}$...依次类推，第n次剪完之后还剩下它的$\\frac{1}{2^{n}}$，据此解答。<br>",
@@ -4890,7 +4890,7 @@
         "difficulty": "中等",
         "knowledge": "百分数的意义、互化与百分率应用",
         "chapter": "六年级上册 6. 百分数（一）",
-        "stem": "张明的爸爸感冒了。一盒感冒冲剂有9包。按医嘱，你觉得这盒药爸爸能吃几天？<br><img src=\"assets/images/img_docx_75c86eacd8cf.png\" data-cx=\"1543050\" data-cy=\"1068735\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\">",
+        "stem": "张明的爸爸感冒了。一盒感冒冲剂有9包。按医嘱，你觉得这盒药爸爸能吃几天？<br><img src=\"assets/images/img_docx_75c86eacd8cf.png\" data-cx=\"1543050\" data-cy=\"1068735\" style=\"width:162px;max-width:100%;height:auto\" class=\"block my-2 rounded\">",
         "options": [],
         "answer": "6天",
         "analysis": "由题意可知，成人一次喝$\\frac{1}{2}$包，一日3次，则一日喝（$\\frac{1}{2}$×3）包，再根据除法的意义，用9除以一日喝的包数即可解答。<br>",
@@ -4970,7 +4970,7 @@
         "difficulty": "中等",
         "knowledge": "百分数的意义、互化与百分率应用",
         "chapter": "六年级上册 6. 百分数（一）",
-        "stem": "如图，一个长方形遮住甲、乙两条线段的一部分，原来甲与乙比较，（       ）。<br><img src=\"assets/images/img_docx_15a4628b7017.png\" data-cx=\"2714625\" data-cy=\"1285875\" style=\"width:285px;max-width:100%;height:auto\" class=\"block my-2 rounded\">",
+        "stem": "如图，一个长方形遮住甲、乙两条线段的一部分，原来甲与乙比较，（       ）。<br><img src=\"assets/images/img_docx_15a4628b7017.png\" data-cx=\"2714625\" data-cy=\"1285875\" style=\"width:280px;max-width:100%;height:auto\" class=\"block my-2 rounded\">",
         "options": [
             "A. 一样长",
             "B. 甲长",
@@ -4991,11 +4991,11 @@
         "difficulty": "容易",
         "knowledge": "百分数的意义、互化与百分率应用",
         "chapter": "六年级上册 6. 百分数（一）",
-        "stem": "星星小学五年级有男生152人，女生118人．六年级的学生人数是五年级的<img src=\"assets/images/img_docx_3972cec1f800.png\" data-cx=\"95250\" data-cy=\"333375\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">，六年级有学生多少人？",
+        "stem": "星星小学五年级有男生152人，女生118人．六年级的学生人数是五年级的<img src=\"assets/images/img_docx_3972cec1f800.png\" data-cx=\"95250\" data-cy=\"333375\" style=\"width:10px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">，六年级有学生多少人？",
         "options": [],
         "answer": "答：六年级有学生210人",
         "analysis": "",
-        "detail": "（152+118）×<img src=\"assets/images/img_docx_871082af1062.png\" data-cx=\"95250\" data-cy=\"333375\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">=270×<img src=\"assets/images/img_docx_871082af1062.png\" data-cx=\"95250\" data-cy=\"333375\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">=210（人）<br>答：六年级有学生210人"
+        "detail": "（152+118）×<img src=\"assets/images/img_docx_871082af1062.png\" data-cx=\"95250\" data-cy=\"333375\" style=\"width:10px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">=270×<img src=\"assets/images/img_docx_871082af1062.png\" data-cx=\"95250\" data-cy=\"333375\" style=\"width:10px;max-width:100%;height:auto\" class=\"inline-block align-middle my-0.5\">=210（人）<br>答：六年级有学生210人"
     },
     {
         "id": "g6_3_96",
@@ -5023,11 +5023,11 @@
         "difficulty": "中等",
         "knowledge": "扇形统计图的特点及绘制、求一个数是另一个数的百分之几（百分率问题）",
         "chapter": "六年级上册 7. 扇形统计图与数与形",
-        "stem": "金湾某小学对六年级全体学生“最关注的全运会赛事项目”进行调查，分别用下面两幅统计图反映调查的情况，请你根据图中的信息解答下面问题。<br><img src=\"assets/images/img_docx_38165c81a454.png\" data-cx=\"5238750\" data-cy=\"1790700\" style=\"width:420px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)该校六年级参与调查的学生一共有(        )人。<br>(2)将条形统计图和扇形统计图补充完整。<br>(3)关注“公路自行车”赛事项目的学生人数比关注“竞走”赛事项目的学生人数多百分之几？",
+        "stem": "金湾某小学对六年级全体学生“最关注的全运会赛事项目”进行调查，分别用下面两幅统计图反映调查的情况，请你根据图中的信息解答下面问题。<br><img src=\"assets/images/img_docx_38165c81a454.png\" data-cx=\"5238750\" data-cy=\"1790700\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)该校六年级参与调查的学生一共有(        )人。<br>(2)将条形统计图和扇形统计图补充完整。<br>(3)关注“公路自行车”赛事项目的学生人数比关注“竞走”赛事项目的学生人数多百分之几？",
         "options": [],
         "answer": "(1)200<br>(2)见详解<br>(3)75%",
         "analysis": "（1）从条形图找到公路自行车的人数，从扇形图找到它对应的占比，用“部分量÷对应占比”，求出参与调查的总人数。<br>（2）先根据总人数乘竞走的占比求出竞走的人数；再用其他赛事的人数除以总人数求出它的占比；接着用1减去已知项目的占比，求出网球的占比，再用总人数乘网球的占比求出网球的人数，最后把这些数据补到对应的统计图里。<br>（3）先求出公路自行车和竞走项目的人数差，再把竞走的人数当作单位“1”，用“人数差÷单位1的量”，求出多的百分比。",
-        "detail": "（1）70÷35%<br>＝70÷0.35<br>＝200（人）<br>（2）竞走人数：200×20%<br>＝200×0.2<br>＝40（人）<br>其他赛事占比：30÷200×100%<br>＝0.15×100%<br>＝15%<br>网球占比：1－35%－20%－15%＝30%<br>网球人数：200×30%<br>＝200×0.3<br>＝60（人）<br>画图如下：<br><img src=\"assets/images/img_docx_19b56484e63b.png\" data-cx=\"6118600\" data-cy=\"2098437\" style=\"width:420px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>（3）（70－40）÷40×100%<br>＝30÷40×100%<br>＝0.75×100%<br>＝75%<br>答：关注“公路自行车”赛事项目的学生人数比关注“竞走”赛事项目的学生人数多75%。"
+        "detail": "（1）70÷35%<br>＝70÷0.35<br>＝200（人）<br>（2）竞走人数：200×20%<br>＝200×0.2<br>＝40（人）<br>其他赛事占比：30÷200×100%<br>＝0.15×100%<br>＝15%<br>网球占比：1－35%－20%－15%＝30%<br>网球人数：200×30%<br>＝200×0.3<br>＝60（人）<br>画图如下：<br><img src=\"assets/images/img_docx_19b56484e63b.png\" data-cx=\"6118600\" data-cy=\"2098437\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>（3）（70－40）÷40×100%<br>＝30÷40×100%<br>＝0.75×100%<br>＝75%<br>答：关注“公路自行车”赛事项目的学生人数比关注“竞走”赛事项目的学生人数多75%。"
     },
     {
         "id": "g6_up_64",
@@ -5081,7 +5081,7 @@
         "difficulty": "中等",
         "knowledge": "数与形规律探索",
         "chapter": "六年级上册 7. 扇形统计图与数与形",
-        "stem": "用小棒以下面的方式摆六边形，摆21个六边形要用小棒(        )根。<br><img src=\"assets/images/img_docx_aedfa9659c05.png\" data-cx=\"2676525\" data-cy=\"615107\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\">",
+        "stem": "用小棒以下面的方式摆六边形，摆21个六边形要用小棒(        )根。<br><img src=\"assets/images/img_docx_aedfa9659c05.png\" data-cx=\"2676525\" data-cy=\"615107\" style=\"width:280px;max-width:100%;height:auto\" class=\"block my-2 rounded\">",
         "options": [],
         "answer": "106",
         "analysis": "根据图示发现：摆1个六边形需要小棒：6根；摆2个六边形需要小棒（6＋5）根；摆3个六边形需要小棒（6＋5＋5）根；……摆n个六边形需要小棒的根数是6＋5（n－1）。据此解答。<br>",
@@ -5118,7 +5118,7 @@
         "difficulty": "中等",
         "knowledge": "扇形统计图的认识与应用",
         "chapter": "六年级上册 7. 扇形统计图与数与形",
-        "stem": "珠海某小学六年级参加课外兴趣小组分布情况如图，其中有34名同学参加音乐兴趣小组。<br><img src=\"assets/images/img_docx_422c9eb6ce12.png\" data-cx=\"1219200\" data-cy=\"1247775\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>（1）参加体育兴趣小组的同学比参加音乐小组的同学多多少人？<br>（2）参加其它兴趣小组的同学有多少人？",
+        "stem": "珠海某小学六年级参加课外兴趣小组分布情况如图，其中有34名同学参加音乐兴趣小组。<br><img src=\"assets/images/img_docx_422c9eb6ce12.png\" data-cx=\"1219200\" data-cy=\"1247775\" style=\"width:128px;max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>（1）参加体育兴趣小组的同学比参加音乐小组的同学多多少人？<br>（2）参加其它兴趣小组的同学有多少人？",
         "options": [],
         "answer": "（1）34人<br>（2）46人",
         "analysis": "（1）34人<br>（2）46人<br><br><br>（1）将总人数看作单位“1”，参加音乐兴趣小组的人数÷对应百分率＝总人数，总人数×（参加体育兴趣小组对应百分率－参加音乐小组对应百分率）即可；<br>（2）单位“1”－音乐、美术、体育各占的百分率＝参加其它兴趣小组的对应百分率，总人数×参加其它兴趣小组的对应百分率＝参加其它兴趣小组的人数。<br>",
@@ -5134,11 +5134,11 @@
         "difficulty": "较难",
         "knowledge": "扇形统计图的认识与应用",
         "chapter": "六年级上册 7. 扇形统计图与数与形",
-        "stem": "陈东家在“双减政策”实施前、后每月各种支出计划如下图，请根据统计图完成下面各题。<br><img src=\"assets/images/img_docx_65b84d628e75.png\" data-cx=\"5391150\" data-cy=\"2071092\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>（1）请把图1中的扇形统计图补充完整。<br>（2）“双减政策”后，陈东家每月教育支出是500元，这个月支出的总金额是（       ）元。<br>（3）如果陈东家“双减政策”实施前、后每月支出总金额相同。请你结合上面两幅统计图中的数据说明“双减政策”对于陈东家产生了怎样的影响？",
+        "stem": "陈东家在“双减政策”实施前、后每月各种支出计划如下图，请根据统计图完成下面各题。<br><img src=\"assets/images/img_docx_65b84d628e75.png\" data-cx=\"5391150\" data-cy=\"2071092\" style=\"width:280px;max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>（1）请把图1中的扇形统计图补充完整。<br>（2）“双减政策”后，陈东家每月教育支出是500元，这个月支出的总金额是（       ）元。<br>（3）如果陈东家“双减政策”实施前、后每月支出总金额相同。请你结合上面两幅统计图中的数据说明“双减政策”对于陈东家产生了怎样的影响？",
         "options": [],
         "answer": "（1）见详解；<br>（2）10000；<br>（3）见详解",
         "analysis": "（1）见详解；<br>（2）10000；<br>（3）见详解<br><br><br>（1）根据扇形统计图的特点，把陈东家在“双减政策”实施前每月的总支出看作“1”，用1减去食品、还购房贷款、理财、水电、其他的支出占每月的总支出的百分比，即可求出教育的支出占每月的总支出的百分比，并补充到扇形统计图中。<br>（2）“双减政策”后，陈东家每月教育支出是500元，陈东家每月教育支出占每月的总支出的5%，已知一个数的百分之几是多少，求这个数，用除法，用500除以5%，即可求出这个月支出的总金额。<br>（3）从两张统计图的数据对比就可以看出，教育支出的占比减少了，而用于其他方面的支出所占的比重增多了。<br>",
-        "detail": "<br>（1）1－30%－30%－10%－10%－5%<br>＝40%－10%－10%－5%<br>＝15%<br>如图：<br><img src=\"assets/images/img_docx_797dab100737.png\" data-cx=\"2695575\" data-cy=\"2231082\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>（2）500÷5%＝10000（元）<br>即这个月支出的总金额是10000元。<br>（3）答：“双减政策”实施后，教育支出减少了，可用于其他方面的支出增多了。<br>【点睛】<br>此题考查的目的是理解掌握扇形统计图的特点及作用，并且能够根据统计图提供的信息，解决有关的实际问题。"
+        "detail": "<br>（1）1－30%－30%－10%－10%－5%<br>＝40%－10%－10%－5%<br>＝15%<br>如图：<br><img src=\"assets/images/img_docx_797dab100737.png\" data-cx=\"2695575\" data-cy=\"2231082\" style=\"width:165px;max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>（2）500÷5%＝10000（元）<br>即这个月支出的总金额是10000元。<br>（3）答：“双减政策”实施后，教育支出减少了，可用于其他方面的支出增多了。<br>【点睛】<br>此题考查的目的是理解掌握扇形统计图的特点及作用，并且能够根据统计图提供的信息，解决有关的实际问题。"
     },
     {
         "id": "g6_2_68",
@@ -5150,10 +5150,10 @@
         "difficulty": "较难",
         "knowledge": "扇形统计图的认识与应用",
         "chapter": "六年级上册 7. 扇形统计图与数与形",
-        "stem": "某班学生上学方式统计图。<br><img src=\"assets/images/img_docx_eda1166efa15.png\" data-cx=\"2524125\" data-cy=\"2524125\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>（1）骑单车的人数占总人数的（       ）%。<br>（2）已知骑单车的人数有5人，请问全班有多少人？<br>（3）请根据该扇形统计图完成下面的条形统计图。<br><img src=\"assets/images/img_docx_87f622f67377.png\" data-cx=\"3257550\" data-cy=\"2381250\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\">",
+        "stem": "某班学生上学方式统计图。<br><img src=\"assets/images/img_docx_eda1166efa15.png\" data-cx=\"2524125\" data-cy=\"2524125\" style=\"width:165px;max-width:100%;height:auto\" class=\"block my-2 rounded\"><br>（1）骑单车的人数占总人数的（       ）%。<br>（2）已知骑单车的人数有5人，请问全班有多少人？<br>（3）请根据该扇形统计图完成下面的条形统计图。<br><img src=\"assets/images/img_docx_87f622f67377.png\" data-cx=\"3257550\" data-cy=\"2381250\" style=\"width:219px;max-width:100%;height:auto\" class=\"block my-2 rounded\">",
         "options": [],
         "answer": "（1）10；<br>（2）50人；",
-        "analysis": "（1）10；<br>（2）50人；<br>（3）<img src=\"assets/images/img_docx_1a9a64d03551.png\" data-cx=\"3257550\" data-cy=\"2381250\" style=\"max-width:100%;height:auto\" class=\"block my-2 rounded\"><br><br><br>（1）把学生的总人数看作单位“1”，根据减法的意义，用减法解答；<br>（2）把学生的总人数看作单位“1”，如果骑单车的人数有5人，占总人数的10%，根据已知一个数的百分之几是多少，求这个数，用除法求出总人数；<br>（3）根据一个数乘百分数的意义，分别求出每一种上学方式的人数，用乘法解答，再用求出的人数，制作条形统计图。<br>",
+        "analysis": "（1）10；<br>（2）50人；<br>（3）<img src=\"assets/images/img_docx_1a9a64d03551.png\" data-cx=\"3257550\" data-cy=\"2381250\" style=\"width:219px;max-width:100%;height:auto\" class=\"block my-2 rounded\"><br><br><br>（1）把学生的总人数看作单位“1”，根据减法的意义，用减法解答；<br>（2）把学生的总人数看作单位“1”，如果骑单车的人数有5人，占总人数的10%，根据已知一个数的百分之几是多少，求这个数，用除法求出总人数；<br>（3）根据一个数乘百分数的意义，分别求出每一种上学方式的人数，用乘法解答，再用求出的人数，制作条形统计图。<br>",
         "detail": "<br>（1）1－28%－22%－40%＝10%<br>（2）5÷10%＝50（人）<br>（3）50×40%＝20（人）<br>50×28%＝14（人）<br>50×22%＝11（人）<br>条形统计图略。<br>【点睛】<br>此题考查的目的是理解掌握扇形统计图、条形统计图的特点及作用，并且能够根据统计图提供的信息，再根据已知一个数的百分之几是多少，求这个数的方法，以及求一个数的百分之几是多少的方法解决问题。"
     },
     {
@@ -5265,7 +5265,7 @@
         "difficulty": "容易",
         "knowledge": "正负数的定义、有理数加法运算",
         "chapter": "2.3.1 有理数的加法",
-        "stem": "我国是最早认识负数并进行相关运算的国家，魏晋时期的数学家刘徽在其著作《九章算术注》中，用不同颜色的算簿（小棍形状的记数工具）分别表示正数和负数，如图①表示的是$-2+(+4)=+2$的运算过程．按照这种方法，图②中表示的算式是（   ）<br><img src=\"assets/images/img_001_11d5283324a5.png\" data-cx=\"3629025\" data-cy=\"819150\" style=\"width:320px;height:86px\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "我国是最早认识负数并进行相关运算的国家，魏晋时期的数学家刘徽在其著作《九章算术注》中，用不同颜色的算簿（小棍形状的记数工具）分别表示正数和负数，如图①表示的是$-2+(+4)=+2$的运算过程．按照这种方法，图②中表示的算式是（   ）<br><img src=\"assets/images/img_001_11d5283324a5.png\" data-cx=\"3629025\" data-cy=\"819150\" style=\"width:280px;height:86px\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [
             "A. $(-3)+4=1$",
             "B. $(-3)+(-4)=-7$",
@@ -5434,7 +5434,7 @@
         "difficulty": "中等",
         "knowledge": "根据点在数轴的位置判断式子的正负、带有字母的绝对值化简问题、有理数的减法运算、有理数加法运算",
         "chapter": "2.3.1 有理数的加法",
-        "stem": "已知有理数$a$，$b$，$c$在数轴上的位置如图所示，下列结论正确的是（    ）<br><img src=\"assets/images/img_003_e8004b29444a.png\" data-cx=\"2752725\" data-cy=\"247650\" style=\"width:289px;height:26px\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "已知有理数$a$，$b$，$c$在数轴上的位置如图所示，下列结论正确的是（    ）<br><img src=\"assets/images/img_003_e8004b29444a.png\" data-cx=\"2752725\" data-cy=\"247650\" style=\"width:280px;height:26px\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [
             "A. $a+b > 0$",
             "B. $|c-b|=c-b$",
@@ -5497,7 +5497,7 @@
         "difficulty": "中等",
         "knowledge": "根据点在数轴的位置判断式子的正负、绝对值的几何意义、有理数加法运算、利用数轴比较有理数的大小",
         "chapter": "2.3.1 有理数的加法",
-        "stem": "实数a，b在数轴上的位置如图所示，下列结论中正确的是（   ）<br><img src=\"assets/images/img_006_9c00a32605e6.png\" data-cx=\"2905125\" data-cy=\"180975\" style=\"width:305px;height:19px\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "实数a，b在数轴上的位置如图所示，下列结论中正确的是（   ）<br><img src=\"assets/images/img_006_9c00a32605e6.png\" data-cx=\"2905125\" data-cy=\"180975\" style=\"width:280px;height:19px\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [
             "A. $a > b$",
             "B. $-a < b$",
@@ -5894,7 +5894,7 @@
         "difficulty": "容易",
         "knowledge": "有理数加法在生活中的应用、正负数的实际应用",
         "chapter": "2.3.1 有理数的加法",
-        "stem": "如图是一种转盘型密码锁，每次开锁时先把表示“0”的刻度线与固定盘上的标记线对齐，再旋转转盘三次．例如，按逆时针方向转5个小格记为“$+5$”，此时标记线对准的数是5，再顺时针转2个小格记为“$-2$”，再逆时针方向转3个小格记为“$+3$”，锁可以打开，那么开锁密码就可以记为“$+5$，$-2$，$+3$”，此时，标记线对准的刻度线表示的数是6．如果开锁密码为“$-15$，$+20$，$-10$”，那么锁打开时标记线对准的刻度线表示的数是__________．<br><img src=\"assets/images/img_011_54521cc35193.png\" data-cx=\"1095375\" data-cy=\"1590675\" style=\"width:115px;height:167px\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "如图是一种转盘型密码锁，每次开锁时先把表示“0”的刻度线与固定盘上的标记线对齐，再旋转转盘三次．例如，按逆时针方向转5个小格记为“$+5$”，此时标记线对准的数是5，再顺时针转2个小格记为“$-2$”，再逆时针方向转3个小格记为“$+3$”，锁可以打开，那么开锁密码就可以记为“$+5$，$-2$，$+3$”，此时，标记线对准的刻度线表示的数是6．如果开锁密码为“$-15$，$+20$，$-10$”，那么锁打开时标记线对准的刻度线表示的数是__________．<br><img src=\"assets/images/img_011_54521cc35193.png\" data-cx=\"1095375\" data-cy=\"1590675\" style=\"width:114px;height:167px\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [],
         "answer": "35",
         "analysis": "本题主要考查了正负数的应用及有理数加法运算的应用，根据题意列出算式$-15+20+(-10)$，然后再进行计算，根据结果的符号及绝对值即可判断锁打开时标记线对准的刻度线表示的数．",
@@ -5990,7 +5990,7 @@
         "difficulty": "较难",
         "knowledge": "有理数加法在生活中的应用、正负数的实际应用",
         "chapter": "2.3.1 有理数的加法",
-        "stem": "综合与实践<br><table class=\"w-full text-xs border-collapse border border-slate-300 my-2 bg-white\"><tr><td colspan=\"3\" class=\"border border-slate-300 px-2 py-1 text-center\">探究喷墨打印机的工作原理</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">素材1</td><td class=\"border border-slate-300 px-2 py-1 text-center\">喷墨式双向打印机通过喷射墨水完成文件打印．如图1，打印机外框架上有一根水平杆，喷头架在水平杆上来回移动完成喷墨．第一次，喷头架从左到右喷墨，停止后纸张向前移动；第二次，喷头架从停止处出发，反向完成喷墨，如此往复．</td><td class=\"border border-slate-300 px-2 py-1 text-center\"><img src=\"assets/images/img_014_291c174296be.png\" data-cx=\"1847850\" data-cy=\"1447800\" style=\"width:194px;height:152px\" class=\"inline-block align-middle my-1 rounded\"></td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">素材2</td><td class=\"border border-slate-300 px-2 py-1 text-center\">如图2，以这根水平杆所在的直线建立数轴，以水平杆的中点为原点，以向右的方向为正方向，用一个单位长度表示$1cm$．已知喷头架的初始位置为$-10$，向右$2$个单位长度记为$+2$，向左$3$个单位记为$-3$，以下记录了喷头架的$6$次运动情况：$+18$，$-10$，$+6$，$-10$，$+8$，$-12$．</td><td class=\"border border-slate-300 px-2 py-1 text-center\"><img src=\"assets/images/img_015_25ea16d35f91.png\" data-cx=\"1943100\" data-cy=\"1581150\" style=\"width:204px;height:166px\" class=\"inline-block align-middle my-1 rounded\"></td></tr><tr><td colspan=\"3\" class=\"border border-slate-300 px-2 py-1 text-center\">问题解决</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">任务1</td><td class=\"border border-slate-300 px-2 py-1 text-center\">确定位置</td><td class=\"border border-slate-300 px-2 py-1 text-center\">经过$6$次喷墨后，确定喷头架的最终位置．</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">任务2</td><td class=\"border border-slate-300 px-2 py-1 text-center\">确定路程</td><td class=\"border border-slate-300 px-2 py-1 text-center\">经过$6$次喷墨后，求出喷头架移动的总路程．</td></tr></table>",
+        "stem": "综合与实践<br><table class=\"w-full text-xs border-collapse border border-slate-300 my-2 bg-white\"><tr><td colspan=\"3\" class=\"border border-slate-300 px-2 py-1 text-center\">探究喷墨打印机的工作原理</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">素材1</td><td class=\"border border-slate-300 px-2 py-1 text-center\">喷墨式双向打印机通过喷射墨水完成文件打印．如图1，打印机外框架上有一根水平杆，喷头架在水平杆上来回移动完成喷墨．第一次，喷头架从左到右喷墨，停止后纸张向前移动；第二次，喷头架从停止处出发，反向完成喷墨，如此往复．</td><td class=\"border border-slate-300 px-2 py-1 text-center\"><img src=\"assets/images/img_014_291c174296be.png\" data-cx=\"1847850\" data-cy=\"1447800\" style=\"width:194px;height:152px\" class=\"inline-block align-middle my-1 rounded\"></td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">素材2</td><td class=\"border border-slate-300 px-2 py-1 text-center\">如图2，以这根水平杆所在的直线建立数轴，以水平杆的中点为原点，以向右的方向为正方向，用一个单位长度表示$1cm$．已知喷头架的初始位置为$-10$，向右$2$个单位长度记为$+2$，向左$3$个单位记为$-3$，以下记录了喷头架的$6$次运动情况：$+18$，$-10$，$+6$，$-10$，$+8$，$-12$．</td><td class=\"border border-slate-300 px-2 py-1 text-center\"><img src=\"assets/images/img_015_25ea16d35f91.png\" data-cx=\"1943100\" data-cy=\"1581150\" style=\"width:197px;height:166px\" class=\"inline-block align-middle my-1 rounded\"></td></tr><tr><td colspan=\"3\" class=\"border border-slate-300 px-2 py-1 text-center\">问题解决</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">任务1</td><td class=\"border border-slate-300 px-2 py-1 text-center\">确定位置</td><td class=\"border border-slate-300 px-2 py-1 text-center\">经过$6$次喷墨后，确定喷头架的最终位置．</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">任务2</td><td class=\"border border-slate-300 px-2 py-1 text-center\">确定路程</td><td class=\"border border-slate-300 px-2 py-1 text-center\">经过$6$次喷墨后，求出喷头架移动的总路程．</td></tr></table>",
         "options": [],
         "answer": "任务一：喷头架在初始位置$-10$；任务二：$64cm$．",
         "analysis": "本题考查了有理数的加法应用，正负数的应用，解题的关键是掌握有理数的加法运算法则．任务一：把$6$次运动的数据加起来，即可求解；任务二：把$6$次运动数据的绝对值相加即可求解．",
@@ -6038,7 +6038,7 @@
         "difficulty": "容易",
         "knowledge": "有理数加法运算",
         "chapter": "2.3.1 有理数的加法",
-        "stem": "算筹（小木棍）是我国古代的一种计数工具，将算筹正放表示正数，斜放表示负数．如图，图①可列式计算为$(+3)+(-2)=1$，由此可推算图②可列算式为（  ）<br><img src=\"assets/images/img_docx_84e80c8f8071.png\" data-cx=\"3733800\" data-cy=\"1000125\" style=\"width:392px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "算筹（小木棍）是我国古代的一种计数工具，将算筹正放表示正数，斜放表示负数．如图，图①可列式计算为$(+3)+(-2)=1$，由此可推算图②可列算式为（  ）<br><img src=\"assets/images/img_docx_84e80c8f8071.png\" data-cx=\"3733800\" data-cy=\"1000125\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [
             "A. $(+4)-(-3)=7$",
             "B. $(+4)+(+3)=7$",
@@ -6297,7 +6297,7 @@
             "A. <img src=\"assets/images/img_017_4fb14ce93241.png\" data-cx=\"2667000\" data-cy=\"219075\" style=\"width:280px;height:23px\" class=\"inline-block align-middle my-1 rounded\">",
             "B. <img src=\"assets/images/img_018_768e81247f83.png\" data-cx=\"2619375\" data-cy=\"219075\" style=\"width:275px;height:23px\" class=\"inline-block align-middle my-1 rounded\">",
             "C. <img src=\"assets/images/img_019_cb1b6c57b66b.png\" data-cx=\"2647950\" data-cy=\"219075\" style=\"width:278px;height:23px\" class=\"inline-block align-middle my-1 rounded\">",
-            "D. <img src=\"assets/images/img_020_fc9e91645a1e.png\" data-cx=\"2771775\" data-cy=\"228600\" style=\"width:291px;height:24px\" class=\"inline-block align-middle my-1 rounded\">"
+            "D. <img src=\"assets/images/img_020_fc9e91645a1e.png\" data-cx=\"2771775\" data-cy=\"228600\" style=\"width:280px;height:24px\" class=\"inline-block align-middle my-1 rounded\">"
         ],
         "answer": "D",
         "analysis": "本题考查数轴与有理数，绝对值的意义，根据绝对值的意义，得到$|a|=-a,|b|=-b$，进行判断即可．",
@@ -6676,7 +6676,7 @@
         "difficulty": "容易",
         "knowledge": "有理数的加减混合运算",
         "chapter": "2.3.2 有理数的减法",
-        "stem": "老师设计了接力游戏，用合作的方式完成分式化简．规则是：每人只能看到前一人给的式子，并进行一步计算，再将结果传递给下一人，最后完成计算．过程如图所示：<br><img src=\"assets/images/img_028_7dd8a0254b56.png\" data-cx=\"4105275\" data-cy=\"847725\" style=\"width:320px;height:89px\" class=\"inline-block align-middle my-1 rounded\"><br>接力中，自己负责的一步出现错误的是（    ）",
+        "stem": "老师设计了接力游戏，用合作的方式完成分式化简．规则是：每人只能看到前一人给的式子，并进行一步计算，再将结果传递给下一人，最后完成计算．过程如图所示：<br><img src=\"assets/images/img_028_7dd8a0254b56.png\" data-cx=\"4105275\" data-cy=\"847725\" style=\"width:280px;height:89px\" class=\"inline-block align-middle my-1 rounded\"><br>接力中，自己负责的一步出现错误的是（    ）",
         "options": [
             "A. 只有乙",
             "B. 甲和乙",
@@ -6877,7 +6877,7 @@
         "difficulty": "容易",
         "knowledge": "有理数加减混合运算的应用",
         "chapter": "2.3.2 有理数的减法",
-        "stem": "手机移动支付给生活带来便捷，如图是小陈某天微信账单的全部收支明细（正数表示收入，负数表示支出，单位：元），小陈当天微信收支的最终结果是（　　）<br><img src=\"assets/images/img_029_06e63f854145.png\" data-cx=\"2781300\" data-cy=\"1038225\" style=\"width:292px;height:109px\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "手机移动支付给生活带来便捷，如图是小陈某天微信账单的全部收支明细（正数表示收入，负数表示支出，单位：元），小陈当天微信收支的最终结果是（　　）<br><img src=\"assets/images/img_029_06e63f854145.png\" data-cx=\"2781300\" data-cy=\"1038225\" style=\"width:280px;height:109px\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [
             "A. 收入50元",
             "B. 支出40元",
@@ -7300,7 +7300,7 @@
         "difficulty": "容易",
         "knowledge": "将用科学记数法表示的数变回原数",
         "chapter": "2.3.2 科学记数法",
-        "stem": "小华在做练习题时，不小心把墨水洒在了习题上，如图所示，他翻看答案后得知本题的正确答案选B，则原数中数字“3”后“0”的个数为（   ）<br><table class=\"border-collapse border border-slate-300 my-2 text-xs\"><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">长江是世界第三长河，也是亚洲最长的河流，全长约63<img src=\"assets/images/img_docx_fe384fdf7bad.png\" data-cx=\"142875\" data-cy=\"219075\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">米，将63<img src=\"assets/images/img_docx_fe384fdf7bad.png\" data-cx=\"142875\" data-cy=\"219075\" style=\"width:24px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">用科学记数法表示为（   ）A．$63\\times {10}^{5}$  B．$6.3\\times {10}^{6}$  C．$0.63\\times {10}^{7}$  D．$6.3\\times {10}^{7}$</td></tr></table>",
+        "stem": "小华在做练习题时，不小心把墨水洒在了习题上，如图所示，他翻看答案后得知本题的正确答案选B，则原数中数字“3”后“0”的个数为（   ）<br><table class=\"border-collapse border border-slate-300 my-2 text-xs\"><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">长江是世界第三长河，也是亚洲最长的河流，全长约63<img src=\"assets/images/img_docx_fe384fdf7bad.png\" data-cx=\"142875\" data-cy=\"219075\" style=\"width:15px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">米，将63<img src=\"assets/images/img_docx_fe384fdf7bad.png\" data-cx=\"142875\" data-cy=\"219075\" style=\"width:15px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">用科学记数法表示为（   ）A．$63\\times {10}^{5}$  B．$6.3\\times {10}^{6}$  C．$0.63\\times {10}^{7}$  D．$6.3\\times {10}^{7}$</td></tr></table>",
         "options": [
             "A. 3个",
             "B. 4个",
@@ -7875,7 +7875,7 @@
         "typeName": "填空题",
         "difficulty": "容易",
         "knowledge": "有理数的乘法法则、有理数大小比较",
-        "stem": "数学活动课上，王老师在 $4$ 张卡片上分别写了 $4$ 个不同的数：$-3$，$+2$，$+5$，$-8$，然后从中抽取 $2$ 张，使这 $2$ 张卡片上各数之积最大，最大的积为 ______。<div class=\"my-2\"><img src=\"assets/images/img_030_c47d025f3344.png\" style=\"width:300px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2857500\" data-cy=\"609600\" /></div>",
+        "stem": "数学活动课上，王老师在 $4$ 张卡片上分别写了 $4$ 个不同的数：$-3$，$+2$，$+5$，$-8$，然后从中抽取 $2$ 张，使这 $2$ 张卡片上各数之积最大，最大的积为 ______。<div class=\"my-2\"><img src=\"assets/images/img_030_c47d025f3344.png\" style=\"width:280px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2857500\" data-cy=\"609600\" /></div>",
         "options": [],
         "answer": "$24$",
         "analysis": "从 $-3$，$+2$，$+5$，$-8$ 中任取 $2$ 个数相乘，比较所有乘积的大小即可求解。",
@@ -8039,7 +8039,7 @@
         "options": [],
         "answer": "(1) $(-2)\\times(-3)=+6$，$3$ 天前的水位比今天高 $6$ 厘米；(2) 水位每天下降 $2$ 厘米，那么 $3$ 天后的水位比今天高 $-6$ 厘米（或低 $6$ 厘米）；(3) 见解析",
         "analysis": "此题考查了有理数的乘法、正数和负数以及数轴的直观表示，弄清正负号规定的实际意义是解本题的关键。",
-        "detail": "解：(1) 根据题意得：$(-2)\\times(-3)=6$，答：$3$ 天前的水位比今天高 $6$ 厘米；<br>(2) 算式 $(-2)\\times(+3)=-6$ 表示的意义是：水位每天下降 $2$ 厘米，那么 $3$ 天后的水位比今天高 $-6$ 厘米；<br>(3) 如图所示，把今天的水位记为 $0$ 厘米，∵ $(+2)\\times(+3)=6$ 表示的意义是：水位每天上升 $2$ 厘米，那么 $3$ 天后的水位为 $6$ 厘米，∴ $3$ 天后的水位比今天高 $6$ 厘米：<div class=\"my-2\"><img src=\"assets/images/img_032_0d9215581bb2.png\" style=\"width:310px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2952750\" data-cy=\"581025\" /></div>如图所示，把今天的水位记为 $0$ 厘米，∵ $(-2)\\times(-3)=6$ 表示的意义是：水位每天下降 $2$ 厘米，那么 $3$ 天前的水位为 $6$ 厘米，∴ $3$ 天前的水位比今天高 $6$ 厘米：<div class=\"my-2\"><img src=\"assets/images/img_033_ba7f58f0554c.png\" style=\"width:310px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2952750\" data-cy=\"581025\" /></div>",
+        "detail": "解：(1) 根据题意得：$(-2)\\times(-3)=6$，答：$3$ 天前的水位比今天高 $6$ 厘米；<br>(2) 算式 $(-2)\\times(+3)=-6$ 表示的意义是：水位每天下降 $2$ 厘米，那么 $3$ 天后的水位比今天高 $-6$ 厘米；<br>(3) 如图所示，把今天的水位记为 $0$ 厘米，∵ $(+2)\\times(+3)=6$ 表示的意义是：水位每天上升 $2$ 厘米，那么 $3$ 天后的水位为 $6$ 厘米，∴ $3$ 天后的水位比今天高 $6$ 厘米：<div class=\"my-2\"><img src=\"assets/images/img_032_0d9215581bb2.png\" style=\"width:280px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2952750\" data-cy=\"581025\" /></div>如图所示，把今天的水位记为 $0$ 厘米，∵ $(-2)\\times(-3)=6$ 表示的意义是：水位每天下降 $2$ 厘米，那么 $3$ 天前的水位为 $6$ 厘米，∴ $3$ 天前的水位比今天高 $6$ 厘米：<div class=\"my-2\"><img src=\"assets/images/img_033_ba7f58f0554c.png\" style=\"width:280px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2952750\" data-cy=\"581025\" /></div>",
         "number": 15
     },
     {
@@ -8973,9 +8973,9 @@
         "difficulty": "中等",
         "knowledge": "用数轴上的点表示有理数、利用数轴比较有理数的大小、求一个数的绝对值、有理数的乘方运算",
         "chapter": "2.5.1 有理数的乘方",
-        "stem": "在数轴上表示下列各数：${(-2)}^{2}$，0，$-1^{2}$，$1\\frac{1}{2}$，$-|-4|$，$-2.5$，并用“$<$”连接．<br><img src=\"assets/images/img_docx_58798170f6a0.png\" data-cx=\"2800350\" data-cy=\"209550\" style=\"width:294px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "在数轴上表示下列各数：${(-2)}^{2}$，0，$-1^{2}$，$1\\frac{1}{2}$，$-|-4|$，$-2.5$，并用“$<$”连接．<br><img src=\"assets/images/img_docx_58798170f6a0.png\" data-cx=\"2800350\" data-cy=\"209550\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [],
-        "answer": "各数表示在数轴上为：<br><img src=\"assets/images/img_docx_fe55274dc4bd.png\" data-cx=\"3181350\" data-cy=\"533400\" style=\"width:334px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">$-|-4|<-2.5<-1^{2}<0<1\\frac{1}{2}<{(-2)}^{2}$．",
+        "answer": "各数表示在数轴上为：<br><img src=\"assets/images/img_docx_fe55274dc4bd.png\" data-cx=\"3181350\" data-cy=\"533400\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">$-|-4|<-2.5<-1^{2}<0<1\\frac{1}{2}<{(-2)}^{2}$．",
         "analysis": "先计算乘方和绝对值，再在数轴上表示出各数，最后根据数轴上左边的数小于右边的数用小于号将各数连接起来即可．",
         "detail": "解：${(-2)}^{2}=4$，$-1^{2}=-1$，$-|-4|=-4$"
     },
@@ -9026,9 +9026,9 @@
         "difficulty": "容易",
         "knowledge": "利用数轴比较有理数的大小、用数轴上的点表示有理数、有理数的乘方运算、求一个数的绝对值",
         "chapter": "2.5.1 有理数的乘方",
-        "stem": "在数轴上分别表示下列有理数，并用“$<$”号把这些数连起来．<br><img src=\"assets/images/img_docx_ce8ed3626e15.png\" data-cx=\"3114675\" data-cy=\"209550\" style=\"width:327px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">$3\\frac{1}{2}$，0，$-(-2),{(-2)}^{2},-|-3|$",
+        "stem": "在数轴上分别表示下列有理数，并用“$<$”号把这些数连起来．<br><img src=\"assets/images/img_docx_ce8ed3626e15.png\" data-cx=\"3114675\" data-cy=\"209550\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">$3\\frac{1}{2}$，0，$-(-2),{(-2)}^{2},-|-3|$",
         "options": [],
-        "answer": "数轴表示如下所示：<br><img src=\"assets/images/img_docx_53faaf4f58f7.png\" data-cx=\"3476625\" data-cy=\"438150\" style=\"width:365px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>$-|-3|<0<-(-2)<3\\frac{1}{2}<{(-2)}^{2}$",
+        "answer": "数轴表示如下所示：<br><img src=\"assets/images/img_docx_53faaf4f58f7.png\" data-cx=\"3476625\" data-cy=\"438150\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>$-|-3|<0<-(-2)<3\\frac{1}{2}<{(-2)}^{2}$",
         "analysis": "本题主要考查了有理数与数轴，计算绝对值，乘方和化简多重符号，先计算绝对值，乘方和化简多重符号，再在数轴上表示出各数，最后根据正方向向右的数轴上左边的数小于右边的数用小于号将各数连接起来即可．",
         "detail": "解：$-(-2)=2,{(-2)}^{2}=4,-|-3|=-3$．"
     },
@@ -10466,7 +10466,7 @@
         "difficulty": "容易",
         "knowledge": "代数式表示的实际意义、有理数四则混合运算的实际应用",
         "chapter": "3.1.1 代数式的概念和列代数式",
-        "stem": "某超市的水果价格如图所示．<br><img src=\"assets/images/img_docx_b64a0222a441.png\" data-cx=\"2743200\" data-cy=\"1676400\" style=\"width:288px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)代数式$50-6a$表示的实际意义是______；<br>(2)小明用43元买了2斤葡萄，最多还能买多少斤苹果？",
+        "stem": "某超市的水果价格如图所示．<br><img src=\"assets/images/img_docx_b64a0222a441.png\" data-cx=\"2743200\" data-cy=\"1676400\" style=\"width:220px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)代数式$50-6a$表示的实际意义是______；<br>(2)小明用43元买了2斤葡萄，最多还能买多少斤苹果？",
         "options": [],
         "answer": "(1)50元买了$a$斤梨子后剩余的钱数<br>(2)最多还能买3斤苹果",
         "analysis": "本题考查了列代数式，有理数的混合运算，正确理解题意是解题的关键．<br>（1）由图可知梨子每斤6元，则$a$斤梨子总价$6a$元，即可确定$50-6a$表示的实际意义；<br>（2）由图可知葡萄为每斤8元，苹果每斤9元，则用43元减去买葡萄的钱，剩余的钱再除以苹果的单价即可．",
@@ -10777,7 +10777,7 @@
         "difficulty": "容易",
         "knowledge": "列代数式",
         "chapter": "3.1.2 列代数式解决实际问题",
-        "stem": "现存于陕西历史博物馆的我国南北朝时期的官员独孤信的印章如图1，图2是该印章的几何示意图，它由18个相同的正方形和8个相同的等边三角形围成．若其中正方形的边长和等边三角形的边长都为m，等边三角形的高为n，则这个印章的表面积为（    ）<br><img src=\"assets/images/img_docx_c2bac8af3a2a.png\" data-cx=\"3448050\" data-cy=\"1800225\" style=\"width:362px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "现存于陕西历史博物馆的我国南北朝时期的官员独孤信的印章如图1，图2是该印章的几何示意图，它由18个相同的正方形和8个相同的等边三角形围成．若其中正方形的边长和等边三角形的边长都为m，等边三角形的高为n，则这个印章的表面积为（    ）<br><img src=\"assets/images/img_docx_c2bac8af3a2a.png\" data-cx=\"3448050\" data-cy=\"1800225\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [
             "A. $18mn+4m^{2}$",
             "B. $18m^{2}+4mn$",
@@ -10924,7 +10924,7 @@
         "difficulty": "容易",
         "knowledge": "列代数式",
         "chapter": "3.1.2 列代数式解决实际问题",
-        "stem": "某窗户的形状如图所示(图中长度单位：$cm$)，其上部是半圆形，下部是由两个相同的长方形和一个正方形构成．已知半圆的半径为$xcm$，长方形的长和宽分别为$ycm$和$zcm$，则窗户的面积为(    )．<br><img src=\"assets/images/img_docx_15a968dec000.png\" data-cx=\"1457325\" data-cy=\"1609725\" style=\"width:153px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "某窗户的形状如图所示(图中长度单位：$cm$)，其上部是半圆形，下部是由两个相同的长方形和一个正方形构成．已知半圆的半径为$xcm$，长方形的长和宽分别为$ycm$和$zcm$，则窗户的面积为(    )．<br><img src=\"assets/images/img_docx_15a968dec000.png\" data-cx=\"1457325\" data-cy=\"1609725\" style=\"width:149px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [
             "A. $\\pi x^{2}+2yz+y^{2}$",
             "B. $\\frac{1}{2}\\pi x^{2}+2yz+y^{2}$",
@@ -11014,7 +11014,7 @@
         "difficulty": "中等",
         "knowledge": "列代数式",
         "chapter": "3.1.2 列代数式解决实际问题",
-        "stem": "如图，是由长方形、正方形、三角形及圆组成的图形（长度单位：$m$）．<br><img src=\"assets/images/img_docx_bbea5fd26d0f.png\" data-cx=\"1924050\" data-cy=\"1619250\" style=\"width:202px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)用式子表示图中阴影部分的面积；<br>(2)按照图所示的尺寸设计并画出一个新的图形，使其面积等于$(x^{2}+\\frac{1}{2}xy-\\frac{1}{4}\\pi x^{2})m^{2}$．",
+        "stem": "如图，是由长方形、正方形、三角形及圆组成的图形（长度单位：$m$）．<br><img src=\"assets/images/img_docx_bbea5fd26d0f.png\" data-cx=\"1924050\" data-cy=\"1619250\" style=\"width:165px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)用式子表示图中阴影部分的面积；<br>(2)按照图所示的尺寸设计并画出一个新的图形，使其面积等于$(x^{2}+\\frac{1}{2}xy-\\frac{1}{4}\\pi x^{2})m^{2}$．",
         "options": [],
         "answer": "(1)$(2x+x^{2}+\\frac{1}{2}xy-\\pi r^{2})m^{2}$<br>(2)<br>如图所示，阴影部分即为所求.<br><img src=\"assets/images/img_docx_bd042dc5ba04.png\" data-cx=\"1657350\" data-cy=\"876300\" style=\"width:174px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "analysis": "本题考查了图形的面积，列代数式，解题关键是分析出图形的所有形状，按照各图形面积公式求解即可．<br>（1）分析出图形中由四个图形组成，长方形、正方形，三角形，圆形，很容易用式子表示该图形中阴影部分的面积；<br>（2）根据面积为$(x^{2}+\\frac{1}{2}xy-\\frac{1}{4}\\pi x^{2})m^{2}$分析出可以由一个边长x为的正方形，一个直角边分别为x，y的三角形，一个直径径为x的圆形组成．",
@@ -11030,7 +11030,7 @@
         "difficulty": "中等",
         "knowledge": "列代数式、有理数四则混合运算",
         "chapter": "3.1.2 列代数式解决实际问题",
-        "stem": "如图1是一张边长为$a$的正方形纸片，在它的一角剪去一个边长为$b$的小正方形，然后将图1剩余部分（阴影部分）剪拼成如图2的一个大长方形（阴影部分）．<br><img src=\"assets/images/img_docx_833b7e9de67f.png\" data-cx=\"3009900\" data-cy=\"1457325\" style=\"width:316px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)将图1阴影部分的面积记为$S_{1}$，图2的面积记为$S_{2}$，若用含$a$、$b$的代数式表示$S_{1}$和$S_{2}$，则$S_{1}=$______，$S_{2}=$______；<br>(2)请你判断$S_{1}$与$S_{2}$之间的大小关系：$S_{1}$______$S_{2}$（填“$>$”、“$<$”或“$=$”），并写出关于a，b的一个等式；<br>(3)利用（2）中的结论，求${2025}^{2}-{2024}^{2}$的值．",
+        "stem": "如图1是一张边长为$a$的正方形纸片，在它的一角剪去一个边长为$b$的小正方形，然后将图1剩余部分（阴影部分）剪拼成如图2的一个大长方形（阴影部分）．<br><img src=\"assets/images/img_docx_833b7e9de67f.png\" data-cx=\"3009900\" data-cy=\"1457325\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)将图1阴影部分的面积记为$S_{1}$，图2的面积记为$S_{2}$，若用含$a$、$b$的代数式表示$S_{1}$和$S_{2}$，则$S_{1}=$______，$S_{2}=$______；<br>(2)请你判断$S_{1}$与$S_{2}$之间的大小关系：$S_{1}$______$S_{2}$（填“$>$”、“$<$”或“$=$”），并写出关于a，b的一个等式；<br>(3)利用（2）中的结论，求${2025}^{2}-{2024}^{2}$的值．",
         "options": [],
         "answer": "(1)$a^{2}-b^{2}$，$(a+b)(a-b)$<br>(2)$=$；$a^{2}-b^{2}=(a+b)(a-b)$或$(a+b)(a-b)=a^{2}-b^{2}$<br>(3)$4049$",
         "analysis": "本题考查了列代数式、有理数的混合运算，采用数形结合的思想是解此题的关键．<br>（1）利用正方形和长方形的面积公式，分别表示出阴影部分的面积，即可得解；<br>（2）根据面积不变即可得解；<br>（3）利用（2）得到的结论计算即可得解．",
@@ -11046,7 +11046,7 @@
         "difficulty": "容易",
         "knowledge": "用代数式表示数、图形的规律",
         "chapter": "3.1.2 列代数式解决实际问题",
-        "stem": "用牙签按下列图示搭三角形：<br><img src=\"assets/images/img_docx_19444c88cf5c.png\" data-cx=\"4095750\" data-cy=\"438150\" style=\"width:420px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>照这样的规律搭下去，搭n个这样的三角形需要_______根牙签．（用含n的代数式表示）",
+        "stem": "用牙签按下列图示搭三角形：<br><img src=\"assets/images/img_docx_19444c88cf5c.png\" data-cx=\"4095750\" data-cy=\"438150\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>照这样的规律搭下去，搭n个这样的三角形需要_______根牙签．（用含n的代数式表示）",
         "options": [],
         "answer": "$(2n+1)$",
         "analysis": "本题考查用代数式表示图形的变化规律，根据图形发展规律准确推理和归纳是本题的解题关键．根据规律可知每次增加2根牙签，再列式表示即可．",
@@ -11062,7 +11062,7 @@
         "difficulty": "容易",
         "knowledge": "用代数式表示数、图形的规律",
         "chapter": "3.1.2 列代数式解决实际问题",
-        "stem": "如图是用若干个相同的小正方形拼成的图案．第1个图案中有4个小正方形，第2个图案中有7个小正方形，第3个图案中有10个小正方形，······，依此规律，第n个图案中小正方形的个数为___________（用含$n$的代数式表示）．<br><img src=\"assets/images/img_docx_7a6cf4d12eb7.png\" data-cx=\"3638550\" data-cy=\"790575\" style=\"width:382px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "如图是用若干个相同的小正方形拼成的图案．第1个图案中有4个小正方形，第2个图案中有7个小正方形，第3个图案中有10个小正方形，······，依此规律，第n个图案中小正方形的个数为___________（用含$n$的代数式表示）．<br><img src=\"assets/images/img_docx_7a6cf4d12eb7.png\" data-cx=\"3638550\" data-cy=\"790575\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [],
         "answer": "$(3n+1)$",
         "analysis": "本题考查了图形的变化规律、列代数式，解决本题的关键是根据图形的变化寻找规律．根据图形的变化规律可知，从第二个图形起每个图形都比前一个多3个小正方形，以此即可找到图形规律．",
@@ -11078,7 +11078,7 @@
         "difficulty": "中等",
         "knowledge": "用代数式表示数、图形的规律",
         "chapter": "3.1.2 列代数式解决实际问题",
-        "stem": "棋源自中国，围棋中棋子与棋盘体现出古代“天圆地方”的东方哲学$．$如图是由棋子摆成的图案，第$1$个图案中有$2$颗棋子，第$2$个图案中有$5$颗棋子，第$3$个图案中有$8$颗棋子，第$4$个图案中有$11$颗棋子，按此规律摆放，第$n$个图案中有______颗棋子．$($用含$n$的代数式表示$)$<br><img src=\"assets/images/img_docx_8aa965f11ec2.png\" data-cx=\"3324225\" data-cy=\"876300\" style=\"width:349px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "棋源自中国，围棋中棋子与棋盘体现出古代“天圆地方”的东方哲学$．$如图是由棋子摆成的图案，第$1$个图案中有$2$颗棋子，第$2$个图案中有$5$颗棋子，第$3$个图案中有$8$颗棋子，第$4$个图案中有$11$颗棋子，按此规律摆放，第$n$个图案中有______颗棋子．$($用含$n$的代数式表示$)$<br><img src=\"assets/images/img_docx_8aa965f11ec2.png\" data-cx=\"3324225\" data-cy=\"876300\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [],
         "answer": "$(3n-1)$",
         "analysis": "本题考查规律型：图形的变化．<br>仔细观察图形，找到图形的变化规律，利用规律求解．",
@@ -11094,7 +11094,7 @@
         "difficulty": "中等",
         "knowledge": "用代数式表示数、图形的规律",
         "chapter": "3.1.2 列代数式解决实际问题",
-        "stem": "如图，将形状大小完全相同的梅花按以下规律进行摆放，其中第1个图形中有5朵梅花，第2个图形中有8朵梅花，第3个图形中有13朵梅花，第4个图形中有20朵梅花……依此规律，第n个图形中含有的梅花朵数是______________．（用含n的代数式表示）<br><img src=\"assets/images/img_docx_6c113adbe397.png\" data-cx=\"2924175\" data-cy=\"952500\" style=\"width:307px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "如图，将形状大小完全相同的梅花按以下规律进行摆放，其中第1个图形中有5朵梅花，第2个图形中有8朵梅花，第3个图形中有13朵梅花，第4个图形中有20朵梅花……依此规律，第n个图形中含有的梅花朵数是______________．（用含n的代数式表示）<br><img src=\"assets/images/img_docx_6c113adbe397.png\" data-cx=\"2924175\" data-cy=\"952500\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [],
         "answer": "$4+n^{2}$/$n^{2}+4$",
         "analysis": "本题考查了图形类规律探索，正确归纳类推出一般规律是解题关键．根据题意可得第1个图形中有$1^{2}+4=5$朵梅花，第2个图形中有$8=2^{2}+4$朵梅花，第3个图形中有$3^{2}+4=13$朵梅花，第4个图形中有$4^{2}+4=20$朵梅花，据此归纳类推出一般规律即可得．",
@@ -11126,7 +11126,7 @@
         "difficulty": "中等",
         "knowledge": "用代数式表示数、图形的规律、数字类规律探索、有理数的乘方运算",
         "chapter": "3.1.2 列代数式解决实际问题",
-        "stem": "数形结合是解决数学问题的一种重要的思想方法，初中数学里的代数公式，很多都可以借助几何图形进行直观推导和解释．<br>【方法初探】<br>（1）例如：求$1+2+3+4+$…$+n$的值（其中$n$是正整数）．方案如下：如图$1$，斜线左边的三角形图案是由上到下每层依次分别为$1$，$2$，$3$，…，$n$个小圆圈排列组成的．而组成整个三角形小圆圈的个数恰为所求式子$1+2+3+4+…+n$的值．为求式子的值，现把左边三角形倒放于斜线右边，与原三角形组成一个平行四边形．此时，组成平行四边形的小圆圈共有______行，每行有______个小圆圈，所以组成一个三角形小圆圈的个数为$1+2+3+4+…+n=$______；<br>【探索归纳】<br>（2）下面我们将利用数形结合尝试求$1^{3}+2^{3}+3^{3}+⋯+n^{3}$的值（其中$n$是正整数）．请你仔细观察图$2$，找出图形与算式之间的关系，解决下列问题：<br>①探索规律：根据前面的规律，第（$5$）个图形可以表示的等式为______；<br>②归纳结论：则$1^{3}+2^{3}+3^{3}+⋯+n^{3}=$______（结果用含n的代数式表示）；<br>【拓展应用】<br>（3）求$\\frac{1^{3}+2^{3}+3^{3}+⋯⋯+{100}^{3}}{1+2+3+⋯+100}$的值．<br><img src=\"assets/images/img_docx_6e60e09f0c83.png\" data-cx=\"6118600\" data-cy=\"1912705\" style=\"width:420px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "数形结合是解决数学问题的一种重要的思想方法，初中数学里的代数公式，很多都可以借助几何图形进行直观推导和解释．<br>【方法初探】<br>（1）例如：求$1+2+3+4+$…$+n$的值（其中$n$是正整数）．方案如下：如图$1$，斜线左边的三角形图案是由上到下每层依次分别为$1$，$2$，$3$，…，$n$个小圆圈排列组成的．而组成整个三角形小圆圈的个数恰为所求式子$1+2+3+4+…+n$的值．为求式子的值，现把左边三角形倒放于斜线右边，与原三角形组成一个平行四边形．此时，组成平行四边形的小圆圈共有______行，每行有______个小圆圈，所以组成一个三角形小圆圈的个数为$1+2+3+4+…+n=$______；<br>【探索归纳】<br>（2）下面我们将利用数形结合尝试求$1^{3}+2^{3}+3^{3}+⋯+n^{3}$的值（其中$n$是正整数）．请你仔细观察图$2$，找出图形与算式之间的关系，解决下列问题：<br>①探索规律：根据前面的规律，第（$5$）个图形可以表示的等式为______；<br>②归纳结论：则$1^{3}+2^{3}+3^{3}+⋯+n^{3}=$______（结果用含n的代数式表示）；<br>【拓展应用】<br>（3）求$\\frac{1^{3}+2^{3}+3^{3}+⋯⋯+{100}^{3}}{1+2+3+⋯+100}$的值．<br><img src=\"assets/images/img_docx_6e60e09f0c83.png\" data-cx=\"6118600\" data-cy=\"1912705\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [],
         "answer": "（1）$n$，$n+1$，$\\frac{n(n+1)}{2}$；（2）①$1^{3}+2^{3}+3^{3}+4^{3}+5^{3}={15}^{2}$；②${[\\frac{n(n+1)}{2}]}^{2}$；（3）$5050$",
         "analysis": "本题考查数字规律探究，利用数形结合，探究出规律是解题的关键．<br>（1）根据平行四边形的面积公式列式即可得解；<br>（2）①根据前四个图总结规律即可得解；②根据①中的等式总结规律即可得解；<br>（3）根据（1）（2）中的结论求解即可．",
@@ -11174,7 +11174,7 @@
         "difficulty": "容易",
         "knowledge": "列代数式、已知字母的值 ，求代数式的值",
         "chapter": "3.1.2 列代数式解决实际问题",
-        "stem": "如图，某学校操场最内侧的跑道由两段直道和两段半圆形弯道组成，其中直道的长为$l$，半圆形弯道的半径为$r$．<br><img src=\"assets/images/img_docx_c8e1f90dc1a4.png\" data-cx=\"2990850\" data-cy=\"1019175\" style=\"width:314px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)用代数式表示这条跑道的周长；<br>(2)当$l=84m$，$r=37m$时，计算这条跑道的周长（$\\pi$取$3.14$，结果取整数）．",
+        "stem": "如图，某学校操场最内侧的跑道由两段直道和两段半圆形弯道组成，其中直道的长为$l$，半圆形弯道的半径为$r$．<br><img src=\"assets/images/img_docx_c8e1f90dc1a4.png\" data-cx=\"2990850\" data-cy=\"1019175\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)用代数式表示这条跑道的周长；<br>(2)当$l=84m$，$r=37m$时，计算这条跑道的周长（$\\pi$取$3.14$，结果取整数）．",
         "options": [],
         "answer": "(1)$2\\pi r+2l$<br>(2)$400m$",
         "analysis": "本题主要考查了列代数式和代数式求值，正确理解题意是解题的关键．<br>（1）这条跑道的周长等于半径为r的圆的周长加上两条直道的长，据此列式求解即可；<br>（2）把$l=84m$，$r=37m$代入（1）所求代数式中求值即可．",
@@ -11190,7 +11190,7 @@
         "difficulty": "较难",
         "knowledge": "数轴上两点之间的距离、列代数式、动点问题（一元一次方程的应用）",
         "chapter": "3.1.2 列代数式解决实际问题",
-        "stem": "阅读理解：A、B、C为数轴上三点，若点C到A的距离是点C到B的距离的3倍，我们称点C是【A，B】的和谐点．若点C到B的距离是点C到A的距离的3倍，我们称点C是【B，A】的和谐点．<br><img src=\"assets/images/img_docx_e7102839a016.png\" data-cx=\"5238750\" data-cy=\"1343025\" style=\"width:420px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)如图1，点A表示的数为$-1$，点B表示的数为3．表示0的点D到点A的距离是1，到点B的距离是3，那么点D________【A，B】的和谐点，点D________【B，A】的和谐点．（请在横线上填是或不是）<br>(2)如图2， A、B为数轴上两点，点A所表示的数为$-1$，点B所表示的数为3．则【A，B】的和谐点有________个，并求出所有【A，B】的和谐点所表示的数．<br>(3)如图3，M、N为数轴上两点，点M所表示的数为$-20$，点N所表示的数为40．现有一只电子蚂蚁P从点M出发，以3个单位每秒的速度向右运动，另一只电子蚂蚁Q从点N出发，以m个单位每秒的速度向左运动，当点P到达点N时或者Q点到达M点时，P、Q两点同时停止运动，设运动的时间为t秒．<br>①当P，Q两点相遇前，若点H是【P，Q】的和谐点且在P、Q之间，当m取何值时，则H所表示的数是定值，请求出该定值和m的值．<br>②在上一问的m值的情况下，直接写出当P是【M，Q】的和谐点时，t的值为________________．",
+        "stem": "阅读理解：A、B、C为数轴上三点，若点C到A的距离是点C到B的距离的3倍，我们称点C是【A，B】的和谐点．若点C到B的距离是点C到A的距离的3倍，我们称点C是【B，A】的和谐点．<br><img src=\"assets/images/img_docx_e7102839a016.png\" data-cx=\"5238750\" data-cy=\"1343025\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)如图1，点A表示的数为$-1$，点B表示的数为3．表示0的点D到点A的距离是1，到点B的距离是3，那么点D________【A，B】的和谐点，点D________【B，A】的和谐点．（请在横线上填是或不是）<br>(2)如图2， A、B为数轴上两点，点A所表示的数为$-1$，点B所表示的数为3．则【A，B】的和谐点有________个，并求出所有【A，B】的和谐点所表示的数．<br>(3)如图3，M、N为数轴上两点，点M所表示的数为$-20$，点N所表示的数为40．现有一只电子蚂蚁P从点M出发，以3个单位每秒的速度向右运动，另一只电子蚂蚁Q从点N出发，以m个单位每秒的速度向左运动，当点P到达点N时或者Q点到达M点时，P、Q两点同时停止运动，设运动的时间为t秒．<br>①当P，Q两点相遇前，若点H是【P，Q】的和谐点且在P、Q之间，当m取何值时，则H所表示的数是定值，请求出该定值和m的值．<br>②在上一问的m值的情况下，直接写出当P是【M，Q】的和谐点时，t的值为________________．",
         "options": [],
         "answer": "(1)不是，是<br>(2)【A，B】的和谐点有2个，【A，B】的和谐点所表示的数为5或2<br>(3)①该定值为25和m的值为1②$t=20$或$t=12$",
         "analysis": "本题主要考查了实数和数轴，两点之间的距离，解绝对值的方程，动点问题，解题的关键是理解题目中的定义．<br>（1）根据给出的定义求解即可；<br>（2）假设和谐点表示的数是$x$，列出绝对值方程，求解即可；<br>（3）①根据初始点求出定值，然后根据两点之间的距离，求出时间和速度即可；<br>②设运动的时间为t秒，表示出$P,Q$对应的数，然后根据定义列出绝对值方程求解即可．",
@@ -11206,7 +11206,7 @@
         "difficulty": "中等",
         "knowledge": "列代数式、整式加减的应用",
         "chapter": "3.1.2 列代数式解决实际问题",
-        "stem": "火车站、机场等场所都有为旅客提供打包服务的项目．现有一个长、宽、高分别为a厘米、b厘米、30厘米的箱子（其中$a>b$），准备采用如图①、②的两种打包方式，所用打包带的总长（不计接头处的长度）分别记为$l_{1}$，$l_{2}$．<br><img src=\"assets/images/img_docx_23130e71ccd2.png\" data-cx=\"3362325\" data-cy=\"1190625\" style=\"width:353px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)图①中打包带的总长$l_{1}=$______厘米（用含a，b的代数式表示，并化简），图②中打包带的总长$l_{2}$______厘米（用含a，b的代数式表示，并化简）；<br>(2)试判断哪一种打包方式更节省材料，并说明理由．",
+        "stem": "火车站、机场等场所都有为旅客提供打包服务的项目．现有一个长、宽、高分别为a厘米、b厘米、30厘米的箱子（其中$a>b$），准备采用如图①、②的两种打包方式，所用打包带的总长（不计接头处的长度）分别记为$l_{1}$，$l_{2}$．<br><img src=\"assets/images/img_docx_23130e71ccd2.png\" data-cx=\"3362325\" data-cy=\"1190625\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)图①中打包带的总长$l_{1}=$______厘米（用含a，b的代数式表示，并化简），图②中打包带的总长$l_{2}$______厘米（用含a，b的代数式表示，并化简）；<br>(2)试判断哪一种打包方式更节省材料，并说明理由．",
         "options": [],
         "answer": "(1)$(4a+2b+180)$，$(2a+4b+180)$<br>(2)<br>第二种，理由如下：<br>由（1）知，$l_{1}-l_{2}=(4a+2b+180)-(2a+4b+180)=2a-2b$，<br>因为$a>b$，<br>所以$2a>2b$，<br>则$l_{1}>l_{2}$，<br>所以第二种打包方式更节省材料．",
         "analysis": "本题主要考查了列代数式，整式加减的应用，能根据题意分别表示出$l_{1}$和$l_{2}$是解题的关键．<br>（1）根据所给打包方式，分别表示出打包带的总长度即可；<br>（2）结合（1）中的结果进行计算即可．",
@@ -11238,7 +11238,7 @@
         "difficulty": "中等",
         "knowledge": "列代数式、已知字母的值 ，求代数式的值",
         "chapter": "3.1.2 列代数式解决实际问题",
-        "stem": "如图，一种圆环的外圆直径是$8cm$，环宽$1cm$，若把x个这样的圆环扣在一起并拉紧，其长度记作$ycm$，则当$x=99$时，y的值为______________<br><img src=\"assets/images/img_docx_cf7f77dc87cc.png\" data-cx=\"6118600\" data-cy=\"1191797\" style=\"width:420px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "如图，一种圆环的外圆直径是$8cm$，环宽$1cm$，若把x个这样的圆环扣在一起并拉紧，其长度记作$ycm$，则当$x=99$时，y的值为______________<br><img src=\"assets/images/img_docx_cf7f77dc87cc.png\" data-cx=\"6118600\" data-cy=\"1191797\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [],
         "answer": "$596$",
         "analysis": "本题考查列代数式，求解代数式的值，解答本题的关键是明确题意，写出相应的代数式，然后代入数值计算即可．",
@@ -11286,7 +11286,7 @@
         "difficulty": "容易",
         "knowledge": "列代数式、有理数的乘方运算、已知字母的值 ，求代数式的值、绝对值非负性",
         "chapter": "3.1.2 列代数式解决实际问题",
-        "stem": "如图，是一个长为$acm$，宽为$bcm$的长方形，两个阴影图形都是一对底边长为$1cm$，且底边在长方形对边上的平行四边形．<br><img src=\"assets/images/img_docx_6bcc6268354e.png\" data-cx=\"1971675\" data-cy=\"1704975\" style=\"width:207px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)用含字母$a$，$b$的代数式表示长方形中空白部分的面积；<br>(2)若$a$、$b$满足${(a-4)}^{2}+|b-3|=0$，求长方形中空白部分的面积．",
+        "stem": "如图，是一个长为$acm$，宽为$bcm$的长方形，两个阴影图形都是一对底边长为$1cm$，且底边在长方形对边上的平行四边形．<br><img src=\"assets/images/img_docx_6bcc6268354e.png\" data-cx=\"1971675\" data-cy=\"1704975\" style=\"width:165px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)用含字母$a$，$b$的代数式表示长方形中空白部分的面积；<br>(2)若$a$、$b$满足${(a-4)}^{2}+|b-3|=0$，求长方形中空白部分的面积．",
         "options": [],
         "answer": "(1)$(ab-a-b+1){cm}^{2}$<br>(2)$6{cm}^{2}$",
         "analysis": "本题主要考查了列代数式，代数式求值，非负数的性质，正确理解题意是解题的关键．<br>（1）空白部分的面积等于长方形面积减去两个阴影部分的平行四边形面积，再加上两个阴影部分的平行四边形重叠的平行四边形面积，据此求解即可；<br>（2）根据非负数的性质求出a、b的值，再代值计算即可得到答案．",
@@ -11339,7 +11339,7 @@
         "difficulty": "中等",
         "knowledge": "图形类规律探索",
         "chapter": "3.1.2 列代数式解决实际问题",
-        "stem": "如图，为庆祝国庆76周年，李明用棋子摆出一组形如小彩旗的图形，按照这种方法摆下去，当要摆第76个图形时需要棋子的枚数是（   ）<br><img src=\"assets/images/img_docx_970ab538f92c.png\" data-cx=\"2705100\" data-cy=\"876300\" style=\"width:284px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "如图，为庆祝国庆76周年，李明用棋子摆出一组形如小彩旗的图形，按照这种方法摆下去，当要摆第76个图形时需要棋子的枚数是（   ）<br><img src=\"assets/images/img_docx_970ab538f92c.png\" data-cx=\"2705100\" data-cy=\"876300\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [
             "A. 227",
             "B. 228",
@@ -11392,7 +11392,7 @@
         "difficulty": "容易",
         "knowledge": "正（反）比例关系、 反比例的意义及辨识",
         "chapter": "3.1.3 正（反）比例关系",
-        "stem": "古希腊著名的科学家阿基米德发现了杠杆平衡，后来人们把它归纳为“杠杆原理”，即“阻力$\\times$阻力臂$=$动力$\\times$动力臂”．小明同学用撬棍撬动一块大石头，已知阻力和阻力臂分别是$1100N$和$0.5m$，则动力$F$（单位：$N$）与动力臂$l$（单位：$m$）的关系正确的是（   ）<br><img src=\"assets/images/img_docx_2e9f704ea0ba.png\" data-cx=\"1657350\" data-cy=\"1571625\" style=\"width:174px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "古希腊著名的科学家阿基米德发现了杠杆平衡，后来人们把它归纳为“杠杆原理”，即“阻力$\\times$阻力臂$=$动力$\\times$动力臂”．小明同学用撬棍撬动一块大石头，已知阻力和阻力臂分别是$1100N$和$0.5m$，则动力$F$（单位：$N$）与动力臂$l$（单位：$m$）的关系正确的是（   ）<br><img src=\"assets/images/img_docx_2e9f704ea0ba.png\" data-cx=\"1657350\" data-cy=\"1571625\" style=\"width:165px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [
             "A. 成反比例，$F=\\frac{550}{l}$",
             "B. 成正比例，$F=\\frac{1100}{l}$",
@@ -11962,7 +11962,7 @@
         "difficulty": "中等",
         "knowledge": "带有字母的绝对值化简问题、有理数加减混合运算的应用、程序流程图与代数式求值",
         "chapter": "3.2.1 求代数式的值",
-        "stem": "学习完有理数加、减、乘、除运算后，数学兴趣小组对新运算“$a※b$”进行了探究．<br>探究过程如下：<br>I.给出了“$a※b$”的一些具体例子：<br>$3※2=+53※5=-2(-1.4)※(-1.4)=0$<br>$4※0=+4(-3.5)※5=-1.53※3=0$<br>$(-2)※(-5)=+7(-5)※(-3)=-2$<br>$1※(-3)=+4(-1)※0=-1$<br>$0※(-2)=+20※5=-5$<br>II.根据上面的例子，小华画出了“$a※b$”的部分流程图如下：<br><img src=\"assets/images/img_docx_06c8594e4dce.png\" data-cx=\"3390900\" data-cy=\"1809750\" style=\"width:356px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>Ⅲ.小明在小华的基础上进一步完善和改进，画出了“$a※b$”的流程图如下：<br><img src=\"assets/images/img_docx_d9a92c2d6811.png\" data-cx=\"4219575\" data-cy=\"2057400\" style=\"width:420px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>根据以上探究过程，完成下面问题：<br>(1)在①$a+b$，②$a-b$，③$a\\times b$中，符合小华画的部分流程图的运算有______（只填序号）；<br>(2)小明画的流程图中的A处应填______，B处应填______；<br>(3)根据小明画的流程图解决下面问题：<br>①计算：$(-1)※2024$；<br>②若$2024※x=2025$，则x的值为______．",
+        "stem": "学习完有理数加、减、乘、除运算后，数学兴趣小组对新运算“$a※b$”进行了探究．<br>探究过程如下：<br>I.给出了“$a※b$”的一些具体例子：<br>$3※2=+53※5=-2(-1.4)※(-1.4)=0$<br>$4※0=+4(-3.5)※5=-1.53※3=0$<br>$(-2)※(-5)=+7(-5)※(-3)=-2$<br>$1※(-3)=+4(-1)※0=-1$<br>$0※(-2)=+20※5=-5$<br>II.根据上面的例子，小华画出了“$a※b$”的部分流程图如下：<br><img src=\"assets/images/img_docx_06c8594e4dce.png\" data-cx=\"3390900\" data-cy=\"1809750\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>Ⅲ.小明在小华的基础上进一步完善和改进，画出了“$a※b$”的流程图如下：<br><img src=\"assets/images/img_docx_d9a92c2d6811.png\" data-cx=\"4219575\" data-cy=\"2057400\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>根据以上探究过程，完成下面问题：<br>(1)在①$a+b$，②$a-b$，③$a\\times b$中，符合小华画的部分流程图的运算有______（只填序号）；<br>(2)小明画的流程图中的A处应填______，B处应填______；<br>(3)根据小明画的流程图解决下面问题：<br>①计算：$(-1)※2024$；<br>②若$2024※x=2025$，则x的值为______．",
         "options": [],
         "answer": "(1)②<br>(2)$|a|+|b|$；$||a|-|b||$<br>(3)①$-2023$；②1或$-1$",
         "analysis": "本题考查了新定义运算、程序流程图、有理数的混合运算，理解题意，根据新运算结果探究出运算规律是解题的关键．<br>（1）根据小华画的部分流程图，结合题目的运算即可判断；<br>（2）根据“$a※b$”的一些具体例子，分$a>b$和$a<b$两种情况讨论，利用有理数的混合运算法则即可解答；<br>（3）①利用（2）中的运算规律，直接计算即可；②由$2024※x=2025>0$可得$x<2024$，从而列出方程$|2024|+|x|=2025$，解出$x$的值即可解答．",
@@ -12084,7 +12084,7 @@
         "difficulty": "中等",
         "knowledge": "数字类规律探索",
         "chapter": "3.2.1 求代数式的值",
-        "stem": "程序框图的算法思路源于我国古代数学名著《九章算术》中的“更相减损术”．如图所示，在这个数据运算程序中，如果第1次输入的a值为6，那么此次的输出结果是2．把第1次输出的结果当作a值返回进行第2次运算，那么第2次输出的结果是7，…，以此类推，第2025次输出的结果是（   ）<br><img src=\"assets/images/img_docx_9fd242990bb6.png\" data-cx=\"2752725\" data-cy=\"1266825\" style=\"width:289px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "程序框图的算法思路源于我国古代数学名著《九章算术》中的“更相减损术”．如图所示，在这个数据运算程序中，如果第1次输入的a值为6，那么此次的输出结果是2．把第1次输出的结果当作a值返回进行第2次运算，那么第2次输出的结果是7，…，以此类推，第2025次输出的结果是（   ）<br><img src=\"assets/images/img_docx_9fd242990bb6.png\" data-cx=\"2752725\" data-cy=\"1266825\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [
             "A. 1",
             "B. 2",
@@ -12121,7 +12121,7 @@
         "difficulty": "中等",
         "knowledge": "数字类规律探索",
         "chapter": "3.2.1 求代数式的值",
-        "stem": "《庄子·天下》：“一尺之棰，日取其半，万世不竭．”意思是说：一尺长的木棍，每天截掉一半，永远也截不完．探究课上，同学们运用此数学思想研究下列问题．<br>(1)【规律探索】：<br>如图，同学们将一个边长为1的正方形纸片分割成若干个部分，并用数形结合的思想解决下列问题：<br>观察图形，请按照对应思路填空<br><img src=\"assets/images/img_docx_1b36b18fd1c3.png\" data-cx=\"3505200\" data-cy=\"1028700\" style=\"width:368px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">$\\frac{1}{2}+\\frac{1}{4}=1-\\frac{1}{2^{2}}$；<br>$\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}=1-\\frac{1}{2^{3}}$；<br>$\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}+\\frac{1}{16}=1-$______；猜想：$\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}+\\frac{1}{16}+…+\\frac{1}{2^{10}}=1-$______；<br>(2)【规律证明】：同学采用了以下方法验证所得猜想是否正确，请你将过程补充完整．<br>设$S=\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}+\\frac{1}{16}+…+\\frac{1}{2^{10}}$①<br>则$2S=2\\times (\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}+\\frac{1}{16}+…+\\frac{1}{2^{10}})$    即$2S=2\\times \\frac{1}{2}+2\\times \\frac{1}{4}+2\\times \\frac{1}{8}+2\\times \\frac{1}{16}+…+2\\times \\frac{1}{2^{10}}$<br>化简得$2S=1+\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}+\\frac{1}{16}+…+\\frac{1}{2^{9}}$②<br>$②-①$得：$2S-S=(1+\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}+\\frac{1}{16}+…+\\frac{1}{2^{9}})-(\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}+\\frac{1}{16}+…+\\frac{1}{2^{10}})$<br>即$S=$______；<br>进一步可猜想：$\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}+\\frac{1}{16}+…+\\frac{1}{2^{n}}=$______．<br>(3)【拓展延申】应用以上结论，请你计算${(\\frac{1}{2})}^{11}+{(\\frac{1}{2})}^{12}+{(\\frac{1}{2})}^{13}\\cdots +{(\\frac{1}{2})}^{n}$的值．",
+        "stem": "《庄子·天下》：“一尺之棰，日取其半，万世不竭．”意思是说：一尺长的木棍，每天截掉一半，永远也截不完．探究课上，同学们运用此数学思想研究下列问题．<br>(1)【规律探索】：<br>如图，同学们将一个边长为1的正方形纸片分割成若干个部分，并用数形结合的思想解决下列问题：<br>观察图形，请按照对应思路填空<br><img src=\"assets/images/img_docx_1b36b18fd1c3.png\" data-cx=\"3505200\" data-cy=\"1028700\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">$\\frac{1}{2}+\\frac{1}{4}=1-\\frac{1}{2^{2}}$；<br>$\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}=1-\\frac{1}{2^{3}}$；<br>$\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}+\\frac{1}{16}=1-$______；猜想：$\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}+\\frac{1}{16}+…+\\frac{1}{2^{10}}=1-$______；<br>(2)【规律证明】：同学采用了以下方法验证所得猜想是否正确，请你将过程补充完整．<br>设$S=\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}+\\frac{1}{16}+…+\\frac{1}{2^{10}}$①<br>则$2S=2\\times (\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}+\\frac{1}{16}+…+\\frac{1}{2^{10}})$    即$2S=2\\times \\frac{1}{2}+2\\times \\frac{1}{4}+2\\times \\frac{1}{8}+2\\times \\frac{1}{16}+…+2\\times \\frac{1}{2^{10}}$<br>化简得$2S=1+\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}+\\frac{1}{16}+…+\\frac{1}{2^{9}}$②<br>$②-①$得：$2S-S=(1+\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}+\\frac{1}{16}+…+\\frac{1}{2^{9}})-(\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}+\\frac{1}{16}+…+\\frac{1}{2^{10}})$<br>即$S=$______；<br>进一步可猜想：$\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}+\\frac{1}{16}+…+\\frac{1}{2^{n}}=$______．<br>(3)【拓展延申】应用以上结论，请你计算${(\\frac{1}{2})}^{11}+{(\\frac{1}{2})}^{12}+{(\\frac{1}{2})}^{13}\\cdots +{(\\frac{1}{2})}^{n}$的值．",
         "options": [],
         "answer": "(1)$\\frac{1}{2^{4}}$；$\\frac{1}{2^{10}}$<br>(2)$1-\\frac{1}{2^{10}}$；$1-\\frac{1}{2^{n}}$<br>(3)$\\frac{1}{2^{10}}-\\frac{1}{2^{n}}$",
         "analysis": "本题主要考查了数字类的规律探索，正确理解题意找到规律是解题的关键．<br>（1）根据题意结合图形即可得到答案；<br>（2）根据所给计算过程即可求出S；再仿照题意求出第二空的答案即可；<br>（3）所求式子等价于$[\\frac{1}{2}+{(\\frac{1}{2})}^{2}+{(\\frac{1}{2})}^{3}\\cdots +{(\\frac{1}{2})}^{n}]-[\\frac{1}{2}+{(\\frac{1}{2})}^{2}+{(\\frac{1}{2})}^{3}\\cdots +{(\\frac{1}{2})}^{10}]$，根据（2）所求计算出前后两个式子的结果即可得到答案．",
@@ -12169,7 +12169,7 @@
         "difficulty": "中等",
         "knowledge": "程序流程图与代数式求值",
         "chapter": "3.2.1 求代数式的值",
-        "stem": "如图，按照所示的运算程序计算：若开始输入的$x$值为14，则第1次输出的结果为7，第2次输出的结果为10，…，第2025次输出的结果为（    ）<br><img src=\"assets/images/img_docx_0e63e873b874.png\" data-cx=\"2895600\" data-cy=\"1095375\" style=\"width:304px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "如图，按照所示的运算程序计算：若开始输入的$x$值为14，则第1次输出的结果为7，第2次输出的结果为10，…，第2025次输出的结果为（    ）<br><img src=\"assets/images/img_docx_0e63e873b874.png\" data-cx=\"2895600\" data-cy=\"1095375\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [
             "A. 1",
             "B. 2",
@@ -12253,7 +12253,7 @@
         "difficulty": "容易",
         "knowledge": "有理数的乘方运算、已知字母的值 ，求代数式的值",
         "chapter": "3.2.2 代数式求值的实际应用",
-        "stem": "我国古代数学的许多创新和发展都位居世界前列，如南宋数学家杨辉（约$13$世纪）所著的《详解九章算术》一书中，用如图的三角形解释二项式乘法${(a+b)}^{n}$的展开式的各项系数，此三角形称为“杨辉三角”．根据“杨辉三角”系数的规律，若${(2x+1)}^{5}=a_{5}x^{5}+a_{4}x^{4}+a_{3}x^{3}+a_{2}x^{2}+a_{1}x+a_{0}$，则$a_{5}+a_{4}+a_{3}+a_{2}+a_{1}+a_{0}$的值为（    ）<br><img src=\"assets/images/img_docx_3a69ce90fa81.png\" data-cx=\"2371725\" data-cy=\"1809750\" style=\"width:249px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "我国古代数学的许多创新和发展都位居世界前列，如南宋数学家杨辉（约$13$世纪）所著的《详解九章算术》一书中，用如图的三角形解释二项式乘法${(a+b)}^{n}$的展开式的各项系数，此三角形称为“杨辉三角”．根据“杨辉三角”系数的规律，若${(2x+1)}^{5}=a_{5}x^{5}+a_{4}x^{4}+a_{3}x^{3}+a_{2}x^{2}+a_{1}x+a_{0}$，则$a_{5}+a_{4}+a_{3}+a_{2}+a_{1}+a_{0}$的值为（    ）<br><img src=\"assets/images/img_docx_3a69ce90fa81.png\" data-cx=\"2371725\" data-cy=\"1809750\" style=\"width:210px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [
             "A. $32$",
             "B. $63$",
@@ -12386,7 +12386,7 @@
         "difficulty": "中等",
         "knowledge": "用代数式表示数、图形的规律、已知字母的值 ，求代数式的值",
         "chapter": "3.2.2 代数式求值的实际应用",
-        "stem": "如图，有一根弯曲的铁丝，准备用如图$1$所示的方式剪切，这样就把原来的铁丝分成了几段．<br><img src=\"assets/images/img_docx_f7086203bc4f.png\" data-cx=\"2790825\" data-cy=\"1800225\" style=\"width:293px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)探究：按如图$2$的方式剪切，在括号里填写适当的数．<br>(2)总结：如果剪切次数用$a$表示，分成的段数用$b$表示时，$a$和$b$的关系是（    ）．<br>(3)应用：像这样如果剪切$20$次，会分成（    ）段．",
+        "stem": "如图，有一根弯曲的铁丝，准备用如图$1$所示的方式剪切，这样就把原来的铁丝分成了几段．<br><img src=\"assets/images/img_docx_f7086203bc4f.png\" data-cx=\"2790825\" data-cy=\"1800225\" style=\"width:220px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)探究：按如图$2$的方式剪切，在括号里填写适当的数．<br>(2)总结：如果剪切次数用$a$表示，分成的段数用$b$表示时，$a$和$b$的关系是（    ）．<br>(3)应用：像这样如果剪切$20$次，会分成（    ）段．",
         "options": [],
         "answer": "(1)$7$，$10$<br>(2)$b=3a+1$<br>(3)$61$",
         "analysis": "本题考查了图形的规律变化问题，代数式求值，由已知图形找到变化规律是解题的关键．<br>（1）根据图形解答即可；<br>（2）根据已知图形找到变化规律即可；<br>（3）把$a=20$代入（$2$）所得规律求出$b$的值即可；",
@@ -12402,7 +12402,7 @@
         "difficulty": "中等",
         "knowledge": "有理数乘除混合运算、列代数式、已知字母的值 ，求代数式的值",
         "chapter": "3.2.2 代数式求值的实际应用",
-        "stem": "2024年，常州持续大力实施“常有安居”民生实事工程，一批老旧小区焕然一新．某社区为有效解决老百姓“停车难”问题，计划将一块长$62m$、宽$36m$的长方形空地改造为一个停车场，如图是停车场的设计方案，其中的阴影部分是四个完全相同的长方形停车区域，空白部分均为宽度相等的通道，设通道的宽为$am$．<br><img src=\"assets/images/img_docx_ca36770bdb19.png\" data-cx=\"3105150\" data-cy=\"2038350\" style=\"width:326px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)每个长方形停车区域的长为_______$m$，宽为_______$m$（用含$a$的代数式表示）；<br>(2)当$a=6$时，求四个停车区域的总面积；<br>(3)在（2）的条件下，如果每个车位宽度为$2.5m$，这次“空地改造”可以为小区新增停车位_______个．",
+        "stem": "2024年，常州持续大力实施“常有安居”民生实事工程，一批老旧小区焕然一新．某社区为有效解决老百姓“停车难”问题，计划将一块长$62m$、宽$36m$的长方形空地改造为一个停车场，如图是停车场的设计方案，其中的阴影部分是四个完全相同的长方形停车区域，空白部分均为宽度相等的通道，设通道的宽为$am$．<br><img src=\"assets/images/img_docx_ca36770bdb19.png\" data-cx=\"3105150\" data-cy=\"2038350\" style=\"width:220px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)每个长方形停车区域的长为_______$m$，宽为_______$m$（用含$a$的代数式表示）；<br>(2)当$a=6$时，求四个停车区域的总面积；<br>(3)在（2）的条件下，如果每个车位宽度为$2.5m$，这次“空地改造”可以为小区新增停车位_______个．",
         "options": [],
         "answer": "(1)$(62-2a)$，$(9-\\frac{1}{2}a)$<br>(2)$1200m^{2}$<br>(3)80",
         "analysis": "本题考查了列代数式、代数式求值，正确列出代数式，熟练掌握代数式求值的方法是解题关键．<br>（1）利用长方形空地的长减去2个通道的宽即可得每个长方形停车区域的长，利用长方形空地的宽减去2个通道的宽，再除以4即可得每个长方形停车区域的宽；<br>（2）将$a=6$代入，求出每个长方形停车区域的长与宽，再根据长方形的面积公式计算即可得；<br>（3）求出每个长方形停车区域的长，再除以每个车位的宽度，然后乘以4即可得．",
@@ -12418,7 +12418,7 @@
         "difficulty": "中等",
         "knowledge": "有理数四则混合运算、用代数式表示数、图形的规律",
         "chapter": "3.2.2 代数式求值的实际应用",
-        "stem": "春秋时期，孔子有一天对他的弟子们说道：“举一隅，不以三隅反，则不复也．”这句话的意思是说：“教书先生举出一个墙角，学生就应该会独立思考，融会贯通，从而类推到其余三个墙角，然后用三个墙角反证老师先前提出的墙角，如果每个学生都这样学习和思考，教书先生就不用再费力气教学生了”．<br>【规律探索】用同样大小的两种不同颜色的正方形纸片，按如图方式拼成长方形：<br>第（1）个图形中有2张正方形纸片：<br>第（2）个图形中有$2(1+2)=2+4=6$张正方形纸片：<br>第（3）个图形中有$2(1+2+3)=2+4+6=12$张正方形纸片；<br>第（4）个图形中有$2(1+2+3+4)=2+4+6+8=20$张正方形纸片：<br>请你观察图形与算式，完成下列问题：<br>【规律归纳】<br>（1）第（7）个图形中有______张正方形纸片（直接写出结果）；<br>（2）根据上面的发现我们可以猜想：$2+4+6+\\cdots +2n=$______（用含$n$的代数式表示）：<br>【规律应用】根据你的发现计算：<br>（3）①$2+4+6+\\cdots +600$；<br>②$202+204+206+\\cdots +600$．<br><img src=\"assets/images/img_docx_0246b7339a2e.png\" data-cx=\"4448175\" data-cy=\"1390650\" style=\"width:420px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "春秋时期，孔子有一天对他的弟子们说道：“举一隅，不以三隅反，则不复也．”这句话的意思是说：“教书先生举出一个墙角，学生就应该会独立思考，融会贯通，从而类推到其余三个墙角，然后用三个墙角反证老师先前提出的墙角，如果每个学生都这样学习和思考，教书先生就不用再费力气教学生了”．<br>【规律探索】用同样大小的两种不同颜色的正方形纸片，按如图方式拼成长方形：<br>第（1）个图形中有2张正方形纸片：<br>第（2）个图形中有$2(1+2)=2+4=6$张正方形纸片：<br>第（3）个图形中有$2(1+2+3)=2+4+6=12$张正方形纸片；<br>第（4）个图形中有$2(1+2+3+4)=2+4+6+8=20$张正方形纸片：<br>请你观察图形与算式，完成下列问题：<br>【规律归纳】<br>（1）第（7）个图形中有______张正方形纸片（直接写出结果）；<br>（2）根据上面的发现我们可以猜想：$2+4+6+\\cdots +2n=$______（用含$n$的代数式表示）：<br>【规律应用】根据你的发现计算：<br>（3）①$2+4+6+\\cdots +600$；<br>②$202+204+206+\\cdots +600$．<br><img src=\"assets/images/img_docx_0246b7339a2e.png\" data-cx=\"4448175\" data-cy=\"1390650\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [],
         "answer": "（1）$56$；（2）$n(n+1)$；（3）①$90300$；②$80200$",
         "analysis": "（1）根据前四个图形的排列规律，第七个图形有$2\\times (1+2+3+4+5+6+7)$张正方形纸片，计算得出答案．<br>（2）根据前面的发现，$2+4+6+…+2n$，可以写成：$2\\times (1+2+3+…+n)$的形式，化简计算得出答案．<br>（3）①直接用发现的规律代入计算求解；<br>②运用添项法，原式加上$(2+4+6+…+200)$然后再减去，计算结果不变；原式可变为：$(2+4+6+…+600)-(2+4+6+…+200)$，运用发现的规律计算求解．",
@@ -12434,7 +12434,7 @@
         "difficulty": "中等",
         "knowledge": "图形类规律探索、直线相交的交点个数问题、用代数式表示数、图形的规律",
         "chapter": "3.2.2 代数式求值的实际应用",
-        "stem": "【问题情境】课本196页有这样一个数学探究《鸡蛋饼的分割》，小明帮妈妈切鸡蛋饼的时候联想到一个数学问题：鸡蛋饼表面可以看作是一个圆面，分割的每一刀都可以抽象为一条直线，鸡蛋饼的分割问题可转化为直线分平面区域的问题．<br>【数学问题】分割线的条数、分割线的最多交点数、分割出的最多区域数之间存在什么样的数量关系？<br>【问题探究】为了解决这个问题，我们利用图1、图2、图3借助表格探索圆中分割线的条数m、分割线的最多交点数n、圆面被分割出的最多平面区域数t之间的一般规律．<br><img src=\"assets/images/img_docx_0de2c958b6ee.png\" data-cx=\"933450\" data-cy=\"942975\" style=\"width:98px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br><img src=\"assets/images/img_docx_297cc5b3bf3d.png\" data-cx=\"4486275\" data-cy=\"1162050\" style=\"width:420px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br><table class=\"border-collapse border border-slate-300 my-2 text-xs\"><tr><td class=\"border border-slate-300 px-2 py-1 text-center\"></td><td class=\"border border-slate-300 px-2 py-1 text-center\">$m$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$n$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$t$</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">图1</td><td class=\"border border-slate-300 px-2 py-1 text-center\">1</td><td class=\"border border-slate-300 px-2 py-1 text-center\">0</td><td class=\"border border-slate-300 px-2 py-1 text-center\">2</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">图2</td><td class=\"border border-slate-300 px-2 py-1 text-center\">2</td><td class=\"border border-slate-300 px-2 py-1 text-center\">1</td><td class=\"border border-slate-300 px-2 py-1 text-center\">4</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">图3</td><td class=\"border border-slate-300 px-2 py-1 text-center\">3</td><td class=\"border border-slate-300 px-2 py-1 text-center\">3</td><td class=\"border border-slate-300 px-2 py-1 text-center\">7</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">图4</td><td class=\"border border-slate-300 px-2 py-1 text-center\">4</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$x$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$y$</td></tr></table><br>【问题解决】<br>(1)请在图4中用四条分割线将圆面分割出最多的区域，并画出分割后的图形；<br>(2)将表格中的数据补充完整，$x=$_______；$y=$_______；<br>(3)猜想：圆中分割线的条数m、分割线的最多交点数n、圆面被分割出的最多平面区域数t之间的数量关系为：_______；<br>(4)根据上面的规律，你能用10条分割线将一个圆面分出57个区域吗？请说明理由．",
+        "stem": "【问题情境】课本196页有这样一个数学探究《鸡蛋饼的分割》，小明帮妈妈切鸡蛋饼的时候联想到一个数学问题：鸡蛋饼表面可以看作是一个圆面，分割的每一刀都可以抽象为一条直线，鸡蛋饼的分割问题可转化为直线分平面区域的问题．<br>【数学问题】分割线的条数、分割线的最多交点数、分割出的最多区域数之间存在什么样的数量关系？<br>【问题探究】为了解决这个问题，我们利用图1、图2、图3借助表格探索圆中分割线的条数m、分割线的最多交点数n、圆面被分割出的最多平面区域数t之间的一般规律．<br><img src=\"assets/images/img_docx_0de2c958b6ee.png\" data-cx=\"933450\" data-cy=\"942975\" style=\"width:98px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br><img src=\"assets/images/img_docx_297cc5b3bf3d.png\" data-cx=\"4486275\" data-cy=\"1162050\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br><table class=\"border-collapse border border-slate-300 my-2 text-xs\"><tr><td class=\"border border-slate-300 px-2 py-1 text-center\"></td><td class=\"border border-slate-300 px-2 py-1 text-center\">$m$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$n$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$t$</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">图1</td><td class=\"border border-slate-300 px-2 py-1 text-center\">1</td><td class=\"border border-slate-300 px-2 py-1 text-center\">0</td><td class=\"border border-slate-300 px-2 py-1 text-center\">2</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">图2</td><td class=\"border border-slate-300 px-2 py-1 text-center\">2</td><td class=\"border border-slate-300 px-2 py-1 text-center\">1</td><td class=\"border border-slate-300 px-2 py-1 text-center\">4</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">图3</td><td class=\"border border-slate-300 px-2 py-1 text-center\">3</td><td class=\"border border-slate-300 px-2 py-1 text-center\">3</td><td class=\"border border-slate-300 px-2 py-1 text-center\">7</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">图4</td><td class=\"border border-slate-300 px-2 py-1 text-center\">4</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$x$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$y$</td></tr></table><br>【问题解决】<br>(1)请在图4中用四条分割线将圆面分割出最多的区域，并画出分割后的图形；<br>(2)将表格中的数据补充完整，$x=$_______；$y=$_______；<br>(3)猜想：圆中分割线的条数m、分割线的最多交点数n、圆面被分割出的最多平面区域数t之间的数量关系为：_______；<br>(4)根据上面的规律，你能用10条分割线将一个圆面分出57个区域吗？请说明理由．",
         "options": [],
         "answer": "(1)<br>解：出分割后的图形，如图所示：<br><img src=\"assets/images/img_docx_c344dd6a0962.png\" data-cx=\"1057275\" data-cy=\"1038225\" style=\"width:111px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(2)6；11<br>(3)$t-m-n=1$（或其它正确的变形形式）<br>(4)<br>解：不能，理由如下：<br>2条分割线最多有1个交点，<br>3条分割线最多有$1+2=3$个交点，<br>4条分割线最多有$1+2+3=6$个交点，<br>……<br>10条分割线最多有$1+2+3+\\cdot \\cdot \\cdot +9=\\frac{1}{2}\\times (1+9)\\times 9=45$个交点，<br>根据解析（3）可得：10条分割线将圆面分割出最多的区域为：<br>$t=m+n+1=10+45+1=56<57$，<br>∴不能用10条分割线将一个圆面分出57个区域．",
         "analysis": "本题主要考查了规律探索，解题的关键是根据已知图形，找出一般规律．<br>（1）四条直线两两相交，且没有三条直线交于一点，画出图形即可；<br>（2）根据画出的图形得出x、y的值即可；<br>（3）根据表格中数据得出规律写出等式即可；<br>（4）求出用10条分割线分成的最多区域个数，然后进行对比即可．",
@@ -12634,7 +12634,7 @@
         "difficulty": "容易",
         "knowledge": "程序流程图与代数式求值、数字类规律探索",
         "chapter": "第三章 代数式单元测试",
-        "stem": "如图所示的运算程序中，若开始输入的$x$值为$16$，我们发现第$1$次输出的结果为$8$，第$2$次输出的结果为$4$，…第$2022$次输出的结果为（    ）<br><img src=\"assets/images/img_docx_d4824e79425d.png\" data-cx=\"3514725\" data-cy=\"1038225\" style=\"width:369px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "如图所示的运算程序中，若开始输入的$x$值为$16$，我们发现第$1$次输出的结果为$8$，第$2$次输出的结果为$4$，…第$2022$次输出的结果为（    ）<br><img src=\"assets/images/img_docx_d4824e79425d.png\" data-cx=\"3514725\" data-cy=\"1038225\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [
             "A. $8$",
             "B. $6$",
@@ -12697,7 +12697,7 @@
         "difficulty": "容易",
         "knowledge": "用代数式表示数、图形的规律",
         "chapter": "第三章 代数式单元测试",
-        "stem": "下列图形都是按照一定规律组成，第一个图形中共有2个三角形，第二个图形中共有8个三角形，第三个图形中共有14个三角形…，依此规律，第八个图形中三角形的个数是（  ）<br><img src=\"assets/images/img_docx_bb8291371c87.png\" data-cx=\"4352925\" data-cy=\"752475\" style=\"width:420px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "下列图形都是按照一定规律组成，第一个图形中共有2个三角形，第二个图形中共有8个三角形，第三个图形中共有14个三角形…，依此规律，第八个图形中三角形的个数是（  ）<br><img src=\"assets/images/img_docx_bb8291371c87.png\" data-cx=\"4352925\" data-cy=\"752475\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [
             "A. 26",
             "B. 32",
@@ -12798,7 +12798,7 @@
         "difficulty": "中等",
         "knowledge": "程序流程图与代数式求值、程序流程图与有理数计算",
         "chapter": "第三章 代数式单元测试",
-        "stem": "下面是一组数值转换机的示意图．<br><img src=\"assets/images/img_docx_eccf1b8a6cac.png\" data-cx=\"3114675\" data-cy=\"1438275\" style=\"width:327px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)写出图（b）中的转化步骤：①_____，②_____，③_____；<br>(2)图（b）中，若$x=-4$，求输出的值；<br>(3)图（a）中，若$y=13$，求x的值．",
+        "stem": "下面是一组数值转换机的示意图．<br><img src=\"assets/images/img_docx_eccf1b8a6cac.png\" data-cx=\"3114675\" data-cy=\"1438275\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)写出图（b）中的转化步骤：①_____，②_____，③_____；<br>(2)图（b）中，若$x=-4$，求输出的值；<br>(3)图（a）中，若$y=13$，求x的值．",
         "options": [],
         "answer": "(1)$+1$，${()}^{2}$，$\\times 2$<br>(2)$18$<br>(3)3或$-3$",
         "analysis": "（1）根据图形和算式$2{(x+1)}^{2}$得出答案即可；<br>（2）把$x=-4$代入$2{(x+1)}^{2}$，再求出答案即可；<br>（3）把$y=13$代入$y=\\frac{3x^{2}-1}{2}$，再求出答案即可．<br>本题考查了求代数式的值，能根据图形得出算式是解此题的关键．",
@@ -12878,7 +12878,7 @@
         "difficulty": "容易",
         "knowledge": "用代数式表示数、图形的规律",
         "chapter": "第三章 代数式单元测试",
-        "stem": "$0.2582\\times 100+20=45.82\\approx 46$（元），<br>答：预计需要花费46元．<br>38．我国著名数学家华罗庚曾经说过，“数形结合百般好，隔裂分家万事非”，数形结合的思想方法在数学中应用极为广泛．观察下列按照一定规律堆砌的小钢管的横截面图：<br><img src=\"assets/images/img_docx_0c567b8416f0.png\" data-cx=\"3286125\" data-cy=\"762000\" style=\"width:345px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)当$n=1$时，钢管总数为______；<br>当$n=2$时，钢管总数为______；<br>当$n=3$时，钢管总数为______；<br>当$n=4$时，钢管总数为______；<br>(2)若按照这个规律继续堆砌小钢管，计算第25个图的钢管总数，并写出你的分析过程．",
+        "stem": "$0.2582\\times 100+20=45.82\\approx 46$（元），<br>答：预计需要花费46元．<br>38．我国著名数学家华罗庚曾经说过，“数形结合百般好，隔裂分家万事非”，数形结合的思想方法在数学中应用极为广泛．观察下列按照一定规律堆砌的小钢管的横截面图：<br><img src=\"assets/images/img_docx_0c567b8416f0.png\" data-cx=\"3286125\" data-cy=\"762000\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)当$n=1$时，钢管总数为______；<br>当$n=2$时，钢管总数为______；<br>当$n=3$时，钢管总数为______；<br>当$n=4$时，钢管总数为______；<br>(2)若按照这个规律继续堆砌小钢管，计算第25个图的钢管总数，并写出你的分析过程．",
         "options": [],
         "answer": "(1)3；9；18；30<br>(2)<br>解：设钢管总数为$S_{n}$，<br>因为$S_{1}=1+2$；<br>$S_{2}=1+2+3+3$；<br>$S_{3}=1+2+3+4+4+4$；<br>$S_{4}=1+2+3+4+5+5+5+5$，<br>所以$S_{n}=(1+2+3+\\cdot \\cdot \\cdot +n)+n(n+1)=\\frac{n(n+1)}{2}+n(n+1)$，<br>将$n=25$代入，得$S_{n}=\\frac{25\\times 26}{2}+25\\times 26=975$，<br>所以第25个图的钢管总数为975个．",
         "analysis": "本题主要考查了图形规律探索，解题的关键是根据已知图形得出规律．<br>（1）根据已知图形得出对应n的值即可；<br>（2）根据已知图形得出一般规律，然后令$n=25$，求出结果即可．",
@@ -13116,7 +13116,7 @@
         "difficulty": "中等",
         "knowledge": "单项式规律题",
         "chapter": "4.1.1 单项式",
-        "stem": "观察下列单项式：根据摆放规律，从第2024个单项式到第2025个单项式的箭头是______．（填→、↑、←、↓）<br><img src=\"assets/images/img_docx_1c38ec0dc585.png\" data-cx=\"3971925\" data-cy=\"742950\" style=\"width:417px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "观察下列单项式：根据摆放规律，从第2024个单项式到第2025个单项式的箭头是______．（填→、↑、←、↓）<br><img src=\"assets/images/img_docx_1c38ec0dc585.png\" data-cx=\"3971925\" data-cy=\"742950\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [],
         "answer": "$→$",
         "analysis": "本题考查图形类规律探究，根据箭头规律按照$↓,→,↑,→$的顺序为一个循环，进行判断即可．",
@@ -14366,10 +14366,10 @@
         "chapter": "13.1三角形单元测试卷",
         "stem": "下列图形中，具有稳定性的是（　　）",
         "options": [
-            "A. <img src=\"assets/images/ch13_1_q1_a.png\" data-cx=\"1524000\" data-cy=\"762000\" style=\"width:120px;height:auto\" class=\"inline-block align-middle my-1\">",
-            "B. <img src=\"assets/images/ch13_1_q1_b.png\" data-cx=\"1524000\" data-cy=\"762000\" style=\"width:120px;height:auto\" class=\"inline-block align-middle my-1\">",
-            "C. <img src=\"assets/images/ch13_1_q1_c.png\" data-cx=\"1185333\" data-cy=\"931333\" style=\"width:95px;height:auto\" class=\"inline-block align-middle my-1\">",
-            "D. <img src=\"assets/images/ch13_1_q1_d.png\" data-cx=\"1185333\" data-cy=\"931333\" style=\"width:95px;height:auto\" class=\"inline-block align-middle my-1\">"
+            "A. <img src=\"assets/images/ch13_1_q1_a.png\" data-cx=\"1524000\" data-cy=\"762000\" style=\"width:160px;height:auto\" class=\"inline-block align-middle my-1\">",
+            "B. <img src=\"assets/images/ch13_1_q1_b.png\" data-cx=\"1524000\" data-cy=\"762000\" style=\"width:160px;height:auto\" class=\"inline-block align-middle my-1\">",
+            "C. <img src=\"assets/images/ch13_1_q1_c.png\" data-cx=\"1185333\" data-cy=\"931333\" style=\"width:124px;height:auto\" class=\"inline-block align-middle my-1\">",
+            "D. <img src=\"assets/images/ch13_1_q1_d.png\" data-cx=\"1185333\" data-cy=\"931333\" style=\"width:124px;height:auto\" class=\"inline-block align-middle my-1\">"
         ],
         "answer": "B",
         "analysis": "本题考查的是三角形的性质，熟记三角形具有稳定性是解题的关键。根据三角形具有稳定性判断。",
@@ -14387,10 +14387,10 @@
         "chapter": "13.1三角形单元测试卷",
         "stem": "如图，四个图形中，线段$BE$是$\\triangle ABC$的高的图是（　　）",
         "options": [
-            "A. <img src=\"assets/images/ch13_1_q2_a.png\" data-cx=\"1693333\" data-cy=\"1154545\" style=\"width:150px;height:auto\" class=\"inline-block align-middle my-1\">",
-            "B. <img src=\"assets/images/ch13_1_q2_b.png\" data-cx=\"1693333\" data-cy=\"1154545\" style=\"width:150px;height:auto\" class=\"inline-block align-middle my-1\">",
-            "C. <img src=\"assets/images/ch13_1_q2_c.png\" data-cx=\"1693333\" data-cy=\"1077575\" style=\"width:150px;height:auto\" class=\"inline-block align-middle my-1\">",
-            "D. <img src=\"assets/images/ch13_1_q2_d.png\" data-cx=\"1693333\" data-cy=\"1077575\" style=\"width:150px;height:auto\" class=\"inline-block align-middle my-1\">"
+            "A. <img src=\"assets/images/ch13_1_q2_a.png\" data-cx=\"1693333\" data-cy=\"1154545\" style=\"width:178px;height:auto\" class=\"inline-block align-middle my-1\">",
+            "B. <img src=\"assets/images/ch13_1_q2_b.png\" data-cx=\"1693333\" data-cy=\"1154545\" style=\"width:178px;height:auto\" class=\"inline-block align-middle my-1\">",
+            "C. <img src=\"assets/images/ch13_1_q2_c.png\" data-cx=\"1693333\" data-cy=\"1077575\" style=\"width:178px;height:auto\" class=\"inline-block align-middle my-1\">",
+            "D. <img src=\"assets/images/ch13_1_q2_d.png\" data-cx=\"1693333\" data-cy=\"1077575\" style=\"width:178px;height:auto\" class=\"inline-block align-middle my-1\">"
         ],
         "answer": "D",
         "analysis": "根据高的画法知，过点$B$作$AC$边上的高，垂足为$E$，其中线段$BE$是$\\triangle ABC$的高。",
@@ -14448,7 +14448,7 @@
         "difficulty": "容易",
         "knowledge": "三角形的外角的定义及性质、与角平分线有关的三角形内角和问题、三角形内角和定理的应用",
         "chapter": "13.1三角形单元测试卷",
-        "stem": "如图，在$\\triangle ABC$中，$AD$、$AE$分别是$\\triangle ABC$的角平分线和高，若$\\angle B=40^\\circ$，$\\angle EAD=16^\\circ$，则$\\angle C$的度数是（　　）<br><img src=\"assets/images/ch13_1_q5.png\" data-cx=\"1828800\" data-cy=\"1600200\" style=\"width:190px;height:auto;margin:8px 0\" class=\"block\">",
+        "stem": "如图，在$\\triangle ABC$中，$AD$、$AE$分别是$\\triangle ABC$的角平分线和高，若$\\angle B=40^\\circ$，$\\angle EAD=16^\\circ$，则$\\angle C$的度数是（　　）<br><img src=\"assets/images/ch13_1_q5.png\" data-cx=\"1828800\" data-cy=\"1600200\" style=\"width:165px;height:auto;margin:8px 0\" class=\"block\">",
         "options": [
             "A. $74^\\circ$",
             "B. $72^\\circ$",
@@ -14553,7 +14553,7 @@
         "difficulty": "容易",
         "knowledge": "三角形的外角的定义及性质、根据平行线的性质求角的度数",
         "chapter": "13.1三角形单元测试卷",
-        "stem": "如图1所示，在反射现象中，反射光线、入射光线和法线都在同一个平面内；反射光线和入射光线分别位于法线两侧；反射角$r$等于入射角$i$。这就是光的反射定律。如图2所示，李明同学将支架平面镜放置在水平桌面$MN$上，镜面$AB$的调节角$\\angle ABC=40^\\circ$，激光笔发出的光束$DG$射到平面镜上，若激光笔与水平天花板（直线$EF$）的夹角$\\angle EPG=35^\\circ$，则反射光束$GH$与天花板所形成的角$\\angle EHG$的度数为（　　）<br><img src=\"assets/images/ch13_1_q10_stem.png\" data-cx=\"3800000\" data-cy=\"1479285\" style=\"width:440px;max-width:100%;height:auto;margin:8px 0\" class=\"block\">",
+        "stem": "如图1所示，在反射现象中，反射光线、入射光线和法线都在同一个平面内；反射光线和入射光线分别位于法线两侧；反射角$r$等于入射角$i$。这就是光的反射定律。如图2所示，李明同学将支架平面镜放置在水平桌面$MN$上，镜面$AB$的调节角$\\angle ABC=40^\\circ$，激光笔发出的光束$DG$射到平面镜上，若激光笔与水平天花板（直线$EF$）的夹角$\\angle EPG=35^\\circ$，则反射光束$GH$与天花板所形成的角$\\angle EHG$的度数为（　　）<br><img src=\"assets/images/ch13_1_q10_stem.png\" data-cx=\"3800000\" data-cy=\"1479285\" style=\"width:280px;max-width:100%;height:auto;margin:8px 0\" class=\"block\">",
         "options": [
             "A. $45^\\circ$",
             "B. $60^\\circ$",
@@ -14562,7 +14562,7 @@
         ],
         "answer": "C",
         "analysis": "本题考查了平行线的性质、三角形外角的性质，先根据平行线的性质得出$\\angle BGQ=\\angle ABM=40^\\circ$，结合$GK\\perp AB$与$EF\\parallel GQ$求出$\\angle HGP=30^\\circ$，再由外角性质求出$\\angle EHG$。",
-        "detail": "解：过点$G$作$GK\\perp AB$，过点$G$作$GQ\\parallel MN$，<br><img src=\"assets/images/ch13_1_q10_detail.png\" data-cx=\"3800000\" data-cy=\"1479285\" style=\"width:440px;max-width:100%;height:auto;margin:8px 0\" class=\"block\">$\\therefore \\angle BGQ=\\angle ABM=40^\\circ$，<br>$\\because GK\\perp AB$，$\\therefore \\angle KGB=90^\\circ$，$\\therefore \\angle KGQ=50^\\circ$。<br>$\\because EF\\parallel MN$，$GQ\\parallel MN$，$\\therefore EF\\parallel GQ$，<br>$\\therefore \\angle PGQ=\\angle EPG=35^\\circ$，<br>$\\therefore \\angle KGP=50^\\circ-35^\\circ=15^\\circ$。<br>$\\because \\angle HGK=\\angle KGP=15^\\circ$，$\\therefore \\angle HGP=30^\\circ$，<br>$\\therefore \\angle EHG=\\angle HPG+\\angle HGP=35^\\circ+30^\\circ=65^\\circ$。<br>故选：C。"
+        "detail": "解：过点$G$作$GK\\perp AB$，过点$G$作$GQ\\parallel MN$，<br><img src=\"assets/images/ch13_1_q10_detail.png\" data-cx=\"3800000\" data-cy=\"1479285\" style=\"width:280px;max-width:100%;height:auto;margin:8px 0\" class=\"block\">$\\therefore \\angle BGQ=\\angle ABM=40^\\circ$，<br>$\\because GK\\perp AB$，$\\therefore \\angle KGB=90^\\circ$，$\\therefore \\angle KGQ=50^\\circ$。<br>$\\because EF\\parallel MN$，$GQ\\parallel MN$，$\\therefore EF\\parallel GQ$，<br>$\\therefore \\angle PGQ=\\angle EPG=35^\\circ$，<br>$\\therefore \\angle KGP=50^\\circ-35^\\circ=15^\\circ$。<br>$\\because \\angle HGK=\\angle KGP=15^\\circ$，$\\therefore \\angle HGP=30^\\circ$，<br>$\\therefore \\angle EHG=\\angle HPG+\\angle HGP=35^\\circ+30^\\circ=65^\\circ$。<br>故选：C。"
     },
     {
         "id": "tri13_11",
@@ -14595,7 +14595,7 @@
         "difficulty": "中等",
         "knowledge": "三角形折叠中的角度问题、与平行线有关的三角形内角和问题",
         "chapter": "13.1三角形单元测试卷",
-        "stem": "在三角形纸片$ABC$中，$\\angle A=90^\\circ$，$\\angle C=25^\\circ$，点$D$为$AC$边上靠近点$C$处一定点，点$E$为$BC$边上一动点，沿$DE$折叠三角形纸片，点$C$落在点$C'$处。<br>①如图1，当点$C'$落在$BC$边上时，$\\angle ADC'=50^\\circ$；<br>②如图2，当点$C'$落在$\\triangle ABC$内部时，$\\angle ADC'+\\angle BEC'=50^\\circ$；<br>③如图3，当点$C'$落在$\\triangle ABC$上方时，$\\angle BEC'-\\angle ADC'=50^\\circ$；<br>④当$C'E\\parallel AB$时，$\\angle CDE=32.5^\\circ$或$\\angle CDE=123.5^\\circ$。<br>以上结论正确的个数是（　　）<br><img src=\"assets/images/ch13_1_q12_stem.png\" data-cx=\"4000000\" data-cy=\"1000000\" style=\"width:480px;max-width:100%;height:auto;margin:8px 0\" class=\"block\">",
+        "stem": "在三角形纸片$ABC$中，$\\angle A=90^\\circ$，$\\angle C=25^\\circ$，点$D$为$AC$边上靠近点$C$处一定点，点$E$为$BC$边上一动点，沿$DE$折叠三角形纸片，点$C$落在点$C'$处。<br>①如图1，当点$C'$落在$BC$边上时，$\\angle ADC'=50^\\circ$；<br>②如图2，当点$C'$落在$\\triangle ABC$内部时，$\\angle ADC'+\\angle BEC'=50^\\circ$；<br>③如图3，当点$C'$落在$\\triangle ABC$上方时，$\\angle BEC'-\\angle ADC'=50^\\circ$；<br>④当$C'E\\parallel AB$时，$\\angle CDE=32.5^\\circ$或$\\angle CDE=123.5^\\circ$。<br>以上结论正确的个数是（　　）<br><img src=\"assets/images/ch13_1_q12_stem.png\" data-cx=\"4000000\" data-cy=\"1000000\" style=\"width:280px;max-width:100%;height:auto;margin:8px 0\" class=\"block\">",
         "options": [
             "A. 1",
             "B. 2",
@@ -14604,7 +14604,7 @@
         ],
         "answer": "C",
         "analysis": "该题主要考查了折叠的性质、平行线的性质、三角形内角和定理。分别根据点$C'$落点位置及$C'E\\parallel AB$两种情况结合折叠性质计算。",
-        "detail": "解：①如图1，当点$C'$落在$BC$边上时，根据折叠性质可得$\\angle C=\\angle DC'C$，$\\angle CDE=\\angle C'DE$，$\\angle DEC=\\angle DEC'$，$\\therefore \\angle ADC'=2\\angle C=50^\\circ$，故①正确；<br>②如图2，当点$C'$落在$\\triangle ABC$内部时，$\\angle ADC'+\\angle BEC'=180^\\circ\\times2-(\\angle CDC'+\\angle CEC')=360^\\circ-2(\\angle CDE+\\angle CED)=360^\\circ-2(180^\\circ-\\angle C)=2\\angle C=50^\\circ$，故②正确；<br>③如图3，当点$C'$落在$\\triangle ABC$上方时，$\\angle BEC'-\\angle ADC'=(180^\\circ-\\angle CEC')-(\\angle CDE+\\angle C'DE-180^\\circ)=360^\\circ-2(\\angle CDE+\\angle CED)=2\\angle C=50^\\circ$，故③正确；<br>④当$C'E\\parallel AB$时，分两种情况：<br><img src=\"assets/images/ch13_1_q12_detail1.png\" data-cx=\"1900000\" data-cy=\"1306250\" style=\"width:190px;height:auto;margin:6px 0\" class=\"block\">第一种情况：$\\because \\angle A=90^\\circ$，$\\angle C=25^\\circ$，$\\therefore \\angle B=65^\\circ$。$\\because C'E\\parallel AB$，$\\therefore \\angle CEC'=\\angle B=65^\\circ$，$\\therefore \\angle CED=\\frac{1}{2}\\angle CEC'=32.5^\\circ$，$\\therefore \\angle CDE=180^\\circ-25^\\circ-32.5^\\circ=122.5^\\circ$；<br><img src=\"assets/images/ch13_1_q12_detail2.png\" data-cx=\"1900000\" data-cy=\"1385416\" style=\"width:190px;height:auto;margin:6px 0\" class=\"block\">第二种情况：$\\because C'E\\parallel AB$，$\\therefore \\angle BEC'=\\angle B=65^\\circ$，$\\therefore \\angle DFC=\\angle BEC'+\\angle C'=65^\\circ+25^\\circ=90^\\circ$，$\\therefore \\angle CDF=90^\\circ-\\angle C=65^\\circ$，$\\therefore \\angle CDE=\\frac{1}{2}\\angle CDC'=32.5^\\circ$。<br>综上，$\\angle CDE=32.5^\\circ$或$\\angle CDE=122.5^\\circ$，故④错误。<br>故选：C。"
+        "detail": "解：①如图1，当点$C'$落在$BC$边上时，根据折叠性质可得$\\angle C=\\angle DC'C$，$\\angle CDE=\\angle C'DE$，$\\angle DEC=\\angle DEC'$，$\\therefore \\angle ADC'=2\\angle C=50^\\circ$，故①正确；<br>②如图2，当点$C'$落在$\\triangle ABC$内部时，$\\angle ADC'+\\angle BEC'=180^\\circ\\times2-(\\angle CDC'+\\angle CEC')=360^\\circ-2(\\angle CDE+\\angle CED)=360^\\circ-2(180^\\circ-\\angle C)=2\\angle C=50^\\circ$，故②正确；<br>③如图3，当点$C'$落在$\\triangle ABC$上方时，$\\angle BEC'-\\angle ADC'=(180^\\circ-\\angle CEC')-(\\angle CDE+\\angle C'DE-180^\\circ)=360^\\circ-2(\\angle CDE+\\angle CED)=2\\angle C=50^\\circ$，故③正确；<br>④当$C'E\\parallel AB$时，分两种情况：<br><img src=\"assets/images/ch13_1_q12_detail1.png\" data-cx=\"1900000\" data-cy=\"1306250\" style=\"width:199px;height:auto;margin:6px 0\" class=\"block\">第一种情况：$\\because \\angle A=90^\\circ$，$\\angle C=25^\\circ$，$\\therefore \\angle B=65^\\circ$。$\\because C'E\\parallel AB$，$\\therefore \\angle CEC'=\\angle B=65^\\circ$，$\\therefore \\angle CED=\\frac{1}{2}\\angle CEC'=32.5^\\circ$，$\\therefore \\angle CDE=180^\\circ-25^\\circ-32.5^\\circ=122.5^\\circ$；<br><img src=\"assets/images/ch13_1_q12_detail2.png\" data-cx=\"1900000\" data-cy=\"1385416\" style=\"width:199px;height:auto;margin:6px 0\" class=\"block\">第二种情况：$\\because C'E\\parallel AB$，$\\therefore \\angle BEC'=\\angle B=65^\\circ$，$\\therefore \\angle DFC=\\angle BEC'+\\angle C'=65^\\circ+25^\\circ=90^\\circ$，$\\therefore \\angle CDF=90^\\circ-\\angle C=65^\\circ$，$\\therefore \\angle CDE=\\frac{1}{2}\\angle CDC'=32.5^\\circ$。<br>综上，$\\angle CDE=32.5^\\circ$或$\\angle CDE=122.5^\\circ$，故④错误。<br>故选：C。"
     },
     {
         "id": "tri13_13",
@@ -14616,7 +14616,7 @@
         "difficulty": "容易",
         "knowledge": "确定第三边的取值范围",
         "chapter": "13.1三角形单元测试卷",
-        "stem": "$\\triangle ABC$的边长如图所示，写出一个符合条件的$m$的值______。<br><img src=\"assets/images/ch13_1_q13.png\" data-cx=\"1900000\" data-cy=\"1029166\" style=\"width:200px;height:auto;margin:8px 0\" class=\"block\">",
+        "stem": "$\\triangle ABC$的边长如图所示，写出一个符合条件的$m$的值______。<br><img src=\"assets/images/ch13_1_q13.png\" data-cx=\"1900000\" data-cy=\"1029166\" style=\"width:199px;height:auto;margin:8px 0\" class=\"block\">",
         "options": [],
         "answer": "$4$（答案不唯一）",
         "analysis": "本题考查三角形的三边关系，根据三角形任意两边之和大于第三边，任意两边之差小于第三边求得$m$的取值范围即可求解。",
@@ -14632,7 +14632,7 @@
         "difficulty": "容易",
         "knowledge": "根据三角形中线求面积",
         "chapter": "13.1三角形单元测试卷",
-        "stem": "如图，$\\triangle ABC$中，点$D$是$BC$的中点，$2AE=ED$，且$\\triangle ABC$的面积为$8$，则阴影部分的面积是______。<br><img src=\"assets/images/ch13_1_q14.png\" data-cx=\"1900000\" data-cy=\"1662500\" style=\"width:190px;height:auto;margin:8px 0\" class=\"block\">",
+        "stem": "如图，$\\triangle ABC$中，点$D$是$BC$的中点，$2AE=ED$，且$\\triangle ABC$的面积为$8$，则阴影部分的面积是______。<br><img src=\"assets/images/ch13_1_q14.png\" data-cx=\"1900000\" data-cy=\"1662500\" style=\"width:165px;height:auto;margin:8px 0\" class=\"block\">",
         "options": [],
         "answer": "$\\frac{4}{3}$",
         "analysis": "本题考查了三角形的面积和中线的性质：三角形的中线将三角形面积分成相等的两部分。根据题意可知：$\\triangle ADC$的面积是阴影部分面积的$3$倍，$\\triangle ABC$的面积是$\\triangle ADC$面积的$2$倍。",
@@ -14648,11 +14648,11 @@
         "difficulty": "中等",
         "knowledge": "三角形内角和定理的应用",
         "chapter": "13.1三角形单元测试卷",
-        "stem": "将一个三角板$ABC$和圆规按如图方式摆放在同一水平桌面上，圆规的两脚恰好接触三角板的一组邻直角边。已知$\\angle 1=16^\\circ$，$\\angle 2=31^\\circ$，则$\\angle 3=$______度。<br><img src=\"assets/images/ch13_1_q15_stem.png\" data-cx=\"1900000\" data-cy=\"1824000\" style=\"width:200px;height:auto;margin:8px 0\" class=\"block\">",
+        "stem": "将一个三角板$ABC$和圆规按如图方式摆放在同一水平桌面上，圆规的两脚恰好接触三角板的一组邻直角边。已知$\\angle 1=16^\\circ$，$\\angle 2=31^\\circ$，则$\\angle 3=$______度。<br><img src=\"assets/images/ch13_1_q15_stem.png\" data-cx=\"1900000\" data-cy=\"1824000\" style=\"width:165px;height:auto;margin:8px 0\" class=\"block\">",
         "options": [],
         "answer": "$43$",
         "analysis": "本题主要考查了三角形内角和定理的应用，连接$EF$，由三角形内角和定理可得出$\\angle CEF+\\angle CFE=90^\\circ$，根据角的和差关系即可得出$\\angle DEF+\\angle DFE=137^\\circ$，再根据三角形内角和定理求解即可。",
-        "detail": "解：如图，连接$EF$，<br><img src=\"assets/images/ch13_1_q15_detail.png\" data-cx=\"1900000\" data-cy=\"1824000\" style=\"width:200px;height:auto;margin:8px 0\" class=\"block\">由题意可知，$\\angle C=90^\\circ$，<br>在$\\triangle EFC$中，$\\angle CEF+\\angle CFE+\\angle C=180^\\circ$，<br>$\\therefore \\angle CEF+\\angle CFE=180^\\circ-\\angle C=90^\\circ$。<br>又$\\because \\angle 1=16^\\circ$，$\\angle 2=31^\\circ$，<br>$\\therefore \\angle 1+\\angle CEF+\\angle 2+\\angle CFE=16^\\circ+90^\\circ+31^\\circ=137^\\circ$，即$\\angle DEF+\\angle DFE=137^\\circ$。<br>在$\\triangle DEF$中，$\\angle 3=180^\\circ-(\\angle DEF+\\angle DFE)=180^\\circ-137^\\circ=43^\\circ$。<br>故答案为：$43$。"
+        "detail": "解：如图，连接$EF$，<br><img src=\"assets/images/ch13_1_q15_detail.png\" data-cx=\"1900000\" data-cy=\"1824000\" style=\"width:165px;height:auto;margin:8px 0\" class=\"block\">由题意可知，$\\angle C=90^\\circ$，<br>在$\\triangle EFC$中，$\\angle CEF+\\angle CFE+\\angle C=180^\\circ$，<br>$\\therefore \\angle CEF+\\angle CFE=180^\\circ-\\angle C=90^\\circ$。<br>又$\\because \\angle 1=16^\\circ$，$\\angle 2=31^\\circ$，<br>$\\therefore \\angle 1+\\angle CEF+\\angle 2+\\angle CFE=16^\\circ+90^\\circ+31^\\circ=137^\\circ$，即$\\angle DEF+\\angle DFE=137^\\circ$。<br>在$\\triangle DEF$中，$\\angle 3=180^\\circ-(\\angle DEF+\\angle DFE)=180^\\circ-137^\\circ=43^\\circ$。<br>故答案为：$43$。"
     },
     {
         "id": "tri13_16",
@@ -14664,11 +14664,11 @@
         "difficulty": "中等",
         "knowledge": "对顶角相等、三角形的外角的定义及性质、与角平分线有关的三角形内角和问题",
         "chapter": "13.1三角形单元测试卷",
-        "stem": "如图，$\\angle BAD$，$\\angle BCD$的角平分线相交于点$P$，若$\\angle B=5\\angle D=65^\\circ$，则$\\angle P$的度数为______。<br><img src=\"assets/images/ch13_1_q16_stem.png\" data-cx=\"1900000\" data-cy=\"1512244\" style=\"width:200px;height:auto;margin:8px 0\" class=\"block\">",
+        "stem": "如图，$\\angle BAD$，$\\angle BCD$的角平分线相交于点$P$，若$\\angle B=5\\angle D=65^\\circ$，则$\\angle P$的度数为______。<br><img src=\"assets/images/ch13_1_q16_stem.png\" data-cx=\"1900000\" data-cy=\"1512244\" style=\"width:199px;height:auto;margin:8px 0\" class=\"block\">",
         "options": [],
         "answer": "$26^\\circ$",
         "analysis": "本题考查了角的平分线、三角形外角性质、三角形内角和定理、对顶角相等。设$AP,BC$的交点为$M$，延长$BC$交$AD$于点$N$，利用$\\angle BCD=\\angle BAD+\\angle B+\\angle D$及$\\angle BAM+\\angle B=\\angle PCM+\\angle P$求解。",
-        "detail": "解：设$AP,BC$的交点为$M$，延长$BC$交$AD$于点$N$，<br><img src=\"assets/images/ch13_1_q16_detail.png\" data-cx=\"1900000\" data-cy=\"1589795\" style=\"width:200px;height:auto;margin:8px 0\" class=\"block\">$\\because \\angle BAD$，$\\angle BCD$的角平分线相交于点$P$，<br>$\\therefore \\angle BCD=2\\angle PCM$，$\\angle BAD=2\\angle BAM$。<br>$\\because \\angle BCD=\\angle BND+\\angle D$，$\\angle BND=\\angle BAD+\\angle B$，<br>$\\therefore \\angle BCD=\\angle BAD+\\angle B+\\angle D$，<br>$\\therefore 2\\angle PCM=2\\angle BAM+\\angle B+\\angle D$，即$\\angle PCM-\\angle BAM=\\frac{\\angle B+\\angle D}{2}$。<br>$\\because \\angle AMB=\\angle PMC$，$\\therefore \\angle BAM+\\angle B=\\angle PCM+\\angle P$，<br>$\\therefore \\angle P=\\angle B-(\\angle PCM-\\angle BAM)=\\angle B-\\frac{\\angle B+\\angle D}{2}=\\frac{\\angle B-\\angle D}{2}$。<br>$\\because \\angle B=5\\angle D=65^\\circ$，$\\therefore \\angle B=65^\\circ$，$\\angle D=13^\\circ$，<br>$\\therefore \\angle P=\\frac{65^\\circ-13^\\circ}{2}=26^\\circ$。<br>故答案为：$26^\\circ$。"
+        "detail": "解：设$AP,BC$的交点为$M$，延长$BC$交$AD$于点$N$，<br><img src=\"assets/images/ch13_1_q16_detail.png\" data-cx=\"1900000\" data-cy=\"1589795\" style=\"width:165px;height:auto;margin:8px 0\" class=\"block\">$\\because \\angle BAD$，$\\angle BCD$的角平分线相交于点$P$，<br>$\\therefore \\angle BCD=2\\angle PCM$，$\\angle BAD=2\\angle BAM$。<br>$\\because \\angle BCD=\\angle BND+\\angle D$，$\\angle BND=\\angle BAD+\\angle B$，<br>$\\therefore \\angle BCD=\\angle BAD+\\angle B+\\angle D$，<br>$\\therefore 2\\angle PCM=2\\angle BAM+\\angle B+\\angle D$，即$\\angle PCM-\\angle BAM=\\frac{\\angle B+\\angle D}{2}$。<br>$\\because \\angle AMB=\\angle PMC$，$\\therefore \\angle BAM+\\angle B=\\angle PCM+\\angle P$，<br>$\\therefore \\angle P=\\angle B-(\\angle PCM-\\angle BAM)=\\angle B-\\frac{\\angle B+\\angle D}{2}=\\frac{\\angle B-\\angle D}{2}$。<br>$\\because \\angle B=5\\angle D=65^\\circ$，$\\therefore \\angle B=65^\\circ$，$\\angle D=13^\\circ$，<br>$\\therefore \\angle P=\\frac{65^\\circ-13^\\circ}{2}=26^\\circ$。<br>故答案为：$26^\\circ$。"
     },
     {
         "id": "tri13_17",
@@ -14696,7 +14696,7 @@
         "difficulty": "容易",
         "knowledge": "垂线的定义理解、角平分线的有关计算、三角形的外角的定义及性质、三角形内角和定理的应用",
         "chapter": "13.1三角形单元测试卷",
-        "stem": "如图，在$\\triangle ABC$中，$CD$平分$\\angle ACB$，$AE\\perp CD$，垂足为$F$，交$BC$于点$E$，若$\\angle BAE=33^\\circ$，$\\angle B=37^\\circ$，求$\\angle EAC$的度数。<br><img src=\"assets/images/ch13_1_q18.png\" data-cx=\"2200000\" data-cy=\"1178571\" style=\"width:240px;height:auto;margin:8px 0\" class=\"block\">",
+        "stem": "如图，在$\\triangle ABC$中，$CD$平分$\\angle ACB$，$AE\\perp CD$，垂足为$F$，交$BC$于点$E$，若$\\angle BAE=33^\\circ$，$\\angle B=37^\\circ$，求$\\angle EAC$的度数。<br><img src=\"assets/images/ch13_1_q18.png\" data-cx=\"2200000\" data-cy=\"1178571\" style=\"width:231px;height:auto;margin:8px 0\" class=\"block\">",
         "options": [],
         "answer": "$\\angle EAC=70^\\circ$",
         "analysis": "本题考查了三角形的内角和定理、三角形外角性质、垂直定义、等角的余角相等。先证$\\angle EAC=\\angle CEA$，再由外角性质$\\angle CEA=\\angle B+\\angle BAE$求解。",
@@ -14712,7 +14712,7 @@
         "difficulty": "容易",
         "knowledge": "三角形内角和定理的应用",
         "chapter": "13.1三角形单元测试卷",
-        "stem": "如图，在$\\triangle ABC$中，$\\angle A=100^\\circ$，$\\angle 1=\\angle 2$，$\\angle 3=\\angle 4$。求$x$的值。<br><img src=\"assets/images/ch13_1_q19.png\" data-cx=\"2200000\" data-cy=\"1178571\" style=\"width:240px;height:auto;margin:8px 0\" class=\"block\">",
+        "stem": "如图，在$\\triangle ABC$中，$\\angle A=100^\\circ$，$\\angle 1=\\angle 2$，$\\angle 3=\\angle 4$。求$x$的值。<br><img src=\"assets/images/ch13_1_q19.png\" data-cx=\"2200000\" data-cy=\"1178571\" style=\"width:231px;height:auto;margin:8px 0\" class=\"block\">",
         "options": [],
         "answer": "$x=140$",
         "analysis": "本题考查三角形内角和定理，利用三角形内角和定理求出$\\angle 1+\\angle 2+\\angle 3+\\angle 4=80^\\circ$，结合$\\angle 1=\\angle 2$，$\\angle 3=\\angle 4$得$\\angle 2+\\angle 4=40^\\circ$，进而求出$x$。",
@@ -14728,7 +14728,7 @@
         "difficulty": "容易",
         "knowledge": "根据三角形中线求面积、与三角形的高有关的计算问题",
         "chapter": "13.1三角形单元测试卷",
-        "stem": "如图，在$\\triangle ABC$中，$AD$、$CE$为$\\triangle ABC$的高，且$AD=3$，$CE=2$，$AB=6$，点$F$为$AC$的中点，连接$BF$。<br>（1）求$\\triangle ABF$的面积；<br>（2）求$\\triangle ABF$和$\\triangle BCF$的周长差。<br><img src=\"assets/images/ch13_1_q20.png\" data-cx=\"2200000\" data-cy=\"1425925\" style=\"width:230px;height:auto;margin:8px 0\" class=\"block\">",
+        "stem": "如图，在$\\triangle ABC$中，$AD$、$CE$为$\\triangle ABC$的高，且$AD=3$，$CE=2$，$AB=6$，点$F$为$AC$的中点，连接$BF$。<br>（1）求$\\triangle ABF$的面积；<br>（2）求$\\triangle ABF$和$\\triangle BCF$的周长差。<br><img src=\"assets/images/ch13_1_q20.png\" data-cx=\"2200000\" data-cy=\"1425925\" style=\"width:220px;height:auto;margin:8px 0\" class=\"block\">",
         "options": [],
         "answer": "（1）$3$；（2）$2$",
         "analysis": "本题考查了三角形的中线性质与面积公式的应用。（1）先由$AB$和$CE$求出$S_{\\triangle ABC}$，再由中线平分面积得$S_{\\triangle ABF}$；（2）由面积和$AD$求出$BC$，再计算周长差$AB-BC$。",
@@ -14760,7 +14760,7 @@
         "difficulty": "中等",
         "knowledge": "与三角形的高有关的计算问题、三角形内角和定理的应用",
         "chapter": "13.1三角形单元测试卷",
-        "stem": "如图，在$\\triangle ABC$中，$P$是线段$BC$上的一个动点，且不与$B,C$重合，$PD\\perp AB$，$PE\\perp AC$。<br>（1）已知$\\angle BAC=80^\\circ$，$\\angle B=\\angle C$：<br>①$\\angle DPE=$______；<br>②若$\\angle APB=3\\angle PAC$，则$\\angle APD=$______；<br>（2）如图②，已知$AB=AC$，作$BF\\perp AC$，试探究$BF$，$PE$，$PD$之间的关系。<br><img src=\"assets/images/ch13_1_q22.png\" data-cx=\"3400000\" data-cy=\"1487500\" style=\"width:380px;max-width:100%;height:auto;margin:8px 0\" class=\"block\">",
+        "stem": "如图，在$\\triangle ABC$中，$P$是线段$BC$上的一个动点，且不与$B,C$重合，$PD\\perp AB$，$PE\\perp AC$。<br>（1）已知$\\angle BAC=80^\\circ$，$\\angle B=\\angle C$：<br>①$\\angle DPE=$______；<br>②若$\\angle APB=3\\angle PAC$，则$\\angle APD=$______；<br>（2）如图②，已知$AB=AC$，作$BF\\perp AC$，试探究$BF$，$PE$，$PD$之间的关系。<br><img src=\"assets/images/ch13_1_q22.png\" data-cx=\"3400000\" data-cy=\"1487500\" style=\"width:280px;max-width:100%;height:auto;margin:8px 0\" class=\"block\">",
         "options": [],
         "answer": "（1）①$100^\\circ$；②$35^\\circ$；（2）$BF=PD+PE$",
         "analysis": "本题考查三角形内角和定理及等面积法的应用。（1）利用内角和与垂直求出角度；（2）连接$AP$，利用$S_{\\triangle ABC}=S_{\\triangle ABP}+S_{\\triangle APC}$及$AB=AC$推导$BF=PD+PE$。",
@@ -14776,11 +14776,11 @@
         "difficulty": "中等",
         "knowledge": "对顶角相等、与角平分线有关的三角形内角和问题、三角形内角和定理的应用",
         "chapter": "13.1三角形单元测试卷",
-        "stem": "如图，已知线段$AB$、$CD$相交于点$O$，连接$AC$、$BD$，我们把形如这样的图形称为“八字图形”。<br>（1）求证：$\\angle A+\\angle C=\\angle B+\\angle D$；<br>（2）利用八字图形解决问题：如图②，若$\\angle CAB$和$\\angle BDC$的平分线$AP$和$DP$相交于点$P$，与$CD$、$AB$分别交于点$M,N$。<br>①若$\\angle B=100^\\circ$，$\\angle C=120^\\circ$，求$\\angle P$的度数；<br>②根据①的结果直接写出$\\angle B$，$\\angle C$，$\\angle P$之间的关系是______。<br><img src=\"assets/images/ch13_1_q23_stem.png\" data-cx=\"3800000\" data-cy=\"1055555\" style=\"width:440px;max-width:100%;height:auto;margin:8px 0\" class=\"block\">",
+        "stem": "如图，已知线段$AB$、$CD$相交于点$O$，连接$AC$、$BD$，我们把形如这样的图形称为“八字图形”。<br>（1）求证：$\\angle A+\\angle C=\\angle B+\\angle D$；<br>（2）利用八字图形解决问题：如图②，若$\\angle CAB$和$\\angle BDC$的平分线$AP$和$DP$相交于点$P$，与$CD$、$AB$分别交于点$M,N$。<br>①若$\\angle B=100^\\circ$，$\\angle C=120^\\circ$，求$\\angle P$的度数；<br>②根据①的结果直接写出$\\angle B$，$\\angle C$，$\\angle P$之间的关系是______。<br><img src=\"assets/images/ch13_1_q23_stem.png\" data-cx=\"3800000\" data-cy=\"1055555\" style=\"width:280px;max-width:100%;height:auto;margin:8px 0\" class=\"block\">",
         "options": [],
         "answer": "（1）见解析；（2）①$\\angle P=110^\\circ$；②$2\\angle P=\\angle B+\\angle C$",
         "analysis": "本题主要考查了三角形内角和定理、角平分线的定义、对顶角的性质。（1）利用内角和与对顶角相等证明；（2）在两组“八字图形”中列等式相加化简。",
-        "detail": "（1）证明：在$\\triangle AOC$中，$\\angle A+\\angle C=180^\\circ-\\angle AOC$，<br>在$\\triangle BOD$中，$\\angle B+\\angle D=180^\\circ-\\angle BOD$，<br>$\\because \\angle AOC=\\angle BOD$，$\\therefore \\angle A+\\angle C=\\angle B+\\angle D$；<br><br>（2）解：①在$\\triangle AMC$和$\\triangle DMP$中，$\\angle C+\\angle CAM=\\angle P+\\angle PDM$；<br>在$\\triangle BDN$和$\\triangle PAN$中，$\\angle B+\\angle BDN=\\angle P+\\angle PAN$。<br>两式相加得：$\\angle C+\\angle CAM+\\angle B+\\angle BDN=2\\angle P+\\angle PDM+\\angle PAN$。<br>$\\because PA$平分$\\angle BAC$，$PD$平分$\\angle BDC$，$\\therefore \\angle CAM=\\angle PAN$，$\\angle BDN=\\angle PDM$，<br>$\\therefore \\angle C+\\angle B=2\\angle P$，即$120^\\circ+100^\\circ=2\\angle P$，$\\therefore \\angle P=110^\\circ$。<br>②$2\\angle P=\\angle B+\\angle C$。理由如下：<br><img src=\"assets/images/ch13_1_q23_detail.png\" data-cx=\"2200000\" data-cy=\"1217857\" style=\"width:240px;height:auto;margin:8px 0\" class=\"block\">$\\because AP$和$DP$分别平分$\\angle CAB$和$\\angle BDC$，$\\therefore \\angle 1=\\angle 2$，$\\angle 3=\\angle 4$。<br>由八字图形得$\\angle C+\\angle 1=\\angle P+\\angle 3$，$\\angle B+\\angle 4=\\angle P+\\angle 2$，<br>两式相加得$\\angle B+\\angle C=2\\angle P$。"
+        "detail": "（1）证明：在$\\triangle AOC$中，$\\angle A+\\angle C=180^\\circ-\\angle AOC$，<br>在$\\triangle BOD$中，$\\angle B+\\angle D=180^\\circ-\\angle BOD$，<br>$\\because \\angle AOC=\\angle BOD$，$\\therefore \\angle A+\\angle C=\\angle B+\\angle D$；<br><br>（2）解：①在$\\triangle AMC$和$\\triangle DMP$中，$\\angle C+\\angle CAM=\\angle P+\\angle PDM$；<br>在$\\triangle BDN$和$\\triangle PAN$中，$\\angle B+\\angle BDN=\\angle P+\\angle PAN$。<br>两式相加得：$\\angle C+\\angle CAM+\\angle B+\\angle BDN=2\\angle P+\\angle PDM+\\angle PAN$。<br>$\\because PA$平分$\\angle BAC$，$PD$平分$\\angle BDC$，$\\therefore \\angle CAM=\\angle PAN$，$\\angle BDN=\\angle PDM$，<br>$\\therefore \\angle C+\\angle B=2\\angle P$，即$120^\\circ+100^\\circ=2\\angle P$，$\\therefore \\angle P=110^\\circ$。<br>②$2\\angle P=\\angle B+\\angle C$。理由如下：<br><img src=\"assets/images/ch13_1_q23_detail.png\" data-cx=\"2200000\" data-cy=\"1217857\" style=\"width:220px;height:auto;margin:8px 0\" class=\"block\">$\\because AP$和$DP$分别平分$\\angle CAB$和$\\angle BDC$，$\\therefore \\angle 1=\\angle 2$，$\\angle 3=\\angle 4$。<br>由八字图形得$\\angle C+\\angle 1=\\angle P+\\angle 3$，$\\angle B+\\angle 4=\\angle P+\\angle 2$，<br>两式相加得$\\angle B+\\angle C=2\\angle P$。"
     },
     {
         "id": "tri13_24",
@@ -14792,11 +14792,11 @@
         "difficulty": "中等",
         "knowledge": "三角形的外角的定义及性质、与角平分线有关的三角形内角和问题",
         "chapter": "13.1三角形单元测试卷",
-        "stem": "如图①所示的图形，像我们常见的学习用品——圆规。我们把这样的图形叫做“规形图”，$\\angle BDC$叫“规角”。<br>（1）观察“规形图”，试探究规角$\\angle BDC$与$\\angle BAC$、$\\angle B$、$\\angle C$之间的数量关系，并说明理由；<br>（2）请你利用结论，解决下列问题：<br>①如图②，在$\\triangle ABC$中，$\\angle ABC$、$\\angle ACB$的平分线交于点$P$，若$\\angle A=50^\\circ$，则$\\angle P=$______度；<br>②如图③，$BD$平分$\\angle ABP$，$CD$平分$\\angle ACP$，若$\\angle A=40^\\circ$，$\\angle P=130^\\circ$，$\\angle D$的度数是______。<br><img src=\"assets/images/ch13_1_q24_stem.png\" data-cx=\"3600000\" data-cy=\"1350000\" style=\"width:420px;max-width:100%;height:auto;margin:8px 0\" class=\"block\">",
+        "stem": "如图①所示的图形，像我们常见的学习用品——圆规。我们把这样的图形叫做“规形图”，$\\angle BDC$叫“规角”。<br>（1）观察“规形图”，试探究规角$\\angle BDC$与$\\angle BAC$、$\\angle B$、$\\angle C$之间的数量关系，并说明理由；<br>（2）请你利用结论，解决下列问题：<br>①如图②，在$\\triangle ABC$中，$\\angle ABC$、$\\angle ACB$的平分线交于点$P$，若$\\angle A=50^\\circ$，则$\\angle P=$______度；<br>②如图③，$BD$平分$\\angle ABP$，$CD$平分$\\angle ACP$，若$\\angle A=40^\\circ$，$\\angle P=130^\\circ$，$\\angle D$的度数是______。<br><img src=\"assets/images/ch13_1_q24_stem.png\" data-cx=\"3600000\" data-cy=\"1350000\" style=\"width:280px;max-width:100%;height:auto;margin:8px 0\" class=\"block\">",
         "options": [],
         "answer": "（1）$\\angle BDC=\\angle BAC+\\angle B+\\angle C$；（2）①$115$；②$85^\\circ$",
         "analysis": "本题考查三角形内角和定理、外角性质以及角平分线的定义。（1）连接$AD$并延长至点$F$，利用三角形外角性质推导；（2）套用（1）中规形图结论结合角平分线计算。",
-        "detail": "（1）解：如图，连接$AD$并延长至点$F$，<br><img src=\"assets/images/ch13_1_q24_detail.png\" data-cx=\"1900000\" data-cy=\"1445652\" style=\"width:200px;height:auto;margin:8px 0\" class=\"block\">根据外角的性质，可得$\\angle BDF=\\angle BAD+\\angle B$，$\\angle CDF=\\angle C+\\angle CAD$。<br>又$\\because \\angle BDC=\\angle BDF+\\angle CDF$，$\\angle BAC=\\angle BAD+\\angle CAD$，<br>$\\therefore \\angle BDC=\\angle BAC+\\angle B+\\angle C$；<br><br>（2）解：①由（1）可得，$\\angle BPC=\\angle ABP+\\angle ACP+\\angle A$。<br>$\\because \\angle ABC$、$\\angle ACB$的平分线交于点$P$，<br>$\\therefore \\angle BPC=\\frac{1}{2}(\\angle ABC+\\angle ACB)+\\angle A=90^\\circ+\\frac{1}{2}\\angle A=90^\\circ+\\frac{1}{2}\\times50^\\circ=115^\\circ$。<br>②由（1）可得，$\\angle P=\\angle A+\\angle ABP+\\angle ACP$，$\\angle D=\\angle A+\\angle ABD+\\angle ACD$，<br>$\\therefore \\angle ABP+\\angle ACP=\\angle P-\\angle A=130^\\circ-40^\\circ=90^\\circ$。<br>$\\because BD$平分$\\angle ABP$，$CD$平分$\\angle ACP$，<br>$\\therefore \\angle ABD+\\angle ACD=\\frac{1}{2}(\\angle ABP+\\angle ACP)=45^\\circ$，<br>$\\therefore \\angle D=45^\\circ+40^\\circ=85^\\circ$。"
+        "detail": "（1）解：如图，连接$AD$并延长至点$F$，<br><img src=\"assets/images/ch13_1_q24_detail.png\" data-cx=\"1900000\" data-cy=\"1445652\" style=\"width:199px;height:auto;margin:8px 0\" class=\"block\">根据外角的性质，可得$\\angle BDF=\\angle BAD+\\angle B$，$\\angle CDF=\\angle C+\\angle CAD$。<br>又$\\because \\angle BDC=\\angle BDF+\\angle CDF$，$\\angle BAC=\\angle BAD+\\angle CAD$，<br>$\\therefore \\angle BDC=\\angle BAC+\\angle B+\\angle C$；<br><br>（2）解：①由（1）可得，$\\angle BPC=\\angle ABP+\\angle ACP+\\angle A$。<br>$\\because \\angle ABC$、$\\angle ACB$的平分线交于点$P$，<br>$\\therefore \\angle BPC=\\frac{1}{2}(\\angle ABC+\\angle ACB)+\\angle A=90^\\circ+\\frac{1}{2}\\angle A=90^\\circ+\\frac{1}{2}\\times50^\\circ=115^\\circ$。<br>②由（1）可得，$\\angle P=\\angle A+\\angle ABP+\\angle ACP$，$\\angle D=\\angle A+\\angle ABD+\\angle ACD$，<br>$\\therefore \\angle ABP+\\angle ACP=\\angle P-\\angle A=130^\\circ-40^\\circ=90^\\circ$。<br>$\\because BD$平分$\\angle ABP$，$CD$平分$\\angle ACP$，<br>$\\therefore \\angle ABD+\\angle ACD=\\frac{1}{2}(\\angle ABP+\\angle ACP)=45^\\circ$，<br>$\\therefore \\angle D=45^\\circ+40^\\circ=85^\\circ$。"
     },
     {
         "id": "tri13_25",
@@ -14808,11 +14808,11 @@
         "difficulty": "中等",
         "knowledge": "根据三角形中线求面积、加减消元法",
         "chapter": "13.1三角形单元测试卷",
-        "stem": "已知$\\triangle ABC$的面积是$60$，请完成下列问题：<br>（1）如图1，若$AD$是$\\triangle ABC$的边$BC$上的中线，则$\\triangle ABD$的面积______$\\triangle ACD$的面积（填“$>$”“$<$”或“$=$”）；<br>（2）如图2，若$CD,BE$分别是$\\triangle ABC$的边$AB,AC$上的中线，求四边形$ADOE$的面积可以用如下方法：连接$AO$，由$AD=DB$得$S_{\\triangle ADO}=S_{\\triangle BDO}$，同理$S_{\\triangle AEO}=S_{\\triangle CEO}$。设$S_{\\triangle ADO}=x$，$S_{\\triangle AEO}=y$，则$S_{\\triangle BDO}=x$，$S_{\\triangle CEO}=y$。由题意得$S_{\\triangle ABE}=\\frac{1}{2}S_{\\triangle ABC}=30$，$S_{\\triangle ADC}=\\frac{1}{2}S_{\\triangle ABC}=30$，可列方程组为$\\begin{cases}2x+y=30\\\\x+2y=30\\end{cases}$，解得______，通过解这个方程组可得四边形$ADOE$的面积为______；<br>（3）如图3，$AD:DB=1:3$，$CE:AE=1:2$，请你计算四边形$ADOE$的面积，并说明理由。<br><img src=\"assets/images/ch13_1_q25_stem.png\" data-cx=\"3800000\" data-cy=\"1187500\" style=\"width:440px;max-width:100%;height:auto;margin:8px 0\" class=\"block\">",
+        "stem": "已知$\\triangle ABC$的面积是$60$，请完成下列问题：<br>（1）如图1，若$AD$是$\\triangle ABC$的边$BC$上的中线，则$\\triangle ABD$的面积______$\\triangle ACD$的面积（填“$>$”“$<$”或“$=$”）；<br>（2）如图2，若$CD,BE$分别是$\\triangle ABC$的边$AB,AC$上的中线，求四边形$ADOE$的面积可以用如下方法：连接$AO$，由$AD=DB$得$S_{\\triangle ADO}=S_{\\triangle BDO}$，同理$S_{\\triangle AEO}=S_{\\triangle CEO}$。设$S_{\\triangle ADO}=x$，$S_{\\triangle AEO}=y$，则$S_{\\triangle BDO}=x$，$S_{\\triangle CEO}=y$。由题意得$S_{\\triangle ABE}=\\frac{1}{2}S_{\\triangle ABC}=30$，$S_{\\triangle ADC}=\\frac{1}{2}S_{\\triangle ABC}=30$，可列方程组为$\\begin{cases}2x+y=30\\\\x+2y=30\\end{cases}$，解得______，通过解这个方程组可得四边形$ADOE$的面积为______；<br>（3）如图3，$AD:DB=1:3$，$CE:AE=1:2$，请你计算四边形$ADOE$的面积，并说明理由。<br><img src=\"assets/images/ch13_1_q25_stem.png\" data-cx=\"3800000\" data-cy=\"1187500\" style=\"width:280px;max-width:100%;height:auto;margin:8px 0\" class=\"block\">",
         "options": [],
         "answer": "（1）$=$；（2）$\\begin{cases}x=10\\\\y=10\\end{cases}$，$20$；（3）$13$",
         "analysis": "本题考查三角形的中线与面积比、解二元一次方程组。（1）利用中线平分面积；（2）解二元一次方程组求$x+y$；（3）连接$AO$，利用共高三角形面积比等于底边比建立关于$x,y$的方程组求解。",
-        "detail": "（1）解：$\\because AD$是$\\triangle ABC$的边$BC$上的中线，$\\therefore \\triangle ABD$的面积$=\\triangle ACD$的面积。<br>故答案为：$=$；<br><br>（2）解方程组$\\begin{cases}2x+y=30\\\\x+2y=30\\end{cases}$，得$\\begin{cases}x=10\\\\y=10\\end{cases}$，<br>由图可知：四边形$ADOE$的面积为$x+y=20$；<br><br>（3）解：四边形$ADOE$的面积为$13$，理由如下：<br>连接$AO$，设$S_{\\triangle OAD}=x$，$S_{\\triangle AOE}=y$，<br><img src=\"assets/images/ch13_1_q25_detail.png\" data-cx=\"1900000\" data-cy=\"1385416\" style=\"width:200px;height:auto;margin:8px 0\" class=\"block\">$\\because AD:DB=1:3$，$CE:AE=1:2$，<br>$\\therefore \\frac{S_{\\triangle BOD}}{S_{\\triangle AOD}}=\\frac{BD}{AD}=3$，$\\frac{S_{\\triangle AOE}}{S_{\\triangle COE}}=\\frac{AE}{CE}=2$，$\\frac{S_{\\triangle ABE}}{S_{\\triangle ABC}}=\\frac{AE}{AC}=\\frac{2}{3}$，$\\frac{S_{\\triangle ADC}}{S_{\\triangle ABC}}=\\frac{AD}{AB}=\\frac{1}{4}$，<br>$\\therefore S_{\\triangle BOD}=3x$，$S_{\\triangle COE}=\\frac{1}{2}y$，$S_{\\triangle ABE}=\\frac{2}{3}\\times60=40$，$S_{\\triangle ADC}=\\frac{1}{4}\\times60=15$。<br>$\\therefore \\begin{cases}3x+x+y=40\\\\x+y+\\frac{1}{2}y=15\\end{cases}$，解得$\\begin{cases}x=9\\\\y=4\\end{cases}$，<br>$\\therefore$四边形$ADOE$的面积为$x+y=13$。"
+        "detail": "（1）解：$\\because AD$是$\\triangle ABC$的边$BC$上的中线，$\\therefore \\triangle ABD$的面积$=\\triangle ACD$的面积。<br>故答案为：$=$；<br><br>（2）解方程组$\\begin{cases}2x+y=30\\\\x+2y=30\\end{cases}$，得$\\begin{cases}x=10\\\\y=10\\end{cases}$，<br>由图可知：四边形$ADOE$的面积为$x+y=20$；<br><br>（3）解：四边形$ADOE$的面积为$13$，理由如下：<br>连接$AO$，设$S_{\\triangle OAD}=x$，$S_{\\triangle AOE}=y$，<br><img src=\"assets/images/ch13_1_q25_detail.png\" data-cx=\"1900000\" data-cy=\"1385416\" style=\"width:199px;height:auto;margin:8px 0\" class=\"block\">$\\because AD:DB=1:3$，$CE:AE=1:2$，<br>$\\therefore \\frac{S_{\\triangle BOD}}{S_{\\triangle AOD}}=\\frac{BD}{AD}=3$，$\\frac{S_{\\triangle AOE}}{S_{\\triangle COE}}=\\frac{AE}{CE}=2$，$\\frac{S_{\\triangle ABE}}{S_{\\triangle ABC}}=\\frac{AE}{AC}=\\frac{2}{3}$，$\\frac{S_{\\triangle ADC}}{S_{\\triangle ABC}}=\\frac{AD}{AB}=\\frac{1}{4}$，<br>$\\therefore S_{\\triangle BOD}=3x$，$S_{\\triangle COE}=\\frac{1}{2}y$，$S_{\\triangle ABE}=\\frac{2}{3}\\times60=40$，$S_{\\triangle ADC}=\\frac{1}{4}\\times60=15$。<br>$\\therefore \\begin{cases}3x+x+y=40\\\\x+y+\\frac{1}{2}y=15\\end{cases}$，解得$\\begin{cases}x=9\\\\y=4\\end{cases}$，<br>$\\therefore$四边形$ADOE$的面积为$x+y=13$。"
     },
     {
         "id": "prop_1",
@@ -14839,7 +14839,7 @@
         "type": "choice",
         "typeName": "单选题",
         "difficulty": "容易",
-        "stem": "如图所示的图案是由全等的图形拼成的，其中 $AD=0.8$，$BC=1.6$，则 $AF=$（　　）<div class=\"my-2\"><img src=\"assets/images/img_044_3797e4f176e2.png\" style=\"width:340px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"3238500\" data-cy=\"1104900\" /></div>",
+        "stem": "如图所示的图案是由全等的图形拼成的，其中 $AD=0.8$，$BC=1.6$，则 $AF=$（　　）<div class=\"my-2\"><img src=\"assets/images/img_044_3797e4f176e2.png\" style=\"width:280px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"3238500\" data-cy=\"1104900\" /></div>",
         "options": [
             "A. $10.8$",
             "B. $9.6$",
@@ -14858,7 +14858,7 @@
         "type": "choice",
         "typeName": "单选题",
         "difficulty": "容易",
-        "stem": "找出下列各组图中的全等图形（　　）<div class=\"my-2\"><img src=\"assets/images/img_045_89c22de871d6.png\" style=\"width:480px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"4572000\" data-cy=\"847725\" /></div>",
+        "stem": "找出下列各组图中的全等图形（　　）<div class=\"my-2\"><img src=\"assets/images/img_045_89c22de871d6.png\" style=\"width:280px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"4572000\" data-cy=\"847725\" /></div>",
         "options": [
             "A. ②和⑥",
             "B. ②和⑦",
@@ -14877,7 +14877,7 @@
         "type": "choice",
         "typeName": "单选题",
         "difficulty": "容易",
-        "stem": "如图，四边形 $ABCD$ 中，$AB=5$，$BC=10$，$CD=6$，$AD=3$。若四边形 $OPCE \\cong$ 四边形 $ABCD$，则 $PD$ 的长为（　　）<div class=\"my-2\"><img src=\"assets/images/img_046_07e5bcc76f08.png\" style=\"width:220px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2095500\" data-cy=\"1638300\" /></div>",
+        "stem": "如图，四边形 $ABCD$ 中，$AB=5$，$BC=10$，$CD=6$，$AD=3$。若四边形 $OPCE \\cong$ 四边形 $ABCD$，则 $PD$ 的长为（　　）<div class=\"my-2\"><img src=\"assets/images/img_046_07e5bcc76f08.png\" style=\"width:205px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2095500\" data-cy=\"1638300\" /></div>",
         "options": [
             "A. $3$",
             "B. $4$",
@@ -14896,7 +14896,7 @@
         "type": "choice",
         "typeName": "单选题",
         "difficulty": "容易",
-        "stem": "已知图中的两个三角形全等，则 $\\angle \\alpha$ 的度数为（　　）<div class=\"my-2\"><img src=\"assets/images/img_047_f61b871ecbc3.png\" style=\"width:280px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2667000\" data-cy=\"1581150\" /></div>",
+        "stem": "已知图中的两个三角形全等，则 $\\angle \\alpha$ 的度数为（　　）<div class=\"my-2\"><img src=\"assets/images/img_047_f61b871ecbc3.png\" style=\"width:220px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2667000\" data-cy=\"1581150\" /></div>",
         "options": [
             "A. $72^\\circ$",
             "B. $58^\\circ$",
@@ -14915,7 +14915,7 @@
         "type": "choice",
         "typeName": "单选题",
         "difficulty": "容易",
-        "stem": "如图，点 $B$、$C$、$D$ 在同一直线上，若 $\\triangle ABC \\cong \\triangle DEC$，$AC=3$，$BD=10$，则 $CE$ 等于（　　）<div class=\"my-2\"><img src=\"assets/images/img_048_3befd5b53e5e.png\" style=\"width:260px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2476500\" data-cy=\"1647825\" /></div>",
+        "stem": "如图，点 $B$、$C$、$D$ 在同一直线上，若 $\\triangle ABC \\cong \\triangle DEC$，$AC=3$，$BD=10$，则 $CE$ 等于（　　）<div class=\"my-2\"><img src=\"assets/images/img_048_3befd5b53e5e.png\" style=\"width:220px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2476500\" data-cy=\"1647825\" /></div>",
         "options": [
             "A. $3$",
             "B. $7$",
@@ -14934,7 +14934,7 @@
         "type": "choice",
         "typeName": "单选题",
         "difficulty": "容易",
-        "stem": "如图，$\\triangle ABC \\cong \\triangle CDA$，并且 $AB=CD$，小胡同学写了四个结论，其中有一个不正确，这个结论是（　　）<div class=\"my-2\"><img src=\"assets/images/img_049_9bacf21ebc52.png\" style=\"width:240px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2286000\" data-cy=\"1485900\" /></div>",
+        "stem": "如图，$\\triangle ABC \\cong \\triangle CDA$，并且 $AB=CD$，小胡同学写了四个结论，其中有一个不正确，这个结论是（　　）<div class=\"my-2\"><img src=\"assets/images/img_049_9bacf21ebc52.png\" style=\"width:220px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2286000\" data-cy=\"1485900\" /></div>",
         "options": [
             "A. $\\angle 1=\\angle 2$",
             "B. $AD \\parallel BC$",
@@ -14953,7 +14953,7 @@
         "type": "choice",
         "typeName": "单选题",
         "difficulty": "中等",
-        "stem": "如图，已知 $\\triangle ABC \\cong \\triangle DBE$，点 $D$ 在 $AC$ 上，$DE$ 与 $BC$ 相交于点 $F$，若 $\\angle CAB=\\angle ABC$，$\\angle C=36^\\circ$，则 $\\angle 1$ 的度数为（　　）<div class=\"my-2\"><img src=\"assets/images/img_050_616082837f0e.png\" style=\"width:230px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2190750\" data-cy=\"1733550\" /></div>",
+        "stem": "如图，已知 $\\triangle ABC \\cong \\triangle DBE$，点 $D$ 在 $AC$ 上，$DE$ 与 $BC$ 相交于点 $F$，若 $\\angle CAB=\\angle ABC$，$\\angle C=36^\\circ$，则 $\\angle 1$ 的度数为（　　）<div class=\"my-2\"><img src=\"assets/images/img_050_616082837f0e.png\" style=\"width:202px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2190750\" data-cy=\"1733550\" /></div>",
         "options": [
             "A. $108^\\circ$",
             "B. $110^\\circ$",
@@ -14972,7 +14972,7 @@
         "type": "choice",
         "typeName": "单选题",
         "difficulty": "中等",
-        "stem": "如图，$\\triangle EFG \\cong \\triangle NMH$，$\\angle F$ 和 $\\angle M$ 是对应角。在 $\\triangle EFG$ 中，$FG$ 是最长边，在 $\\triangle NMH$ 中，$MH$ 是最长边，$EF=2.1\\text{ cm}$，$EH=1.1\\text{ cm}$，$NH=3.3\\text{ cm}$，$\\angle E=109^\\circ$，则线段 $NM$ 的长度及 $\\angle N$ 的度数是（　　）<div class=\"my-2\"><img src=\"assets/images/img_051_8a155c8c9a86.png\" style=\"width:280px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2667000\" data-cy=\"1466850\" /></div>",
+        "stem": "如图，$\\triangle EFG \\cong \\triangle NMH$，$\\angle F$ 和 $\\angle M$ 是对应角。在 $\\triangle EFG$ 中，$FG$ 是最长边，在 $\\triangle NMH$ 中，$MH$ 是最长边，$EF=2.1\\text{ cm}$，$EH=1.1\\text{ cm}$，$NH=3.3\\text{ cm}$，$\\angle E=109^\\circ$，则线段 $NM$ 的长度及 $\\angle N$ 的度数是（　　）<div class=\"my-2\"><img src=\"assets/images/img_051_8a155c8c9a86.png\" style=\"width:220px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2667000\" data-cy=\"1466850\" /></div>",
         "options": [
             "A. $2.1\\text{ cm},71^\\circ$",
             "B. $3.3\\text{ cm},109^\\circ$",
@@ -14991,7 +14991,7 @@
         "type": "choice",
         "typeName": "单选题",
         "difficulty": "中等",
-        "stem": "如图，$\\triangle ABC$ 中，$\\angle ABC=45^\\circ$，将 $\\triangle ABC$ 绕点 $B$ 逆时针旋转 $60^\\circ$ 得到 $\\triangle DBE$，点 $A$、$C$ 的对应点分别为 $D$、$E$，延长 $CA$ 交 $DE$ 于点 $F$，下列结论错误的是（　　）<div class=\"my-2\"><img src=\"assets/images/img_052_fbbc9fddd75f.png\" style=\"width:230px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2190750\" data-cy=\"1695450\" /></div>",
+        "stem": "如图，$\\triangle ABC$ 中，$\\angle ABC=45^\\circ$，将 $\\triangle ABC$ 绕点 $B$ 逆时针旋转 $60^\\circ$ 得到 $\\triangle DBE$，点 $A$、$C$ 的对应点分别为 $D$、$E$，延长 $CA$ 交 $DE$ 于点 $F$，下列结论错误的是（　　）<div class=\"my-2\"><img src=\"assets/images/img_052_fbbc9fddd75f.png\" style=\"width:207px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2190750\" data-cy=\"1695450\" /></div>",
         "options": [
             "A. $\\angle BED=30^\\circ$",
             "B. $\\angle DBE=45^\\circ$",
@@ -15010,7 +15010,7 @@
         "type": "choice",
         "typeName": "单选题",
         "difficulty": "容易",
-        "stem": "如图，$\\triangle ABC \\cong \\triangle A'BC'$，过点 $C$ 作 $CD \\perp BC'$，垂足为 $D$，若 $\\angle ABA'=55^\\circ$，则 $\\angle BCD$ 的度数为（　　）<div class=\"my-2\"><img src=\"assets/images/img_053_a3d602922192.png\" style=\"width:250px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2381250\" data-cy=\"1876425\" /></div>",
+        "stem": "如图，$\\triangle ABC \\cong \\triangle A'BC'$，过点 $C$ 作 $CD \\perp BC'$，垂足为 $D$，若 $\\angle ABA'=55^\\circ$，则 $\\angle BCD$ 的度数为（　　）<div class=\"my-2\"><img src=\"assets/images/img_053_a3d602922192.png\" style=\"width:203px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2381250\" data-cy=\"1876425\" /></div>",
         "options": [
             "A. $25^\\circ$",
             "B. $35^\\circ$",
@@ -15029,7 +15029,7 @@
         "type": "choice",
         "typeName": "单选题",
         "difficulty": "中等",
-        "stem": "如图，$B$ 是 $AC$ 上的点，$\\triangle ABD \\cong \\triangle EBC$，则下列结论：① $CD \\perp AE$，② $AD \\perp CE$，③ $\\angle ADE=\\angle CDE$，④ $\\angle EAD=\\angle ECD$。其中正确的有（　　）<div class=\"my-2\"><img src=\"assets/images/img_054_8240c9e4ad67.png\" style=\"width:250px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2381250\" data-cy=\"1695450\" /></div>",
+        "stem": "如图，$B$ 是 $AC$ 上的点，$\\triangle ABD \\cong \\triangle EBC$，则下列结论：① $CD \\perp AE$，② $AD \\perp CE$，③ $\\angle ADE=\\angle CDE$，④ $\\angle EAD=\\angle ECD$。其中正确的有（　　）<div class=\"my-2\"><img src=\"assets/images/img_054_8240c9e4ad67.png\" style=\"width:220px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2381250\" data-cy=\"1695450\" /></div>",
         "options": [
             "A. $4$个",
             "B. $3$个",
@@ -15038,7 +15038,7 @@
         ],
         "answer": "B",
         "analysis": "本题主要考查全等三角形的性质定理，三角形外角的性质，等腰三角形的性质。延长 $AD$ 交 $CE$ 于点 $F$，延长 $CD$ 交 $AE$ 于点 $G$，由 $\\triangle ABD \\cong \\triangle EBC$，可证 $\\angle ABE=\\angle EBC=90^\\circ$，$AB=EB$，$BD=BC$，进而逐项判断即可。",
-        "detail": "解：如图，延长 $AD$ 交 $CE$ 于点 $F$，延长 $CD$ 交 $AE$ 于点 $G$。<div class=\"my-2\"><img src=\"assets/images/img_055_3893a45febca.png\" style=\"width:250px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2381250\" data-cy=\"1695450\" /></div>∵ $\\triangle ABD \\cong \\triangle EBC$，<br>∴ $\\angle ABE=\\angle EBC$，$AB=EB$，$BD=BC$。<br>∵点 $B$ 在 $AC$ 上，<br>∴ $\\angle ABE+\\angle EBC=180^\\circ$，<br>∴ $\\angle ABE=\\angle EBC=90^\\circ$，<br>∴ $\\angle BAE=\\angle BEA=\\angle BCD=45^\\circ$。<br>在 $\\triangle ACG$ 中，$\\angle ACG+\\angle CAG=90^\\circ$，<br>∴ $\\angle AGC=90^\\circ$，<br>∴ $CG \\perp AE$，即 $CD \\perp AE$，故①正确；<br>∵ $\\angle ABD=90^\\circ$，<br>∴ $\\angle ADB+\\angle BAD=90^\\circ$，<br>∵ $\\angle ADB=\\angle ECB$，<br>∴ $\\angle ECB+\\angle BAD=90^\\circ$，<br>∴ $\\angle AFC=90^\\circ$，即 $AD \\perp CE$，故②正确；<br>∵ $\\angle ADE=180^\\circ-45^\\circ-\\angle EAD$，$\\angle CDE=180^\\circ-45^\\circ=135^\\circ$，<br>∴ $\\angle CDE > \\angle ADE$，故③错误；<br>∵ $\\angle ADB=\\angle EAD+\\angle AEB=\\angle EAD+45^\\circ$，$\\angle ECB=\\angle BCD+\\angle ECD=\\angle ECD+45^\\circ$，<br>且 $\\angle ADB=\\angle ECB$，<br>∴ $\\angle EAD=\\angle ECD$，故④正确。<br>故选：B。",
+        "detail": "解：如图，延长 $AD$ 交 $CE$ 于点 $F$，延长 $CD$ 交 $AE$ 于点 $G$。<div class=\"my-2\"><img src=\"assets/images/img_055_3893a45febca.png\" style=\"width:220px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2381250\" data-cy=\"1695450\" /></div>∵ $\\triangle ABD \\cong \\triangle EBC$，<br>∴ $\\angle ABE=\\angle EBC$，$AB=EB$，$BD=BC$。<br>∵点 $B$ 在 $AC$ 上，<br>∴ $\\angle ABE+\\angle EBC=180^\\circ$，<br>∴ $\\angle ABE=\\angle EBC=90^\\circ$，<br>∴ $\\angle BAE=\\angle BEA=\\angle BCD=45^\\circ$。<br>在 $\\triangle ACG$ 中，$\\angle ACG+\\angle CAG=90^\\circ$，<br>∴ $\\angle AGC=90^\\circ$，<br>∴ $CG \\perp AE$，即 $CD \\perp AE$，故①正确；<br>∵ $\\angle ABD=90^\\circ$，<br>∴ $\\angle ADB+\\angle BAD=90^\\circ$，<br>∵ $\\angle ADB=\\angle ECB$，<br>∴ $\\angle ECB+\\angle BAD=90^\\circ$，<br>∴ $\\angle AFC=90^\\circ$，即 $AD \\perp CE$，故②正确；<br>∵ $\\angle ADE=180^\\circ-45^\\circ-\\angle EAD$，$\\angle CDE=180^\\circ-45^\\circ=135^\\circ$，<br>∴ $\\angle CDE > \\angle ADE$，故③错误；<br>∵ $\\angle ADB=\\angle EAD+\\angle AEB=\\angle EAD+45^\\circ$，$\\angle ECB=\\angle BCD+\\angle ECD=\\angle ECD+45^\\circ$，<br>且 $\\angle ADB=\\angle ECB$，<br>∴ $\\angle EAD=\\angle ECD$，故④正确。<br>故选：B。",
         "number": 12,
         "knowledge": "三角形的外角的定义及性质、全等三角形的性质、等边对等角"
     },
@@ -15048,7 +15048,7 @@
         "type": "choice",
         "typeName": "单选题",
         "difficulty": "中等",
-        "stem": "如图，$\\triangle ABC \\cong \\triangle EDF$，点 $A$、$F$、$C$、$E$ 在一条直线上，连接 $AD$。若 $\\angle DAF=\\angle AFD=\\angle ADE=2\\angle B$，则 $\\angle E$ 等于（　　）<div class=\"my-2\"><img src=\"assets/images/img_056_ae063b413299.png\" style=\"width:220px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2095500\" data-cy=\"1828800\" /></div>",
+        "stem": "如图，$\\triangle ABC \\cong \\triangle EDF$，点 $A$、$F$、$C$、$E$ 在一条直线上，连接 $AD$。若 $\\angle DAF=\\angle AFD=\\angle ADE=2\\angle B$，则 $\\angle E$ 等于（　　）<div class=\"my-2\"><img src=\"assets/images/img_056_ae063b413299.png\" style=\"width:165px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2095500\" data-cy=\"1828800\" /></div>",
         "options": [
             "A. $30^\\circ$",
             "B. $36^\\circ$",
@@ -15067,7 +15067,7 @@
         "type": "choice",
         "typeName": "单选题",
         "difficulty": "容易",
-        "stem": "如图，$\\triangle AOB \\cong \\triangle ADC$，点 $B$ 和点 $C$ 是对应顶点，$\\angle O=\\angle D=90^\\circ$，记 $\\angle OAD=\\alpha$，$\\angle ABO=\\beta$，$\\angle ABC=\\angle ACB$，当 $BC \\parallel OA$ 时，$\\alpha$ 与 $\\beta$ 之间的数量关系为（　　）<div class=\"my-2\"><img src=\"assets/images/img_057_e8af287c269f.png\" style=\"width:220px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2095500\" data-cy=\"1704975\" /></div>",
+        "stem": "如图，$\\triangle AOB \\cong \\triangle ADC$，点 $B$ 和点 $C$ 是对应顶点，$\\angle O=\\angle D=90^\\circ$，记 $\\angle OAD=\\alpha$，$\\angle ABO=\\beta$，$\\angle ABC=\\angle ACB$，当 $BC \\parallel OA$ 时，$\\alpha$ 与 $\\beta$ 之间的数量关系为（　　）<div class=\"my-2\"><img src=\"assets/images/img_057_e8af287c269f.png\" style=\"width:197px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2095500\" data-cy=\"1704975\" /></div>",
         "options": [
             "A. $\\alpha=\\beta$",
             "B. $\\alpha=2\\beta$",
@@ -15086,7 +15086,7 @@
         "type": "choice",
         "typeName": "单选题",
         "difficulty": "中等",
-        "stem": "题目：“如图，已知 $\\triangle ABD \\cong \\triangle CDB$，$AD=8\\text{ cm}$，$BD=10\\text{ cm}$，动点 $P$ 以 $1\\text{ cm/s}$ 的速度从点 $A$ 出发沿边 $AD$ 向终点 $D$ 移动，动点 $Q$ 以 $2\\text{ cm/s}$ 的速度从点 $B$ 出发沿边 $BC$ 向终点 $C$ 匀速移动，动点 $M$ 从点 $B$ 出发沿对角线 $BD$ 向终点 $D$ 移动，三点同时出发，当其中一点到达终点时，其余两点也停止运动。连接 $PM$、$QM$，求动点 $M$ 的速度为多少时，存在某个时刻，使得以 $P$、$D$、$M$ 为顶点的三角形与 $\\triangle QBM$ 全等（点 $B$ 与点 $D$ 是对应点）。”甲答：$3\\text{ cm/s}$，乙答：$\\frac{15}{8}\\text{ cm/s}$，丙答：$\\frac{10}{3}\\text{ cm/s}$，则正确的是（　　）<div class=\"my-2\"><img src=\"assets/images/img_058_c92fbf1a6d8f.png\" style=\"width:250px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2381250\" data-cy=\"1828800\" /></div>",
+        "stem": "题目：“如图，已知 $\\triangle ABD \\cong \\triangle CDB$，$AD=8\\text{ cm}$，$BD=10\\text{ cm}$，动点 $P$ 以 $1\\text{ cm/s}$ 的速度从点 $A$ 出发沿边 $AD$ 向终点 $D$ 移动，动点 $Q$ 以 $2\\text{ cm/s}$ 的速度从点 $B$ 出发沿边 $BC$ 向终点 $C$ 匀速移动，动点 $M$ 从点 $B$ 出发沿对角线 $BD$ 向终点 $D$ 移动，三点同时出发，当其中一点到达终点时，其余两点也停止运动。连接 $PM$、$QM$，求动点 $M$ 的速度为多少时，存在某个时刻，使得以 $P$、$D$、$M$ 为顶点的三角形与 $\\triangle QBM$ 全等（点 $B$ 与点 $D$ 是对应点）。”甲答：$3\\text{ cm/s}$，乙答：$\\frac{15}{8}\\text{ cm/s}$，丙答：$\\frac{10}{3}\\text{ cm/s}$，则正确的是（　　）<div class=\"my-2\"><img src=\"assets/images/img_058_c92fbf1a6d8f.png\" style=\"width:208px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2381250\" data-cy=\"1828800\" /></div>",
         "options": [
             "A. 甲、乙的答案合在一起才完整",
             "B. 乙、丙的答案合在一起才完整",
@@ -15119,7 +15119,7 @@
         "type": "blank",
         "typeName": "填空题",
         "difficulty": "容易",
-        "stem": "如图，在平面直角坐标系中，$\\triangle OAB$ 的顶点坐标分别是 $A(-6,0)$，$B(0,4)$，$\\triangle OA'B' \\cong \\triangle OAB$，若点 $A'$ 在 $x$ 轴上，则点 $B'$ 的坐标是 ______。<div class=\"my-2\"><img src=\"assets/images/img_059_2d1872574f10.png\" style=\"width:250px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2381250\" data-cy=\"1790700\" /></div>",
+        "stem": "如图，在平面直角坐标系中，$\\triangle OAB$ 的顶点坐标分别是 $A(-6,0)$，$B(0,4)$，$\\triangle OA'B' \\cong \\triangle OAB$，若点 $A'$ 在 $x$ 轴上，则点 $B'$ 的坐标是 ______。<div class=\"my-2\"><img src=\"assets/images/img_059_2d1872574f10.png\" style=\"width:213px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2381250\" data-cy=\"1790700\" /></div>",
         "options": [],
         "answer": "$(6,-4)$",
         "analysis": "根据全等三角形的性质和点的坐标得出 $OA=OA'=6$，$OB=A'B'=4$，即可得出答案。",
@@ -15133,7 +15133,7 @@
         "type": "blank",
         "typeName": "填空题",
         "difficulty": "容易",
-        "stem": "如图，点 $A$、$B$、$C$ 在同一直线上，$\\triangle ABD \\cong \\triangle EBC$，若 $\\angle C=20^\\circ$，则 $\\angle A=$ ______ 度。<div class=\"my-2\"><img src=\"assets/images/img_060_0cce632bb66d.png\" style=\"width:230px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2190750\" data-cy=\"1676400\" /></div>",
+        "stem": "如图，点 $A$、$B$、$C$ 在同一直线上，$\\triangle ABD \\cong \\triangle EBC$，若 $\\angle C=20^\\circ$，则 $\\angle A=$ ______ 度。<div class=\"my-2\"><img src=\"assets/images/img_060_0cce632bb66d.png\" style=\"width:209px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2190750\" data-cy=\"1676400\" /></div>",
         "options": [],
         "answer": "$70$",
         "analysis": "本题考查了全等三角形的性质，三角形的内角和定理，邻补角的性质，由 $\\triangle ABD \\cong \\triangle EBC$，则 $\\angle D=\\angle C=20^\\circ$，$\\angle ABD=\\angle EBC$，根据点 $A$、$B$、$C$ 在同一直线上，有 $\\angle ABD=\\angle EBC=90^\\circ$，最后由三角形的内角和定理即可求解。",
@@ -15147,7 +15147,7 @@
         "type": "blank",
         "typeName": "填空题",
         "difficulty": "容易",
-        "stem": "如图，$\\triangle ABC$ 的两条高 $AD$，$CE$ 相交于点 $F$，若 $\\triangle ABD \\cong \\triangle CFD$，$DC=6$，$DF=2$，则 $\\triangle ABC$ 的面积为 ______。<div class=\"my-2\"><img src=\"assets/images/img_061_044a518d5e30.png\" style=\"width:220px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2095500\" data-cy=\"1638300\" /></div>",
+        "stem": "如图，$\\triangle ABC$ 的两条高 $AD$，$CE$ 相交于点 $F$，若 $\\triangle ABD \\cong \\triangle CFD$，$DC=6$，$DF=2$，则 $\\triangle ABC$ 的面积为 ______。<div class=\"my-2\"><img src=\"assets/images/img_061_044a518d5e30.png\" style=\"width:205px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2095500\" data-cy=\"1638300\" /></div>",
         "options": [],
         "answer": "$24$",
         "analysis": "利用全等三角形的性质求出 $AD$ 和 $BC$ 的长可得结论。",
@@ -15161,7 +15161,7 @@
         "type": "blank",
         "typeName": "填空题",
         "difficulty": "容易",
-        "stem": "如图，若 $\\triangle ADC \\cong \\triangle AEB$，且 $\\angle A=40^\\circ$，$\\angle C=20^\\circ$，则 $\\angle AEB=$ ______ $^\\circ$。<div class=\"my-2\"><img src=\"assets/images/img_062_6b84a835aee3.png\" style=\"width:250px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2381250\" data-cy=\"1581150\" /></div>",
+        "stem": "如图，若 $\\triangle ADC \\cong \\triangle AEB$，且 $\\angle A=40^\\circ$，$\\angle C=20^\\circ$，则 $\\angle AEB=$ ______ $^\\circ$。<div class=\"my-2\"><img src=\"assets/images/img_062_6b84a835aee3.png\" style=\"width:220px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2381250\" data-cy=\"1581150\" /></div>",
         "options": [],
         "answer": "$120$",
         "analysis": "此题主要考查全等三角形的性质，三角形的内角和定理；根据全等三角形的性质得出 $\\angle B=\\angle C=20^\\circ$，根据三角形的内角和定理求出即可。",
@@ -15175,11 +15175,11 @@
         "type": "blank",
         "typeName": "填空题",
         "difficulty": "容易",
-        "stem": "如图，已知线段 $AB=40$ 米，$MA \\perp AB$ 于点 $A$，$MA=20$ 米，射线 $BD \\perp AB$ 于 $B$，$P$ 点从 $B$ 点向 $A$ 运动，每秒走 $1$ 米，$Q$ 点从 $B$ 点向 $D$ 运动，每秒走 $3$ 米，$P$、$Q$ 同时从 $B$ 出发，则出发 $x$ 秒后，在线段 $MA$ 上有一点 $C$，使 $\\triangle CAP$ 与 $\\triangle PBQ$ 全等，则 $x$ 的值为 ______。<div class=\"my-2\"><img src=\"assets/images/img_063_b99866bf8a88.png\" style=\"width:230px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2190750\" data-cy=\"1733550\" /></div>",
+        "stem": "如图，已知线段 $AB=40$ 米，$MA \\perp AB$ 于点 $A$，$MA=20$ 米，射线 $BD \\perp AB$ 于 $B$，$P$ 点从 $B$ 点向 $A$ 运动，每秒走 $1$ 米，$Q$ 点从 $B$ 点向 $D$ 运动，每秒走 $3$ 米，$P$、$Q$ 同时从 $B$ 出发，则出发 $x$ 秒后，在线段 $MA$ 上有一点 $C$，使 $\\triangle CAP$ 与 $\\triangle PBQ$ 全等，则 $x$ 的值为 ______。<div class=\"my-2\"><img src=\"assets/images/img_063_b99866bf8a88.png\" style=\"width:202px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2190750\" data-cy=\"1733550\" /></div>",
         "options": [],
         "answer": "$10$",
         "analysis": "本题考查全等三角形的性质——全等三角形的对应边相等。分 $\\triangle CAP \\cong \\triangle PBQ$ 和 $\\triangle CAP \\cong \\triangle QBP$ 两种情况讨论求解。",
-        "detail": "解：∵ $P$ 点从 $B$ 点向 $A$ 运动，每秒走 $1$ 米，$Q$ 点从 $B$ 点向 $D$ 运动，每秒走 $3$ 米，<br>∴ $AP=40-x$，$BQ=3x$，<br>①当 $\\triangle CAP \\cong \\triangle PBQ$ 时，则 $AP=BQ$，<div class=\"my-2\"><img src=\"assets/images/img_064_05f98d3abe60.png\" style=\"width:230px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2190750\" data-cy=\"1733550\" /></div>∴ $40-x=3x$，<br>解得：$x=10$；<br>②当 $\\triangle CAP \\cong \\triangle QBP$ 时，则 $AP=BP=\\frac{1}{2}AB$，<br>即 $40-x=\\frac{1}{2}\\times 40$，<br>解得：$x=20$，<br>此时 $CA=BQ=3x=60$ 米，<br>∵点 $C$ 在线段 $MA$ 上，$MA=20$ 米，<br>∴ $CA \\le MA$，故 $x=20$ 不符合题意；<br>综上：当 $x=10$ 时，$\\triangle CAP$ 与 $\\triangle PBQ$ 全等。<br>故答案为：$10$。",
+        "detail": "解：∵ $P$ 点从 $B$ 点向 $A$ 运动，每秒走 $1$ 米，$Q$ 点从 $B$ 点向 $D$ 运动，每秒走 $3$ 米，<br>∴ $AP=40-x$，$BQ=3x$，<br>①当 $\\triangle CAP \\cong \\triangle PBQ$ 时，则 $AP=BQ$，<div class=\"my-2\"><img src=\"assets/images/img_064_05f98d3abe60.png\" style=\"width:202px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2190750\" data-cy=\"1733550\" /></div>∴ $40-x=3x$，<br>解得：$x=10$；<br>②当 $\\triangle CAP \\cong \\triangle QBP$ 时，则 $AP=BP=\\frac{1}{2}AB$，<br>即 $40-x=\\frac{1}{2}\\times 40$，<br>解得：$x=20$，<br>此时 $CA=BQ=3x=60$ 米，<br>∵点 $C$ 在线段 $MA$ 上，$MA=20$ 米，<br>∴ $CA \\le MA$，故 $x=20$ 不符合题意；<br>综上：当 $x=10$ 时，$\\triangle CAP$ 与 $\\triangle PBQ$ 全等。<br>故答案为：$10$。",
         "number": 21,
         "knowledge": "全等三角形的性质"
     },
@@ -15189,7 +15189,7 @@
         "type": "calc",
         "typeName": "解答题",
         "difficulty": "容易",
-        "stem": "如图所示，$A$，$D$，$E$ 三点在同一条直线上，且 $\\triangle BAD \\cong \\triangle ACE$。<div class=\"my-2\"><img src=\"assets/images/img_065_94dbc748f68b.png\" style=\"width:230px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2190750\" data-cy=\"1609725\" /></div>(1)证明：$BD=DE+CE$；<br>(2)探究当 $\\angle ADB$ 满足什么条件时，$BD \\parallel CE$？并说明理由。",
+        "stem": "如图所示，$A$，$D$，$E$ 三点在同一条直线上，且 $\\triangle BAD \\cong \\triangle ACE$。<div class=\"my-2\"><img src=\"assets/images/img_065_94dbc748f68b.png\" style=\"width:218px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2190750\" data-cy=\"1609725\" /></div>(1)证明：$BD=DE+CE$；<br>(2)探究当 $\\angle ADB$ 满足什么条件时，$BD \\parallel CE$？并说明理由。",
         "options": [],
         "answer": "(1)证明见解析；(2)当 $\\angle ADB=90^\\circ$ 时，$BD \\parallel CE$，理由见解析",
         "analysis": "本题考查了全等三角形的性质和平行线的判定等的应用。<br>(1)根据全等三角形的性质求出 $BD=AE$，$AD=CE$，代入求出即可；<br>(2)根据全等三角形的性质求出 $\\angle E=\\angle BDA=90^\\circ$，推出 $\\angle BDE=90^\\circ$，根据平行线的判定求出即可。",
@@ -15203,7 +15203,7 @@
         "type": "calc",
         "typeName": "解答题",
         "difficulty": "中等",
-        "stem": "如图，在 $\\triangle ABC$ 中，$\\angle ABC=90^\\circ$，$AB=8$，$BC=12$，点 $B$ 在直线 $m$ 上，点 $M$ 是直线 $m$ 上点 $B$ 左边的一点，且 $BM=4$，$\\angle ABM=60^\\circ$。动点 $P$ 从点 $A$ 出发，以每秒 $2$ 个单位长度的速度沿折线 $AB-BC$ 向终点 $C$ 匀速运动；同时动点 $Q$ 从 $C$ 点出发，以每秒 $6$ 个单位长度的速度沿折线 $CB-BA$ 向终点 $A$ 匀速运动。两点到达相应的终点就分别停止运动，分别过点 $P$、点 $Q$ 作 $PD \\perp m$ 于点 $D$，$QE \\perp m$ 于点 $E$。设点 $P$ 的运动时间为 $t\\text{ s}(t>0)$。<div class=\"my-2\"><img src=\"assets/images/img_066_18d95a478d7e.png\" style=\"width:280px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2667000\" data-cy=\"1600200\" /></div>(1)用含 $t$ 的代数式表示 $BP$ 的长；<br>(2)当点 $Q$ 在边 $BC$ 上时，求证：$\\angle PBD=\\angle BQE$；<br>(3)当 $\\triangle PBD$ 与 $\\triangle BQE$ 全等时，直接写出 $t$ 的值。",
+        "stem": "如图，在 $\\triangle ABC$ 中，$\\angle ABC=90^\\circ$，$AB=8$，$BC=12$，点 $B$ 在直线 $m$ 上，点 $M$ 是直线 $m$ 上点 $B$ 左边的一点，且 $BM=4$，$\\angle ABM=60^\\circ$。动点 $P$ 从点 $A$ 出发，以每秒 $2$ 个单位长度的速度沿折线 $AB-BC$ 向终点 $C$ 匀速运动；同时动点 $Q$ 从 $C$ 点出发，以每秒 $6$ 个单位长度的速度沿折线 $CB-BA$ 向终点 $A$ 匀速运动。两点到达相应的终点就分别停止运动，分别过点 $P$、点 $Q$ 作 $PD \\perp m$ 于点 $D$，$QE \\perp m$ 于点 $E$。设点 $P$ 的运动时间为 $t\\text{ s}(t>0)$。<div class=\"my-2\"><img src=\"assets/images/img_066_18d95a478d7e.png\" style=\"width:220px; max-width:100%; height:auto;\" class=\"block\" data-cx=\"2667000\" data-cy=\"1600200\" /></div>(1)用含 $t$ 的代数式表示 $BP$ 的长；<br>(2)当点 $Q$ 在边 $BC$ 上时，求证：$\\angle PBD=\\angle BQE$；<br>(3)当 $\\triangle PBD$ 与 $\\triangle BQE$ 全等时，直接写出 $t$ 的值。",
         "options": [],
         "answer": "(1)$8-2t$ 或 $2t-8$；(2)证明见解析；(3)$1$ 或 $\\frac{5}{2}$ 或 $8$",
         "analysis": "本题主要考查了全等三角形的性质、直角三角形的性质、一元一次方程等知识点，学会用分类讨论的思想思考问题是解题的关键。<br>(1)由题意分 $0<t\\le 4$ 和 $4<t\\le 10$ 两种情况列出代数式即可；<br>(2)由直角三角形的性质以及平角的性质即可解答；<br>(3)由全等三角形的性质分情况列出方程求解即可。",
@@ -15219,7 +15219,7 @@
         "typeName": "单选题",
         "difficulty": "中等",
         "knowledge": "全等的性质和SAS综合（SAS）",
-        "stem": "如图，在$\\triangle ABC$中，点$D$在$AC$上，$BD$平分$\\angle ABC$，延长$BA$到点$E$，使得$BE=BC$，连结$DE$．若$\\angle ADE=44^\\circ$，则$\\angle ADB$的度数是（　　）<br><div class=\"my-2\"><img src=\"assets/images/img_067_50ebdd12aaee.png\" alt=\"题目配图\" data-cx=\"2286000\" data-cy=\"1615965\" style=\"max-width: 240px; height: auto; display: block;\" /></div>",
+        "stem": "如图，在$\\triangle ABC$中，点$D$在$AC$上，$BD$平分$\\angle ABC$，延长$BA$到点$E$，使得$BE=BC$，连结$DE$．若$\\angle ADE=44^\\circ$，则$\\angle ADB$的度数是（　　）<br><div class=\"my-2\"><img src=\"assets/images/img_067_50ebdd12aaee.png\" alt=\"题目配图\" data-cx=\"2286000\" data-cy=\"1615965\" style=\"max-width:220px; height: auto; display: block;\" /></div>",
         "options": [
             "A. $68^\\circ$",
             "B. $69^\\circ$",
@@ -15238,7 +15238,7 @@
         "typeName": "单选题",
         "difficulty": "中等",
         "knowledge": "三角形内角和定理的应用、全等的性质和SAS综合（SAS）",
-        "stem": "如图，在$\\triangle ABC$中，若$\\angle B=\\angle C$，$BD=CE$，$CD=BF$，则$\\angle EDF=$（　　）<br><div class=\"my-2\"><img src=\"assets/images/img_068_a535ea5cfe94.png\" alt=\"题目配图\" data-cx=\"2095500\" data-cy=\"1847144\" style=\"max-width: 220px; height: auto; display: block;\" /></div>",
+        "stem": "如图，在$\\triangle ABC$中，若$\\angle B=\\angle C$，$BD=CE$，$CD=BF$，则$\\angle EDF=$（　　）<br><div class=\"my-2\"><img src=\"assets/images/img_068_a535ea5cfe94.png\" alt=\"题目配图\" data-cx=\"2095500\" data-cy=\"1847144\" style=\"max-width:165px; height: auto; display: block;\" /></div>",
         "options": [
             "A. $90^\\circ-\\angle A$",
             "B. $90^\\circ-\\frac{1}{2}\\angle A$",
@@ -15257,7 +15257,7 @@
         "typeName": "单选题",
         "difficulty": "容易",
         "knowledge": "全等的性质和SAS综合（SAS）",
-        "stem": "如图1，两个大小不同的三角板叠放在一起，图2是由它得到的抽象几何图形，已知$AB=AC$，$AE=AD$，$\\angle CAB=\\angle DAE=90^\\circ$，且点$B,C,E$在同一条直线上，$BC=10\\text{ cm}$，$CE=4\\text{ cm}$，连接$DC$．现有一只壁虎以$2\\text{ cm/s}$的速度沿$B-C-D$的路线爬行，则壁虎爬到点$D$所用的时间为（　　）<br><div class=\"my-2\"><img src=\"assets/images/img_069_dffb02c5fc09.png\" alt=\"题目配图\" data-cx=\"3429000\" data-cy=\"1696452\" style=\"max-width: 360px; height: auto; display: block;\" /></div>",
+        "stem": "如图1，两个大小不同的三角板叠放在一起，图2是由它得到的抽象几何图形，已知$AB=AC$，$AE=AD$，$\\angle CAB=\\angle DAE=90^\\circ$，且点$B,C,E$在同一条直线上，$BC=10\\text{ cm}$，$CE=4\\text{ cm}$，连接$DC$．现有一只壁虎以$2\\text{ cm/s}$的速度沿$B-C-D$的路线爬行，则壁虎爬到点$D$所用的时间为（　　）<br><div class=\"my-2\"><img src=\"assets/images/img_069_dffb02c5fc09.png\" alt=\"题目配图\" data-cx=\"3429000\" data-cy=\"1696452\" style=\"max-width:280px; height: auto; display: block;\" /></div>",
         "options": [
             "A. $9\\text{ s}$",
             "B. $10\\text{ s}$",
@@ -15276,7 +15276,7 @@
         "typeName": "单选题",
         "difficulty": "中等",
         "knowledge": "用SAS证明三角形全等（SAS）",
-        "stem": "如图，已知$BC=EF$，$AF=DC$，点$A$、$F$、$C$、$D$四点在同一直线上．要利用“$\\text{SAS}$”来判定$\\triangle ABC\\cong\\triangle DEF$，下列四个条件：①$\\angle A=\\angle D$；②$\\angle ACB=\\angle DFE$；③$AB\\parallel DE$；④$BC\\parallel EF$．可以利用的是（　　）<br><div class=\"my-2\"><img src=\"assets/images/img_070_da095e9f98dd.png\" alt=\"题目配图\" data-cx=\"2190750\" data-cy=\"1785055\" style=\"max-width: 230px; height: auto; display: block;\" /></div>",
+        "stem": "如图，已知$BC=EF$，$AF=DC$，点$A$、$F$、$C$、$D$四点在同一直线上．要利用“$\\text{SAS}$”来判定$\\triangle ABC\\cong\\triangle DEF$，下列四个条件：①$\\angle A=\\angle D$；②$\\angle ACB=\\angle DFE$；③$AB\\parallel DE$；④$BC\\parallel EF$．可以利用的是（　　）<br><div class=\"my-2\"><img src=\"assets/images/img_070_da095e9f98dd.png\" alt=\"题目配图\" data-cx=\"2190750\" data-cy=\"1785055\" style=\"max-width:196px; height: auto; display: block;\" /></div>",
         "options": [
             "A. ①②",
             "B. ②④",
@@ -15295,7 +15295,7 @@
         "typeName": "单选题",
         "difficulty": "容易",
         "knowledge": "确定第三边的取值范围、全等的性质和SAS综合（SAS）",
-        "stem": "如图，点$E$是$\\angle BAC$平分线$AD$上一点，$AB=6$，$AC=10$，$BE=4$，则$CE$长可能是（　　）<br><div class=\"my-2\"><img src=\"assets/images/img_071_f5a02117bdcf.png\" alt=\"题目配图\" data-cx=\"2381250\" data-cy=\"1597741\" style=\"max-width: 250px; height: auto; display: block;\" /></div>",
+        "stem": "如图，点$E$是$\\angle BAC$平分线$AD$上一点，$AB=6$，$AC=10$，$BE=4$，则$CE$长可能是（　　）<br><div class=\"my-2\"><img src=\"assets/images/img_071_f5a02117bdcf.png\" alt=\"题目配图\" data-cx=\"2381250\" data-cy=\"1597741\" style=\"max-width:220px; height: auto; display: block;\" /></div>",
         "options": [
             "A. $7$",
             "B. $8$",
@@ -15304,7 +15304,7 @@
         ],
         "answer": "A",
         "analysis": "本题考查了全等三角形的判定与性质、三角形的三边关系，通过作辅助线构造全等三角形是解题的关键．在$AC$取$AF=AB=6$，求出$CF=AC-AF=4$，然后证明$\\triangle BAE\\cong\\triangle FAE(\\text{SAS})$，根据全等三角形对应边相等得到$EF=BE=4$，再根据三角形的任意两边之差小于第三边，任意两边之和大于第三边即可求解．",
-        "detail": "解：在$AC$上取$AF=AB=6$，连接$FE$，<br><div class=\"my-2\"><img src=\"assets/images/img_072_398ef74838b5.png\" alt=\"解析辅助线图\" data-cx=\"2381250\" data-cy=\"1597741\" style=\"max-width: 250px; height: auto; display: block;\" /></div>$\\because AC=10$，<br>$\\therefore CF=AC-AF=4$，<br>$\\because$点$E$是$\\angle BAC$平分线$AD$上一点，<br>$\\therefore \\angle BAE=\\angle FAE$，<br>在$\\triangle BAE$和$\\triangle FAE$中，<br>$\\begin{cases} AB=AF \\\\ \\angle BAE=\\angle FAE \\\\ AE=AE \\end{cases}$，<br>$\\therefore \\triangle BAE\\cong\\triangle FAE(\\text{SAS})$，<br>$\\therefore EF=BE=4$，<br>$\\therefore FC-EF < EC < EF+FC$，<br>$\\therefore 4-4 < EC < 4+4$，即$0 < EC < 8$，<br>$\\therefore CE$长可能是$7$．<br>故选：A．"
+        "detail": "解：在$AC$上取$AF=AB=6$，连接$FE$，<br><div class=\"my-2\"><img src=\"assets/images/img_072_398ef74838b5.png\" alt=\"解析辅助线图\" data-cx=\"2381250\" data-cy=\"1597741\" style=\"max-width:220px; height: auto; display: block;\" /></div>$\\because AC=10$，<br>$\\therefore CF=AC-AF=4$，<br>$\\because$点$E$是$\\angle BAC$平分线$AD$上一点，<br>$\\therefore \\angle BAE=\\angle FAE$，<br>在$\\triangle BAE$和$\\triangle FAE$中，<br>$\\begin{cases} AB=AF \\\\ \\angle BAE=\\angle FAE \\\\ AE=AE \\end{cases}$，<br>$\\therefore \\triangle BAE\\cong\\triangle FAE(\\text{SAS})$，<br>$\\therefore EF=BE=4$，<br>$\\therefore FC-EF < EC < EF+FC$，<br>$\\therefore 4-4 < EC < 4+4$，即$0 < EC < 8$，<br>$\\therefore CE$长可能是$7$．<br>故选：A．"
     },
     {
         "id": "sas_6",
@@ -15314,7 +15314,7 @@
         "typeName": "单选题",
         "difficulty": "中等",
         "knowledge": "利用邻补角互补求角度、三角形内角和定理的应用、全等的性质和SAS综合（SAS）",
-        "stem": "如图，在$\\triangle ABC$和$\\triangle CDE$中，$CA=CB$，$CD=CE$，$\\angle ACB=\\angle ECD=\\alpha$，$AD$，$BE$交于点$H$，则$\\angle AHE$的度数为（　　）<br><div class=\"my-2\"><img src=\"assets/images/img_073_06600cecdb32.png\" alt=\"题目配图\" data-cx=\"2476500\" data-cy=\"1493183\" style=\"max-width: 260px; height: auto; display: block;\" /></div>",
+        "stem": "如图，在$\\triangle ABC$和$\\triangle CDE$中，$CA=CB$，$CD=CE$，$\\angle ACB=\\angle ECD=\\alpha$，$AD$，$BE$交于点$H$，则$\\angle AHE$的度数为（　　）<br><div class=\"my-2\"><img src=\"assets/images/img_073_06600cecdb32.png\" alt=\"题目配图\" data-cx=\"2476500\" data-cy=\"1493183\" style=\"max-width:220px; height: auto; display: block;\" /></div>",
         "options": [
             "A. $180^\\circ-\\alpha$",
             "B. $90^\\circ+\\alpha$",
@@ -15323,7 +15323,7 @@
         ],
         "answer": "A",
         "analysis": "本题主要考查全等三角形的判定和性质和邻补角的定义，三角形内角和定理，设$AD$与$BC$相交于点$P$，根据题意得$\\angle ACD=\\angle BCE$，可利用$\\text{SAS}$证明$\\triangle ACD\\cong\\triangle BCE$，有$\\angle CAD=\\angle CBE$，结合三角形内角和定理得$\\angle AHB=\\angle ACB=\\alpha$，结合邻补角的定义即可得$\\angle AHE=180^\\circ-\\angle AHB=180^\\circ-\\alpha$．",
-        "detail": "解：设$AD$与$BC$相交于点$P$，如图所示：<br><div class=\"my-2\"><img src=\"assets/images/img_074_26b938d30ef8.png\" alt=\"解析辅助线图\" data-cx=\"2476500\" data-cy=\"1493183\" style=\"max-width: 260px; height: auto; display: block;\" /></div>$\\because \\angle ACB=\\angle DCE=\\alpha$，<br>$\\therefore \\angle ACD=\\angle BCE$，<br>在$\\triangle ACD$和$\\triangle BCE$中，<br>$\\begin{cases} CA=CB \\\\ \\angle ACD=\\angle BCE \\\\ CD=CE \\end{cases}$，<br>$\\therefore \\triangle ACD\\cong\\triangle BCE(\\text{SAS})$，<br>$\\therefore \\angle CAD=\\angle CBE$，<br>$\\because \\angle APC=\\angle BPH$，<br>则$180^\\circ-\\angle CAD-\\angle APC=180^\\circ-\\angle CBE-\\angle BPH$，<br>$\\therefore \\angle AHB=\\angle ACB=\\alpha$，<br>$\\therefore \\angle AHE=180^\\circ-\\angle AHB=180^\\circ-\\alpha$，<br>故选：A．"
+        "detail": "解：设$AD$与$BC$相交于点$P$，如图所示：<br><div class=\"my-2\"><img src=\"assets/images/img_074_26b938d30ef8.png\" alt=\"解析辅助线图\" data-cx=\"2476500\" data-cy=\"1493183\" style=\"max-width:220px; height: auto; display: block;\" /></div>$\\because \\angle ACB=\\angle DCE=\\alpha$，<br>$\\therefore \\angle ACD=\\angle BCE$，<br>在$\\triangle ACD$和$\\triangle BCE$中，<br>$\\begin{cases} CA=CB \\\\ \\angle ACD=\\angle BCE \\\\ CD=CE \\end{cases}$，<br>$\\therefore \\triangle ACD\\cong\\triangle BCE(\\text{SAS})$，<br>$\\therefore \\angle CAD=\\angle CBE$，<br>$\\because \\angle APC=\\angle BPH$，<br>则$180^\\circ-\\angle CAD-\\angle APC=180^\\circ-\\angle CBE-\\angle BPH$，<br>$\\therefore \\angle AHB=\\angle ACB=\\alpha$，<br>$\\therefore \\angle AHE=180^\\circ-\\angle AHB=180^\\circ-\\alpha$，<br>故选：A．"
     },
     {
         "id": "sas_7",
@@ -15333,7 +15333,7 @@
         "typeName": "单选题",
         "difficulty": "容易",
         "knowledge": "全等的性质和SAS综合（SAS）",
-        "stem": "如图，在$8\\times 8$的正方形网格中，$\\triangle ABC$的顶点和线段$EF$的端点都在小正方形的顶点上，这样的三角形叫做格点三角形．请你在图中找出所有满足条件的点$D$，使得以$D$、$E$、$F$为顶点的格点三角形与$\\triangle ABC$全等，这样的点$D$有（　　）<br><div class=\"my-2\"><img src=\"assets/images/img_075_9d51293c734f.png\" alt=\"题目配图\" data-cx=\"2286000\" data-cy=\"2326821\" style=\"max-width: 240px; height: auto; display: block;\" /></div>",
+        "stem": "如图，在$8\\times 8$的正方形网格中，$\\triangle ABC$的顶点和线段$EF$的端点都在小正方形的顶点上，这样的三角形叫做格点三角形．请你在图中找出所有满足条件的点$D$，使得以$D$、$E$、$F$为顶点的格点三角形与$\\triangle ABC$全等，这样的点$D$有（　　）<br><div class=\"my-2\"><img src=\"assets/images/img_075_9d51293c734f.png\" alt=\"题目配图\" data-cx=\"2286000\" data-cy=\"2326821\" style=\"max-width:162px; height: auto; display: block;\" /></div>",
         "options": [
             "A. $1$个",
             "B. $2$个",
@@ -15342,7 +15342,7 @@
         ],
         "answer": "D",
         "analysis": "本题考查了全等三角形的判定，利用网格的特性找到原三角形的边和角的特点，据此作图是解题关键；由图可知：$AB=2$，$BC$是$2\\times 2$的正方形的对角线，$\\angle ABC=90^\\circ+45^\\circ=135^\\circ$，而$EF=2$，则在网格中分别以$E$，$F$为一个端点，连接$2\\times 2$的正方形网格的对角线，且使$\\angle EFD=135^\\circ,\\angle FED=135^\\circ$，根据$\\text{SAS}$可知，所作三角形与$\\triangle ABC$全等．",
-        "detail": "解：点$D$的位置如图所示：<br><div class=\"my-2\"><img src=\"assets/images/img_076_f5c07359eb52.png\" alt=\"解析配图\" data-cx=\"2286000\" data-cy=\"2326821\" style=\"max-width: 240px; height: auto; display: block;\" /></div>由图可知，这样的点$D$有$4$个，<br>故选：D．"
+        "detail": "解：点$D$的位置如图所示：<br><div class=\"my-2\"><img src=\"assets/images/img_076_f5c07359eb52.png\" alt=\"解析配图\" data-cx=\"2286000\" data-cy=\"2326821\" style=\"max-width:162px; height: auto; display: block;\" /></div>由图可知，这样的点$D$有$4$个，<br>故选：D．"
     },
     {
         "id": "sas_8",
@@ -15352,7 +15352,7 @@
         "typeName": "单选题",
         "difficulty": "中等",
         "knowledge": "三角形的外角的定义及性质、全等的性质和SAS综合（SAS）",
-        "stem": "如图，在$6\\times 7$的正方形网格中，每个小正方形的顶点叫作格点，点$A,B,C,D$均为格点，连接$AB,BC,CD,BD$，下列说法正确的是（　　）<br><div class=\"my-2\"><img src=\"assets/images/img_077_90b42288e77f.png\" alt=\"题目配图\" data-cx=\"2286000\" data-cy=\"1940943\" style=\"max-width: 240px; height: auto; display: block;\" /></div>",
+        "stem": "如图，在$6\\times 7$的正方形网格中，每个小正方形的顶点叫作格点，点$A,B,C,D$均为格点，连接$AB,BC,CD,BD$，下列说法正确的是（　　）<br><div class=\"my-2\"><img src=\"assets/images/img_077_90b42288e77f.png\" alt=\"题目配图\" data-cx=\"2286000\" data-cy=\"1940943\" style=\"max-width:165px; height: auto; display: block;\" /></div>",
         "options": [
             "A. $\\angle BAC=\\angle BDC$",
             "B. $\\angle BAC+\\angle BDC=50^\\circ$",
@@ -15361,7 +15361,7 @@
         ],
         "answer": "D",
         "analysis": "本题主要考查了全等三角形的性质与判定，三角形外角的性质，可证明$\\triangle ABC\\cong\\triangle BED$得到$\\angle BAC=\\angle EBD$，由$\\angle EBD\\ne\\angle BDC$，可得$\\angle BAC\\ne\\angle BDC$，据此可判断A；再由$\\angle DCE=45^\\circ$即可判断B、C、D．",
-        "detail": "解：如图所示，取格点$E$，<br><div class=\"my-2\"><img src=\"assets/images/img_078_d3d8caea2a9d.png\" alt=\"解析辅助线图\" data-cx=\"2286000\" data-cy=\"1940943\" style=\"max-width: 240px; height: auto; display: block;\" /></div>由网格的特点可得$AB=BE=4$，$BC=DE=2$，$\\angle ABC=\\angle BED=90^\\circ$，<br>在$\\triangle ABC$和$\\triangle BED$中，<br>$\\begin{cases} AB=BE \\\\ \\angle ABC=\\angle BED \\\\ BC=DE \\end{cases}$，<br>$\\therefore \\triangle ABC\\cong\\triangle BED(\\text{SAS})$，<br>$\\therefore \\angle BAC=\\angle EBD$，<br>$\\because \\angle EBD\\ne\\angle BDC$，<br>$\\therefore \\angle BAC\\ne\\angle BDC$，故A错误；<br>由网格的特点可得$\\angle DCE=45^\\circ$，<br>$\\therefore \\angle DBC+\\angle BDC=\\angle DCE=45^\\circ$，$\\angle BCD=180^\\circ-45^\\circ=135^\\circ$，故C错误；<br>$\\therefore \\angle BDC=\\angle DCE-\\angle DBC=45^\\circ-\\angle DBC$，$\\angle BAC+\\angle BDC=45^\\circ$，故B错误；<br>$\\because \\angle ABD=\\angle ABC-\\angle DBC=90^\\circ-\\angle DBC$，<br>$\\therefore \\angle ABD-\\angle BDC=90^\\circ-\\angle DBC-45^\\circ+\\angle DBC=45^\\circ$，故D正确；<br>故选：D．"
+        "detail": "解：如图所示，取格点$E$，<br><div class=\"my-2\"><img src=\"assets/images/img_078_d3d8caea2a9d.png\" alt=\"解析辅助线图\" data-cx=\"2286000\" data-cy=\"1940943\" style=\"max-width:165px; height: auto; display: block;\" /></div>由网格的特点可得$AB=BE=4$，$BC=DE=2$，$\\angle ABC=\\angle BED=90^\\circ$，<br>在$\\triangle ABC$和$\\triangle BED$中，<br>$\\begin{cases} AB=BE \\\\ \\angle ABC=\\angle BED \\\\ BC=DE \\end{cases}$，<br>$\\therefore \\triangle ABC\\cong\\triangle BED(\\text{SAS})$，<br>$\\therefore \\angle BAC=\\angle EBD$，<br>$\\because \\angle EBD\\ne\\angle BDC$，<br>$\\therefore \\angle BAC\\ne\\angle BDC$，故A错误；<br>由网格的特点可得$\\angle DCE=45^\\circ$，<br>$\\therefore \\angle DBC+\\angle BDC=\\angle DCE=45^\\circ$，$\\angle BCD=180^\\circ-45^\\circ=135^\\circ$，故C错误；<br>$\\therefore \\angle BDC=\\angle DCE-\\angle DBC=45^\\circ-\\angle DBC$，$\\angle BAC+\\angle BDC=45^\\circ$，故B错误；<br>$\\because \\angle ABD=\\angle ABC-\\angle DBC=90^\\circ-\\angle DBC$，<br>$\\therefore \\angle ABD-\\angle BDC=90^\\circ-\\angle DBC-45^\\circ+\\angle DBC=45^\\circ$，故D正确；<br>故选：D．"
     },
     {
         "id": "sas_9",
@@ -15371,7 +15371,7 @@
         "typeName": "单选题",
         "difficulty": "中等",
         "knowledge": "确定第三边的取值范围、全等的性质和SAS综合（SAS）",
-        "stem": "如图，$AD$是$\\triangle ABC$的边$BC$上的中线，若$AB=5,AD=3$，则$AC$的取值范围为（　　）<br><div class=\"my-2\"><img src=\"assets/images/img_079_062b6bd951bf.png\" alt=\"题目配图\" data-cx=\"2286000\" data-cy=\"1306285\" style=\"max-width: 240px; height: auto; display: block;\" /></div>",
+        "stem": "如图，$AD$是$\\triangle ABC$的边$BC$上的中线，若$AB=5,AD=3$，则$AC$的取值范围为（　　）<br><div class=\"my-2\"><img src=\"assets/images/img_079_062b6bd951bf.png\" alt=\"题目配图\" data-cx=\"2286000\" data-cy=\"1306285\" style=\"max-width:220px; height: auto; display: block;\" /></div>",
         "options": [
             "A. $1 < AC < 11$",
             "B. $1 < AC < 8$",
@@ -15380,7 +15380,7 @@
         ],
         "answer": "A",
         "analysis": "本题考查全等三角形的判定和性质，三角形的三边关系，倍长$AD$至点$E$，连接$BE$，证明$\\triangle BDE\\cong\\triangle CDA$，得到$BE=AC$，利用三角形的三边关系进行求解即可．",
-        "detail": "解：倍长$AD$至点$E$，连接$BE$，则$AD=DE=\\frac{1}{2}AE$，<br><div class=\"my-2\"><img src=\"assets/images/img_080_e814c02d1fc1.png\" alt=\"解析辅助线图\" data-cx=\"2286000\" data-cy=\"2081892\" style=\"max-width: 240px; height: auto; display: block;\" /></div>$\\therefore AE=2AD=6$，<br>$\\because AD$是$\\triangle ABC$的边$BC$上的中线，<br>$\\therefore BD=CD$，<br>在$\\triangle BDE$和$\\triangle CDA$中，<br>$\\begin{cases} BD=CD \\\\ \\angle BDE=\\angle CDA \\\\ DE=DA \\end{cases}$，<br>$\\therefore \\triangle BDE\\cong\\triangle CDA(\\text{SAS})$，<br>$\\therefore BE=AC$，<br>在$\\triangle ABE$中，$AE-AB < BE < AB+AE$，<br>$\\therefore 1 < BE < 11$，<br>$\\therefore 1 < AC < 11$；<br>故选：A．"
+        "detail": "解：倍长$AD$至点$E$，连接$BE$，则$AD=DE=\\frac{1}{2}AE$，<br><div class=\"my-2\"><img src=\"assets/images/img_080_e814c02d1fc1.png\" alt=\"解析辅助线图\" data-cx=\"2286000\" data-cy=\"2081892\" style=\"max-width:165px; height: auto; display: block;\" /></div>$\\therefore AE=2AD=6$，<br>$\\because AD$是$\\triangle ABC$的边$BC$上的中线，<br>$\\therefore BD=CD$，<br>在$\\triangle BDE$和$\\triangle CDA$中，<br>$\\begin{cases} BD=CD \\\\ \\angle BDE=\\angle CDA \\\\ DE=DA \\end{cases}$，<br>$\\therefore \\triangle BDE\\cong\\triangle CDA(\\text{SAS})$，<br>$\\therefore BE=AC$，<br>在$\\triangle ABE$中，$AE-AB < BE < AB+AE$，<br>$\\therefore 1 < BE < 11$，<br>$\\therefore 1 < AC < 11$；<br>故选：A．"
     },
     {
         "id": "sas_10",
@@ -15390,7 +15390,7 @@
         "typeName": "单选题",
         "difficulty": "中等",
         "knowledge": "图形类规律探索、用SAS证明三角形全等（SAS）",
-        "stem": "如图1，已知$AB=AC$，$D$为$\\angle BAC$的角平分线上面一点，连接$BD$、$CD$；如图2，已知$AB=AC$，$D$、$E$为$\\angle BAC$的角平分线上面两点，连接$BD$、$CD$、$BE$、$CE$；如图3，已知$AB=AC$，$D$、$E$、$F$为$\\angle BAC$的角平分线上面三点，连接$BD$、$CD$、$BE$、$CE$、$BF$、$CF$；…，依此规律，第$9$个图形中有全等三角形的对数是（　　）<br><div class=\"my-2\"><img src=\"assets/images/img_081_5e62a515bfd8.png\" alt=\"题目配图\" data-cx=\"4000500\" data-cy=\"1600200\" style=\"max-width: 420px; height: auto; display: block;\" /></div>",
+        "stem": "如图1，已知$AB=AC$，$D$为$\\angle BAC$的角平分线上面一点，连接$BD$、$CD$；如图2，已知$AB=AC$，$D$、$E$为$\\angle BAC$的角平分线上面两点，连接$BD$、$CD$、$BE$、$CE$；如图3，已知$AB=AC$，$D$、$E$、$F$为$\\angle BAC$的角平分线上面三点，连接$BD$、$CD$、$BE$、$CE$、$BF$、$CF$；…，依此规律，第$9$个图形中有全等三角形的对数是（　　）<br><div class=\"my-2\"><img src=\"assets/images/img_081_5e62a515bfd8.png\" alt=\"题目配图\" data-cx=\"4000500\" data-cy=\"1600200\" style=\"max-width:280px; height: auto; display: block;\" /></div>",
         "options": [
             "A. $40$",
             "B. $36$",
@@ -15409,7 +15409,7 @@
         "typeName": "填空题",
         "difficulty": "中等",
         "knowledge": "根据平行线的性质探究角的关系、全等的性质和SAS综合（SAS）",
-        "stem": "如图，亮亮想测量某湖$A$，$B$两点之间的距离，他选取了可以直接到达点$A$，$B$的一点$C$，连接$CA$，$CB$，并作$BD\\parallel AC$，截取$BD=AC$，连接$CD$，他说，根据三角形全等的判定定理，可得$\\triangle ABC\\cong\\triangle DCB$，所以$AB=CD$，他用到三角形全等的判定定理是______．<br><div class=\"my-2\"><img src=\"assets/images/img_082_0a940114b580.png\" alt=\"题目配图\" data-cx=\"2381250\" data-cy=\"1627187\" style=\"max-width: 250px; height: auto; display: block;\" /></div>",
+        "stem": "如图，亮亮想测量某湖$A$，$B$两点之间的距离，他选取了可以直接到达点$A$，$B$的一点$C$，连接$CA$，$CB$，并作$BD\\parallel AC$，截取$BD=AC$，连接$CD$，他说，根据三角形全等的判定定理，可得$\\triangle ABC\\cong\\triangle DCB$，所以$AB=CD$，他用到三角形全等的判定定理是______．<br><div class=\"my-2\"><img src=\"assets/images/img_082_0a940114b580.png\" alt=\"题目配图\" data-cx=\"2381250\" data-cy=\"1627187\" style=\"max-width:220px; height: auto; display: block;\" /></div>",
         "answer": "$\\text{SAS}$",
         "analysis": "本题主要考查了平行线的性质、全等三角形的应用等知识，熟练掌握全等三角形的判定定理是解题关键．首先根据“两直线平行，内错角相等”可得$\\angle ACB=\\angle DBC$，再利用“$\\text{SAS}$”证明$\\triangle ACB\\cong\\triangle DBC$，即可获得答案．",
         "detail": "解：$\\because BD\\parallel AC$，<br>$\\therefore \\angle ACB=\\angle DBC$，<br>在$\\triangle ACB$与$\\triangle DBC$中，<br>$\\begin{cases} AC=BD \\\\ \\angle ACB=\\angle DBC \\\\ BC=CB \\end{cases}$，<br>$\\therefore \\triangle ACB\\cong\\triangle DBC(\\text{SAS})$，<br>$\\therefore AB=CD$，<br>故答案为：$\\text{SAS}$．"
@@ -15422,7 +15422,7 @@
         "typeName": "填空题",
         "difficulty": "容易",
         "knowledge": "全等的性质和SAS综合（SAS）",
-        "stem": "如图，一个直角三角板的一条直角边经过$\\angle AOB$的顶点$O$，一把直尺经过三角板的直角顶点$E$并且与这条直角边垂直，直尺与$\\angle AOB$的两边分别交于$C$、$D$，当$CE=DE$时，$\\angle AOE$与$\\angle AOB$的数量关系为：_______．<br><div class=\"my-2\"><img src=\"assets/images/img_083_8d253a25576b.png\" alt=\"题目配图\" data-cx=\"2190750\" data-cy=\"2321426\" style=\"max-width: 230px; height: auto; display: block;\" /></div>",
+        "stem": "如图，一个直角三角板的一条直角边经过$\\angle AOB$的顶点$O$，一把直尺经过三角板的直角顶点$E$并且与这条直角边垂直，直尺与$\\angle AOB$的两边分别交于$C$、$D$，当$CE=DE$时，$\\angle AOE$与$\\angle AOB$的数量关系为：_______．<br><div class=\"my-2\"><img src=\"assets/images/img_083_8d253a25576b.png\" alt=\"题目配图\" data-cx=\"2190750\" data-cy=\"2321426\" style=\"max-width:156px; height: auto; display: block;\" /></div>",
         "answer": "$\\angle AOE=\\frac{1}{2}\\angle AOB$",
         "analysis": "本题考查了全等三角形的性质与判定，解决本题的关键是熟练掌握全等三角形的性质与判定．根据$\\text{SAS}$可以证明$\\triangle OEC\\cong\\triangle OED$，从而得结论．",
         "detail": "解：由题意得$OE\\perp CD$，<br>$\\therefore \\angle OEC=\\angle OED=90^\\circ$，<br>在$\\triangle OEC$和$\\triangle OED$中，<br>$\\begin{cases} CE=DE \\\\ \\angle OEC=\\angle OED \\\\ OE=OE \\end{cases}$，<br>$\\therefore \\triangle OEC\\cong\\triangle OED(\\text{SAS})$，<br>$\\therefore \\angle AOE=\\angle BOE$，<br>$\\therefore \\angle AOE=\\frac{1}{2}\\angle AOB$，<br>故答案为：$\\angle AOE=\\frac{1}{2}\\angle AOB$．"
@@ -15435,7 +15435,7 @@
         "typeName": "填空题",
         "difficulty": "容易",
         "knowledge": "全等的性质和SAS综合（SAS）",
-        "stem": "如图，在$\\triangle ABC$中，$BD$平分$\\angle ABC$，$BA=BE,\\angle A=75^\\circ$，则$\\angle CED=$______．<br><div class=\"my-2\"><img src=\"assets/images/img_084_a76fe41ca26b.png\" alt=\"题目配图\" data-cx=\"2381250\" data-cy=\"1623934\" style=\"max-width: 250px; height: auto; display: block;\" /></div>",
+        "stem": "如图，在$\\triangle ABC$中，$BD$平分$\\angle ABC$，$BA=BE,\\angle A=75^\\circ$，则$\\angle CED=$______．<br><div class=\"my-2\"><img src=\"assets/images/img_084_a76fe41ca26b.png\" alt=\"题目配图\" data-cx=\"2381250\" data-cy=\"1623934\" style=\"max-width:220px; height: auto; display: block;\" /></div>",
         "answer": "$105^\\circ$/105度",
         "analysis": "本题考查全等三角形的判定与性质，证明$\\triangle ABD\\cong\\triangle EBD(\\text{SAS})$得到$\\angle A=\\angle DEB=75^\\circ$即可求解．",
         "detail": "解：$\\because BD$平分$\\angle ABC$，<br>$\\therefore \\angle ABD=\\angle EBD$，<br>在$\\triangle ABD$和$\\triangle EBD$中，<br>$\\begin{cases} BA=BE \\\\ \\angle ABD=\\angle EBD \\\\ BD=BD \\end{cases}$，<br>$\\therefore \\triangle ABD\\cong\\triangle EBD(\\text{SAS})$，<br>$\\therefore \\angle A=\\angle DEB=75^\\circ$，<br>$\\therefore \\angle CED=180^\\circ-\\angle DEB=180^\\circ-75^\\circ=105^\\circ$，<br>故答案为：$105^\\circ$．"
@@ -15448,7 +15448,7 @@
         "typeName": "填空题",
         "difficulty": "中等",
         "knowledge": "三角形内角和定理的应用、全等的性质和SAS综合（SAS）",
-        "stem": "如图，$AC=BC$，$DC=EC$，$\\angle ACB=\\angle ECD=90^\\circ$．若$\\angle EBD=34^\\circ$，则$\\angle AEB=$_____．<br><div class=\"my-2\"><img src=\"assets/images/img_085_55ec36344fbb.png\" alt=\"题目配图\" data-cx=\"2381250\" data-cy=\"1678214\" style=\"max-width: 250px; height: auto; display: block;\" /></div>",
+        "stem": "如图，$AC=BC$，$DC=EC$，$\\angle ACB=\\angle ECD=90^\\circ$．若$\\angle EBD=34^\\circ$，则$\\angle AEB=$_____．<br><div class=\"my-2\"><img src=\"assets/images/img_085_55ec36344fbb.png\" alt=\"题目配图\" data-cx=\"2381250\" data-cy=\"1678214\" style=\"max-width:220px; height: auto; display: block;\" /></div>",
         "answer": "$124^\\circ$",
         "analysis": "本题考查了全等三角形的判定与性质，三角形内角和定理等知识．证明$\\triangle ACE\\cong\\triangle BCD(\\text{SAS})$，则$\\angle CAE=\\angle CBD$，$\\angle CAE+\\angle CBE=\\angle CBD+\\angle CBE=\\angle EBD$，再根据三角形内角和定理计算求解即可．",
         "detail": "解：$\\because \\angle ACB=\\angle ECD=90^\\circ$，<br>$\\therefore \\angle ACB-\\angle BCE=\\angle ECD-\\angle BCE$，即$\\angle ACE=\\angle BCD$，<br>在$\\triangle ACE$和$\\triangle BCD$中，<br>$\\begin{cases} AC=BC \\\\ \\angle ACE=\\angle BCD \\\\ EC=DC \\end{cases}$，<br>$\\therefore \\triangle ACE\\cong\\triangle BCD(\\text{SAS})$，<br>$\\therefore \\angle CAE=\\angle CBD$，<br>$\\therefore \\angle CAE+\\angle CBE=\\angle CBD+\\angle CBE=\\angle EBD=34^\\circ$，<br>$\\therefore \\angle EAB+\\angle EBA=180^\\circ-\\angle ACB-(\\angle CAE+\\angle CBE)=56^\\circ$，<br>$\\therefore \\angle AEB=180^\\circ-(\\angle EAB+\\angle EBA)=124^\\circ$，<br>故答案为：$124^\\circ$．"
@@ -15461,7 +15461,7 @@
         "typeName": "填空题",
         "difficulty": "中等",
         "knowledge": "全等的性质和SAS综合（SAS）",
-        "stem": "如图，$AB=AD$，$AC=AE$，且点$C$在$DE$上，$\\angle BAD=\\angle CAE=50^\\circ$，则$\\angle BCD=$______．<br><div class=\"my-2\"><img src=\"assets/images/img_086_6696c8a4232c.png\" alt=\"题目配图\" data-cx=\"2286000\" data-cy=\"1766806\" style=\"max-width: 240px; height: auto; display: block;\" /></div>",
+        "stem": "如图，$AB=AD$，$AC=AE$，且点$C$在$DE$上，$\\angle BAD=\\angle CAE=50^\\circ$，则$\\angle BCD=$______．<br><div class=\"my-2\"><img src=\"assets/images/img_086_6696c8a4232c.png\" alt=\"题目配图\" data-cx=\"2286000\" data-cy=\"1766806\" style=\"max-width:207px; height: auto; display: block;\" /></div>",
         "answer": "$50^\\circ$/50度",
         "analysis": "本题考查了全等三角形的判定与性质，解决本题的关键是证明$\\triangle ABC\\cong\\triangle ADE$．先根据角的和差证明$\\angle BAC=\\angle DAE$，利用$\\text{SAS}$证明$\\triangle ABC\\cong\\triangle ADE$，可得$\\angle B=\\angle D$，再求解即可．",
         "detail": "解：$\\because \\angle BAD=\\angle CAE=50^\\circ$，<br>$\\therefore \\angle BAD+\\angle CAD=\\angle CAE+\\angle CAD$，<br>$\\therefore \\angle BAC=\\angle DAE$．<br>在$\\triangle ABC$和$\\triangle ADE$中，<br>$\\begin{cases} AB=AD \\\\ \\angle BAC=\\angle DAE \\\\ AC=AE \\end{cases}$，<br>$\\therefore \\triangle ABC\\cong\\triangle ADE(\\text{SAS})$，<br>$\\therefore \\angle B=\\angle D$．<br>$\\because$对顶角相等，<br>$\\therefore \\angle B+\\angle BAD=\\angle D+\\angle BCD$，<br>$\\therefore \\angle BCD=\\angle BAD=50^\\circ$．<br>故答案为：$50^\\circ$．"
@@ -15474,7 +15474,7 @@
         "typeName": "填空题",
         "difficulty": "中等",
         "knowledge": "全等的性质和SAS综合（SAS）",
-        "stem": "如图，在$\\text{Rt}\\triangle ABC$中，$\\angle ABC=90^\\circ$，$BD$是高，$E$是$\\triangle ABC$外一点，$BE=BA$，$\\angle E=\\angle C$，若$DE=\\frac{2}{5}BD$，$AD=16,BD=20$，求$\\triangle BDE$的面积．小颖思考后认为可以这样添加辅助线：在$BD$上截取$BF=DE$，连接$AF$．根据小颖的思路可得$\\triangle BDE$的面积为__________．<br><div class=\"my-2\"><img src=\"assets/images/img_087_c9e9c907b184.png\" alt=\"题目配图\" data-cx=\"2381250\" data-cy=\"1736008\" style=\"max-width: 250px; height: auto; display: block;\" /></div>",
+        "stem": "如图，在$\\text{Rt}\\triangle ABC$中，$\\angle ABC=90^\\circ$，$BD$是高，$E$是$\\triangle ABC$外一点，$BE=BA$，$\\angle E=\\angle C$，若$DE=\\frac{2}{5}BD$，$AD=16,BD=20$，求$\\triangle BDE$的面积．小颖思考后认为可以这样添加辅助线：在$BD$上截取$BF=DE$，连接$AF$．根据小颖的思路可得$\\triangle BDE$的面积为__________．<br><div class=\"my-2\"><img src=\"assets/images/img_087_c9e9c907b184.png\" alt=\"题目配图\" data-cx=\"2381250\" data-cy=\"1736008\" style=\"max-width:219px; height: auto; display: block;\" /></div>",
         "answer": "$64$",
         "analysis": "本题考查了全等三角形的判定和性质；先通过等量代换推出$\\angle ABD=\\angle E$，再利用“边角边”证明$\\triangle ABF\\cong\\triangle BED$，再通过$S_{\\triangle ABF}=\\frac{1}{2}BF\\cdot AD$求出$\\triangle ABF$的面积即可．",
         "detail": "解：$\\because BD$是$\\triangle ABC$的高，<br>$\\therefore BD\\perp AC$，<br>$\\therefore \\angle A+\\angle ABD=90^\\circ$，<br>$\\because \\angle ABC=90^\\circ$，<br>$\\therefore \\angle A+\\angle C=90^\\circ$，<br>$\\therefore \\angle ABD=\\angle C$，<br>$\\because \\angle E=\\angle C$，<br>$\\therefore \\angle ABD=\\angle E$．<br>在$\\triangle ABF$和$\\triangle BED$中，<br>$\\begin{cases} BA=BE \\\\ \\angle ABD=\\angle E \\\\ BF=DE \\end{cases}$，<br>$\\therefore \\triangle ABF\\cong\\triangle BED(\\text{SAS})$，<br>$\\therefore S_{\\triangle ABF}=S_{\\triangle BED}$．<br>$\\because DE=\\frac{2}{5}BD,BD=20,BF=DE$，<br>$\\therefore BF=DE=\\frac{2}{5}BD=\\frac{2}{5}\\times 20=8$，<br>$\\therefore S_{\\triangle ABF}=\\frac{1}{2}BF\\cdot AD=\\frac{1}{2}\\times 8\\times 16=64$，<br>$\\therefore S_{\\triangle BED}=S_{\\triangle ABF}=64$．<br>故答案为：$64$．"
@@ -15487,10 +15487,10 @@
         "typeName": "填空题",
         "difficulty": "容易",
         "knowledge": "全等的性质和SAS综合（SAS）",
-        "stem": "如图是钉板示意图，每相邻的$4$个钉点均是小正方形的顶点，钉点$A,B$的连线与钉点$C,D$的连线交于点$E$．<br><div class=\"my-2\"><img src=\"assets/images/img_088_ef6926e3a716.png\" alt=\"题目配图\" data-cx=\"2095500\" data-cy=\"1965960\" style=\"max-width: 220px; height: auto; display: block;\" /></div>（1）若$CD=5,AE=2$，则$BE$的长为________；<br>（2）连接钉点$B,C$，则$\\angle ABC+\\angle BCD=$________度．",
+        "stem": "如图是钉板示意图，每相邻的$4$个钉点均是小正方形的顶点，钉点$A,B$的连线与钉点$C,D$的连线交于点$E$．<br><div class=\"my-2\"><img src=\"assets/images/img_088_ef6926e3a716.png\" alt=\"题目配图\" data-cx=\"2095500\" data-cy=\"1965960\" style=\"max-width:165px; height: auto; display: block;\" /></div>（1）若$CD=5,AE=2$，则$BE$的长为________；<br>（2）连接钉点$B,C$，则$\\angle ABC+\\angle BCD=$________度．",
         "answer": "$3$；$90$",
         "analysis": "本题主要考查全等三角形的判定和性质，熟练掌握全等三角形的判定和性质是解题的关键．（1）根据题意可得$\\triangle BFA\\cong\\triangle DAC(\\text{SAS})$，求出$AB=CD=5$，即可求出$BE$的长；（2）根据题意可得$\\triangle AGB\\cong\\triangle DAC(\\text{SAS})$，求出$\\angle GBA=\\angle ACD$，同理$\\angle HCB=\\angle GBC$，继而求出$\\angle ABC+\\angle BCD=\\angle ACH=90^\\circ$．",
-        "detail": "解：如图：<br><div class=\"my-2\"><img src=\"assets/images/img_089_4c53f21c6af5.png\" alt=\"解析辅助线图\" data-cx=\"2095500\" data-cy=\"1965960\" style=\"max-width: 220px; height: auto; display: block;\" /></div>（1）$\\because$每相邻的$4$个钉点均是小正方形的顶点，<br>在$\\triangle BFA$和$\\triangle DAC$中，<br>$\\begin{cases} BF=AD \\\\ \\angle BFA=\\angle DAC=90^\\circ \\\\ FA=AC \\end{cases}$，<br>$\\therefore \\triangle BFA\\cong\\triangle DAC(\\text{SAS})$，<br>$\\therefore AB=CD=5$，<br>$\\therefore BE=AB-AE=5-2=3$；<br>（2）$\\because$每相邻的$4$个钉点均是小正方形的顶点，<br>在$\\triangle AGB$和$\\triangle DAC$中，<br>$\\begin{cases} AG=AD \\\\ \\angle AGB=\\angle DAC=90^\\circ \\\\ GB=AC \\end{cases}$，<br>$\\therefore \\triangle AGB\\cong\\triangle DAC(\\text{SAS})$，<br>$\\therefore \\angle GBA=\\angle ACD$，<br>同理可得$\\angle HCB=\\angle GBC$，<br>$\\therefore \\angle ABC+\\angle BCD=\\angle GBA+\\angle GBC+\\angle BCD=\\angle ACD+\\angle HCB+\\angle BCD=\\angle ACH=90^\\circ$；<br>故答案为：（1）$3$，（2）$90$．"
+        "detail": "解：如图：<br><div class=\"my-2\"><img src=\"assets/images/img_089_4c53f21c6af5.png\" alt=\"解析辅助线图\" data-cx=\"2095500\" data-cy=\"1965960\" style=\"max-width:165px; height: auto; display: block;\" /></div>（1）$\\because$每相邻的$4$个钉点均是小正方形的顶点，<br>在$\\triangle BFA$和$\\triangle DAC$中，<br>$\\begin{cases} BF=AD \\\\ \\angle BFA=\\angle DAC=90^\\circ \\\\ FA=AC \\end{cases}$，<br>$\\therefore \\triangle BFA\\cong\\triangle DAC(\\text{SAS})$，<br>$\\therefore AB=CD=5$，<br>$\\therefore BE=AB-AE=5-2=3$；<br>（2）$\\because$每相邻的$4$个钉点均是小正方形的顶点，<br>在$\\triangle AGB$和$\\triangle DAC$中，<br>$\\begin{cases} AG=AD \\\\ \\angle AGB=\\angle DAC=90^\\circ \\\\ GB=AC \\end{cases}$，<br>$\\therefore \\triangle AGB\\cong\\triangle DAC(\\text{SAS})$，<br>$\\therefore \\angle GBA=\\angle ACD$，<br>同理可得$\\angle HCB=\\angle GBC$，<br>$\\therefore \\angle ABC+\\angle BCD=\\angle GBA+\\angle GBC+\\angle BCD=\\angle ACD+\\angle HCB+\\angle BCD=\\angle ACH=90^\\circ$；<br>故答案为：（1）$3$，（2）$90$．"
     },
     {
         "id": "sas_18",
@@ -15500,7 +15500,7 @@
         "typeName": "解答题",
         "difficulty": "容易",
         "knowledge": "全等的性质和SAS综合（SAS）",
-        "stem": "在$\\text{Rt}\\triangle ABC$中，$\\angle A=90^\\circ$，$D$为$BC$的中点，点$E$为$AC$上一点，连接$ED$并延长至点$F$，使得$DF=DE$，连接$BF$．求证：$BF\\perp AB$．<br><div class=\"my-2\"><img src=\"assets/images/img_090_17ed3d1db281.png\" alt=\"题目配图\" data-cx=\"2095500\" data-cy=\"1824317\" style=\"max-width: 220px; height: auto; display: block;\" /></div>",
+        "stem": "在$\\text{Rt}\\triangle ABC$中，$\\angle A=90^\\circ$，$D$为$BC$的中点，点$E$为$AC$上一点，连接$ED$并延长至点$F$，使得$DF=DE$，连接$BF$．求证：$BF\\perp AB$．<br><div class=\"my-2\"><img src=\"assets/images/img_090_17ed3d1db281.png\" alt=\"题目配图\" data-cx=\"2095500\" data-cy=\"1824317\" style=\"max-width:165px; height: auto; display: block;\" /></div>",
         "answer": "证明见解析",
         "analysis": "本题考查的是全等三角形的判定与性质，熟记判定方法是解本题的关键．先证明$BD=CD$，再按照$\\text{SAS}$证明两个三角形全等，得出$\\angle ECD=\\angle FBD$，可得$AC\\parallel BF$，进而即可得证$BF\\perp AB$．",
         "detail": "证明：$\\because D$为$BC$的中点，<br>$\\therefore BD=CD$，<br>在$\\triangle ECD$和$\\triangle FBD$中，<br>$\\begin{cases} CD=BD \\\\ \\angle CDE=\\angle BDF \\\\ DE=DF \\end{cases}$，<br>$\\therefore \\triangle ECD\\cong\\triangle FBD(\\text{SAS})$，<br>$\\therefore \\angle ECD=\\angle FBD$，<br>$\\therefore AC\\parallel BF$，<br>$\\because \\angle A=90^\\circ$，即$AC\\perp AB$，<br>$\\therefore BF\\perp AB$．"
@@ -15513,7 +15513,7 @@
         "typeName": "解答题",
         "difficulty": "容易",
         "knowledge": "全等的性质和SAS综合（SAS）",
-        "stem": "如图，在$\\triangle ABC$和$\\triangle ADE$中，延长$BC$交$DE$于$F$，$\\angle CFE$与$\\angle CAE$互补，$BC=DE$，$AC=AE$．求证：$\\angle B=\\angle D$．<br><div class=\"my-2\"><img src=\"assets/images/img_091_49c5579009aa.png\" alt=\"题目配图\" data-cx=\"2381250\" data-cy=\"1716355\" style=\"max-width: 250px; height: auto; display: block;\" /></div>",
+        "stem": "如图，在$\\triangle ABC$和$\\triangle ADE$中，延长$BC$交$DE$于$F$，$\\angle CFE$与$\\angle CAE$互补，$BC=DE$，$AC=AE$．求证：$\\angle B=\\angle D$．<br><div class=\"my-2\"><img src=\"assets/images/img_091_49c5579009aa.png\" alt=\"题目配图\" data-cx=\"2381250\" data-cy=\"1716355\" style=\"max-width:220px; height: auto; display: block;\" /></div>",
         "answer": "证明见解析",
         "analysis": "本题主要考查了全等三角形的判定和性质以及四边形内角和的性质，根据题意得出$\\triangle ABC\\cong\\triangle ADE$即可得出结论．",
         "detail": "证明：$\\because \\angle CFE$与$\\angle CAE$互补，<br>$\\therefore$由四边形内角和，得$\\angle ACF$与$\\angle E$互补．<br>$\\because \\angle ACB$与$\\angle ACF$互补，<br>$\\therefore \\angle ACB=\\angle E$．<br>在$\\triangle ABC$和$\\triangle ADE$中，<br>$\\begin{cases} BC=DE \\\\ \\angle ACB=\\angle E \\\\ AC=AE \\end{cases}$，<br>$\\therefore \\triangle ABC\\cong\\triangle ADE(\\text{SAS})$．<br>$\\therefore \\angle B=\\angle D$．"
@@ -15526,7 +15526,7 @@
         "typeName": "解答题",
         "difficulty": "容易",
         "knowledge": "内错角相等两直线平行、全等的性质和SAS综合（SAS）",
-        "stem": "如图，点$D$和点$C$在线段$BE$上，$\\triangle ABC\\cong\\triangle FED$．<br><div class=\"my-2\"><img src=\"assets/images/img_092_df063c83af20.png\" alt=\"题目配图\" data-cx=\"2381250\" data-cy=\"1834733\" style=\"max-width: 250px; height: auto; display: block;\" /></div>(1)求证：$BD=EC$；<br>(2)判断线段$AD$与$FC$的关系并证明．",
+        "stem": "如图，点$D$和点$C$在线段$BE$上，$\\triangle ABC\\cong\\triangle FED$．<br><div class=\"my-2\"><img src=\"assets/images/img_092_df063c83af20.png\" alt=\"题目配图\" data-cx=\"2381250\" data-cy=\"1834733\" style=\"max-width:208px; height: auto; display: block;\" /></div>(1)求证：$BD=EC$；<br>(2)判断线段$AD$与$FC$的关系并证明．",
         "answer": "(1)见解析；(2)$AD\\parallel FC$，且$AD=FC$，证明见解析",
         "analysis": "本题考查了全等三角形的判定与性质，平行线的判定，解题的关键是掌握全等三角形的判定与性质．（1）根据全等三角形的性质可得$BC=ED$，进而得到$BC-DC=DE-DC$，即可得证；（2）根据全等三角形的性质可得$\\angle ACD=\\angle FDC$，$AC=DF$，推出$\\triangle ACD\\cong\\triangle FDC$，得到$AD=FC$，$\\angle ADC=\\angle DCF$，推出$AD\\parallel FC$．",
         "detail": "（1）证明：$\\because \\triangle ABC\\cong\\triangle FED$，<br>$\\therefore BC=ED$，<br>$\\therefore BC-DC=DE-DC$，<br>$\\therefore BD=EC$；<br>（2）解：$AD\\parallel FC$，且$AD=FC$，理由如下：<br>$\\because \\triangle ABC\\cong\\triangle FED$，<br>$\\therefore \\angle ACD=\\angle FDC$，$AC=DF$，<br>在$\\triangle ACD$和$\\triangle FDC$中，<br>$\\begin{cases} AC=DF \\\\ \\angle ACD=\\angle FDC \\\\ CD=DC \\end{cases}$，<br>$\\therefore \\triangle ACD\\cong\\triangle FDC(\\text{SAS})$，<br>$\\therefore AD=FC$，$\\angle ADC=\\angle DCF$，<br>$\\therefore AD\\parallel FC$．"
@@ -15539,7 +15539,7 @@
         "typeName": "解答题",
         "difficulty": "中等",
         "knowledge": "三角形内角和定理的应用、全等的性质和SAS综合（SAS）",
-        "stem": "把两个含有$45^\\circ$角的直角三角板如图放置，点$D$在$BC$上，连接$BE$、$AD$，$AD$的延长线交$BE$于点$F$．<br><div class=\"my-2\"><img src=\"assets/images/img_093_40def87e2017.png\" alt=\"题目配图\" data-cx=\"2381250\" data-cy=\"1764467\" style=\"max-width: 250px; height: auto; display: block;\" /></div>(1)求证：$AD=BE$；<br>(2)求证：$AF\\perp BE$．",
+        "stem": "把两个含有$45^\\circ$角的直角三角板如图放置，点$D$在$BC$上，连接$BE$、$AD$，$AD$的延长线交$BE$于点$F$．<br><div class=\"my-2\"><img src=\"assets/images/img_093_40def87e2017.png\" alt=\"题目配图\" data-cx=\"2381250\" data-cy=\"1764467\" style=\"max-width:216px; height: auto; display: block;\" /></div>(1)求证：$AD=BE$；<br>(2)求证：$AF\\perp BE$．",
         "answer": "(1)见解析；(2)见解析",
         "analysis": "本题考查了全等三角形的判定与性质，等腰直角三角形的性质，直角三角形的两个锐角互余，解题关键是利用直角三角形的性质求解．（1）由$\\text{SAS}$判定$\\triangle ECB\\cong\\triangle DCA$，根据全等三角形的性质可得$AD=BE$；（2）利用全等三角形的性质可得$\\angle BEC=\\angle ADC$，再证明$\\angle BEC+\\angle DAC=90^\\circ$，即可得出结论成立．",
         "detail": "（1）证明：$\\because \\triangle ABC$和$\\triangle ECD$都是等腰直角三角形，<br>$\\therefore \\angle ECD=\\angle BCA=90^\\circ$，$CE=CD$，$BC=AC$，<br>在$\\triangle ECB$和$\\triangle DCA$中，<br>$\\begin{cases} CE=CD \\\\ \\angle ECD=\\angle BCA \\\\ BC=AC \\end{cases}$，<br>$\\therefore \\triangle ECB\\cong\\triangle DCA(\\text{SAS})$，<br>$\\therefore AD=BE$；<br>（2）证明：$\\because \\triangle ECB\\cong\\triangle DCA$，<br>$\\therefore \\angle BEC=\\angle ADC$，<br>又$\\because \\angle ADC+\\angle DAC=90^\\circ$，<br>$\\therefore \\angle BEC+\\angle DAC=90^\\circ$，<br>$\\therefore \\angle AFE=90^\\circ$．<br>$\\therefore AF\\perp BE$．"
@@ -15552,7 +15552,7 @@
         "typeName": "解答题",
         "difficulty": "中等",
         "knowledge": "两直线平行内错角相等、三角形内角和定理的应用、全等的性质和SAS综合（SAS）",
-        "stem": "如图，已知$AD\\parallel BC$且$AD=BC$，$E$、$F$是$BD$上两点，且$BE=DF$．<br><div class=\"my-2\"><img src=\"assets/images/img_094_f0dda2815ce6.png\" alt=\"题目配图\" data-cx=\"2286000\" data-cy=\"1655379\" style=\"max-width: 240px; height: auto; display: block;\" /></div>(1)求证：$\\triangle ADE\\cong\\triangle CBF$；<br>(2)若$\\angle CBD=35^\\circ$，$\\angle BCF=95^\\circ$，求$\\angle AEB$的度数．",
+        "stem": "如图，已知$AD\\parallel BC$且$AD=BC$，$E$、$F$是$BD$上两点，且$BE=DF$．<br><div class=\"my-2\"><img src=\"assets/images/img_094_f0dda2815ce6.png\" alt=\"题目配图\" data-cx=\"2286000\" data-cy=\"1655379\" style=\"max-width:220px; height: auto; display: block;\" /></div>(1)求证：$\\triangle ADE\\cong\\triangle CBF$；<br>(2)若$\\angle CBD=35^\\circ$，$\\angle BCF=95^\\circ$，求$\\angle AEB$的度数．",
         "answer": "(1)见解析；(2)$130^\\circ$",
         "analysis": "本题考查了全等三角形的判定与性质，三角形内角和定理等知识．（1）根据等式的性质可得出$BF=DE$，根据平行线的性质得出$\\angle ADE=\\angle CBF$，然后根据$\\text{SAS}$证明$\\triangle ADE\\cong\\triangle CBF$即可；（2）根据三角形内角和定理求出$\\angle BFC=50^\\circ$，根据全等三角形的性质求出$\\angle AED=50^\\circ$，然后根据邻补角定义求解即可．",
         "detail": "（1）证明：$\\because BE=DF$，<br>$\\therefore BE+EF=DF+EF$，即$BF=DE$，<br>$\\because AD\\parallel BC$，<br>$\\therefore \\angle ADE=\\angle CBF$，<br>在$\\triangle ADE$和$\\triangle CBF$中，<br>$\\begin{cases} AD=BC \\\\ \\angle ADE=\\angle CBF \\\\ DE=BF \\end{cases}$，<br>$\\therefore \\triangle ADE\\cong\\triangle CBF(\\text{SAS})$；<br>（2）解：$\\because \\angle CBD=35^\\circ$，$\\angle BCF=95^\\circ$，<br>$\\therefore \\angle BFC=50^\\circ$，<br>$\\because \\triangle ADE\\cong\\triangle CBF$，<br>$\\therefore \\angle AED=\\angle BFC=50^\\circ$，<br>$\\therefore \\angle AEB=180^\\circ-\\angle AED=130^\\circ$．"
@@ -15565,7 +15565,7 @@
         "typeName": "解答题",
         "difficulty": "中等",
         "knowledge": "三角形的外角的定义及性质、全等的性质和SAS综合（SAS）",
-        "stem": "已知点$C$为线段$AB$上一点，分别以$AC$，$BC$为边在线段$AB$同侧作$\\triangle ACD$和$\\triangle BCE$，且$CA=CD$，$CB=CE$，$\\angle ACD=\\angle BCE$，直线$AE$与$BD$交于点$F$．<br><div class=\"my-2\"><img src=\"assets/images/img_095_5add6610772e.png\" alt=\"题目配图\" data-cx=\"3810000\" data-cy=\"1631757\" style=\"max-width: 400px; height: auto; display: block;\" /></div>(1)如图1，求证：$\\triangle ACE\\cong\\triangle DCB$；<br>(2)若$\\angle ACD=60^\\circ$，则$\\angle AFB=$________；<br>(3)如图2，若$\\angle ACD=\\alpha$，则$\\angle AFB=$________．（用含$\\alpha$的式子表示）",
+        "stem": "已知点$C$为线段$AB$上一点，分别以$AC$，$BC$为边在线段$AB$同侧作$\\triangle ACD$和$\\triangle BCE$，且$CA=CD$，$CB=CE$，$\\angle ACD=\\angle BCE$，直线$AE$与$BD$交于点$F$．<br><div class=\"my-2\"><img src=\"assets/images/img_095_5add6610772e.png\" alt=\"题目配图\" data-cx=\"3810000\" data-cy=\"1631757\" style=\"max-width:280px; height: auto; display: block;\" /></div>(1)如图1，求证：$\\triangle ACE\\cong\\triangle DCB$；<br>(2)若$\\angle ACD=60^\\circ$，则$\\angle AFB=$________；<br>(3)如图2，若$\\angle ACD=\\alpha$，则$\\angle AFB=$________．（用含$\\alpha$的式子表示）",
         "answer": "(1)见解析；(2)$120^\\circ$；(3)$180^\\circ-\\alpha$",
         "analysis": "本题考查了全等三角形的判定及性质，三角形的外角性质等；（1）由$\\text{SAS}$可判定$\\triangle ACE\\cong\\triangle DCB$，即可得证；（2）由全等三角形的性质得$\\angle CAE=\\angle CDB$，由三角形的外角性质得$\\angle CAE+\\angle CBD=60^\\circ$，即可求解；（3）由全等三角形的性质得$\\angle CAE=\\angle CDB$，由三角形的外角性质得$\\angle CAE+\\angle CBD=\\alpha$，即可求解．",
         "detail": "（1）证明：$\\because \\angle ACD=\\angle BCE$，<br>$\\therefore \\angle ACD+\\angle DCE=\\angle BCE+\\angle DCE$，即$\\angle ACE=\\angle DCB$，<br>在$\\triangle ACE$和$\\triangle DCB$中，<br>$\\begin{cases} CA=CD \\\\ \\angle ACE=\\angle DCB \\\\ CE=CB \\end{cases}$，<br>$\\therefore \\triangle ACE\\cong\\triangle DCB(\\text{SAS})$；<br>（2）解：$\\because \\angle ACD=60^\\circ$，<br>$\\therefore \\angle CDB+\\angle CBD=60^\\circ$，<br>$\\because \\triangle ACE\\cong\\triangle DCB$，<br>$\\therefore \\angle CAE=\\angle CDB$，<br>$\\therefore \\angle CAE+\\angle CBD=60^\\circ$，<br>$\\therefore \\angle AFB=180^\\circ-(\\angle CAE+\\angle CBD)=120^\\circ$，<br>故答案为：$120^\\circ$；<br>（3）解：$\\because \\angle ACD=\\alpha$，<br>$\\therefore \\angle CDB+\\angle CBD=\\alpha$，<br>$\\because \\triangle ACE\\cong\\triangle DCB$，<br>$\\therefore \\angle CAE=\\angle CDB$，<br>$\\therefore \\angle CAE+\\angle CBD=\\alpha$，<br>$\\therefore \\angle AFB=180^\\circ-(\\angle CAE+\\angle CBD)=180^\\circ-\\alpha$，<br>故答案为：$180^\\circ-\\alpha$．"
@@ -15578,7 +15578,7 @@
         "typeName": "单选题",
         "difficulty": "容易",
         "knowledge": "全等的性质和ASA（AAS）综合（ASA或者AAS）、三角形内角和定理的应用",
-        "stem": "如图，已知点$B,C,E$在同一条直线上，$\\angle B=\\angle E=\\angle ACD=60^\\circ,AB=CE$，则图中与$BC$相等的线段是（　　）<br><div class=\"my-2\"><img src=\"assets/images/img_096_3f5c54438456.png\" alt=\"题目配图\" data-cx=\"2286000\" data-cy=\"1451428\" style=\"max-width: 240px; height: auto; display: block;\" /></div>",
+        "stem": "如图，已知点$B,C,E$在同一条直线上，$\\angle B=\\angle E=\\angle ACD=60^\\circ,AB=CE$，则图中与$BC$相等的线段是（　　）<br><div class=\"my-2\"><img src=\"assets/images/img_096_3f5c54438456.png\" alt=\"题目配图\" data-cx=\"2286000\" data-cy=\"1451428\" style=\"max-width:220px; height: auto; display: block;\" /></div>",
         "options": [
             "A. $AC$",
             "B. $DE$",
@@ -15616,7 +15616,7 @@
         "typeName": "单选题",
         "difficulty": "中等",
         "knowledge": "全等的性质和ASA（AAS）综合（ASA或者AAS）、两直线平行同位角相等",
-        "stem": "如图，在$\\triangle ABC$中，$BE$平分$\\angle ABC$交$AC$于点$E$，$\\angle BEC=90^\\circ$，过点$E$作$DE\\parallel BC$交$AB$于点$D$，延长$AC$至点$F$，连接$BF$，若$\\angle BCF=115^\\circ$，则$\\angle ADE$的度数为（　　）<br><div class=\"my-2\"><img src=\"assets/images/img_098_4649f0efb444.png\" alt=\"题目配图\" data-cx=\"2095500\" data-cy=\"1798319\" style=\"max-width: 220px; height: auto; display: block;\" /></div>",
+        "stem": "如图，在$\\triangle ABC$中，$BE$平分$\\angle ABC$交$AC$于点$E$，$\\angle BEC=90^\\circ$，过点$E$作$DE\\parallel BC$交$AB$于点$D$，延长$AC$至点$F$，连接$BF$，若$\\angle BCF=115^\\circ$，则$\\angle ADE$的度数为（　　）<br><div class=\"my-2\"><img src=\"assets/images/img_098_4649f0efb444.png\" alt=\"题目配图\" data-cx=\"2095500\" data-cy=\"1798319\" style=\"max-width:165px; height: auto; display: block;\" /></div>",
         "options": [
             "A. $45^\\circ$",
             "B. $50^\\circ$",
@@ -15635,7 +15635,7 @@
         "typeName": "单选题",
         "difficulty": "中等",
         "knowledge": "全等的性质和ASA（AAS）综合（ASA或者AAS）、全等三角形的性质",
-        "stem": "如图所示，在$\\triangle ABC$中，$\\angle BAC=45^\\circ$，高$AD$，高$CE$交于点$H$．若$AE=3.2$，$S_{\\triangle ABC}=8$，则$CH$的长度为（　　）<br><div class=\"my-2\"><img src=\"assets/images/img_099_ac1506b9478a.png\" alt=\"题目配图\" data-cx=\"1905000\" data-cy=\"1833113\" style=\"max-width: 200px; height: auto; display: block;\" /></div>",
+        "stem": "如图所示，在$\\triangle ABC$中，$\\angle BAC=45^\\circ$，高$AD$，高$CE$交于点$H$．若$AE=3.2$，$S_{\\triangle ABC}=8$，则$CH$的长度为（　　）<br><div class=\"my-2\"><img src=\"assets/images/img_099_ac1506b9478a.png\" alt=\"题目配图\" data-cx=\"1905000\" data-cy=\"1833113\" style=\"max-width:165px; height: auto; display: block;\" /></div>",
         "options": [
             "A. $1.2$",
             "B. $1.3$",
@@ -15654,7 +15654,7 @@
         "typeName": "单选题",
         "difficulty": "中等",
         "knowledge": "全等的性质和ASA（AAS）综合（ASA或者AAS）",
-        "stem": "题目：“如图，$AE$与$BD$相交于点$C$，且$\\triangle ACB\\cong\\triangle ECD$，$AB=6\\text{ cm}$，点$P$从点$A$出发，沿$A\\to B\\to A$方向以$4\\text{ cm/s}$的速度运动，点$Q$从点$D$出发，沿$D\\to E$方向以$1\\text{ cm/s}$的速度运动，$P$、$Q$两点同时出发，当点$P$到达点$A$时，$P$、$Q$两点同时停止运动，设点$P$的运动时间为$t\\text{ s}$．连接$PQ$，当线段$PQ$经过点$C$时，求$t$的值．”对于其答案，甲答：$1.2\\text{ s}$，乙答：$2\\text{ s}$，则正确的是（　　）<br><div class=\"my-2\"><img src=\"assets/images/img_100_d27aed355aa3.png\" alt=\"题目配图\" data-cx=\"2000250\" data-cy=\"1542010\" style=\"max-width: 210px; height: auto; display: block;\" /></div>",
+        "stem": "题目：“如图，$AE$与$BD$相交于点$C$，且$\\triangle ACB\\cong\\triangle ECD$，$AB=6\\text{ cm}$，点$P$从点$A$出发，沿$A\\to B\\to A$方向以$4\\text{ cm/s}$的速度运动，点$Q$从点$D$出发，沿$D\\to E$方向以$1\\text{ cm/s}$的速度运动，$P$、$Q$两点同时出发，当点$P$到达点$A$时，$P$、$Q$两点同时停止运动，设点$P$的运动时间为$t\\text{ s}$．连接$PQ$，当线段$PQ$经过点$C$时，求$t$的值．”对于其答案，甲答：$1.2\\text{ s}$，乙答：$2\\text{ s}$，则正确的是（　　）<br><div class=\"my-2\"><img src=\"assets/images/img_100_d27aed355aa3.png\" alt=\"题目配图\" data-cx=\"2000250\" data-cy=\"1542010\" style=\"max-width:208px; height: auto; display: block;\" /></div>",
         "options": [
             "A. 只有甲答的对",
             "B. 只有乙答的对",
@@ -15673,7 +15673,7 @@
         "typeName": "单选题",
         "difficulty": "中等",
         "knowledge": "全等的性质和ASA（AAS）综合（ASA或者AAS）、根据三角形中线求面积",
-        "stem": "如图，在$\\text{Rt}\\triangle ABC$中，$\\angle BAC=90^\\circ$，$CD$是$\\triangle ABC$的角平分线，$AE\\perp CD$于点$E$，连接$BE$，$AB=6$，$AC=8$，$BC=10$，则$\\triangle ABE$的面积是（　　）<br><div class=\"my-2\"><img src=\"assets/images/img_101_c3ba297b8e87.png\" alt=\"题目配图\" data-cx=\"2286000\" data-cy=\"1524000\" style=\"max-width: 240px; height: auto; display: block;\" /></div>",
+        "stem": "如图，在$\\text{Rt}\\triangle ABC$中，$\\angle BAC=90^\\circ$，$CD$是$\\triangle ABC$的角平分线，$AE\\perp CD$于点$E$，连接$BE$，$AB=6$，$AC=8$，$BC=10$，则$\\triangle ABE$的面积是（　　）<br><div class=\"my-2\"><img src=\"assets/images/img_101_c3ba297b8e87.png\" alt=\"题目配图\" data-cx=\"2286000\" data-cy=\"1524000\" style=\"max-width:220px; height: auto; display: block;\" /></div>",
         "options": [
             "A. $\\frac{9}{5}$",
             "B. $2$",
@@ -15682,7 +15682,7 @@
         ],
         "answer": "C",
         "analysis": "本题考查了角平分线的定义，全等三角形的证明与性质，三角形中线的性质．延长$AE$交$BC$于点$F$，作$AM\\perp BC$于点$M$，利用角平分线的定义可证$\\triangle AEC\\cong\\triangle FEC(\\text{ASA})$，可推出$AE=EF$，$FC=AC=8$，再根据三角形面积可求得$AM$，从而得到$S_{\\triangle ABF}$，最后利用三角形中线的性质可知$S_{\\triangle ABE}=\\frac{1}{2}S_{\\triangle ABF}$，即可求得答案．",
-        "detail": "解：延长$AE$交$BC$于点$F$，作$AM\\perp BC$于点$M$，如图所示，<br><div class=\"my-2\"><img src=\"assets/images/img_102_3f9eaad24c83.png\" alt=\"第6题解析配图\" data-cx=\"2286000\" data-cy=\"1524000\" style=\"max-width: 240px; height: auto; display: block;\" /></div>$\\because AE\\perp CD$，$CD$是$\\triangle ABC$的角平分线，<br>$\\therefore \\angle AEC=\\angle FEC=90^\\circ$，$\\angle ACE=\\angle FCE$，<br>在$\\triangle AEC$和$\\triangle FEC$中，<br>$\\begin{cases} \\angle AEC=\\angle FEC \\\\ EC=EC \\\\ \\angle ACE=\\angle FCE \\end{cases}$，<br>$\\therefore \\triangle AEC\\cong\\triangle FEC(\\text{ASA})$，<br>$\\therefore AE=EF$，$FC=AC$，<br>$\\because \\angle BAC=90^\\circ$，$AB=6$，$AC=8$，$BC=10$，<br>$\\therefore BF=BC-FC=BC-AC=10-8=2$，<br>$\\because S_{\\triangle ABC}=\\frac{1}{2}AB\\cdot AC=\\frac{1}{2}BC\\cdot AM$，<br>$\\therefore AM=\\frac{AB\\cdot AC}{BC}=\\frac{6\\times 8}{10}=\\frac{24}{5}$，<br>$\\therefore S_{\\triangle ABF}=\\frac{1}{2}BF\\cdot AM=\\frac{1}{2}\\times 2\\times\\frac{24}{5}=\\frac{24}{5}$，<br>$\\because AE=EF$，<br>$\\therefore S_{\\triangle ABE}=\\frac{1}{2}S_{\\triangle ABF}=\\frac{1}{2}\\times\\frac{24}{5}=\\frac{12}{5}$，<br>故选：C．"
+        "detail": "解：延长$AE$交$BC$于点$F$，作$AM\\perp BC$于点$M$，如图所示，<br><div class=\"my-2\"><img src=\"assets/images/img_102_3f9eaad24c83.png\" alt=\"第6题解析配图\" data-cx=\"2286000\" data-cy=\"1524000\" style=\"max-width:220px; height: auto; display: block;\" /></div>$\\because AE\\perp CD$，$CD$是$\\triangle ABC$的角平分线，<br>$\\therefore \\angle AEC=\\angle FEC=90^\\circ$，$\\angle ACE=\\angle FCE$，<br>在$\\triangle AEC$和$\\triangle FEC$中，<br>$\\begin{cases} \\angle AEC=\\angle FEC \\\\ EC=EC \\\\ \\angle ACE=\\angle FCE \\end{cases}$，<br>$\\therefore \\triangle AEC\\cong\\triangle FEC(\\text{ASA})$，<br>$\\therefore AE=EF$，$FC=AC$，<br>$\\because \\angle BAC=90^\\circ$，$AB=6$，$AC=8$，$BC=10$，<br>$\\therefore BF=BC-FC=BC-AC=10-8=2$，<br>$\\because S_{\\triangle ABC}=\\frac{1}{2}AB\\cdot AC=\\frac{1}{2}BC\\cdot AM$，<br>$\\therefore AM=\\frac{AB\\cdot AC}{BC}=\\frac{6\\times 8}{10}=\\frac{24}{5}$，<br>$\\therefore S_{\\triangle ABF}=\\frac{1}{2}BF\\cdot AM=\\frac{1}{2}\\times 2\\times\\frac{24}{5}=\\frac{24}{5}$，<br>$\\because AE=EF$，<br>$\\therefore S_{\\triangle ABE}=\\frac{1}{2}S_{\\triangle ABF}=\\frac{1}{2}\\times\\frac{24}{5}=\\frac{12}{5}$，<br>故选：C．"
     },
     {
         "id": "asa_7",
@@ -15692,7 +15692,7 @@
         "typeName": "填空题",
         "difficulty": "容易",
         "knowledge": "全等的性质和ASA（AAS）综合（ASA或者AAS）",
-        "stem": "如图，小明站在点$C$处测甲、乙两楼楼顶上的点$A$和点$E$．已知$C,E,A$三点在同一条直线上，点$B,C$相距$20\\text{ m}$，点$D,C$相距$40\\text{ m}$，乙楼的高$BE$为$15\\text{ m}$，$EF\\parallel BC,EF\\perp AD$，则甲楼的高$AD$为_______．<br><div class=\"my-2\"><img src=\"assets/images/img_103_c598fa17038c.png\" alt=\"题目配图\" data-cx=\"2190750\" data-cy=\"1661948\" style=\"max-width: 230px; height: auto; display: block;\" /></div>",
+        "stem": "如图，小明站在点$C$处测甲、乙两楼楼顶上的点$A$和点$E$．已知$C,E,A$三点在同一条直线上，点$B,C$相距$20\\text{ m}$，点$D,C$相距$40\\text{ m}$，乙楼的高$BE$为$15\\text{ m}$，$EF\\parallel BC,EF\\perp AD$，则甲楼的高$AD$为_______．<br><div class=\"my-2\"><img src=\"assets/images/img_103_c598fa17038c.png\" alt=\"题目配图\" data-cx=\"2190750\" data-cy=\"1661948\" style=\"max-width:211px; height: auto; display: block;\" /></div>",
         "options": [],
         "answer": "$30\\text{ m}$/30米",
         "analysis": "本题考查了全等三角形的应用，根据题意证明$\\triangle AFE\\cong\\triangle EBC$，得到$AF=BE=15\\text{ m}$后即可作答．",
@@ -15706,7 +15706,7 @@
         "typeName": "填空题",
         "difficulty": "容易",
         "knowledge": "全等的性质和ASA（AAS）综合（ASA或者AAS）",
-        "stem": "如图所示，乐乐用手电筒进行物理光学实验．地面上从左到右依次是墙、木板和平面镜．手电筒的光线从点$G$出发，在平面镜上的$B$处反射后，恰好经过木板的边缘点$F$落在墙上的点$E$处，点$F$到地面的高度$CF=1.5$米，$A$、$C$到平面镜$B$的距离相等．图中点$A,B,C,D$在同一条直线上，则灯泡到地面的高度$AG$为____米；你的数学根据是_____．<br><div class=\"my-2\"><img src=\"assets/images/img_104_13095966d054.png\" alt=\"题目配图\" data-cx=\"2476500\" data-cy=\"1508760\" style=\"max-width: 260px; height: auto; display: block;\" /></div>",
+        "stem": "如图所示，乐乐用手电筒进行物理光学实验．地面上从左到右依次是墙、木板和平面镜．手电筒的光线从点$G$出发，在平面镜上的$B$处反射后，恰好经过木板的边缘点$F$落在墙上的点$E$处，点$F$到地面的高度$CF=1.5$米，$A$、$C$到平面镜$B$的距离相等．图中点$A,B,C,D$在同一条直线上，则灯泡到地面的高度$AG$为____米；你的数学根据是_____．<br><div class=\"my-2\"><img src=\"assets/images/img_104_13095966d054.png\" alt=\"题目配图\" data-cx=\"2476500\" data-cy=\"1508760\" style=\"max-width:220px; height: auto; display: block;\" /></div>",
         "options": [],
         "answer": "$1.5$；$\\text{ASA}$",
         "analysis": "本题考查了全等三角形的判定和性质，熟练掌握全等三角形的判定方法是解题的关键．根据反射角等于入射角得到$\\angle ABG=\\angle CBF$，可证$\\triangle GAB\\cong\\triangle FCB(\\text{ASA})$，得到$AG=CF=1.5$米即可得到答案．",
@@ -15720,7 +15720,7 @@
         "typeName": "填空题",
         "difficulty": "容易",
         "knowledge": "全等的性质和ASA（AAS）综合（ASA或者AAS）",
-        "stem": "如图，在$\\triangle ABC$中，点$D$为边$BC$的中点，连接$AD$，点$E$、$F$为直线$AD$上的点，连接$BE$，$CF$，且$BE\\parallel CF$．若$AE=15$，$AF=7$，则$DE$的长度为__________．<br><div class=\"my-2\"><img src=\"assets/images/img_105_67c476d5e1fe.png\" alt=\"题目配图\" data-cx=\"2095500\" data-cy=\"1676400\" style=\"max-width: 220px; height: auto; display: block;\" /></div>",
+        "stem": "如图，在$\\triangle ABC$中，点$D$为边$BC$的中点，连接$AD$，点$E$、$F$为直线$AD$上的点，连接$BE$，$CF$，且$BE\\parallel CF$．若$AE=15$，$AF=7$，则$DE$的长度为__________．<br><div class=\"my-2\"><img src=\"assets/images/img_105_67c476d5e1fe.png\" alt=\"题目配图\" data-cx=\"2095500\" data-cy=\"1676400\" style=\"max-width:200px; height: auto; display: block;\" /></div>",
         "options": [],
         "answer": "4",
         "analysis": "本题考查了全等三角形的判定和性质，利用中点性质可得$BD=CD$，由平行线性质可得$\\angle DBE=\\angle DCF$，再由对顶角相等可得$\\angle BDE=\\angle CDF$，可证$\\triangle BDE\\cong\\triangle CDF(\\text{ASA})$，由全等三角形性质可得$DE=DF$，然后根据$EF=AE-AF$求出$EF$的长，进而可求出$DE$的长．",
@@ -15734,7 +15734,7 @@
         "typeName": "解答题",
         "difficulty": "容易",
         "knowledge": "全等的性质和ASA（AAS）综合（ASA或者AAS）",
-        "stem": "已知：如图，$CB\\perp AD$，$AE\\perp DC$，垂足分别为$B$，$E$，$AE$，$BC$相交于点$F$，且$AB=BC$．<br><div class=\"my-2\"><img src=\"assets/images/img_106_f2c876a9fade.png\" alt=\"题目配图\" data-cx=\"2000250\" data-cy=\"1636568\" style=\"max-width: 210px; height: auto; display: block;\" /></div>(1)求证：$\\triangle ABF\\cong\\triangle CBD$；<br>(2)已知$AD=7$，$BF=2$，求$CF$的长度．",
+        "stem": "已知：如图，$CB\\perp AD$，$AE\\perp DC$，垂足分别为$B$，$E$，$AE$，$BC$相交于点$F$，且$AB=BC$．<br><div class=\"my-2\"><img src=\"assets/images/img_106_f2c876a9fade.png\" alt=\"题目配图\" data-cx=\"2000250\" data-cy=\"1636568\" style=\"max-width:196px; height: auto; display: block;\" /></div>(1)求证：$\\triangle ABF\\cong\\triangle CBD$；<br>(2)已知$AD=7$，$BF=2$，求$CF$的长度．",
         "options": [],
         "answer": "(1)见解析；(2)$CF=3$",
         "analysis": "本题主要考查全等三角形的判定和性质．<br>（1）由条件可求得$\\angle A=\\angle C$，利用$\\text{ASA}$可证明$\\triangle ABF\\cong\\triangle CBD$；<br>（2）根据全等三角形的性质得$AB=CB$，$BD=BF=2$，则$BC=AB=7-2=5$，然后再根据$CF=CB-BF$即可得出答案．",
@@ -15748,7 +15748,7 @@
         "typeName": "解答题",
         "difficulty": "中等",
         "knowledge": "全等的性质和ASA（AAS）综合（ASA或者AAS）、三角形内角和定理的证明",
-        "stem": "某中学几名同学想利用所学知识测量某段渭河的宽度（宽度一定），测量方案：寻找对岸河边一棵树的位置记作点$A$，在该岸边寻找点$B$，使$AB$垂直于河岸，因河边不安全，几名同学在该岸同侧平地上取点$C,D$，使$A,B,C$三点在同一直线上，且$CB=CD,\\angle BCD=105^\\circ$，测得$\\angle ADC=58^\\circ$，再在$CD$的延长线上取一点$E$，使$\\angle BEC=17^\\circ$，这时测得$DE$的长就是该段渭河的宽度$AB$．你认为这几名同学的测量方案可行吗？请说明理由．<br><div class=\"my-2\"><img src=\"assets/images/img_107_d34f2d8b633e.png\" alt=\"题目配图\" data-cx=\"2095500\" data-cy=\"1828800\" style=\"max-width: 220px; height: auto; display: block;\" /></div>",
+        "stem": "某中学几名同学想利用所学知识测量某段渭河的宽度（宽度一定），测量方案：寻找对岸河边一棵树的位置记作点$A$，在该岸边寻找点$B$，使$AB$垂直于河岸，因河边不安全，几名同学在该岸同侧平地上取点$C,D$，使$A,B,C$三点在同一直线上，且$CB=CD,\\angle BCD=105^\\circ$，测得$\\angle ADC=58^\\circ$，再在$CD$的延长线上取一点$E$，使$\\angle BEC=17^\\circ$，这时测得$DE$的长就是该段渭河的宽度$AB$．你认为这几名同学的测量方案可行吗？请说明理由．<br><div class=\"my-2\"><img src=\"assets/images/img_107_d34f2d8b633e.png\" alt=\"题目配图\" data-cx=\"2095500\" data-cy=\"1828800\" style=\"max-width:165px; height: auto; display: block;\" /></div>",
         "options": [],
         "answer": "可行，理由见解析",
         "analysis": "本题主要考查了全等三角形的判定与性质、三角形内角和定理、线段的和差等知识点，掌握全等三角形的判定与性质成为解题的关键．由三角形内角和定理可得$\\angle EBC=58^\\circ$，即$\\angle ADC=\\angle EBC$，再证明$\\triangle ACD\\cong\\triangle ECB$可得$AC=EC$，最后根据线段的和差即可解答．",
@@ -15764,7 +15764,7 @@
         "difficulty": "容易",
         "knowledge": "用SAS证明三角形全等（SAS）、用ASA（AAS）证明三角形全等（ASA或者AAS）",
         "chapter": "14.5三角形全等的判定（AAS）",
-        "stem": "如图，已知$\\triangle ABC$的三条边和三个角，则下面甲、乙、丙三个三角形中不能证明和$\\triangle ABC$全等的是（　　）<br><img src=\"assets/images/img_108_3d7aeee8cf10.png\" data-cx=\"4200000\" data-cy=\"1276800\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:540px;height:auto;margin:10px 0\">",
+        "stem": "如图，已知$\\triangle ABC$的三条边和三个角，则下面甲、乙、丙三个三角形中不能证明和$\\triangle ABC$全等的是（　　）<br><img src=\"assets/images/img_108_3d7aeee8cf10.png\" data-cx=\"4200000\" data-cy=\"1276800\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:280px;height:auto;margin:10px 0\">",
         "options": [
             "A. 甲和乙",
             "B. 只有甲",
@@ -15785,7 +15785,7 @@
         "difficulty": "中等",
         "knowledge": "直角三角形的两个锐角互余、全等的性质和ASA（AAS）综合（ASA或者AAS）",
         "chapter": "14.5三角形全等的判定（AAS）",
-        "stem": "如图，$AB\\perp CD$，且$AB=CD$，$CE\\perp AD$于$E$，$BF\\perp AD$于$F$．若$CE=8$，$BF=4$，$EF=3$，则$AD$的长为（　　）<br><img src=\"assets/images/img_109_1977ddad1898.png\" data-cx=\"1920000\" data-cy=\"1333894\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:240px;height:auto;margin:10px 0\">",
+        "stem": "如图，$AB\\perp CD$，且$AB=CD$，$CE\\perp AD$于$E$，$BF\\perp AD$于$F$．若$CE=8$，$BF=4$，$EF=3$，则$AD$的长为（　　）<br><img src=\"assets/images/img_109_1977ddad1898.png\" data-cx=\"1920000\" data-cy=\"1333894\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:202px;height:auto;margin:10px 0\">",
         "options": [
             "A. $9$",
             "B. $8$",
@@ -15806,7 +15806,7 @@
         "difficulty": "中等",
         "knowledge": "全等的性质和ASA（AAS）综合（ASA或者AAS）",
         "chapter": "14.5三角形全等的判定（AAS）",
-        "stem": "如图，在四边形$ABDC$中，$AB=AC$，$\\angle BAC=90^\\circ$，$BD\\perp AD$，$CE\\perp AD$于点$E$，若$AE=2$，$ED=3$，则四边形$ABDC$的面积等于（　　）<br><img src=\"assets/images/img_110_64185064960c.png\" data-cx=\"1920000\" data-cy=\"1313684\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:240px;height:auto;margin:10px 0\">",
+        "stem": "如图，在四边形$ABDC$中，$AB=AC$，$\\angle BAC=90^\\circ$，$BD\\perp AD$，$CE\\perp AD$于点$E$，若$AE=2$，$ED=3$，则四边形$ABDC$的面积等于（　　）<br><img src=\"assets/images/img_110_64185064960c.png\" data-cx=\"1920000\" data-cy=\"1313684\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:202px;height:auto;margin:10px 0\">",
         "options": [
             "A. $35$",
             "B. $17.5$",
@@ -15827,7 +15827,7 @@
         "difficulty": "容易",
         "knowledge": "等式的性质1、全等的性质和ASA（AAS）综合（ASA或者AAS）、三角形内角和定理的应用",
         "chapter": "14.5三角形全等的判定（AAS）",
-        "stem": "如图，点$A$在$DE$上，$AC=EC$，$\\angle 1=\\angle 2=\\angle 3$，则$DE$等于（　　）<br><img src=\"assets/images/img_111_db618fcc79c1.png\" data-cx=\"1920000\" data-cy=\"1246315\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:240px;height:auto;margin:10px 0\">",
+        "stem": "如图，点$A$在$DE$上，$AC=EC$，$\\angle 1=\\angle 2=\\angle 3$，则$DE$等于（　　）<br><img src=\"assets/images/img_111_db618fcc79c1.png\" data-cx=\"1920000\" data-cy=\"1246315\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:202px;height:auto;margin:10px 0\">",
         "options": [
             "A. $DC$",
             "B. $AB$",
@@ -15836,7 +15836,7 @@
         ],
         "answer": "B",
         "analysis": "本题主要考查了等式的性质1，三角形的内角和定理，全等三角形的判定与性质等知识点，熟练掌握全等三角形的判定与性质是解题的关键．<br>设$AB$与$CD$交于点$F$，由等式的性质1及三角形的内角和定理可得$\\angle D=\\angle B$，由等式的性质1可得$\\angle ACB=\\angle ECD$，利用$\\text{AAS}$可证得$\\triangle ABC\\cong\\triangle EDC$，于是可得$DE=AB$，据此即可得出答案．",
-        "detail": "解：如图，设$AB$与$CD$交于点$F$，<br><img src=\"assets/images/img_112_d15895288bc0.png\" data-cx=\"1920000\" data-cy=\"1246315\" alt=\"第4题解析配图\" style=\"display:block;max-width:100%;width:240px;height:auto;margin:10px 0\">$\\because \\angle 1=\\angle 2$，$\\angle AFD=\\angle BFC$，<br>$\\therefore 180^\\circ-\\angle 1-\\angle AFD=180^\\circ-\\angle 2-\\angle BFC$，<br>$\\therefore \\angle D=\\angle B$，<br>$\\because \\angle 2=\\angle 3$，<br>$\\therefore \\angle 2+\\angle ACD=\\angle 3+\\angle ACD$，<br>$\\therefore \\angle ACB=\\angle ECD$，<br>在$\\triangle ABC$和$\\triangle EDC$中，<br>$\\begin{cases} \\angle B=\\angle D \\\\ \\angle ACB=\\angle ECD \\\\ AC=EC \\end{cases}$，<br>$\\therefore \\triangle ABC\\cong\\triangle EDC(\\text{AAS})$，<br>$\\therefore DE=AB$，<br>故选：B．"
+        "detail": "解：如图，设$AB$与$CD$交于点$F$，<br><img src=\"assets/images/img_112_d15895288bc0.png\" data-cx=\"1920000\" data-cy=\"1246315\" alt=\"第4题解析配图\" style=\"display:block;max-width:100%;width:202px;height:auto;margin:10px 0\">$\\because \\angle 1=\\angle 2$，$\\angle AFD=\\angle BFC$，<br>$\\therefore 180^\\circ-\\angle 1-\\angle AFD=180^\\circ-\\angle 2-\\angle BFC$，<br>$\\therefore \\angle D=\\angle B$，<br>$\\because \\angle 2=\\angle 3$，<br>$\\therefore \\angle 2+\\angle ACD=\\angle 3+\\angle ACD$，<br>$\\therefore \\angle ACB=\\angle ECD$，<br>在$\\triangle ABC$和$\\triangle EDC$中，<br>$\\begin{cases} \\angle B=\\angle D \\\\ \\angle ACB=\\angle ECD \\\\ AC=EC \\end{cases}$，<br>$\\therefore \\triangle ABC\\cong\\triangle EDC(\\text{AAS})$，<br>$\\therefore DE=AB$，<br>故选：B．"
     },
     {
         "id": "aas_5",
@@ -15848,7 +15848,7 @@
         "difficulty": "中等",
         "knowledge": "全等的性质和ASA（AAS）综合（ASA或者AAS）、用ASA（AAS）证明三角形全等（ASA或者AAS）",
         "chapter": "14.5三角形全等的判定（AAS）",
-        "stem": "如图，在$\\triangle ABC$中，$\\angle ACB=90^\\circ,CA=CB,CD$是$\\angle ACB$内部的射线且$\\angle BCD<45^\\circ$，过点$A$作$AE\\perp CD$于点$E$，过点$B$作$BF\\perp CD$于点$F$．给出下面三个结论：①$\\angle EAB=\\angle FBA$；②$AB=CF$；③$EF=AE-BF$．其中正确的有（　　）<br><img src=\"assets/images/img_113_4d0066cbb18f.png\" data-cx=\"1920000\" data-cy=\"1291636\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:240px;height:auto;margin:10px 0\">",
+        "stem": "如图，在$\\triangle ABC$中，$\\angle ACB=90^\\circ,CA=CB,CD$是$\\angle ACB$内部的射线且$\\angle BCD<45^\\circ$，过点$A$作$AE\\perp CD$于点$E$，过点$B$作$BF\\perp CD$于点$F$．给出下面三个结论：①$\\angle EAB=\\angle FBA$；②$AB=CF$；③$EF=AE-BF$．其中正确的有（　　）<br><img src=\"assets/images/img_113_4d0066cbb18f.png\" data-cx=\"1920000\" data-cy=\"1291636\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:202px;height:auto;margin:10px 0\">",
         "options": [
             "A. ①②",
             "B. ①③",
@@ -15869,7 +15869,7 @@
         "difficulty": "中等",
         "knowledge": "根据平行线判定与性质证明、全等的性质和ASA（AAS）综合（ASA或者AAS）",
         "chapter": "14.5三角形全等的判定（AAS）",
-        "stem": "如图，$AD$是一段斜坡，$AB$是水平线，现为了测斜坡上一点$D$的铅直高度（即垂线段$DB$的长度），小亮在$D$处立上一竹竿$CD$，并保证$CD=AB$，$CD\\perp AD$，然后在竿顶$C$处垂下一根细绳（细绳末端挂一重锤，使细绳与水平线垂直），细绳与斜坡$AD$交于点$E$．此时他测得$DE=2\\text{ m}$，则$DB$的长度为_____．<br><img src=\"assets/images/img_114_0b0bbd772730.png\" data-cx=\"1760000\" data-cy=\"1345882\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:220px;height:auto;margin:10px 0\">",
+        "stem": "如图，$AD$是一段斜坡，$AB$是水平线，现为了测斜坡上一点$D$的铅直高度（即垂线段$DB$的长度），小亮在$D$处立上一竹竿$CD$，并保证$CD=AB$，$CD\\perp AD$，然后在竿顶$C$处垂下一根细绳（细绳末端挂一重锤，使细绳与水平线垂直），细绳与斜坡$AD$交于点$E$．此时他测得$DE=2\\text{ m}$，则$DB$的长度为_____．<br><img src=\"assets/images/img_114_0b0bbd772730.png\" data-cx=\"1760000\" data-cy=\"1345882\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:185px;height:auto;margin:10px 0\">",
         "options": [],
         "answer": "$2\\text{ m}$",
         "analysis": "本题考查平行线的判定及性质，全等三角形的判定及性质，由题意可得$CE\\perp AB$，$DB\\perp AB$，即$CE\\parallel DB$，得到$\\angle ADB=\\angle CED$，再由$\\angle CDE=\\angle ABD=90^\\circ$，$CD=AB$证得$\\triangle ABD\\cong\\triangle CDE(\\text{AAS})$，根据全等三角形的性质即可解答．",
@@ -15885,11 +15885,11 @@
         "difficulty": "中等",
         "knowledge": "全等的性质和ASA（AAS）综合（ASA或者AAS）",
         "chapter": "14.5三角形全等的判定（AAS）",
-        "stem": "如图，四边形$ABCD$中，$\\angle BAD=\\angle ACB=90^\\circ$，$AB=AD$，$AC=3$，$BC=1$，则四边形$ABCD$的面积是______．<br><img src=\"assets/images/img_115_e0eee569093f.png\" data-cx=\"1760000\" data-cy=\"1452000\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:220px;height:auto;margin:10px 0\">",
+        "stem": "如图，四边形$ABCD$中，$\\angle BAD=\\angle ACB=90^\\circ$，$AB=AD$，$AC=3$，$BC=1$，则四边形$ABCD$的面积是______．<br><img src=\"assets/images/img_115_e0eee569093f.png\" data-cx=\"1760000\" data-cy=\"1452000\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:165px;height:auto;margin:10px 0\">",
         "options": [],
         "answer": "6",
         "analysis": "本题考查了全等三角形的判定与性质，过$D$作$DE\\perp AC$于$E$，证明$\\triangle ABC\\cong\\triangle DAE$，得出$AC=DE=3$，然后根据$S_{\\text{四边形}ABCD}=S_{\\triangle ABC}+S_{\\triangle ACD}$求解即可．",
-        "detail": "解：如图，过$D$作$DE\\perp AC$于$E$，则$\\angle AED=90^\\circ$，<br><img src=\"assets/images/img_116_ce305d098f0a.png\" data-cx=\"1760000\" data-cy=\"1452000\" alt=\"第7题解析配图\" style=\"display:block;max-width:100%;width:220px;height:auto;margin:10px 0\">$\\therefore \\angle EAD+\\angle ADE=90^\\circ$，<br>$\\because \\angle BAD=\\angle ACB=90^\\circ$，<br>$\\therefore \\angle BAC+\\angle EAD=90^\\circ$，<br>$\\therefore \\angle BAC=\\angle ADE$，<br>在$\\triangle ABC$和$\\triangle DAE$中，<br>$\\begin{cases} \\angle BAC=\\angle ADE \\\\ \\angle ACB=\\angle DEA=90^\\circ \\\\ AB=DA \\end{cases}$，<br>$\\therefore \\triangle ABC\\cong\\triangle DAE(\\text{AAS})$，<br>$\\therefore AC=DE=3$，<br>$\\therefore S_{\\text{四边形}ABCD}=S_{\\triangle ABC}+S_{\\triangle ACD}=\\frac{1}{2}BC\\cdot AC+\\frac{1}{2}AC\\cdot DE=\\frac{1}{2}\\times 1\\times 3+\\frac{1}{2}\\times 3\\times 3=6$，<br>故答案为：$6$．"
+        "detail": "解：如图，过$D$作$DE\\perp AC$于$E$，则$\\angle AED=90^\\circ$，<br><img src=\"assets/images/img_116_ce305d098f0a.png\" data-cx=\"1760000\" data-cy=\"1452000\" alt=\"第7题解析配图\" style=\"display:block;max-width:100%;width:165px;height:auto;margin:10px 0\">$\\therefore \\angle EAD+\\angle ADE=90^\\circ$，<br>$\\because \\angle BAD=\\angle ACB=90^\\circ$，<br>$\\therefore \\angle BAC+\\angle EAD=90^\\circ$，<br>$\\therefore \\angle BAC=\\angle ADE$，<br>在$\\triangle ABC$和$\\triangle DAE$中，<br>$\\begin{cases} \\angle BAC=\\angle ADE \\\\ \\angle ACB=\\angle DEA=90^\\circ \\\\ AB=DA \\end{cases}$，<br>$\\therefore \\triangle ABC\\cong\\triangle DAE(\\text{AAS})$，<br>$\\therefore AC=DE=3$，<br>$\\therefore S_{\\text{四边形}ABCD}=S_{\\triangle ABC}+S_{\\triangle ACD}=\\frac{1}{2}BC\\cdot AC+\\frac{1}{2}AC\\cdot DE=\\frac{1}{2}\\times 1\\times 3+\\frac{1}{2}\\times 3\\times 3=6$，<br>故答案为：$6$．"
     },
     {
         "id": "aas_8",
@@ -15901,7 +15901,7 @@
         "difficulty": "中等",
         "knowledge": "三角形的外角的定义及性质、全等的性质和ASA（AAS）综合（ASA或者AAS）、根据三角形中线求面积",
         "chapter": "14.5三角形全等的判定（AAS）",
-        "stem": "如图，在$\\triangle ABC$中，$AB=AC$，$AB>BC$，点$D$在边$BC$上，$CD=2BD$，点$E$，$F$在线段$AD$上，$\\angle 1=\\angle 2=\\angle BAC$，若$\\triangle BDE$的面积为$2$，$\\triangle ABC$的面积为$24$，则$\\triangle CFD$的面积为________．<br><img src=\"assets/images/img_117_6a5baf361d04.png\" data-cx=\"1760000\" data-cy=\"1481333\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:220px;height:auto;margin:10px 0\">",
+        "stem": "如图，在$\\triangle ABC$中，$AB=AC$，$AB>BC$，点$D$在边$BC$上，$CD=2BD$，点$E$，$F$在线段$AD$上，$\\angle 1=\\angle 2=\\angle BAC$，若$\\triangle BDE$的面积为$2$，$\\triangle ABC$的面积为$24$，则$\\triangle CFD$的面积为________．<br><img src=\"assets/images/img_117_6a5baf361d04.png\" data-cx=\"1760000\" data-cy=\"1481333\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:165px;height:auto;margin:10px 0\">",
         "options": [],
         "answer": "10",
         "analysis": "本题考查三角形外角的性质，三角形全等的判定和性质，三角形的面积．根据三角形外角的性质结合题意可证$\\triangle ABE\\cong\\triangle CAF(\\text{ASA})$，得出$S_{\\triangle ABE}=S_{\\triangle CAF}$．根据$CD=2BD$可求出$S_{\\triangle ACD}=\\frac{2}{3}S_{\\triangle ABC}=16$，$S_{\\triangle ABD}=\\frac{1}{3}S_{\\triangle ABC}=8$，最后根据$S_{\\triangle CAF}=S_{\\triangle ABE}=S_{\\triangle ABD}-S_{\\triangle BDE}$，$S_{\\triangle CFD}=S_{\\triangle ACD}-S_{\\triangle CAF}$求解即可．",
@@ -15917,11 +15917,11 @@
         "difficulty": "中等",
         "knowledge": "全等的性质和ASA（AAS）综合（ASA或者AAS）",
         "chapter": "14.5三角形全等的判定（AAS）",
-        "stem": "如图，在$\\triangle ABC$中，$\\angle ACB=90^\\circ$，$CD$为$AB$边上的高，$AB=15\\text{ cm}$，$CD=6\\text{ cm}$，点$F$从点$D$出发，在直线$CD$上以$3\\text{ cm/s}$的速度移动，过点$F$作$BC$的垂线交直线$BC$于点$E$．当点$F$运动________$\\text{s}$时，$CE=AC$．<br><img src=\"assets/images/img_118_b1ff545f953f.png\" data-cx=\"1840000\" data-cy=\"1508800\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:230px;height:auto;margin:10px 0\">",
+        "stem": "如图，在$\\triangle ABC$中，$\\angle ACB=90^\\circ$，$CD$为$AB$边上的高，$AB=15\\text{ cm}$，$CD=6\\text{ cm}$，点$F$从点$D$出发，在直线$CD$上以$3\\text{ cm/s}$的速度移动，过点$F$作$BC$的垂线交直线$BC$于点$E$．当点$F$运动________$\\text{s}$时，$CE=AC$．<br><img src=\"assets/images/img_118_b1ff545f953f.png\" data-cx=\"1840000\" data-cy=\"1508800\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:165px;height:auto;margin:10px 0\">",
         "options": [],
         "answer": "3或7",
         "analysis": "本题主要考查了三角形全等的判定和性质，解题的关键是熟练掌握三角形全等的判定定理，注意分类讨论．分两种情况：当点$F$在射线$DC$上时，当点$F$在射线$CD$上时，分别画出图形求出结果即可．",
-        "detail": "解：当点$F$在射线$DC$上时，如图，<br><img src=\"assets/images/img_119_97801f04eea8.png\" data-cx=\"1760000\" data-cy=\"1724800\" alt=\"第9题解析图1\" style=\"display:block;max-width:100%;width:220px;height:auto;margin:10px 0\">$\\because FE\\perp BC$，<br>$\\therefore \\angle CEF=90^\\circ$，<br>$\\because \\angle ACB=90^\\circ$，<br>$\\therefore \\angle ACD+\\angle ECF=90^\\circ$，$\\angle ECF+\\angle EFC=90^\\circ$，<br>$\\therefore \\angle ACD=\\angle EFC$，<br>$\\because \\angle ACD+\\angle BCD=90^\\circ$，$\\angle BCD+\\angle ABC=90^\\circ$，<br>$\\therefore \\angle ABC=\\angle ACD$，<br>$\\therefore \\angle EFC=\\angle ABC$，<br>在$\\triangle CEF$和$\\triangle ACB$中，<br>$\\begin{cases} \\angle CEF=\\angle ACB=90^\\circ \\\\ \\angle EFC=\\angle CBA \\\\ CE=AC \\end{cases}$，<br>$\\therefore \\triangle CEF\\cong\\triangle ACB(\\text{AAS})$，<br>$\\therefore CF=AB=15\\text{ cm}$，<br>$\\therefore DF=CD+CF=6+15=21(\\text{cm})$，<br>$\\therefore$此时点$F$运动时间为$21\\div 3=7(\\text{s})$；<br>当点$F$在射线$CD$上时，如图，<br><img src=\"assets/images/img_120_bcbff8621e85.png\" data-cx=\"1840000\" data-cy=\"1680301\" alt=\"第9题解析图2\" style=\"display:block;max-width:100%;width:230px;height:auto;margin:10px 0\">同理可证：$\\triangle CEF\\cong\\triangle ACB(\\text{AAS})$，<br>$\\therefore CF=AB=15\\text{ cm}$，<br>$\\therefore DF=CF-CD=15-6=9(\\text{cm})$，<br>$\\therefore$此时点$F$运动时间为$9\\div 3=3(\\text{s})$．<br>综上所述，点$F$运动$3\\text{ s}$或$7\\text{ s}$时，$CE=AC$．<br>故答案为：$3$或$7$．"
+        "detail": "解：当点$F$在射线$DC$上时，如图，<br><img src=\"assets/images/img_119_97801f04eea8.png\" data-cx=\"1760000\" data-cy=\"1724800\" alt=\"第9题解析图1\" style=\"display:block;max-width:100%;width:165px;height:auto;margin:10px 0\">$\\because FE\\perp BC$，<br>$\\therefore \\angle CEF=90^\\circ$，<br>$\\because \\angle ACB=90^\\circ$，<br>$\\therefore \\angle ACD+\\angle ECF=90^\\circ$，$\\angle ECF+\\angle EFC=90^\\circ$，<br>$\\therefore \\angle ACD=\\angle EFC$，<br>$\\because \\angle ACD+\\angle BCD=90^\\circ$，$\\angle BCD+\\angle ABC=90^\\circ$，<br>$\\therefore \\angle ABC=\\angle ACD$，<br>$\\therefore \\angle EFC=\\angle ABC$，<br>在$\\triangle CEF$和$\\triangle ACB$中，<br>$\\begin{cases} \\angle CEF=\\angle ACB=90^\\circ \\\\ \\angle EFC=\\angle CBA \\\\ CE=AC \\end{cases}$，<br>$\\therefore \\triangle CEF\\cong\\triangle ACB(\\text{AAS})$，<br>$\\therefore CF=AB=15\\text{ cm}$，<br>$\\therefore DF=CD+CF=6+15=21(\\text{cm})$，<br>$\\therefore$此时点$F$运动时间为$21\\div 3=7(\\text{s})$；<br>当点$F$在射线$CD$上时，如图，<br><img src=\"assets/images/img_120_bcbff8621e85.png\" data-cx=\"1840000\" data-cy=\"1680301\" alt=\"第9题解析图2\" style=\"display:block;max-width:100%;width:165px;height:auto;margin:10px 0\">同理可证：$\\triangle CEF\\cong\\triangle ACB(\\text{AAS})$，<br>$\\therefore CF=AB=15\\text{ cm}$，<br>$\\therefore DF=CF-CD=15-6=9(\\text{cm})$，<br>$\\therefore$此时点$F$运动时间为$9\\div 3=3(\\text{s})$．<br>综上所述，点$F$运动$3\\text{ s}$或$7\\text{ s}$时，$CE=AC$．<br>故答案为：$3$或$7$．"
     },
     {
         "id": "aas_10",
@@ -15933,7 +15933,7 @@
         "difficulty": "容易",
         "knowledge": "全等的性质和ASA（AAS）综合（ASA或者AAS）",
         "chapter": "14.5三角形全等的判定（AAS）",
-        "stem": "小丽与爸妈在公园里坐荡秋千．如图，小丽坐在秋千的起始位置$A$处，$OA$与地面垂直，两脚在地面上用力一蹬，妈妈在距地面$1\\text{ m}$高的$B$处接住她后用力一推，爸爸在$C$处接住她．若妈妈与爸爸到$OA$的水平距离$BD$、$CE$分别为$1.4\\text{ m}$和$1.8\\text{ m}$，$\\angle BOC=90^\\circ$．爸爸在$C$处接住小丽时，小丽距离地面的高度是多少？<br><img src=\"assets/images/img_121_b87e288bd3de.png\" data-cx=\"1920000\" data-cy=\"1418507\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:240px;height:auto;margin:10px 0\">",
+        "stem": "小丽与爸妈在公园里坐荡秋千．如图，小丽坐在秋千的起始位置$A$处，$OA$与地面垂直，两脚在地面上用力一蹬，妈妈在距地面$1\\text{ m}$高的$B$处接住她后用力一推，爸爸在$C$处接住她．若妈妈与爸爸到$OA$的水平距离$BD$、$CE$分别为$1.4\\text{ m}$和$1.8\\text{ m}$，$\\angle BOC=90^\\circ$．爸爸在$C$处接住小丽时，小丽距离地面的高度是多少？<br><img src=\"assets/images/img_121_b87e288bd3de.png\" data-cx=\"1920000\" data-cy=\"1418507\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:202px;height:auto;margin:10px 0\">",
         "options": [],
         "answer": "小丽距离地面的高度是$1.4\\text{ m}$",
         "analysis": "本题主要考查全等三角形的判定和性质，掌握其判定方法和性质是关键．根据题意可证$\\triangle BOD\\cong\\triangle OCE(\\text{AAS})$，得到$BD=OE=1.4\\text{ m},OD=CE=1.8\\text{ m}$，则$DE=OD-OE=1.8-1.4=0.4(\\text{m})$，由此即可求解．",
@@ -15949,7 +15949,7 @@
         "difficulty": "中等",
         "knowledge": "全等的性质和ASA（AAS）综合（ASA或者AAS）、三角形内角和定理的应用",
         "chapter": "14.5三角形全等的判定（AAS）",
-        "stem": "如图，在$\\triangle ABC$中，$AB=24$，$AC=18$，$O$是$\\triangle ABC$内部一点，$OB=OC$，过点$O$的直线分别交$AB$，$AC$于点$D$，$E$．若$\\angle BOC=\\angle BDE=\\angle CED$，求$\\triangle ADE$的周长．<br><img src=\"assets/images/img_122_1cbc3d51d146.png\" data-cx=\"1920000\" data-cy=\"1412830\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:240px;height:auto;margin:10px 0\">",
+        "stem": "如图，在$\\triangle ABC$中，$AB=24$，$AC=18$，$O$是$\\triangle ABC$内部一点，$OB=OC$，过点$O$的直线分别交$AB$，$AC$于点$D$，$E$．若$\\angle BOC=\\angle BDE=\\angle CED$，求$\\triangle ADE$的周长．<br><img src=\"assets/images/img_122_1cbc3d51d146.png\" data-cx=\"1920000\" data-cy=\"1412830\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:202px;height:auto;margin:10px 0\">",
         "options": [],
         "answer": "$\\triangle ADE$的周长为$42$",
         "analysis": "本题考查了全等三角形的判定与性质，三角形内角和定理，平角定义，掌握知识点的应用是解题的关键．由三角形内角和定理和平角定义得$\\angle DBO=\\angle COE$，证明$\\triangle DBO\\cong\\triangle EOC(\\text{AAS})$，由性质可得$DO=CE$，$DB=OE$，最后代入即可求解．",
@@ -15965,7 +15965,7 @@
         "difficulty": "中等",
         "knowledge": "全等的性质和ASA（AAS）综合（ASA或者AAS）",
         "chapter": "14.5三角形全等的判定（AAS）",
-        "stem": "如图①，在$\\triangle ABC$中，$\\angle ACB=90^\\circ$，$AC=BC$，过点$C$在$\\triangle ABC$外作直线$l$，$AM\\perp l$于点$M$，$BN\\perp l$于点$N$．<br><img src=\"assets/images/img_123_7b6c3f171468.png\" data-cx=\"4160000\" data-cy=\"1366373\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:520px;height:auto;margin:10px 0\"><br>(1)试说明：$MN=AM+BN$；<br>(2)如图②，将（1）中条件改为$\\angle ADC=\\angle CEB=\\angle ACB=\\alpha$（$90^\\circ<\\alpha<180^\\circ$），$AC=BC$，请问（1）中的结论$DE=AD+BE$是否还成立？请说明理由；<br>(3)如图③，在$\\triangle ABC$中，点$D$为$AB$上一点，$DE=DF$，$\\angle A=\\angle EDF=\\angle B$，$AE=3$，$BF=5$，请直接写出$AB$的长．",
+        "stem": "如图①，在$\\triangle ABC$中，$\\angle ACB=90^\\circ$，$AC=BC$，过点$C$在$\\triangle ABC$外作直线$l$，$AM\\perp l$于点$M$，$BN\\perp l$于点$N$．<br><img src=\"assets/images/img_123_7b6c3f171468.png\" data-cx=\"4160000\" data-cy=\"1366373\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:280px;height:auto;margin:10px 0\"><br>(1)试说明：$MN=AM+BN$；<br>(2)如图②，将（1）中条件改为$\\angle ADC=\\angle CEB=\\angle ACB=\\alpha$（$90^\\circ<\\alpha<180^\\circ$），$AC=BC$，请问（1）中的结论$DE=AD+BE$是否还成立？请说明理由；<br>(3)如图③，在$\\triangle ABC$中，点$D$为$AB$上一点，$DE=DF$，$\\angle A=\\angle EDF=\\angle B$，$AE=3$，$BF=5$，请直接写出$AB$的长．",
         "options": [],
         "answer": "(1)见解析；(2)$DE=AD+BE$成立，理由见解析；(3)$8$",
         "analysis": "本题考查了全等三角形的判定与性质，同角的余角相等，一线三等角模型证明全等，解题关键是熟悉一线三等角模型．<br>（1）先证明$\\triangle ACM\\cong\\triangle CBN$，再根据全等三角形的性质得出$AM=CN$，$BN=CM$，从而根据$MN=CM+CN$，可得$MN=AM+BN$；<br>（2）先判定$DE=AD+BE$成立，再说理由，先证明$\\triangle ACD\\cong\\triangle CBE$，再根据全等三角形的性质得出$AD=CE$，$CD=BE$，结合$DE=DC+CE$，可得$DE=AD+BE$；<br>（3）先证明$\\triangle AED\\cong\\triangle BDF$，再根据全等三角形的性质得出$AE=DB$，$AD=BF$，根据$AB=AD+DB$，$AE=3$，$BF=5$，可求得$AB$．",
@@ -15981,7 +15981,7 @@
         "difficulty": "容易",
         "knowledge": "用SSS证明三角形全等（SSS）",
         "chapter": "14.6三角形全等的判定（SSS）",
-        "stem": "如图，$D$为$AE$延长线上一点，且$AB=AC$，$EB=EC$，$CD=BD$，则图中全等三角形共有（　　）<br><img src=\"assets/images/img_124_7737e6025f99.png\" data-cx=\"1920000\" data-cy=\"1337142\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:240px;height:auto;margin:10px 0\">",
+        "stem": "如图，$D$为$AE$延长线上一点，且$AB=AC$，$EB=EC$，$CD=BD$，则图中全等三角形共有（　　）<br><img src=\"assets/images/img_124_7737e6025f99.png\" data-cx=\"1920000\" data-cy=\"1337142\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:202px;height:auto;margin:10px 0\">",
         "options": [
             "A. $1$对",
             "B. $2$对",
@@ -16002,7 +16002,7 @@
         "difficulty": "容易",
         "knowledge": "同位角相等两直线平行、全等的性质和SSS综合（SSS）",
         "chapter": "14.6三角形全等的判定（SSS）",
-        "stem": "如图，点$A$，$D$，$C$，$F$在同一条直线上，$AD=CF$，$AB=DE$，$BC=EF$，下列结论不一定正确的是（　　）<br><img src=\"assets/images/img_125_fb9d05dd434d.png\" data-cx=\"2000000\" data-cy=\"1241379\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:250px;height:auto;margin:10px 0\">",
+        "stem": "如图，点$A$，$D$，$C$，$F$在同一条直线上，$AD=CF$，$AB=DE$，$BC=EF$，下列结论不一定正确的是（　　）<br><img src=\"assets/images/img_125_fb9d05dd434d.png\" data-cx=\"2000000\" data-cy=\"1241379\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:210px;height:auto;margin:10px 0\">",
         "options": [
             "A. $\\triangle ABC\\cong\\triangle DEF$",
             "B. $\\angle B=\\angle E$",
@@ -16023,7 +16023,7 @@
         "difficulty": "中等",
         "knowledge": "全等的性质和SSS综合（SSS）、三角形内角和定理的应用",
         "chapter": "14.6三角形全等的判定（SSS）",
-        "stem": "如图，在$\\triangle ACD$和$\\triangle BCE$中，$CA=CB,AD=BE,CD=CE,\\angle ACE=50^\\circ,\\angle BCD=150^\\circ$，$AD$与$BE$相交于点$P$，则$\\angle BPD$的度数为（　　）<br><img src=\"assets/images/img_126_279a1152c50a.png\" data-cx=\"2000000\" data-cy=\"1389473\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:250px;height:auto;margin:10px 0\">",
+        "stem": "如图，在$\\triangle ACD$和$\\triangle BCE$中，$CA=CB,AD=BE,CD=CE,\\angle ACE=50^\\circ,\\angle BCD=150^\\circ$，$AD$与$BE$相交于点$P$，则$\\angle BPD$的度数为（　　）<br><img src=\"assets/images/img_126_279a1152c50a.png\" data-cx=\"2000000\" data-cy=\"1389473\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:210px;height:auto;margin:10px 0\">",
         "options": [
             "A. $110^\\circ$",
             "B. $120^\\circ$",
@@ -16044,7 +16044,7 @@
         "difficulty": "容易",
         "knowledge": "全等的性质和SSS综合（SSS）、三角形内角和定理的应用",
         "chapter": "14.6三角形全等的判定（SSS）",
-        "stem": "如图，在$\\triangle ABC$中，$AB=AC$，$D$为$BC$中点，$\\angle C=70^\\circ$，则$\\angle BAD$的度数是（　　）<br><img src=\"assets/images/img_127_7f2cdcb0a3a9.png\" data-cx=\"1600000\" data-cy=\"1490909\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:200px;height:auto;margin:10px 0\">",
+        "stem": "如图，在$\\triangle ABC$中，$AB=AC$，$D$为$BC$中点，$\\angle C=70^\\circ$，则$\\angle BAD$的度数是（　　）<br><img src=\"assets/images/img_127_7f2cdcb0a3a9.png\" data-cx=\"1600000\" data-cy=\"1490909\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:165px;height:auto;margin:10px 0\">",
         "options": [
             "A. $20^\\circ$",
             "B. $45^\\circ$",
@@ -16065,7 +16065,7 @@
         "difficulty": "容易",
         "knowledge": "全等的性质和SSS综合（SSS）、三角形内角和定理的应用",
         "chapter": "14.6三角形全等的判定（SSS）",
-        "stem": "如图，$AD=BC$，$AE=CF$，$E$、$F$是$BD$上两点，$BE=DF$．若$\\angle AED=105^\\circ$，$\\angle ADB=40^\\circ$，则$\\angle BCF$的度数为（　　）<br><img src=\"assets/images/img_128_95605471be29.png\" data-cx=\"2000000\" data-cy=\"1298245\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:250px;height:auto;margin:10px 0\">",
+        "stem": "如图，$AD=BC$，$AE=CF$，$E$、$F$是$BD$上两点，$BE=DF$．若$\\angle AED=105^\\circ$，$\\angle ADB=40^\\circ$，则$\\angle BCF$的度数为（　　）<br><img src=\"assets/images/img_128_95605471be29.png\" data-cx=\"2000000\" data-cy=\"1298245\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:210px;height:auto;margin:10px 0\">",
         "options": [
             "A. $25^\\circ$",
             "B. $35^\\circ$",
@@ -16086,7 +16086,7 @@
         "difficulty": "中等",
         "knowledge": "利用邻补角互补求角度、全等的性质和SSS综合（SSS）、内错角相等两直线平行",
         "chapter": "14.6三角形全等的判定（SSS）",
-        "stem": "如图，点$E$、$F$在$BD$上，且$AB=CD$，$BF=DE$、$AE=CF$，$AC$与$BD$交于点$O$．则下列说法不正确的是（　　）<br><img src=\"assets/images/img_129_b372239ccd4e.png\" data-cx=\"2000000\" data-cy=\"1322033\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:250px;height:auto;margin:10px 0\">",
+        "stem": "如图，点$E$、$F$在$BD$上，且$AB=CD$，$BF=DE$、$AE=CF$，$AC$与$BD$交于点$O$．则下列说法不正确的是（　　）<br><img src=\"assets/images/img_129_b372239ccd4e.png\" data-cx=\"2000000\" data-cy=\"1322033\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:210px;height:auto;margin:10px 0\">",
         "options": [
             "A. $BE=DF$",
             "B. $\\triangle AEB\\cong\\triangle CFD$",
@@ -16107,7 +16107,7 @@
         "difficulty": "中等",
         "knowledge": "全等的性质和SSS综合（SSS）",
         "chapter": "14.6三角形全等的判定（SSS）",
-        "stem": "如图，在$\\triangle ABC$中，$AB=AC$，$D$为$BC$的中点，则下列结论中：①$\\triangle ABD\\cong\\triangle ACD$；②$\\angle B=\\angle C$；③$AD$平分$\\angle BAC$；④$AD\\perp BC$，其中正确的个数为（　　）<br><img src=\"assets/images/img_127_7f2cdcb0a3a9.png\" data-cx=\"1600000\" data-cy=\"1490909\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:200px;height:auto;margin:10px 0\">",
+        "stem": "如图，在$\\triangle ABC$中，$AB=AC$，$D$为$BC$的中点，则下列结论中：①$\\triangle ABD\\cong\\triangle ACD$；②$\\angle B=\\angle C$；③$AD$平分$\\angle BAC$；④$AD\\perp BC$，其中正确的个数为（　　）<br><img src=\"assets/images/img_127_7f2cdcb0a3a9.png\" data-cx=\"1600000\" data-cy=\"1490909\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:165px;height:auto;margin:10px 0\">",
         "options": [
             "A. $1$个",
             "B. $2$个",
@@ -16128,7 +16128,7 @@
         "difficulty": "容易",
         "knowledge": "全等的性质和SSS综合（SSS）、三角形内角和定理的应用",
         "chapter": "14.6三角形全等的判定（SSS）",
-        "stem": "如图，在$\\triangle ABC$和$\\triangle BDE$中，点$C$在边$BD$上，$AC$交$BE$于点$F$．若$AC=BD,AB=ED,BC=BE,\\angle ACB=50^\\circ$，则$\\angle BFC=$______$^\\circ$．<br><img src=\"assets/images/img_130_0dafe18dff5e.png\" data-cx=\"1920000\" data-cy=\"1337142\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:240px;height:auto;margin:10px 0\">",
+        "stem": "如图，在$\\triangle ABC$和$\\triangle BDE$中，点$C$在边$BD$上，$AC$交$BE$于点$F$．若$AC=BD,AB=ED,BC=BE,\\angle ACB=50^\\circ$，则$\\angle BFC=$______$^\\circ$．<br><img src=\"assets/images/img_130_0dafe18dff5e.png\" data-cx=\"1920000\" data-cy=\"1337142\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:202px;height:auto;margin:10px 0\">",
         "options": [],
         "answer": "80",
         "analysis": "本题主要考查全等三角形的判定和性质，三角形的内角和定理，掌握全等三角形的判定和性质是关键．根据题意得到$\\triangle ABC\\cong\\triangle DEB(\\text{SSS})$，$\\angle DBE=50^\\circ$，由三角形内角和定理即可求解．",
@@ -16144,11 +16144,11 @@
         "difficulty": "中等",
         "knowledge": "全等的性质和SSS综合（SSS）、全等的性质和SAS综合（SAS）",
         "chapter": "14.6三角形全等的判定（SSS）",
-        "stem": "如图，$E$是$\\triangle ABC$外一点，$D$是$AE$上一点，$AC=BC=BE$，$DA=DB$，$\\angle EBD=\\angle CBD$，$\\angle C=70^\\circ$，则$\\angle BED$的度数为______．<br><img src=\"assets/images/img_131_ad2593e8dfc8.png\" data-cx=\"1920000\" data-cy=\"1289142\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:240px;height:auto;margin:10px 0\">",
+        "stem": "如图，$E$是$\\triangle ABC$外一点，$D$是$AE$上一点，$AC=BC=BE$，$DA=DB$，$\\angle EBD=\\angle CBD$，$\\angle C=70^\\circ$，则$\\angle BED$的度数为______．<br><img src=\"assets/images/img_131_ad2593e8dfc8.png\" data-cx=\"1920000\" data-cy=\"1289142\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:202px;height:auto;margin:10px 0\">",
         "options": [],
         "answer": "$35^\\circ$",
         "analysis": "本题考查了全等三角形的判定和性质，连接$DC$，证明$\\triangle ACD\\cong\\triangle BCD(\\text{SSS})$，可得$\\angle DCB=\\frac{1}{2}\\angle ACB=35^\\circ$，再证明$\\triangle BED\\cong\\triangle BCD$，即可得到$\\angle BED=\\angle DCB=35^\\circ$，掌握全等三角形的判定和性质是解题的关键．",
-        "detail": "解：如图，连接$DC$，<br><img src=\"assets/images/img_132_0427216ba7d6.png\" data-cx=\"1920000\" data-cy=\"1289142\" alt=\"第9题解析配图\" style=\"display:block;max-width:100%;width:240px;height:auto;margin:10px 0\">在$\\triangle ACD$和$\\triangle BCD$中，<br>$\\begin{cases} DA=DB \\\\ CA=CB \\\\ CD=CD \\end{cases}$，<br>$\\therefore \\triangle ACD\\cong\\triangle BCD(\\text{SSS})$，<br>$\\therefore \\angle DCB=\\angle ACD=\\frac{1}{2}\\angle ACB=35^\\circ$，<br>在$\\triangle BED$和$\\triangle BCD$中，<br>$\\begin{cases} BD=BD \\\\ \\angle EBD=\\angle CBD \\\\ BE=BC \\end{cases}$，<br>$\\therefore \\triangle BED\\cong\\triangle BCD(\\text{SAS})$，<br>$\\therefore \\angle BED=\\angle DCB=35^\\circ$，<br>故答案为：$35^\\circ$．"
+        "detail": "解：如图，连接$DC$，<br><img src=\"assets/images/img_132_0427216ba7d6.png\" data-cx=\"1920000\" data-cy=\"1289142\" alt=\"第9题解析配图\" style=\"display:block;max-width:100%;width:202px;height:auto;margin:10px 0\">在$\\triangle ACD$和$\\triangle BCD$中，<br>$\\begin{cases} DA=DB \\\\ CA=CB \\\\ CD=CD \\end{cases}$，<br>$\\therefore \\triangle ACD\\cong\\triangle BCD(\\text{SSS})$，<br>$\\therefore \\angle DCB=\\angle ACD=\\frac{1}{2}\\angle ACB=35^\\circ$，<br>在$\\triangle BED$和$\\triangle BCD$中，<br>$\\begin{cases} BD=BD \\\\ \\angle EBD=\\angle CBD \\\\ BE=BC \\end{cases}$，<br>$\\therefore \\triangle BED\\cong\\triangle BCD(\\text{SAS})$，<br>$\\therefore \\angle BED=\\angle DCB=35^\\circ$，<br>故答案为：$35^\\circ$．"
     },
     {
         "id": "sss_10",
@@ -16160,7 +16160,7 @@
         "difficulty": "中等",
         "knowledge": "全等的性质和SSS综合（SSS）",
         "chapter": "14.6三角形全等的判定（SSS）",
-        "stem": "如图，$AB=AD$，$CB=CD$，$DA$的延长线交$BC$于点$E$，若$\\angle EAC=50^\\circ$，则$\\angle BAE$的度数为__________．<br><img src=\"assets/images/img_133_028e97ea0969.png\" data-cx=\"1920000\" data-cy=\"1337142\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:240px;height:auto;margin:10px 0\">",
+        "stem": "如图，$AB=AD$，$CB=CD$，$DA$的延长线交$BC$于点$E$，若$\\angle EAC=50^\\circ$，则$\\angle BAE$的度数为__________．<br><img src=\"assets/images/img_133_028e97ea0969.png\" data-cx=\"1920000\" data-cy=\"1337142\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:202px;height:auto;margin:10px 0\">",
         "options": [],
         "answer": "$80^\\circ$",
         "analysis": "本题考查了全等三角形的判定与性质．根据题意证明$\\triangle BAC\\cong\\triangle DAC(\\text{SSS})$，得出$\\angle BAC=\\angle DAC$，结合$\\angle EAC=50^\\circ$求得$\\angle DAC$，根据$\\angle BAE=\\angle BAC-\\angle EAC$，即可解题．",
@@ -16176,7 +16176,7 @@
         "difficulty": "容易",
         "knowledge": "全等的性质和SSS综合（SSS）",
         "chapter": "14.6三角形全等的判定（SSS）",
-        "stem": "如图，在$\\triangle ABC$中，$AB=AC,\\angle BAC=60^\\circ$，分别以$AB,AC$为一边，向$\\triangle ABC$外作$\\triangle ADB$和$\\triangle AEC$，若$AD=CE,BD=AE,\\angle E=125^\\circ$，则$\\angle DAE$的度数为________．<br><img src=\"assets/images/img_134_6f2ca766cf5e.png\" data-cx=\"1920000\" data-cy=\"1361454\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:240px;height:auto;margin:10px 0\">",
+        "stem": "如图，在$\\triangle ABC$中，$AB=AC,\\angle BAC=60^\\circ$，分别以$AB,AC$为一边，向$\\triangle ABC$外作$\\triangle ADB$和$\\triangle AEC$，若$AD=CE,BD=AE,\\angle E=125^\\circ$，则$\\angle DAE$的度数为________．<br><img src=\"assets/images/img_134_6f2ca766cf5e.png\" data-cx=\"1920000\" data-cy=\"1361454\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:202px;height:auto;margin:10px 0\">",
         "options": [],
         "answer": "$115^\\circ$/115度",
         "analysis": "本题主要考查全等三角形的性质与判定，熟练掌握全等三角形的性质与判定是解题的关键；由题意易得$\\triangle ADB\\cong\\triangle CEA$，则有$\\angle DAB=\\angle ACE$，然后根据三角形内角和可进行求解．",
@@ -16192,7 +16192,7 @@
         "difficulty": "中等",
         "knowledge": "全等的性质和SSS综合（SSS）",
         "chapter": "14.6三角形全等的判定（SSS）",
-        "stem": "如图，点$B,E,F,C$在同一直线上，点$A$、$D$为线段$BC$上方两点，连接$AB$、$DC$、$AF$、$DE$，$AF$与$DE$交于点$O$，$AB=CD,BE=CF,AF=DE$．求证：$\\angle OEF=\\angle OFE$．<br><img src=\"assets/images/img_135_4c1385c805a0.png\" data-cx=\"2000000\" data-cy=\"1321428\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:250px;height:auto;margin:10px 0\">",
+        "stem": "如图，点$B,E,F,C$在同一直线上，点$A$、$D$为线段$BC$上方两点，连接$AB$、$DC$、$AF$、$DE$，$AF$与$DE$交于点$O$，$AB=CD,BE=CF,AF=DE$．求证：$\\angle OEF=\\angle OFE$．<br><img src=\"assets/images/img_135_4c1385c805a0.png\" data-cx=\"2000000\" data-cy=\"1321428\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:210px;height:auto;margin:10px 0\">",
         "options": [],
         "answer": "见解析",
         "analysis": "本题主要考查了全等三角形的判定以及性质，利用$\\text{SSS}$证明$\\triangle DCE\\cong\\triangle ABF$，利用全等三角形的性质即可得出$\\angle OEF=\\angle OFE$．",
@@ -16208,7 +16208,7 @@
         "difficulty": "中等",
         "knowledge": "全等的性质和SSS综合（SSS）、三角形的外角的定义及性质、三角形内角和定理的应用、角平分线的有关计算",
         "chapter": "14.6三角形全等的判定（SSS）",
-        "stem": "如图，点$B$，$E$，$C$，$F$在一条直线上，$AB=DE$，$AC=DF$，$BE=CF$．<br><img src=\"assets/images/img_136_fb4ae7265103.png\" data-cx=\"2400000\" data-cy=\"1010000\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:420px;height:auto;margin:10px 0\"><br>(1)如图（1），求证：$\\angle A=\\angle D$；<br>(2)如图（2），$\\angle A=70^\\circ$，$\\angle B=40^\\circ$，$FG$平分$\\angle DFE$交$AC$于点$G$，求$\\angle CGF$的度数．",
+        "stem": "如图，点$B$，$E$，$C$，$F$在一条直线上，$AB=DE$，$AC=DF$，$BE=CF$．<br><img src=\"assets/images/img_136_fb4ae7265103.png\" data-cx=\"2400000\" data-cy=\"1010000\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:252px;height:auto;margin:10px 0\"><br>(1)如图（1），求证：$\\angle A=\\angle D$；<br>(2)如图（2），$\\angle A=70^\\circ$，$\\angle B=40^\\circ$，$FG$平分$\\angle DFE$交$AC$于点$G$，求$\\angle CGF$的度数．",
         "options": [],
         "answer": "(1)见解析；(2)$\\angle CGF=35^\\circ$",
         "analysis": "本题主要考查了全等三角形的判定和性质，三角形外角性质，三角形内角和定理，角平分线定义，熟练掌握全等三角形的判定方法，理解全等三角形的对应边相等，对应角相等是解决问题的关键．<br>（1）先根据$BE=CF$得$BC=EF$，进而可依据$\\text{SSS}$判定$\\triangle ABC$和$\\triangle DEF$全等，然后根据全等三角形的性质即可得出结论；<br>（2）先求出$\\angle ACB=70^\\circ$，再由$\\triangle ABC$和$\\triangle DEF$全等得$\\angle ACB=\\angle DFE=70^\\circ$，再根据$FG$平分$\\angle DFE$得$\\angle CFG=35^\\circ$，然后根据三角形外角性质即可得出$\\angle CGF$的度数．",
@@ -16224,7 +16224,7 @@
         "difficulty": "容易",
         "knowledge": "全等的性质和SSS综合（SSS）、内错角相等两直线平行",
         "chapter": "14.6三角形全等的判定（SSS）",
-        "stem": "如图，$DB=BC$，$ED=AB$，$E$是$BC$的中点，且$AC=\\frac{1}{2}BC$．<br><img src=\"assets/images/img_137_44e73aea8922.png\" data-cx=\"1840000\" data-cy=\"1429538\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:230px;height:auto;margin:10px 0\"><br>(1)试说明：$\\triangle ABC\\cong\\triangle EDB$；<br>(2)判断$AC$和$BD$的位置关系，并说明理由．",
+        "stem": "如图，$DB=BC$，$ED=AB$，$E$是$BC$的中点，且$AC=\\frac{1}{2}BC$．<br><img src=\"assets/images/img_137_44e73aea8922.png\" data-cx=\"1840000\" data-cy=\"1429538\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:193px;height:auto;margin:10px 0\"><br>(1)试说明：$\\triangle ABC\\cong\\triangle EDB$；<br>(2)判断$AC$和$BD$的位置关系，并说明理由．",
         "options": [],
         "answer": "(1)见解析；(2)$AC\\parallel BD$，理由见解析",
         "analysis": "本题主要考查了全等三角形的判定和性质，解题的关键是熟练掌握三角形全等的判定方法．<br>（1）根据$\\text{SSS}$证明$\\triangle ABC\\cong\\triangle EDB$即可；<br>（2）根据三角形全等的性质得出$\\angle ACB=\\angle EBD$，再根据平行线的判定得出答案即可．",
@@ -16240,7 +16240,7 @@
         "difficulty": "容易",
         "knowledge": "三角形外角的性质、角平分线的定义及尺规作图",
         "chapter": "14.7 角平分线",
-        "stem": "如图，在$\\triangle ABC$中，$\\angle ABC=60^\\circ$，$\\angle ACB=70^\\circ$，$\\angle ACD$为$\\triangle ABC$的外角，以点$B$为圆心，任意长为半径作弧，分别交$AB$，$BC$于点$E$，$F$，分别以点$E$，$F$为圆心，大于$\\frac{1}{2}EF$长为半径作弧，两弧交于点$G$，作射线$BG$，以点$C$为圆心，任意长为半径作弧，分别交$AC$，$CD$于点$H$，$I$，分别以点$H$，$I$为圆心，大于$\\frac{1}{2}IH$长为半径作弧，两弧交于点$P$，作射线$CP$交射线$BG$于点$Q$，则$\\angle BQC$的度数为___________．<br><img src=\"assets/images/img_138_c122bd101244.png\" data-cx=\"2240000\" data-cy=\"1527272\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:280px;height:auto;margin:10px 0\">",
+        "stem": "如图，在$\\triangle ABC$中，$\\angle ABC=60^\\circ$，$\\angle ACB=70^\\circ$，$\\angle ACD$为$\\triangle ABC$的外角，以点$B$为圆心，任意长为半径作弧，分别交$AB$，$BC$于点$E$，$F$，分别以点$E$，$F$为圆心，大于$\\frac{1}{2}EF$长为半径作弧，两弧交于点$G$，作射线$BG$，以点$C$为圆心，任意长为半径作弧，分别交$AC$，$CD$于点$H$，$I$，分别以点$H$，$I$为圆心，大于$\\frac{1}{2}IH$长为半径作弧，两弧交于点$P$，作射线$CP$交射线$BG$于点$Q$，则$\\angle BQC$的度数为___________．<br><img src=\"assets/images/img_138_c122bd101244.png\" data-cx=\"2240000\" data-cy=\"1527272\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:220px;height:auto;margin:10px 0\">",
         "options": [],
         "answer": "$25^\\circ$/25度",
         "analysis": "本题主要考查了三角形外角的性质，角平分线的定义及其尺规作图，根据平角的定义得到$\\angle ACD=110^\\circ$，由作图方法可知，$BQ$，$CQ$分别平分$\\angle ABC$，$\\angle ACD$，根据角平分线的定义可得$\\angle QBC$，$\\angle QCD$的度数，再根据三角形外角的性质即可得到答案．",
@@ -16256,11 +16256,11 @@
         "difficulty": "容易",
         "knowledge": "尺规作图——角平分线、角平分线的性质、三角形面积",
         "chapter": "14.7 角平分线",
-        "stem": "如图，在$\\triangle ABC$中．<br><img src=\"assets/images/img_139_23ff61e8bd46.png\" data-cx=\"2400000\" data-cy=\"995744\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:420px;height:auto;margin:10px 0\"><br>(1)尺规作图：作$\\angle BAC$的平分线$AD$交$BC$于点$D$．（保留作图痕迹，不写作法）<br>(2)若$AB=8$，$AC=6$，$\\triangle ABD$的面积为$12$，求$\\triangle ABC$的面积．",
+        "stem": "如图，在$\\triangle ABC$中．<br><img src=\"assets/images/img_139_23ff61e8bd46.png\" data-cx=\"2400000\" data-cy=\"995744\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:252px;height:auto;margin:10px 0\"><br>(1)尺规作图：作$\\angle BAC$的平分线$AD$交$BC$于点$D$．（保留作图痕迹，不写作法）<br>(2)若$AB=8$，$AC=6$，$\\triangle ABD$的面积为$12$，求$\\triangle ABC$的面积．",
         "options": [],
-        "answer": "(1)如图，射线$AD$即为所求：<br><img src=\"assets/images/img_140_0dc9a6cff7ac.png\" data-cx=\"1920000\" data-cy=\"1381052\" alt=\"第2题尺规作图答案\" style=\"display:block;max-width:100%;width:240px;height:auto;margin:10px 0\">(2)$21$",
+        "answer": "(1)如图，射线$AD$即为所求：<br><img src=\"assets/images/img_140_0dc9a6cff7ac.png\" data-cx=\"1920000\" data-cy=\"1381052\" alt=\"第2题尺规作图答案\" style=\"display:block;max-width:100%;width:202px;height:auto;margin:10px 0\">(2)$21$",
         "analysis": "本题考查了作图——角平分线，角平分线的性质，三角形面积，掌握角平分线上的点到角两边的距离相等是解题关键．<br>（1）根据角平分线的作法作图即可；<br>（2）过点$D$作$DF\\perp AB$、$DE\\perp AC$，根据角平分线的性质，得到$DF=DE$，再根据三角形面积公式，求得$DE=DF=3$，再由$S_{\\triangle ABC}=S_{\\triangle ABD}+S_{\\triangle ACD}$，即可求解．",
-        "detail": "（1）如图，射线$AD$即为所求．<br>（2）解：如图，过点$D$作$DF\\perp AB$交$AB$于点$F$，作$DE\\perp AC$交$AC$于点$E$，<br><img src=\"assets/images/img_141_c541846d4cb9.png\" data-cx=\"1920000\" data-cy=\"1381052\" alt=\"第2题解析配图\" style=\"display:block;max-width:100%;width:240px;height:auto;margin:10px 0\">$\\because AD$平分$\\angle BAC$，<br>$\\therefore DF=DE$，<br>$\\because \\triangle ABD$的面积为$12$，<br>$\\therefore \\frac{1}{2}AB\\cdot DF=\\frac{1}{2}\\times 8\\times DF=12$，<br>$\\therefore DF=3=DE$，<br>$\\because AB=8$，$AC=6$，<br>$\\therefore S_{\\triangle ABC}=S_{\\triangle ABD}+S_{\\triangle ACD}=12+\\frac{1}{2}AC\\cdot DE=12+\\frac{1}{2}\\times 6\\times 3=21$．"
+        "detail": "（1）如图，射线$AD$即为所求．<br>（2）解：如图，过点$D$作$DF\\perp AB$交$AB$于点$F$，作$DE\\perp AC$交$AC$于点$E$，<br><img src=\"assets/images/img_141_c541846d4cb9.png\" data-cx=\"1920000\" data-cy=\"1381052\" alt=\"第2题解析配图\" style=\"display:block;max-width:100%;width:202px;height:auto;margin:10px 0\">$\\because AD$平分$\\angle BAC$，<br>$\\therefore DF=DE$，<br>$\\because \\triangle ABD$的面积为$12$，<br>$\\therefore \\frac{1}{2}AB\\cdot DF=\\frac{1}{2}\\times 8\\times DF=12$，<br>$\\therefore DF=3=DE$，<br>$\\because AB=8$，$AC=6$，<br>$\\therefore S_{\\triangle ABC}=S_{\\triangle ABD}+S_{\\triangle ACD}=12+\\frac{1}{2}AC\\cdot DE=12+\\frac{1}{2}\\times 6\\times 3=21$．"
     },
     {
         "id": "bis_3",
@@ -16272,7 +16272,7 @@
         "difficulty": "容易",
         "knowledge": "角平分线的性质定理、三角形的面积比",
         "chapter": "14.7 角平分线",
-        "stem": "如图，在$\\triangle ABC$中，$\\angle ACB=90^\\circ$，$BE$平分$\\angle ABC$，$ED\\perp AB$于$D$．如果$BC=6,AB=10$，那么$S_{\\triangle BCE}:S_{\\triangle BAE}$的值（　　）<br><img src=\"assets/images/img_142_ca9bcea0fdfc.png\" data-cx=\"2080000\" data-cy=\"1341935\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:260px;height:auto;margin:10px 0\">",
+        "stem": "如图，在$\\triangle ABC$中，$\\angle ACB=90^\\circ$，$BE$平分$\\angle ABC$，$ED\\perp AB$于$D$．如果$BC=6,AB=10$，那么$S_{\\triangle BCE}:S_{\\triangle BAE}$的值（　　）<br><img src=\"assets/images/img_142_ca9bcea0fdfc.png\" data-cx=\"2080000\" data-cy=\"1341935\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:218px;height:auto;margin:10px 0\">",
         "options": [
             "A. $3:4$",
             "B. $3:5$",
@@ -16293,7 +16293,7 @@
         "difficulty": "较难",
         "knowledge": "尺规作图、角平分线性质、全等三角形的判定（SSA分类讨论）",
         "chapter": "14.7 角平分线",
-        "stem": "如图，点$P$是$\\angle ABC$平分线上的一点，点$M$是射线$BC$上的一点（异于点$B$），连结$MP$，在射线$BA$上用尺规作图的方法找一点$N$，使$\\triangle BPN\\cong\\triangle BPM$．<br>小明说：“以$B$为圆心，$BM$为半径作弧，交射线$BA$于$N$，连结$PN$，则可证得$\\triangle BPN\\cong\\triangle BPM$．”<br>小红说：“以$P$为圆心，$PM$为半径作弧，交射线$BA$于$N$，连结$PN$，当$\\angle PMB$的大小满足一定条件时也可证得$\\triangle BPN\\cong\\triangle BPM$．”你认为小红提出的条件应该是（　　）<br><img src=\"assets/images/img_143_86120b83fb3e.png\" data-cx=\"2080000\" data-cy=\"1282666\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:260px;height:auto;margin:10px 0\">",
+        "stem": "如图，点$P$是$\\angle ABC$平分线上的一点，点$M$是射线$BC$上的一点（异于点$B$），连结$MP$，在射线$BA$上用尺规作图的方法找一点$N$，使$\\triangle BPN\\cong\\triangle BPM$．<br>小明说：“以$B$为圆心，$BM$为半径作弧，交射线$BA$于$N$，连结$PN$，则可证得$\\triangle BPN\\cong\\triangle BPM$．”<br>小红说：“以$P$为圆心，$PM$为半径作弧，交射线$BA$于$N$，连结$PN$，当$\\angle PMB$的大小满足一定条件时也可证得$\\triangle BPN\\cong\\triangle BPM$．”你认为小红提出的条件应该是（　　）<br><img src=\"assets/images/img_143_86120b83fb3e.png\" data-cx=\"2080000\" data-cy=\"1282666\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:218px;height:auto;margin:10px 0\">",
         "options": [
             "A. $\\angle PMB=90^\\circ$",
             "B. $\\angle PMB\\ge \\angle PBM$",
@@ -16302,7 +16302,7 @@
         ],
         "answer": "C",
         "analysis": "本题考查了尺规作图，角平分线性质，全等三角形的判定．根据以$P$为圆心，$PM$为半径作弧，分情况当$\\angle PMB=90^\\circ$时，当$\\angle PMB<\\angle PBM$时，当$\\angle PMB\\ge\\angle PBM$时，结合全等三角形判定定理分析，即可解题．",
-        "detail": "解：当$\\angle PMB=90^\\circ$时，<br>由作图方法可知，$\\angle PNB=90^\\circ$，<br>由$PM=PN,PB=PB$，可证得$\\triangle BPN\\cong\\triangle BPM(\\text{HL})$．<br>当$\\angle PMB<\\angle PBM$时，$PM>PB$，<br>由作图方法可知，$PN>PB$，<br>如图，此时，射线$BA$上只有一个$N$点符合，可证得$\\triangle BPN\\cong\\triangle BPM$．<br><img src=\"assets/images/img_144_4be0535f0af9.png\" data-cx=\"1920000\" data-cy=\"1684210\" alt=\"第4题解析图1\" style=\"display:block;max-width:100%;width:240px;height:auto;margin:10px 0\">当$\\angle PMB\\ge\\angle PBM$时，$PM\\le PB$，<br>由作图方法可知，$PN\\le PB$，<br><img src=\"assets/images/img_145_d9a1abee5179.png\" data-cx=\"1920000\" data-cy=\"1616842\" alt=\"第4题解析图2\" style=\"display:block;max-width:100%;width:240px;height:auto;margin:10px 0\">如图，此时，射线$BA$上不止一个$N$点符合，得不到$\\triangle BPN\\cong\\triangle BPM$．<br>综上所述，小红提出的条件应该是$\\angle PMB=90^\\circ$或$\\angle PMB<\\angle PBM$，<br>故选：C．"
+        "detail": "解：当$\\angle PMB=90^\\circ$时，<br>由作图方法可知，$\\angle PNB=90^\\circ$，<br>由$PM=PN,PB=PB$，可证得$\\triangle BPN\\cong\\triangle BPM(\\text{HL})$．<br>当$\\angle PMB<\\angle PBM$时，$PM>PB$，<br>由作图方法可知，$PN>PB$，<br>如图，此时，射线$BA$上只有一个$N$点符合，可证得$\\triangle BPN\\cong\\triangle BPM$．<br><img src=\"assets/images/img_144_4be0535f0af9.png\" data-cx=\"1920000\" data-cy=\"1684210\" alt=\"第4题解析图1\" style=\"display:block;max-width:100%;width:165px;height:auto;margin:10px 0\">当$\\angle PMB\\ge\\angle PBM$时，$PM\\le PB$，<br>由作图方法可知，$PN\\le PB$，<br><img src=\"assets/images/img_145_d9a1abee5179.png\" data-cx=\"1920000\" data-cy=\"1616842\" alt=\"第4题解析图2\" style=\"display:block;max-width:100%;width:165px;height:auto;margin:10px 0\">如图，此时，射线$BA$上不止一个$N$点符合，得不到$\\triangle BPN\\cong\\triangle BPM$．<br>综上所述，小红提出的条件应该是$\\angle PMB=90^\\circ$或$\\angle PMB<\\angle PBM$，<br>故选：C．"
     },
     {
         "id": "bis_5",
@@ -16314,7 +16314,7 @@
         "difficulty": "中等",
         "knowledge": "角平分线的性质定理、三角形中线与等高面积比",
         "chapter": "14.7 角平分线",
-        "stem": "如图，在$\\triangle ABC$中，$AD$是它的角平分线，$AE$是它的中线，$AB=5$，$AC=3$，$BC=7$，则$ED$长为（　　）<br><img src=\"assets/images/img_146_1dcfada32403.png\" data-cx=\"2000000\" data-cy=\"1275862\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:250px;height:auto;margin:10px 0\">",
+        "stem": "如图，在$\\triangle ABC$中，$AD$是它的角平分线，$AE$是它的中线，$AB=5$，$AC=3$，$BC=7$，则$ED$长为（　　）<br><img src=\"assets/images/img_146_1dcfada32403.png\" data-cx=\"2000000\" data-cy=\"1275862\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:210px;height:auto;margin:10px 0\">",
         "options": [
             "A. $\\frac{15}{7}$",
             "B. $\\frac{7}{15}$",
@@ -16323,7 +16323,7 @@
         ],
         "answer": "C",
         "analysis": "本题主要考查角平分线的性质定理，掌握角平分线的性质定理，等高的三角形面积的计算方法是关键．<br>过点$D$作$DG\\perp AB$于$G$，$DH\\perp AC$于$H$，$\\frac{S_{\\triangle BAD}}{S_{\\triangle CAD}}=\\frac{AB}{AC}=\\frac{5}{3}$，$\\frac{BD}{DC}=\\frac{5}{3}$，$BD=\\frac{35}{8}$，由中点得到$BE=\\frac{7}{2}$，根据$DE=BD-BE=\\frac{35}{8}-\\frac{7}{2}=\\frac{7}{8}$即可求解．",
-        "detail": "解：如图，过点$D$作$DG\\perp AB$于$G$，$DH\\perp AC$于$H$，<br><img src=\"assets/images/img_147_558b2e68cbd1.png\" data-cx=\"2000000\" data-cy=\"1275862\" alt=\"第5题解析配图\" style=\"display:block;max-width:100%;width:250px;height:auto;margin:10px 0\">$\\because AD$平分$\\angle BAC$，$DG\\perp AB$，$DH\\perp AC$，<br>$\\therefore DG=DH$，<br>$\\therefore \\frac{S_{\\triangle BAD}}{S_{\\triangle CAD}}=\\frac{AB}{AC}=\\frac{5}{3}$，<br>$\\therefore \\frac{BD}{DC}=\\frac{5}{3}$，<br>$\\because BC=7$，<br>$\\therefore BD=\\frac{35}{8}$，<br>$\\because AE$是$\\triangle ABC$的中线，$BC=7$，<br>$\\therefore BE=\\frac{7}{2}$，<br>$\\therefore DE=BD-BE=\\frac{35}{8}-\\frac{7}{2}=\\frac{7}{8}$，<br>故选：C．"
+        "detail": "解：如图，过点$D$作$DG\\perp AB$于$G$，$DH\\perp AC$于$H$，<br><img src=\"assets/images/img_147_558b2e68cbd1.png\" data-cx=\"2000000\" data-cy=\"1275862\" alt=\"第5题解析配图\" style=\"display:block;max-width:100%;width:210px;height:auto;margin:10px 0\">$\\because AD$平分$\\angle BAC$，$DG\\perp AB$，$DH\\perp AC$，<br>$\\therefore DG=DH$，<br>$\\therefore \\frac{S_{\\triangle BAD}}{S_{\\triangle CAD}}=\\frac{AB}{AC}=\\frac{5}{3}$，<br>$\\therefore \\frac{BD}{DC}=\\frac{5}{3}$，<br>$\\because BC=7$，<br>$\\therefore BD=\\frac{35}{8}$，<br>$\\because AE$是$\\triangle ABC$的中线，$BC=7$，<br>$\\therefore BE=\\frac{7}{2}$，<br>$\\therefore DE=BD-BE=\\frac{35}{8}-\\frac{7}{2}=\\frac{7}{8}$，<br>故选：C．"
     },
     {
         "id": "bis_6",
@@ -16335,7 +16335,7 @@
         "difficulty": "中等",
         "knowledge": "角平分线的性质、直角三角形全等判定（HL）、面积割补",
         "chapter": "14.7 角平分线",
-        "stem": "如图，$AD$是$\\triangle ABC$的角平分线，$DF\\perp AB$，垂足为$F$，点$E$、$G$分别在$AB$、$AC$上且$DE=DG$，$\\triangle ADG$和$\\triangle AED$的面积分别为$50$和$40$，则$\\triangle EDF$的面积为（　　）<br><img src=\"assets/images/img_148_205fc3da5bcc.png\" data-cx=\"2000000\" data-cy=\"1464285\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:250px;height:auto;margin:10px 0\">",
+        "stem": "如图，$AD$是$\\triangle ABC$的角平分线，$DF\\perp AB$，垂足为$F$，点$E$、$G$分别在$AB$、$AC$上且$DE=DG$，$\\triangle ADG$和$\\triangle AED$的面积分别为$50$和$40$，则$\\triangle EDF$的面积为（　　）<br><img src=\"assets/images/img_148_205fc3da5bcc.png\" data-cx=\"2000000\" data-cy=\"1464285\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:210px;height:auto;margin:10px 0\">",
         "options": [
             "A. $4$",
             "B. $5$",
@@ -16344,7 +16344,7 @@
         ],
         "answer": "B",
         "analysis": "本题主要考查了角平分线的性质，直角三角形的判定定理，解题的关键是熟练掌握角平分线的性质．<br>过点$D$作$DH\\perp AC$交$AC$于点$H$，得到$\\text{Rt}\\triangle DFE\\cong\\text{Rt}\\triangle DHG$和$\\text{Rt}\\triangle ADF\\cong\\text{Rt}\\triangle ADH$，然后利用三角形面积的和差即可求解．",
-        "detail": "解：如图，过点$D$作$DH\\perp AC$交$AC$于点$H$，<br><img src=\"assets/images/img_149_92c9fe79f70c.png\" data-cx=\"2000000\" data-cy=\"1464285\" alt=\"第6题解析配图\" style=\"display:block;max-width:100%;width:250px;height:auto;margin:10px 0\">$\\because AD$是$\\triangle ABC$的角平分线，$DF\\perp AB$，<br>$\\therefore DF=DH$，<br>又$\\because DE=DG$，<br>$\\therefore \\text{Rt}\\triangle DFE\\cong\\text{Rt}\\triangle DHG(\\text{HL})$，<br>$\\because \\begin{cases} AD=AD \\\\ DH=DF \\end{cases}$，<br>$\\therefore \\text{Rt}\\triangle ADF\\cong\\text{Rt}\\triangle ADH(\\text{HL})$，<br>$\\therefore S_{\\triangle AED}+S_{\\triangle DEF}=S_{\\triangle ADF}=S_{\\triangle ADH}$，<br>$\\therefore S_{\\triangle AED}+S_{\\triangle DEF}+S_{\\triangle DHG}=S_{\\triangle ADG}=50$，<br>$\\therefore S_{\\triangle EDF}=\\frac{1}{2}\\times(50-40)=5$．<br>故选：B．"
+        "detail": "解：如图，过点$D$作$DH\\perp AC$交$AC$于点$H$，<br><img src=\"assets/images/img_149_92c9fe79f70c.png\" data-cx=\"2000000\" data-cy=\"1464285\" alt=\"第6题解析配图\" style=\"display:block;max-width:100%;width:210px;height:auto;margin:10px 0\">$\\because AD$是$\\triangle ABC$的角平分线，$DF\\perp AB$，<br>$\\therefore DF=DH$，<br>又$\\because DE=DG$，<br>$\\therefore \\text{Rt}\\triangle DFE\\cong\\text{Rt}\\triangle DHG(\\text{HL})$，<br>$\\because \\begin{cases} AD=AD \\\\ DH=DF \\end{cases}$，<br>$\\therefore \\text{Rt}\\triangle ADF\\cong\\text{Rt}\\triangle ADH(\\text{HL})$，<br>$\\therefore S_{\\triangle AED}+S_{\\triangle DEF}=S_{\\triangle ADF}=S_{\\triangle ADH}$，<br>$\\therefore S_{\\triangle AED}+S_{\\triangle DEF}+S_{\\triangle DHG}=S_{\\triangle ADG}=50$，<br>$\\therefore S_{\\triangle EDF}=\\frac{1}{2}\\times(50-40)=5$．<br>故选：B．"
     },
     {
         "id": "bis_7",
@@ -16356,11 +16356,11 @@
         "difficulty": "容易",
         "knowledge": "角平分线的性质、三角形面积公式",
         "chapter": "14.7 角平分线",
-        "stem": "如图，$BD$是$\\angle ABC$的平分线，$DE\\perp AB$于$E$，$S_{\\triangle ABC}=33\\text{cm}^2$，$AB=16\\text{cm},BC=14\\text{cm}$，则$DE$的长是_________．<br><img src=\"assets/images/img_150_6701a1216d68.png\" data-cx=\"2160000\" data-cy=\"1114838\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:270px;height:auto;margin:10px 0\">",
+        "stem": "如图，$BD$是$\\angle ABC$的平分线，$DE\\perp AB$于$E$，$S_{\\triangle ABC}=33\\text{cm}^2$，$AB=16\\text{cm},BC=14\\text{cm}$，则$DE$的长是_________．<br><img src=\"assets/images/img_150_6701a1216d68.png\" data-cx=\"2160000\" data-cy=\"1114838\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:227px;height:auto;margin:10px 0\">",
         "options": [],
         "answer": "$2.2\\text{cm}$",
         "analysis": "本题考查了角平分线的性质，解题的关键是掌握角平分线上的点到两边距离相等．过点$D$作$DF\\perp BC$于点$F$，根据角平分线的性质得出$DE=DF$，再根据$S_{\\triangle ABC}=S_{\\triangle ABD}+S_{\\triangle BCD}=\\frac{1}{2}AB\\cdot DE+\\frac{1}{2}BC\\cdot DF$，即可解答．",
-        "detail": "解：过点$D$作$DF\\perp BC$于点$F$，<br><img src=\"assets/images/img_151_c7f53868054c.png\" data-cx=\"2160000\" data-cy=\"1114838\" alt=\"第7题解析配图\" style=\"display:block;max-width:100%;width:270px;height:auto;margin:10px 0\">$\\because BD$是$\\angle ABC$的平分线，$DE\\perp AB$，$DF\\perp BC$，<br>$\\therefore DE=DF$，<br>$\\because S_{\\triangle ABC}=S_{\\triangle ABD}+S_{\\triangle BCD}=\\frac{1}{2}AB\\cdot DE+\\frac{1}{2}BC\\cdot DF$，<br>$\\therefore \\frac{1}{2}\\times 16\\times DE+\\frac{1}{2}\\times 14\\times DE=33$，<br>解得：$DE=2.2\\text{cm}$，<br>故答案为：$2.2\\text{cm}$．"
+        "detail": "解：过点$D$作$DF\\perp BC$于点$F$，<br><img src=\"assets/images/img_151_c7f53868054c.png\" data-cx=\"2160000\" data-cy=\"1114838\" alt=\"第7题解析配图\" style=\"display:block;max-width:100%;width:227px;height:auto;margin:10px 0\">$\\because BD$是$\\angle ABC$的平分线，$DE\\perp AB$，$DF\\perp BC$，<br>$\\therefore DE=DF$，<br>$\\because S_{\\triangle ABC}=S_{\\triangle ABD}+S_{\\triangle BCD}=\\frac{1}{2}AB\\cdot DE+\\frac{1}{2}BC\\cdot DF$，<br>$\\therefore \\frac{1}{2}\\times 16\\times DE+\\frac{1}{2}\\times 14\\times DE=33$，<br>解得：$DE=2.2\\text{cm}$，<br>故答案为：$2.2\\text{cm}$．"
     },
     {
         "id": "bis_8",
@@ -16372,11 +16372,11 @@
         "difficulty": "容易",
         "knowledge": "角平分线的性质、三角形面积比",
         "chapter": "14.7 角平分线",
-        "stem": "如图，在$\\triangle ABC$中，$AB=2$，$BC=3$，$BD$是$\\angle ABC$的平分线，如果$\\triangle ABC$的面积为$\\frac{3}{2}$，那么$\\triangle DBC$的面积为__________．<br><img src=\"assets/images/img_152_ede627f6f31c.png\" data-cx=\"2000000\" data-cy=\"1087719\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:250px;height:auto;margin:10px 0\">",
+        "stem": "如图，在$\\triangle ABC$中，$AB=2$，$BC=3$，$BD$是$\\angle ABC$的平分线，如果$\\triangle ABC$的面积为$\\frac{3}{2}$，那么$\\triangle DBC$的面积为__________．<br><img src=\"assets/images/img_152_ede627f6f31c.png\" data-cx=\"2000000\" data-cy=\"1087719\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:210px;height:auto;margin:10px 0\">",
         "options": [],
         "answer": "$\\frac{9}{10}$/0.9",
         "analysis": "本题主要考查了角平分线的性质，过点$D$分别作$AB$，$BC$的垂线，垂足为$E$、$F$，由角平分线的性质可得$DE=DF$，则可证明$\\frac{S_{\\triangle ABD}}{S_{\\triangle CBD}}=\\frac{AB}{BC}=\\frac{2}{3}$，据此求解即可．",
-        "detail": "解：如图所示，过点$D$分别作$AB$，$BC$的垂线，垂足为$E$、$F$，<br><img src=\"assets/images/img_153_fa982cc3cedc.png\" data-cx=\"2000000\" data-cy=\"1087719\" alt=\"第8题解析配图\" style=\"display:block;max-width:100%;width:250px;height:auto;margin:10px 0\">$\\because BD$是$\\angle ABC$的平分线，$DE\\perp AB$，$DF\\perp BC$，<br>$\\therefore DE=DF$，<br>$\\because \\frac{S_{\\triangle ABD}}{S_{\\triangle CBD}}=\\frac{\\frac{1}{2}AB\\cdot DE}{\\frac{1}{2}BC\\cdot DF}=\\frac{AB}{BC}=\\frac{2}{3}$，<br>$\\therefore S_{\\triangle CBD}=\\frac{3}{3+2}S_{\\triangle ABC}=\\frac{9}{10}$，<br>故答案为：$\\frac{9}{10}$．"
+        "detail": "解：如图所示，过点$D$分别作$AB$，$BC$的垂线，垂足为$E$、$F$，<br><img src=\"assets/images/img_153_fa982cc3cedc.png\" data-cx=\"2000000\" data-cy=\"1087719\" alt=\"第8题解析配图\" style=\"display:block;max-width:100%;width:210px;height:auto;margin:10px 0\">$\\because BD$是$\\angle ABC$的平分线，$DE\\perp AB$，$DF\\perp BC$，<br>$\\therefore DE=DF$，<br>$\\because \\frac{S_{\\triangle ABD}}{S_{\\triangle CBD}}=\\frac{\\frac{1}{2}AB\\cdot DE}{\\frac{1}{2}BC\\cdot DF}=\\frac{AB}{BC}=\\frac{2}{3}$，<br>$\\therefore S_{\\triangle CBD}=\\frac{3}{3+2}S_{\\triangle ABC}=\\frac{9}{10}$，<br>故答案为：$\\frac{9}{10}$．"
     },
     {
         "id": "bis_9",
@@ -16388,11 +16388,11 @@
         "difficulty": "中等",
         "knowledge": "角平分线的性质定理、全等三角形的判定与性质",
         "chapter": "14.7 角平分线",
-        "stem": "如图，$\\text{Rt}\\triangle ABC$中，$\\angle C=90^\\circ$，$AD$平分$\\angle BAC$交$BC$于点$D$，$E$为线段$AC$上一点，连接$DE$，且$\\angle B=\\angle CED$．若$AB=16$，$CE=7$，则$AE$的长为______．<br><img src=\"assets/images/img_154_ca91c91b789a.png\" data-cx=\"2000000\" data-cy=\"1392857\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:250px;height:auto;margin:10px 0\">",
+        "stem": "如图，$\\text{Rt}\\triangle ABC$中，$\\angle C=90^\\circ$，$AD$平分$\\angle BAC$交$BC$于点$D$，$E$为线段$AC$上一点，连接$DE$，且$\\angle B=\\angle CED$．若$AB=16$，$CE=7$，则$AE$的长为______．<br><img src=\"assets/images/img_154_ca91c91b789a.png\" data-cx=\"2000000\" data-cy=\"1392857\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:210px;height:auto;margin:10px 0\">",
         "options": [],
         "answer": "2",
         "analysis": "本题考查了角平分线的性质定理、三角形全等的判定与性质，通过作辅助线，构造全等三角形是解题关键．过点$D$作$DF\\perp AB$于点$F$，先证出$\\triangle BDF\\cong\\triangle EDC$，根据全等三角形的性质可得$BF=CE=7$，从而可得$AF=9$，再证出$\\text{Rt}\\triangle ACD\\cong\\text{Rt}\\triangle AFD$，根据全等三角形的性质可得$AC=AF=9$，然后根据$AE=AC-CE$求解即可得．",
-        "detail": "解：如图，过点$D$作$DF\\perp AB$于点$F$，<br><img src=\"assets/images/img_155_708d705a8ab0.png\" data-cx=\"2000000\" data-cy=\"1392857\" alt=\"第9题解析配图\" style=\"display:block;max-width:100%;width:250px;height:auto;margin:10px 0\">$\\because AD$平分$\\angle BAC$，<br>$\\therefore DF=DC$，<br>在$\\triangle BDF$和$\\triangle EDC$中，<br>$\\begin{cases} \\angle BFD=\\angle C=90^\\circ \\\\ \\angle B=\\angle CED \\\\ DF=DC \\end{cases}$，<br>$\\therefore \\triangle BDF\\cong\\triangle EDC(\\text{AAS})$，<br>$\\therefore BF=CE=7$，<br>$\\because AB=16$，<br>$\\therefore AF=AB-BF=16-7=9$，<br>在$\\text{Rt}\\triangle ACD$和$\\text{Rt}\\triangle AFD$中，<br>$\\begin{cases} AD=AD \\\\ DC=DF \\end{cases}$，<br>$\\therefore \\text{Rt}\\triangle ACD\\cong\\text{Rt}\\triangle AFD(\\text{HL})$，<br>$\\therefore AC=AF=9$，<br>$\\therefore AE=AC-CE=9-7=2$，<br>故答案为：$2$．"
+        "detail": "解：如图，过点$D$作$DF\\perp AB$于点$F$，<br><img src=\"assets/images/img_155_708d705a8ab0.png\" data-cx=\"2000000\" data-cy=\"1392857\" alt=\"第9题解析配图\" style=\"display:block;max-width:100%;width:210px;height:auto;margin:10px 0\">$\\because AD$平分$\\angle BAC$，<br>$\\therefore DF=DC$，<br>在$\\triangle BDF$和$\\triangle EDC$中，<br>$\\begin{cases} \\angle BFD=\\angle C=90^\\circ \\\\ \\angle B=\\angle CED \\\\ DF=DC \\end{cases}$，<br>$\\therefore \\triangle BDF\\cong\\triangle EDC(\\text{AAS})$，<br>$\\therefore BF=CE=7$，<br>$\\because AB=16$，<br>$\\therefore AF=AB-BF=16-7=9$，<br>在$\\text{Rt}\\triangle ACD$和$\\text{Rt}\\triangle AFD$中，<br>$\\begin{cases} AD=AD \\\\ DC=DF \\end{cases}$，<br>$\\therefore \\text{Rt}\\triangle ACD\\cong\\text{Rt}\\triangle AFD(\\text{HL})$，<br>$\\therefore AC=AF=9$，<br>$\\therefore AE=AC-CE=9-7=2$，<br>故答案为：$2$．"
     },
     {
         "id": "bis_10",
@@ -16404,11 +16404,11 @@
         "difficulty": "中等",
         "knowledge": "角平分线的尺规作图、全等三角形的判定与性质（三线合一构造）",
         "chapter": "14.7 角平分线",
-        "stem": "如图，以点$B$为圆心，适当长为半径画弧，分别交$BC$，$BA$于点$M$，$N$，分别以点$M$，$N$为圆心，大于$\\frac{1}{2}MN$的长为半径画弧，两弧在$\\angle CBA$的内部相交于点$F$，画射线$BF$；已知$\\angle A=90^\\circ$，$AB=AC$，且$CE\\perp BF$于点$E$．若$CE=4$，则线段$BD$长为______．<br><img src=\"assets/images/img_156_dda3f7cd999d.png\" data-cx=\"2160000\" data-cy=\"1380983\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:270px;height:auto;margin:10px 0\">",
+        "stem": "如图，以点$B$为圆心，适当长为半径画弧，分别交$BC$，$BA$于点$M$，$N$，分别以点$M$，$N$为圆心，大于$\\frac{1}{2}MN$的长为半径画弧，两弧在$\\angle CBA$的内部相交于点$F$，画射线$BF$；已知$\\angle A=90^\\circ$，$AB=AC$，且$CE\\perp BF$于点$E$．若$CE=4$，则线段$BD$长为______．<br><img src=\"assets/images/img_156_dda3f7cd999d.png\" data-cx=\"2160000\" data-cy=\"1380983\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:220px;height:auto;margin:10px 0\">",
         "options": [],
         "answer": "8",
         "analysis": "本题考查了角平分线的画法和性质，全等三角形的判定和性质，余角性质，延长$CE$交$BA$的延长线于点$G$，由作图可知，$BF$为$\\angle ABC$的角平分线，据此可证$\\triangle BEC\\cong\\triangle BEG(\\text{ASA})$，得到$CE=GE=4$，即得$CG=8$，再证明$\\triangle ABD\\cong\\triangle ACG(\\text{ASA})$，得到$BD=CG=8$，即可求解，正确作出辅助线是解题的关键．",
-        "detail": "解：延长$CE$交$BA$的延长线于点$G$，<br><img src=\"assets/images/img_157_c052d199cb3a.png\" data-cx=\"2160000\" data-cy=\"1380983\" alt=\"第10题解析配图\" style=\"display:block;max-width:100%;width:270px;height:auto;margin:10px 0\">由作图可知，$BF$为$\\angle ABC$的角平分线，<br>$\\therefore \\angle CBE=\\angle GBE$，<br>$\\because CE\\perp BF$，<br>$\\therefore \\angle BEC=\\angle BEG=90^\\circ$，<br>又$\\because BE=BE$，<br>$\\therefore \\triangle BEC\\cong\\triangle BEG(\\text{ASA})$，<br>$\\therefore CE=GE=4$，<br>$\\therefore CG=4+4=8$，<br>$\\because \\angle BAC=90^\\circ$，<br>$\\therefore \\angle BAD=\\angle CAG=90^\\circ$，<br>$\\because \\angle ABD+\\angle G=90^\\circ$，$\\angle ACG+\\angle G=90^\\circ$，<br>$\\therefore \\angle ABD=\\angle ACG$，<br>又$\\because AB=AC$，<br>$\\therefore \\triangle ABD\\cong\\triangle ACG(\\text{ASA})$，<br>$\\therefore BD=CG=8$，<br>故答案为：$8$．"
+        "detail": "解：延长$CE$交$BA$的延长线于点$G$，<br><img src=\"assets/images/img_157_c052d199cb3a.png\" data-cx=\"2160000\" data-cy=\"1380983\" alt=\"第10题解析配图\" style=\"display:block;max-width:100%;width:220px;height:auto;margin:10px 0\">由作图可知，$BF$为$\\angle ABC$的角平分线，<br>$\\therefore \\angle CBE=\\angle GBE$，<br>$\\because CE\\perp BF$，<br>$\\therefore \\angle BEC=\\angle BEG=90^\\circ$，<br>又$\\because BE=BE$，<br>$\\therefore \\triangle BEC\\cong\\triangle BEG(\\text{ASA})$，<br>$\\therefore CE=GE=4$，<br>$\\therefore CG=4+4=8$，<br>$\\because \\angle BAC=90^\\circ$，<br>$\\therefore \\angle BAD=\\angle CAG=90^\\circ$，<br>$\\because \\angle ABD+\\angle G=90^\\circ$，$\\angle ACG+\\angle G=90^\\circ$，<br>$\\therefore \\angle ABD=\\angle ACG$，<br>又$\\because AB=AC$，<br>$\\therefore \\triangle ABD\\cong\\triangle ACG(\\text{ASA})$，<br>$\\therefore BD=CG=8$，<br>故答案为：$8$．"
     },
     {
         "id": "bis_11",
@@ -16420,7 +16420,7 @@
         "difficulty": "中等",
         "knowledge": "角平分线的性质、直角三角形全等（HL）、四边形面积",
         "chapter": "14.7 角平分线",
-        "stem": "如图，$DE\\perp AB$于$E$，$DF\\perp AC$于$F$，若$BD=CD$，$AD$平分$\\angle BAC$；<br><img src=\"assets/images/img_158_3830783bba9e.png\" data-cx=\"2080000\" data-cy=\"1255172\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:260px;height:auto;margin:10px 0\"><br>(1)求证：$BE=CF$；<br>(2)已知$AC=20$，$BE=4$，$DF=8$，求四边形$ABDC$的面积．",
+        "stem": "如图，$DE\\perp AB$于$E$，$DF\\perp AC$于$F$，若$BD=CD$，$AD$平分$\\angle BAC$；<br><img src=\"assets/images/img_158_3830783bba9e.png\" data-cx=\"2080000\" data-cy=\"1255172\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:218px;height:auto;margin:10px 0\"><br>(1)求证：$BE=CF$；<br>(2)已知$AC=20$，$BE=4$，$DF=8$，求四边形$ABDC$的面积．",
         "options": [],
         "answer": "(1)见解析；(2)四边形$ABDC$的面积为$128$",
         "analysis": "（1）根据角平分线性质得出$DE=DF$，$\\angle DEB=\\angle DFC=90^\\circ$，利用$\\text{HL}$证明$\\text{Rt}\\triangle BED\\cong\\text{Rt}\\triangle CFD$得出结论；<br>（2）根据全等三角形的判定得出$\\text{Rt}\\triangle AED\\cong\\text{Rt}\\triangle AFD$，得出$AE=AF$，利用三角形面积公式得出答案．",
@@ -16436,7 +16436,7 @@
         "difficulty": "中等",
         "knowledge": "角平分线的性质定理、全等三角形的判定和性质、线段的和差",
         "chapter": "14.7 角平分线",
-        "stem": "如图1，$AP$平分$\\angle BAC$，$PD\\perp AB$，$PE\\perp AC$，垂足分别为点$D$、$E$．<br><img src=\"assets/images/img_159_097f8a9b867e.png\" data-cx=\"2400000\" data-cy=\"1095652\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:420px;height:auto;margin:10px 0\"><br>(1)求证：$AD=AE$；<br>(2)在图1的条件下，如图2，点$M$、$N$分别在$AB$、$AC$上，$PM=PN$，$AM=5$，$AN=3$，求$AD$的长．",
+        "stem": "如图1，$AP$平分$\\angle BAC$，$PD\\perp AB$，$PE\\perp AC$，垂足分别为点$D$、$E$．<br><img src=\"assets/images/img_159_097f8a9b867e.png\" data-cx=\"2400000\" data-cy=\"1095652\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:252px;height:auto;margin:10px 0\"><br>(1)求证：$AD=AE$；<br>(2)在图1的条件下，如图2，点$M$、$N$分别在$AB$、$AC$上，$PM=PN$，$AM=5$，$AN=3$，求$AD$的长．",
         "options": [],
         "answer": "(1)见解析；(2)$4$．",
         "analysis": "本题考查了角平分线的性质定理，全等三角形的判定和性质，线段的和差，掌握全等三角形的判定和性质是解题关键．<br>（1）由角平分线的性质定理可得$PD=PE$，再根据“$\\text{HL}$”证明$\\text{Rt}\\triangle ADP\\cong\\text{Rt}\\triangle AEP$，即可得到结论；<br>（2）证明$\\text{Rt}\\triangle PDM\\cong\\text{Rt}\\triangle PEN$，得到$DM=EN$，再根据线段的和差，得到$AE+AD=AM+AN=8$，即可求出$AD$的长．",
@@ -16452,11 +16452,11 @@
         "difficulty": "中等",
         "knowledge": "线段垂直平分线的性质、角平分线的性质、全等三角形的判定与性质",
         "chapter": "14.7 角平分线",
-        "stem": "如图所示，在$\\triangle ABC$中，$AB=8$，$AC=4$，点$G$为$BC$的中点，$DG\\perp BC$交$\\angle BAC$的平分线$AD$于点$D$，$DE\\perp AB$于点$E$，$DF\\perp AC$交$AC$的延长线于点$F$．<br><img src=\"assets/images/img_160_ec2f7ad43326.png\" data-cx=\"1840000\" data-cy=\"1656000\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:230px;height:auto;margin:10px 0\"><br>(1)求证：$BE=CF$；<br>(2)求$AE$的长．",
+        "stem": "如图所示，在$\\triangle ABC$中，$AB=8$，$AC=4$，点$G$为$BC$的中点，$DG\\perp BC$交$\\angle BAC$的平分线$AD$于点$D$，$DE\\perp AB$于点$E$，$DF\\perp AC$交$AC$的延长线于点$F$．<br><img src=\"assets/images/img_160_ec2f7ad43326.png\" data-cx=\"1840000\" data-cy=\"1656000\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:165px;height:auto;margin:10px 0\"><br>(1)求证：$BE=CF$；<br>(2)求$AE$的长．",
         "options": [],
         "answer": "(1)见解析；(2)$6$．",
         "analysis": "本题考查了全等三角形的判定与性质，角平分线的性质，熟练掌握知识点的应用是解题的关键．<br>（1）连接$BD$，$CD$，先利用$\\text{SAS}$证明$\\triangle BGD\\cong\\triangle CGD$得到$BD=CD$，再由角平分线的性质得到$DE=DF$，即可利用$\\text{HL}$证明$\\text{Rt}\\triangle DEB\\cong\\text{Rt}\\triangle DFC$则$BE=CF$；<br>（2）证明$\\text{Rt}\\triangle ADE\\cong\\text{Rt}\\triangle ADF(\\text{HL})$，得到$AF=AE$，由（1）得$BE=CF$，则$AE=AF=AC+CF$，据此求出$BE$的长，即可求出$AE$的长．",
-        "detail": "（1）证明：如图所示，连接$BD$，$CD$，<br><img src=\"assets/images/img_161_f722ec5b9ee8.png\" data-cx=\"1840000\" data-cy=\"1656000\" alt=\"第13题解析配图\" style=\"display:block;max-width:100%;width:230px;height:auto;margin:10px 0\">$\\because G$是$BC$的中点，$DG\\perp BC$，<br>$\\therefore BG=CG$，$\\angle BGD=\\angle CGD=90^\\circ$，<br>又$\\because DG=DG$，<br>$\\therefore \\triangle BGD\\cong\\triangle CGD(\\text{SAS})$，<br>$\\therefore BD=CD$，<br>$\\because AD$平分$\\angle BAC$，$DE\\perp AB$，$DF\\perp AC$，<br>$\\therefore DE=DF$，$\\angle DEB=\\angle DFC=90^\\circ$，<br>又$\\because DB=DC$，<br>$\\therefore \\text{Rt}\\triangle DEB\\cong\\text{Rt}\\triangle DFC(\\text{HL})$，<br>$\\therefore BE=CF$；<br>（2）解：在$\\text{Rt}\\triangle ADE$和$\\text{Rt}\\triangle ADF$中，<br>$\\begin{cases} AD=AD \\\\ DE=DF \\end{cases}$，<br>$\\therefore \\text{Rt}\\triangle ADE\\cong\\text{Rt}\\triangle ADF(\\text{HL})$，<br>$\\therefore AF=AE$，<br>由（1）得$BE=CF$，<br>$\\therefore AE=AF=AC+CF$，<br>$\\therefore AB=AE+BE=AC+CF+BE=AC+2BE$，<br>$\\because AB=8$，$AC=4$，<br>$\\therefore BE=2$，<br>$\\therefore AE=AB-BE=6$．"
+        "detail": "（1）证明：如图所示，连接$BD$，$CD$，<br><img src=\"assets/images/img_161_f722ec5b9ee8.png\" data-cx=\"1840000\" data-cy=\"1656000\" alt=\"第13题解析配图\" style=\"display:block;max-width:100%;width:165px;height:auto;margin:10px 0\">$\\because G$是$BC$的中点，$DG\\perp BC$，<br>$\\therefore BG=CG$，$\\angle BGD=\\angle CGD=90^\\circ$，<br>又$\\because DG=DG$，<br>$\\therefore \\triangle BGD\\cong\\triangle CGD(\\text{SAS})$，<br>$\\therefore BD=CD$，<br>$\\because AD$平分$\\angle BAC$，$DE\\perp AB$，$DF\\perp AC$，<br>$\\therefore DE=DF$，$\\angle DEB=\\angle DFC=90^\\circ$，<br>又$\\because DB=DC$，<br>$\\therefore \\text{Rt}\\triangle DEB\\cong\\text{Rt}\\triangle DFC(\\text{HL})$，<br>$\\therefore BE=CF$；<br>（2）解：在$\\text{Rt}\\triangle ADE$和$\\text{Rt}\\triangle ADF$中，<br>$\\begin{cases} AD=AD \\\\ DE=DF \\end{cases}$，<br>$\\therefore \\text{Rt}\\triangle ADE\\cong\\text{Rt}\\triangle ADF(\\text{HL})$，<br>$\\therefore AF=AE$，<br>由（1）得$BE=CF$，<br>$\\therefore AE=AF=AC+CF$，<br>$\\therefore AB=AE+BE=AC+CF+BE=AC+2BE$，<br>$\\because AB=8$，$AC=4$，<br>$\\therefore BE=2$，<br>$\\therefore AE=AB-BE=6$．"
     },
     {
         "id": "bis_14",
@@ -16468,11 +16468,11 @@
         "difficulty": "较难",
         "knowledge": "角平分线的性质定理、内角与外角平分线比例定理、等面积法",
         "chapter": "14.7 角平分线",
-        "stem": "如图1，$AD$是$\\angle BAC$的角平分线，$P$为$AD$上任意一点，$PM\\perp AB$于$M$，$PN\\perp AC$于$N$．<br><img src=\"assets/images/img_162_f7d12099b046.png\" data-cx=\"2400000\" data-cy=\"764444\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:580px;height:auto;margin:10px 0\"><br>(1)求证：$PM=PN$；<br>(2)如图2，在$\\triangle ABC$中，$AD$是$\\angle BAC$的角平分线，$DE\\perp AB$于$E$，$DF\\perp AC$于$F$，若$AB=5$，$AC=3$，求$\\frac{BD}{DC}$的值；<br>(3)如图3，在$\\triangle ABC$中，$AD$是$\\angle BAC$的外角平分线，$AD$交$BC$的延长线于点$D$，当$AB=5$，$AC=3$时，求$BC$与$CD$的数量关系．",
+        "stem": "如图1，$AD$是$\\angle BAC$的角平分线，$P$为$AD$上任意一点，$PM\\perp AB$于$M$，$PN\\perp AC$于$N$．<br><img src=\"assets/images/img_162_f7d12099b046.png\" data-cx=\"2400000\" data-cy=\"764444\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:252px;height:auto;margin:10px 0\"><br>(1)求证：$PM=PN$；<br>(2)如图2，在$\\triangle ABC$中，$AD$是$\\angle BAC$的角平分线，$DE\\perp AB$于$E$，$DF\\perp AC$于$F$，若$AB=5$，$AC=3$，求$\\frac{BD}{DC}$的值；<br>(3)如图3，在$\\triangle ABC$中，$AD$是$\\angle BAC$的外角平分线，$AD$交$BC$的延长线于点$D$，当$AB=5$，$AC=3$时，求$BC$与$CD$的数量关系．",
         "options": [],
         "answer": "(1)见解析；(2)$\\frac{BD}{DC}=\\frac{5}{3}$；(3)$\\frac{BC}{CD}=\\frac{2}{3}$",
         "analysis": "此题考查了全等三角形的判定和性质，三角形的面积公式，角平分线的性质，正确地作出辅助线是解题的关键．<br>（1）根据角平分线的定义可知$\\angle MAP=\\angle NAP$，再证$\\triangle AMP\\cong\\triangle ANP(\\text{AAS})$，由全等三角形的性质即可；<br>（2）由（1）得：$DE=DF$，利用等面积即可求出$\\frac{BD}{CD}=\\frac{AB}{AC}=\\frac{5}{3}$；<br>（3）同（2）理可以求出$\\frac{BD}{CD}=\\frac{AB}{AC}=\\frac{5}{3}$，则$\\frac{BC}{CD}=\\frac{2}{3}$．",
-        "detail": "（1）证明：$\\because AD$是$\\angle BAC$的角平分线，<br>$\\therefore \\angle MAP=\\angle NAP$，<br>$\\because PM\\perp AB$，$PN\\perp AC$，<br>$\\therefore \\angle AMP=\\angle ANP=90^\\circ$，<br>$\\because AP=AP$，<br>$\\therefore \\triangle AMP\\cong\\triangle ANP(\\text{AAS})$，<br>$\\therefore PM=PN$；<br>（2）解：$\\because DE\\perp AB$，$DF\\perp AC$，<br>$\\therefore$由（1）得：$DE=DF$，<br>设点$A$到$BC$的距离为$h$，<br>$\\therefore \\frac{S_{\\triangle ABD}}{S_{\\triangle ACD}}=\\frac{\\frac{1}{2}BD\\cdot h}{\\frac{1}{2}CD\\cdot h}=\\frac{\\frac{1}{2}AB\\cdot DE}{\\frac{1}{2}AC\\cdot DF}$，<br>则有$\\frac{BD}{CD}=\\frac{AB}{AC}=\\frac{5}{3}$；<br>（3）解：如图，作$DE\\perp AB$交$AB$的延长线于$E$，$DF\\perp AC$交$AC$的延长线于$F$，过$A$作$AH\\perp BC$于$H$，<br><img src=\"assets/images/img_163_ced7f355f952.png\" data-cx=\"2080000\" data-cy=\"1515932\" alt=\"第14题图3解析配图\" style=\"display:block;max-width:100%;width:260px;height:auto;margin:10px 0\">由（1）得：$DE=DF$，<br>$\\therefore \\frac{S_{\\triangle ABD}}{S_{\\triangle ACD}}=\\frac{\\frac{1}{2}BD\\cdot AH}{\\frac{1}{2}CD\\cdot AH}=\\frac{\\frac{1}{2}AB\\cdot DE}{\\frac{1}{2}AC\\cdot DF}$，<br>则有$\\frac{BD}{CD}=\\frac{AB}{AC}=\\frac{5}{3}$，即$\\frac{BC+CD}{CD}=\\frac{5}{3}$，<br>$\\therefore \\frac{BC}{CD}=\\frac{2}{3}$．"
+        "detail": "（1）证明：$\\because AD$是$\\angle BAC$的角平分线，<br>$\\therefore \\angle MAP=\\angle NAP$，<br>$\\because PM\\perp AB$，$PN\\perp AC$，<br>$\\therefore \\angle AMP=\\angle ANP=90^\\circ$，<br>$\\because AP=AP$，<br>$\\therefore \\triangle AMP\\cong\\triangle ANP(\\text{AAS})$，<br>$\\therefore PM=PN$；<br>（2）解：$\\because DE\\perp AB$，$DF\\perp AC$，<br>$\\therefore$由（1）得：$DE=DF$，<br>设点$A$到$BC$的距离为$h$，<br>$\\therefore \\frac{S_{\\triangle ABD}}{S_{\\triangle ACD}}=\\frac{\\frac{1}{2}BD\\cdot h}{\\frac{1}{2}CD\\cdot h}=\\frac{\\frac{1}{2}AB\\cdot DE}{\\frac{1}{2}AC\\cdot DF}$，<br>则有$\\frac{BD}{CD}=\\frac{AB}{AC}=\\frac{5}{3}$；<br>（3）解：如图，作$DE\\perp AB$交$AB$的延长线于$E$，$DF\\perp AC$交$AC$的延长线于$F$，过$A$作$AH\\perp BC$于$H$，<br><img src=\"assets/images/img_163_ced7f355f952.png\" data-cx=\"2080000\" data-cy=\"1515932\" alt=\"第14题图3解析配图\" style=\"display:block;max-width:100%;width:218px;height:auto;margin:10px 0\">由（1）得：$DE=DF$，<br>$\\therefore \\frac{S_{\\triangle ABD}}{S_{\\triangle ACD}}=\\frac{\\frac{1}{2}BD\\cdot AH}{\\frac{1}{2}CD\\cdot AH}=\\frac{\\frac{1}{2}AB\\cdot DE}{\\frac{1}{2}AC\\cdot DF}$，<br>则有$\\frac{BD}{CD}=\\frac{AB}{AC}=\\frac{5}{3}$，即$\\frac{BC+CD}{CD}=\\frac{5}{3}$，<br>$\\therefore \\frac{BC}{CD}=\\frac{2}{3}$．"
     },
     {
         "id": "bis_15",
@@ -16484,7 +16484,7 @@
         "difficulty": "容易",
         "knowledge": "角平分线的判定定理、直角三角形两锐角互余",
         "chapter": "14.7 角平分线",
-        "stem": "如图，在$\\text{Rt}\\triangle ABC$中，$\\angle A=90^\\circ$，$\\angle C=58^\\circ$，点$O$在$\\triangle ABC$的内部，$OM\\perp AB$于点$M$，$ON\\perp BC$于点$N$，若$OM=ON$，则$\\angle OBC$的度数为（　　）<br><img src=\"assets/images/img_164_d0d6e1cbc398.png\" data-cx=\"2000000\" data-cy=\"1344827\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:250px;height:auto;margin:10px 0\">",
+        "stem": "如图，在$\\text{Rt}\\triangle ABC$中，$\\angle A=90^\\circ$，$\\angle C=58^\\circ$，点$O$在$\\triangle ABC$的内部，$OM\\perp AB$于点$M$，$ON\\perp BC$于点$N$，若$OM=ON$，则$\\angle OBC$的度数为（　　）<br><img src=\"assets/images/img_164_d0d6e1cbc398.png\" data-cx=\"2000000\" data-cy=\"1344827\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:210px;height:auto;margin:10px 0\">",
         "options": [
             "A. $20^\\circ$",
             "B. $18^\\circ$",
@@ -16505,7 +16505,7 @@
         "difficulty": "容易",
         "knowledge": "角平分线的判定、三角形面积公式",
         "chapter": "14.7 角平分线",
-        "stem": "如图，点$D$是$\\triangle ABC$的边$BC$上一点，连接$AD$，$\\triangle ABD$与$\\triangle ACD$的面积比是$5:4$，$AB=10$，$AC=8$，$\\angle BAC=50^\\circ$，则$\\angle BAD$的度数为（　　）<br><img src=\"assets/images/img_165_4afa88e0c0f0.png\" data-cx=\"1760000\" data-cy=\"1503333\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:220px;height:auto;margin:10px 0\">",
+        "stem": "如图，点$D$是$\\triangle ABC$的边$BC$上一点，连接$AD$，$\\triangle ABD$与$\\triangle ACD$的面积比是$5:4$，$AB=10$，$AC=8$，$\\angle BAC=50^\\circ$，则$\\angle BAD$的度数为（　　）<br><img src=\"assets/images/img_165_4afa88e0c0f0.png\" data-cx=\"1760000\" data-cy=\"1503333\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:165px;height:auto;margin:10px 0\">",
         "options": [
             "A. $20^\\circ$",
             "B. $25^\\circ$",
@@ -16526,7 +16526,7 @@
         "difficulty": "容易",
         "knowledge": "全等三角形的判定与性质、角平分线的判定定理",
         "chapter": "14.7 角平分线",
-        "stem": "如图，$CD\\perp AB$，$BE\\perp AC$，垂足分别为$D$，$E$，$BE$，$CD$相交于点$O$，$OB=OC$，连接$AO$，若$\\angle AOD=55^\\circ$，则$\\angle BAC=$（　　）<br><img src=\"assets/images/img_166_69ff32d53498.png\" data-cx=\"1920000\" data-cy=\"1386666\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:240px;height:auto;margin:10px 0\">",
+        "stem": "如图，$CD\\perp AB$，$BE\\perp AC$，垂足分别为$D$，$E$，$BE$，$CD$相交于点$O$，$OB=OC$，连接$AO$，若$\\angle AOD=55^\\circ$，则$\\angle BAC=$（　　）<br><img src=\"assets/images/img_166_69ff32d53498.png\" data-cx=\"1920000\" data-cy=\"1386666\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:202px;height:auto;margin:10px 0\">",
         "options": [
             "A. $35^\\circ$",
             "B. $55^\\circ$",
@@ -16547,7 +16547,7 @@
         "difficulty": "容易",
         "knowledge": "角平分线的判定、全等三角形的判定与性质、三角形周长转化",
         "chapter": "14.7 角平分线",
-        "stem": "如图，在$\\triangle ABC$中，$AB=9$，$AC=3$，$BC=7$，点$D$在边$BC$上，点$D$到边$AB$，$AC$的距离相等，且$AE=AC$，则$\\triangle BDE$的周长等于（　　）<br><img src=\"assets/images/img_167_a434c75e178f.png\" data-cx=\"2000000\" data-cy=\"1227586\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:250px;height:auto;margin:10px 0\">",
+        "stem": "如图，在$\\triangle ABC$中，$AB=9$，$AC=3$，$BC=7$，点$D$在边$BC$上，点$D$到边$AB$，$AC$的距离相等，且$AE=AC$，则$\\triangle BDE$的周长等于（　　）<br><img src=\"assets/images/img_167_a434c75e178f.png\" data-cx=\"2000000\" data-cy=\"1227586\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:210px;height:auto;margin:10px 0\">",
         "options": [
             "A. $10$",
             "B. $13$",
@@ -16568,7 +16568,7 @@
         "difficulty": "容易",
         "knowledge": "角平分线的判定定理、旁心性质",
         "chapter": "14.7 角平分线",
-        "stem": "如图，已知点$P$到$AE$，$AD$，$BC$的距离相等，则下列说法：①点$P$在$\\angle BAC$的平分线上；②点$P$在$\\angle CBE$的平分线上；③点$P$在$\\angle BCD$的平分线上；④点$P$是$\\angle BAC$，$\\angle CBE$，$\\angle BCD$的平分线的交点，其中正确的是（　　）<br><img src=\"assets/images/img_168_38af7cbf1392.png\" data-cx=\"1920000\" data-cy=\"1391094\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:240px;height:auto;margin:10px 0\">",
+        "stem": "如图，已知点$P$到$AE$，$AD$，$BC$的距离相等，则下列说法：①点$P$在$\\angle BAC$的平分线上；②点$P$在$\\angle CBE$的平分线上；③点$P$在$\\angle BCD$的平分线上；④点$P$是$\\angle BAC$，$\\angle CBE$，$\\angle BCD$的平分线的交点，其中正确的是（　　）<br><img src=\"assets/images/img_168_38af7cbf1392.png\" data-cx=\"1920000\" data-cy=\"1391094\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:202px;height:auto;margin:10px 0\">",
         "options": [
             "A. ①②③④",
             "B. ①",
@@ -16589,7 +16589,7 @@
         "difficulty": "中等",
         "knowledge": "角平分线的判定和性质、三角形外角平分线交点",
         "chapter": "14.7 角平分线",
-        "stem": "如图，$\\angle BCF$、$\\angle EBC$的角平分线$CD$、$BD$交于点$D$，若$\\angle EAD=38^\\circ$，则$\\angle EAF$的度数是（　　）<br><img src=\"assets/images/img_169_de78d7846039.png\" data-cx=\"1920000\" data-cy=\"1630188\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:240px;height:auto;margin:10px 0\">",
+        "stem": "如图，$\\angle BCF$、$\\angle EBC$的角平分线$CD$、$BD$交于点$D$，若$\\angle EAD=38^\\circ$，则$\\angle EAF$的度数是（　　）<br><img src=\"assets/images/img_169_de78d7846039.png\" data-cx=\"1920000\" data-cy=\"1630188\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:165px;height:auto;margin:10px 0\">",
         "options": [
             "A. $76^\\circ$",
             "B. $67^\\circ$",
@@ -16598,7 +16598,7 @@
         ],
         "answer": "A",
         "analysis": "过点$D$作$DM\\perp AF$于点$M$，$DN\\perp AE$于点$N$，$DP\\perp BC$于点$P$，根据角平分线的性质得出$DM=DP$，$DN=DP$，证明$DM=DN$，根据角平分线的判定得出$AD$平分$\\angle EAF$，即可得出答案．",
-        "detail": "解：过点$D$作$DM\\perp AF$于点$M$，$DN\\perp AE$于点$N$，$DP\\perp BC$于点$P$，如图所示：<br><img src=\"assets/images/img_170_d6e4ea7f699e.png\" data-cx=\"1920000\" data-cy=\"1630188\" alt=\"第20题解析配图\" style=\"display:block;max-width:100%;width:240px;height:auto;margin:10px 0\">$\\because CD$、$BD$分别为$\\angle BCF$、$\\angle EBC$的角平分线，<br>$\\therefore DM=DP$，$DN=DP$，<br>$\\therefore DM=DN$，<br>$\\therefore AD$平分$\\angle EAF$，<br>$\\therefore \\angle EAF=2\\angle EAD=2\\times 38^\\circ=76^\\circ$，<br>故选：A．"
+        "detail": "解：过点$D$作$DM\\perp AF$于点$M$，$DN\\perp AE$于点$N$，$DP\\perp BC$于点$P$，如图所示：<br><img src=\"assets/images/img_170_d6e4ea7f699e.png\" data-cx=\"1920000\" data-cy=\"1630188\" alt=\"第20题解析配图\" style=\"display:block;max-width:100%;width:165px;height:auto;margin:10px 0\">$\\because CD$、$BD$分别为$\\angle BCF$、$\\angle EBC$的角平分线，<br>$\\therefore DM=DP$，$DN=DP$，<br>$\\therefore DM=DN$，<br>$\\therefore AD$平分$\\angle EAF$，<br>$\\therefore \\angle EAF=2\\angle EAD=2\\times 38^\\circ=76^\\circ$，<br>故选：A．"
     },
     {
         "id": "bis_21",
@@ -16610,7 +16610,7 @@
         "difficulty": "容易",
         "knowledge": "角平分线的判定定理、三角形外角的性质",
         "chapter": "14.7 角平分线",
-        "stem": "如图，已知$PA\\perp ON$于$A$，$PB\\perp OM$于$B$，且$PA=PB,\\angle MON=50^\\circ$，$\\angle OPC=30^\\circ$，则$\\angle PCA=$______．<br><img src=\"assets/images/img_171_8ccf146ec9e7.png\" data-cx=\"1920000\" data-cy=\"1485283\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:240px;height:auto;margin:10px 0\">",
+        "stem": "如图，已知$PA\\perp ON$于$A$，$PB\\perp OM$于$B$，且$PA=PB,\\angle MON=50^\\circ$，$\\angle OPC=30^\\circ$，则$\\angle PCA=$______．<br><img src=\"assets/images/img_171_8ccf146ec9e7.png\" data-cx=\"1920000\" data-cy=\"1485283\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:202px;height:auto;margin:10px 0\">",
         "options": [],
         "answer": "$55^\\circ$/55度",
         "analysis": "本题主要考查了角平分线的判定定理，三角形外角的性质，证明点$P$在$\\angle MON$的平分线上是本题的关键．由$PA\\perp ON$，$PB\\perp OM$，$PA=PB$，可证点$P$在$\\angle MON$的平分线上，可得$\\angle AOP=\\angle BOP=\\frac{1}{2}\\angle MON=25^\\circ$，由三角形外角性质可求解．",
@@ -16626,7 +16626,7 @@
         "difficulty": "容易",
         "knowledge": "角平分线的判定定理、三角形外角的性质",
         "chapter": "14.7 角平分线",
-        "stem": "如图，已知$DB\\perp AE$于点$B,DC\\perp AF$于点$C$，且$DB=DC,\\angle BAC=40^\\circ,\\angle ADG=130^\\circ$，则$\\angle DGF=$___________．<br><img src=\"assets/images/img_172_f1519cfcbbf4.png\" data-cx=\"2000000\" data-cy=\"1344827\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:250px;height:auto;margin:10px 0\">",
+        "stem": "如图，已知$DB\\perp AE$于点$B,DC\\perp AF$于点$C$，且$DB=DC,\\angle BAC=40^\\circ,\\angle ADG=130^\\circ$，则$\\angle DGF=$___________．<br><img src=\"assets/images/img_172_f1519cfcbbf4.png\" data-cx=\"2000000\" data-cy=\"1344827\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:210px;height:auto;margin:10px 0\">",
         "options": [],
         "answer": "$150^\\circ$/150度",
         "analysis": "先根据到角的两边距离相等的点在角的平分线上得到$AD$是$\\angle BAC$的平分线，求出$\\angle CAD$的度数，再根据三角形的一个外角等于与它不相邻的两个内角的和即可求解．",
@@ -16642,11 +16642,11 @@
         "difficulty": "中等",
         "knowledge": "角平分线的判定与性质、三角形面积比、三角形内角和定理",
         "chapter": "14.7 角平分线",
-        "stem": "如图，在$\\triangle ABC$中，$\\angle B=60^\\circ$，$\\angle C=50^\\circ$，点$D$为$\\triangle ABC$的边$BC$上一点，点$E$、$G$分别在边$AB$、$AC$上，连接$AD$、$DE$、$DG$，若$\\frac{S_{\\triangle ADE}}{S_{\\triangle ADG}}=\\frac{AE}{AG}$，则$\\angle ADC$的度数为_________°．<br><img src=\"assets/images/img_173_7e5a390e9c65.png\" data-cx=\"1920000\" data-cy=\"1412830\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:240px;height:auto;margin:10px 0\">",
+        "stem": "如图，在$\\triangle ABC$中，$\\angle B=60^\\circ$，$\\angle C=50^\\circ$，点$D$为$\\triangle ABC$的边$BC$上一点，点$E$、$G$分别在边$AB$、$AC$上，连接$AD$、$DE$、$DG$，若$\\frac{S_{\\triangle ADE}}{S_{\\triangle ADG}}=\\frac{AE}{AG}$，则$\\angle ADC$的度数为_________°．<br><img src=\"assets/images/img_173_7e5a390e9c65.png\" data-cx=\"1920000\" data-cy=\"1412830\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:202px;height:auto;margin:10px 0\">",
         "options": [],
         "answer": "95",
         "analysis": "根据角平分线的判定与性质可知$\\angle DAC=\\frac{1}{2}\\angle BAC$，最后利用三角形的内角和定理即可解答．",
-        "detail": "解：过点$D$作$DF\\perp AB$，垂足为$F$，过点$D$作$DH\\perp AC$，垂足为$H$，<br><img src=\"assets/images/img_174_187f6239e88c.png\" data-cx=\"1920000\" data-cy=\"1412830\" alt=\"第23题解析配图\" style=\"display:block;max-width:100%;width:240px;height:auto;margin:10px 0\">$\\because S_{\\triangle ADE}=\\frac{1}{2}\\cdot AE\\cdot DF$，$S_{\\triangle ADG}=\\frac{1}{2}\\cdot AG\\cdot DH$，<br>$\\therefore \\frac{S_{\\triangle ADE}}{S_{\\triangle ADG}}=\\frac{\\frac{1}{2}\\cdot AE\\cdot DF}{\\frac{1}{2}\\cdot AG\\cdot DH}$，<br>$\\because \\frac{S_{\\triangle ADE}}{S_{\\triangle ADG}}=\\frac{AE}{AG}$，<br>$\\therefore DF=DH$，<br>$\\therefore AD$是$\\angle BAC$的平分线，<br>$\\therefore \\angle DAC=\\frac{1}{2}\\angle BAC$，<br>$\\because \\angle B=60^\\circ$，$\\angle C=50^\\circ$，<br>$\\therefore \\angle BAC=180^\\circ-\\angle B-\\angle C=70^\\circ$，<br>$\\therefore \\angle DAC=\\frac{1}{2}\\angle BAC=35^\\circ$，<br>$\\therefore \\angle ADC=180^\\circ-\\angle C-\\angle DAC=180^\\circ-35^\\circ-50^\\circ=95^\\circ$，<br>故答案为：$95$．"
+        "detail": "解：过点$D$作$DF\\perp AB$，垂足为$F$，过点$D$作$DH\\perp AC$，垂足为$H$，<br><img src=\"assets/images/img_174_187f6239e88c.png\" data-cx=\"1920000\" data-cy=\"1412830\" alt=\"第23题解析配图\" style=\"display:block;max-width:100%;width:202px;height:auto;margin:10px 0\">$\\because S_{\\triangle ADE}=\\frac{1}{2}\\cdot AE\\cdot DF$，$S_{\\triangle ADG}=\\frac{1}{2}\\cdot AG\\cdot DH$，<br>$\\therefore \\frac{S_{\\triangle ADE}}{S_{\\triangle ADG}}=\\frac{\\frac{1}{2}\\cdot AE\\cdot DF}{\\frac{1}{2}\\cdot AG\\cdot DH}$，<br>$\\because \\frac{S_{\\triangle ADE}}{S_{\\triangle ADG}}=\\frac{AE}{AG}$，<br>$\\therefore DF=DH$，<br>$\\therefore AD$是$\\angle BAC$的平分线，<br>$\\therefore \\angle DAC=\\frac{1}{2}\\angle BAC$，<br>$\\because \\angle B=60^\\circ$，$\\angle C=50^\\circ$，<br>$\\therefore \\angle BAC=180^\\circ-\\angle B-\\angle C=70^\\circ$，<br>$\\therefore \\angle DAC=\\frac{1}{2}\\angle BAC=35^\\circ$，<br>$\\therefore \\angle ADC=180^\\circ-\\angle C-\\angle DAC=180^\\circ-35^\\circ-50^\\circ=95^\\circ$，<br>故答案为：$95$．"
     },
     {
         "id": "bis_24",
@@ -16658,7 +16658,7 @@
         "difficulty": "中等",
         "knowledge": "角平分线的判定与性质、直角三角形全等判定与性质（HL）",
         "chapter": "14.7 角平分线",
-        "stem": "如图，已知在$\\triangle ACE$中，$\\angle AEC=90^\\circ$，点$D$，$B$分别在边$CE$，$AE$上，$DF\\perp AC$于$F$，$BD=CD$，$BE=CF$．<br>（1）若$\\angle C=60^\\circ$，则$\\angle BAD=$______；<br>（2）已知$AC=10$，$BE=2$，则$AB$的长是______．<br><img src=\"assets/images/img_175_399a94cea175.png\" data-cx=\"2000000\" data-cy=\"1206896\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:250px;height:auto;margin:10px 0\">",
+        "stem": "如图，已知在$\\triangle ACE$中，$\\angle AEC=90^\\circ$，点$D$，$B$分别在边$CE$，$AE$上，$DF\\perp AC$于$F$，$BD=CD$，$BE=CF$．<br>（1）若$\\angle C=60^\\circ$，则$\\angle BAD=$______；<br>（2）已知$AC=10$，$BE=2$，则$AB$的长是______．<br><img src=\"assets/images/img_175_399a94cea175.png\" data-cx=\"2000000\" data-cy=\"1206896\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:210px;height:auto;margin:10px 0\">",
         "options": [],
         "answer": "$15^\\circ$；$6$",
         "analysis": "本题考查了角平分线的判定与性质、三角形全等的判定与性质、三角形内角和定理，熟练掌握以上知识点，证明三角形全等是解此题的关键．<br>（1）先证明$\\text{Rt}\\triangle BDE\\cong\\text{Rt}\\triangle CDF(\\text{HL})$得到$AD$平分$\\angle EAC$，由三角形内角和定理计算出$\\angle EAC=30^\\circ$，即可得到答案；<br>（2）先计算出$AF=8$，证明$\\text{Rt}\\triangle ADE\\cong\\text{Rt}\\triangle ADF(\\text{HL})$得到$AE=AF=8$，最后由$AB=AE-BE$即可得到答案．",
@@ -16674,11 +16674,11 @@
         "difficulty": "较难",
         "knowledge": "三等分角线、角平分线的性质与判定定理、三角形外角性质",
         "chapter": "14.7 角平分线",
-        "stem": "如图，在$\\triangle ABC$中，$\\angle A=45^\\circ$，$\\angle ABC=67.5^\\circ$，点$E$，$F$是内角$\\angle ABC$与外角$\\angle ACD$的三等分线的交点，则$\\angle BFE=$____．<br><img src=\"assets/images/img_176_9245484173fd.png\" data-cx=\"2000000\" data-cy=\"1438596\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:250px;height:auto;margin:10px 0\">",
+        "stem": "如图，在$\\triangle ABC$中，$\\angle A=45^\\circ$，$\\angle ABC=67.5^\\circ$，点$E$，$F$是内角$\\angle ABC$与外角$\\angle ACD$的三等分线的交点，则$\\angle BFE=$____．<br><img src=\"assets/images/img_176_9245484173fd.png\" data-cx=\"2000000\" data-cy=\"1438596\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:210px;height:auto;margin:10px 0\">",
         "options": [],
         "answer": "$52.5^\\circ$",
         "analysis": "过点$F$作$FM\\perp BC$于点$M$，$FN\\perp CE$于点$N$，$FH\\perp BE$，根据角平分线的性质可得$FM=FH$，$FM=FN$，从而证得$EF$平分$\\angle CEH$，再由三角形内角和与外角性质即可求解．",
-        "detail": "解：如图，过点$F$作$FM\\perp BC$于点$M$，$FN\\perp CE$于点$N$，$FH\\perp BE$，交$BE$的延长线于点$H$，<br><img src=\"assets/images/img_177_3e25f839e7cf.png\" data-cx=\"2000000\" data-cy=\"1438596\" alt=\"第25题解析配图\" style=\"display:block;max-width:100%;width:250px;height:auto;margin:10px 0\">$\\because$点$E$，$F$是内角$\\angle ABC$与外角$\\angle ACD$的三等分线的交点，<br>$\\therefore BF$是$\\angle EBD$的平分线，$CF$是$\\angle ECD$的平分线，<br>又$\\because FM\\perp BD$，$FH\\perp BE$，<br>$\\therefore FM=FH$，同理可得$FM=FN$，<br>$\\therefore FN=FH$，<br>又$\\because FN\\perp EC$，$FH\\perp EH$，<br>$\\therefore EF$是$\\angle CEH$的平分线，<br>$\\because \\angle A=45^\\circ$，$\\angle ABC=67.5^\\circ$，<br>$\\therefore \\angle ACD=\\angle A+\\angle ABC=112.5^\\circ$，$\\angle ACB=67.5^\\circ$，<br>$\\because$点$E$，$F$是内角$\\angle ABC$与外角$\\angle ACD$的三等分线的交点，<br>$\\therefore \\angle EBC=\\frac{2}{3}\\angle ABC=45^\\circ$，$\\angle ACE=\\frac{1}{3}\\angle ACD=\\frac{1}{3}\\times 112.5^\\circ=37.5^\\circ$，<br>$\\therefore \\angle ECB=\\angle ACB+\\angle ACE=67.5^\\circ+37.5^\\circ=105^\\circ$，<br>$\\because \\angle BEC=180^\\circ-\\angle EBC-\\angle ECB=180^\\circ-45^\\circ-105^\\circ=30^\\circ$，<br>$\\therefore \\angle CEH=180^\\circ-\\angle BEC=180^\\circ-30^\\circ=150^\\circ$，<br>$\\therefore \\angle CEF=\\angle HEF=75^\\circ$，<br>$\\therefore \\angle BFE+\\angle FEC=\\angle ECB+\\angle FBC=105^\\circ+22.5^\\circ=127.5^\\circ$，<br>$\\therefore \\angle BFE=127.5^\\circ-75^\\circ=52.5^\\circ$，<br>故答案为：$52.5^\\circ$．"
+        "detail": "解：如图，过点$F$作$FM\\perp BC$于点$M$，$FN\\perp CE$于点$N$，$FH\\perp BE$，交$BE$的延长线于点$H$，<br><img src=\"assets/images/img_177_3e25f839e7cf.png\" data-cx=\"2000000\" data-cy=\"1438596\" alt=\"第25题解析配图\" style=\"display:block;max-width:100%;width:210px;height:auto;margin:10px 0\">$\\because$点$E$，$F$是内角$\\angle ABC$与外角$\\angle ACD$的三等分线的交点，<br>$\\therefore BF$是$\\angle EBD$的平分线，$CF$是$\\angle ECD$的平分线，<br>又$\\because FM\\perp BD$，$FH\\perp BE$，<br>$\\therefore FM=FH$，同理可得$FM=FN$，<br>$\\therefore FN=FH$，<br>又$\\because FN\\perp EC$，$FH\\perp EH$，<br>$\\therefore EF$是$\\angle CEH$的平分线，<br>$\\because \\angle A=45^\\circ$，$\\angle ABC=67.5^\\circ$，<br>$\\therefore \\angle ACD=\\angle A+\\angle ABC=112.5^\\circ$，$\\angle ACB=67.5^\\circ$，<br>$\\because$点$E$，$F$是内角$\\angle ABC$与外角$\\angle ACD$的三等分线的交点，<br>$\\therefore \\angle EBC=\\frac{2}{3}\\angle ABC=45^\\circ$，$\\angle ACE=\\frac{1}{3}\\angle ACD=\\frac{1}{3}\\times 112.5^\\circ=37.5^\\circ$，<br>$\\therefore \\angle ECB=\\angle ACB+\\angle ACE=67.5^\\circ+37.5^\\circ=105^\\circ$，<br>$\\because \\angle BEC=180^\\circ-\\angle EBC-\\angle ECB=180^\\circ-45^\\circ-105^\\circ=30^\\circ$，<br>$\\therefore \\angle CEH=180^\\circ-\\angle BEC=180^\\circ-30^\\circ=150^\\circ$，<br>$\\therefore \\angle CEF=\\angle HEF=75^\\circ$，<br>$\\therefore \\angle BFE+\\angle FEC=\\angle ECB+\\angle FBC=105^\\circ+22.5^\\circ=127.5^\\circ$，<br>$\\therefore \\angle BFE=127.5^\\circ-75^\\circ=52.5^\\circ$，<br>故答案为：$52.5^\\circ$．"
     },
     {
         "id": "bis_26",
@@ -16690,7 +16690,7 @@
         "difficulty": "中等",
         "knowledge": "全等三角形的判定与性质、角平分线的判定定理、四边形内角和",
         "chapter": "14.7 角平分线",
-        "stem": "如图，$\\angle AOB=60^\\circ$，$P$是射线$OC$上的一点，$PD\\perp OA$于点$D$，$PE\\perp OB$于点$E$．$M$、$N$分别是$OA$与$OB$上的点，$DM=EN$，$\\angle MPN=120^\\circ$．求证：$OC$是$\\angle AOB$的平分线．<br><img src=\"assets/images/img_178_77f1789c6d27.png\" data-cx=\"1760000\" data-cy=\"1584000\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:220px;height:auto;margin:10px 0\">",
+        "stem": "如图，$\\angle AOB=60^\\circ$，$P$是射线$OC$上的一点，$PD\\perp OA$于点$D$，$PE\\perp OB$于点$E$．$M$、$N$分别是$OA$与$OB$上的点，$DM=EN$，$\\angle MPN=120^\\circ$．求证：$OC$是$\\angle AOB$的平分线．<br><img src=\"assets/images/img_178_77f1789c6d27.png\" data-cx=\"1760000\" data-cy=\"1584000\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:165px;height:auto;margin:10px 0\">",
         "options": [],
         "answer": "见解析",
         "analysis": "本题考查了全等三角形的判定与性质、角平分线的判定定理，先证明$\\triangle PDM\\cong\\triangle PEN(\\text{ASA})$，得出$DP=EP$，再由角平分线的判定定理即可得证，熟练掌握以上知识点并灵活运用是解此题的关键．",
@@ -16706,11 +16706,11 @@
         "difficulty": "中等",
         "knowledge": "手拉手全等模型、全等三角形对应高相等、角平分线的判定",
         "chapter": "14.7 角平分线",
-        "stem": "如图所示，$\\triangle ABC$和$\\triangle DBE$中，$BA=BC$，$BD=BE$，并且$\\angle ABC=\\angle DBE$，连接$AD$，$CE$，相交于点$F$．求证：<br><img src=\"assets/images/img_179_1207ce7dd6c4.png\" data-cx=\"2080000\" data-cy=\"1261639\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:260px;height:auto;margin:10px 0\"><br>(1)$AD=CE$；<br>(2)$CB$平分$\\angle ACE$．",
+        "stem": "如图所示，$\\triangle ABC$和$\\triangle DBE$中，$BA=BC$，$BD=BE$，并且$\\angle ABC=\\angle DBE$，连接$AD$，$CE$，相交于点$F$．求证：<br><img src=\"assets/images/img_179_1207ce7dd6c4.png\" data-cx=\"2080000\" data-cy=\"1261639\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:218px;height:auto;margin:10px 0\"><br>(1)$AD=CE$；<br>(2)$CB$平分$\\angle ACE$．",
         "options": [],
         "answer": "(1)见解析；(2)见解析",
         "analysis": "（1）由$\\angle ABC=\\angle DBE$得$\\angle ABD=\\angle CBE$，证明$\\triangle ABD\\cong\\triangle CBE(\\text{SAS})$，即可得证；<br>（2）过点$B$作$BG\\perp AC$于点$G$，作$BH\\perp CE$于点$H$，利用全等三角形对应边上的高相等得到$BG=BH$，再根据角平分线的判定即可得证．",
-        "detail": "（1）证明：$\\because \\angle ABC=\\angle DBE$，<br>$\\therefore \\angle ABC+\\angle CBD=\\angle DBE+\\angle CBD$，<br>即$\\angle ABD=\\angle CBE$，<br>在$\\triangle ABD$和$\\triangle CBE$中，<br>$\\begin{cases} AB=CB \\\\ \\angle ABD=\\angle CBE \\\\ BD=BE \\end{cases}$，<br>$\\therefore \\triangle ABD\\cong\\triangle CBE(\\text{SAS})$，<br>$\\therefore AD=CE$；<br>（2）证明：如图，过点$B$作$BG\\perp AC$于点$G$，作$BH\\perp CE$于点$H$，<br><img src=\"assets/images/img_180_0913c1bee212.png\" data-cx=\"2080000\" data-cy=\"1261639\" alt=\"第27题解析配图\" style=\"display:block;max-width:100%;width:260px;height:auto;margin:10px 0\">$\\because \\triangle ABD\\cong\\triangle CBE$，$AD=CE$，<br>$\\therefore S_{\\triangle ABD}=S_{\\triangle CBE}$，<br>$\\therefore BG=BH$，<br>又$\\because BG\\perp AD$，$BH\\perp CE$，<br>$\\therefore CB$平分$\\angle ACE$．"
+        "detail": "（1）证明：$\\because \\angle ABC=\\angle DBE$，<br>$\\therefore \\angle ABC+\\angle CBD=\\angle DBE+\\angle CBD$，<br>即$\\angle ABD=\\angle CBE$，<br>在$\\triangle ABD$和$\\triangle CBE$中，<br>$\\begin{cases} AB=CB \\\\ \\angle ABD=\\angle CBE \\\\ BD=BE \\end{cases}$，<br>$\\therefore \\triangle ABD\\cong\\triangle CBE(\\text{SAS})$，<br>$\\therefore AD=CE$；<br>（2）证明：如图，过点$B$作$BG\\perp AC$于点$G$，作$BH\\perp CE$于点$H$，<br><img src=\"assets/images/img_180_0913c1bee212.png\" data-cx=\"2080000\" data-cy=\"1261639\" alt=\"第27题解析配图\" style=\"display:block;max-width:100%;width:218px;height:auto;margin:10px 0\">$\\because \\triangle ABD\\cong\\triangle CBE$，$AD=CE$，<br>$\\therefore S_{\\triangle ABD}=S_{\\triangle CBE}$，<br>$\\therefore BG=BH$，<br>又$\\because BG\\perp AD$，$BH\\perp CE$，<br>$\\therefore CB$平分$\\angle ACE$．"
     },
     {
         "id": "bis_28",
@@ -16722,11 +16722,11 @@
         "difficulty": "较难",
         "knowledge": "三角形内角平分线与外角平分线模型、角平分线的性质与判定、全等三角形",
         "chapter": "14.7 角平分线",
-        "stem": "如图，$\\triangle ABC$，$\\angle ABC$的平分线与$\\angle ACB$的外角平分线交于点$D$，过点$D$作$DE\\perp BC$于$E$．<br><img src=\"assets/images/img_181_8ff0914c699a.png\" data-cx=\"2400000\" data-cy=\"746666\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:580px;height:auto;margin:10px 0\"><br>(1)如图1，若$\\angle BAC=68^\\circ$，求$\\angle BDC$的度数．<br>(2)如图2，连$AD$，求证：$AD$平分$\\angle CAM$．<br>(3)如图3，若$\\triangle ABC$周长为$20$，求$BE$的长．",
+        "stem": "如图，$\\triangle ABC$，$\\angle ABC$的平分线与$\\angle ACB$的外角平分线交于点$D$，过点$D$作$DE\\perp BC$于$E$．<br><img src=\"assets/images/img_181_8ff0914c699a.png\" data-cx=\"2400000\" data-cy=\"746666\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:252px;height:auto;margin:10px 0\"><br>(1)如图1，若$\\angle BAC=68^\\circ$，求$\\angle BDC$的度数．<br>(2)如图2，连$AD$，求证：$AD$平分$\\angle CAM$．<br>(3)如图3，若$\\triangle ABC$周长为$20$，求$BE$的长．",
         "options": [],
         "answer": "(1)$34^\\circ$；(2)见解析；(3)$10$",
         "analysis": "（1）由角平分线的定义得到$\\angle ABD=\\angle CBD=\\frac{1}{2}\\angle ABC$，$\\angle ACD=\\angle DCN=\\frac{1}{2}\\angle ACN$，再由三角形外角的性质可得到$\\angle ACN=\\angle BAC+\\angle ABC$，$\\angle DCN=\\angle BDC+\\angle CBD$，进而可得$\\angle BDC=\\frac{1}{2}\\angle BAC$，据此可得答案；<br>（2）过点$D$作$DP\\perp BM$于$P$，$DQ\\perp AC$于$Q$，由角平分线的性质证明$DP=DQ$，则由角平分线的判定定理可证$AD$平分$\\angle CAM$；<br>（3）证明$\\text{Rt}\\triangle ADQ\\cong\\text{Rt}\\triangle ADP$可得$AP=AQ$，同理$BP=BE$，$CQ=CE$，再根据线段的和差关系和三角形周长公式可得$BC+CE=10$，据此可求出$BE$的长．",
-        "detail": "（1）解：$\\because \\angle ABC$的平分线与$\\angle ACB$的外角平分线交于点$D$，<br>$\\therefore \\angle ABD=\\angle CBD=\\frac{1}{2}\\angle ABC$，$\\angle ACD=\\angle DCN=\\frac{1}{2}\\angle ACN$，<br>$\\because \\angle ACN=\\angle BAC+\\angle ABC$，$\\angle DCN=\\angle BDC+\\angle CBD$，<br>$\\therefore 2\\angle BDC+2\\angle CBD=\\angle BAC+\\angle ABC$，<br>$\\therefore \\angle BDC=\\frac{1}{2}\\angle BAC$，<br>$\\because \\angle BAC=68^\\circ$，<br>$\\therefore \\angle BDC=34^\\circ$；<br>（2）证明：如图2，过点$D$作$DP\\perp BM$于$P$，$DQ\\perp AC$于$Q$，<br><img src=\"assets/images/img_182_73d9f95004a0.png\" data-cx=\"1920000\" data-cy=\"1689600\" alt=\"第28题图2解析配图\" style=\"display:block;max-width:100%;width:240px;height:auto;margin:10px 0\">$\\because DE\\perp BC$，$BD$平分$\\angle ABC$，$CD$平分$\\angle ACN$，<br>$\\therefore DP=DE$，$DQ=DE$，<br>$\\therefore DP=DQ$，<br>$\\therefore AD$平分$\\angle CAM$；<br>（3）解：如图2，由（2）知：$DP=DQ$，<br>在$\\text{Rt}\\triangle ADQ$和$\\text{Rt}\\triangle ADP$中，<br>$\\begin{cases} DP=DQ \\\\ AD=AD \\end{cases}$，<br>$\\therefore \\text{Rt}\\triangle ADQ\\cong\\text{Rt}\\triangle ADP(\\text{HL})$，<br>$\\therefore AP=AQ$，<br>同理得：$BP=BE$，$CQ=CE$，<br>$\\because \\triangle ABC$的周长为$20$，<br>$\\therefore AB+BC+AC=20$，<br>$\\therefore AB+BC+AQ+CQ=AB+BC+AP+CE=20$，<br>$\\because AB+AP=BP=BE=BC+CE$，<br>$\\therefore 2BE=20$，即：$BE=10$．"
+        "detail": "（1）解：$\\because \\angle ABC$的平分线与$\\angle ACB$的外角平分线交于点$D$，<br>$\\therefore \\angle ABD=\\angle CBD=\\frac{1}{2}\\angle ABC$，$\\angle ACD=\\angle DCN=\\frac{1}{2}\\angle ACN$，<br>$\\because \\angle ACN=\\angle BAC+\\angle ABC$，$\\angle DCN=\\angle BDC+\\angle CBD$，<br>$\\therefore 2\\angle BDC+2\\angle CBD=\\angle BAC+\\angle ABC$，<br>$\\therefore \\angle BDC=\\frac{1}{2}\\angle BAC$，<br>$\\because \\angle BAC=68^\\circ$，<br>$\\therefore \\angle BDC=34^\\circ$；<br>（2）证明：如图2，过点$D$作$DP\\perp BM$于$P$，$DQ\\perp AC$于$Q$，<br><img src=\"assets/images/img_182_73d9f95004a0.png\" data-cx=\"1920000\" data-cy=\"1689600\" alt=\"第28题图2解析配图\" style=\"display:block;max-width:100%;width:165px;height:auto;margin:10px 0\">$\\because DE\\perp BC$，$BD$平分$\\angle ABC$，$CD$平分$\\angle ACN$，<br>$\\therefore DP=DE$，$DQ=DE$，<br>$\\therefore DP=DQ$，<br>$\\therefore AD$平分$\\angle CAM$；<br>（3）解：如图2，由（2）知：$DP=DQ$，<br>在$\\text{Rt}\\triangle ADQ$和$\\text{Rt}\\triangle ADP$中，<br>$\\begin{cases} DP=DQ \\\\ AD=AD \\end{cases}$，<br>$\\therefore \\text{Rt}\\triangle ADQ\\cong\\text{Rt}\\triangle ADP(\\text{HL})$，<br>$\\therefore AP=AQ$，<br>同理得：$BP=BE$，$CQ=CE$，<br>$\\because \\triangle ABC$的周长为$20$，<br>$\\therefore AB+BC+AC=20$，<br>$\\therefore AB+BC+AQ+CQ=AB+BC+AP+CE=20$，<br>$\\because AB+AP=BP=BE=BC+CE$，<br>$\\therefore 2BE=20$，即：$BE=10$．"
     },
     {
         "id": "bis_29",
@@ -16738,7 +16738,7 @@
         "difficulty": "容易",
         "knowledge": "三角形内心（三条角平分线交点）、三角形面积与周长关系",
         "chapter": "14.7 角平分线",
-        "stem": "如图，在$\\triangle ABC$中，$O$是$\\triangle ABC$三个内角平分线的交点，若$\\triangle ABC$面积为$36$，且$O$到边$AC$的距离为$4$，则$\\triangle ABC$的周长为（　　）<br><img src=\"assets/images/img_183_fdf0788ca1e8.png\" data-cx=\"1840000\" data-cy=\"1407058\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:230px;height:auto;margin:10px 0\">",
+        "stem": "如图，在$\\triangle ABC$中，$O$是$\\triangle ABC$三个内角平分线的交点，若$\\triangle ABC$面积为$36$，且$O$到边$AC$的距离为$4$，则$\\triangle ABC$的周长为（　　）<br><img src=\"assets/images/img_183_fdf0788ca1e8.png\" data-cx=\"1840000\" data-cy=\"1407058\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:193px;height:auto;margin:10px 0\">",
         "options": [
             "A. $8$",
             "B. $12$",
@@ -16759,11 +16759,11 @@
         "difficulty": "较难",
         "knowledge": "角平分线的判定与性质、截长补短构造全等三角形、三角形内角和",
         "chapter": "14.7 角平分线",
-        "stem": "如图1，在$\\triangle ABC$中，两个内角$\\angle ABC$和$\\angle ACB$的平分线交于点$O$，连接$AO$，$OE\\perp AB$于点$E$，$OF\\perp AC$于点$F$．<br><img src=\"assets/images/img_184_a15f9e330ebf.png\" data-cx=\"2400000\" data-cy=\"1061052\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:430px;height:auto;margin:10px 0\"><br>(1)求证：$AO$平分$\\angle BAC$；<br>(2)如图2，延长$CA$至点$D$，使$CD=CB$，若$\\angle D=\\angle AOD$，$\\angle ACB=66^\\circ$，求$\\angle BAC$的度数．",
+        "stem": "如图1，在$\\triangle ABC$中，两个内角$\\angle ABC$和$\\angle ACB$的平分线交于点$O$，连接$AO$，$OE\\perp AB$于点$E$，$OF\\perp AC$于点$F$．<br><img src=\"assets/images/img_184_a15f9e330ebf.png\" data-cx=\"2400000\" data-cy=\"1061052\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:252px;height:auto;margin:10px 0\"><br>(1)求证：$AO$平分$\\angle BAC$；<br>(2)如图2，延长$CA$至点$D$，使$CD=CB$，若$\\angle D=\\angle AOD$，$\\angle ACB=66^\\circ$，求$\\angle BAC$的度数．",
         "options": [],
         "answer": "(1)见解析；(2)$76^\\circ$",
         "analysis": "本题考查了角平分线的判定与性质，全等三角形的判定与性质，灵活运用各知识点是解答本题的关键．<br>（1）作$OM\\perp BC$于点$M$，由角平分线的性质得$OE=OM,OF=OM$，从而$OE=OF$，进而可证$AO$平分$\\angle BAC$；<br>（2）设$\\angle D=\\angle AOD=x$，则$\\angle BAO=\\angle CAO=2x$，证明$\\triangle DCO\\cong\\triangle BCO(\\text{SAS})$得$\\angle CBO=\\angle D=x$，从而$\\angle ABC=2\\angle CBO=2x$，然后利用三角形内角和定理列式即可求解．",
-        "detail": "（1）证明：作$OM\\perp BC$于点$M$，<br><img src=\"assets/images/img_185_5b38958648ee.png\" data-cx=\"1760000\" data-cy=\"1632680\" alt=\"第30题图1解析配图\" style=\"display:block;max-width:100%;width:220px;height:auto;margin:10px 0\">$\\because$两个内角$\\angle ABC$和$\\angle ACB$的平分线交于点$O$，$OE\\perp AB$，$OF\\perp AC$，<br>$\\therefore OE=OM,OF=OM$，<br>$\\therefore OE=OF$，<br>$\\therefore AO$平分$\\angle BAC$；<br>（2）解：设$\\angle D=\\angle AOD=x$，<br>$\\because AO$平分$\\angle BAC$，<br>$\\therefore \\angle BAO=\\angle CAO=\\angle D+\\angle AOD=2x$．<br>在$\\triangle DCO$和$\\triangle BCO$中，<br>$\\begin{cases} CB=CD \\\\ \\angle DCO=\\angle BCO \\\\ CO=CO \\end{cases}$，<br>$\\therefore \\triangle DCO\\cong\\triangle BCO(\\text{SAS})$，<br>$\\therefore \\angle CBO=\\angle D=x$．<br>$\\because BO$平分$\\angle ABC$，<br>$\\therefore \\angle ABC=2\\angle CBO=2x$，<br>$\\because \\angle BAC+\\angle ABC+\\angle ACB=180^\\circ$，<br>$\\therefore 4x+2x+66^\\circ=180^\\circ$，<br>$\\therefore x=19^\\circ$，<br>$\\therefore \\angle BAC=4x=76^\\circ$．"
+        "detail": "（1）证明：作$OM\\perp BC$于点$M$，<br><img src=\"assets/images/img_185_5b38958648ee.png\" data-cx=\"1760000\" data-cy=\"1632680\" alt=\"第30题图1解析配图\" style=\"display:block;max-width:100%;width:165px;height:auto;margin:10px 0\">$\\because$两个内角$\\angle ABC$和$\\angle ACB$的平分线交于点$O$，$OE\\perp AB$，$OF\\perp AC$，<br>$\\therefore OE=OM,OF=OM$，<br>$\\therefore OE=OF$，<br>$\\therefore AO$平分$\\angle BAC$；<br>（2）解：设$\\angle D=\\angle AOD=x$，<br>$\\because AO$平分$\\angle BAC$，<br>$\\therefore \\angle BAO=\\angle CAO=\\angle D+\\angle AOD=2x$．<br>在$\\triangle DCO$和$\\triangle BCO$中，<br>$\\begin{cases} CB=CD \\\\ \\angle DCO=\\angle BCO \\\\ CO=CO \\end{cases}$，<br>$\\therefore \\triangle DCO\\cong\\triangle BCO(\\text{SAS})$，<br>$\\therefore \\angle CBO=\\angle D=x$．<br>$\\because BO$平分$\\angle ABC$，<br>$\\therefore \\angle ABC=2\\angle CBO=2x$，<br>$\\because \\angle BAC+\\angle ABC+\\angle ACB=180^\\circ$，<br>$\\therefore 4x+2x+66^\\circ=180^\\circ$，<br>$\\therefore x=19^\\circ$，<br>$\\therefore \\angle BAC=4x=76^\\circ$．"
     },
     {
         "id": "ch15_1_2_1",
@@ -17032,7 +17032,7 @@
         "options": [],
         "answer": "$1.8$",
         "analysis": "本题考查了全等三角形的判定与性质、等腰三角形的性质，延长$AD$至$G$，使$DG=AD$，连接$BG$，可证明$\\triangle BDG\\cong \\triangle CDA(SAS)$，则$BG=AC$，$\\angle CAD=\\angle G$，根据$AF=EF$，得$\\angle CAD=\\angle AEF$，可证出$\\angle G=\\angle BEG$，即得出$AC=BE=3$，然后利用线段的和差即可解决问题．",
-        "detail": "解：如图，延长$AD$至$G$，使$DG=AD$，连接$BG$，<br><img src=\"assets/images/img_docx_d218404845f0.png\" data-cx=\"1200150\" data-cy=\"1676400\" style=\"width:126px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>在$\\triangle BDG$和$\\triangle CDA$中，<br>${\\begin{cases}BD=CD \\\\ \\angle BDG=\\angle CDA \\\\ DG=DA\\end{cases}$，<br>∴$\\triangle BDG\\cong \\triangle CDA(SAS)$，<br>∴$BG=AC$，$\\angle CAD=\\angle G$，<br>∵$\\angle AEF=\\angle FAE$，<br>∴$\\angle CAD=\\angle AEF$，<br>∵$\\angle BEG=\\angle AEF$，<br>∴$\\angle CAD=\\angle BEG$，<br>∴$\\angle G=\\angle BEG$，<br>∴$BG=BE=3$，<br>∴$AC=BE=3$，<br>∵$\\angle AEF=\\angle FAE$，<br>∴$AF=EF=1.2$，<br>∴$CF=AC-AF=1.8$．<br>故答案为：$1.8$．"
+        "detail": "解：如图，延长$AD$至$G$，使$DG=AD$，连接$BG$，<br><img src=\"assets/images/img_docx_d218404845f0.png\" data-cx=\"1200150\" data-cy=\"1676400\" style=\"width:118px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>在$\\triangle BDG$和$\\triangle CDA$中，<br>${\\begin{cases}BD=CD \\\\ \\angle BDG=\\angle CDA \\\\ DG=DA\\end{cases}$，<br>∴$\\triangle BDG\\cong \\triangle CDA(SAS)$，<br>∴$BG=AC$，$\\angle CAD=\\angle G$，<br>∵$\\angle AEF=\\angle FAE$，<br>∴$\\angle CAD=\\angle AEF$，<br>∵$\\angle BEG=\\angle AEF$，<br>∴$\\angle CAD=\\angle BEG$，<br>∴$\\angle G=\\angle BEG$，<br>∴$BG=BE=3$，<br>∴$AC=BE=3$，<br>∵$\\angle AEF=\\angle FAE$，<br>∴$AF=EF=1.2$，<br>∴$CF=AC-AF=1.8$．<br>故答案为：$1.8$．"
     },
     {
         "id": "ch15_3_1_5",
@@ -17076,7 +17076,7 @@
         "difficulty": "中等",
         "knowledge": "根据等角对等边证明边相等、两直线平行内错角相等、全等的性质和ASA（AAS）综合（ASA或者AAS）、角平分线的有关计算",
         "chapter": "15.3.1 等角对等边",
-        "stem": "【教材呈现】<br>如图1，$AD$平分$\\angle EAC$，$AD\\parallel BC$．易证$\\triangle ABC$是等腰三角形．<br>【变式探究】<br>（1）如图2，把一张长方形的纸沿对角线$AC$折叠，重合部分是一个等腰三角形吗？为什么？<br>【形成经验】<br>当角平分线遇上平行线时一般会产生等腰三角形．<br>【经验应用】<br>（2）如图3，$AD\\parallel BC$，$AD$平分$\\angle EAC$，$CD$平分$\\angle ACF$，试探究线段$AB$与线段$AD$的数量关系，并说明理由．<br>【拓展提升】<br>（3）如图4，在四边形$ABCD$中，$AD\\parallel BC$，E为$CD$的中点，且$AE$平分$\\angle BAD$，连接$BE$，则线段$AD、BC$和$AB$之间的数量关系为__________．<br><img src=\"assets/images/img_docx_402de345c440.png\" data-cx=\"4362450\" data-cy=\"1543050\" style=\"width:420px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "【教材呈现】<br>如图1，$AD$平分$\\angle EAC$，$AD\\parallel BC$．易证$\\triangle ABC$是等腰三角形．<br>【变式探究】<br>（1）如图2，把一张长方形的纸沿对角线$AC$折叠，重合部分是一个等腰三角形吗？为什么？<br>【形成经验】<br>当角平分线遇上平行线时一般会产生等腰三角形．<br>【经验应用】<br>（2）如图3，$AD\\parallel BC$，$AD$平分$\\angle EAC$，$CD$平分$\\angle ACF$，试探究线段$AB$与线段$AD$的数量关系，并说明理由．<br>【拓展提升】<br>（3）如图4，在四边形$ABCD$中，$AD\\parallel BC$，E为$CD$的中点，且$AE$平分$\\angle BAD$，连接$BE$，则线段$AD、BC$和$AB$之间的数量关系为__________．<br><img src=\"assets/images/img_docx_402de345c440.png\" data-cx=\"4362450\" data-cy=\"1543050\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [],
         "answer": "（1）重合部分是一个等腰三角形，<br>理由：<br>∵在长方形$ABCD$中，$DC\\parallel AB$，<br>∴$\\angle ACD=\\angle BAC$，<br>由折叠性质可得$\\angle BAC=\\angle B^{'}AC$，<br>∴$\\angle ACD=\\angle B^{'}AC$，<br>∴$AE=CE$，<br>∴$\\triangle ACE$是等腰三角形；<br>（2）$AB=AD$，理由：<br>如图，<br><img src=\"assets/images/img_docx_20cbbedf092a.png\" data-cx=\"1352550\" data-cy=\"1333500\" style=\"width:142px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">∵$AD\\parallel BC$，<br>∴$\\angle 1=\\angle B, \\angle 2=\\angle 4$．<br>∵$AD$平分$\\angle EAC$，<br>∴$\\angle 1=\\angle 2$，<br>∴$\\angle B=\\angle 4$，<br>∴$AB=AC$．<br>∵$AD\\parallel BC$，<br>∴$\\angle D=\\angle 5$．<br>∵$CD$平分$\\angle ACF$，<br>∴$\\angle 3=\\angle 5$，<br>∴$\\angle 3=\\angle D$，<br>∴$AC=AD$，<br>∴$AB=AD$；<br>（3）$AB=AD+BC$",
         "analysis": "（1）由平行线的性质得$\\angle ACD=\\angle BAC$，由折叠的性质得$\\angle BAC=\\angle B^{'}AC$，从而$\\angle ACD=\\angle B^{'}AC$，进而可证$\\triangle ACE$是等腰三角形；<br>（2）分别证明$AB=AC$和$AC=AD$，从而可证$AB=AD$；<br>（3）延长$AE$、$BC$交于点F．先根据等角对等边证明$AB=BF$，再根据$AAS$证明$\\triangle ADE\\cong \\triangle FCE$得$AD=CF$，进而可证$AB=AD+BC$．",
@@ -17092,7 +17092,7 @@
         "difficulty": "中等",
         "knowledge": "根据等角对等边证明边相等、折叠问题、三角形的外角的定义及性质、全等的性质和SAS综合（SAS）",
         "chapter": "15.3.1 等角对等边",
-        "stem": "数学课上，张老师根据习题改编了一个题目：如图1，$AD$是$\\triangle ABC$的高，$\\angle C=2\\angle B$，若$CD=2,AC=5$，求$BC$的长．<br><img src=\"assets/images/img_docx_4aeb18219f3c.jpg\" data-cx=\"4429125\" data-cy=\"1000125\" style=\"width:420px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>小明同学的想法是利用构造全等三角形来解决：将$\\triangle ACD$沿$AD$折叠，如图2，则点C刚好落在$BC$边上的点E处．……<br>（1）结合小明同学的想法，请直接写出：$BC=$______．<br>【改编拓展】张老师继续启发同学们改编此题，得到下列试题，请同学们解答：<br>（2）如图3，$\\angle ACB=2\\angle B,AD$为$\\triangle ABC$的外角$\\angle CAF$的平分线，交$BC$的延长线于点$D$，则线段$AB、AC、CD$有什么数量关系？请写出你的猜想并证明．",
+        "stem": "数学课上，张老师根据习题改编了一个题目：如图1，$AD$是$\\triangle ABC$的高，$\\angle C=2\\angle B$，若$CD=2,AC=5$，求$BC$的长．<br><img src=\"assets/images/img_docx_4aeb18219f3c.jpg\" data-cx=\"4429125\" data-cy=\"1000125\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>小明同学的想法是利用构造全等三角形来解决：将$\\triangle ACD$沿$AD$折叠，如图2，则点C刚好落在$BC$边上的点E处．……<br>（1）结合小明同学的想法，请直接写出：$BC=$______．<br>【改编拓展】张老师继续启发同学们改编此题，得到下列试题，请同学们解答：<br>（2）如图3，$\\angle ACB=2\\angle B,AD$为$\\triangle ABC$的外角$\\angle CAF$的平分线，交$BC$的延长线于点$D$，则线段$AB、AC、CD$有什么数量关系？请写出你的猜想并证明．",
         "options": [],
         "answer": "（1）9；<br>（2）$AB+AC=CD$，<br>证明：如图，在$AF$上截取$AG=AC$，连接$DG$，<br><img src=\"assets/images/img_docx_33c2f11e4aaa.jpg\" data-cx=\"1543050\" data-cy=\"781050\" style=\"width:162px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">$\\because AD$平分$\\angle CAF$，<br>$\\therefore \\angle CAD=\\angle GAD$，<br>在$\\triangle CAD$和$\\triangle GAD$中，<br>${\\begin{cases}AC=AG \\\\ \\angle CAD=\\angle GAD \\\\ AD=AD\\end{cases}$，<br>$\\therefore \\triangle CAD\\cong \\triangle GAD(SAS)$，<br>$\\therefore CD=GD$，$\\angle ACD=\\angle AGD$，<br>$\\because \\angle ACD+\\angle ACB=180^\\circ$，$\\angle AGD+\\angle DGF=180^\\circ$，<br>$\\therefore \\angle ACB=\\angle DGF$，<br>$\\because \\angle ACB=2\\angle B$，<br>$\\therefore \\angle DGF=2\\angle B$，<br>$\\because \\angle DGF=\\angle B+\\angle BDG$，<br>$\\therefore \\angle B=\\angle BDG$，<br>$\\therefore BG=DG$，<br>$\\therefore BA+AG=BG=DG=CD$，<br>$\\therefore AB+AC=CD$．",
         "analysis": "（1）根据题意画出图形，由折叠的性质可得：$AC=AE=5$，$DE=CD=2$，$\\angle C=\\angle AED$，由$\\angle C=2\\angle B$可得$\\angle AED=2\\angle B$，再由三角形外角的定义及性质可得$\\angle AED=\\angle B+\\angle BAE$，推出$\\angle B=\\angle BAE$，进而得到$BE=AE=5$，最后进行计算即可得到答案；<br>（2）在$AF$上截取$AG=AC$，连接$DG$，证明$\\triangle CAD\\cong \\triangle GAD$得到$CD=GD$，$\\angle ACD=\\angle AGD$，证明$\\angle ACB=\\angle DGF$，再由$\\angle ACB=2\\angle B$得到$\\angle DGF=2\\angle B$，再根据三角形外角的定义及性质得出$\\angle B=\\angle BDG$，进而得到$BG=DG$，即可得证．",
@@ -17129,7 +17129,7 @@
         "difficulty": "中等",
         "knowledge": "作垂线(尺规作图)、三角形的外角的定义及性质、线段垂直平分线的性质、等腰三角形的性质和判定",
         "chapter": "15.3.2 等腰三角形的性质与判定",
-        "stem": "如图，在$\\triangle ABC$中，以点$A$为圆心，以$AB$的长为半径作弧，交$BC$于点$D$，取$BD$的中点$E$，连接$AE$；任取一点$P$，使点$P$和点$D$位于边$AC$的两侧，以点$D$为圆心，以$DP$的长为半径作弧，与边$AC$相交于点$G$和$H$，再分别以点$G$和$H$为圆心，以大于$\\frac{1}{2}GH$的长为半径作弧，两弧分别交于$M, N$两点，作直线$MN$，交$AC$于点$F$．若$AB=CD$且$AB\\neq BD$，则下列结论不正确的是（　　）<br><img src=\"assets/images/img_docx_6cb4e2edb47e.png\" data-cx=\"1990725\" data-cy=\"1685925\" style=\"width:209px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "如图，在$\\triangle ABC$中，以点$A$为圆心，以$AB$的长为半径作弧，交$BC$于点$D$，取$BD$的中点$E$，连接$AE$；任取一点$P$，使点$P$和点$D$位于边$AC$的两侧，以点$D$为圆心，以$DP$的长为半径作弧，与边$AC$相交于点$G$和$H$，再分别以点$G$和$H$为圆心，以大于$\\frac{1}{2}GH$的长为半径作弧，两弧分别交于$M, N$两点，作直线$MN$，交$AC$于点$F$．若$AB=CD$且$AB\\neq BD$，则下列结论不正确的是（　　）<br><img src=\"assets/images/img_docx_6cb4e2edb47e.png\" data-cx=\"1990725\" data-cy=\"1685925\" style=\"width:165px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [
             "A. $AE\\perp BC$",
             "B. $AF=CF$",
@@ -17166,7 +17166,7 @@
         "difficulty": "中等",
         "knowledge": "全等的性质和SAS综合（SAS）、等腰三角形的性质和判定",
         "chapter": "15.3.2 等腰三角形的性质与判定",
-        "stem": "如图，在$\\triangle ABC$中，$\\angle BAC=90^\\circ$，$AB=AC$，点D是$AC$上一点，过C作$CE\\perp BD$于点E．若点D是$AC$上一动点，$\\angle AED$如何变化．<br><img src=\"assets/images/img_docx_b78c7d741f07.png\" data-cx=\"2771775\" data-cy=\"1076325\" style=\"width:291px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+        "stem": "如图，在$\\triangle ABC$中，$\\angle BAC=90^\\circ$，$AB=AC$，点D是$AC$上一点，过C作$CE\\perp BD$于点E．若点D是$AC$上一动点，$\\angle AED$如何变化．<br><img src=\"assets/images/img_docx_b78c7d741f07.png\" data-cx=\"2771775\" data-cy=\"1076325\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
         "options": [],
         "answer": "$\\angle AED=45^\\circ$，恒定不变",
         "analysis": "本题主要考查了全等三角形的判定与性质，等腰三角形的判定与性质，通过巧妙的构造出三角形全等是解题的关键．如图，在$BD$上截取$BK=CE$，连接$AK$，易证$\\triangle ABK\\cong \\triangle ACE(SAS)$，则$AK=AE$，再由$\\angle BAK+\\angle KAD=90^\\circ$可得$\\angle KAD+\\angle CAE=90^\\circ$，则$\\triangle AEK$是等腰直角三角形，由此即可得证．",
@@ -17254,7 +17254,7 @@
         ],
         "answer": "B",
         "analysis": "此题主要考查了等边三角形的性质以及等腰三角形的性质．根据等腰三角形的性质以及平行线的判定定理得出$A_{1}B_{1}\\parallel A_{2}B_{2}\\parallel A_{3}B_{3}$，以及$a_{2}=2a_{1}$，得出$a_{3}=4a_{1}=4$，$a_{4}=8a_{1}=8$，$a_{5}=16a_{1}$…进而得出答案．",
-        "detail": "解：如图，<br><img src=\"assets/images/img_docx_f86aa7909fff.png\" data-cx=\"2362200\" data-cy=\"1352550\" style=\"width:248px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>∵$\\triangle A_{1}B_{1}A_{2}$是等边三角形，<br>∴$A_{1}B_{1}=A_{2}B_{1}, \\angle 2=\\angle 3=60^\\circ$，<br>∵$\\angle MON=30^\\circ$，<br>∴$\\angle 1=60^\\circ -30^\\circ =30^\\circ$，<br>又∵$\\angle 3=60^\\circ$，<br>∴$\\angle OB_{1}A_{2}=60^\\circ +30^\\circ =90^\\circ$，<br>∵$\\angle MON=\\angle 1=30^\\circ$，<br>∴$OA_{1}=A_{1}B_{1}=1$，<br>∴$A_{2}B_{1}=1$，<br>∵$\\triangle A_{2}B_{2}A_{3}$是等边三角形，<br>同理可得：$OA_{2}=B_{2}A_{2}=2$，<br>∴$a_{2}=2a_{1}=2$，<br>同理：$a_{3}=4a_{1}=4=2^{2}$，<br>$a_{4}=8a_{1}=8=2^{3}$，<br>$a_{5}=16a_{1}=16=2^{4}$，<br>…，<br>以此类推：$a_{2016}=2^{2015}$，<br>故选：B．"
+        "detail": "解：如图，<br><img src=\"assets/images/img_docx_f86aa7909fff.png\" data-cx=\"2362200\" data-cy=\"1352550\" style=\"width:220px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>∵$\\triangle A_{1}B_{1}A_{2}$是等边三角形，<br>∴$A_{1}B_{1}=A_{2}B_{1}, \\angle 2=\\angle 3=60^\\circ$，<br>∵$\\angle MON=30^\\circ$，<br>∴$\\angle 1=60^\\circ -30^\\circ =30^\\circ$，<br>又∵$\\angle 3=60^\\circ$，<br>∴$\\angle OB_{1}A_{2}=60^\\circ +30^\\circ =90^\\circ$，<br>∵$\\angle MON=\\angle 1=30^\\circ$，<br>∴$OA_{1}=A_{1}B_{1}=1$，<br>∴$A_{2}B_{1}=1$，<br>∵$\\triangle A_{2}B_{2}A_{3}$是等边三角形，<br>同理可得：$OA_{2}=B_{2}A_{2}=2$，<br>∴$a_{2}=2a_{1}=2$，<br>同理：$a_{3}=4a_{1}=4=2^{2}$，<br>$a_{4}=8a_{1}=8=2^{3}$，<br>$a_{5}=16a_{1}=16=2^{4}$，<br>…，<br>以此类推：$a_{2016}=2^{2015}$，<br>故选：B．"
     },
     {
         "id": "ch15_3_3_5",
@@ -17275,7 +17275,7 @@
         ],
         "answer": "D",
         "analysis": "本题考查等边三角形的性质，等腰三角形的判定，垂直平分线的性质．利用分类讨论的思想是解答本题的关键．<br>①如图所示，当点P在三角形的内部时，点P到$\\triangle ABC$的三个顶点的距离相等；②如图所示，当P在$\\triangle ABC$的外部时，每条边的垂直平分线上的点只要能够使顶点这条边的两端点连接而成的三角形是等腰三角形即可．",
-        "detail": "解：①当点P在三角形的内部时，点P是边$AB$、$BC$、$AC$的垂直平分线的交点，如图点$P_{10}$．<br>②当P在三角形的外部时，分别以三角形各顶点为圆心，边长为半径画弧，与垂直平分线的交点有3个，如图，点$P_{1}∼P_{9}$，共9个．<br><img src=\"assets/images/img_docx_43e7b5003341.png\" data-cx=\"2438400\" data-cy=\"2343150\" style=\"width:256px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>综上，具有这样性质的点P共有10个．<br>故选：D．"
+        "detail": "解：①当点P在三角形的内部时，点P是边$AB$、$BC$、$AC$的垂直平分线的交点，如图点$P_{10}$．<br>②当P在三角形的外部时，分别以三角形各顶点为圆心，边长为半径画弧，与垂直平分线的交点有3个，如图，点$P_{1}∼P_{9}$，共9个．<br><img src=\"assets/images/img_docx_43e7b5003341.png\" data-cx=\"2438400\" data-cy=\"2343150\" style=\"width:165px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>综上，具有这样性质的点P共有10个．<br>故选：D．"
     },
     {
         "id": "ch15_3_3_6",
@@ -17335,7 +17335,7 @@
         "difficulty": "中等",
         "knowledge": "内错角相等两直线平行、等边三角形的性质、全等的性质和SAS综合（SAS）",
         "chapter": "15.3.3 等边三角形的性质",
-        "stem": "如图，已知等边三角形$ABC, D$是直线$AB$上一点，以$CD$为一边，向上作等边三角形$EDC$，连接$AE$．<br><img src=\"assets/images/img_docx_44c771bae80b.png\" data-cx=\"4210050\" data-cy=\"1638300\" style=\"width:420px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)如图①，当点D在边$AB$上时，求证：$\\triangle DBC\\cong \\triangle EAC$．<br>(2)在（1）的条件下，猜想$AE, BC$之间的位置关系，并说明理由．<br>(3)如图②，当点D在边$BA$的延长线上时，（2）中的猜想是否仍然成立？若成立，请给予证明；若不成立，请说明理由．",
+        "stem": "如图，已知等边三角形$ABC, D$是直线$AB$上一点，以$CD$为一边，向上作等边三角形$EDC$，连接$AE$．<br><img src=\"assets/images/img_docx_44c771bae80b.png\" data-cx=\"4210050\" data-cy=\"1638300\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)如图①，当点D在边$AB$上时，求证：$\\triangle DBC\\cong \\triangle EAC$．<br>(2)在（1）的条件下，猜想$AE, BC$之间的位置关系，并说明理由．<br>(3)如图②，当点D在边$BA$的延长线上时，（2）中的猜想是否仍然成立？若成立，请给予证明；若不成立，请说明理由．",
         "options": [],
         "answer": "(1)<br>证明：∵$\\triangle ABC$与$\\triangle CDE$都是等边三角形，<br>∴$BC=AC, CD=CE, \\angle ACB=\\angle DCE=60^\\circ$，<br>∴$\\angle ACB-\\angle ACD=\\angle DCE-\\angle ACD$，即$\\angle BCD=\\angle ACE$，<br>在$\\triangle DBC$和$\\triangle EAC$中，<br>${\\begin{cases}BC=AC \\\\ \\angle BCD=\\angle ACE \\\\ CD=CE\\end{cases}$，<br>∴$\\triangle DBC\\cong \\triangle EAC(SAS)$．<br>(2)<br>$AE\\parallel BC$，理由如下：<br>∵$\\triangle ABC$与$\\triangle CDE$都是等边三角形，<br>∴$\\angle B=\\angle ACB=60^\\circ$，<br>由（1）已证：$\\triangle DBC\\cong \\triangle EAC$，<br>∴$\\angle CAE=\\angle B=60^\\circ$，<br>∴$\\angle CAE=\\angle ACB=60^\\circ$，<br>∴$AE\\parallel BC$．<br>(3)<br>$AE\\parallel BC$仍然成立，证明如下：<br>∵$\\triangle ABC$与$\\triangle CDE$都是等边三角形，<br>∴$BC=AC, CD=CE, \\angle B=\\angle ACB=\\angle DCE=60^\\circ$，<br>∴$\\angle ACB+\\angle ACD=\\angle DCE+\\angle ACD$，即$\\angle BCD=\\angle ACE$，<br>在$\\triangle DBC$和$\\triangle EAC$中，<br>${\\begin{cases}BC=AC \\\\ \\angle BCD=\\angle ACE \\\\ CD=CE\\end{cases}$，<br>∴$\\triangle DBC\\cong \\triangle EAC(SAS)$，<br>∴$\\angle CAE=\\angle B=60^\\circ$，<br>∴$\\angle CAE=\\angle ACB=60^\\circ$，<br>∴$AE\\parallel BC$．",
         "analysis": "本题考查了等边三角形的性质、三角形全等的判定与性质、平行线的判定等知识，熟练掌握等边三角形的性质是解题关键．<br>（1）先根据等边三角形的性质可得$BC=AC, CD=CE, \\angle ACB=\\angle DCE=60^\\circ$，则可得$\\angle BCD=\\angle ACE$，再根据$SAS$定理即可得证；<br>（2）先根据等边三角形的性质可得$\\angle B=\\angle ACB=60^\\circ$，再根据全等三角形的性质可得$\\angle CAE=\\angle B=60^\\circ$，则可得$\\angle CAE=\\angle ACB=60^\\circ$，然后根据平行线的判定即可得；<br>（3）同样的方法，先证出$\\triangle DBC\\cong \\triangle EAC$，根据全等三角形的性质可得$\\angle CAE=\\angle B=60^\\circ$，则可得$\\angle CAE=\\angle ACB=60^\\circ$，然后根据平行线的判定即可得．",
@@ -17351,7 +17351,7 @@
         "difficulty": "中等",
         "knowledge": "角平分线的判定定理、等边三角形的性质、全等的性质和SAS综合（SAS）、等边三角形的判定和性质",
         "chapter": "15.3.3 等边三角形的性质",
-        "stem": "如图$1$，在等边$\\triangle ABC$中，$E$为边$AC$上一点，$D$为$BC$上一点，且$AE=CD$，连接$AD$与$BE$相交于点$F$．<br><img src=\"assets/images/img_docx_754f88c4b6c1.png\" data-cx=\"2552700\" data-cy=\"1562100\" style=\"width:268px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)$AD$与$BE$的数量关系是，$AD$与$BE$构成的锐角夹角$\\angle BFD$的度数是；并说明理由．<br>(2)深入探究，将图$1$中的$AD$延长至点$G$，使$FG=BF$，连接$BG$，$CG$，如图$2$所示．求证：$GA$平分$\\angle BGC$（第一问的结论，本问可直接使用）",
+        "stem": "如图$1$，在等边$\\triangle ABC$中，$E$为边$AC$上一点，$D$为$BC$上一点，且$AE=CD$，连接$AD$与$BE$相交于点$F$．<br><img src=\"assets/images/img_docx_754f88c4b6c1.png\" data-cx=\"2552700\" data-cy=\"1562100\" style=\"width:220px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)$AD$与$BE$的数量关系是，$AD$与$BE$构成的锐角夹角$\\angle BFD$的度数是；并说明理由．<br>(2)深入探究，将图$1$中的$AD$延长至点$G$，使$FG=BF$，连接$BG$，$CG$，如图$2$所示．求证：$GA$平分$\\angle BGC$（第一问的结论，本问可直接使用）",
         "options": [],
         "answer": "(1)$AD=BE$，$60^\\circ$<br>∵$\\triangle ABC$是等边三角形，<br>$\\therefore AB=CA, \\angle BAE=\\angle C=60^\\circ$，<br>在$\\triangle ACD$和$\\triangle BAE$中，<br>${\\begin{cases}CA=AB \\\\ \\angle C=\\angle BAE \\\\ CD=AE\\end{cases}$，<br>$\\therefore \\triangle ACD\\cong \\triangle BAE(SAS)$，<br>$\\therefore AD=BE, \\angle CAD=\\angle ABE$，<br>$\\therefore \\angle BFD=\\angle ABE+\\angle BAD=\\angle CAD+\\angle BAD=\\angle BAC=60^\\circ$，<br>故答案为：$AD=BE$，$60^\\circ$；<br>(2)<br>证明：由（1）可知，$\\angle BFD=60^\\circ$，<br>$\\therefore \\angle AFB=120^\\circ$，<br>$\\because FG=BF$，<br>∴$\\triangle BFG$是等边三角形，<br>$\\therefore BF=BG, \\angle FBG=\\angle BGF=60^\\circ$，<br>∵$\\triangle ABC$是等边三角形，<br>$\\therefore AB=CB, \\angle ABC=60^\\circ$，<br>$\\therefore \\angle ABC=\\angle FBG$，<br>$\\therefore \\angle ABC-\\angle FBD=\\angle FBG-\\angle FBD$，<br>即$\\angle ABF=\\angle CBG$，<br>$\\therefore \\triangle ABF\\cong \\triangle CBG(SAS)$，<br>$\\therefore \\angle AFB=\\angle CGB=120^\\circ$，<br>$\\therefore \\angle CGF=\\angle CGB-\\angle FGB=120^\\circ -60^\\circ =60^\\circ$，<br>$\\therefore \\angle BGF=\\angle CGF$，<br>$\\thereforeGA$平分$\\angle BGC$．",
         "analysis": "本题考查了全等三角形的判定与性质、等边三角形的判定与性质、等腰三角形的性质，角平分线的判定与性质等知识，熟练掌握等边三角形的判定与性质和等腰三角形的性质，证明三角形全等是解题的关键．<br>（1）证$\\triangle ACD\\cong \\triangle BAE(SAS)$．得$AD=BE$，$\\angle CAD=\\angle ABE$，再由三角形的外角性质得$\\angle BFD=\\angle ABE+\\angle BAD=\\angle BAC=60^\\circ$即可；<br>（2）证$\\triangle BFG$是等边三角形，得$BF=BG$，$\\angle FBG=\\angle BGF=60^\\circ$，再证$\\triangle ABF\\cong \\triangle CBG(SAS)$，得$\\angle AFB=\\angle CGB=120^\\circ$，即可解决问题．",
@@ -17462,9 +17462,9 @@
         "difficulty": "中等",
         "knowledge": "全等的性质和SAS综合（SAS）、等边三角形的判定和性质、含30度角的直角三角形",
         "chapter": "15.3.4 等边三角形的判定",
-        "stem": "如图$1$，在$\\triangle ABC$中，$\\angle B=60^\\circ$，点$M$从点$B$出发沿射线$BC$方向，在射线$BC$上运动．在点$M$运动的过程中，连结$AM$，并以$AM$为边在射线$BC$上方，作等边$\\triangle AMN$，连结$CN$．<br><img src=\"assets/images/img_docx_953b8e755688.png\" data-cx=\"3771900\" data-cy=\"1552575\" style=\"width:396px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>（1）当$\\angle BAM=$______$^\\circ$时，$AB=2BM$；<br>（2）请添加一个条件：______，使得$\\triangle ABC$为等边三角形；<br>①如图$1$，当$\\triangle ABC$为等边三角形时，求证：$CN+CM=AC$；<br>②如图$2$，当点$M$运动到线段$BC$之外（即点$M$在线段$BC$的延长线上时），其它条件不变（$\\triangle ABC$仍为等边三角形），请写出此时线段$CN$、$CM$、$AC$满足的数量关系，并证明．",
+        "stem": "如图$1$，在$\\triangle ABC$中，$\\angle B=60^\\circ$，点$M$从点$B$出发沿射线$BC$方向，在射线$BC$上运动．在点$M$运动的过程中，连结$AM$，并以$AM$为边在射线$BC$上方，作等边$\\triangle AMN$，连结$CN$．<br><img src=\"assets/images/img_docx_953b8e755688.png\" data-cx=\"3771900\" data-cy=\"1552575\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>（1）当$\\angle BAM=$______$^\\circ$时，$AB=2BM$；<br>（2）请添加一个条件：______，使得$\\triangle ABC$为等边三角形；<br>①如图$1$，当$\\triangle ABC$为等边三角形时，求证：$CN+CM=AC$；<br>②如图$2$，当点$M$运动到线段$BC$之外（即点$M$在线段$BC$的延长线上时），其它条件不变（$\\triangle ABC$仍为等边三角形），请写出此时线段$CN$、$CM$、$AC$满足的数量关系，并证明．",
         "options": [],
-        "answer": "（1）$30$；<br>（2）$AB=AC$，<br>$①$证明：如图$1$中，<br><img src=\"assets/images/img_docx_60eed3705b35.png\" data-cx=\"1714500\" data-cy=\"1485900\" style=\"width:180px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">$\\because \\triangle ABC$与$\\triangle AMN$是等边三角形，<br>$\\therefore AB=AC$，$AM=AN$，$\\angle BAC=\\angle MAN=60^\\circ$，<br>$\\therefore \\angle BAC-\\angle MAC=\\angle MAN-\\angle MAC$，<br>即$\\angle BAM=\\angle CAN$，<br>在$\\triangle BAM$与$\\triangle CAN$中，<br>${\\begin{cases}AB=AC \\\\ \\angle BAM=\\angle CAN \\\\ AM=AN\\end{cases}$，<br>$\\therefore \\triangle BAM\\cong \\triangle CAN(SAS)$，<br>$\\therefore BM=CN$，<br>$\\therefore AC=BC=BM+CM=CN+CM$．<br>$②$结论：$AC=CN-CM$．<br>理由：如图$2$中，<br><img src=\"assets/images/img_docx_a02e7eaf8bc6.png\" data-cx=\"1695450\" data-cy=\"1381125\" style=\"width:178px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">$\\because \\triangle ABC$与$\\triangle AMN$是等边三角形，<br>$\\therefore AB=AC$，$AM=AN$，$\\angle BAC=\\angle MAN=60^\\circ$，<br>$\\therefore \\angle BAC+\\angle MAC=\\angle MAN+\\angle MAC$，<br>即$\\angle BAM=\\angle CAN$，<br>在$\\triangle BAM$与$\\triangle CAN$中，<br>${\\begin{cases}AB=AC \\\\ \\angle BAM=\\angle CAN \\\\ AM=AN\\end{cases}$，<br>$\\therefore \\triangle BAM\\cong \\triangle CAN(SAS)$，<br>$\\therefore BM=CN$，<br>$\\therefore AC=BC=BM-CM=CN-CM$．",
+        "answer": "（1）$30$；<br>（2）$AB=AC$，<br>$①$证明：如图$1$中，<br><img src=\"assets/images/img_docx_60eed3705b35.png\" data-cx=\"1714500\" data-cy=\"1485900\" style=\"width:165px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">$\\because \\triangle ABC$与$\\triangle AMN$是等边三角形，<br>$\\therefore AB=AC$，$AM=AN$，$\\angle BAC=\\angle MAN=60^\\circ$，<br>$\\therefore \\angle BAC-\\angle MAC=\\angle MAN-\\angle MAC$，<br>即$\\angle BAM=\\angle CAN$，<br>在$\\triangle BAM$与$\\triangle CAN$中，<br>${\\begin{cases}AB=AC \\\\ \\angle BAM=\\angle CAN \\\\ AM=AN\\end{cases}$，<br>$\\therefore \\triangle BAM\\cong \\triangle CAN(SAS)$，<br>$\\therefore BM=CN$，<br>$\\therefore AC=BC=BM+CM=CN+CM$．<br>$②$结论：$AC=CN-CM$．<br>理由：如图$2$中，<br><img src=\"assets/images/img_docx_a02e7eaf8bc6.png\" data-cx=\"1695450\" data-cy=\"1381125\" style=\"width:178px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">$\\because \\triangle ABC$与$\\triangle AMN$是等边三角形，<br>$\\therefore AB=AC$，$AM=AN$，$\\angle BAC=\\angle MAN=60^\\circ$，<br>$\\therefore \\angle BAC+\\angle MAC=\\angle MAN+\\angle MAC$，<br>即$\\angle BAM=\\angle CAN$，<br>在$\\triangle BAM$与$\\triangle CAN$中，<br>${\\begin{cases}AB=AC \\\\ \\angle BAM=\\angle CAN \\\\ AM=AN\\end{cases}$，<br>$\\therefore \\triangle BAM\\cong \\triangle CAN(SAS)$，<br>$\\therefore BM=CN$，<br>$\\therefore AC=BC=BM-CM=CN-CM$．",
         "analysis": "本题是三角形的综合题，考查了等边三角形的判定和性质，全等三角形的判定和性质等知识，解题的关键是根据等边三角形的性质和全等三角形的判定和性质进行解答，属于中考常考题型．<br>（1）根据含$30^\\circ$角的直角三角形的性质解答即可；<br>（2）利用等边三角形的判定解答；<br>$①$利用等边三角形的性质和全等三角形的判定证明即可；<br>$②$利用等边三角形的性质和全等三角形的判定证明即可．",
         "detail": "解：（1）当$\\angle BAM=30^\\circ$时，<br>$\\therefore \\angle AMB=180^\\circ -60^\\circ -30^\\circ =90^\\circ$，<br>$\\therefore AB=2BM$；<br>故答案为：$30$；<br>（2）添加一个条件$AB=AC$，可得$\\triangle ABC$为等边三角形；理由：<br>∵$AB=AC$，$\\angle B=60^\\circ$，<br>∴$\\triangle ABC$为等边三角形；<br>故答案为：$AB=AC$；"
     },
@@ -17592,7 +17592,7 @@
         ],
         "answer": "C",
         "analysis": "",
-        "detail": "解：如图，∵△A$_{1}$B$_{1}$A$_{2}$是等边三角形，<br>∴A$_{1}$B$_{1}$=A$_{2}$B$_{1}$，∠3=∠4=∠12=60°．<br>∴∠2=120°．<br>∵∠MON=30°，<br>∴∠1=180°－120°－30°=30°．<br>又∵∠3=60°，<br>∴∠5=180°－60°－30°=90°．<br>∵∠MON=∠1=30°，<br>∴OA$_{1}$=A$_{1}$B$_{1}$=1．<br>∴A$_{2}$B$_{1}$=1．<br>∵△A$_{2}$B$_{2}$A$_{3}$、△A$_{3}$B$_{3}$A$_{4}$是等边三角形，<br>∴∠11=∠10=60°，∠13=60°．<br>∵∠4=∠12=60°，<br>∴A$_{1}$B$_{1}$∥A$_{2}$B$_{2}$∥A$_{3}$B$_{3}$，B$_{1}$A$_{2}$∥B$_{2}$A$_{3}$．<br>∴∠1=∠6=∠7=30°，∠5=∠8=90°．<br>∴A$_{2}$B$_{2}$=2B$_{1}$A$_{2}$，B$_{3}$A$_{3}$=2B$_{2}$A$_{3}$．<br>∴A$_{3}$B$_{3}$=4B$_{1}$A$_{2}$=4，A$_{4}$B$_{4}$=8B$_{1}$A$_{2}$=8，A$_{5}$B$_{5}$=16B$_{1}$A$_{2}$=16．<br>以此类推：A$_{6}$B$_{6}$=32B$_{1}$A$_{2}$=32，即△A$_{6}$B$_{6}$A$_{7}$的边长为32．<br>故选：C．<br><img src=\"assets/images/img_docx_d18e1878dcae.png\" data-cx=\"2571750\" data-cy=\"1438275\" style=\"width:270px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>【点睛】本题主要考查了分类归纳（图形的变化类），等边三角形的性质，三角形内角和定理，平行的判定和性质，含30度角的直角三角形的性质等．"
+        "detail": "解：如图，∵△A$_{1}$B$_{1}$A$_{2}$是等边三角形，<br>∴A$_{1}$B$_{1}$=A$_{2}$B$_{1}$，∠3=∠4=∠12=60°．<br>∴∠2=120°．<br>∵∠MON=30°，<br>∴∠1=180°－120°－30°=30°．<br>又∵∠3=60°，<br>∴∠5=180°－60°－30°=90°．<br>∵∠MON=∠1=30°，<br>∴OA$_{1}$=A$_{1}$B$_{1}$=1．<br>∴A$_{2}$B$_{1}$=1．<br>∵△A$_{2}$B$_{2}$A$_{3}$、△A$_{3}$B$_{3}$A$_{4}$是等边三角形，<br>∴∠11=∠10=60°，∠13=60°．<br>∵∠4=∠12=60°，<br>∴A$_{1}$B$_{1}$∥A$_{2}$B$_{2}$∥A$_{3}$B$_{3}$，B$_{1}$A$_{2}$∥B$_{2}$A$_{3}$．<br>∴∠1=∠6=∠7=30°，∠5=∠8=90°．<br>∴A$_{2}$B$_{2}$=2B$_{1}$A$_{2}$，B$_{3}$A$_{3}$=2B$_{2}$A$_{3}$．<br>∴A$_{3}$B$_{3}$=4B$_{1}$A$_{2}$=4，A$_{4}$B$_{4}$=8B$_{1}$A$_{2}$=8，A$_{5}$B$_{5}$=16B$_{1}$A$_{2}$=16．<br>以此类推：A$_{6}$B$_{6}$=32B$_{1}$A$_{2}$=32，即△A$_{6}$B$_{6}$A$_{7}$的边长为32．<br>故选：C．<br><img src=\"assets/images/img_docx_d18e1878dcae.png\" data-cx=\"2571750\" data-cy=\"1438275\" style=\"width:220px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>【点睛】本题主要考查了分类归纳（图形的变化类），等边三角形的性质，三角形内角和定理，平行的判定和性质，含30度角的直角三角形的性质等．"
     },
     {
         "id": "ch15_3_5_7",
@@ -17668,7 +17668,7 @@
         "difficulty": "中等",
         "knowledge": "全等的性质和ASA（AAS）综合（ASA或者AAS）、等边三角形的性质、等腰三角形的性质和判定、含30度角的直角三角形",
         "chapter": "15.3.5 30°角的直角三角形的性质",
-        "stem": "已知，在等边△$ABC$中，$D$、$E$分别为$AC$、$BC$边上的点，$BE=CD$，连接$AE$、$BD$相交于点$F$．<br><img src=\"assets/images/img_docx_0c0dca60e5d6.png\" data-cx=\"2724150\" data-cy=\"1447800\" style=\"width:286px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)如图1，求$\\angle AFD$的度数；<br>(2)如图2，过点$A$作$AH\\perp BD$于$H$，若$EF=HD$，求证：$BF=HF$．",
+        "stem": "已知，在等边△$ABC$中，$D$、$E$分别为$AC$、$BC$边上的点，$BE=CD$，连接$AE$、$BD$相交于点$F$．<br><img src=\"assets/images/img_docx_0c0dca60e5d6.png\" data-cx=\"2724150\" data-cy=\"1447800\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)如图1，求$\\angle AFD$的度数；<br>(2)如图2，过点$A$作$AH\\perp BD$于$H$，若$EF=HD$，求证：$BF=HF$．",
         "options": [],
         "answer": "(1)$\\angle AFD=60^\\circ$；<br>(2)<br>证明：由（1）得：$\\triangle ABE\\cong \\triangle BCD$，<br>$BE=CD$，$AE=BD$，$\\angle AFD=60^\\circ$，<br>$\\because AH\\perp BD$，<br>∴$\\angle AHF=90^\\circ$，<br>$\\therefore \\angle FAH=90^\\circ -\\angle AFH=30^\\circ$，<br>∴$HF=\\frac{1}{2}AF$，<br>$\\because EF=HD,$<br>$\\therefore AF=BH,$<br>$\\therefore HF=\\frac{1}{2}BH,$<br>$\\therefore BF=HF$．",
         "analysis": "本题是三角形综合题目，考查了等边三角形的性质、全等三角形的判定与性质、含30°角的直角三角形的性质、等腰三角形的判定与性质等知识；熟练掌握等边三角形的性质和等腰三角形的判定与性质，证明三角形全等是解题的关键．<br>（1）由等边三角形的性质得出$AB=BC, \\angle ABC=\\angle C=60^\\circ$，证出$\\angle AEB=\\angle BDC$，证明$\\triangle ABE\\cong \\triangle BCD(AAS)$，则$\\angle BAE=\\angle CBD,$即可得解答；<br>（2）由（1）得$\\triangle ABE\\cong \\triangle BCD$，由全等三角形的性质得出$\\angle BAE=\\angle CBD$，AE=BD，求出$\\angle AFH=\\angle ABC=60^\\circ$，由直角三角形性质得出$HF=\\frac{1}{2}AF$，证出$AF=BH$，得出$HF=\\frac{1}{2}BH$，即可得出$BF=HF$；",
@@ -17684,7 +17684,7 @@
         "difficulty": "中等",
         "knowledge": "全等三角形综合问题、等边三角形的性质、含30度角的直角三角形",
         "chapter": "15.3.5 30°角的直角三角形的性质",
-        "stem": "如图1所示，在边长为$6cm$的等边$\\triangle ABC$中，动点$P$以$1cm/s$的速度从点$A$出发，沿线段$AB$向点$B$运动．设点$P$的运动时间为$t(s)$，$t>0$．<br><img src=\"assets/images/img_docx_2613f862df49.png\" data-cx=\"4124325\" data-cy=\"1266825\" style=\"width:420px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)当$t=$______时，$\\triangle PAC$是直角三角形；<br>(2)如图2，若另一动点$Q$从点$C$出发，沿线段$CA$向点$A$运动，且动点$P$，$Q$均以$1cm/s$的速度同时出发．那么当$t$取何值时，$\\triangle PAQ$是直角三角形？请说明理由；<br>(3)如图3，若另一动点$Q$从点$C$出发，沿射线$BC$方向运动，且动点$P$，$Q$均以$1cm/s$的速度同时出发，当点$P$到达终点$B$时，点$Q$也随之停止运动，连接$PQ$交$AC$于点$D$，过点$P$作$PE\\perp AC$于$E$．试问线段$DE$的长度是否变化？若变化，请说明如何变化；若不变，请求出$DE$的长度．",
+        "stem": "如图1所示，在边长为$6cm$的等边$\\triangle ABC$中，动点$P$以$1cm/s$的速度从点$A$出发，沿线段$AB$向点$B$运动．设点$P$的运动时间为$t(s)$，$t>0$．<br><img src=\"assets/images/img_docx_2613f862df49.png\" data-cx=\"4124325\" data-cy=\"1266825\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)当$t=$______时，$\\triangle PAC$是直角三角形；<br>(2)如图2，若另一动点$Q$从点$C$出发，沿线段$CA$向点$A$运动，且动点$P$，$Q$均以$1cm/s$的速度同时出发．那么当$t$取何值时，$\\triangle PAQ$是直角三角形？请说明理由；<br>(3)如图3，若另一动点$Q$从点$C$出发，沿射线$BC$方向运动，且动点$P$，$Q$均以$1cm/s$的速度同时出发，当点$P$到达终点$B$时，点$Q$也随之停止运动，连接$PQ$交$AC$于点$D$，过点$P$作$PE\\perp AC$于$E$．试问线段$DE$的长度是否变化？若变化，请说明如何变化；若不变，请求出$DE$的长度．",
         "options": [],
         "answer": "(1)$3s$<br>(2)当$t$为$2s$或$4s$时，$\\triangle PAQ$是直角三角形<br>(3)$DE$的长度不变化，为$3cm$",
         "analysis": "（1）由等边三角形的性质可得$AB=BC=AC=6cm$，$\\angle A=\\angle B=\\angle ACB=60^\\circ$，由题意可得$\\angle APC=90^\\circ$，求出$\\angle ACP=30^\\circ$，由直角三角形的性质可得$AP=\\frac{1}{2}AC=3cm$，即可得解；<br>（2）分两种情况：当$\\angle APQ=90^\\circ$时，当$\\angle AQP=90^\\circ$时，分别利用直角三角形的性质列出一元一次方程，解方程即可得解；<br>（3）过点$Q$作$QF\\perp AC$交$AC$的延长线于$F$，证明$\\triangle APE\\cong \\triangle CQF(AAS)$，得出$AE=CF$，$PE=QF$，证明$\\triangle PDE\\cong \\triangle QDE(AAS)$，得出$DE=DF=\\frac{1}{2}EF$，求出$EF=AC=6cm$，即可得解．",
@@ -17700,7 +17700,7 @@
         "difficulty": "容易",
         "knowledge": "轴对称、翻折性质、等腰三角形等边对等角、三角形外角",
         "chapter": "15.8等边对等角",
-        "stem": "如图，在$\\triangle ABC$中，点$D$在$BC$上，$AD=BD$，$\\angle B=40^\\circ$，将$\\triangle ABD$沿着$AD$翻折得到$\\triangle AED$，则$\\angle CDE$的度数是（　　）<br><img src=\"assets/images/img_186_979aae5d4499.png\" data-cx=\"2600000\" data-cy=\"1689531\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:320px;height:auto;margin:10px 0\">",
+        "stem": "如图，在$\\triangle ABC$中，点$D$在$BC$上，$AD=BD$，$\\angle B=40^\\circ$，将$\\triangle ABD$沿着$AD$翻折得到$\\triangle AED$，则$\\angle CDE$的度数是（　　）<br><img src=\"assets/images/img_186_979aae5d4499.png\" data-cx=\"2600000\" data-cy=\"1689531\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:220px;height:auto;margin:10px 0\">",
         "options": [
             "A. $20^\\circ$",
             "B. $25^\\circ$",
@@ -17721,7 +17721,7 @@
         "difficulty": "中等",
         "knowledge": "线段垂直平分线、等腰三角形等边对等角、三角形内角和",
         "chapter": "15.8等边对等角",
-        "stem": "如图，在$\\triangle ABC$中，$\\angle APC=114^\\circ$，$P$为$\\triangle ABC$内一点，过点$P$的直线$MN$分别交$AB$、$BC$于点$M$、$N$。若$M$在$PA$的垂直平分线上，$N$在$PC$的垂直平分线上，则$\\angle ABC$的度数为（　　）<br><img src=\"assets/images/img_187_b5cecf8e22c6.png\" data-cx=\"2600000\" data-cy=\"2749600\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:285px;height:auto;margin:10px 0\">",
+        "stem": "如图，在$\\triangle ABC$中，$\\angle APC=114^\\circ$，$P$为$\\triangle ABC$内一点，过点$P$的直线$MN$分别交$AB$、$BC$于点$M$、$N$。若$M$在$PA$的垂直平分线上，$N$在$PC$的垂直平分线上，则$\\angle ABC$的度数为（　　）<br><img src=\"assets/images/img_187_b5cecf8e22c6.png\" data-cx=\"2600000\" data-cy=\"2749600\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:156px;height:auto;margin:10px 0\">",
         "options": [
             "A. $48^\\circ$",
             "B. $52^\\circ$",
@@ -17742,7 +17742,7 @@
         "difficulty": "中等",
         "knowledge": "全等三角形、等腰三角形等边对等角、平行线性质",
         "chapter": "15.8等边对等角",
-        "stem": "如图，在$\\triangle ABC$中，$AB=AC$，$\\angle BAC=50^\\circ$，$\\triangle ABC\\cong\\triangle ADE$，$AB$、$CE$相交于点$F$。当$AD\\parallel CE$时，则$\\angle BAE$的大小是（　　）<br><img src=\"assets/images/img_188_22a19ab614e3.png\" data-cx=\"2600000\" data-cy=\"2088939\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:310px;height:auto;margin:10px 0\">",
+        "stem": "如图，在$\\triangle ABC$中，$AB=AC$，$\\angle BAC=50^\\circ$，$\\triangle ABC\\cong\\triangle ADE$，$AB$、$CE$相交于点$F$。当$AD\\parallel CE$时，则$\\angle BAE$的大小是（　　）<br><img src=\"assets/images/img_188_22a19ab614e3.png\" data-cx=\"2600000\" data-cy=\"2088939\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:199px;height:auto;margin:10px 0\">",
         "options": [
             "A. $20^\\circ$",
             "B. $25^\\circ$",
@@ -17763,7 +17763,7 @@
         "difficulty": "中等",
         "knowledge": "等边对等角、三角形内角和、三角形外角",
         "chapter": "15.8等边对等角",
-        "stem": "如图，在$\\triangle ABC$中，$AB=AC$，$\\angle ABN=\\angle MBC$，$BM=NM$，则$\\angle NBC$的度数是______。<br><img src=\"assets/images/img_189_fd777b68ea21.png\" data-cx=\"2600000\" data-cy=\"3297987\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:245px;height:auto;margin:10px 0\">",
+        "stem": "如图，在$\\triangle ABC$中，$AB=AC$，$\\angle ABN=\\angle MBC$，$BM=NM$，则$\\angle NBC$的度数是______。<br><img src=\"assets/images/img_189_fd777b68ea21.png\" data-cx=\"2600000\" data-cy=\"3297987\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:130px;height:auto;margin:10px 0\">",
         "options": [],
         "answer": "$60^\\circ$",
         "analysis": "设$\\angle A=x^\\circ$、$\\angle ABN=\\angle MBC=y^\\circ$。利用三角形外角性质和$BM=NM$得到等角关系，再用$AB=AC$和三角形内角和定理建立方程。",
@@ -17779,7 +17779,7 @@
         "difficulty": "较难",
         "knowledge": "等腰三角形等边对等角、三角形外角、规律探索",
         "chapter": "15.8等边对等角",
-        "stem": "如图，在$\\triangle ABA_1$中，$\\angle B=20^\\circ$，$AB=A_1B$。在$A_1B$上取一点$B_1$，延长$AA_1$到点$A_2$，使得$A_1A_2=A_1B_1$；连接$A_2B_1$，再在$A_2B_1$上取一点$B_2$，延长$A_1A_2$到点$A_3$，使得$A_2A_3=A_2B_2$；连接$A_3B_2$……按此作法进行下去，$\\angle B_nA_nA$的度数为______。<br><img src=\"assets/images/img_190_cd28dd3771fd.png\" data-cx=\"2600000\" data-cy=\"1387183\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:360px;height:auto;margin:10px 0\">",
+        "stem": "如图，在$\\triangle ABA_1$中，$\\angle B=20^\\circ$，$AB=A_1B$。在$A_1B$上取一点$B_1$，延长$AA_1$到点$A_2$，使得$A_1A_2=A_1B_1$；连接$A_2B_1$，再在$A_2B_1$上取一点$B_2$，延长$A_1A_2$到点$A_3$，使得$A_2A_3=A_2B_2$；连接$A_3B_2$……按此作法进行下去，$\\angle B_nA_nA$的度数为______。<br><img src=\"assets/images/img_190_cd28dd3771fd.png\" data-cx=\"2600000\" data-cy=\"1387183\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:273px;height:auto;margin:10px 0\">",
         "options": [],
         "answer": "$\\left(\\frac{1}{2}\\right)^{n-1}\\times80^\\circ$",
         "analysis": "本题考查等腰三角形性质、三角形外角性质和规律探索。先求出第一组角，再观察后续角度依次减半的规律。",
@@ -17795,11 +17795,11 @@
         "difficulty": "较难",
         "knowledge": "等腰三角形等边对等角、角平分线、全等三角形判定与性质",
         "chapter": "15.8等边对等角",
-        "stem": "如图，在$\\triangle ABC$中，$AB=AC$，$\\angle BAC=100^\\circ$，$BD$平分$\\angle ABC$，且$BD=AB$，连接$AD$、$DC$。<br>（1）求证：$\\angle CAD=\\angle DBC$；<br>（2）求$\\angle BDC$的度数。<br><img src=\"assets/images/img_191_3d844d310cd1.png\" data-cx=\"2600000\" data-cy=\"1239005\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:330px;height:auto;margin:10px 0\">",
+        "stem": "如图，在$\\triangle ABC$中，$AB=AC$，$\\angle BAC=100^\\circ$，$BD$平分$\\angle ABC$，且$BD=AB$，连接$AD$、$DC$。<br>（1）求证：$\\angle CAD=\\angle DBC$；<br>（2）求$\\angle BDC$的度数。<br><img src=\"assets/images/img_191_3d844d310cd1.png\" data-cx=\"2600000\" data-cy=\"1239005\" alt=\"题目配图\" style=\"display:block;max-width:100%;width:273px;height:auto;margin:10px 0\">",
         "options": [],
         "answer": "（1）见解析；（2）$\\angle BDC=130^\\circ$",
         "analysis": "先利用等腰三角形的性质和角平分线求出相关角，再在第（2）问中延长$AD$构造全等三角形。",
-        "detail": "（1）证明：因为$AB=AC$、$\\angle BAC=100^\\circ$，所以$\\angle ABC=\\angle ACB=40^\\circ$。<br>因为$BD$平分$\\angle ABC$，所以$\\angle ABD=\\angle DBC=20^\\circ$。<br>又因为$BD=AB$，所以$\\angle ADB=\\angle DAB=\\frac{180^\\circ-20^\\circ}{2}=80^\\circ$。<br>所以$\\angle CAD=\\angle BAC-\\angle DAB=100^\\circ-80^\\circ=20^\\circ=\\angle DBC$，得证。<br><br>（2）解：延长$AD$到点$E$，使得$AE=BC$，连接$CE$。<br><img src=\"assets/images/img_192_61abb806964b.png\" alt=\"第6题辅助线：延长AD至E并连接CE的示意图\" style=\"display:block;max-width:100%;width:250px;height:auto;margin:10px 0\"><br>因为$BD=AB=AC$，且$\\angle CAD=\\angle DBC$，所以$\\triangle DBC\\cong\\triangle CAE$（SAS）。<br>所以$CD=CE$，$\\angle BDC=\\angle ACE$，且$\\angle CDE=\\angle CED$。设$\\angle CDE=\\angle CED=\\alpha$。<br>因为$\\angle ADB=80^\\circ$，所以$\\angle BDE=180^\\circ-80^\\circ=100^\\circ$，从而$\\angle BDC=\\angle ACE=100^\\circ+\\alpha$。<br>在$\\triangle ACE$中，$\\angle CAE+\\angle ACE+\\angle AEC=180^\\circ$，即$20^\\circ+(100^\\circ+\\alpha)+\\alpha=180^\\circ$。<br>解得$\\alpha=30^\\circ$，所以$\\angle BDC=100^\\circ+30^\\circ=130^\\circ$。"
+        "detail": "（1）证明：因为$AB=AC$、$\\angle BAC=100^\\circ$，所以$\\angle ABC=\\angle ACB=40^\\circ$。<br>因为$BD$平分$\\angle ABC$，所以$\\angle ABD=\\angle DBC=20^\\circ$。<br>又因为$BD=AB$，所以$\\angle ADB=\\angle DAB=\\frac{180^\\circ-20^\\circ}{2}=80^\\circ$。<br>所以$\\angle CAD=\\angle BAC-\\angle DAB=100^\\circ-80^\\circ=20^\\circ=\\angle DBC$，得证。<br><br>（2）解：延长$AD$到点$E$，使得$AE=BC$，连接$CE$。<br><img src=\"assets/images/img_192_61abb806964b.png\" alt=\"第6题辅助线：延长AD至E并连接CE的示意图\" style=\"display:block;max-width:100%;width:203px;height:auto;margin:10px 0\"><br>因为$BD=AB=AC$，且$\\angle CAD=\\angle DBC$，所以$\\triangle DBC\\cong\\triangle CAE$（SAS）。<br>所以$CD=CE$，$\\angle BDC=\\angle ACE$，且$\\angle CDE=\\angle CED$。设$\\angle CDE=\\angle CED=\\alpha$。<br>因为$\\angle ADB=80^\\circ$，所以$\\angle BDE=180^\\circ-80^\\circ=100^\\circ$，从而$\\angle BDC=\\angle ACE=100^\\circ+\\alpha$。<br>在$\\triangle ACE$中，$\\angle CAE+\\angle ACE+\\angle AEC=180^\\circ$，即$20^\\circ+(100^\\circ+\\alpha)+\\alpha=180^\\circ$。<br>解得$\\alpha=30^\\circ$，所以$\\angle BDC=100^\\circ+30^\\circ=130^\\circ$。"
     },
     {
         "id": "iso_7",
@@ -17811,11 +17811,11 @@
         "difficulty": "较难",
         "knowledge": "等腰三角形等边对等角、三角形内角和、三角形外角、分类讨论",
         "chapter": "15.8等边对等角",
-        "stem": "如图，在$\\triangle ABC$中，$\\angle ABC=\\angle ACB$，点$D$在$BC$所在直线上，点$E$在射线$AC$上，且$AD=AE$，连接$DE$。<br>（1）若$\\angle B=\\angle C=35^\\circ$，$\\angle BAD=80^\\circ$，求$\\angle CDE$的度数；<br>（2）若$\\angle ABC=\\angle ACB=75^\\circ$，$\\angle CDE=18^\\circ$，求$\\angle BAD$的度数；<br>（3）当点$D$在直线$BC$上（不与点$B$、$C$重合）运动时，试探究$\\angle BAD$与$\\angle CDE$的数量关系，并说明理由。<br><br><img src=\"assets/images/img_193_d1e6c5bd4a19.png\" alt=\"第7题题干配图：点D在直线BC不同位置的三种情况\" style=\"display:block;max-width:100%;width:680px;height:auto;margin:10px 0\">",
+        "stem": "如图，在$\\triangle ABC$中，$\\angle ABC=\\angle ACB$，点$D$在$BC$所在直线上，点$E$在射线$AC$上，且$AD=AE$，连接$DE$。<br>（1）若$\\angle B=\\angle C=35^\\circ$，$\\angle BAD=80^\\circ$，求$\\angle CDE$的度数；<br>（2）若$\\angle ABC=\\angle ACB=75^\\circ$，$\\angle CDE=18^\\circ$，求$\\angle BAD$的度数；<br>（3）当点$D$在直线$BC$上（不与点$B$、$C$重合）运动时，试探究$\\angle BAD$与$\\angle CDE$的数量关系，并说明理由。<br><br><img src=\"assets/images/img_193_d1e6c5bd4a19.png\" alt=\"第7题题干配图：点D在直线BC不同位置的三种情况\" style=\"display:block;max-width:100%;width:280px;height:auto;margin:10px 0\">",
         "options": [],
         "answer": "（1）$40^\\circ$；（2）$36^\\circ$；（3）$2\\angle CDE=\\angle BAD$",
         "analysis": "前两问利用等腰三角形性质、三角形内角和与外角性质计算；第（3）问需要按点$D$位于$B$左侧、线段$BC$上、$C$右侧三种情况分类讨论。",
-        "detail": "（1）解：因为$\\angle B=\\angle C=35^\\circ$，所以$\\angle BAC=180^\\circ-35^\\circ-35^\\circ=110^\\circ$。<br>所以$\\angle DAE=\\angle BAC-\\angle BAD=110^\\circ-80^\\circ=30^\\circ$。<br>因为$AD=AE$，所以$\\angle ADE=\\angle AED=\\frac{180^\\circ-30^\\circ}{2}=75^\\circ$。<br>所以$\\angle CDE=\\angle AED-\\angle C=75^\\circ-35^\\circ=40^\\circ$。<br><br>（2）解：因为$\\angle ACB=75^\\circ$、$\\angle CDE=18^\\circ$，所以$\\angle AED=\\angle ACB-\\angle CDE=75^\\circ-18^\\circ=57^\\circ$。<br>因为$AD=AE$，所以$\\angle ADE=\\angle AED=57^\\circ$。<br>所以$\\angle ADC=\\angle ADE-\\angle CDE=57^\\circ-18^\\circ=39^\\circ$。<br>因为$\\angle ABC=\\angle ADC+\\angle BAD=75^\\circ$，所以$\\angle BAD=75^\\circ-39^\\circ=36^\\circ$。<br><br>（3）解：因为$AD=AE$，所以$\\angle ADE=\\angle AED$。设$\\angle ABC=\\angle ACB=y^\\circ$，$\\angle ADE=\\angle AED=x^\\circ$，$\\angle CDE=\\alpha$，$\\angle BAD=\\beta$。<br>① 当点$D$在点$B$的左侧时，$\\angle ADC=x^\\circ-\\alpha$。由三角形外角性质得$y=x+\\alpha$，$y=x-\\alpha+\\beta$，两式相减得$2\\alpha-\\beta=0$，即$2\\alpha=\\beta$。<br>② 当点$D$在线段$BC$上时，$\\angle ADC=x^\\circ+\\alpha$。由三角形外角性质得$x+\\alpha=y+\\beta$，$x=y+\\alpha$，两式相减得$2\\alpha-\\beta=0$，即$2\\alpha=\\beta$。<br>③ 当点$D$在点$C$的右侧时，$\\angle ADC=x^\\circ-\\alpha$。由三角形内角和与外角性质得$x-\\alpha+y+\\beta=180^\\circ$，$x+y+\\alpha=180^\\circ$，两式相减得$2\\alpha-\\beta=0$，即$2\\alpha=\\beta$。<br>综上，$2\\angle CDE=\\angle BAD$。<br><img src=\"assets/images/img_194_654a248df54e.png\" alt=\"第7题解析配图：三种位置情况下的角度关系图\" style=\"display:block;max-width:100%;width:480px;height:auto;margin:10px 0\">"
+        "detail": "（1）解：因为$\\angle B=\\angle C=35^\\circ$，所以$\\angle BAC=180^\\circ-35^\\circ-35^\\circ=110^\\circ$。<br>所以$\\angle DAE=\\angle BAC-\\angle BAD=110^\\circ-80^\\circ=30^\\circ$。<br>因为$AD=AE$，所以$\\angle ADE=\\angle AED=\\frac{180^\\circ-30^\\circ}{2}=75^\\circ$。<br>所以$\\angle CDE=\\angle AED-\\angle C=75^\\circ-35^\\circ=40^\\circ$。<br><br>（2）解：因为$\\angle ACB=75^\\circ$、$\\angle CDE=18^\\circ$，所以$\\angle AED=\\angle ACB-\\angle CDE=75^\\circ-18^\\circ=57^\\circ$。<br>因为$AD=AE$，所以$\\angle ADE=\\angle AED=57^\\circ$。<br>所以$\\angle ADC=\\angle ADE-\\angle CDE=57^\\circ-18^\\circ=39^\\circ$。<br>因为$\\angle ABC=\\angle ADC+\\angle BAD=75^\\circ$，所以$\\angle BAD=75^\\circ-39^\\circ=36^\\circ$。<br><br>（3）解：因为$AD=AE$，所以$\\angle ADE=\\angle AED$。设$\\angle ABC=\\angle ACB=y^\\circ$，$\\angle ADE=\\angle AED=x^\\circ$，$\\angle CDE=\\alpha$，$\\angle BAD=\\beta$。<br>① 当点$D$在点$B$的左侧时，$\\angle ADC=x^\\circ-\\alpha$。由三角形外角性质得$y=x+\\alpha$，$y=x-\\alpha+\\beta$，两式相减得$2\\alpha-\\beta=0$，即$2\\alpha=\\beta$。<br>② 当点$D$在线段$BC$上时，$\\angle ADC=x^\\circ+\\alpha$。由三角形外角性质得$x+\\alpha=y+\\beta$，$x=y+\\alpha$，两式相减得$2\\alpha-\\beta=0$，即$2\\alpha=\\beta$。<br>③ 当点$D$在点$C$的右侧时，$\\angle ADC=x^\\circ-\\alpha$。由三角形内角和与外角性质得$x-\\alpha+y+\\beta=180^\\circ$，$x+y+\\alpha=180^\\circ$，两式相减得$2\\alpha-\\beta=0$，即$2\\alpha=\\beta$。<br>综上，$2\\angle CDE=\\angle BAD$。<br><img src=\"assets/images/img_194_654a248df54e.png\" alt=\"第7题解析配图：三种位置情况下的角度关系图\" style=\"display:block;max-width:100%;width:280px;height:auto;margin:10px 0\">"
     },
     {
         "id": "ch15_9_1",
@@ -17894,7 +17894,7 @@
         "options": [],
         "answer": "18 或 2",
         "analysis": "本题考查了等腰三角形的性质；根据三线合一的性质得出 $BD = DE = 8$，然后分类讨论，即可求解。",
-        "detail": "<img src=\"assets/images/img_docx_cd4143f9c098.png\" data-cx=\"1828800\" data-cy=\"1047750\" style=\"width:192px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">【详解】<br>解：分类讨论如下：<br>① 当点 $E$ 在 $BC$ 的延长线上时：<br><br>∵ $AB = AE, AD\\perp BE$，<br>∴ $BD = DE = 8$，<br>∴ $BC = BE - CE = BE - AE = 16 - 10 = 6$，<br>∴ $CD = BD - BC = 8 - 6 = 2$；<br><br>② 当点 $E$ 在线段 $BC$ 上时：<br><img src=\"assets/images/img_docx_a35f8947b45d.png\" data-cx=\"2781300\" data-cy=\"1038225\" style=\"width:292px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>∵ $AB = AE, AD\\perp BE$，<br>∴ $BD = DE = 8$，<br>又 ∵ $EC = EA = AB = 10$，<br>∴ $CD = CE + DE = 10 + 8 = 18$。<br>故答案为：2 或 18。"
+        "detail": "<img src=\"assets/images/img_docx_cd4143f9c098.png\" data-cx=\"1828800\" data-cy=\"1047750\" style=\"width:192px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">【详解】<br>解：分类讨论如下：<br>① 当点 $E$ 在 $BC$ 的延长线上时：<br><br>∵ $AB = AE, AD\\perp BE$，<br>∴ $BD = DE = 8$，<br>∴ $BC = BE - CE = BE - AE = 16 - 10 = 6$，<br>∴ $CD = BD - BC = 8 - 6 = 2$；<br><br>② 当点 $E$ 在线段 $BC$ 上时：<br><img src=\"assets/images/img_docx_a35f8947b45d.png\" data-cx=\"2781300\" data-cy=\"1038225\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>∵ $AB = AE, AD\\perp BE$，<br>∴ $BD = DE = 8$，<br>又 ∵ $EC = EA = AB = 10$，<br>∴ $CD = CE + DE = 10 + 8 = 18$。<br>故答案为：2 或 18。"
     },
     {
         "id": "ch15_9_5",
@@ -17926,7 +17926,7 @@
         "options": [],
         "answer": "见详解",
         "analysis": "本题考查了垂直平分线的性质及等腰三角形的性质，根据等腰三角形的性质可得 $BD = CD, AD\\perp BC$，从而得出 $BE = CE$，再根据垂直平分线的性质可得 $AE = CE$，最后根据等量代换即可得证。",
-        "detail": "<img src=\"assets/images/img_docx_b924d719427b.png\" data-cx=\"1162050\" data-cy=\"1590675\" style=\"width:122px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">【详解】<br>证明：连接 $EC$。<br><br>∵ $AB = AC$，点 $D$ 是 $BC$ 边上的中点，<br>∴ $BD = CD, AD\\perp BC$，<br>∴ $AD$ 是线段 $BC$ 的垂直平分线，<br>∴ $BE = CE$。<br>∵ $EF$ 是线段 $AC$ 的垂直平分线，<br>∴ $AE = CE$，<br>∴ $AE = BE$。"
+        "detail": "<img src=\"assets/images/img_docx_b924d719427b.png\" data-cx=\"1162050\" data-cy=\"1590675\" style=\"width:121px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">【详解】<br>证明：连接 $EC$。<br><br>∵ $AB = AC$，点 $D$ 是 $BC$ 边上的中点，<br>∴ $BD = CD, AD\\perp BC$，<br>∴ $AD$ 是线段 $BC$ 的垂直平分线，<br>∴ $BE = CE$。<br>∵ $EF$ 是线段 $AC$ 的垂直平分线，<br>∴ $AE = CE$，<br>∴ $AE = BE$。"
     },
     {
         "id": "ch15_9_7",
@@ -17958,7 +17958,7 @@
         "options": [],
         "answer": "(1) ①见解析； ②$AM = \\frac{1}{2}DE$；  (2) 见解析",
         "analysis": "本题考查全等三角形的判定和性质，等腰三角形的性质，三角形的面积等知识，通过辅助线构造全等三角形是解答本题的关键。<br>(1) ①如图 1，过点 $A$ 作 $AF\\perp DE$ 于 $F$，先根据等量代换可得：$AE = AD$，由等腰三角形三线合一的性质可得：$\\angle EAF = \\frac{1}{2}\\angle EAD$，$\\angle BAM = \\frac{1}{2}\\angle BAC$，则 $\\angle EAF + \\angle BAM = 90^\\circ$，最后由同角的余角可得结论；<br>②如图 1，过点 $A$ 作 $AF\\perp DE$ 于 $F$，根据 AAS 证明 $\\triangle AFE \\cong  \\triangle CMA$，得 $AM = EF$，由等腰三角形三线合一的性质可得：$AM = \\frac{1}{2}DE$；<br>(2) 延长 $EA$ 至 $N$，使 $AN = AE$，连接 $DN$，根据三角形的中线平分三角形的面积可得：$S_{\\triangle AED} = S_{\\triangle ADN}$，证明 $\\triangle ABC \\cong  \\triangle ADN (SAS)$，则 $S_{\\triangle ABC} = S_{\\triangle ADN}$，从而可得结论。",
-        "detail": "<img src=\"assets/images/img_docx_3bc8a24ea258.png\" data-cx=\"1238250\" data-cy=\"1381125\" style=\"width:130px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">【详解】<br>(1) ① 证明：<br>如图 1，过点 $A$ 作 $AF\\perp DE$ 于 $F$。<br><br>∵ $AE = AC, AD = AB, AB = AC$，<br>∴ $AE = AD$，<br>∴ $\\angle EAF = \\frac{1}{2}\\angle EAD$，<br>∵ $AB = AC, AM\\perp BC$，<br>∴ $\\angle BAM = \\frac{1}{2}\\angle BAC$，<br>∵ $\\angle EAD + \\angle BAC = 180^\\circ$，<br>∴ $\\angle EAF + \\angle BAM = 90^\\circ$。<br>∵ $\\angle AFE = 90^\\circ  ⇒ \\angle EAF + \\angle E = 90^\\circ$，<br>∴ $\\angle E = \\angle BAM$。<br>② 解：<br>$AM = \\frac{1}{2}DE$。理由如下：<br>如图 1，过点 $A$ 作 $AF\\perp DE$ 于 $F$。<br>∵ $AB = AC, AM\\perp BC$，<br>∴ $\\angle BAM = \\angle CAM$，<br>∴ $\\angle E = \\angle CAM$，<br>在 $\\triangle AFE$ 与 $\\triangle CMA$ 中，<br>$\\angle AFE = \\angle CMA = 90^\\circ , \\angle E = \\angle CAM, AE = CA$，<br>∴ $\\triangle AFE \\cong  \\triangle CMA (AAS)$，<br>∴ $AM = EF$，<br>∵ $EF = DF = \\frac{1}{2}DE$，<br>∴ $AM = \\frac{1}{2}DE$。<br>(2) 证明：<br>延长 $EA$ 至 $N$，使 $AN = AE$，连接 $DN$。<br><img src=\"assets/images/img_docx_e7d97aba7a67.png\" data-cx=\"1495425\" data-cy=\"1619250\" style=\"width:157px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>∵ $DA$ 是 $\\triangle EDN$ 的中线，<br>∴ $S_{\\triangle AED} = S_{\\triangle ADN}$。<br>∵ $\\angle EAD + \\angle DAN = 180^\\circ , \\angle BAC + \\angle EAD = 180^\\circ$，<br>∴ $\\angle DAN = \\angle BAC$。<br>∵ $AE = AC, AE = AN$，<br>∴ $AC = AN$。<br>在 $\\triangle ABC$ 与 $\\triangle ADN$ 中，<br>$AB = AD, \\angle BAC = \\angle DAN, AC = AN$，<br>∴ $\\triangle ABC \\cong  \\triangle ADN (SAS)$，<br>∴ $S_{\\triangle ABC} = S_{\\triangle ADN}$，<br>∴ $S_{\\triangle ABC} = S_{\\triangle ADE}$。"
+        "detail": "<img src=\"assets/images/img_docx_3bc8a24ea258.png\" data-cx=\"1238250\" data-cy=\"1381125\" style=\"width:130px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">【详解】<br>(1) ① 证明：<br>如图 1，过点 $A$ 作 $AF\\perp DE$ 于 $F$。<br><br>∵ $AE = AC, AD = AB, AB = AC$，<br>∴ $AE = AD$，<br>∴ $\\angle EAF = \\frac{1}{2}\\angle EAD$，<br>∵ $AB = AC, AM\\perp BC$，<br>∴ $\\angle BAM = \\frac{1}{2}\\angle BAC$，<br>∵ $\\angle EAD + \\angle BAC = 180^\\circ$，<br>∴ $\\angle EAF + \\angle BAM = 90^\\circ$。<br>∵ $\\angle AFE = 90^\\circ  ⇒ \\angle EAF + \\angle E = 90^\\circ$，<br>∴ $\\angle E = \\angle BAM$。<br>② 解：<br>$AM = \\frac{1}{2}DE$。理由如下：<br>如图 1，过点 $A$ 作 $AF\\perp DE$ 于 $F$。<br>∵ $AB = AC, AM\\perp BC$，<br>∴ $\\angle BAM = \\angle CAM$，<br>∴ $\\angle E = \\angle CAM$，<br>在 $\\triangle AFE$ 与 $\\triangle CMA$ 中，<br>$\\angle AFE = \\angle CMA = 90^\\circ , \\angle E = \\angle CAM, AE = CA$，<br>∴ $\\triangle AFE \\cong  \\triangle CMA (AAS)$，<br>∴ $AM = EF$，<br>∵ $EF = DF = \\frac{1}{2}DE$，<br>∴ $AM = \\frac{1}{2}DE$。<br>(2) 证明：<br>延长 $EA$ 至 $N$，使 $AN = AE$，连接 $DN$。<br><img src=\"assets/images/img_docx_e7d97aba7a67.png\" data-cx=\"1495425\" data-cy=\"1619250\" style=\"width:152px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>∵ $DA$ 是 $\\triangle EDN$ 的中线，<br>∴ $S_{\\triangle AED} = S_{\\triangle ADN}$。<br>∵ $\\angle EAD + \\angle DAN = 180^\\circ , \\angle BAC + \\angle EAD = 180^\\circ$，<br>∴ $\\angle DAN = \\angle BAC$。<br>∵ $AE = AC, AE = AN$，<br>∴ $AC = AN$。<br>在 $\\triangle ABC$ 与 $\\triangle ADN$ 中，<br>$AB = AD, \\angle BAC = \\angle DAN, AC = AN$，<br>∴ $\\triangle ABC \\cong  \\triangle ADN (SAS)$，<br>∴ $S_{\\triangle ABC} = S_{\\triangle ADN}$，<br>∴ $S_{\\triangle ABC} = S_{\\triangle ADE}$。"
     },
     {
         "id": "ch16_1_1_1",
@@ -18969,7 +18969,7 @@
         "difficulty": "容易",
         "knowledge": "单项式乘多项式的应用",
         "chapter": "16.2.2 单项式乘以多项式",
-        "stem": "如图，正方形$ABCD$的边长为4，点$E$在边$AB$上．四边形$EFGB$也为正方形，设$\\triangle AFC$的面积为$S$，则（　　）<br><img src=\"assets/images/ch16_2_2_q7.png\" style=\"max-width:240px;\">",
+        "stem": "如图，正方形$ABCD$的边长为4，点$E$在边$AB$上．四边形$EFGB$也为正方形，设$\\triangle AFC$的面积为$S$，则（　　）<br><img src=\"assets/images/ch16_2_2_q7.png\" style=\"max-width:208px;\">",
         "options": [
             "A. $S=6$",
             "B. $S=8$",
@@ -19102,7 +19102,7 @@
         "difficulty": "中等",
         "knowledge": "单项式乘多项式的应用",
         "chapter": "16.2.2 单项式乘以多项式",
-        "stem": "如图，将梯形$ABCD$分成四个三角形：$\\triangle AOD$、$\\triangle BOC$、$\\triangle AOB$、$\\triangle COD$，其中$BC$边的长是$AD$的2倍，$\\triangle AOD$的面积为15，$\\triangle BOC$的面积为18，求$\\triangle AOB$与$\\triangle COD$的面积之和．<br><img src=\"assets/images/ch16_2_2_q15.png\" style=\"max-width:240px;\">",
+        "stem": "如图，将梯形$ABCD$分成四个三角形：$\\triangle AOD$、$\\triangle BOC$、$\\triangle AOB$、$\\triangle COD$，其中$BC$边的长是$AD$的2倍，$\\triangle AOD$的面积为15，$\\triangle BOC$的面积为18，求$\\triangle AOB$与$\\triangle COD$的面积之和．<br><img src=\"assets/images/ch16_2_2_q15.png\" style=\"max-width:220px;\">",
         "options": [],
         "answer": "39",
         "analysis": "本题主要考查了整式乘法的应用和代数式的求值．先设$AD=x$，则$BC=2x$，$\\triangle AOD,\\triangle BOC$的高为$a,b$，根据题意可知$\\frac{1}{2}xa=15,\\frac{1}{2}\\times 2xb=18$，进而得出梯形的面积$(x+2x)\\times (a+b)\\times \\frac{1}{2}=\\frac{3}{2}(ax+bx)$，再整体代入求出梯形的面积，然后根据面积的差得出答案．",
@@ -19202,7 +19202,7 @@
         "difficulty": "中等",
         "knowledge": "计算多项式乘多项式",
         "chapter": "16.2.3 多项式乘以多项式",
-        "stem": "甲、乙、丙、丁四位同学在计算多项式“$(x+15)(x-$<img src=\"assets/images/ch16_2_3_q4.png\" style=\"height:1.2em;vertical-align:middle;\">$)$”时，得到了各不相同的四个结果：甲，$x^{2}-120x-2025$；乙，$x^{2}+120x-2025$；丙，$x^{2}-160x+2025$；丁，$x^{2}+160x+2025$．已知四位同学中只有1人计算正确，且“<img src=\"assets/images/ch16_2_3_q4.png\" style=\"height:1.2em;vertical-align:middle;\">”处的数字是正数．则计算结果正确的是（　　）",
+        "stem": "甲、乙、丙、丁四位同学在计算多项式“$(x+15)(x-$<img src=\"assets/images/ch16_2_3_q4.png\" style=\"width:120px;height:1.2em;vertical-align:middle;\">$)$”时，得到了各不相同的四个结果：甲，$x^{2}-120x-2025$；乙，$x^{2}+120x-2025$；丙，$x^{2}-160x+2025$；丁，$x^{2}+160x+2025$．已知四位同学中只有1人计算正确，且“<img src=\"assets/images/ch16_2_3_q4.png\" style=\"width:120px;height:1.2em;vertical-align:middle;\">”处的数字是正数．则计算结果正确的是（　　）",
         "options": [
             "A. 甲",
             "B. 乙",
@@ -19244,7 +19244,7 @@
         "difficulty": "容易",
         "knowledge": "单项式乘多项式的应用、计算多项式乘多项式",
         "chapter": "16.2.3 多项式乘以多项式",
-        "stem": "如图，综合实践课上，小明在长方形硬纸片的四个角处分别剪去边长为$x$的小正方形，再按虚线折叠，可以制成有底无盖的长方体盒子，则该长方体盒子的体积可表示为（　　）<br><img src=\"assets/images/ch16_2_3_q6.png\" style=\"max-width:240px;\">",
+        "stem": "如图，综合实践课上，小明在长方形硬纸片的四个角处分别剪去边长为$x$的小正方形，再按虚线折叠，可以制成有底无盖的长方体盒子，则该长方体盒子的体积可表示为（　　）<br><img src=\"assets/images/ch16_2_3_q6.png\" style=\"max-width:220px;\">",
         "options": [
             "A. $4x^{3}+16x^{2}-15$",
             "B. $4x^{3}-16x^{2}+15x$",
@@ -19313,7 +19313,7 @@
         "difficulty": "容易",
         "knowledge": "单项式乘多项式的应用、计算多项式乘多项式",
         "chapter": "16.2.3 多项式乘以多项式",
-        "stem": "如图，为某年某月的日历（数字隐去）其中$A,B,C,D$代表当日的数字，设$A$代表的数字为$m$，则$B\\cdot D-A\\cdot C=$____________．（用含$m$的代数式表示）<br><img src=\"assets/images/ch16_2_3_q10.png\" style=\"max-width:240px;\">",
+        "stem": "如图，为某年某月的日历（数字隐去）其中$A,B,C,D$代表当日的数字，设$A$代表的数字为$m$，则$B\\cdot D-A\\cdot C=$____________．（用含$m$的代数式表示）<br><img src=\"assets/images/ch16_2_3_q10.png\" style=\"max-width:220px;\">",
         "options": [],
         "answer": "$7m+48$",
         "analysis": "此题考查了多项式乘以多项式，单项式乘以多项式运算，解题的关键是掌握以上运算法则．设A代表的数字为m，然后表示出C代表的数字为m+7，B代表的数字为m+6，D代表的数字为m+8，然后代入B·D-A·C利用整式乘法的运算法则求解即可．",
@@ -19329,7 +19329,7 @@
         "difficulty": "容易",
         "knowledge": "多项式乘多项式与图形面积",
         "chapter": "16.2.3 多项式乘以多项式",
-        "stem": "一个大长方形由4个正方形①、②、③、④和1个小长方形⑤组成．已知大长方形面积等于48，正方形④的面积等于1，则正方形①与正方形③的面积之和为____________．<br><img src=\"assets/images/ch16_2_3_q11.png\" style=\"max-width:240px;\">",
+        "stem": "一个大长方形由4个正方形①、②、③、④和1个小长方形⑤组成．已知大长方形面积等于48，正方形④的面积等于1，则正方形①与正方形③的面积之和为____________．<br><img src=\"assets/images/ch16_2_3_q11.png\" style=\"max-width:220px;\">",
         "options": [],
         "answer": "$\\frac{53}{2}$",
         "analysis": "本题考查用代数式表示实际问题中的数量关系，完全平方公式，代数式求值．设正方形③的边长为x，则正方形②的边长为x+1，正方形①的边长为x+1+1，根据大长方形面积等于48，可找出4x^2+8x=45，进而即可得出结论．",
@@ -19393,7 +19393,7 @@
         "difficulty": "容易",
         "knowledge": "列代数式、已知字母的值 ，求代数式的值、多项式乘多项式与图形面积",
         "chapter": "16.2.3 多项式乘以多项式",
-        "stem": "如图，某小区有一块长$(3a+2b)\\text{ m}$，宽$(2a+b)\\text{ m}$的长方形空地，管理部门规划了一块长方形花园（图中阴影部分），花园的北面和东、西两面都留有宽度为$a\\text{ m}$的小路（图中空白部分）．<br><img src=\"assets/images/ch16_2_3_q15.png\" style=\"max-width:260px;\"><br>(1) 用含$a,b$的代数式表示花园的面积；<br>(2) 小区管理部门打算在花园北面和东、西两面的小路上都铺上地砖，用含$a,b$的代数式表示铺设地砖的面积；<br>(3) 若$a=5\\text{ m}$，$b=8\\text{ m}$，预计每平方米铺设地砖的价格是30元，那么购买所需地砖需要多少元？",
+        "stem": "如图，某小区有一块长$(3a+2b)\\text{ m}$，宽$(2a+b)\\text{ m}$的长方形空地，管理部门规划了一块长方形花园（图中阴影部分），花园的北面和东、西两面都留有宽度为$a\\text{ m}$的小路（图中空白部分）．<br><img src=\"assets/images/ch16_2_3_q15.png\" style=\"max-width:220px;\"><br>(1) 用含$a,b$的代数式表示花园的面积；<br>(2) 小区管理部门打算在花园北面和东、西两面的小路上都铺上地砖，用含$a,b$的代数式表示铺设地砖的面积；<br>(3) 若$a=5\\text{ m}$，$b=8\\text{ m}$，预计每平方米铺设地砖的价格是30元，那么购买所需地砖需要多少元？",
         "options": [],
         "answer": "(1) $a^{2}+3ab+2b^{2}$；<br>(2) $5a^{2}+4ab$；<br>(3) 8550元．",
         "analysis": "本题主要考查了利用整式解决实际问题，整式的混合运算，代数求值等，解题的关键是掌握整式的各运算法则．（1）根据题意列出代数式，利用多项式乘多项式进行化简即可；（2）根据题意列出代数式，利用多项式乘多项式进行化简即可；（3）代入字母数值求值即可．",
@@ -21563,7 +21563,7 @@
         "difficulty": "中等",
         "knowledge": "用代数式表示数、图形的规律；列二次函数关系式；图形类规律探索",
         "chapter": "26.1 二次函数的定义",
-        "stem": "（21-22初三上·山东青岛·检测）<br>图（1）是一个水平摆放的小正方体木块，图（2）、（3）是由这样的小正方体木块叠放而成，按照这样的规律继续叠放下去，则第n个叠放的图形中，小正方体木块总数m与n的解析式是______．<br><br><img src=\"assets/images/ch26_1_q9.png\" data-cx=\"3028950\" data-cy=\"1066800\" style=\"width:318px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
+        "stem": "（21-22初三上·山东青岛·检测）<br>图（1）是一个水平摆放的小正方体木块，图（2）、（3）是由这样的小正方体木块叠放而成，按照这样的规律继续叠放下去，则第n个叠放的图形中，小正方体木块总数m与n的解析式是______．<br><br><img src=\"assets/images/ch26_1_q9.png\" data-cx=\"3028950\" data-cy=\"1066800\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
         "options": [],
         "answer": "$m=2n^{2}−n$",
         "analysis": "图（1）中只有一层，有$(4×0+1)$个正方形，图（2）中有两层，在图（1）的基础上增加了一层，第二层有$(4×1+1)$个，图（3）中有三层，在图（2）的基础长增加了一层，第三层有$(4×2+1)$，依此类推出第n层正方形的个数，即可推出当有n层时总的正方形个数．",
@@ -21581,11 +21581,11 @@
         "difficulty": "中等",
         "knowledge": "列二次函数关系式；等边三角形的性质；用勾股定理解三角形",
         "chapter": "26.1 二次函数的定义",
-        "stem": "（2024·浙江舟山·模拟）<br>如图，正三角形$ABC$的边长为1，$D$是$AC$边上的一点，过$D$作$BC$边的垂线，交$BC$于$G$，用$x$表示线段$BG$的长度，显然线段$Rt△CGD$的面积$y$是线段长度$x$的函数，这个函数的表达式是________．<br><br><img src=\"assets/images/ch26_1_q10_stem.png\" data-cx=\"1047750\" data-cy=\"1152525\" style=\"width:140px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
+        "stem": "（2024·浙江舟山·模拟）<br>如图，正三角形$ABC$的边长为1，$D$是$AC$边上的一点，过$D$作$BC$边的垂线，交$BC$于$G$，用$x$表示线段$BG$的长度，显然线段$Rt△CGD$的面积$y$是线段长度$x$的函数，这个函数的表达式是________．<br><br><img src=\"assets/images/ch26_1_q10_stem.png\" data-cx=\"1047750\" data-cy=\"1152525\" style=\"width:110px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
         "options": [],
         "answer": "$y=\\frac{\\sqrt{3}}{2}(1−x)^{2}$",
         "analysis": "此题主要考查了等边三角形的性质，直角三角形的性质，勾股定理等，熟练掌握等边三角形的性质，理解在直角三角形中，$30°$的角所对的直角边等于斜边的一半是解决问题的关键．先求出$∠CDG=30°$，根据直角三角形的性质得$DC=2GC$，再由勾股定理可得$DG=\\sqrt{3}GC$，然后等边$△ABC$的边长为1，$BG=x$得$GC=1−x$，$DG=\\sqrt{3}(1−x)$，据此可得出函数的表达式．",
-        "detail": "解：如图，连接$BD$，<br><br><img src=\"assets/images/ch26_1_q10_sol.png\" data-cx=\"1057275\" data-cy=\"1162050\" style=\"width:140px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>$∵△ABC$为等边三角形，<br>$∴∠C=60°$，<br>$∵DG⊥BC$，<br>$∴∠CDG=30°$，<br>在$Rt△DCG$中，$∠CDG=30°$，<br>$∴DC=2GC$，<br>由勾股定理得：$DG=\\sqrt{DC^{2}−GC^{2}}=\\sqrt{3}GC$，<br>$∵$等边$△ABC$的边长为1，$BG=x$，<br>$∴GC=BC−BG=1−x$，<br>$∴$$DG=\\sqrt{3}(1−x)$，<br>∴$y=\\frac{1}{2}CG⋅DG=\\frac{1}{2}×\\sqrt{3}(1−x)^{2}=\\frac{\\sqrt{3}}{2}(1−x)^{2}$，<br>故答案为：$y=\\frac{\\sqrt{3}}{2}(1−x)^{2}$．",
+        "detail": "解：如图，连接$BD$，<br><br><img src=\"assets/images/ch26_1_q10_sol.png\" data-cx=\"1057275\" data-cy=\"1162050\" style=\"width:111px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>$∵△ABC$为等边三角形，<br>$∴∠C=60°$，<br>$∵DG⊥BC$，<br>$∴∠CDG=30°$，<br>在$Rt△DCG$中，$∠CDG=30°$，<br>$∴DC=2GC$，<br>由勾股定理得：$DG=\\sqrt{DC^{2}−GC^{2}}=\\sqrt{3}GC$，<br>$∵$等边$△ABC$的边长为1，$BG=x$，<br>$∴GC=BC−BG=1−x$，<br>$∴$$DG=\\sqrt{3}(1−x)$，<br>∴$y=\\frac{1}{2}CG⋅DG=\\frac{1}{2}×\\sqrt{3}(1−x)^{2}=\\frac{\\sqrt{3}}{2}(1−x)^{2}$，<br>故答案为：$y=\\frac{\\sqrt{3}}{2}(1−x)^{2}$．",
         "proceduralKnowledge": "【二次函数概念判定与求参程序】第一步：将函数表达式去括号、移项并整理成一般形式 $y=ax^2+bx+c$；第二步：检查最高次数必须为2，且二次项系数 $a\\ne 0$；第三步：根据题意列出关于字母参数的等式与不等式组并求解．",
         "conditionalKnowledge": "当题目要求识别二次函数、判断二次函数个数或根据二次函数定义确定参数取值时，必须同时满足两个约束：二次项指数等于2，且二次项系数绝对不为零．"
     },
@@ -21781,7 +21781,7 @@
         "difficulty": "中等",
         "knowledge": "二次函数图象与各项系数符号；y=ax²的图象和性质",
         "chapter": "26.2.1 二次函数y=ax²的图象和性质",
-        "stem": "四个二次函数的图象对应的函数关系式分别是①$y=ax^{2}$；②$y=bx^{2}$；③$y=cx^{2}$；④$y=dx^{2}$．则$a,b,c,d$的大小关系为（ ）<br><br><img src=\"assets/images/ch26_2_1_q5.png\" data-cx=\"1645920\" data-cy=\"1754333\" style=\"width:180px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
+        "stem": "四个二次函数的图象对应的函数关系式分别是①$y=ax^{2}$；②$y=bx^{2}$；③$y=cx^{2}$；④$y=dx^{2}$．则$a,b,c,d$的大小关系为（ ）<br><br><img src=\"assets/images/ch26_2_1_q5.png\" data-cx=\"1645920\" data-cy=\"1754333\" style=\"width:155px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
         "options": [
             "A．$a>b>c>d$",
             "B．$a>b>d>c$",
@@ -21804,7 +21804,7 @@
         "difficulty": "较易",
         "knowledge": "y=ax²的图象和性质",
         "chapter": "26.2.1 二次函数y=ax²的图象和性质",
-        "stem": "抛物线$C_{1}:y=5x^{2},C_{2}:y=ax^{2},C_{3}:y=\\frac{3}{2}x^{2}$如图所示．若a的值为整数，则a的值为________．<br><br><img src=\"assets/images/ch26_2_1_q6.png\" data-cx=\"1645920\" data-cy=\"1645920\" style=\"width:180px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
+        "stem": "抛物线$C_{1}:y=5x^{2},C_{2}:y=ax^{2},C_{3}:y=\\frac{3}{2}x^{2}$如图所示．若a的值为整数，则a的值为________．<br><br><img src=\"assets/images/ch26_2_1_q6.png\" data-cx=\"1645920\" data-cy=\"1645920\" style=\"width:165px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
         "options": [],
         "answer": "2或3或4",
         "analysis": "本题主要考查了二次函数$y=ax^{2}(a≠0)$的图象．根据二次函数$y=ax^{2}(a≠0)$的图象解答即可．",
@@ -21876,7 +21876,7 @@
         "difficulty": "中等",
         "knowledge": "两个二次函数图象综合判断；y=ax²的图象和性质",
         "chapter": "26.2.1 二次函数y=ax²的图象和性质",
-        "stem": "二次函数$y_{1}=(1−m)x^{2}$，$y_{2}=(m−2)x^{2}$的图象在同一平面直角坐标系下如图所示，则m的取值范围是________．<br><br><img src=\"assets/images/ch26_2_1_q10.png\" data-cx=\"1645920\" data-cy=\"1519765\" style=\"width:180px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
+        "stem": "二次函数$y_{1}=(1−m)x^{2}$，$y_{2}=(m−2)x^{2}$的图象在同一平面直角坐标系下如图所示，则m的取值范围是________．<br><br><img src=\"assets/images/ch26_2_1_q10.png\" data-cx=\"1645920\" data-cy=\"1519765\" style=\"width:165px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
         "options": [],
         "answer": "$\\frac{3}{2}<m<2$",
         "analysis": "本题考查了二次函数的图象与性质，结合题意，可知两个二次函数图象的开口向下，那么${1−m<0m−2<0$，当$x>0$时，$y_{2}>y_{1}$，从而得到$m−2>1−m$，最后解得答案．",
@@ -21896,9 +21896,9 @@
         "chapter": "26.2.1 二次函数y=ax²的图象和性质",
         "stem": "画出下列函数的图象：(1)$y=3x^{2}$；(2)$y=−\\frac{1}{3}x^{2}$",
         "options": [],
-        "answer": "(1)<br><img src=\"assets/images/ch26_2_1_q11_ans1.png\" data-cx=\"1463040\" data-cy=\"2444458\" style=\"width:170px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>(2)<br><img src=\"assets/images/ch26_2_1_q11_ans2.png\" data-cx=\"1645920\" data-cy=\"1478569\" style=\"width:180px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
+        "answer": "(1)<br><img src=\"assets/images/ch26_2_1_q11_ans1.png\" data-cx=\"1463040\" data-cy=\"2444458\" style=\"width:99px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>(2)<br><img src=\"assets/images/ch26_2_1_q11_ans2.png\" data-cx=\"1645920\" data-cy=\"1478569\" style=\"width:165px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
         "analysis": "",
-        "detail": "（1）解：列表：<br><div class=\"overflow-x-auto my-3\">\n  <table class=\"w-full max-w-xl mx-auto text-center border-collapse border border-slate-300 text-sm\">\n    <tbody>\n      <tr class=\"bg-slate-50\">\n        <td class=\"border border-slate-300 py-1 px-2 font-semibold\">$x$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$\\cdots$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$-3$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$-2$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$-1$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$0$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$1$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$2$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$3$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$\\cdots$</td>\n      </tr>\n      <tr>\n        <td class=\"border border-slate-300 py-1 px-2 font-semibold\">$y$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$\\cdots$</td>\n        <td class=\"border border-slate-300 py-1 px-2 font-medium text-teal-700\">$27$</td>\n        <td class=\"border border-slate-300 py-1 px-2 font-medium text-teal-700\">$12$</td>\n        <td class=\"border border-slate-300 py-1 px-2 font-medium text-teal-700\">$3$</td>\n        <td class=\"border border-slate-300 py-1 px-2 font-medium text-teal-700\">$0$</td>\n        <td class=\"border border-slate-300 py-1 px-2 font-medium text-teal-700\">$3$</td>\n        <td class=\"border border-slate-300 py-1 px-2 font-medium text-teal-700\">$12$</td>\n        <td class=\"border border-slate-300 py-1 px-2 font-medium text-teal-700\">$27$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$\\cdots$</td>\n      </tr>\n    </tbody>\n  </table>\n</div>在平面直角坐标系中描点，然后用光滑的曲线顺次连接各点，得到函数图象如图所示：<br><img src=\"assets/images/ch26_2_1_q11_ans1.png\" data-cx=\"1463040\" data-cy=\"2444458\" style=\"width:170px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>（2）解：列表：<br><div class=\"overflow-x-auto my-3\">\n  <table class=\"w-full max-w-xl mx-auto text-center border-collapse border border-slate-300 text-sm\">\n    <tbody>\n      <tr class=\"bg-slate-50\">\n        <td class=\"border border-slate-300 py-1 px-2 font-semibold\">$x$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$\\cdots$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$-3$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$-2$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$-1$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$0$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$1$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$2$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$3$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$\\cdots$</td>\n      </tr>\n      <tr>\n        <td class=\"border border-slate-300 py-1 px-2 font-semibold\">$y$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$\\cdots$</td>\n        <td class=\"border border-slate-300 py-1 px-2 font-medium text-teal-700\">$-3$</td>\n        <td class=\"border border-slate-300 py-1 px-2 font-medium text-teal-700\">$-\\frac{4}{3}$</td>\n        <td class=\"border border-slate-300 py-1 px-2 font-medium text-teal-700\">$-\\frac{1}{3}$</td>\n        <td class=\"border border-slate-300 py-1 px-2 font-medium text-teal-700\">$0$</td>\n        <td class=\"border border-slate-300 py-1 px-2 font-medium text-teal-700\">$-\\frac{1}{3}$</td>\n        <td class=\"border border-slate-300 py-1 px-2 font-medium text-teal-700\">$-\\frac{4}{3}$</td>\n        <td class=\"border border-slate-300 py-1 px-2 font-medium text-teal-700\">$-3$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$\\cdots$</td>\n      </tr>\n    </tbody>\n  </table>\n</div>在平面直角坐标系中描点，然后用光滑的曲线顺次连接各点，得到函数图象如图所示：<br><img src=\"assets/images/ch26_2_1_q11_ans2.png\" data-cx=\"1645920\" data-cy=\"1478569\" style=\"width:180px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\">",
+        "detail": "（1）解：列表：<br><div class=\"overflow-x-auto my-3\">\n  <table class=\"w-full max-w-xl mx-auto text-center border-collapse border border-slate-300 text-sm\">\n    <tbody>\n      <tr class=\"bg-slate-50\">\n        <td class=\"border border-slate-300 py-1 px-2 font-semibold\">$x$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$\\cdots$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$-3$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$-2$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$-1$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$0$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$1$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$2$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$3$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$\\cdots$</td>\n      </tr>\n      <tr>\n        <td class=\"border border-slate-300 py-1 px-2 font-semibold\">$y$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$\\cdots$</td>\n        <td class=\"border border-slate-300 py-1 px-2 font-medium text-teal-700\">$27$</td>\n        <td class=\"border border-slate-300 py-1 px-2 font-medium text-teal-700\">$12$</td>\n        <td class=\"border border-slate-300 py-1 px-2 font-medium text-teal-700\">$3$</td>\n        <td class=\"border border-slate-300 py-1 px-2 font-medium text-teal-700\">$0$</td>\n        <td class=\"border border-slate-300 py-1 px-2 font-medium text-teal-700\">$3$</td>\n        <td class=\"border border-slate-300 py-1 px-2 font-medium text-teal-700\">$12$</td>\n        <td class=\"border border-slate-300 py-1 px-2 font-medium text-teal-700\">$27$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$\\cdots$</td>\n      </tr>\n    </tbody>\n  </table>\n</div>在平面直角坐标系中描点，然后用光滑的曲线顺次连接各点，得到函数图象如图所示：<br><img src=\"assets/images/ch26_2_1_q11_ans1.png\" data-cx=\"1463040\" data-cy=\"2444458\" style=\"width:99px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>（2）解：列表：<br><div class=\"overflow-x-auto my-3\">\n  <table class=\"w-full max-w-xl mx-auto text-center border-collapse border border-slate-300 text-sm\">\n    <tbody>\n      <tr class=\"bg-slate-50\">\n        <td class=\"border border-slate-300 py-1 px-2 font-semibold\">$x$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$\\cdots$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$-3$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$-2$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$-1$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$0$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$1$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$2$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$3$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$\\cdots$</td>\n      </tr>\n      <tr>\n        <td class=\"border border-slate-300 py-1 px-2 font-semibold\">$y$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$\\cdots$</td>\n        <td class=\"border border-slate-300 py-1 px-2 font-medium text-teal-700\">$-3$</td>\n        <td class=\"border border-slate-300 py-1 px-2 font-medium text-teal-700\">$-\\frac{4}{3}$</td>\n        <td class=\"border border-slate-300 py-1 px-2 font-medium text-teal-700\">$-\\frac{1}{3}$</td>\n        <td class=\"border border-slate-300 py-1 px-2 font-medium text-teal-700\">$0$</td>\n        <td class=\"border border-slate-300 py-1 px-2 font-medium text-teal-700\">$-\\frac{1}{3}$</td>\n        <td class=\"border border-slate-300 py-1 px-2 font-medium text-teal-700\">$-\\frac{4}{3}$</td>\n        <td class=\"border border-slate-300 py-1 px-2 font-medium text-teal-700\">$-3$</td>\n        <td class=\"border border-slate-300 py-1 px-2\">$\\cdots$</td>\n      </tr>\n    </tbody>\n  </table>\n</div>在平面直角坐标系中描点，然后用光滑的曲线顺次连接各点，得到函数图象如图所示：<br><img src=\"assets/images/ch26_2_1_q11_ans2.png\" data-cx=\"1645920\" data-cy=\"1478569\" style=\"width:165px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\">",
         "proceduralKnowledge": "【最简二次函数y=ax²图象与性质分析程序】第一步：观察系数 $a$ 的正负确定抛物线开口方向（$a>0$ 向上，$a<0$ 向下）；第二步：由 $|a|$ 大小判断开口大小（$|a|$ 越小开口越大）；第三步：利用对称轴 $x=0$ 及顶点 $(0,0)$，根据离对称轴的水平距离或增减区间比较函数值大小或极值．",
         "conditionalKnowledge": "当考察形如 $y=ax^2$ 的最简二次函数图象特征、增减性比较、系数 $a$ 的几何意义以及开口大小时，紧扣顶点在原点、关于y轴对称及系数绝对值决定开口宽窄的核心规律．"
     },
@@ -21930,9 +21930,9 @@
         "difficulty": "中等",
         "knowledge": "y=ax²的图象和性质",
         "chapter": "26.2.1 二次函数y=ax²的图象和性质",
-        "stem": "在如图所示网格内建立恰当直角坐标系后，画出函数$y=2x^{2}$和$y=−\\frac{1}{2}x^{2}$的图象，并根据图象回答下列问题(设小方格的边长为1)：<br><br><img src=\"assets/images/ch26_2_1_q13_stem.png\" data-cx=\"1737360\" data-cy=\"1737360\" style=\"width:190px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>(1)说出这两个函数图象的开口方向，对称轴和顶点坐标；(2)抛物线$y=2x^{2}$，当$x$______时，抛物线上的点都在$x$轴的上方，它的顶点是图象的最______点；(3)函数$y=−\\frac{1}{2}x^{2}$，对于一切$x$的值，总有函数$y$______0；当$x$______时，$y$有最______值是______．",
+        "stem": "在如图所示网格内建立恰当直角坐标系后，画出函数$y=2x^{2}$和$y=−\\frac{1}{2}x^{2}$的图象，并根据图象回答下列问题(设小方格的边长为1)：<br><br><img src=\"assets/images/ch26_2_1_q13_stem.png\" data-cx=\"1737360\" data-cy=\"1737360\" style=\"width:165px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>(1)说出这两个函数图象的开口方向，对称轴和顶点坐标；(2)抛物线$y=2x^{2}$，当$x$______时，抛物线上的点都在$x$轴的上方，它的顶点是图象的最______点；(3)函数$y=−\\frac{1}{2}x^{2}$，对于一切$x$的值，总有函数$y$______0；当$x$______时，$y$有最______值是______．",
         "options": [],
-        "answer": "(1)图象如图：<br><img src=\"assets/images/ch26_2_1_q13_ans.png\" data-cx=\"1920240\" data-cy=\"2028076\" style=\"width:210px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>二次函数$y=2x^{2}$的图象开口向上，对称轴为$y$轴，顶点坐标为$(0,0)$；二次函数$y=−\\frac{1}{2}x^{2}$的图象开口向下，对称轴为$y$轴，顶点坐标为$(0,0)$．<br>(2)$≠0$，低．<br>(3)$≤$，$=$，大，$0$．",
+        "answer": "(1)图象如图：<br><img src=\"assets/images/ch26_2_1_q13_ans.png\" data-cx=\"1920240\" data-cy=\"2028076\" style=\"width:156px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>二次函数$y=2x^{2}$的图象开口向上，对称轴为$y$轴，顶点坐标为$(0,0)$；二次函数$y=−\\frac{1}{2}x^{2}$的图象开口向下，对称轴为$y$轴，顶点坐标为$(0,0)$．<br>(2)$≠0$，低．<br>(3)$≤$，$=$，大，$0$．",
         "analysis": "本题考查二次函数的图象与性质，能够正确作出二次函数的图象是解题关键．<br>（1）先在网格内画出两个二次函数的图象，然后再根据图象即可知开口方向，对称轴和顶点坐标；<br>（2）根据函数$y=2x^{2}$的图象解答即可；<br>（3）根据函数$y=−\\frac{1}{2}x^{2}$的图象解答即可．",
         "detail": "（1）<br>由图可得：二次函数$y=2x^{2}$的图象开口向上，对称轴为$y$轴，顶点坐标为$(0,0)$；二次函数$y=−\\frac{1}{2}x^{2}$的图象开口向下，对称轴为$y$轴，顶点坐标为$(0,0)$．<br>（2）解：抛物线$y=2x^{2}$，当$x≠0$时，抛物线上的点都在$x$轴的上方，它的顶点是图象的最低点$(0,0)$．<br>故答案为：$≠0$，低．<br>（3）解：函数$y=−\\frac{1}{2}x^{2}$，对于一切$x$的值，总有函数$y≤0$；当$x=0$时，$y$有最大值是$0$．<br>故答案为：$≤$，$=$，大，$0$．",
         "proceduralKnowledge": "【最简二次函数y=ax²图象与性质分析程序】第一步：观察系数 $a$ 的正负确定抛物线开口方向（$a>0$ 向上，$a<0$ 向下）；第二步：由 $|a|$ 大小判断开口大小（$|a|$ 越小开口越大）；第三步：利用对称轴 $x=0$ 及顶点 $(0,0)$，根据离对称轴的水平距离或增减区间比较函数值大小或极值．",
@@ -21948,7 +21948,7 @@
         "difficulty": "中等",
         "knowledge": "y=ax²的图象和性质",
         "chapter": "26.2.1 二次函数y=ax²的图象和性质",
-        "stem": "如图，点$A(−2,1)$、$B(4,m)$在$y=ax^{2}$的图象上．直线$AB$与$y$轴交于点$C$，连接$OA$、$OB$．<br><br><img src=\"assets/images/ch26_2_1_q14.png\" data-cx=\"1920240\" data-cy=\"1634568\" style=\"width:210px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>(1)$a=$ _______；$m=$ _______；(2)求直线$AB$的函数表达式；(3)当 $−2<x<4$ 时，$y$ 的取值范围为_____．",
+        "stem": "如图，点$A(−2,1)$、$B(4,m)$在$y=ax^{2}$的图象上．直线$AB$与$y$轴交于点$C$，连接$OA$、$OB$．<br><br><img src=\"assets/images/ch26_2_1_q14.png\" data-cx=\"1920240\" data-cy=\"1634568\" style=\"width:165px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>(1)$a=$ _______；$m=$ _______；(2)求直线$AB$的函数表达式；(3)当 $−2<x<4$ 时，$y$ 的取值范围为_____．",
         "options": [],
         "answer": "(1)$\\frac{1}{4}$；4<br>(2)$y=\\frac{1}{2}x+2$；<br>(3)$0≤y<4$",
         "analysis": "此题主要考查了运用待定系数法求函数解析式，二次函数的图象及性质，熟练求解直线的解析式是解题的关键．<br>（1）将点$A(−2，1)$代入$y=ax^{2}$求出$a$的值，再将点$B(4,m)$代入求解即可；<br>（2）运用待定系数法求出直线$AB$的解析式即可；<br>（3）观察图象，利用数形结合法求解即可；",
@@ -22175,7 +22175,7 @@
         "difficulty": "中等",
         "knowledge": "y=ax²+k的图象和性质",
         "chapter": "26.2.2 y=ax²+k的图象和性质",
-        "stem": "如图，将二次函数$y=x^{2}−4$位于$x$轴下方的图象沿$x$轴翻折，再得到一个新函数的图象（图中的实线）．<br><br><img src=\"assets/images/ch26_2_2_q11.png\" data-cx=\"1181100\" data-cy=\"1247775\" style=\"width:150px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>(1)当$x=−3$时，新函数值为______，当$x=1$时，新函数值为______；<br>(2)当$x=$______时，新函数有最小值；<br>(3)当新函数中函数$y$随$x$的增大而增大时，自变量$x$的范围是______；<br>(4)若关于$x$的方程$|x^{2}−4|=a$有且只有两个解，则$a$的取值范围_______．",
+        "stem": "如图，将二次函数$y=x^{2}−4$位于$x$轴下方的图象沿$x$轴翻折，再得到一个新函数的图象（图中的实线）．<br><br><img src=\"assets/images/ch26_2_2_q11.png\" data-cx=\"1181100\" data-cy=\"1247775\" style=\"width:124px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>(1)当$x=−3$时，新函数值为______，当$x=1$时，新函数值为______；<br>(2)当$x=$______时，新函数有最小值；<br>(3)当新函数中函数$y$随$x$的增大而增大时，自变量$x$的范围是______；<br>(4)若关于$x$的方程$|x^{2}−4|=a$有且只有两个解，则$a$的取值范围_______．",
         "options": [],
         "answer": "(1)5，3<br>(2)$-2$或2<br>(3)$−2<x<0$或$x>2$<br>(4)$a>4$或$a=0$",
         "analysis": "（1）把$x=−3$和$x=1$分别代入$y=x^{2}−4$求得函数值，根据函数图象即可求得答案；<br>（2）根据函数图象即可求得；<br>（3）根据函数图象即可求得；<br>（4）根据图象求得答案即可．",
@@ -22193,7 +22193,7 @@
         "difficulty": "中等",
         "knowledge": "y=ax²的图象和性质、y=ax²+k的图象和性质",
         "chapter": "26.2.2 y=ax²+k的图象和性质",
-        "stem": "如图是二次函数$y_{1}=3x^{2}−\\frac{1}{2}$的图象，根据图象回答下列问题：<br><br><img src=\"assets/images/ch26_2_2_q12.png\" data-cx=\"1257300\" data-cy=\"1800225\" style=\"width:160px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>(1)二次函数$y=x²$的图象与$y_{1}$的图象有什么相同和不同（各写出两条）；<br>(2)若有一个二次函数的图象与$y_{1}$的图象形状相同，且不经过第三、四象限，写出一个符合条件的二次函数的表达式．",
+        "stem": "如图是二次函数$y_{1}=3x^{2}−\\frac{1}{2}$的图象，根据图象回答下列问题：<br><br><img src=\"assets/images/ch26_2_2_q12.png\" data-cx=\"1257300\" data-cy=\"1800225\" style=\"width:115px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>(1)二次函数$y=x²$的图象与$y_{1}$的图象有什么相同和不同（各写出两条）；<br>(2)若有一个二次函数的图象与$y_{1}$的图象形状相同，且不经过第三、四象限，写出一个符合条件的二次函数的表达式．",
         "options": [],
         "answer": "(1)<br>解：二次函数$y=x²$的图象与二次函数$y_{1}=3x^{2}−\\frac{1}{2}$的图象：<br>相同点是：①开口向上，②对称轴都是y轴，<br>不同点：①二次函数$y=x²$的图象的顶点是$(0,0)$，二次函数$y_{1}=3x^{2}−\\frac{1}{2}$的图象的顶点是$(0,−\\frac{1}{2})$，②开口大小不同，二次函数$y=x²$的图象的开口大于二次函数$y_{1}=3x^{2}−\\frac{1}{2}$的图象的开口；<br>(2)$y=3x^{2}$（答案不唯一）",
         "analysis": "此题考查了二次函数的图象和性质．<br>（1）根据二次函数$y=x²$的图象与二次函数$y_{1}=3x^{2}−\\frac{1}{2}$的图象进行解答即可；<br>（2）根据二次函数的图象与$y_{1}$的图象形状相同，且不经过第三、四象限，写出答案即可．",
@@ -22229,11 +22229,11 @@
         "difficulty": "中等",
         "knowledge": "用描点法画函数图象、y=ax²+k的图象和性质",
         "chapter": "26.2.2 y=ax²+k的图象和性质",
-        "stem": "已知二次函数 $y=-x^{2}+4$．<br><br><img src=\"assets/images/ch26_2_2_q14_stem.png\" data-cx=\"1905000\" data-cy=\"1981200\" style=\"width:210px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>(1) 填写下表，在上图平面直角坐标系中描出表中的点并画出函数图象．<br><div class=\"overflow-x-auto my-3\">\n  <table class=\"w-full max-w-lg mx-auto text-center border-collapse border border-slate-300 text-sm\">\n    <tbody>\n      <tr class=\"bg-slate-50\">\n        <td class=\"border border-slate-300 py-1.5 px-3 font-semibold\">$x$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$\\cdots$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$-2$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$-1$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$0$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$1$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$2$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$\\cdots$</td>\n      </tr>\n      <tr>\n        <td class=\"border border-slate-300 py-1.5 px-3 font-semibold\">$y$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$\\cdots$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3 min-w-[36px]\">&nbsp;</td>\n        <td class=\"border border-slate-300 py-1.5 px-3 min-w-[36px]\">&nbsp;</td>\n        <td class=\"border border-slate-300 py-1.5 px-3 min-w-[36px]\">&nbsp;</td>\n        <td class=\"border border-slate-300 py-1.5 px-3 min-w-[36px]\">&nbsp;</td>\n        <td class=\"border border-slate-300 py-1.5 px-3 min-w-[36px]\">&nbsp;</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$\\cdots$</td>\n      </tr>\n    </tbody>\n  </table>\n</div>(2) 利用图象写出当 $-2<x\\le 1$ 时，$y$ 的取值范围是______．",
+        "stem": "已知二次函数 $y=-x^{2}+4$．<br><br><img src=\"assets/images/ch26_2_2_q14_stem.png\" data-cx=\"1905000\" data-cy=\"1981200\" style=\"width:159px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>(1) 填写下表，在上图平面直角坐标系中描出表中的点并画出函数图象．<br><div class=\"overflow-x-auto my-3\">\n  <table class=\"w-full max-w-lg mx-auto text-center border-collapse border border-slate-300 text-sm\">\n    <tbody>\n      <tr class=\"bg-slate-50\">\n        <td class=\"border border-slate-300 py-1.5 px-3 font-semibold\">$x$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$\\cdots$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$-2$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$-1$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$0$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$1$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$2$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$\\cdots$</td>\n      </tr>\n      <tr>\n        <td class=\"border border-slate-300 py-1.5 px-3 font-semibold\">$y$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$\\cdots$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3 min-w-[36px]\">&nbsp;</td>\n        <td class=\"border border-slate-300 py-1.5 px-3 min-w-[36px]\">&nbsp;</td>\n        <td class=\"border border-slate-300 py-1.5 px-3 min-w-[36px]\">&nbsp;</td>\n        <td class=\"border border-slate-300 py-1.5 px-3 min-w-[36px]\">&nbsp;</td>\n        <td class=\"border border-slate-300 py-1.5 px-3 min-w-[36px]\">&nbsp;</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$\\cdots$</td>\n      </tr>\n    </tbody>\n  </table>\n</div>(2) 利用图象写出当 $-2<x\\le 1$ 时，$y$ 的取值范围是______．",
         "options": [],
-        "answer": "(1)填表如下：<br>x<br>…<br>$−2$<br>$−1$<br>0<br>1<br>2<br>…<br>y<br>…<br>0<br>3<br>4<br>3<br>0<br>…<br>函数图象如图所示：<br><br><img src=\"assets/images/ch26_2_2_q14_ans.png\" data-cx=\"1943100\" data-cy=\"2019300\" style=\"width:210px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>(2)$0<y≤4$",
+        "answer": "(1)填表如下：<br>x<br>…<br>$−2$<br>$−1$<br>0<br>1<br>2<br>…<br>y<br>…<br>0<br>3<br>4<br>3<br>0<br>…<br>函数图象如图所示：<br><br><img src=\"assets/images/ch26_2_2_q14_ans.png\" data-cx=\"1943100\" data-cy=\"2019300\" style=\"width:159px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>(2)$0<y≤4$",
         "analysis": "（1）根据列表、描点、连线三步作出函数图象即可；<br>（2）观察函数图象求解即可．",
-        "detail": "（1）解：当 $x=-2$ 时，$y=-(-2)^{2}+4=0$；<br>当 $x=-1$ 时，$y=-(-1)^{2}+4=3$；<br>当 $x=0$ 时，$y=-0^{2}+4=4$；<br>当 $x=1$ 时，$y=-1^{2}+4=3$；<br>当 $x=2$ 时，$y=-2^{2}+4=0$．<br>填写完整的表格如下：<br><div class=\"overflow-x-auto my-3\">\n  <table class=\"w-full max-w-lg mx-auto text-center border-collapse border border-slate-300 text-sm\">\n    <tbody>\n      <tr class=\"bg-slate-50\">\n        <td class=\"border border-slate-300 py-1.5 px-3 font-semibold\">$x$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$\\cdots$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$-2$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$-1$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$0$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$1$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$2$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$\\cdots$</td>\n      </tr>\n      <tr>\n        <td class=\"border border-slate-300 py-1.5 px-3 font-semibold\">$y$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$\\cdots$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3 font-medium text-teal-700\">$0$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3 font-medium text-teal-700\">$3$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3 font-medium text-teal-700\">$4$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3 font-medium text-teal-700\">$3$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3 font-medium text-teal-700\">$0$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$\\cdots$</td>\n      </tr>\n    </tbody>\n  </table>\n</div>在坐标系中描点并画出函数图象如图所示：<br><img src=\"assets/images/ch26_2_2_q14_ans.png\" data-cx=\"1943100\" data-cy=\"2019300\" style=\"width:210px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>（2）解：由函数图象可得：当 $-2<x\\le 1$ 时，$y$ 的取值范围是 $0<y\\le 4$．",
+        "detail": "（1）解：当 $x=-2$ 时，$y=-(-2)^{2}+4=0$；<br>当 $x=-1$ 时，$y=-(-1)^{2}+4=3$；<br>当 $x=0$ 时，$y=-0^{2}+4=4$；<br>当 $x=1$ 时，$y=-1^{2}+4=3$；<br>当 $x=2$ 时，$y=-2^{2}+4=0$．<br>填写完整的表格如下：<br><div class=\"overflow-x-auto my-3\">\n  <table class=\"w-full max-w-lg mx-auto text-center border-collapse border border-slate-300 text-sm\">\n    <tbody>\n      <tr class=\"bg-slate-50\">\n        <td class=\"border border-slate-300 py-1.5 px-3 font-semibold\">$x$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$\\cdots$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$-2$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$-1$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$0$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$1$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$2$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$\\cdots$</td>\n      </tr>\n      <tr>\n        <td class=\"border border-slate-300 py-1.5 px-3 font-semibold\">$y$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$\\cdots$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3 font-medium text-teal-700\">$0$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3 font-medium text-teal-700\">$3$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3 font-medium text-teal-700\">$4$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3 font-medium text-teal-700\">$3$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3 font-medium text-teal-700\">$0$</td>\n        <td class=\"border border-slate-300 py-1.5 px-3\">$\\cdots$</td>\n      </tr>\n    </tbody>\n  </table>\n</div>在坐标系中描点并画出函数图象如图所示：<br><img src=\"assets/images/ch26_2_2_q14_ans.png\" data-cx=\"1943100\" data-cy=\"2019300\" style=\"width:159px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>（2）解：由函数图象可得：当 $-2<x\\le 1$ 时，$y$ 的取值范围是 $0<y\\le 4$．",
         "proceduralKnowledge": "【上下平移型二次函数y=ax²+k分析程序】第一步：明确抛物线顶点坐标为 $(0,k)$，对称轴仍为直线 $x=0$（y轴）；第二步：根据 $k$ 的正负明确是由 $y=ax^2$ 向上（$k>0$）或向下（$k<0$）平移 $|k|$ 个单位得到；第三步：结合自变量取值范围及顶点最值计算函数值域或交点个数．",
         "conditionalKnowledge": "当抛物线解析式含常数项 $k$ 但无一次项时，识别为沿y轴上下平移变换，利用对称轴为y轴的轴对称性及顶点极值解决函数值比较与参数方程问题．"
     },
@@ -22247,7 +22247,7 @@
         "difficulty": "中等",
         "knowledge": "y=ax²+k的图象和性质",
         "chapter": "26.2.2 y=ax²+k的图象和性质",
-        "stem": "如图，将二次函数$y=x^{2}−4$位于$x$的下方的图象沿$x$轴翻折，再得到一个新函数的图象（图中的实线）．<br><br><img src=\"assets/images/ch26_2_2_q15.png\" data-cx=\"1276350\" data-cy=\"1323975\" style=\"width:150px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>(1)当$x=−3$时，新函数值为______，当$x=1$时，新函数值为______；<br>(2)当$x=$______时，新函数有最小值；<br>(3)当新函数中函数$y$随$x$的增大而增大时，自变量$x$的范围是______；<br>(4)直线$y=a$与新函数图象有两个公共点时，$a$的取值范围______．",
+        "stem": "如图，将二次函数$y=x^{2}−4$位于$x$的下方的图象沿$x$轴翻折，再得到一个新函数的图象（图中的实线）．<br><br><img src=\"assets/images/ch26_2_2_q15.png\" data-cx=\"1276350\" data-cy=\"1323975\" style=\"width:134px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>(1)当$x=−3$时，新函数值为______，当$x=1$时，新函数值为______；<br>(2)当$x=$______时，新函数有最小值；<br>(3)当新函数中函数$y$随$x$的增大而增大时，自变量$x$的范围是______；<br>(4)直线$y=a$与新函数图象有两个公共点时，$a$的取值范围______．",
         "options": [],
         "answer": "(1)5，3<br>(2)-2或2<br>(3)$−2<x<0$或$x>2$<br>(4)$a>4$或$a=0$",
         "analysis": "（1）把$x=−3$和$x=1$分别代入$y=x^{2}−4$求得函数值，根据函数图象即可求得答案；<br>（2）根据函数图象即可求得；<br>（3）根据函数图象即可求得；<br>（4）根据图象求得答案即可．",
@@ -22288,7 +22288,7 @@
         "difficulty": "容易",
         "knowledge": "根据实际问题列方程",
         "chapter": "5.1.1 从算式到方程",
-        "stem": "如果用“$x$”表示这周产生的可回收垃圾的质量，那么解决“这周产生的可回收垃圾的质量”这个问题，下面所列方程中不正确的是（　　）<br><img src=\"assets/images/ch5_1_1_q2.png\" data-cx=\"4754880\" data-cy=\"861882\" style=\"width:400px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
+        "stem": "如果用“$x$”表示这周产生的可回收垃圾的质量，那么解决“这周产生的可回收垃圾的质量”这个问题，下面所列方程中不正确的是（　　）<br><img src=\"assets/images/ch5_1_1_q2.png\" data-cx=\"4754880\" data-cy=\"861882\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
         "options": [
             "A．$1.5x+2=20$",
             "B．$20-1.5x=2$",
@@ -22334,7 +22334,7 @@
         "difficulty": "较易",
         "knowledge": "根据实际问题列方程",
         "chapter": "5.1.1 从算式到方程",
-        "stem": "如图，在编写数学谜题时，“口”内要求填写同一个数字，若设“口”内的数字为$y$，则可列出方程___________．<br><img src=\"assets/images/ch5_1_1_q4.png\" data-cx=\"2011680\" data-cy=\"2224368\" style=\"width:160px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
+        "stem": "如图，在编写数学谜题时，“口”内要求填写同一个数字，若设“口”内的数字为$y$，则可列出方程___________．<br><img src=\"assets/images/ch5_1_1_q4.png\" data-cx=\"2011680\" data-cy=\"2224368\" style=\"width:149px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
         "options": [],
         "answer": "$5(120+y)=100y+30$",
         "analysis": "根据竖式乘法运算的算理，将两位数和三位数用含有 $y$ 的十进制代数式表示，结合乘积列出方程即可．",
@@ -22352,7 +22352,7 @@
         "difficulty": "较易",
         "knowledge": "根据实际问题列方程",
         "chapter": "5.1.1 从算式到方程",
-        "stem": "根据题意设未知数，并列出方程．<br>(1) 一个数的$3$倍比它的$2$倍多$10$，求这个数；<br>(2) 从$60\\text{cm}$的木条上截去两段长度相等的木条后，还剩$20\\text{cm}$，求截去的一段木条的长度．<br><img src=\"assets/images/ch5_1_1_q5.png\" data-cx=\"2377440\" data-cy=\"1292676\" style=\"width:220px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
+        "stem": "根据题意设未知数，并列出方程．<br>(1) 一个数的$3$倍比它的$2$倍多$10$，求这个数；<br>(2) 从$60\\text{cm}$的木条上截去两段长度相等的木条后，还剩$20\\text{cm}$，求截去的一段木条的长度．<br><img src=\"assets/images/ch5_1_1_q5.png\" data-cx=\"2377440\" data-cy=\"1292676\" style=\"width:250px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
         "options": [],
         "answer": "(1) 设这个数为$x$，列方程为 $3x=2x+10$（或 $3x-2x=10$）；<br>(2) 设截去的一段木条的长度为$x\\text{cm}$，列方程为 $60-2x=20$（或 $2x+20=60$）．",
         "analysis": "(1) 设这个数为 $x$，根据“3倍比2倍多10”列出方程；(2) 设每段截去长度为 $x\\text{cm}$，根据“原长 - 截去总长 = 剩余长度”列出方程．",
@@ -22547,7 +22547,7 @@
         "difficulty": "容易",
         "knowledge": "一元一次方程的解的检验",
         "chapter": "5.1.1 从算式到方程",
-        "stem": "检验括号里$x$的值，哪个是方程的解？写出检验判定过程．<br>(1) $x+9=46$（$x=37$，$x=55$）；<br>(2) $5x-2=18$（$x=3$，$x=4$）；<br>(3) $6x-2.4=1.2$（$x=0.6$，$x=0.2$）；<br>(4) $2x-1.5\\times 2=8$（$x=5.5$，$x=2.5$）．<br><img src=\"assets/images/ch5_1_1_q15.png\" data-cx=\"4389120\" data-cy=\"933045\" style=\"width:380px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
+        "stem": "检验括号里$x$的值，哪个是方程的解？写出检验判定过程．<br>(1) $x+9=46$（$x=37$，$x=55$）；<br>(2) $5x-2=18$（$x=3$，$x=4$）；<br>(3) $6x-2.4=1.2$（$x=0.6$，$x=0.2$）；<br>(4) $2x-1.5\\times 2=8$（$x=5.5$，$x=2.5$）．<br><img src=\"assets/images/ch5_1_1_q15.png\" data-cx=\"4389120\" data-cy=\"933045\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
         "options": [],
         "answer": "(1) $x=37$ 是方程的解；<br>(2) $x=4$ 是方程的解；<br>(3) $x=0.6$ 是方程的解；<br>(4) $x=5.5$ 是方程的解．",
         "analysis": "根据方程的解的定义，将括号内给出的数值分别代入方程的左边和右边，若左边等于右边则是方程的解；若左边不等于右边则不是方程的解．",
@@ -22565,7 +22565,7 @@
         "difficulty": "较易",
         "knowledge": "东、南、西、北方向；根据方向、角度和距离确定物体的位置",
         "chapter": "六年级上册 第一章 确定位置单元测试（A卷）",
-        "stem": "如图，以博物馆为观测点，下列说法正确的是（ ）。<br><br><img src=\"assets/images/g6_pos_a_q1.png\" data-cx=\"1800225\" data-cy=\"762000\" style=\"width:260px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
+        "stem": "如图，以博物馆为观测点，下列说法正确的是（ ）。<br><br><img src=\"assets/images/g6_pos_a_q1.png\" data-cx=\"1800225\" data-cy=\"762000\" style=\"width:189px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
         "options": [
             "A．人民广场在南偏东70°方向上，距离是1500m",
             "B．人民广场在南偏东70°方向上，距离是3m",
@@ -22612,7 +22612,7 @@
         "difficulty": "中等",
         "knowledge": "用数对表示位置；方格纸上图形的平移问题（数对）",
         "chapter": "六年级上册 第一章 确定位置单元测试（A卷）",
-        "stem": "将如图所示的平行四边形向右平移，使点A到达（6，5）的位置，则平移后与点D对应的顶点的位置用数对表示是（ ）。<br><br><img src=\"assets/images/g6_pos_a_q3.png\" data-cx=\"2028825\" data-cy=\"1285875\" style=\"width:260px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
+        "stem": "将如图所示的平行四边形向右平移，使点A到达（6，5）的位置，则平移后与点D对应的顶点的位置用数对表示是（ ）。<br><br><img src=\"assets/images/g6_pos_a_q3.png\" data-cx=\"2028825\" data-cy=\"1285875\" style=\"width:213px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
         "options": [
             "A．（5，2）",
             "B．（2，5）",
@@ -22634,7 +22634,7 @@
         "difficulty": "中等",
         "knowledge": "用数对表示位置",
         "chapter": "六年级上册 第一章 确定位置单元测试（A卷）",
-        "stem": "如图是某小区地下停车场的局部示意图。如果汽车A的位置用数对（8，4）表示，那么汽车B的位置用数对（ ）表示。<br><br><img src=\"assets/images/g6_pos_a_q4.png\" data-cx=\"2257425\" data-cy=\"1133475\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
+        "stem": "如图是某小区地下停车场的局部示意图。如果汽车A的位置用数对（8，4）表示，那么汽车B的位置用数对（ ）表示。<br><br><img src=\"assets/images/g6_pos_a_q4.png\" data-cx=\"2257425\" data-cy=\"1133475\" style=\"width:237px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
         "options": [
             "A．（3，4）",
             "B．（2，4）",
@@ -22699,7 +22699,7 @@
         "difficulty": "较易",
         "knowledge": "根据方向、角度和距离确定物体的位置",
         "chapter": "六年级上册 第一章 确定位置单元测试（A卷）",
-        "stem": "如图，小明从家出发去学校，要向( )偏( )( )°方向，走( )米。<br><br><img src=\"assets/images/g6_pos_a_q7.png\" data-cx=\"1562100\" data-cy=\"1019175\" style=\"width:220px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
+        "stem": "如图，小明从家出发去学校，要向( )偏( )( )°方向，走( )米。<br><br><img src=\"assets/images/g6_pos_a_q7.png\" data-cx=\"1562100\" data-cy=\"1019175\" style=\"width:164px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
         "options": [],
         "answer": "东 北 30 1500",
         "analysis": "观察上图可知，图上1段表示500米，学校与小明家之间有3段长度，所以小明家与学校的距离为500×3＝1500（米），小明家在学校的西偏南30°方向1500米处，根据位置的相对性可知，学校在小明家东偏北30°方向1500米处。",
@@ -22717,7 +22717,7 @@
         "difficulty": "较易",
         "knowledge": "根据方向、角度和距离描述路线图",
         "chapter": "六年级上册 第一章 确定位置单元测试（A卷）",
-        "stem": "星期天，红红一家去动物园，他们先向( )走( )m到阳光超市，再沿( )偏( )( )°方向走( )m到书店，从书店向( )走( )m到银行，然后沿( )偏( )( )°方向走( )m到游乐园，最后从游乐园沿( )偏( )( )°方向走( )m到动物园。<br><br><img src=\"assets/images/g6_pos_a_q8.png\" data-cx=\"2581275\" data-cy=\"1057275\" style=\"width:320px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
+        "stem": "星期天，红红一家去动物园，他们先向( )走( )m到阳光超市，再沿( )偏( )( )°方向走( )m到书店，从书店向( )走( )m到银行，然后沿( )偏( )( )°方向走( )m到游乐园，最后从游乐园沿( )偏( )( )°方向走( )m到动物园。<br><br><img src=\"assets/images/g6_pos_a_q8.png\" data-cx=\"2581275\" data-cy=\"1057275\" style=\"width:271px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
         "options": [],
         "answer": "东 100 北 东 40 130 东 210 南 东 45 80 北 东 30 200",
         "analysis": "根据方向规则（上北下南，左西右东）以及图中所给出的角度和距离，描述行走路线。",
@@ -22879,9 +22879,9 @@
         "difficulty": "较易",
         "knowledge": "根据方向、角度和距离确定物体的位置",
         "chapter": "六年级上册 第一章 确定位置单元测试（A卷）",
-        "stem": "看图连一连。<br><br><img src=\"assets/images/g6_pos_a_q17.png\" data-cx=\"2771775\" data-cy=\"1495425\" style=\"width:320px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>公园在学校 东偏北 $30^\\circ$ 方向 200m处商场在学校 西偏北 $30^\\circ$ 方向 800m处邮局在学校 东偏南 $50^\\circ$ 方向 400m处广场在学校 西偏南 $45^\\circ$ 方向 600m处",
+        "stem": "看图连一连。<br><br><img src=\"assets/images/g6_pos_a_q17.png\" data-cx=\"2771775\" data-cy=\"1495425\" style=\"width:278px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>公园在学校 东偏北 $30^\\circ$ 方向 200m处商场在学校 西偏北 $30^\\circ$ 方向 800m处邮局在学校 东偏南 $50^\\circ$ 方向 400m处广场在学校 西偏南 $45^\\circ$ 方向 600m处",
         "options": [],
-        "answer": "<br><br><img src=\"assets/images/g6_pos_a_q18_stem.png\" data-cx=\"3038475\" data-cy=\"1352550\" style=\"width:340px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
+        "answer": "<br><br><img src=\"assets/images/g6_pos_a_q18_stem.png\" data-cx=\"3038475\" data-cy=\"1352550\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
         "analysis": "图中的方向是上北下南，左西右东，每份线段表示200m。以学校为观测点，写出公园、商场、邮局和广场的位置，据此连线。",
         "detail": "公园在学校东偏北30°方向800m处；<br>商场在学校西偏南30°方向200m处；<br>邮局在学校东偏南50°方向400m处；<br>广场在学校西偏北45°方向600m处。图略。",
         "proceduralKnowledge": "【确定位置与数对方向解题程序】第一步：明确观测基准点与参照物（上北下南，左西右东）；第二步：按数对定义先列后行（列号在左，行号在右）；第三步：根据偏角方向与比例尺距离进行路线绘制、位置判定或坐标变换．",
@@ -22897,9 +22897,9 @@
         "difficulty": "中等",
         "knowledge": "根据方向、角度和距离画线路图",
         "chapter": "六年级上册 第一章 确定位置单元测试（A卷）",
-        "stem": "小明从家到城市展览馆，先向东偏北40°方向走400米到达商场，再从商场向东偏南30°方向走200米到达城市展览馆门口。请标出商场和城市展览馆的位置。<br><br><img src=\"assets/images/g6_pos_a_q18_sol.png\" data-cx=\"2924175\" data-cy=\"1562100\" style=\"width:340px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
+        "stem": "小明从家到城市展览馆，先向东偏北40°方向走400米到达商场，再从商场向东偏南30°方向走200米到达城市展览馆门口。请标出商场和城市展览馆的位置。<br><br><img src=\"assets/images/g6_pos_a_q18_sol.png\" data-cx=\"2924175\" data-cy=\"1562100\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
         "options": [],
-        "answer": "<br><br><img src=\"assets/images/g6_pos_a_q19_stem.png\" data-cx=\"3810000\" data-cy=\"2019300\" style=\"width:380px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
+        "answer": "<br><br><img src=\"assets/images/g6_pos_a_q19_stem.png\" data-cx=\"3810000\" data-cy=\"2019300\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
         "analysis": "图上的方向是上北下南，左西右东，每份线段表示100米。据此作图。",
         "detail": "作图略。",
         "proceduralKnowledge": "【确定位置与数对方向解题程序】第一步：明确观测基准点与参照物（上北下南，左西右东）；第二步：按数对定义先列后行（列号在左，行号在右）；第三步：根据偏角方向与比例尺距离进行路线绘制、位置判定或坐标变换．",
@@ -22915,9 +22915,9 @@
         "difficulty": "中等",
         "knowledge": "根据数对找位置；画平行线；根据方向、角度和距离确定物体的位置",
         "chapter": "六年级上册 第一章 确定位置单元测试（A卷）",
-        "stem": "<br><img src=\"assets/images/g6_pos_a_q19_sol.png\" data-cx=\"4714875\" data-cy=\"2552700\" style=\"width:420px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>(1)从点C画一条线段 $AB$ ，使它与线段 $AB$ 平行。(2)描出 $E(13, 9)$ 、 $F(18, 9)$ 、 $G(18, 4)$ 三点并顺次连接，得到三角形 $\\triangle EFG$ 。(3)以点E为观测点，点G在( )偏( )( )°方向。",
+        "stem": "<br><img src=\"assets/images/g6_pos_a_q19_sol.png\" data-cx=\"4714875\" data-cy=\"2552700\" style=\"width:277px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>(1)从点C画一条线段 $AB$ ，使它与线段 $AB$ 平行。(2)描出 $E(13, 9)$ 、 $F(18, 9)$ 、 $G(18, 4)$ 三点并顺次连接，得到三角形 $\\triangle EFG$ 。(3)以点E为观测点，点G在( )偏( )( )°方向。",
         "options": [],
-        "answer": "(1)<br><br><img src=\"assets/images/g6_pos_a_q20_stem.png\" data-cx=\"3990975\" data-cy=\"2152650\" style=\"width:380px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>(2)<br><br><img src=\"assets/images/g6_pos_a_q20_sol.png\" data-cx=\"4000500\" data-cy=\"2162175\" style=\"width:380px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>(3) 南 东 45",
+        "answer": "(1)<br><br><img src=\"assets/images/g6_pos_a_q20_stem.png\" data-cx=\"3990975\" data-cy=\"2152650\" style=\"width:278px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>(2)<br><br><img src=\"assets/images/g6_pos_a_q20_sol.png\" data-cx=\"4000500\" data-cy=\"2162175\" style=\"width:278px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>(3) 南 东 45",
         "analysis": "（1）将直尺边缘和已知线段AB完全对齐重合，三角板卡到直尺一端，沿三角板平移直尺直到边缘经过点C，画出AB过点C的平行线；<br>（2）数对表示位置，第一个数字是列数，第二个数字是行数，据此找到三个点的位置顺次连接即可；<br>（3）图中方向为上北下南左西右东，G在E的右下方即东南方向，因为EF和FG的长度相同，三角形EFG是等腰直角三角形，即GE的连线正好是一个正方形的对角线，即与正南方向的夹角是45°，据此填写。",
         "detail": "（1）略<br>（2）E13,9表示点E在第13列第9行；F18,9表示点F在第18列第9行；G18,4表示点G在第18列第4行；据此描点并依次连线。图略。<br>（3）以点E为观测点，点G在南偏东45°方向（或东偏南45°方向）。",
         "proceduralKnowledge": "【确定位置与数对方向解题程序】第一步：明确观测基准点与参照物（上北下南，左西右东）；第二步：按数对定义先列后行（列号在左，行号在右）；第三步：根据偏角方向与比例尺距离进行路线绘制、位置判定或坐标变换．",
@@ -22933,7 +22933,7 @@
         "difficulty": "中等",
         "knowledge": "平行四边形的概念及特点；平移与平移现象；用数对表示位置；梯形面积的计算",
         "chapter": "六年级上册 第一章 确定位置单元测试（A卷）",
-        "stem": "下图中每个小正方形的边长都是1厘米。<br><br><img src=\"assets/images/g6_pos_a_q21_stem.png\" data-cx=\"2486025\" data-cy=\"1609725\" style=\"width:300px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>(1)如果点A的位置用数对 $A(2, 1)$ 表示，那么点B的位置用数对表示为( )，点C的位置用数对表示为( )。(2)梯形ABCD的面积是( )平方厘米。(3)若将点D平移到（ ）位置时，梯形ABCD变成了一个平行四边形。",
+        "stem": "下图中每个小正方形的边长都是1厘米。<br><br><img src=\"assets/images/g6_pos_a_q21_stem.png\" data-cx=\"2486025\" data-cy=\"1609725\" style=\"width:220px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>(1)如果点A的位置用数对 $A(2, 1)$ 表示，那么点B的位置用数对表示为( )，点C的位置用数对表示为( )。(2)梯形ABCD的面积是( )平方厘米。(3)若将点D平移到（ ）位置时，梯形ABCD变成了一个平行四边形。",
         "options": [],
         "answer": "(1) （0，1） （4，1）<br>(2)5<br>(3)（5，3）",
         "analysis": "（1）数对中的第一个数表示列数，第二个数表示行数，由此用数对将B和C的位置表示出来；<br>（2）梯形面积＝（上底＋下底）×高÷2，观察图形可知，梯形的上底是1厘米、下底是4厘米，高是2厘米，将数据代入公式计算出这个梯形的面积；<br>（3）当AD的长度等于BC时，即AD是4厘米时，梯形就变成了平行四边形，将点D向右平移3个小正方形的边长，找出此时D点在第几列、第几行即可解答。",
@@ -22951,9 +22951,9 @@
         "difficulty": "中等",
         "knowledge": "根据方向、角度和距离确定物体的位置",
         "chapter": "六年级上册 第一章 确定位置单元测试（A卷）",
-        "stem": "填空并根据要求画图。<br><br><img src=\"assets/images/g6_pos_a_q21_sol.png\" data-cx=\"2628900\" data-cy=\"1438275\" style=\"width:300px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>(1)英子家在青少年宫的( )偏( )( )°方向( )千米。(2)张丽家在青少年宫的北偏西20度方向10千米处，在平面图上表示出张丽家的位置。",
+        "stem": "填空并根据要求画图。<br><br><img src=\"assets/images/g6_pos_a_q21_sol.png\" data-cx=\"2628900\" data-cy=\"1438275\" style=\"width:274px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>(1)英子家在青少年宫的( )偏( )( )°方向( )千米。(2)张丽家在青少年宫的北偏西20度方向10千米处，在平面图上表示出张丽家的位置。",
         "options": [],
-        "answer": "(1) 东 北 30 15<br>(2)<br><br><img src=\"assets/images/g6_pos_a_q22.png\" data-cx=\"2638425\" data-cy=\"1562100\" style=\"width:320px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
+        "answer": "(1) 东 北 30 15<br>(2)<br><br><img src=\"assets/images/g6_pos_a_q22.png\" data-cx=\"2638425\" data-cy=\"1562100\" style=\"width:220px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
         "analysis": "以青少年宫为参照点，根据上北下南，左西右东确定方向，1段表示5千米，青少年宫到英子家有3段，距离就是5乘3，即是15千米，据此解答；<br>以青少年宫为参照点，根据上北下南，左西右东确定方向，1段表示5千米，用10除以5，在图形上画2段表示距离，据此画图；",
         "detail": "（1）英子家在青少年宫的东偏北30°方向15千米；（方向答案不唯一）<br>（2）画图略。",
         "proceduralKnowledge": "【确定位置与数对方向解题程序】第一步：明确观测基准点与参照物（上北下南，左西右东）；第二步：按数对定义先列后行（列号在左，行号在右）；第三步：根据偏角方向与比例尺距离进行路线绘制、位置判定或坐标变换．",
@@ -22969,11 +22969,11 @@
         "difficulty": "中等",
         "knowledge": "用数对表示位置；根据数对找位置；根据方向和距离描述简单的路线；根据方向、角度和距离确定物体的位置",
         "chapter": "六年级上册 第一章 确定位置单元测试（A卷）",
-        "stem": "按要求填一填。<br><br><img src=\"assets/images/g6_pos_a_q23_stem.png\" data-cx=\"3790950\" data-cy=\"1771650\" style=\"width:380px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>(1)请用数对表示出宿营地和指挥部的位置，并在图中标出D高地（3，6）的位置。(2)B高地在C高地的( )偏( )( )°方向( )米处。(3)从B高地到指挥部怎么走？请你写出行走路线。",
+        "stem": "按要求填一填。<br><br><img src=\"assets/images/g6_pos_a_q23_stem.png\" data-cx=\"3790950\" data-cy=\"1771650\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>(1)请用数对表示出宿营地和指挥部的位置，并在图中标出D高地（3，6）的位置。(2)B高地在C高地的( )偏( )( )°方向( )米处。(3)从B高地到指挥部怎么走？请你写出行走路线。",
         "options": [],
         "answer": "(1)宿营地（1，1）；指挥部（11，2）；图见详解<br>(2) 北 东 37 5000<br>(3)见详解",
         "analysis": "（1）数对的表示规则为先列后行，即数对的第一个数表示在第几列，第二个数表示在第几行。由图可知，宿营地在第1列第1行，指挥部在第11列第2行。D高地（3，6）的位置在第3列第6行。<br>（2）以C高地为观测点，以正北方向为基准，向东偏转37°，距离为5000米。<br>（3）从B地出发，先向正东方向走到A高地，距离是6000米，再以正南方向为基准，向西偏转45°走到指挥部，距离是4200米，按此描述。",
-        "detail": "（1）宿营地（1，1），指挥部（11，2）。<br>如图：标出D高地（3，6）的位置。<br><br><img src=\"assets/images/g6_pos_a_q23_sol.png\" data-cx=\"3895725\" data-cy=\"1819275\" style=\"width:380px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>（2）B高地在C高地的北偏东37°方向5000米处。（方向答案不唯一）<br>（3）答：从B高地出发，先向正东方向行6000米到达A高地，再向南偏西45°方向行4200米到达指挥部。",
+        "detail": "（1）宿营地（1，1），指挥部（11，2）。<br>如图：标出D高地（3，6）的位置。<br><br><img src=\"assets/images/g6_pos_a_q23_sol.png\" data-cx=\"3895725\" data-cy=\"1819275\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>（2）B高地在C高地的北偏东37°方向5000米处。（方向答案不唯一）<br>（3）答：从B高地出发，先向正东方向行6000米到达A高地，再向南偏西45°方向行4200米到达指挥部。",
         "proceduralKnowledge": "【确定位置与数对方向解题程序】第一步：明确观测基准点与参照物（上北下南，左西右东）；第二步：按数对定义先列后行（列号在左，行号在右）；第三步：根据偏角方向与比例尺距离进行路线绘制、位置判定或坐标变换．",
         "conditionalKnowledge": "当根据方向、角度与距离确定位置，或用数对表示点的位置及平移变换时，牢记基准参照点的相对性以及“先列后行”的定序法则．"
     },
@@ -22987,7 +22987,7 @@
         "difficulty": "中等",
         "knowledge": "相遇问题；根据方向、角度和距离描述路线图；根据方向、角度和距离确定物体的位置",
         "chapter": "六年级上册 第一章 确定位置单元测试（A卷）",
-        "stem": "根据笑笑、淘气两家之间的路线图解答。<br><br><img src=\"assets/images/g6_pos_a_q24.png\" data-cx=\"3781425\" data-cy=\"1133475\" style=\"width:420px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>(1)广场在书店的( )方向( )米处，淘气家在广场的( )方向( )米处。(2)淘气从家出发先向( )方向走到广场，再向( )方向走到书店。(3)星期天，笑笑有一本书要还给淘气，他俩约定两人同时从家出发，相向而行，相遇时还给淘气。如果淘气的步行速度为70米/分，笑笑的步行速度为60米/分，那么他们出发后几分钟相遇？",
+        "stem": "根据笑笑、淘气两家之间的路线图解答。<br><br><img src=\"assets/images/g6_pos_a_q24.png\" data-cx=\"3781425\" data-cy=\"1133475\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>(1)广场在书店的( )方向( )米处，淘气家在广场的( )方向( )米处。(2)淘气从家出发先向( )方向走到广场，再向( )方向走到书店。(3)星期天，笑笑有一本书要还给淘气，他俩约定两人同时从家出发，相向而行，相遇时还给淘气。如果淘气的步行速度为70米/分，笑笑的步行速度为60米/分，那么他们出发后几分钟相遇？",
         "options": [],
         "answer": "(1)<br>东偏南30°<br>300<br>东偏北25°<br>280<br>(2)<br>西偏南25°<br>西偏北30°<br>(3)<br>6分钟",
         "analysis": "（1）（2）先确定方向，图中按“上北下南、左西右东”的方向，以观测点为中心，结合图中标注的角度和距离填空即可。<br>（3）先把笑笑家到淘气家各段路程相加得到总路程。因为两人是相向而行，所以用总路程除以两人的速度和，即可得到相遇时间，相遇时间＝总路程÷速度和。",
@@ -23005,9 +23005,9 @@
         "difficulty": "中等",
         "knowledge": "用数对表示位置；东、南、西、北方向",
         "chapter": "六年级上册 第一章 确定位置单元测试（A卷）",
-        "stem": "小锦在地图App中搜索学校，看到如下平面地图。（1）照样子，用数对表示小锦家附近场所的位置。小锦家（5，7） 世纪广场（ ） 博物馆（ ） 剧院（ ）<br><br><img src=\"assets/images/g6_pos_a_q25_stem.png\" data-cx=\"2924175\" data-cy=\"1971675\" style=\"width:340px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>（2）从小锦家到学校，地图App给出的推荐路线是先向正东方向走300m，再向南走100m。请在地图上标出学校的位置，并用数对（ ）表示。（3）若地图从每格100m精确到每格50m，那么原先一格的距离需要用（ ）格来替代，则小锦家的位置可以用数对（ ）来表示。",
+        "stem": "小锦在地图App中搜索学校，看到如下平面地图。（1）照样子，用数对表示小锦家附近场所的位置。小锦家（5，7） 世纪广场（ ） 博物馆（ ） 剧院（ ）<br><br><img src=\"assets/images/g6_pos_a_q25_stem.png\" data-cx=\"2924175\" data-cy=\"1971675\" style=\"width:220px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>（2）从小锦家到学校，地图App给出的推荐路线是先向正东方向走300m，再向南走100m。请在地图上标出学校的位置，并用数对（ ）表示。（3）若地图从每格100m精确到每格50m，那么原先一格的距离需要用（ ）格来替代，则小锦家的位置可以用数对（ ）来表示。",
         "options": [],
-        "answer": "（1）（5，3）；（4，1）；（9，3）<br>（2）<br><br><img src=\"assets/images/g6_pos_a_q25_sol.png\" data-cx=\"2809875\" data-cy=\"1895475\" style=\"width:340px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>；（8，6）<br>（3）2；（10，14）",
+        "answer": "（1）（5，3）；（4，1）；（9，3）<br>（2）<br><br><img src=\"assets/images/g6_pos_a_q25_sol.png\" data-cx=\"2809875\" data-cy=\"1895475\" style=\"width:220px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>；（8，6）<br>（3）2；（10，14）",
         "analysis": "（1）根据数对的概念，括号里左边的数代表列，右边的数代表行，以此即可填空。<br>（2）因为300÷100＝3（格），100÷100＝1（格），所以以小锦家为起点，向右走3格，再向下走1格，即可确定学校的位置，画在图上，并根据数对的概念，表示出学校的位置。<br>（3）因为地图从每格100m精确到每格50m，所以原先一格的距离需要用（100÷50）格来替代，数对所表示的列和行均需乘2，以此用新的数对来表示。",
         "detail": "（1）世纪广场（5，3）；博物馆（4，1）；剧院（9，3）。<br>（2）因为300÷100＝3（格），100÷100＝1（格），所以以小锦家为起点，向右走3格，再向下走1格。画图略。<br>学校的位置，用数对（8，6）表示。<br>（3）因为100÷50＝2，5×2＝10，7×2＝14，所以若地图从每格100m精确到每格50m，那么原先一格的距离需要用2格来替代，则小锦家的位置可以用数对（10，14）来表示。",
         "proceduralKnowledge": "【确定位置与数对方向解题程序】第一步：明确观测基准点与参照物（上北下南，左西右东）；第二步：按数对定义先列后行（列号在左，行号在右）；第三步：根据偏角方向与比例尺距离进行路线绘制、位置判定或坐标变换．",
@@ -23023,11 +23023,11 @@
         "difficulty": "较难",
         "knowledge": "相遇问题；根据方向、角度和距离描述路线图",
         "chapter": "六年级上册 第一章 确定位置单元测试（A卷）",
-        "stem": "小宇参加迷你欢乐跑比赛。<br><br><img src=\"assets/images/g6_pos_a_q25_mini.png\" data-cx=\"1685925\" data-cy=\"1381125\" style=\"width:200px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>（1）比赛路线：从少年宫出发，先向南偏（ ）（ ）°方向跑（ ）m到达环城公园，接着向南偏（ ）（ ）°方向跑1800m到达植物园，最后向北偏（ ）（ ）°方向跑2000m回到少年宫。（2）梅教练以每分100m的速度与小宇同时从少年宫反方向出发巡逻赛道。估一估：梅教练和小宇在何处相遇？用“△”在图中标出。小宇出发几分后与梅教练相遇？",
+        "stem": "小宇参加迷你欢乐跑比赛。<br><br><img src=\"assets/images/g6_pos_a_q25_mini.png\" data-cx=\"1685925\" data-cy=\"1381125\" style=\"width:177px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>（1）比赛路线：从少年宫出发，先向南偏（ ）（ ）°方向跑（ ）m到达环城公园，接着向南偏（ ）（ ）°方向跑1800m到达植物园，最后向北偏（ ）（ ）°方向跑2000m回到少年宫。（2）梅教练以每分100m的速度与小宇同时从少年宫反方向出发巡逻赛道。估一估：梅教练和小宇在何处相遇？用“△”在图中标出。小宇出发几分后与梅教练相遇？",
         "options": [],
         "answer": "（1）西；35；1200；东；65；西；30；<br>（2）画图见详解；20分",
         "analysis": "（1）根据图中所给信息，从少年宫出发，确定比赛的路线的方向和距离，据此解答。<br>（2）根据两人的速度和路程，先计算总路程，即比赛路线的总长度，为从少年宫到环城公园，环城公园到植物园，植物园到少年宫的距离之和；再根据相遇问题公式，相遇时间＝总路程÷速度和，其中速度和为梅教练和小宇的速度之和，据此画图并解答。",
-        "detail": "（1）比赛路线：从少年宫出发，先向南偏西35°方向跑1200m到达环城公园，接着向南偏东65°方向跑1800m到达植物园，最后向北偏西30°方向跑2000m回到少年宫。<br>（2）画图如下：<br><br><img src=\"assets/images/g6_pos_a_q25_route.png\" data-cx=\"3314700\" data-cy=\"2686050\" style=\"width:360px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>总路程：<br>1200+1800+2000<br>=3000+2000<br>=5000（米）<br>速度和：100+150=250（米/分）<br>相遇时间：5000÷250=20（分）<br>答：小宇出发20分后与梅教练相遇。",
+        "detail": "（1）比赛路线：从少年宫出发，先向南偏西35°方向跑1200m到达环城公园，接着向南偏东65°方向跑1800m到达植物园，最后向北偏西30°方向跑2000m回到少年宫。<br>（2）画图如下：<br><br><img src=\"assets/images/g6_pos_a_q25_route.png\" data-cx=\"3314700\" data-cy=\"2686050\" style=\"width:197px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br><br>总路程：<br>1200+1800+2000<br>=3000+2000<br>=5000（米）<br>速度和：100+150=250（米/分）<br>相遇时间：5000÷250=20（分）<br>答：小宇出发20分后与梅教练相遇。",
         "proceduralKnowledge": "【确定位置与数对方向解题程序】第一步：明确观测基准点与参照物（上北下南，左西右东）；第二步：按数对定义先列后行（列号在左，行号在右）；第三步：根据偏角方向与比例尺距离进行路线绘制、位置判定或坐标变换．",
         "conditionalKnowledge": "当根据方向、角度与距离确定位置，或用数对表示点的位置及平移变换时，牢记基准参照点的相对性以及“先列后行”的定序法则．"
     }
@@ -23065,7 +23065,7 @@
             "difficulty": "中等",
             "knowledge": "用数对表示位置",
             "chapter": "六年级上册 第一章 确定位置单元测试（B卷）",
-            "stem": "如图是成语填空小游戏，如果“画”字用数对（4，4）表示，那么○中的字是____________，用数对____________表示。下列选项正确的是（ ）。<br><br><img src=\"assets/images/g6_pos_b_q2.png\" style=\"width:300px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
+            "stem": "如图是成语填空小游戏，如果“画”字用数对（4，4）表示，那么○中的字是____________，用数对____________表示。下列选项正确的是（ ）。<br><br><img src=\"assets/images/g6_pos_b_q2.png\" style=\"width:165px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
             "options": [
                     "A．龙 （4，3）",
                     "B．龙 （3，4）",
@@ -23111,7 +23111,7 @@
             "difficulty": "中等",
             "knowledge": "等腰三角形和等边三角形的认识及特征；根据方向、角度和距离描述路线图",
             "chapter": "六年级上册 第一章 确定位置单元测试（B卷）",
-            "stem": "如图，沿等边三角形的道路跑步，下面说法正确的是（ ）。<br><br><img src=\"assets/images/g6_pos_b_q4.png\" style=\"width:260px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
+            "stem": "如图，沿等边三角形的道路跑步，下面说法正确的是（ ）。<br><br><img src=\"assets/images/g6_pos_b_q4.png\" style=\"width:146px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
             "options": [
                     "A．从点A向东偏北30°方向跑100m到点C",
                     "B．从点A向西跑100m到点B",
@@ -23157,7 +23157,7 @@
             "difficulty": "较易",
             "knowledge": "根据方向、角度和距离描述路线图",
             "chapter": "六年级上册 第一章 确定位置单元测试（B卷）",
-            "stem": "如下图，曲米要从家去仙山湖，他应该先向(        )m到达公园，再向(        )m到达电影院，最后向(        )m到达仙山湖。<br><br><img src=\"assets/images/g6_pos_b_q6.png\" style=\"width:360px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
+            "stem": "如下图，曲米要从家去仙山湖，他应该先向(        )m到达公园，再向(        )m到达电影院，最后向(        )m到达仙山湖。<br><br><img src=\"assets/images/g6_pos_b_q6.png\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
             "options": [],
             "answer": "正东方向走400；东偏北45°方向走450；南偏东55°方向走700",
             "analysis": "图中的方向是上北下南，描述路线时，要注意观测点是变化的，要描述清楚方向角度和距离。",
@@ -23175,7 +23175,7 @@
             "difficulty": "中等",
             "knowledge": "用数对表示位置",
             "chapter": "六年级上册 第一章 确定位置单元测试（B卷）",
-            "stem": "一艘渔船在海上遭遇特大风浪即将沉没，船长即刻发出了SOS（求救）信号，下图是这艘渔船和附近的搜救船所在位置的平面图。用数对表示搜救一号的位置是（2，1），渔船的位置是(        )，搜救二号的位置是(        )。<br><br><img src=\"assets/images/g6_pos_b_q7.png\" style=\"width:360px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
+            "stem": "一艘渔船在海上遭遇特大风浪即将沉没，船长即刻发出了SOS（求救）信号，下图是这艘渔船和附近的搜救船所在位置的平面图。用数对表示搜救一号的位置是（2，1），渔船的位置是(        )，搜救二号的位置是(        )。<br><br><img src=\"assets/images/g6_pos_b_q7.png\" style=\"width:220px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
             "options": [],
             "answer": "（5，4）；（0，4）",
             "analysis": "数对中两个数字的含义，即第一个数字表示列为横轴上的数，第二个数字表示行为纵轴上的数，再确定渔船的位置数对，在平面图上找到搜救二号的位置，确定搜救二号的位置数对。",
@@ -23193,7 +23193,7 @@
             "difficulty": "中等",
             "knowledge": "比例尺应用；东、南、西、北方向；根据方向、角度和距离描述路线图；根据方向、角度和距离确定物体的位置",
             "chapter": "六年级上册 第一章 确定位置单元测试（B卷）",
-            "stem": "适当的运动可以提升心肺功能，增强运动耐力，使心脏更加强壮。在邮局上班的孙叔叔每天坚持步行去邮局，下面是他从家走到邮局的路线图。<br><br><img src=\"assets/images/g6_pos_b_q8.png\" style=\"width:380px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>孙叔叔从家出发，向北偏(    )(    )°方向走(    )米到达图书馆，然后向(    )走(    )米到达商场，再向(    )偏(    )(    )°方向走(    )米到达加油站，最后向南偏(    )(    )°方向走(    )米到达邮局。",
+            "stem": "适当的运动可以提升心肺功能，增强运动耐力，使心脏更加强壮。在邮局上班的孙叔叔每天坚持步行去邮局，下面是他从家走到邮局的路线图。<br><br><img src=\"assets/images/g6_pos_b_q8.png\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>孙叔叔从家出发，向北偏(    )(    )°方向走(    )米到达图书馆，然后向(    )走(    )米到达商场，再向(    )偏(    )(    )°方向走(    )米到达加油站，最后向南偏(    )(    )°方向走(    )米到达邮局。",
             "options": [],
             "answer": "东；60；600；东/正东；900；南；东；35；300；西；40；300",
             "analysis": "由图可知，先确定观测点，以观测点为中心找到正北、正南、正西、正东四个基本方向，再确定主方向，从主方向开始向东或西偏转一定角度，据此可得偏向和角度；图中1格表示的实际距离为300米，据此计算各段路程。",
@@ -23229,7 +23229,7 @@
             "difficulty": "较难",
             "knowledge": "根据方向、角度和距离确定物体的位置",
             "chapter": "六年级上册 第一章 确定位置单元测试（B卷）",
-            "stem": "根据下面的描述，将邮局、医院、超市和银行四个地点填入下图相应的括号内。<br>①超市距离医院最远。<br>②银行在医院东偏北30°的方向上。<br>③医院在邮局的正西方向上。<br><br><img src=\"assets/images/g6_pos_b_q10_stem.png\" style=\"width:360px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
+            "stem": "根据下面的描述，将邮局、医院、超市和银行四个地点填入下图相应的括号内。<br>①超市距离医院最远。<br>②银行在医院东偏北30°的方向上。<br>③医院在邮局的正西方向上。<br><br><img src=\"assets/images/g6_pos_b_q10_stem.png\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
             "options": [],
             "answer": "见详解",
             "analysis": "根据所给的方向，位置关系描述，结合图中已有的方向标识，确定各个地点的位置。",
@@ -23355,7 +23355,7 @@
             "difficulty": "中等",
             "knowledge": "根据方向、角度和距离确定物体的位置",
             "chapter": "六年级上册 第一章 确定位置单元测试（B卷）",
-            "stem": "连一连（以丽丽家为观测点）。<br><br><img src=\"assets/images/g6_pos_b_q17_stem.png\" style=\"width:260px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>南偏西40°距离5千米　　超市<br>北偏东30°距离4千米　　医院<br>东偏南45°距离3千米　　学校<br>北偏西25°距离2千米　　公园",
+            "stem": "连一连（以丽丽家为观测点）。<br><br><img src=\"assets/images/g6_pos_b_q17_stem.png\" style=\"width:165px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>南偏西40°距离5千米　　超市<br>北偏东30°距离4千米　　医院<br>东偏南45°距离3千米　　学校<br>北偏西25°距离2千米　　公园",
             "options": [],
             "answer": "见详解",
             "analysis": "将方向和距离结合起来描述位置时，要注意三个要素：一是观测点，二是方向，三是距离。",
@@ -23373,11 +23373,11 @@
             "difficulty": "中等",
             "knowledge": "用数对表示位置；直角梯形和等腰梯形的概念及特点；梯形的高及画法",
             "chapter": "六年级上册 第一章 确定位置单元测试（B卷）",
-            "stem": "确定位置。<br><br><img src=\"assets/images/g6_pos_b_q18_stem.png\" style=\"width:340px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>(1)上图中A点的位置用数对表示是(        )；B点的位置用数对表示是(        )。<br>(2)在图中找一个点D，使四边形ABCD是一个等腰梯形，请你标出D点并画出这个等腰梯形。<br>(3)画出这个等腰梯形的一条高。",
+            "stem": "确定位置。<br><br><img src=\"assets/images/g6_pos_b_q18_stem.png\" style=\"width:158px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>(1)上图中A点的位置用数对表示是(        )；B点的位置用数对表示是(        )。<br>(2)在图中找一个点D，使四边形ABCD是一个等腰梯形，请你标出D点并画出这个等腰梯形。<br>(3)画出这个等腰梯形的一条高。",
             "options": [],
             "answer": "(1)（2，3）；（4，6）<br>(2)标出D（8，3）并画出等腰梯形，见详解<br>(3)画出一条高，见详解",
             "analysis": "（1）根据用数对表示点的位置的方法，第一个数字表示列数，第二个数字表示行数，即可用数对表示A、B点的位置。<br>（2）等腰梯形的两条腰相等，上底和下底互相平行，那么D点的位置可以用数对表示为（8，3），据此画图。<br>（3）从梯形一条底边上的一点到它对边的垂直线段叫做梯形的高。据此画图。",
-            "detail": "（1）上图中A点的位置用数对表示是（2，3）；B点的位置用数对表示是（4，6）。<br>（2）等腰梯形画法如图所示（D点坐标为（8，3））：<br><img src=\"assets/images/g6_pos_b_q18_sol1.png\" style=\"width:340px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>（3）画出这个等腰梯形的高如图所示：<br><img src=\"assets/images/g6_pos_b_q18_sol2.png\" style=\"width:340px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\">",
+            "detail": "（1）上图中A点的位置用数对表示是（2，3）；B点的位置用数对表示是（4，6）。<br>（2）等腰梯形画法如图所示（D点坐标为（8，3））：<br><img src=\"assets/images/g6_pos_b_q18_sol1.png\" style=\"width:158px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>（3）画出这个等腰梯形的高如图所示：<br><img src=\"assets/images/g6_pos_b_q18_sol2.png\" style=\"width:158px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\">",
             "proceduralKnowledge": "【确定位置与数对方向解题程序】第一步：明确观测基准点与参照物（上北下南，左西右东）；第二步：按数对定义先列后行（列号在左，行号在右）；第三步：根据偏角方向与比例尺距离进行路线绘制、位置判定或坐标变换．",
             "conditionalKnowledge": "当根据方向、角度与距离确定位置，或用数对表示点的位置及平移变换时，牢记基准参照点的相对性以及“先列后行”的定序法则．"
     },
@@ -23391,11 +23391,11 @@
             "difficulty": "中等",
             "knowledge": "根据方向、角度和距离确定物体的位置",
             "chapter": "六年级上册 第一章 确定位置单元测试（B卷）",
-            "stem": "根据下面的描述，在图中标出各建筑物的位置。<br><br><img src=\"assets/images/g6_pos_b_q19_stem.png\" style=\"width:320px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>（1）学校在广场北偏西45°方向上，距离是400m。<br>（2）花园在广场南偏东30°方向上，距离是800m。",
+            "stem": "根据下面的描述，在图中标出各建筑物的位置。<br><br><img src=\"assets/images/g6_pos_b_q19_stem.png\" style=\"width:220px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>（1）学校在广场北偏西45°方向上，距离是400m。<br>（2）花园在广场南偏东30°方向上，距离是800m。",
             "options": [],
             "answer": "见详解",
             "analysis": "按照“上北下南，左西右东”的方向，先确定观测点，然后根据图中1格代表200米，计算出图中的距离，依次画图即可。",
-            "detail": "（1）标注学校：400米是2个200米的长度，即学校距离广场的图上长度是2个单位长度；从广场出发，在北偏西45°方向画出长度为2个单位长度的线段，线段端点标注“学校”；<br>（2）标注花园：800米是4个200米的长度，即花园距离广场的图上长度是4个单位长度；从广场出发，在南偏东30°方向画出长度为4个单位长度的线段，线段端点标注“花园”。<br>标点如图所示：<br><img src=\"assets/images/g6_pos_b_q19_sol.png\" style=\"width:320px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\">",
+            "detail": "（1）标注学校：400米是2个200米的长度，即学校距离广场的图上长度是2个单位长度；从广场出发，在北偏西45°方向画出长度为2个单位长度的线段，线段端点标注“学校”；<br>（2）标注花园：800米是4个200米的长度，即花园距离广场的图上长度是4个单位长度；从广场出发，在南偏东30°方向画出长度为4个单位长度的线段，线段端点标注“花园”。<br>标点如图所示：<br><img src=\"assets/images/g6_pos_b_q19_sol.png\" style=\"width:155px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\">",
             "proceduralKnowledge": "【确定位置与数对方向解题程序】第一步：明确观测基准点与参照物（上北下南，左西右东）；第二步：按数对定义先列后行（列号在左，行号在右）；第三步：根据偏角方向与比例尺距离进行路线绘制、位置判定或坐标变换．",
             "conditionalKnowledge": "当根据方向、角度与距离确定位置，或用数对表示点的位置及平移变换时，牢记基准参照点的相对性以及“先列后行”的定序法则．"
     },
@@ -23409,7 +23409,7 @@
             "difficulty": "中等",
             "knowledge": "利用小数四则混合运算解决问题；根据方向、角度和距离描述路线图",
             "chapter": "六年级上册 第一章 确定位置单元测试（B卷）",
-            "stem": "如下图是小恒坐出租车从家去图书馆的路线图。已知出租车车费在3km以内（含3km）按起步价9元计算，之后路程每增加1km车费就增加2元，不足1km按1km算。写出小恒坐出租车从家到图书馆的路线，他一共需要付给出租车司机多少元？<br><br><img src=\"assets/images/g6_pos_b_q20.png\" style=\"width:360px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
+            "stem": "如下图是小恒坐出租车从家去图书馆的路线图。已知出租车车费在3km以内（含3km）按起步价9元计算，之后路程每增加1km车费就增加2元，不足1km按1km算。写出小恒坐出租车从家到图书馆的路线，他一共需要付给出租车司机多少元？<br><br><img src=\"assets/images/g6_pos_b_q20.png\" style=\"width:220px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>",
             "options": [],
             "answer": "路线：小恒坐出租车从家出发先向东偏南50°方向行2.5km到百货商场，再向北偏东60°方向行1.5km到银行，最后向东偏南40°方向行1.5km到图书馆。共需付车费15元。",
             "analysis": "先根据图中方向和距离信息，描述小恒坐出租车从家到图书馆的路线，再计算总路程，最后根据出租车收费标准计算车费。",
@@ -23427,11 +23427,11 @@
             "difficulty": "中等",
             "knowledge": "用数对表示位置；根据数对找位置",
             "chapter": "六年级上册 第一章 确定位置单元测试（B卷）",
-            "stem": "下图是枫叶小学的区域平面图。教学楼在图上的位置表示为（2，4）。<br><br><img src=\"assets/images/g6_pos_b_q21_stem.png\" style=\"width:360px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>(1)（5，2）表示的位置是(        )。<br>(2)有一次，童童的活动路线如下：（2，4）→（8，3）→（1，2）。她先后去了哪些地方？<br>(3)食堂位于教学楼以南300米，再往东200米处，用数对表示为（ ， ），在图中用 <img src=\"assets/images/g6_pos_b_q21_icon.png\" style=\"width:16px;height:auto\" class=\"inline-block align-middle mx-1\"> 标出它的位置。<br>(4)丽丽要从数对（9，5）的位置走到数对（7，1）的位置，可以先向(        )走(        )米，再向(        )走(        )米。",
+            "stem": "下图是枫叶小学的区域平面图。教学楼在图上的位置表示为（2，4）。<br><br><img src=\"assets/images/g6_pos_b_q21_stem.png\" style=\"width:199px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>(1)（5，2）表示的位置是(        )。<br>(2)有一次，童童的活动路线如下：（2，4）→（8，3）→（1，2）。她先后去了哪些地方？<br>(3)食堂位于教学楼以南300米，再往东200米处，用数对表示为（ ， ），在图中用 <img src=\"assets/images/g6_pos_b_q21_icon.png\" style=\"width:16px;height:auto\" class=\"inline-block align-middle mx-1\"> 标出它的位置。<br>(4)丽丽要从数对（9，5）的位置走到数对（7，1）的位置，可以先向(        )走(        )米，再向(        )走(        )米。",
             "options": [],
             "answer": "(1)健身房<br>(2)教学楼，图书室，体育馆<br>(3)（4，1）；见详解图<br>(4)南；400；西；200（或西；200；南；400）",
             "analysis": "（1）用数对表示位置时，第一个数表示列，第二个数表示行。（5，2）即第5列、第2行，对应图中位置是健身房。<br>（2）（2，4）是教学楼；（8，3）是图书室；（1，2）是体育馆。<br>（3）图中1格代表100米。教学楼（2，4）向南300米即向下3格，行变为1；向东200米即向右2格，列变为4，食堂位置为（4，1）。<br>（4）从（9，5）到（7，1）：列从9到7向西平移2格（200米），行从5到1向南平移4格（400米）。",
-            "detail": "（1）（5，2）表示的位置是健身房；<br>（2）童童先去了教学楼，接着去了图书室，最后去了体育馆；<br>（3）食堂用数对表示为（4，1），标出位置如图：<br><img src=\"assets/images/g6_pos_b_q21_sol.png\" style=\"width:360px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>（4）丽丽可以先向南走400米，再向西走200米（或先向西走200米，再向南走400米）。",
+            "detail": "（1）（5，2）表示的位置是健身房；<br>（2）童童先去了教学楼，接着去了图书室，最后去了体育馆；<br>（3）食堂用数对表示为（4，1），标出位置如图：<br><img src=\"assets/images/g6_pos_b_q21_sol.png\" style=\"width:198px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>（4）丽丽可以先向南走400米，再向西走200米（或先向西走200米，再向南走400米）。",
             "proceduralKnowledge": "【确定位置与数对方向解题程序】第一步：明确观测基准点与参照物（上北下南，左西右东）；第二步：按数对定义先列后行（列号在左，行号在右）；第三步：根据偏角方向与比例尺距离进行路线绘制、位置判定或坐标变换．",
             "conditionalKnowledge": "当根据方向、角度与距离确定位置，或用数对表示点的位置及平移变换时，牢记基准参照点的相对性以及“先列后行”的定序法则．"
     },
@@ -23445,11 +23445,11 @@
             "difficulty": "中等",
             "knowledge": "基础行程问题；根据方向、角度和距离确定物体的位置",
             "chapter": "六年级上册 第一章 确定位置单元测试（B卷）",
-            "stem": "聪聪和小伙伴周末去动物园玩，下面是动物园平面图。<br><br><img src=\"assets/images/g6_pos_b_q22_stem.png\" style=\"width:320px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>(1)猴山在大门(        )偏北(        )°方向。<br>(2)他们用30m/分的速度从大门走到鹿园，用了10分钟。则图中的 <img src=\"assets/images/g6_pos_b_q22_icon.png\" style=\"width:16px;height:auto\" class=\"inline-block align-middle mx-1\"> ＝(        )。<br>(3)孔雀馆在大门西偏南30°方向200m处，请在图上标出它的位置。",
+            "stem": "聪聪和小伙伴周末去动物园玩，下面是动物园平面图。<br><br><img src=\"assets/images/g6_pos_b_q22_stem.png\" style=\"width:165px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>(1)猴山在大门(        )偏北(        )°方向。<br>(2)他们用30m/分的速度从大门走到鹿园，用了10分钟。则图中的 <img src=\"assets/images/g6_pos_b_q22_icon.png\" style=\"width:16px;height:auto\" class=\"inline-block align-middle mx-1\"> ＝(        )。<br>(3)孔雀馆在大门西偏南30°方向200m处，请在图上标出它的位置。",
             "options": [],
             "answer": "(1)东；40<br>(2)100<br>(3)见详解图",
             "analysis": "（1）先确定观测点为大门；再根据图上方向“上北下南，左西右东”和夹角确定具体方向；<br>（2）根据“路程＝速度×时间”求出总路程，再除以线段格数；<br>（3）以大门为观测点，在大门西偏南30°方向取2个单位长度，终点处标注孔雀馆。",
-            "detail": "（1）由图可知，猴山在大门东偏北40°方向；<br>（2）大门到鹿园距离：$30\\times 10＝300$（m），图中共3段，每段长度：$300\\div 3＝100$（m）；<br>（3）$200\\div 100＝2$（段），以大门为观测点，在大门西偏南30°方向画2个单位长度，终点标注孔雀馆。<br>标点如图所示：<br><img src=\"assets/images/g6_pos_b_q22_sol.png\" style=\"width:320px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\">",
+            "detail": "（1）由图可知，猴山在大门东偏北40°方向；<br>（2）大门到鹿园距离：$30\\times 10＝300$（m），图中共3段，每段长度：$300\\div 3＝100$（m）；<br>（3）$200\\div 100＝2$（段），以大门为观测点，在大门西偏南30°方向画2个单位长度，终点标注孔雀馆。<br>标点如图所示：<br><img src=\"assets/images/g6_pos_b_q22_sol.png\" style=\"width:165px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\">",
             "proceduralKnowledge": "【确定位置与数对方向解题程序】第一步：明确观测基准点与参照物（上北下南，左西右东）；第二步：按数对定义先列后行（列号在左，行号在右）；第三步：根据偏角方向与比例尺距离进行路线绘制、位置判定或坐标变换．",
             "conditionalKnowledge": "当根据方向、角度与距离确定位置，或用数对表示点的位置及平移变换时，牢记基准参照点的相对性以及“先列后行”的定序法则．"
     },
@@ -23463,7 +23463,7 @@
             "difficulty": "中等",
             "knowledge": "根据方向、角度和距离描述路线图；根据方向、角度和距离确定物体的位置",
             "chapter": "六年级上册 第一章 确定位置单元测试（B卷）",
-            "stem": "某城市中心广场的四周道路如图。以中心广场为观测点。<br><br><img src=\"assets/images/g6_pos_b_q23.png\" style=\"width:340px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>(1)商店的位置是(        )偏(        )，距离中心广场(        )米；学校的位置是(        )偏(        )，距离中心广场(        )米；音乐厅的位置是(        )偏(        )，距离中心广场(        )米。<br>(2)你说一说从学校到音乐厅怎样走，写在下面。",
+            "stem": "某城市中心广场的四周道路如图。以中心广场为观测点。<br><br><img src=\"assets/images/g6_pos_b_q23.png\" style=\"width:155px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>(1)商店的位置是(        )偏(        )，距离中心广场(        )米；学校的位置是(        )偏(        )，距离中心广场(        )米；音乐厅的位置是(        )偏(        )，距离中心广场(        )米。<br>(2)你说一说从学校到音乐厅怎样走，写在下面。",
             "options": [],
             "answer": "(1)北；西；1000；南；东；4000；南；西；3000（答案不唯一）<br>(2)见详解",
             "analysis": "（1）以中心广场为观测点，根据“上北下南，左西右东”的方位规则，结合图中标注的距离，确定商店、学校、音乐厅的方位和距离。<br>（2）先确定学校到中心广场的行走方向与距离，再确定中心广场到音乐厅的行走方向与距离，将两段路线组合描述。",
@@ -23481,11 +23481,11 @@
             "difficulty": "较难",
             "knowledge": "三角形的内角和；直角、钝角、锐角的认识及特征；根据方向、角度和距离描述路线图",
             "chapter": "六年级上册 第一章 确定位置单元测试（B卷）",
-            "stem": "广东清远英德享有“中国红茶之乡”的美誉。英德的一家茶场想开辟最新的旅游观光茶园，设计的部分位置观光路线图如下。<br><br><img src=\"assets/images/g6_pos_b_q24_stem.png\" style=\"width:380px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>（1）通过观察上图，完成下表：<br><table class=\"min-w-full border-collapse border border-slate-300 text-sm my-2\"><tr class=\"bg-slate-50\"><th class=\"border border-slate-300 px-3 py-1.5\">路线</th><th class=\"border border-slate-300 px-3 py-1.5\">方向</th><th class=\"border border-slate-300 px-3 py-1.5\">路程</th></tr><tr><td class=\"border border-slate-300 px-3 py-1.5 text-center\">自制茶叶区—茶叶售卖区</td><td class=\"border border-slate-300 px-3 py-1.5 text-center\">南偏西35°</td><td class=\"border border-slate-300 px-3 py-1.5 text-center\">(        )</td></tr><tr><td class=\"border border-slate-300 px-3 py-1.5 text-center\">茶叶售卖区—茶艺表演区</td><td class=\"border border-slate-300 px-3 py-1.5 text-center\">(        )</td><td class=\"border border-slate-300 px-3 py-1.5 text-center\">(        )</td></tr><tr><td class=\"border border-slate-300 px-3 py-1.5 text-center\">茶艺表演区—自制茶叶区</td><td class=\"border border-slate-300 px-3 py-1.5 text-center\">(        )</td><td class=\"border border-slate-300 px-3 py-1.5 text-center\">(        )</td></tr></table>（2）茶园的观光车集合点距离自制茶叶区2千米，观光车每时行20千米，从观光车集合点出发到自制茶叶区，再按照图片上的路线逆时针绕行观光一圈，需要多少分钟？",
+            "stem": "广东清远英德享有“中国红茶之乡”的美誉。英德的一家茶场想开辟最新的旅游观光茶园，设计的部分位置观光路线图如下。<br><br><img src=\"assets/images/g6_pos_b_q24_stem.png\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>（1）通过观察上图，完成下表：<br><table class=\"min-w-full border-collapse border border-slate-300 text-sm my-2\"><tr class=\"bg-slate-50\"><th class=\"border border-slate-300 px-3 py-1.5\">路线</th><th class=\"border border-slate-300 px-3 py-1.5\">方向</th><th class=\"border border-slate-300 px-3 py-1.5\">路程</th></tr><tr><td class=\"border border-slate-300 px-3 py-1.5 text-center\">自制茶叶区—茶叶售卖区</td><td class=\"border border-slate-300 px-3 py-1.5 text-center\">南偏西35°</td><td class=\"border border-slate-300 px-3 py-1.5 text-center\">(        )</td></tr><tr><td class=\"border border-slate-300 px-3 py-1.5 text-center\">茶叶售卖区—茶艺表演区</td><td class=\"border border-slate-300 px-3 py-1.5 text-center\">(        )</td><td class=\"border border-slate-300 px-3 py-1.5 text-center\">(        )</td></tr><tr><td class=\"border border-slate-300 px-3 py-1.5 text-center\">茶艺表演区—自制茶叶区</td><td class=\"border border-slate-300 px-3 py-1.5 text-center\">(        )</td><td class=\"border border-slate-300 px-3 py-1.5 text-center\">(        )</td></tr></table>（2）茶园的观光车集合点距离自制茶叶区2千米，观光车每时行20千米，从观光车集合点出发到自制茶叶区，再按照图片上的路线逆时针绕行观光一圈，需要多少分钟？",
             "options": [],
             "answer": "（1）见详解表格；<br>（2）42分钟",
             "analysis": "（1）①实际距离：图上距离1厘米表示实际距离2千米，用图上距离乘2即为实际距离；<br>②方向：利用方位相对性与直角三角形角度关系求解；<br>（2）总路程＝集合点到自制区距离＋环线三段距离；时间＝总路程÷速度，再转化为分钟。",
-            "detail": "（1）根据比例尺及角度关系计算：<br>自制茶叶区到茶叶售卖区：$2\\times 2＝4$（千米），方向为南偏西35°；<br>茶叶售卖区到茶艺表演区：图示角度 $\\angle 1＝90^\\circ－53^\\circ＝37^\\circ$，$\\angle 2＝90^\\circ－35^\\circ－37^\\circ＝18^\\circ$（如图所示），方向为东偏北18°，路程为 $2.5\\times 2＝5$（千米）；<br><img src=\"assets/images/g6_pos_b_q24_sol.png\" style=\"width:340px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>茶艺表演区到自制茶叶区：方向为西偏北35°，路程为 $1.5\\times 2＝3$（千米）；<br>填表如下：<br><table class=\"min-w-full border-collapse border border-slate-300 text-sm my-2\"><tr class=\"bg-slate-50\"><th class=\"border border-slate-300 px-3 py-1.5\">路线</th><th class=\"border border-slate-300 px-3 py-1.5\">方向</th><th class=\"border border-slate-300 px-3 py-1.5\">路程</th></tr><tr><td class=\"border border-slate-300 px-3 py-1.5 text-center\">自制茶叶区—茶叶售卖区</td><td class=\"border border-slate-300 px-3 py-1.5 text-center\">南偏西35°</td><td class=\"border border-slate-300 px-3 py-1.5 text-center\">4千米</td></tr><tr><td class=\"border border-slate-300 px-3 py-1.5 text-center\">茶叶售卖区—茶艺表演区</td><td class=\"border border-slate-300 px-3 py-1.5 text-center\">东偏北18°</td><td class=\"border border-slate-300 px-3 py-1.5 text-center\">5千米</td></tr><tr><td class=\"border border-slate-300 px-3 py-1.5 text-center\">茶艺表演区—自制茶叶区</td><td class=\"border border-slate-300 px-3 py-1.5 text-center\">西偏北35°</td><td class=\"border border-slate-300 px-3 py-1.5 text-center\">3千米</td></tr></table>（2）总路程：$2＋4＋5＋3＝14$（千米）；<br>所需时间：$14\\div 20＝0.7$（小时），$0.7\\times 60＝42$（分钟）。<br>答：需要42分钟。",
+            "detail": "（1）根据比例尺及角度关系计算：<br>自制茶叶区到茶叶售卖区：$2\\times 2＝4$（千米），方向为南偏西35°；<br>茶叶售卖区到茶艺表演区：图示角度 $\\angle 1＝90^\\circ－53^\\circ＝37^\\circ$，$\\angle 2＝90^\\circ－35^\\circ－37^\\circ＝18^\\circ$（如图所示），方向为东偏北18°，路程为 $2.5\\times 2＝5$（千米）；<br><img src=\"assets/images/g6_pos_b_q24_sol.png\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>茶艺表演区到自制茶叶区：方向为西偏北35°，路程为 $1.5\\times 2＝3$（千米）；<br>填表如下：<br><table class=\"min-w-full border-collapse border border-slate-300 text-sm my-2\"><tr class=\"bg-slate-50\"><th class=\"border border-slate-300 px-3 py-1.5\">路线</th><th class=\"border border-slate-300 px-3 py-1.5\">方向</th><th class=\"border border-slate-300 px-3 py-1.5\">路程</th></tr><tr><td class=\"border border-slate-300 px-3 py-1.5 text-center\">自制茶叶区—茶叶售卖区</td><td class=\"border border-slate-300 px-3 py-1.5 text-center\">南偏西35°</td><td class=\"border border-slate-300 px-3 py-1.5 text-center\">4千米</td></tr><tr><td class=\"border border-slate-300 px-3 py-1.5 text-center\">茶叶售卖区—茶艺表演区</td><td class=\"border border-slate-300 px-3 py-1.5 text-center\">东偏北18°</td><td class=\"border border-slate-300 px-3 py-1.5 text-center\">5千米</td></tr><tr><td class=\"border border-slate-300 px-3 py-1.5 text-center\">茶艺表演区—自制茶叶区</td><td class=\"border border-slate-300 px-3 py-1.5 text-center\">西偏北35°</td><td class=\"border border-slate-300 px-3 py-1.5 text-center\">3千米</td></tr></table>（2）总路程：$2＋4＋5＋3＝14$（千米）；<br>所需时间：$14\\div 20＝0.7$（小时），$0.7\\times 60＝42$（分钟）。<br>答：需要42分钟。",
             "proceduralKnowledge": "【确定位置与数对方向解题程序】第一步：明确观测基准点与参照物（上北下南，左西右东）；第二步：按数对定义先列后行（列号在左，行号在右）；第三步：根据偏角方向与比例尺距离进行路线绘制、位置判定或坐标变换．",
             "conditionalKnowledge": "当根据方向、角度与距离确定位置，或用数对表示点的位置及平移变换时，牢记基准参照点的相对性以及“先列后行”的定序法则．"
     },
@@ -23499,11 +23499,11 @@
             "difficulty": "较难",
             "knowledge": "根据方向、角度和距离画线路图；根据方向、角度和距离描述路线图",
             "chapter": "六年级上册 第一章 确定位置单元测试（B卷）",
-            "stem": "某市地铁1号线列车从起点站向东偏北30°方向行驶8千米后，再向东行驶4千米，最后向东偏南40°方向行驶6千米到达终点站。<br><br><img src=\"assets/images/g6_pos_b_q25_stem.png\" style=\"width:360px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>（1）根据上面的描述，把地铁1号线的路线图画完整。<br>（2）写出地铁1号线列车返回时所行驶的方向和路程。",
+            "stem": "某市地铁1号线列车从起点站向东偏北30°方向行驶8千米后，再向东行驶4千米，最后向东偏南40°方向行驶6千米到达终点站。<br><br><img src=\"assets/images/g6_pos_b_q25_stem.png\" style=\"width:220px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>（1）根据上面的描述，把地铁1号线的路线图画完整。<br>（2）写出地铁1号线列车返回时所行驶的方向和路程。",
             "options": [],
             "answer": "（1）见详解路线图；<br>（2）列车从终点站出发，向西偏北40°方向行驶6千米，再向西行驶4千米，最后向西偏南30°方向行驶8千米到达起点站。",
             "analysis": "（1）在描述路线时，要找准观测点，描述清楚方向角度和距离。图中的方向是上北下南，左西右东。图上1厘米表示2千米，8千米要画4厘米的线段，4千米要画2厘米的线段，6千米要画3厘米的线段。列车从哪里出发，哪里就是观测点。<br>（2）列车返回时的方向和去时的方向相反，距离相等。",
-            "detail": "（1）地铁1号线路线图补全如下：<br><img src=\"assets/images/g6_pos_b_q25_sol.png\" style=\"width:360px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>（2）列车返回时所行驶的方向和路程为：<br>从终点站出发，向西偏北40°方向行驶6千米，再向西行驶4千米，最后向西偏南30°方向行驶8千米到达起点站。",
+            "detail": "（1）地铁1号线路线图补全如下：<br><img src=\"assets/images/g6_pos_b_q25_sol.png\" style=\"width:220px;max-width:100%;height:auto\" class=\"inline-block align-middle my-2 rounded\"><br>（2）列车返回时所行驶的方向和路程为：<br>从终点站出发，向西偏北40°方向行驶6千米，再向西行驶4千米，最后向西偏南30°方向行驶8千米到达起点站。",
             "proceduralKnowledge": "【确定位置与数对方向解题程序】第一步：明确观测基准点与参照物（上北下南，左西右东）；第二步：按数对定义先列后行（列号在左，行号在右）；第三步：根据偏角方向与比例尺距离进行路线绘制、位置判定或坐标变换．",
             "conditionalKnowledge": "当根据方向、角度与距离确定位置，或用数对表示点的位置及平移变换时，牢记基准参照点的相对性以及“先列后行”的定序法则．"
     }

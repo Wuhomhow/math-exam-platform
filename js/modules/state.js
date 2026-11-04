@@ -12,7 +12,7 @@
       if (/^(13|14|15|16)\./.test(value)) {
         return { grade: '初二', semester: '上册', label: value };
       }
-      if (/^25\./.test(value)) {
+      if (/^(25|26)\./.test(value)) {
         return { grade: '初三', semester: '上册', label: value };
       }
 
@@ -104,6 +104,7 @@
         if (ch.startsWith('16.') || ch.includes('第十六')) return '第16章 幂的运算';
       } else if (grade === '初三') {
         if (ch.startsWith('25.') || ch.includes('第二十五')) return '第25章 一元二次方程';
+        if (ch.startsWith('26.') || ch.includes('第二十六')) return '第26章 二次函数';
       }
       return null;
     }

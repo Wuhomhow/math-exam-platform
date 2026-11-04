@@ -1,18 +1,18 @@
     function getDifficultyBadgeClass(diff) {
       switch (diff) {
         case '容易':
-          return 'text-emerald-700 bg-emerald-50 border-emerald-200';
+          return 'q-meta-diff is-easy';
         case '较易':
-          return 'text-teal-700 bg-teal-50 border-teal-200';
+          return 'q-meta-diff is-fair';
         case '适中':
         case '中等':
-          return 'text-amber-700 bg-amber-50 border-amber-200';
+          return 'q-meta-diff is-medium';
         case '较难':
-          return 'text-orange-700 bg-orange-50 border-orange-200';
+          return 'q-meta-diff is-hard';
         case '困难':
-          return 'text-rose-700 bg-rose-50 border-rose-200';
+          return 'q-meta-diff is-extreme';
         default:
-          return 'text-slate-700 bg-slate-50 border-slate-200';
+          return 'q-meta-diff';
       }
     }
     // Switch Main Views (题库 / 试卷预览)
@@ -228,65 +228,65 @@
         let optionsHtml = '';
         if (q.options && q.options.length > 0) {
           optionsHtml = `
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mt-3 pt-2 text-sm text-slate-800">
-              ${q.options.map(opt => `<div class="answer-option ${getOptionLayoutClass(opt)} p-2 bg-slate-50 rounded border border-slate-100">${formatMathHtml(opt)}</div>`).join('')}
+            <div class="q-options-grid grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 mt-2.5 text-sm text-slate-800">
+              ${q.options.map(opt => `<div class="answer-option ${getOptionLayoutClass(opt)}">${formatMathHtml(opt)}</div>`).join('')}
             </div>
           `;
         }
 
-        const imgHtml = q.image ? `<div class="my-2"><img src="${q.image}" class="max-h-40 max-w-xs h-auto border border-slate-200 rounded p-1 bg-white object-contain"></div>` : '';
+        const imgHtml = q.image ? `<div class="my-1.5"><img src="${q.image}" class="max-h-40 max-w-xs h-auto rounded object-contain"></div>` : '';
 
         // Check if this question has >= 80% similar questions based on conditional & procedural knowledge
         const similarList = typeof window.getSimilarQuestionsFor === 'function' ? window.getSimilarQuestionsFor(q.id, 3) : [];
         const similarBtnHtml = similarList.length > 0 ? `
-          <button class="btn-open-similar px-2.5 py-1 rounded-md flex items-center space-x-1 font-medium transition" data-id="${q.id}" data-number="${qNumber}">
+          <button class="btn-open-similar q-aux-btn" data-id="${q.id}" data-number="${qNumber}">
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
             <span>举一反三 (${similarList.length})</span>
           </button>
         ` : '';
 
         return `
-          <div class="question-card ${isSelected ? 'is-selected' : ''} p-5" data-id="${q.id}">
+          <div class="question-card ${isSelected ? 'is-selected' : ''}" data-id="${q.id}">
             <!-- Header Row -->
-            <div class="flex flex-wrap items-center justify-between pb-3 border-b border-slate-100 gap-2">
+            <div class="q-card-header flex flex-wrap items-center justify-between gap-x-4 gap-y-1.5">
               <div class="flex flex-wrap items-center gap-2">
-                <span class="font-bold text-slate-900 text-sm">第 ${qNumber} 题</span>
-                <span class="text-xs px-2 py-0.5 rounded font-medium ${getGradeSemesterTagClass(q.chapter)}">${getChapterDisplayLabel(q.chapter)}</span>
-                <span class="text-xs px-2 py-0.5 rounded font-medium bg-[#F0FDFA] text-[#0F766E] border border-[#CCFBF1]">${q.typeName}</span>
-                <span class="text-xs px-2 py-0.5 rounded font-medium border ${diffColor}">难度：${q.difficulty}</span>
+                <span class="q-meta-num">第 ${qNumber} 题</span>
+                <span class="q-meta-chapter">${getChapterDisplayLabel(q.chapter)}</span>
+                <span class="q-meta-type">${q.typeName}</span>
+                <span class="${diffColor}">${q.difficulty}</span>
               </div>
-              <div class="text-xs text-slate-400">
-                考点：<span class="text-slate-600 font-medium">${q.knowledge}</span>
+              <div class="q-meta-kp">
+                <span>考点：</span><span class="q-meta-kp-text">${q.knowledge}</span>
               </div>
             </div>
 
-            <!-- Stem -->
-            <div class="pt-3 text-sm leading-relaxed text-slate-900">
-              ${formatMathHtml(q.stem)}
+            <!-- Stem & Options -->
+            <div class="q-card-body text-sm leading-relaxed text-slate-900">
+              <div class="q-stem-content">${formatMathHtml(q.stem)}</div>
               ${imgHtml}
               ${optionsHtml}
             </div>
 
             <!-- Analysis Accordion Drawer -->
-            <div id="analysis_${q.id}" class="hidden mt-4 p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs space-y-2">
+            <div id="analysis_${q.id}" class="hidden q-analysis-panel text-xs space-y-1.5">
               <div class="flex items-center space-x-2 font-bold text-slate-900">
-                <span class="w-2 h-2 rounded-full bg-[#0F766E]"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-[#0F766E]"></span>
                 <span>参考答案：</span>
                 <span class="text-[#0F766E] font-mono text-sm">${formatMathHtml(q.answer)}</span>
               </div>
               <div class="text-slate-600"><b class="text-slate-800">【分析】</b>${formatMathHtml(q.analysis)}</div>
-              <div class="text-slate-700 pt-1 border-t border-slate-200 leading-relaxed"><b class="text-slate-800">【详解】</b>${formatMathHtml(q.detail)}</div>
+              <div class="text-slate-700 pt-1.5 border-t border-slate-200/70 leading-relaxed"><b class="text-slate-800">【详解】</b>${formatMathHtml(q.detail)}</div>
             </div>
 
             <!-- Bottom Actions -->
-            <div data-html2canvas-ignore="true" class="mt-4 pt-3 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2">
-              <div class="flex flex-wrap items-center gap-3 text-xs">
-                <button class="btn-toggle-analysis flex items-center space-x-1 transition" data-id="${q.id}">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+            <div data-html2canvas-ignore="true" class="q-card-footer flex flex-wrap items-center justify-between gap-2">
+              <div class="flex flex-wrap items-center gap-1 sm:gap-2 text-xs">
+                <button class="btn-toggle-analysis q-aux-btn" data-id="${q.id}">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
                   <span class="analysis-btn-text">查看答案解析</span>
                 </button>
-                <button class="btn-screenshot-question flex items-center space-x-1 transition" data-id="${q.id}" data-number="${qNumber}">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"></path></svg>
+                <button class="btn-screenshot-question q-aux-btn" data-id="${q.id}" data-number="${qNumber}">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"></path></svg>
                   <span class="screenshot-btn-text">截图复制</span>
                 </button>
                 ${similarBtnHtml}
@@ -295,8 +295,8 @@
               <!-- Cart Toggle Button -->
               <button class="btn-toggle-cart ${isSelected ? 'is-remove' : ''} px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all flex items-center space-x-1.5" data-id="${q.id}">
                 ${isSelected ? `
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path></svg>
-                  <span>移出试题篮</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                  <span>已加入试题篮</span>
                 ` : `
                   <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
                   <span>加入试题篮</span>
@@ -416,60 +416,60 @@
         let optionsHtml = '';
         if (sq.options && sq.options.length > 0) {
           optionsHtml = `
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-2 mt-3 pt-2 text-sm text-slate-800">
-              ${sq.options.map(opt => `<div class="answer-option ${getOptionLayoutClass(opt)} p-2 bg-slate-50 rounded border border-slate-100">${formatMathHtml(opt)}</div>`).join('')}
+            <div class="q-options-grid grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 mt-2.5 text-sm text-slate-800">
+              ${sq.options.map(opt => `<div class="answer-option ${getOptionLayoutClass(opt)}">${formatMathHtml(opt)}</div>`).join('')}
             </div>
           `;
         }
 
-        const imgHtml = sq.image ? `<div class="my-2"><img src="${sq.image}" class="max-h-40 max-w-xs h-auto border border-slate-200 rounded p-1 bg-white object-contain"></div>` : '';
+        const imgHtml = sq.image ? `<div class="my-1.5"><img src="${sq.image}" class="max-h-40 max-w-xs h-auto rounded object-contain"></div>` : '';
 
         return `
-          <div class="similar-question-card ${isSelected ? 'is-selected' : ''} p-4 sm:p-5" data-id="${sq.id}">
-            <!-- Card Top Meta (匹配题典网青绿色规范) -->
-            <div class="flex flex-wrap items-center justify-between gap-2 pb-2.5 border-b border-slate-100">
+          <div class="similar-question-card ${isSelected ? 'is-selected' : ''}" data-id="${sq.id}">
+            <!-- Card Top Meta -->
+            <div class="q-card-header flex flex-wrap items-center justify-between gap-x-4 gap-y-1.5">
               <div class="flex flex-wrap items-center gap-2">
-                <span class="px-2 py-0.5 rounded bg-[#0F766E] text-white text-xs font-semibold">变式 ${idx + 1}</span>
-                <span class="text-xs px-2 py-0.5 rounded font-bold bg-[#F0FDFA] text-[#115E59] border border-[#CCFBF1]">相似度 ${item.similarityPercent}%</span>
-                <span class="text-xs px-2 py-0.5 rounded font-medium bg-[#F0FDFA] text-[#0F766E] border border-[#CCFBF1]">${sq.typeName}</span>
-                <span class="text-xs px-2 py-0.5 rounded font-medium ${getGradeSemesterTagClass(sq.chapter)}">${getChapterDisplayLabel(sq.chapter)}</span>
-                <span class="text-xs px-2 py-0.5 rounded font-medium border ${diffColor}">难度：${sq.difficulty}</span>
+                <span class="q-meta-num">变式 ${idx + 1}</span>
+                <span class="q-meta-chapter">相似度 ${item.similarityPercent}%</span>
+                <span class="q-meta-type">${sq.typeName}</span>
+                <span class="q-meta-type">${getChapterDisplayLabel(sq.chapter)}</span>
+                <span class="${diffColor}">${sq.difficulty}</span>
               </div>
-              <div class="text-xs text-slate-400">
-                考点：<span class="text-slate-600 font-medium">${sq.knowledge}</span>
+              <div class="q-meta-kp">
+                <span>考点：</span><span class="q-meta-kp-text">${sq.knowledge}</span>
               </div>
             </div>
 
-            <!-- Question Stem -->
-            <div class="pt-3 text-sm leading-relaxed text-slate-900">
-              ${formatMathHtml(sq.stem)}
+            <!-- Question Stem & Options -->
+            <div class="q-card-body text-sm leading-relaxed text-slate-900">
+              <div class="q-stem-content">${formatMathHtml(sq.stem)}</div>
               ${imgHtml}
               ${optionsHtml}
             </div>
 
             <!-- Analysis Accordion -->
-            <div id="sim_analysis_${sq.id}" class="hidden mt-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs space-y-2">
+            <div id="sim_analysis_${sq.id}" class="hidden q-analysis-panel text-xs space-y-1.5">
               <div class="flex items-center space-x-2 font-bold text-slate-900">
-                <span class="w-2 h-2 rounded-full bg-[#0F766E]"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-[#0F766E]"></span>
                 <span>参考答案：</span>
                 <span class="text-[#0F766E] font-mono text-sm">${formatMathHtml(sq.answer)}</span>
               </div>
               <div class="text-slate-600"><b class="text-slate-800">【分析】</b>${formatMathHtml(sq.analysis)}</div>
-              <div class="text-slate-700 pt-1 border-t border-slate-200 leading-relaxed"><b class="text-slate-800">【详解】</b>${formatMathHtml(sq.detail)}</div>
+              <div class="text-slate-700 pt-1.5 border-t border-slate-200/70 leading-relaxed"><b class="text-slate-800">【详解】</b>${formatMathHtml(sq.detail)}</div>
             </div>
 
-            <!-- Card Footer Actions (统一青绿色调) -->
-            <div class="mt-3.5 pt-2.5 border-t border-slate-100 flex items-center justify-between">
-              <button class="btn-sim-toggle-analysis text-xs flex items-center space-x-1 font-medium transition" data-id="${sq.id}">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+            <!-- Card Footer Actions -->
+            <div class="q-card-footer flex flex-wrap items-center justify-between gap-2">
+              <button class="btn-sim-toggle-analysis q-aux-btn" data-id="${sq.id}">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
                 <span class="sim-analysis-btn-text">查看答案解析</span>
               </button>
 
               <div class="flex items-center space-x-2">
                 <button class="btn-sim-toggle-cart ${isSelected ? 'is-remove' : ''} px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all flex items-center space-x-1.5" data-id="${sq.id}">
                   ${isSelected ? `
-                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path></svg>
-                    <span>移出试题篮</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>已加入试题篮</span>
                   ` : `
                     <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
                     <span>加入试题篮</span>

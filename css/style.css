@@ -135,12 +135,10 @@
       color: var(--color-primary-dark);
     }
 
-    /* 移出/清空等语义危险次级按钮（保留红色警告语义） */
+    /* 清空等语义危险次级按钮（保留红色警告语义） */
     .btn-danger-outline,
     #btnClearBasket,
-    #btnClearBasketDrawer,
-    .btn-toggle-cart.is-remove,
-    .btn-sim-toggle-cart.is-remove {
+    #btnClearBasketDrawer {
       background-color: var(--color-danger-bg) !important;
       color: var(--color-danger) !important;
       border: 1px solid var(--color-danger-border) !important;
@@ -148,11 +146,24 @@
     }
     .btn-danger-outline:hover,
     #btnClearBasket:hover,
-    #btnClearBasketDrawer:hover,
-    .btn-toggle-cart.is-remove:hover,
-    .btn-sim-toggle-cart.is-remove:hover {
+    #btnClearBasketDrawer:hover {
       background-color: #FFE4E6 !important;
       border-color: #FDA4AF !important;
+    }
+
+    /* 已加入试题篮状态按钮：清晰浅青绿状态，悬停平滑反馈 */
+    .btn-toggle-cart.is-remove,
+    .btn-sim-toggle-cart.is-remove {
+      background-color: var(--color-primary-bg) !important;
+      color: var(--color-primary-dark) !important;
+      border: 1px solid var(--color-primary-border) !important;
+      box-shadow: none !important;
+    }
+    .btn-toggle-cart.is-remove:hover,
+    .btn-sim-toggle-cart.is-remove:hover {
+      background-color: var(--color-primary-light) !important;
+      border-color: var(--color-primary) !important;
+      color: var(--color-primary-dark) !important;
     }
 
     /* 顶部导航与分段控制器激活态 */
@@ -231,7 +242,9 @@
       outline-offset: 1px;
     }
 
-    /* 卡片统一细边框、圆角、轻量化无冗余阴影 */
+    /* ==========================================================================
+       题目卡片专项样式（第二轮 UI 精细化）
+       ========================================================================== */
     .ui-card,
     .question-card,
     .similar-question-card {
@@ -239,55 +252,173 @@
       border: 1px solid var(--color-border);
       border-radius: var(--radius-card);
       box-shadow: none;
-      transition: border-color var(--transition-fast), background-color var(--transition-fast);
+      transition: border-color var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
+    }
+    .question-card {
+      padding: 0.95rem 1.2rem;
+    }
+    .similar-question-card {
+      padding: 0.9rem 1.15rem;
     }
     .question-card:hover,
     .similar-question-card:hover {
       border-color: #CBD5E1;
-      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+      box-shadow: 0 1px 4px rgba(15, 23, 42, 0.03);
     }
     .question-card.is-selected,
     .similar-question-card.is-selected {
       border-color: var(--color-primary) !important;
-      background-color: #FCFDFD;
+      background-color: #FFFFFF;
       box-shadow: 0 0 0 1px var(--color-primary-light) !important;
     }
 
-    /* 选项悬停态 */
-    .answer-option {
-      min-width: 0;
+    /* 1. 顶部元信息区：分层级、弱化冗余边框、自然换行 */
+    .q-card-header {
+      padding-bottom: 0.45rem;
+      margin-bottom: 0.2rem;
+    }
+    .q-meta-num {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--color-text-main);
+      letter-spacing: -0.01em;
+      margin-right: 0.15rem;
+    }
+    .q-meta-chapter {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.125rem 0.5rem;
+      border-radius: 0.35rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      background-color: var(--color-primary-bg);
+      color: var(--color-primary-dark);
+      border: none;
+    }
+    .q-meta-type {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.125rem 0.48rem;
+      border-radius: 0.35rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      background-color: var(--color-subtle-bg);
+      color: #475569;
+      border: none;
+    }
+    .q-meta-diff {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.125rem 0.48rem;
+      border-radius: 0.35rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      background-color: var(--color-subtle-bg);
+      color: var(--color-text-secondary);
+      border: none;
+    }
+    .q-meta-diff.is-easy { background-color: #ECFDF5; color: #047857; }
+    .q-meta-diff.is-fair { background-color: #F0FDFA; color: #0F766E; }
+    .q-meta-diff.is-medium { background-color: #FFFBEB; color: #B45309; }
+    .q-meta-diff.is-hard { background-color: #FFF7ED; color: #C2410C; }
+    .q-meta-diff.is-extreme { background-color: #FFF1F2; color: #BE123C; }
+
+    .q-meta-kp {
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      line-height: 1.4;
+      max-width: 100%;
       overflow-wrap: anywhere;
+    }
+    .q-meta-kp-text {
+      color: var(--color-text-secondary);
+      font-weight: 400;
+    }
+
+    /* 2. 题干区域：清晰易读、紧凑连接、不缩字号 */
+    .q-card-body {
+      padding-top: 0.25rem;
+      font-size: 0.925rem;
+      line-height: 1.68;
+      color: var(--color-text-main);
+      overflow-wrap: anywhere;
+    }
+    .q-stem-content br + br {
+      display: none;
+    }
+    .q-stem-content img {
+      margin-top: 0.35rem !important;
+      margin-bottom: 0.25rem !important;
+    }
+
+    /* 3. 选项区域：双列对齐、低对比浅底、弱化边框、自适应换行 */
+    .q-options-grid {
+      align-items: stretch;
+    }
+    .question-card .answer-option,
+    .similar-question-card .answer-option {
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+      padding: 0.45rem 0.7rem;
+      border-radius: 0.45rem;
+      background-color: #F8FAFC;
+      border: 1px solid #F1F5F9;
+      color: var(--color-text-main);
+      font-size: 0.875rem;
+      line-height: 1.5;
+      overflow-wrap: anywhere;
+      word-break: break-word;
       transition: border-color var(--transition-fast), background-color var(--transition-fast);
     }
     .question-card .answer-option:hover,
     .similar-question-card .answer-option:hover {
-      border-color: var(--color-primary-border) !important;
-      background-color: var(--color-primary-bg) !important;
+      border-color: #CCFBF1 !important;
+      background-color: #F0FDFA !important;
     }
     .answer-option-wide { grid-column: 1 / -1; }
 
-    /* 题卡底部辅助操作按钮（查看解析、截图、举一反三） */
-    .btn-toggle-analysis,
-    .btn-screenshot-question,
-    .btn-sim-toggle-analysis {
-      color: var(--color-text-secondary);
-      transition: color var(--transition-fast);
-    }
-    .btn-toggle-analysis:hover,
-    .btn-screenshot-question:hover,
-    .btn-sim-toggle-analysis:hover {
-      color: var(--color-primary) !important;
+    /* 4. 解析折叠面板：去除厚重边框，清爽内嵌 */
+    .q-analysis-panel {
+      margin-top: 0.65rem;
+      padding: 0.75rem 0.9rem;
+      border-radius: 0.55rem;
+      background-color: #F8FAFC;
+      border: 1px solid #EEF2F6;
     }
 
-    .btn-open-similar {
+    /* 5. 底部操作区：轻量文字辅助按钮 vs 实心青绿主按钮 */
+    .q-card-footer {
+      margin-top: 0.65rem;
+      padding-top: 0.45rem;
+      border-top: 1px solid #F8FAFC;
+    }
+    .q-aux-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.25rem 0.45rem;
+      border-radius: 0.375rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--color-text-secondary) !important;
+      background-color: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      transition: color var(--transition-fast), background-color var(--transition-fast);
+    }
+    .q-aux-btn:hover {
       color: var(--color-primary) !important;
       background-color: var(--color-primary-bg) !important;
-      border: 1px solid var(--color-primary-light) !important;
     }
-    .btn-open-similar:hover {
+    .q-aux-btn.btn-open-similar {
+      color: var(--color-primary) !important;
+    }
+    .q-aux-btn.btn-open-similar:hover {
       color: var(--color-primary-dark) !important;
-      background-color: var(--color-primary-light) !important;
-      border-color: var(--color-primary-border) !important;
+      background-color: var(--color-primary-bg) !important;
     }
 
     /* Fallback inline math styling when KaTeX CDN is offline */

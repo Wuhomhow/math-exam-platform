@@ -5,10 +5,17 @@
 
     function inferAcademicLocation(chapter) {
       const value = String(chapter || '').trim();
-      const legacyGrade7 = /^[123456]\./.test(value) || /第[一二三四五六]章/.test(value);
-      if (legacyGrade7) {
-        return { grade: '初一', semester: '上册', label: value };
+
+      const m = value.match(/^(六年级|小学六年级|初一|初二|初三|高一|高二|高三|七年级|八年级|九年级)\s*(上册|下册)?\s*(.*)$/);
+      if (m) {
+        const gradeMap = { '小学六年级': '六年级', '七年级': '初一', '八年级': '初二', '九年级': '初三' };
+        return {
+          grade: gradeMap[m[1]] || m[1],
+          semester: m[2] || '上册',
+          label: (m[3] || value).trim()
+        };
       }
+
       if (/^(13|14|15|16)\./.test(value)) {
         return { grade: '初二', semester: '上册', label: value };
       }
@@ -16,14 +23,9 @@
         return { grade: '初三', semester: '上册', label: value };
       }
 
-      const m = value.match(/^(六年级|小学六年级|初一|初二|初三|高一|高二|高三|七年级|八年级|九年级)\s*(上册|下册)\s*(.*)$/);
-      if (m) {
-        const gradeMap = { '小学六年级': '六年级', '七年级': '初一', '八年级': '初二', '九年级': '初三' };
-        return {
-          grade: gradeMap[m[1]] || m[1],
-          semester: m[2],
-          label: (m[3] || value).trim()
-        };
+      const legacyGrade7 = /^[123456]\./.test(value) || /^第[一二三四五六]章/.test(value);
+      if (legacyGrade7) {
+        return { grade: '初一', semester: '上册', label: value };
       }
 
       // Keep any future imported topic visible instead of silently dropping it.

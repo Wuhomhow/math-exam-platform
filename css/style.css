@@ -151,8 +151,34 @@
     .nav-topic-button:hover { background-color: var(--accent-50); color: var(--accent-900); }
     .nav-topic-button.is-active .nav-topic-count { background: var(--accent-100); color: var(--accent-900); }
     .nav-tab.text-blue-700, #mobileNavBank.text-blue-700, #mobileNavPaper.text-blue-700 { color: var(--accent-900) !important; }
-    .filter-type-btn.bg-blue-600, .filter-diff-btn.bg-blue-600 { background-color: var(--accent-700) !important; color: #fff !important; box-shadow: 0 1px 2px rgba(15, 118, 110, .2); }
-    .filter-type-btn.bg-slate-100:hover, .filter-diff-btn.bg-slate-100:hover { background-color: var(--accent-50) !important; color: var(--accent-900) !important; }
+    .filter-type-btn.bg-blue-600 { background-color: var(--accent-700) !important; color: #fff !important; box-shadow: 0 1px 2px rgba(15, 118, 110, .2); }
+    .filter-type-btn.bg-slate-100:hover { background-color: var(--accent-50) !important; color: var(--accent-900) !important; }
+
+    /* Difficulty Filter Buttons Distinct Palettes */
+    .filter-diff-btn { font-weight: 500; border-width: 1px; border-style: solid; transition: all .15s ease; }
+    .filter-diff-btn[data-diff="all"] { background-color: #f1f5f9; border-color: #e2e8f0; color: #334155; }
+    .filter-diff-btn[data-diff="all"]:hover { background-color: #e2e8f0; }
+    .filter-diff-btn[data-diff="all"].is-active { background-color: var(--accent-700) !important; border-color: var(--accent-700) !important; color: #fff !important; }
+
+    .filter-diff-btn[data-diff="容易"] { background-color: #ecfdf5; border-color: #a7f3d0; color: #047857; }
+    .filter-diff-btn[data-diff="容易"]:hover { background-color: #d1fae5; border-color: #6ee7b7; }
+    .filter-diff-btn[data-diff="容易"].is-active { background-color: #059669 !important; border-color: #059669 !important; color: #fff !important; box-shadow: 0 1px 2px rgba(5, 150, 105, .3); }
+
+    .filter-diff-btn[data-diff="较易"] { background-color: #f0fdfa; border-color: #99f6e4; color: #0f766e; }
+    .filter-diff-btn[data-diff="较易"]:hover { background-color: #ccfbf1; border-color: #5eead4; }
+    .filter-diff-btn[data-diff="较易"].is-active { background-color: #0d9488 !important; border-color: #0d9488 !important; color: #fff !important; box-shadow: 0 1px 2px rgba(13, 148, 136, .3); }
+
+    .filter-diff-btn[data-diff="中等"] { background-color: #fffbeb; border-color: #fde68a; color: #b45309; }
+    .filter-diff-btn[data-diff="中等"]:hover { background-color: #fef3c7; border-color: #fcd34d; }
+    .filter-diff-btn[data-diff="中等"].is-active { background-color: #d97706 !important; border-color: #d97706 !important; color: #fff !important; box-shadow: 0 1px 2px rgba(217, 119, 6, .3); }
+
+    .filter-diff-btn[data-diff="较难"] { background-color: #fff7ed; border-color: #fed7aa; color: #c2410c; }
+    .filter-diff-btn[data-diff="较难"]:hover { background-color: #ffedd5; border-color: #fdba74; }
+    .filter-diff-btn[data-diff="较难"].is-active { background-color: #ea580c !important; border-color: #ea580c !important; color: #fff !important; box-shadow: 0 1px 2px rgba(234, 88, 12, .3); }
+
+    .filter-diff-btn[data-diff="困难"] { background-color: #fff1f2; border-color: #fecdd3; color: #be123c; }
+    .filter-diff-btn[data-diff="困难"]:hover { background-color: #ffe4e6; border-color: #fda4af; }
+    .filter-diff-btn[data-diff="困难"].is-active { background-color: #e11d48 !important; border-color: #e11d48 !important; color: #fff !important; box-shadow: 0 1px 2px rgba(225, 29, 72, .3); }
     #btnOpenBasket, #btnDrawerGoPaper, #btnPrintPaper, .btn-toggle-cart:not(.bg-red-50) { background-color: var(--accent-700) !important; }
     #btnOpenBasket:hover, #btnDrawerGoPaper:hover, #btnPrintPaper:hover, .btn-toggle-cart:not(.bg-red-50):hover { background-color: var(--accent-900) !important; }
     #btnExportWord { background-color: var(--accent-700) !important; }

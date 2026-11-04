@@ -39,9 +39,7 @@ function syncUiToState() {
   // 3. Diff filter buttons
   document.querySelectorAll('.filter-diff-btn').forEach(btn => {
     const isAct = btn.getAttribute('data-diff') === state.diffFilter;
-    btn.className = isAct
-      ? 'filter-diff-btn px-3 py-1 rounded-md bg-blue-600 text-white font-medium'
-      : 'filter-diff-btn px-3 py-1 rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200';
+    btn.classList.toggle('is-active', isAct);
   });
 
   // 4. Search input
@@ -505,7 +503,7 @@ function initEvents() {
         currentPool = paper.questionIds.map(id => byId.get(id)).filter(q => {
           if (!q) return false;
           if (state.typeFilter !== 'all' && q.type !== state.typeFilter) return false;
-          if (state.diffFilter !== 'all' && q.difficulty !== state.diffFilter) return false;
+          if (state.diffFilter !== 'all' && (q.difficulty === '适中' ? '中等' : q.difficulty) !== state.diffFilter) return false;
           return true;
         });
       }
@@ -517,7 +515,7 @@ function initEvents() {
           } else if (q.chapter !== state.chapterFilter) return false;
         }
         if (state.typeFilter !== 'all' && q.type !== state.typeFilter) return false;
-        if (state.diffFilter !== 'all' && q.difficulty !== state.diffFilter) return false;
+        if (state.diffFilter !== 'all' && (q.difficulty === '适中' ? '中等' : q.difficulty) !== state.diffFilter) return false;
         return true;
       });
     }
@@ -545,9 +543,9 @@ function initEvents() {
   document.querySelectorAll('.filter-diff-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.filter-diff-btn').forEach(b => {
-        b.className = 'filter-diff-btn px-3 py-1 rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200';
+        b.classList.remove('is-active');
       });
-      btn.className = 'filter-diff-btn px-3 py-1 rounded-md bg-blue-600 text-white font-medium';
+      btn.classList.add('is-active');
       state.diffFilter = btn.getAttribute('data-diff');
       state.currentPage = 1;
       saveUiPreferences();

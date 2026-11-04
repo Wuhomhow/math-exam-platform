@@ -1,3 +1,20 @@
+    function getDifficultyBadgeClass(diff) {
+      switch (diff) {
+        case '容易':
+          return 'text-emerald-700 bg-emerald-50 border-emerald-200';
+        case '较易':
+          return 'text-teal-700 bg-teal-50 border-teal-200';
+        case '适中':
+        case '中等':
+          return 'text-amber-700 bg-amber-50 border-amber-200';
+        case '较难':
+          return 'text-orange-700 bg-orange-50 border-orange-200';
+        case '困难':
+          return 'text-rose-700 bg-rose-50 border-rose-200';
+        default:
+          return 'text-slate-700 bg-slate-50 border-slate-200';
+      }
+    }
     // Switch Main Views (题库 / 试卷预览)
     function switchView(viewName) {
       if (viewName !== 'paper') viewName = 'bank';
@@ -51,20 +68,21 @@
         return q.chapter === state.chapterFilter;
       });
       const typeMap = { all: chapPool.length, choice: 0, blank: 0, calc: 0 };
-      const diffMap = { all: chapPool.length, '容易': 0, '中等': 0, '较难': 0 };
+      const diffMap = { all: chapPool.length, '容易': 0, '较易': 0, '中等': 0, '较难': 0 };
       chapPool.forEach(q => {
         if (typeMap[q.type] !== undefined) typeMap[q.type]++;
-        if (diffMap[q.difficulty] !== undefined) diffMap[q.difficulty]++;
+        const d = q.difficulty === '适中' ? '中等' : q.difficulty;
+        if (diffMap[d] !== undefined) diffMap[d]++;
       });
       const typeLabels = { all: '全部', choice: '单选题', blank: '填空题', calc: '解答题' };
       document.querySelectorAll('.filter-type-btn').forEach(b => {
         const t = b.getAttribute('data-type');
         if (typeLabels[t]) b.textContent = `${typeLabels[t]} (${typeMap[t]})`;
       });
-      const diffLabels = { all: '全部', '容易': '容易', '中等': '中等', '较难': '较难' };
+      const diffLabels = { all: '全部', '容易': '容易', '较易': '较易', '中等': '中等', '较难': '较难' };
       document.querySelectorAll('.filter-diff-btn').forEach(b => {
         const d = b.getAttribute('data-diff');
-        if (diffLabels[d]) b.textContent = `${diffLabels[d]} (${diffMap[d]})`;
+        if (diffLabels[d]) b.textContent = `${diffLabels[d]} (${diffMap[d] !== undefined ? diffMap[d] : 0})`;
       });
 
       function getCurrentFilteredQuestions() {
@@ -75,7 +93,7 @@
             return paper.questionIds.map(id => byId.get(id)).filter(q => {
               if (!q) return false;
               if (state.typeFilter !== 'all' && q.type !== state.typeFilter) return false;
-              if (state.diffFilter !== 'all' && q.difficulty !== state.diffFilter) return false;
+              if (state.diffFilter !== 'all' && (q.difficulty === '适中' ? '中等' : q.difficulty) !== state.diffFilter) return false;
               if (state.searchKeyword) {
                 const kw = state.searchKeyword.toLowerCase();
                 const matchStem = q.stem.toLowerCase().includes(kw);
@@ -97,7 +115,7 @@
             }
           }
           if (state.typeFilter !== 'all' && q.type !== state.typeFilter) return false;
-          if (state.diffFilter !== 'all' && q.difficulty !== state.diffFilter) return false;
+          if (state.diffFilter !== 'all' && (q.difficulty === '适中' ? '中等' : q.difficulty) !== state.diffFilter) return false;
           if (state.searchKeyword) {
             const kw = state.searchKeyword.toLowerCase();
             const matchStem = q.stem.toLowerCase().includes(kw);
@@ -211,9 +229,7 @@
       container.innerHTML = pageQuestions.map((q, pageIdx) => {
         const qNumber = startIndex + pageIdx + 1;
         const isSelected = state.selectedIds.has(q.id);
-        const diffColor = q.difficulty === '容易' ? 'text-emerald-600 bg-emerald-50 border-emerald-200' :
-                          q.difficulty === '中等' ? 'text-amber-600 bg-amber-50 border-amber-200' :
-                          'text-rose-600 bg-rose-50 border-rose-200';
+        const diffColor = getDifficultyBadgeClass(q.difficulty);
         
         let optionsHtml = '';
         if (q.options && q.options.length > 0) {
@@ -403,9 +419,7 @@
       bodyEl.innerHTML = similarItems.map((item, idx) => {
         const sq = item.question;
         const isSelected = state.selectedIds.has(sq.id);
-        const diffColor = sq.difficulty === '容易' ? 'text-emerald-600 bg-emerald-50 border-emerald-200' :
-                          sq.difficulty === '中等' ? 'text-amber-600 bg-amber-50 border-amber-200' :
-                          'text-rose-600 bg-rose-50 border-rose-200';
+        const diffColor = getDifficultyBadgeClass(sq.difficulty);
 
         let optionsHtml = '';
         if (sq.options && sq.options.length > 0) {

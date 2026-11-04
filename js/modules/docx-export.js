@@ -751,9 +751,9 @@
           if (isTeacher) {
             out += renderRichContentToWordXml(
               q.answer,
-              textWithMathAndImgToRuns('【答案】', { sz: 19, bold: true, color: '1D4ED8' }),
+              textWithMathAndImgToRuns('【答案】', { sz: 19, bold: true, color: '0F766E' }),
               '',
-              { sz: 19, color: '1D4ED8' },
+              { sz: 19, color: '0F766E' },
               { indent: 360, before: 40, after: 20 }
             );
             if (q.analysis) {
@@ -839,7 +839,7 @@
       const a = document.createElement('a');
       a.href = url;
       const suffix = isTeacher ? '_教师解析版' : '_学生用卷';
-      a.download = `初中数学试卷${suffix}.docx`;
+      a.download = `题典网_数学试卷${suffix}.docx`;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);

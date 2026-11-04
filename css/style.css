@@ -1,6 +1,51 @@
+    /* ==========================================================================
+       题典网 · 全局 UI 颜色与组件设计系统 (CSS Variables)
+       ========================================================================== */
+    :root {
+      /* 核心品牌青绿色系 */
+      --color-primary: #0F766E;
+      --color-primary-dark: #115E59;
+      --color-primary-light: #CCFBF1;
+      --color-primary-bg: #F0FDFA;
+      --color-primary-border: #99F6E4;
+
+      /* 中性色与背景层级 */
+      --color-page-bg: #F8FAFC;
+      --color-card-bg: #FFFFFF;
+      --color-subtle-bg: #F1F5F9;
+      --color-text-main: #1E293B;
+      --color-text-secondary: #64748B;
+      --color-text-muted: #94A3B8;
+      --color-border: #E2E8F0;
+      --color-border-light: #F1F5F9;
+
+      /* 语义状态颜色（保留语义差异） */
+      --color-success: #059669;
+      --color-warning: #D97706;
+      --color-danger: #E11D48;
+      --color-danger-bg: #FFF1F2;
+      --color-danger-border: #FECDD3;
+
+      /* 兼容旧变量别名 */
+      --accent-900: var(--color-primary-dark);
+      --accent-700: var(--color-primary);
+      --accent-600: #0D9488;
+      --accent-100: var(--color-primary-light);
+      --accent-50: var(--color-primary-bg);
+
+      /* 统一组件圆角与过渡 */
+      --radius-card: 0.75rem;
+      --radius-btn: 0.5rem;
+      --radius-tag: 0.375rem;
+      --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
     body {
       font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+      background-color: var(--color-page-bg);
+      color: var(--color-text-main);
     }
+
     .font-serif-sc {
       font-family: 'Songti SC', 'Noto Serif SC', 'SimSun', serif;
     }
@@ -9,7 +54,7 @@
     img {
       display: inline-block;
     }
-    
+
     /* Prevent KaTeX MathML duplication when copying or exporting */
     .katex-mathml {
       display: none !important;
@@ -24,6 +69,226 @@
     svg.w-6 { width: 1.5rem; height: 1.5rem; display: inline-block; vertical-align: middle; }
     svg.w-8 { width: 2rem; height: 2rem; display: inline-block; vertical-align: middle; }
     svg.w-12 { width: 3rem; height: 3rem; display: inline-block; vertical-align: middle; }
+
+    /* 统一图标线条粗细与对齐 */
+    svg {
+      stroke-width: 1.75;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* ==========================================================================
+       统一组件样式：按钮、输入框、复选框、卡片、分段切换器
+       ========================================================================== */
+    button, a.btn-primary, a.btn-secondary {
+      border-radius: var(--radius-btn);
+      transition: color var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    button:focus-visible, a:focus-visible {
+      outline: 2px solid var(--color-primary-light);
+      outline-offset: 2px;
+    }
+
+    /* 主按钮：纯色青绿色，无渐变，无跳动缩放 */
+    .btn-primary,
+    #btnOpenBasket,
+    #btnDrawerGoPaper,
+    #btnPrintPaper,
+    #btnExportWord,
+    .btn-toggle-cart:not(.is-remove),
+    .btn-sim-toggle-cart:not(.is-remove) {
+      background-color: var(--color-primary) !important;
+      color: #FFFFFF !important;
+      border: 1px solid var(--color-primary) !important;
+      box-shadow: none !important;
+    }
+    .btn-primary:hover,
+    #btnOpenBasket:hover,
+    #btnDrawerGoPaper:hover,
+    #btnPrintPaper:hover,
+    #btnExportWord:hover,
+    .btn-toggle-cart:not(.is-remove):hover,
+    .btn-sim-toggle-cart:not(.is-remove):hover {
+      background-color: var(--color-primary-dark) !important;
+      border-color: var(--color-primary-dark) !important;
+    }
+
+    /* 次级按钮：白色背景 + 浅灰细边框 */
+    .btn-secondary,
+    #btnOpenGuide,
+    #btnSelectAll,
+    #btnBackToBank,
+    .page-nav-btn:not(.is-active) {
+      background-color: var(--color-card-bg);
+      color: var(--color-text-main);
+      border: 1px solid var(--color-border);
+      box-shadow: none;
+    }
+    .btn-secondary:hover,
+    #btnOpenGuide:hover,
+    #btnSelectAll:hover,
+    #btnBackToBank:hover,
+    .page-nav-btn:not(.is-active):hover {
+      background-color: var(--color-primary-bg);
+      border-color: var(--color-primary-border);
+      color: var(--color-primary-dark);
+    }
+
+    /* 移出/清空等语义危险次级按钮（保留红色警告语义） */
+    .btn-danger-outline,
+    #btnClearBasket,
+    #btnClearBasketDrawer,
+    .btn-toggle-cart.is-remove,
+    .btn-sim-toggle-cart.is-remove {
+      background-color: var(--color-danger-bg) !important;
+      color: var(--color-danger) !important;
+      border: 1px solid var(--color-danger-border) !important;
+      box-shadow: none !important;
+    }
+    .btn-danger-outline:hover,
+    #btnClearBasket:hover,
+    #btnClearBasketDrawer:hover,
+    .btn-toggle-cart.is-remove:hover,
+    .btn-sim-toggle-cart.is-remove:hover {
+      background-color: #FFE4E6 !important;
+      border-color: #FDA4AF !important;
+    }
+
+    /* 顶部导航与分段控制器激活态 */
+    .nav-tab.is-active,
+    .seg-btn.is-active {
+      background-color: var(--color-card-bg) !important;
+      color: var(--color-primary) !important;
+      font-weight: 600 !important;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+    }
+    .nav-tab:not(.is-active),
+    .seg-btn:not(.is-active) {
+      color: var(--color-text-secondary) !important;
+      background-color: transparent !important;
+    }
+    .nav-tab:not(.is-active):hover,
+    .seg-btn:not(.is-active):hover {
+      color: var(--color-primary-dark) !important;
+      background-color: rgba(255, 255, 255, 0.65) !important;
+    }
+
+    /* 题型筛选按钮 */
+    .filter-type-btn {
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-tag);
+      font-weight: 500;
+      border: 1px solid var(--color-border);
+      background-color: var(--color-card-bg);
+      color: var(--color-text-main);
+      transition: all var(--transition-fast);
+    }
+    .filter-type-btn:hover {
+      background-color: var(--color-primary-bg);
+      border-color: var(--color-primary-border);
+      color: var(--color-primary-dark);
+    }
+    .filter-type-btn.is-active {
+      background-color: var(--color-primary) !important;
+      border-color: var(--color-primary) !important;
+      color: #FFFFFF !important;
+    }
+
+    /* 分页按钮激活态 */
+    .page-nav-btn.is-active {
+      background-color: var(--color-primary) !important;
+      border: 1px solid var(--color-primary) !important;
+      color: #FFFFFF !important;
+    }
+
+    /* 输入框与复选框统一浅青绿焦点态 */
+    input[type="text"],
+    input[type="search"],
+    select,
+    textarea {
+      background-color: var(--color-card-bg);
+      border: 1px solid var(--color-border) !important;
+      color: var(--color-text-main);
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    }
+    input[type="text"]:focus,
+    input[type="search"]:focus,
+    select:focus,
+    textarea:focus {
+      outline: none !important;
+      border-color: var(--color-primary) !important;
+      box-shadow: 0 0 0 3px var(--color-primary-light) !important;
+    }
+
+    input[type="checkbox"] {
+      accent-color: var(--color-primary);
+      border-color: var(--color-border);
+      cursor: pointer;
+    }
+    input[type="checkbox"]:focus {
+      outline: 2px solid var(--color-primary-light);
+      outline-offset: 1px;
+    }
+
+    /* 卡片统一细边框、圆角、轻量化无冗余阴影 */
+    .ui-card,
+    .question-card,
+    .similar-question-card {
+      background-color: var(--color-card-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-card);
+      box-shadow: none;
+      transition: border-color var(--transition-fast), background-color var(--transition-fast);
+    }
+    .question-card:hover,
+    .similar-question-card:hover {
+      border-color: #CBD5E1;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+    }
+    .question-card.is-selected,
+    .similar-question-card.is-selected {
+      border-color: var(--color-primary) !important;
+      background-color: #FCFDFD;
+      box-shadow: 0 0 0 1px var(--color-primary-light) !important;
+    }
+
+    /* 选项悬停态 */
+    .answer-option {
+      min-width: 0;
+      overflow-wrap: anywhere;
+      transition: border-color var(--transition-fast), background-color var(--transition-fast);
+    }
+    .question-card .answer-option:hover,
+    .similar-question-card .answer-option:hover {
+      border-color: var(--color-primary-border) !important;
+      background-color: var(--color-primary-bg) !important;
+    }
+    .answer-option-wide { grid-column: 1 / -1; }
+
+    /* 题卡底部辅助操作按钮（查看解析、截图、举一反三） */
+    .btn-toggle-analysis,
+    .btn-screenshot-question,
+    .btn-sim-toggle-analysis {
+      color: var(--color-text-secondary);
+      transition: color var(--transition-fast);
+    }
+    .btn-toggle-analysis:hover,
+    .btn-screenshot-question:hover,
+    .btn-sim-toggle-analysis:hover {
+      color: var(--color-primary) !important;
+    }
+
+    .btn-open-similar {
+      color: var(--color-primary) !important;
+      background-color: var(--color-primary-bg) !important;
+      border: 1px solid var(--color-primary-light) !important;
+    }
+    .btn-open-similar:hover {
+      color: var(--color-primary-dark) !important;
+      background-color: var(--color-primary-light) !important;
+      border-color: var(--color-primary-border) !important;
+    }
 
     /* Fallback inline math styling when KaTeX CDN is offline */
     .math-fallback {
@@ -59,8 +324,9 @@
 
     /* Paper styling */
     .paper-sheet {
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-      background-color: #ffffff;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+      background-color: var(--color-card-bg);
+      border: 1px solid var(--color-border);
       min-height: 1050px;
     }
 
@@ -81,6 +347,7 @@
         padding: 0;
         background: transparent !important;
         box-shadow: none !important;
+        border: none !important;
       }
       .no-print {
         display: none !important;
@@ -99,99 +366,254 @@
       height: 6px;
     }
     ::-webkit-scrollbar-track {
-      background: #f1f5f9;
+      background: var(--color-subtle-bg);
     }
     ::-webkit-scrollbar-thumb {
-      background: #cbd5e1;
+      background: #CBD5E1;
       border-radius: 3px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #94a3b8;
+      background: var(--color-text-muted);
     }
 
-    /* Unified grade/semester/question-bank navigation */
-    .chapter-tree-btn { transition: background-color .15s ease, color .15s ease, border-color .15s ease; }
-    .chapter-tree-btn:hover { background-color: #f8fafc; }
-    .chapter-tree-btn.is-active { background-color: #eff6ff !important; border-color: #bfdbfe !important; color: #1d4ed8 !important; font-weight: 700 !important; }
-    .nav-grade-card { border: 1px solid #e2e8f0; border-radius: .75rem; overflow: hidden; background: #fff; }
-    .nav-grade-card > summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: .5rem; padding: .7rem .8rem; background: #f8fafc; font-size: .875rem; font-weight: 700; color: #334155; }
+    /* ==========================================================================
+       左侧题库目录（年级 / 册次 / 章节导航）
+       ========================================================================== */
+    .chapter-tree-btn {
+      transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+    }
+    .chapter-tree-btn:hover {
+      background-color: var(--color-primary-bg);
+      color: var(--color-primary-dark);
+    }
+    .chapter-tree-btn.is-active {
+      background-color: var(--color-primary-bg) !important;
+      border-color: var(--color-primary-border) !important;
+      color: var(--color-primary-dark) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-grade-card {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      background: var(--color-card-bg);
+    }
+    .nav-grade-card > summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      padding: 0.7rem 0.8rem;
+      background: var(--color-page-bg);
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--color-text-main);
+    }
     .nav-grade-card > summary::-webkit-details-marker { display: none; }
-    .nav-grade-card > summary::after { content: '⌄'; color: #94a3b8; font-size: .95rem; transition: transform .15s ease; }
+    .nav-grade-card > summary::after {
+      content: '⌄';
+      color: var(--color-text-muted);
+      font-size: 0.95rem;
+      transition: transform var(--transition-fast);
+    }
     .nav-grade-card:not([open]) > summary::after { transform: rotate(-90deg); }
-    .nav-grade-content { padding: .65rem; }
-    .nav-finished-paper-card { border: 1px solid #ccfbf1; border-radius: .6rem; overflow: hidden; background: #f0fdfa; }
-    .nav-finished-paper-card > summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: .4rem; padding: .48rem .6rem; background: #f0fdfa; font-size: .76rem; font-weight: 700; color: #115e59; transition: background-color .15s ease; }
-    .nav-finished-paper-card > summary:hover { background: #ccfbf1; }
+    .nav-grade-content { padding: 0.65rem; }
+
+    .nav-finished-paper-card {
+      border: 1px solid var(--color-primary-light);
+      border-radius: 0.6rem;
+      overflow: hidden;
+      background: var(--color-primary-bg);
+    }
+    .nav-finished-paper-card > summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.4rem;
+      padding: 0.48rem 0.6rem;
+      background: var(--color-primary-bg);
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      transition: background-color var(--transition-fast);
+    }
+    .nav-finished-paper-card > summary:hover { background: var(--color-primary-light); }
     .nav-finished-paper-card > summary::-webkit-details-marker { display: none; }
-    .nav-finished-paper-card > summary::after { content: '⌄'; color: #0f766e; font-size: .85rem; transition: transform .15s ease; }
+    .nav-finished-paper-card > summary::after {
+      content: '⌄';
+      color: var(--color-primary);
+      font-size: 0.85rem;
+      transition: transform var(--transition-fast);
+    }
     .nav-finished-paper-card:not([open]) > summary::after { transform: rotate(-90deg); }
-    .nav-finished-badge { margin-left: auto; margin-right: .25rem; padding: .08rem .38rem; border-radius: .35rem; background: #ccfbf1; color: #0f766e; font-size: .68rem; font-weight: 700; }
-    .nav-finished-paper-content { padding: .4rem .45rem .45rem; background: #ffffff; border-top: 1px solid #ccfbf1; }
-    .nav-chapter-group-card { border: 1px solid #e2e8f0; border-radius: .55rem; overflow: hidden; background: #ffffff; margin-bottom: .45rem; }
-    .nav-chapter-group-card > summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: .4rem; padding: .46rem .55rem; background: #f8fafc; font-size: .74rem; font-weight: 700; color: #334155; transition: background-color .15s ease, color .15s ease; }
-    .nav-chapter-group-card > summary:hover { background: #f1f5f9; color: #0f172a; }
+    .nav-finished-badge {
+      margin-left: auto;
+      margin-right: 0.25rem;
+      padding: 0.08rem 0.38rem;
+      border-radius: 0.35rem;
+      background: var(--color-primary-light);
+      color: var(--color-primary);
+      font-size: 0.68rem;
+      font-weight: 700;
+    }
+    .nav-finished-paper-content {
+      padding: 0.4rem 0.45rem 0.45rem;
+      background: var(--color-card-bg);
+      border-top: 1px solid var(--color-primary-light);
+    }
+
+    .nav-chapter-group-card {
+      border: 1px solid var(--color-border);
+      border-radius: 0.55rem;
+      overflow: hidden;
+      background: var(--color-card-bg);
+      margin-bottom: 0.45rem;
+    }
+    .nav-chapter-group-card > summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.4rem;
+      padding: 0.46rem 0.55rem;
+      background: var(--color-page-bg);
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: var(--color-text-main);
+      transition: background-color var(--transition-fast), color var(--transition-fast);
+    }
+    .nav-chapter-group-card > summary:hover {
+      background: var(--color-subtle-bg);
+      color: var(--color-primary-dark);
+    }
     .nav-chapter-group-card > summary::-webkit-details-marker { display: none; }
-    .nav-chapter-group-card > summary::after { content: '⌄'; color: #94a3b8; font-size: .85rem; transition: transform .15s ease; }
+    .nav-chapter-group-card > summary::after {
+      content: '⌄';
+      color: var(--color-text-muted);
+      font-size: 0.85rem;
+      transition: transform var(--transition-fast);
+    }
     .nav-chapter-group-card:not([open]) > summary::after { transform: rotate(-90deg); }
-    .nav-chapter-group-badge { margin-left: auto; margin-right: .25rem; padding: .06rem .32rem; border-radius: .3rem; background: #f1f5f9; color: #64748b; font-size: .67rem; font-weight: 700; }
-    .nav-chapter-group-content { padding: .35rem .4rem .4rem; background: #ffffff; border-top: 1px solid #f1f5f9; }
-    .nav-semester-label { display: flex; align-items: center; justify-content: space-between; padding: .15rem .25rem .45rem; margin-bottom: .35rem; border-bottom: 1px solid #f1f5f9; font-size: .72rem; font-weight: 700; color: #64748b; letter-spacing: .02em; }
-    .nav-topic-button { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: .5rem; text-align: left; padding: .55rem .6rem; border: 1px solid transparent; border-radius: .55rem; color: #475569; font-size: .78rem; line-height: 1.35; }
+    .nav-chapter-group-badge {
+      margin-left: auto;
+      margin-right: 0.25rem;
+      padding: 0.06rem 0.32rem;
+      border-radius: 0.3rem;
+      background: var(--color-subtle-bg);
+      color: var(--color-text-secondary);
+      font-size: 0.67rem;
+      font-weight: 700;
+    }
+    .nav-chapter-group-content {
+      padding: 0.35rem 0.4rem 0.4rem;
+      background: var(--color-card-bg);
+      border-top: 1px solid var(--color-border-light);
+    }
+
+    .nav-semester-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.15rem 0.25rem 0.45rem;
+      margin-bottom: 0.35rem;
+      border-bottom: 1px solid var(--color-border-light);
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--color-text-secondary);
+      letter-spacing: 0.02em;
+    }
+    .nav-topic-button {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      text-align: left;
+      padding: 0.55rem 0.6rem;
+      border: 1px solid transparent;
+      border-radius: 0.5rem;
+      color: #475569;
+      font-size: 0.78rem;
+      line-height: 1.35;
+    }
+    .nav-topic-button:hover {
+      background-color: var(--color-primary-bg);
+      color: var(--color-primary-dark);
+    }
     .nav-topic-button .nav-topic-label { min-width: 0; }
-    .nav-topic-button .nav-topic-count { flex-shrink: 0; min-width: 1.65rem; text-align: center; padding: .1rem .35rem; border-radius: .35rem; background: #f1f5f9; color: #64748b; font-size: .7rem; font-weight: 700; }
+    .nav-topic-button .nav-topic-count {
+      flex-shrink: 0;
+      min-width: 1.65rem;
+      text-align: center;
+      padding: 0.1rem 0.35rem;
+      border-radius: 0.35rem;
+      background: var(--color-subtle-bg);
+      color: var(--color-text-secondary);
+      font-size: 0.7rem;
+      font-weight: 700;
+    }
+    .nav-topic-button.is-active .nav-topic-count {
+      background: var(--color-primary-light);
+      color: var(--color-primary-dark);
+    }
 
+    /* ==========================================================================
+       难度筛选按钮专属语义调色盘（保留各难度语义区分）
+       ========================================================================== */
+    .filter-diff-btn {
+      font-weight: 500;
+      border-width: 1px;
+      border-style: solid;
+      border-radius: var(--radius-tag);
+      transition: all var(--transition-fast);
+    }
+    .filter-diff-btn[data-diff="all"] {
+      background-color: var(--color-card-bg);
+      border-color: var(--color-border);
+      color: var(--color-text-main);
+    }
+    .filter-diff-btn[data-diff="all"]:hover {
+      background-color: var(--color-primary-bg);
+      border-color: var(--color-primary-border);
+      color: var(--color-primary-dark);
+    }
+    .filter-diff-btn[data-diff="all"].is-active {
+      background-color: var(--color-primary) !important;
+      border-color: var(--color-primary) !important;
+      color: #FFFFFF !important;
+    }
 
-    /* Classroom-professional controls: calm teal accent, consistent line icons. */
-    :root { --accent-900: #115e59; --accent-700: #0f766e; --accent-600: #0d9488; --accent-100: #ccfbf1; --accent-50: #f0fdfa; }
-    button { border-radius: .625rem; transition: color .16s ease, background-color .16s ease, border-color .16s ease, box-shadow .16s ease, transform .16s ease; }
-    button:focus-visible { outline: 3px solid rgba(13, 148, 136, .28); outline-offset: 2px; }
-    button:active { transform: translateY(1px); }
-    button svg { stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
-    .chapter-tree-btn.is-active { background-color: var(--accent-50) !important; border-color: #5eead4 !important; color: var(--accent-900) !important; }
-    .nav-topic-button:hover { background-color: var(--accent-50); color: var(--accent-900); }
-    .nav-topic-button.is-active .nav-topic-count { background: var(--accent-100); color: var(--accent-900); }
-    .nav-tab.text-blue-700, #mobileNavBank.text-blue-700, #mobileNavPaper.text-blue-700 { color: var(--accent-900) !important; }
-    .filter-type-btn.bg-blue-600 { background-color: var(--accent-700) !important; color: #fff !important; box-shadow: 0 1px 2px rgba(15, 118, 110, .2); }
-    .filter-type-btn.bg-slate-100:hover { background-color: var(--accent-50) !important; color: var(--accent-900) !important; }
+    .filter-diff-btn[data-diff="容易"] { background-color: #ECFDF5; border-color: #A7F3D0; color: #047857; }
+    .filter-diff-btn[data-diff="容易"]:hover { background-color: #D1FAE5; border-color: #6EE7B7; }
+    .filter-diff-btn[data-diff="容易"].is-active { background-color: #059669 !important; border-color: #059669 !important; color: #FFFFFF !important; }
 
-    /* Difficulty Filter Buttons Distinct Palettes */
-    .filter-diff-btn { font-weight: 500; border-width: 1px; border-style: solid; transition: all .15s ease; }
-    .filter-diff-btn[data-diff="all"] { background-color: #f1f5f9; border-color: #e2e8f0; color: #334155; }
-    .filter-diff-btn[data-diff="all"]:hover { background-color: #e2e8f0; }
-    .filter-diff-btn[data-diff="all"].is-active { background-color: var(--accent-700) !important; border-color: var(--accent-700) !important; color: #fff !important; }
+    .filter-diff-btn[data-diff="较易"] { background-color: var(--color-primary-bg); border-color: var(--color-primary-border); color: var(--color-primary); }
+    .filter-diff-btn[data-diff="较易"]:hover { background-color: var(--color-primary-light); border-color: #5EEAD4; }
+    .filter-diff-btn[data-diff="较易"].is-active { background-color: #0D9488 !important; border-color: #0D9488 !important; color: #FFFFFF !important; }
 
-    .filter-diff-btn[data-diff="容易"] { background-color: #ecfdf5; border-color: #a7f3d0; color: #047857; }
-    .filter-diff-btn[data-diff="容易"]:hover { background-color: #d1fae5; border-color: #6ee7b7; }
-    .filter-diff-btn[data-diff="容易"].is-active { background-color: #059669 !important; border-color: #059669 !important; color: #fff !important; box-shadow: 0 1px 2px rgba(5, 150, 105, .3); }
+    .filter-diff-btn[data-diff="中等"] { background-color: #FFFBEB; border-color: #FDE68A; color: #B45309; }
+    .filter-diff-btn[data-diff="中等"]:hover { background-color: #FEF3C7; border-color: #FCD34D; }
+    .filter-diff-btn[data-diff="中等"].is-active { background-color: #D97706 !important; border-color: #D97706 !important; color: #FFFFFF !important; }
 
-    .filter-diff-btn[data-diff="较易"] { background-color: #f0fdfa; border-color: #99f6e4; color: #0f766e; }
-    .filter-diff-btn[data-diff="较易"]:hover { background-color: #ccfbf1; border-color: #5eead4; }
-    .filter-diff-btn[data-diff="较易"].is-active { background-color: #0d9488 !important; border-color: #0d9488 !important; color: #fff !important; box-shadow: 0 1px 2px rgba(13, 148, 136, .3); }
+    .filter-diff-btn[data-diff="较难"] { background-color: #FFF7ED; border-color: #FED7AA; color: #C2410C; }
+    .filter-diff-btn[data-diff="较难"]:hover { background-color: #FFEDD5; border-color: #FDBA74; }
+    .filter-diff-btn[data-diff="较难"].is-active { background-color: #EA580C !important; border-color: #EA580C !important; color: #FFFFFF !important; }
 
-    .filter-diff-btn[data-diff="中等"] { background-color: #fffbeb; border-color: #fde68a; color: #b45309; }
-    .filter-diff-btn[data-diff="中等"]:hover { background-color: #fef3c7; border-color: #fcd34d; }
-    .filter-diff-btn[data-diff="中等"].is-active { background-color: #d97706 !important; border-color: #d97706 !important; color: #fff !important; box-shadow: 0 1px 2px rgba(217, 119, 6, .3); }
+    .filter-diff-btn[data-diff="困难"] { background-color: #FFF1F2; border-color: #FECDD3; color: #BE123C; }
+    .filter-diff-btn[data-diff="困难"]:hover { background-color: #FFE4E6; border-color: #FDA4AF; }
+    .filter-diff-btn[data-diff="困难"].is-active { background-color: #E11D48 !important; border-color: #E11D48 !important; color: #FFFFFF !important; }
 
-    .filter-diff-btn[data-diff="较难"] { background-color: #fff7ed; border-color: #fed7aa; color: #c2410c; }
-    .filter-diff-btn[data-diff="较难"]:hover { background-color: #ffedd5; border-color: #fdba74; }
-    .filter-diff-btn[data-diff="较难"].is-active { background-color: #ea580c !important; border-color: #ea580c !important; color: #fff !important; box-shadow: 0 1px 2px rgba(234, 88, 12, .3); }
-
-    .filter-diff-btn[data-diff="困难"] { background-color: #fff1f2; border-color: #fecdd3; color: #be123c; }
-    .filter-diff-btn[data-diff="困难"]:hover { background-color: #ffe4e6; border-color: #fda4af; }
-    .filter-diff-btn[data-diff="困难"].is-active { background-color: #e11d48 !important; border-color: #e11d48 !important; color: #fff !important; box-shadow: 0 1px 2px rgba(225, 29, 72, .3); }
-    #btnOpenBasket, #btnDrawerGoPaper, #btnPrintPaper, .btn-toggle-cart:not(.bg-red-50) { background-color: var(--accent-700) !important; }
-    #btnOpenBasket:hover, #btnDrawerGoPaper:hover, #btnPrintPaper:hover, .btn-toggle-cart:not(.bg-red-50):hover { background-color: var(--accent-900) !important; }
-    #btnExportWord { background-color: var(--accent-700) !important; }
-    #btnExportWord:hover { background-color: var(--accent-900) !important; }
-    .bg-gradient-to-tr.from-blue-600.to-indigo-500 { background-image: linear-gradient(135deg, #0f766e, #14b8a6) !important; }
-    .bg-gradient-to-r.from-blue-700.to-indigo-600 { background-image: linear-gradient(90deg, #115e59, #0f766e) !important; }
-    .btn-toggle-analysis:hover { color: var(--accent-700) !important; }
-    .nav-grade-card { border-radius: .9rem; }
+    /* ==========================================================================
+       题目插图尺寸与响应式侧栏
+       ========================================================================== */
     .answer-space-resizable { resize: vertical; overflow: auto; min-height: 56px; max-height: 600px; }
-    .answer-option { min-width: 0; overflow-wrap: anywhere; }
-    .answer-option-wide { grid-column: 1 / -1; }
-    
-    /* Proportional math illustrations and diagrams */
+
     .question-card img {
       max-width: min(100%, 450px);
       max-height: 280px;
@@ -231,17 +653,17 @@
     }
     @media print { .answer-space-resizable { resize: none; overflow: hidden; } }
 
-/* Responsive catalog sidebar: Always visible on PC (>= 1024px), collapsible on Mobile (< 1024px) */
-@media (min-width: 1024px) {
-  #catalogBodyContainer {
-    display: block !important;
-  }
-}
-@media (max-width: 1023px) {
-  #catalogBodyContainer {
-    display: none;
-  }
-  #catalogBodyContainer.is-open {
-    display: block !important;
-  }
-}
+    /* Responsive catalog sidebar: Always visible on PC (>= 1024px), collapsible on Mobile (< 1024px) */
+    @media (min-width: 1024px) {
+      #catalogBodyContainer {
+        display: block !important;
+      }
+    }
+    @media (max-width: 1023px) {
+      #catalogBodyContainer {
+        display: none;
+      }
+      #catalogBodyContainer.is-open {
+        display: block !important;
+      }
+    }

@@ -35,15 +35,15 @@
     function getGradeSemesterTagClass(chapter) {
       const { grade, semester } = inferAcademicLocation(chapter);
       const gradeSemesterColors = {
-        '六年级': { '上册': 'bg-orange-100 text-orange-800', '下册': 'bg-amber-100 text-amber-800' },
-        '初一': { '上册': 'bg-teal-100 text-teal-800', '下册': 'bg-cyan-100 text-cyan-800' },
-        '初二': { '上册': 'bg-indigo-100 text-indigo-800', '下册': 'bg-violet-100 text-violet-800' },
-        '初三': { '上册': 'bg-amber-100 text-amber-800', '下册': 'bg-orange-100 text-orange-800' },
-        '高一': { '上册': 'bg-rose-100 text-rose-800', '下册': 'bg-pink-100 text-pink-800' },
-        '高二': { '上册': 'bg-emerald-100 text-emerald-800', '下册': 'bg-green-100 text-green-800' },
-        '高三': { '上册': 'bg-sky-100 text-sky-800', '下册': 'bg-blue-100 text-blue-800' }
+        '六年级': { '上册': 'bg-orange-50 text-orange-800 border border-orange-200', '下册': 'bg-amber-50 text-amber-800 border border-amber-200' },
+        '初一': { '上册': 'bg-[#F0FDFA] text-[#115E59] border border-[#CCFBF1]', '下册': 'bg-teal-50 text-teal-800 border border-teal-200' },
+        '初二': { '上册': 'bg-slate-100 text-slate-700 border border-slate-200', '下册': 'bg-slate-100 text-slate-700 border border-slate-200' },
+        '初三': { '上册': 'bg-amber-50 text-amber-800 border border-amber-200', '下册': 'bg-orange-50 text-orange-800 border border-orange-200' },
+        '高一': { '上册': 'bg-rose-50 text-rose-800 border border-rose-200', '下册': 'bg-pink-50 text-pink-800 border border-pink-200' },
+        '高二': { '上册': 'bg-emerald-50 text-emerald-800 border border-emerald-200', '下册': 'bg-green-50 text-green-800 border border-green-200' },
+        '高三': { '上册': 'bg-teal-50 text-teal-800 border border-teal-200', '下册': 'bg-teal-50 text-teal-800 border border-teal-200' }
       };
-      return gradeSemesterColors[grade]?.[semester] || 'bg-slate-100 text-slate-700';
+      return gradeSemesterColors[grade]?.[semester] || 'bg-slate-100 text-slate-700 border border-slate-200';
     }
 
     function getChapterDisplayLabel(chapter) {

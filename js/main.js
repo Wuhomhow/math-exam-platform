@@ -31,9 +31,7 @@ function syncUiToState() {
   // 2. Type filter buttons
   document.querySelectorAll('.filter-type-btn').forEach(btn => {
     const isAct = btn.getAttribute('data-type') === state.typeFilter;
-    btn.className = isAct
-      ? 'filter-type-btn px-3 py-1 rounded-md bg-blue-600 text-white font-medium'
-      : 'filter-type-btn px-3 py-1 rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200';
+    btn.classList.toggle('is-active', isAct);
   });
 
   // 3. Diff filter buttons
@@ -53,16 +51,20 @@ function syncUiToState() {
   const teacherBtn = document.getElementById('viewModeTeacher');
   if (studentBtn && teacherBtn) {
     const isTeacher = state.paperViewMode === 'teacher';
-    studentBtn.className = isTeacher ? 'px-3 py-1 rounded-md text-slate-600 hover:text-slate-900' : 'px-3 py-1 rounded-md bg-white text-blue-700 font-semibold shadow-xs';
-    teacherBtn.className = isTeacher ? 'px-3 py-1 rounded-md bg-white text-blue-700 font-semibold shadow-xs' : 'px-3 py-1 rounded-md text-slate-600 hover:text-slate-900';
+    studentBtn.classList.toggle('is-active', !isTeacher);
+    teacherBtn.classList.toggle('is-active', isTeacher);
+  }
+  const teacherToggle = document.getElementById('toggleTeacherMode');
+  if (teacherToggle) {
+    teacherToggle.checked = state.paperViewMode === 'teacher';
   }
 
   // 6. Paper layout mode
   const layoutSingle = document.getElementById('btnLayoutSingle');
   const layoutDouble = document.getElementById('btnLayoutDouble');
   if (layoutSingle && layoutDouble) {
-    layoutSingle.className = state.isDoubleColumn ? 'px-2.5 py-1 rounded-md text-slate-600 hover:text-slate-900' : 'px-2.5 py-1 rounded-md bg-white text-blue-700 font-semibold shadow-xs';
-    layoutDouble.className = state.isDoubleColumn ? 'px-2.5 py-1 rounded-md bg-white text-blue-700 font-semibold shadow-xs' : 'px-2.5 py-1 rounded-md text-slate-600 hover:text-slate-900';
+    layoutSingle.classList.toggle('is-active', !state.isDoubleColumn);
+    layoutDouble.classList.toggle('is-active', Boolean(state.isDoubleColumn));
   }
 
   // 7. Paper order mode
@@ -70,14 +72,14 @@ function syncUiToState() {
   const orderAddedBtn = document.getElementById('btnOrderByAdded');
   const orderTypeBtn = document.getElementById('btnOrderByType');
   if (orderAddedBtn && orderTypeBtn) {
-    orderAddedBtn.className = isAddedOrder ? 'px-2.5 py-1 rounded-md bg-white text-blue-700 font-semibold shadow-xs' : 'px-2.5 py-1 rounded-md text-slate-600 hover:text-slate-900';
-    orderTypeBtn.className = !isAddedOrder ? 'px-2.5 py-1 rounded-md bg-white text-blue-700 font-semibold shadow-xs' : 'px-2.5 py-1 rounded-md text-slate-600 hover:text-slate-900';
+    orderAddedBtn.classList.toggle('is-active', isAddedOrder);
+    orderTypeBtn.classList.toggle('is-active', !isAddedOrder);
   }
   const drawerOrderAddedBtn = document.getElementById('btnDrawerOrderByAdded');
   const drawerOrderTypeBtn = document.getElementById('btnDrawerOrderByType');
   if (drawerOrderAddedBtn && drawerOrderTypeBtn) {
-    drawerOrderAddedBtn.className = isAddedOrder ? 'px-2 py-0.5 rounded-md bg-white text-blue-700 font-semibold shadow-xs' : 'px-2 py-0.5 rounded-md text-slate-600 hover:text-slate-900';
-    drawerOrderTypeBtn.className = !isAddedOrder ? 'px-2 py-0.5 rounded-md bg-white text-blue-700 font-semibold shadow-xs' : 'px-2 py-0.5 rounded-md text-slate-600 hover:text-slate-900';
+    drawerOrderAddedBtn.classList.toggle('is-active', isAddedOrder);
+    drawerOrderTypeBtn.classList.toggle('is-active', !isAddedOrder);
   }
 }
 
@@ -113,7 +115,7 @@ class HandInHandTour {
       {
         target: '#btnSelectAll',
         title: '2. 加入试卷',
-        desc: '点击题目下方的【加入试卷】或直接【全选入篮】。',
+        desc: '点击题目下方的【加入试题篮】或直接【全选入篮】。',
         actionBefore: () => {
           switchView('bank');
           closeDrawerGlobal();
@@ -159,8 +161,8 @@ class HandInHandTour {
       position: fixed;
       z-index: 9998;
       border-radius: 8px;
-      box-shadow: 0 0 0 9999px rgba(15, 23, 42, 0.72);
-      border: 2px solid #3b82f6;
+      box-shadow: 0 0 0 9999px rgba(15, 23, 42, 0.65);
+      border: 2px solid var(--color-primary, #0F766E);
       pointer-events: none;
       transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
       display: none;
@@ -172,9 +174,10 @@ class HandInHandTour {
     this.popover.style.cssText = `
       position: fixed;
       z-index: 9999;
-      background: #ffffff;
+      background: var(--color-card-bg, #FFFFFF);
+      border: 1px solid var(--color-border, #E2E8F0);
       border-radius: 12px;
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.25), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 10px 20px -5px rgba(15, 23, 42, 0.15);
       padding: 14px 16px;
       transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
       display: none;
@@ -296,17 +299,17 @@ class HandInHandTour {
       const isLast = this.currentStep === this.steps.length - 1;
       this.popover.innerHTML = `
         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px;">
-          <span style="font-size: 11px; font-weight: 700; color: #2563eb;">${this.currentStep + 1} / ${this.steps.length}</span>
-          <button id="tourBtnClose" style="background: transparent; border: none; font-size: 15px; color: #94a3b8; cursor: pointer; padding: 2px 4px; line-height: 1;">✕</button>
+          <span style="font-size: 11px; font-weight: 700; color: var(--color-primary, #0F766E);">${this.currentStep + 1} / ${this.steps.length}</span>
+          <button id="tourBtnClose" style="background: transparent; border: none; font-size: 15px; color: var(--color-text-muted, #94A3B8); cursor: pointer; padding: 2px 4px; line-height: 1;">✕</button>
         </div>
-        <h4 style="font-size: 14px; font-weight: 700; color: #0f172a; margin: 0 0 4px 0;">${step.title}</h4>
-        <p style="font-size: 12px; color: #475569; line-height: 1.45; margin: 0 0 12px 0;">${step.desc}</p>
+        <h4 style="font-size: 14px; font-weight: 700; color: var(--color-text-main, #1E293B); margin: 0 0 4px 0;">${step.title}</h4>
+        <p style="font-size: 12px; color: var(--color-text-secondary, #64748B); line-height: 1.45; margin: 0 0 12px 0;">${step.desc}</p>
         <div style="display: flex; align-items: center; justify-content: space-between;">
-          <button id="tourBtnSkip" style="font-size: 11px; color: #64748b; background: transparent; border: none; cursor: pointer; padding: 2px 4px;">跳过</button>
+          <button id="tourBtnSkip" style="font-size: 11px; color: var(--color-text-secondary, #64748B); background: transparent; border: none; cursor: pointer; padding: 2px 4px;">跳过</button>
           <div style="display: flex; gap: 6px;">
-            ${this.currentStep > 0 ? '<button id="tourBtnPrev" style="padding: 4px 10px; font-size: 11px; color: #475569; background: #f1f5f9; border-radius: 6px; border: none; cursor: pointer;">上一步</button>' : ''}
-            <button id="tourBtnNext" style="padding: 4px 12px; font-size: 11px; font-weight: 600; color: #ffffff; background: ${isLast ? '#059669' : '#2563eb'}; border-radius: 6px; border: none; cursor: pointer;">
-              ${isLast ? '完成' : '下一步 👉'}
+            ${this.currentStep > 0 ? '<button id="tourBtnPrev" style="padding: 4px 10px; font-size: 11px; color: var(--color-text-main, #1E293B); background: var(--color-card-bg, #FFFFFF); border: 1px solid var(--color-border, #E2E8F0); border-radius: 6px; cursor: pointer;">上一步</button>' : ''}
+            <button id="tourBtnNext" style="padding: 4px 12px; font-size: 11px; font-weight: 600; color: #ffffff; background: var(--color-primary, #0F766E); border-radius: 6px; border: 1px solid var(--color-primary, #0F766E); cursor: pointer;">
+              ${isLast ? '完成' : '下一步'}
             </button>
           </div>
         </div>
@@ -530,9 +533,9 @@ function initEvents() {
   document.querySelectorAll('.filter-type-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.filter-type-btn').forEach(b => {
-        b.className = 'filter-type-btn px-3 py-1 rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200';
+        b.classList.remove('is-active');
       });
-      btn.className = 'filter-type-btn px-3 py-1 rounded-md bg-blue-600 text-white font-medium';
+      btn.classList.add('is-active');
       state.typeFilter = btn.getAttribute('data-type');
       state.currentPage = 1;
       saveUiPreferences();
@@ -555,21 +558,22 @@ function initEvents() {
 
   // Search
   let searchDebounceTimer = null;
-      document.getElementById('searchInput').addEventListener('input', (e) => {
-        clearTimeout(searchDebounceTimer);
-        searchDebounceTimer = setTimeout(() => {
-          state.searchKeyword = e.target.value.trim();
-          state.currentPage = 1;
-          saveUiPreferences();
-          renderQuestionList();
-        }, 300);
-      });
+  document.getElementById('searchInput').addEventListener('input', (e) => {
+    clearTimeout(searchDebounceTimer);
+    searchDebounceTimer = setTimeout(() => {
+      state.searchKeyword = e.target.value.trim();
+      state.currentPage = 1;
+      saveUiPreferences();
+      renderQuestionList();
+    }, 300);
+  });
 
   // 教师解析模式（精简复选框交互）
   const teacherToggle = document.getElementById('toggleTeacherMode');
   if (teacherToggle) {
     teacherToggle.addEventListener('change', (e) => {
       state.paperViewMode = e.target.checked ? 'teacher' : 'student';
+      saveUiPreferences();
       renderPaper();
     });
   }
@@ -580,15 +584,15 @@ function initEvents() {
   if (layoutSingle && layoutDouble) {
     layoutSingle.addEventListener('click', () => {
       state.isDoubleColumn = false;
-      layoutSingle.className = 'px-2.5 py-1 rounded-md bg-white text-blue-700 font-semibold shadow-xs';
-      layoutDouble.className = 'px-2.5 py-1 rounded-md text-slate-600 hover:text-slate-900';
+      layoutSingle.classList.add('is-active');
+      layoutDouble.classList.remove('is-active');
       saveUiPreferences();
       renderPaper();
     });
     layoutDouble.addEventListener('click', () => {
       state.isDoubleColumn = true;
-      layoutDouble.className = 'px-2.5 py-1 rounded-md bg-white text-blue-700 font-semibold shadow-xs';
-      layoutSingle.className = 'px-2.5 py-1 rounded-md text-slate-600 hover:text-slate-900';
+      layoutDouble.classList.add('is-active');
+      layoutSingle.classList.remove('is-active');
       saveUiPreferences();
       renderPaper();
     });

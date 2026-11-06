@@ -104,7 +104,6 @@
 
     function getChapterGroup(grade, chapter) {
       const ch = String(chapter || '').trim();
-      if (grade === '六年级' && /^5\.1(?:\.|\s|$)/.test(ch)) return '5.1 圆的认识与周长';
       if (grade === '初一') {
         if (ch.startsWith('2.') || ch.includes('第二章')) return '第二章 有理数的运算';
         if (ch.startsWith('3.') || ch.includes('第三章')) return '第三章 代数式';
@@ -116,6 +115,15 @@
       } else if (grade === '初三') {
         if (ch.startsWith('25.') || ch.includes('第二十五')) return '第25章 一元二次方程';
         if (ch.startsWith('26.') || ch.includes('第二十六')) return '第26章 二次函数';
+      }
+      return null;
+    }
+
+    function getChapterParent(grade, chapter) {
+      const location = inferAcademicLocation(chapter);
+      const label = String(location.label || chapter || '').trim();
+      if (grade === '六年级' && /^5\\.1\\.\\d+(?:\\s|$)/.test(label)) {
+        return '六年级上册 5.1 圆的认识与周长';
       }
       return null;
     }
@@ -147,25 +155,36 @@
           if (!gradeEntry.semesters.has(location.semester)) {
             gradeEntry.semesters.set(location.semester, {
               groups: new Map(),
-              standalone: new Map()
+              standalone: new Map(),
+              children: new Map()
             });
           }
           const semEntry = gradeEntry.semesters.get(location.semester);
-          const grp = getChapterGroup(location.grade, chapter);
-          if (grp) {
-            if (!semEntry.groups.has(grp)) {
-              semEntry.groups.set(grp, { chapters: new Map(), firstOrder: order });
+          const parentChapter = getChapterParent(location.grade, chapter);
+          if (parentChapter) {
+            if (!semEntry.children.has(parentChapter)) semEntry.children.set(parentChapter, new Map());
+            const childMap = semEntry.children.get(parentChapter);
+            if (!childMap.has(chapter)) {
+              childMap.set(chapter, { label: location.label, count: 0, firstOrder: order });
             }
-            const grpInfo = semEntry.groups.get(grp);
-            if (!grpInfo.chapters.has(chapter)) {
-              grpInfo.chapters.set(chapter, { label: location.label, count: 0, firstOrder: order });
-            }
-            grpInfo.chapters.get(chapter).count++;
+            childMap.get(chapter).count++;
           } else {
-            if (!semEntry.standalone.has(chapter)) {
-              semEntry.standalone.set(chapter, { label: location.label, count: 0, firstOrder: order });
+            const grp = getChapterGroup(location.grade, chapter);
+            if (grp) {
+              if (!semEntry.groups.has(grp)) {
+                semEntry.groups.set(grp, { chapters: new Map(), firstOrder: order });
+              }
+              const grpInfo = semEntry.groups.get(grp);
+              if (!grpInfo.chapters.has(chapter)) {
+                grpInfo.chapters.set(chapter, { label: location.label, count: 0, firstOrder: order });
+              }
+              grpInfo.chapters.get(chapter).count++;
+            } else {
+              if (!semEntry.standalone.has(chapter)) {
+                semEntry.standalone.set(chapter, { label: location.label, count: 0, firstOrder: order });
+              }
+              semEntry.standalone.get(chapter).count++;
             }
-            semEntry.standalone.get(chapter).count++;
           }
         }
       });
@@ -196,6 +215,9 @@
             for (const [, c] of grp.chapters) regularTotal += c.count;
           }
           for (const [, c] of semEntry.standalone) regularTotal += c.count;
+          for (const [, childMap] of semEntry.children) {
+            for (const [, c] of childMap) regularTotal += c.count;
+          }
         }
         const gradeTotal = finishedTotal + regularTotal;
 
@@ -238,6 +260,9 @@
             for (const [, c] of grp.chapters) semesterTotal += c.count;
           }
           for (const [, c] of standaloneList) semesterTotal += c.count;
+          for (const [, childMap] of semEntry.children) {
+            for (const [, c] of childMap) semesterTotal += c.count;
+          }
 
           const groupsHtml = groupList.map(([grpTitle, grpInfo]) => {
             const chapList = [...grpInfo.chapters.entries()].sort((a, b) => a[1].firstOrder - b[1].firstOrder);
@@ -260,12 +285,31 @@
             `;
           }).join('');
 
-          const standaloneHtml = standaloneList.map(([chapter, meta]) => `
-            <button type="button" class="chapter-tree-btn nav-topic-button" data-chapter="${escapeNavText(chapter)}">
-              <span class="nav-topic-label">${escapeNavText(meta.label)}</span>
-              <span class="nav-topic-count">${meta.count}</span>
-            </button>
-          `).join('');
+          const standaloneHtml = standaloneList.map(([chapter, meta]) => {
+            const childMap = semEntry.children.get(chapter);
+            const childList = childMap
+              ? [...childMap.entries()].sort((a, b) => a[1].firstOrder - b[1].firstOrder)
+              : [];
+            const childrenHtml = childList.length ? `
+              <div class="nav-topic-children">
+                ${childList.map(([childChapter, childMeta]) => `
+                  <button type="button" class="chapter-tree-btn nav-topic-button nav-topic-child-button" data-chapter="${escapeNavText(childChapter)}">
+                    <span class="nav-topic-label">${escapeNavText(childMeta.label)}</span>
+                    <span class="nav-topic-count">${childMeta.count}</span>
+                  </button>
+                `).join('')}
+              </div>
+            ` : '';
+            return `
+              <div class="nav-topic-parent-block">
+                <button type="button" class="chapter-tree-btn nav-topic-button" data-chapter="${escapeNavText(chapter)}">
+                  <span class="nav-topic-label">${escapeNavText(meta.label)}</span>
+                  <span class="nav-topic-count">${meta.count}</span>
+                </button>
+                ${childrenHtml}
+              </div>
+            `;
+          }).join('');
 
           return `
             <div class="mb-2 last:mb-0">

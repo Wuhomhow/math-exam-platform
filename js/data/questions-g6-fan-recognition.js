@@ -20,7 +20,7 @@ const FAN_RECOGNITION_QUESTIONS = [
     ],
     "answer": "D",
     "analysis": "$\\angle 1=65^\\circ$，所以$2\\angle 1=130^\\circ$。圆心角的顶点在圆心上，两边是圆的半径；再结合角度判断选项。",
-    "detail": "$2\\angle 1=2\\times65^\\circ=130^\\circ$。A．角顶点在圆周，不是圆心角；B．是圆心角，但角度约为45°，不符合要求；C．角顶点不在圆心，不符合圆心角定义；D．顶点在圆心，角度约为130°，符合要求。故选D。"
+    "detail": "$2\\angle 1=2\\times65^\\circ=130^\\circ$。A．角顶点在圆周，不是圆心角；B．是圆心角，但角度约为$65^\\circ$，不符合要求；C．角顶点不在圆心，不符合圆心角定义；D．顶点在圆心，角度约为$130^\\circ$，符合要求。故选D。"
   },
   {
     "id": "g6_fan_412_02",
@@ -53,7 +53,7 @@ const FAN_RECOGNITION_QUESTIONS = [
     "difficulty": "适中",
     "knowledge": "弧、圆心角、扇形的认识；图形的折叠问题",
     "chapter": "六年级上册 5.1.2 扇形的认识",
-    "stem": "把一张直径是4厘米的圆形纸片对折3次，会得到（　）个同样大小的扇形，扇形的半径是（　）厘米，圆心角是（　）°。<br><img src=\"assets/images/g6_fan_412_image16.png\" alt=\"圆形纸片连续对折示意图\" style=\"width:400px;max-width:100%;height:auto\" data-cx=\"3810000\" data-cy=\"647700\">",
+    "stem": "把一张直径是4厘米的圆形纸片对折3次，会得到（　）个同样大小的扇形，扇形的半径是（　）厘米，圆心角是（　）$^\\circ$。<br><img src=\"assets/images/g6_fan_412_image16.png\" alt=\"圆形纸片连续对折示意图\" style=\"width:400px;max-width:100%;height:auto\" data-cx=\"3810000\" data-cy=\"647700\">",
     "options": [],
     "answer": "8；2；45",
     "analysis": "根据题意，把一张圆形纸片对折3次，这张圆形纸片被平分8份，即8个小扇形；扇形半径等于圆的直径÷2，扇形的圆心角等于圆心角除以8。",
@@ -69,10 +69,10 @@ const FAN_RECOGNITION_QUESTIONS = [
     "difficulty": "适中",
     "knowledge": "弧、圆心角、扇形的认识",
     "chapter": "六年级上册 5.1.2 扇形的认识",
-    "stem": "每个圆中涂色扇形的圆心角是多少度？<br><img src=\"assets/images/g6_fan_412_image17.png\" alt=\"三个圆中涂色扇形的原题图\" style=\"width:400px;max-width:100%;height:auto\" data-cx=\"3810000\" data-cy=\"1085850\"><br>（　　）（　　）（　　）",
+    "stem": "每个圆中涂色扇形的圆心角是多少度？<br><img src=\"assets/images/g6_fan_412_image17.png\" alt=\"三个圆中涂色扇形的原题图\" style=\"width:400px;max-width:100%;height:auto\" data-cx=\"3810000\" data-cy=\"1085850\"><br>（　　）$^\\circ$　（　　）$^\\circ$　（　　）$^\\circ$",
     "options": [],
-    "answer": "270°；315°；210°",
-    "analysis": "周角360°，直角90°，分别用周角度数减去空白扇形圆心角的度数，得到涂色扇形的圆心角度数。",
+    "answer": "$270^\\circ$；$315^\\circ$；$210^\\circ$",
+    "analysis": "周角是$360^\\circ$，直角是$90^\\circ$，分别用周角度数减去空白扇形圆心角的度数，得到涂色扇形的圆心角度数。",
     "detail": "$360^\\circ-90^\\circ=270^\\circ$；$360^\\circ-45^\\circ=315^\\circ$；$360^\\circ-150^\\circ=210^\\circ$。<br><img src=\"assets/images/g6_fan_412_image21.png\" alt=\"三个扇形的原始答案图\" style=\"width:400px;max-width:100%;height:auto\" data-cx=\"3810000\" data-cy=\"1352550\">"
   },
   {
@@ -117,10 +117,10 @@ const FAN_RECOGNITION_QUESTIONS = [
     "difficulty": "适中",
     "knowledge": "弧、圆心角、扇形的认识；画扇形",
     "chapter": "六年级上册 5.1.2 扇形的认识",
-    "stem": "如图，在圆内分别画出圆心角是30°、60°、90°和120°的扇形A、B、C、D。<br><img src=\"assets/images/g6_fan_412_image24.png\" alt=\"原题空白圆形\" style=\"width:180px;max-width:100%;height:auto\" data-cx=\"1714500\" data-cy=\"1657350\"><br>（1）比较扇形A、B、C、D的大小（用“＜”连接）：（　）。<br>（2）在同圆或等圆中，扇形的大小与（　）有关。",
+    "stem": "如图，在圆内分别画出圆心角是$30^\\circ$、$60^\\circ$、$90^\\circ$和$120^\\circ$的扇形A、B、C、D。<br><img src=\"assets/images/g6_fan_412_image24.png\" alt=\"原题空白圆形\" style=\"width:180px;max-width:100%;height:auto\" data-cx=\"1714500\" data-cy=\"1657350\"><br>（1）比较扇形A、B、C、D的大小（用“＜”连接）：（　）。<br>（2）在同圆或等圆中，扇形的大小与（　）有关。",
     "options": [],
     "answer": "（1）扇形A＜扇形B＜扇形C＜扇形D；（2）圆心角",
-    "analysis": "先在圆内画一条半径，再以这条半径为一边，以圆心为顶点画一个30°的角，角的另一边为圆的另一条半径，这两条半径与所夹的弧就是圆心角为30°的扇形，并标上A，用同样的方法即可再画圆心角分别是60°、90°、120°的扇形并标上B、C、D。在同圆或等圆中，扇形的大小与圆心角的大小有关。",
+    "analysis": "先在圆内画一条半径，再以这条半径为一边，以圆心为顶点画一个30°的角，角的另一边为圆的另一条半径，这两条半径与所夹的弧就是圆心角为$30^\\circ$的扇形，并标上A，用同样的方法即可再画圆心角分别是$60^\\circ$、$90^\\circ$、$120^\\circ$的扇形并标上B、C、D。在同圆或等圆中，扇形的大小与圆心角的大小有关。",
     "detail": "由分析可得：<br><img src=\"assets/images/g6_fan_412_image25.png\" alt=\"四个扇形的原始答案图\" style=\"width:280px;max-width:100%;height:auto\" data-cx=\"2667000\" data-cy=\"2200275\"><br>（1）$30^\\circ<60^\\circ<90^\\circ<120^\\circ$，扇形A＜扇形B＜扇形C＜扇形D。<br>（2）在同圆或等圆中，扇形的大小与圆心角的大小有关。"
   },
   {
@@ -136,8 +136,8 @@ const FAN_RECOGNITION_QUESTIONS = [
     "stem": "画一个直径3厘米的圆，分别用字母O、r标出圆心和半径，并在这个圆中画一个圆心角为$120^\\circ$的扇形。",
     "options": [],
     "answer": "<img src=\"assets/images/g6_fan_412_image26.png\" alt=\"第8题原始作图答案\" style=\"width:220px;max-width:100%;height:auto\" data-cx=\"2095500\" data-cy=\"2028825\">",
-    "analysis": "算出圆的半径是3÷2＝1.5厘米，确定一点为圆心，圆规两脚间的距离为半径长度，旋转一周画出符合要求的圆，并在图中用字母标出圆心O和半径r。以O点为顶点，用圆的任意一条半径为边，利用量角器画出120°的角。",
-    "detail": "$3\\div2=1.5$（厘米）。两条半径和120°圆心角所对的弧围成扇形，画图略。<br><img src=\"assets/images/g6_fan_412_image26.png\" alt=\"第8题原始作图答案\" style=\"width:220px;max-width:100%;height:auto\" data-cx=\"2095500\" data-cy=\"2028825\">"
+    "analysis": "算出圆的半径是3÷2＝1.5厘米，确定一点为圆心，圆规两脚间的距离为半径长度，旋转一周画出符合要求的圆，并在图中用字母标出圆心O和半径r。以O点为顶点，用圆的任意一条半径为边，利用量角器画出$120^\\circ$的角。",
+    "detail": "$3\\div2=1.5$（厘米）。两条半径和$120^\\circ$圆心角所对的弧围成扇形，画图略。<br><img src=\"assets/images/g6_fan_412_image26.png\" alt=\"第8题原始作图答案\" style=\"width:220px;max-width:100%;height:auto\" data-cx=\"2095500\" data-cy=\"2028825\">"
   },
   {
     "id": "g6_fan_412_09",
@@ -149,11 +149,11 @@ const FAN_RECOGNITION_QUESTIONS = [
     "difficulty": "适中",
     "knowledge": "弧、圆心角、扇形的认识；画圆；画扇形；圆的概念及特点",
     "chapter": "六年级上册 5.1.2 扇形的认识",
-    "stem": "请在下边空白处画一个半径是2厘米的圆，再在圆中画一个圆心角是90°的扇形，并用阴影部分表示。",
+    "stem": "请在下边空白处画一个半径是2厘米的圆，再在圆中画一个圆心角是$90^\\circ$的扇形，并用阴影部分表示。",
     "options": [],
     "answer": "<img src=\"assets/images/g6_fan_412_image27.png\" alt=\"第9题原始作图答案\" style=\"width:220px;max-width:100%;height:auto\" data-cx=\"2095500\" data-cy=\"1943100\">",
-    "analysis": "根据画圆的方法：先把圆规的两脚分开，定好距离2厘米，也就是半径的长度，把有针尖的一点固定在一点上，也就是圆心，带有铅笔的那只脚绕圆心旋转一周，就画成了一个圆；画出一条射线，用量角器的中心点和射线的端点重合，0刻度线与射线重合，在量角器上找出90°并画出射线，据此用阴影填充扇形区域。",
-    "detail": "按题意画出半径为2厘米的圆，在圆中画出90°圆心角，并将对应扇形区域涂上阴影。<br><img src=\"assets/images/g6_fan_412_image27.png\" alt=\"第9题原始作图答案\" style=\"width:220px;max-width:100%;height:auto\" data-cx=\"2095500\" data-cy=\"1943100\">"
+    "analysis": "根据画圆的方法：先把圆规的两脚分开，定好距离2厘米，也就是半径的长度，把有针尖的一点固定在一点上，也就是圆心，带有铅笔的那只脚绕圆心旋转一周，就画成了一个圆；画出一条射线，用量角器的中心点和射线的端点重合，0刻度线与射线重合，在量角器上找出$90^\\circ$并画出射线，据此用阴影填充扇形区域。",
+    "detail": "按题意画出半径为2厘米的圆，在圆中画出$90^\\circ$圆心角，并将对应扇形区域涂上阴影。<br><img src=\"assets/images/g6_fan_412_image27.png\" alt=\"第9题原始作图答案\" style=\"width:220px;max-width:100%;height:auto\" data-cx=\"2095500\" data-cy=\"1943100\">"
   },
   {
     "id": "g6_fan_412_10",

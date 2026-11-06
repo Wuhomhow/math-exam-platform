@@ -1,5 +1,5 @@
 // 六年级上册 5.1.2《扇形的认识》课后作业（巩固）
-// 题目内容依据用户上传的 Word 文档整理；原文中缺失的数学符号以“原文缺失”标注，不擅自补全。
+// 题目内容依据用户上传的 Word 文档整理；配图按原题结构重绘为 SVG。
 const FAN_RECOGNITION_QUESTIONS = [
   {
     id:"g6_fan_412_01", number:1, origNumber:1, sectionNumber:1,

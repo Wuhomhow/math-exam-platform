@@ -122,7 +122,7 @@
     function getChapterParent(grade, chapter) {
       const location = inferAcademicLocation(chapter);
       const label = String(location.label || chapter || '').trim();
-      if (grade === '六年级' && /^5\\.1\\.\\d+(?:\\s|$)/.test(label)) {
+      if (grade === '六年级' && /^5\.1\.\d+(?:\s|$)/.test(label)) {
         return '六年级上册 5.1 圆的认识与周长';
       }
       return null;

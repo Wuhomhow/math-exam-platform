@@ -718,6 +718,7 @@
 
       const choices = selected.filter(q => q.type === 'choice');
       const blanks = selected.filter(q => q.type === 'blank');
+      const judges = selected.filter(q => q.type === 'judge');
       const calcs = selected.filter(q => q.type === 'calc');
 
       function renderQuestionListXml(list, isChoice, isCalc, startAt = 1) {
@@ -798,12 +799,20 @@
           bodyXml += renderQuestionListXml(blanks, false, false, choices.length + 1);
         }
 
-        if (calcs.length > 0) {
+        if (judges.length > 0) {
           bodyXml += makeParagraph(
-            textWithMathAndImgToRuns(`三、解答题（本大题共 ${calcs.length} 小题。解答应写出文字说明、演算步骤或推证过程）`, { sz: 22, bold: true, font: '黑体' }),
+            textWithMathAndImgToRuns(`三、判断题（本大题共 ${judges.length} 小题，请判断正误）`, { sz: 22, bold: true, font: '黑体' }),
             { before: 200, after: 80 }
           );
-          bodyXml += renderQuestionListXml(calcs, false, true, choices.length + blanks.length + 1);
+          bodyXml += renderQuestionListXml(judges, false, false, choices.length + blanks.length + 1);
+        }
+
+        if (calcs.length > 0) {
+          bodyXml += makeParagraph(
+            textWithMathAndImgToRuns(`四、解答题（本大题共 ${calcs.length} 小题。解答应写出文字说明、演算步骤或推证过程）`, { sz: 22, bold: true, font: '黑体' }),
+            { before: 200, after: 80 }
+          );
+          bodyXml += renderQuestionListXml(calcs, false, true, choices.length + blanks.length + judges.length + 1);
         }
       }
 

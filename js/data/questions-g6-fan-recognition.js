@@ -8,7 +8,7 @@ const FAN_RECOGNITION_QUESTIONS = [
     stem:"若圆心角∠1＝65°，下面（　　）图表示圆心角为2∠1。 + "<br><img src=\"assets/images/g6_fan_412_q1-options.svg\" alt=\"四个选项的圆心角示意图\" style=\"width:440px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
     options:["A．图A","B．图B","C．图C","D．图D"],
     answer:"D",
-    analysis:"顶点在圆心上，且角的两边是圆的半径，这样的角叫做圆心角；已知∠1＝65°，可以计算2∠1的度数，再根据这个度数判断。",
+    analysis:"∠1＝65°，所以2∠1＝130°。圆心角的顶点在圆心上，两边是圆的半径；再结合角度判断选项。",
     detail:"2∠1＝2×65°＝130°。A．角顶点在圆周，不是圆心；B．是圆心角，但角度约为（原文缺失）；C．角顶点不在圆心；D．顶点在圆心，是圆心角，角度约为（原文缺失），符合要求。"
   },
   {

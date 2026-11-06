@@ -104,7 +104,7 @@
 
     function getChapterGroup(grade, chapter) {
       const ch = String(chapter || '').trim();
-      if (grade === '六年级' && /^5\\.1(?:\\.|\\s|$)/.test(ch)) return '5.1 圆的认识与周长';
+      if (grade === '六年级' && /^5\.1(?:\.|\s|$)/.test(ch)) return '5.1 圆的认识与周长';
       if (grade === '初一') {
         if (ch.startsWith('2.') || ch.includes('第二章')) return '第二章 有理数的运算';
         if (ch.startsWith('3.') || ch.includes('第三章')) return '第三章 代数式';

@@ -694,6 +694,17 @@
       color: var(--color-primary-dark);
     }
 
+    /* Nested topics, such as grade 6 section 5.1.2 under section 5.1 */
+    .nav-topic-children {
+      margin: 0.1rem 0 0.4rem 0.8rem;
+      padding-left: 0.45rem;
+      border-left: 2px solid var(--color-border-light);
+    }
+    .nav-topic-child-button {
+      font-size: 0.74rem;
+      padding: 0.45rem 0.55rem;
+    }
+
     /* ==========================================================================
        难度筛选按钮专属语义调色盘（保留各难度语义区分）
        ========================================================================== */

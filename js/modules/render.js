@@ -63,14 +63,14 @@
         }
         return q.chapter === state.chapterFilter;
       });
-      const typeMap = { all: chapPool.length, choice: 0, blank: 0, calc: 0 };
+      const typeMap = { all: chapPool.length, choice: 0, blank: 0, judge: 0, calc: 0 };
       const diffMap = { all: chapPool.length, '容易': 0, '较易': 0, '中等': 0, '较难': 0 };
       chapPool.forEach(q => {
         if (typeMap[q.type] !== undefined) typeMap[q.type]++;
         const d = q.difficulty === '适中' ? '中等' : q.difficulty;
         if (diffMap[d] !== undefined) diffMap[d]++;
       });
-      const typeLabels = { all: '全部', choice: '单选题', blank: '填空题', calc: '解答题' };
+      const typeLabels = { all: '全部', choice: '单选题', blank: '填空题', judge: '判断题', calc: '解答题' };
       document.querySelectorAll('.filter-type-btn').forEach(b => {
         const t = b.getAttribute('data-type');
         if (typeLabels[t]) b.textContent = `${typeLabels[t]} (${typeMap[t]})`;
@@ -961,6 +961,7 @@
       // Group by Part
       const choices = selected.filter(q => q.type === 'choice');
       const blanks = selected.filter(q => q.type === 'blank');
+      const judges = selected.filter(q => q.type === 'judge');
       const calcs = selected.filter(q => q.type === 'calc');
 
       // Part 1: Choice
@@ -1035,13 +1036,45 @@
         `;
       }
 
-      // Part 3: Calc / Answer
-if (calcs.length > 0) {
-  let questionIndex = choices.length + blanks.length + 1;
+      // Part 3: Judge
+      if (judges.length > 0) {
+        let questionIndex = choices.length + blanks.length + 1;
         html += `
           <div class="question-part mt-6 pt-4 border-t border-slate-300">
             <h3 class="font-bold text-base border-b border-slate-900 pb-1 mb-4 flex items-center justify-between">
-              <span>三、解答题（本大题共 ${calcs.length} 小题。解答应写出文字说明、演算步骤或推证过程）</span>
+              <span>三、判断题（本大题共 ${judges.length} 小题，请判断正误）</span>
+            </h3>
+            <div class="${isDouble ? 'grid grid-cols-2 gap-x-8 gap-y-4' : 'space-y-4'}">
+              ${judges.map(q => {
+                const idx = questionIndex++;
+                const teacherHtml = isTeacher ? `
+                  <div class="mt-2 p-2.5 bg-slate-50 border border-slate-200 rounded text-xs text-slate-700 font-sans space-y-1">
+                    <div><b>【答案】</b><span class="text-[#0F766E] font-bold">${formatMathHtml(q.answer)}</span></div>
+                    <div><b>【解析】</b>${formatMathHtml(q.detail)}</div>
+                  </div>
+                ` : '';
+
+                return `
+                  <div class="question-item text-sm leading-relaxed mb-4">
+                    <div>
+                      <span class="font-bold mr-1">${idx}.</span><span>${formatMathHtml(q.stem)}</span>
+                      ${teacherHtml}
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+        `;
+      }
+
+      // Part 4: Calc / Answer
+if (calcs.length > 0) {
+  let questionIndex = choices.length + blanks.length + judges.length + 1;
+        html += `
+          <div class="question-part mt-6 pt-4 border-t border-slate-300">
+            <h3 class="font-bold text-base border-b border-slate-900 pb-1 mb-4 flex items-center justify-between">
+              <span>四、解答题（本大题共 ${calcs.length} 小题。解答应写出文字说明、演算步骤或推证过程）</span>
             </h3>
             <div class="space-y-6">
               ${calcs.map(q => {

@@ -14,7 +14,7 @@ const CH5_EQUATION_LESSON2_QUESTIONS = [
     "difficulty": "较易",
     "knowledge": "已知一元一次方程的解，求参数",
     "chapter": "5.2 解一元一次方程（第2课时）",
-    "stem": "小马虎在做作业，不小心将方程$2(x-3)-\\blacksquare=x+1$中的一个常数污染了．怎么办？他翻开书后的答案，发现方程的解是$x=9$，请问这个被污染的常数是（　　）",
+    "stem": "小马虎在做作业，不小心将方程$2(x-3)-\\square=x+1$中的一个常数污染了．怎么办？他翻开书后的答案，发现方程的解是$x=9$，请问这个被污染的常数是（　　）",
     "options": [
       "A．1",
       "B．2",
@@ -37,7 +37,7 @@ const CH5_EQUATION_LESSON2_QUESTIONS = [
     "difficulty": "容易",
     "knowledge": "新定义下的实数运算；解一元一次方程（二）——去括号",
     "chapter": "5.2 解一元一次方程（第2课时）",
-    "stem": "定义运算$a\\ast b=a-2b$，例如：$3\\ast2=3-2\\times2=-1$，若$2\\ast(x-1)=10$，则$x$的值为（　　）",
+    "stem": "定义运算$a* b=a-2b$，例如：$3*2=3-2\\times2=-1$，若$2*(x-1)=10$，则$x$的值为（　　）",
     "options": [
       "A．$-5$",
       "B．$-\\frac92$",
@@ -45,7 +45,7 @@ const CH5_EQUATION_LESSON2_QUESTIONS = [
       "D．$3$"
     ],
     "answer": "C",
-    "analysis": "根据新运算的定义，将$2\\ast(x-1)$化为普通代数式，再解一元一次方程即可。",
+    "analysis": "根据新运算的定义，将$2*(x-1)$化为普通代数式，再解一元一次方程即可。",
     "detail": "解：根据新定义得$2-2(x-1)=10$，<br>去括号得$2-2x+2=10$，<br>解得$x=-3$。<br>故选：C。"
   },
   {
@@ -106,7 +106,7 @@ const CH5_EQUATION_LESSON2_QUESTIONS = [
     "difficulty": "适中",
     "knowledge": "解一元一次方程（二）——去括号；解一元一次方程（三）——去分母",
     "chapter": "5.2 解一元一次方程（第2课时）",
-    "stem": "方程$\\frac19\\left\\{\\frac16\\left[\\frac13\\left(\\frac{x+2}{2}+4\\right)-7\\right]+10\\right\\}=1$的解为（　　）",
+    "stem": "方程$\\frac19\\left(\\frac16\\left[\\frac13\\left(\\frac{x+2}{2}+4\\right)-7\\right]+10\\right)=1$的解为（　　）",
     "options": [
       "A．$-4$",
       "B．$-3$",
@@ -115,7 +115,7 @@ const CH5_EQUATION_LESSON2_QUESTIONS = [
     ],
     "answer": "A",
     "analysis": "本题考查一元一次方程的解法。根据方程的特点，逐步去分母与去括号即可得到答案。",
-    "detail": "解：<br>$\\frac19\\left\\{\\frac16\\left[\\frac13\\left(\\frac{x+2}{2}+4\\right)-7\\right]+10\\right\\}=1$，<br>∴$\\frac16\\left[\\frac13\\left(\\frac{x+2}{2}+4\\right)-7\\right]+10=9$，<br>∴$\\frac16\\left[\\frac13\\left(\\frac{x+2}{2}+4\\right)-7\\right]=-1$，<br>∴$\\frac13\\left(\\frac{x+2}{2}+4\\right)-7=-6$，<br>∴$\\frac13\\left(\\frac{x+2}{2}+4\\right)=1$，<br>∴$\\frac{x+2}{2}+4=3$，<br>∴$\\frac{x+2}{2}=-1$，<br>∴$x+2=-2$，<br>解得$x=-4$。<br>故选：A。"
+    "detail": "解：<br>$\\frac19\\left(\\frac16\\left[\\frac13\\left(\\frac{x+2}{2}+4\\right)-7\\right]+10\\right)=1$，<br>∴$\\frac16\\left[\\frac13\\left(\\frac{x+2}{2}+4\\right)-7\\right]+10=9$，<br>∴$\\frac16\\left[\\frac13\\left(\\frac{x+2}{2}+4\\right)-7\\right]=-1$，<br>∴$\\frac13\\left(\\frac{x+2}{2}+4\\right)-7=-6$，<br>∴$\\frac13\\left(\\frac{x+2}{2}+4\\right)=1$，<br>∴$\\frac{x+2}{2}+4=3$，<br>∴$\\frac{x+2}{2}=-1$，<br>∴$x+2=-2$，<br>解得$x=-4$。<br>故选：A。"
   },
   {
     "id": "ch5_2_2_q6",
@@ -129,7 +129,7 @@ const CH5_EQUATION_LESSON2_QUESTIONS = [
     "difficulty": "较易",
     "knowledge": "解一元一次方程（二）——去括号",
     "chapter": "5.2 解一元一次方程（第2课时）",
-    "stem": "若$4-3(3-x)$与$2(\\frac12x-5)$的值相等，则$x=\\underline{\\qquad}$。",
+    "stem": "若$4-3(3-x)$与$2(\\frac12x-5)$的值相等，则$x=\\qquad$。",
     "options": [],
     "answer": "$-\\frac52$",
     "analysis": "此题考查解一元一次方程。根据题意列出方程，去括号、移项、合并同类项，再把未知数的系数化为1即可。",
@@ -147,7 +147,7 @@ const CH5_EQUATION_LESSON2_QUESTIONS = [
     "difficulty": "容易",
     "knowledge": "新定义下的运算；解一元一次方程",
     "chapter": "5.2 解一元一次方程（第2课时）",
-    "stem": "对于有理数$a，b$规定运算：$a\\ast b=a+2b$，则方程$3\\ast(x+4)=2$的解是_________。",
+    "stem": "对于有理数$a，b$规定运算：$a* b=a+2b$，则方程$3*(x+4)=2$的解是_________。",
     "options": [],
     "answer": "$x=-4.5$",
     "analysis": "根据题中的新定义化简方程，再解一元一次方程即可。",
@@ -201,7 +201,7 @@ const CH5_EQUATION_LESSON2_QUESTIONS = [
     "difficulty": "适中",
     "knowledge": "解一元一次方程（二）——去括号；新定义运算；代数式求值",
     "chapter": "5.2 解一元一次方程（第2课时）",
-    "stem": "设$a，b，c，d$为有理数，现规定一种新的运算$\\begin{vmatrix}a&b\\\\c&d\\end{vmatrix}=ad-bc$，当$\\begin{vmatrix}2x&4\\\\3x-2&3\\end{vmatrix}=10$时，求代数式$2(x-2)-3(x+1)=$____。",
+    "stem": "设$a，b，c，d$为有理数，现规定二阶行列式按$ad-bc$计算；当$2x\\cdot3-4(3x-2)=10$时，求代数式$2(x-2)-3(x+1)=$____。",
     "options": [],
     "answer": "$-\\frac{20}{3}$",
     "analysis": "根据题中的新定义运算列出关于$x$的方程，求出$x$的值，再代入所求代数式计算。",
@@ -295,7 +295,7 @@ const CH5_EQUATION_LESSON2_QUESTIONS = [
     "options": [],
     "answer": "（1）$m=1$；（2）$n=5$；（3）$a=2，k=26$",
     "analysis": "本题考查一元一次方程的解的应用，关键是理解“立信方程”的意义。<br>（1）根据“立信方程”的定义解答。<br>（2）先由$x^2+3x-4=0$得到$2x^2+6x=8$，再代入第二个方程。<br>（3）先由第一个方程确定$a$的可能值，再由第二个方程确定$k$的可能值，最后根据两个方程有相同的解确定$a、k$。",
-    "detail": "（1）解：由$2x+1=1$，得$2x=0$，解得$x=0$。<br>将$x=0$代入$1-2(x-m)=3$，得$1-2(0-m)=3$，<br>解得$m=1$。<br>故答案为：1。<br>（2）解：由$x^2+3x-4=0$，得$x^2+3x=4$，<br>∴$2x^2+6x=8$。<br>代入$6x+2x^2-3-n=0$，得$8-3-n=0$，<br>解得$n=5$。<br>故答案为：5。<br>（3）解：由$ax=2a^3-3a^2-5a+4$，得$x=2a^2-3a-5+\\frac4a$。<br>∵$x$的值为整数，且$a$取正整数，<br>∴$\\frac4a$为整数，故$a=1$或$a=2$或$a=4$。<br>当$a=1$时，$x=-2$；当$a=2$时，$x=-1$；当$a=4$时，$x=16$。<br>由$9x-3=kx+14$，得$(9-k)x=17$，即$x=\\frac{17}{9-k}$。<br>∵$x$的值为整数，<br>∴$k=8$或$k=10$或$k=26$。<br>当$k=8$时，$x=17$；当$k=10$时，$x=-17$；当$k=26$时，$x=-1$。<br>∵两个方程的解相同，<br>∴$x=-1$，对应$a=2，k=26$。<br>故答案为：$a=2，k=26$。"
+    "detail": "（1）解：由$2x+1=1$，得$2x=0$，解得$x=0$。<br>将$x=0$代入$1-2(x-m)=3$，得$1-2(0-m)=3$，<br>解得$m=1$。<br>故答案为：1。<br>（2）解：由$x^2+3x-4=0$，得$x^2+3x=4$，<br>∴$2x^2+6x=8$。<br>代入$6x+2x^2-3-n=0$，得$8-3-n=0$，<br>解得$n=5$。<br>故答案为：5。<br>（3）解：由$ax=2a^3-3a^2-5a+4$，得$x=2a^2-3a-5+\\frac{4}{a}$。<br>∵$x$的值为整数，且$a$取正整数，<br>∴$\\frac{4}{a}$为整数，故$a=1$或$a=2$或$a=4$。<br>当$a=1$时，$x=-2$；当$a=2$时，$x=-1$；当$a=4$时，$x=16$。<br>由$9x-3=kx+14$，得$(9-k)x=17$，即$x=\\frac{17}{9-k}$。<br>∵$x$的值为整数，<br>∴$k=8$或$k=10$或$k=26$。<br>当$k=8$时，$x=17$；当$k=10$时，$x=-17$；当$k=26$时，$x=-1$。<br>∵两个方程的解相同，<br>∴$x=-1$，对应$a=2，k=26$。<br>故答案为：$a=2，k=26$。"
   }
 ];
 for (const question of CH5_EQUATION_LESSON2_QUESTIONS) {

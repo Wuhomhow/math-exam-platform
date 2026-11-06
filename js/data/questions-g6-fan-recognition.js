@@ -46,7 +46,7 @@ const FAN_RECOGNITION_QUESTIONS = [
     stem:"用4个圆心角是90°的扇形，一定可以拼成一个圆。（　）",
     options:[], answer:"×",
     analysis:"扇形拼成圆需要同时满足圆心角总和为360°、所有扇形半径相等两个条件。题目仅说明圆心角为90°，未说明半径是否相等，因此不一定能拼成圆。",
-    detail:"圆心角总和符合拼成圆的要求，但扇形的大小由半径和圆心角共同决定；若4个扇形的半径不相等，则无法拼成圆。故答案为：×。"
+    detail:"4×90°＝360°，圆心角总和符合拼成圆的要求。但扇形的大小由半径和圆心角共同决定；若4个扇形的半径不相等，则无法拼成圆。故答案为：×。"
   },
   {
     id:"g6_fan_412_06", number:6, origNumber:6, sectionNumber:6,
@@ -61,10 +61,10 @@ const FAN_RECOGNITION_QUESTIONS = [
     id:"g6_fan_412_07", number:7, origNumber:7, sectionNumber:7,
     type:"calc", typeName:"解答题", difficulty:"适中", knowledge:"弧、圆心角、扇形的认识；画扇形",
     chapter:"六年级上册 5.1.2 扇形的认识",
-    stem:"如图，在圆内分别画出圆心角是30°、60°、90°和120°的扇形A、B、C、D。（1）比较扇形A、B、C、D的大小（用“＜”连接）；（2）在同圆或等圆中，扇形的大小与（　）有关。" + "<br><img src=\"assets/images/g6_fan_412_q7-four-fans.svg\" alt=\"圆内四个扇形示意图\" style=\"width:440px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+    stem:"如图，在圆内分别画出圆心角是30°、60°、90°和120°的扇形A、B、C、D。（1）比较扇形A、B、C、D的大小（用“＜”连接）；（2）在同圆或等圆中，扇形的大小与（　）有关。" + "<br><img src=\"assets/images/g6_fan_412_q7-blank.svg\" alt=\"圆内四个扇形示意图\" style=\"width:440px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
     options:[], answer:"（1）扇形A＜扇形B＜扇形C＜扇形D；（2）圆心角",
     analysis:"在同圆中，圆心角的度数越大，扇形就越大。在同圆或等圆中，扇形的大小与圆心角的大小有关。",
-    detail:"（1）30°＜60°＜90°＜120°，所以扇形A＜扇形B＜扇形C＜扇形D。（2）在同圆或等圆中，扇形的大小与圆心角的大小有关。"
+    detail:"（1）30°＜60°＜90°＜120°，所以扇形A＜扇形B＜扇形C＜扇形D。参考作图如下：<br><img src=\"assets/images/g6_fan_412_q7-answer.svg\" alt=\"四个扇形的作图参考\" style=\"width:260px;max-width:100%;height:auto\"><br>（2）在同圆或等圆中，扇形的大小与圆心角的大小有关。"
   },
   {
     id:"g6_fan_412_08", number:8, origNumber:8, sectionNumber:8,
@@ -88,10 +88,10 @@ const FAN_RECOGNITION_QUESTIONS = [
     id:"g6_fan_412_10", number:10, origNumber:10, sectionNumber:10,
     type:"calc", typeName:"作图题", difficulty:"适中", knowledge:"画扇形；弧、圆心角、扇形的认识",
     chapter:"六年级上册 5.1.2 扇形的认识",
-    stem:"下图中有一个扇形，请在此圆中画出与它相同的扇形，并涂上颜色。" + "<br><img src=\"assets/images/g6_fan_412_q10-fans.svg\" alt=\"扇形复制与涂色参考图\" style=\"width:440px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+    stem:"下图中有一个扇形，请在此圆中画出与它相同的扇形，并涂上颜色。" + "<br><img src=\"assets/images/g6_fan_412_q10-stem.svg\" alt=\"扇形复制与涂色参考图\" style=\"width:440px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
     options:[], answer:"见详解。",
     analysis:"可先用量角器量出扇形的圆心角度数，再以圆的任意一条半径为扇形的边，利用量角器画出圆心角度数相同的扇形即可。",
-    detail:"先量出原扇形的圆心角，再以圆的任意一条半径为边，画出圆心角度数相同的扇形并涂色。"
+    detail:"先量出原扇形的圆心角，再以圆的任意一条半径为边，画出圆心角度数相同的扇形并涂色。作图参考：<br><img src=\"assets/images/g6_fan_412_q10-detail.svg\" alt=\"相同扇形的作图参考\" style=\"width:500px;max-width:100%;height:auto\">"
   }
 ];
 for (const question of FAN_RECOGNITION_QUESTIONS) {

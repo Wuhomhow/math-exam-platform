@@ -555,54 +555,57 @@
     }
 
     // Zero-dependency native SVG foreignObject -> Canvas renderer (fallback if CDN libraries fail)
-    async function renderCardViaNativeSvg(cardEl, scale = 2) {
+    async function renderCardViaNativeSvg(cardEl, scale = 2.5) {
       const rect = cardEl.getBoundingClientRect();
       const width = Math.ceil(rect.width);
       const height = Math.ceil(rect.height);
 
       const clone = cardEl.cloneNode(true);
-      const styleProps = [
-        'display', 'position', 'top', 'left', 'right', 'bottom', 'width', 'height',
-        'minWidth', 'minHeight', 'maxWidth', 'maxHeight', 'margin', 'padding',
-        'border', 'borderTop', 'borderRight', 'borderBottom', 'borderLeft', 'borderRadius',
-        'backgroundColor', 'color', 'fontSize', 'fontFamily', 'fontWeight', 'fontStyle',
-        'lineHeight', 'textAlign', 'verticalAlign', 'whiteSpace', 'wordBreak', 'overflowWrap',
-        'flexDirection', 'flexWrap', 'alignItems', 'justifyContent', 'gap', 'rowGap', 'columnGap',
-        'gridTemplateColumns', 'gridColumn', 'boxSizing', 'overflow'
-      ];
-
-      function syncStyles(origNode, cloneNode) {
-        if (origNode.nodeType !== 1 || cloneNode.nodeType !== 1) return;
-        const cs = window.getComputedStyle(origNode);
-        for (const prop of styleProps) {
-          try {
-            cloneNode.style[prop] = cs[prop];
-          } catch (e) {}
-        }
-        const origChildren = Array.from(origNode.children);
-        const cloneChildren = Array.from(cloneNode.children);
-        for (let i = 0; i < origChildren.length; i++) {
-          const oc = origChildren[i];
-          const cc = cloneChildren[i];
-          if (!cc) continue;
-          if (oc.hasAttribute('data-html2canvas-ignore') || oc.classList.contains('katex-mathml') || cs.display === 'none') {
-            cc.remove();
-          } else {
-            syncStyles(oc, cc);
-          }
-        }
-      }
-
-      syncStyles(cardEl, clone);
-      clone.querySelectorAll('[data-html2canvas-ignore], .katex-mathml').forEach(el => el.remove());
+      clone.querySelectorAll('[data-html2canvas-ignore], .katex-mathml, .q-card-footer').forEach(el => el.remove());
       clone.style.margin = '0';
-      clone.style.width = `${width}px`;
-      clone.style.height = `${height}px`;
+      clone.style.width = width + 'px';
+      clone.style.height = height + 'px';
       clone.style.backgroundColor = '#ffffff';
+      clone.style.boxSizing = 'border-box';
       clone.setAttribute('xmlns', 'http://www.w3.org/1999/xhtml');
 
+      // Collect all active document stylesheets to embed into SVG
+      let cssRulesText = '';
+      try {
+        for (const sheet of document.styleSheets) {
+          try {
+            const rules = sheet.cssRules || sheet.rules;
+            if (rules) {
+              for (const rule of rules) {
+                cssRulesText += rule.cssText + '\n';
+              }
+            }
+          } catch (_) {}
+        }
+      } catch (_) {}
+
+      // Extra CSS patch for fraction lines and SVG alignment
+      cssRulesText += `
+        * { box-sizing: border-box; }
+        .katex .frac-line {
+          display: block !important;
+          min-height: 1.5px !important;
+          height: 1.5px !important;
+          background-color: currentColor !important;
+          border: none !important;
+          margin: 2px 0 !important;
+        }
+        .katex .sqrt > .sqrt-line {
+          display: block !important;
+          min-height: 1.5px !important;
+          height: 1.5px !important;
+          background-color: currentColor !important;
+          border: none !important;
+        }
+      `;
+
       const serialized = new XMLSerializer().serializeToString(clone);
-      const svgStr = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}"><foreignObject width="100%" height="100%">${serialized}</foreignObject></svg>`;
+      const svgStr = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}"><defs><style type="text/css"><![CDATA[${cssRulesText}]]></style></defs><foreignObject width="100%" height="100%">${serialized}</foreignObject></svg>`;
       const svgDataUrl = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgStr);
 
       const img = new Image();
@@ -613,8 +616,8 @@
       });
 
       const canvas = document.createElement('canvas');
-      canvas.width = width * scale;
-      canvas.height = height * scale;
+      canvas.width = Math.round(width * scale);
+      canvas.height = Math.round(height * scale);
       const ctx = canvas.getContext('2d');
       ctx.fillStyle = '#ffffff';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -626,7 +629,7 @@
       });
     }
 
-    // Generate PNG Blob of Question Card across 3 fallback engines
+    // Generate PNG Blob of Question Card across 3 fallback engines (html-to-image primary)
     async function generateQuestionCardBlob(cardEl) {
       // Ensure all images in the card are base64 data URIs so canvas is NEVER tainted on file://
       inlineCardImagesWithBase64(cardEl);
@@ -641,26 +644,113 @@
         });
       }));
 
-      const dpr = Math.min(window.devicePixelRatio || 2, 2.5);
+      // Pre-warm fonts to avoid KaTeX font blanking
+      if (document.fonts && document.fonts.ready) {
+        try { await document.fonts.ready; } catch (_) {}
+      }
 
-      // Engine 1: html2canvas
+      // High-DPI Retina scaling for ultra-crisp formulas
+      const dpr = Math.max(window.devicePixelRatio || 2, 2.5);
+
+      const filterFn = (node) => {
+        if (!node) return true;
+        if (node.hasAttribute && (node.hasAttribute('data-html2canvas-ignore') || node.getAttribute('data-html2canvas-ignore') === 'true')) return false;
+        if (node.classList && (node.classList.contains('katex-mathml') || node.classList.contains('q-card-footer'))) return false;
+        return true;
+      };
+
+      // Engine 1: html-to-image (Native Browser SVG foreignObject renderer — 100% pixel-perfect KaTeX)
+      if (typeof window.htmlToImage === 'object' && typeof window.htmlToImage.toBlob === 'function') {
+        try {
+          // Warm up font cache first to prevent blank glyphs on KaTeX WebFonts
+          try {
+            await window.htmlToImage.toPng(cardEl, {
+              backgroundColor: '#ffffff',
+              pixelRatio: 1,
+              filter: filterFn
+            });
+          } catch (_) {}
+
+          const blob = await window.htmlToImage.toBlob(cardEl, {
+            backgroundColor: '#ffffff',
+            pixelRatio: dpr,
+            filter: filterFn,
+            style: {
+              margin: '0',
+              transform: 'none',
+              boxShadow: 'none'
+            }
+          });
+          if (blob) return blob;
+        } catch (err1) {
+          console.warn('Engine 1 (html-to-image with fonts) failed, trying skipFonts:', err1);
+          try {
+            const blob = await window.htmlToImage.toBlob(cardEl, {
+              backgroundColor: '#ffffff',
+              pixelRatio: dpr,
+              skipFonts: true,
+              filter: filterFn,
+              style: {
+                margin: '0',
+                transform: 'none',
+                boxShadow: 'none'
+              }
+            });
+            if (blob) return blob;
+          } catch (err1b) {
+            console.warn('Engine 1b (html-to-image skipFonts) failed, falling back to Engine 2:', err1b);
+          }
+        }
+      }
+
+      // Engine 2: html2canvas with explicit KaTeX CSS repair for fraction lines and radicals
       if (typeof window.html2canvas === 'function') {
         try {
           const canvas = await window.html2canvas(cardEl, {
             scale: dpr,
             backgroundColor: '#ffffff',
-            useCORS: false,
-            allowTaint: false,
+            useCORS: true,
+            allowTaint: true,
             logging: false,
             imageTimeout: 8000,
             onclone: (clonedDoc) => {
               const fixStyle = clonedDoc.createElement('style');
-              fixStyle.textContent = 'img { display: inline-block !important; }';
+              fixStyle.textContent = `
+                img { display: inline-block !important; }
+                /* KaTeX horizontal line and radical fixes for html2canvas */
+                .katex .frac-line {
+                  display: block !important;
+                  min-height: 1.5px !important;
+                  height: 1.5px !important;
+                  background-color: currentColor !important;
+                  border: none !important;
+                  margin: 2px 0 !important;
+                }
+                .katex .sqrt > .sqrt-line {
+                  display: block !important;
+                  min-height: 1.5px !important;
+                  height: 1.5px !important;
+                  background-color: currentColor !important;
+                  border: none !important;
+                }
+                .katex .sqrt > .sqrt-sign {
+                  display: inline-block !important;
+                  vertical-align: baseline !important;
+                }
+                .katex .sqrt > .sqrt-sign svg {
+                  display: inline-block !important;
+                  vertical-align: baseline !important;
+                }
+                .katex .vlist-t, .katex .vlist-r {
+                  display: inline-table !important;
+                  vertical-align: middle !important;
+                }
+              `;
               clonedDoc.head.appendChild(fixStyle);
             },
             ignoreElements: (el) => {
               if (!el || !el.classList) return false;
-              return el.classList.contains('katex-mathml') || el.hasAttribute('data-html2canvas-ignore');
+              return el.classList.contains('katex-mathml') || el.hasAttribute('data-html2canvas-ignore') || el.classList.contains('q-card-footer');
             }
           });
           const blob = await new Promise((resolve, reject) => {
@@ -671,27 +761,8 @@
             }
           });
           if (blob) return blob;
-        } catch (err1) {
-          console.warn('Engine 1 (html2canvas) failed, falling back to Engine 2:', err1);
-        }
-      }
-
-      // Engine 2: html-to-image (with skipFonts: true to prevent cross-origin CSS rules error)
-      if (typeof window.htmlToImage === 'object' && typeof window.htmlToImage.toBlob === 'function') {
-        try {
-          const blob = await window.htmlToImage.toBlob(cardEl, {
-            backgroundColor: '#ffffff',
-            pixelRatio: dpr,
-            skipFonts: true,
-            filter: (node) => {
-              if (node && node.hasAttribute && node.hasAttribute('data-html2canvas-ignore')) return false;
-              if (node && node.classList && node.classList.contains('katex-mathml')) return false;
-              return true;
-            }
-          });
-          if (blob) return blob;
         } catch (err2) {
-          console.warn('Engine 2 (html-to-image) failed, falling back to Engine 3 (native SVG):', err2);
+          console.warn('Engine 2 (html2canvas) failed, falling back to Engine 3:', err2);
         }
       }
 
@@ -699,7 +770,7 @@
       return await renderCardViaNativeSvg(cardEl, dpr);
     }
 
-    // Show interactive screenshot preview modal when browser blocks direct clipboard write
+    // Show interactive screenshot preview modal with 1-click clipboard copy
     function showScreenshotPreviewModal(blob, qNumber, hasAnalysis) {
       const old = document.getElementById('screenshotPreviewModal');
       if (old) old.remove();
@@ -711,15 +782,19 @@
       modal.innerHTML = `
         <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full overflow-hidden border border-slate-200">
           <div class="px-5 py-3.5 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
-            <div class="text-sm font-bold text-slate-800">第 ${qNumber} 题截图预览（右键图片可直接“复制图像”）</div>
+            <div class="text-sm font-bold text-slate-800">第 ${qNumber} 题高清截图预览</div>
             <button id="closeScreenshotModalBtn" class="text-slate-400 hover:text-slate-600 text-lg leading-none px-2 py-1">✕</button>
           </div>
           <div class="p-5 max-h-[70vh] overflow-y-auto bg-slate-100/60 flex justify-center">
             <img src="${url}" alt="第 ${qNumber} 题截图" class="max-w-full h-auto rounded-lg shadow-sm border border-slate-200 bg-white">
           </div>
-          <div class="px-5 py-3 bg-slate-50 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500">
-            <span>提示：在上方图片上点击鼠标右键 → 选择【复制图片】即可粘贴到微信/Word</span>
+          <div class="px-5 py-3 bg-slate-50 border-t border-slate-200 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500">
+            <span>提示：点击右侧【复制到剪贴板】或在图片上右键选择【复制图片】</span>
             <div class="flex items-center gap-2">
+              <button id="copyModalImageBtn" class="px-3.5 py-1.5 rounded-lg border border-slate-300 bg-white hover:bg-slate-50 font-semibold text-slate-700 transition flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+                <span>复制到剪贴板</span>
+              </button>
               <a href="${url}" download="第${qNumber}题截图${hasAnalysis ? '_含解析' : ''}.png" class="btn-primary px-3.5 py-1.5 rounded-lg font-semibold transition">下载保存图片</a>
             </div>
           </div>
@@ -734,6 +809,25 @@
       modal.querySelector('#closeScreenshotModalBtn')?.addEventListener('click', close);
       modal.addEventListener('click', (e) => {
         if (e.target === modal) close();
+      });
+
+      // Direct user gesture clipboard copy inside modal
+      modal.querySelector('#copyModalImageBtn')?.addEventListener('click', async () => {
+        const copyBtn = modal.querySelector('#copyModalImageBtn');
+        try {
+          if (navigator.clipboard && typeof window.ClipboardItem !== 'undefined') {
+            await navigator.clipboard.write([
+              new ClipboardItem({ 'image/png': blob })
+            ]);
+            showToast('已复制高清截图到剪贴板！可直接粘贴至微信或文档', 'success');
+            if (copyBtn) copyBtn.innerHTML = '<span>✓ 已复制</span>';
+          } else {
+            showToast('当前浏览器限制剪贴板，请直接右键图片选择“复制图片”', 'info');
+          }
+        } catch (clipErr) {
+          console.warn('Modal manual copy failed:', clipErr);
+          showToast('复制受限，请在图片上右键选择【复制图片】', 'info');
+        }
       });
     }
 
@@ -781,7 +875,7 @@
         }
 
         if (copied) {
-          showToast(`第 ${qNumber} 题截图${modeLabel}已成功复制到剪贴板！`, 'success');
+          showToast(`第 ${qNumber} 题高清截图${modeLabel}已成功复制到剪贴板！可直接粘贴`, 'success');
         } else {
           // If browser blocks clipboard API (e.g. strict file:// restriction), open preview modal for 1-click right-click copy & download
           showScreenshotPreviewModal(blob, qNumber, hasAnalysis);

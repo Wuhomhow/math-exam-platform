@@ -55,6 +55,7 @@
           .replace(/&lt;/g, '<')
           .replace(/&gt;/g, '>')
           .replace(/(?<!\\)%/g, '\\%')
+          .replace(/\\\\([a-zA-Z]+)/g, function(_, cmd) { return '\\' + cmd; })
           .trim();
         if (!cleanTex) return '';
         if (window.katex) {

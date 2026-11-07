@@ -259,24 +259,50 @@
           return ai - bi || a.localeCompare(b, 'zh-CN');
         });
 
+        function getChapterSortKey(str) {
+          const s = String(str || '').trim();
+          const numM = s.match(/^(\d+)(?:\.(\d+))?/);
+          if (numM) {
+            return parseInt(numM[1], 10) * 100 + (numM[2] ? parseInt(numM[2], 10) : 0);
+          }
+          const cnNums = { '一': 1, '二': 2, '三': 3, '四': 4, '五': 5, '六': 6, '七': 7, '八': 8, '九': 9, '十': 10 };
+          const cnM = s.match(/^第([一二三四五六七八九十0-9]+)章/);
+          if (cnM) {
+            const raw = cnM[1];
+            if (/^\d+$/.test(raw)) return parseInt(raw, 10) * 100;
+            if (raw.startsWith('十')) {
+              const unit = cnNums[raw.slice(1)] || 0;
+              return (10 + unit) * 100;
+            }
+            if (raw.includes('十')) {
+              const parts = raw.split('十');
+              const tens = cnNums[parts[0]] || 1;
+              const unit = cnNums[parts[1]] || 0;
+              return (tens * 10 + unit) * 100;
+            }
+            return (cnNums[raw] || 99) * 100;
+          }
+          return 9999;
+        }
+
         const semesterHtml = orderedSemesters.map(semester => {
           const semEntry = semesters.get(semester);
-          const groupList = [...semEntry.groups.entries()].sort((a, b) => a[1].firstOrder - b[1].firstOrder);
-          const standaloneList = [...semEntry.standalone.entries()].sort((a, b) => a[1].firstOrder - b[1].firstOrder);
 
           let semesterTotal = 0;
-          for (const [, grp] of groupList) {
+          for (const [, grp] of semEntry.groups) {
             for (const [, c] of grp.chapters) semesterTotal += c.count;
           }
-          for (const [, c] of standaloneList) semesterTotal += c.count;
+          for (const [, c] of semEntry.standalone) semesterTotal += c.count;
           for (const [, childMap] of semEntry.children) {
             for (const [, c] of childMap) semesterTotal += c.count;
           }
 
-          const groupsHtml = groupList.map(([grpTitle, grpInfo]) => {
+          const items = [];
+
+          for (const [grpTitle, grpInfo] of semEntry.groups) {
             const chapList = [...grpInfo.chapters.entries()].sort((a, b) => a[0].localeCompare(b[0], 'zh-CN', { numeric: true }));
             const grpTotal = chapList.reduce((acc, entry) => acc + entry[1].count, 0);
-            return `
+            const html = `
               <details class="nav-chapter-group-card mb-2">
                 <summary>
                   <span>${escapeNavText(grpTitle)}</span>
@@ -292,9 +318,14 @@
                 </div>
               </details>
             `;
-          }).join('');
+            items.push({
+              sortKey: getChapterSortKey(grpTitle),
+              firstOrder: grpInfo.firstOrder,
+              html: html
+            });
+          }
 
-          const standaloneHtml = standaloneList.map(([chapter, meta]) => {
+          for (const [chapter, meta] of semEntry.standalone) {
             const childMap = semEntry.children.get(chapter);
             const childList = childMap
               ? [...childMap.entries()].sort((a, b) => a[1].firstOrder - b[1].firstOrder)
@@ -309,8 +340,8 @@
                 `).join('')}
               </div>
             ` : '';
-            return `
-              <div class="nav-topic-parent-block">
+            const html = `
+              <div class="nav-topic-parent-block mb-1">
                 <button type="button" class="chapter-tree-btn nav-topic-button" data-chapter="${escapeNavText(chapter)}">
                   <span class="nav-topic-label">${escapeNavText(meta.label)}</span>
                   <span class="nav-topic-count">${meta.count}</span>
@@ -318,13 +349,24 @@
                 ${childrenHtml}
               </div>
             `;
-          }).join('');
+            items.push({
+              sortKey: getChapterSortKey(meta.label || chapter),
+              firstOrder: meta.firstOrder,
+              html: html
+            });
+          }
+
+          items.sort((a, b) => {
+            if (a.sortKey !== 9999 || b.sortKey !== 9999) {
+              if (a.sortKey !== b.sortKey) return a.sortKey - b.sortKey;
+            }
+            return a.firstOrder - b.firstOrder;
+          });
 
           return `
             <div class="mb-2 last:mb-0">
               <div class="nav-semester-label"><span>${escapeNavText(semester)}</span><span>${semesterTotal} 题</span></div>
-              ${groupsHtml}
-              ${standaloneHtml ? `<div class="space-y-1">${standaloneHtml}</div>` : ''}
+              <div class="space-y-1">${items.map(it => it.html).join('')}</div>
             </div>
           `;
         }).join('');

@@ -130,13 +130,22 @@
         .replace(/'/g, '&apos;');
     }
 
-    function ommlRun(text) {
+    function ommlRun(text, isText = false) {
       if (!text) return '';
-      return `<m:r><m:rPr><m:sty m:val="p"/></m:rPr><w:rPr><w:rFonts w:ascii="Cambria Math" w:hAnsi="Cambria Math" w:eastAsia="宋体" w:cs="Cambria Math"/><w:sz w:val="21"/><w:szCs w:val="21"/></w:rPr><m:t xml:space="preserve">${escXml(text)}</m:t></m:r>`;
+      const sty = isText ? '<m:rPr><m:sty m:val="p"/></m:rPr>' : '';
+      return `<m:r>${sty}<w:rPr><w:rFonts w:ascii="Cambria Math" w:hAnsi="Cambria Math" w:eastAsia="宋体" w:cs="Cambria Math"/><w:sz w:val="21"/><w:szCs w:val="21"/></w:rPr><m:t xml:space="preserve">${escXml(text)}</m:t></m:r>`;
     }
 
     function ommlSup(baseXml, supXml) {
       return `<m:sSup><m:sSupPr><m:ctrlPr><w:rPr><w:rFonts w:ascii="Cambria Math" w:hAnsi="Cambria Math" w:cs="Cambria Math"/><w:sz w:val="21"/><w:szCs w:val="21"/></w:rPr></m:ctrlPr></m:sSupPr><m:e>${baseXml}</m:e><m:sup>${supXml}</m:sup></m:sSup>`;
+    }
+
+    function ommlSub(baseXml, subXml) {
+      return `<m:sSub><m:sSubPr><m:ctrlPr><w:rPr><w:rFonts w:ascii="Cambria Math" w:hAnsi="Cambria Math" w:cs="Cambria Math"/><w:sz w:val="21"/><w:szCs w:val="21"/></w:rPr></m:ctrlPr></m:sSubPr><m:e>${baseXml}</m:e><m:sub>${subXml}</m:sub></m:sSub>`;
+    }
+
+    function ommlSubSup(baseXml, subXml, supXml) {
+      return `<m:sSubSup><m:sSubSupPr><m:ctrlPr><w:rPr><w:rFonts w:ascii="Cambria Math" w:hAnsi="Cambria Math" w:cs="Cambria Math"/><w:sz w:val="21"/><w:szCs w:val="21"/></w:rPr></m:ctrlPr></m:sSubSupPr><m:e>${baseXml}</m:e><m:sub>${subXml}</m:sub><m:sup>${supXml}</m:sup></m:sSubSup>`;
     }
 
     function ommlFrac(numXml, denXml) {
@@ -144,7 +153,11 @@
     }
 
     function ommlDelim(begChr, endChr, innerXml) {
-      return `<m:d><m:dPr><m:begChr m:val="${escXml(begChr)}"/><m:endChr m:val="${escXml(endChr)}"/><m:ctrlPr><w:rPr><w:rFonts w:ascii="Cambria Math" w:hAnsi="Cambria Math" w:cs="Cambria Math"/><w:sz w:val="21"/><w:szCs w:val="21"/></w:rPr></m:ctrlPr></m:dPr><m:e>${innerXml}</m:e></m:d>`;
+      return `<m:d><m:dPr><m:begChr m:val="${escXml(begChr)}"/><m:endChr m:val="${escXml(endChr)}"/><m:grow m:val="1"/><m:shp m:val="match"/><m:ctrlPr><w:rPr><w:rFonts w:ascii="Cambria Math" w:hAnsi="Cambria Math" w:cs="Cambria Math"/><w:sz w:val="21"/><w:szCs w:val="21"/></w:rPr></m:ctrlPr></m:dPr><m:e>${innerXml}</m:e></m:d>`;
+    }
+
+    function ommlCases(rowsXml) {
+      return `<m:d><m:dPr><m:begChr m:val="{"/><m:endChr m:val=""/><m:grow m:val="1"/><m:shp m:val="match"/><m:ctrlPr><w:rPr><w:rFonts w:ascii="Cambria Math" w:hAnsi="Cambria Math" w:cs="Cambria Math"/><w:sz w:val="21"/><w:szCs w:val="21"/></w:rPr></m:ctrlPr></m:dPr><m:e><m:eqArr><m:eqArrPr/>${rowsXml}</m:eqArr></m:e></m:d>`;
     }
 
     // 将题库中常见的紧凑分数写法（如 \frac12、\frac18、\frac32）
@@ -263,9 +276,9 @@
         if (s.startsWith('\\begin{cases}', i)) {
           const endIdx = s.indexOf('\\end{cases}', i + 13);
           const body = endIdx !== -1 ? s.slice(i + 13, endIdx) : s.slice(i + 13);
-          const rows = body.split(/\\\\+|\\(?=[a-zA-Z0-9+\-])|\n/).map(r => r.trim()).filter(Boolean);
+          const rows = body.split(/\\\\+|\\(?=[a-zA-Z0-9+\-])|\n/).map(r => r.replace(/&/g, '  ').trim()).filter(Boolean);
           const eqArrInner = rows.map(r => `<m:e>${parseLatexInner(r)}</m:e>`).join('');
-          atoms.push(`<m:d><m:dPr><m:begChr m:val="{"/><m:endChr m:val=""/></m:dPr><m:e><m:eqArr>${eqArrInner}</m:eqArr></m:e></m:d>`);
+          atoms.push(ommlCases(eqArrInner));
           i = endIdx !== -1 ? endIdx + 11 : s.length;
         } else if (s.startsWith('\\begin{matrix}', i) || s.startsWith('\\begin{pmatrix}', i)) {
           const isParen = s.startsWith('\\begin{pmatrix}', i);
@@ -283,7 +296,7 @@
           i += 2;
         } else if (s.startsWith('\\text{', i)) {
           const g = readBraceGroup(s, i + 5);
-          atoms.push(ommlRun(g.content));
+          atoms.push(ommlRun(g.content, true));
           i = g.nextIdx;
         } else if (s.startsWith('\\frac{', i)) {
           const g1 = readBraceGroup(s, i + 5);
@@ -341,7 +354,7 @@
           }
           if (depth === 0) {
             const innerStr = s.slice(i + 1, k - 1);
-            atoms.push(ommlRun(begChr) + parseLatexInner(innerStr) + ommlRun(endChr));
+            atoms.push(ommlDelim(begChr, endChr, parseLatexInner(innerStr)));
             i = k;
           } else {
             atoms.push(ommlRun(begChr));
@@ -361,6 +374,33 @@
           const g = readBraceGroup(s, i);
           atoms.push(parseLatexInner(g.content));
           i = g.nextIdx;
+        } else if (s[i] === '_') {
+          i++;
+          let subXml = '';
+          if (i < s.length && s[i] === '{') {
+            const g = readBraceGroup(s, i);
+            subXml = parseLatexInner(g.content);
+            i = g.nextIdx;
+          } else if (i < s.length) {
+            subXml = ommlRun(s[i]);
+            i++;
+          }
+          const prevAtom = atoms.length > 0 ? atoms.pop() : ommlRun('');
+          if (i < s.length && s[i] === '^') {
+            i++;
+            let supXml = '';
+            if (i < s.length && s[i] === '{') {
+              const g = readBraceGroup(s, i);
+              supXml = parseLatexInner(g.content);
+              i = g.nextIdx;
+            } else if (i < s.length) {
+              supXml = ommlRun(s[i]);
+              i++;
+            }
+            atoms.push(ommlSubSup(prevAtom, subXml, supXml));
+          } else {
+            atoms.push(ommlSub(prevAtom, subXml));
+          }
         } else if (s[i] === '^') {
           i++;
           let supXml = '';
@@ -373,7 +413,21 @@
             i++;
           }
           const prevAtom = atoms.length > 0 ? atoms.pop() : ommlRun('');
-          atoms.push(ommlSup(prevAtom, supXml));
+          if (i < s.length && s[i] === '_') {
+            i++;
+            let subXml = '';
+            if (i < s.length && s[i] === '{') {
+              const g = readBraceGroup(s, i);
+              subXml = parseLatexInner(g.content);
+              i = g.nextIdx;
+            } else if (i < s.length) {
+              subXml = ommlRun(s[i]);
+              i++;
+            }
+            atoms.push(ommlSubSup(prevAtom, subXml, supXml));
+          } else {
+            atoms.push(ommlSup(prevAtom, supXml));
+          }
         } else if (/[0-9a-zA-Z.]/.test(s[i])) {
           let start = i;
           if (/[0-9.]/.test(s[i])) {

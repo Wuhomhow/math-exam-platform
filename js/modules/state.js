@@ -84,8 +84,23 @@
     // 自定义成品试卷配置（原题库索引模式：零重复题目、保留原知识点）
     window.CUSTOM_FINISHED_PAPERS = [
       {
+        id: 'algebra_part1_foundation_paper',
+        title: '初一代数式前半部分（基础与巩固·34题）',
+        grade: '初一',
+        semester: '上册',
+        questionIds: [
+          'ch3_1_1_1', 'ch3_1_1_2', 'ch3_1_1_12', 'ch3_1_1_13',
+          'ch3_1_2_1', 'ch3_1_2_2', 'ch3_1_2_6', 'ch3_1_3_3', 'ch3_1_3_4', 'ch3_2_1_1',
+          'alg_oct30_20', 'ch3_1_3_10', 'ch3_2_1_5', 'alg_oct30_10',
+          'ch3_1_1_4', 'ch3_1_2_11', 'ch3_1_2_12', 'ch3_1_3_1', 'ch3_1_3_2', 'ch3_2_1_7', 'ch3_2_1_8',
+          'alg_oct30_9', 'ch3_1_2_20', 'alg_oct30_24',
+          'ch3_1_1_18', 'ch3_1_1_20', 'alg_oct30_7', 'alg_oct30_13', 'g7_2_9',
+          'ch3_1_2_16', 'alg_oct30_17', 'op_oct30_13', 'ch3_2_1_14', 'alg_oct30_11'
+        ]
+      },
+      {
         id: 'algebra_part1_paper',
-        title: '初一代数式前半部分（中等与中上强化）',
+        title: '初一代数式前半部分（中等与中上强化·34题）',
         grade: '初一',
         semester: '上册',
         questionIds: [
@@ -396,7 +411,7 @@
     }
 
     // Restore the basket on this browser; keep the built-in selection for first-time visitors.
-    const BASKET_STORAGE_KEY = 'mathQuestionBank:selectedIds:v2';
+    const BASKET_STORAGE_KEY = 'mathQuestionBank:selectedIds:v3';
     const ANSWER_SPACE_STORAGE_KEY = 'mathQuestionBank:answerSpaceHeights:v1';
     const LAST_VIEW_STORAGE_KEY = 'mathQuestionBank:lastView:v1';
     const UI_PREFS_STORAGE_KEY = 'mathQuestionBank:uiPreferences:v2';
@@ -490,13 +505,13 @@
     const state = {
       currentView: 'bank', // 'bank' | 'paper' | 'quiz'
       selectedIds: new Set([
-        'alg_oct30_9', 'alg_oct30_20', 'ch3_1_2_16', 'ch3_1_2_17', 'ch3_1_2_20',
-        'ch3_1_2_21', 'ch3_1_2_23', 'alg_oct30_6', 'alg_oct30_15', 'alg_oct30_17',
-        'alg_oct30_21', 'alg_oct30_24', 'alg_oct30_27', 'alg_oct30_30', 'alg_oct30_32',
-        'ch3_1_3_10', 'ch3_1_3_15', 'op_oct30_13', 'alg_oct30_5', 'ch3_2_1_5',
-        'ch3_2_1_6', 'ch3_2_1_14', 'ch3_2_1_15', 'op_oct30_21', 'op_oct30_26',
-        'alg_oct30_1', 'alg_oct30_10', 'alg_oct30_11', 'alg_oct30_14', 'alg_oct30_16',
-        'alg_oct30_22', 'alg_oct30_31', 'alg_oct30_34', 'g7_2_40'
+        'ch3_1_1_1', 'ch3_1_1_2', 'ch3_1_1_12', 'ch3_1_1_13',
+        'ch3_1_2_1', 'ch3_1_2_2', 'ch3_1_2_6', 'ch3_1_3_3', 'ch3_1_3_4', 'ch3_2_1_1',
+        'alg_oct30_20', 'ch3_1_3_10', 'ch3_2_1_5', 'alg_oct30_10',
+        'ch3_1_1_4', 'ch3_1_2_11', 'ch3_1_2_12', 'ch3_1_3_1', 'ch3_1_3_2', 'ch3_2_1_7', 'ch3_2_1_8',
+        'alg_oct30_9', 'ch3_1_2_20', 'alg_oct30_24',
+        'ch3_1_1_18', 'ch3_1_1_20', 'alg_oct30_7', 'alg_oct30_13', 'g7_2_9',
+        'ch3_1_2_16', 'alg_oct30_17', 'op_oct30_13', 'ch3_2_1_14', 'alg_oct30_11'
       ]),
       answerSpaceHeights: {},
       chapterFilter: 'all',

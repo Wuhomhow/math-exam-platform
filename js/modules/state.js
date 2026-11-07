@@ -105,7 +105,11 @@
 
     function getChapterGroup(grade, chapter) {
       const ch = String(chapter || '').trim();
-      if (grade === '初一') {
+      if (grade === '六年级') {
+        const loc = inferAcademicLocation(ch);
+        const label = String(loc.label || ch).trim();
+        if (label.startsWith('4.') || label.includes('第四章')) return '第四章 圆';
+      } else if (grade === '初一') {
         if (ch.startsWith('2.') || ch.includes('第二章')) return '第二章 有理数的运算';
         if (ch.startsWith('3.') || ch.includes('第三章')) return '第三章 代数式';
         if (ch.startsWith('4.') || ch.includes('第四章')) return '第四章 整式的加减法';
@@ -123,11 +127,6 @@
     }
 
     function getChapterParent(grade, chapter) {
-      const location = inferAcademicLocation(chapter);
-      const label = String(location.label || chapter || '').trim();
-      if (grade === '六年级' && /^5\.1\.\d+(?:\s|$)/.test(label)) {
-        return '六年级上册 5.1 圆的认识与周长';
-      }
       return null;
     }
 

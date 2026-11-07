@@ -108,7 +108,14 @@
       if (grade === '六年级') {
         const loc = inferAcademicLocation(ch);
         const label = String(loc.label || ch).trim();
-        if (label.startsWith('4.') || label.includes('第四章')) return '第四章 圆';
+        if (
+          label.includes('圆') ||
+          (label.includes('扇形') && !label.includes('统计图')) ||
+          label.startsWith('4.') ||
+          label.includes('第四章')
+        ) {
+          return '第四章 圆';
+        }
       } else if (grade === '初一') {
         if (ch.startsWith('2.') || ch.includes('第二章')) return '第二章 有理数的运算';
         if (ch.startsWith('3.') || ch.includes('第三章')) return '第三章 代数式';
@@ -267,7 +274,7 @@
           }
 
           const groupsHtml = groupList.map(([grpTitle, grpInfo]) => {
-            const chapList = [...grpInfo.chapters.entries()].sort((a, b) => a[1].firstOrder - b[1].firstOrder);
+            const chapList = [...grpInfo.chapters.entries()].sort((a, b) => a[0].localeCompare(b[0], 'zh-CN', { numeric: true }));
             const grpTotal = chapList.reduce((acc, entry) => acc + entry[1].count, 0);
             return `
               <details class="nav-chapter-group-card mb-2">

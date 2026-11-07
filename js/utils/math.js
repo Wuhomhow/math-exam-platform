@@ -55,7 +55,8 @@
           .replace(/&lt;/g, '<')
           .replace(/&gt;/g, '>')
           .replace(/(?<!\\)%/g, '\\%')
-          .replace(/\\\\([a-zA-Z]+)/g, function(_, cmd) { return '\\' + cmd; })
+          .replace(/\\\\(frac|dfrac|tfrac|sqrt|text|triangle|angle|circ|parallel|perp|cong|alpha|beta|gamma|theta|pi|pm|mp|le|ge|cdot|times|div|neq|approx|because|therefore|quad|qquad|dots|cdots|mathbf|mathrm|left|right|begin|end)\b/g, '\\$1')
+          .replace(/\\\\(?=[a-zA-Z0-9+\-])/g, '\\\\ ')
           .trim();
         if (!cleanTex) return '';
         if (window.katex) {

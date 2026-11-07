@@ -242,7 +242,6 @@
         .replace(/\\underbrace\{([^{}]*)\}_\{([^{}]*)\}/g, '$1（共 $2）')
         .replace(/\\underbrace\{([^{}]*)\}/g, '$1')
         .replace(/\\\s+/g, ' ')
-        .replace(/\\\\/g, ' ')
         .trim();
 
       function readBraceGroup(str, i) {
@@ -264,10 +263,24 @@
         if (s.startsWith('\\begin{cases}', i)) {
           const endIdx = s.indexOf('\\end{cases}', i + 13);
           const body = endIdx !== -1 ? s.slice(i + 13, endIdx) : s.slice(i + 13);
-          const rows = body.split(/\\\\/).map(r => r.trim()).filter(Boolean);
+          const rows = body.split(/\\\\+|\\(?=[a-zA-Z0-9+\-])|\n/).map(r => r.trim()).filter(Boolean);
           const eqArrInner = rows.map(r => `<m:e>${parseLatexInner(r)}</m:e>`).join('');
           atoms.push(`<m:d><m:dPr><m:begChr m:val="{"/><m:endChr m:val=""/></m:dPr><m:e><m:eqArr>${eqArrInner}</m:eqArr></m:e></m:d>`);
           i = endIdx !== -1 ? endIdx + 11 : s.length;
+        } else if (s.startsWith('\\begin{matrix}', i) || s.startsWith('\\begin{pmatrix}', i)) {
+          const isParen = s.startsWith('\\begin{pmatrix}', i);
+          const envName = isParen ? 'pmatrix' : 'matrix';
+          const endIdx = s.indexOf(`\\end{${envName}}`, i + envName.length + 8);
+          const body = endIdx !== -1 ? s.slice(i + envName.length + 8, endIdx) : s.slice(i + envName.length + 8);
+          const rows = body.split(/\\\\+|\\(?=[a-zA-Z0-9+\-])|\n/).map(r => r.trim()).filter(Boolean);
+          const eqArrInner = rows.map(r => `<m:e>${parseLatexInner(r)}</m:e>`).join('');
+          const begChr = isParen ? '(' : '';
+          const endChr = isParen ? ')' : '';
+          atoms.push(`<m:d><m:dPr><m:begChr m:val="${begChr}"/><m:endChr m:val="${endChr}"/></m:dPr><m:e><m:eqArr>${eqArrInner}</m:eqArr></m:e></m:d>`);
+          i = endIdx !== -1 ? endIdx + envName.length + 6 : s.length;
+        } else if (s.startsWith('\\\\', i)) {
+          atoms.push(ommlRun(' '));
+          i += 2;
         } else if (s.startsWith('\\text{', i)) {
           const g = readBraceGroup(s, i + 5);
           atoms.push(ommlRun(g.content));
@@ -528,9 +541,14 @@
         if (!srcM) return '';
         const src = srcM[1];
         let imgBytes = imageBufferCache.get(src);
-        if (!imgBytes && src.startsWith('data:image/')) {
-          const m = src.match(/base64,([A-Za-z0-9+/=]+)/);
-          if (m) imgBytes = base64ToUint8Array(m[1]);
+        if (!imgBytes) {
+          const cleanKey = src.replace(/^\.?\//, '');
+          const mapped = window.IMAGE_BASE64_MAP && (window.IMAGE_BASE64_MAP[cleanKey] || window.IMAGE_BASE64_MAP[src]);
+          const dataUri = mapped || (src.startsWith('data:image/') ? src : null);
+          if (dataUri && dataUri.startsWith('data:image/')) {
+            const m = dataUri.match(/base64,([A-Za-z0-9+/=]+)/);
+            if (m) imgBytes = base64ToUint8Array(m[1]);
+          }
         }
         if (!imgBytes) return '';
 

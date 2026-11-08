@@ -236,14 +236,13 @@
 
         const imgHtml = q.image ? `<div class="my-1.5"><img src="${q.image}" class="max-h-40 max-w-xs h-auto rounded object-contain"></div>` : '';
 
-        // Check if this question has >= 80% similar questions based on conditional & procedural knowledge
-        const similarList = typeof window.getSimilarQuestionsFor === 'function' ? window.getSimilarQuestionsFor(q.id, 3) : [];
-        const similarBtnHtml = similarList.length > 0 ? `
+        // 举一反三按钮：轻量级秒开，点击后由 openSimilarQuestionsModal 按需毫秒级即时检索
+        const similarBtnHtml = `
           <button class="btn-open-similar q-aux-btn" data-id="${q.id}" data-number="${qNumber}">
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-            <span>举一反三 (${similarList.length})</span>
+            <span>举一反三</span>
           </button>
-        ` : '';
+        `;
 
         return `
           <div class="question-card ${isSelected ? 'is-selected' : ''}" data-id="${q.id}">

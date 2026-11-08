@@ -18,6 +18,8 @@
     if (/^(3\.|第三章|4\.|第四章|16\.)/.test(ch)) return 'algebra_poly';
     if (/^(13\.|14\.|15\.)/.test(ch)) return 'g8_geometry';
     if (ch.startsWith('25.')) return 'g9_quadratic';
+    if (ch.startsWith('26.')) return 'g9_parabola';
+    if (ch.startsWith('27.')) return 'g9_inverse';
     return 'general_math';
   }
 
@@ -131,8 +133,9 @@
     { id: 'fraction_ratio_calc', name: '分率乘除与比值化简运算', pattern: /分数乘|分数除|化简比|比值/ }
   ];
 
-  // 缓存每道题的认知特征画像與相似题结果
+  // 缓存每道题的认知特征画像、领域分组索引与相似题结果
   let profileMap = null;
+  let domainMap = null;
   let similarCache = new Map();
 
   function parseKnowledgeSet(q) {
@@ -179,9 +182,13 @@
   function ensureProfilesInitialized() {
     if (profileMap && profileMap.size === QUESTION_BANK.length) return;
     profileMap = new Map();
+    domainMap = new Map();
     similarCache.clear();
     for (const q of QUESTION_BANK) {
-      profileMap.set(q.id, buildQuestionProfile(q));
+      const prof = buildQuestionProfile(q);
+      profileMap.set(q.id, prof);
+      if (!domainMap.has(prof.domain)) domainMap.set(prof.domain, []);
+      domainMap.get(prof.domain).push(q);
     }
   }
 
@@ -198,10 +205,8 @@
   // 计算两道题的「条件性 + 程序性」综合相似度（返回 score 0~1 及匹配诊断信息）
   function computeCognitiveSimilarity(q1, q2) {
     if (!q1 || !q2 || q1.id === q2.id) return null;
-    ensureProfilesInitialized();
-
-    const p1 = profileMap.get(q1.id);
-    const p2 = profileMap.get(q2.id);
+    const p1 = profileMap ? profileMap.get(q1.id) : null;
+    const p2 = profileMap ? profileMap.get(q2.id) : null;
     if (!p1 || !p2 || p1.domain !== p2.domain) return null;
 
     // 1. 条件性知识交集
@@ -276,7 +281,7 @@
     };
   }
 
-  // 获取指定题目的相似题列表（阈值 >= 80%，按同构度、同章节、题型优先级排序，默认最多返回 3 道）
+  // 获取指定题目的相似题列表（按领域索引高速匹配，默认最多返回 3 道）
   function getSimilarQuestionsFor(questionId, maxCount = 3) {
     if (!questionId || typeof QUESTION_BANK === 'undefined') return [];
     ensureProfilesInitialized();
@@ -285,11 +290,15 @@
       return similarCache.get(questionId).slice(0, maxCount);
     }
 
-    const targetQ = QUESTION_BANK.find(q => q.id === questionId);
+    const p1 = profileMap.get(questionId);
+    if (!p1) return [];
+
+    const candidatePool = domainMap.get(p1.domain) || [];
+    const targetQ = candidatePool.find(q => q.id === questionId) || QUESTION_BANK.find(q => q.id === questionId);
     if (!targetQ) return [];
 
     const matches = [];
-    for (const candidate of QUESTION_BANK) {
+    for (const candidate of candidatePool) {
       if (candidate.id === questionId) continue;
       // 跳过题干几乎一模一样的意外重复题
       if (candidate.stem && targetQ.stem && candidate.stem.trim() === targetQ.stem.trim()) continue;

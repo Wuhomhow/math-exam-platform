@@ -16,7 +16,7 @@
         };
       }
 
-      if (/^(13|14|15|16|17)\./.test(value) || /^第十[三四五六七]章/.test(value)) {
+      if (/^(13|14|15|16|17|18)\./.test(value) || /^第十[三四五六七八]章/.test(value)) {
         return { grade: '初二', semester: '上册', label: value };
       }
       if (/^(25|26|27)\./.test(value) || /^第二十[五六七]章/.test(value)) {
@@ -162,6 +162,7 @@
         if (ch.startsWith('15.') || ch.includes('第十五')) return '第15章 等腰三角形';
         if (ch.startsWith('16.') || ch.includes('第十六')) return '第16章 幂的运算';
         if (ch.startsWith('17.') || ch.includes('第十七')) return '第17章 因式分解';
+        if (ch.startsWith('18.') || ch.includes('第十八')) return '第18章 分式';
       } else if (grade === '初三') {
         if (ch.startsWith('25.') || ch.includes('第二十五')) return '第25章 一元二次方程';
         if (ch.startsWith('26.') || ch.includes('第二十六')) return '第26章 二次函数';

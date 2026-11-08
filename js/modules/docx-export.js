@@ -531,12 +531,28 @@
       return bytes;
     }
 
+    async function ensureImageBase64Loaded() {
+      if (window.IMAGE_BASE64_MAP) return window.IMAGE_BASE64_MAP;
+      const script = document.querySelector('script[src*="images-base64.js"]');
+      if (script && !window.IMAGE_BASE64_MAP) {
+        await new Promise((resolve) => {
+          if (window.IMAGE_BASE64_MAP) return resolve();
+          script.addEventListener('load', resolve, { once: true });
+          script.addEventListener('error', resolve, { once: true });
+          setTimeout(resolve, 3000);
+        });
+      }
+      return window.IMAGE_BASE64_MAP;
+    }
+
     async function exportWordDoc() {
       const selected = getSelectedQuestions();
       if (selected.length === 0) {
         showToast('试题篮为空，请先选择题目后再导出！', 'warn');
         return;
       }
+
+      await ensureImageBase64Loaded();
 
       const isTeacher = state.paperViewMode === 'teacher';
       const isDouble = state.isDoubleColumn;

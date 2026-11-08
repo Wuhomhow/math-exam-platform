@@ -380,8 +380,7 @@
   </div>
 
   <!-- INLINE DATA & APPLICATION LOGIC -->
-  <!-- 1. 题库数据与离线图片 Base64 映射 -->
-  <script src="js/data/images-base64.js"></script>
+  <!-- 1. 题库核心数据（毫秒级瞬时解析） -->
   <script src="js/data/questions.js"></script>
   <script src="js/data/questions-ch5-equation-lesson2.js"></script>
 
@@ -397,8 +396,11 @@
   <script src="js/modules/render.js"></script>
   <script src="js/modules/docx-export.js"></script>
 
-  <!-- 5. 事件绑定与主程序启动 -->
+  <!-- 5. 事件绑定与主程序启动（首屏瞬时呈现） -->
   <script src="js/main.js"></script>
+
+  <!-- 6. 离线图片 Base64 映射库（体积约 61MB，仅供 Word 导出与离线截图使用，使用 defer 异步加载，首屏零阻塞） -->
+  <script src="js/data/images-base64.js" defer></script>
 
   <!-- 6. 新手引导卡片专属交互脚本 -->
   <script>

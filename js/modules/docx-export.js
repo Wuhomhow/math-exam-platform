@@ -786,7 +786,26 @@
         return `<w:tbl><w:tblPr><w:tblW w:w="9000" w:type="dxa"/><w:tblInd w:w="360" w:type="dxa"/><w:tblBorders><w:top w:val="none"/><w:left w:val="none"/><w:bottom w:val="none"/><w:right w:val="none"/><w:insideH w:val="none"/><w:insideV w:val="none"/></w:tblBorders></w:tblPr>${rowsXml}</w:tbl>`;
       }
 
-      let bodyXml = '';
+      const now = new Date();
+      const pad = (n) => String(n).padStart(2, '0');
+      const year = now.getFullYear();
+      const month = pad(now.getMonth() + 1);
+      const date = pad(now.getDate());
+      const hours = pad(now.getHours());
+      const minutes = pad(now.getMinutes());
+      const timeStr = `${year}年${month}月${date}日 ${hours}:${minutes}`;
+      const paperTitle = `题典网_${timeStr}`;
+
+      let bodyXml = makeParagraph(
+        textWithMathAndImgToRuns(paperTitle, { sz: 32, bold: true, font: '黑体' }),
+        { align: 'center', before: 180, after: 100 }
+      );
+      if (isTeacher) {
+        bodyXml += makeParagraph(
+          textWithMathAndImgToRuns('（教师解析版）', { sz: 20, bold: true, color: '0F766E' }),
+          { align: 'center', before: 0, after: 120 }
+        );
+      }
 
       const choices = selected.filter(q => q.type === 'choice');
       const blanks = selected.filter(q => q.type === 'blank');
@@ -893,17 +912,98 @@
       const pageH = isDouble ? '11906' : '16838';
       const orient = isDouble ? ' w:orient="landscape"' : '';
 
+      const headerXml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:hdr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">
+  <w:p>
+    <w:pPr>
+      <w:pStyle w:val="Header"/>
+      <w:jc w:val="center"/>
+      <w:pBdr>
+        <w:bottom w:val="single" w:sz="6" w:space="1" w:color="CCCCCC"/>
+      </w:pBdr>
+    </w:pPr>
+    <w:r>
+      <w:rPr>
+        <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        <w:sz w:val="18"/>
+        <w:szCs w:val="18"/>
+        <w:color w:val="666666"/>
+      </w:rPr>
+      <w:t xml:space="preserve">${escXml(paperTitle)}</w:t>
+    </w:r>
+  </w:p>
+</w:hdr>`;
+
+      const footerXml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:ftr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">
+  <w:p>
+    <w:pPr>
+      <w:pStyle w:val="Footer"/>
+      <w:jc w:val="center"/>
+    </w:pPr>
+    <w:r>
+      <w:rPr>
+        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:eastAsia="宋体"/>
+        <w:sz w:val="18"/>
+        <w:szCs w:val="18"/>
+        <w:color w:val="666666"/>
+      </w:rPr>
+      <w:t xml:space="preserve">第 </w:t>
+    </w:r>
+    <w:fldSimple w:instr="PAGE">
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:eastAsia="宋体"/>
+          <w:sz w:val="18"/>
+          <w:szCs w:val="18"/>
+          <w:color w:val="666666"/>
+        </w:rPr>
+        <w:t>1</w:t>
+      </w:r>
+    </w:fldSimple>
+    <w:r>
+      <w:rPr>
+        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:eastAsia="宋体"/>
+        <w:sz w:val="18"/>
+        <w:szCs w:val="18"/>
+        <w:color w:val="666666"/>
+      </w:rPr>
+      <w:t xml:space="preserve"> 页 共 </w:t>
+    </w:r>
+    <w:fldSimple w:instr="NUMPAGES">
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:eastAsia="宋体"/>
+          <w:sz w:val="18"/>
+          <w:szCs w:val="18"/>
+          <w:color w:val="666666"/>
+        </w:rPr>
+        <w:t>1</w:t>
+      </w:r>
+    </w:fldSimple>
+    <w:r>
+      <w:rPr>
+        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:eastAsia="宋体"/>
+        <w:sz w:val="18"/>
+        <w:szCs w:val="18"/>
+        <w:color w:val="666666"/>
+      </w:rPr>
+      <w:t xml:space="preserve"> 页</w:t>
+    </w:r>
+  </w:p>
+</w:ftr>`;
+
       const documentXml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"><w:body>${bodyXml}<w:sectPr><w:pgSz w:w="${pageW}" w:h="${pageH}"${orient}/><w:pgMar w:top="1134" w:right="1134" w:bottom="1134" w:left="1134" w:header="720" w:footer="720" w:gutter="0"/>${colsXml}</w:sectPr></w:body></w:document>`;
+<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"><w:body>${bodyXml}<w:sectPr><w:headerReference w:type="default" r:id="rIdHeader1"/><w:footerReference w:type="default" r:id="rIdFooter1"/><w:pgSz w:w="${pageW}" w:h="${pageH}"${orient}/><w:pgMar w:top="1134" w:right="1134" w:bottom="1134" w:left="1134" w:header="720" w:footer="720" w:gutter="0"/>${colsXml}</w:sectPr></w:body></w:document>`;
 
       const contentTypesXml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="png" ContentType="image/png"/><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/></Types>`;
+<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="png" ContentType="image/png"/><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/><Override PartName="/word/header1.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.header+xml"/><Override PartName="/word/footer1.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml"/></Types>`;
 
       const rootRelsXml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/></Relationships>`;
 
       const docRelsXml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">${relsExtra.join('')}</Relationships>`;
+<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rIdHeader1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/header" Target="header1.xml"/><Relationship Id="rIdFooter1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer" Target="footer1.xml"/>${relsExtra.join('')}</Relationships>`;
 
       const enc = new TextEncoder();
       const zipEntries = [
@@ -911,6 +1011,8 @@
         { name: '_rels/.rels', data: enc.encode(rootRelsXml) },
         { name: 'word/document.xml', data: enc.encode(documentXml) },
         { name: 'word/_rels/document.xml.rels', data: enc.encode(docRelsXml) },
+        { name: 'word/header1.xml', data: enc.encode(headerXml) },
+        { name: 'word/footer1.xml', data: enc.encode(footerXml) },
         ...mediaFiles
       ];
 
@@ -919,8 +1021,9 @@
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
+      const fileTimeStr = `${year}${month}${date}_${hours}${minutes}`;
       const suffix = isTeacher ? '_教师解析版' : '_学生用卷';
-      a.download = `题典网_数学试卷${suffix}.docx`;
+      a.download = `题典网_${fileTimeStr}${suffix}.docx`;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);

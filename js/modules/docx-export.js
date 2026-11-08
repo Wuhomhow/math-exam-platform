@@ -561,18 +561,38 @@
     }
 
     async function ensureImageBase64Loaded() {
-      if (window.IMAGE_BASE64_MAP) return window.IMAGE_BASE64_MAP;
-      const script = document.querySelector('script[src*="images-base64.js"]');
-      if (script && !window.IMAGE_BASE64_MAP) {
-        await new Promise((resolve) => {
-          if (window.IMAGE_BASE64_MAP) return resolve();
-          script.addEventListener('load', resolve, { once: true });
-          script.addEventListener('error', resolve, { once: true });
-          setTimeout(resolve, 3000);
+      if (window.IMAGE_BASE64_MAP && Object.keys(window.IMAGE_BASE64_MAP).length > 200) {
+        return window.IMAGE_BASE64_MAP;
+      }
+      window.IMAGE_BASE64_MAP = window.IMAGE_BASE64_MAP || {};
+
+      function loadScript(src) {
+        return new Promise((resolve) => {
+          let s = document.querySelector(`script[src="${src}"]`);
+          if (s) {
+            if (s.dataset.loaded === 'true') return resolve();
+            s.addEventListener('load', () => { s.dataset.loaded = 'true'; resolve(); }, { once: true });
+            s.addEventListener('error', resolve, { once: true });
+            setTimeout(resolve, 6000);
+            return;
+          }
+          s = document.createElement('script');
+          s.src = src;
+          s.onload = () => { s.dataset.loaded = 'true'; resolve(); };
+          s.onerror = () => { console.warn('Failed to load image map chunk:', src); resolve(); };
+          document.body.appendChild(s);
+          setTimeout(resolve, 8000);
         });
       }
+
+      await Promise.all([
+        loadScript('js/data/images-base64-part1.js'),
+        loadScript('js/data/images-base64-part2.js')
+      ]);
+
       return window.IMAGE_BASE64_MAP;
     }
+    window.ensureImageBase64Loaded = ensureImageBase64Loaded;
 
     async function exportWordDoc() {
       const selected = getSelectedQuestions();

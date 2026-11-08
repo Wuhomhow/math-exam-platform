@@ -630,6 +630,9 @@
 
     // Generate PNG Blob of Question Card across 3 fallback engines (html-to-image primary)
     async function generateQuestionCardBlob(cardEl) {
+      if (typeof window.ensureImageBase64Loaded === 'function' && (!window.IMAGE_BASE64_MAP || Object.keys(window.IMAGE_BASE64_MAP).length === 0)) {
+        try { await window.ensureImageBase64Loaded(); } catch (e) {}
+      }
       // Ensure all images in the card are base64 data URIs so canvas is NEVER tainted on file://
       inlineCardImagesWithBase64(cardEl);
 

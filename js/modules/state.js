@@ -146,6 +146,13 @@
         ) {
           return '第四章 圆';
         }
+        if (
+          label.startsWith('7.') ||
+          label.includes('第七章') ||
+          label.includes('负数')
+        ) {
+          return '第七章 生活中的负数';
+        }
       } else if (grade === '初一') {
         if (ch.startsWith('2.') || ch.includes('第二章')) return '第二章 有理数的运算';
         if (ch.startsWith('3.') || ch.includes('第三章')) return '第三章 代数式';

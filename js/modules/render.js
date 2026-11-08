@@ -63,10 +63,21 @@
         }
         return q.chapter === state.chapterFilter;
       });
+      const normalizeQuestionType = (q) => {
+        if (!q) return 'calc';
+        if (q.type === 'choice' || q.type === 'blank' || q.type === 'judge' || q.type === 'calc') return q.type;
+        if (q.type === 'answer' || q.type === 'solution') return 'calc';
+        if (q.typeName === '单选题') return 'choice';
+        if (q.typeName === '填空题') return 'blank';
+        if (q.typeName === '判断题') return 'judge';
+        return 'calc';
+      };
       const typeMap = { all: chapPool.length, choice: 0, blank: 0, judge: 0, calc: 0 };
       const diffMap = { all: chapPool.length, '容易': 0, '较易': 0, '中等': 0, '较难': 0 };
       chapPool.forEach(q => {
-        if (typeMap[q.type] !== undefined) typeMap[q.type]++;
+        const qt = normalizeQuestionType(q);
+        q.type = qt;
+        if (typeMap[qt] !== undefined) typeMap[qt]++;
         const d = q.difficulty === '适中' ? '中等' : q.difficulty;
         if (diffMap[d] !== undefined) diffMap[d]++;
       });
@@ -88,7 +99,7 @@
             const byId = new Map(QUESTION_BANK.map(q => [q.id, q]));
             return paper.questionIds.map(id => byId.get(id)).filter(q => {
               if (!q) return false;
-              if (state.typeFilter !== 'all' && q.type !== state.typeFilter) return false;
+              if (state.typeFilter !== 'all' && normalizeQuestionType(q) !== state.typeFilter) return false;
               if (state.diffFilter !== 'all' && (q.difficulty === '适中' ? '中等' : q.difficulty) !== state.diffFilter) return false;
               if (state.searchKeyword) {
                 const kw = state.searchKeyword.toLowerCase();
@@ -110,7 +121,7 @@
               return false;
             }
           }
-          if (state.typeFilter !== 'all' && q.type !== state.typeFilter) return false;
+          if (state.typeFilter !== 'all' && normalizeQuestionType(q) !== state.typeFilter) return false;
           if (state.diffFilter !== 'all' && (q.difficulty === '适中' ? '中等' : q.difficulty) !== state.diffFilter) return false;
           if (state.searchKeyword) {
             const kw = state.searchKeyword.toLowerCase();
@@ -537,30 +548,112 @@
       });
     })();
 
-    // Inline any local images on the card using window.IMAGE_BASE64_MAP so canvas is never tainted on file://
-    function inlineCardImagesWithBase64(rootEl) {
-      if (!rootEl || !window.IMAGE_BASE64_MAP) return;
-      rootEl.querySelectorAll('img').forEach(img => {
+    // Inline any local images on the card using window.IMAGE_BASE64_MAP or live canvas/fetch fallback so screenshots never lose images
+    async function inlineCardImagesWithBase64(rootEl) {
+      if (!rootEl) return;
+      if (typeof window.ensureImageBase64Loaded === 'function' && (!window.IMAGE_BASE64_MAP || Object.keys(window.IMAGE_BASE64_MAP).length === 0)) {
+        try { await window.ensureImageBase64Loaded(); } catch (_) {}
+      }
+      const map = window.IMAGE_BASE64_MAP || {};
+      const imgs = Array.from(rootEl.querySelectorAll('img'));
+
+      await Promise.all(imgs.map(async (img) => {
         const rawSrc = img.getAttribute('src') || '';
-        if (rawSrc && !rawSrc.startsWith('data:')) {
-          const cleanKey = rawSrc.replace(/^\.?\//, '');
-          if (window.IMAGE_BASE64_MAP[cleanKey]) {
-            img.setAttribute('src', window.IMAGE_BASE64_MAP[cleanKey]);
-          } else if (window.IMAGE_BASE64_MAP[rawSrc]) {
-            img.setAttribute('src', window.IMAGE_BASE64_MAP[rawSrc]);
+        if (!rawSrc) return;
+
+        // 1. Wait for original image element to finish loading if not yet complete
+        if (!img.complete) {
+          await new Promise(res => {
+            img.addEventListener('load', res, { once: true });
+            img.addEventListener('error', res, { once: true });
+            setTimeout(res, 3000);
+          });
+        }
+
+        let dataUrl = rawSrc.startsWith('data:') ? rawSrc : null;
+
+        // 2. Lookup in prebuilt base64 map (by relative path, raw path, or filename)
+        if (!dataUrl) {
+          const cleanKey = rawSrc.replace(/^\.?\//, '').split('?')[0].split('#')[0];
+          const baseName = cleanKey.split('/').pop();
+          if (map[cleanKey]) {
+            dataUrl = map[cleanKey];
+          } else if (map[rawSrc]) {
+            dataUrl = map[rawSrc];
+          } else if (baseName && map[`assets/images/${baseName}`]) {
+            dataUrl = map[`assets/images/${baseName}`];
           }
         }
-      });
+
+        // 3. Fallback: fetch local image and convert to data URL (works on http/https or permissive local)
+        if (!dataUrl) {
+          try {
+            const resp = await fetch(img.src || rawSrc);
+            if (resp.ok) {
+              const blob = await resp.blob();
+              dataUrl = await new Promise((resolve) => {
+                const reader = new FileReader();
+                reader.onloadend = () => resolve(reader.result);
+                reader.onerror = () => resolve(null);
+                reader.readAsDataURL(blob);
+              });
+            }
+          } catch (_) {}
+        }
+
+        // 4. Fallback: draw loaded <img> onto an offscreen canvas to extract data URL
+        if (!dataUrl && img.complete && img.naturalWidth > 0) {
+          try {
+            const c = document.createElement('canvas');
+            c.width = img.naturalWidth;
+            c.height = img.naturalHeight;
+            const ctx = c.getContext('2d');
+            ctx.drawImage(img, 0, 0);
+            dataUrl = c.toDataURL('image/png');
+          } catch (_) {}
+        }
+
+        // 5. Apply dataUrl and wait for browser to decode the updated image
+        if (dataUrl && img.getAttribute('src') !== dataUrl) {
+          await new Promise(res => {
+            img.onload = res;
+            img.onerror = res;
+            img.setAttribute('src', dataUrl);
+            setTimeout(res, 1500);
+          });
+        }
+        if (typeof img.decode === 'function') {
+          try { await img.decode(); } catch (_) {}
+        }
+      }));
     }
 
     // Zero-dependency native SVG foreignObject -> Canvas renderer (fallback if CDN libraries fail)
     async function renderCardViaNativeSvg(cardEl, scale = 2.5) {
+      await inlineCardImagesWithBase64(cardEl);
       const rect = cardEl.getBoundingClientRect();
       const width = Math.ceil(rect.width);
       const height = Math.ceil(rect.height);
 
       const clone = cardEl.cloneNode(true);
       clone.querySelectorAll('[data-html2canvas-ignore], .katex-mathml, .q-card-footer').forEach(el => el.remove());
+
+      // Explicitly lock rendered dimensions on cloned images so SVG foreignObject never collapses them
+      const origImgs = Array.from(cardEl.querySelectorAll('img'));
+      const cloneImgs = Array.from(clone.querySelectorAll('img'));
+      cloneImgs.forEach((cImg, idx) => {
+        const oImg = origImgs[idx];
+        if (oImg) {
+          const r = oImg.getBoundingClientRect();
+          if (r.width > 0 && r.height > 0) {
+            cImg.setAttribute('width', Math.round(r.width));
+            cImg.setAttribute('height', Math.round(r.height));
+            cImg.style.width = Math.round(r.width) + 'px';
+            cImg.style.height = Math.round(r.height) + 'px';
+          }
+        }
+      });
+
       clone.style.margin = '0';
       clone.style.width = width + 'px';
       clone.style.height = height + 'px';
@@ -620,8 +713,38 @@
       const ctx = canvas.getContext('2d');
       ctx.fillStyle = '#ffffff';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.save();
       ctx.scale(scale, scale);
       ctx.drawImage(img, 0, 0);
+      ctx.restore();
+
+      // Explicitly composite all visible card images onto the 2D canvas as well
+      const origCardImgs = Array.from(cardEl.querySelectorAll('img'));
+      for (const oImg of origCardImgs) {
+        const r = oImg.getBoundingClientRect();
+        const style = window.getComputedStyle(oImg);
+        const visible = r.width > 0 && r.height > 0 && style.display !== 'none' && style.visibility !== 'hidden' && !oImg.closest('.hidden, [data-html2canvas-ignore], .q-card-footer');
+        if (!visible) continue;
+        const src = oImg.getAttribute('src') || oImg.src;
+        if (!src) continue;
+        await new Promise(resolve => {
+          const im = new Image();
+          im.onload = () => {
+            try {
+              const x = Math.round((r.left - rect.left) * scale);
+              const y = Math.round((r.top - rect.top) * scale);
+              const w = Math.round(r.width * scale);
+              const h = Math.round(r.height * scale);
+              ctx.fillStyle = '#ffffff';
+              ctx.fillRect(x, y, w, h);
+              ctx.drawImage(im, x, y, w, h);
+            } catch (_) {}
+            resolve();
+          };
+          im.onerror = () => resolve();
+          im.src = src;
+        });
+      }
 
       return await new Promise((resolve, reject) => {
         canvas.toBlob(b => b ? resolve(b) : reject(new Error('Native SVG canvas toBlob failed')), 'image/png');
@@ -630,21 +753,11 @@
 
     // Generate PNG Blob of Question Card across 3 fallback engines (html-to-image primary)
     async function generateQuestionCardBlob(cardEl) {
-      if (typeof window.ensureImageBase64Loaded === 'function' && (!window.IMAGE_BASE64_MAP || Object.keys(window.IMAGE_BASE64_MAP).length === 0)) {
-        try { await window.ensureImageBase64Loaded(); } catch (e) {}
-      }
-      // Ensure all images in the card are base64 data URIs so canvas is NEVER tainted on file://
-      inlineCardImagesWithBase64(cardEl);
+      // Ensure all images in the card are inlined as base64 data URIs and fully decoded before capture
+      await inlineCardImagesWithBase64(cardEl);
 
-      // Wait for any images inside cardEl to finish decoding
-      const imgs = Array.from(cardEl.querySelectorAll('img'));
-      await Promise.all(imgs.map(img => {
-        if (img.complete) return Promise.resolve();
-        return new Promise(res => {
-          img.onload = res;
-          img.onerror = res;
-        });
-      }));
+      // Give the browser a layout frame to settle image dimensions if any src was updated
+      await new Promise(res => requestAnimationFrame(() => requestAnimationFrame(res)));
 
       // Pre-warm fonts to avoid KaTeX font blanking
       if (document.fonts && document.fonts.ready) {
@@ -661,21 +774,76 @@
         return true;
       };
 
-      // Engine 1: html-to-image (Native Browser SVG foreignObject renderer — 100% pixel-perfect KaTeX)
-      if (typeof window.htmlToImage === 'object' && typeof window.htmlToImage.toBlob === 'function') {
+      // Pre-compute rendered rects & base64 data URLs of all visible images inside cardEl
+      // so we can composite them directly onto the 2D canvas if SVG foreignObject omits external/base64 <img> tags (WebKit/Safari quirk)
+      const cardRect = cardEl.getBoundingClientRect();
+      const imageOverlays = Array.from(cardEl.querySelectorAll('img')).map(img => {
+        const r = img.getBoundingClientRect();
+        const style = window.getComputedStyle(img);
+        const visible = r.width > 0 && r.height > 0 && style.display !== 'none' && style.visibility !== 'hidden' && !img.closest('.hidden, [data-html2canvas-ignore], .q-card-footer');
+        if (!visible) return null;
+        return {
+          src: img.getAttribute('src') || img.src,
+          x: r.left - cardRect.left,
+          y: r.top - cardRect.top,
+          width: r.width,
+          height: r.height
+        };
+      }).filter(Boolean);
+
+      // Helper: explicitly stamp all card images onto a rendered canvas and return a PNG Blob
+      async function compositeImagesAndToBlob(baseCanvas) {
+        if (imageOverlays.length > 0) {
+          const ctx = baseCanvas.getContext('2d');
+          await Promise.all(imageOverlays.map(item => new Promise(resolve => {
+            if (!item.src) return resolve();
+            const im = new Image();
+            im.onload = () => {
+              try {
+                // Clear white behind the image rect first so transparent PNGs look crisp and never double-blend
+                ctx.fillStyle = '#ffffff';
+                ctx.fillRect(
+                  Math.round(item.x * dpr),
+                  Math.round(item.y * dpr),
+                  Math.round(item.width * dpr),
+                  Math.round(item.height * dpr)
+                );
+                ctx.drawImage(
+                  im,
+                  Math.round(item.x * dpr),
+                  Math.round(item.y * dpr),
+                  Math.round(item.width * dpr),
+                  Math.round(item.height * dpr)
+                );
+              } catch (_) {}
+              resolve();
+            };
+            im.onerror = () => resolve();
+            im.src = item.src;
+          })));
+        }
+        return await new Promise((resolve, reject) => {
+          baseCanvas.toBlob(b => b ? resolve(b) : reject(new Error('Canvas toBlob returned null')), 'image/png');
+        });
+      }
+
+      // Engine 1: html-to-image -> toCanvas + direct 2D image compositing (100% pixel-perfect KaTeX + guaranteed images on Safari/Chrome)
+      if (typeof window.htmlToImage === 'object' && typeof window.htmlToImage.toCanvas === 'function') {
         try {
           // Warm up font cache first to prevent blank glyphs on KaTeX WebFonts
           try {
-            await window.htmlToImage.toPng(cardEl, {
+            await window.htmlToImage.toCanvas(cardEl, {
               backgroundColor: '#ffffff',
               pixelRatio: 1,
+              cacheBust: false,
               filter: filterFn
             });
           } catch (_) {}
 
-          const blob = await window.htmlToImage.toBlob(cardEl, {
+          const canvas = await window.htmlToImage.toCanvas(cardEl, {
             backgroundColor: '#ffffff',
             pixelRatio: dpr,
+            cacheBust: false,
             filter: filterFn,
             style: {
               margin: '0',
@@ -683,14 +851,18 @@
               boxShadow: 'none'
             }
           });
-          if (blob) return blob;
+          if (canvas) {
+            const blob = await compositeImagesAndToBlob(canvas);
+            if (blob) return blob;
+          }
         } catch (err1) {
           console.warn('Engine 1 (html-to-image with fonts) failed, trying skipFonts:', err1);
           try {
-            const blob = await window.htmlToImage.toBlob(cardEl, {
+            const canvas = await window.htmlToImage.toCanvas(cardEl, {
               backgroundColor: '#ffffff',
               pixelRatio: dpr,
               skipFonts: true,
+              cacheBust: false,
               filter: filterFn,
               style: {
                 margin: '0',
@@ -698,14 +870,17 @@
                 boxShadow: 'none'
               }
             });
-            if (blob) return blob;
+            if (canvas) {
+              const blob = await compositeImagesAndToBlob(canvas);
+              if (blob) return blob;
+            }
           } catch (err1b) {
             console.warn('Engine 1b (html-to-image skipFonts) failed, falling back to Engine 2:', err1b);
           }
         }
       }
 
-      // Engine 2: html2canvas with explicit KaTeX CSS repair for fraction lines and radicals
+      // Engine 2: html2canvas with explicit KaTeX CSS repair + direct 2D image compositing
       if (typeof window.html2canvas === 'function') {
         try {
           const canvas = await window.html2canvas(cardEl, {
@@ -755,14 +930,10 @@
               return el.classList.contains('katex-mathml') || el.hasAttribute('data-html2canvas-ignore') || el.classList.contains('q-card-footer');
             }
           });
-          const blob = await new Promise((resolve, reject) => {
-            try {
-              canvas.toBlob((b) => b ? resolve(b) : reject(new Error('toBlob null')), 'image/png');
-            } catch (err) {
-              reject(err);
-            }
-          });
-          if (blob) return blob;
+          if (canvas) {
+            const blob = await compositeImagesAndToBlob(canvas);
+            if (blob) return blob;
+          }
         } catch (err2) {
           console.warn('Engine 2 (html2canvas) failed, falling back to Engine 3:', err2);
         }

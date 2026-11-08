@@ -271,7 +271,7 @@
               <div class="flex items-center space-x-2 font-bold text-slate-900">
                 <span class="w-1.5 h-1.5 rounded-full bg-[#0F766E]"></span>
                 <span>参考答案：</span>
-                <span class="text-[#0F766E] font-mono text-sm">${formatMathHtml(q.answer)}</span>
+                <span class="text-[#0F766E] font-semibold text-base tracking-wide">${formatMathHtml(q.answer)}</span>
               </div>
               <div class="text-slate-600"><b class="text-slate-800">【分析】</b>${formatMathHtml(q.analysis)}</div>
               <div class="text-slate-700 pt-1.5 border-t border-slate-200/70 leading-relaxed"><b class="text-slate-800">【详解】</b>${formatMathHtml(q.detail)}</div>
@@ -451,7 +451,7 @@
               <div class="flex items-center space-x-2 font-bold text-slate-900">
                 <span class="w-1.5 h-1.5 rounded-full bg-[#0F766E]"></span>
                 <span>参考答案：</span>
-                <span class="text-[#0F766E] font-mono text-sm">${formatMathHtml(sq.answer)}</span>
+                <span class="text-[#0F766E] font-semibold text-base tracking-wide">${formatMathHtml(sq.answer)}</span>
               </div>
               <div class="text-slate-600"><b class="text-slate-800">【分析】</b>${formatMathHtml(sq.analysis)}</div>
               <div class="text-slate-700 pt-1.5 border-t border-slate-200/70 leading-relaxed"><b class="text-slate-800">【详解】</b>${formatMathHtml(sq.detail)}</div>

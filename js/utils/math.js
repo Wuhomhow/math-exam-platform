@@ -50,11 +50,22 @@
     // Safely format inline $...$ math using KaTeX or pure-HTML fallback
     function formatMathHtml(str) {
       if (str === null || str === undefined) return '';
-      return String(str).replace(/\$([^$]+)\$/g, (_, tex) => {
+
+      // 1. Normalize small and fullwidth minus/plus signs (U+FE63, U+FE62, U+FF0D, U+FF0B)
+      let s = String(str)
+        .replace(/\ufe63/g, '−')
+        .replace(/\ufe62/g, '+')
+        .replace(/\uff0d/g, '−')
+        .replace(/\uff0b/g, '+');
+
+      // 2. Render LaTeX math within $ ... $
+      s = s.replace(/\$([^$]+)\$/g, (_, tex) => {
         const cleanTex = tex
           .replace(/&lt;/g, '<')
           .replace(/&gt;/g, '>')
           .replace(/(?<!\\)%/g, '\\%')
+          .replace(/[\ufe63\u2212\uff0d]/g, '-')
+          .replace(/[\ufe62\uff0b]/g, '+')
           .replace(/\\\\(frac|dfrac|tfrac|sqrt|text|triangle|angle|circ|parallel|perp|cong|alpha|beta|gamma|theta|pi|pm|mp|le|ge|cdot|times|div|neq|approx|because|therefore|quad|qquad|dots|cdots|mathbf|mathrm|left|right|begin|end)\b/g, '\\$1')
           .replace(/\\\\(?=[a-zA-Z0-9+\-])/g, '\\\\ ')
           .trim();
@@ -67,6 +78,11 @@
         const attrTex = cleanTex.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
         return '<span class="katex-pending" data-tex="' + attrTex + '">' + renderFallbackTex(cleanTex) + '</span>';
       });
+
+      // 3. For any negative numbers outside $...$ (e.g. −2, -2, −0.5, −5℃), style the minus sign prominently
+      s = s.replace(/(^|[\s，、；：（(>])([−\-])(?=\d)/g, '$1<span class="math-neg-sign">−</span>');
+
+      return s;
     }
 
     function getOptionLayoutClass(option) {

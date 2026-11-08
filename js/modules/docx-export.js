@@ -148,6 +148,13 @@
       return `<m:sSubSup><m:sSubSupPr><m:ctrlPr><w:rPr><w:rFonts w:ascii="Cambria Math" w:hAnsi="Cambria Math" w:cs="Cambria Math"/><w:sz w:val="21"/><w:szCs w:val="21"/></w:rPr></m:ctrlPr></m:sSubSupPr><m:e>${baseXml}</m:e><m:sub>${subXml}</m:sub><m:sup>${supXml}</m:sup></m:sSubSup>`;
     }
 
+    function ommlRad(radicandXml, degXml = '') {
+      if (degXml) {
+        return `<m:rad><m:radPr><m:ctrlPr><w:rPr><w:rFonts w:ascii="Cambria Math" w:hAnsi="Cambria Math" w:cs="Cambria Math"/><w:sz w:val="21"/><w:szCs w:val="21"/></w:rPr></m:ctrlPr></m:radPr><m:deg>${degXml}</m:deg><m:e>${radicandXml}</m:e></m:rad>`;
+      }
+      return `<m:rad><m:radPr><m:degHide m:val="1"/><m:ctrlPr><w:rPr><w:rFonts w:ascii="Cambria Math" w:hAnsi="Cambria Math" w:cs="Cambria Math"/><w:sz w:val="21"/><w:szCs w:val="21"/></w:rPr></m:ctrlPr></m:radPr><m:deg/><m:e>${radicandXml}</m:e></m:rad>`;
+    }
+
     function ommlFrac(numXml, denXml) {
       return `<m:f><m:fPr><m:ctrlPr><w:rPr><w:rFonts w:ascii="Cambria Math" w:hAnsi="Cambria Math" w:cs="Cambria Math"/><w:sz w:val="21"/><w:szCs w:val="21"/></w:rPr></m:ctrlPr></m:fPr><m:num>${numXml}</m:num><m:den>${denXml}</m:den></m:f>`;
     }
@@ -219,7 +226,7 @@
       let s = normalizeCompactFractions(String(tex)
         .replace(/\\(?:dfrac|tfrac)\b/g, '\\frac'))
         .replace(/\\%/g, '%')
-        .replace(/\\dot\{([^{}]*)\}/g, '$1\u0307')
+        .replace(/\\underset\{\\cdot\}\{([^{}]*)\}/g, '$1\u0323').replace(/\\dot\{([^{}]*)\}/g, '$1\u0307').replace(/\\dot\s+([0-9A-Za-z])/g, '$1\u0307')
         .replace(/\\,/g, ' ')
         .replace(/\\(?:qquad|quad|enspace)\b/g, '  ')
         .replace(/\\[;:!]/g, ' ')
@@ -298,6 +305,28 @@
           const g = readBraceGroup(s, i + 5);
           atoms.push(ommlRun(g.content, true));
           i = g.nextIdx;
+        } else if (s.startsWith('\\sqrt', i)) {
+          let nextI = i + 5;
+          while (nextI < s.length && s[nextI] === ' ') nextI++;
+          let degXml = '';
+          if (s[nextI] === '[') {
+            const closeBracket = s.indexOf(']', nextI + 1);
+            if (closeBracket !== -1) {
+              degXml = parseLatexInner(s.slice(nextI + 1, closeBracket));
+              nextI = closeBracket + 1;
+              while (nextI < s.length && s[nextI] === ' ') nextI++;
+            }
+          }
+          if (s[nextI] === '{') {
+            const g = readBraceGroup(s, nextI);
+            atoms.push(ommlRad(parseLatexInner(g.content), degXml));
+            i = g.nextIdx;
+          } else if (nextI < s.length) {
+            atoms.push(ommlRad(ommlRun(s[nextI]), degXml));
+            i = nextI + 1;
+          } else {
+            i = nextI;
+          }
         } else if (s.startsWith('\\frac{', i)) {
           const g1 = readBraceGroup(s, i + 5);
           let nextI = g1.nextIdx;
@@ -1013,7 +1042,7 @@
 <w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"><w:body>${bodyXml}<w:sectPr><w:headerReference w:type="default" r:id="rIdHeader1"/><w:footerReference w:type="default" r:id="rIdFooter1"/><w:pgSz w:w="${pageW}" w:h="${pageH}"${orient}/><w:pgMar w:top="1134" w:right="1134" w:bottom="1134" w:left="1134" w:header="720" w:footer="720" w:gutter="0"/>${colsXml}</w:sectPr></w:body></w:document>`;
 
       const contentTypesXml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="png" ContentType="image/png"/><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/><Override PartName="/word/header1.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.header+xml"/><Override PartName="/word/footer1.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml"/></Types>`;
+<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="png" ContentType="image/png"/><Default Extension="jpeg" ContentType="image/jpeg"/><Default Extension="jpg" ContentType="image/jpeg"/><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/><Override PartName="/word/header1.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.header+xml"/><Override PartName="/word/footer1.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml"/></Types>`;
 
       const rootRelsXml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/></Relationships>`;

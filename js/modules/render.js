@@ -15,34 +15,38 @@
           return 'q-meta-diff';
       }
     }
-    // Switch Main Views (题库 / 试卷预览)
+    // Switch Main Views (题库 / 题目图谱 / 试卷预览)
     function switchView(viewName) {
-      if (viewName !== 'paper') viewName = 'bank';
+      if (viewName !== 'paper' && viewName !== 'graph') viewName = 'bank';
       state.currentView = viewName;
       try {
         localStorage.setItem(LAST_VIEW_STORAGE_KEY, viewName);
       } catch (error) {
         // The current view still switches normally if browser storage is unavailable.
       }
-      document.getElementById('viewQuestionBank').classList.toggle('hidden', viewName !== 'bank');
-      document.getElementById('viewPaperPreview').classList.toggle('hidden', viewName !== 'paper');
+      document.getElementById('viewQuestionBank')?.classList.toggle('hidden', viewName !== 'bank');
+      document.getElementById('viewKnowledgeGraph')?.classList.toggle('hidden', viewName !== 'graph');
+      document.getElementById('viewPaperPreview')?.classList.toggle('hidden', viewName !== 'paper');
 
       const bankBtn = document.getElementById('navBankBtn');
+      const graphBtn = document.getElementById('navGraphBtn');
       const paperBtn = document.getElementById('navPaperBtn');
-      if (bankBtn && paperBtn) {
-        bankBtn.classList.toggle('is-active', viewName === 'bank');
-        paperBtn.classList.toggle('is-active', viewName === 'paper');
-      }
+      if (bankBtn) bankBtn.classList.toggle('is-active', viewName === 'bank');
+      if (graphBtn) graphBtn.classList.toggle('is-active', viewName === 'graph');
+      if (paperBtn) paperBtn.classList.toggle('is-active', viewName === 'paper');
 
       const mobileBankBtn = document.getElementById('mobileNavBank');
+      const mobileGraphBtn = document.getElementById('mobileNavGraph');
       const mobilePaperBtn = document.getElementById('mobileNavPaper');
-      if (mobileBankBtn && mobilePaperBtn) {
-        mobileBankBtn.classList.toggle('is-active', viewName === 'bank');
-        mobilePaperBtn.classList.toggle('is-active', viewName === 'paper');
-      }
+      if (mobileBankBtn) mobileBankBtn.classList.toggle('is-active', viewName === 'bank');
+      if (mobileGraphBtn) mobileGraphBtn.classList.toggle('is-active', viewName === 'graph');
+      if (mobilePaperBtn) mobilePaperBtn.classList.toggle('is-active', viewName === 'paper');
 
       saveUiPreferences();
       if (viewName === 'paper') renderPaper();
+      if (viewName === 'graph' && window.GraphFilter) {
+        window.GraphFilter.refreshAllViews({ keepNetworkTransform: true });
+      }
       window.scrollTo({ top: 0, behavior: 'smooth' });
       setTimeout(renderMath, 50);
     }
@@ -275,6 +279,7 @@
               <div class="q-stem-content">${formatMathHtml(q.stem)}</div>
               ${imgHtml}
               ${optionsHtml}
+              ${typeof window.renderQuestionKnowledgeTagsHtml === 'function' ? window.renderQuestionKnowledgeTagsHtml(q.id) : ''}
             </div>
 
             <!-- Analysis Accordion Drawer -->
@@ -357,6 +362,15 @@
         btn.addEventListener('click', () => {
           const id = btn.getAttribute('data-id');
           toggleCartItem(id);
+        });
+      });
+
+      container.querySelectorAll('[data-jump-graph-node]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const nid = btn.getAttribute('data-jump-graph-node');
+          if (typeof window.jumpToKnowledgeGraphNode === 'function') {
+            window.jumpToKnowledgeGraphNode(nid);
+          }
         });
       });
 

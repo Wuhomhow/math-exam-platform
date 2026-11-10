@@ -220,17 +220,191 @@
       const listEl = document.getElementById('graphQuestionListContainer');
       const titleEl = document.getElementById('graphQuestionSectionTitle');
       const pagEl = document.getElementById('graphQuestionPagination');
+      const kpListEl = document.getElementById('graphQuestionKpFilterList');
       if (!listEl || !node) return;
 
       const allEntries = window.GraphData.getQuestionsForNode(node.id, true);
-      if (titleEl) {
-        titleEl.innerHTML = `「${escapeHtml(node.name)}」关联题目列表 <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-[#F0FDFA] text-[#0F766E] border border-[#CCFBF1] ml-1">${allEntries.length} 题</span>`;
+
+      // Build knowledge point metadata & question-to-KPs lookup across allEntries
+      const qKpMap = new Map(); // questionId -> [{ node, role }]
+      const kpStatsMap = new Map(); // kpId -> { node, totalCount, primaryCount, soloCount, isCore }
+
+      allEntries.forEach(entry => {
+        const q = entry.question;
+        const kps = window.GraphData.getKnowledgeForQuestion(q.id) || [];
+        qKpMap.set(q.id, kps);
+
+        kps.forEach(({ node: kpNode, role }) => {
+          if (!kpNode) return;
+          let st = kpStatsMap.get(kpNode.id);
+          if (!st) {
+            const isDirectOrDescendant = kpNode.id === node.id || kpNode.parentId === node.id ||
+              (window.GraphData.getAncestors(kpNode.id) || []).some(a => a.id === node.id);
+            st = {
+              node: kpNode,
+              totalCount: 0,
+              primaryCount: 0,
+              soloCount: 0,
+              isCurrent: kpNode.id === node.id,
+              isDescendant: isDirectOrDescendant,
+              isCore: kpNode.id === node.id || (node.level < 3 && isDirectOrDescendant)
+            };
+            kpStatsMap.set(kpNode.id, st);
+          }
+          st.totalCount++;
+          if (role === 'primary') {
+            st.primaryCount++;
+            st.isCore = true;
+          }
+          if (kps.length === 1 && kps[0].node.id === kpNode.id) {
+            st.soloCount++;
+          }
+        });
+      });
+
+      // Ensure current leaf node is always present in kpStatsMap if allEntries > 0
+      if (node.level === 3 && allEntries.length > 0 && !kpStatsMap.has(node.id)) {
+        kpStatsMap.set(node.id, {
+          node,
+          totalCount: allEntries.length,
+          primaryCount: allEntries.filter(e => e.role === 'primary').length,
+          soloCount: allEntries.length,
+          isCurrent: true,
+          isDescendant: true,
+          isCore: true
+        });
       }
 
-      // Apply secondary filters (type, difficulty, role)
-      const filteredEntries = allEntries.filter(entry => {
+      // Sort knowledge points:
+      // 1. Current selected node itself (if level 3) ALWAYS first
+      // 2. Core knowledge points (role === 'primary' or direct child of current chapter/domain) next
+      // 3. Secondary / comprehensive knowledge points after, sorted by count desc
+      const sortedKpList = Array.from(kpStatsMap.values()).sort((a, b) => {
+        if (a.isCurrent !== b.isCurrent) return a.isCurrent ? -1 : 1;
+        if (a.isCore !== b.isCore) return a.isCore ? -1 : 1;
+        if (a.isDescendant !== b.isDescendant) return a.isDescendant ? -1 : 1;
+        if (b.primaryCount !== a.primaryCount) return b.primaryCount - a.primaryCount;
+        return b.totalCount - a.totalCount;
+      });
+
+      // Clean up any stale selected KP IDs that don't exist in current node's KP set
+      if (!Array.isArray(window.GraphState.qSelectedKpIds)) {
+        window.GraphState.qSelectedKpIds = [];
+      }
+      const validSelectedIds = window.GraphState.qSelectedKpIds.filter(id => kpStatsMap.has(id));
+      window.GraphState.qSelectedKpIds = validSelectedIds;
+      const selectedKpSet = new Set(validSelectedIds);
+
+      // Render dynamic Knowledge Point multi-select filter bar
+      if (kpListEl) {
+        const isAllActive = selectedKpSet.size === 0;
+        let pillsHtml = `
+          <button type="button" class="graph-q-kp-all-btn filter-type-btn ${isAllActive ? 'is-active' : ''}" data-kp-all="true" title="显示当前节点下的全部关联题目">
+            全部 (${allEntries.length})
+          </button>
+        `;
+
+        pillsHtml += sortedKpList.map(item => {
+          const isSelected = selectedKpSet.has(item.node.id);
+          const coreBadge = item.isCore
+            ? `<span class="px-1.5 py-0.2 rounded text-[10px] font-bold ${isSelected ? 'bg-white/20 text-white' : 'bg-[#F0FDFA] text-[#0F766E] border border-[#CCFBF1]'}">核心考点</span>`
+            : '';
+          return `
+            <button type="button" class="graph-q-kp-btn filter-type-btn inline-flex items-center gap-1.5 ${isSelected ? 'is-active' : ''}" data-kp-id="${item.node.id}" title="点击单选或多选该知识点（单选时仅显示只含该考点的题目，支持多选组合）">
+              ${coreBadge}
+              <span>${escapeHtml(item.node.name)}</span>
+            </button>
+          `;
+        }).join('');
+
+        if (selectedKpSet.size > 0) {
+          const modeHint = selectedKpSet.size === 1
+            ? '单选模式：仅显示独立考查该知识点的题目（不含其他知识点）'
+            : `多选模式：已组合选中 ${selectedKpSet.size} 个知识点`;
+          pillsHtml += `
+            <span class="text-[11px] text-[#0F766E] bg-[#F0FDFA] border border-[#CCFBF1] px-2 py-0.5 rounded-md font-medium ml-1">${modeHint}</span>
+            <button type="button" id="btnGraphClearKpFilter" class="text-[11px] text-slate-500 hover:text-rose-600 underline px-1.5 py-0.5">重置知识点</button>
+          `;
+        }
+
+        kpListEl.innerHTML = pillsHtml;
+
+        kpListEl.querySelector('.graph-q-kp-all-btn')?.addEventListener('click', () => {
+          window.GraphState.qSelectedKpIds = [];
+          window.GraphState.qPage = 1;
+          this.renderQuestionListSection(node);
+        });
+
+        kpListEl.querySelector('#btnGraphClearKpFilter')?.addEventListener('click', () => {
+          window.GraphState.qSelectedKpIds = [];
+          window.GraphState.qPage = 1;
+          this.renderQuestionListSection(node);
+        });
+
+        kpListEl.querySelectorAll('.graph-q-kp-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const kpId = btn.getAttribute('data-kp-id');
+            if (!kpId) return;
+            const curr = new Set(window.GraphState.qSelectedKpIds || []);
+            if (curr.has(kpId)) {
+              curr.delete(kpId);
+            } else {
+              curr.add(kpId);
+            }
+            window.GraphState.qSelectedKpIds = Array.from(curr);
+            window.GraphState.qPage = 1;
+            this.renderQuestionListSection(node);
+          });
+        });
+      }
+
+      // Filter entries by selected knowledge points:
+      // - When 0 selected ("全部"): show all questions in allEntries.
+      // - When 1 selected (single-select K): ONLY show questions that correspond strictly to K
+      //   without extra knowledge points (`qKpIds.length === 1 && qKpIds[0] === K`).
+      //   (If on a level-3 leaf node and the user single-selected a co-occurring secondary KP K != node.id,
+      //    match questions that only have K alongside current leaf node without any 3rd KP.)
+      // - When >= 2 selected (multi-select): show questions whose knowledge points are within the selected set
+      //   (all of the question's KPs are covered by the selected KPs, without unselected extra KPs).
+      let kpFilteredEntries = allEntries;
+      if (selectedKpSet.size === 1) {
+        const onlyId = validSelectedIds[0];
+        const strictSingle = allEntries.filter(entry => {
+          const kps = qKpMap.get(entry.question.id) || [];
+          return kps.length === 1 && kps[0].node.id === onlyId;
+        });
+        if (strictSingle.length > 0 || onlyId === node.id || node.level < 3) {
+          kpFilteredEntries = strictSingle;
+        } else {
+          const pairOnly = allEntries.filter(entry => {
+            const kps = qKpMap.get(entry.question.id) || [];
+            const ids = kps.map(k => k.node.id);
+            return ids.includes(onlyId) && ids.every(id => id === onlyId || id === node.id);
+          });
+          kpFilteredEntries = pairOnly.length > 0
+            ? pairOnly
+            : allEntries.filter(entry => (qKpMap.get(entry.question.id) || []).some(k => k.node.id === onlyId));
+        }
+      } else if (selectedKpSet.size > 1) {
+        const strictSubset = allEntries.filter(entry => {
+          const kps = qKpMap.get(entry.question.id) || [];
+          const ids = kps.map(k => k.node.id);
+          return ids.length > 0 && ids.every(id => selectedKpSet.has(id));
+        });
+        if (strictSubset.length > 0 || selectedKpSet.has(node.id) || node.level < 3) {
+          kpFilteredEntries = strictSubset;
+        } else {
+          kpFilteredEntries = allEntries.filter(entry => {
+            const kps = qKpMap.get(entry.question.id) || [];
+            const ids = kps.map(k => k.node.id);
+            return ids.some(id => selectedKpSet.has(id)) && ids.every(id => selectedKpSet.has(id) || id === node.id);
+          });
+        }
+      }
+
+      // Apply secondary filters (type, difficulty)
+      const filteredEntries = kpFilteredEntries.filter(entry => {
         const q = entry.question;
-        if (window.GraphState.qRoleFilter !== 'all' && entry.role !== window.GraphState.qRoleFilter) return false;
         if (window.GraphState.qTypeFilter !== 'all' && q.type !== window.GraphState.qTypeFilter) return false;
         if (window.GraphState.qDiffFilter !== 'all') {
           const d = q.difficulty === '适中' ? '中等' : q.difficulty;
@@ -239,10 +413,14 @@
         return true;
       });
 
+      if (titleEl) {
+        const countText = selectedKpSet.size > 0 || window.GraphState.qTypeFilter !== 'all' || window.GraphState.qDiffFilter !== 'all'
+          ? `${filteredEntries.length} / ${allEntries.length} 题`
+          : `${allEntries.length} 题`;
+        titleEl.innerHTML = `「${escapeHtml(node.name)}」关联题目列表 <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-[#F0FDFA] text-[#0F766E] border border-[#CCFBF1] ml-1">${countText}</span>`;
+      }
+
       // Sync filter pill UI in question section
-      document.querySelectorAll('.graph-q-role-btn').forEach(btn => {
-        btn.classList.toggle('is-active', btn.getAttribute('data-q-role') === window.GraphState.qRoleFilter);
-      });
       document.querySelectorAll('.graph-q-type-btn').forEach(btn => {
         btn.classList.toggle('is-active', btn.getAttribute('data-q-type') === window.GraphState.qTypeFilter);
       });
@@ -253,7 +431,7 @@
       if (filteredEntries.length === 0) {
         listEl.innerHTML = `
           <div class="py-12 text-center text-slate-400 text-xs ui-card">
-            当前筛选条件下暂无关联题目，请尝试切换考查角色、题型或难度筛选。
+            当前筛选条件下暂无符合要求的题目（单选知识点时仅显示不含其他知识点的独立考查题，您可点击多个知识点组合筛选或点击「全部」）。
           </div>
         `;
         if (pagEl) pagEl.classList.add('hidden');
@@ -315,13 +493,15 @@
 
             <!-- Analysis Accordion Drawer -->
             <div id="graph_analysis_${q.id}" class="hidden q-analysis-panel text-xs space-y-1.5">
+              ${typeof window.renderQuestionAnalysisBoxHtml === 'function' ? window.renderQuestionAnalysisBoxHtml(q) : `
               <div class="flex items-center space-x-2 font-bold text-slate-900">
                 <span class="w-1.5 h-1.5 rounded-full bg-[#0F766E]"></span>
                 <span>参考答案：</span>
                 <span class="text-[#0F766E] font-semibold text-base tracking-wide">${formatMathHtml(q.answer)}</span>
               </div>
               <div class="text-slate-600"><b class="text-slate-800">【分析】</b>${formatMathHtml(q.analysis)}</div>
-              <div class="text-slate-700 pt-1.5 border-t border-slate-200/70 leading-relaxed"><b class="text-slate-800">【详解】</b>${formatMathHtml(q.detail)}</div>
+              ${q.detail && q.detail !== '略' ? `<div class="text-slate-700 pt-1.5 border-t border-slate-200/70 leading-relaxed"><b class="text-slate-800">【详解】</b>${formatMathHtml(q.detail)}</div>` : ''}
+              `}
             </div>
 
             <!-- Bottom Actions -->
@@ -432,15 +612,6 @@
     },
 
     bindQuestionFilterBar() {
-      document.querySelectorAll('.graph-q-role-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          window.GraphState.qRoleFilter = btn.getAttribute('data-q-role');
-          window.GraphState.qPage = 1;
-          const node = window.GraphData.getNode(window.GraphState.selectedNodeId);
-          if (node) this.renderQuestionListSection(node);
-        });
-      });
-
       document.querySelectorAll('.graph-q-type-btn').forEach(btn => {
         btn.addEventListener('click', () => {
           window.GraphState.qTypeFilter = btn.getAttribute('data-q-type');

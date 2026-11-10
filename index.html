@@ -120,7 +120,7 @@
             </button>
             <button id="treeChapterAll" type="button" class="chapter-tree-btn is-active w-full flex items-center justify-between gap-3 px-3 py-2.5 rounded-lg border border-slate-200 text-sm font-semibold" data-chapter="all">
               <span>已选题库</span>
-              <span id="allQuestionCount" class="text-xs font-bold">2090 题</span>
+              <span id="allQuestionCount" class="text-xs font-bold">2153 题</span>
             </button>
             <div id="chapterNavigationTree" class="space-y-3" aria-label="按年级和册次浏览题目"></div>
           </div>
@@ -211,7 +211,7 @@
             <span class="w-8 h-8 rounded-lg bg-[#F0FDFA] border border-[#CCFBF1] text-[#0F766E] flex items-center justify-center font-bold text-sm">🕸️</span>
             <div>
               <h2 class="text-sm sm:text-base font-bold text-slate-900">数学题目知识图谱</h2>
-              <p class="text-[11px] text-slate-500">覆盖六至九年级 84 个知识节点 · 61 条教学关系 · 2,090 道题目双向关联</p>
+              <p class="text-[11px] text-slate-500">覆盖六至九年级 88 个知识节点 · 69 条教学关系 · 2,153 道题目双向关联</p>
             </div>
           </div>
           <div id="graphSearchBoxWrapper" class="relative flex-1 max-w-xs ml-auto sm:ml-2">
@@ -334,31 +334,30 @@
       <div class="ui-card p-4 space-y-3">
         <div class="flex flex-wrap items-center justify-between gap-2">
           <h3 id="graphQuestionSectionTitle" class="text-sm sm:text-base font-bold text-slate-900">关联题目列表</h3>
-          <span class="text-xs text-slate-400">支持按考查角色、题型、难度二次筛选并直接加入试题篮</span>
+          <span class="text-xs text-slate-400">支持按知识点（单选纯考点 / 多选组合）、题型、难度二次筛选并直接加入试题篮</span>
         </div>
 
-        <div class="flex flex-wrap items-center gap-y-2 gap-x-6 pt-2 border-t border-slate-100 text-xs">
-          <div class="flex flex-wrap items-center gap-1.5">
-            <span class="text-slate-500 font-medium">考查角色：</span>
-            <button type="button" class="graph-q-role-btn filter-type-btn is-active" data-q-role="all">全部角色</button>
-            <button type="button" class="graph-q-role-btn filter-type-btn" data-q-role="primary">核心考点</button>
-            <button type="button" class="graph-q-role-btn filter-type-btn" data-q-role="secondary">次要考点</button>
-            <button type="button" class="graph-q-role-btn filter-type-btn" data-q-role="comprehensive">综合考查</button>
+        <div class="space-y-2.5 pt-2 border-t border-slate-100 text-xs">
+          <div class="flex flex-wrap items-start gap-1.5" id="graphQuestionKpFilterRow">
+            <span class="text-slate-500 font-medium py-1 shrink-0">知识点筛选：</span>
+            <div id="graphQuestionKpFilterList" class="flex flex-wrap items-center gap-1.5 flex-1"></div>
           </div>
-          <div class="flex flex-wrap items-center gap-1.5">
-            <span class="text-slate-500 font-medium">题型：</span>
-            <button type="button" class="graph-q-type-btn filter-type-btn is-active" data-q-type="all">全部</button>
-            <button type="button" class="graph-q-type-btn filter-type-btn" data-q-type="choice">单选题</button>
-            <button type="button" class="graph-q-type-btn filter-type-btn" data-q-type="blank">填空题</button>
-            <button type="button" class="graph-q-type-btn filter-type-btn" data-q-type="calc">解答题</button>
-          </div>
-          <div class="flex flex-wrap items-center gap-1.5">
-            <span class="text-slate-500 font-medium">难度：</span>
-            <button type="button" class="graph-q-diff-btn filter-diff-btn px-2.5 py-1 rounded-md is-active" data-q-diff="all">全部</button>
-            <button type="button" class="graph-q-diff-btn filter-diff-btn px-2.5 py-1 rounded-md" data-q-diff="容易">容易</button>
-            <button type="button" class="graph-q-diff-btn filter-diff-btn px-2.5 py-1 rounded-md" data-q-diff="较易">较易</button>
-            <button type="button" class="graph-q-diff-btn filter-diff-btn px-2.5 py-1 rounded-md" data-q-diff="中等">中等</button>
-            <button type="button" class="graph-q-diff-btn filter-diff-btn px-2.5 py-1 rounded-md" data-q-diff="较难">较难</button>
+          <div class="flex flex-wrap items-center gap-y-2 gap-x-6 pt-1.5 border-t border-slate-100/80">
+            <div class="flex flex-wrap items-center gap-1.5">
+              <span class="text-slate-500 font-medium">题型：</span>
+              <button type="button" class="graph-q-type-btn filter-type-btn is-active" data-q-type="all">全部</button>
+              <button type="button" class="graph-q-type-btn filter-type-btn" data-q-type="choice">单选题</button>
+              <button type="button" class="graph-q-type-btn filter-type-btn" data-q-type="blank">填空题</button>
+              <button type="button" class="graph-q-type-btn filter-type-btn" data-q-type="calc">解答题</button>
+            </div>
+            <div class="flex flex-wrap items-center gap-1.5">
+              <span class="text-slate-500 font-medium">难度：</span>
+              <button type="button" class="graph-q-diff-btn filter-diff-btn px-2.5 py-1 rounded-md is-active" data-q-diff="all">全部</button>
+              <button type="button" class="graph-q-diff-btn filter-diff-btn px-2.5 py-1 rounded-md" data-q-diff="容易">容易</button>
+              <button type="button" class="graph-q-diff-btn filter-diff-btn px-2.5 py-1 rounded-md" data-q-diff="较易">较易</button>
+              <button type="button" class="graph-q-diff-btn filter-diff-btn px-2.5 py-1 rounded-md" data-q-diff="中等">中等</button>
+              <button type="button" class="graph-q-diff-btn filter-diff-btn px-2.5 py-1 rounded-md" data-q-diff="较难">较难</button>
+            </div>
           </div>
         </div>
       </div>

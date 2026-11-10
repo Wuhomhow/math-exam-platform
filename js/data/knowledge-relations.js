@@ -323,20 +323,6 @@ window.KNOWLEDGE_RELATIONS = [
     "status": "reviewed"
   },
   {
-    "source": "kp_g7_alg_expr",
-    "target": "kp_g9_if_def_graph",
-    "relation": "prerequisite",
-    "description": "初一学习的正（反）比例数量关系为初三建立反比例函数 y=k/x 的数学模型打下基础。",
-    "status": "reviewed"
-  },
-  {
-    "source": "kp_g9_if_def_graph",
-    "target": "kp_g9_if_linear_app",
-    "relation": "prerequisite",
-    "description": "掌握反比例函数的解析式求法、象限分布与增减性，是解决反比例函数与一次函数交点综合及实际问题的关键。",
-    "status": "reviewed"
-  },
-  {
     "source": "kp_g8_tri_side_line",
     "target": "kp_g8_cong_sas",
     "relation": "prerequisite",
@@ -425,6 +411,76 @@ window.KNOWLEDGE_RELATIONS = [
     "target": "kp_syn_new_def",
     "relation": "related",
     "description": "新定义运算与“和谐方程”、“立信方程”问题常需要转化为一元一次方程求解参数。",
+    "status": "reviewed"
+  },
+  {
+    "source": "kp_g7_alg_expr",
+    "target": "kp_g9_if_def_expr",
+    "relation": "prerequisite",
+    "description": "初一学习的正（反）比例数量关系与列代数式，为初三建立反比例函数 y=k/x 的定义与解析式打下基础。",
+    "status": "reviewed"
+  },
+  {
+    "source": "kp_g9_if_def_expr",
+    "target": "kp_g9_if_graph_quad",
+    "relation": "prerequisite",
+    "description": "理解反比例函数的定义与表达式后，才能通过列表、描点、连线研究双曲线的图象特征与象限分布。",
+    "status": "reviewed"
+  },
+  {
+    "source": "kp_g9_if_graph_quad",
+    "target": "kp_g9_if_monotone_cmp",
+    "relation": "prerequisite",
+    "description": "先确定双曲线所在的象限，才能在各个象限内分析 y 随 x 变化的增减性并比较函数值大小。",
+    "status": "reviewed"
+  },
+  {
+    "source": "kp_g9_if_graph_quad",
+    "target": "kp_g9_if_k_geom",
+    "relation": "prerequisite",
+    "description": "掌握反比例函数图象上点的坐标特征 (x·y=k) 与对称性，是推导并运用比例系数 |k| 面积几何意义的前提。",
+    "status": "reviewed"
+  },
+  {
+    "source": "kp_g9_if_monotone_cmp",
+    "target": "kp_g9_if_linear_comp",
+    "relation": "prerequisite",
+    "description": "反比例函数的象限分布、增减性与交点特征是解决反比例函数与一次函数图象共存及不等式解集综合题的基础。",
+    "status": "reviewed"
+  },
+  {
+    "source": "kp_g9_if_k_geom",
+    "target": "kp_g9_if_linear_comp",
+    "relation": "related",
+    "description": "一次函数与反比例函数交点综合大题常结合比例系数 k 的面积几何意义与割补法求三角形或四边形面积。",
+    "status": "reviewed"
+  },
+  {
+    "source": "kp_g9_if_def_expr",
+    "target": "kp_g9_if_real_app",
+    "relation": "prerequisite",
+    "description": "利用待定系数法求反比例函数表达式及函数值与自变量互求，是解决反比例函数实际应用题的基本工具。",
+    "status": "reviewed"
+  },
+  {
+    "source": "kp_g9_if_monotone_cmp",
+    "target": "kp_g9_if_real_app",
+    "relation": "prerequisite",
+    "description": "实际应用题中求自变量或函数值的最大/最小允许范围（如排污达标时间、电阻调节范围）需直接运用反比例函数的增减性。",
+    "status": "reviewed"
+  },
+  {
+    "source": "kp_g9_if_linear_comp",
+    "target": "kp_g9_if_real_app",
+    "relation": "related",
+    "description": "环保整改、药物浓度、蓄水排水等分段函数实际问题常将前段一次函数与后段反比例函数结合考查。",
+    "status": "reviewed"
+  },
+  {
+    "source": "kp_g9_qf_graph_prop",
+    "target": "kp_g9_if_graph_quad",
+    "relation": "related",
+    "description": "二次函数抛物线与反比例函数双曲线常结合在同一坐标系中综合考查各项系数 a, b, c, k 的符号判断。",
     "status": "reviewed"
   }
 ];

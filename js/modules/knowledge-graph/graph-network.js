@@ -136,36 +136,43 @@
 
       // 4. If 2-hop depth is enabled, add 2nd-hop prerequisite/dependent neighbors
       if (window.GraphState.networkHopDepth === 2) {
-        prereqs.forEach((pItem, pIdx) => {
+        prereqs.forEach((pItem) => {
           const subRels = window.GraphData.getRelationsForNode(pItem.node.id);
           (subRels.prerequisites || []).slice(0, 2).forEach((sub, sIdx) => {
             const pos = addedNodes.get(pItem.node.id);
-            const x = Math.max(68, (pos ? pos.x : 150) - 110);
-            const y = Math.min(H - 50, Math.max(55, (pos ? pos.y : cy) + (sIdx === 0 ? -55 : 55)));
+            const x = Math.max(76, (pos ? pos.x : 150) - 110);
+            const y = Math.min(H - 55, Math.max(55, (pos ? pos.y : cy) + (sIdx === 0 ? -62 : 62)));
             addNode(sub.node, x, y, 'hop2');
             addEdge(sub.node.id, pItem.node.id, 'prerequisite', sub.description);
           });
         });
 
-        deps.forEach((dItem, dIdx) => {
+        deps.forEach((dItem) => {
           const subRels = window.GraphData.getRelationsForNode(dItem.node.id);
           (subRels.dependents || []).slice(0, 2).forEach((sub, sIdx) => {
             const pos = addedNodes.get(dItem.node.id);
-            const x = Math.min(W - 68, (pos ? pos.x : W - 150) + 110);
-            const y = Math.min(H - 50, Math.max(55, (pos ? pos.y : cy) + (sIdx === 0 ? -55 : 55)));
+            const x = Math.min(W - 76, (pos ? pos.x : W - 150) + 110);
+            const y = Math.min(H - 55, Math.max(55, (pos ? pos.y : cy) + (sIdx === 0 ? -62 : 62)));
             addNode(sub.node, x, y, 'hop2');
             addEdge(dItem.node.id, sub.node.id, 'prerequisite', sub.description);
           });
         });
+      }
 
-        // Also if centerNode is a Level 3 leaf and has siblings in the same module, show up to 3 siblings if graph is sparse
-        if (addedNodes.size < 6 && parent) {
-          const siblings = window.GraphData.getChildren(parent.id).filter(s => s.id !== centerNode.id).slice(0, 3);
+      // 5. If centerNode has no children (Level 3 leaf node) and has siblings under the same chapter module,
+      // place up to 3 sibling nodes in the bottom row so the lower half of the network canvas is balanced and informative
+      if (children.length === 0 && parent) {
+        const siblings = window.GraphData.getChildren(parent.id)
+          .filter(s => s.id !== centerNode.id && !addedNodes.has(s.id))
+          .slice(0, 3);
+        if (siblings.length > 0) {
+          const spanX = Math.min(540, Math.max(200, (siblings.length - 1) * 185));
+          const startX = cx - spanX / 2;
           siblings.forEach((sib, idx) => {
-            const x = cx + (idx - 1) * 165;
-            const y = 420;
-            addNode(sib, x, y, 'hop2');
-            addEdge(parent.id, sib.id, 'hierarchy', `同章兄弟考点：「${parent.name}」包含「${sib.name}」`);
+            const x = siblings.length === 1 ? cx : startX + (idx * spanX) / (siblings.length - 1);
+            const y = 425;
+            addNode(sib, x, y, 'sibling');
+            addEdge(parent.id, sib.id, 'hierarchy', `同章关联考点：「${parent.name}」包含「${sib.name}」`);
           });
         }
       }
@@ -183,6 +190,7 @@
         center:       { fill: '#0F766E', stroke: '#115E59', text: '#FFFFFF', badge: '当前选中' },
         parent:       { fill: '#F8FAFC', stroke: '#64748B', text: '#1E293B', badge: '上级章节' },
         child:        { fill: '#F0FDFA', stroke: '#0D9488', text: '#115E59', badge: '下级考点' },
+        sibling:      { fill: '#F0FDFA', stroke: '#5EEAD4', text: '#115E59', badge: '同章考点' },
         prerequisite: { fill: '#FFFBEB', stroke: '#D97706', text: '#92400E', badge: '前置知识' },
         dependent:    { fill: '#EEF2FF', stroke: '#4F46E5', text: '#3730A3', badge: '后续进阶' },
         related:      { fill: '#FDF2F8', stroke: '#DB2777', text: '#9D174D', badge: '横向关联' },
@@ -252,7 +260,7 @@
         const st = roleColors[role] || roleColors.hop2;
         const qCount = window.GraphData.getQuestionsForNode(node.id, true).length;
         const isCenter = role === 'center';
-        const isWeak = role === 'hop2';
+        const isWeak = role === 'hop2' || role === 'sibling';
 
         // Truncate display name nicely
         const displayName = node.name.length > 12 ? node.name.slice(0, 11) + '…' : node.name;
@@ -262,10 +270,11 @@
         const halfH = boxH / 2;
 
         return `
-          <g class="graph-svg-node cursor-grab" data-node-id="${node.id}" transform="translate(${nx}, ${ny})" opacity="${isWeak ? '0.78' : '1'}">
+          <g class="graph-svg-node cursor-grab" data-node-id="${node.id}" transform="translate(${nx}, ${ny})" opacity="${isWeak ? '0.88' : '1'}">
+            <rect x="${-halfW}" y="${-halfH + 2}" width="${boxW}" height="${boxH}" rx="12"
+                  fill="#0F172A" fill-opacity="0.06" />
             <rect x="${-halfW}" y="${-halfH}" width="${boxW}" height="${boxH}" rx="12"
-                  fill="${st.fill}" stroke="${st.stroke}" stroke-width="${isCenter ? '2.5' : '1.8'}"
-                  filter="url(#nodeDropShadow)" />
+                  fill="${st.fill}" stroke="${st.stroke}" stroke-width="${isCenter ? '2.5' : '1.8'}" />
             <!-- Role & question count top mini bar -->
             <text x="${-halfW + 10}" y="${-halfH + 16}" font-size="9.5" font-weight="700"
                   fill="${isCenter ? '#CCFBF1' : st.stroke}">${escapeSvg(st.badge)}</text>
@@ -280,9 +289,6 @@
 
       svg.innerHTML = `
         <defs>
-          <filter id="nodeDropShadow" x="-15%" y="-15%" width="130%" height="130%">
-            <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.08" />
-          </filter>
           <marker id="arrowPrereq" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
             <path d="M 0 1 L 10 5 L 0 9 z" fill="#D97706" />
           </marker>

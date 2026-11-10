@@ -25,7 +25,9 @@
 
       const rawNodes = Array.isArray(window.KNOWLEDGE_NODES) ? window.KNOWLEDGE_NODES : [];
       const rawRelations = Array.isArray(window.KNOWLEDGE_RELATIONS) ? window.KNOWLEDGE_RELATIONS : [];
-      const rawMappings = Array.isArray(window.QUESTION_KNOWLEDGE) ? window.QUESTION_KNOWLEDGE : [];
+      const rawMappings = Array.isArray(window.QUESTION_KNOWLEDGE)
+        ? window.QUESTION_KNOWLEDGE
+        : (Array.isArray(window.QUESTION_KNOWLEDGE_MAP) ? window.QUESTION_KNOWLEDGE_MAP : []);
       const rawQuestions = Array.isArray(window.QUESTION_BANK) ? window.QUESTION_BANK : [];
 
       rawQuestions.forEach(q => {
@@ -214,7 +216,9 @@
       if (!this.initialized) this.init();
       const rawNodes = Array.isArray(window.KNOWLEDGE_NODES) ? window.KNOWLEDGE_NODES : [];
       const rawRelations = Array.isArray(window.KNOWLEDGE_RELATIONS) ? window.KNOWLEDGE_RELATIONS : [];
-      const rawMappings = Array.isArray(window.QUESTION_KNOWLEDGE) ? window.QUESTION_KNOWLEDGE : [];
+      const rawMappings = Array.isArray(window.QUESTION_KNOWLEDGE)
+        ? window.QUESTION_KNOWLEDGE
+        : (Array.isArray(window.QUESTION_KNOWLEDGE_MAP) ? window.QUESTION_KNOWLEDGE_MAP : []);
 
       const errors = [];
       const seenNodeIds = new Set();

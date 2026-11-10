@@ -33,15 +33,21 @@
 
       s = s.replace(/\\text\{([^{}]*)\}/g, '<span style="font-style:normal">$1</span>');
       for (let pass = 0; pass < 3; pass++) {
+        s = s.replace(/\\sqrt\[([^{}\]]*)\]\{([^{}]*)\}/g,
+          '<span class="math-sqrt"><sup class="math-sqrt-root">$1</sup>&radic;<span class="math-sqrt-body">$2</span></span>');
+        s = s.replace(/\\sqrt\{([^{}]*)\}/g,
+          '<span class="math-sqrt">&radic;<span class="math-sqrt-body">$1</span></span>');
         s = s.replace(/\\frac\{([^{}]*)\}\{([^{}]*)\}/g,
           '<span class="math-frac"><span class="math-frac-num">$1</span><span class="math-frac-den">$2</span></span>');
       }
       s = s.replace(/\^\{([^{}]*)\}/g, '<sup>$1</sup>');
       s = s.replace(/\^([0-9a-zA-Z+-])/g, '<sup>$1</sup>');
+      s = s.replace(/_\{([^{}]*)\}/g, '<sub>$1</sub>');
+      s = s.replace(/_([0-9a-zA-Z+-])/g, '<sub>$1</sub>');
       s = s.replace(/</g, (m, offset, full) => {
         // Keep our own generated HTML tags intact, escape standalone <
         const after = full.slice(offset);
-        if (/^<\/?(span|sup)\b/.test(after)) return '<';
+        if (/^<\/?(span|sup|sub)\b/.test(after)) return '<';
         return '&lt;';
       });
       return '<span class="math-fallback">' + s + '</span>';
@@ -58,7 +64,9 @@
         .replace(/\uff0d/g, '−')
         .replace(/\uff0b/g, '+');
 
-      // 2. Render LaTeX math within $ ... $
+      // 2. Extract $...$ blocks into placeholders BEFORE styling plain-text negative signs,
+      //    so regexes never corrupt KaTeX SVG path attributes (e.g. `l0 -0` inside \sqrt SVG).
+      const mathPlaceholders = [];
       s = s.replace(/\$([^$]+)\$/g, (_, tex) => {
         const cleanTex = tex
           .replace(/&lt;/g, '<')
@@ -70,17 +78,35 @@
           .replace(/\\\\(?=[a-zA-Z0-9+\-])/g, '\\\\ ')
           .trim();
         if (!cleanTex) return '';
+        let rendered = '';
         if (window.katex) {
           try {
-            return window.katex.renderToString(cleanTex, { throwOnError: false, displayMode: false });
+            rendered = window.katex.renderToString(cleanTex, { throwOnError: false, displayMode: false });
           } catch (e) {}
         }
-        const attrTex = cleanTex.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-        return '<span class="katex-pending" data-tex="' + attrTex + '">' + renderFallbackTex(cleanTex) + '</span>';
+        if (!rendered) {
+          const attrTex = cleanTex.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+          rendered = '<span class="katex-pending" data-tex="' + attrTex + '">' + renderFallbackTex(cleanTex) + '</span>';
+        }
+        const token = `\u0000MATH_${mathPlaceholders.length}_\u0000`;
+        mathPlaceholders.push(rendered);
+        return token;
       });
 
-      // 3. For any negative numbers outside $...$ (e.g. −2, -2, −0.5, −5℃), style the minus sign prominently
-      s = s.replace(/(^|[\s，、；：（(>])([−\-])(?=\d)/g, '$1<span class="math-neg-sign">−</span>');
+      // 3. Protect existing HTML tags (e.g. <img ...>) before styling plain-text minus signs
+      const tagPlaceholders = [];
+      s = s.replace(/<[^>]+>/g, (tag) => {
+        const token = `\u0000TAG_${tagPlaceholders.length}_\u0000`;
+        tagPlaceholders.push(tag);
+        return token;
+      });
+
+      // 4. For any negative numbers in plain text outside $...$ (e.g. −2, -2, −0.5, −5℃), style the minus sign prominently
+      s = s.replace(/(^|[\s，、；：（(>\u0000])([−\-])(?=\d)/g, '$1<span class="math-neg-sign">−</span>');
+
+      // 5. Restore HTML tags and rendered KaTeX math blocks
+      s = s.replace(/\u0000TAG_(\d+)_\u0000/g, (_, idx) => tagPlaceholders[Number(idx)] || '');
+      s = s.replace(/\u0000MATH_(\d+)_\u0000/g, (_, idx) => mathPlaceholders[Number(idx)] || '');
 
       return s;
     }
@@ -102,6 +128,75 @@
         .replace(/<\/?[a-zA-Z][^>]*>/g, ' ');
       return formatMathHtml(withoutTables);
     }
+
+    // Extract and cleanly format analysis, detail, and point parts without duplicate tags
+    function parseQuestionAnalysisDetail(q) {
+      if (!q) return { analysis: '', detail: '', point: '' };
+      const aRaw = String(q.analysis || '').trim();
+      const dRaw = String(q.detail || '').trim();
+
+      let analysisPart = '';
+      let detailPart = '';
+      let pointPart = '';
+
+      if (aRaw.includes('【详解】')) {
+        const idx = aRaw.indexOf('【详解】');
+        analysisPart = aRaw.slice(0, idx).trim();
+        const rest = aRaw.slice(idx + 4).trim();
+        if (rest.includes('【点睛】')) {
+          const pIdx = rest.indexOf('【点睛】');
+          detailPart = rest.slice(0, pIdx).trim();
+          pointPart = rest.slice(pIdx + 4).trim();
+        } else {
+          detailPart = rest;
+        }
+      } else {
+        analysisPart = aRaw;
+        if (dRaw.includes('【点睛】')) {
+          const pIdx = dRaw.indexOf('【点睛】');
+          detailPart = dRaw.slice(0, pIdx).trim();
+          pointPart = dRaw.slice(pIdx + 4).trim();
+        } else {
+          detailPart = dRaw;
+        }
+      }
+
+      analysisPart = analysisPart.replace(/^(?:<br\s*\/?>|\s)*【(?:分析|解析)】\s*/, '').replace(/(?:<br\s*\/?>|\s)+$/, '');
+      detailPart = detailPart.replace(/^(?:<br\s*\/?>|\s)*【(?:详解|解答)】\s*/, '').replace(/(?:<br\s*\/?>|\s)+$/, '');
+      pointPart = pointPart.replace(/^(?:<br\s*\/?>|\s)*【(?:点睛|总结|说明)】\s*/, '').replace(/(?:<br\s*\/?>|\s)+$/, '');
+
+      return { analysis: analysisPart, detail: detailPart, point: pointPart };
+    }
+
+    // Render unified analysis drawer HTML with clean badges and zero duplicate tags/empty containers
+    function renderQuestionAnalysisBoxHtml(q) {
+      if (!q) return '';
+      const parts = parseQuestionAnalysisDetail(q);
+
+      let html = `
+        <div class="flex items-center space-x-2 font-bold text-slate-900">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#0F766E]"></span>
+          <span>参考答案：</span>
+          <span class="text-[#0F766E] font-semibold text-base tracking-wide">${formatMathHtml(q.answer)}</span>
+        </div>
+      `;
+
+      if (parts.analysis) {
+        html += `<div class="text-slate-600"><b class="text-slate-800">【分析】</b>${formatMathHtml(parts.analysis)}</div>`;
+      }
+
+      if (parts.detail && parts.detail !== '略') {
+        html += `<div class="text-slate-700 pt-1.5 border-t border-slate-200/70 leading-relaxed"><b class="text-slate-800">【详解】</b>${formatMathHtml(parts.detail)}</div>`;
+      }
+
+      if (parts.point) {
+        html += `<div class="text-slate-600 pt-1.5 border-t border-slate-200/60 text-xs leading-relaxed"><b class="text-slate-800">【点睛】</b>${formatMathHtml(parts.point)}</div>`;
+      }
+
+      return html;
+    }
+    window.parseQuestionAnalysisDetail = parseQuestionAnalysisDetail;
+    window.renderQuestionAnalysisBoxHtml = renderQuestionAnalysisBoxHtml;
 
     // Upgrade any pending fallback math spans if KaTeX finishes loading later
     function renderMath() {

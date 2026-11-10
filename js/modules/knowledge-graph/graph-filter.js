@@ -17,7 +17,8 @@
     // Detail panel question filters
     qTypeFilter: 'all',       // 'all' | 'choice' | 'blank' | 'calc'
     qDiffFilter: 'all',       // 'all' | '容易' | '较易' | '中等' | '较难'
-    qRoleFilter: 'all',       // 'all' | 'primary' | 'secondary' | 'comprehensive'
+    qRoleFilter: 'all',       // legacy fallback
+    qSelectedKpIds: [],       // Multi-select knowledge point IDs ([] = all)
     qPage: 1,
     qPageSize: 8,
 
@@ -29,8 +30,13 @@
         if (!p || typeof p !== 'object') return;
         if (p.viewMode === 'tree' || p.viewMode === 'network') this.viewMode = p.viewMode;
         if (p.userRoleMode === 'teacher' || p.userRoleMode === 'student') this.userRoleMode = p.userRoleMode;
-        if (typeof p.selectedNodeId === 'string' && window.GraphData?.getNode(p.selectedNodeId)) {
-          this.selectedNodeId = p.selectedNodeId;
+        const migratedNodeMap = {
+          'kp_g9_if_def_graph': 'kp_g9_if_def_expr',
+          'kp_g9_if_linear_app': 'kp_g9_if_linear_comp'
+        };
+        const candidateNodeId = migratedNodeMap[p.selectedNodeId] || p.selectedNodeId;
+        if (typeof candidateNodeId === 'string' && window.GraphData?.getNode(candidateNodeId)) {
+          this.selectedNodeId = candidateNodeId;
         }
         if (Array.isArray(p.expandedIds)) {
           this.expandedIds = new Set(p.expandedIds);
@@ -145,6 +151,7 @@
       if (!node) return;
       GraphState.selectedNodeId = nodeId;
       GraphState.activeRelationEdge = null;
+      GraphState.qSelectedKpIds = [];
       GraphState.qPage = 1;
 
       // Expand all ancestors so tree shows selected node

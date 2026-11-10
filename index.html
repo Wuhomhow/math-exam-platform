@@ -41,11 +41,15 @@
         </div>
 
         <!-- Navigation Tabs -->
-        <nav class="hidden md:flex items-center gap-1 rounded-lg bg-slate-100 border border-slate-200 p-1">
-          <button id="navBankBtn" class="nav-tab is-active px-4 py-1.5 rounded-md text-sm font-semibold transition-all">
+        <nav class="flex items-center gap-1 rounded-lg bg-slate-100 border border-slate-200 p-1">
+          <button id="navBankBtn" type="button" onclick="if(typeof switchView==='function')switchView('bank')" class="nav-tab is-active px-4 py-1.5 rounded-md text-sm font-semibold transition-all">
             题库选题
           </button>
-          <button id="navPaperBtn" class="nav-tab px-4 py-1.5 rounded-md text-sm font-medium transition-all">
+          <button id="navGraphBtn" type="button" onclick="if(typeof switchView==='function')switchView('graph')" class="nav-tab px-4 py-1.5 rounded-md text-sm font-semibold transition-all flex items-center gap-1.5">
+            <span>🕸️</span>
+            <span>题目图谱</span>
+          </button>
+          <button id="navPaperBtn" type="button" onclick="if(typeof switchView==='function')switchView('paper')" class="nav-tab px-4 py-1.5 rounded-md text-sm font-medium transition-all">
             试卷排版与预览
           </button>
         </nav>
@@ -76,8 +80,9 @@
   <!-- Mobile Tab Switcher -->
   <div class="md:hidden px-4 py-2 border-b border-slate-200 bg-white no-print">
     <div class="flex gap-1 rounded-lg bg-slate-100 border border-slate-200 p-1">
-      <button id="mobileNavBank" class="nav-tab is-active flex-1 py-1.5 rounded-md text-center text-sm font-semibold transition-all">题库选题</button>
-      <button id="mobileNavPaper" class="nav-tab flex-1 py-1.5 rounded-md text-center text-sm font-medium transition-all">试卷排版</button>
+      <button id="mobileNavBank" type="button" onclick="if(typeof switchView==='function')switchView('bank')" class="nav-tab is-active flex-1 py-1.5 rounded-md text-center text-sm font-semibold transition-all">题库选题</button>
+      <button id="mobileNavGraph" type="button" onclick="if(typeof switchView==='function')switchView('graph')" class="nav-tab flex-1 py-1.5 rounded-md text-center text-sm font-semibold transition-all">🕸️ 题目图谱</button>
+      <button id="mobileNavPaper" type="button" onclick="if(typeof switchView==='function')switchView('paper')" class="nav-tab flex-1 py-1.5 rounded-md text-center text-sm font-medium transition-all">试卷排版</button>
     </div>
   </div>
 
@@ -109,6 +114,10 @@
 
           <!-- Catalog Body: Hidden by default on mobile (<lg), block on PC (lg) -->
           <div id="catalogBodyContainer" class="mt-3 space-y-3">
+            <button id="sidebarGoGraphBtn" type="button" onclick="if(typeof switchView==='function')switchView('graph')" class="w-full flex items-center justify-between gap-2 px-3 py-2.5 rounded-lg border border-[#99F6E4] bg-[#F0FDFA] hover:bg-[#CCFBF1] text-[#0F766E] text-sm font-bold transition">
+              <span class="flex items-center gap-1.5"><span>🕸️</span><span>数学题目知识图谱</span></span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-white text-[#0F766E] border border-[#CCFBF1] font-semibold">进入 &rarr;</span>
+            </button>
             <button id="treeChapterAll" type="button" class="chapter-tree-btn is-active w-full flex items-center justify-between gap-3 px-3 py-2.5 rounded-lg border border-slate-200 text-sm font-semibold" data-chapter="all">
               <span>已选题库</span>
               <span id="allQuestionCount" class="text-xs font-bold">2090 题</span>
@@ -190,6 +199,173 @@
       </section>
 
     </div>
+  </main>
+
+  <!-- VIEW 1.5: 题目图谱中心 (Knowledge Graph Explorer) -->
+  <main id="viewKnowledgeGraph" class="hidden flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 no-print space-y-5">
+    <!-- Top Filter & Mode Control Bar -->
+    <div class="ui-card p-4 space-y-3">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <div class="flex flex-wrap items-center gap-3 flex-1 min-w-[260px]">
+          <div class="flex items-center gap-2">
+            <span class="w-8 h-8 rounded-lg bg-[#F0FDFA] border border-[#CCFBF1] text-[#0F766E] flex items-center justify-center font-bold text-sm">🕸️</span>
+            <div>
+              <h2 class="text-sm sm:text-base font-bold text-slate-900">数学题目知识图谱</h2>
+              <p class="text-[11px] text-slate-500">覆盖六至九年级 84 个知识节点 · 61 条教学关系 · 2,090 道题目双向关联</p>
+            </div>
+          </div>
+          <div id="graphSearchBoxWrapper" class="relative flex-1 max-w-xs ml-auto sm:ml-2">
+            <input type="text" id="graphSearchInput" placeholder="搜索知识点名称、章节、标签..." class="w-full pl-8 pr-3 py-1.5 rounded-lg border border-slate-200 text-xs">
+            <svg class="w-4 h-4 text-slate-400 absolute left-2.5 top-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+            <div id="graphSearchDropdown" class="hidden absolute left-0 right-0 top-9 bg-white border border-slate-200 rounded-xl shadow-lg z-50 max-h-72 overflow-y-auto"></div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2 text-xs">
+          <div class="inline-flex rounded-lg border border-slate-200 p-0.5 bg-slate-100" title="切换图谱展示方式">
+            <button type="button" id="btnGraphViewTree" class="seg-btn is-active px-3 py-1 rounded-md font-semibold">🌲 树状视图</button>
+            <button type="button" id="btnGraphViewNetwork" class="seg-btn px-3 py-1 rounded-md font-semibold">🕸️ 网络视图</button>
+          </div>
+          <div class="inline-flex rounded-lg border border-slate-200 p-0.5 bg-slate-100" title="切换教师组卷视角与学生学习视角">
+            <button type="button" id="btnGraphRoleTeacher" class="seg-btn is-active px-2.5 py-1 rounded-md">👨‍🏫 教师模式</button>
+            <button type="button" id="btnGraphRoleStudent" class="seg-btn px-2.5 py-1 rounded-md">🎓 学生模式</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-2.5 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2.5 text-xs">
+        <div class="flex flex-wrap items-center gap-2">
+          <label class="inline-flex items-center gap-1 text-slate-600">
+            <span>年级：</span>
+            <select id="graphFilterGrade" class="rounded-lg border border-slate-200 px-2.5 py-1 text-xs bg-white">
+              <option value="all">全部年级</option>
+              <option value="六年级">六年级</option>
+              <option value="七年级">七年级 (初一)</option>
+              <option value="八年级">八年级 (初二)</option>
+              <option value="九年级">九年级 (初三)</option>
+            </select>
+          </label>
+          <label class="inline-flex items-center gap-1 text-slate-600">
+            <span>学期：</span>
+            <select id="graphFilterSemester" class="rounded-lg border border-slate-200 px-2.5 py-1 text-xs bg-white">
+              <option value="all">全部学期</option>
+              <option value="上册">上册</option>
+              <option value="下册">下册</option>
+            </select>
+          </label>
+          <label class="inline-flex items-center gap-1 text-slate-600">
+            <span>知识领域：</span>
+            <select id="graphFilterDomain" class="rounded-lg border border-slate-200 px-2.5 py-1 text-xs bg-white">
+              <option value="all">全部领域</option>
+              <option value="数与代数">数与代数</option>
+              <option value="图形与几何">图形与几何</option>
+              <option value="统计与概率">统计与概率</option>
+              <option value="综合与实践">综合与实践</option>
+            </select>
+          </label>
+          <label class="inline-flex items-center gap-1.5 text-slate-600 cursor-pointer select-none ml-1">
+            <input type="checkbox" id="graphFilterReviewedOnly" class="rounded border-slate-300">
+            <span>仅显示有已审核题目的节点</span>
+          </label>
+        </div>
+        <button type="button" id="btnGraphResetFilters" class="text-slate-500 hover:text-[#0F766E] px-2.5 py-1 rounded border border-slate-200 hover:border-[#0F766E] transition">
+          重置筛选
+        </button>
+      </div>
+    </div>
+
+    <!-- Main 3-Column Graph Workspace -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
+      <aside class="lg:col-span-3 ui-card p-3.5 lg:sticky lg:top-20 lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto">
+        <div class="flex items-center justify-between pb-2.5 mb-2.5 border-b border-slate-100">
+          <span class="text-xs font-bold text-slate-800">📚 知识体系目录</span>
+          <span id="graphSidebarNodeCount" class="text-[11px] font-semibold text-[#0F766E] bg-[#F0FDFA] px-2 py-0.5 rounded-full border border-[#CCFBF1]">59 个考点</span>
+        </div>
+        <div id="graphSidebarTree"></div>
+      </aside>
+
+      <section class="lg:col-span-5 space-y-4">
+        <div id="graphMainTreeContainer" class="ui-card p-4 space-y-3">
+          <div class="flex items-center justify-between pb-2 border-b border-slate-100 text-xs">
+            <span class="font-bold text-slate-800">🌲 知识层级结构树（点击任意节点查看详情与题目）</span>
+            <div class="flex items-center gap-1.5">
+              <button type="button" id="btnGraphExpandAll" class="px-2 py-1 rounded border border-slate-200 hover:bg-slate-50 text-slate-600">全部展开</button>
+              <button type="button" id="btnGraphCollapseAll" class="px-2 py-1 rounded border border-slate-200 hover:bg-slate-50 text-slate-600">收起章节</button>
+            </div>
+          </div>
+          <div id="graphTreeCanvasBody" class="space-y-3 max-h-[680px] overflow-y-auto pr-1"></div>
+        </div>
+
+        <div id="graphMainNetworkContainer" class="hidden ui-card p-4 space-y-3">
+          <div class="flex flex-wrap items-center justify-between gap-2 pb-2 border-b border-slate-100 text-xs">
+            <div class="flex items-center gap-2">
+              <span class="font-bold text-slate-800">🕸️ 局部知识关系网</span>
+              <div class="hidden sm:flex items-center gap-2 text-[11px] text-slate-500">
+                <span class="inline-flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-amber-500"></span>前置</span>
+                <span class="inline-flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-indigo-600"></span>后续</span>
+                <span class="inline-flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-pink-600"></span>关联</span>
+                <span class="inline-flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-slate-400"></span>包含</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <button type="button" id="btnGraphToggleHop" class="px-2.5 py-1 rounded border border-slate-200 hover:border-[#0F766E] text-slate-700 font-medium transition">扩展二度关系 (2跳)</button>
+              <button type="button" id="btnGraphZoomIn" class="px-2 py-1 rounded border border-slate-200 hover:bg-slate-50" title="放大">＋</button>
+              <button type="button" id="btnGraphZoomOut" class="px-2 py-1 rounded border border-slate-200 hover:bg-slate-50" title="缩小">－</button>
+              <button type="button" id="btnGraphResetLayout" class="px-2.5 py-1 rounded border border-slate-200 hover:bg-slate-50 text-slate-600" title="恢复初始布局">复位</button>
+            </div>
+          </div>
+
+          <div class="relative w-full h-[460px] rounded-xl bg-slate-50/70 border border-slate-200/80 overflow-hidden select-none">
+            <svg id="graphNetworkSvg" viewBox="0 0 860 520" class="w-full h-full"></svg>
+          </div>
+
+          <div id="graphNetworkEdgeInfo" class="px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200/80 text-xs min-h-[38px] flex items-center"></div>
+        </div>
+      </section>
+
+      <aside class="lg:col-span-4 ui-card p-4 lg:sticky lg:top-20">
+        <div id="graphNodeDetailPanel"></div>
+      </aside>
+    </div>
+
+    <section id="graphRelatedQuestionsSection" class="space-y-4 pt-2">
+      <div class="ui-card p-4 space-y-3">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <h3 id="graphQuestionSectionTitle" class="text-sm sm:text-base font-bold text-slate-900">关联题目列表</h3>
+          <span class="text-xs text-slate-400">支持按考查角色、题型、难度二次筛选并直接加入试题篮</span>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-y-2 gap-x-6 pt-2 border-t border-slate-100 text-xs">
+          <div class="flex flex-wrap items-center gap-1.5">
+            <span class="text-slate-500 font-medium">考查角色：</span>
+            <button type="button" class="graph-q-role-btn filter-type-btn is-active" data-q-role="all">全部角色</button>
+            <button type="button" class="graph-q-role-btn filter-type-btn" data-q-role="primary">核心考点</button>
+            <button type="button" class="graph-q-role-btn filter-type-btn" data-q-role="secondary">次要考点</button>
+            <button type="button" class="graph-q-role-btn filter-type-btn" data-q-role="comprehensive">综合考查</button>
+          </div>
+          <div class="flex flex-wrap items-center gap-1.5">
+            <span class="text-slate-500 font-medium">题型：</span>
+            <button type="button" class="graph-q-type-btn filter-type-btn is-active" data-q-type="all">全部</button>
+            <button type="button" class="graph-q-type-btn filter-type-btn" data-q-type="choice">单选题</button>
+            <button type="button" class="graph-q-type-btn filter-type-btn" data-q-type="blank">填空题</button>
+            <button type="button" class="graph-q-type-btn filter-type-btn" data-q-type="calc">解答题</button>
+          </div>
+          <div class="flex flex-wrap items-center gap-1.5">
+            <span class="text-slate-500 font-medium">难度：</span>
+            <button type="button" class="graph-q-diff-btn filter-diff-btn px-2.5 py-1 rounded-md is-active" data-q-diff="all">全部</button>
+            <button type="button" class="graph-q-diff-btn filter-diff-btn px-2.5 py-1 rounded-md" data-q-diff="容易">容易</button>
+            <button type="button" class="graph-q-diff-btn filter-diff-btn px-2.5 py-1 rounded-md" data-q-diff="较易">较易</button>
+            <button type="button" class="graph-q-diff-btn filter-diff-btn px-2.5 py-1 rounded-md" data-q-diff="中等">中等</button>
+            <button type="button" class="graph-q-diff-btn filter-diff-btn px-2.5 py-1 rounded-md" data-q-diff="较难">较难</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="graphQuestionListContainer" class="space-y-4"></div>
+      <div id="graphQuestionPagination" class="hidden ui-card p-3.5 flex items-center justify-center text-xs"></div>
+    </section>
   </main>
 
   <!-- VIEW 2: 试卷排版与预览中心 (Exam Paper Preview & Print) -->
@@ -380,9 +556,12 @@
   </div>
 
   <!-- INLINE DATA & APPLICATION LOGIC -->
-  <!-- 1. 题库核心数据（毫秒级瞬时解析） -->
+  <!-- 1. 题库核心数据与知识图谱独立数据层（毫秒级瞬时解析） -->
   <script src="js/data/questions.js"></script>
   <script src="js/data/questions-ch5-equation-lesson2.js"></script>
+  <script src="js/data/knowledge-nodes.js"></script>
+  <script src="js/data/knowledge-relations.js"></script>
+  <script src="js/data/question-knowledge.js"></script>
 
   <!-- 2. 状态管理与存储 -->
   <script src="js/modules/state.js"></script>
@@ -392,11 +571,18 @@
   <script src="js/utils/math.js"></script>
   <script src="js/utils/similarity.js"></script>
 
-  <!-- 4. 业务视图渲染与 Word 导出引擎 -->
+  <!-- 4. 知识图谱模块（数据索引、筛选、树状图、SVG网络图、节点详情） -->
+  <script src="js/modules/knowledge-graph/graph-data.js"></script>
+  <script src="js/modules/knowledge-graph/graph-filter.js"></script>
+  <script src="js/modules/knowledge-graph/graph-tree.js"></script>
+  <script src="js/modules/knowledge-graph/graph-network.js"></script>
+  <script src="js/modules/knowledge-graph/graph-detail.js"></script>
+
+  <!-- 5. 业务视图渲染与 Word 导出引擎 -->
   <script src="js/modules/render.js"></script>
   <script src="js/modules/docx-export.js"></script>
 
-  <!-- 5. 事件绑定与主程序启动（首屏瞬时呈现） -->
+  <!-- 6. 事件绑定与主程序启动（首屏瞬时呈现） -->
   <script src="js/main.js"></script>
 
 

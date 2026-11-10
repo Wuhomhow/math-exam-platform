@@ -451,8 +451,14 @@
         if (!saved) return;
         const p = JSON.parse(saved);
         if (!p || typeof p !== 'object') return;
-        if (p.currentView === 'bank' || p.currentView === 'paper') state.currentView = p.currentView;
-        if (typeof p.chapterFilter === 'string') state.chapterFilter = p.chapterFilter;
+        if (p.currentView === 'bank' || p.currentView === 'paper' || p.currentView === 'graph') state.currentView = p.currentView;
+        if (typeof p.chapterFilter === 'string') {
+          const isValidChapter = p.chapterFilter === 'all' ||
+            p.chapterFilter === '2.3' ||
+            p.chapterFilter.startsWith('custom:') ||
+            (Array.isArray(window.QUESTION_BANK) && window.QUESTION_BANK.some(q => q.chapter === p.chapterFilter));
+          state.chapterFilter = isValidChapter ? p.chapterFilter : 'all';
+        }
         if (typeof p.typeFilter === 'string') state.typeFilter = p.typeFilter;
         if (typeof p.diffFilter === 'string') state.diffFilter = p.diffFilter;
         if (typeof p.searchKeyword === 'string') state.searchKeyword = p.searchKeyword;

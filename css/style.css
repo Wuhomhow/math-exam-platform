@@ -62,6 +62,21 @@
 
     /* Defensive fallback rules if CDN styles load slowly */
     .hidden { display: none !important; }
+    @media (min-width: 640px) {
+      .hidden.sm\:inline { display: inline !important; }
+      .hidden.sm\:inline-block { display: inline-block !important; }
+      .hidden.sm\:block { display: block !important; }
+      .hidden.sm\:flex { display: flex !important; }
+      .sm\:hidden { display: none !important; }
+    }
+    @media (min-width: 768px) {
+      .hidden.md\:flex { display: flex !important; }
+      .hidden.md\:block { display: block !important; }
+      .md\:hidden { display: none !important; }
+    }
+    @media (min-width: 1024px) {
+      .lg\:hidden { display: none !important; }
+    }
     .translate-x-full { transform: translateX(100%) !important; }
     svg.w-3\.5 { width: 0.875rem; height: 0.875rem; display: inline-block; vertical-align: middle; }
     svg.w-4 { width: 1rem; height: 1rem; display: inline-block; vertical-align: middle; }

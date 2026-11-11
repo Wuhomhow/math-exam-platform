@@ -58,15 +58,23 @@
       // Dynamically update type & difficulty filter counts based on selected chapter
       const allQuestionCountEl = document.getElementById('allQuestionCount');
       if (allQuestionCountEl) allQuestionCountEl.textContent = `${QUESTION_BANK.length} 题`;
-      const chapPool = QUESTION_BANK.filter(q => {
-        if (state.chapterFilter === 'all') return true;
-        if (state.chapterFilter === '2.3') return q.chapter.startsWith('2.3');
-        if (state.chapterFilter.startsWith('custom:')) {
-          const paper = typeof getCustomPaperById === 'function' ? getCustomPaperById(state.chapterFilter.slice(7)) : null;
-          return paper ? paper.questionIds.includes(q.id) : false;
-        }
-        return q.chapter === state.chapterFilter;
-      });
+      const isProcFilter = typeof state.chapterFilter === 'string' && state.chapterFilter.startsWith('proc:');
+      const activeProcId = isProcFilter ? state.chapterFilter.slice(5) : null;
+      const activeProcCollection = (activeProcId && window.ProceduralKnowledgeService)
+        ? window.ProceduralKnowledgeService.getQuestionCollectionByProcedure(activeProcId)
+        : null;
+
+      const chapPool = isProcFilter
+        ? (activeProcCollection ? activeProcCollection.items.map(it => it.question) : [])
+        : QUESTION_BANK.filter(q => {
+            if (state.chapterFilter === 'all') return true;
+            if (state.chapterFilter === '2.3') return q.chapter.startsWith('2.3');
+            if (state.chapterFilter.startsWith('custom:')) {
+              const paper = typeof getCustomPaperById === 'function' ? getCustomPaperById(state.chapterFilter.slice(7)) : null;
+              return paper ? paper.questionIds.includes(q.id) : false;
+            }
+            return q.chapter === state.chapterFilter;
+          });
       const normalizeQuestionType = (q) => {
         if (!q) return 'calc';
         if (q.type === 'choice' || q.type === 'blank' || q.type === 'judge' || q.type === 'calc') return q.type;
@@ -97,6 +105,23 @@
       });
 
       function getCurrentFilteredQuestions() {
+        if (isProcFilter) {
+          const orderedList = activeProcCollection ? activeProcCollection.items.map(it => it.question) : [];
+          return orderedList.filter(q => {
+            if (!q) return false;
+            if (state.typeFilter !== 'all' && normalizeQuestionType(q) !== state.typeFilter) return false;
+            if (state.diffFilter !== 'all' && (q.difficulty === '适中' ? '中等' : q.difficulty) !== state.diffFilter) return false;
+            if (state.searchKeyword) {
+              const kw = state.searchKeyword.toLowerCase();
+              const matchStem = q.stem.toLowerCase().includes(kw);
+              const matchKp = q.knowledge.toLowerCase().includes(kw);
+              const matchAnswer = q.answer.toLowerCase().includes(kw);
+              const matchChap = q.chapter.toLowerCase().includes(kw);
+              if (!matchStem && !matchKp && !matchAnswer && !matchChap) return false;
+            }
+            return true;
+          });
+        }
         if (state.chapterFilter.startsWith('custom:')) {
           const paper = typeof getCustomPaperById === 'function' ? getCustomPaperById(state.chapterFilter.slice(7)) : null;
           if (paper) {
@@ -140,18 +165,28 @@
       }
       const filtered = getCurrentFilteredQuestions();
       const pagEl = document.getElementById('questionPagination');
+      const procBannerHtml = (isProcFilter && typeof window.renderProceduralCollectionBannerHtml === 'function')
+        ? window.renderProceduralCollectionBannerHtml(activeProcId)
+        : '';
 
       if (filtered.length === 0) {
-        container.innerHTML = '';
+        container.innerHTML = procBannerHtml;
         emptyState.classList.remove('hidden');
         if (pagEl) pagEl.classList.add('hidden');
+        container.querySelectorAll('[data-proc-col]').forEach(btn => {
+          btn.addEventListener('click', () => {
+            if (typeof window.jumpToProceduralCollection === 'function') {
+              window.jumpToProceduralCollection(btn.getAttribute('data-proc-col'));
+            }
+          });
+        });
         return;
       }
       emptyState.classList.add('hidden');
 
       // Pagination calculations
       const totalCount = filtered.length;
-      const pageSize = state.pageSize || 15;
+      const pageSize = isProcFilter ? 20 : (state.pageSize || 15);
       const totalPages = Math.max(1, Math.ceil(totalCount / pageSize));
       if (state.currentPage > totalPages) state.currentPage = totalPages;
       if (state.currentPage < 1) state.currentPage = 1;
@@ -235,7 +270,7 @@
         }
       }
 
-      container.innerHTML = pageQuestions.map((q, pageIdx) => {
+      container.innerHTML = procBannerHtml + pageQuestions.map((q, pageIdx) => {
         const qNumber = startIndex + pageIdx + 1;
         const isSelected = state.selectedIds.has(q.id);
         const diffColor = getDifficultyBadgeClass(q.difficulty);
@@ -279,6 +314,7 @@
               <div class="q-stem-content">${formatMathHtml(q.stem)}</div>
               ${imgHtml}
               ${optionsHtml}
+              ${typeof window.renderQuestionProceduralTagsHtml === 'function' ? window.renderQuestionProceduralTagsHtml(q.id) : ''}
               ${typeof window.renderQuestionKnowledgeTagsHtml === 'function' ? window.renderQuestionKnowledgeTagsHtml(q.id) : ''}
             </div>
 
@@ -372,6 +408,15 @@
           const nid = btn.getAttribute('data-jump-graph-node');
           if (typeof window.jumpToKnowledgeGraphNode === 'function') {
             window.jumpToKnowledgeGraphNode(nid);
+          }
+        });
+      });
+
+      container.querySelectorAll('[data-jump-proc], [data-proc-col]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const pid = btn.getAttribute('data-jump-proc') || btn.getAttribute('data-proc-col');
+          if (pid && typeof window.jumpToProceduralCollection === 'function') {
+            window.jumpToProceduralCollection(pid);
           }
         });
       });

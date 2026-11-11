@@ -416,6 +416,33 @@
           </details>
         `;
       }).join('');
+
+      if (window.ProceduralKnowledgeService && typeof window.ProceduralKnowledgeService.getAllCollections === 'function') {
+        const procCols = window.ProceduralKnowledgeService.getAllCollections();
+        const totalProcQs = procCols.reduce((acc, c) => acc + c.totalQuestions, 0);
+        if (procCols.length > 0) {
+          const procHtml = `
+            <details class="nav-finished-paper-card mb-3" open>
+              <summary>
+                <span class="flex items-center gap-1.5">
+                  <span>⚡</span>
+                  <span>程序性知识集合（新）</span>
+                </span>
+                <span class="nav-finished-badge">${procCols.length} 集 · ${totalProcQs} 题</span>
+              </summary>
+              <div class="nav-finished-paper-content space-y-1">
+                ${procCols.map(c => `
+                  <button type="button" class="chapter-tree-btn nav-topic-button" data-chapter="proc:${escapeNavText(c.procedure.id)}">
+                    <span class="nav-topic-label"><b class="text-[#0F766E]">${escapeNavText(c.procedure.id)}</b> ${escapeNavText(c.procedure.name)}</span>
+                    <span class="nav-topic-count">${c.totalQuestions}</span>
+                  </button>
+                `).join('')}
+              </div>
+            </details>
+          `;
+          container.innerHTML = procHtml + container.innerHTML;
+        }
+      }
     }
 
     // Restore the basket on this browser; keep the built-in selection for first-time visitors.
@@ -456,6 +483,7 @@
           const isValidChapter = p.chapterFilter === 'all' ||
             p.chapterFilter === '2.3' ||
             p.chapterFilter.startsWith('custom:') ||
+            p.chapterFilter.startsWith('proc:') ||
             (Array.isArray(window.QUESTION_BANK) && window.QUESTION_BANK.some(q => q.chapter === p.chapterFilter));
           state.chapterFilter = isValidChapter ? p.chapterFilter : 'all';
         }

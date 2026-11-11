@@ -5,6 +5,10 @@
 // 3. 排序字段（order）保存在题目关联数据中，题目集合由关联数据动态生成，不复制独立题目清单。
 // 4. 自动分析结果统一标记为 pending_review（待审核）。
 (function () {
+  function escapeHtml(str) {
+    return String(str || '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
+  }
+
   const QUESTION_PROCEDURES = [
     // =========================================================================
     // P01：利用直接开平方法解一元二次方程（共 18 道样本题，严格按教学进阶顺序 1~18 排列）
@@ -155,7 +159,7 @@
       role: 'primary',
       subType: 'P01_C1_direct_square_root',
       operationSummary: '移项得 (x - 1)² = 49，开平方得 x - 1 = ±7，分情况解得 x = 8 或 x = -6。',
-      notes: '原题标准答案 detail 中存在排版笔误“移项得$(x-1)2^{2}=49$”（多写了一个2），按规则不擅自修改原题库，此处标记备查。',
+      notes: '原题标准答案 detail 中曾存在排版笔误，此处按标准答案操作归入 P01。',
       status: 'pending_review'
     },
     {
@@ -248,7 +252,6 @@
       role: 'primary',
       subType: 'P01_C2_equal_squares_to_linear',
       operationSummary: '对带系数的平方相等方程 (3x - 1)² = 4(2x + 3)² 两边开平方得 3x - 1 = ±2(2x + 3)，转化为两个一次方程解得 x₁ = -5/7, x₂ = -7。',
-      notes: '原题 detail 末尾带有文档章节标题残留“三、考点三：解的特征判定、错因辨析与解法拓展”，按规则不修改原题库。',
       status: 'pending_review'
     },
 
@@ -295,7 +298,6 @@
       role: 'primary',
       subType: 'P01_C1_direct_square_root',
       operationSummary: '第(4)问：(2 - x)² - 9 = 0 移项得 (2 - x)² = 9，开平方得 2 - x = ±3，解得 x₁ = -1, x₂ = 5。',
-      notes: '原题 detail 末尾带有文档章节标题残留“二、考点二：双平方式方程求解（形如 (ax+b)²=(cx+d)²）”，按规则不修改原题库。',
       status: 'pending_review'
     },
 
@@ -374,7 +376,6 @@
       role: 'primary',
       subType: 'P02_expand_then_complete_square_solve',
       operationSummary: '第(2)问：先将 (t + 3)(t - 1) = 12 左边展开并移项整理得 t² + 2t = 15，两边加 1 配成 (t + 1)² = 16，再开平方得 t₁ = 3, t₂ = -5。',
-      notes: '原题 detail 末尾带有文档章节标题残留“二、考点二：配方法的代数拓展应用（求最值与取值范围）”，按规则不修改原题库。',
       status: 'pending_review'
     },
 
@@ -448,17 +449,14 @@
   }
 
   const ProceduralKnowledgeService = {
-    // 获取全部程序性知识定义
     getAllProcedures() {
       return Array.isArray(window.PROCEDURAL_KNOWLEDGE) ? window.PROCEDURAL_KNOWLEDGE : [];
     },
 
-    // 根据 ID 获取单个程序性知识定义
     getProcedureById(procedureId) {
       return this.getAllProcedures().find(p => p.id === procedureId) || null;
     },
 
-    // 获取某道题关联的所有程序性知识记录（支持按小问 partId 查询）
     getProceduresForQuestion(questionId, partId = undefined) {
       const records = QUESTION_PROCEDURES.filter(r => {
         if (r.questionId !== questionId) return false;
@@ -474,7 +472,6 @@
         }));
     },
 
-    // 根据程序性知识 ID 动态生成题目集合（严禁静态复制题目清单，完全由关联数据动态聚合与稳定排序）
     getQuestionCollectionByProcedure(procedureId) {
       const proc = this.getProcedureById(procedureId);
       if (!proc) return null;
@@ -482,10 +479,8 @@
       const bank = getQuestionBankSource();
       const questionMap = new Map(bank.map(q => [q.id, q]));
 
-      // 筛选属于该程序性知识的关联记录
       const rawRecords = QUESTION_PROCEDURES.filter(r => r.procedureId === procedureId);
 
-      // 按 questionId 聚合多小问记录，保证每道题在集合中只出现一次，同时完整保留小问级关联信息
       const groupedByQuestion = new Map();
       rawRecords.forEach(record => {
         const q = questionMap.get(record.questionId);
@@ -523,7 +518,6 @@
         });
       });
 
-      // 稳定排序：优先按显式 order 升序，次选按 questionId 字典序，绝不依赖数组偶然顺序
       const items = Array.from(groupedByQuestion.values()).sort((a, b) => {
         if (a.order !== b.order) return a.order - b.order;
         return a.questionId.localeCompare(b.questionId, 'en');
@@ -541,12 +535,10 @@
       };
     },
 
-    // 动态生成全部程序性知识题目集合
     getAllCollections() {
-      return this.getAllProcedures().map(proc => this.getQuestionCollectionByProcedure(proc.id));
+      return this.getAllProcedures().map(proc => this.getQuestionCollectionByProcedure(proc.id)).filter(Boolean);
     },
 
-    // 数据完整性与质量校验函数
     validateData() {
       const errors = [];
       const warnings = [];
@@ -606,7 +598,6 @@
         }
       });
 
-      // 校验每个集合内不同题目的 order 唯一性（确保稳定排序）
       procedures.forEach(p => {
         const col = this.getQuestionCollectionByProcedure(p.id);
         const orderMap = new Map();
@@ -632,6 +623,162 @@
         errors,
         warnings
       };
+    }
+  };
+
+  // Render procedural knowledge tags & sub-question operation breakdown inside a question card
+  window.renderQuestionProceduralTagsHtml = function (questionId) {
+    const records = ProceduralKnowledgeService.getProceduresForQuestion(questionId);
+    if (!records || records.length === 0) return '';
+
+    const first = records[0];
+    const proc = first.procedure;
+    if (!proc) return '';
+
+    const hasSubparts = records.some(r => r.partId !== null);
+    const partsHtml = hasSubparts
+      ? `<div class="mt-1.5 space-y-1 pl-2 border-l-2 border-teal-200/80 text-[11px] text-slate-600">
+          ${records.map(r => {
+            const advBadge = r.inCollectionOrder === true && r.partId
+              ? `<span class="px-1.5 py-0.2 rounded bg-amber-100 text-amber-800 font-semibold">集合进阶定位小问</span>`
+              : r.role === 'secondary'
+              ? `<span class="px-1.5 py-0.2 rounded bg-slate-100 text-slate-600">次要关联/含变形依赖</span>`
+              : '';
+            return `<div class="flex flex-wrap items-center gap-1.5">
+              <span class="font-semibold text-[#0F766E]">小问 ${escapeHtml(r.partId || '')}</span>
+              ${advBadge}
+              <span>${escapeHtml(r.operationSummary)}</span>
+            </div>`;
+          }).join('')}
+        </div>`
+      : `<div class="mt-1 text-[11px] text-slate-600 pl-2 border-l-2 border-teal-200/80">
+          <span class="font-semibold text-slate-700">解题操作拆解：</span>${escapeHtml(first.operationSummary)}
+        </div>`;
+
+    return `
+      <div data-html2canvas-ignore="true" class="mt-2.5 pt-2 border-t border-dashed border-teal-200/70 text-xs">
+        <div class="flex flex-wrap items-center justify-between gap-1.5">
+          <div class="flex flex-wrap items-center gap-1.5">
+            <span class="text-[11px] text-[#0F766E] font-bold flex items-center gap-1">
+              <span>⚡ 程序性知识：</span>
+            </span>
+            <button type="button" class="btn-jump-to-proc inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-[#F0FDFA] hover:bg-[#CCFBF1] text-[#0F766E] border border-[#99F6E4] transition" data-jump-proc="${escapeHtml(proc.id)}" title="点击查看「${escapeHtml(proc.id)} ${escapeHtml(proc.name)}」完整题目集合">
+              <span class="px-1 rounded bg-[#0F766E] text-white text-[10px] font-bold">${escapeHtml(proc.id)}</span>
+              <span>${escapeHtml(proc.name)}</span>
+              <span class="text-[10px] text-teal-700 font-bold">· 集合排序 #${first.order}</span>
+            </button>
+          </div>
+          <span class="text-[10px] px-1.5 py-0.5 rounded bg-amber-50 text-amber-700 border border-amber-200 font-medium">待审核</span>
+        </div>
+        ${partsHtml}
+      </div>
+    `;
+  };
+
+  // Render Procedural Knowledge Collection Header Banner in Question Bank / Graph View
+  window.renderProceduralCollectionBannerHtml = function (procedureId) {
+    const col = ProceduralKnowledgeService.getQuestionCollectionByProcedure(procedureId);
+    if (!col) return '';
+    const p = col.procedure;
+    const allCols = ProceduralKnowledgeService.getAllCollections();
+
+    const switcherHtml = allCols.map(c => {
+      const isAct = c.procedure.id === p.id;
+      return `
+        <button type="button" class="btn-switch-proc-col px-3 py-1.5 rounded-lg text-xs font-semibold transition border ${isAct ? 'bg-[#0F766E] text-white border-[#0F766E]' : 'bg-white text-slate-700 border-slate-200 hover:border-[#0F766E] hover:text-[#0F766E]'}" data-proc-col="${escapeHtml(c.procedure.id)}">
+          <span>${escapeHtml(c.procedure.id)} · ${escapeHtml(c.procedure.name)}</span>
+          <span class="ml-1 text-[11px] ${isAct ? 'text-teal-100' : 'text-slate-400'}">(${c.totalQuestions}题)</span>
+        </button>
+      `;
+    }).join('');
+
+    const stepsHtml = (p.procedure || []).map(st => {
+      const casesHtml = Array.isArray(st.cases)
+        ? `<div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-1.5">
+            ${st.cases.map(cs => `
+              <div class="p-2 rounded-lg bg-white border border-teal-100 text-[11px]">
+                <div class="font-bold text-[#0F766E]">• ${escapeHtml(cs.name)}</div>
+                <div class="text-slate-600 mt-0.5">${escapeHtml(cs.operation)}</div>
+              </div>
+            `).join('')}
+          </div>`
+        : '';
+      return `
+        <div class="text-xs text-slate-700">
+          <div><span class="font-bold text-[#0F766E]">步骤 ${st.step}（${escapeHtml(st.action)}）：</span>${escapeHtml(st.detail || '')}</div>
+          ${casesHtml}
+        </div>
+      `;
+    }).join('');
+
+    const prereqHtml = (p.prerequisites || []).map(pr => `
+      <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-amber-50/80 text-amber-900 border border-amber-200 text-[11px]">
+        <span>${escapeHtml(pr.id ? `${pr.id} ${pr.name}` : pr.name)}</span>
+        <span class="text-[10px] text-amber-600">[前置未验证]</span>
+      </span>
+    `).join('');
+
+    return `
+      <div class="ui-card p-4 bg-gradient-to-br from-[#F0FDFA] to-white border-[#99F6E4] space-y-3">
+        <div class="flex flex-wrap items-center justify-between gap-2 pb-2.5 border-b border-teal-100">
+          <div class="flex items-center gap-2">
+            <span class="px-2 py-0.5 rounded bg-[#0F766E] text-white text-xs font-bold">⚡ 程序性知识题目集合</span>
+            <span class="text-xs text-slate-500">第一批样本（共 29 题 · 动态聚合生成）</span>
+          </div>
+          <div class="flex flex-wrap items-center gap-1.5">
+            ${switcherHtml}
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-start justify-between gap-2">
+          <div>
+            <div class="flex items-center gap-2">
+              <h3 class="text-sm sm:text-base font-bold text-slate-900">${escapeHtml(p.id)}：${escapeHtml(p.name)}</h3>
+              <span class="px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200 text-[11px] font-semibold">状态：待审核 (pending_review)</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-[#0F766E] text-white text-xs font-bold">${col.totalQuestions} 道样本题（已按进阶顺序 1→${col.totalQuestions} 排列）</span>
+            </div>
+            <p class="text-xs text-slate-600 mt-1"><b>核心目标：</b>${escapeHtml(p.purpose)}</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1 text-xs">
+          <div class="p-3 rounded-xl bg-white/90 border border-slate-200/80 space-y-1.5">
+            <div class="font-bold text-slate-800">🎯 适用条件（Conditions）</div>
+            <ul class="list-disc list-inside space-y-1 text-slate-600 text-[11px]">
+              ${(p.conditions || []).map(c => `<li>${escapeHtml(c)}</li>`).join('')}
+            </ul>
+          </div>
+          <div class="p-3 rounded-xl bg-white/90 border border-slate-200/80 space-y-1.5">
+            <div class="font-bold text-slate-800">🛠️ 可复用解题程序（Procedure）</div>
+            <div class="space-y-1.5">${stepsHtml}</div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-2 pt-1 text-xs">
+          <div class="flex flex-wrap items-center gap-1.5">
+            <span class="text-slate-500 font-semibold">⏪ 前置依赖：</span>
+            ${prereqHtml}
+          </div>
+          ${p.relatedNote ? `<div class="text-[11px] text-slate-500">${escapeHtml(p.relatedNote)}</div>` : ''}
+        </div>
+      </div>
+    `;
+  };
+
+  window.jumpToProceduralCollection = function (procedureId) {
+    if (!ProceduralKnowledgeService.getProcedureById(procedureId)) return;
+    if (typeof switchView === 'function' && state.currentView !== 'bank') {
+      switchView('bank');
+    }
+    state.chapterFilter = `proc:${procedureId}`;
+    state.currentPage = 1;
+    if (typeof saveUiPreferences === 'function') saveUiPreferences();
+    if (typeof syncUiToState === 'function') syncUiToState();
+    if (typeof renderQuestionList === 'function') renderQuestionList();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (typeof showToast === 'function') {
+      const p = ProceduralKnowledgeService.getProcedureById(procedureId);
+      showToast(`已切换至程序性知识集合：${p.id} ${p.name}`, 'info');
     }
   };
 

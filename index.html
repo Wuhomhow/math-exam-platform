@@ -42,14 +42,18 @@
 
         <!-- Navigation Tabs -->
         <nav class="flex items-center gap-1 rounded-lg bg-slate-100 border border-slate-200 p-1">
-          <button id="navBankBtn" type="button" onclick="if(typeof switchView==='function')switchView('bank')" class="nav-tab is-active px-4 py-1.5 rounded-md text-sm font-semibold transition-all">
+          <button id="navBankBtn" type="button" onclick="if(typeof switchView==='function')switchView('bank')" class="nav-tab is-active px-3.5 py-1.5 rounded-md text-sm font-semibold transition-all">
             题库选题
           </button>
-          <button id="navGraphBtn" type="button" onclick="if(typeof switchView==='function')switchView('graph')" class="nav-tab px-4 py-1.5 rounded-md text-sm font-semibold transition-all flex items-center gap-1.5">
+          <button id="navGraphBtn" type="button" onclick="if(typeof switchView==='function')switchView('graph')" class="nav-tab px-3.5 py-1.5 rounded-md text-sm font-semibold transition-all flex items-center gap-1.5">
             <span>🕸️</span>
             <span>题目图谱</span>
           </button>
-          <button id="navPaperBtn" type="button" onclick="if(typeof switchView==='function')switchView('paper')" class="nav-tab px-4 py-1.5 rounded-md text-sm font-medium transition-all">
+          <button id="navProceduralBtn" type="button" onclick="if(typeof switchView==='function')switchView('procedural')" class="nav-tab px-3.5 py-1.5 rounded-md text-sm font-semibold transition-all flex items-center gap-1.5">
+            <span>⚡</span>
+            <span>程序性知识</span>
+          </button>
+          <button id="navPaperBtn" type="button" onclick="if(typeof switchView==='function')switchView('paper')" class="nav-tab px-3.5 py-1.5 rounded-md text-sm font-medium transition-all">
             试卷排版与预览
           </button>
         </nav>
@@ -80,9 +84,10 @@
   <!-- Mobile Tab Switcher -->
   <div class="md:hidden px-4 py-2 border-b border-slate-200 bg-white no-print">
     <div class="flex gap-1 rounded-lg bg-slate-100 border border-slate-200 p-1">
-      <button id="mobileNavBank" type="button" onclick="if(typeof switchView==='function')switchView('bank')" class="nav-tab is-active flex-1 py-1.5 rounded-md text-center text-sm font-semibold transition-all">题库选题</button>
-      <button id="mobileNavGraph" type="button" onclick="if(typeof switchView==='function')switchView('graph')" class="nav-tab flex-1 py-1.5 rounded-md text-center text-sm font-semibold transition-all">🕸️ 题目图谱</button>
-      <button id="mobileNavPaper" type="button" onclick="if(typeof switchView==='function')switchView('paper')" class="nav-tab flex-1 py-1.5 rounded-md text-center text-sm font-medium transition-all">试卷排版</button>
+      <button id="mobileNavBank" type="button" onclick="if(typeof switchView==='function')switchView('bank')" class="nav-tab is-active flex-1 py-1.5 rounded-md text-center text-xs sm:text-sm font-semibold transition-all">题库选题</button>
+      <button id="mobileNavGraph" type="button" onclick="if(typeof switchView==='function')switchView('graph')" class="nav-tab flex-1 py-1.5 rounded-md text-center text-xs sm:text-sm font-semibold transition-all">🕸️ 题目图谱</button>
+      <button id="mobileNavProcedural" type="button" onclick="if(typeof switchView==='function')switchView('procedural')" class="nav-tab flex-1 py-1.5 rounded-md text-center text-xs sm:text-sm font-semibold transition-all">⚡ 程序性知识</button>
+      <button id="mobileNavPaper" type="button" onclick="if(typeof switchView==='function')switchView('paper')" class="nav-tab flex-1 py-1.5 rounded-md text-center text-xs sm:text-sm font-medium transition-all">试卷排版</button>
     </div>
   </div>
 
@@ -120,7 +125,7 @@
             </button>
             <button id="treeChapterAll" type="button" class="chapter-tree-btn is-active w-full flex items-center justify-between gap-3 px-3 py-2.5 rounded-lg border border-slate-200 text-sm font-semibold" data-chapter="all">
               <span>已选题库</span>
-              <span id="allQuestionCount" class="text-xs font-bold">2153 题</span>
+              <span id="allQuestionCount" class="text-xs font-bold">2178 题</span>
             </button>
             <div id="chapterNavigationTree" class="space-y-3" aria-label="按年级和册次浏览题目"></div>
           </div>
@@ -211,7 +216,7 @@
             <span class="w-8 h-8 rounded-lg bg-[#F0FDFA] border border-[#CCFBF1] text-[#0F766E] flex items-center justify-center font-bold text-sm">🕸️</span>
             <div>
               <h2 class="text-sm sm:text-base font-bold text-slate-900">数学题目知识图谱</h2>
-              <p class="text-[11px] text-slate-500">覆盖六至九年级 88 个知识节点 · 69 条教学关系 · 2,153 道题目双向关联</p>
+              <p class="text-[11px] text-slate-500">覆盖六至九年级 88 个知识节点 · 69 条教学关系 · 2,178 道题目双向关联</p>
             </div>
           </div>
           <div id="graphSearchBoxWrapper" class="relative flex-1 max-w-xs ml-auto sm:ml-2">
@@ -365,6 +370,72 @@
       <div id="graphQuestionListContainer" class="space-y-4"></div>
       <div id="graphQuestionPagination" class="hidden ui-card p-3.5 flex items-center justify-center text-xs"></div>
     </section>
+  </main>
+
+  <!-- VIEW 1.8: 程序性知识模块 (Procedural Knowledge Explorer) -->
+  <main id="viewProceduralKnowledge" class="hidden flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 no-print space-y-5">
+    <!-- 层级 1 & 2：程序性知识首页 & 章节下的程序性知识列表 -->
+    <div id="procHomeSection" class="space-y-5">
+      <!-- 顶部模块说明与检索筛选栏 -->
+      <div class="ui-card p-5 space-y-4">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-xl bg-[#F0FDFA] border border-[#CCFBF1] text-[#0F766E] flex items-center justify-center text-lg font-bold shrink-0">⚡</div>
+            <div>
+              <div class="flex items-center gap-2.5">
+                <h1 class="text-lg sm:text-xl font-bold text-slate-900">程序性知识</h1>
+                <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-[#F0FDFA] text-[#0F766E] border border-[#CCFBF1]">已通过审核 · 独立模块</span>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 mt-1">围绕解题过程中的核心操作，整理同类题目的解题方法。</p>
+            </div>
+          </div>
+
+          <!-- 搜索框 -->
+          <div class="relative w-full md:w-80">
+            <input type="text" id="procSearchInput" placeholder="搜索程序性知识名称或操作关键词..." class="w-full pl-9 pr-3 py-2 rounded-lg border border-slate-200 text-xs sm:text-sm focus:outline-none focus:border-[#0F766E]">
+            <svg class="w-4 h-4 text-slate-400 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </div>
+        </div>
+
+        <!-- 年级筛选 / 学科筛选 -->
+        <div class="pt-3 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3 text-xs">
+          <div class="flex flex-wrap items-center gap-3">
+            <label class="inline-flex items-center gap-1.5 text-slate-600 font-medium">
+              <span>年级筛选：</span>
+              <select id="procFilterGrade" class="rounded-lg border border-slate-200 px-3 py-1.5 text-xs bg-white font-semibold text-slate-700">
+                <option value="all">全部年级</option>
+                <option value="九年级">九年级</option>
+              </select>
+            </label>
+            <label class="inline-flex items-center gap-1.5 text-slate-600 font-medium">
+              <span>学科筛选：</span>
+              <select id="procFilterSubject" class="rounded-lg border border-slate-200 px-3 py-1.5 text-xs bg-white font-semibold text-slate-700">
+                <option value="all">全部学科</option>
+                <option value="数学">数学</option>
+              </select>
+            </label>
+          </div>
+          <button type="button" id="btnProcResetFilters" class="text-slate-500 hover:text-[#0F766E] px-3 py-1.5 rounded-lg border border-slate-200 hover:border-[#0F766E] transition font-medium">
+            重置筛选
+          </button>
+        </div>
+      </div>
+
+      <!-- 主体双栏：左侧章节分类导航 + 右侧程序性知识集合卡片列表 -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        <aside class="lg:col-span-3 ui-card p-4 lg:sticky lg:top-20">
+          <div id="procChapterSidebar"></div>
+        </aside>
+        <section class="lg:col-span-9">
+          <div id="procCollectionListContainer"></div>
+        </section>
+      </div>
+    </div>
+
+    <!-- 层级 3：单项程序性知识详情页 -->
+    <div id="procDetailSection" class="hidden"></div>
   </main>
 
   <!-- VIEW 2: 试卷排版与预览中心 (Exam Paper Preview & Print) -->
@@ -579,7 +650,8 @@
   <script src="js/modules/knowledge-graph/graph-network.js"></script>
   <script src="js/modules/knowledge-graph/graph-detail.js"></script>
 
-  <!-- 5. 业务视图渲染与 Word 导出引擎 -->
+  <!-- 5. 程序性知识独立模块与业务视图渲染、Word 导出引擎 -->
+  <script src="js/modules/procedural/procedural-view.js"></script>
   <script src="js/modules/render.js"></script>
   <script src="js/modules/docx-export.js"></script>
 

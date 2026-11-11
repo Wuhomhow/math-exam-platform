@@ -223,13 +223,7 @@
       const kpListEl = document.getElementById('graphQuestionKpFilterList');
       if (!listEl || !node) return;
 
-      const activeProcId = window.GraphState.activeProcedureId || null;
-      const activeProcCol = (activeProcId && window.ProceduralKnowledgeService)
-        ? window.ProceduralKnowledgeService.getQuestionCollectionByProcedure(activeProcId)
-        : null;
-      const allEntries = activeProcCol
-        ? activeProcCol.items.map(it => ({ question: it.question, role: it.role || 'primary' }))
-        : window.GraphData.getQuestionsForNode(node.id, true);
+      const allEntries = window.GraphData.getQuestionsForNode(node.id, true);
 
       // Build knowledge point metadata & question-to-KPs lookup across allEntries
       const qKpMap = new Map(); // questionId -> [{ node, role }]
@@ -452,10 +446,7 @@
       const startIdx = (window.GraphState.qPage - 1) * pageSize;
       const pageItems = filteredEntries.slice(startIdx, startIdx + pageSize);
 
-      const procBannerHtml = (activeProcId && typeof window.renderProceduralCollectionBannerHtml === 'function')
-        ? window.renderProceduralCollectionBannerHtml(activeProcId)
-        : '';
-      listEl.innerHTML = procBannerHtml + pageItems.map((entry, idx) => {
+      listEl.innerHTML = pageItems.map((entry, idx) => {
         const q = entry.question;
         const qNumber = startIdx + idx + 1;
         const isSelected = state.selectedIds.has(q.id);
@@ -587,7 +578,6 @@
       listEl.querySelectorAll('[data-jump-graph-node]').forEach(btn => {
         btn.addEventListener('click', () => {
           const nid = btn.getAttribute('data-jump-graph-node');
-          window.GraphState.activeProcedureId = null;
           window.GraphFilter.selectNode(nid);
           window.scrollTo({ top: 0, behavior: 'smooth' });
         });
@@ -596,10 +586,8 @@
       listEl.querySelectorAll('[data-jump-proc], [data-proc-col]').forEach(btn => {
         btn.addEventListener('click', () => {
           const pid = btn.getAttribute('data-jump-proc') || btn.getAttribute('data-proc-col');
-          if (pid) {
-            window.GraphState.activeProcedureId = pid;
-            window.GraphState.qPage = 1;
-            window.GraphFilter.refreshAllViews({ keepNetworkTransform: true });
+          if (pid && typeof window.jumpToProceduralCollection === 'function') {
+            window.jumpToProceduralCollection(pid);
           }
         });
       });

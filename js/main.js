@@ -438,10 +438,12 @@ function initEvents() {
   // Navigation
   document.getElementById('navBankBtn')?.addEventListener('click', () => switchView('bank'));
   document.getElementById('navGraphBtn')?.addEventListener('click', () => switchView('graph'));
+  document.getElementById('navProceduralBtn')?.addEventListener('click', () => switchView('procedural'));
   document.getElementById('navPaperBtn')?.addEventListener('click', () => switchView('paper'));
 
   document.getElementById('mobileNavBank')?.addEventListener('click', () => switchView('bank'));
   document.getElementById('mobileNavGraph')?.addEventListener('click', () => switchView('graph'));
+  document.getElementById('mobileNavProcedural')?.addEventListener('click', () => switchView('procedural'));
   document.getElementById('mobileNavPaper')?.addEventListener('click', () => switchView('paper'));
 
   // 返回按钮
@@ -642,6 +644,7 @@ function bootstrapApp() {
   if (window.GraphData) window.GraphData.init();
   if (window.GraphFilter) window.GraphFilter.init();
   if (window.GraphDetail) window.GraphDetail.bindQuestionFilterBar();
+  if (window.ProceduralView) window.ProceduralView.init();
   buildChapterNavigation();
   initEvents();
   syncUiToState();

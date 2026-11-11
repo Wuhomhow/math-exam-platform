@@ -32,37 +32,7 @@
         return;
       }
 
-      let procSidebarHtml = '';
-      if (window.ProceduralKnowledgeService && typeof window.ProceduralKnowledgeService.getAllCollections === 'function') {
-        const procCols = window.ProceduralKnowledgeService.getAllCollections();
-        const totalProc = procCols.reduce((s, c) => s + c.totalQuestions, 0);
-        const activeProc = window.GraphState.activeProcedureId || null;
-        if (procCols.length > 0) {
-          procSidebarHtml = `
-            <div class="border border-[#99F6E4] rounded-xl overflow-hidden bg-[#F0FDFA]/60 mb-3 shadow-sm">
-              <div class="flex items-center justify-between px-3 py-2 bg-[#F0FDFA] border-b border-[#CCFBF1]">
-                <span class="text-xs font-bold text-[#0F766E] flex items-center gap-1">
-                  <span>⚡</span><span>程序性知识集合（新）</span>
-                </span>
-                <span class="text-[11px] font-bold text-[#115E59] bg-white px-2 py-0.5 rounded-full border border-[#CCFBF1]">${totalProc} 题</span>
-              </div>
-              <div class="p-2 space-y-1 bg-white">
-                ${procCols.map(c => {
-                  const isAct = activeProc === c.procedure.id;
-                  return `
-                    <button type="button" class="w-full text-left px-2.5 py-1.5 rounded-md text-xs flex items-center justify-between gap-2 transition ${isAct ? 'bg-[#0F766E] text-white font-semibold shadow-sm' : 'text-slate-700 hover:bg-[#F0FDFA] hover:text-[#0F766E]'}" data-select-graph-proc="${escapeHtml(c.procedure.id)}">
-                      <span class="truncate"><b class="${isAct ? 'text-white' : 'text-[#0F766E]'}">${escapeHtml(c.procedure.id)}</b> ${escapeHtml(c.procedure.name)}</span>
-                      <span class="text-[10px] px-1.5 py-0.5 rounded-full shrink-0 ${isAct ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-500'}">${c.totalQuestions}</span>
-                    </button>
-                  `;
-                }).join('')}
-              </div>
-            </div>
-          `;
-        }
-      }
-
-      container.innerHTML = procSidebarHtml + domains.map(dom => {
+      container.innerHTML = domains.map(dom => {
         const isDomOpen = window.GraphState.expandedIds.has(dom.id);
         const domSelected = window.GraphState.selectedNodeId === dom.id;
         const domQCount = window.GraphData.getQuestionsForNode(dom.id, true).length;
@@ -148,19 +118,7 @@
         btn.addEventListener('click', (e) => {
           e.stopPropagation();
           const nid = btn.getAttribute('data-select-node');
-          window.GraphState.activeProcedureId = null;
           window.GraphFilter.selectNode(nid);
-        });
-      });
-
-      container.querySelectorAll('button[data-select-graph-proc]').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          e.stopPropagation();
-          const pid = btn.getAttribute('data-select-graph-proc');
-          window.GraphState.activeProcedureId = pid;
-          window.GraphState.selectedNodeId = 'kp_g9_qe_solve';
-          window.GraphState.qPage = 1;
-          window.GraphFilter.refreshAllViews({ keepNetworkTransform: true });
         });
       });
     },

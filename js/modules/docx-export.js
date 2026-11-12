@@ -230,6 +230,11 @@
         .replace(/\\,/g, ' ')
         .replace(/\\(?:qquad|quad|enspace)\b/g, '  ')
         .replace(/\\[;:!]/g, ' ')
+        .replace(/\\overset\{\\frown\}\{([^{}]*)\}/g, '$1⏜')
+        .replace(/\\wideparen\{([^{}]*)\}/g, '$1⏜')
+        .replace(/\\odot\b/g, '⊙')
+        .replace(/\\backsim\b/g, '∽')
+        .replace(/\\sim\b/g, '∽')
         .replace(/\\angle\b/g, '∠')
         .replace(/\\circ\b/g, '°')
         .replace(/\\parallel\b/g, '∥')
@@ -549,7 +554,7 @@
     }
 
     function makeDrawingXml(rId, cx = '2232000', cy = '600923', docPrId = 1) {
-      return `<w:r><w:drawing><wp:inline xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture"><wp:extent cx="${cx}" cy="${cy}"/><wp:docPr id="1" name="Picture 1"/><wp:cNvGraphicFramePr><a:graphicFrameLocks noChangeAspect="1"/></wp:cNvGraphicFramePr><a:graphic><a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:pic><pic:nvPicPr><pic:cNvPr id="0" name="image1.png"/><pic:cNvPicPr/></pic:nvPicPr><pic:blipFill><a:blip r:embed="${rId}"/><a:stretch><a:fillRect/></a:stretch></pic:blipFill><pic:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="${cx}" cy="${cy}"/></a:xfrm><a:prstGeom prst="rect"/></pic:spPr></pic:pic></a:graphicData></a:graphic></wp:inline></w:drawing></w:r>`;
+      return `<w:r><w:drawing><wp:inline xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture"><wp:extent cx="${cx}" cy="${cy}"/><wp:docPr id="${docPrId}" name="Picture ${docPrId}"/><wp:cNvGraphicFramePr><a:graphicFrameLocks noChangeAspect="1"/></wp:cNvGraphicFramePr><a:graphic><a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:pic><pic:nvPicPr><pic:cNvPr id="${docPrId}" name="image${docPrId}.png"/><pic:cNvPicPr/></pic:nvPicPr><pic:blipFill><a:blip r:embed="${rId}"/><a:stretch><a:fillRect/></a:stretch></pic:blipFill><pic:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="${cx}" cy="${cy}"/></a:xfrm><a:prstGeom prst="rect"/></pic:spPr></pic:pic></a:graphicData></a:graphic></wp:inline></w:drawing></w:r>`;
     }
 
     function base64ToUint8Array(b64) {
@@ -560,8 +565,45 @@
       return bytes;
     }
 
+    function getImageDimensionsFromBytes(bytes) {
+      if (!bytes || bytes.length < 24) return null;
+      // PNG: 89 50 4E 47 0D 0A 1A 0A, IHDR width/height at offset 16..23
+      if (bytes[0] === 0x89 && bytes[1] === 0x50 && bytes[2] === 0x4E && bytes[3] === 0x47) {
+        const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
+        const width = view.getUint32(16, false);
+        const height = view.getUint32(20, false);
+        if (width > 0 && height > 0) return { width, height };
+      }
+      // GIF: GIF87a / GIF89a
+      if (bytes[0] === 0x47 && bytes[1] === 0x49 && bytes[2] === 0x46) {
+        const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
+        const width = view.getUint16(6, true);
+        const height = view.getUint16(8, true);
+        if (width > 0 && height > 0) return { width, height };
+      }
+      // JPEG: FF D8 ... SOF0/SOF1/SOF2/SOF3
+      if (bytes[0] === 0xFF && bytes[1] === 0xD8) {
+        let offset = 2;
+        while (offset + 8 < bytes.length) {
+          if (bytes[offset] !== 0xFF) break;
+          const marker = bytes[offset + 1];
+          if (marker === 0xD9 || marker === 0xDA) break;
+          if (marker >= 0xC0 && marker <= 0xC3) {
+            const height = (bytes[offset + 5] << 8) | bytes[offset + 6];
+            const width = (bytes[offset + 7] << 8) | bytes[offset + 8];
+            if (width > 0 && height > 0) return { width, height };
+            break;
+          }
+          const segLen = (bytes[offset + 2] << 8) | bytes[offset + 3];
+          if (segLen < 2) break;
+          offset += 2 + segLen;
+        }
+      }
+      return null;
+    }
+
     async function ensureImageBase64Loaded() {
-      if (window.IMAGE_BASE64_MAP && Object.keys(window.IMAGE_BASE64_MAP).length > 200) {
+      if (window._imageBase64AllPartsLoaded) {
         return window.IMAGE_BASE64_MAP;
       }
       window.IMAGE_BASE64_MAP = window.IMAGE_BASE64_MAP || {};
@@ -587,8 +629,11 @@
 
       await Promise.all([
         loadScript('js/data/images-base64-part1.js'),
-        loadScript('js/data/images-base64-part2.js')
+        loadScript('js/data/images-base64-part2.js'),
+        loadScript('js/data/images-base64-part3.js'),
+        loadScript('js/data/images-base64-part4.js')
       ]);
+      window._imageBase64AllPartsLoaded = true;
 
       return window.IMAGE_BASE64_MAP;
     }
@@ -655,7 +700,10 @@
         }
       }));
 
-      function registerImageTag(imgTag, maxCx = 3200000) {
+      const defaultMaxCx = isDouble ? 1500000 : 1800000;
+      const defaultMaxCy = isDouble ? 1250000 : 1450000;
+
+      function registerImageTag(imgTag, maxCx = defaultMaxCx, maxCy = defaultMaxCy) {
         const srcM = imgTag.match(/src=["']([^"']+)["']/i);
         if (!srcM) return '';
         const src = srcM[1];
@@ -673,12 +721,31 @@
 
         const cxM = imgTag.match(/data-cx="(\d+)"/);
         const cyM = imgTag.match(/data-cy="(\d+)"/);
-        let cx = cxM ? parseInt(cxM[1], 10) : 2200000;
-        let cy = cyM ? parseInt(cyM[1], 10) : 600000;
-        if (cx > maxCx) {
-          const ratio = maxCx / cx;
-          cx = Math.round(cx * ratio);
-          cy = Math.round(cy * ratio);
+        let cx;
+        let cy;
+        if (cxM && cyM) {
+          cx = parseInt(cxM[1], 10);
+          cy = parseInt(cyM[1], 10);
+        } else {
+          const dims = getImageDimensionsFromBytes(imgBytes);
+          const styleWidthM = imgTag.match(/(?:max-)?width\s*:\s*(\d+)px/i);
+          if (styleWidthM) {
+            cx = parseInt(styleWidthM[1], 10) * 5200;
+          } else if (dims) {
+            cx = dims.width * 5200;
+          } else {
+            cx = maxCx;
+          }
+          if (dims && dims.width > 0 && dims.height > 0) {
+            cy = Math.round(cx * (dims.height / dims.width));
+          } else {
+            cy = Math.round(cx * 0.75);
+          }
+        }
+        const scale = Math.min(1, maxCx / cx, maxCy / cy);
+        if (scale < 1) {
+          cx = Math.round(cx * scale);
+          cy = Math.round(cy * scale);
         }
         const idNum = imgCounter++;
         const rId = `rIdImg${idNum}`;
@@ -694,7 +761,8 @@
         const bold = opts.bold ? '<w:b/><w:bCs/>' : '';
         const color = opts.color ? `<w:color w:val="${opts.color}"/>` : '';
         const font = opts.font || '宋体';
-        const maxCx = opts.maxCx || 3200000;
+        const maxCx = opts.maxCx || defaultMaxCx;
+        const maxCy = opts.maxCy || defaultMaxCy;
         const rPr = `<w:rPr><w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:eastAsia="${font}" w:cs="Times New Roman"/>${bold}${color}<w:sz w:val="${sz}"/><w:szCs w:val="${sz}"/></w:rPr>`;
 
         const imgSplit = String(text).split(/(<img[^>]+>)/g);
@@ -702,7 +770,7 @@
         for (const seg of imgSplit) {
           if (!seg) continue;
           if (seg.startsWith('<img')) {
-            xml += registerImageTag(seg, maxCx);
+            xml += registerImageTag(seg, maxCx, maxCy);
           } else {
             const parts = seg.split(/\$([^$]+)\$/g);
             for (let i = 0; i < parts.length; i++) {
@@ -815,8 +883,13 @@
             const lines = splitHtmlLinesPreserveImg(blk);
             for (let i = 0; i < lines.length; i++) {
               if (!usedFirst) {
-                const lineStr = lines[i] + (firstSuffixText ? ` ${firstSuffixText}` : '');
-                outXml += makeParagraph(firstPrefixXml + textWithMathAndImgToRuns(lineStr, textOpts), pOpts);
+                if (firstPrefixXml && lines[i].trim().startsWith('<img')) {
+                  outXml += makeParagraph(firstPrefixXml + textWithMathAndImgToRuns(firstSuffixText, textOpts), pOpts);
+                  outXml += makeParagraph(textWithMathAndImgToRuns(lines[i], textOpts), { ...pOpts, indent: 360, before: 20, after: 20 });
+                } else {
+                  const lineStr = lines[i] + (firstSuffixText ? ` ${firstSuffixText}` : '');
+                  outXml += makeParagraph(firstPrefixXml + textWithMathAndImgToRuns(lineStr, textOpts), pOpts);
+                }
                 usedFirst = true;
               } else {
                 outXml += makeParagraph(textWithMathAndImgToRuns(lines[i], textOpts), { ...pOpts, indent: 360, before: 20, after: 20 });
@@ -828,14 +901,16 @@
       }
 
       function makeOptionsTable(options) {
-        // Use full-width rows for unusually long options, and two columns for ordinary choices.
+        // 4 columns for short text options, 2 columns for medium options, 1 column for long options.
+        const hasImg = options.some(option => /<img/i.test(option));
         const maxLen = Math.max(...options.map(option => option
           .replace(/<img[^>]*>/gi, ' image ')
           .replace(/<[^>]*>/g, '')
           .replace(/\$([^$]+)\$/g, (_, tex) => tex).length));
-        const cols = maxLen > 65 ? 1 : 2;
+        const cols = (!hasImg && maxLen <= 14) ? 4 : (maxLen > 65 ? 1 : 2);
         const colWidth = Math.floor(9000 / cols);
-        const maxImgCx = cols === 1 ? 4200000 : 2300000;
+        const maxImgCx = cols === 1 ? 1800000 : (cols === 4 ? 1100000 : 1450000);
+        const maxImgCy = cols === 1 ? 1350000 : (cols === 4 ? 950000 : 1150000);
 
         let rowsXml = '';
         for (let r = 0; r < options.length; r += cols) {
@@ -843,7 +918,11 @@
           let cellsXml = '';
           for (let c = 0; c < cols; c++) {
             const optText = slice[c] || '';
-            cellsXml += `<w:tc><w:tcPr><w:tcW w:w="${colWidth}" w:type="dxa"/></w:tcPr>${makeParagraph(textWithMathAndImgToRuns(optText, { sz: 21, maxCx: maxImgCx }), { before: 20, after: 20, line: 280 })}</w:tc>`;
+            const optLines = splitHtmlLinesPreserveImg(optText);
+            const cellContentXml = optLines.length > 0
+              ? optLines.map(line => makeParagraph(textWithMathAndImgToRuns(line, { sz: 21, maxCx: maxImgCx, maxCy: maxImgCy }), { before: 20, after: 20, line: 280 })).join('')
+              : makeParagraph('', { before: 20, after: 20, line: 280 });
+            cellsXml += `<w:tc><w:tcPr><w:tcW w:w="${colWidth}" w:type="dxa"/></w:tcPr>${cellContentXml}</w:tc>`;
           }
           rowsXml += `<w:tr>${cellsXml}</w:tr>`;
         }
@@ -863,7 +942,11 @@
 
       let bodyXml = makeParagraph(
         textWithMathAndImgToRuns(paperTitle, { sz: 32, bold: true, font: '黑体' }),
-        { align: 'center', before: 180, after: 100 }
+        { align: 'center', before: 180, after: 80 }
+      );
+      bodyXml += makeParagraph(
+        textWithMathAndImgToRuns('学校:___________姓名：___________班级：___________考号：___________', { sz: 20 }),
+        { align: 'center', before: 20, after: 100 }
       );
       if (isTeacher) {
         bodyXml += makeParagraph(
@@ -886,7 +969,7 @@
           const qIsCalc = isCalc !== null ? isCalc : q.type === 'calc';
           out += renderRichContentToWordXml(
             q.stem,
-            textWithMathAndImgToRuns(`${num}. `, { sz: 21, bold: true }),
+            textWithMathAndImgToRuns(`${num}．`, { sz: 21, bold: true }),
             '',
             { sz: 21 },
             { before: 120, after: 40 }
@@ -913,6 +996,18 @@
               { sz: 19, color: '0F766E' },
               { indent: 360, before: 40, after: 20 }
             );
+            if (q.difficulty) {
+              out += makeParagraph(
+                textWithMathAndImgToRuns('【难度】', { sz: 19, bold: true, color: '475569' }) + textWithMathAndImgToRuns(q.difficulty, { sz: 19, color: '475569' }),
+                { indent: 360, before: 20, after: 20 }
+              );
+            }
+            if (q.knowledge) {
+              out += makeParagraph(
+                textWithMathAndImgToRuns('【知识点】', { sz: 19, bold: true, color: '475569' }) + textWithMathAndImgToRuns(q.knowledge, { sz: 19, color: '475569' }),
+                { indent: 360, before: 20, after: 20 }
+              );
+            }
             if (q.analysis) {
               out += renderRichContentToWordXml(
                 q.analysis,
@@ -941,7 +1036,7 @@
       } else {
         if (choices.length > 0) {
           bodyXml += makeParagraph(
-            textWithMathAndImgToRuns(`一、选择题（本大题共 ${choices.length} 小题，在每小题列出的选项中，选出符合题目的一项）`, { sz: 22, bold: true, font: '黑体' }),
+            textWithMathAndImgToRuns('一、单选题', { sz: 22, bold: true, font: '黑体' }),
             { before: 180, after: 80 }
           );
           bodyXml += renderQuestionListXml(choices, true, false);
@@ -949,7 +1044,7 @@
 
         if (blanks.length > 0) {
           bodyXml += makeParagraph(
-            textWithMathAndImgToRuns(`二、填空题（本大题共 ${blanks.length} 小题）`, { sz: 22, bold: true, font: '黑体' }),
+            textWithMathAndImgToRuns('二、填空题', { sz: 22, bold: true, font: '黑体' }),
             { before: 200, after: 80 }
           );
           bodyXml += renderQuestionListXml(blanks, false, false, choices.length + 1);
@@ -957,7 +1052,7 @@
 
         if (judges.length > 0) {
           bodyXml += makeParagraph(
-            textWithMathAndImgToRuns(`三、判断题（本大题共 ${judges.length} 小题，请判断正误）`, { sz: 22, bold: true, font: '黑体' }),
+            textWithMathAndImgToRuns('三、判断题', { sz: 22, bold: true, font: '黑体' }),
             { before: 200, after: 80 }
           );
           bodyXml += renderQuestionListXml(judges, false, false, choices.length + blanks.length + 1);
@@ -965,7 +1060,7 @@
 
         if (calcs.length > 0) {
           bodyXml += makeParagraph(
-            textWithMathAndImgToRuns(`四、解答题（本大题共 ${calcs.length} 小题。解答应写出文字说明、演算步骤或推证过程）`, { sz: 22, bold: true, font: '黑体' }),
+            textWithMathAndImgToRuns('四、解答题', { sz: 22, bold: true, font: '黑体' }),
             { before: 200, after: 80 }
           );
           bodyXml += renderQuestionListXml(calcs, false, true, choices.length + blanks.length + judges.length + 1);

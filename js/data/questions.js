@@ -7697,7 +7697,7 @@ window.QUESTION_BANK = [
     ],
     "answer": "B",
     "analysis": "本题考查利用数轴比较大小、利用数轴确定式子的符号，绝对值的意义，有理数运算，根据数轴得出$-1<a<0<1<b$，结合有理数的乘除法及加减运算依次判断即可．",
-    "detail": "解：∵$-1<a<0<1<b$，<br>$\\thereforea+b>0$，$a-b<0$，故①错误，②正确；<br>$\\because-1<a<0<1<b$，<br>∴$a+1>0$，$b-1>0$，$a-1<0$，<br>∴$(b-1)(a+1)>0$，$\\frac{a-1}{|b-1|}<0$，故③正确；④错误；<br>综上所述，正确的有②③．<br>故选：B．"
+    "detail": "解：∵$-1<a<0<1<b$，<br>$\\therefore a+b>0$，$a-b<0$，故①错误，②正确；<br>$\\because -1<a<0<1<b$，<br>∴$a+1>0$，$b-1>0$，$a-1<0$，<br>∴$(b-1)(a+1)>0$，$\\frac{a-1}{|b-1|}<0$，故③正确；④错误；<br>综上所述，正确的有②③．<br>故选：B．"
   },
   {
     "id": "op_oct30_34",
@@ -7750,7 +7750,7 @@ window.QUESTION_BANK = [
     ],
     "answer": "B",
     "analysis": "本题考查了数字类规律探索问题，根据题意找出规律为从第四项起，以$-1$、$0$的顺序循环出现，根据$(2025-3)\\div 2=1011$进而可求解，准确找出规律是解题的关键．",
-    "detail": "解：依题意得：<br>$a_{1}=2$，<br>$a_{2}=-|a_{1}+1|=-|2+1|=-3$，<br>$a_{3}=-|a_{2}+1|=-|-3+1|=-2$，<br>$a_{4}=-|a_{3}+1|=-|-2+1|=-1$，<br>$a_{5}=-|a_{4}+1|=-|-1+1|=0$，<br>$a_{6}=-|a_{5}+1|=-|0+1|=-1$，<br>$\\cdots \\cdots$，<br>$\\therefore$从第四项起，以$-1$、$0$的顺序循环的出现，<br>$\\because (2025-3)\\div 2=1011$，<br>$\\thereforea_{2025}=0$，<br>故选：B．"
+    "detail": "解：依题意得：<br>$a_{1}=2$，<br>$a_{2}=-|a_{1}+1|=-|2+1|=-3$，<br>$a_{3}=-|a_{2}+1|=-|-3+1|=-2$，<br>$a_{4}=-|a_{3}+1|=-|-2+1|=-1$，<br>$a_{5}=-|a_{4}+1|=-|-1+1|=0$，<br>$a_{6}=-|a_{5}+1|=-|0+1|=-1$，<br>$\\cdots \\cdots$，<br>$\\therefore$从第四项起，以$-1$、$0$的顺序循环的出现，<br>$\\because (2025-3)\\div 2=1011$，<br>$\\therefore a_{2025}=0$，<br>故选：B．"
   },
   {
     "id": "exp_1",
@@ -8088,7 +8088,7 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "2",
     "analysis": "本题考查了绝对值与平方的非负性，掌握非负性是解决本题的关键．<br>根据绝对值和平方的非负性，它们的和为零时，每个部分必须为零，从而求出 a 和 b 的值．",
-    "detail": "解：若$|a+1|+{(b-3)}^{2}=0$，<br>∴$|a+1|=0$，${(b-3)}^{2}=0$，<br>$\\thereforea+1=0$，$b-3=0$，<br>解得$a=-1$，$b=3$，<br>∴$a+b=-1+3=2$．<br>故答案为：2．"
+    "detail": "解：若$|a+1|+{(b-3)}^{2}=0$，<br>∴$|a+1|=0$，${(b-3)}^{2}=0$，<br>$\\therefore a+1=0$，$b-3=0$，<br>解得$a=-1$，$b=3$，<br>∴$a+b=-1+3=2$．<br>故答案为：2．"
   },
   {
     "id": "op_oct30_29",
@@ -8640,7 +8640,7 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "(1)①×，②√<br>(2)<br>解：$(4,\\frac{3}{5})$是“共生有理数对”．<br>理由：∵$4-\\frac{3}{5}=\\frac{17}{5}$，$4\\times \\frac{3}{5}+1=\\frac{17}{5}$，<br>∴$4-\\frac{3}{5}=4\\times \\frac{3}{5}+1$，<br>∴$(4,\\frac{3}{5})$是“共生有理数对”；",
     "analysis": "此题考查有理数的四则混合运算，解题关键在于理解题意掌握运算法则．<br>（1）根据“共生有理数对”的定义即可判断；<br>（2）根据“共生有理数对”的定义，构建方程即可解决问题．",
-    "detail": "（1）解：①$\\because-2-1=-3$，$-2\\times 1+1=-1$，<br>∴$-2-1\\neq -2\\times 1+1$，<br>∴$(-2,1)$不是“共生有理数对”，<br>②∵$3-\\frac{1}{2}=\\frac{5}{2}$，$3\\times \\frac{1}{2}+1=\\frac{5}{2}$，<br>∴$3-\\frac{1}{2}=3\\times \\frac{1}{2}+1$，<br>∴$(3,\\frac{1}{2})$是“共生有理数对”；<br>故答案为：①×，②√；<br>（2）略"
+    "detail": "（1）解：①$\\because -2-1=-3$，$-2\\times 1+1=-1$，<br>∴$-2-1\\neq -2\\times 1+1$，<br>∴$(-2,1)$不是“共生有理数对”，<br>②∵$3-\\frac{1}{2}=\\frac{5}{2}$，$3\\times \\frac{1}{2}+1=\\frac{5}{2}$，<br>∴$3-\\frac{1}{2}=3\\times \\frac{1}{2}+1$，<br>∴$(3,\\frac{1}{2})$是“共生有理数对”；<br>故答案为：①×，②√；<br>（2）略"
   },
   {
     "id": "op_oct30_50",
@@ -8908,7 +8908,7 @@ window.QUESTION_BANK = [
     ],
     "answer": "D",
     "analysis": "本题考查了图形规律问题，旨在考查学生的抽象概括能力，由图可知：图 1 有 1 颗弹珠，图 2 有 $1+2=3$ 颗弹珠，图 3 有 $1+2+3=6$ 颗弹珠，推出 $a_{n}=1+2+3+⋯+n=\\frac{n(n+1)}{2}$，即可求解.",
-    "detail": "解：由图可知：图 1 有 1 颗弹珠，图 2 有 $1+2=3$ 颗弹珠，图 3 有 $1+2+3=6$ 颗弹珠，…，$\\therefore a_{n}=1+2+3+⋯+n=\\frac{n(n+1)}{2}$，<br>$\\therefore \\frac{1}{a_{1}}+\\frac{1}{a_{2}}+\\frac{1}{a_{3}}+⋯+\\frac{1}{a_{2024}}$ = $\\frac{2}{1\\times 2}+\\frac{2}{2\\times 3}+\\frac{2}{3\\times 4}+⋯+\\frac{2}{2024\\times 2025}$ = $2\\times (\\frac{1}{1\\times 2}+\\frac{1}{2\\times 3}+\\frac{1}{3\\times 4}+⋯+\\frac{1}{2024\\times 2025})$<br>= $2\\times (1-\\frac{1}{2}+\\frac{1}{2}-\\frac{1}{3}+\\frac{1}{3}-\\frac{1}{4}+⋯+\\frac{1}{2024}-\\frac{1}{2025})$ = $2\\times (1-\\frac{1}{2025})=\\frac{4048}{2025}$. 故选：D.<br>二、填空题"
+    "detail": "解：由图可知：图 1 有 1 颗弹珠，图 2 有 $1+2=3$ 颗弹珠，图 3 有 $1+2+3=6$ 颗弹珠，…，$\\therefore a_{n}=1+2+3+⋯+n=\\frac{n(n+1)}{2}$，<br>$\\therefore \\frac{1}{a_{1}}+\\frac{1}{a_{2}}+\\frac{1}{a_{3}}+⋯+\\frac{1}{a_{2024}}$ = $\\frac{2}{1\\times 2}+\\frac{2}{2\\times 3}+\\frac{2}{3\\times 4}+⋯+\\frac{2}{2024\\times 2025}$ = $2\\times (\\frac{1}{1\\times 2}+\\frac{1}{2\\times 3}+\\frac{1}{3\\times 4}+⋯+\\frac{1}{2024\\times 2025})$<br>= $2\\times (1-\\frac{1}{2}+\\frac{1}{2}-\\frac{1}{3}+\\frac{1}{3}-\\frac{1}{4}+⋯+\\frac{1}{2024}-\\frac{1}{2025})$ = $2\\times (1-\\frac{1}{2025})=\\frac{4048}{2025}$. 故选：D."
   },
   {
     "id": "ch2_test_13",
@@ -8972,7 +8972,7 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "$45$",
     "analysis": "本题考查有理数的乘方；能准确理解定义，多计算一些数字，进而确定循环规律是解题关键. 分别计算 $F_{1}(3)$、$F_{2}(3)$、$F_{3}(3)$、$F_{4}(3)$、$F_{5}(3)$、$F_{6}(3)$，发现规律为每 5 次是一组循环即可求解.",
-    "detail": "解：由题意得，$F_{1}(3)=3^{2}=9$，$\\therefore F_{2}(3)=F(F_{1}(3))=F(9)=9^{2}=81$，$F_{3}(3)=F(F_{2}(3))=F(81)=|8^{2}-1^{2}|=63$，<br>$F_{4}(3)=F(F_{3}(3))=F(63)=|6^{2}-3^{2}|=27$，$F_{5}(3)=F(F_{4}(3))=F(27)=|2^{2}-7^{2}|=45$，$F_{6}(3)=F(F_{5}(3))=F(45)=|4^{2}-5^{2}|=9$，…，<br>$\\therefore$可知每 5 次是一组循环，$\\because 2025\\div 5=405$，$\\therefore F_{2025}(3)=F_{5}(3)=45$，故答案为：45.<br>三、解答题"
+    "detail": "解：由题意得，$F_{1}(3)=3^{2}=9$，$\\therefore F_{2}(3)=F(F_{1}(3))=F(9)=9^{2}=81$，$F_{3}(3)=F(F_{2}(3))=F(81)=|8^{2}-1^{2}|=63$，<br>$F_{4}(3)=F(F_{3}(3))=F(63)=|6^{2}-3^{2}|=27$，$F_{5}(3)=F(F_{4}(3))=F(27)=|2^{2}-7^{2}|=45$，$F_{6}(3)=F(F_{5}(3))=F(45)=|4^{2}-5^{2}|=9$，…，<br>$\\therefore$可知每 5 次是一组循环，$\\because 2025\\div 5=405$，$\\therefore F_{2025}(3)=F_{5}(3)=45$，故答案为：45."
   },
   {
     "id": "ch2_test_17",
@@ -10369,7 +10369,7 @@ window.QUESTION_BANK = [
     ],
     "answer": "B",
     "analysis": "本题考查整式的加减运算，根据游戏步骤逐步计算各同学手中的扑克牌数量，最终得到B同学剩余的扑克牌张数．解题关键是准确理解每一步操作，并运用整式加减进行计算，注意最终结果与$x$无关．",
-    "detail": "解：$\\because$ 初始时，$A$、$B$、$C$各有$x$张扑克牌；<br>第一步：$A$拿出$3$张给$B$，<br>$\\thereforeA$有$(x-3)$张，$B$有$(x+3)$张，$C$有$x$张；<br>第二步：$C$拿出$5$张给$B$，<br>$\\thereforeC$有$(x-5)$张，$B$有$(x+3)+5=(x+8)$张，$A$有$(x-3)$张；<br>第三步：$A$此时有$(x-3)$张，$B$拿出$(x-3)$张给$A$，<br>$\\thereforeB$剩余扑克牌张数为：$(x+8)-(x-3)=x+8-x+3=11$（张）．<br>故选：B．"
+    "detail": "解：$\\because$ 初始时，$A$、$B$、$C$各有$x$张扑克牌；<br>第一步：$A$拿出$3$张给$B$，<br>$\\therefore A$有$(x-3)$张，$B$有$(x+3)$张，$C$有$x$张；<br>第二步：$C$拿出$5$张给$B$，<br>$\\therefore C$有$(x-5)$张，$B$有$(x+3)+5=(x+8)$张，$A$有$(x-3)$张；<br>第三步：$A$此时有$(x-3)$张，$B$拿出$(x-3)$张给$A$，<br>$\\therefore B$剩余扑克牌张数为：$(x+8)-(x-3)=x+8-x+3=11$（张）．<br>故选：B．"
   },
   {
     "id": "alg_oct30_32",
@@ -12485,7 +12485,7 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "$m=4$，$n=2$",
     "analysis": "本题主要考查了由多项式、单项式次数求参数，涉及多项式次数定义、单项式次数定义等知识点，熟练掌握多项式次数定义、单项式次数定义是解题的关键．<br>由多项式次数定义“多项式中次数最大项的次数称为多项式的次数”得到$2+(m-1)=5$，由单项式次数定义“所有字母次数的和称为单项式次数”得到$2n+1=5$，解方程即可求出$m$、$n$的值．",
-    "detail": "解：$\\because$多项式$-3x^{2}y^{m-1}+x^{3}y-3x^{4}-1$是五次四项式，<br>$\\therefore2+(m-1)=5$，<br>解得：$m=4$，<br>$\\because$单项式$2x^{2n}y$的次数与该多项式的次数相同，<br>$\\therefore2n+1=5$，<br>解得：$n=2$．"
+    "detail": "解：$\\because$多项式$-3x^{2}y^{m-1}+x^{3}y-3x^{4}-1$是五次四项式，<br>$\\therefore 2+(m-1)=5$，<br>解得：$m=4$，<br>$\\because$单项式$2x^{2n}y$的次数与该多项式的次数相同，<br>$\\therefore 2n+1=5$，<br>解得：$n=2$．"
   },
   {
     "id": "g7_2_70",
@@ -12884,7 +12884,7 @@ window.QUESTION_BANK = [
     "chapter": "4.2.3 整式加减的应用",
     "stem": "定义：若一个多项式的各项系数之和为7的整数倍，则称这个多项式为“$7S$标准多项式”．例如：多项式$20x+8y$的系数和为$20+8=28=7\\times 4$，所以多项式$20x+8y$是“$7S$标准多项式”．请根据这个定义解答下列问题：<br>(1)在下列多项式中，属于“$7S$标准多项式”的是______；（填写序号）<br>①$2x^{2}-9x$；②$3a+5b$；③$19x^{2}-4x+2y-3xy$．<br>(2)若多项式$4mx-ny$是关于x，y的“$7S$标准多项式”（其中m、n均为整数），则多项式$2mx+3ny$也是关于x，y的“$7S$标准多多项式”吗？若是，请说明理由；若不是，请举出反例．<br>(3)已知$A=a-2b$，$B=2b-c$，$C=c-d$，且$mA+nB+tC=a-6b+5c-3d$（其中m，$n$，t均为整数），请证明多项式$mx+7ny+2txy$也是关于x，y的“$7S$标准多项式”．",
     "options": [],
-    "answer": "(1)①③<br>(2)<br>解：是，理由如下：<br>$\\because$多项式$4mx-ny$是关于$x$，$y$的“$7S$标准多项式”，<br>$\\therefore4m-n$为$7$的整数倍，<br>设$4m-n=7z$（$z$为整数，$z\\neq 0$），<br>则$n=4m-7z$，<br>$\\because$多项式$2mx+3ny$的系数和为$2m+3n$，<br>$\\therefore2m+3n=2m+3(4m-7z)=14m-21z$，<br>$\\because14m-21z=7(2m-3z)$，<br>$\\therefore14m-21z$是$7$的整数倍，即$2m+3n$是$7$的整数倍，<br>$\\therefore$多项式$4mx-ny$是关于$x$，$y$的“$7S$标准多项式”（其中$m$，$n$均为整数），则多项式$2mx+3ny$也是关于$x$，$y$的“$7S$标准多项式”；<br>(3)<br>证明：∵$A=a-2b$，$B=2b-c$，$C=c-d$，<br>∴$mA+nB+tC$<br>$=m(a-2b)+n(2b-c)+t(c-d)$<br>$=ma-2mb+2nb-nc+tc-td$<br>$=ma+(2n-2m)b+(t-n)c-td$<br>∵$mA+nB+tC=a-6b+5c-3d$，<br>∴$ma+(2n-2m)b+(t-n)c-td=a-6b+5c-3d$，<br>∴$m=1,2n-2m=-6,t-n=5,t=3$，<br>∴$m=1,n=-2,t=3$，<br>∴多项式$mx+7ny+2txy$为$x-14y+6xy$，<br>$\\because$多项式$x-14y+6xy$的系数和为$1-14+6=-7=-1\\times 7$，<br>∴多项式$mx+7ny+2txy$也是关于x，y的“$7S$标准多项式”．",
+    "answer": "(1)①③<br>(2)<br>解：是，理由如下：<br>$\\because$多项式$4mx-ny$是关于$x$，$y$的“$7S$标准多项式”，<br>$\\therefore 4m-n$为$7$的整数倍，<br>设$4m-n=7z$（$z$为整数，$z\\neq 0$），<br>则$n=4m-7z$，<br>$\\because$多项式$2mx+3ny$的系数和为$2m+3n$，<br>$\\therefore 2m+3n=2m+3(4m-7z)=14m-21z$，<br>$\\because 14m-21z=7(2m-3z)$，<br>$\\therefore 14m-21z$是$7$的整数倍，即$2m+3n$是$7$的整数倍，<br>$\\therefore$多项式$4mx-ny$是关于$x$，$y$的“$7S$标准多项式”（其中$m$，$n$均为整数），则多项式$2mx+3ny$也是关于$x$，$y$的“$7S$标准多项式”；<br>(3)<br>证明：∵$A=a-2b$，$B=2b-c$，$C=c-d$，<br>∴$mA+nB+tC$<br>$=m(a-2b)+n(2b-c)+t(c-d)$<br>$=ma-2mb+2nb-nc+tc-td$<br>$=ma+(2n-2m)b+(t-n)c-td$<br>∵$mA+nB+tC=a-6b+5c-3d$，<br>∴$ma+(2n-2m)b+(t-n)c-td=a-6b+5c-3d$，<br>∴$m=1,2n-2m=-6,t-n=5,t=3$，<br>∴$m=1,n=-2,t=3$，<br>∴多项式$mx+7ny+2txy$为$x-14y+6xy$，<br>$\\because$多项式$x-14y+6xy$的系数和为$1-14+6=-7=-1\\times 7$，<br>∴多项式$mx+7ny+2txy$也是关于x，y的“$7S$标准多项式”．",
     "analysis": "本题考查了新定义“$7S$标准多项式”，整式的加减运算，理解定义是解题的关键．<br>（1）根据“$7S$标准多项式”的定义求解即可；<br>（2）根据多项式$4mx-ny$是关于$x$，$y$的“$7S$标准多项式”，可设$4m-n=7z$（$z$为整数，$z\\neq 0$），则$n=4m-7z$，多项式$2mx+3ny$的系数和为$2m+3n$，得到$2m+3n=14m-21z$，即可求解；<br>（3）先根据整式加减预算法则求出$m=1,n=-2,t=3$，再结合“$7S$标准多项式”的定义证明即可．",
     "detail": "（1）解：①$\\because$多项式$2x^{2}-9x$的系数和为$2+(-9)=-7=-1\\times 7$，<br>$\\therefore$该多项式是“$7S$标准多项式”，<br>②$\\because$多项式$3a+5b$的系数和为$3+5=8$，$8$不是$7$的整数倍，<br>$\\therefore$该多项式不是“$7S$标准多项式”，<br>③$\\because$多项式$19x^{2}-4x+2y-3xy$的系数和为$19+(-4)+2+(-3)=14=2\\times 7$，<br>$\\therefore$该多项式是“$7S$标准多项式”，<br>故答案为：①③；<br>（2）略<br>（3）略"
   },
@@ -12918,7 +12918,7 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "(1)$\\frac{1}{3}$<br>(2)$\\frac{3}{7}$<br>(3)$5a=6b$",
     "analysis": "本题主要考查了整式加减运算和单项式乘以多项式的应用，解题关键是熟练掌握单项式乘以多项式法则．<br>（1）先把多项式化简，根据多项式的值与x的取值无关可知：化简后的多项式含有x的项的系数为0，列出方程解答即可；<br>（2）计算$A-3B=(7n-3)x+2n$，令$7n-3=0$，再根据多项式的值与x的取值无关可知：化简后的多项式含有x的项的系数为0，列出方程解答即可；<br>（3）观察图形，求出$S_{1}$，$S_{2}$的长与宽，求出它们的面积，进而求出$5S_{1}-3S_{2}$的差，进行判断即可．",
-    "detail": "（1）解：关于$x$的多项式$2m^{2}+(3x-2)m-x=(3m-1)x+2m^{2}-2m$，<br>$\\because$关于$x$的多项式$2m^{2}+(3x-2)m-x$的值与$x$的取值无关，<br>$\\therefore 3m-1=0$，<br>即$m=\\frac{1}{3}$<br>故答案为：$\\frac{1}{3}$．<br>（2）$\\becauseA=3x^{2}+nx+2n$，$B=x^{2}-2nx+x$，<br>$\\thereforeA-3B=(3x^{2}+nx+2n)-3(x^{2}-2nx+x)$<br>$=3x^{2}+nx+2n-3x^{2}+6nx-3x$<br>$=(7n-3)x+2n$，<br>又$\\because A-3B$的值与$x$的取值无关，<br>$\\therefore 7n-3=0$，<br>即$n=\\frac{3}{7}$<br>（3）由题意得，阴影部分的面积$S_{1}=a(x-3b)$，$S_{2}=2b(x-2a)$<br>$\\therefore5S_{1}-3S_{2}=5\\times a(x-3b)-3\\times 2b(x-2a)$<br>$=5ax-15ab-6bx+12ab$<br>$=(5a-6b)x-3ab$，<br>$\\because$当$x$变化时，$5S_{1}-3S_{2}$的值始终保持不变，<br>$\\therefore 5a-6b=0$，<br>即$5a=6b$．"
+    "detail": "（1）解：关于$x$的多项式$2m^{2}+(3x-2)m-x=(3m-1)x+2m^{2}-2m$，<br>$\\because$关于$x$的多项式$2m^{2}+(3x-2)m-x$的值与$x$的取值无关，<br>$\\therefore 3m-1=0$，<br>即$m=\\frac{1}{3}$<br>故答案为：$\\frac{1}{3}$．<br>（2）$\\because A=3x^{2}+nx+2n$，$B=x^{2}-2nx+x$，<br>$\\therefore A-3B=(3x^{2}+nx+2n)-3(x^{2}-2nx+x)$<br>$=3x^{2}+nx+2n-3x^{2}+6nx-3x$<br>$=(7n-3)x+2n$，<br>又$\\because A-3B$的值与$x$的取值无关，<br>$\\therefore 7n-3=0$，<br>即$n=\\frac{3}{7}$<br>（3）由题意得，阴影部分的面积$S_{1}=a(x-3b)$，$S_{2}=2b(x-2a)$<br>$\\therefore 5S_{1}-3S_{2}=5\\times a(x-3b)-3\\times 2b(x-2a)$<br>$=5ax-15ab-6bx+12ab$<br>$=(5a-6b)x-3ab$，<br>$\\because$当$x$变化时，$5S_{1}-3S_{2}$的值始终保持不变，<br>$\\therefore 5a-6b=0$，<br>即$5a=6b$．"
   },
   {
     "id": "g7_2_93",
@@ -16016,7 +16016,7 @@ window.QUESTION_BANK = [
     ],
     "answer": "C",
     "analysis": "本题考查角平分线的定义，平行线的性质，等腰三角形的判定，角平分线和平行线可以构造出等腰三角形，得出$BE=DE=8$，$CF=DF=6$，即可求解．",
-    "detail": "解：如图，标记$\\angle ABG$，<br><img src=\"assets/images/img_docx_25d70e801e63.png\" data-cx=\"1495425\" data-cy=\"914400\" style=\"width:157px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>由题意知，$BD$平分$\\angle ABC$，$CD$平分$\\angle ABG$，<br>$\\therefore\\angle ABD=\\angle CBD$，$\\angle ACD=\\angle GCD$，<br>$\\becauseEF\\parallel BC$，<br>$\\therefore\\angle EDB=\\angle CBD$，$\\angle FDC=\\angle GCD$，<br>$\\therefore\\angle EDB=\\angle ABD$，$\\angle FDC=\\angle ACD$，<br>$\\thereforeBE=DE=8$，$CF=DF=6$，<br>$\\thereforeEF=DE-DF=8-6=2$，<br>故选：C．"
+    "detail": "解：如图，标记$\\angle ABG$，<br><img src=\"assets/images/img_docx_25d70e801e63.png\" data-cx=\"1495425\" data-cy=\"914400\" style=\"width:157px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>由题意知，$BD$平分$\\angle ABC$，$CD$平分$\\angle ABG$，<br>$\\therefore\\angle ABD=\\angle CBD$，$\\angle ACD=\\angle GCD$，<br>$\\because EF\\parallel BC$，<br>$\\therefore\\angle EDB=\\angle CBD$，$\\angle FDC=\\angle GCD$，<br>$\\therefore\\angle EDB=\\angle ABD$，$\\angle FDC=\\angle ACD$，<br>$\\therefore BE=DE=8$，$CF=DF=6$，<br>$\\therefore EF=DE-DF=8-6=2$，<br>故选：C．"
   },
   {
     "id": "ch15_3_1_2",
@@ -16180,7 +16180,7 @@ window.QUESTION_BANK = [
     ],
     "answer": "C",
     "analysis": "本题考查作图—基本作图，等腰三角形的性质，线段垂直平分线的性质，由作图可知$AB=AD$，$MN$垂直平分$HG$，$DH=DG$，利用等腰三角形“三线合一”“等边对等角”以及三角形外角的性质逐项判断即可．",
-    "detail": "解：由作图可知$AB=AD$，<br>$\\therefore\\angle B=\\angle ADB$，<br>$\\becauseE$是$BD$的中点，<br>$\\thereforeAE\\perp BC$，故选项A正确；<br>$\\becauseAB=CD$，$AB=AD$，<br>$\\thereforeAD=CD$，<br>由作图知，$MN$垂直平分$HG$，$DH=DG$，<br>$\\thereforeDF\\perp AC$，<br>$\\thereforeAF=CF$，故B选项正确；<br>$\\becauseAD=CD$，<br>$\\therefore\\angle 2=\\angle C$，<br>$\\therefore\\angle ADB=\\angle 2+\\angle C=2\\angle C$，<br>$\\because\\angle B=\\angle ADB$，<br>$\\therefore\\angle B=2\\angle C$，故D选项正确；<br>现有条件不能证明$\\angle 1=\\angle 2$，故C选项错误；<br>故选C．"
+    "detail": "解：由作图可知$AB=AD$，<br>$\\therefore\\angle B=\\angle ADB$，<br>$\\because E$是$BD$的中点，<br>$\\therefore AE\\perp BC$，故选项A正确；<br>$\\because AB=CD$，$AB=AD$，<br>$\\therefore AD=CD$，<br>由作图知，$MN$垂直平分$HG$，$DH=DG$，<br>$\\therefore DF\\perp AC$，<br>$\\therefore AF=CF$，故B选项正确；<br>$\\because AD=CD$，<br>$\\therefore\\angle 2=\\angle C$，<br>$\\therefore\\angle ADB=\\angle 2+\\angle C=2\\angle C$，<br>$\\because\\angle B=\\angle ADB$，<br>$\\therefore\\angle B=2\\angle C$，故D选项正确；<br>现有条件不能证明$\\angle 1=\\angle 2$，故C选项错误；<br>故选C．"
   },
   {
     "id": "ch15_3_2_3",
@@ -16395,7 +16395,7 @@ window.QUESTION_BANK = [
     "chapter": "15.3.3 等边三角形的性质",
     "stem": "如图$1$，在等边$\\triangle ABC$中，$E$为边$AC$上一点，$D$为$BC$上一点，且$AE=CD$，连接$AD$与$BE$相交于点$F$．<br><img src=\"assets/images/img_docx_754f88c4b6c1.png\" data-cx=\"2552700\" data-cy=\"1562100\" style=\"width:220px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)$AD$与$BE$的数量关系是，$AD$与$BE$构成的锐角夹角$\\angle BFD$的度数是；并说明理由．<br>(2)深入探究，将图$1$中的$AD$延长至点$G$，使$FG=BF$，连接$BG$，$CG$，如图$2$所示．求证：$GA$平分$\\angle BGC$（第一问的结论，本问可直接使用）",
     "options": [],
-    "answer": "(1)$AD=BE$，$60^\\circ$<br>∵$\\triangle ABC$是等边三角形，<br>$\\therefore AB=CA, \\angle BAE=\\angle C=60^\\circ$，<br>在$\\triangle ACD$和$\\triangle BAE$中，<br>${\\begin{cases}CA=AB \\\\ \\angle C=\\angle BAE \\\\ CD=AE\\end{cases}$，<br>$\\therefore \\triangle ACD\\cong \\triangle BAE(SAS)$，<br>$\\therefore AD=BE, \\angle CAD=\\angle ABE$，<br>$\\therefore \\angle BFD=\\angle ABE+\\angle BAD=\\angle CAD+\\angle BAD=\\angle BAC=60^\\circ$，<br>故答案为：$AD=BE$，$60^\\circ$；<br>(2)<br>证明：由（1）可知，$\\angle BFD=60^\\circ$，<br>$\\therefore \\angle AFB=120^\\circ$，<br>$\\because FG=BF$，<br>∴$\\triangle BFG$是等边三角形，<br>$\\therefore BF=BG, \\angle FBG=\\angle BGF=60^\\circ$，<br>∵$\\triangle ABC$是等边三角形，<br>$\\therefore AB=CB, \\angle ABC=60^\\circ$，<br>$\\therefore \\angle ABC=\\angle FBG$，<br>$\\therefore \\angle ABC-\\angle FBD=\\angle FBG-\\angle FBD$，<br>即$\\angle ABF=\\angle CBG$，<br>$\\therefore \\triangle ABF\\cong \\triangle CBG(SAS)$，<br>$\\therefore \\angle AFB=\\angle CGB=120^\\circ$，<br>$\\therefore \\angle CGF=\\angle CGB-\\angle FGB=120^\\circ -60^\\circ =60^\\circ$，<br>$\\therefore \\angle BGF=\\angle CGF$，<br>$\\thereforeGA$平分$\\angle BGC$．",
+    "answer": "(1)$AD=BE$，$60^\\circ$<br>∵$\\triangle ABC$是等边三角形，<br>$\\therefore AB=CA, \\angle BAE=\\angle C=60^\\circ$，<br>在$\\triangle ACD$和$\\triangle BAE$中，<br>${\\begin{cases}CA=AB \\\\ \\angle C=\\angle BAE \\\\ CD=AE\\end{cases}$，<br>$\\therefore \\triangle ACD\\cong \\triangle BAE(SAS)$，<br>$\\therefore AD=BE, \\angle CAD=\\angle ABE$，<br>$\\therefore \\angle BFD=\\angle ABE+\\angle BAD=\\angle CAD+\\angle BAD=\\angle BAC=60^\\circ$，<br>故答案为：$AD=BE$，$60^\\circ$；<br>(2)<br>证明：由（1）可知，$\\angle BFD=60^\\circ$，<br>$\\therefore \\angle AFB=120^\\circ$，<br>$\\because FG=BF$，<br>∴$\\triangle BFG$是等边三角形，<br>$\\therefore BF=BG, \\angle FBG=\\angle BGF=60^\\circ$，<br>∵$\\triangle ABC$是等边三角形，<br>$\\therefore AB=CB, \\angle ABC=60^\\circ$，<br>$\\therefore \\angle ABC=\\angle FBG$，<br>$\\therefore \\angle ABC-\\angle FBD=\\angle FBG-\\angle FBD$，<br>即$\\angle ABF=\\angle CBG$，<br>$\\therefore \\triangle ABF\\cong \\triangle CBG(SAS)$，<br>$\\therefore \\angle AFB=\\angle CGB=120^\\circ$，<br>$\\therefore \\angle CGF=\\angle CGB-\\angle FGB=120^\\circ -60^\\circ =60^\\circ$，<br>$\\therefore \\angle BGF=\\angle CGF$，<br>$\\therefore GA$平分$\\angle BGC$．",
     "analysis": "本题考查了全等三角形的判定与性质、等边三角形的判定与性质、等腰三角形的性质，角平分线的判定与性质等知识，熟练掌握等边三角形的判定与性质和等腰三角形的性质，证明三角形全等是解题的关键．<br>（1）证$\\triangle ACD\\cong \\triangle BAE(SAS)$．得$AD=BE$，$\\angle CAD=\\angle ABE$，再由三角形的外角性质得$\\angle BFD=\\angle ABE+\\angle BAD=\\angle BAC=60^\\circ$即可；<br>（2）证$\\triangle BFG$是等边三角形，得$BF=BG$，$\\angle FBG=\\angle BGF=60^\\circ$，再证$\\triangle ABF\\cong \\triangle CBG(SAS)$，得$\\angle AFB=\\angle CGB=120^\\circ$，即可解决问题．",
     "detail": "（1）略<br>（2）略"
   },
@@ -17359,7 +17359,7 @@ window.QUESTION_BANK = [
     ],
     "answer": "B",
     "analysis": "本题考查幂的乘方，同底数幂的乘法，代数式求值，解题的关键在于灵活运用相关知识．<br>根据所给等式整理推出$a+b=1$，再结合幂的乘方，同底数幂的乘法将${10}^{2a}\\cdot {100}^{b}$整理为${10}^{2(a+b)}$，最后将$a+b=1$代入求解，即可解题．",
-    "detail": "解：$\\because2a+b+c=-1, a+2b-c=4$，<br>$\\therefore 2a+b+c+a+2b-c=-1+4$，<br>即$3(a+b)=3$，<br>整理得$a+b=1$，<br>$\\therefore{10}^{2a}\\cdot {100}^{b}={10}^{2a}\\cdot {({10}^{2})}^{b}={10}^{2a+2b}={10}^{2(a+b)}={10}^{2\\times 1}={10}^{2}=100$；<br>故选：B．"
+    "detail": "解：$\\because 2a+b+c=-1, a+2b-c=4$，<br>$\\therefore 2a+b+c+a+2b-c=-1+4$，<br>即$3(a+b)=3$，<br>整理得$a+b=1$，<br>$\\therefore{10}^{2a}\\cdot {100}^{b}={10}^{2a}\\cdot {({10}^{2})}^{b}={10}^{2a+2b}={10}^{2(a+b)}={10}^{2\\times 1}={10}^{2}=100$；<br>故选：B．"
   },
   {
     "id": "ch16_1_2_5",
@@ -17449,7 +17449,7 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "$32$",
     "analysis": "本题主要考查了幂的乘方运算法则，同底数幂的乘法运算法则，代数式求值，正确将原式变形是解题关键．<br>根据题意，得$3m+2n=5$，将$8^{m}\\cdot 4^{n}$变形为$2^{3m+2n}$即可求解．",
-    "detail": "解：$\\because3m+2n-5=0$，<br>$\\therefore3m+2n=5$，<br>$\\therefore8^{m}\\cdot 4^{n}={(2^{3})}^{m}\\cdot {(2^{2})}^{n}=2^{3m+2n}=2^{5}=32$．<br>故答案为：$32$．"
+    "detail": "解：$\\because 3m+2n-5=0$，<br>$\\therefore 3m+2n=5$，<br>$\\therefore 8^{m}\\cdot 4^{n}={(2^{3})}^{m}\\cdot {(2^{2})}^{n}=2^{3m+2n}=2^{5}=32$．<br>故答案为：$32$．"
   },
   {
     "id": "ch16_1_2_10",
@@ -18841,7 +18841,7 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "①⑥",
     "analysis": "本题考查了一元二次方程的定义．只含有一个未知数，并且未知数的最高次数是2的整式方程叫做一元二次方程，其一般形式是$ax^{2}+bx+c=0$（$a$， $b$，$c$为常数，且$a\\neq 0$），根据定义逐一判断即可．",
-    "detail": "解：①$2x^{2}-mx-1=0$（m为常数）是一元二次方程；<br>②$\\frac{4}{x^{2}+2}=1$，是分式方程，不是一元二次方程；<br>③$x^{2}+y=0$，含有两个未知数，不是一元二次方程；<br>④${(x+3)}^{2}={(x-3)}^{2}$，整理后是一元一次方程，不是一元二次方程；<br>⑤$mx^{2}-3x+2=0$（m为常数），当$m=0$时，不是一元二次方程，<br>⑥$(m^{2}+1)x^{2}+(2m-1)x+2-m=0$是一元二次方程，<br>故答案为：①⑥．<br>二、考点二：化成一元二次方程的一般式及各项系数"
+    "detail": "解：①$2x^{2}-mx-1=0$（m为常数）是一元二次方程；<br>②$\\frac{4}{x^{2}+2}=1$，是分式方程，不是一元二次方程；<br>③$x^{2}+y=0$，含有两个未知数，不是一元二次方程；<br>④${(x+3)}^{2}={(x-3)}^{2}$，整理后是一元一次方程，不是一元二次方程；<br>⑤$mx^{2}-3x+2=0$（m为常数），当$m=0$时，不是一元二次方程，<br>⑥$(m^{2}+1)x^{2}+(2m-1)x+2-m=0$是一元二次方程，<br>故答案为：①⑥．"
   },
   {
     "id": "quad25_1_10",
@@ -19000,7 +19000,7 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "(1)$3x^{2}-5x+1=0$，二次项系数为3，一次项系数为$-5$，常数项为1<br>(2)$x^{2}-7x+6=0$，二次项系数为1，一次项系数为$-7$，常数项为6<br>(3)$2x^{2}+3x-5=0$，二次项系数为2，一次项系数为3，常数项为$-5$",
     "analysis": "此题考查一元二次方程的一般形式，先将一元二次方程化为一般形式，根据各项确定答案：<br>（1）先将一元二次方程化为一般形式，即可确定各项；<br>（2）先将一元二次方程化为一般形式，即可确定各项；<br>（3）先将一元二次方程化为一般形式，即可确定各项；",
-    "detail": "（1）解：整理，得$3x^{2}-5x+1=0$，<br>故二次项系数为3，一次项系数为$-5$，常数项为1．<br>（2）整理，得$x^{2}-7x+6=0$，<br>故二次项系数为1，一次项系数为$-7$，常数项为6．<br>（3）整理，得$2x^{2}+3x-5=0$，<br>故二次项系数为2，一次项系数为3，常数项为$-5$．<br>三、考点三：由一元二次方程的定义求参数"
+    "detail": "（1）解：整理，得$3x^{2}-5x+1=0$，<br>故二次项系数为3，一次项系数为$-5$，常数项为1．<br>（2）整理，得$x^{2}-7x+6=0$，<br>故二次项系数为1，一次项系数为$-7$，常数项为6．<br>（3）整理，得$2x^{2}+3x-5=0$，<br>故二次项系数为2，一次项系数为3，常数项为$-5$．"
   },
   {
     "id": "quad25_1_19",
@@ -19196,7 +19196,7 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "2",
     "analysis": "根据一元二次方程的解的定义，将$x=2$代入方程，对比已知条件即可得到方程的一个根．",
-    "detail": "解：将$x=2$代入$ax^{2}+bx+c$，<br>得$a\\cdot 2^{2}+b\\cdot 2+c=4a+2b+c$，<br>$\\because4a+2b+c=0$，<br>$\\therefore$当$x=2$时，$ax^{2}+bx+c=0$成立，<br>根据一元二次方程的解的定义，可知该一元二次方程一定有一个根为2．"
+    "detail": "解：将$x=2$代入$ax^{2}+bx+c$，<br>得$a\\cdot 2^{2}+b\\cdot 2+c=4a+2b+c$，<br>$\\because 4a+2b+c=0$，<br>$\\therefore$当$x=2$时，$ax^{2}+bx+c=0$成立，<br>根据一元二次方程的解的定义，可知该一元二次方程一定有一个根为2．"
   },
   {
     "id": "quad25_2_3",
@@ -19270,7 +19270,7 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "1",
     "analysis": "本题考查了一元二次方程的解，通过观察表格数据，当$x$取特定值时，表达式$x^{2}-ax$ 的值等于6，这些x值即为方程 $x^{2}-ax-6=0$的根，再计算两根之和，即可作答．",
-    "detail": "解：由表格可知，当$x=-2$时，$x^{2}-ax=6$；<br>当$x=3$时，$x^{2}-ax=6$，<br>∵$x^{2}-ax-6=0$，<br>∴$x^{2}-ax=6$<br>故一元二次方程$x^{2}-ax-6=0$的两根为$x_{1}=-2$，$x_{2}=3$<br>则$x_{1}+x_{2}=-2+3=1$，<br>故答案为：1<br>二、考点二：由一元二次方程的解求参数或代数式的值"
+    "detail": "解：由表格可知，当$x=-2$时，$x^{2}-ax=6$；<br>当$x=3$时，$x^{2}-ax=6$，<br>∵$x^{2}-ax-6=0$，<br>∴$x^{2}-ax=6$<br>故一元二次方程$x^{2}-ax-6=0$的两根为$x_{1}=-2$，$x_{2}=3$<br>则$x_{1}+x_{2}=-2+3=1$，<br>故答案为：1"
   },
   {
     "id": "quad25_2_7",
@@ -19695,7 +19695,7 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "(1)$x_{1}=8$，$x_{2}=-6$<br>(2)$y_{1}=\\frac{7}{2}$，$y_{2}=-\\frac{1}{2}$<br>(3)$x_{1}=2$，$x_{2}=-6$<br>(4)$x_{1}=1$，$x_{2}=-1$",
     "analysis": "此题主要考查解一元二次方程，熟练掌握一元二次方程的解法是做题的关键．<br>（1）利用直接开平方法解方程即可；<br>（2）利用直接开平方法解方程即可；<br>（3）变形后利用直接开平方法解方程即可；<br>（4）利用直接开平方法解方程即可．",
-    "detail": "（1）解：开平方，得$x-1=\\pm 7$，<br>$\\thereforex_{1}=8$，$x_{2}=-6$．<br>（2）解：开平方，得$2y-3=\\pm 4$，<br>$\\thereforey_{1}=\\frac{7}{2}$，$y_{2}=-\\frac{1}{2}$．<br>（3）解：整理，得 ${(x+2)}^{2}=16$，<br>开平方，得$x+2=\\pm 4$，<br>$\\thereforex_{1}=2$，$x_{2}=-6$．<br>（4）解：开平方，得$2x+3=3x+2$，或$2x+3=-3x-2$，<br>解得$x_{1}=1$，$x_{2}=-1$．"
+    "detail": "（1）解：开平方，得$x-1=\\pm 7$，<br>$\\therefore x_{1}=8$，$x_{2}=-6$．<br>（2）解：开平方，得$2y-3=\\pm 4$，<br>$\\therefore y_{1}=\\frac{7}{2}$，$y_{2}=-\\frac{1}{2}$．<br>（3）解：整理，得 ${(x+2)}^{2}=16$，<br>开平方，得$x+2=\\pm 4$，<br>$\\therefore x_{1}=2$，$x_{2}=-6$．<br>（4）解：开平方，得$2x+3=3x+2$，或$2x+3=-3x-2$，<br>解得$x_{1}=1$，$x_{2}=-1$．"
   },
   {
     "id": "quad25_3_15",
@@ -19711,7 +19711,7 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "(1)$x_{1}=-\\frac{2}{3}$，$x_{2}=-\\frac{4}{3}$；<br>(2)$x_{1}=1$，$x_{2}=-\\frac{7}{3}$；<br>(3)$x_{1}=1$，$x_{2}=-3$；<br>(4)$x_{1}=-1$，$x_{2}=5$",
     "analysis": "本题主要考查解一元二次方程的能力，熟练掌握直接开平方法是解题的关键．<br>（1）方程变形为${(x+1)}^{2}=\\frac{1}{9}$，利用直接开平方法进行解方程即可；<br>（2）方程变形为$3x+2=\\pm 5$，解方程即可求出答案；<br>（3）方程变形为${(x+1)}^{2}=4$，利用直接开平方法进行解方程即可；<br>（4）方程变形为${(2-x)}^{2}=9$，利用直接开平方法进行解方程即可；",
-    "detail": "（1）解：$3{(x+1)}^{2}=\\frac{1}{3}$<br>∴${(x+1)}^{2}=\\frac{1}{9}$，<br>则$x+1=\\pm \\frac{1}{3}$，<br>∴$x_{1}=-\\frac{2}{3}$，$x_{2}=-\\frac{4}{3}$；<br>（2）解：${(3x+2)}^{2}=25$<br>$3x+2=\\pm 5$<br>解得$x_{1}=1$，$x_{2}=-\\frac{7}{3}$；<br>（3）解：${(x+1)}^{2}-4=0$<br>${(x+1)}^{2}=4$<br>$x+1=\\pm 2$<br>解得$x_{1}=1$，$x_{2}=-3$；<br>（4）解：${(2-x)}^{2}-9=0$<br>${(2-x)}^{2}=9$<br>$2-x=\\pm 3$<br>解得$x_{1}=-1$，$x_{2}=5$<br>二、考点二：双平方式方程求解（形如 (ax+b)²=(cx+d)²）"
+    "detail": "（1）解：$3{(x+1)}^{2}=\\frac{1}{3}$<br>∴${(x+1)}^{2}=\\frac{1}{9}$，<br>则$x+1=\\pm \\frac{1}{3}$，<br>∴$x_{1}=-\\frac{2}{3}$，$x_{2}=-\\frac{4}{3}$；<br>（2）解：${(3x+2)}^{2}=25$<br>$3x+2=\\pm 5$<br>解得$x_{1}=1$，$x_{2}=-\\frac{7}{3}$；<br>（3）解：${(x+1)}^{2}-4=0$<br>${(x+1)}^{2}=4$<br>$x+1=\\pm 2$<br>解得$x_{1}=1$，$x_{2}=-3$；<br>（4）解：${(2-x)}^{2}-9=0$<br>${(2-x)}^{2}=9$<br>$2-x=\\pm 3$<br>解得$x_{1}=-1$，$x_{2}=5$"
   },
   {
     "id": "quad25_3_16",
@@ -19759,7 +19759,7 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "$x_{1}=-\\frac{5}{7}$，$x_{2}=-7$",
     "analysis": "利用直接开平方法得出两个一元一次方程，解一元一次方程即可得出答案．",
-    "detail": "解：${(3x-1)}^{2}=4{(2x+3)}^{2}$<br>∴$3x-1=\\pm 2(2x+3)$，<br>则$3x-1=-4x-6$或$3x-1=4x+6$，<br>解得：$x_{1}=-\\frac{5}{7}$，$x_{2}=-7$．<br>三、考点三：解的特征判定、错因辨析与解法拓展"
+    "detail": "解：${(3x-1)}^{2}=4{(2x+3)}^{2}$<br>∴$3x-1=\\pm 2(2x+3)$，<br>则$3x-1=-4x-6$或$3x-1=4x+6$，<br>解得：$x_{1}=-\\frac{5}{7}$，$x_{2}=-7$．"
   },
   {
     "id": "quad25_3_19",
@@ -19923,7 +19923,7 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "(1)$x_{1}=-2+\\sqrt{6}$，$x_{2}=-2-\\sqrt{6}$<br>(2)$t_{1}=3$，$t_{2}=-5$",
     "analysis": "（1）根据配方法的步骤解方程即可；<br>（2）先将方程左边展开，再根据配方法的步骤解方程即可．",
-    "detail": "（1）解：$x^{2}+4x-2=0$<br>$x^{2}+4x=2$<br>$x^{2}+4x+4=2+4$<br>${(x+2)}^{2}=6$<br>$x+2=\\pm \\sqrt{6}$<br>$x=-2\\pm \\sqrt{6}$<br>$\\therefore x_{1}=-2+\\sqrt{6}$，$x_{2}=-2-\\sqrt{6}$；<br>（2）解：$(t+3)(t-1)=12$<br>$t^{2}+2t-3=12$<br>$t^{2}+2t=15$<br>$t^{2}+2t+1=15+1$<br>${(t+1)}^{2}=16$<br>$t+1=\\pm 4$<br>$t=-1\\pm 4$<br>$\\therefore t_{1}=-1+4=3$，$t_{2}=-1-4=-5$．<br>二、考点二：配方法的代数拓展应用（求最值与取值范围）"
+    "detail": "（1）解：$x^{2}+4x-2=0$<br>$x^{2}+4x=2$<br>$x^{2}+4x+4=2+4$<br>${(x+2)}^{2}=6$<br>$x+2=\\pm \\sqrt{6}$<br>$x=-2\\pm \\sqrt{6}$<br>$\\therefore x_{1}=-2+\\sqrt{6}$，$x_{2}=-2-\\sqrt{6}$；<br>（2）解：$(t+3)(t-1)=12$<br>$t^{2}+2t-3=12$<br>$t^{2}+2t=15$<br>$t^{2}+2t+1=15+1$<br>${(t+1)}^{2}=16$<br>$t+1=\\pm 4$<br>$t=-1\\pm 4$<br>$\\therefore t_{1}=-1+4=3$，$t_{2}=-1-4=-5$．"
   },
   {
     "id": "quad25_4_6",
@@ -39091,7 +39091,7 @@ window.QUESTION_BANK = [
     "typeName": "解答题",
     "difficulty": "中等",
     "knowledge": "等腰三角形的性质和判定；三角形内角和定理的应用",
-    "stem": "在综合实践课上，李老师以“含$30^\\circ$的三角板和等腰三角形纸片”为模具与同学们开展数学活动．已知，在等腰$\\triangleABC$纸片中，$CA=CB=5$，$\\angle ACB=120^\\circ$，将一块含$30^\\circ$角的足够大的直角三角尺$PMN$（$\\angle M=90^\\circ$，$\\angle MPN=30^\\circ$）按如图所示放置，顶点$P$在线段$BA$上滑动（点$P$不与$A$，$B$重合），三角尺的直角边$PM$始终经过点$C$，并与$CB$的夹角$\\angle PCB=\\alpha$，斜边$PN$交$AC$于点$D$．<br/><img src=\"assets/images/ch15_test_b_img33.png\" style=\"max-width:260px; display:block; margin:6px auto;\" /><br/>(1)当$\\angle BPC=100^\\circ$时，$\\alpha =$______$^\\circ$；<br/>(2)当$AP$等于何值时，$\\triangle APD\\cong \\triangle BCP$？请说明理由；<br/>(3)在点$P$的滑动过程中，存在$\\trianglePCD$是等腰三角形吗？若存在，请求出夹角$\\alpha$的大小；若不存在，请说明理由．",
+    "stem": "在综合实践课上，李老师以“含$30^\\circ$的三角板和等腰三角形纸片”为模具与同学们开展数学活动．已知，在等腰$\\triangle ABC$纸片中，$CA=CB=5$，$\\angle ACB=120^\\circ$，将一块含$30^\\circ$角的足够大的直角三角尺$PMN$（$\\angle M=90^\\circ$，$\\angle MPN=30^\\circ$）按如图所示放置，顶点$P$在线段$BA$上滑动（点$P$不与$A$，$B$重合），三角尺的直角边$PM$始终经过点$C$，并与$CB$的夹角$\\angle PCB=\\alpha$，斜边$PN$交$AC$于点$D$．<br/><img src=\"assets/images/ch15_test_b_img33.png\" style=\"max-width:260px; display:block; margin:6px auto;\" /><br/>(1)当$\\angle BPC=100^\\circ$时，$\\alpha =$______$^\\circ$；<br/>(2)当$AP$等于何值时，$\\triangle APD\\cong \\triangle BCP$？请说明理由；<br/>(3)在点$P$的滑动过程中，存在$\\triangle PCD$是等腰三角形吗？若存在，请求出夹角$\\alpha$的大小；若不存在，请说明理由．",
     "options": [],
     "answer": "(1)$50$<br/>(2)<br/>解：当$AP=5$时，$\\triangle ADP\\cong \\triangle BPC$；理由如下：<br/>∵$\\angle ACB=120^\\circ$，$CA=CB$，<br/>∴$\\angle A=\\angle B=30^\\circ$，<br/>∵$\\angle APC$是$\\triangle BPC$的一个外角，<br/>∴$\\angle APC=\\angle B+\\angle \\alpha =30^\\circ +\\angle \\alpha$，<br/>∵$\\angle APC=\\angle DPC+\\angle APD=30^\\circ +\\angle APD$，<br/>∴$\\angle \\alpha =\\angle APD$，<br/>∵$AP=BC=5$，<br/>在$\\triangle ADP$和$\\triangle BPC$中，<br/>${\\begin{cases}\\angle A=\\angle B\\\\AP=BC\\\\\\angle APD=\\angle BCP\\end{cases}$，<br/>∴$\\triangle ADP\\cong \\triangle BPC$（$ASA$）；<br/>(3)存在，$\\alpha =45^\\circ$或$90^\\circ$",
     "analysis": "（1）根据等腰三角形的性质可得$\\angle B=30^\\circ$，进而可以解决问题；<br/>（2）当$AP=5$时，$\\triangle ADP$与$\\triangle BPC$全等，理由为：根据$CA=CB$，且$\\angle ACB$度数，求出$\\angle A$与$\\angle B$度数，再由外角性质得到$\\angle \\alpha =\\angle APD$，根据$AP=BC$，利用$ASA$即可得证；<br/>（3）点$P$在滑动时，$\\triangle PCD$的形状可以是等腰三角形，分三种情况考虑：当$PC=PD$；$PD=CD$；$PC=CD$，分别求出夹角$\\alpha$的大小即可．<br/>本题属于三角形综合题，主要考查了等腰三角形的判定和性质，三角形的内角和定理，用分类讨论的思想解决问题是解本题的关键．",

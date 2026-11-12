@@ -75,6 +75,16 @@
           .replace(/[\ufe63\u2212\uff0d]/g, '-')
           .replace(/[\ufe62\uff0b]/g, '+')
           .replace(/\\\\(frac|dfrac|tfrac|sqrt|text|triangle|angle|circ|parallel|perp|cong|alpha|beta|gamma|theta|pi|pm|mp|le|ge|cdot|times|div|neq|approx|because|therefore|quad|qquad|dots|cdots|mathbf|mathrm|left|right|begin|end)\b/g, '\\$1')
+          .replace(/\\(therefore|because|angle|triangle|parallel|perp|cong|pm|mp|times|div|cdot|cdots|approx|neq)(?=[a-zA-Z])/g, (m, cmd, offset, full) => {
+            const after = full.slice(offset + m.length);
+            if (cmd === 'triangle' && /^(left|right|down|eq)/.test(after)) return m;
+            if (cmd === 'div' && /^ideontimes/.test(after)) return m;
+            if (cmd === 'approx' && /^eq/.test(after)) return m;
+            if (cmd === 'cdot' && /^[sp]/.test(after)) return m;
+            return '\\' + cmd + ' ';
+          })
+          .replace(/\\therefore\b/g, '∴')
+          .replace(/\\because\b/g, '∵')
           .replace(/\\\\(?=[a-zA-Z0-9+\-])/g, '\\\\ ')
           .trim();
         if (!cleanTex) return '';
@@ -161,9 +171,10 @@
         }
       }
 
-      analysisPart = analysisPart.replace(/^(?:<br\s*\/?>|\s)*【(?:分析|解析)】\s*/, '').replace(/(?:<br\s*\/?>|\s)+$/, '');
-      detailPart = detailPart.replace(/^(?:<br\s*\/?>|\s)*【(?:详解|解答)】\s*/, '').replace(/(?:<br\s*\/?>|\s)+$/, '');
-      pointPart = pointPart.replace(/^(?:<br\s*\/?>|\s)*【(?:点睛|总结|说明)】\s*/, '').replace(/(?:<br\s*\/?>|\s)+$/, '');
+      const trailingSectionRe = /(?:<br\s*\/?>|\s)*[一二三四五六七八九十]+、\s*(?:考点[一二三四五六七八九十0-9]*|题型[一二三四五六七八九十0-9]*|选择题|填空题|解答题)[^<]*$/;
+      analysisPart = analysisPart.replace(/^(?:<br\s*\/?>|\s)*【(?:分析|解析)】\s*/, '').replace(trailingSectionRe, '').replace(/(?:<br\s*\/?>|\s)+$/, '');
+      detailPart = detailPart.replace(/^(?:<br\s*\/?>|\s)*【(?:详解|解答)】\s*/, '').replace(trailingSectionRe, '').replace(/(?:<br\s*\/?>|\s)+$/, '');
+      pointPart = pointPart.replace(/^(?:<br\s*\/?>|\s)*【(?:点睛|总结|说明)】\s*/, '').replace(trailingSectionRe, '').replace(/(?:<br\s*\/?>|\s)+$/, '');
 
       return { analysis: analysisPart, detail: detailPart, point: pointPart };
     }

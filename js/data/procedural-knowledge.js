@@ -931,6 +931,104 @@
       ],
       graphNodeId: 'kp_g7_alg_eval',
       status: 'published'
+    },
+    {
+        "id": "P10",
+        "name": "利用等腰三角形“三线合一”求解与构造辅助线",
+        "grade": "八年级",
+        "subject": "数学",
+        "chapterGroup": "第十五章 轴对称与等腰三角形",
+        "chapter": "15.9三线合一",
+        "description": "在等腰三角形中确认两腰与底边，由顶角平分线、底边上的中线、底边上的高三者之一直接推出其余两者（或过顶角顶点作底边垂线/中线构造三线合一），实现垂直、线段平分与角平分的转化。",
+        "purpose": "利用等腰三角形“三线合一”性质完成角度计算、线段求值、垂直平分证明及辅助线构造。",
+        "applicability": [
+            "已知等腰三角形（$AB=AC$）及底边上的中点、底边上的垂线或顶角平分线三者之一，求角度、线段长或证明垂直与平分。",
+            "图形中存在共顶点或共底边的等腰三角形、尺规作图痕迹或折叠对称，需通过“三线合一”导出直角或中点。",
+            "已知等腰三角形求底边长、底边上的高或面积，但图中缺少直角三角形时，过顶角顶点作底边的垂线（或连接底边中点）构造“三线合一”。"
+        ],
+        "conditions": [
+            "图形中含有等腰三角形（已知两腰相等 $AB=AC$，或可由等角对等边、全等证得两腰相等）",
+            "涉及底边中点、底边垂线、顶角平分线三者之一，或需要构造直角三角形与中点关系"
+        ],
+        "steps": [
+            {
+                "step": 1,
+                "title": "锁定等腰三角形的“两腰”与“底边”",
+                "description": "在图形中找出或先证出相等的两条边（如 $AB=AC$），明确顶角顶点 $A$ 与对应的底边 $BC$（注意区分腰上的线与底边上的线，仅底边上的三线重合）。",
+                "formula": "在 $\\triangle ABC$ 中，确认 $AB=AC$（$A$ 为顶角顶点，$BC$ 为底边）",
+                "example": "如在 $\\triangle ABC$ 中，已知 $AB=AC$，则 $BC$ 是底边，$\\angle BAC$ 是顶角。"
+            },
+            {
+                "step": 2,
+                "title": "识别底边上的已知“一线”（或过顶角顶点作辅助线）",
+                "description": "观察过顶角顶点 $A$ 与底边 $BC$ 相交的线段 $AD$：①若已有 $D$ 为 $BC$ 中点（$BD=CD$）、$AD\\perp BC$ 或 $AD$ 平分 $\\angle BAC$ 之一，直接提取该条件；②若图中无现成线段，则过点 $A$ 作 $AD\\perp BC$ 于点 $D$（或取 $BC$ 中点 $D$ 并连接 $AD$）。",
+                "formula": "识别已知条件：$BD=CD$ 或 $AD\\perp BC$ 或 $\\angle BAD=\\angle CAD$",
+                "example": "如已知点 $D$ 是底边 $BC$ 的中点（即 $AD$ 是底边上的中线），或过点 $B$ 作 $BN\\perp CE$ 于点 $N$。"
+            },
+            {
+                "step": 3,
+                "title": "直接导出另外“两线”结论，进行角度与线段转化",
+                "description": "依据“三线合一”直接写出另外两个结论：①得垂直 $AD\\perp BC\\implies \\angle ADB=\\angle ADC=90^{\\circ}$，利用直角三角形两锐角互余求角度；②得中点 $BD=CD=\\frac{1}{2}BC$，实现线段倍半转化；③得角平分线 $\\angle BAD=\\angle CAD=\\frac{1}{2}\\angle BAC$。",
+                "formula": "$AB=AC,\\ BD=CD \\implies AD\\perp BC,\\ \\angle BAD=\\angle CAD=\\frac{1}{2}\\angle BAC$",
+                "example": "由 $AB=AC$ 且 $D$ 为 $BC$ 中点，得 $AD\\perp BC$（$\\angle ADB=90^{\\circ}$）且 $\\angle BAD=\\angle CAD$。"
+            }
+        ],
+        "procedure": [
+            {
+                "step": 1,
+                "action": "锁定等腰三角形的两腰与底边",
+                "detail": "找出相等的两腰 AB=AC，明确顶角顶点 A 与底边 BC。"
+            },
+            {
+                "step": 2,
+                "action": "识别底边上的已知一线或作辅助线",
+                "detail": "确认 AD 是否为底边中线、底边高或顶角平分线（若缺失则连接底边中点或作底边垂线）。"
+            },
+            {
+                "step": 3,
+                "action": "导出其余两线结论并完成边角转化",
+                "detail": "推出 AD⊥BC、BD=CD、∠BAD=∠CAD，结合直角三角形互余或线段倍半关系求解。"
+            }
+        ],
+        "prerequisites": [
+            {
+                "id": null,
+                "name": "等腰三角形的定义及“等边对等角”、“等角对等边”性质",
+                "type": "concept"
+            },
+            {
+                "id": null,
+                "name": "三角形的高、中线、角平分线定义及直角三角形两锐角互余性质",
+                "type": "concept"
+            }
+        ],
+        "prerequisiteProcedureIds": [],
+        "subsequentProcedureIds": [],
+        "relatedProcedureIds": [],
+        "pitfalls": [
+            "误将等腰三角形“腰上的高、腰上的中线、底角平分线”当作三线合一使用（非等边三角形中，仅底边上的三线重合）。",
+            "在尚未证明两腰相等（$AB=AC$）前，直接对普通三角形套用“三线合一”。"
+        ],
+        "exampleQuestionId": "ch15_9_1",
+        "exampleStepMapping": [
+            {
+                "step": 1,
+                "title": "对应步骤 1（锁定等腰三角形两腰与底边）",
+                "detail": "识别图形中的等腰三角形（如 $AB=AC$ 或 $BC=BE$），明确相等的两腰、顶角顶点与对应底边。"
+            },
+            {
+                "step": 2,
+                "title": "对应步骤 2（提取底边上的一线或作底边垂线）",
+                "detail": "利用题中已有的底边中线/垂线/顶角平分线，或过顶角顶点作底边的垂线构造“三线合一”基本图形。"
+            },
+            {
+                "step": 3,
+                "title": "对应步骤 3（导出垂直与中点倍半关系求解）",
+                "detail": "由“三线合一”推出底边被平分或顶角被平分、底边夹角为 $90^{\\circ}$，结合角度互余或线段关系算出最终结果。"
+            }
+        ],
+        "graphNodeId": "kp_g8_iso_tri",
+        "status": "published"
     }
   ];
 

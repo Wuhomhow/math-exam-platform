@@ -2853,6 +2853,157 @@
       subType: 'P09_ratio_k_overall',
       operationSummary: '设连比 x/2 = y/3 = z/4 = k，用 x=2k, y=3k, z=4k 整体代换分子分母并约去 k，算得 7/4。',
       status: 'published'
+    },
+
+    // =========================================================================
+    // P10：利用等腰三角形“三线合一”求解与构造辅助线（共 11 道关联题）
+    // =========================================================================
+    {
+        "questionId": "ch15_9_1",
+        "procedureId": "P10",
+        "partId": null,
+        "sortOrder": 1,
+        "order": 1,
+        "role": "primary",
+        "subType": "P10_isosceles_three_lines_in_one",
+        "operationSummary": "在等腰三角形中锁定两腰与底边，运用“三线合一”进行垂直、线段平分与角度互余转化（原题考点：等腰三角形“三线合一”性质与应用）。",
+        "status": "published"
+    },
+    {
+        "questionId": "ch15_9_2",
+        "procedureId": "P10",
+        "partId": null,
+        "sortOrder": 2,
+        "order": 2,
+        "role": "primary",
+        "subType": "P10_isosceles_three_lines_in_one",
+        "operationSummary": "在等腰三角形中锁定两腰与底边，运用“三线合一”进行垂直、线段平分与角度互余转化（原题考点：等腰三角形“三线合一”性质与应用）。",
+        "status": "published"
+    },
+    {
+        "questionId": "ch15_9_3",
+        "procedureId": "P10",
+        "partId": null,
+        "sortOrder": 3,
+        "order": 3,
+        "role": "primary",
+        "subType": "P10_isosceles_three_lines_in_one",
+        "operationSummary": "在等腰三角形中锁定两腰与底边，运用“三线合一”进行垂直、线段平分与角度互余转化（原题考点：等腰三角形“三线合一”性质与应用）。",
+        "status": "published"
+    },
+    {
+        "questionId": "ch15_9_4",
+        "procedureId": "P10",
+        "partId": null,
+        "sortOrder": 4,
+        "order": 4,
+        "role": "primary",
+        "subType": "P10_isosceles_three_lines_in_one",
+        "operationSummary": "在等腰三角形中锁定两腰与底边，运用“三线合一”进行垂直、线段平分与角度互余转化（原题考点：等腰三角形“三线合一”性质与应用）。",
+        "status": "published"
+    },
+    {
+        "questionId": "ch15_9_5",
+        "procedureId": "P10",
+        "partId": null,
+        "sortOrder": 5,
+        "order": 5,
+        "role": "primary",
+        "subType": "P10_isosceles_three_lines_in_one",
+        "operationSummary": "在等腰三角形中锁定两腰与底边，运用“三线合一”进行垂直、线段平分与角度互余转化（原题考点：等腰三角形“三线合一”性质与应用）。",
+        "status": "published"
+    },
+    {
+        "questionId": "ch15_9_6",
+        "procedureId": "P10",
+        "partId": null,
+        "sortOrder": 6,
+        "order": 6,
+        "role": "primary",
+        "subType": "P10_isosceles_three_lines_in_one",
+        "operationSummary": "在等腰三角形中锁定两腰与底边，运用“三线合一”进行垂直、线段平分与角度互余转化（原题考点：等腰三角形“三线合一”性质与应用）。",
+        "status": "published"
+    },
+    {
+        "questionId": "ch15_9_7",
+        "procedureId": "P10",
+        "partId": "(1)",
+        "sortOrder": 7,
+        "order": 7,
+        "partOrder": 1,
+        "role": "primary",
+        "subType": "P10_isosceles_three_lines_in_one",
+        "operationSummary": "第(1)问：在等腰三角形中利用“三线合一”导出底边垂线、底边中点或顶角平分线关系完成求解与证明。",
+        "status": "published"
+    },
+    {
+        "questionId": "ch15_9_7",
+        "procedureId": "P10",
+        "partId": "(2)",
+        "sortOrder": 7,
+        "order": 7,
+        "partOrder": 2,
+        "role": "primary",
+        "subType": "P10_isosceles_three_lines_in_one",
+        "operationSummary": "第(2)问：在等腰三角形中利用“三线合一”导出底边垂线、底边中点或顶角平分线关系完成求解与证明。",
+        "status": "published"
+    },
+    {
+        "questionId": "ch15_9_8",
+        "procedureId": "P10",
+        "partId": "(1)",
+        "sortOrder": 8,
+        "order": 8,
+        "partOrder": 1,
+        "role": "primary",
+        "subType": "P10_isosceles_three_lines_in_one",
+        "operationSummary": "第(1)问：在等腰三角形中利用“三线合一”导出底边垂线、底边中点或顶角平分线关系完成求解与证明。",
+        "status": "published"
+    },
+    {
+        "questionId": "ch15_9_8",
+        "procedureId": "P10",
+        "partId": "(2)",
+        "sortOrder": 8,
+        "order": 8,
+        "partOrder": 2,
+        "role": "primary",
+        "subType": "P10_isosceles_three_lines_in_one",
+        "operationSummary": "第(2)问：在等腰三角形中利用“三线合一”导出底边垂线、底边中点或顶角平分线关系完成求解与证明。",
+        "status": "published"
+    },
+    {
+        "questionId": "ch15_3_3_3",
+        "procedureId": "P10",
+        "partId": null,
+        "sortOrder": 9,
+        "order": 9,
+        "role": "primary",
+        "subType": "P10_isosceles_three_lines_in_one",
+        "operationSummary": "在等腰三角形中锁定两腰与底边，运用“三线合一”进行垂直、线段平分与角度互余转化（原题考点：三线合一、等边三角形的性质）。",
+        "status": "published"
+    },
+    {
+        "questionId": "ch15_3_5_2",
+        "procedureId": "P10",
+        "partId": null,
+        "sortOrder": 10,
+        "order": 10,
+        "role": "primary",
+        "subType": "P10_isosceles_three_lines_in_one",
+        "operationSummary": "在等腰三角形中锁定两腰与底边，运用“三线合一”进行垂直、线段平分与角度互余转化（原题考点：三线合一、含30度角的直角三角形）。",
+        "status": "published"
+    },
+    {
+        "questionId": "ch15_3_5_8",
+        "procedureId": "P10",
+        "partId": null,
+        "sortOrder": 11,
+        "order": 11,
+        "role": "primary",
+        "subType": "P10_isosceles_three_lines_in_one",
+        "operationSummary": "在等腰三角形中锁定两腰与底边，运用“三线合一”进行垂直、线段平分与角度互余转化（原题考点：三线合一、三角形内角和定理的应用、含30度角的直角三角形）。",
+        "status": "published"
     }
   ];
 

@@ -19,7 +19,7 @@
       if (/^(13|14|15|16|17|18)\./.test(value) || /^第十[三四五六七八]章/.test(value)) {
         return { grade: '初二', semester: '上册', label: value };
       }
-      if (/^(25|26|27)\./.test(value) || /^第二十[五六七]章/.test(value)) {
+      if (/^(25|26|27|28)\./.test(value) || /^第二十[五六七八]章/.test(value)) {
         return { grade: '初三', semester: '上册', label: value };
       }
 
@@ -154,6 +154,7 @@
           return '第七章 生活中的负数';
         }
       } else if (grade === '初一') {
+        if (ch.startsWith('1.') || ch.includes('第一章')) return '第一章 有理数';
         if (ch.startsWith('2.') || ch.includes('第二章')) return '第二章 有理数的运算';
         if (ch.startsWith('3.') || ch.includes('第三章')) return '第三章 代数式';
         if (ch.startsWith('4.') || ch.includes('第四章')) return '第四章 整式的加减法';
@@ -167,6 +168,7 @@
         if (ch.startsWith('25.') || ch.includes('第二十五')) return '第25章 一元二次方程';
         if (ch.startsWith('26.') || ch.includes('第二十六')) return '第26章 二次函数';
         if (ch.startsWith('27.') || ch.includes('第二十七')) return '第27章 反比例函数';
+  if (ch.startsWith('28.') || ch.includes('第二十八')) return '第28章 旋转';
       }
       return null;
     }

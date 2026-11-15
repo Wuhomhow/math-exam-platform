@@ -198,14 +198,82 @@
       );
       const filteredCols = this.getFilteredCollections();
 
-      // Build Grade -> Semester -> Chapter Group -> Section hierarchy matching Question Bank sidebar style
-      const chapterCounts = new Map();
+      // Build Grade -> Chapter Group -> Section hierarchy dynamically across all grades
+      const gradeDisplayMap = {
+        '七年级': { title: '初一（七年级）', semester: '上册' },
+        '八年级': { title: '初二（八年级）', semester: '上册' },
+        '九年级': { title: '初三（九年级）', semester: '上册' }
+      };
+      const gradeOrder = ['七年级', '八年级', '九年级'];
+
+      const byGrade = new Map();
       allCols.forEach(c => {
-        const ch = c.procedure.chapter;
-        chapterCounts.set(ch, (chapterCounts.get(ch) || 0) + 1);
+        const g = c.procedure.grade || '九年级';
+        if (!byGrade.has(g)) byGrade.set(g, []);
+        byGrade.get(g).push(c);
       });
 
       const isAllChap = ProceduralState.chapterFilter === 'all';
+      const gradeCardsHtml = gradeOrder
+        .filter(g => byGrade.has(g))
+        .map(g => {
+          const gCols = byGrade.get(g);
+          const gMeta = gradeDisplayMap[g] || { title: g, semester: '全册' };
+          const byGroup = new Map();
+          gCols.forEach(c => {
+            const grp = c.procedure.chapterGroup || c.procedure.chapter || '未分组章节';
+            if (!byGroup.has(grp)) byGroup.set(grp, []);
+            byGroup.get(grp).push(c);
+          });
+
+          const groupCardsHtml = Array.from(byGroup.entries()).map(([grpName, grpCols]) => {
+            const secCounts = new Map();
+            grpCols.forEach(c => {
+              const ch = c.procedure.chapter;
+              secCounts.set(ch, (secCounts.get(ch) || 0) + 1);
+            });
+            return `
+              <details class="nav-chapter-group-card mb-2" open>
+                <summary>
+                  <span>${escapeHtml(grpName)}</span>
+                  <span class="nav-chapter-group-badge">${secCounts.size} 节 · ${grpCols.length} 项</span>
+                </summary>
+                <div class="nav-chapter-group-content space-y-1">
+                  ${Array.from(secCounts.entries()).map(([chapName, cnt]) => {
+                    const active = ProceduralState.chapterFilter === chapName;
+                    return `
+                      <button type="button" class="proc-chap-btn chapter-tree-btn nav-topic-button ${active ? 'is-active' : ''}" data-proc-chap="${escapeHtml(chapName)}">
+                        <span class="nav-topic-label">${escapeHtml(chapName)}</span>
+                        <span class="nav-topic-count">${cnt}</span>
+                      </button>
+                    `;
+                  }).join('')}
+                </div>
+              </details>
+            `;
+          }).join('');
+
+          return `
+            <details class="nav-grade-card" open>
+              <summary>
+                <span>${escapeHtml(gMeta.title)}</span>
+                <span class="text-xs font-semibold text-slate-500">${gCols.length} 项</span>
+              </summary>
+              <div class="nav-grade-content">
+                <div class="mb-2 last:mb-0">
+                  <div class="nav-semester-label">
+                    <span>${escapeHtml(gMeta.semester)}</span>
+                    <span>${gCols.length} 项</span>
+                  </div>
+                  <div class="space-y-1">
+                    ${groupCardsHtml}
+                  </div>
+                </div>
+              </div>
+            </details>
+          `;
+        }).join('');
+
       let sidebarHtml = `
         <button type="button" class="proc-chap-btn chapter-tree-btn ${isAllChap ? 'is-active' : ''} w-full flex items-center justify-between gap-3 px-3 py-2.5 rounded-lg border border-slate-200 text-sm font-semibold" data-proc-chap="all">
           <span>全部程序性知识</span>
@@ -213,39 +281,7 @@
         </button>
 
         <div class="space-y-3">
-          <details class="nav-grade-card" open>
-            <summary>
-              <span>初三</span>
-              <span class="text-xs font-semibold text-slate-500">${allCols.length} 项</span>
-            </summary>
-            <div class="nav-grade-content">
-              <div class="mb-2 last:mb-0">
-                <div class="nav-semester-label">
-                  <span>上册</span>
-                  <span>${allCols.length} 项</span>
-                </div>
-                <div class="space-y-1">
-                  <details class="nav-chapter-group-card mb-2" open>
-                    <summary>
-                      <span>第25章 一元二次方程</span>
-                      <span class="nav-chapter-group-badge">${chapterCounts.size} 节 · ${allCols.length} 项</span>
-                    </summary>
-                    <div class="nav-chapter-group-content space-y-1">
-                      ${Array.from(chapterCounts.entries()).map(([chapName, cnt]) => {
-                        const active = ProceduralState.chapterFilter === chapName;
-                        return `
-                          <button type="button" class="proc-chap-btn chapter-tree-btn nav-topic-button ${active ? 'is-active' : ''}" data-proc-chap="${escapeHtml(chapName)}">
-                            <span class="nav-topic-label">${escapeHtml(chapName)}</span>
-                            <span class="nav-topic-count">${cnt}</span>
-                          </button>
-                        `;
-                      }).join('')}
-                    </div>
-                  </details>
-                </div>
-              </div>
-            </div>
-          </details>
+          ${gradeCardsHtml}
         </div>
       `;
       chapterNavEl.innerHTML = sidebarHtml;
@@ -281,13 +317,16 @@
                       <span class="px-2 py-0.5 rounded bg-[#F0FDFA] text-[#115E59] border border-[#CCFBF1] font-medium">${escapeHtml(p.grade)}</span>
                       <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-600 font-medium">${escapeHtml(p.chapter)}</span>
                     </div>
-                    <svg class="w-4 h-4 text-slate-300 group-hover:text-[#0F766E] group-hover:translate-x-0.5 transition-all shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
+                    <div class="flex items-center gap-1.5 shrink-0">
+                      <span class="px-2 py-0.5 rounded-full bg-teal-50 text-[#0F766E] text-[11px] font-semibold">${col.totalQuestions} 题</span>
+                      <svg class="w-4 h-4 text-slate-300 group-hover:text-[#0F766E] group-hover:translate-x-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                      </svg>
+                    </div>
                   </div>
 
                   <h3 class="text-base font-bold text-slate-900 group-hover:text-[#0F766E] transition-colors pt-0.5">
-                    ${escapeHtml(p.name)}
+                    ${renderMathText(p.name)}
                   </h3>
 
                   <p class="text-xs sm:text-[13px] text-slate-600 leading-relaxed">
@@ -346,7 +385,7 @@
             </div>
             <div class="flex-1 min-w-0 space-y-1.5">
               <div class="text-sm font-bold text-slate-900">
-                步骤 ${stepNum}：${escapeHtml(st.title)}
+                步骤 ${stepNum}：${renderMathText(st.title)}
               </div>
               <div class="text-xs sm:text-sm text-slate-700 leading-relaxed">
                 ${renderMathText(st.description)}
@@ -363,7 +402,7 @@
         `;
       }).join('');
 
-      // 4.3 Applicability & Prerequisites HTML (Two-Column Optimized Layout)
+      // 4.3 Applicability, Prerequisites & Pitfalls HTML
       const applicabilityHtml = (p.applicability || []).map(item => `
         <li class="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed">
           <span class="w-1.5 h-1.5 rounded-full bg-[#0F766E] mt-2 shrink-0"></span>
@@ -379,7 +418,7 @@
               <div>
                 <span>依赖程序性知识：</span>
                 <button type="button" class="text-[#0F766E] font-semibold hover:underline" data-nav-proc="${escapeHtml(pr.id)}">
-                  ${escapeHtml(pr.id)} · ${escapeHtml(pr.name)}
+                  ${escapeHtml(pr.id)} · ${renderMathText(pr.name)}
                 </button>
               </div>
             </li>
@@ -393,6 +432,13 @@
         `;
       }).join('');
 
+      const pitfallsHtml = (p.pitfalls || []).map(item => `
+        <li class="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed">
+          <span class="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 shrink-0"></span>
+          <span>${renderMathText(item)}</span>
+        </li>
+      `).join('');
+
       // 4.4 Typical Example Question HTML (only rendered when valid exampleQuestionId exists in QUESTION_BANK)
       let exampleSectionHtml = '';
       if (exampleQ) {
@@ -404,7 +450,7 @@
         const exImgHtml = exampleQ.image ? `<div class="my-1.5"><img src="${exampleQ.image}" class="max-h-40 max-w-xs h-auto rounded object-contain"></div>` : '';
         const stepMapHtml = (p.exampleStepMapping || []).map(m => `
           <div class="p-2.5 rounded-lg bg-[#F0FDFA]/70 border border-[#CCFBF1] text-xs space-y-0.5">
-            <div class="font-bold text-[#115E59]">${escapeHtml(m.title)}</div>
+            <div class="font-bold text-[#115E59]">${renderMathText(m.title)}</div>
             <div class="text-slate-700 leading-relaxed">${renderMathText(m.detail)}</div>
           </div>
         `).join('');
@@ -534,19 +580,20 @@
             <span>/</span>
             <button type="button" id="btnProcBackChap" class="hover:text-[#0F766E] hover:underline" data-chap="${escapeHtml(p.chapter)}">${escapeHtml(p.chapter)}</button>
             <span>/</span>
-            <span class="font-bold text-slate-800">${escapeHtml(p.name)}</span>
+            <span class="font-bold text-slate-800">${renderMathText(p.name)}</span>
           </div>
         </div>
 
         <!-- 4.1 Basic Information Header -->
-        <section class="ui-card p-5 space-y-2.5">
+        <section class="ui-card p-5 space-y-2">
           <div class="flex flex-wrap items-center gap-2 text-xs">
             <span class="px-2.5 py-0.5 rounded bg-[#0F766E] text-white font-bold">${escapeHtml(p.id)}</span>
             <span class="px-2.5 py-0.5 rounded bg-[#F0FDFA] text-[#115E59] border border-[#CCFBF1] font-semibold">${escapeHtml(p.grade)}</span>
             <span class="px-2.5 py-0.5 rounded bg-slate-100 text-slate-700 font-medium">${escapeHtml(p.chapter)}</span>
           </div>
 
-          <h2 class="text-lg sm:text-xl font-bold text-slate-900">${escapeHtml(p.name)}</h2>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900">${renderMathText(p.name)}</h2>
+          ${p.description ? `<p class="text-xs sm:text-sm text-slate-600 leading-relaxed">${renderMathText(p.description)}</p>` : ''}
         </section>
 
         <!-- 4.2 Core Operations: Step-by-Step Checklist (Visual Focus) -->
@@ -559,7 +606,7 @@
           </div>
         </section>
 
-        <!-- 4.3 Applicability & Prerequisites (Optimized Two-Column Layout) -->
+        <!-- 4.3 Applicability, Prerequisites & Pitfalls -->
         <section class="grid grid-cols-1 md:grid-cols-2 gap-4 items-stretch">
           <div class="ui-card p-5 space-y-3 flex flex-col">
             <div class="pb-2.5 border-b border-slate-100 flex items-center gap-2">
@@ -571,14 +618,28 @@
             </ul>
           </div>
 
-          <div class="ui-card p-5 space-y-3 flex flex-col">
-            <div class="pb-2.5 border-b border-slate-100 flex items-center gap-2">
-              <span class="w-2.5 h-2.5 rounded-full bg-slate-500"></span>
-              <h4 class="text-sm sm:text-base font-bold text-slate-900">前置知识</h4>
+          <div class="ui-card p-5 space-y-4 flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="pb-2.5 border-b border-slate-100 flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-slate-500"></span>
+                <h4 class="text-sm sm:text-base font-bold text-slate-900">前置知识</h4>
+              </div>
+              <ul class="space-y-2.5">
+                ${prereqListHtml}
+              </ul>
             </div>
-            <ul class="space-y-2.5 flex-1">
-              ${prereqListHtml}
-            </ul>
+
+            ${pitfallsHtml ? `
+              <div class="pt-3 border-t border-slate-100 space-y-2">
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                  <h5 class="text-xs sm:text-sm font-bold text-slate-800">易错点与边界提醒</h5>
+                </div>
+                <ul class="space-y-1.5">
+                  ${pitfallsHtml}
+                </ul>
+              </div>
+            ` : ''}
           </div>
         </section>
 
@@ -592,7 +653,7 @@
               <span class="text-slate-500 font-semibold">前置程序性知识：</span>
               ${prereqProcs.length > 0 ? prereqProcs.map(pr => `
                 <button type="button" class="px-2.5 py-1 rounded-lg bg-[#F0FDFA] text-[#0F766E] border border-[#CCFBF1] font-semibold hover:bg-[#CCFBF1]/60 transition" data-nav-proc="${escapeHtml(pr.id)}">
-                  ${escapeHtml(pr.id)} · ${escapeHtml(pr.name)}
+                  ${escapeHtml(pr.id)} · ${renderMathText(pr.name)}
                 </button>
               `).join('') : '<span class="text-slate-400">无直接前置程序性知识</span>'}
             </div>
@@ -601,11 +662,11 @@
               <span class="text-slate-500 font-semibold">后续关联程序性知识：</span>
               ${subseqProcs.length > 0 ? subseqProcs.map(sp => `
                 <button type="button" class="px-2.5 py-1 rounded-lg bg-[#F0FDFA] text-[#0F766E] border border-[#CCFBF1] font-semibold hover:bg-[#CCFBF1]/60 transition" data-nav-proc="${escapeHtml(sp.id)}">
-                  ${escapeHtml(sp.id)} · ${escapeHtml(sp.name)}
+                  ${escapeHtml(sp.id)} · ${renderMathText(sp.name)}
                 </button>
               `).join('') : relatedProcs.length > 0 ? relatedProcs.map(rp => `
                 <button type="button" class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 border border-slate-200 font-semibold hover:border-[#0F766E] hover:text-[#0F766E] transition" data-nav-proc="${escapeHtml(rp.id)}">
-                  同源操作对比：${escapeHtml(rp.id)} · ${escapeHtml(rp.name)}
+                  同源操作对比：${escapeHtml(rp.id)} · ${renderMathText(rp.name)}
                 </button>
               `).join('') : '<span class="text-slate-400">暂无后续直接关联集合</span>'}
             </div>
@@ -622,7 +683,7 @@
           <div class="ui-card p-4 flex flex-wrap items-center justify-between gap-2">
             <div>
               <h3 class="text-sm sm:text-base font-bold text-slate-900">
-                关联题目集合（共 ${col.totalQuestions} 题 · 按内部学习顺序 1 → ${col.totalQuestions} 排列）
+                关联题目集合（共 ${col.totalQuestions} 题 · 按内部学习顺序 ${col.totalQuestions > 0 ? `1 → ${col.totalQuestions}` : '0'} 排列）
               </h3>
               <p class="text-xs text-slate-500 mt-0.5">全部题目直接引用题库原始记录，点击「进入原题详情页」可在题库中查看完整原题与相似变式</p>
             </div>

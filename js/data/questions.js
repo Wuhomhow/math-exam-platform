@@ -4667,6 +4667,2181 @@ window.QUESTION_BANK = [
     "detail": "解：（1）填表如下：<div class=\"my-2 overflow-x-auto\"><table class=\"border-collapse border border-slate-300 text-xs sm:text-sm my-1\"><thead><tr class=\"bg-slate-50\"><th class=\"border border-slate-300 px-3 py-1.5 text-center\">日期</th><th class=\"border border-slate-300 px-3 py-1.5 text-left\">项目</th><th class=\"border border-slate-300 px-3 py-1.5 text-center\">收支情况（元）</th></tr></thead><tbody><tr><td class=\"border border-slate-300 px-3 py-1 text-center\">9月5日</td><td class=\"border border-slate-300 px-3 py-1\">爸爸月工资收入 $4500$ 元</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$+4500$</td></tr><tr><td class=\"border border-slate-300 px-3 py-1 text-center\">9月6日</td><td class=\"border border-slate-300 px-3 py-1\">水、电、煤气、物管费支出 $800$ 元</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$-800$</td></tr><tr><td class=\"border border-slate-300 px-3 py-1 text-center\">9月7日</td><td class=\"border border-slate-300 px-3 py-1\">电话、手机、网络费支出 $600$ 元</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$-600$</td></tr><tr><td class=\"border border-slate-300 px-3 py-1 text-center\">9月15日</td><td class=\"border border-slate-300 px-3 py-1\">妈妈工资收入 $3500$ 元</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$+3500$</td></tr><tr><td class=\"border border-slate-300 px-3 py-1 text-center\">9月18日</td><td class=\"border border-slate-300 px-3 py-1\">还银行住房贷款 $3000$ 元</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$-3000$</td></tr><tr><td class=\"border border-slate-300 px-3 py-1 text-center\">9月20日</td><td class=\"border border-slate-300 px-3 py-1\">爸爸、妈妈、“大头儿子”购衣服支出 $900$ 元</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$-900$</td></tr><tr><td class=\"border border-slate-300 px-3 py-1 text-center\">9月28日</td><td class=\"border border-slate-300 px-3 py-1\">订报刊、买书支出 $300$ 元</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$-300$</td></tr><tr><td class=\"border border-slate-300 px-3 py-1 text-center\">9月30日</td><td class=\"border border-slate-300 px-3 py-1\">结算本月伙食费共支出 $1700$ 元</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$-1700$</td></tr><tr><td rowspan=\"3\" class=\"border border-slate-300 px-3 py-1 text-center font-semibold\">合计</td><td class=\"border border-slate-300 px-3 py-1\">本月共收入</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$+8000$</td></tr><tr><td class=\"border border-slate-300 px-3 py-1\">本月共支出</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$-7300$</td></tr><tr><td class=\"border border-slate-300 px-3 py-1\">本月共结余</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$+700$</td></tr></tbody></table></div>（2）因为本月结余 $700$ 元较少，不适合远途去四川九寨沟旅游，可以选择在本市旅游．"
   },
   {
+    "id": "g7_1_2_1_1",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.1 有理数的意义",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "有理数的意义",
+    "stem": "下列各数中 $\\frac{22}{7}$，$0$，$\\frac{\\pi}{2}$，$0.\\dot{6}$，$-1.414$，有理数有（   ）",
+    "options": [
+      "$1$ 个",
+      "$2$ 个",
+      "$3$ 个",
+      "$4$ 个"
+    ],
+    "answer": "D",
+    "analysis": "本题考查了有理数的概念，有理数包括整数和分数（有限小数与无限循环小数都可以化为分数），据此判断即可．",
+    "detail": "解：$\\frac{22}{7}$，$0$，$0.\\dot{6}$，$-1.414$ 都是有理数，$\\frac{\\pi}{2}$ 是无理数，故有理数共 $4$ 个．<br>故选：D．"
+  },
+  {
+    "id": "g7_1_2_1_2",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.1 有理数的意义",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "有理数的意义",
+    "stem": "在数 $2$，$0$，$-3.7$，$\\pi$，$4.8$ 中，有理数有（   ）",
+    "options": [
+      "$1$ 个",
+      "$2$ 个",
+      "$3$ 个",
+      "$4$ 个"
+    ],
+    "answer": "D",
+    "analysis": "本题主要考查了有理数的定义，根据有理数的定义进行判断即可．",
+    "detail": "解：在数 $2$，$0$，$-3.7$，$\\pi$，$4.8$ 中，有理数有 $2$，$0$，$-3.7$，$4.8$，共 $4$ 个．<br>故选：D．"
+  },
+  {
+    "id": "g7_1_2_1_3",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.1 有理数的意义",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "有理数的意义",
+    "stem": "观察下面六个数：$-1.732$，$\\pi$，$3.\\dot{1}\\dot{4}$，$67\\%$，$\\frac{5}{6}$，$3.1212212221\\cdots\\cdots$（两个 $1$ 之间的 $2$ 的个数依次逐渐增加），这些数中，有理数的个数为（   ）",
+    "options": [
+      "$2$",
+      "$3$",
+      "$4$",
+      "$5$"
+    ],
+    "answer": "C",
+    "analysis": "本题主要考查了有理数的定义，根据有理数定义“整数和分数统称为有理数”进行解答即可．",
+    "detail": "解：在 $-1.732$，$\\pi$，$3.\\dot{1}\\dot{4}$，$67\\%$，$\\frac{5}{6}$，$3.1212212221\\cdots\\cdots$（两个 $1$ 之间的 $2$ 的个数依次逐渐增加）中，有理数有 $-1.732$，$3.\\dot{1}\\dot{4}$，$67\\%$，$\\frac{5}{6}$，共 $4$ 个．<br>故选：C．"
+  },
+  {
+    "id": "g7_1_2_1_4",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.1 有理数的意义",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "有理数的意义",
+    "stem": "祖冲之，中国南北朝时期著名的数学家、天文学家．他是世界上将圆周率精确到小数点后第七位的第一人，这一研究发现比西方早了 $1100$ 多年，他将圆周率的分数近似值 $\\frac{355}{113}$ 称为密率，$\\frac{22}{7}$ 称为约率．请判断：约率 $\\frac{22}{7}$ 是（   ）",
+    "options": [
+      "有理数",
+      "整数",
+      "有限小数",
+      "无限不循环小数"
+    ],
+    "answer": "A",
+    "analysis": "本题主要考查有理数的定义，有理数包括整数和分数，故 $\\frac{22}{7}$ 是有理数．",
+    "detail": "解：$\\because \\frac{22}{7}$ 是分数，<br>$\\therefore \\frac{22}{7}$ 是有理数．<br>故选：A．"
+  },
+  {
+    "id": "g7_1_2_1_5",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.1 有理数的意义",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "有理数的意义",
+    "stem": "下列关于 $-0.25$ 的说法正确的个数是（   ）<br>①是分数；②是小数；③是负数；④是有理数．",
+    "options": [
+      "$1$",
+      "$2$",
+      "$3$",
+      "$4$"
+    ],
+    "answer": "D",
+    "analysis": "本题主要考查有理数，熟练掌握有理数的相关定义是解题的关键．",
+    "detail": "解：$\\because -0.25=-\\frac{1}{4}$，既是分数，也是小数，是负数，也是有理数，<br>$\\therefore$ 四个说法都正确．<br>故选：D．"
+  },
+  {
+    "id": "g7_1_2_1_6",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.2 0的意义",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "0的意义",
+    "stem": "下列说法正确的是（   ）",
+    "options": [
+      "$0$ 是正数",
+      "$0$ 是负数",
+      "$0$ 是整数",
+      "$0$ 是分数"
+    ],
+    "answer": "C",
+    "analysis": "本题主要考查了“$0$”的意义，熟知“$0$”的意义是解题的关键．",
+    "detail": "解：A、$0$ 既不是正数，也不是负数，原说法错误，不符合题意；<br>B、$0$ 既不是正数，也不是负数，原说法错误，不符合题意；<br>C、$0$ 是整数，符合题意；<br>D、$0$ 不是分数，不符合题意．<br>故选：C．"
+  },
+  {
+    "id": "g7_1_2_1_7",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.2 0的意义",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "0的意义",
+    "stem": "下列关于“$0$”的说法正确的有（   ）<br>① $0$ 是正数和负数的分界点；② $0$ 是正数；③ $0$ 是自然数；④不存在既不是正数也不是负数的数；⑤ $0$ 既是整数也是偶数；⑥ $0$ 不是负数．",
+    "options": [
+      "$2$ 个",
+      "$3$ 个",
+      "$4$ 个",
+      "$5$ 个"
+    ],
+    "answer": "C",
+    "analysis": "此题考查 $0$ 的意义，正确理解 $0$ 的意义是解题的关键．",
+    "detail": "解：$0$ 是正数和负数的分界点，故①正确；<br>$0$ 既不是正数，也不是负数，故②错误，⑥正确；<br>$0$ 是自然数，故③正确；<br>存在既不是正数也不是负数的数，即 $0$，故④错误；<br>$0$ 既是整数也是偶数，故⑤正确；<br>故正确的有①③⑤⑥，共 $4$ 个．<br>故选：C．"
+  },
+  {
+    "id": "g7_1_2_1_8",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.2 0的意义",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "0的意义",
+    "stem": "下列说法错误的是（   ）",
+    "options": [
+      "$0$ 既不是正数也不是负数",
+      "$0$ 是自然数，也是整数，也是有理数",
+      "若一个有理数不是正数，则它一定是负数",
+      "如果仓库运进货物 $5\\text{ t}$ 记作 $+5\\text{ t}$，那么运出货物 $5\\text{ t}$ 记作 $-5\\text{ t}$"
+    ],
+    "answer": "C",
+    "analysis": "本题考查了有理数的定义和分类，注意 $0$ 既不是正数也不是负数．",
+    "detail": "解：A、$0$ 既不是正数也不是负数，正确，不合题意；<br>B、$0$ 是自然数，也是整数，也是有理数，正确，不合题意；<br>C、若一个有理数不是正数，则它可能是 $0$ 或负数，原说法错误，符合题意；<br>D、如果仓库运进货物 $5\\text{ t}$ 记作 $+5\\text{ t}$，那么运出货物 $5\\text{ t}$ 记作 $-5\\text{ t}$，正确，不合题意．<br>故选：C．"
+  },
+  {
+    "id": "g7_1_2_1_9",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.2 0的意义",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "0的意义",
+    "stem": "下列语句正确的个数是（   ）<br>①一个数前面加上“$-$”号，这个数就是负数；②如果 $a$ 是正数，那么 $-a$ 一定是负数；③一个有理数不是正的就是负的；④ $0^{\\circ}\\text{C}$ 表示没有温度．",
+    "options": [
+      "$0$ 个",
+      "$1$ 个",
+      "$2$ 个",
+      "$3$ 个"
+    ],
+    "answer": "B",
+    "analysis": "根据正负数的定义和 $0$ 的意义进行逐一判断即可．",
+    "detail": "解：①一个正数前面加上“$-$”号，这个数才是负数（如 $-0=0$ 不是负数，$-(-2)=2$ 是正数），说法错误；<br>②如果 $a$ 是正数，那么 $-a$ 一定是负数，说法正确；<br>③ $0$ 是有理数，但 $0$ 既不是正数也不是负数，说法错误；<br>④ $0^{\\circ}\\text{C}$ 表示冰水混合物的温度，不是没有温度，说法错误；<br>故正确的只有②，共 $1$ 个．<br>故选：B．"
+  },
+  {
+    "id": "g7_1_2_1_10",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.2 0的意义",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "0的意义",
+    "stem": "下列说法正确的是（   ）<br>①零是整数；②零是有理数；③零是自然数；④零是正数；⑤零是负数；⑥零是非负数．",
+    "options": [
+      "①②④⑤",
+      "②③⑤⑥",
+      "①②③⑥",
+      "②③④⑤"
+    ],
+    "answer": "C",
+    "analysis": "根据零是既不是正数也不是负数的整数和有理数，逐一判断即可求解．",
+    "detail": "解：①零是整数，正确；<br>②零是有理数，正确；<br>③零是自然数，正确；<br>④零不是正数，原说法错误；<br>⑤零不是负数，原说法错误；<br>⑥零是非负数，正确；<br>所以正确的有①②③⑥．<br>故选：C．"
+  },
+  {
+    "id": "g7_1_2_1_11",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.3 有理数的分类",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "有理数的分类",
+    "stem": "下列 $7$ 个数：$-\\frac{7}{4}$，$1.010010001$，$\\frac{4}{33}$，$0$，$-2$，$0.12$，$-3.2626626662\\cdots$（每两个 $2$ 之间依次多一个 $6$），其中有理数有（   ）",
+    "options": [
+      "$3$ 个",
+      "$4$ 个",
+      "$5$ 个",
+      "$6$ 个"
+    ],
+    "answer": "D",
+    "analysis": "本题考查了有理数的概念，解题的关键是根据有理数的定义（整数和分数，即有限小数或无限循环小数），逐一判断各数是否属于有理数．",
+    "detail": "解：$-\\frac{7}{4}$：分数形式，属于有理数；<br>$1.010010001$：有限小数，属于有理数；<br>$\\frac{4}{33}$：分数形式，化为小数是无限循环小数 $0.\\dot{1}\\dot{2}$，属于有理数；<br>$0$：整数，属于有理数；<br>$-2$：整数，属于有理数；<br>$0.12$：有限小数，属于有理数；<br>$-3.2626626662\\cdots$（每两个 $2$ 之间依次多一个 $6$）：无限不循环小数，属于无理数．<br>综上，前 $6$ 个数均为有理数，共 $6$ 个．<br>故选：D．"
+  },
+  {
+    "id": "g7_1_2_1_12",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.3 有理数的分类",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "有理数的分类",
+    "stem": "将下列各数填入合适的集合内：<br>$-3$，$\\frac{1}{2}$，$\\pi$，$-1.777$，$200$，$-1\\frac{3}{7}$，$0$，$-2.8$，$4$，$13\\%$．<br>正数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$<br>正有理数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$<br>整数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$<br>分数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$",
+    "options": [],
+    "answer": "正数集合：$\\{\\frac{1}{2}, \\pi, 200, 4, 13\\%, \\cdots\\}$；正有理数集合：$\\{\\frac{1}{2}, 200, 4, 13\\%, \\cdots\\}$；整数集合：$\\{-3, 200, 0, 4, \\cdots\\}$；分数集合：$\\{\\frac{1}{2}, -1.777, -1\\frac{3}{7}, -2.8, 13\\%, \\cdots\\}$",
+    "analysis": "本题考查了有理数的分类，注意 $\\pi$ 是正数但不是有理数（也不是分数），有限小数和百分数都属于分数．",
+    "detail": "解：正数集合：$\\left\\{\\frac{1}{2},\\ \\pi,\\ 200,\\ 4,\\ 13\\%,\\ \\cdots\\right\\}$；<br>正有理数集合：$\\left\\{\\frac{1}{2},\\ 200,\\ 4,\\ 13\\%,\\ \\cdots\\right\\}$；<br>整数集合：$\\left\\{-3,\\ 200,\\ 0,\\ 4,\\ \\cdots\\right\\}$；<br>分数集合：$\\left\\{\\frac{1}{2},\\ -1.777,\\ -1\\frac{3}{7},\\ -2.8,\\ 13\\%,\\ \\cdots\\right\\}$．"
+  },
+  {
+    "id": "g7_1_2_1_13",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.3 有理数的分类",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "有理数的分类",
+    "stem": "画示意图表示下列概念之间的关系：有理数、正有理数、负有理数、零．",
+    "options": [],
+    "answer": "有理数按性质符号分为正有理数、零、负有理数三部分（示意图见解析）．",
+    "analysis": "本题是对有理数分类的考查，根据有理数分为正有理数、负有理数、零画包含关系图即可．",
+    "detail": "解：有理数包含正有理数、零和负有理数，示意图如下：<div class=\"my-2\"><img src=\"assets/images/g7_1_2_1_img3.png\" width=\"114\" height=\"83\" class=\"max-w-full h-auto rounded\" style=\"max-height:83px;\"></div>"
+  },
+  {
+    "id": "g7_1_2_1_14",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.4 带“非”字的有理数",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "带“非”字的有理数",
+    "stem": "对于 $-3.\\dot{2}7\\dot{1}$，下列说法不正确的是（   ）",
+    "options": [
+      "是非正数",
+      "是分数",
+      "是有理数",
+      "是非负整数"
+    ],
+    "answer": "D",
+    "analysis": "本题考查了有理数的定义与分类，根据非正数、分数、有理数、非负整数的定义判断即可．",
+    "detail": "解：A、$-3.\\dot{2}7\\dot{1}<0$，非正数是指 $0$ 和负数，故说法正确，不符合题意；<br>B、$-3.\\dot{2}7\\dot{1}$ 是无限循环小数，属于分数，故说法正确，不符合题意；<br>C、$-3.\\dot{2}7\\dot{1}$ 是无限循环小数，属于有理数，故说法正确，不符合题意；<br>D、非负整数是指 $0$ 和正整数，则 $-3.\\dot{2}7\\dot{1}$ 不是非负整数，故说法错误，符合题意．<br>故选：D．"
+  },
+  {
+    "id": "g7_1_2_1_15",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.4 带“非”字的有理数",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "带“非”字的有理数",
+    "stem": "下列说法中，错误的有（   ）<br>① $-2\\frac{4}{7}$ 是负分数；② $1.5$ 不是整数；③非负有理数不包括 $0$；④ $3.14$ 不是有理数；⑤ $0$ 是最小的有理数；⑥正整数、负整数统称为有理数．",
+    "options": [
+      "$1$ 个",
+      "$2$ 个",
+      "$3$ 个",
+      "$4$ 个"
+    ],
+    "answer": "D",
+    "analysis": "本题考查了有理数的分类和概念，熟练掌握有理数概念是解题的关键．",
+    "detail": "解：① $-2\\frac{4}{7}$ 是负分数，正确；<br>② $1.5$ 是分数，不是整数，正确；<br>③非负有理数是指正有理数和 $0$，包括 $0$，故错误；<br>④ $3.14$ 是有限小数，是有理数，故错误；<br>⑤有理数没有最小值（负数比 $0$ 小），故错误；<br>⑥正整数、$0$、负整数统称为整数，整数和分数统称为有理数，故错误．<br>综上所述，错误的有③、④、⑤、⑥，共 $4$ 个．<br>故选：D．"
+  },
+  {
+    "id": "g7_1_2_1_16",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.4 带“非”字的有理数",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "容易",
+    "knowledge": "带“非”字的有理数",
+    "stem": "在 $-\\frac{1}{5}$，$0$，$-1.8$，$-3$，$\\frac{3}{2}$，$4.2$ 中，分数的个数为 ______，整数的个数为 ______，非负数的个数为 ______．",
+    "options": [],
+    "answer": "$4$；$2$；$3$",
+    "analysis": "本题考查了有理数的分类，熟练掌握分数、整数、非负数的概念是解题的关键．",
+    "detail": "解：在 $-\\frac{1}{5}$，$0$，$-1.8$，$-3$，$\\frac{3}{2}$，$4.2$ 中，分数有 $-\\frac{1}{5}$，$-1.8$，$\\frac{3}{2}$，$4.2$，共 $4$ 个；整数有 $0$，$-3$，共 $2$ 个；非负数有 $0$，$\\frac{3}{2}$，$4.2$，共 $3$ 个．<br>故答案为：$4$；$2$；$3$．"
+  },
+  {
+    "id": "g7_1_2_1_17",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.4 带“非”字的有理数",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "带“非”字的有理数",
+    "stem": "将下列各数填入适当的括号内：<br>$\\pi$，$5$，$-3$，$\\frac{3}{4}$，$8.9$，$19$，$-\\frac{6}{7}$，$-3.14$，$-9$，$0$，$2\\frac{3}{5}$．<br>正数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$<br>负数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$<br>整数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$<br>分数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$<br>正整数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$<br>负整数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$<br>非负数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$",
+    "options": [],
+    "answer": "正数集合：$\\{\\pi, 5, \\frac{3}{4}, 8.9, 19, 2\\frac{3}{5}, \\cdots\\}$；负数集合：$\\{-3, -\\frac{6}{7}, -3.14, -9, \\cdots\\}$；整数集合：$\\{5, -3, 19, -9, 0, \\cdots\\}$；分数集合：$\\{\\frac{3}{4}, 8.9, -\\frac{6}{7}, -3.14, 2\\frac{3}{5}, \\cdots\\}$；正整数集合：$\\{5, 19, \\cdots\\}$；负整数集合：$\\{-3, -9, \\cdots\\}$；非负数集合：$\\{\\pi, 5, \\frac{3}{4}, 8.9, 19, 2\\frac{3}{5}, 0, \\cdots\\}$",
+    "analysis": "本题考查了有理数的分类，注意 $\\pi$ 是正数与非负数，但不是分数．",
+    "detail": "解：正数集合：$\\left\\{\\pi,\\ 5,\\ \\frac{3}{4},\\ 8.9,\\ 19,\\ 2\\frac{3}{5},\\ \\cdots\\right\\}$；<br>负数集合：$\\left\\{-3,\\ -\\frac{6}{7},\\ -3.14,\\ -9,\\ \\cdots\\right\\}$；<br>整数集合：$\\left\\{5,\\ -3,\\ 19,\\ -9,\\ 0,\\ \\cdots\\right\\}$；<br>分数集合：$\\left\\{\\frac{3}{4},\\ 8.9,\\ -\\frac{6}{7},\\ -3.14,\\ 2\\frac{3}{5},\\ \\cdots\\right\\}$；<br>正整数集合：$\\left\\{5,\\ 19,\\ \\cdots\\right\\}$；<br>负整数集合：$\\left\\{-3,\\ -9,\\ \\cdots\\right\\}$；<br>非负数集合：$\\left\\{\\pi,\\ 5,\\ \\frac{3}{4},\\ 8.9,\\ 19,\\ 2\\frac{3}{5},\\ 0,\\ \\cdots\\right\\}$．"
+  },
+  {
+    "id": "g7_1_2_1_18",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.4 带“非”字的有理数",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "带“非”字的有理数",
+    "stem": "把下列各数填在相应的大括号内：<br>$-4$；$-3.5$；$0$；$\\frac{\\pi}{3}$；$10\\%$；$-\\frac{2}{3}$；$2021$；$2.030030003$；$+6$；$0.75$；$-3$；$2\\frac{2}{7}$．<br>正分数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$；<br>负整数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$；<br>整数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$；<br>正有理数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$；<br>负数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$；<br>非负整数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$；<br>分数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$．",
+    "options": [],
+    "answer": "正分数集合：$\\{10\\%, 2.030030003, 0.75, 2\\frac{2}{7}, \\cdots\\}$；负整数集合：$\\{-4, -3, \\cdots\\}$；整数集合：$\\{-4, 0, 2021, +6, -3, \\cdots\\}$；正有理数集合：$\\{10\\%, 2021, 2.030030003, +6, 0.75, 2\\frac{2}{7}, \\cdots\\}$；负数集合：$\\{-4, -3.5, -\\frac{2}{3}, -3, \\cdots\\}$；非负整数集合：$\\{0, 2021, +6, \\cdots\\}$；分数集合：$\\{-3.5, 10\\%, -\\frac{2}{3}, 2.030030003, 0.75, 2\\frac{2}{7}, \\cdots\\}$",
+    "analysis": "本题考查了有理数的分类，注意 $\\frac{\\pi}{3}$ 是无理数，不属于有理数或分数；$2.030030003$ 是有限小数，属于正分数．",
+    "detail": "解：正分数集合：$\\left\\{10\\%,\\ 2.030030003,\\ 0.75,\\ 2\\frac{2}{7},\\ \\cdots\\right\\}$；<br>负整数集合：$\\left\\{-4,\\ -3,\\ \\cdots\\right\\}$；<br>整数集合：$\\left\\{-4,\\ 0,\\ 2021,\\ +6,\\ -3,\\ \\cdots\\right\\}$；<br>正有理数集合：$\\left\\{10\\%,\\ 2021,\\ 2.030030003,\\ +6,\\ 0.75,\\ 2\\frac{2}{7},\\ \\cdots\\right\\}$；<br>负数集合：$\\left\\{-4,\\ -3.5,\\ -\\frac{2}{3},\\ -3,\\ \\cdots\\right\\}$；<br>非负整数集合：$\\left\\{0,\\ 2021,\\ +6,\\ \\cdots\\right\\}$；<br>分数集合：$\\left\\{-3.5,\\ 10\\%,\\ -\\frac{2}{3},\\ 2.030030003,\\ 0.75,\\ 2\\frac{2}{7},\\ \\cdots\\right\\}$．"
+  },
+  {
+    "id": "g7_1_2_1_19",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.4 带“非”字的有理数",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "带“非”字的有理数",
+    "stem": "把下列各数填在相应的括号里：<br>$-5$，$+2\\frac{2}{7}$，$0.62$，$0$，$-\\frac{5}{6}\\pi$，$-6.3$，$-7\\frac{1}{3}$，$-0.101001$，$-30\\%$，$2023$．<br>正整数：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$<br>负整数：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$<br>正分数：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$<br>负分数：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$<br>整数：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$<br>有理数：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$<br>非负有理数：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$",
+    "options": [],
+    "answer": "正整数：$\\{2023, \\cdots\\}$；负整数：$\\{-5, \\cdots\\}$；正分数：$\\{+2\\frac{2}{7}, 0.62, \\cdots\\}$；负分数：$\\{-6.3, -7\\frac{1}{3}, -0.101001, -30\\%, \\cdots\\}$；整数：$\\{2023, -5, 0, \\cdots\\}$；有理数：$\\{-5, +2\\frac{2}{7}, 0.62, 0, -6.3, -7\\frac{1}{3}, -0.101001, -30\\%, 2023, \\cdots\\}$；非负有理数：$\\{+2\\frac{2}{7}, 0.62, 0, 2023, \\cdots\\}$",
+    "analysis": "本题考查了有理数的分类，注意 $-\\frac{5}{6}\\pi$ 是无理数，不属于负分数或有理数．",
+    "detail": "解：正整数：$\\left\\{2023,\\ \\cdots\\right\\}$；<br>负整数：$\\left\\{-5,\\ \\cdots\\right\\}$；<br>正分数：$\\left\\{+2\\frac{2}{7},\\ 0.62,\\ \\cdots\\right\\}$；<br>负分数：$\\left\\{-6.3,\\ -7\\frac{1}{3},\\ -0.101001,\\ -30\\%,\\ \\cdots\\right\\}$；<br>整数：$\\left\\{2023,\\ -5,\\ 0,\\ \\cdots\\right\\}$；<br>有理数：$\\left\\{-5,\\ +2\\frac{2}{7},\\ 0.62,\\ 0,\\ -6.3,\\ -7\\frac{1}{3},\\ -0.101001,\\ -30\\%,\\ 2023,\\ \\cdots\\right\\}$；<br>非负有理数：$\\left\\{+2\\frac{2}{7},\\ 0.62,\\ 0,\\ 2023,\\ \\cdots\\right\\}$．"
+  },
+  {
+    "id": "g7_1_2_1_20",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.4 带“非”字的有理数",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "带“非”字的有理数",
+    "stem": "把下列各有理数填入相应的集合里：<br>$-5$，$10$，$0$，$+2\\frac{3}{5}$，$0.01$，$+66$，$-\\frac{3}{5}$，$15\\%$，$\\frac{22}{7}$．<br>整数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$；<br>负数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$；<br>非负整数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$；<br>分数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$；<br>正有理数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$；<br>非负数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$．",
+    "options": [],
+    "answer": "整数集合：$\\{-5, 10, 0, +66, \\cdots\\}$；负数集合：$\\{-5, -\\frac{3}{5}, \\cdots\\}$；非负整数集合：$\\{10, 0, +66, \\cdots\\}$；分数集合：$\\{+2\\frac{3}{5}, 0.01, -\\frac{3}{5}, 15\\%, \\frac{22}{7}, \\cdots\\}$；正有理数集合：$\\{10, +2\\frac{3}{5}, 0.01, +66, 15\\%, \\frac{22}{7}, \\cdots\\}$；非负数集合：$\\{10, 0, +2\\frac{3}{5}, 0.01, +66, 15\\%, \\frac{22}{7}, \\cdots\\}$",
+    "analysis": "本题考查了有理数的分类，注意整数和正数的区别，$0$ 是整数和非负数，但不是正数．",
+    "detail": "解：整数集合：$\\left\\{-5,\\ 10,\\ 0,\\ +66,\\ \\cdots\\right\\}$；<br>负数集合：$\\left\\{-5,\\ -\\frac{3}{5},\\ \\cdots\\right\\}$；<br>非负整数集合：$\\left\\{10,\\ 0,\\ +66,\\ \\cdots\\right\\}$；<br>分数集合：$\\left\\{+2\\frac{3}{5},\\ 0.01,\\ -\\frac{3}{5},\\ 15\\%,\\ \\frac{22}{7},\\ \\cdots\\right\\}$；<br>正有理数集合：$\\left\\{10,\\ +2\\frac{3}{5},\\ 0.01,\\ +66,\\ 15\\%,\\ \\frac{22}{7},\\ \\cdots\\right\\}$；<br>非负数集合：$\\left\\{10,\\ 0,\\ +2\\frac{3}{5},\\ 0.01,\\ +66,\\ 15\\%,\\ \\frac{22}{7},\\ \\cdots\\right\\}$．"
+  },
+  {
+    "id": "g7_1_2_1_21",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.4 带“非”字的有理数",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "带“非”字的有理数",
+    "stem": "将下列各数填入适当的括号内：<br>$\\pi$，$5$，$-3$，$\\frac{3}{4}$，$8.9$，$19$，$-\\frac{6}{7}$，$-3.14$，$-9$，$0$，$2\\frac{3}{5}$．<br>正数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$ &nbsp;&nbsp; 负数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$<br>整数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$ &nbsp;&nbsp; 分数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$<br>正整数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$ &nbsp;&nbsp; 负整数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$<br>非负数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$ &nbsp;&nbsp; 非正数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$",
+    "options": [],
+    "answer": "正数集合：$\\{\\pi, 5, \\frac{3}{4}, 8.9, 19, 2\\frac{3}{5}, \\cdots\\}$；负数集合：$\\{-3, -\\frac{6}{7}, -3.14, -9, \\cdots\\}$；整数集合：$\\{5, -3, 19, -9, 0, \\cdots\\}$；分数集合：$\\{\\frac{3}{4}, 8.9, -\\frac{6}{7}, -3.14, 2\\frac{3}{5}, \\cdots\\}$；正整数集合：$\\{5, 19, \\cdots\\}$；负整数集合：$\\{-3, -9, \\cdots\\}$；非负数集合：$\\{\\pi, 5, \\frac{3}{4}, 8.9, 19, 0, 2\\frac{3}{5}, \\cdots\\}$；非正数集合：$\\{-3, -\\frac{6}{7}, -3.14, -9, 0, \\cdots\\}$",
+    "analysis": "本题考查了有理数的分类，注意非负数包含正数和 $0$，非正数包含负数和 $0$．",
+    "detail": "解：正数集合：$\\left\\{\\pi,\\ 5,\\ \\frac{3}{4},\\ 8.9,\\ 19,\\ 2\\frac{3}{5},\\ \\cdots\\right\\}$；<br>负数集合：$\\left\\{-3,\\ -\\frac{6}{7},\\ -3.14,\\ -9,\\ \\cdots\\right\\}$；<br>整数集合：$\\left\\{5,\\ -3,\\ 19,\\ -9,\\ 0,\\ \\cdots\\right\\}$；<br>分数集合：$\\left\\{\\frac{3}{4},\\ 8.9,\\ -\\frac{6}{7},\\ -3.14,\\ 2\\frac{3}{5},\\ \\cdots\\right\\}$；<br>正整数集合：$\\left\\{5,\\ 19,\\ \\cdots\\right\\}$；<br>负整数集合：$\\left\\{-3,\\ -9,\\ \\cdots\\right\\}$；<br>非负数集合：$\\left\\{\\pi,\\ 5,\\ \\frac{3}{4},\\ 8.9,\\ 19,\\ 0,\\ 2\\frac{3}{5},\\ \\cdots\\right\\}$；<br>非正数集合：$\\left\\{-3,\\ -\\frac{6}{7},\\ -3.14,\\ -9,\\ 0,\\ \\cdots\\right\\}$．"
+  },
+  {
+    "id": "g7_1_2_1_22",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.4 带“非”字的有理数",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "带“非”字的有理数",
+    "stem": "把下列各数填在相应的大括号内：<br>$15$，$-\\frac{1}{2}$，$0.81$，$-3$，$\\frac{1}{4}$，$-3.1$，$-4$，$171$，$0$，$3.14$，$2\\pi$．<br>正数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$<br>整数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$<br>分数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$<br>非正数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$<br>负分数集合：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$",
+    "options": [],
+    "answer": "正数集合：$\\{15, 0.81, \\frac{1}{4}, 171, 3.14, 2\\pi, \\cdots\\}$；整数集合：$\\{15, -3, -4, 171, 0, \\cdots\\}$；分数集合：$\\{-\\frac{1}{2}, 0.81, \\frac{1}{4}, -3.1, 3.14, \\cdots\\}$；非正数集合：$\\{-\\frac{1}{2}, -3, -3.1, -4, 0, \\cdots\\}$；负分数集合：$\\{-\\frac{1}{2}, -3.1, \\cdots\\}$",
+    "analysis": "本题考查有理数的分类，注意 $2\\pi$ 是正无理数，属于正数集合，但不属于分数集合．",
+    "detail": "解：正数集合：$\\left\\{15,\\ 0.81,\\ \\frac{1}{4},\\ 171,\\ 3.14,\\ 2\\pi,\\ \\cdots\\right\\}$；<br>整数集合：$\\left\\{15,\\ -3,\\ -4,\\ 171,\\ 0,\\ \\cdots\\right\\}$；<br>分数集合：$\\left\\{-\\frac{1}{2},\\ 0.81,\\ \\frac{1}{4},\\ -3.1,\\ 3.14,\\ \\cdots\\right\\}$；<br>非正数集合：$\\left\\{-\\frac{1}{2},\\ -3,\\ -3.1,\\ -4,\\ 0,\\ \\cdots\\right\\}$；<br>负分数集合：$\\left\\{-\\frac{1}{2},\\ -3.1,\\ \\cdots\\right\\}$．"
+  },
+  {
+    "id": "g7_1_2_1_23",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.4 带“非”字的有理数",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "带“非”字的有理数",
+    "stem": "把下列各数填在相应的集合中：<br>$-100.1$，$6$，$-7\\frac{1}{3}$，$0$，$-100$，$+3\\frac{1}{4}$，$-2.25$，$0.01$，$+67$，$-\\frac{2}{7}$，$-10\\%$，$\\frac{3}{101}$，$2018$，$-18$．<br>正整数集：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$；<br>正数集：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$；<br>负分数集：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$；<br>负数集：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$；<br>非负整数集：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$；<br>分数集：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$．",
+    "options": [],
+    "answer": "正整数集：$\\{6, +67, 2018, \\cdots\\}$；正数集：$\\{6, +3\\frac{1}{4}, 0.01, +67, \\frac{3}{101}, 2018, \\cdots\\}$；负分数集：$\\{-100.1, -7\\frac{1}{3}, -2.25, -\\frac{2}{7}, -10\\%, \\cdots\\}$；负数集：$\\{-100.1, -7\\frac{1}{3}, -100, -2.25, -\\frac{2}{7}, -10\\%, -18, \\cdots\\}$；非负整数集：$\\{6, 0, +67, 2018, \\cdots\\}$；分数集：$\\{-100.1, -7\\frac{1}{3}, +3\\frac{1}{4}, -2.25, 0.01, -\\frac{2}{7}, -10\\%, \\frac{3}{101}, \\cdots\\}$",
+    "analysis": "本题主要考查了有理数的分类，掌握正整数、正数、负分数、负数、非负整数和分数的定义与特点是解题的关键．",
+    "detail": "解：正整数集：$\\left\\{6,\\ +67,\\ 2018,\\ \\cdots\\right\\}$；<br>正数集：$\\left\\{6,\\ +3\\frac{1}{4},\\ 0.01,\\ +67,\\ \\frac{3}{101},\\ 2018,\\ \\cdots\\right\\}$；<br>负分数集：$\\left\\{-100.1,\\ -7\\frac{1}{3},\\ -2.25,\\ -\\frac{2}{7},\\ -10\\%,\\ \\cdots\\right\\}$；<br>负数集：$\\left\\{-100.1,\\ -7\\frac{1}{3},\\ -100,\\ -2.25,\\ -\\frac{2}{7},\\ -10\\%,\\ -18,\\ \\cdots\\right\\}$；<br>非负整数集：$\\left\\{6,\\ 0,\\ +67,\\ 2018,\\ \\cdots\\right\\}$；<br>分数集：$\\left\\{-100.1,\\ -7\\frac{1}{3},\\ +3\\frac{1}{4},\\ -2.25,\\ 0.01,\\ -\\frac{2}{7},\\ -10\\%,\\ \\frac{3}{101},\\ \\cdots\\right\\}$．"
+  },
+  {
+    "id": "g7_1_2_2_1",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.5 数轴的三要素及画法",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "容易",
+    "knowledge": "数轴的三要素及画法",
+    "stem": "数轴是规定了 ______，______ 和 ______ 的一条 ______．",
+    "options": [],
+    "answer": "原点；单位长度；正方向；直线",
+    "analysis": "本题主要考查数轴的定义，规定了原点、单位长度和正方向的直线叫做数轴．",
+    "detail": "解：根据数轴的定义可知，数轴是规定了原点、单位长度和正方向的一条直线．<br>故答案为：原点；单位长度；正方向；直线．"
+  },
+  {
+    "id": "g7_1_2_2_2",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.5 数轴的三要素及画法",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "数轴的三要素及画法",
+    "stem": "下列数轴画法规范的是（   ）",
+    "options": [
+      "<img src=\"assets/images/g7_1_2_2_img1.png\" width=\"193\" height=\"28\" class=\"inline-block align-middle max-w-full h-auto\" style=\"max-height:36px;\">",
+      "<img src=\"assets/images/g7_1_2_2_img2.png\" width=\"168\" height=\"28\" class=\"inline-block align-middle max-w-full h-auto\" style=\"max-height:36px;\">",
+      "<img src=\"assets/images/g7_1_2_2_img3.png\" width=\"196\" height=\"28\" class=\"inline-block align-middle max-w-full h-auto\" style=\"max-height:36px;\">",
+      "<img src=\"assets/images/g7_1_2_2_img4.png\" width=\"168\" height=\"28\" class=\"inline-block align-middle max-w-full h-auto\" style=\"max-height:36px;\">"
+    ],
+    "answer": "C",
+    "analysis": "本题考查数轴的意义和表示方法，掌握数轴的三要素（原点、单位长度、正方向）是正确判断的前提．",
+    "detail": "解：A、缺少正方向，故此选项不符合题意；<br>B、单位长度不一致，故此选项不符合题意；<br>C、规定了原点、单位长度、正方向的直线叫做数轴，故此选项符合题意；<br>D、缺少原点，故此选项不符合题意．<br>故选：C．"
+  },
+  {
+    "id": "g7_1_2_2_3",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.5 数轴的三要素及画法",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "数轴的三要素及画法",
+    "stem": "四位同学画数轴如图所示，正确的是（   ）",
+    "options": [
+      "<img src=\"assets/images/g7_1_2_2_img5.png\" width=\"199\" height=\"20\" class=\"inline-block align-middle max-w-full h-auto\" style=\"max-height:36px;\">",
+      "<img src=\"assets/images/g7_1_2_2_img6.png\" width=\"194\" height=\"20\" class=\"inline-block align-middle max-w-full h-auto\" style=\"max-height:36px;\">",
+      "<img src=\"assets/images/g7_1_2_2_img7.png\" width=\"214\" height=\"21\" class=\"inline-block align-middle max-w-full h-auto\" style=\"max-height:36px;\">",
+      "<img src=\"assets/images/g7_1_2_2_img8.png\" width=\"192\" height=\"20\" class=\"inline-block align-middle max-w-full h-auto\" style=\"max-height:36px;\">"
+    ],
+    "answer": "D",
+    "analysis": "本题考查了数轴的三要素，规定了原点、正方向、单位长度的直线叫做数轴，且数轴上右边的数总比左边的数大．",
+    "detail": "解：A、数轴缺少原点，故不符合题意；<br>B、数轴缺少正方向，故不符合题意；<br>C、$-1$ 与 $-2$ 位置颠倒，不符合右边的数总比左边的数大的特点，故不符合题意；<br>D、数轴具备原点、单位长度、正方向三要素且刻度顺序正确，故符合题意．<br>故选：D．"
+  },
+  {
+    "id": "g7_1_2_2_4",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.5 数轴的三要素及画法",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "中等",
+    "knowledge": "数轴的三要素及画法",
+    "stem": "以下 $5$ 个城市的国际标准时间（单位：时）在数轴上表示如图所示，那么北京时间 2026 年 10 月 1 日 20 时应是（   ）<div class=\"my-2\"><img src=\"assets/images/g7_1_2_2_img9.png\" width=\"401\" height=\"50\" class=\"max-w-full h-auto rounded\" style=\"max-height:60px;\"></div>",
+    "options": [
+      "纽约时间 2026 年 10 月 1 日 5 时",
+      "伦敦时间 2026 年 10 月 1 日 12 时",
+      "巴黎时间 2026 年 10 月 1 日 7 时",
+      "汉城时间 2026 年 10 月 1 日 19 时"
+    ],
+    "answer": "B",
+    "analysis": "根据数轴确定各城市对应的数值，利用有理数减法计算各城市与北京的时差，进而求出对应时间．",
+    "detail": "解：由数轴可知，纽约、伦敦、巴黎、北京、汉城对应的数值分别为 $-5$、$0$、$1$、$8$、$9$，<br>北京与纽约、伦敦、巴黎、汉城的时差分别为：$8-(-5)=13$，$8-0=8$，$8-1=7$，$8-9=-1$，<br>将北京的时刻减去上述时差即可得相应城市的时刻：<br>$20-13=7$（时），$20-8=12$（时），$20-7=13$（时），$20-(-1)=21$（时），<br>$\\therefore$ 北京时间 2026 年 10 月 1 日 20 时，相当于纽约时间 2026 年 10 月 1 日 7 时、伦敦时间 2026 年 10 月 1 日 12 时、巴黎时间 2026 年 10 月 1 日 13 时、汉城时间 2026 年 10 月 1 日 21 时．<br>故选：B．"
+  },
+  {
+    "id": "g7_1_2_2_5",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.5 数轴的三要素及画法",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "数轴的三要素及画法",
+    "stem": "数轴是规定了（   ）",
+    "options": [
+      "原点和正方向的一条直线",
+      "单位长度的一条直线",
+      "原点和单位长度的一条直线",
+      "原点、正方向和单位长度的一条直线"
+    ],
+    "answer": "D",
+    "analysis": "本题主要考查了数轴的定义，掌握数轴是规定了原点、正方向和单位长度的一条直线是解题的关键．",
+    "detail": "解：$\\because$ 数轴是规定了原点、正方向和单位长度的一条直线，<br>$\\therefore$ D 选项符合题意．<br>故选：D．"
+  },
+  {
+    "id": "g7_1_2_2_6",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.5 数轴的三要素及画法",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "容易",
+    "knowledge": "数轴的三要素及画法",
+    "stem": "下列有关数轴的说法：（1）在画数轴时，原点位置可以任意确定；（2）一般情况下，取向右的方向为数轴的正方向；（3）数轴中的单位长度可根据实际需要任意选取；（4）数轴上的点只能表示整数．其中正确的有 ______ 个．",
+    "options": [],
+    "answer": "$3$",
+    "analysis": "本题考查了数轴的画法及其意义，把握数轴三要素（原点、正方向、单位长度）是解答此题的关键．",
+    "detail": "解：说法（1），数轴上原点位置的确定是任意的，正确；<br>说法（2），数轴上一般情况下取向右为正方向，正确；<br>说法（3），数轴上单位长度可根据实际需要任意选取，正确；<br>说法（4），数轴上的点不仅能表示整数，还能表示分数、无理数等，错误．<br>$\\therefore$ 说法正确的共有 $3$ 个．<br>故答案为：$3$．"
+  },
+  {
+    "id": "g7_1_2_2_7",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.5 数轴的三要素及画法",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "数轴的三要素及画法",
+    "stem": "有关数轴的画法，下列说法中，错误的是（   ）",
+    "options": [
+      "原点位置可以是数轴上任意一点",
+      "一般情况下，取从左到右的方向为数轴的正方向",
+      "数轴的单位长度可根据实际需要任意选取",
+      "数轴上每两个刻度之间的长度都等于 $1\\text{ cm}$"
+    ],
+    "answer": "D",
+    "analysis": "数轴上原点的位置可以任意确定，单位长度也可以根据实际需要任意选取（不一定等于 $1\\text{ cm}$），一般取向右方向为正方向．",
+    "detail": "解：数轴上原点的位置可以任意确定，单位长度也可以根据需要任意选取（只要同一数轴上单位长度统一即可，不一定等于 $1\\text{ cm}$），一般取向右方向为正方向，故选项 D 不正确．<br>故选：D．"
+  },
+  {
+    "id": "g7_1_2_2_8",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.6 用数轴上的点表示有理数",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "容易",
+    "knowledge": "用数轴上的点表示有理数",
+    "stem": "判断正误：数轴上找不到既不表示正数也不表示负数的点．（   ）（填“$\\checkmark$”或“$\\times$”）",
+    "options": [],
+    "answer": "$\\times$",
+    "analysis": "本题考查了数轴与 $0$ 的意义，$0$ 既不是正数也不是负数，数轴上的原点表示的数就是 $0$．",
+    "detail": "解：$\\because 0$ 既不是正数也不是负数，且数轴上原点表示的数为 $0$，<br>$\\therefore$ 数轴上的原点既不表示正数，也不表示负数，故原说法错误．<br>故答案为：$\\times$．"
+  },
+  {
+    "id": "g7_1_2_2_9",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.6 用数轴上的点表示有理数",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "用数轴上的点表示有理数",
+    "stem": "如图，在数轴上，点 $A$ 表示的数可能是（   ）<div class=\"my-2\"><img src=\"assets/images/g7_1_2_2_img10.png\" width=\"442\" height=\"48\" class=\"max-w-full h-auto rounded\" style=\"max-height:60px;\"></div>",
+    "options": [
+      "$2.6$",
+      "$-2.6$",
+      "$1.8$",
+      "$-1.8$"
+    ],
+    "answer": "D",
+    "analysis": "本题考查数轴上点的位置估算，根据点 $A$ 位于 $-2$ 与 $-1$ 之间即可判断．",
+    "detail": "解：由图可知，点 $A$ 表示的数在 $-2$ 与 $-1$ 之间，四个选项中只有 $-1.8$ 符合题意．<br>故选：D．"
+  },
+  {
+    "id": "g7_1_2_2_10",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.6 用数轴上的点表示有理数",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "容易",
+    "knowledge": "用数轴上的点表示有理数",
+    "stem": "如图，在数轴上注明了四段的范围，其中第 ______（填序号）段上有三个整数．<div class=\"my-2\"><img src=\"assets/images/g7_1_2_2_img11.png\" width=\"247\" height=\"43\" class=\"max-w-full h-auto rounded\" style=\"max-height:60px;\"></div>",
+    "options": [],
+    "answer": "②",
+    "analysis": "本题考查了数轴的特点，整数包括正整数、$0$、负整数，逐段找出所包含的整数即可求解．",
+    "detail": "解：根据图示，第①段（$-4.3$ 到 $-2.1$）包含的整数是 $-4$，$-3$，共 $2$ 个，不符合题意；<br>第②段（$-2.1$ 到 $0.1$）包含的整数是 $-2$，$-1$，$0$，共 $3$ 个，符合题意；<br>第③段（$0.1$ 到 $2.3$）包含的整数是 $1$，$2$，共 $2$ 个，不符合题意；<br>第④段（$2.3$ 到 $4.5$）包含的整数是 $3$，$4$，共 $2$ 个，不符合题意．<br>故答案为：②．"
+  },
+  {
+    "id": "g7_1_2_2_11",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.6 用数轴上的点表示有理数",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "用数轴上的点表示有理数",
+    "stem": "下列说法正确的是（   ）",
+    "options": [
+      "有的有理数不能在数轴上表示出来",
+      "数轴上的某一点可以表示两个不同的有理数",
+      "数轴上的点只能表示整数",
+      "任何一个有理数都可以用数轴上的一个点来表示"
+    ],
+    "answer": "D",
+    "analysis": "本题主要考查了数轴与有理数的对应关系，所有有理数都可以用数轴上的点表示，且数轴上的一个点只能表示一个数．",
+    "detail": "解：A、所有的有理数都可以用数轴上的点表示，原说法错误；<br>B、数轴上的一个点只能表示一个有理数，原说法错误；<br>C、数轴上的点不仅能表示整数，还能表示分数等，原说法错误；<br>D、任何一个有理数都可以用数轴上的一个点来表示，原说法正确．<br>故选：D．"
+  },
+  {
+    "id": "g7_1_2_2_12",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.6 用数轴上的点表示有理数",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "用数轴上的点表示有理数",
+    "stem": "[教材例4（1）变式] 如图，数轴上 $A, B, C, D$ 各点表示的数正确的是（   ）<div class=\"my-2\"><img src=\"assets/images/g7_1_2_2_img12.png\" width=\"233\" height=\"46\" class=\"max-w-full h-auto rounded\" style=\"max-height:60px;\"></div>",
+    "options": [
+      "点 $D$ 表示 $-2.5$",
+      "点 $C$ 表示 $-1.25$",
+      "点 $B$ 表示 $\\frac{1}{2}$",
+      "点 $A$ 表示 $1.25$"
+    ],
+    "answer": "C",
+    "analysis": "本题主要考查了数轴上点的确定方法，根据各点在数轴上的刻度位置逐一读取即可．",
+    "detail": "解：由图可知：<br>A、点 $D$ 在 $-2$ 和 $-1$ 正中间，表示 $-1.5$，故 A 错误；<br>B、点 $C$ 在 $-1$ 和 $0$ 之间，表示 $-0.75$，故 B 错误；<br>C、点 $B$ 在 $0$ 和 $1$ 正中间，表示 $\\frac{1}{2}$，故 C 正确；<br>D、点 $A$ 在 $1$ 和 $2$ 正中间，表示 $1.5$，故 D 错误．<br>故选：C．"
+  },
+  {
+    "id": "g7_1_2_2_13",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.6 用数轴上的点表示有理数",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "用数轴上的点表示有理数",
+    "stem": "邮递员骑车从邮局出发，先向南骑行 $4\\text{ km}$ 到达 $A$ 村，继续向南骑行 $2\\text{ km}$ 到达 $B$ 村，然后向北骑行 $11\\text{ km}$ 到 $C$ 村，最后骑到邮局．<br>（1）以邮局为原点，以向北方向为正方向，用 $1\\text{ cm}$ 表示 $1\\text{ km}$，画出数轴，并在该数轴上表示出 $A$、$B$、$C$ 三个村庄位置的点；<br>（2）$C$ 村距离邮局多远？",
+    "options": [],
+    "answer": "（1）数轴见解析（点 $A$ 表示 $-4$，点 $B$ 表示 $-6$，点 $C$ 表示 $5$）；（2）$5\\text{ km}$",
+    "analysis": "本题主要考查数轴的实际运用：（1）以邮局为原点、向北为正方向，则 $A$ 村对应 $-4$，$B$ 村对应 $-6$，$C$ 村对应 $-6+11=5$；（2）由点 $C$ 表示的数即可得出 $C$ 村到邮局的距离．",
+    "detail": "解：（1）根据题意，点 $A$ 表示 $-4$，点 $B$ 表示 $-4-2=-6$，点 $C$ 表示 $-6+11=5$，在数轴上表示如下：<div class=\"my-2\"><img src=\"assets/images/g7_1_2_2_img13.png\" width=\"473\" height=\"50\" class=\"max-w-full h-auto rounded\" style=\"max-height:60px;\"></div>（2）根据数轴可得，$C$ 村对应的数为 $5$，故 $C$ 村距离邮局 $5\\text{ km}$．"
+  },
+  {
+    "id": "g7_1_2_2_14",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.6 用数轴上的点表示有理数",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "容易",
+    "knowledge": "用数轴上的点表示有理数",
+    "stem": "下面的数轴被墨迹盖住一部分，被盖住的整数有 ______ 个．<div class=\"my-2\"><img src=\"assets/images/g7_1_2_2_img14.png\" width=\"164\" height=\"33\" class=\"max-w-full h-auto rounded\" style=\"max-height:60px;\"></div>",
+    "options": [],
+    "answer": "$9$",
+    "analysis": "本题考查了数轴上整数点的计数，分别找出两处墨迹覆盖区间内的所有整数即可．",
+    "detail": "解：由数轴可知，左侧墨迹（$-6.3$ 到 $-1$ 之间）盖住的整数有 $-6, -5, -4, -3, -2$，共 $5$ 个；<br>右侧墨迹（$0$ 到 $4.15$ 之间）盖住的整数有 $1, 2, 3, 4$，共 $4$ 个；<br>所以被盖住的整数共有 $5+4=9$ 个．<br>故答案为：$9$．"
+  },
+  {
+    "id": "g7_1_2_2_15",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.7 数轴上点到原点的距离与点的移动",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "容易",
+    "knowledge": "数轴上点到原点的距离与点的移动",
+    "stem": "在数轴上表示 $+3$ 的点与原点的距离是 ______；在数轴上距离原点 $5$ 个单位长度的点表示的数是 ______．",
+    "options": [],
+    "answer": "$3$；$5$ 或 $-5$",
+    "analysis": "本题考查了数轴上点到原点的距离，注意距离原点 $5$ 个单位长度的点在原点左右两侧各有一个．",
+    "detail": "解：数轴上表示 $+3$ 的点与原点的距离是 $3$；<br>在数轴上距离原点 $5$ 个单位长度的点表示的数是 $5$ 或 $-5$．<br>故答案为：$3$；$5$ 或 $-5$．"
+  },
+  {
+    "id": "g7_1_2_2_16",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.7 数轴上点到原点的距离与点的移动",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "数轴上点到原点的距离与点的移动",
+    "stem": "给出下面六个数：$2.5$，$1$，$-\\frac{1}{3}$，$-2.5$，$0$，$3\\frac{3}{4}$．先画出数轴，再把表示上面各数的点在数轴上表示出来．",
+    "options": [],
+    "answer": "数轴表示见解析",
+    "analysis": "本题考查了用数轴上的点表示有理数，先画出包含原点、正方向和单位长度的数轴，再准确描出各数对应的点即可．",
+    "detail": "解：在数轴上表示各数如图所示：<div class=\"my-2\"><img src=\"assets/images/g7_1_2_2_img15.png\" width=\"211\" height=\"50\" class=\"max-w-full h-auto rounded\" style=\"max-height:60px;\"></div>"
+  },
+  {
+    "id": "g7_1_2_2_17",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.7 数轴上点到原点的距离与点的移动",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "数轴上点到原点的距离与点的移动",
+    "stem": "将数轴上表示数 $2$ 的点，沿数轴移动 $3$ 个单位，得到的点表示的数为（   ）",
+    "options": [
+      "$-1$",
+      "$5$",
+      "$-1$ 或 $5$",
+      "$-5$ 或 $1$"
+    ],
+    "answer": "C",
+    "analysis": "本题考查了数轴上点的移动，由于未指明移动方向，需分向左移动和向右移动两种情况讨论．",
+    "detail": "解：把数轴上表示数 $2$ 的点移动 $3$ 个单位：若向右移动 $3$ 个单位得到 $2+3=5$；若向左移动 $3$ 个单位得到 $2-3=-1$．<div class=\"my-2\"><img src=\"assets/images/g7_1_2_2_img16.png\" width=\"301\" height=\"42\" class=\"max-w-full h-auto rounded\" style=\"max-height:60px;\"></div>故得到的点表示的数为 $-1$ 或 $5$．<br>故选：C．"
+  },
+  {
+    "id": "g7_1_2_2_18",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.7 数轴上点到原点的距离与点的移动",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "容易",
+    "knowledge": "数轴上点到原点的距离与点的移动",
+    "stem": "数轴上，到原点距离为 $5$ 的点表示的数是 ______．",
+    "options": [],
+    "answer": "$\\pm 5$",
+    "analysis": "本题考查数轴上点到原点的距离，与原点距离为 $5$ 个单位长度的点在原点左右两侧各有一个．",
+    "detail": "解：在数轴上，到原点距离为 $5$ 的点表示的数是 $\\pm 5$（即 $5$ 或 $-5$）．<br>故答案为：$\\pm 5$．"
+  },
+  {
+    "id": "g7_1_2_2_19",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.7 数轴上点到原点的距离与点的移动",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "数轴上点到原点的距离与点的移动",
+    "stem": "下列各数在数轴上对应的点到原点的距离大于 $3$ 的是（   ）",
+    "options": [
+      "$2$",
+      "$3$",
+      "$-3$",
+      "$-4$"
+    ],
+    "answer": "D",
+    "analysis": "本题考查数轴上点到原点的距离，分别求出各数对应点到原点的距离并与 $3$ 比较即可．",
+    "detail": "解：A、$2$ 到原点的距离为 $2<3$，不符合题意；<br>B、$3$ 到原点的距离为 $3$，不大于 $3$，不符合题意；<br>C、$-3$ 到原点的距离为 $3$，不大于 $3$，不符合题意；<br>D、$-4$ 到原点的距离为 $4>3$，符合题意．<br>故选：D．"
+  },
+  {
+    "id": "g7_1_2_2_20",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.7 数轴上点到原点的距离与点的移动",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "中等",
+    "knowledge": "数轴上点到原点的距离与点的移动",
+    "stem": "表示数 $-2$ 的点 $A$，沿数轴移动 $6$ 个单位后到达点 $B$，则点 $B$ 表示的数为（   ）",
+    "options": [
+      "$-8$",
+      "$4$",
+      "$4$ 或 $-8$",
+      "$\\pm 6$"
+    ],
+    "answer": "C",
+    "analysis": "此题考查了数轴上点的移动，分点 $A$ 向左移动 $6$ 个单位和向右移动 $6$ 个单位两种情况求解．",
+    "detail": "解：根据题意知，表示数 $-2$ 的点 $A$ 沿数轴移动 $6$ 个单位后到达的点 $B$ 有两个位置：一个是点 $A$ 从 $-2$ 处向右移动 $6$ 个单位得到的 $B_2(4)$，另一个是点 $A$ 从 $-2$ 处向左移动 $6$ 个单位得到的 $B_1(-8)$，如图所示：<div class=\"my-2\"><img src=\"assets/images/g7_1_2_2_img17.png\" width=\"391\" height=\"42\" class=\"max-w-full h-auto rounded\" style=\"max-height:60px;\"></div>所以点 $B$ 表示的数为 $4$ 或 $-8$．<br>故选：C．"
+  },
+  {
+    "id": "g7_1_2_2_21",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.7 数轴上点到原点的距离与点的移动",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "较难",
+    "knowledge": "数轴上点到原点的距离与点的移动",
+    "stem": "等边 $\\triangle ABC$ 在数轴上的位置如图所示，点 $A$、$C$ 对应的数分别为 $0$ 和 $-1$，若 $\\triangle ABC$ 绕着顶点顺时针方向在数轴上连续翻转，翻转 $1$ 次后，点 $B$ 所对应的数为 $1$；则翻转 $2018$ 次后，点 $B$ 所对应的数是（   ）<div class=\"my-2\"><img src=\"assets/images/g7_1_2_2_img18.png\" width=\"332\" height=\"63\" class=\"max-w-full h-auto rounded\" style=\"max-height:63px;\"></div>",
+    "options": [
+      "$2017$",
+      "$2016$",
+      "$2015$",
+      "$2014$"
+    ],
+    "answer": "A",
+    "analysis": "本题考查了数轴上的图形翻转规律，观察发现每 $3$ 次翻转为一个循环组依次循环，用 $2018\\div 3$ 商 $672$ 余 $2$，即可推出点 $B$ 所对应的数．",
+    "detail": "解：如图，每 $3$ 次翻转为一个循环组依次循环：<div class=\"my-2\"><img src=\"assets/images/g7_1_2_2_img19.png\" width=\"333\" height=\"63\" class=\"max-w-full h-auto rounded\" style=\"max-height:63px;\"></div>$\\because 2018\\div 3=672\\cdots\\cdots 2$，<br>$\\therefore$ 翻转 $2017$ 次（即第 $672\\times 3+1$ 次）后点 $B$ 落在数轴上，对应数为 $2017$；翻转第 $2018$ 次时，是以点 $B(2017)$ 为支点顺时针翻转使点 $C$ 落到 $2018$，此时点 $B$ 仍在数轴上的 $2017$ 处，<br>$\\therefore$ 翻转 $2018$ 次后，点 $B$ 所对应的数是 $2018-1=2017$．<br>故选：A．"
+  },
+  {
+    "id": "g7_1_2_2_22",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.7 数轴上点到原点的距离与点的移动",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "较难",
+    "knowledge": "数轴上点到原点的距离与点的移动",
+    "stem": "正方形 $ABCD$ 在数轴上的位置如图所示，点 $D$、$A$ 对应的数分别为 $0$ 和 $1$．若正方形 $ABCD$ 绕着顶点顺时针方向在数轴上连续翻转，翻转 $1$ 次后，点 $B$ 所对应的数为 $2$；则翻转 $2024$ 次后，数轴上数 $2025$ 所对应的点是（   ）<div class=\"my-2\"><img src=\"assets/images/g7_1_2_2_img20.jpeg\" width=\"327\" height=\"58\" class=\"max-w-full h-auto rounded\" style=\"max-height:60px;\"></div>",
+    "options": [
+      "点 $A$",
+      "点 $B$",
+      "点 $C$",
+      "点 $D$"
+    ],
+    "answer": "A",
+    "analysis": "本题主要考查了数轴上的图形翻转规律，正方形每翻转 $4$ 次为一个循环，依次找出数字 $1, 2, 3, 4, \\cdots$ 对应的顶点周期规律即可求解．",
+    "detail": "解：正方形连续顺时针翻转过程中，数轴上的正整数与顶点的对应关系为：<br>数 $1$ 对应点 $A$，翻转第 $1$ 次后数 $2$ 对应点 $B$，翻转第 $2$ 次后数 $3$ 对应点 $C$，翻转第 $3$ 次后数 $4$ 对应点 $D$，翻转第 $4$ 次后数 $5$ 对应点 $A$，$\\cdots\\cdots$<br>$\\therefore$ 每 $4$ 个数为一个循环组（余 $1$ 对应 $A$，余 $2$ 对应 $B$，余 $3$ 对应 $C$，整除对应 $D$），<br>$\\because 2025\\div 4=506\\cdots\\cdots 1$，<br>$\\therefore$ 数轴上数 $2025$ 所对应的点是点 $A$．<br>故选：A．"
+  },
+  {
+    "id": "g7_1_2_2_23",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.7 数轴上点到原点的距离与点的移动",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "数轴上点到原点的距离与点的移动",
+    "stem": "下列说法：①规定了原点、正方向的直线是数轴；②数轴上两个不同的点可以表示同一个有理数；③有理数 $-\\frac{1}{1000}$ 在数轴上无法表示出来；④任何一个有理数都可以在数轴上找到与它对应的唯一点．其中正确的是（   ）",
+    "options": [
+      "①②③④",
+      "②③④",
+      "③④",
+      "④"
+    ],
+    "answer": "D",
+    "analysis": "此题主要考查了数轴的相关概念：规定了原点、正方向、单位长度的直线叫做数轴，所有的有理数都可以用数轴上的唯一一个点表示．",
+    "detail": "解：①规定了原点、正方向和单位长度的直线才是数轴，缺少单位长度，故①错误；<br>②数轴上两个不同的点表示的数一定不同，故②错误；<br>③有理数 $-\\frac{1}{1000}$ 可以在数轴上表示出来，故③错误；<br>④任何一个有理数都可以在数轴上找到与它对应的唯一点，故④正确．<br>故选：D．"
+  },
+  {
+    "id": "g7_1_2_3_1",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.8 相反数的定义",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "容易",
+    "knowledge": "相反数的定义",
+    "stem": "请写出一个其相反数是负数的数为 ______．",
+    "options": [],
+    "answer": "$1$（答案不唯一）",
+    "analysis": "本题主要考查了相反数的定义，正数的相反数是负数，据此解答即可．",
+    "detail": "解：根据题意得：一个其相反数是负数的数为正数，如 $1$，$2$，$\\cdots\\cdots$<br>故答案为：$1$（答案不唯一）．"
+  },
+  {
+    "id": "g7_1_2_3_2",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.8 相反数的定义",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "容易",
+    "knowledge": "相反数的定义",
+    "stem": "判断正误：互为相反数的两个数一定不相等．（   ）（填“$\\checkmark$”或“$\\times$”）",
+    "options": [],
+    "answer": "$\\times$",
+    "analysis": "本题考查了相反数的性质，一个正数的相反数是负数，一个负数的相反数是正数，$0$ 的相反数是 $0$．",
+    "detail": "解：因为 $0$ 的相反数是 $0$，所以互为相反数的两个数可以相等（都为 $0$），原说法错误．<br>故答案为：$\\times$．"
+  },
+  {
+    "id": "g7_1_2_3_3",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.8 相反数的定义",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "相反数的定义",
+    "stem": "下列各数中，与 $2025$ 互为相反数的是（   ）",
+    "options": [
+      "$-2025$",
+      "$-\\frac{1}{2025}$",
+      "$\\frac{1}{2025}$",
+      "$2025$"
+    ],
+    "answer": "A",
+    "analysis": "本题主要考查了相反数的定义，根据只有符号不同的两个数互为相反数进行求解即可．",
+    "detail": "解：与 $2025$ 互为相反数的是 $-2025$．<br>故选：A．"
+  },
+  {
+    "id": "g7_1_2_3_4",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.8 相反数的定义",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "相反数的定义",
+    "stem": "下列各数中，与 $20$ 互为相反数的是（   ）",
+    "options": [
+      "$-20$",
+      "$-\\frac{1}{20}$",
+      "$\\frac{1}{20}$",
+      "$20$"
+    ],
+    "answer": "A",
+    "analysis": "本题考查了互为相反数，根据相反数的定义分别求出各项的相反数即可判定．",
+    "detail": "解：A、$-20$ 的相反数是 $20$，符合题意；<br>B、$-\\frac{1}{20}$ 的相反数是 $\\frac{1}{20}$，不符合题意；<br>C、$\\frac{1}{20}$ 的相反数是 $-\\frac{1}{20}$，不符合题意；<br>D、$20$ 的相反数是 $-20$，不符合题意．<br>故选：A．"
+  },
+  {
+    "id": "g7_1_2_3_5",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.8 相反数的定义",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "相反数的定义",
+    "stem": "下列两个数中，互为相反数的是（   ）",
+    "options": [
+      "$+5$ 和 $-(-5)$",
+      "$+(-8)$ 和 $-(-8)$",
+      "$-7$ 和 $-\\frac{1}{7}$",
+      "$4$ 和 $\\frac{1}{4}$"
+    ],
+    "answer": "B",
+    "analysis": "本题考查了相反数的定义，先化简多重符号，再根据“只有符号不同的两个数互为相反数”逐一判断即可．",
+    "detail": "解：A、$-(-5)=5$，故 $+5$ 和 $-(-5)$ 相等，不是互为相反数；<br>B、$+(-8)=-8$，$-(-8)=8$，故 $+(-8)$ 和 $-(-8)$ 互为相反数，符合题意；<br>C、$-7$ 和 $-\\frac{1}{7}$ 不是互为相反数；<br>D、$4$ 和 $\\frac{1}{4}$ 互为倒数，不是互为相反数．<br>故选：B．"
+  },
+  {
+    "id": "g7_1_2_3_6",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.8 相反数的定义",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "相反数的定义",
+    "stem": "在实数 $-2$，$0$，$-1$，$2$ 中，相反数是它本身的数是（   ）",
+    "options": [
+      "$-2$",
+      "$0$",
+      "$-1$",
+      "$2$"
+    ],
+    "answer": "B",
+    "analysis": "本题考查了相反数，正数的相反数是负数，负数的相反数是正数，相反数是它本身的数只有 $0$．",
+    "detail": "解：$-2$ 的相反数是 $2$，$0$ 的相反数是 $0$，$-1$ 的相反数是 $1$，$2$ 的相反数是 $-2$，故相反数是它本身的数是 $0$．<br>故选：B．"
+  },
+  {
+    "id": "g7_1_2_3_7",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.8 相反数的定义",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "相反数的定义",
+    "stem": "如图，数轴上点 $P$ 表示的数的相反数是（   ）<div class=\"my-2\"><img src=\"assets/images/g7_1_2_3_img1.png\" width=\"323\" height=\"47\" class=\"max-w-full h-auto rounded\" style=\"max-height:60px;\"></div>",
+    "options": [
+      "$-2$",
+      "$-1$",
+      "$1$",
+      "$2$"
+    ],
+    "answer": "D",
+    "analysis": "本题考查用数轴上的点表示有理数及相反数，先确定点 $P$ 表示的数为 $-2$，再求其相反数即可．",
+    "detail": "解：由数轴可得，点 $P$ 表示的数为 $-2$，则点 $P$ 表示的数的相反数是 $2$．<br>故选：D．"
+  },
+  {
+    "id": "g7_1_2_3_8",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.8 相反数的定义",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "容易",
+    "knowledge": "相反数的定义",
+    "stem": "下面各组数中：① $\\frac{1}{2}$ 和 $-\\frac{1}{2}$；② $-(-6)$ 和 $+(-6)$；③ $-(-4)$ 和 $+(+4)$；④ $-(+1)$ 和 $+(-1)$；⑤ $+5\\frac{1}{2}$ 和 $+(-5\\frac{1}{2})$；⑥ $-3\\frac{1}{7}$ 和 $-(-3\\frac{1}{7})$．互为相反数的是 ______（填序号）．",
+    "options": [],
+    "answer": "①②⑤⑥",
+    "analysis": "本题主要考查了相反数和多重符号化简，先化简各组数，再判断它们是否只有符号不同．",
+    "detail": "解：① $\\frac{1}{2}$ 和 $-\\frac{1}{2}$ 互为相反数；<br>② $-(-6)=6$，$+(-6)=-6$，$6$ 和 $-6$ 互为相反数；<br>③ $-(-4)=4$，$+(+4)=4$，两数相等，不是互为相反数；<br>④ $-(+1)=-1$，$+(-1)=-1$，两数相等，不是互为相反数；<br>⑤ $+(-5\\frac{1}{2})=-5\\frac{1}{2}$，与 $+5\\frac{1}{2}$ 互为相反数；<br>⑥ $-(-3\\frac{1}{7})=3\\frac{1}{7}$，与 $-3\\frac{1}{7}$ 互为相反数．<br>故互为相反数的是①②⑤⑥．<br>故答案为：①②⑤⑥．"
+  },
+  {
+    "id": "g7_1_2_3_9",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.9 化简多重符号",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "化简多重符号",
+    "stem": "$+(-1\\frac{1}{4})$ 的相反数是（   ）",
+    "options": [
+      "$-(+1\\frac{1}{4})$",
+      "$-1\\frac{1}{4}$",
+      "$1\\frac{1}{4}$",
+      "$+(-1\\frac{1}{4})$"
+    ],
+    "answer": "C",
+    "analysis": "本题考查了多重符号化简与相反数的概念，先化简 $+(-1\\frac{1}{4})=-1\\frac{1}{4}$，再求其相反数．",
+    "detail": "解：因为 $+(-1\\frac{1}{4})=-1\\frac{1}{4}$，所以 $-1\\frac{1}{4}$ 的相反数是 $1\\frac{1}{4}$．<br>故选：C．"
+  },
+  {
+    "id": "g7_1_2_3_10",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.9 化简多重符号",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "容易",
+    "knowledge": "化简多重符号",
+    "stem": "有理数 $-9.25$，$7$，$-\\frac{9}{10}$，$-(-1\\frac{2}{7})$，$0$，$-301$ 中，非负数有 ______ 个．",
+    "options": [],
+    "answer": "$3$",
+    "analysis": "本题考查化简多重符号与有理数的分类，先化简 $-(-1\\frac{2}{7})=1\\frac{2}{7}$，再找出正数和 $0$．",
+    "detail": "解：因为 $-(-1\\frac{2}{7})=1\\frac{2}{7}>0$，所以 $7$，$-(-1\\frac{2}{7})$，$0$ 为非负数，共有 $3$ 个．<br>故答案为：$3$．"
+  },
+  {
+    "id": "g7_1_2_3_11",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.9 化简多重符号",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "化简多重符号",
+    "stem": "下列各数：$+(-1)$，$-[+(-5)]$，$-(-\\frac{3}{4})$，$-(-m)$，$+[-(+\\frac{1}{5})]$ 中，一定是正数的有（   ）",
+    "options": [
+      "$1$ 个",
+      "$2$ 个",
+      "$3$ 个",
+      "$4$ 个"
+    ],
+    "answer": "B",
+    "analysis": "本题主要考查化简多重符号与正负数的识别，注意字母 $m$ 的正负未知．",
+    "detail": "解：$+(-1)=-1$，$-[+(-5)]=5$，$-(-\\frac{3}{4})=\\frac{3}{4}$，$-(-m)=m$，$+[-(+\\frac{1}{5})]=-\\frac{1}{5}$，<br>由于 $m$ 的正负未知，故一定是正数的有 $-[+(-5)]$ 和 $-(-\\frac{3}{4})$，共 $2$ 个．<br>故选：B．"
+  },
+  {
+    "id": "g7_1_2_3_12",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.9 化简多重符号",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "容易",
+    "knowledge": "化简多重符号",
+    "stem": "化简：<br>（1）$-(-5)=$ ______；（2）$-(+3.5)=$ ______；（3）$+[-(+8)]=$ ______；<br>（4）$-[+(-1)]=$ ______；（5）$-[-(-2)]=$ ______；（6）$-\\{+[+(-4)]\\}=$ ______．",
+    "options": [],
+    "answer": "$5$；$-3.5$；$-8$；$1$；$-2$；$4$",
+    "analysis": "本题考查化简多重符号，根据负号的个数“奇负偶正”依次化简即可．",
+    "detail": "解：（1）$-(-5)=5$；<br>（2）$-(+3.5)=-3.5$；<br>（3）$+[-(+8)]=-8$；<br>（4）$-[+(-1)]=1$；<br>（5）$-[-(-2)]=-2$；<br>（6）$-\\{+[+(-4)]\\}=4$．<br>故答案为：$5$；$-3.5$；$-8$；$1$；$-2$；$4$．"
+  },
+  {
+    "id": "g7_1_2_3_13",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.9 化简多重符号",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "化简多重符号",
+    "stem": "化简：<br>（1）$+(-2.8)$；（2）$-(+\\frac{1}{2})$；（3）$-(-100)$；<br>（4）$-[-(+4)]$；（5）$+[-(-10)]$；（6）$-\\{+[-(+3)]\\}$．",
+    "options": [],
+    "answer": "（1）$-2.8$；（2）$-\\frac{1}{2}$；（3）$100$；（4）$4$；（5）$10$；（6）$3$",
+    "analysis": "本题考查了化简多重符号，根据相反数的意义或“奇负偶正”法则求解即可．",
+    "detail": "解：（1）$+(-2.8)=-2.8$；<br>（2）$-(+\\frac{1}{2})=-\\frac{1}{2}$；<br>（3）$-(-100)=100$；<br>（4）$-[-(+4)]=4$；<br>（5）$+[-(-10)]=10$；<br>（6）$-\\{+[-(+3)]\\}=3$．"
+  },
+  {
+    "id": "g7_1_2_3_14",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.9 化简多重符号",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "化简多重符号",
+    "stem": "下列各组数：① $-1$ 与 $+(-1)$；② $+(+1)$ 与 $-1$；③ $-(+4)$ 与 $-(-4)$；④ $-(+1.7)$ 与 $+(-1.7)$；⑤ $-[+(-8)]$ 与 $-(+8)$．其中互为相反数的有（   ）",
+    "options": [
+      "$2$ 组",
+      "$3$ 组",
+      "$4$ 组",
+      "$5$ 组"
+    ],
+    "answer": "B",
+    "analysis": "本题主要考查了相反数的判断与多重符号化简，先化简各数再判断是否互为相反数．",
+    "detail": "解：① $-1$ 与 $+(-1)=-1$ 两数相等；<br>② $+(+1)=1$ 与 $-1$ 互为相反数；<br>③ $-(+4)=-4$ 与 $-(-4)=4$ 互为相反数；<br>④ $-(+1.7)=-1.7$ 与 $+(-1.7)=-1.7$ 两数相等；<br>⑤ $-[+(-8)]=8$ 与 $-(+8)=-8$ 互为相反数．<br>其中②③⑤符合题意，共 $3$ 组．<br>故选：B．"
+  },
+  {
+    "id": "g7_1_2_3_15",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.9 化简多重符号",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "化简多重符号",
+    "stem": "化简下列各式的符号，并回答问题：<br>（1）$-(-2)=$ ______；（2）$+(-\\frac{1}{5})=$ ______；（3）$-[-(-4)]=$ ______；（4）$-[-(+3.5)]=$ ______；（5）$-\\{-[-(-5)]\\}=$ ______；<br>问：①当 $+5$ 的前面有 $2024$ 个负号时，化简后的结果是 ______；<br>②当 $-5$ 的前面有 $2025$ 个负号时，化简后的结果是 ______；<br>由①②你能总结出什么规律？",
+    "options": [],
+    "answer": "（1）$2$；（2）$-\\frac{1}{5}$；（3）$-4$；（4）$3.5$；（5）$5$；① $5$；② $5$；规律：一个数的前面有奇数个负号时，化简后的结果等于它的相反数；一个数的前面有偶数个负号时，化简后的结果等于它本身．",
+    "analysis": "本题考查化简多重符号的规律总结，熟练掌握负号个数“奇负偶正”是解题的关键．",
+    "detail": "解：（1）$-(-2)=2$；<br>（2）$+(-\\frac{1}{5})=-\\frac{1}{5}$；<br>（3）$-[-(-4)]=-4$；<br>（4）$-[-(+3.5)]=3.5$；<br>（5）$-\\{-[-(-5)]\\}=5$；<br>①当 $+5$ 的前面有 $2024$ 个负号时，负号个数为偶数，化简后的结果是 $5$；<br>②当 $-5$ 的前面有 $2025$ 个负号时，共有 $2026$ 个负号（或奇数的相反数），化简后的结果是 $5$；<br>总结规律：一个数的前面有奇数个负号时，化简后的结果等于它的相反数；一个数的前面有偶数个负号时，化简后的结果等于它本身．"
+  },
+  {
+    "id": "g7_1_2_3_16",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.9 化简多重符号",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "化简多重符号",
+    "stem": "$\\{-\\{-\\{-[-(-25)]\\}\\}\\}=$（   ）",
+    "options": [
+      "$25$",
+      "$-25$",
+      "$\\frac{1}{25}$",
+      "$-\\frac{1}{25}$"
+    ],
+    "answer": "B",
+    "analysis": "本题考查多重符号化简，数出 $25$ 前面负号的总个数为 $5$ 个（奇数个），故结果为负．",
+    "detail": "解：由题可知 $25$ 前面的负号个数为 $5$ 个（奇数个），则 $\\{-\\{-\\{-[-(-25)]\\}\\}\\}=-25$．<br>故选：B．"
+  },
+  {
+    "id": "g7_1_2_3_17",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.10 相反数的应用",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "相反数的应用",
+    "stem": "点 $A, B, C, D, E$ 在数轴上的位置如图所示，解答下列问题：<div class=\"my-2\"><img src=\"assets/images/g7_1_2_3_img2.png\" width=\"444\" height=\"45\" class=\"max-w-full h-auto rounded\" style=\"max-height:60px;\"></div>（1）写出点 $A, B, C, D, E$ 分别表示什么数？<br>（2）写出其中哪些数是互为相反数？并说明它们到原点的距离有什么关系？",
+    "options": [],
+    "answer": "（1）点 $A$ 表示 $-4.5$，点 $B$ 表示 $-1$，点 $C$ 表示 $1$，点 $D$ 表示 $2$，点 $E$ 表示 $4.5$；（2）点 $A$ 与点 $E$ 表示的数（$-4.5$ 与 $4.5$）、点 $B$ 与点 $C$ 表示的数（$-1$ 与 $1$）互为相反数，它们到原点的距离相等．",
+    "analysis": "本题主要考查了数轴表示数及相反数的几何意义：互为相反数的两个数位于原点两侧，且到原点的距离相等．",
+    "detail": "解：（1）由数轴知：点 $A$ 表示的数为 $-4.5$，点 $B$ 表示的数为 $-1$，点 $C$ 表示的数为 $1$，点 $D$ 表示的数为 $2$，点 $E$ 表示的数为 $4.5$；<br>（2）由（1）知，$A, E$ 两点表示的数（$-4.5$ 和 $4.5$）以及 $B, C$ 两点表示的数（$-1$ 和 $1$）互为相反数；由数轴知，互为相反数的两个点到原点的距离相等．"
+  },
+  {
+    "id": "g7_1_2_3_18",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.10 相反数的应用",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "相反数的应用",
+    "stem": "数轴上点 $A$ 表示 $-3$，$B, C$ 两点表示的数互为相反数，且点 $B$ 到点 $A$ 的距离是 $2$，求点 $C$ 所表示的数．",
+    "options": [],
+    "answer": "$1$ 或 $5$",
+    "analysis": "本题主要考查了数轴上两点之间的距离与相反数的定义，先求出点 $B$ 表示的数为 $-1$ 或 $-5$，再求其相反数即可得出点 $C$ 表示的数．",
+    "detail": "解：因为点 $B$ 到点 $A$ 的距离是 $2$，且点 $A$ 表示 $-3$，<br>所以点 $B$ 表示的数为 $-3+2=-1$ 或 $-3-2=-5$．<br>又因为 $B, C$ 两点表示的数互为相反数，<br>所以点 $C$ 所表示的数为 $1$ 或 $5$．"
+  },
+  {
+    "id": "g7_1_2_3_19",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.10 相反数的应用",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "相反数的应用",
+    "stem": "下列说法正确的是（   ）",
+    "options": [
+      "$-(+4)$ 是 $-4$ 的相反数",
+      "$-(-\\frac{3}{5})$ 是 $-\\frac{3}{5}$ 的相反数",
+      "$-\\frac{1}{3}$ 的相反数是 $+(-\\frac{1}{3})$",
+      "$+6$ 的相反数是 $-(-6)$"
+    ],
+    "answer": "B",
+    "analysis": "本题考查相反数的定义与多重符号化简，先化简各选项中的式子，再结合“只有符号不同的两个数互为相反数”判断即可．",
+    "detail": "解：A、$-(+4)=-4$，它是 $4$ 的相反数，故 A 错误；<br>B、$-(-\\frac{3}{5})=\\frac{3}{5}$，它是 $-\\frac{3}{5}$ 的相反数，故 B 正确；<br>C、$+(-\\frac{1}{3})=-\\frac{1}{3}$，与 $-\\frac{1}{3}$ 相等，不是相反数，故 C 错误；<br>D、$-(-6)=6$，与 $+6$ 相等，不是相反数，故 D 错误．<br>故选：B．"
+  },
+  {
+    "id": "g7_1_2_3_20",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.10 相反数的应用",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "相反数的应用",
+    "stem": "如图，点 $M$ 表示的数是 $m$，下列点中，表示 $m$ 的相反数的是（   ）<div class=\"my-2\"><img src=\"assets/images/g7_1_2_3_img3.png\" width=\"214\" height=\"41\" class=\"max-w-full h-auto rounded\" style=\"max-height:60px;\"></div>",
+    "options": [
+      "点 $A$",
+      "点 $B$",
+      "点 $C$",
+      "点 $D$"
+    ],
+    "answer": "A",
+    "analysis": "本题考查了相反数与数轴，互为相反数的两个点位于原点两侧且到原点的距离相等．",
+    "detail": "解：由相反数的几何意义可知，$m$ 和 $m$ 的相反数在原点两侧且到原点的距离相等，观察数轴可知表示 $m$ 的相反数的是点 $A$．<br>故选：A．"
+  },
+  {
+    "id": "g7_1_2_3_21",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.10 相反数的应用",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "相反数的应用",
+    "stem": "下列说法错误的是（   ）",
+    "options": [
+      "任何有理数都可以用数轴上的点表示",
+      "$-(-4)$ 和 $-4$ 互为相反数",
+      "$m+1$ 一定比 $m$ 大",
+      "最小的有理数是 $0$"
+    ],
+    "answer": "D",
+    "analysis": "本题考查了相反数、数轴、有理数及其大小比较，由于负有理数比 $0$ 小，故没有最小的有理数．",
+    "detail": "解：A、任何有理数都可以用数轴上的点表示，说法正确；<br>B、$-(-4)=4$ 和 $-4$ 互为相反数，说法正确；<br>C、$m+1$ 一定比 $m$ 大，说法正确；<br>D、没有最小的有理数，原说法错误，符合题意．<br>故选：D．"
+  },
+  {
+    "id": "g7_1_2_3_22",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.10 相反数的应用",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "相反数的应用",
+    "stem": "（1）把下列各数填入相应的大括号内：$15$，$-\\frac{3}{8}$，$0$，$0.15$，$-30$，$-12.8$，$\\frac{22}{5}$，$+10$，$-10$．<br>正有理数：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$；<br>负有理数：$\\{\\qquad\\qquad\\qquad\\qquad\\cdots\\}$；<br>（2）若点 $A, B, C, D$ 分别表示 $-(-\\frac{5}{2})$，$-(+\\frac{1}{2})$，$+(-4)$，$+(+7\\frac{1}{2})$，点 $E, F$ 分别表示 $+(-4)$ 与 $+(+7\\frac{1}{2})$ 的相反数，请画出数轴并在数轴上标出点 $A, B, C, D, E, F$．",
+    "options": [],
+    "answer": "（1）正有理数：$\\{15, 0.15, \\frac{22}{5}, +10, \\cdots\\}$；负有理数：$\\{-\\frac{3}{8}, -30, -12.8, -10, \\cdots\\}$；（2）数轴见解析．",
+    "analysis": "本题考查了有理数的分类、多重符号化简、相反数及用数轴上的点表示有理数．",
+    "detail": "解：（1）正有理数：$\\left\\{15,\\ 0.15,\\ \\frac{22}{5},\\ +10,\\ \\cdots\\right\\}$；<br>负有理数：$\\left\\{-\\frac{3}{8},\\ -30,\\ -12.8,\\ -10,\\ \\cdots\\right\\}$．<br>（2）因为 $-(-\\frac{5}{2})=\\frac{5}{2}=2.5$，$-(+\\frac{1}{2})=-\\frac{1}{2}=-0.5$，$+(-4)=-4$，$+(+7\\frac{1}{2})=7\\frac{1}{2}=7.5$，<br>且 $+(-4)$ 的相反数点 $E$ 表示 $4$，$+(+7\\frac{1}{2})$ 的相反数点 $F$ 表示 $-7\\frac{1}{2}$，在数轴上标出各点如下：<div class=\"my-2\"><img src=\"assets/images/g7_1_2_3_img4.png\" width=\"427\" height=\"33\" class=\"max-w-full h-auto rounded\" style=\"max-height:60px;\"></div>"
+  },
+  {
+    "id": "g7_1_2_3_23",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.10 相反数的应用",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "相反数的应用",
+    "stem": "如图，数轴上的一个单位长度表示 $2$，请回答问题：<div class=\"my-2\"><img src=\"assets/images/g7_1_2_3_img5.png\" width=\"167\" height=\"26\" class=\"max-w-full h-auto rounded\" style=\"max-height:60px;\"></div>（1）若点 $A$ 与点 $D$ 表示的数互为相反数，则点 $D$ 表示的数是多少？<br>（2）若点 $B$ 与点 $F$ 表示的数互为相反数，则点 $D$ 表示的数的相反数是多少？",
+    "options": [],
+    "answer": "（1）$5$；（2）$-2$",
+    "analysis": "本题主要考查数轴上两点间的距离与相反数的几何意义，注意每格（一个单位长度）表示 $2$．",
+    "detail": "解：（1）由数轴可知点 $A$ 和点 $D$ 相距 $5$ 格，距離为 $5\\times 2=10$，<br>若点 $A$ 与点 $D$ 表示的数互为相反数，则它们到原点的距离相等，均为 $10\\div 2=5$，且点 $D$ 在右侧，故点 $D$ 表示的数是 $5$；<br>（2）由数轴可知点 $B$ 和点 $F$ 相距 $6$ 格，距离为 $6\\times 2=12$，<br>若点 $B$ 与点 $F$ 表示的数互为相反数，则点 $F$ 到原点的距离为 $12\\div 2=6$，即点 $F$ 表示 $6$；<br>点 $D$ 在点 $F$ 左侧 $2$ 格（即 $2\\times 2=4$），故点 $D$ 表示的数为 $6-4=2$，其相反数是 $-2$．"
+  },
+  {
+    "id": "g7_1_2_4_1",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.11 绝对值的意义",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "容易",
+    "knowledge": "绝对值的意义",
+    "stem": "绝对值小于 $2.5$ 的整数有 ______（写一个即可）．",
+    "options": [],
+    "answer": "$2$（答案不唯一，$-2, -1, 0, 1, 2$ 任写一个即可）",
+    "analysis": "本题考查了绝对值的定义，绝对值小于 $2.5$ 的整数有 $-2, -1, 0, 1, 2$．",
+    "detail": "解：绝对值小于 $2.5$ 的整数有：$-2, -1, 0, 1, 2$．<br>故答案为：$2$（答案不唯一）．"
+  },
+  {
+    "id": "g7_1_2_4_2",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.11 绝对值的意义",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "绝对值的意义",
+    "stem": "已知点 $M, N, P, Q$ 在数轴上的位置如图，则其中对应的数的绝对值最大的点是（   ）<div class=\"my-2\"><img src=\"assets/images/g7_1_2_4_img1.png\" width=\"157\" height=\"42\" class=\"max-w-full h-auto rounded\" style=\"max-height:60px;\"></div>",
+    "options": [
+      "点 $Q$",
+      "点 $P$",
+      "点 $N$",
+      "点 $M$"
+    ],
+    "answer": "A",
+    "analysis": "本题考查了绝对值的几何意义，数轴上离原点越远的点所表示的数的绝对值越大．",
+    "detail": "解：结合数轴可知，点 $Q$ 离原点 $O$ 最远，因此点 $Q$ 对应的数的绝对值最大．<br>故选：A．"
+  },
+  {
+    "id": "g7_1_2_4_3",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.11 绝对值的意义",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "容易",
+    "knowledge": "绝对值的意义",
+    "stem": "写出“数轴上到原点的距离等于 $2$ 的点”表示的负有理数：______．",
+    "options": [],
+    "answer": "$-2$",
+    "analysis": "本题考查了数轴与绝对值的几何意义，到原点的距离等于 $2$ 的点表示 $\\pm 2$，取其中的负数即可．",
+    "detail": "解：到原点的距离等于 $2$ 个单位长度的点所表示的有理数是 $\\pm 2$，其中负有理数是 $-2$．<br>故答案为：$-2$．"
+  },
+  {
+    "id": "g7_1_2_4_4",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.11 绝对值的意义",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "绝对值的意义",
+    "stem": "若 $m$ 的绝对值为 $|-(+5)|$，则 $m$ 的值是（   ）",
+    "options": [
+      "$-5$",
+      "$5$",
+      "$-\\frac{1}{5}$",
+      "$\\pm 5$"
+    ],
+    "answer": "D",
+    "analysis": "本题考查化简双重符号与绝对值的定义，先求出 $|-(+5)|=5$，再由 $|m|=5$ 得 $m=\\pm 5$．",
+    "detail": "解：$\\because |-(+5)|=|-5|=5$，<br>$\\therefore |m|=5$，解得 $m=\\pm 5$．<br>故选：D．"
+  },
+  {
+    "id": "g7_1_2_4_5",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.11 绝对值的意义",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "绝对值的意义",
+    "stem": "如果 $m$ 是一个有理数，那么下面结论中正确的是（   ）",
+    "options": [
+      "$-m$ 一定是负数",
+      "$|m|$ 一定是正数",
+      "$-|m|$ 一定是负数",
+      "$|m|$ 不是负数"
+    ],
+    "answer": "D",
+    "analysis": "本题主要考查了绝对值的非负性，对任意有理数 $m$，总有 $|m|\\ge 0$（即 $|m|$ 不是负数）．",
+    "detail": "解：当 $m=0$ 时，$-m=0$，$|m|=0$，$-|m|=0$，故 A、B、C 均不正确；<br>由绝对值的非负性可知 $|m|\\ge 0$，即 $|m|$ 不是负数，故 D 选项正确．<br>故选：D．"
+  },
+  {
+    "id": "g7_1_2_4_6",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.11 绝对值的意义",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "绝对值的意义",
+    "stem": "下列数轴上四个点表示的数中，绝对值最小的是（   ）<div class=\"my-2\"><img src=\"assets/images/g7_1_2_4_img2.png\" width=\"244\" height=\"42\" class=\"max-w-full h-auto rounded\" style=\"max-height:60px;\"></div>",
+    "options": [
+      "$P_1$",
+      "$P_2$",
+      "$P_3$",
+      "$P_4$"
+    ],
+    "answer": "C",
+    "analysis": "本题考查了绝对值的几何意义，数轴上离原点越近的点所表示的数的绝对值越小．",
+    "detail": "解：由图可知，$P_3$ 点到原点 $0$ 的距离最短，所以在这四个点表示的数中，绝对值最小的是 $P_3$．<br>故选：C．"
+  },
+  {
+    "id": "g7_1_2_4_7",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.11 绝对值的意义",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "中等",
+    "knowledge": "绝对值的意义",
+    "stem": "如图，数轴的单位长度为 $1$，点 $A, B, C$ 表示的数都是整数，若点 $A$ 和点 $C$ 表示的两个数的绝对值相等，则点 $B$ 表示的数是（   ）<div class=\"my-2\"><img src=\"assets/images/g7_1_2_4_img3.png\" width=\"268\" height=\"25\" class=\"max-w-full h-auto rounded\" style=\"max-height:60px;\"></div>",
+    "options": [
+      "$-4$",
+      "$-3$",
+      "$1$",
+      "$2$"
+    ],
+    "answer": "B",
+    "analysis": "本题考查了数轴与绝对值，由点 $A$ 和点 $C$ 的绝对值相等可知它们关于原点对称，结合两点的距离为 $8$ 可确定原点位置．",
+    "detail": "解：$\\because$ 点 $A$ 和点 $C$ 表示的两个数的绝对值相等，<br>$\\therefore$ 点 $A$ 和点 $C$ 的中点即为原点，又由数轴知点 $A$ 和点 $C$ 相距 $8$ 个单位长度，<br>$\\therefore$ 点 $A$ 表示 $-4$，点 $C$ 表示 $4$；<br>点 $B$ 在点 $A$ 右侧 $1$ 个单位长度处，故点 $B$ 表示的数是 $-4+1=-3$．<br>故选：B．"
+  },
+  {
+    "id": "g7_1_2_4_8",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.11 绝对值的意义",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "绝对值的意义",
+    "stem": "$-|-3|$ 的相反数为（   ）",
+    "options": [
+      "$-3$",
+      "$3$",
+      "$\\frac{1}{3}$",
+      "$-\\frac{1}{3}$"
+    ],
+    "answer": "B",
+    "analysis": "本题考查了相反数和绝对值，先化简 $-|-3|=-3$，再求 $-3$ 的相反数．",
+    "detail": "解：$\\because -|-3|=-3$，而 $-3$ 的相反数是 $3$，<br>$\\therefore -|-3|$ 的相反数是 $3$．<br>故选：B．"
+  },
+  {
+    "id": "g7_1_2_4_9",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.11 绝对值的意义",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "绝对值的意义",
+    "stem": "下列各组数中，互为相反数的是（   ）",
+    "options": [
+      "$-(-5)$ 和 $|-5|$",
+      "$-|-3|$ 和 $|-3|$",
+      "$+(+4)$ 和 $+|-4|$",
+      "$+(-7)$ 和 $-7$"
+    ],
+    "answer": "B",
+    "analysis": "本题主要考查了相反数的定义与绝对值化简，分别化简各选项中的两个数再判断即可．",
+    "detail": "解：A、$\\because -(-5)=5$，$|-5|=5$，两数相等，不互为相反数；<br>B、$\\because -|-3|=-3$，$|-3|=3$，两数互为相反数，符合题意；<br>C、$\\because +(+4)=4$，$+|-4|=4$，两数相等，不互为相反数；<br>D、$\\because +(-7)=-7$，与 $-7$ 相等，不互为相反数．<br>故选：B．"
+  },
+  {
+    "id": "g7_1_2_4_10",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.11 绝对值的意义",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "中等",
+    "knowledge": "绝对值的意义",
+    "stem": "在数轴上有两个点，点 $M$ 表示数 $a$，点 $N$ 表示数 $-a$，则下列描述正确的是（   ）",
+    "options": [
+      "点 $M$ 在原点右侧，点 $N$ 在原点左侧",
+      "点 $M$ 在原点左侧，点 $N$ 在原点右侧",
+      "点 $M$ 和点 $N$ 到原点的距离一定相等",
+      "点 $M$ 和点 $N$ 一定在原点的两侧"
+    ],
+    "answer": "C",
+    "analysis": "本题主要考查数轴与绝对值的几何意义，注意当 $a=0$ 时点 $M, N$ 重合于原点，但无论 $a$ 取何值总有 $|a|=|-a|$．",
+    "detail": "解：$\\because$ 点 $M$ 表示数 $a$，点 $N$ 表示数 $-a$（当 $a=0$ 时两点都在原点，故 A、B、D 不一定成立），<br>$\\therefore |a|=|-a|$，即点 $M$ 和点 $N$ 到原点的距离一定相等．<br>故选：C．"
+  },
+  {
+    "id": "g7_1_2_4_11",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.11 绝对值的意义",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "绝对值的意义",
+    "stem": "有理数 $a$ 在数轴上对应的点到原点的距离为 $5$，则 $a$ 的相反数是（   ）",
+    "options": [
+      "$5$",
+      "$-5$",
+      "$5$ 或 $-5$",
+      "不能确定"
+    ],
+    "answer": "C",
+    "analysis": "本题考查了绝对值的几何意义和相反数，由 $|a|=5$ 得 $a=\\pm 5$，故 $a$ 的相反数也是 $5$ 或 $-5$．",
+    "detail": "解：因为有理数 $a$ 在数轴上对应的点到原点的距离为 $5$，所以 $a=5$ 或 $a=-5$，<br>因此 $a$ 的相反数是 $-5$ 或 $5$．<br>故选：C．"
+  },
+  {
+    "id": "g7_1_2_4_12",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.12 绝对值的性质",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "中等",
+    "knowledge": "绝对值的性质",
+    "stem": "若 $x+|x|=0$，则 $x$ 一定是（   ）",
+    "options": [
+      "正数",
+      "负数",
+      "正数或零",
+      "负数或零"
+    ],
+    "answer": "D",
+    "analysis": "本题考查绝对值的性质，由 $x+|x|=0$ 得 $|x|=-x\\ge 0$，故 $x\\le 0$．",
+    "detail": "解：$\\because x+|x|=0$，<br>$\\therefore |x|=-x\\ge 0$，<br>$\\therefore x\\le 0$，即 $x$ 一定是负数或零．<br>故选：D．"
+  },
+  {
+    "id": "g7_1_2_4_13",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.12 绝对值的性质",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "绝对值的性质",
+    "stem": "在有理数中，绝对值等于它本身的数有（   ）",
+    "options": [
+      "$0$ 个",
+      "$1$ 个",
+      "$2$ 个",
+      "无数个"
+    ],
+    "answer": "D",
+    "analysis": "本题考查了绝对值的性质，当 $a\\ge 0$ 时 $|a|=a$，即 $0$ 和所有正有理数的绝对值都等于它本身．",
+    "detail": "解：在有理数中，绝对值等于它本身的数有 $0$ 和所有正有理数，共有无数个．<br>故选：D．"
+  },
+  {
+    "id": "g7_1_2_4_14",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.12 绝对值的性质",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "容易",
+    "knowledge": "绝对值的性质",
+    "stem": "【中考新趋势·结论开放】如果 $a$ 的绝对值等于它的相反数，那么符合条件的 $a$ 的值可能是 ______．（写出一个即可）",
+    "options": [],
+    "answer": "$0$ 或负数（如 $-1$，写出一个即可）",
+    "analysis": "本题考查了绝对值的性质：当 $a\\le 0$ 时，$|a|=-a$．",
+    "detail": "解：$\\because$ 一个数的绝对值等于这个数的相反数（即 $|a|=-a$），<br>$\\therefore$ 这个数为 $0$ 或负数．<br>故答案为：$0$ 或负数（写出一个即可）．"
+  },
+  {
+    "id": "g7_1_2_4_15",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.12 绝对值的性质",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "中等",
+    "knowledge": "绝对值的性质",
+    "stem": "已知 $|x-2|+|y-3|+|z-4|=0$，则 $x, y, z$ 的值分别是 ______．",
+    "options": [],
+    "answer": "$x=2$，$y=3$，$z=4$",
+    "analysis": "本题主要考查了绝对值的非负性：几个非负数的和为 $0$，则每个非负数都为 $0$．",
+    "detail": "解：$\\because |x-2|\\ge 0$，$|y-3|\\ge 0$，$|z-4|\\ge 0$，且 $|x-2|+|y-3|+|z-4|=0$，<br>$\\therefore x-2=0$，$y-3=0$，$z-4=0$，<br>解得 $x=2$，$y=3$，$z=4$．<br>故答案为：$x=2$，$y=3$，$z=4$．"
+  },
+  {
+    "id": "g7_1_2_4_16",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.12 绝对值的性质",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "绝对值的性质",
+    "stem": "$|x-3|+|y-2|=0$ 成立的条件是（   ）",
+    "options": [
+      "$x=3$",
+      "$y=2$",
+      "$x=3$ 且 $y=2$",
+      "$x=3$ 或 $y=2$"
+    ],
+    "answer": "C",
+    "analysis": "本题主要考查绝对值的非负性，由 $|x-3|+|y-2|=0$ 可得 $x-3=0$ 且 $y-2=0$．",
+    "detail": "解：$\\because |x-3|+|y-2|=0$，且 $|x-3|\\ge 0$，$|y-2|\\ge 0$，<br>$\\therefore x-3=0$ 且 $y-2=0$，解得 $x=3$ 且 $y=2$．<br>故选：C．"
+  },
+  {
+    "id": "g7_1_2_4_17",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.12 绝对值的性质",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "中等",
+    "knowledge": "绝对值的性质",
+    "stem": "式子 $|x-2|+|-2|$ 的最小值是 ______．",
+    "options": [],
+    "answer": "$2$",
+    "analysis": "本题主要考查了绝对值的非负性，根据 $|x-2|\\ge 0$ 且 $|-2|=2$ 即可求得最小值．",
+    "detail": "解：$\\because |x-2|\\ge 0$，$|-2|=2$，<br>$\\therefore |x-2|+|-2|\\ge 0+2=2$，<br>$\\therefore$ 当 $x=2$ 时，式子 $|x-2|+|-2|$ 的最小值是 $2$．<br>故答案为：$2$．"
+  },
+  {
+    "id": "g7_1_2_4_18",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.13 绝对值的应用",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "绝对值的应用",
+    "stem": "在做某固体混合物实验时，因某两瓶溶液的标签贴错了，只记得其中一瓶溶液质量的绝对值是 $5\\text{ g}$，则该溶液的质量是（   ）",
+    "options": [
+      "$5\\text{ g}$",
+      "$-5\\text{ g}$",
+      "$\\pm 5\\text{ g}$",
+      "无法确定"
+    ],
+    "answer": "A",
+    "analysis": "本题考查了绝对值的实际应用，实际物体的质量大于 $0$，据此排除负值即可．",
+    "detail": "解：$\\because$ 一瓶溶液质量的绝对值是 $5\\text{ g}$，且实际溶液的质量必大于 $0$，<br>$\\therefore$ 该溶液的质量是 $5\\text{ g}$．<br>故选：A．"
+  },
+  {
+    "id": "g7_1_2_4_19",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.13 绝对值的应用",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "容易",
+    "knowledge": "绝对值的应用",
+    "stem": "食品安全一直是社会关注的焦点，而食品包装作为保护食品质量和确保消费者健康的重要一环，在食品供应链中扮演着至关重要的角色．按规定，食品包装袋上都应标明袋内装有食品多少克，下表是几种饼干的检验结果，“$+、-$”分别表示比标准质量多、少，用绝对值判断最符合标准的一种食品是 ______ 饼干．<div class=\"my-2 overflow-x-auto\"><table class=\"border-collapse border border-slate-300 text-xs sm:text-sm my-1\"><thead><tr class=\"bg-slate-50\"><th class=\"border border-slate-300 px-3 py-1 text-center\">威化</th><th class=\"border border-slate-300 px-3 py-1 text-center\">咸味</th><th class=\"border border-slate-300 px-3 py-1 text-center\">甜味</th><th class=\"border border-slate-300 px-3 py-1 text-center\">酥脆</th></tr></thead><tbody><tr><td class=\"border border-slate-300 px-3 py-1 text-center\">$+4\\text{ (g)}$</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$-4.5\\text{ (g)}$</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$+2\\text{ (g)}$</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$-3.1\\text{ (g)}$</td></tr></tbody></table></div>",
+    "options": [],
+    "answer": "甜味",
+    "analysis": "本题主要考查了绝对值的实际应用，质量偏差的绝对值越小，越接近标准质量．",
+    "detail": "解：$\\because |-4.5|=4.5$，$|+4|=4$，$|+2|=2$，$|-3.1|=3.1$，<br>且 $|-4.5|>|+4|>|-3.1|>|+2|$，<br>$\\therefore$ 甜味饼干的误差绝对值最小，最符合标准．<br>故答案为：甜味．"
+  },
+  {
+    "id": "g7_1_2_4_20",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.13 绝对值的应用",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "绝对值的应用",
+    "stem": "机床厂工人加工一种直径为 $30\\text{ mm}$ 的机器零件，要求误差不大于 $0.05\\text{ mm}$，质检员现抽取 $10$ 个进行检测（超出部分记为正，不足部分记为负，单位：$\\text{mm}$）得到数据如下：$+0.05$，$-0.04$，$-0.02$，$+0.07$，$-0.03$，$+0.04$，$-0.01$，$-0.01$，$+0.03$，$-0.06$．其中不合格的零件有（   ）",
+    "options": [
+      "$1$ 个",
+      "$2$ 个",
+      "$3$ 个",
+      "$4$ 个"
+    ],
+    "answer": "B",
+    "analysis": "本题主要考查了绝对值与正负数的实际应用，误差绝对值大于 $0.05\\text{ mm}$ 的零件为不合格零件．",
+    "detail": "解：$\\because$ 要求误差不大于 $0.05\\text{ mm}$（即误差绝对值 $\\le 0.05$），<br>$\\therefore$ 不合格的零件有 $+0.07$ 和 $-0.06$，共 $2$ 个．<br>故选：B．"
+  },
+  {
+    "id": "g7_1_2_4_21",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.13 绝对值的应用",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "绝对值的应用",
+    "stem": "某工厂的质检员抽查一批零件的质量，从中抽取了 $5$ 件，根据检查结果记录如下（已知零件的标准直径为 $10\\text{ mm}$，超过标准直径长度的数量记为正数，不足标准直径长度的数量记为负数）：<br>1号零件：$+0.1\\text{ mm}$；2号零件：$-0.15\\text{ mm}$；3号零件：$-0.2\\text{ mm}$；4号零件：$+0.25\\text{ mm}$；5号零件：$-0.05\\text{ mm}$．<br>根据信息回答问题：<br>（1）你认为几号零件的大小最符合标准？<br>（2）如果规定：误差在 $0.18\\text{ mm}$ 之内为正品，误差在 $0.18\\sim 0.22\\text{ mm}$ 之间为次品，误差超过 $0.22\\text{ mm}$ 为废品，那么这 $5$ 个零件，哪件是正品，哪件是次品，哪件是废品？请直接写出你的结论．",
+    "options": [],
+    "answer": "（1）5号零件的大小最符合标准；（2）1、2、5号是正品，3号是次品，4号是废品．",
+    "analysis": "本题主要考查了绝对值的实际意义，绝对值越小表示数据越接近标准尺寸，绝对值越大表示数据越偏离标准尺寸．",
+    "detail": "解：（1）$\\because |-0.05|<|+0.1|<|-0.15|<|-0.2|<|+0.25|$，<br>$\\therefore$ 5号零件的大小最符合标准；<br>（2）$\\because |+0.1|=0.1<0.18$，$|-0.15|=0.15<0.18$，$|-0.05|=0.05<0.18$，<br>$\\therefore$ 1、2、5号是正品；<br>$\\because |-0.2|=0.2$，且 $0.18<0.2<0.22$，$\\therefore$ 3号是次品；<br>$\\because |+0.25|=0.25>0.22$，$\\therefore$ 4号是废品．"
+  },
+  {
+    "id": "g7_1_2_4_22",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.13 绝对值的应用",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "绝对值的应用",
+    "stem": "世乒赛中用球的质量有严格的规定，下表是 $6$ 个乒乓球质量检测的结果（单位：克，超过标准质量的克数记为正数，不足标准质量的克数记为负数）：<div class=\"my-2 overflow-x-auto\"><table class=\"border-collapse border border-slate-300 text-xs sm:text-sm my-1\"><thead><tr class=\"bg-slate-50\"><th class=\"border border-slate-300 px-3 py-1 text-center\">一号球</th><th class=\"border border-slate-300 px-3 py-1 text-center\">二号球</th><th class=\"border border-slate-300 px-3 py-1 text-center\">三号球</th><th class=\"border border-slate-300 px-3 py-1 text-center\">四号球</th><th class=\"border border-slate-300 px-3 py-1 text-center\">五号球</th><th class=\"border border-slate-300 px-3 py-1 text-center\">六号球</th></tr></thead><tbody><tr><td class=\"border border-slate-300 px-3 py-1 text-center\">$-0.5$</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$0.1$</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$0.2$</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$0$</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$-0.08$</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$-0.15$</td></tr></tbody></table></div>（1）请找出三个误差相对较小一些的乒乓球，并用绝对值的知识说明；<br>（2）若规定与标准质量误差不超过 $0.1\\text{ g}$ 的为优等品，超过 $0.1\\text{ g}$ 但不超过 $0.3\\text{ g}$ 的为合格品，在这六个乒乓球中，优等品、合格品和不合格品分别是哪几个乒乓球？请说明理由．",
+    "options": [],
+    "answer": "（1）误差相对较小的三个球是四号球、五号球、二号球（说明见解析）；（2）优等品是二号球、四号球、五号球（共 $3$ 个）；合格品是三号球、六号球（共 $2$ 个）；不合格品是一号球（共 $1$ 个）．",
+    "analysis": "本题考查了绝对值的意义及应用，偏差的绝对值越小，就越接近标准质量．",
+    "detail": "解：（1）四号球：$|0|=0$，正好等于标准质量；<br>五号球：$|-0.08|=0.08$，比标准球轻 $0.08$ 克；<br>二号球：$|+0.1|=0.1$，比标准球重 $0.1$ 克；<br>这三个球的误差绝对值最小，故误差相对较小．<br>（2）一号球：$|-0.5|=0.5>0.3$，不合格品；<br>二号球：$|+0.1|=0.1\\le 0.1$，优等品；<br>三号球：$|0.2|=0.2$，$0.1<0.2\\le 0.3$，合格品；<br>四号球：$|0|=0\\le 0.1$，优等品；<br>五号球：$|-0.08|=0.08\\le 0.1$，优等品；<br>六号球：$|-0.15|=0.15$，$0.1<0.15\\le 0.3$，合格品．<br>综上，优等品是二号球、四号球、五号球；合格品是三号球、六号球；不合格品是一号球．"
+  },
+  {
+    "id": "g7_1_2_4_23",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.13 绝对值的应用",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "绝对值的应用",
+    "stem": "有 $5$ 名学生参加技能大赛，他们在规定的时间内按要求加工同一种零件．零件质量要求是：零件直径比标准直径可以有 $0.5\\text{ mm}$ 的误差．其中超过标准长度的用正数表示，不足标准长度的用负数表示．现将 $5$ 名学生的加工结果（单位：$\\text{mm}$）记录如下：<div class=\"my-2 overflow-x-auto\"><table class=\"border-collapse border border-slate-300 text-xs sm:text-sm my-1\"><thead><tr class=\"bg-slate-50\"><th class=\"border border-slate-300 px-3 py-1 text-center\">张琪</th><th class=\"border border-slate-300 px-3 py-1 text-center\">赵阳</th><th class=\"border border-slate-300 px-3 py-1 text-center\">李嘉</th><th class=\"border border-slate-300 px-3 py-1 text-center\">孙磊</th><th class=\"border border-slate-300 px-3 py-1 text-center\">周正</th></tr></thead><tbody><tr><td class=\"border border-slate-300 px-3 py-1 text-center\">$+0.35$</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$-0.46$</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$-0.29$</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$+0.38$</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$+0.52$</td></tr></tbody></table></div>（1）以上 $5$ 名同学加工的零件中，谁的不符合标准？<br>（2）以上 $5$ 名同学加工的零件中，谁的最好？为什么？",
+    "options": [],
+    "answer": "（1）周正；（2）李嘉的最好，因为 $|-0.29|$ 最小，加工的零件直径与标准直径误差最小．",
+    "analysis": "本题考查有理数的大小比较与绝对值的应用：（1）找出误差绝对值超过 $0.5\\text{ mm}$ 的零件；（2）比较误差绝对值大小，绝对值最小的最好．",
+    "detail": "解：（1）$\\because$ 零件直径比标准直径允许有 $0.5\\text{ mm}$ 的误差，而 $|+0.52|=0.52>0.5$，<br>$\\therefore$ 周正同学加工的零件不符合标准；<br>（2）$\\because |-0.29|<|+0.35|<|+0.38|<|-0.46|<0.5<|+0.52|$，<br>$\\therefore$ 李嘉同学加工的零件直径比标准直径误差最小，故李嘉的最好．"
+  },
+  {
+    "id": "g7_1_2_5_1",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.14 有理数大小的比较",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "容易",
+    "knowledge": "有理数大小的比较",
+    "stem": "比较大小：$-\\frac{3}{4}$ ______ $-\\frac{2}{3}$（填“$>$”“$<$”或“$=$”）．",
+    "options": [],
+    "answer": "$<$",
+    "analysis": "根据两个负数比较大小，绝对值大的反而小，通分比较即可．",
+    "detail": "解：$\\left|-\\frac{3}{4}\\right|=\\frac{3}{4}=\\frac{9}{12}$，$\\left|-\\frac{2}{3}\\right|=\\frac{2}{3}=\\frac{8}{12}$，<br>$\\because \\frac{9}{12}>\\frac{8}{12}$，$\\therefore -\\frac{3}{4}<-\\frac{2}{3}$．<br>故答案为：$<$．"
+  },
+  {
+    "id": "g7_1_2_5_2",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.14 有理数大小的比较",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "容易",
+    "knowledge": "有理数大小的比较",
+    "stem": "用“$>$”或“$<$”号填空：$-\\frac{3}{4}$ ______ $-\\frac{4}{5}$．",
+    "options": [],
+    "answer": "$>$",
+    "analysis": "本题考查了有理数的大小比较，根据两个负数比较大小，绝对值越大的数反而越小．",
+    "detail": "解：$-\\frac{3}{4}=-\\frac{15}{20}$，$-\\frac{4}{5}=-\\frac{16}{20}$，<br>$\\because \\left|-\\frac{15}{20}\\right|=\\frac{15}{20}<\\left|-\\frac{16}{20}\\right|=\\frac{16}{20}$，<br>$\\therefore -\\frac{3}{4}>-\\frac{4}{5}$．<br>故答案为：$>$．"
+  },
+  {
+    "id": "g7_1_2_5_3",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.14 有理数大小的比较",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "容易",
+    "knowledge": "有理数大小的比较",
+    "stem": "比较大小：$-\\frac{2}{3}$ ______ $-\\frac{3}{4}$（填“$>$”“$=$”或“$<$”）．",
+    "options": [],
+    "answer": "$>$",
+    "analysis": "两个负数比较大小，先通分计算两个数的绝对值，再根据“绝对值大的负数反而小”得出结果．",
+    "detail": "解：$\\left|-\\frac{2}{3}\\right|=\\frac{2}{3}=\\frac{8}{12}$，$\\left|-\\frac{3}{4}\\right|=\\frac{3}{4}=\\frac{9}{12}$，<br>$\\because \\frac{8}{12}<\\frac{9}{12}$，$\\therefore -\\frac{2}{3}>-\\frac{3}{4}$．<br>故答案为：$>$．"
+  },
+  {
+    "id": "g7_1_2_5_4",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.14 有理数大小的比较",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "容易",
+    "knowledge": "有理数大小的比较",
+    "stem": "比较大小：$-\\frac{2}{5}$ ______ $-\\frac{2}{7}$（填“$>$”或“$<$”）．",
+    "options": [],
+    "answer": "$<$",
+    "analysis": "本题考查比较两个负分数的大小，根据两个负数比较大小，绝对值大的反而小判断即可．",
+    "detail": "解：$\\because \\left|-\\frac{2}{5}\\right|=\\frac{2}{5}$，$\\left|-\\frac{2}{7}\\right|=\\frac{2}{7}$，且 $\\frac{2}{5}>\\frac{2}{7}$，<br>$\\therefore -\\frac{2}{5}<-\\frac{2}{7}$．<br>故答案为：$<$．"
+  },
+  {
+    "id": "g7_1_2_5_5",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.14 有理数大小的比较",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "有理数大小的比较",
+    "stem": "在 $-\\frac{1}{2}, -\\frac{1}{3}, -2, -1$ 这四个数中，最接近 $0$ 的数是（   ）",
+    "options": [
+      "$-\\frac{1}{2}$",
+      "$-\\frac{1}{3}$",
+      "$-2$",
+      "$-1$"
+    ],
+    "answer": "B",
+    "analysis": "本题主要考查有理数大小比较，离 $0$ 最近（即绝对值最小）的数最接近 $0$．",
+    "detail": "解：依据有理数大小比较的法则可得 $-2<-1<-\\frac{1}{2}<-\\frac{1}{3}<0$，<br>$\\therefore$ 最接近 $0$ 的数是 $-\\frac{1}{3}$．<br>故选：B．"
+  },
+  {
+    "id": "g7_1_2_5_6",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.14 有理数大小的比较",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "有理数大小的比较",
+    "stem": "在 $-1$，$8$，$-7$，$-11$ 这四个数中，其中最小的数是（   ）",
+    "options": [
+      "$-1$",
+      "$8$",
+      "$-7$",
+      "$-11$"
+    ],
+    "answer": "D",
+    "analysis": "本题考查了有理数的大小比较，根据正数大于一切负数，两个负数比较大小绝对值大的反而小即可判断．",
+    "detail": "解：$\\because -11<-7<-1<8$，<br>$\\therefore$ 最小的数是 $-11$．<br>故选：D．"
+  },
+  {
+    "id": "g7_1_2_5_7",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.14 有理数大小的比较",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "有理数大小的比较",
+    "stem": "在 $-\\frac{1}{2}$，$-5$，$-3$，$2$ 这四个数中，最小的数是（   ）",
+    "options": [
+      "$-\\frac{1}{2}$",
+      "$-5$",
+      "$-3$",
+      "$2$"
+    ],
+    "answer": "B",
+    "analysis": "本题考查了有理数的大小比较，根据正数大于负数、两个负数绝对值大的反而小比较即可．",
+    "detail": "解：$\\because -5<-3<-\\frac{1}{2}<2$，<br>$\\therefore$ 最小的数是 $-5$．<br>故选：B．"
+  },
+  {
+    "id": "g7_1_2_5_8",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.14 有理数大小的比较",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "有理数大小的比较",
+    "stem": "比较下列各组数的大小：<br>（1）$5$ 和 $-2$；（2）$-3$ 和 $-7$；（3）$-(-1)$ 和 $-(+2)$；（4）$-(-0.5)$ 和 $|-1.5|$．",
+    "options": [],
+    "answer": "（1）$5>-2$；（2）$-3>-7$；（3）$-(-1)>-(+2)$；（4）$-(-0.5)<|-1.5|$",
+    "analysis": "本题考查有理数的大小比较，结合多重符号与绝对值的化简，熟练掌握有理数大小的比较法则是解题的关键．",
+    "detail": "解：（1）因为正数大于负数，所以 $5>-2$；<br>（2）$|-3|=3$，$|-7|=7$，因为 $3<7$，所以 $-3>-7$；<br>（3）$-(-1)=1$，$-(+2)=-2$，因为正数大于负数，所以 $1>-2$，即 $-(-1)>-(+2)$；<br>（4）$-(-0.5)=0.5$，$|-1.5|=1.5$，因为 $0.5<1.5$，所以 $-(-0.5)<|-1.5|$．"
+  },
+  {
+    "id": "g7_1_2_5_9",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.14 有理数大小的比较",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "有理数大小的比较",
+    "stem": "比较下列各组数的大小：<br>（1）$-7$ 和 $2$；（2）$-\\frac{9}{7}$ 和 $-\\frac{6}{5}$；（3）$-|-5.7|$ 和 $|-2.9|$；（4）$-\\frac{1}{2}$，$-\\frac{1}{3}$，$\\frac{1}{4}$．",
+    "options": [],
+    "answer": "（1）$-7<2$；（2）$-\\frac{9}{7}<-\\frac{6}{5}$；（3）$-|-5.7|<|-2.9|$；（4）$-\\frac{1}{2}<-\\frac{1}{3}<\\frac{1}{4}$",
+    "analysis": "本题考查了有理数的大小比较与化简绝对值，掌握正数大于负数、两个负数绝对值大的反而小是解题的关键．",
+    "detail": "解：（1）正数大于负数，故 $-7<2$；<br>（2）$\\left|-\\frac{9}{7}\\right|=\\frac{9}{7}=\\frac{45}{35}$，$\\left|-\\frac{6}{5}\\right|=\\frac{6}{5}=\\frac{42}{35}$，$\\because \\frac{45}{35}>\\frac{42}{35}$，$\\therefore -\\frac{9}{7}<-\\frac{6}{5}$；<br>（3）$-|-5.7|=-5.7$，$|-2.9|=2.9$，$\\because -5.7<2.9$，$\\therefore -|-5.7|<|-2.9|$；<br>（4）$\\left|-\\frac{1}{2}\\right|=\\frac{1}{2}>\\left|-\\frac{1}{3}\\right|=\\frac{1}{3}$，$\\therefore -\\frac{1}{2}<-\\frac{1}{3}<\\frac{1}{4}$．"
+  },
+  {
+    "id": "g7_1_2_5_10",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.14 有理数大小的比较",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "有理数大小的比较",
+    "stem": "有理数 $a, b$ 在数轴上的对应点的位置如图所示，下列结论中正确的是（   ）<div class=\"my-2\"><img src=\"assets/images/g7_1_2_5_img1.png\" width=\"243\" height=\"41\" class=\"max-w-full h-auto rounded\" style=\"max-height:60px;\"></div>",
+    "options": [
+      "$a<-2$",
+      "$b<1$",
+      "$a>b$",
+      "$a<b$"
+    ],
+    "answer": "D",
+    "analysis": "本题考查了利用数轴比较有理数的大小，数轴上右边的点表示的数总比左边的点表示的数大．",
+    "detail": "解：由数轴可知，$-2<a<-1$，$1<b<2$，且 $a<b$，故 A、B、C 不正确，D 正确．<br>故选：D．"
+  },
+  {
+    "id": "g7_1_2_5_11",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.14 有理数大小的比较",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "有理数大小的比较",
+    "stem": "有理数 $a, b$ 在数轴上对应点的位置如图所示，则下列关系正确的是（   ）<div class=\"my-2\"><img src=\"assets/images/g7_1_2_5_img2.png\" width=\"249\" height=\"36\" class=\"max-w-full h-auto rounded\" style=\"max-height:60px;\"></div>",
+    "options": [
+      "$b<0<a$",
+      "$a<0<b$",
+      "$0<b<a$",
+      "$0<a<b$"
+    ],
+    "answer": "B",
+    "analysis": "根据数轴上的点从左往右依次增大即可得到 $a, 0, b$ 的大小关系．",
+    "detail": "解：根据 $a, b$ 在数轴上的位置（$a=-3, b=2$），得 $a<0<b$．<br>故选：B．"
+  },
+  {
+    "id": "g7_1_2_5_12",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.14 有理数大小的比较",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "中等",
+    "knowledge": "有理数大小的比较",
+    "stem": "有理数 $x, y$ 在数轴上对应点如图所示，下列大小关系正确的是（   ）<div class=\"my-2\"><img src=\"assets/images/g7_1_2_5_img3.png\" width=\"201\" height=\"28\" class=\"max-w-full h-auto rounded\" style=\"max-height:60px;\"></div>",
+    "options": [
+      "$x<-y<|x|<y$",
+      "$-y<|x|<x<y$",
+      "$-y<x<y<|x|$",
+      "$-y<x<|x|<y$"
+    ],
+    "answer": "D",
+    "analysis": "本题考查了有理数的大小比较、数轴与绝对值，由图可知 $x<0<y$ 且 $|x|<|y|$，结合对称性比较即可．",
+    "detail": "解：$\\because x<0<y$ 且 $|x|<|y|$，<br>$\\therefore -y<x<0<|x|<y$，即 $-y<x<|x|<y$．<br>故选：D．"
+  },
+  {
+    "id": "g7_1_2_5_13",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.14 有理数大小的比较",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "中等",
+    "knowledge": "有理数大小的比较",
+    "stem": "有理数 $a, b$ 在数轴上表示的点如图所示，则 $a, -a, b, -b$ 的大小关系是（   ）<div class=\"my-2\"><img src=\"assets/images/g7_1_2_5_img4.png\" width=\"186\" height=\"26\" class=\"max-w-full h-auto rounded\" style=\"max-height:60px;\"></div>",
+    "options": [
+      "$-b>a>-a>b$",
+      "$a>-a>b>-b$",
+      "$b>a>-b>-a$",
+      "$b>-a>a>-b$"
+    ],
+    "answer": "D",
+    "analysis": "本题考查利用数轴比较有理数大小，由图知 $a<0<b$ 且 $|a|<|b|$，从而判断 $a, -a, b, -b$ 的位置．",
+    "detail": "解：由图可知，$a<0<b$ 且 $|a|<|b|$，<br>$\\therefore b>-a>0>a>-b$，即 $b>-a>a>-b$．<br>故选：D．"
+  },
+  {
+    "id": "g7_1_2_5_14",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.14 有理数大小的比较",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "有理数大小的比较",
+    "stem": "实数 $a, b$ 在数轴上的对应点的位置如图所示，则正确的结论是（   ）<div class=\"my-2\"><img src=\"assets/images/g7_1_2_5_img5.png\" width=\"323\" height=\"49\" class=\"max-w-full h-auto rounded\" style=\"max-height:60px;\"></div>",
+    "options": [
+      "$a>-3$",
+      "$a<-4$",
+      "$a>-b$",
+      "$a<-b$"
+    ],
+    "answer": "D",
+    "analysis": "本题考查数轴与有理数大小比较，由图知 $-4<a<-3$，$2<b<3$（即 $-3<-b<-2$），故 $a<-b$．",
+    "detail": "解：由图可知，$-4<a<-3$，故 A、B 错误；<br>又 $\\because 2<b<3$，$\\therefore -3<-b<-2$，故 $a<-b$，C 错误，D 正确．<br>故选：D．"
+  },
+  {
+    "id": "g7_1_2_5_15",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.15 有理数大小比较的实际应用",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "有理数大小比较的实际应用",
+    "stem": "2024 年春节前，一轮雨雪降温席卷黔北地区，某地一周最低气温如下表，其中最低气温出现在（   ）<div class=\"my-2 overflow-x-auto\"><table class=\"border-collapse border border-slate-300 text-xs sm:text-sm my-1\"><thead><tr class=\"bg-slate-50\"><th class=\"border border-slate-300 px-2.5 py-1 text-center\">日期</th><th class=\"border border-slate-300 px-2.5 py-1 text-center\">周日</th><th class=\"border border-slate-300 px-2.5 py-1 text-center\">周一</th><th class=\"border border-slate-300 px-2.5 py-1 text-center\">周二</th><th class=\"border border-slate-300 px-2.5 py-1 text-center\">周三</th><th class=\"border border-slate-300 px-2.5 py-1 text-center\">周四</th><th class=\"border border-slate-300 px-2.5 py-1 text-center\">周五</th><th class=\"border border-slate-300 px-2.5 py-1 text-center\">周六</th></tr></thead><tbody><tr><td class=\"border border-slate-300 px-2.5 py-1 text-center font-medium\">气温（$^{\\circ}\\text{C}$）</td><td class=\"border border-slate-300 px-2.5 py-1 text-center\">$-3$</td><td class=\"border border-slate-300 px-2.5 py-1 text-center\">$-5$</td><td class=\"border border-slate-300 px-2.5 py-1 text-center\">$-1$</td><td class=\"border border-slate-300 px-2.5 py-1 text-center\">$-2$</td><td class=\"border border-slate-300 px-2.5 py-1 text-center\">$-3$</td><td class=\"border border-slate-300 px-2.5 py-1 text-center\">$0$</td><td class=\"border border-slate-300 px-2.5 py-1 text-center\">$3$</td></tr></tbody></table></div>",
+    "options": [
+      "周一",
+      "周二",
+      "周五",
+      "周六"
+    ],
+    "answer": "A",
+    "analysis": "本题考查有理数大小比较的实际应用，找出表中最小的数所在的日期即可．",
+    "detail": "解：$\\because -5<-3<-2<-1<0<3$，<br>$\\therefore$ 最低气温是 $-5\\,^{\\circ}\\text{C}$，出现在周一．<br>故选：A．"
+  },
+  {
+    "id": "g7_1_2_5_16",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.15 有理数大小比较的实际应用",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "有理数大小比较的实际应用",
+    "stem": "初中常用部分元素常见化合价如下表所示：<div class=\"my-2 overflow-x-auto\"><table class=\"border-collapse border border-slate-300 text-xs sm:text-sm my-1\"><thead><tr class=\"bg-slate-50\"><th class=\"border border-slate-300 px-3 py-1 text-center\">元素</th><th class=\"border border-slate-300 px-3 py-1 text-center\">氧 $\\text{O}$</th><th class=\"border border-slate-300 px-3 py-1 text-center\">镁 $\\text{Mg}$</th><th class=\"border border-slate-300 px-3 py-1 text-center\">氯 $\\text{Cl}$</th><th class=\"border border-slate-300 px-3 py-1 text-center\">铝 $\\text{Al}$</th><th class=\"border border-slate-300 px-3 py-1 text-center\">钾 $\\text{K}$</th></tr></thead><tbody><tr><td class=\"border border-slate-300 px-3 py-1 text-center font-medium\">化合价</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$-2$</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$+2$</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$-1$</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$+3$</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$+1$</td></tr></tbody></table></div>其中化合价最小的元素是（   ）",
+    "options": [
+      "氧 $\\text{O}$",
+      "镁 $\\text{Mg}$",
+      "氯 $\\text{Cl}$",
+      "铝 $\\text{Al}$"
+    ],
+    "answer": "A",
+    "analysis": "本题考查了有理数大小的比较，正数大于负数，两个负数比较大小绝对值大的反而小．",
+    "detail": "解：$\\because |-2|=2>|-1|=1$，$\\therefore -2<-1<+1<+2<+3$，<br>故化合价最小的元素是氧 $\\text{O}$．<br>故选：A．"
+  },
+  {
+    "id": "g7_1_2_5_17",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.15 有理数大小比较的实际应用",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "有理数大小比较的实际应用",
+    "stem": "下表是几种液体在标准大气压下的沸点：<div class=\"my-2 overflow-x-auto\"><table class=\"border-collapse border border-slate-300 text-xs sm:text-sm my-1\"><thead><tr class=\"bg-slate-50\"><th class=\"border border-slate-300 px-3 py-1 text-center\">液体名称</th><th class=\"border border-slate-300 px-3 py-1 text-center\">液态氩</th><th class=\"border border-slate-300 px-3 py-1 text-center\">液态氧</th><th class=\"border border-slate-300 px-3 py-1 text-center\">液态氢</th><th class=\"border border-slate-300 px-3 py-1 text-center\">液态氮</th></tr></thead><tbody><tr><td class=\"border border-slate-300 px-3 py-1 text-center font-medium\">沸点/$^{\\circ}\\text{C}$</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$-186$</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$-183$</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$-253$</td><td class=\"border border-slate-300 px-3 py-1 text-center\">$-196$</td></tr></tbody></table></div>则沸点最低的液体是（   ）",
+    "options": [
+      "液态氩",
+      "液态氧",
+      "液态氢",
+      "液态氮"
+    ],
+    "answer": "C",
+    "analysis": "本题考查了比较负数的大小，绝对值大的负数反而小．",
+    "detail": "解：$\\because |-186|=186$，$|-183|=183$，$|-253|=253$，$|-196|=196$，<br>且 $253>196>186>183$，$\\therefore -253<-196<-186<-183$，<br>$\\therefore$ 沸点最低的液体是液态氢．<br>故选：C．"
+  },
+  {
+    "id": "g7_1_2_5_18",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.15 有理数大小比较的实际应用",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "有理数大小比较的实际应用",
+    "stem": "正负数可表示同一问题中相反意义的两个量，某次篮球比赛中，甲队胜了两场记作 $+2$ 分，乙队负三场记作 $-3$ 分，$+2$ 和 $-3$ 的大小关系为（   ）",
+    "options": [
+      "$(+2)=(-3)$",
+      "$(+2)<(-3)$",
+      "$(+2)>(-3)$",
+      "无法比较"
+    ],
+    "answer": "C",
+    "analysis": "本题考查了有理数的大小比较，根据正数大于负数即可求解．",
+    "detail": "解：$+2$ 是正数，$-3$ 是负数，因为正数大于负数，所以 $(+2)>(-3)$．<br>故选：C．"
+  },
+  {
+    "id": "g7_1_2_5_19",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.15 有理数大小比较的实际应用",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "有理数大小比较的实际应用",
+    "stem": "某种药品的说明书上，贴有如下标签，若要存放该药品，则下列温度符合要求的是（   ）<div class=\"my-2 p-3 rounded-lg border border-slate-300 bg-slate-50 text-xs sm:text-sm max-w-md leading-relaxed\"><div><b>用法用量：</b>每天不少于 $90\\text{ mg}$，不超过 $120\\text{ mg}$，分 $2\\sim 3$ 次服用</div><div><b>药品规格：</b>$30\\text{ mg}/$粒</div><div><b>贮藏条件：</b>$-1\\,^{\\circ}\\text{C}\\sim 4\\,^{\\circ}\\text{C}$</div></div>",
+    "options": [
+      "$-1.1\\,^{\\circ}\\text{C}$",
+      "$0\\,^{\\circ}\\text{C}$",
+      "$4.1\\,^{\\circ}\\text{C}$",
+      "$5\\,^{\\circ}\\text{C}$"
+    ],
+    "answer": "B",
+    "analysis": "本题考查了有理数大小比较，判断哪个温度在 $-1\\,^{\\circ}\\text{C}\\sim 4\\,^{\\circ}\\text{C}$ 范围内即可．",
+    "detail": "解：$\\because -1.1<-1<0<4<4.1<5$，<br>$\\therefore$ 在 $-1\\,^{\\circ}\\text{C}\\sim 4\\,^{\\circ}\\text{C}$ 范围内、符合要求的是 $0\\,^{\\circ}\\text{C}$．<br>故选：B．"
+  },
+  {
+    "id": "g7_1_2_5_20",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.15 有理数大小比较的实际应用",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "有理数大小比较的实际应用",
+    "stem": "如图显示了某地连续 $5$ 天的日最低气温，则在这 $5$ 天中最低气温的日期是（   ）<div class=\"my-2\"><img src=\"assets/images/g7_1_2_5_img6.png\" width=\"226\" height=\"64\" class=\"max-w-full h-auto rounded\" style=\"max-height:64px;\"></div>",
+    "options": [
+      "星期一",
+      "星期二",
+      "星期三",
+      "星期五"
+    ],
+    "answer": "B",
+    "analysis": "本题考查了有理数的大小比较，比较五日最低气温 $-2\\,^{\\circ}\\text{C}, -4\\,^{\\circ}\\text{C}, 0\\,^{\\circ}\\text{C}, 1\\,^{\\circ}\\text{C}, -1\\,^{\\circ}\\text{C}$ 的大小即可．",
+    "detail": "解：五日最低气温分别为 $-2\\,^{\\circ}\\text{C}, -4\\,^{\\circ}\\text{C}, 0\\,^{\\circ}\\text{C}, 1\\,^{\\circ}\\text{C}, -1\\,^{\\circ}\\text{C}$，<br>$\\because -4<-2<-1<0<1$，<br>$\\therefore$ 这 $5$ 天中最低气温的日期是星期二．<br>故选：B．"
+  },
+  {
+    "id": "g7_1_2_5_21",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.15 有理数大小比较的实际应用",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "有理数大小比较的实际应用",
+    "stem": "如图，数轴上每个刻度为 $1$ 个单位长度，点 $A$ 表示的数是 $-3$．<div class=\"my-2\"><img src=\"assets/images/g7_1_2_5_img7.png\" width=\"308\" height=\"67\" class=\"max-w-full h-auto rounded\" style=\"max-height:67px;\"></div>（1）在数轴上标出原点，并指出点 $B$ 所表示的数是 ______；<br>（2）把这些数用数轴上的点表示出来：$0$，$1\\frac{1}{2}$，$-3$，$-(-5)$，$-\\left|-\\frac{2}{3}\\right|$，$+\\left(-4\\frac{1}{2}\\right)$．请将这些数按从小到大的顺序排列（用“$<$”连接）．",
+    "options": [],
+    "answer": "（1）$4$（数轴见解析）；（2）$+\\left(-4\\frac{1}{2}\\right)<-3<-\\left|-\\frac{2}{3}\\right|<0<1\\frac{1}{2}<-(-5)$",
+    "analysis": "本题主要考查了在数轴上表示数及利用数轴比较有理数大小：（1）由点 $A(-3)$ 向右数 $3$ 个单位确定原点 $O$，再读出点 $B$；（2）先化简各数再描点排序．",
+    "detail": "解：（1）点 $A$ 表示的数是 $-3$，从点 $A$ 向右移动 $3$ 个单位即为原点 $O$，点 $B$ 在原点右边 $4$ 个单位处，故点 $B$ 表示 $4$：<div class=\"my-2\"><img src=\"assets/images/g7_1_2_5_img8.png\" width=\"313\" height=\"26\" class=\"max-w-full h-auto rounded\" style=\"max-height:60px;\"></div>（2）先化简：$-(-5)=5$，$-\\left|-\\frac{2}{3}\\right|=-\\frac{2}{3}$，$+\\left(-4\\frac{1}{2}\\right)=-4\\frac{1}{2}$，在数轴上表示如下：<div class=\"my-2\"><img src=\"assets/images/g7_1_2_5_img9.png\" width=\"493\" height=\"66\" class=\"max-w-full h-auto rounded\" style=\"max-height:66px;\"></div>按从小到大的顺序排列为：$+\\left(-4\\frac{1}{2}\\right)<-3<-\\left|-\\frac{2}{3}\\right|<0<1\\frac{1}{2}<-(-5)$．"
+  },
+  {
+    "id": "g7_1_2_5_22",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.15 有理数大小比较的实际应用",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "有理数大小比较的实际应用",
+    "stem": "如图，观察数轴，解答下列问题：<div class=\"my-2\"><img src=\"assets/images/g7_1_2_5_img10.png\" width=\"401\" height=\"42\" class=\"max-w-full h-auto rounded\" style=\"max-height:60px;\"></div>（1）$A$ 点表示的有理数是 ______，表示有理数 $\\frac{5}{2}$ 的点是 ______；<br>（2）用数轴上的点 $M, N$ 分别表示有理数 $-\\frac{3}{2}$ 和 $6$；<br>（3）将这五个数 $-5$，$6$，$\\frac{5}{2}$，$0$，$-\\frac{3}{2}$ 用“$<$”连接的结果是：______．",
+    "options": [],
+    "answer": "（1）$-5$，$B$；（2）数轴见解析；（3）$-5<-\\frac{3}{2}<0<\\frac{5}{2}<6$",
+    "analysis": "本题主要考查了用数轴上的点表示有理数及利用数轴比较有理数的大小．",
+    "detail": "解：（1）由数轴可知，$A$ 点表示的有理数是 $-5$，表示有理数 $\\frac{5}{2}$（即 $2.5$）的点是 $B$；<br>（2）用数轴上的点 $M, N$ 分别表示有理数 $-\\frac{3}{2}$ 和 $6$ 如下：<div class=\"my-2\"><img src=\"assets/images/g7_1_2_5_img11.png\" width=\"416\" height=\"44\" class=\"max-w-full h-auto rounded\" style=\"max-height:60px;\"></div>（3）根据数轴上右边的数总比左边的数大，得：$-5<-\\frac{3}{2}<0<\\frac{5}{2}<6$．"
+  },
+  {
+    "id": "g7_1_2_5_23",
+    "grade": "初一",
+    "semester": "上册",
+    "chapterGroup": "第一章 有理数",
+    "chapter": "1.2.15 有理数大小比较的实际应用",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "有理数大小比较的实际应用",
+    "stem": "（1）填空：如图，写出数轴上的点 $A$、点 $B$ 所表示的数：点 $A$ 表示的数是 ______，点 $B$ 表示的数是 ______；<div class=\"my-2\"><img src=\"assets/images/g7_1_2_5_img12.png\" width=\"408\" height=\"46\" class=\"max-w-full h-auto rounded\" style=\"max-height:60px;\"></div>（2）已知点 $C$ 表示的数是 $2\\frac{1}{2}$，点 $D$ 表示的数是 $-\\frac{4}{5}$，请在图中的数轴上分别画出点 $C$ 和点 $D$，并标明相应字母；<br>（3）将 $A, B, C, D$ 四个点所表示的数按从小到大的顺序排列，用“$<$”连接．",
+    "options": [],
+    "answer": "（1）$-\\frac{11}{6}$（或 $-1\\frac{5}{6}$），$\\frac{7}{4}$（或 $1\\frac{3}{4}$）；（2）数轴见解析；（3）$-\\frac{11}{6}<-\\frac{4}{5}<\\frac{7}{4}<2\\frac{1}{2}$",
+    "analysis": "本题考查了利用数轴表示有理数及比较大小，注意 $-1$ 到 $-2$ 之间平均分成 $6$ 份（每份 $\\frac{1}{6}$），$1$ 到 $2$ 之间平均分成 $4$ 份（每份 $\\frac{1}{4}$）．",
+    "detail": "解：（1）把 $-1$ 到 $-2$ 之间的长度平均分成 $6$ 份，点 $A$ 表示的数是 $-1\\frac{5}{6}=-\\frac{11}{6}$；把 $1$ 到 $2$ 之间的长度平均分成 $4$ 份，点 $B$ 表示的数是 $1\\frac{3}{4}=\\frac{7}{4}$；<br>（2）点 $C$ 和点 $D$ 在数轴上的位置如图所示：<div class=\"my-2\"><img src=\"assets/images/g7_1_2_5_img13.png\" width=\"389\" height=\"44\" class=\"max-w-full h-auto rounded\" style=\"max-height:60px;\"></div>（3）由数轴可得：$-\\frac{11}{6}<-\\frac{4}{5}<\\frac{7}{4}<2\\frac{1}{2}$．"
+  },
+  {
     "id": "add_1",
     "number": 1,
     "origNumber": 1,
@@ -29949,7 +32124,7 @@ window.QUESTION_BANK = [
     "typeName": "填空题",
     "difficulty": "较易",
     "knowledge": "根据反比例函数的定义求参数",
-    "stem": "若函数 =(k-2)x^{k^{2}-5}$ 是反比例函数，则 =$ ______．",
+    "stem": "若函数 $y=(k-2)x^{k^{2}-5}$ 是反比例函数，则 $k=$ ______．",
     "answer": "$-2$",
     "analysis": "【分析】反比例函数满足$x$的次数为$-1$，且系数不为$0$，据此列方程和不等式求解即可．<br/>【详解】解：∵函数$y=(k-2)x^{k^{2}-5}$是反比例函数，<br/>∴$k-2≠0$，$k^{2}-5=-1$<br/>∴$k≠2$，$k=±2$<br/>∴$k=-2$．"
   },
@@ -30200,7 +32375,7 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "(1)$y=\\frac{60}{x}(x\\ge 4)$，<br/>(2)栅栏总长$23m$．",
     "analysis": "本题主要考查了反比例函数．解决本题的关键是根据矩形的面积公式得到矩形的长与宽之间的函数关系式，并根据墙的长度确定自变量的取值范围．<br/>（1）根据矩形的面积公式和矩形的长为$y$、宽为$x$得到求$y$与$x$之间的函数关系式是$y=\\frac{60}{x}$，再根据墙的长度确定$x$的取值范围；<br/>（2）分别求出当$x=4$和$x=3$时对应的$y$值分别是$15$和$20$，当$y=20$时超过了墙的长度，所以应选当$x=4$，并根据矩形的周长公式求出此时栅栏的长度．",
-    "detail": "（1）解：$∵$矩形的面积为$60m^{2}$，<br/>$∴xy=60$，<br/>整理得：$y=\\frac{60}{x}$，<br/>$∵$墙的长度是$15m$，<br/>$∴0<y\\le 15$，<br/>$∴\\frac{60}{x}\\le 15$，<br/>解得：$x\\ge 4$，<br/>自变量$x$的取值范围是$y=\\frac{60}{x}(x\\ge 4)$；<br/>（2）解：当$x=4$时，$y=\\frac{60}{x}=\\frac{60}{4}=15$，<br/>矩形的长为$15m$，宽为$4m$，<br/>此时墙的长度恰好够用；<br/>当$x=3$时，$y=\\frac{60}{x}=\\frac{60}{3}=20$，<br/>矩形的长为$20m$，<br/>此时墙的长度不够用，<br/>$∴$选$x=4$比较合理，<br/>当$x=4$时$y=15$，<br/>此时栅栏的部总长为：$2x+y=2\\times 4+15=23(m)$，<br/>答：栅栏的总长为$23m$．"
+    "detail": "（1）解：$∵$矩形的面积为$60m^{2}$，<br/>$∴xy=60$，<br/>整理得：$y=\\frac{60}{x}$，<br/>$∵$墙的长度是$15m$，<br/>$∴0 \\lt y\\le 15$，<br/>$∴\\frac{60}{x}\\le 15$，<br/>解得：$x\\ge 4$，<br/>自变量$x$的取值范围是$y=\\frac{60}{x}(x\\ge 4)$；<br/>（2）解：当$x=4$时，$y=\\frac{60}{x}=\\frac{60}{4}=15$，<br/>矩形的长为$15m$，宽为$4m$，<br/>此时墙的长度恰好够用；<br/>当$x=3$时，$y=\\frac{60}{x}=\\frac{60}{3}=20$，<br/>矩形的长为$20m$，<br/>此时墙的长度不够用，<br/>$∴$选$x=4$比较合理，<br/>当$x=4$时$y=15$，<br/>此时栅栏的部总长为：$2x+y=2\\times 4+15=23(m)$，<br/>答：栅栏的总长为$23m$．"
   },
   {
     "id": "ch27_1_hw_q8",
@@ -30343,7 +32518,7 @@ window.QUESTION_BANK = [
     "knowledge": "二次函数图象与各项系数符号；正比例函数的图象；判断（画）反比例函数图象",
     "stem": "二次函数 $y=ax^{2}+bx+c\\ (abc\\neq 0)$ 的图象如图所示，反比例函数 $y=\\frac{c}{x}$ 与正比例函数 $y=bx$ 在同一坐标系内的大致图象是（ ）<br/><img src=\"assets/images/ch27_2_1_img1.png\" style=\"max-width:320px; display:block; margin:8px auto;\" />",
     "answer": "D",
-    "analysis": "【分析】先根据二次函数的图象可得$b,c$的符号，再根据反比例函数的图象、正比例函数的图象特点即可得．<br/>【详解】解：$∵$抛物线的开口向上，与$y$轴的交点位于$y$轴的正半轴，<br/>$∴a>0,c>0$，<br/>$∵$抛物线的对称轴位于$y$轴的右侧，<br/>$∴x=-\\frac{b}{2a}>0$，<br/>$∴b<0$，<br/>由$c>0$可知，反比例函数$y=\\frac{c}{x}$的图象位于第一、三象限，<br/>由$b<0$可知，正比例函数$y=bx$的图象经过原点，且经过第二、四象限，<br/>观察四个选项可知，只有选项D符合，<br/>故选：D．<br/>【点睛】本题考查了二次函数、反比例函数和正比例函数的图象，熟练掌握各函数的图象特点是解题关键．",
+    "analysis": "【分析】先根据二次函数的图象可得$b,c$的符号，再根据反比例函数的图象、正比例函数的图象特点即可得．<br/>【详解】解：$∵$抛物线的开口向上，与$y$轴的交点位于$y$轴的正半轴，<br/>$∴a \\gt 0,c \\gt 0$，<br/>$∵$抛物线的对称轴位于$y$轴的右侧，<br/>$∴x=-\\frac{b}{2a} \\gt 0$，<br/>$∴b \\lt 0$，<br/>由$c \\gt 0$可知，反比例函数$y=\\frac{c}{x}$的图象位于第一、三象限，<br/>由$b \\lt 0$可知，正比例函数$y=bx$的图象经过原点，且经过第二、四象限，<br/>观察四个选项可知，只有选项D符合，<br/>故选：D．<br/>【点睛】本题考查了二次函数、反比例函数和正比例函数的图象，熟练掌握各函数的图象特点是解题关键．",
     "options": [
       "A．<img src=\"assets/images/ch27_2_1_img2.png\" style=\"max-width:180px; display:inline-block; vertical-align:middle;\" />",
       "B．<img src=\"assets/images/ch27_2_1_img3.png\" style=\"max-width:180px; display:inline-block; vertical-align:middle;\" />",
@@ -30360,9 +32535,9 @@ window.QUESTION_BANK = [
     "typeName": "单选题",
     "difficulty": "中等",
     "knowledge": "已知反比例函数的图象，判断其解析式",
-    "stem": "反比例函数$y=\\frac{k}{x}$（$k≠0$，$x>0$）的图象在平面直角坐标系中的位置如图所示，则$k$的值可能为（ ）<br/><img src=\"assets/images/ch27_2_1_img6.jpeg\" style=\"max-width:320px; display:block; margin:8px auto;\" />",
+    "stem": "反比例函数$y=\\frac{k}{x}$（$k≠0$，$x \\gt 0$）的图象在平面直角坐标系中的位置如图所示，则$k$的值可能为（ ）<br/><img src=\"assets/images/ch27_2_1_img6.jpeg\" style=\"max-width:320px; display:block; margin:8px auto;\" />",
     "answer": "B",
-    "analysis": "【分析】观察图形得出$3＜k＜6$，根据$k$的取值判断即可．<br/>【详解】解：由题图可知，当$x=1$时，$y=\\frac{k}{1}＞3$，即$k>3$，<br/>当$x=3$时，$y=\\frac{k}{3}<2$， 即$k<6$，<br/>$∴3＜k＜6$．<br/>选项中只有4在此范围内，<br/>∴$k$的值可能为4．",
+    "analysis": "【分析】观察图形得出$3＜k＜6$，根据$k$的取值判断即可．<br/>【详解】解：由题图可知，当$x=1$时，$y=\\frac{k}{1}＞3$，即$k \\gt 3$，<br/>当$x=3$时，$y=\\frac{k}{3} \\lt 2$， 即$k \\lt 6$，<br/>$∴3＜k＜6$．<br/>选项中只有4在此范围内，<br/>∴$k$的值可能为4．",
     "options": [
       "A．$3$",
       "B．$4$",
@@ -30381,7 +32556,7 @@ window.QUESTION_BANK = [
     "knowledge": "已知反比例函数的图象，判断其解析式",
     "stem": "反比例函数的图象如图所示，则这个反比例函数的解析式可能是（ ）<br/><img src=\"assets/images/ch27_2_1_img7.png\" style=\"max-width:320px; display:block; margin:8px auto;\" />",
     "answer": "C",
-    "analysis": "【分析】本题考查了反比例函数的图象以及反比例函数图象上点的坐标特征，观察函数图象利用反比例函数图象上点的坐标特征找出$k$的取值范围是解题的关键．<br/>根据点$A$、$B$的坐标结合函数图象以及反比例函数图象上点的坐标特征，即可得出$6<k<9$，再对照四个选项即可得出结论．<br/>【详解】解：据点$A$、$B$的坐标结合函数图象以及反比例函数图象上点的坐标特征，<br/>观察函数图象可知：$-2×(-3)<k<3×3$，即$6<k<9$．<br/>故选：C．",
+    "analysis": "【分析】本题考查了反比例函数的图象以及反比例函数图象上点的坐标特征，观察函数图象利用反比例函数图象上点的坐标特征找出$k$的取值范围是解题的关键．<br/>根据点$A$、$B$的坐标结合函数图象以及反比例函数图象上点的坐标特征，即可得出$6 \\lt k \\lt 9$，再对照四个选项即可得出结论．<br/>【详解】解：据点$A$、$B$的坐标结合函数图象以及反比例函数图象上点的坐标特征，<br/>观察函数图象可知：$-2×(-3) \\lt k \\lt 3×3$，即$6 \\lt k \\lt 9$．<br/>故选：C．",
     "options": [
       "A．$y=\\frac{2}{x}$",
       "B．$y=\\frac{6}{x}$",
@@ -30400,7 +32575,7 @@ window.QUESTION_BANK = [
     "knowledge": "判断反比例函数图象所在象限",
     "stem": "在一块平地上，划出一个占地面积为100平方米的矩形区域，这个矩形区域的相邻两边长为$x$米，$y$米，那么$y$关于$x$的函数图像位于平面直角坐标系中的（ ）",
     "answer": "C",
-    "analysis": "【分析】先根据矩形面积公式推导得到$y$关于$x$的函数表达式，再结合边长的实际意义确定$x$，$y$的取值范围，即可判断函数图像所在象限．<br/>【详解】解：∵矩形面积等于相邻两边长的乘积，由题意得$xy=100$，整理得$y=\\frac{100}{x}$，该函数为反比例函数，<br/>又∵$x$，$y$表示矩形的边长，边长为正实数，<br/>∴$x>0$，<br/>可得$y=\\frac{100}{x}>0$，<br/>∴函数图像只位于平面直角坐标系的第一象限．",
+    "analysis": "【分析】先根据矩形面积公式推导得到$y$关于$x$的函数表达式，再结合边长的实际意义确定$x$，$y$的取值范围，即可判断函数图像所在象限．<br/>【详解】解：∵矩形面积等于相邻两边长的乘积，由题意得$xy=100$，整理得$y=\\frac{100}{x}$，该函数为反比例函数，<br/>又∵$x$，$y$表示矩形的边长，边长为正实数，<br/>∴$x \\gt 0$，<br/>可得$y=\\frac{100}{x} \\gt 0$，<br/>∴函数图像只位于平面直角坐标系的第一象限．",
     "options": [
       "A．第一、三象限",
       "B．第二、四象限",
@@ -30419,7 +32594,7 @@ window.QUESTION_BANK = [
     "knowledge": "根据一元二次方程根的情况求参数；判断反比例函数图象所在象限",
     "stem": "若关于x的一元二次方程$x^{2}-2x+n=0$无实数根，则反比例函数$y=\\frac{n}{x}$的图象所在的象限分别为（ ）",
     "answer": "A",
-    "analysis": "【分析】本题考查的是反比例函数的性质，根的判别式，先根据一元二次方程无实数根的条件求出n的范围，再根据反比例函数的性质判断图象所在象限．<br/>【详解】解：∵关于x的一元二次方程$x^{2}-2x+n=0$无实数根，<br/>∴$Δ=(-2)^{2}-4×1×n=4-4n<0$，<br/>∴$n>1$，<br/>∴$n>0$，<br/>∴反比例函数$y=\\frac{n}{x}$中，$n>0$，<br/>∴图象位于第一、三象限，<br/>故选：A．",
+    "analysis": "【分析】本题考查的是反比例函数的性质，根的判别式，先根据一元二次方程无实数根的条件求出n的范围，再根据反比例函数的性质判断图象所在象限．<br/>【详解】解：∵关于x的一元二次方程$x^{2}-2x+n=0$无实数根，<br/>∴$Δ=(-2)^{2}-4×1×n=4-4n \\lt 0$，<br/>∴$n \\gt 1$，<br/>∴$n \\gt 0$，<br/>∴反比例函数$y=\\frac{n}{x}$中，$n \\gt 0$，<br/>∴图象位于第一、三象限，<br/>故选：A．",
     "options": [
       "A．第一、三象限",
       "B．第二、四象限",
@@ -30438,7 +32613,7 @@ window.QUESTION_BANK = [
     "knowledge": "已知双曲线分布的象限，求参数范围",
     "stem": "若反比例函数$y=\\frac{k-1}{x}$的图象位于第二、四象限，则$k$的值可能是（ ）",
     "answer": "D",
-    "analysis": "【详解】解：∵反比例函数$y=\\frac{k-1}{x}$的图象位于第二、四象限<br/>∴$k-1<0$<br/>解得$k<1$<br/>观察选项，只有0满足$k<1$．",
+    "analysis": "【详解】解：∵反比例函数$y=\\frac{k-1}{x}$的图象位于第二、四象限<br/>∴$k-1 \\lt 0$<br/>解得$k \\lt 1$<br/>观察选项，只有0满足$k \\lt 1$．",
     "options": [
       "A．3",
       "B．2",
@@ -30457,12 +32632,12 @@ window.QUESTION_BANK = [
     "knowledge": "二次函数图象与各项系数符号；已知双曲线分布的象限，求参数范围",
     "stem": "某学习小组用绘图软件绘制出了函数$y=\\frac{ax}{(x+b)^{2}}$的图象，结合所学函数的知识，下列对$a,b$大小的判断，正确的是（ ）<br/><img src=\"assets/images/ch27_2_1_img8.png\" style=\"max-width:320px; display:block; margin:8px auto;\" />",
     "answer": "A",
-    "analysis": "【分析】由图象可知，当$x>0$时，$y>0$，可知$a$的取值范围，再由当$x=-b$时，函数值不存在即可求解．<br/>【详解】解：由图象得，当$x>0$时，$y>0$，<br/>$∵(x+b)^{2}>0$，<br/>$∴ax>0$，<br/>$∴a>0$，<br/>由图象得，当$x<0$时，$y<0$，<br/>$∵(x+b)^{2}>0$，<br/>$∴ax<0$，<br/>也可得$a>0$，<br/>当$x=-b$时，函数值不存在，<br/>$∴-b>0$，即$b<0$．<br/>综上，$a>0,b<0$．",
+    "analysis": "【分析】由图象可知，当$x \\gt 0$时，$y \\gt 0$，可知$a$的取值范围，再由当$x=-b$时，函数值不存在即可求解．<br/>【详解】解：由图象得，当$x \\gt 0$时，$y \\gt 0$，<br/>$∵(x+b)^{2} \\gt 0$，<br/>$∴ax \\gt 0$，<br/>$∴a \\gt 0$，<br/>由图象得，当$x \\lt 0$时，$y \\lt 0$，<br/>$∵(x+b)^{2} \\gt 0$，<br/>$∴ax \\lt 0$，<br/>也可得$a \\gt 0$，<br/>当$x=-b$时，函数值不存在，<br/>$∴-b \\gt 0$，即$b \\lt 0$．<br/>综上，$a \\gt 0,b \\lt 0$．",
     "options": [
-      "A．$a>0,b<0$",
-      "B．$a>0,b>0$",
-      "C．$a<0,b>0$",
-      "D．$a<0,b<0$"
+      "A．$a \\gt 0,b \\lt 0$",
+      "B．$a \\gt 0,b \\gt 0$",
+      "C．$a \\lt 0,b \\gt 0$",
+      "D．$a \\lt 0,b \\lt 0$"
     ]
   },
   {
@@ -30475,8 +32650,8 @@ window.QUESTION_BANK = [
     "difficulty": "中等",
     "knowledge": "已知反比例函数的图象，判断其解析式；已知双曲线分布的象限，求参数范围",
     "stem": "反比例函数$y_{1}=\\frac{k_{1}}{x}$，$y_{2}=\\frac{k_{2}}{x}$，$y_{3}=\\frac{k_{3}}{x}$在同一坐标系中的图像如图所示，则$k_{1}$，$k_{2}$，$k_{3}$的大小关系为______．（用“<”连接）<br/><img src=\"assets/images/ch27_2_1_img9.png\" style=\"max-width:320px; display:block; margin:8px auto;\" />",
-    "answer": "$k_{1}<k_{2}<k_{3}$",
-    "analysis": "【分析】本题考查反比例函数图像与性质，由图可知$y_{3}=\\frac{k_{3}}{x}$图像在第三象限，$k_{3}>0$；$y_{1}=\\frac{k_{1}}{x}$，$y_{2}=\\frac{k_{2}}{x}$图像在第四象限，$k_{2}<0$、$k_{1}<0$；再取$x=1$，如图所示，即可比较$k_{1}$，$k_{2}$的大小，熟记反比例函数图像与性质，数形结合是解决问题的关键．<br/>【详解】解：由图可知，$y_{3}=\\frac{k_{3}}{x}$图像在第三象限，$k_{3}>0$；$y_{1}=\\frac{k_{1}}{x}$，$y_{2}=\\frac{k_{2}}{x}$图像在第四象限，$k_{2}<0$、$k_{1}<0$；<br/>取$x=1$，如图所示：<br/><img src=\"assets/images/ch27_2_1_img10.png\" style=\"max-width:320px; display:block; margin:8px auto;\" /><br/>$∴k_{2}>k_{1}$；<br/>综上所述，$k_{1}<k_{2}<k_{3}$，<br/>故答案为：$k_{1}<k_{2}<k_{3}$．"
+    "answer": "$k_{1} \\lt k_{2} \\lt k_{3}$",
+    "analysis": "【分析】本题考查反比例函数图像与性质，由图可知$y_{3}=\\frac{k_{3}}{x}$图像在第三象限，$k_{3} \\gt 0$；$y_{1}=\\frac{k_{1}}{x}$，$y_{2}=\\frac{k_{2}}{x}$图像在第四象限，$k_{2} \\lt 0$、$k_{1} \\lt 0$；再取$x=1$，如图所示，即可比较$k_{1}$，$k_{2}$的大小，熟记反比例函数图像与性质，数形结合是解决问题的关键．<br/>【详解】解：由图可知，$y_{3}=\\frac{k_{3}}{x}$图像在第三象限，$k_{3} \\gt 0$；$y_{1}=\\frac{k_{1}}{x}$，$y_{2}=\\frac{k_{2}}{x}$图像在第四象限，$k_{2} \\lt 0$、$k_{1} \\lt 0$；<br/>取$x=1$，如图所示：<br/><img src=\"assets/images/ch27_2_1_img10.png\" style=\"max-width:320px; display:block; margin:8px auto;\" /><br/>$∴k_{2} \\gt k_{1}$；<br/>综上所述，$k_{1} \\lt k_{2} \\lt k_{3}$，<br/>故答案为：$k_{1} \\lt k_{2} \\lt k_{3}$．"
   },
   {
     "id": "ch27_2_1_q9",
@@ -30489,7 +32664,7 @@ window.QUESTION_BANK = [
     "knowledge": "根据一元二次方程根的情况求参数；判断反比例函数图象所在象限",
     "stem": "若一元二次方程$x^{2}+2x+k=0$无实数根，则反比例函数$y=\\frac{k-1}{x}$的图象经过第______象限．",
     "answer": "一、三",
-    "analysis": "【分析】本题考查了反比例函数的图像与系数的关系及一元二次方程根的判别式的知识，解题的关键是首先根据方程根的情况判定实数$k$的取值范围．<br/>本题根据反比例函数的图像与系数的关系及一元二次方程根的判别式的知识，进行作答，即可求解；<br/>【详解】∵一元二次方程$x^{2}+2x+k=0$无实数根，<br/>∴$Δ=4-4k<0$，<br/>解得：$k>1$，<br/>∴$k-1>0$，<br/>∴反比例函数$y=\\frac{k-1}{x}$的图象经过第一、三象限．"
+    "analysis": "【分析】本题考查了反比例函数的图像与系数的关系及一元二次方程根的判别式的知识，解题的关键是首先根据方程根的情况判定实数$k$的取值范围．<br/>本题根据反比例函数的图像与系数的关系及一元二次方程根的判别式的知识，进行作答，即可求解；<br/>【详解】∵一元二次方程$x^{2}+2x+k=0$无实数根，<br/>∴$Δ=4-4k \\lt 0$，<br/>解得：$k \\gt 1$，<br/>∴$k-1 \\gt 0$，<br/>∴反比例函数$y=\\frac{k-1}{x}$的图象经过第一、三象限．"
   },
   {
     "id": "ch27_2_1_q10",
@@ -30514,8 +32689,8 @@ window.QUESTION_BANK = [
     "difficulty": "较易",
     "knowledge": "已知双曲线分布的象限，求参数范围",
     "stem": "反比例函数$y=\\frac{m-1}{x}$的图象在第二、四象限内，则$m$的取值范围是______．",
-    "answer": "$m<1$",
-    "analysis": "【详解】解：∵反比例函数$y=\\frac{m-1}{x}$的图象在第二、四象限内，<br/>∴$m-1<0$，<br/>解得：$m<1$．"
+    "answer": "$m \\lt 1$",
+    "analysis": "【详解】解：∵反比例函数$y=\\frac{m-1}{x}$的图象在第二、四象限内，<br/>∴$m-1 \\lt 0$，<br/>解得：$m \\lt 1$．"
   },
   {
     "id": "ch27_2_1_q12",
@@ -30526,9 +32701,9 @@ window.QUESTION_BANK = [
     "typeName": "填空题",
     "difficulty": "中等",
     "knowledge": "根据反比例函数的定义求参数；因式分解法解一元二次方程；已知双曲线分布的象限，求参数范围",
-    "stem": "若反比例函数 =(k^{2}-5)x^{k^{2}-k-7}$ 的图象位于第一、三象限，则 $ 的值为 ______．",
+    "stem": "若反比例函数 $y=(k^{2}-5)x^{k^{2}-k-7}$ 的图象位于第一、三象限，则 $k$ 的值为 ______．",
     "answer": "3",
-    "analysis": "【分析】本题主要考查了反比例函数的定义和性质，解一元二次方程，熟知反比例函数的相关知识是解题的关键．<br/>根据反比例函数的定义和性质得到$k^{2}-5>0$且$k^{2}-k-7=-1$，再解一元二次方程即可．<br/>【详解】解：由题意得，$k^{2}-5>0$且$k^{2}-k-7=-1$，<br/>解得$k=3$或$k=-2$（舍）<br/>故答案为：$3$．"
+    "analysis": "【分析】本题主要考查了反比例函数的定义和性质，解一元二次方程，熟知反比例函数的相关知识是解题的关键．<br/>根据反比例函数的定义和性质得到$k^{2}-5 \\gt 0$且$k^{2}-k-7=-1$，再解一元二次方程即可．<br/>【详解】解：由题意得，$k^{2}-5 \\gt 0$且$k^{2}-k-7=-1$，<br/>解得$k=3$或$k=-2$（舍）<br/>故答案为：$3$．"
   },
   {
     "id": "ch27_2_1_q13",
@@ -30539,7 +32714,7 @@ window.QUESTION_BANK = [
     "typeName": "解答题",
     "difficulty": "中等",
     "knowledge": "判断（画）反比例函数图象；已知反比例函数的图象，判断其解析式",
-    "stem": "把下列函数的解析式与其图象对应起来：（1）=\\frac{2}{x}$；（2）=\\frac{2}{|x|}$；（3）=-\\frac{2}{x}$；（4）=-\\frac{2}{|x|}$．<div class=\"grid grid-cols-1 sm:grid-cols-2 gap-3 mt-2.5\"><div class=\"answer-option\"><span>A．</span><img src=\"assets/images/ch27_2_1_img11.png\" style=\"max-width:180px; display:inline-block; vertical-align:middle;\" /></div><div class=\"answer-option\"><span>B．</span><img src=\"assets/images/ch27_2_1_img12.png\" style=\"max-width:180px; display:inline-block; vertical-align:middle;\" /></div><div class=\"answer-option\"><span>C．</span><img src=\"assets/images/ch27_2_1_img13.png\" style=\"max-width:180px; display:inline-block; vertical-align:middle;\" /></div><div class=\"answer-option\"><span>D．</span><img src=\"assets/images/ch27_2_1_img14.png\" style=\"max-width:180px; display:inline-block; vertical-align:middle;\" /></div></div>",
+    "stem": "把下列函数的解析式与其图象对应起来：（1）$y=\\frac{2}{x}$；（2）$y=\\frac{2}{|x|}$；（3）$y=-\\frac{2}{x}$；（4）$y=-\\frac{2}{|x|}$．<div class=\"grid grid-cols-1 sm:grid-cols-2 gap-3 mt-2.5\"><div class=\"answer-option\"><span>A．</span><img src=\"assets/images/ch27_2_1_img11.png\" style=\"max-width:180px; display:inline-block; vertical-align:middle;\" /></div><div class=\"answer-option\"><span>B．</span><img src=\"assets/images/ch27_2_1_img12.png\" style=\"max-width:180px; display:inline-block; vertical-align:middle;\" /></div><div class=\"answer-option\"><span>C．</span><img src=\"assets/images/ch27_2_1_img13.png\" style=\"max-width:180px; display:inline-block; vertical-align:middle;\" /></div><div class=\"answer-option\"><span>D．</span><img src=\"assets/images/ch27_2_1_img14.png\" style=\"max-width:180px; display:inline-block; vertical-align:middle;\" /></div></div>",
     "answer": "（1）B；（2）A；（3）C；（4）D",
     "analysis": "【分析】根据反比例函数的选择即可得到结论．<br/>【详解】解：（1）$y=\\frac{2}{x}$的图象在一，三象限，对应着图象B；<br/>（2）$y=\\frac{2}{|x|}$的图象关于y轴对称，且函数值为正，在x轴上方，对应着图象A；<br/>（3）$y=-\\frac{2}{x}$的图象在二，四象限，对应着图象C；<br/>（4）$y=-\\frac{2}{|x|}$的图象关于y轴对称，且函数值为负，在x轴方下方，对应着图象D．<br/>【点睛】本题考查了反比例函数的选择，熟练掌握反比例函数的性质是解题的关键．",
     "options": []
@@ -30554,8 +32729,8 @@ window.QUESTION_BANK = [
     "difficulty": "中等",
     "knowledge": "判断（画）反比例函数图象；判断反比例函数图象所在象限",
     "stem": "九年级某数学兴趣小组在学习了反比例函数的图象与性质后，进一步研究函数$y=\\frac{2}{|x|}$的图象与性质，探究过程如下：（1）写出自变量x的取值范围；（2）画函数图象；列表：下表是x与y的几组对应值，其中$m=$______；<br/><table class=\"w-full max-w-xl text-xs border-collapse border border-slate-300 my-2 bg-white text-center\"><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">x</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td><td class=\"border border-slate-300 px-2 py-1 text-center\">－3</td><td class=\"border border-slate-300 px-2 py-1 text-center\">－2</td><td class=\"border border-slate-300 px-2 py-1 text-center\">－1</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-\\frac{1}{2}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$\\frac{1}{2}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">1</td><td class=\"border border-slate-300 px-2 py-1 text-center\">2</td><td class=\"border border-slate-300 px-2 py-1 text-center\">3</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">y</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td><td class=\"border border-slate-300 px-2 py-1 text-center\">1</td><td class=\"border border-slate-300 px-2 py-1 text-center\">2</td><td class=\"border border-slate-300 px-2 py-1 text-center\">4</td><td class=\"border border-slate-300 px-2 py-1 text-center\">4</td><td class=\"border border-slate-300 px-2 py-1 text-center\">2</td><td class=\"border border-slate-300 px-2 py-1 text-center\">m</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td></tr></table><br/>描点画图：利用所给的网格，建立平面直角坐标系，描出表中各对对应值为坐标的点，画出该函数图象；<br/>（3）通过观察图象，写出该函数的两条性质：①______；②______．<br/><img src=\"assets/images/ch27_2_1_img15.png\" style=\"max-width:320px; display:block; margin:8px auto;\" />",
-    "answer": "（1）$x≠0$；<br/>（2）$1$；该函数的图象如下：<br/><img src=\"assets/images/ch27_2_1_img16.png\" style=\"max-width:320px; display:block; margin:8px auto;\" /><br/>（3）①当$x>0$时，y随x的增大而减小，当$x<0$时，y随x的增大而增大，②无论x取何值，函数值恒大于0",
-    "analysis": "【分析】（1）根据分母不能为0，得出自变量的取值范围；<br/>（2）代入求值即可；经历描点、连线形成图象；<br/>（3）依据函数的增减性，函数值的大小等方面说明性质．<br/>【详解】解：（1）自变量的取值范围为：$x≠0$；<br/>（2）把$x=2$代入$y=\\frac{2}{|x|}$得，$m=1$；<br/>进而可得函数的图象；<br/>（3）①当$x>0$时，y随x的增大而减小，当$x<0$时，y随x的增大而增大，<br/>②无论x取何值，函数值恒大于0.<br/>【点睛】本题考查反比例函数的图象和性质，掌握函数图象的绘制方法是画出图象的关键，求出变量之间的对应值是画图象的前提．"
+    "answer": "（1）$x≠0$；<br/>（2）$1$；该函数的图象如下：<br/><img src=\"assets/images/ch27_2_1_img16.png\" style=\"max-width:320px; display:block; margin:8px auto;\" /><br/>（3）①当$x \\gt 0$时，y随x的增大而减小，当$x \\lt 0$时，y随x的增大而增大，②无论x取何值，函数值恒大于0",
+    "analysis": "【分析】（1）根据分母不能为0，得出自变量的取值范围；<br/>（2）代入求值即可；经历描点、连线形成图象；<br/>（3）依据函数的增减性，函数值的大小等方面说明性质．<br/>【详解】解：（1）自变量的取值范围为：$x≠0$；<br/>（2）把$x=2$代入$y=\\frac{2}{|x|}$得，$m=1$；<br/>进而可得函数的图象；<br/>（3）①当$x \\gt 0$时，y随x的增大而减小，当$x \\lt 0$时，y随x的增大而增大，<br/>②无论x取何值，函数值恒大于0.<br/>【点睛】本题考查反比例函数的图象和性质，掌握函数图象的绘制方法是画出图象的关键，求出变量之间的对应值是画图象的前提．"
   },
   {
     "id": "ch27_2_1_q15",
@@ -30566,9 +32741,9 @@ window.QUESTION_BANK = [
     "typeName": "解答题",
     "difficulty": "中等",
     "knowledge": "已知双曲线分布的象限，求参数范围",
-    "stem": "已知反比例函数$y=\\frac{12}{x}$．(1)若$y<4$，则x的取值范围是______；(2)若$y≥2$，则x的取值范围是______；(3)若$-2<y≤2$，且$y≠0$，则x的取值范围是______．",
-    "answer": "(1)$x>3$或$x<0$<br/>(2)$0<x≤6$<br/>(3)$x<-6$或$x≥6$",
-    "analysis": "【分析】本题考查反比例函数的增减性，<br/>（1）先求出当$y=4$时$x$的值，然后根据反比例函数的增减性进行求解即可；<br/>（2）先求出当$y=2$时$x$的值，然后根据反比例函数的增减性进行求解即可；<br/>（3）先分别求出当$y=2$和$y=-2$时$x$的值，然后根据反比例函数的增减性进行求解即可；<br/>解题的关键在于熟知反比例函数$y=\\frac{k}{x}(k≠0)$的性质：当$k>0$时，函数的图像在第一、三象限，在每个象限内，$y$随$x$的增大而减小；当$k<0$时，函数的图像在第二、四象限，在每个象限内，$y$随$x$的增大而增大．<br/>【详解】（1）解：反比例函数$y=\\frac{12}{x}$的图像如图所示，<br/>当$y=4$时，$x=\\frac{12}{4}=3$，<br/>∵函数的图像在第一、三象限，在每个象限内，$y$随$x$的增大而减小，<br/>∴当$y<4$时，x的取值范围是$x>3$或$x<0$，<br/>故答案为：$x>3$或$x<0$；<br/>（2）当$y=2$时，$x=\\frac{12}{2}=6$，<br/>∵函数的图像在第一、三象限，在每个象限内，$y$随$x$的增大而减小，<br/>∴当$y≥2$时，x的取值范围是$0<x≤6$，<br/>故答案为：$0<x≤6$；<br/>（3）当$y=2$时，$x=\\frac{12}{2}=6$；当$y=-2$时，$x=\\frac{12}{-2}=-6$，<br/>∵函数的图像在第一、三象限，在每个象限内，$y$随$x$的增大而减小，<br/>∴当$-2<y≤2$且$y≠0$时，x的取值范围是$x<-6$或$x≥6$．<br/><img src=\"assets/images/ch27_2_1_img17.png\" style=\"max-width:320px; display:block; margin:8px auto;\" />"
+    "stem": "已知反比例函数$y=\\frac{12}{x}$．(1)若$y \\lt 4$，则x的取值范围是______；(2)若$y≥2$，则x的取值范围是______；(3)若$-2 \\lt y≤2$，且$y≠0$，则x的取值范围是______．",
+    "answer": "(1)$x \\gt 3$或$x \\lt 0$<br/>(2)$0 \\lt x≤6$<br/>(3)$x \\lt -6$或$x≥6$",
+    "analysis": "【分析】本题考查反比例函数的增减性，<br/>（1）先求出当$y=4$时$x$的值，然后根据反比例函数的增减性进行求解即可；<br/>（2）先求出当$y=2$时$x$的值，然后根据反比例函数的增减性进行求解即可；<br/>（3）先分别求出当$y=2$和$y=-2$时$x$的值，然后根据反比例函数的增减性进行求解即可；<br/>解题的关键在于熟知反比例函数$y=\\frac{k}{x}(k≠0)$的性质：当$k \\gt 0$时，函数的图像在第一、三象限，在每个象限内，$y$随$x$的增大而减小；当$k \\lt 0$时，函数的图像在第二、四象限，在每个象限内，$y$随$x$的增大而增大．<br/>【详解】（1）解：反比例函数$y=\\frac{12}{x}$的图像如图所示，<br/>当$y=4$时，$x=\\frac{12}{4}=3$，<br/>∵函数的图像在第一、三象限，在每个象限内，$y$随$x$的增大而减小，<br/>∴当$y \\lt 4$时，x的取值范围是$x \\gt 3$或$x \\lt 0$，<br/>故答案为：$x \\gt 3$或$x \\lt 0$；<br/>（2）当$y=2$时，$x=\\frac{12}{2}=6$，<br/>∵函数的图像在第一、三象限，在每个象限内，$y$随$x$的增大而减小，<br/>∴当$y≥2$时，x的取值范围是$0 \\lt x≤6$，<br/>故答案为：$0 \\lt x≤6$；<br/>（3）当$y=2$时，$x=\\frac{12}{2}=6$；当$y=-2$时，$x=\\frac{12}{-2}=-6$，<br/>∵函数的图像在第一、三象限，在每个象限内，$y$随$x$的增大而减小，<br/>∴当$-2 \\lt y≤2$且$y≠0$时，x的取值范围是$x \\lt -6$或$x≥6$．<br/><img src=\"assets/images/ch27_2_1_img17.png\" style=\"max-width:320px; display:block; margin:8px auto;\" />"
   },
   {
     "id": "ch27_2_1_ex_q1",
@@ -30588,7 +32763,7 @@ window.QUESTION_BANK = [
     ],
     "answer": "A",
     "analysis": "本题考查反比例函数图象的性质，熟练掌握反比例函数的比例系数包括前面的符号是解题的关键．根据反比例函数图象的性质并结合其比例系数解答即可．",
-    "detail": "解：$∵k=-1<0$，<br/>$∴$此函数图象在二、四象限，<br/>故选：A．"
+    "detail": "解：$∵k=-1 \\lt 0$，<br/>$∴$此函数图象在二、四象限，<br/>故选：A．"
   },
   {
     "id": "ch27_2_1_ex_q2",
@@ -30657,7 +32832,7 @@ window.QUESTION_BANK = [
     "stem": "在平面直角坐标系中，若一个反比例函数的图象在第一、三象限，则该反比例函数的解析式可以是______（写出一个即可）．",
     "options": [],
     "answer": "$y=\\frac{1}{x}$（答案不唯一）",
-    "analysis": "本题考查了反比例函数的图象与性质，熟练掌握当$k>0$，反比例函数图象经过第一、三象限，当$k<0$，反比例函数图象经过第二、四象限是解题的关键；写出一个比例系数为正数的反比例函数即可．",
+    "analysis": "本题考查了反比例函数的图象与性质，熟练掌握当$k \\gt 0$，反比例函数图象经过第一、三象限，当$k \\lt 0$，反比例函数图象经过第二、四象限是解题的关键；写出一个比例系数为正数的反比例函数即可．",
     "detail": "解：一个反比例函数的图象在第一、三象限，则该反比例函数的解析式可以是$y=\\frac{1}{x}$，<br/>故答案为：$y=\\frac{1}{x}$（答案不唯一）．"
   },
   {
@@ -30692,8 +32867,8 @@ window.QUESTION_BANK = [
       "D．第三、第四象限"
     ],
     "answer": "B",
-    "analysis": "对于反比例函数$y=\\frac{k}{x}(k\\neq 0)$，当$k>0$时，图象位于第一，第三象限，当$k<0$时，图象位于第二，第四象限，只需判断本题中$k$的符号即可求解.",
-    "detail": "解：$∵$ 反比例函数$y=\\frac{10}{x}$中，$k=10>0$，<br/>$∴$ 该反比例函数的图象位于第一，第三象限，"
+    "analysis": "对于反比例函数 $y=\\frac{k}{x}\\ (k\\neq 0)$，当 $k \\gt 0$ 时，图象位于第一、第三象限；当 $k \\lt 0$ 时，图象位于第二、第四象限，只需判断本题中 $k$ 的符号即可求解．",
+    "detail": "解：$∵$ 反比例函数 $y=\\frac{10}{x}$ 中，$k=10 \\gt 0$，<br/>$∴$ 该反比例函数的图象位于第一、第三象限．<br/>故选：B．"
   },
   {
     "id": "ch27_2_1_ex_q8",
@@ -30708,7 +32883,7 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "第一、三",
     "analysis": "",
-    "detail": "解：$∵k^{2}\\ge 0$，<br/>$∴k^{2}+1>0$，<br/>$∴$反比例函数$y=\\frac{k^{2}+1}{x}$的图象位于第一、三象限．"
+    "detail": "解：$∵k^{2}\\ge 0$，<br/>$∴k^{2}+1 \\gt 0$，<br/>$∴$反比例函数$y=\\frac{k^{2}+1}{x}$的图象位于第一、三象限．"
   },
   {
     "id": "ch27_2_1_ex_q9",
@@ -30722,8 +32897,8 @@ window.QUESTION_BANK = [
     "stem": "下列反比例函数的图象分别在哪两个象限？(1)$y=\\frac{3}{x}$．(2)$y=-\\frac{1}{x}$．",
     "options": [],
     "answer": "(1)$y=\\frac{3}{x}$的图象在第一、三象限；<br/>(2)$y=-\\frac{1}{x}$的图象在第二、四象限．",
-    "analysis": "（1）根据反比例函数$y=\\frac{k}{x}(k\\neq 0)$的图象是双曲线；当$k>0$，双曲线的两支分别位于第一、第三象限，在每一象限内y随x的增大而减小可得答案；<br/>（2）根据反比例函数$y=\\frac{k}{x}(k\\neq 0)$的图象是双曲线；当$k<0$，双曲线的两支分别位于第二、第四象限，在每一象限内y随x的增大而增大可得答案．",
-    "detail": "（1）解：$y=\\frac{3}{x}$，<br/>∵$k=3>0$，<br/>∴$y=\\frac{3}{x}$的图象在第一、三象限；<br/>（2）解：$y=-\\frac{1}{x}$，<br/>∵$k=-1<0$，<br/>∴$y=-\\frac{1}{x}$的图象在第二、四象限．<br/>【点睛】此题主要考查了反比例函数的性质，关键是掌握反比例函数$y=\\frac{k}{x}(k\\neq 0)$的性质．"
+    "analysis": "（1）根据反比例函数$y=\\frac{k}{x}(k\\neq 0)$的图象是双曲线；当$k \\gt 0$，双曲线的两支分别位于第一、第三象限，在每一象限内y随x的增大而减小可得答案；<br/>（2）根据反比例函数$y=\\frac{k}{x}(k\\neq 0)$的图象是双曲线；当$k \\lt 0$，双曲线的两支分别位于第二、第四象限，在每一象限内y随x的增大而增大可得答案．",
+    "detail": "（1）解：$y=\\frac{3}{x}$，<br/>∵$k=3 \\gt 0$，<br/>∴$y=\\frac{3}{x}$的图象在第一、三象限；<br/>（2）解：$y=-\\frac{1}{x}$，<br/>∵$k=-1 \\lt 0$，<br/>∴$y=-\\frac{1}{x}$的图象在第二、四象限．<br/>【点睛】此题主要考查了反比例函数的性质，关键是掌握反比例函数$y=\\frac{k}{x}(k\\neq 0)$的性质．"
   },
   {
     "id": "ch27_2_1_ex_q10",
@@ -30742,8 +32917,8 @@ window.QUESTION_BANK = [
       "D．5"
     ],
     "answer": "D",
-    "analysis": "先根据图象位置列出不等式$4-k<0$，求出$k>4$，再对照选项选出符合范围的值．",
-    "detail": "解：$∵$反比例函数$y=\\frac{4-k}{x}$图象位于第二、四象限，<br/>$∴4-k<0$，<br/>$∴k>4$．"
+    "analysis": "先根据图象位置列出不等式$4-k \\lt 0$，求出$k \\gt 4$，再对照选项选出符合范围的值．",
+    "detail": "解：$∵$反比例函数$y=\\frac{4-k}{x}$图象位于第二、四象限，<br/>$∴4-k \\lt 0$，<br/>$∴k \\gt 4$．"
   },
   {
     "id": "ch27_2_1_ex_q11",
@@ -30756,9 +32931,9 @@ window.QUESTION_BANK = [
     "knowledge": "已知双曲线分布的象限，求参数范围",
     "stem": "反比例函数$y=\\frac{k+1}{x}$的图象位于第一、第三象限，写出一个符合条件的$k$的值是______．",
     "options": [],
-    "answer": "1（答案不唯一，$k>-1$即可）",
-    "analysis": "对于反比例函数$y=\\frac{a}{x}$，当比例系数$a>0$时，图象位于第一、第三象限，据此列出关于$k$的不等式，求解得到$k$的取值范围，任取范围内一个值即可．",
-    "detail": "解：$∵$反比例函数$y=\\frac{k+1}{x}$的图象位于第一、第三象限，<br/>$∴k+1>0$，<br/>解得$k>-1$，<br/>∴只要取大于$-1$的任意实数都符合条件，例如$1$（答案不唯一）．"
+    "answer": "1（答案不唯一，$k \\gt -1$即可）",
+    "analysis": "对于反比例函数$y=\\frac{a}{x}$，当比例系数$a \\gt 0$时，图象位于第一、第三象限，据此列出关于$k$的不等式，求解得到$k$的取值范围，任取范围内一个值即可．",
+    "detail": "解：$∵$反比例函数$y=\\frac{k+1}{x}$的图象位于第一、第三象限，<br/>$∴k+1 \\gt 0$，<br/>解得$k \\gt -1$，<br/>∴只要取大于$-1$的任意实数都符合条件，例如$1$（答案不唯一）．"
   },
   {
     "id": "ch27_2_1_ex_q12",
@@ -30771,9 +32946,9 @@ window.QUESTION_BANK = [
     "knowledge": "已知双曲线分布的象限，求参数范围",
     "stem": "已知反比例函数$y=\\frac{3m+4}{x}$（$m$是常数）的图象位于第二、四象限，求$m$的取值范围．",
     "options": [],
-    "answer": "$m<-\\frac{4}{3}$",
-    "analysis": "根据反比例函数 $y=\\frac{k}{x}$ 的图象位于第二、四象限时比例系数 $k<0$，列出关于 $m$ 的不等式求解即可．",
-    "detail": "解：∵反比例函数 $y=\\frac{3m+4}{x}$ 的图象位于第二、四象限，<br/>∴$3m+4<0$，<br/>解得：$m<-\\frac{4}{3}$．"
+    "answer": "$m \\lt -\\frac{4}{3}$",
+    "analysis": "根据反比例函数 $y=\\frac{k}{x}$ 的图象位于第二、四象限时比例系数 $k \\lt 0$，列出关于 $m$ 的不等式求解即可．",
+    "detail": "解：∵反比例函数 $y=\\frac{3m+4}{x}$ 的图象位于第二、四象限，<br/>∴$3m+4 \\lt 0$，<br/>解得：$m \\lt -\\frac{4}{3}$．"
   },
   {
     "id": "g6_circle_411_01",
@@ -31092,11 +33267,11 @@ window.QUESTION_BANK = [
     "difficulty": "中等",
     "knowledge": "弧、圆心角、扇形的认识；画扇形",
     "chapter": "六年级上册 4.1.2 扇形的认识",
-    "stem": "如图，在圆内分别画出圆心角是 $30^\\circ$、$60^\\circ$、$90^\\circ$ 和 $120^\\circ$ 的扇形 $A$、$B$、$C$、$D$。<br><img src=\"assets/images/g6_fan_412_image24.png\" alt=\"原题空白圆形\" style=\"width:180px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\" data-cx=\"1714500\" data-cy=\"1657350\"><br>（1）比较扇形 $A$、$B$、$C$、$D$ 的大小（用“$<$”连接）：______。<br>（2）在同圆或等圆中，扇形的大小与______有关。",
+    "stem": "如图，在圆内分别画出圆心角是 $30^\\circ$、$60^\\circ$、$90^\\circ$ 和 $120^\\circ$ 的扇形 $A$、$B$、$C$、$D$。<br><img src=\"assets/images/g6_fan_412_image24.png\" alt=\"原题空白圆形\" style=\"width:180px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\" data-cx=\"1714500\" data-cy=\"1657350\"><br>（1）比较扇形 $A$、$B$、$C$、$D$ 的大小（用“$ \\lt $”连接）：______。<br>（2）在同圆或等圆中，扇形的大小与______有关。",
     "options": [],
     "answer": "（1）扇形A＜扇形B＜扇形C＜扇形D；（2）圆心角",
     "analysis": "先在圆内画一条半径，再以这条半径为一边，以圆心为顶点画一个30°的角，角的另一边为圆的另一条半径，这两条半径与所夹的弧就是圆心角为$30^\\circ$的扇形，并标上A，用同样的方法即可再画圆心角分别是$60^\\circ$、$90^\\circ$、$120^\\circ$的扇形并标上B、C、D。在同圆或等圆中，扇形的大小与圆心角的大小有关。",
-    "detail": "由分析可得：<br><img src=\"assets/images/g6_fan_412_image25.png\" alt=\"四个扇形的原始答案图\" style=\"width:280px;max-width:100%;height:auto\" data-cx=\"2667000\" data-cy=\"2200275\"><br>（1）$30^\\circ<60^\\circ<90^\\circ<120^\\circ$，扇形A＜扇形B＜扇形C＜扇形D。<br>（2）在同圆或等圆中，扇形的大小与圆心角的大小有关。",
+    "detail": "由分析可得：<br><img src=\"assets/images/g6_fan_412_image25.png\" alt=\"四个扇形的原始答案图\" style=\"width:280px;max-width:100%;height:auto\" data-cx=\"2667000\" data-cy=\"2200275\"><br>（1）$30^\\circ \\lt 60^\\circ \\lt 90^\\circ \\lt 120^\\circ$，扇形A＜扇形B＜扇形C＜扇形D。<br>（2）在同圆或等圆中，扇形的大小与圆心角的大小有关。",
     "grade": "六年级",
     "term": "上册"
   },
@@ -31803,7 +33978,7 @@ window.QUESTION_BANK = [
     ],
     "answer": "B",
     "analysis": "利用圆的面积公式$S=\\pi r^{2}$，分别计算出原计划披萨的面积和实际补偿披萨的总面积，通过比较两者的大小来判断小欣是否吃亏。",
-    "detail": "$12\\div 2=6$ (厘米)<br>$3.14\\times 6^{2}=113.04$ (平方厘米)<br>$6\\div 2=3$ (厘米)<br>$3.14\\times 3^{2}=28.26$ (平方厘米)<br>$28.26\\times 2=56.52$ (平方厘米)<br>$113.04>56.52$<br>原计划披萨面积大于补偿披萨总面积，所以小欣亏了。"
+    "detail": "$12\\div 2=6$ (厘米)<br>$3.14\\times 6^{2}=113.04$ (平方厘米)<br>$6\\div 2=3$ (厘米)<br>$3.14\\times 3^{2}=28.26$ (平方厘米)<br>$28.26\\times 2=56.52$ (平方厘米)<br>$113.04 \\gt 56.52$<br>原计划披萨面积大于补偿披萨总面积，所以小欣亏了。"
   },
   {
     "id": "g6_432_q04",
@@ -32164,7 +34339,7 @@ window.QUESTION_BANK = [
     ],
     "answer": "A",
     "analysis": "图A为半圆，其直径是4厘米。图B为不规则图形，大半圆的直径是$2+2=4$厘米，小半圆的直径是2厘米，将该图B右边多出的半圆形通过旋转平移至左侧，填补空缺后与上面的部分组成了一个半圆，由于图A和B都是半圆，并且直径都相等，故它们的面积是相等的；图A的周长＝半圆弧长＋直径，图B的周长＝一个大半圆弧长＋两个小半圆弧长，两个小半圆弧可以看作一个小的整圆周长，根据圆的周长公式$C=\\pi d$解答。",
-    "detail": "图B经过平移旋转填补后，转化为一个半圆形，图A和图B都是半圆形，直径相等，所以它们面积也相等。<br>图A的周长：$4\\times 3.14\\div 2+4$<br>$=6.28+4$<br>$=10.28$（厘米）<br>图B的周长：$4\\times 3.14\\div 2+2\\times 3.14$<br>$=6.28+6.28$<br>$＝12.56$（厘米）<br>因为$10.28<12.56$，所以图A的周长＜图B的周长。"
+    "detail": "图B经过平移旋转填补后，转化为一个半圆形，图A和图B都是半圆形，直径相等，所以它们面积也相等。<br>图A的周长：$4\\times 3.14\\div 2+4$<br>$=6.28+4$<br>$=10.28$（厘米）<br>图B的周长：$4\\times 3.14\\div 2+2\\times 3.14$<br>$=6.28+6.28$<br>$＝12.56$（厘米）<br>因为$10.28 \\lt 12.56$，所以图A的周长＜图B的周长。"
   },
   {
     "id": "g6_434_q03",
@@ -33453,7 +35628,7 @@ window.QUESTION_BANK = [
     "typeName": "单选题",
     "difficulty": "较易",
     "knowledge": "求反比例函数解析式",
-    "stem": "如图，在正方形网格上建立直角坐标系，$x$轴、$y$轴都在网格线上，其中1格代表1个单位长度．反比例函数$y=\\frac{k}{x}(k>0,x>0)$的图象被撕掉了一部分，已知点$M$，$N$在格点上，则$k=$（　　）<br><img src=\"assets/images/ch27_2_1_q1.png\" style=\"max-width:240px;display:block;margin:8px auto;\" />",
+    "stem": "如图，在正方形网格上建立直角坐标系，$x$轴、$y$轴都在网格线上，其中1格代表1个单位长度．反比例函数$y=\\frac{k}{x}(k \\gt 0,x \\gt 0)$的图象被撕掉了一部分，已知点$M$，$N$在格点上，则$k=$（　　）<br><img src=\"assets/images/ch27_2_1_q1.png\" style=\"max-width:240px;display:block;margin:8px auto;\" />",
     "options": [
       "A．4",
       "B．5",
@@ -33462,7 +35637,7 @@ window.QUESTION_BANK = [
     ],
     "answer": "A",
     "analysis": "根据题意可设$M(1,m)$，则$N(2,m-2)$，根据点$M$、$N$在反比例函数图象上，有$k=1\\cdot m=2\\cdot(m-2)$，据此求解即可．",
-    "detail": "解：由函数图象可知，点$M$的横坐标为$1$，点$N$的横坐标为$2$，且点$N$的纵坐标比点$M$的纵坐标小$2$。<br>设$M(1,m)$，则$N(2,m-2)$。<br>∵点$M$，$N$在反比例函数$y=\\frac{k}{x}(k>0,x>0)$的图象上，<br>∴$k=1\\cdot m=2\\cdot(m-2)$，<br>∴$m=4$，<br>∴$k=4$。<br>故选：A．"
+    "detail": "解：由函数图象可知，点$M$的横坐标为$1$，点$N$的横坐标为$2$，且点$N$的纵坐标比点$M$的纵坐标小$2$。<br>设$M(1,m)$，则$N(2,m-2)$。<br>∵点$M$，$N$在反比例函数$y=\\frac{k}{x}(k \\gt 0,x \\gt 0)$的图象上，<br>∴$k=1\\cdot m=2\\cdot(m-2)$，<br>∴$m=4$，<br>∴$k=4$。<br>故选：A．"
   },
   {
     "id": "ch27_2_1_prop_q2",
@@ -33477,12 +35652,12 @@ window.QUESTION_BANK = [
     "options": [
       "A．$y=-\\frac{1}{x}$",
       "B．$y=\\frac{1}{x}$",
-      "C．$y=-\\frac{1}{x}(x>0)$",
-      "D．$y=\\frac{1}{x}(x<0)$"
+      "C．$y=-\\frac{1}{x}(x \\gt 0)$",
+      "D．$y=\\frac{1}{x}(x \\lt 0)$"
     ],
     "answer": "D",
     "analysis": "根据反比例函数的图象和性质，逐一分析各个选项中自变量取值范围内的增减性即可判定．",
-    "detail": "解：选项A：$y=-\\frac{1}{x}$中$k=-1<0$，在每个象限内$y$随$x$的增大而增大，故不符合题意；<br>选项B：$y=\\frac{1}{x}$中$k=1>0$，当$x_1<0,x_2>0$时，$y_1<0,y_2>0$，即$y_2>y_1$，在整个定义域内不具备减小性质，故不符合题意；<br>选项C：$y=-\\frac{1}{x}$中$k=-1<0$，当$x>0$时，$y$随$x$的增大而增大，故不符合题意；<br>选项D：$y=\\frac{1}{x}$中$k=1>0$，当$x<0$时，双曲线在第三象限，$y$随$x$的增大而减小，故符合题意．<br>故选：D．"
+    "detail": "解：选项A：$y=-\\frac{1}{x}$中$k=-1 \\lt 0$，在每个象限内$y$随$x$的增大而增大，故不符合题意；<br>选项B：$y=\\frac{1}{x}$中$k=1 \\gt 0$，当$x_1 \\lt 0,x_2 \\gt 0$时，$y_1 \\lt 0,y_2 \\gt 0$，即$y_2 \\gt y_1$，在整个定义域内不具备减小性质，故不符合题意；<br>选项C：$y=-\\frac{1}{x}$中$k=-1 \\lt 0$，当$x \\gt 0$时，$y$随$x$的增大而增大，故不符合题意；<br>选项D：$y=\\frac{1}{x}$中$k=1 \\gt 0$，当$x \\lt 0$时，双曲线在第三象限，$y$随$x$的增大而减小，故符合题意．<br>故选：D．"
   },
   {
     "id": "ch27_2_1_prop_q3",
@@ -33493,7 +35668,7 @@ window.QUESTION_BANK = [
     "typeName": "单选题",
     "difficulty": "中等",
     "knowledge": "已知反比例函数的增减性求参数",
-    "stem": "已知反比例函数$y=\\frac{k}{x}$的图象上有点$(-2,m)$，$(-1,n)$，且$m<n$，则$k$值可能为（　　）",
+    "stem": "已知反比例函数$y=\\frac{k}{x}$的图象上有点$(-2,m)$，$(-1,n)$，且$m \\lt n$，则$k$值可能为（　　）",
     "options": [
       "A．$-2$",
       "B．$0$",
@@ -33501,8 +35676,8 @@ window.QUESTION_BANK = [
       "D．$2$"
     ],
     "answer": "A",
-    "analysis": "将两点坐标分别代入反比例函数解析式，得到$m,n$关于$k$的表达式，再由$m<n$求出$k$的取值范围，最后结合选项判断即可．",
-    "detail": "解：∵点$(-2,m)$，$(-1,n)$都在反比例函数$y=\\frac{k}{x}$的图象上，<br>∴代入得：$m=\\frac{k}{-2}=-\\frac{k}{2}$，$n=\\frac{k}{-1}=-k$。<br>∵$m<n$，<br>∴$-\\frac{k}{2}<-k$，<br>两边同加$k$得：$\\frac{k}{2}<0$，即$k<0$。<br>结合各选项，只有$-2<0$符合题意。<br>故选：A．"
+    "analysis": "将两点坐标分别代入反比例函数解析式，得到$m,n$关于$k$的表达式，再由$m \\lt n$求出$k$的取值范围，最后结合选项判断即可．",
+    "detail": "解：∵点$(-2,m)$，$(-1,n)$都在反比例函数$y=\\frac{k}{x}$的图象上，<br>∴代入得：$m=\\frac{k}{-2}=-\\frac{k}{2}$，$n=\\frac{k}{-1}=-k$。<br>∵$m \\lt n$，<br>∴$-\\frac{k}{2} \\lt -k$，<br>两边同加$k$得：$\\frac{k}{2} \\lt 0$，即$k \\lt 0$。<br>结合各选项，只有$-2 \\lt 0$符合题意。<br>故选：A．"
   },
   {
     "id": "ch27_2_1_prop_q4",
@@ -33515,14 +35690,14 @@ window.QUESTION_BANK = [
     "knowledge": "判断反比例函数的增减性、比较反比例函数值或自变量的大小",
     "stem": "已知$A(m-1,y_1)$，$B(m,y_2)$，$C(m+1,y_3)$三点都在反比例函数$y=-\\frac{2}{x}$的图象上，则下列结论正确的是（　　）",
     "options": [
-      "A．当$m<-1$时，$0<y_3<y_2<y_1$",
-      "B．当$-1<m<0$时，$y_3<0<y_1<y_2$",
-      "C．当$0<m<1$时，$y_3<y_2<0<y_1$",
-      "D．当$m>1$时，$y_3<y_2<y_1<0$"
+      "A．当$m \\lt -1$时，$0 \\lt y_3 \\lt y_2 \\lt y_1$",
+      "B．当$-1 \\lt m \\lt 0$时，$y_3 \\lt 0 \\lt y_1 \\lt y_2$",
+      "C．当$0 \\lt m \\lt 1$时，$y_3 \\lt y_2 \\lt 0 \\lt y_1$",
+      "D．当$m \\gt 1$时，$y_3 \\lt y_2 \\lt y_1 \\lt 0$"
     ],
     "answer": "B",
-    "analysis": "根据反比例函数$k=-2<0$判定图象位于第二、四象限，且在每个象限内$y$随$x$的增大而增大。结合$m$的取值范围确定三点横坐标所在的象限即可得出答案．",
-    "detail": "解：∵反比例函数$y=-\\frac{2}{x}$中$k=-2<0$，<br>∴函数图象位于第二、四象限，且在每个象限内$y$随$x$的增大而增大。<br>A、当$m<-1$时，$m-1<m<m+1<0$，三点都在第二象限，根据增减性得$y_1<y_2<y_3$且均大于0，即$0<y_1<y_2<y_3$，故A选项错误；<br>B、当$-1<m<0$时，$m-1<m<0<m+1$，点$A$、$B$在第二象限，点$C$在第四象限，可得$y_1<y_2$且$y_1>0,y_2>0,y_3<0$，即$y_3<0<y_1<y_2$，故B选项正确；<br>C、当$0<m<1$时，$m-1<0<m<m+1$，点$A$在第二象限，点$B$、$C$在第四象限，根据增减性得$y_2<y_3<0<y_1$，故C选项错误；<br>D、当$m>1$时，$0<m-1<m<m+1$，三点都在第四象限，根据增减性得$y_1<y_2<y_3<0$，故D选项错误．<br>故选：B．"
+    "analysis": "根据反比例函数$k=-2 \\lt 0$判定图象位于第二、四象限，且在每个象限内$y$随$x$的增大而增大。结合$m$的取值范围确定三点横坐标所在的象限即可得出答案．",
+    "detail": "解：∵反比例函数$y=-\\frac{2}{x}$中$k=-2 \\lt 0$，<br>∴函数图象位于第二、四象限，且在每个象限内$y$随$x$的增大而增大。<br>A、当$m \\lt -1$时，$m-1 \\lt m \\lt m+1 \\lt 0$，三点都在第二象限，根据增减性得$y_1 \\lt y_2 \\lt y_3$且均大于0，即$0 \\lt y_1 \\lt y_2 \\lt y_3$，故A选项错误；<br>B、当$-1 \\lt m \\lt 0$时，$m-1 \\lt m \\lt 0 \\lt m+1$，点$A$、$B$在第二象限，点$C$在第四象限，可得$y_1 \\lt y_2$且$y_1 \\gt 0,y_2 \\gt 0,y_3 \\lt 0$，即$y_3 \\lt 0 \\lt y_1 \\lt y_2$，故B选项正确；<br>C、当$0 \\lt m \\lt 1$时，$m-1 \\lt 0 \\lt m \\lt m+1$，点$A$在第二象限，点$B$、$C$在第四象限，根据增减性得$y_2 \\lt y_3 \\lt 0 \\lt y_1$，故C选项错误；<br>D、当$m \\gt 1$时，$0 \\lt m-1 \\lt m \\lt m+1$，三点都在第四象限，根据增减性得$y_1 \\lt y_2 \\lt y_3 \\lt 0$，故D选项错误．<br>故选：B．"
   },
   {
     "id": "ch27_2_1_prop_q5",
@@ -33533,11 +35708,11 @@ window.QUESTION_BANK = [
     "typeName": "填空题",
     "difficulty": "中等",
     "knowledge": "求反比例函数解析式、勾股定理与菱形性质",
-    "stem": "如图，在菱形$ABCD$中，点$A$在$y$轴正半轴上，边$AD$与$x$轴平行，$OA=1$，点$B$的坐标为$(3,5)$，若点$C$在反比例函数$y=\\frac{k}{x}(x>0)$的图象上，则$k$的值为______．<br><img src=\"assets/images/ch27_2_1_q5_stem.png\" style=\"max-width:260px;display:block;margin:8px auto;\" />",
+    "stem": "如图，在菱形$ABCD$中，点$A$在$y$轴正半轴上，边$AD$与$x$轴平行，$OA=1$，点$B$的坐标为$(3,5)$，若点$C$在反比例函数$y=\\frac{k}{x}(x \\gt 0)$的图象上，则$k$的值为______．<br><img src=\"assets/images/ch27_2_1_q5_stem.png\" style=\"max-width:260px;display:block;margin:8px auto;\" />",
     "options": [],
     "answer": "$40$",
     "analysis": "由点$A$在$y$轴上及$OA=1$得出$A(0,1)$，构造直角三角形利用勾股定理求出菱形边长$AB$，再根据菱形性质得到$BC$的长度与平行位置关系，确定点$C$的坐标后代入函数解析式求$k$．",
-    "detail": "解：∵点$A$在$y$轴正半轴上，$OA=1$，<br>∴点$A$的坐标为$(0,1)$。<br>∵点$B$的坐标为$(3,5)$，过点$B$作$BE\\perp y$轴于点$E$，则$BE=3,OE=5$。<br><img src=\"assets/images/ch27_2_1_q5_detail.png\" style=\"max-width:260px;display:block;margin:8px auto;\" /><br>∴$AE=OE-OA=5-1=4$。<br>在$\\text{Rt}\\triangle ABE$中，由勾股定理得：$AB=\\sqrt{AE^2+BE^2}=\\sqrt{4^2+3^2}=5$。<br>∵四边形$ABCD$是菱形，<br>∴$AD=AB=5,BC\\parallel AD$。<br>∵边$AD$与$x$轴平行，<br>∴边$BC$与$x$轴平行，即点$C$的纵坐标与点$B$的纵坐标相同，为$5$。<br>由图象可知点$C$在点$B$的右侧，<br>∴点$C$的横坐标为$3+5=8$，坐标为$(8,5)$。<br>∵点$C$在反比例函数$y=\\frac{k}{x}(x>0)$的图象上，<br>∴$k=8\\times 5=40$。<br>故答案为：$40$．"
+    "detail": "解：∵点$A$在$y$轴正半轴上，$OA=1$，<br>∴点$A$的坐标为$(0,1)$。<br>∵点$B$的坐标为$(3,5)$，过点$B$作$BE\\perp y$轴于点$E$，则$BE=3,OE=5$。<br><img src=\"assets/images/ch27_2_1_q5_detail.png\" style=\"max-width:260px;display:block;margin:8px auto;\" /><br>∴$AE=OE-OA=5-1=4$。<br>在$\\text{Rt}\\triangle ABE$中，由勾股定理得：$AB=\\sqrt{AE^2+BE^2}=\\sqrt{4^2+3^2}=5$。<br>∵四边形$ABCD$是菱形，<br>∴$AD=AB=5,BC\\parallel AD$。<br>∵边$AD$与$x$轴平行，<br>∴边$BC$与$x$轴平行，即点$C$的纵坐标与点$B$的纵坐标相同，为$5$。<br>由图象可知点$C$在点$B$的右侧，<br>∴点$C$的横坐标为$3+5=8$，坐标为$(8,5)$。<br>∵点$C$在反比例函数$y=\\frac{k}{x}(x \\gt 0)$的图象上，<br>∴$k=8\\times 5=40$。<br>故答案为：$40$．"
   },
   {
     "id": "ch27_2_1_prop_q6",
@@ -33548,11 +35723,11 @@ window.QUESTION_BANK = [
     "typeName": "填空题",
     "difficulty": "较易",
     "knowledge": "判断反比例函数的增减性、求反比例函数解析式",
-    "stem": "已知反比例函数$y=\\frac{k}{x}$的图象经过点$(-2025,2026)$，当$x>0$时，函数值$y$随自变量$x$的增大而_____．（填“增大”或“减小”）",
+    "stem": "已知反比例函数$y=\\frac{k}{x}$的图象经过点$(-2025,2026)$，当$x \\gt 0$时，函数值$y$随自变量$x$的增大而_____．（填“增大”或“减小”）",
     "options": [],
     "answer": "增大",
-    "analysis": "根据图象经过点$(-2025,2026)$，先利用待定系数法确定$k<0$，再根据反比例函数的性质判断在第一象限内函数值的增减性．",
-    "detail": "解：∵反比例函数$y=\\frac{k}{x}$的图象经过点$(-2025,2026)$，<br>∴$2026=\\frac{k}{-2025}$，<br>解得$k=2026\\times(-2025)<0$。<br>当$k<0$时，双曲线的两支分别位于第二、第四象限，且在每一象限内$y$随$x$的增大而增大。<br>∴当$x>0$（第四象限支）时，$y$随$x$的增大而增大。<br>故答案为：增大．"
+    "analysis": "根据图象经过点$(-2025,2026)$，先利用待定系数法确定$k \\lt 0$，再根据反比例函数的性质判断在第一象限内函数值的增减性．",
+    "detail": "解：∵反比例函数$y=\\frac{k}{x}$的图象经过点$(-2025,2026)$，<br>∴$2026=\\frac{k}{-2025}$，<br>解得$k=2026\\times(-2025) \\lt 0$。<br>当$k \\lt 0$时，双曲线的两支分别位于第二、第四象限，且在每一象限内$y$随$x$的增大而增大。<br>∴当$x \\gt 0$（第四象限支）时，$y$随$x$的增大而增大。<br>故答案为：增大．"
   },
   {
     "id": "ch27_2_1_prop_q7",
@@ -33563,11 +35738,11 @@ window.QUESTION_BANK = [
     "typeName": "填空题",
     "difficulty": "中等",
     "knowledge": "已知反比例函数的增减性求参数范围",
-    "stem": "已知点$A(m,n)$与点$B(3,4)$在同一条反比例函数$y=\\frac{k}{x}$的图象上，若$0<m<3$，则$n$的取值范围是________．",
+    "stem": "已知点$A(m,n)$与点$B(3,4)$在同一条反比例函数$y=\\frac{k}{x}$的图象上，若$0 \\lt m \\lt 3$，则$n$的取值范围是________．",
     "options": [],
-    "answer": "$n>4$",
-    "analysis": "先根据点$B(3,4)$求出$k=12$，确定函数在第一象限内$y$随$x$的增大而减小，再由$0<m<3$求出$n$的取值范围．",
-    "detail": "解：∵点$B(3,4)$在反比例函数$y=\\frac{k}{x}$的图象上，<br>∴$k=3\\times 4=12$，解析式为$y=\\frac{12}{x}$。<br>∵$k=12>0$，<br>∴在第一象限内，$y$随$x$的增大而减小。<br>∵点$A(m,n)$在第一象限图象上，且$0<m<3$，当$x=3$时$y=4$，<br>∴$n>4$。<br>故答案为：$n>4$．"
+    "answer": "$n \\gt 4$",
+    "analysis": "先根据点$B(3,4)$求出$k=12$，确定函数在第一象限内$y$随$x$的增大而减小，再由$0 \\lt m \\lt 3$求出$n$的取值范围．",
+    "detail": "解：∵点$B(3,4)$在反比例函数$y=\\frac{k}{x}$的图象上，<br>∴$k=3\\times 4=12$，解析式为$y=\\frac{12}{x}$。<br>∵$k=12 \\gt 0$，<br>∴在第一象限内，$y$随$x$的增大而减小。<br>∵点$A(m,n)$在第一象限图象上，且$0 \\lt m \\lt 3$，当$x=3$时$y=4$，<br>∴$n \\gt 4$。<br>故答案为：$n \\gt 4$．"
   },
   {
     "id": "ch27_2_1_prop_q8",
@@ -33578,11 +35753,11 @@ window.QUESTION_BANK = [
     "typeName": "填空题",
     "difficulty": "中等",
     "knowledge": "比较反比例函数值或自变量的大小",
-    "stem": "已知点$A(x_1,y_1)$，$B(x_2,y_2)$，$C(x_3,y_3)$在反比例函数$y=-\\frac{m^2+1}{x}$（$m$为任意实数）的图象上，且$x_1<0<x_2<x_3$，则$y_1$，$y_2$，$y_3$的大小关系为________．",
+    "stem": "已知点$A(x_1,y_1)$，$B(x_2,y_2)$，$C(x_3,y_3)$在反比例函数$y=-\\frac{m^2+1}{x}$（$m$为任意实数）的图象上，且$x_1 \\lt 0 \\lt x_2 \\lt x_3$，则$y_1$，$y_2$，$y_3$的大小关系为________．",
     "options": [],
-    "answer": "$y_2<y_3<y_1$",
-    "analysis": "先根据实数平方的非负性判断比例系数符号$k=-(m^2+1)<0$，进而确定图象所在象限与增减性，再结合横坐标正负与大小比较函数值．",
-    "detail": "解：对于反比例函数$y=-\\frac{m^2+1}{x}$，比例系数为$k=-(m^2+1)$。<br>∵对任意实数$m$，$m^2\\ge 0$，∴$m^2+1>0$，可得$k=-(m^2+1)<0$。<br>∴反比例函数的图象位于第二、四象限，且在每一象限内$y$随$x$的增大而增大。<br>∵$x_1<0$，∴点$A(x_1,y_1)$在第二象限，可得$y_1>0$；<br>∵$0<x_2<x_3$，∴点$B(x_2,y_2)$、$C(x_3,y_3)$都在第四象限，可得$y_2<0,y_3<0$。<br>又∵在第四象限内$y$随$x$的增大而增大，且$x_2<x_3$，∴$y_2<y_3<0$。<br>综上所述，三者大小关系为：$y_2<y_3<y_1$（或写为$y_1>y_3>y_2$）。<br>故答案为：$y_2<y_3<y_1$．"
+    "answer": "$y_2 \\lt y_3 \\lt y_1$",
+    "analysis": "先根据实数平方的非负性判断比例系数符号$k=-(m^2+1) \\lt 0$，进而确定图象所在象限与增减性，再结合横坐标正负与大小比较函数值．",
+    "detail": "解：对于反比例函数$y=-\\frac{m^2+1}{x}$，比例系数为$k=-(m^2+1)$。<br>∵对任意实数$m$，$m^2\\ge 0$，∴$m^2+1 \\gt 0$，可得$k=-(m^2+1) \\lt 0$。<br>∴反比例函数的图象位于第二、四象限，且在每一象限内$y$随$x$的增大而增大。<br>∵$x_1 \\lt 0$，∴点$A(x_1,y_1)$在第二象限，可得$y_1 \\gt 0$；<br>∵$0 \\lt x_2 \\lt x_3$，∴点$B(x_2,y_2)$、$C(x_3,y_3)$都在第四象限，可得$y_2 \\lt 0,y_3 \\lt 0$。<br>又∵在第四象限内$y$随$x$的增大而增大，且$x_2 \\lt x_3$，∴$y_2 \\lt y_3 \\lt 0$。<br>综上所述，三者大小关系为：$y_2 \\lt y_3 \\lt y_1$（或写为$y_1 \\gt y_3 \\gt y_2$）。<br>故答案为：$y_2 \\lt y_3 \\lt y_1$．"
   },
   {
     "id": "ch27_2_1_prop_q9",
@@ -33593,11 +35768,11 @@ window.QUESTION_BANK = [
     "typeName": "解答题",
     "difficulty": "中等",
     "knowledge": "判断反比例函数图象所在象限、已知反比例函数的增减性求参数、比较反比例函数值",
-    "stem": "已知反比例函数$y=\\frac{k-3}{x}$．<br>（1）若$k=2$，写出反比例函数$y=\\frac{k-3}{x}$的图象所在的象限；<br>（2）当$x>0$时，$y$随$x$的增大而增大，求$k$的取值范围；<br>（3）若点$(-1,m)$与点$(2,n)$均在双曲线$y=\\frac{k-3}{x}$上，请比较$m$与$n$的大小．",
+    "stem": "已知反比例函数$y=\\frac{k-3}{x}$．<br>（1）若$k=2$，写出反比例函数$y=\\frac{k-3}{x}$的图象所在的象限；<br>（2）当$x \\gt 0$时，$y$随$x$的增大而增大，求$k$的取值范围；<br>（3）若点$(-1,m)$与点$(2,n)$均在双曲线$y=\\frac{k-3}{x}$上，请比较$m$与$n$的大小．",
     "options": [],
-    "answer": "（1）第二、第四象限；（2）$k<3$；（3）当$k>3$时，$m<n$；当$k<3$时，$m>n$．",
-    "analysis": "（1）代入$k=2$计算比例系数，由正负判定图象位置；（2）根据在每个象限内的增减性列出关于$k$的不等式求解；（3）求出两点纵坐标关于$k$的代数式，按$k>3$与$k<3$分类讨论比较大小．",
-    "detail": "（1）解：当$k=2$时，反比例函数为$y=\\frac{2-3}{x}=-\\frac{1}{x}$，<br>∵比例系数为$-1<0$，<br>∴其图象位于第二、第四象限。<br><br>（2）解：∵当$x>0$时，$y$随$x$的增大而增大，<br>∴比例系数$k-3<0$，解得$k<3$。<br><br>（3）解：将$(-1,m)$与$(2,n)$代入$y=\\frac{k-3}{x}$得：<br>$m=\\frac{k-3}{-1}=-(k-3)$，$n=\\frac{k-3}{2}$。<br>①当$k>3$时，$k-3>0$，此时$m<0,n>0$，∴$m<n$；<br>②当$k<3$时，$k-3<0$，此时$m>0,n<0$，∴$m>n$。<br>综上所述：当$k>3$时，$m<n$；当$k<3$时，$m>n$．"
+    "answer": "（1）第二、第四象限；（2）$k \\lt 3$；（3）当$k \\gt 3$时，$m \\lt n$；当$k \\lt 3$时，$m \\gt n$．",
+    "analysis": "（1）代入$k=2$计算比例系数，由正负判定图象位置；（2）根据在每个象限内的增减性列出关于$k$的不等式求解；（3）求出两点纵坐标关于$k$的代数式，按$k \\gt 3$与$k \\lt 3$分类讨论比较大小．",
+    "detail": "（1）解：当$k=2$时，反比例函数为$y=\\frac{2-3}{x}=-\\frac{1}{x}$，<br>∵比例系数为$-1 \\lt 0$，<br>∴其图象位于第二、第四象限。<br><br>（2）解：∵当$x \\gt 0$时，$y$随$x$的增大而增大，<br>∴比例系数$k-3 \\lt 0$，解得$k \\lt 3$。<br><br>（3）解：将$(-1,m)$与$(2,n)$代入$y=\\frac{k-3}{x}$得：<br>$m=\\frac{k-3}{-1}=-(k-3)$，$n=\\frac{k-3}{2}$。<br>①当$k \\gt 3$时，$k-3 \\gt 0$，此时$m \\lt 0,n \\gt 0$，∴$m \\lt n$；<br>②当$k \\lt 3$时，$k-3 \\lt 0$，此时$m \\gt 0,n \\lt 0$，∴$m \\gt n$。<br>综上所述：当$k \\gt 3$时，$m \\lt n$；当$k \\lt 3$时，$m \\gt n$．"
   },
   {
     "id": "ch27_2_2_ex_q1",
@@ -33658,7 +35833,7 @@ window.QUESTION_BANK = [
     "typeName": "单选题",
     "difficulty": "容易",
     "knowledge": "判断反比例函数的增减性",
-    "stem": "反比例函数$y=\\frac{k}{x}(x<0)$的图象如图所示，随着$x$值的增大，$y$值（ ）．<br/><img src=\"assets/images/ch27_2_2_ex_img1.png\" style=\"max-width:260px; display:block; margin:6px auto;\" />",
+    "stem": "反比例函数$y=\\frac{k}{x}(x \\lt 0)$的图象如图所示，随着$x$值的增大，$y$值（ ）．<br/><img src=\"assets/images/ch27_2_2_ex_img1.png\" style=\"max-width:260px; display:block; margin:6px auto;\" />",
     "options": [
       "A．减小",
       "B．增大",
@@ -33666,8 +35841,8 @@ window.QUESTION_BANK = [
       "D．先增大后减小"
     ],
     "answer": "A",
-    "analysis": "本题考查了反比例函数的性质．对于反比例函数$y=\\frac{k}{x}$，当$k>0$时，在每一个象限内，函数值$y$随着自变量$x$的增大而减小；当$k<0$时，在每一个象限内，函数值$y$随着自变量$x$的增大而增大．<br/>根据反比例函数的性质：当$k>0$时，在每一个象限内，函数值$y$随着自变量$x$的增大而减小即可解答．",
-    "detail": "解：由图可知，图象在第三象限，<br/>∴$k>0$，<br/>∴函数值$y$随着自变量$x$的增大而减小．<br/>故选：A．"
+    "analysis": "本题考查了反比例函数的性质．对于反比例函数$y=\\frac{k}{x}$，当$k \\gt 0$时，在每一个象限内，函数值$y$随着自变量$x$的增大而减小；当$k \\lt 0$时，在每一个象限内，函数值$y$随着自变量$x$的增大而增大．<br/>根据反比例函数的性质：当$k \\gt 0$时，在每一个象限内，函数值$y$随着自变量$x$的增大而减小即可解答．",
+    "detail": "解：由图可知，图象在第三象限，<br/>∴$k \\gt 0$，<br/>∴函数值$y$随着自变量$x$的增大而减小．<br/>故选：A．"
   },
   {
     "id": "ch27_2_2_ex_q5",
@@ -33678,11 +35853,11 @@ window.QUESTION_BANK = [
     "typeName": "填空题",
     "difficulty": "较易",
     "knowledge": "判断反比例函数的增减性",
-    "stem": "反比例函数$y=\\frac{k}{x}$，$k>0$，则在第三象限，y随x增大而______．（选填“增大”或“减小”）",
+    "stem": "反比例函数$y=\\frac{k}{x}$，$k \\gt 0$，则在第三象限，y随x增大而______．（选填“增大”或“减小”）",
     "options": [],
     "answer": "减小",
-    "analysis": "此题考查反比例函数的性质．由$k>0$，根据反比例函数的性质即可得出结论．",
-    "detail": "解：$∵$反比例函数$y=\\frac{k}{x}$，$k>0$，<br/>$∴$反比例函数在一、三象限，每个象限内y随x增大而减小，<br/>$∴$在第三象限，y随x增大而减小，<br/>故答案为：减小．"
+    "analysis": "此题考查反比例函数的性质．由$k \\gt 0$，根据反比例函数的性质即可得出结论．",
+    "detail": "解：$∵$反比例函数$y=\\frac{k}{x}$，$k \\gt 0$，<br/>$∴$反比例函数在一、三象限，每个象限内y随x增大而减小，<br/>$∴$在第三象限，y随x增大而减小，<br/>故答案为：减小．"
   },
   {
     "id": "ch27_2_2_ex_q6",
@@ -33693,11 +35868,11 @@ window.QUESTION_BANK = [
     "typeName": "解答题",
     "difficulty": "较易",
     "knowledge": "求反比例函数解析式；判断反比例函数的增减性",
-    "stem": "已知反比例函数$y=\\frac{k}{x}$（$k$为常数，$k\\neq 0$）的图象经过点$A(3,2)$．(1)求这个函数的解析式；(2)当$-3<x<-1$时，直接写出$y$的取值范围．",
+    "stem": "已知反比例函数$y=\\frac{k}{x}$（$k$为常数，$k\\neq 0$）的图象经过点$A(3,2)$．(1)求这个函数的解析式；(2)当$-3 \\lt x \\lt -1$时，直接写出$y$的取值范围．",
     "options": [],
-    "answer": "(1)$y=\\frac{6}{x}$<br/>(2)$-6<y<-2$",
+    "answer": "(1)$y=\\frac{6}{x}$<br/>(2)$-6 \\lt y \\lt -2$",
     "analysis": "本题考查反比例函数的图象和性质，熟练掌握反比例函数的图象和性质，是解题的关键：<br/>（1）待定系数法求出函数解析式即可；<br/>（2）根据函数的增减性，进行求解即可．",
-    "detail": "（1）解：由题意，得：$k=3\\times 2=6$，<br/>∴$y=\\frac{6}{x}$；<br/>（2）∵$y=\\frac{6}{x}$，<br/>∴反比例函数的图象过一，三象限，在每一个象限内，$y$随$x$的增大而减小，<br/>∵$-3<x<-1$，<br/>∴当$x=-3$时，$y$有最大值为$y=\\frac{6}{-3}=-2$；当$x=-1$时，$y$有最小值为$y=\\frac{6}{-1}=-6$，<br/>∴$-6<y<-2$．"
+    "detail": "（1）解：由题意，得：$k=3\\times 2=6$，<br/>∴$y=\\frac{6}{x}$；<br/>（2）∵$y=\\frac{6}{x}$，<br/>∴反比例函数的图象过一，三象限，在每一个象限内，$y$随$x$的增大而减小，<br/>∵$-3 \\lt x \\lt -1$，<br/>∴当$x=-3$时，$y$有最大值为$y=\\frac{6}{-3}=-2$；当$x=-1$时，$y$有最小值为$y=\\frac{6}{-1}=-6$，<br/>∴$-6 \\lt y \\lt -2$．"
   },
   {
     "id": "ch27_2_2_ex_q7",
@@ -33716,8 +35891,8 @@ window.QUESTION_BANK = [
       "D．$\\frac{1}{2}$"
     ],
     "answer": "A",
-    "analysis": "本题考查反比例函数的性质，利用反比例函数的增减性得到系数$k-1$的取值范围，对于反比例函数$y=\\frac{m}{x}$，当$m>0$时，图象任意一支上$y$都随$x$的增大而减小，进行解答；即可．",
-    "detail": "∵ 反比例函数$y=\\frac{k-1}{x}$图象的任意一支上，$y$都随$x$的增大而减小，<br/>∴ $k-1>0$，<br/>解得 $k>1$，<br/>上述四个选项中只有$2>1$，符合条件．"
+    "analysis": "本题考查反比例函数的性质，利用反比例函数的增减性得到系数$k-1$的取值范围，对于反比例函数$y=\\frac{m}{x}$，当$m \\gt 0$时，图象任意一支上$y$都随$x$的增大而减小，进行解答；即可．",
+    "detail": "∵ 反比例函数$y=\\frac{k-1}{x}$图象的任意一支上，$y$都随$x$的增大而减小，<br/>∴ $k-1 \\gt 0$，<br/>解得 $k \\gt 1$，<br/>上述四个选项中只有$2 \\gt 1$，符合条件．"
   },
   {
     "id": "ch27_2_2_ex_q8",
@@ -33728,11 +35903,11 @@ window.QUESTION_BANK = [
     "typeName": "填空题",
     "difficulty": "较易",
     "knowledge": "已知反比例函数的增减性求参数",
-    "stem": "已知y是关于x的反比例函数$y=\\frac{m}{x}$，当$x>0$时，函数y随自变量x的增大而增大，请写出一个符合条件的m的值_________．",
+    "stem": "已知y是关于x的反比例函数$y=\\frac{m}{x}$，当$x \\gt 0$时，函数y随自变量x的增大而增大，请写出一个符合条件的m的值_________．",
     "options": [],
     "answer": "$-1$（答案不唯一，只要小于0即可）",
     "analysis": "根据反比例函数的性质，先确定$m$的取值范围，再写出取值范围内一个符合条件的值即可．",
-    "detail": "解：由题意得，当$x>0$时，$y$随$x$的增大而增大，<br/>∴$m<0$， 取$m$的一个符合条件的值为$-1$（答案不唯一）．"
+    "detail": "解：由题意得，当$x \\gt 0$时，$y$随$x$的增大而增大，<br/>∴$m \\lt 0$， 取$m$的一个符合条件的值为$-1$（答案不唯一）．"
   },
   {
     "id": "ch27_2_2_ex_q9",
@@ -33745,9 +35920,9 @@ window.QUESTION_BANK = [
     "knowledge": "求反比例函数解析式；已知反比例函数的增减性求参数",
     "stem": "已知反比例函数$y=\\frac{3-m}{x}$．(1)若该反比例函数图象在每一个象限内，y都随着x的增大而减小，求m的取值范围；(2)若点$A(2,3)$在此反比例函数图象上，求反比例函数的解析式．",
     "options": [],
-    "answer": "(1)$m<3$；(2)$y=\\frac{6}{x}$",
-    "analysis": "（1）根据反比例函数在每一个象限内 $y$ 随 $x$ 的增大而减小，可得比例系数 $3-m>0$，解不等式即可；（2）将点 $A(2,3)$ 代入反比例函数解析式即可求出函数解析式．",
-    "detail": "（1）解：∵该反比例函数图象在每一个象限内，$y$ 都随着 $x$ 的增大而减小，<br/>∴$3-m>0$，解得 $m<3$；<br/>（2）解：∵点 $A(2,3)$ 在此反比例函数图象上，<br/>∴$3=\\frac{3-m}{2}$，解得 $3-m=6$（或 $m=-3$），<br/>∴反比例函数的解析式为 $y=\\frac{6}{x}$．"
+    "answer": "(1)$m \\lt 3$；(2)$y=\\frac{6}{x}$",
+    "analysis": "（1）根据反比例函数在每一个象限内 $y$ 随 $x$ 的增大而减小，可得比例系数 $3-m \\gt 0$，解不等式即可；（2）将点 $A(2,3)$ 代入反比例函数解析式即可求出函数解析式．",
+    "detail": "（1）解：∵该反比例函数图象在每一个象限内，$y$ 都随着 $x$ 的增大而减小，<br/>∴$3-m \\gt 0$，解得 $m \\lt 3$；<br/>（2）解：∵点 $A(2,3)$ 在此反比例函数图象上，<br/>∴$3=\\frac{3-m}{2}$，解得 $3-m=6$（或 $m=-3$），<br/>∴反比例函数的解析式为 $y=\\frac{6}{x}$．"
   },
   {
     "id": "ch27_2_2_ex_q10",
@@ -33760,14 +35935,14 @@ window.QUESTION_BANK = [
     "knowledge": "比较反比例函数值或自变量的大小",
     "stem": "已知点$A(1,a)$，点$B(4,b)$，点$C(7,c)$都在反比例函数$y=\\frac{7}{x}$的图象上，则$a$，$b$，$c$的关系是（ ）",
     "options": [
-      "A．$a<b<c$",
-      "B．$a<c<b$",
-      "C．$a>c>b$",
-      "D．$a>b>c$"
+      "A．$a \\lt b \\lt c$",
+      "B．$a \\lt c \\lt b$",
+      "C．$a \\gt c \\gt b$",
+      "D．$a \\gt b \\gt c$"
     ],
     "answer": "D",
     "analysis": "利用反比例函数的性质直接判断．",
-    "detail": "解：∵点$A(1,a)$，$B(4,b)$，$C(7,c)$都在反比例函数$y=\\frac{7}{x}$的图象上，<br/>∵$k=7$，<br/>∴函数图象在一三象限，且在每个象限内$y$随$x$的增大而减小，<br/>∵$7>4>1>0$，<br/>∴$a>b>c$．"
+    "detail": "解：∵点$A(1,a)$，$B(4,b)$，$C(7,c)$都在反比例函数$y=\\frac{7}{x}$的图象上，<br/>∵$k=7$，<br/>∴函数图象在一三象限，且在每个象限内$y$随$x$的增大而减小，<br/>∵$7 \\gt 4 \\gt 1 \\gt 0$，<br/>∴$a \\gt b \\gt c$．"
   },
   {
     "id": "ch27_2_2_ex_q11",
@@ -33780,9 +35955,9 @@ window.QUESTION_BANK = [
     "knowledge": "判断反比例函数的增减性；判断反比例函数图象所在象限；比较反比例函数值或自变量的大小",
     "stem": "已知点$A(2,y_{1})$，$B(3,y_{2})$都在反比例函数$y=\\frac{4}{x}$的图象上，比较$y_{1}$与$y_{2}$的大小：$y_{1}$__________$y_{2}$．",
     "options": [],
-    "answer": "$>$",
+    "answer": "$ \\gt $",
     "analysis": "根据反比例函数的比例系数判断函数图象经过的象限，以及在每个象限内的函数增减性，结合两点的横坐标比较纵坐标的大小即可．",
-    "detail": "解：∵在反比例函数$y=\\frac{4}{x}$ 中，$k=4>0$，<br/>∴反比例函数的图象分布在第一、三象限，且在每个象限内$y$随$x$的增大而减小，<br/>∵点$A(2,y_{1})$，$B(3,y_{2})$的横坐标都为正，<br/>∴这两点都在第一象限，<br/>又∵ $2<3$，<br/>∴$y_{1}>y_{2}$．"
+    "detail": "解：∵在反比例函数$y=\\frac{4}{x}$ 中，$k=4 \\gt 0$，<br/>∴反比例函数的图象分布在第一、三象限，且在每个象限内$y$随$x$的增大而减小，<br/>∵点$A(2,y_{1})$，$B(3,y_{2})$的横坐标都为正，<br/>∴这两点都在第一象限，<br/>又∵ $2 \\lt 3$，<br/>∴$y_{1} \\gt y_{2}$．"
   },
   {
     "id": "ch27_2_2_ex_q12",
@@ -33795,9 +35970,9 @@ window.QUESTION_BANK = [
     "knowledge": "求反比例函数解析式；比较反比例函数值或自变量的大小",
     "stem": "已知$y$与$x$成反比例，且当$x=4$时，$y=3$．(1)求$y$关于$x$的函数表达式；(2)点$M(-3,m),N(2,n)$在该反比例函数的图象上，则m，n的大小关系为：$m$____________$n$．（用“>”“<”或“=”连接）",
     "options": [],
-    "answer": "(1)<br/>$y=\\frac{12}{x} (x\\neq 0)$<br/>(2)<br/>$<$",
+    "answer": "(1)<br/>$y=\\frac{12}{x} (x\\neq 0)$<br/>(2)<br/>$ \\lt $",
     "analysis": "（1）待定系数法求出函数解析式即可；<br/>（2）求出$m,n$的值，比较大小即可.",
-    "detail": "（1）解：$y$与$x$成反比例，<br/>∴设$y=\\frac{k}{x} (k\\neq 0)$，<br/>将$x=4,y=3$代入解析式得$3=\\frac{k}{4}$，<br/>解得$k=12$，<br/>∴$y$关于$x$的函数表达式为$y=\\frac{12}{x} (x\\neq 0)$；<br/>（2）解：∵点$M(-3,m),N(2,n)$在该反比例函数图象上，<br/>∴将$x=-3$代入$y=\\frac{12}{x}$得$m=\\frac{12}{-3}=-4$，将$x=2$代入$y=\\frac{12}{x}$得$n=\\frac{12}{2}=6$，<br/>∵$-4<6$，<br/>∴$m<n$."
+    "detail": "（1）解：$y$与$x$成反比例，<br/>∴设$y=\\frac{k}{x} (k\\neq 0)$，<br/>将$x=4,y=3$代入解析式得$3=\\frac{k}{4}$，<br/>解得$k=12$，<br/>∴$y$关于$x$的函数表达式为$y=\\frac{12}{x} (x\\neq 0)$；<br/>（2）解：∵点$M(-3,m),N(2,n)$在该反比例函数图象上，<br/>∴将$x=-3$代入$y=\\frac{12}{x}$得$m=\\frac{12}{-3}=-4$，将$x=2$代入$y=\\frac{12}{x}$得$n=\\frac{12}{2}=6$，<br/>∵$-4 \\lt 6$，<br/>∴$m \\lt n$."
   },
   {
     "id": "ch27_2_2_hw_q1",
@@ -33836,8 +36011,8 @@ window.QUESTION_BANK = [
       "D．不变"
     ],
     "answer": "A",
-    "analysis": "本题考查反比例函数图象与性质，熟记反比例函数的增减性是解决问题的关键．<br/>根据反比例函数图象与性质，当$k=-8<0$时，反比例函数图象在第二、四象限，且在每一个象限中，$y$随$x$的增大而增大，即可得到答案．",
-    "detail": "解：$∵$反比例函数$y=\\frac{-8}{x}$中，$k=-8<0$，<br/>$∴$反比例函数图象在第二、四象限，且在每一个象限中，$y$随$x$的增大而增大，<br/>则在第二象限中$y=\\frac{-8}{x}$的图象，$y$随$x$的增大而增大，<br/>故选：A．"
+    "analysis": "本题考查反比例函数图象与性质，熟记反比例函数的增减性是解决问题的关键．<br/>根据反比例函数图象与性质，当$k=-8 \\lt 0$时，反比例函数图象在第二、四象限，且在每一个象限中，$y$随$x$的增大而增大，即可得到答案．",
+    "detail": "解：$∵$反比例函数$y=\\frac{-8}{x}$中，$k=-8 \\lt 0$，<br/>$∴$反比例函数图象在第二、四象限，且在每一个象限中，$y$随$x$的增大而增大，<br/>则在第二象限中$y=\\frac{-8}{x}$的图象，$y$随$x$的增大而增大，<br/>故选：A．"
   },
   {
     "id": "ch27_2_2_hw_q3",
@@ -33848,16 +36023,16 @@ window.QUESTION_BANK = [
     "typeName": "单选题",
     "difficulty": "较易",
     "knowledge": "已知反比例函数的增减性求参数",
-    "stem": "已知$A(x_{1},y_{1})$，$B(x_{2},y_{2})$两点在双曲线$y=\\frac{m+1}{x}$上，当$x_{1}>x_{2}>0$时，$y_{1}<y_{2}$．则$m$的取值范围是（ ）",
+    "stem": "已知$A(x_{1},y_{1})$，$B(x_{2},y_{2})$两点在双曲线$y=\\frac{m+1}{x}$上，当$x_{1} \\gt x_{2} \\gt 0$时，$y_{1} \\lt y_{2}$．则$m$的取值范围是（ ）",
     "options": [
-      "A．$m<0$",
-      "B．$m<-1$",
+      "A．$m \\lt 0$",
+      "B．$m \\lt -1$",
       "C．$m\\le -1$",
-      "D．$m>-1$"
+      "D．$m \\gt -1$"
     ],
     "answer": "D",
     "analysis": "根据给定x，y的大小关系判断反比例函数比例系数的符号，进而求解m的取值范围．",
-    "detail": "解：对于反比例函数$y=\\frac{k}{x}$，当$k>0$时，在每个象限内，$y$随$x$的增大而减小．<br/>$∵x_{1}>x_{2}>0$时，$y_{1}<y_{2}$，<br/>$∴$$m+1>0$，<br/>解得$m>-1$．"
+    "detail": "解：对于反比例函数$y=\\frac{k}{x}$，当$k \\gt 0$时，在每个象限内，$y$随$x$的增大而减小．<br/>$∵x_{1} \\gt x_{2} \\gt 0$时，$y_{1} \\lt y_{2}$，<br/>$∴$$m+1 \\gt 0$，<br/>解得$m \\gt -1$．"
   },
   {
     "id": "ch27_2_2_hw_q4",
@@ -33870,14 +36045,14 @@ window.QUESTION_BANK = [
     "knowledge": "比较反比例函数值或自变量的大小",
     "stem": "已知点$A(-2,y_{1}),B(-1,y_{2})$在反比例函数$y=-\\frac{4}{x}$的图像上，则 $y_{1}$与$y_{2}$的大小关系是（ ）",
     "options": [
-      "A．$y_{1}>y_{2}$",
-      "B．$y_{1}<y_{2}$",
+      "A．$y_{1} \\gt y_{2}$",
+      "B．$y_{1} \\lt y_{2}$",
       "C．$y_{1}=y_{2}$",
       "D．无法确定"
     ],
     "answer": "B",
     "analysis": "根据反比例函数的增减性求解即可．",
-    "detail": "解：∵点$A(-2,y_{1})，B(-1,y_{2})$在反比例函数$y=-\\frac{4}{x}$的图像上，<br/>∴点$A(-2,y_{1})，B(-1,y_{2})$在反比例函数第二象限的双曲线上，且y随x的增大而增大，<br/>∵$-2<-1$，<br/>∴$y_{1}<y_{2}$．"
+    "detail": "解：∵点$A(-2,y_{1})，B(-1,y_{2})$在反比例函数$y=-\\frac{4}{x}$的图像上，<br/>∴点$A(-2,y_{1})，B(-1,y_{2})$在反比例函数第二象限的双曲线上，且y随x的增大而增大，<br/>∵$-2 \\lt -1$，<br/>∴$y_{1} \\lt y_{2}$．"
   },
   {
     "id": "ch27_2_2_hw_q5",
@@ -33903,11 +36078,11 @@ window.QUESTION_BANK = [
     "typeName": "填空题",
     "difficulty": "较易",
     "knowledge": "求反比例函数解析式；判断反比例函数的增减性",
-    "stem": "若反比例函数 $y=\\frac{k}{x}$的图像经过点$(2,-3)$，则当$x<0$时，y随x的增大而________（填“增大”或“减小”）．",
+    "stem": "若反比例函数 $y=\\frac{k}{x}$的图像经过点$(2,-3)$，则当$x \\lt 0$时，y随x的增大而________（填“增大”或“减小”）．",
     "options": [],
     "answer": "增大",
-    "analysis": "先利用待定系数法求出反比例函数的比例系数$k$，再根据反比例函数的性质判断$x<0$时$y$随$x$的变化趋势即可得到答案．",
-    "detail": "解：∵反比例函数$y=\\frac{k}{x}$的图像经过点$(2,-3)$，<br/>∴$-3=\\frac{k}{2}$，<br/>解得$k=2\\times (-3)=-6<0$，<br/>∴反比例函数的图象经过第二、四象限，且在每个象限内，$y$随$x$的增大而增大．<br/>∴当$x<0$时，$y$随$x$的增大而增大．"
+    "analysis": "先利用待定系数法求出反比例函数的比例系数$k$，再根据反比例函数的性质判断$x \\lt 0$时$y$随$x$的变化趋势即可得到答案．",
+    "detail": "解：∵反比例函数$y=\\frac{k}{x}$的图像经过点$(2,-3)$，<br/>∴$-3=\\frac{k}{2}$，<br/>解得$k=2\\times (-3)=-6 \\lt 0$，<br/>∴反比例函数的图象经过第二、四象限，且在每个象限内，$y$随$x$的增大而增大．<br/>∴当$x \\lt 0$时，$y$随$x$的增大而增大．"
   },
   {
     "id": "ch27_2_2_hw_q7",
@@ -33918,11 +36093,11 @@ window.QUESTION_BANK = [
     "typeName": "填空题",
     "difficulty": "较易",
     "knowledge": "已知反比例函数的增减性求参数",
-    "stem": "已知点$A(2,y_{1})$，$B(4,y_{2})$在反比例函数$y=\\frac{k}{x}(k\\neq 0)$的图象上，若$y_{1}>y_{2}$，请写出一个符合条件的$k$的值是___．",
+    "stem": "已知点$A(2,y_{1})$，$B(4,y_{2})$在反比例函数$y=\\frac{k}{x}(k\\neq 0)$的图象上，若$y_{1} \\gt y_{2}$，请写出一个符合条件的$k$的值是___．",
     "options": [],
     "answer": "1（答案不唯一）",
     "analysis": "根据已知点的横坐标和纵坐标的大小关系，判断$k$的取值范围，即可得到符合条件的$k$值．",
-    "detail": "解：∵$0<2<4$，$y_{1}>y_{2}$，<br/>∴在同一象限内$y$随$x$的增大而减小，<br/>∴反比例函数的图象位于第一、三象限，<br/>∴$k>0$，<br/>∴$k=1$（答案不唯一）．"
+    "detail": "解：∵$0 \\lt 2 \\lt 4$，$y_{1} \\gt y_{2}$，<br/>∴在同一象限内$y$随$x$的增大而减小，<br/>∴反比例函数的图象位于第一、三象限，<br/>∴$k \\gt 0$，<br/>∴$k=1$（答案不唯一）．"
   },
   {
     "id": "ch27_2_2_hw_q8",
@@ -33933,11 +36108,11 @@ window.QUESTION_BANK = [
     "typeName": "填空题",
     "difficulty": "较易",
     "knowledge": "比较反比例函数值或自变量的大小",
-    "stem": "在平面直角坐标系$xOy$中，点$(x_{1},y_{1})$，$(x_{2},y_{2})$在反比例函数$y=-\\frac{1}{x}$的图象上，当$x_{1}<0<x_{2}$时，$y_{1}$________$y_{2}$（填“＞”“＝”或“＜”）．",
+    "stem": "在平面直角坐标系$xOy$中，点$(x_{1},y_{1})$，$(x_{2},y_{2})$在反比例函数$y=-\\frac{1}{x}$的图象上，当$x_{1} \\lt 0 \\lt x_{2}$时，$y_{1}$________$y_{2}$（填“＞”“＝”或“＜”）．",
     "options": [],
     "answer": ">",
     "analysis": "根据反比例函数的比例系数判断函数图象所在象限，再结合两点横坐标的范围判断两点所在象限，得到两个函数值的正负后比较大小即可．",
-    "detail": "解：反比例函数$y=-\\frac{1}{x}$中，比例系数$k=-1<0$，<br/>∴该函数的图象位于第二、四象限，<br/>$∵x_{1}<0$，<br/>$∴$点$(x_{1},y_{1})$在第二象限，可得$y_{1}>0$，<br/>$∵x_{2}>0$，<br/>$∴$点$(x_{2},y_{2})$在第四象限，可得$y_{2}<0$，<br/>$∴y_{1}>y_{2}$．"
+    "detail": "解：反比例函数$y=-\\frac{1}{x}$中，比例系数$k=-1 \\lt 0$，<br/>∴该函数的图象位于第二、四象限，<br/>$∵x_{1} \\lt 0$，<br/>$∴$点$(x_{1},y_{1})$在第二象限，可得$y_{1} \\gt 0$，<br/>$∵x_{2} \\gt 0$，<br/>$∴$点$(x_{2},y_{2})$在第四象限，可得$y_{2} \\lt 0$，<br/>$∴y_{1} \\gt y_{2}$．"
   },
   {
     "id": "ch27_2_2_hw_q9",
@@ -33950,9 +36125,9 @@ window.QUESTION_BANK = [
     "knowledge": "求反比例函数解析式；已知反比例函数的增减性求参数；比较反比例函数值或自变量的大小",
     "stem": "已知反比例函数$y=\\frac{k-1}{x}$（$k$为常数，$k\\neq 1$）．(1)若在其图象的每一支上，$y$随$x$的增大而增大，求$k$的取值范围；(2)若点$P(2,3)$在该反比例函数的图象上．①求该反比例函数的解析式；②当$-3\\le x\\le -1$时，求$y$的取值范围．",
     "options": [],
-    "answer": "(1)$k<1$<br/>(2)①$y=\\frac{6}{x}$②$-6\\le y\\le -2$",
-    "analysis": "本题考查了反比例函数的解析式，反比例函数的性质，正确掌握相关性质内容是解题的关键．<br/>（1）结合在其图象的每一支上，$y$随$x$的增大而增大，得$k-1<0$，故$k<1$，即可作答．<br/>（2）①直接把$P(2,3)$代入$y=\\frac{k-1}{x}$，进行计算，得$k=7$，故$y=\\frac{6}{x}$，<br/>②先分别算出把$x=-3$代入$y=\\frac{6}{x}$，得$y=-2$；把$x=-1$代入$y=\\frac{6}{x}$，得$y=-6$；再结合反比例函数$y=\\frac{6}{x}$在其图象的每一支上，$y$随$x$的增大而减小，进行分析，即可作答．",
-    "detail": "（1）解：∵反比例函数$y=\\frac{k-1}{x}$在其图象的每一支上，$y$随$x$的增大而增大，<br/>∴$k-1<0$，<br/>解得$k<1$；<br/>（2）解：①依题意，把$P(2,3)$代入$y=\\frac{k-1}{x}$，<br/>得$3=\\frac{k-1}{2}$，<br/>解得$k=7$，<br/>∴$y=\\frac{7-1}{x}=\\frac{6}{x}$；<br/>②由①得$y=\\frac{6}{x}$，<br/>依题意，把$x=-3$代入$y=\\frac{6}{x}$，得$y=\\frac{6}{-3}=-2$；<br/>把$x=-1$代入$y=\\frac{6}{x}$，得$y=\\frac{6}{-1}=-6$；<br/>∵$y=\\frac{6}{x}$中的$6>0$，<br/>∴反比例函数$y=\\frac{6}{x}$在其图象的每一支上，$y$随$x$的增大而减小，<br/>∴当$-3\\le x\\le -1$时，则$-6\\le y\\le -2$．"
+    "answer": "(1)$k \\lt 1$<br/>(2)①$y=\\frac{6}{x}$②$-6\\le y\\le -2$",
+    "analysis": "本题考查了反比例函数的解析式，反比例函数的性质，正确掌握相关性质内容是解题的关键．<br/>（1）结合在其图象的每一支上，$y$随$x$的增大而增大，得$k-1 \\lt 0$，故$k \\lt 1$，即可作答．<br/>（2）①直接把$P(2,3)$代入$y=\\frac{k-1}{x}$，进行计算，得$k=7$，故$y=\\frac{6}{x}$，<br/>②先分别算出把$x=-3$代入$y=\\frac{6}{x}$，得$y=-2$；把$x=-1$代入$y=\\frac{6}{x}$，得$y=-6$；再结合反比例函数$y=\\frac{6}{x}$在其图象的每一支上，$y$随$x$的增大而减小，进行分析，即可作答．",
+    "detail": "（1）解：∵反比例函数$y=\\frac{k-1}{x}$在其图象的每一支上，$y$随$x$的增大而增大，<br/>∴$k-1 \\lt 0$，<br/>解得$k \\lt 1$；<br/>（2）解：①依题意，把$P(2,3)$代入$y=\\frac{k-1}{x}$，<br/>得$3=\\frac{k-1}{2}$，<br/>解得$k=7$，<br/>∴$y=\\frac{7-1}{x}=\\frac{6}{x}$；<br/>②由①得$y=\\frac{6}{x}$，<br/>依题意，把$x=-3$代入$y=\\frac{6}{x}$，得$y=\\frac{6}{-3}=-2$；<br/>把$x=-1$代入$y=\\frac{6}{x}$，得$y=\\frac{6}{-1}=-6$；<br/>∵$y=\\frac{6}{x}$中的$6 \\gt 0$，<br/>∴反比例函数$y=\\frac{6}{x}$在其图象的每一支上，$y$随$x$的增大而减小，<br/>∴当$-3\\le x\\le -1$时，则$-6\\le y\\le -2$．"
   },
   {
     "id": "ch27_2_2_q1",
@@ -33991,8 +36166,8 @@ window.QUESTION_BANK = [
       "D．<img src=\"assets/images/ch27_2_2_q11_optD.png\" style=\"max-width:180px;display:inline-block;vertical-align:middle;\" />"
     ],
     "answer": "C",
-    "analysis": "按$k>0$和$k<0$分别进行讨论，结合一次函数的斜率与截距、反比例函数的双曲线分支所在象限对照选项即可得到答案．",
-    "detail": "解：分两种情况讨论：<br>①当$k>0$时，双曲线$y=\\frac{k}{x}$经过第一、三象限；对于一次函数$y=-2kx+3$，其斜率$-2k<0$，截距$3>0$，图象经过第一、二、四象限，无对应选项；<br>②当$k<0$时，双曲线$y=\\frac{k}{x}$经过第二、四象限；对于一次函数$y=-2kx+3$，其斜率$-2k>0$，截距$3>0$，图象经过第一、二、三象限，此时选项C完全吻合。<br>故选：C．"
+    "analysis": "按$k \\gt 0$和$k \\lt 0$分别进行讨论，结合一次函数的斜率与截距、反比例函数的双曲线分支所在象限对照选项即可得到答案．",
+    "detail": "解：分两种情况讨论：<br>①当$k \\gt 0$时，双曲线$y=\\frac{k}{x}$经过第一、三象限；对于一次函数$y=-2kx+3$，其斜率$-2k \\lt 0$，截距$3 \\gt 0$，图象经过第一、二、四象限，无对应选项；<br>②当$k \\lt 0$时，双曲线$y=\\frac{k}{x}$经过第二、四象限；对于一次函数$y=-2kx+3$，其斜率$-2k \\gt 0$，截距$3 \\gt 0$，图象经过第一、二、三象限，此时选项C完全吻合。<br>故选：C．"
   },
   {
     "id": "ch27_2_2_q3",
@@ -34018,11 +36193,11 @@ window.QUESTION_BANK = [
     "typeName": "填空题",
     "difficulty": "中等",
     "knowledge": "一次函数与反比例函数的交点问题、函数图象解不等式",
-    "stem": "如图，一次函数$y=k_1x+b$与反比例函数$y=\\frac{k_2}{x}$的图象交于$A$、$B$两点，其横坐标分别为$1$和$3$，则关于$x$的不等式$k_1x+b-\\frac{k_2}{x}<0$的解集是______．<br><img src=\"assets/images/ch27_2_2_q13.png\" style=\"max-width:260px;display:block;margin:8px auto;\" />",
+    "stem": "如图，一次函数$y=k_1x+b$与反比例函数$y=\\frac{k_2}{x}$的图象交于$A$、$B$两点，其横坐标分别为$1$和$3$，则关于$x$的不等式$k_1x+b-\\frac{k_2}{x} \\lt 0$的解集是______．<br><img src=\"assets/images/ch27_2_2_q13.png\" style=\"max-width:260px;display:block;margin:8px auto;\" />",
     "options": [],
-    "answer": "$1<x<3$或$x<0$",
-    "analysis": "不等式$k_1x+b-\\frac{k_2}{x}<0$即$k_1x+b<\\frac{k_2}{x}$，直观表示直线在双曲线下方，观察图象在交点横坐标两侧的分布范围即可得出结果．",
-    "detail": "解：不等式$k_1x+b-\\frac{k_2}{x}<0$可变形为$k_1x+b<\\frac{k_2}{x}$。<br>由函数图象可知，两图象的交点横坐标分别为$x=1$和$x=3$。<br>直线在双曲线下方的区域为：在$y$轴左侧（$x<0$）以及在两交点之间（$1<x<3$）。<br>∴不等式的解集是$1<x<3$或$x<0$。<br>故答案为：$1<x<3$或$x<0$．"
+    "answer": "$1 \\lt x \\lt 3$或$x \\lt 0$",
+    "analysis": "不等式$k_1x+b-\\frac{k_2}{x} \\lt 0$即$k_1x+b \\lt \\frac{k_2}{x}$，直观表示直线在双曲线下方，观察图象在交点横坐标两侧的分布范围即可得出结果．",
+    "detail": "解：不等式$k_1x+b-\\frac{k_2}{x} \\lt 0$可变形为$k_1x+b \\lt \\frac{k_2}{x}$。<br>由函数图象可知，两图象的交点横坐标分别为$x=1$和$x=3$。<br>直线在双曲线下方的区域为：在$y$轴左侧（$x \\lt 0$）以及在两交点之间（$1 \\lt x \\lt 3$）。<br>∴不等式的解集是$1 \\lt x \\lt 3$或$x \\lt 0$。<br>故答案为：$1 \\lt x \\lt 3$或$x \\lt 0$．"
   },
   {
     "id": "ch27_2_2_q5",
@@ -34033,11 +36208,11 @@ window.QUESTION_BANK = [
     "typeName": "解答题",
     "difficulty": "中等",
     "knowledge": "求反比例函数解析式、求一次函数解析式、割补法求三角形面积、图象法解不等式",
-    "stem": "如图，在平面直角坐标系中，一次函数$y=kx+b$的图象与反比例函数$y=\\frac{m}{x}$的图象交于点$A(2,3)$和点$B(-3,n)$．<br><img src=\"assets/images/ch27_2_2_q14_stem.png\" style=\"max-width:260px;display:block;margin:8px auto;\" /><br>（1）求反比例函数和一次函数的解析式；<br>（2）连接$OA$、$OB$，求$\\triangle AOB$的面积；<br>（3）直接写出不等式$kx+b>\\frac{m}{x}$的解集．",
+    "stem": "如图，在平面直角坐标系中，一次函数$y=kx+b$的图象与反比例函数$y=\\frac{m}{x}$的图象交于点$A(2,3)$和点$B(-3,n)$．<br><img src=\"assets/images/ch27_2_2_q14_stem.png\" style=\"max-width:260px;display:block;margin:8px auto;\" /><br>（1）求反比例函数和一次函数的解析式；<br>（2）连接$OA$、$OB$，求$\\triangle AOB$的面积；<br>（3）直接写出不等式$kx+b \\gt \\frac{m}{x}$的解集．",
     "options": [],
-    "answer": "（1）$y=\\frac{6}{x}$，$y=x+1$；（2）$\\frac{5}{2}$；（3）$-3<x<0$或$x>2$．",
+    "answer": "（1）$y=\\frac{6}{x}$，$y=x+1$；（2）$\\frac{5}{2}$；（3）$-3 \\lt x \\lt 0$或$x \\gt 2$．",
     "analysis": "（1）将点$A(2,3)$代入反比例函数求出$m$，进而求出点$B$坐标，利用待定系数法列方程组求出一次函数解析式；<br>（2）求出直线$AB$与$x$轴交点$C$的坐标，利用$S_{\\triangle AOB}=S_{\\triangle COB}+S_{\\triangle COA}$计算面积；<br>（3）寻找一次函数图象位于反比例函数图象上方时自变量$x$的取值范围．",
-    "detail": "（1）解：将点$A(2,3)$代入$y=\\frac{m}{x}$，得$m=2\\times 3=6$，<br>∴反比例函数解析式为$y=\\frac{6}{x}$。<br>将点$B(-3,n)$代入$y=\\frac{6}{x}$，得$n=\\frac{6}{-3}=-2$，<br>∴点$B$坐标为$(-3,-2)$。<br>将点$A(2,3)$、$B(-3,-2)$代入一次函数$y=kx+b$，得：<br>$\\begin{cases}2k+b=3\\\\-3k+b=-2\\end{cases}$，解得$\\begin{cases}k=1\\\\b=1\\end{cases}$，<br>∴一次函数的解析式为$y=x+1$；<br><br>（2）解：如图，设直线$AB$与$x$轴交于点$C$，<br><img src=\"assets/images/ch27_2_2_q14_detail.png\" style=\"max-width:260px;display:block;margin:8px auto;\" /><br>对于$y=x+1$，当$y=0$时，$x+1=0$，解得$x=-1$，<br>∴点$C$坐标为$(-1,0)$，则$OC=1$。<br>∴$S_{\\triangle AOB}=S_{\\triangle COB}+S_{\\triangle COA}=\\frac{1}{2}OC\\cdot |y_B|+\\frac{1}{2}OC\\cdot |y_A|=\\frac{1}{2}\\times 1\\times 2+\\frac{1}{2}\\times 1\\times 3=\\frac{5}{2}$；<br><br>（3）解：观察图象，一次函数图象位于反比例函数图象上方的部分对应的$x$范围为：$-3<x<0$或$x>2$。<br>∴不等式$kx+b>\\frac{m}{x}$的解集为$-3<x<0$或$x>2$．"
+    "detail": "（1）解：将点$A(2,3)$代入$y=\\frac{m}{x}$，得$m=2\\times 3=6$，<br>∴反比例函数解析式为$y=\\frac{6}{x}$。<br>将点$B(-3,n)$代入$y=\\frac{6}{x}$，得$n=\\frac{6}{-3}=-2$，<br>∴点$B$坐标为$(-3,-2)$。<br>将点$A(2,3)$、$B(-3,-2)$代入一次函数$y=kx+b$，得：<br>$\\begin{cases}2k+b=3\\\\-3k+b=-2\\end{cases}$，解得$\\begin{cases}k=1\\\\b=1\\end{cases}$，<br>∴一次函数的解析式为$y=x+1$；<br><br>（2）解：如图，设直线$AB$与$x$轴交于点$C$，<br><img src=\"assets/images/ch27_2_2_q14_detail.png\" style=\"max-width:260px;display:block;margin:8px auto;\" /><br>对于$y=x+1$，当$y=0$时，$x+1=0$，解得$x=-1$，<br>∴点$C$坐标为$(-1,0)$，则$OC=1$。<br>∴$S_{\\triangle AOB}=S_{\\triangle COB}+S_{\\triangle COA}=\\frac{1}{2}OC\\cdot |y_B|+\\frac{1}{2}OC\\cdot |y_A|=\\frac{1}{2}\\times 1\\times 2+\\frac{1}{2}\\times 1\\times 3=\\frac{5}{2}$；<br><br>（3）解：观察图象，一次函数图象位于反比例函数图象上方的部分对应的$x$范围为：$-3 \\lt x \\lt 0$或$x \\gt 2$。<br>∴不等式$kx+b \\gt \\frac{m}{x}$的解集为$-3 \\lt x \\lt 0$或$x \\gt 2$．"
   },
   {
     "id": "ch27_2_2_q6",
@@ -34048,11 +36223,11 @@ window.QUESTION_BANK = [
     "typeName": "解答题",
     "difficulty": "中等",
     "knowledge": "待定系数法求解析式、利用面积割补法求点坐标、图象比较大小、轴对称求最值问题（将军饮马）",
-    "stem": "如图，反比例函数$y_1=\\frac{k_1}{x}(k_1\\neq 0)$与一次函数$y_2=k_2x+b(k_2\\neq 0)$的图象相交于$A(-3,1)$和$B(-1,a)$两点．<br><img src=\"assets/images/ch27_2_2_q15_stem.png\" style=\"max-width:260px;display:block;margin:8px auto;\" /><br>（1）直接写出：$C$点坐标________；反比例函数解析式________，直线$AB$的函数解析式________；<br>（2）如图，直线$OA$与反比例函数交于另一点$C$，若$y$轴上有一点$M$，使$\\triangle ACM$的面积为$12$，求点$M$的坐标；<br>（3）请结合图象回答，$y_1>y_2$时，$x$的取值范围________；<br>（4）在$x$轴上有一点$N$，若满足$NA+NB$最小，则点$N$的坐标为________；若满足$|NB-NA|$最大，则点$N$的坐标为________．",
+    "stem": "如图，反比例函数$y_1=\\frac{k_1}{x}(k_1\\neq 0)$与一次函数$y_2=k_2x+b(k_2\\neq 0)$的图象相交于$A(-3,1)$和$B(-1,a)$两点．<br><img src=\"assets/images/ch27_2_2_q15_stem.png\" style=\"max-width:260px;display:block;margin:8px auto;\" /><br>（1）直接写出：$C$点坐标________；反比例函数解析式________，直线$AB$的函数解析式________；<br>（2）如图，直线$OA$与反比例函数交于另一点$C$，若$y$轴上有一点$M$，使$\\triangle ACM$的面积为$12$，求点$M$的坐标；<br>（3）请结合图象回答，$y_1 \\gt y_2$时，$x$的取值范围________；<br>（4）在$x$轴上有一点$N$，若满足$NA+NB$最小，则点$N$的坐标为________；若满足$|NB-NA|$最大，则点$N$的坐标为________．",
     "options": [],
-    "answer": "（1）$C(3,-1)$，$y_1=-\\frac{3}{x}$，$y_2=x+4$；（2）$(0,4)$或$(0,-4)$；（3）$x<-3$或$-1<x<0$；（4）$(-\\frac{5}{2},0)$，$(-4,0)$．",
+    "answer": "（1）$C(3,-1)$，$y_1=-\\frac{3}{x}$，$y_2=x+4$；（2）$(0,4)$或$(0,-4)$；（3）$x \\lt -3$或$-1 \\lt x \\lt 0$；（4）$(-\\frac{5}{2},0)$，$(-4,0)$．",
     "analysis": "（1）将$A(-3,1)$代入反比例函数求得$k_1=-3$，再求$B$坐标，利用待定系数法求出直线$AB$表达式；由对称性或联立方程求点$C$坐标；<br>（2）设$M(0,y_M)$，根据$S_{\\triangle ACM}=S_{\\triangle AOM}+S_{\\triangle COM}=12$建立方程求解$y_M$；<br>（3）观察图象得出双曲线在直线上方时的自变量取值范围；<br>（4）作点$A$关于$x$轴的对称点$E$，利用两点之间线段最短及三角形两边之差小于第三边分别确定点$N$的位置．",
-    "detail": "（1）解：∵反比例函数$y_1=\\frac{k_1}{x}$经过点$A(-3,1)$，<br>∴$k_1=-3\\times 1=-3$，∴反比例函数解析式为$y_1=-\\frac{3}{x}$。<br>将点$B(-1,a)$代入$y_1=-\\frac{3}{x}$得$a=\\frac{-3}{-1}=3$，∴$B(-1,3)$。<br>将$A(-3,1)$、$B(-1,3)$代入$y_2=k_2x+b$得：<br>$\\begin{cases}-3k_2+b=1\\\\-k_2+b=3\\end{cases}$，解得$\\begin{cases}k_2=1\\\\b=4\\end{cases}$，<br>∴直线$AB$的解析式为$y_2=x+4$。<br>∵点$A$与点$C$关于原点中心对称，且$A(-3,1)$，<br>∴点$C$的坐标为$(3,-1)$。<br>故答案为：$C(3,-1)$；$y_1=-\\frac{3}{x}$；$y_2=x+4$；<br><br>（2）解：设点$M$的坐标为$(0,y_M)$，如图所示，<br><img src=\"assets/images/ch27_2_2_q15_detail1.png\" style=\"max-width:260px;display:block;margin:8px auto;\" /><br>连接$OM$，则$S_{\\triangle ACM}=S_{\\triangle AOM}+S_{\\triangle COM}=\\frac{1}{2}OM\\cdot |x_A|+\\frac{1}{2}OM\\cdot |x_C|=\\frac{1}{2}|y_M|\\times 3+\\frac{1}{2}|y_M|\\times 3=3|y_M|$。<br>∵$S_{\\triangle ACM}=12$，<br>∴$3|y_M|=12$，解得$|y_M|=4$，即$y_M=\\pm 4$。<br>∴点$M$的坐标为$(0,4)$或$(0,-4)$；<br><br>（3）解：结合图象，双曲线位于直线$AB$上方的区域所对应的$x$范围为：$x<-3$或$-1<x<0$。<br>故答案为：$x<-3$或$-1<x<0$；<br><br>（4）解：作点$A(-3,1)$关于$x$轴的对称点$E(-3,-1)$，连接$BE$交$x$轴于点$N$，此时$NA+NB=NE+NB=BE$最小。<br><img src=\"assets/images/ch27_2_2_q15_detail2.png\" style=\"max-width:260px;display:block;margin:8px auto;\" /><br>设直线$BE$解析式为$y=k_4x+b_4$，代入$B(-1,3)$与$E(-3,-1)$得：<br>$\\begin{cases}-k_4+b_4=3\\\\-3k_4+b_4=-1\\end{cases}$，解得$\\begin{cases}k_4=2\\\\b_4=5\\end{cases}$，<br>∴直线$BE$为$y=2x+5$。令$y=0$得$2x+5=0$，解得$x=-\\frac{5}{2}$，∴此时点$N$坐标为$(-\\frac{5}{2},0)$；<br>当点$N$、$A$、$B$三点共线时，$|NB-NA|=AB$最大，此时点$N$即为直线$AB$与$x$轴的交点。<br>对于直线$y=x+4$，令$y=0$得$x+4=0$，解得$x=-4$。<br>∴此时点$N$坐标为$(-4,0)$。<br>故答案为：$(-\\frac{5}{2},0)$；$(-4,0)$．"
+    "detail": "（1）解：∵反比例函数$y_1=\\frac{k_1}{x}$经过点$A(-3,1)$，<br>∴$k_1=-3\\times 1=-3$，∴反比例函数解析式为$y_1=-\\frac{3}{x}$。<br>将点$B(-1,a)$代入$y_1=-\\frac{3}{x}$得$a=\\frac{-3}{-1}=3$，∴$B(-1,3)$。<br>将$A(-3,1)$、$B(-1,3)$代入$y_2=k_2x+b$得：<br>$\\begin{cases}-3k_2+b=1\\\\-k_2+b=3\\end{cases}$，解得$\\begin{cases}k_2=1\\\\b=4\\end{cases}$，<br>∴直线$AB$的解析式为$y_2=x+4$。<br>∵点$A$与点$C$关于原点中心对称，且$A(-3,1)$，<br>∴点$C$的坐标为$(3,-1)$。<br>故答案为：$C(3,-1)$；$y_1=-\\frac{3}{x}$；$y_2=x+4$；<br><br>（2）解：设点$M$的坐标为$(0,y_M)$，如图所示，<br><img src=\"assets/images/ch27_2_2_q15_detail1.png\" style=\"max-width:260px;display:block;margin:8px auto;\" /><br>连接$OM$，则$S_{\\triangle ACM}=S_{\\triangle AOM}+S_{\\triangle COM}=\\frac{1}{2}OM\\cdot |x_A|+\\frac{1}{2}OM\\cdot |x_C|=\\frac{1}{2}|y_M|\\times 3+\\frac{1}{2}|y_M|\\times 3=3|y_M|$。<br>∵$S_{\\triangle ACM}=12$，<br>∴$3|y_M|=12$，解得$|y_M|=4$，即$y_M=\\pm 4$。<br>∴点$M$的坐标为$(0,4)$或$(0,-4)$；<br><br>（3）解：结合图象，双曲线位于直线$AB$上方的区域所对应的$x$范围为：$x \\lt -3$或$-1 \\lt x \\lt 0$。<br>故答案为：$x \\lt -3$或$-1 \\lt x \\lt 0$；<br><br>（4）解：作点$A(-3,1)$关于$x$轴的对称点$E(-3,-1)$，连接$BE$交$x$轴于点$N$，此时$NA+NB=NE+NB=BE$最小。<br><img src=\"assets/images/ch27_2_2_q15_detail2.png\" style=\"max-width:260px;display:block;margin:8px auto;\" /><br>设直线$BE$解析式为$y=k_4x+b_4$，代入$B(-1,3)$与$E(-3,-1)$得：<br>$\\begin{cases}-k_4+b_4=3\\\\-3k_4+b_4=-1\\end{cases}$，解得$\\begin{cases}k_4=2\\\\b_4=5\\end{cases}$，<br>∴直线$BE$为$y=2x+5$。令$y=0$得$2x+5=0$，解得$x=-\\frac{5}{2}$，∴此时点$N$坐标为$(-\\frac{5}{2},0)$；<br>当点$N$、$A$、$B$三点共线时，$|NB-NA|=AB$最大，此时点$N$即为直线$AB$与$x$轴的交点。<br>对于直线$y=x+4$，令$y=0$得$x+4=0$，解得$x=-4$。<br>∴此时点$N$坐标为$(-4,0)$。<br>故答案为：$(-\\frac{5}{2},0)$；$(-4,0)$．"
   },
   {
     "id": "ch27_2_2_ex_q13",
@@ -34083,11 +36258,11 @@ window.QUESTION_BANK = [
     "typeName": "填空题",
     "difficulty": "中等",
     "knowledge": "由反比例函数图象的对称性求点的坐标",
-    "stem": "已知点A(1，2)，B在反比例函数$y=\\frac{k}{x}(x>0)$的图象上，若OA=OB，则点B的坐标为_________．",
+    "stem": "已知点A(1，2)，B在反比例函数$y=\\frac{k}{x}(x \\gt 0)$的图象上，若OA=OB，则点B的坐标为_________．",
     "options": [],
     "answer": "（2，1）",
     "analysis": "根据点A，B关于y=x（y-x=0）的对称，求解即可",
-    "detail": "解：∵点A(1，2)，B在反比例函数$y=\\frac{k}{x}(x>0)$的图象上，OA=OB，<br/>∴点A，B关于直线y=x（y-x=0）的对称，<br/>设点（1，2）关于直线y=x（y-x=0）的对称点设为（a，b）<br/>由两点中点在直线y=x上及过两点的直线垂直直线y=x（斜率之积为-1）<br/>可以得到：${\\frac{1+a}{2}=\\frac{2+b}{2}(b-2)(a-1)=-1)$，<br/>解得：a=2，b=1，<br/>∴点B的坐标为（2,1）<br/>故答案为：（2，1）<br/><img src=\"assets/images/ch27_2_2_ex_img3.png\" style=\"max-width:260px; display:block; margin:6px auto;\" /><br/>【点睛】本题考查了反比例函数图象上点的坐标特征，利用已知条件得出：点A，B关于直线y=x（y-x=0）的对称是解题的关键．"
+    "detail": "解：∵点A(1，2)，B在反比例函数$y=\\frac{k}{x}(x \\gt 0)$的图象上，OA=OB，<br/>∴点A，B关于直线y=x（y-x=0）的对称，<br/>设点（1，2）关于直线y=x（y-x=0）的对称点设为（a，b）<br/>由两点中点在直线y=x上及过两点的直线垂直直线y=x（斜率之积为-1）<br/>可以得到：${\\frac{1+a}{2}=\\frac{2+b}{2}(b-2)(a-1)=-1)$，<br/>解得：a=2，b=1，<br/>∴点B的坐标为（2,1）<br/>故答案为：（2，1）<br/><img src=\"assets/images/ch27_2_2_ex_img3.png\" style=\"max-width:260px; display:block; margin:6px auto;\" /><br/>【点睛】本题考查了反比例函数图象上点的坐标特征，利用已知条件得出：点A，B关于直线y=x（y-x=0）的对称是解题的关键．"
   },
   {
     "id": "ch27_2_2_ex_q15",
@@ -34098,11 +36273,11 @@ window.QUESTION_BANK = [
     "typeName": "填空题",
     "difficulty": "中等",
     "knowledge": "求反比例函数解析式；由反比例函数图象的对称性求点的坐标",
-    "stem": "如图，过原点的直线与反比例函数$y=\\frac{k}{x}(k>0)$的图象交于$A(m,n),B(m-2,n-8)$两点，则$k$的值为______．<br/><img src=\"assets/images/ch27_2_2_ex_img4.png\" style=\"max-width:260px; display:block; margin:6px auto;\" />",
+    "stem": "如图，过原点的直线与反比例函数$y=\\frac{k}{x}(k \\gt 0)$的图象交于$A(m,n),B(m-2,n-8)$两点，则$k$的值为______．<br/><img src=\"assets/images/ch27_2_2_ex_img4.png\" style=\"max-width:260px; display:block; margin:6px auto;\" />",
     "options": [],
     "answer": "$4$",
     "analysis": "根据反比例函数的图象和性质求出$m$，$n$的值，得到点$A$的坐标，再利用待定系数法解答即可求解．",
-    "detail": "解：$∵$过原点的直线与反比例函数$y=\\frac{k}{x}(k>0)$的图象交于$A(m,n)$，$B(m-2,n-8)$两点，<br/>∴点$A$与点$B$关于原点$O$对称，<br/>∴点$A$和点$B$的横纵坐标互为相反数，<br/>$∴m+(m-2)=0$ ，$n+(n-8)=0$ ，<br/>解得$m=1$，$n=4$，<br/>$∴A(1,4)$，<br/>把$A(1,4)$ 代入$y=\\frac{k}{x}$， 得$4=\\frac{k}{1}$，<br/>解得$k=4$．"
+    "detail": "解：$∵$过原点的直线与反比例函数$y=\\frac{k}{x}(k \\gt 0)$的图象交于$A(m,n)$，$B(m-2,n-8)$两点，<br/>∴点$A$与点$B$关于原点$O$对称，<br/>∴点$A$和点$B$的横纵坐标互为相反数，<br/>$∴m+(m-2)=0$ ，$n+(n-8)=0$ ，<br/>解得$m=1$，$n=4$，<br/>$∴A(1,4)$，<br/>把$A(1,4)$ 代入$y=\\frac{k}{x}$， 得$4=\\frac{k}{1}$，<br/>解得$k=4$．"
   },
   {
     "id": "ch27_2_2_ex_q16",
@@ -34113,7 +36288,7 @@ window.QUESTION_BANK = [
     "typeName": "单选题",
     "difficulty": "较易",
     "knowledge": "判断（画）反比例函数图象；判断一次函数的图象",
-    "stem": "若$ab<0$，则正比例函数$y=ax$与反比例函数$y=\\frac{b}{x}$在同一平面直角坐标系中的大致图像可能是（ ）",
+    "stem": "若$ab \\lt 0$，则正比例函数$y=ax$与反比例函数$y=\\frac{b}{x}$在同一平面直角坐标系中的大致图像可能是（ ）",
     "options": [
       "A．<br/><img src=\"assets/images/ch27_2_2_ex_img5.png\" style=\"max-width:180px; display:inline-block; vertical-align:middle;\" />",
       "B．<br/><img src=\"assets/images/ch27_2_2_ex_img6.png\" style=\"max-width:180px; display:inline-block; vertical-align:middle;\" />",
@@ -34121,8 +36296,8 @@ window.QUESTION_BANK = [
       "D．<br/><img src=\"assets/images/ch27_2_2_ex_img8.png\" style=\"max-width:180px; display:inline-block; vertical-align:middle;\" />"
     ],
     "answer": "B",
-    "analysis": "由$ab<0$，得$a,b$异号，若图象中得到的$a,b$异号则成立，否则不成立．",
-    "detail": "A. 由图象可知：$a>0,b>0$，故A错误；<br/>B. 由图象可知：$a<0,b>0$，故B正确；<br/>C. 由图象可知：$a>0,b<0$，但正比例函数图象未过原点，故C错误；<br/>D. 由图象可知：$a<0,b<0$，故D错误；<br/>故选：B．<br/>【点睛】本题考查了根据已知参数的取值范围确定函数的大致图象的问题，熟知参数对于函数图象的影响是解题的关键．"
+    "analysis": "由$ab \\lt 0$，得$a,b$异号，若图象中得到的$a,b$异号则成立，否则不成立．",
+    "detail": "A. 由图象可知：$a \\gt 0,b \\gt 0$，故A错误；<br/>B. 由图象可知：$a \\lt 0,b \\gt 0$，故B正确；<br/>C. 由图象可知：$a \\gt 0,b \\lt 0$，但正比例函数图象未过原点，故C错误；<br/>D. 由图象可知：$a \\lt 0,b \\lt 0$，故D错误；<br/>故选：B．<br/>【点睛】本题考查了根据已知参数的取值范围确定函数的大致图象的问题，熟知参数对于函数图象的影响是解题的关键．"
   },
   {
     "id": "ch27_2_2_ex_q17",
@@ -34137,7 +36312,7 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "一、三",
     "analysis": "此题主要考查了一次函数以及反比例函数的图象综合判断，直接利用一次函数图象经过的象限得出a的符号，进而结合反比例函数图象的性质得出答案．",
-    "detail": "解：∵一次函数$y=ax(a\\neq 0)$的图象经过第一，第三象限，<br/>∴$a>0$，<br/>∴反比例函数$y=\\frac{a}{x}$的图象经过第经过一、三象限，<br/>故答案为：一、三．"
+    "detail": "解：∵一次函数$y=ax(a\\neq 0)$的图象经过第一，第三象限，<br/>∴$a \\gt 0$，<br/>∴反比例函数$y=\\frac{a}{x}$的图象经过第经过一、三象限，<br/>故答案为：一、三．"
   },
   {
     "id": "ch27_2_2_ex_q18",
@@ -34148,11 +36323,11 @@ window.QUESTION_BANK = [
     "typeName": "解答题",
     "difficulty": "较易",
     "knowledge": "求反比例函数解析式；一次函数与反比例函数图象综合判断；比较反比例函数值或自变量的大小",
-    "stem": "如图，在平面直角坐标系中，一次函数$y=x+5$的图象与反比例函数$y=\\frac{k}{x}(k\\neq 0,x<0)$的图象交于$A(m,1)$，$B$两点．<br/><img src=\"assets/images/ch27_2_2_ex_img10.png\" style=\"max-width:260px; display:block; margin:6px auto;\" /><br/>(1)求m的值与反比例函数的表达式；(2)若$m<x<0$，观察图象，直接写出反比例函数中y的取值范围．",
+    "stem": "如图，在平面直角坐标系中，一次函数$y=x+5$的图象与反比例函数$y=\\frac{k}{x}(k\\neq 0,x \\lt 0)$的图象交于$A(m,1)$，$B$两点．<br/><img src=\"assets/images/ch27_2_2_ex_img10.png\" style=\"max-width:260px; display:block; margin:6px auto;\" /><br/>(1)求m的值与反比例函数的表达式；(2)若$m \\lt x \\lt 0$，观察图象，直接写出反比例函数中y的取值范围．",
     "options": [],
-    "answer": "(1)$m=-4$，反比例函数的关系式为$y=-\\frac{4}{x}$<br/>(2)$y>1$",
+    "answer": "(1)$m=-4$，反比例函数的关系式为$y=-\\frac{4}{x}$<br/>(2)$y \\gt 1$",
     "analysis": "本题考查一次函数、反比例函数的交点，掌握一次函数、反比例函数图象上点的坐标特征以及一次函数、反比例函数交点坐标的计算方法是正确解答的前提．<br/>（1）根据一次函数、反比例函数图象上点的坐标特征确定点$A$的坐标，进而确定反比例函数关系式；<br/>（2）根据图象以及两个函数图象的交点坐标进行判断即可．",
-    "detail": "（1）解：$∵$一次函数$y=x+5$的图象与过点$A(m,1)$，<br/>$∴m+5=1$，<br/>即$m=-4$，<br/>$∴$点$A(-4,1)$，<br/>$∵$点$A$在反比例函数$y=\\frac{k}{x}$的图象上，<br/>$∴k=-4\\times 1=-4$，<br/>$∴$反比例函数的关系式为$y=-\\frac{4}{x}$，<br/>答：$m=-4$，反比例函数的关系式为$y=-\\frac{4}{x}$；<br/>（2）由于点$A(-4,1)$，即$m=-4$，<br/>$∴$当$-4<x<0$，反比例函数中$y$的值取值范围为$y>1$．"
+    "detail": "（1）解：$∵$一次函数$y=x+5$的图象与过点$A(m,1)$，<br/>$∴m+5=1$，<br/>即$m=-4$，<br/>$∴$点$A(-4,1)$，<br/>$∵$点$A$在反比例函数$y=\\frac{k}{x}$的图象上，<br/>$∴k=-4\\times 1=-4$，<br/>$∴$反比例函数的关系式为$y=-\\frac{4}{x}$，<br/>答：$m=-4$，反比例函数的关系式为$y=-\\frac{4}{x}$；<br/>（2）由于点$A(-4,1)$，即$m=-4$，<br/>$∴$当$-4 \\lt x \\lt 0$，反比例函数中$y$的值取值范围为$y \\gt 1$．"
   },
   {
     "id": "ch27_2_2_ex_q19",
@@ -34163,16 +36338,16 @@ window.QUESTION_BANK = [
     "typeName": "单选题",
     "difficulty": "较易",
     "knowledge": "一次函数与反比例函数的交点问题",
-    "stem": "如图，在同一平面直角坐标系中，一次函数$y_{1}=kx+b$（$k$，$b$是常数，且$k\\neq 0$）与反比例函数$y_{2}=\\frac{c}{x}$（$c$是常数，且$c\\neq 0$）的图象相交于$A(-3,-2)$，$B(2,3)$两点，则不等式$y_{1}>y_{2}$的解集是（ ）<br/><img src=\"assets/images/ch27_2_2_ex_img11.png\" style=\"max-width:260px; display:block; margin:6px auto;\" />",
+    "stem": "如图，在同一平面直角坐标系中，一次函数$y_{1}=kx+b$（$k$，$b$是常数，且$k\\neq 0$）与反比例函数$y_{2}=\\frac{c}{x}$（$c$是常数，且$c\\neq 0$）的图象相交于$A(-3,-2)$，$B(2,3)$两点，则不等式$y_{1} \\gt y_{2}$的解集是（ ）<br/><img src=\"assets/images/ch27_2_2_ex_img11.png\" style=\"max-width:260px; display:block; margin:6px auto;\" />",
     "options": [
-      "A．$-3<x<2$",
-      "B．$x<3$或$x>2$",
-      "C．$-3<x<0$或$x>2$",
-      "D．$0<x<2$"
+      "A．$-3 \\lt x \\lt 2$",
+      "B．$x \\lt 3$或$x \\gt 2$",
+      "C．$-3 \\lt x \\lt 0$或$x \\gt 2$",
+      "D．$0 \\lt x \\lt 2$"
     ],
     "answer": "C",
     "analysis": "",
-    "detail": "解：由函数图象可知：不等式$y_{1}>y_{2}$的解集为$-3<x<0$或$x>2$．"
+    "detail": "解：由函数图象可知：不等式$y_{1} \\gt y_{2}$的解集为$-3 \\lt x \\lt 0$或$x \\gt 2$．"
   },
   {
     "id": "ch27_2_2_ex_q20",
@@ -34185,9 +36360,9 @@ window.QUESTION_BANK = [
     "knowledge": "一次函数与反比例函数的交点问题",
     "stem": "已知正比例函数$y=kx$与反比例函数$y=\\frac{1}{x}$的图象没有交点，写出一个符合条件的k的值为______________．",
     "options": [],
-    "answer": "$-1$（答案不唯一，$k<0$即可）",
-    "analysis": "根据题意得到正比例函数$y=kx$的图象分布在第二，四象限，得到$k<0$，写出一个符合范围的$k$值即可．",
-    "detail": "解：∵对于反比例函数$y=\\frac{1}{x}$，比例系数$1>0$，<br/>∴反比例函数的图象分布在第一，三象限，<br/>∵正比例函数$y=kx$与反比例函数$y=\\frac{1}{x}$的图象没有交点，<br/>∴正比例函数$y=kx$的图象分布在第二，四象限，<br/>∴$k<0$，<br/>∴符合条件的$k$可以为$-1$（答案不唯一）．"
+    "answer": "$-1$（答案不唯一，$k \\lt 0$即可）",
+    "analysis": "根据题意得到正比例函数$y=kx$的图象分布在第二，四象限，得到$k \\lt 0$，写出一个符合范围的$k$值即可．",
+    "detail": "解：∵对于反比例函数$y=\\frac{1}{x}$，比例系数$1 \\gt 0$，<br/>∴反比例函数的图象分布在第一，三象限，<br/>∵正比例函数$y=kx$与反比例函数$y=\\frac{1}{x}$的图象没有交点，<br/>∴正比例函数$y=kx$的图象分布在第二，四象限，<br/>∴$k \\lt 0$，<br/>∴符合条件的$k$可以为$-1$（答案不唯一）．"
   },
   {
     "id": "ch27_2_2_ex_q21",
@@ -34242,7 +36417,7 @@ window.QUESTION_BANK = [
     ],
     "answer": "D",
     "analysis": "根据$k$的符号分两种情况讨论，结合函数图象经过的象限进行判断即可．",
-    "detail": "解：分两种情况讨论：①当$k>0$时，则$-k<0$，<br/>$∴$反比例函数$y=\\frac{k}{x}$的图象在第一、三象限，一次函数$y=kx-k$的图象经过第一、三、四象限；<br/>观察选项A、B，图象均不符合；<br/>②当$k<0$时，则$-k>0$，<br/>$∴$反比例函数$y=\\frac{k}{x}$的图象在第二、四象限，一次函数$y=kx-k$的图象经过第一、二、四象限；<br/>观察选项C，直线经过第一、三、四象限，不符合；<br/>观察选项D，双曲线在第二、四象限，直线经过第一、二、四象限，符合．"
+    "detail": "解：分两种情况讨论：①当$k \\gt 0$时，则$-k \\lt 0$，<br/>$∴$反比例函数$y=\\frac{k}{x}$的图象在第一、三象限，一次函数$y=kx-k$的图象经过第一、三、四象限；<br/>观察选项A、B，图象均不符合；<br/>②当$k \\lt 0$时，则$-k \\gt 0$，<br/>$∴$反比例函数$y=\\frac{k}{x}$的图象在第二、四象限，一次函数$y=kx-k$的图象经过第一、二、四象限；<br/>观察选项C，直线经过第一、三、四象限，不符合；<br/>观察选项D，双曲线在第二、四象限，直线经过第一、二、四象限，符合．"
   },
   {
     "id": "ch27_2_2_hw_q12",
@@ -34283,11 +36458,11 @@ window.QUESTION_BANK = [
     "typeName": "解答题",
     "difficulty": "较易",
     "knowledge": "求反比例函数解析式；求一次函数解析式；一次函数与反比例函数图象综合判断；一次函数与反比例函数的交点问题",
-    "stem": "如图，在平面直角坐标系中，$A(-3,1)$，$B(a,-3)$是一次函数$y=kx+b$的图象和反比例函数$y=\\frac{m}{x}$图象的两个交点．<br/><img src=\"assets/images/ch27_2_2_hw_img6.png\" style=\"max-width:260px; display:block; margin:6px auto;\" /><br/>(1)求一次函数和反比例函数的表达式．(2)观察图象，直接写出不等式$kx+b<\\frac{m}{x}$的解集．",
+    "stem": "如图，在平面直角坐标系中，$A(-3,1)$，$B(a,-3)$是一次函数$y=kx+b$的图象和反比例函数$y=\\frac{m}{x}$图象的两个交点．<br/><img src=\"assets/images/ch27_2_2_hw_img6.png\" style=\"max-width:260px; display:block; margin:6px auto;\" /><br/>(1)求一次函数和反比例函数的表达式．(2)观察图象，直接写出不等式$kx+b \\lt \\frac{m}{x}$的解集．",
     "options": [],
-    "answer": "(1)一次函数的表达式为$y=-x-2$，反比例函数的表达式为$y=-\\frac{3}{x}$<br/>(2)$-3<x<0$或$x>1$",
+    "answer": "(1)一次函数的表达式为$y=-x-2$，反比例函数的表达式为$y=-\\frac{3}{x}$<br/>(2)$-3 \\lt x \\lt 0$或$x \\gt 1$",
     "analysis": "本题主要考查了一次函数与反比例函数综合，正确求出对应的函数关系式是解题的关键．<br/>（1）先把点$A$坐标代入反比例函数解析式求出反比例函数解析式，再把点$B$坐标代入反比例函数解析式求出点$B$的坐标，再把$A$、$B$坐标代入一次函数解析式求出一次函数解析式即可；<br/>（2）只需要找到一次函数图象在反比例函数图象下方时自变量的取值范围即可．",
-    "detail": "（1）解：由题意，将$A(-3,1)$代入$y=\\frac{m}{x}$，<br/>得：$1=\\frac{m}{-3}$，<br/>解得：$m=-3$，<br/>∴反比例函数的表达式为$y=-\\frac{3}{x}$，<br/>将$B(a,-3)$代入$y=-\\frac{3}{x}$，<br/>得：$-3=-\\frac{3}{a}$，<br/>解得：$a=1$，<br/>则$B(1,-3)$，<br/>将$A(-3,1)$，$B(1,-3)$代入$y=kx+b$，<br/>得：${1=-3k+b-3=k+b)$，<br/>解得：${k=-1b=-2)$，<br/>∴一次函数的表达式为$y=-x-2$；<br/>（2）解：由函数图象可知不等式$kx+b<\\frac{m}{x}$的解集为$-3<x<0$或$x>1$．"
+    "detail": "（1）解：由题意，将$A(-3,1)$代入$y=\\frac{m}{x}$，<br/>得：$1=\\frac{m}{-3}$，<br/>解得：$m=-3$，<br/>∴反比例函数的表达式为$y=-\\frac{3}{x}$，<br/>将$B(a,-3)$代入$y=-\\frac{3}{x}$，<br/>得：$-3=-\\frac{3}{a}$，<br/>解得：$a=1$，<br/>则$B(1,-3)$，<br/>将$A(-3,1)$，$B(1,-3)$代入$y=kx+b$，<br/>得：${1=-3k+b-3=k+b)$，<br/>解得：${k=-1b=-2)$，<br/>∴一次函数的表达式为$y=-x-2$；<br/>（2）解：由函数图象可知不等式$kx+b \\lt \\frac{m}{x}$的解集为$-3 \\lt x \\lt 0$或$x \\gt 1$．"
   },
   {
     "id": "ch27_2_2_hw_q15",
@@ -34298,11 +36473,11 @@ window.QUESTION_BANK = [
     "typeName": "解答题",
     "difficulty": "较易",
     "knowledge": "求反比例函数解析式；求反比例函数值；判断（画）反比例函数图象；一次函数与反比例函数的交点问题；画一次函数图象",
-    "stem": "下面表格信息反映的是反比例函数$y=\\frac{k}{x}$的几组自变量与对应的函数值．<br/><table class=\"w-full max-w-xl text-xs border-collapse border border-slate-300 my-2 bg-white text-center\"><tr><td class=\"border border-slate-300 px-2.5 py-1.5 text-center\">$x$</td><td class=\"border border-slate-300 px-2.5 py-1.5 text-center\">$-3$</td><td class=\"border border-slate-300 px-2.5 py-1.5 text-center\">$-2$</td><td class=\"border border-slate-300 px-2.5 py-1.5 text-center\">$-1$</td><td class=\"border border-slate-300 px-2.5 py-1.5 text-center\">1</td><td class=\"border border-slate-300 px-2.5 py-1.5 text-center\">2</td><td class=\"border border-slate-300 px-2.5 py-1.5 text-center\">3</td></tr><tr><td class=\"border border-slate-300 px-2.5 py-1.5 text-center\">$y$</td><td class=\"border border-slate-300 px-2.5 py-1.5 text-center\">2</td><td class=\"border border-slate-300 px-2.5 py-1.5 text-center\">$m$</td><td class=\"border border-slate-300 px-2.5 py-1.5 text-center\">6</td><td class=\"border border-slate-300 px-2.5 py-1.5 text-center\">$n$</td><td class=\"border border-slate-300 px-2.5 py-1.5 text-center\">$-3$</td><td class=\"border border-slate-300 px-2.5 py-1.5 text-center\">$-2$</td></tr></table><br/><img src=\"assets/images/ch27_2_2_hw_img7.png\" style=\"max-width:260px; display:block; margin:6px auto;\" /><br/>(1)直接写出各字母表示的数值：$k=$ ；$m=$ ；$n=$ ；(2)根据表中各数值和（1）中的结果，在平面直角坐标系中通过描点连线，画出反比例函数$y=\\frac{k}{x}$的图象；(3)已知直线$y=ax+b$经过$(-3,2)$与$(2,-3)$两点，在平面直角坐标系中画出该直线，观察图象，指出当$ax+b>\\frac{k}{x}$时自变量$x$的取值范围．",
+    "stem": "下面表格信息反映的是反比例函数$y=\\frac{k}{x}$的几组自变量与对应的函数值．<br/><table class=\"w-full max-w-xl text-xs border-collapse border border-slate-300 my-2 bg-white text-center\"><tr><td class=\"border border-slate-300 px-2.5 py-1.5 text-center\">$x$</td><td class=\"border border-slate-300 px-2.5 py-1.5 text-center\">$-3$</td><td class=\"border border-slate-300 px-2.5 py-1.5 text-center\">$-2$</td><td class=\"border border-slate-300 px-2.5 py-1.5 text-center\">$-1$</td><td class=\"border border-slate-300 px-2.5 py-1.5 text-center\">1</td><td class=\"border border-slate-300 px-2.5 py-1.5 text-center\">2</td><td class=\"border border-slate-300 px-2.5 py-1.5 text-center\">3</td></tr><tr><td class=\"border border-slate-300 px-2.5 py-1.5 text-center\">$y$</td><td class=\"border border-slate-300 px-2.5 py-1.5 text-center\">2</td><td class=\"border border-slate-300 px-2.5 py-1.5 text-center\">$m$</td><td class=\"border border-slate-300 px-2.5 py-1.5 text-center\">6</td><td class=\"border border-slate-300 px-2.5 py-1.5 text-center\">$n$</td><td class=\"border border-slate-300 px-2.5 py-1.5 text-center\">$-3$</td><td class=\"border border-slate-300 px-2.5 py-1.5 text-center\">$-2$</td></tr></table><br/><img src=\"assets/images/ch27_2_2_hw_img7.png\" style=\"max-width:260px; display:block; margin:6px auto;\" /><br/>(1)直接写出各字母表示的数值：$k=$ ；$m=$ ；$n=$ ；(2)根据表中各数值和（1）中的结果，在平面直角坐标系中通过描点连线，画出反比例函数$y=\\frac{k}{x}$的图象；(3)已知直线$y=ax+b$经过$(-3,2)$与$(2,-3)$两点，在平面直角坐标系中画出该直线，观察图象，指出当$ax+b \\gt \\frac{k}{x}$时自变量$x$的取值范围．",
     "options": [],
-    "answer": "(1)$-6$；$3$；$-6$<br/>(2)<br/>图象如图所示：<br/><img src=\"assets/images/ch27_2_2_hw_img8.png\" style=\"max-width:260px; display:block; margin:6px auto;\" /><br/>(3)$x<-3$或$0<x<2$",
-    "analysis": "（1）先根据表格得出反比例函数$y=\\frac{k}{x}$的图象经过点$(3,-2)$，代入求出k的值；再把点$(-2,m)$，$(1,n)$代入函数解析式求出m、n的值；<br/>（2）先描点，再连线，画出函数图象即可；<br/>（3）连接点$(-3，2)$与$(2,-3)$画出函数$y=ax+b$的图象，观察函数图象，找出一次函数在反比例函数图象上方部分所对的自变量的范围即可得出当$ax+b>\\frac{k}{x}$时自变量$x$的取值范围．",
-    "detail": "（1）解：根据表格可知：反比例函数$y=\\frac{k}{x}$的图象经过点$(3,-2)$，<br/>∴$-2=\\frac{k}{3}$，<br/>解得：$k=-6$，<br/>∴反比例函数解析式为$y=-\\frac{6}{x}$，<br/>把$(-2,m)$，$(1,n)$分别代入$y=-\\frac{6}{x}$得：<br/>$m=-\\frac{6}{-2}=3$，$n=-\\frac{6}{1}=-6$；<br/>（2）略<br/>（3）解：直线$y=ax+b$的图象，如图所示：<br/><img src=\"assets/images/ch27_2_2_hw_img9.png\" style=\"max-width:260px; display:block; margin:6px auto;\" /><br/>观察图象，当$x<-3$或$0<x<2$时，一次函数$y=ax+b$图象在反比例函数$y=\\frac{k}{x}$图象的上面，<br/>∴当$ax+b>\\frac{k}{x}$时，自变量$x$的取值范围是$x<-3$或$0<x<2$．"
+    "answer": "(1)$-6$；$3$；$-6$<br/>(2)<br/>图象如图所示：<br/><img src=\"assets/images/ch27_2_2_hw_img8.png\" style=\"max-width:260px; display:block; margin:6px auto;\" /><br/>(3)$x \\lt -3$或$0 \\lt x \\lt 2$",
+    "analysis": "（1）先根据表格得出反比例函数$y=\\frac{k}{x}$的图象经过点$(3,-2)$，代入求出k的值；再把点$(-2,m)$，$(1,n)$代入函数解析式求出m、n的值；<br/>（2）先描点，再连线，画出函数图象即可；<br/>（3）连接点$(-3，2)$与$(2,-3)$画出函数$y=ax+b$的图象，观察函数图象，找出一次函数在反比例函数图象上方部分所对的自变量的范围即可得出当$ax+b \\gt \\frac{k}{x}$时自变量$x$的取值范围．",
+    "detail": "（1）解：根据表格可知：反比例函数$y=\\frac{k}{x}$的图象经过点$(3,-2)$，<br/>∴$-2=\\frac{k}{3}$，<br/>解得：$k=-6$，<br/>∴反比例函数解析式为$y=-\\frac{6}{x}$，<br/>把$(-2,m)$，$(1,n)$分别代入$y=-\\frac{6}{x}$得：<br/>$m=-\\frac{6}{-2}=3$，$n=-\\frac{6}{1}=-6$；<br/>（2）略<br/>（3）解：直线$y=ax+b$的图象，如图所示：<br/><img src=\"assets/images/ch27_2_2_hw_img9.png\" style=\"max-width:260px; display:block; margin:6px auto;\" /><br/>观察图象，当$x \\lt -3$或$0 \\lt x \\lt 2$时，一次函数$y=ax+b$图象在反比例函数$y=\\frac{k}{x}$图象的上面，<br/>∴当$ax+b \\gt \\frac{k}{x}$时，自变量$x$的取值范围是$x \\lt -3$或$0 \\lt x \\lt 2$．"
   },
   {
     "id": "ch27_3_1_q1",
@@ -34521,11 +36696,11 @@ window.QUESTION_BANK = [
     "typeName": "解答题",
     "difficulty": "中等",
     "knowledge": "实际问题与反比例函数；求反比例函数解析式",
-    "stem": "在探究通过导体的电流与电阻的关系时，小华得出如下结论：当导体两端的电压$U$保持不变时，通过导体的电流$I$（单位：$A$）与导体的电阻$R$（单位：$Ω$）满足关系$I=\\frac{U}{R}$．实验中，当$R=10Ω$时，$I=0.6A$．<br>(1)写出$I$关于$R$的函数表达式；<br>(2)利用$I$关于$R$的函数表达式，说明当电阻增大为原来的$n$倍（$n>1$）时，通过导体的电流将如何变化．",
+    "stem": "在探究通过导体的电流与电阻的关系时，小华得出如下结论：当导体两端的电压$U$保持不变时，通过导体的电流$I$（单位：$A$）与导体的电阻$R$（单位：$Ω$）满足关系$I=\\frac{U}{R}$．实验中，当$R=10Ω$时，$I=0.6A$．<br>(1)写出$I$关于$R$的函数表达式；<br>(2)利用$I$关于$R$的函数表达式，说明当电阻增大为原来的$n$倍（$n \\gt 1$）时，通过导体的电流将如何变化．",
     "options": [],
-    "answer": "(1)$I=\\frac{6}{R} (R>0)$<br>(2)电流变为原来的$\\frac{1}{n}$",
+    "answer": "(1)$I=\\frac{6}{R} (R \\gt 0)$<br>(2)电流变为原来的$\\frac{1}{n}$",
     "analysis": "（1）将已知的$R$、$I$数值代入$I=\\frac{U}{R}$，求出常数$U$，再写出$I$关于$R$的函数表达式．<br>（2）设原来电阻为$R$，表示出原电流；再表示电阻增大为原来的$n$倍后的电阻，求出新电流，对比得出电流变化规律．",
-    "detail": "（1）解：$∵I=\\frac{U}{R}$，$R=10$，$I=0.6$，<br>$∴0.6=\\frac{U}{10}$，<br>$∴U=0.6×10=6$，<br>$∴I=\\frac{6}{R}(R>0)$；<br>（2）解：设原电阻为$R$，原电流$I_{1}=\\frac{6}{R}$．<br>电阻增大为原来的$n$倍后，新电阻$R_{2}=nR$．<br>$∴I_{2}=\\frac{6}{nR}$，<br>$∴I_{2}=\\frac{1}{n}⋅\\frac{6}{R}$，<br>$∴I_{2}=\\frac{1}{n}I_{1}$，<br>$∴$电流变为原来的$\\frac{1}{n}$．"
+    "detail": "（1）解：$∵I=\\frac{U}{R}$，$R=10$，$I=0.6$，<br>$∴0.6=\\frac{U}{10}$，<br>$∴U=0.6×10=6$，<br>$∴I=\\frac{6}{R}(R \\gt 0)$；<br>（2）解：设原电阻为$R$，原电流$I_{1}=\\frac{6}{R}$．<br>电阻增大为原来的$n$倍后，新电阻$R_{2}=nR$．<br>$∴I_{2}=\\frac{6}{nR}$，<br>$∴I_{2}=\\frac{1}{n}⋅\\frac{6}{R}$，<br>$∴I_{2}=\\frac{1}{n}I_{1}$，<br>$∴$电流变为原来的$\\frac{1}{n}$．"
   },
   {
     "id": "ch27_3_1_q12",
@@ -34541,9 +36716,9 @@ window.QUESTION_BANK = [
     "knowledge": "实际问题与反比例函数",
     "stem": "某垃圾清运公司承担了约$3000t$的建筑垃圾的运送工作．<br>(1)求每小时运送的垃圾质量$y(t)$关于完成任务所需的时间$x(h)$的函数表达式；<br>(2)该公司调来了若干辆运输车，平均每小时共运送垃圾不超过$20t$，至少需要多长时间完成运送工作？",
     "options": [],
-    "answer": "(1)$y=\\frac{3000}{x}(x>0)$<br>(2)至少需要$150h$完成运送工作",
+    "answer": "(1)$y=\\frac{3000}{x}(x \\gt 0)$<br>(2)至少需要$150h$完成运送工作",
     "analysis": "（1）由每小时运送的垃圾质量和总量列出函数关系即可；<br>（2）结合（1）的解析式结合函数性质解答.",
-    "detail": "（1）解：由题意可得：每小时运送的垃圾质量$y(t)$关于完成任务所需的时间$x(h)$的函数表达式为：$y=\\frac{3000}{x}(x>0)$；<br>（2）解：令$y=20$，则$\\frac{3000}{x}=20$，<br>解得$x=150$，<br>根据反比例函数的性质，当$x>0$时，$y$ 随$x$ 的增大而减小，<br>因此平均每小时共运送垃圾不超过$20t$时，至少需要$150h$完成运送工作."
+    "detail": "（1）解：由题意可得：每小时运送的垃圾质量$y(t)$关于完成任务所需的时间$x(h)$的函数表达式为：$y=\\frac{3000}{x}(x \\gt 0)$；<br>（2）解：令$y=20$，则$\\frac{3000}{x}=20$，<br>解得$x=150$，<br>根据反比例函数的性质，当$x \\gt 0$时，$y$ 随$x$ 的增大而减小，<br>因此平均每小时共运送垃圾不超过$20t$时，至少需要$150h$完成运送工作."
   },
   {
     "id": "ch27_3_1_q13",
@@ -34559,9 +36734,9 @@ window.QUESTION_BANK = [
     "knowledge": "实际问题与反比例函数；有理数乘法的实际应用",
     "stem": "已知一张桌面所能承受的最大压强$P$为$10^{4}Pa$（$1Pa=1$牛/平方米），有一个长方体铁块的长、宽、高分别为$50cm$，$20cm$，$10cm$．小明和小聪在讨论能否把这个铁块放在这张桌面上．（铁的密度为$7.8g/cm^{3}$，$g$取$10N/kg$）小明：无论怎么摆放，应该都没问题．小聪：不一定，根据所学知识，桌面所受的压强与压力、受力面积小明：哦，铁块对桌面的压力是不变的……<br><img src=\"assets/images/ch27_3_1_img5.jpeg\" style=\"max-width:280px; display:block; margin:8px auto;\" /><br>(1)求出该铁块对桌面的压力．<br>(2)请用反比例函数的性质，说明能否把铁块放在这张桌面上．",
     "options": [],
-    "answer": "(1)$780$牛<br>(2)能放在桌面上，理由如下：<br>由（1）知，铁块对桌面的压力$F=780$牛，<br>$∵P=\\frac{F}{S}=\\frac{780}{S}$，<br>$∴$压强$P$是关于受力面积$S$的反比例函数，<br>$∴$在每一个象限内，$P$随$S$的增大而减小，<br>当$P$取最大压强$10^{4} Pa$时，受力面积$S$最小取到$780÷10000=0.078$平方米，<br>$∴$当受力面积为$50×20=1000$平方厘米$=0.1$平方米$>0.078$平方米，<br>$∴$这样放置能放在桌面上．",
+    "answer": "(1)$780$牛<br>(2)能放在桌面上，理由如下：<br>由（1）知，铁块对桌面的压力$F=780$牛，<br>$∵P=\\frac{F}{S}=\\frac{780}{S}$，<br>$∴$压强$P$是关于受力面积$S$的反比例函数，<br>$∴$在每一个象限内，$P$随$S$的增大而减小，<br>当$P$取最大压强$10^{4} Pa$时，受力面积$S$最小取到$780÷10000=0.078$平方米，<br>$∴$当受力面积为$50×20=1000$平方厘米$=0.1$平方米$ \\gt 0.078$平方米，<br>$∴$这样放置能放在桌面上．",
     "analysis": "（1）根据密度公式求出铁块的质量，再求出铁块的重力，利用“水平面上物体对接触面的压力等于自身重力”求解即可；<br>（2）由于压力$F$固定时，则压强$P$与受力面积$S$满足反比例函数关系$P=\\frac{F}{S}$，利用桌面所能承受的最大压强，求出桌面能承受的最小受力面积，计算铁块摆放的受力面积，与桌面能承受的最小受力面积比较求解即可．",
-    "detail": "(1)$780$牛<br>(2)能放在桌面上，理由如下：<br>由（1）知，铁块对桌面的压力$F=780$牛，<br>$∵P=\\frac{F}{S}=\\frac{780}{S}$，<br>$∴$压强$P$是关于受力面积$S$的反比例函数，<br>$∴$在每一个象限内，$P$随$S$的增大而减小，<br>当$P$取最大压强$10^{4} Pa$时，受力面积$S$最小取到$780÷10000=0.078$平方米，<br>$∴$当受力面积为$50×20=1000$平方厘米$=0.1$平方米$>0.078$平方米，<br>$∴$这样放置能放在桌面上．<br>（1）解：根据题意得：铁块的质量为$7.8×50×20×10=78000$克$=78$千克，<br>$∴$铁块的重力为$G=78kg×10N/kg=780$牛，<br>$∴$该铁块对桌面的压力$F=G=780$牛；<br>（2）略"
+    "detail": "(1)$780$牛<br>(2)能放在桌面上，理由如下：<br>由（1）知，铁块对桌面的压力$F=780$牛，<br>$∵P=\\frac{F}{S}=\\frac{780}{S}$，<br>$∴$压强$P$是关于受力面积$S$的反比例函数，<br>$∴$在每一个象限内，$P$随$S$的增大而减小，<br>当$P$取最大压强$10^{4} Pa$时，受力面积$S$最小取到$780÷10000=0.078$平方米，<br>$∴$当受力面积为$50×20=1000$平方厘米$=0.1$平方米$ \\gt 0.078$平方米，<br>$∴$这样放置能放在桌面上．<br>（1）解：根据题意得：铁块的质量为$7.8×50×20×10=78000$克$=78$千克，<br>$∴$铁块的重力为$G=78kg×10N/kg=780$牛，<br>$∴$该铁块对桌面的压力$F=G=780$牛；<br>（2）略"
   },
   {
     "id": "ch27_3_1_q14",
@@ -34577,9 +36752,9 @@ window.QUESTION_BANK = [
     "knowledge": "实际问题与反比例函数；求反比例函数解析式",
     "stem": "某中学物理兴趣小组在探究液体的压强与容器底面积的关系时，把一定质量的水放入不同底面积的均匀柱形容器中．如图，在实验中发现，水对容器底部的压强$P$（单位：$Pa$）与容器底面积$S$（单位：$cm^{2}$）成反比例函数关系．<br><img src=\"assets/images/ch27_3_1_img6.png\" style=\"max-width:280px; display:block; margin:8px auto;\" /><br>(1)把一定质量的水放入底面积为$40cm^{2}$的容器时，压强是$1500Pa$，求压强$P$关于底面积$S$的函数关系式；<br>(2)在（1）的条件下，实验小组计划更换不同规格的同类型容器，底面积$S$的调节取值范围是$25≤S≤50$，请结合实验数据计算此时水对容器底部的压强$P$的取值范围．",
     "options": [],
-    "answer": "(1)$P=\\frac{60000}{S}(S>0)$<br>(2)$1200≤P≤2400$",
+    "answer": "(1)$P=\\frac{60000}{S}(S \\gt 0)$<br>(2)$1200≤P≤2400$",
     "analysis": "（1）由待定系数法进行求解即可；<br>（2）由反比例函数的性质，算出临界值，即可得出对应的取值范围；",
-    "detail": "（1）解：由题可知，设$P=\\frac{k}{S}$（$k≠0$），<br>当$S=40$时，$P=1500$，代入得$1500=\\frac{k}{40}$，<br>∴$k=60000$，<br>∴$P=\\frac{60000}{S}(S>0)$．<br>（2）解：已知$P=\\frac{60000}{S}$且$25≤S≤50$，<br>∵$k=60000>0$，<br>∴在第一象限内，$P$随$S$的增大而减小，<br>当$S=25$时，$P=2400$；<br>当$S=50$时，$P=1200$；<br>∴$1200≤P≤2400$．"
+    "detail": "（1）解：由题可知，设$P=\\frac{k}{S}$（$k≠0$），<br>当$S=40$时，$P=1500$，代入得$1500=\\frac{k}{40}$，<br>∴$k=60000$，<br>∴$P=\\frac{60000}{S}(S \\gt 0)$．<br>（2）解：已知$P=\\frac{60000}{S}$且$25≤S≤50$，<br>∵$k=60000 \\gt 0$，<br>∴在第一象限内，$P$随$S$的增大而减小，<br>当$S=25$时，$P=2400$；<br>当$S=50$时，$P=1200$；<br>∴$1200≤P≤2400$．"
   },
   {
     "id": "ch27_3_1_q15",
@@ -34597,7 +36772,7 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "(1)$m=1.6,n=1.4$;<br>(2)$0.7≤ρ≤2.8$",
     "analysis": "（1）利用待定系数法求出函数解析式，再利用求函数值的方法解答即可；<br>（2）根据反比例函数的增减性进行解答即可．",
-    "detail": "（1）液体密度$ρ$（单位：$g/cm^{3}$）是浸没深度$h$（单位：$cm$）的反比例函数，<br>$∴$设反比例函数解析式为$ρ=\\frac{k}{h}$，<br>把$h=14$ ，$ρ=1$代入得$k=14$，<br>$∴$$ρ=\\frac{14}{h}$，<br>当$h=8.5$ 时，$m=\\frac{14}{8.5}=1.6$ ；<br>当$h=10$时，$n=\\frac{14}{10}=1.4$ ；<br>（2）当$h=5$时，$ρ=\\frac{14}{5}=2.8$ ，<br>当$h=20$时，$ρ=\\frac{14}{20}=0.7$ ，<br>$∵$$k=14>0$，<br>$∴$当$h>0$时，$ρ$随着$h$的增大而减小，<br>$∴$$0.7≤ρ≤2.8$ ．"
+    "detail": "（1）液体密度$ρ$（单位：$g/cm^{3}$）是浸没深度$h$（单位：$cm$）的反比例函数，<br>$∴$设反比例函数解析式为$ρ=\\frac{k}{h}$，<br>把$h=14$ ，$ρ=1$代入得$k=14$，<br>$∴$$ρ=\\frac{14}{h}$，<br>当$h=8.5$ 时，$m=\\frac{14}{8.5}=1.6$ ；<br>当$h=10$时，$n=\\frac{14}{10}=1.4$ ；<br>（2）当$h=5$时，$ρ=\\frac{14}{5}=2.8$ ，<br>当$h=20$时，$ρ=\\frac{14}{20}=0.7$ ，<br>$∵$$k=14 \\gt 0$，<br>$∴$当$h \\gt 0$时，$ρ$随着$h$的增大而减小，<br>$∴$$0.7≤ρ≤2.8$ ．"
   },
   {
     "id": "ch27_3_2_q1",
@@ -34620,7 +36795,7 @@ window.QUESTION_BANK = [
     ],
     "answer": "C",
     "analysis": "本题考查了反比例函数的实际应用，解题的关键在于熟练掌握反比例函数的关系式和图像性质以及路程公式．<br>根据反比例函数的图像性质和路程与速度时间之间的关系，分别求出最高车速$120 km/h$的时间以及最低车速$60 km/h$的时间，即可求出答案．",
-    "detail": "解：由题图得，限速区间段的总路程为$100×0.5=50km$，<br>∵最高车速为$120 km/h$，<br>∴在最高车速下的行驶时间$t=\\frac{50}{120}=\\frac{5}{12}h$，<br>同理可得，在最低车速$60 km/h$下的行驶时间为$t=\\frac{50}{60}=\\frac{5}{6}h$，<br>∴通过这段限速区间的行驶时间应该在$\\frac{5}{12}∼\\frac{5}{6}$之间．<br>$∵\\frac{5}{12}<0.5<\\frac{5}{6}$，<br>∴选项C符合题意．<br>故选：C．"
+    "detail": "解：由题图得，限速区间段的总路程为$100×0.5=50km$，<br>∵最高车速为$120 km/h$，<br>∴在最高车速下的行驶时间$t=\\frac{50}{120}=\\frac{5}{12}h$，<br>同理可得，在最低车速$60 km/h$下的行驶时间为$t=\\frac{50}{60}=\\frac{5}{6}h$，<br>∴通过这段限速区间的行驶时间应该在$\\frac{5}{12}∼\\frac{5}{6}$之间．<br>$∵\\frac{5}{12} \\lt 0.5 \\lt \\frac{5}{6}$，<br>∴选项C符合题意．<br>故选：C．"
   },
   {
     "id": "ch27_3_2_q2",
@@ -34661,12 +36836,12 @@ window.QUESTION_BANK = [
     "options": [
       "A．当$I=0.2$时，$R=900$",
       "B．$I$与$R$之间的函数表达式是$I=\\frac{220}{R}$",
-      "C．当$0<R<800$时，$I>0.25$",
+      "C．当$0 \\lt R \\lt 800$时，$I \\gt 0.25$",
       "D．当电压不变时，$R$与$I$成正比"
     ],
     "answer": "C",
     "analysis": "本题考查反比例函数的应用，解题的关键是求出反比例函数的解析式．据此依次对各选项进行分析即可作出判断．",
-    "detail": "解：设电流$I(A)$与总电阻$R(Ω)$之间的函数关系为$I=\\frac{k}{R}(k>0)$，<br>由题意可得：$k=0.4×500=200$，<br>∴$I=\\frac{200}{R}$，<br>A．当$I=0.2$时，$R=1000$，故此选项不符合题意；<br>B．$I$与$R$之间的函数表达式是$I=\\frac{200}{R}$，故此选项不符合题意；<br>C．当$R=800$时，$I=0.25$；<br>∴当$0<R<800$时，$I>0.25$，故此选项符合题意；<br>D．∵$I=\\frac{200}{R}$，<br>∴$RI=200$，<br>∴当电压不变时，$R$与$I$成反比，故此选项不符合题意．<br>故选：C．"
+    "detail": "解：设电流$I(A)$与总电阻$R(Ω)$之间的函数关系为$I=\\frac{k}{R}(k \\gt 0)$，<br>由题意可得：$k=0.4×500=200$，<br>∴$I=\\frac{200}{R}$，<br>A．当$I=0.2$时，$R=1000$，故此选项不符合题意；<br>B．$I$与$R$之间的函数表达式是$I=\\frac{200}{R}$，故此选项不符合题意；<br>C．当$R=800$时，$I=0.25$；<br>∴当$0 \\lt R \\lt 800$时，$I \\gt 0.25$，故此选项符合题意；<br>D．∵$I=\\frac{200}{R}$，<br>∴$RI=200$，<br>∴当电压不变时，$R$与$I$成反比，故此选项不符合题意．<br>故选：C．"
   },
   {
     "id": "ch27_3_2_q4",
@@ -34682,14 +36857,14 @@ window.QUESTION_BANK = [
     "knowledge": "实际问题与反比例函数；求反比例函数解析式；求反比例函数值；由反比例函数值求自变量；判断反比例函数的增减性",
     "stem": "某个亮度可调节的台灯，其灯光亮度的改变，通过调节电阻控制电流的变化来实现．如图是该台灯的电流$I(A)$与电阻$R(Ω)$的函数关系图象，该图象经过点$P(880,0.25)$．根据图象可知，下列说法不正确的是（ ）<br><img src=\"assets/images/ch27_3_2_img4.png\" style=\"max-width:280px; display:block; margin:8px auto;\" />",
     "options": [
-      "A．$I$与$R$的函数关系式是$I=\\frac{220}{R}(R>0)$",
+      "A．$I$与$R$的函数关系式是$I=\\frac{220}{R}(R \\gt 0)$",
       "B．当$I=0.22A$时，$R=1000Ω$",
-      "C．当$R>1000Ω$时，$I>0.22A$",
-      "D．当$880Ω<R<1000Ω$时，$I$的取值范围是$0.22A<I<0.25A$"
+      "C．当$R \\gt 1000Ω$时，$I \\gt 0.22A$",
+      "D．当$880Ω \\lt R \\lt 1000Ω$时，$I$的取值范围是$0.22A \\lt I \\lt 0.25A$"
     ],
     "answer": "C",
     "analysis": "先求出反比例函数的解析式，再根据反比例函数的性质逐项判断即可．",
-    "detail": "解：A、设$I$与$R$的函数关系式是$I=\\frac{U}{R}(R>0)$，<br>∵图象经过点$P(880,0.25)$，<br>∴$0.25=\\frac{U}{880}$，解得$U=220$，<br>∴$I$与$R$的函数关系式是$I=\\frac{220}{R}(R>0)$，故A正确，不符合题意；<br>B、当$I=0.22A$时，$0.22=\\frac{220}{R}$，解得$R=1000$，故B正确，不符合题意；<br>C、 ∵反比例函数图象在第一象限，$I$随$R$的增大而减小，<br>∴当$R>1000$时，$I<0.22$，故C错误，符合题意；<br>D、当$R=880$时，$I=0.25$，<br>当$R=1000$时，$I=0.22$，<br>∴当$880<R<1000$时，$I$的取值范围是$0.22A<I<0.25A$，故D正确，不符合题意．"
+    "detail": "解：A、设$I$与$R$的函数关系式是$I=\\frac{U}{R}(R \\gt 0)$，<br>∵图象经过点$P(880,0.25)$，<br>∴$0.25=\\frac{U}{880}$，解得$U=220$，<br>∴$I$与$R$的函数关系式是$I=\\frac{220}{R}(R \\gt 0)$，故A正确，不符合题意；<br>B、当$I=0.22A$时，$0.22=\\frac{220}{R}$，解得$R=1000$，故B正确，不符合题意；<br>C、 ∵反比例函数图象在第一象限，$I$随$R$的增大而减小，<br>∴当$R \\gt 1000$时，$I \\lt 0.22$，故C错误，符合题意；<br>D、当$R=880$时，$I=0.25$，<br>当$R=1000$时，$I=0.22$，<br>∴当$880 \\lt R \\lt 1000$时，$I$的取值范围是$0.22A \\lt I \\lt 0.25A$，故D正确，不符合题意．"
   },
   {
     "id": "ch27_3_2_q5",
@@ -34729,8 +36904,8 @@ window.QUESTION_BANK = [
     "stem": "已知蓄电池的电压$U$为定值，使用蓄电池时，电流$I$（单位：$A$）与电阻$R$（单位：$Ω$）是反比例函数关系，它的图象如图所示．当$I=5A$时，电阻$R$的值为______$Ω$．<br><img src=\"assets/images/ch27_3_2_img6.png\" style=\"max-width:280px; display:block; margin:8px auto;\" />",
     "options": [],
     "answer": "$7.2$",
-    "analysis": "先设反比例函数解析式$I=\\frac{k}{R}(k≠0,R>0)$，将点$(9,4)$代入求$k$值和反比例函数的解析式，最后代入$I=5 A$，即可求解电阻$R$的值．",
-    "detail": "∵电流$I$与电阻$R$是反比例函数关系，<br>∴设$I=\\frac{k}{R}(k≠0,R>0)$，<br>∵由图象可知，点$(9,4)$在反比例函数$I=\\frac{k}{R}$上，<br>∴$k=36$，即$I=\\frac{36}{R}$，<br>∵$I=5 A$，<br>∴$R=\\frac{36}{5}=7.2(Ω)$．"
+    "analysis": "先设反比例函数解析式$I=\\frac{k}{R}(k≠0,R \\gt 0)$，将点$(9,4)$代入求$k$值和反比例函数的解析式，最后代入$I=5 A$，即可求解电阻$R$的值．",
+    "detail": "∵电流$I$与电阻$R$是反比例函数关系，<br>∴设$I=\\frac{k}{R}(k≠0,R \\gt 0)$，<br>∵由图象可知，点$(9,4)$在反比例函数$I=\\frac{k}{R}$上，<br>∴$k=36$，即$I=\\frac{36}{R}$，<br>∵$I=5 A$，<br>∴$R=\\frac{36}{5}=7.2(Ω)$．"
   },
   {
     "id": "ch27_3_2_q7",
@@ -34748,7 +36923,7 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "丙",
     "analysis": "发芽数量$=$实验数量$x×$发芽率$y$，由反比例函数的性质并结合图象分析即可得出结果．",
-    "detail": "解：发芽数量$=$实验数量$x×$发芽率$y$，<br>由图象可得，乙、丁在同一反比例函数图象上，根据反比例函数$y=\\frac{k}{x}(k≠0)$的性质可得$xy=k$为定值，故乙、丁的发芽数量相等，<br>甲点在反比例函数图象的下方，丙点在反比例函数图象的上方，则$x_{\\text{丙}}y_{\\text{丙}}>x_{\\text{乙}}y_{\\text{乙}}=x_{\\text{丁}}y_{\\text{丁}}>x_{\\text{甲}}y_{\\text{甲}}$，<br>∴四类种子中，发芽数量最多的是丙种子．"
+    "detail": "解：发芽数量$=$实验数量$x×$发芽率$y$，<br>由图象可得，乙、丁在同一反比例函数图象上，根据反比例函数$y=\\frac{k}{x}(k≠0)$的性质可得$xy=k$为定值，故乙、丁的发芽数量相等，<br>甲点在反比例函数图象的下方，丙点在反比例函数图象的上方，则$x_{\\text{丙}}y_{\\text{丙}} \\gt x_{\\text{乙}}y_{\\text{乙}}=x_{\\text{丁}}y_{\\text{丁}} \\gt x_{\\text{甲}}y_{\\text{甲}}$，<br>∴四类种子中，发芽数量最多的是丙种子．"
   },
   {
     "id": "ch27_3_2_q8",
@@ -34852,11 +37027,11 @@ window.QUESTION_BANK = [
     "typeName": "解答题",
     "difficulty": "中等",
     "knowledge": "实际问题与反比例函数；求反比例函数解析式；求反比例函数值；由反比例函数值求自变量",
-    "stem": "为配合“$AI$科普进校园”活动，某科技公司推出一款$AI$编程教具套装．销售数据显示，这款教具的日销售量y（单位：套）与每套售价x（单位：元）成反比例函数关系，函数图像经过点$P(12,10)$．<br><img src=\"assets/images/ch27_3_2_img13.png\" style=\"max-width:280px; display:block; margin:8px auto;\" /><br>(1)求y与x之间的函数表达式（不必写x的取值范围）<br>(2)当每套售价为24元时，对应的日销售量为______套；<br>(3)若$10<y<20$，求x的取值范围．",
+    "stem": "为配合“$AI$科普进校园”活动，某科技公司推出一款$AI$编程教具套装．销售数据显示，这款教具的日销售量y（单位：套）与每套售价x（单位：元）成反比例函数关系，函数图像经过点$P(12,10)$．<br><img src=\"assets/images/ch27_3_2_img13.png\" style=\"max-width:280px; display:block; margin:8px auto;\" /><br>(1)求y与x之间的函数表达式（不必写x的取值范围）<br>(2)当每套售价为24元时，对应的日销售量为______套；<br>(3)若$10 \\lt y \\lt 20$，求x的取值范围．",
     "options": [],
-    "answer": "(1)$y=\\frac{120}{x}$；<br>(2)5；<br>(3)$6<x<12$",
-    "analysis": "($1$)设反比例函数的解析式为$y=\\frac{k}{x}(k≠0)$，将点$P(12,10)$代入解析式求解，即可解题；<br>($2$)将$x=24$代入($1$)中求出的解析式求解，即可解题，<br>($3$)把$y=10、y=20$代入($1$)中求出的解析$y=\\frac{120}{x}$，再根据反比例函数的性质$k=120>0$在第一象限，$y$随$x$的增大而减小，即可解答．",
-    "detail": "（1）解：∵$y$与$x$成反比例函数关系，<br>∴设$y$与$x$之间的函数表达式为$y=\\frac{k}{x}$，<br>∵点$P(12,10)$在反比例函数图象上，<br>∴$10=\\frac{k}{12}$，解得$k=120$，<br>∴$y$与$x$之间的函数表达式为$y=\\frac{120}{x}$；<br>（2）解：将$x=24$代入($1$)中求出的解析式:<br>$y=\\frac{120}{24}=5$，<br>∴当日销售单价为$24$元时，对应的日销售量为$5$套；<br>（3）解：当$y=10$时，$10=\\frac{120}{x}$，解得$x=12$，<br>当$y=20$时，$20=\\frac{120}{x}$，解得$x=6$，<br>∵$k=120>0$，<br>∴在第一象限，$y$随$x$的增大而减小，<br>∴$x$的取值范围为$6<x<12$"
+    "answer": "(1)$y=\\frac{120}{x}$；<br>(2)5；<br>(3)$6 \\lt x \\lt 12$",
+    "analysis": "($1$)设反比例函数的解析式为$y=\\frac{k}{x}(k≠0)$，将点$P(12,10)$代入解析式求解，即可解题；<br>($2$)将$x=24$代入($1$)中求出的解析式求解，即可解题，<br>($3$)把$y=10、y=20$代入($1$)中求出的解析$y=\\frac{120}{x}$，再根据反比例函数的性质$k=120 \\gt 0$在第一象限，$y$随$x$的增大而减小，即可解答．",
+    "detail": "（1）解：∵$y$与$x$成反比例函数关系，<br>∴设$y$与$x$之间的函数表达式为$y=\\frac{k}{x}$，<br>∵点$P(12,10)$在反比例函数图象上，<br>∴$10=\\frac{k}{12}$，解得$k=120$，<br>∴$y$与$x$之间的函数表达式为$y=\\frac{120}{x}$；<br>（2）解：将$x=24$代入($1$)中求出的解析式:<br>$y=\\frac{120}{24}=5$，<br>∴当日销售单价为$24$元时，对应的日销售量为$5$套；<br>（3）解：当$y=10$时，$10=\\frac{120}{x}$，解得$x=12$，<br>当$y=20$时，$20=\\frac{120}{x}$，解得$x=6$，<br>∵$k=120 \\gt 0$，<br>∴在第一象限，$y$随$x$的增大而减小，<br>∴$x$的取值范围为$6 \\lt x \\lt 12$"
   },
   {
     "id": "ch27_3_2_q14",
@@ -34870,11 +37045,11 @@ window.QUESTION_BANK = [
     "typeName": "解答题",
     "difficulty": "中等",
     "knowledge": "实际问题与反比例函数；求反比例函数解析式；求反比例函数值",
-    "stem": "1896年，挪威生理学家古德贝发现，每个人有一条腿迈出的步子比另一条腿迈出的步子长，这就导致人在蒙上眼睛行走时，虽然主观上沿直线前进，但实际上走的是一个大圆圈！这就是有趣的“瞎转圈”现象．某学校数学兴趣小组通过实验发现，人蒙上眼睛走出的大圆圈的半径$y$米与其两腿迈出的步长之差$x$厘米（$x>0$）拟合后的函数为反比例函数，其图象如图所示．请根据图象中的信息解决下列问题：<br><img src=\"assets/images/ch27_3_2_img14.png\" style=\"max-width:280px; display:block; margin:8px auto;\" /><br>(1)求$y$与$x$之间的函数表达式；<br>(2)若小昆两腿迈出的步长之差为0.5厘米，则他蒙上眼睛走的大圆圈的半径为多少米？<br>(3)若小明蒙上眼睛走的大圆圈的半径不小于70米，求其两腿迈出的步长之差$x$的取值范围．",
+    "stem": "1896年，挪威生理学家古德贝发现，每个人有一条腿迈出的步子比另一条腿迈出的步子长，这就导致人在蒙上眼睛行走时，虽然主观上沿直线前进，但实际上走的是一个大圆圈！这就是有趣的“瞎转圈”现象．某学校数学兴趣小组通过实验发现，人蒙上眼睛走出的大圆圈的半径$y$米与其两腿迈出的步长之差$x$厘米（$x \\gt 0$）拟合后的函数为反比例函数，其图象如图所示．请根据图象中的信息解决下列问题：<br><img src=\"assets/images/ch27_3_2_img14.png\" style=\"max-width:280px; display:block; margin:8px auto;\" /><br>(1)求$y$与$x$之间的函数表达式；<br>(2)若小昆两腿迈出的步长之差为0.5厘米，则他蒙上眼睛走的大圆圈的半径为多少米？<br>(3)若小明蒙上眼睛走的大圆圈的半径不小于70米，求其两腿迈出的步长之差$x$的取值范围．",
     "options": [],
-    "answer": "(1)$y=\\frac{14}{x}$<br>(2)当某人迈出的步长差为0.5厘米时，他蒙上眼睛走出的大圆圈的半径为28米<br>(3)某人蒙上眼睛走出的大圆圈的半径不小于70米，则其两腿迈出的步长之差$0<x≤0.2$",
+    "answer": "(1)$y=\\frac{14}{x}$<br>(2)当某人迈出的步长差为0.5厘米时，他蒙上眼睛走出的大圆圈的半径为28米<br>(3)某人蒙上眼睛走出的大圆圈的半径不小于70米，则其两腿迈出的步长之差$0 \\lt x≤0.2$",
     "analysis": "（1）设反比例函数解析式为$y=\\frac{k}{x}$，将图象中的点代入解析式求解，即可解题；<br>（2）将$x=0.5$代入（1）中解析式求解，即可解题；<br>（3）根据题意建立不等式求解，即可解题．",
-    "detail": "（1）解：设反比例函数解析式为$y=\\frac{k}{x}$，<br>由图象可知，反比例函数过点$(2,7)$，<br>$∴7=\\frac{k}{2}$，<br>$∴k=14$，<br>$∴y$与$x$之间的函数表达式为$y=\\frac{14}{x}$；<br>（2）解：当$x=0.5$时，$y=\\frac{14}{0.5}=28$，<br>∴当某人迈出的步长差为0.5厘米时，他蒙上眼睛走出的大圆圈的半径为28米；<br>（3）解：当$y≥70$时，即$\\frac{14}{x}≥70$，<br>$∴x≤0.2$，<br>$∵x>0$<br>∴某人蒙上眼睛走出的大圆圈的半径不小于70米，则其两腿迈出的步长之差$0<x≤0.2$．"
+    "detail": "（1）解：设反比例函数解析式为$y=\\frac{k}{x}$，<br>由图象可知，反比例函数过点$(2,7)$，<br>$∴7=\\frac{k}{2}$，<br>$∴k=14$，<br>$∴y$与$x$之间的函数表达式为$y=\\frac{14}{x}$；<br>（2）解：当$x=0.5$时，$y=\\frac{14}{0.5}=28$，<br>∴当某人迈出的步长差为0.5厘米时，他蒙上眼睛走出的大圆圈的半径为28米；<br>（3）解：当$y≥70$时，即$\\frac{14}{x}≥70$，<br>$∴x≤0.2$，<br>$∵x \\gt 0$<br>∴某人蒙上眼睛走出的大圆圈的半径不小于70米，则其两腿迈出的步长之差$0 \\lt x≤0.2$．"
   },
   {
     "id": "ch27_3_2_q15",
@@ -34929,7 +37104,7 @@ window.QUESTION_BANK = [
     "typeName": "单选题",
     "difficulty": "中等",
     "knowledge": "实际问题与反比例函数",
-    "stem": "2025年“体重管理年”正式启动，其中所涉及的体质指数“$BMI$”是衡量人体胖瘦程度的标准，其计算公式为$BMI=\\frac{m}{h^{2}}$（$m$表示体重，单位：公斤；$h$表示身高，单位：米）成年人$BMI$数值标准见下表：<br><table class=\"w-full max-w-xl text-xs border-collapse border border-slate-300 my-2 bg-white text-center\"><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">$BMI$范围</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$BMI<16$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$16≤BMI<18.5$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$18.5≤BMI<24$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$24≤BMI<28$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$BMI≥28$</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">胖瘦程度</td><td class=\"border border-slate-300 px-2 py-1 text-center\">瘦弱</td><td class=\"border border-slate-300 px-2 py-1 text-center\">偏瘦</td><td class=\"border border-slate-300 px-2 py-1 text-center\">正常</td><td class=\"border border-slate-300 px-2 py-1 text-center\">偏胖</td><td class=\"border border-slate-300 px-2 py-1 text-center\">肥胖</td></tr></table><br>已知某位成年人身高为1.6米，以下说法正确的是（）",
+    "stem": "2025年“体重管理年”正式启动，其中所涉及的体质指数“$BMI$”是衡量人体胖瘦程度的标准，其计算公式为$BMI=\\frac{m}{h^{2}}$（$m$表示体重，单位：公斤；$h$表示身高，单位：米）成年人$BMI$数值标准见下表：<br><table class=\"w-full max-w-xl text-xs border-collapse border border-slate-300 my-2 bg-white text-center\"><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">$BMI$范围</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$BMI \\lt 16$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$16≤BMI \\lt 18.5$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$18.5≤BMI \\lt 24$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$24≤BMI \\lt 28$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$BMI≥28$</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">胖瘦程度</td><td class=\"border border-slate-300 px-2 py-1 text-center\">瘦弱</td><td class=\"border border-slate-300 px-2 py-1 text-center\">偏瘦</td><td class=\"border border-slate-300 px-2 py-1 text-center\">正常</td><td class=\"border border-slate-300 px-2 py-1 text-center\">偏胖</td><td class=\"border border-slate-300 px-2 py-1 text-center\">肥胖</td></tr></table><br>已知某位成年人身高为1.6米，以下说法正确的是（）",
     "options": [
       "A．$BMI$数值随着体重$m$的值的增加而减少",
       "B．$BMI$数值与体重$m$的值之间成正比例关系",
@@ -34952,16 +37127,16 @@ window.QUESTION_BANK = [
     "typeName": "单选题",
     "difficulty": "中等",
     "knowledge": "实际问题与反比例函数",
-    "stem": "气球内充满了一定质量的气体，当温度不变时，气球内气体的气压$p$（单位：千帕）随体积V（单位：立方米）的变化情况如下表所示．那么在这个温度下，当$p>3$时，V的取值范围是（ ）<br><table class=\"w-full max-w-xl text-xs border-collapse border border-slate-300 my-2 bg-white text-center\"><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">V</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td><td class=\"border border-slate-300 px-2 py-1 text-center\">64</td><td class=\"border border-slate-300 px-2 py-1 text-center\">48</td><td class=\"border border-slate-300 px-2 py-1 text-center\">38.4</td><td class=\"border border-slate-300 px-2 py-1 text-center\">32</td><td class=\"border border-slate-300 px-2 py-1 text-center\">24</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">p</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td><td class=\"border border-slate-300 px-2 py-1 text-center\">1.5</td><td class=\"border border-slate-300 px-2 py-1 text-center\">2</td><td class=\"border border-slate-300 px-2 py-1 text-center\">2.5</td><td class=\"border border-slate-300 px-2 py-1 text-center\">3</td><td class=\"border border-slate-300 px-2 py-1 text-center\">4</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td></tr></table>",
+    "stem": "气球内充满了一定质量的气体，当温度不变时，气球内气体的气压$p$（单位：千帕）随体积V（单位：立方米）的变化情况如下表所示．那么在这个温度下，当$p \\gt 3$时，V的取值范围是（ ）<br><table class=\"w-full max-w-xl text-xs border-collapse border border-slate-300 my-2 bg-white text-center\"><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">V</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td><td class=\"border border-slate-300 px-2 py-1 text-center\">64</td><td class=\"border border-slate-300 px-2 py-1 text-center\">48</td><td class=\"border border-slate-300 px-2 py-1 text-center\">38.4</td><td class=\"border border-slate-300 px-2 py-1 text-center\">32</td><td class=\"border border-slate-300 px-2 py-1 text-center\">24</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">p</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td><td class=\"border border-slate-300 px-2 py-1 text-center\">1.5</td><td class=\"border border-slate-300 px-2 py-1 text-center\">2</td><td class=\"border border-slate-300 px-2 py-1 text-center\">2.5</td><td class=\"border border-slate-300 px-2 py-1 text-center\">3</td><td class=\"border border-slate-300 px-2 py-1 text-center\">4</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td></tr></table>",
     "options": [
-      "A．$V>32$",
-      "B．$V<32$",
-      "C．$0<V<32$",
-      "D．$V<32$且$V≠0$"
+      "A．$V \\gt 32$",
+      "B．$V \\lt 32$",
+      "C．$0 \\lt V \\lt 32$",
+      "D．$V \\lt 32$且$V≠0$"
     ],
     "answer": "C",
     "analysis": "本题考查了反比例函数的应用，求反比例函数解析式，由表中数据判断出$p$与$V$的函数关系是解题的关键．根据所给出的数据可得$p$是$V$的反比例函数，根据反比例函数的性质即可求解．",
-    "detail": "解：∵$64×1.5=48×2=38.4×2.5=32×3=24×4$，<br>∴$pV=96$，<br>∴$V=\\frac{96}{p}$，<br>∵$k=96>0$，<br>∴在第一象限内，$V$随着p的增大而减小，<br>而$p=3$时，$V=32$，<br>∴$p>3$时，$0<V<32$，<br>故选：C．"
+    "detail": "解：∵$64×1.5=48×2=38.4×2.5=32×3=24×4$，<br>∴$pV=96$，<br>∴$V=\\frac{96}{p}$，<br>∵$k=96 \\gt 0$，<br>∴在第一象限内，$V$随着p的增大而减小，<br>而$p=3$时，$V=32$，<br>∴$p \\gt 3$时，$0 \\lt V \\lt 32$，<br>故选：C．"
   },
   {
     "id": "ch27_3_3_q4",
@@ -35093,7 +37268,7 @@ window.QUESTION_BANK = [
     "typeName": "填空题",
     "difficulty": "较易",
     "knowledge": "实际问题与反比例函数",
-    "stem": "密度计是一种重要的密度分析仪表，用于连续测量液体的密度，进而可以计算液体浓度、固液比等工艺参数，广泛应用于化工生产装置中，其检测精度和稳定性直接影响到产品质量．如图，密度计悬浮在不同的液体中时，浸在液体中的高度$h(cm)$是液体的密度$ρ(g/cm^{3})$的函数，其函数关系的部分对应值如下表$(ρ>0)$：<br><img src=\"assets/images/ch27_3_3_img3.png\" style=\"max-width:280px; display:block; margin:8px auto;\" /><br><table class=\"w-full max-w-xl text-xs border-collapse border border-slate-300 my-2 bg-white text-center\"><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">密度$ρ(g/cm^{3})$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">1</td><td class=\"border border-slate-300 px-2 py-1 text-center\">2</td><td class=\"border border-slate-300 px-2 py-1 text-center\">3</td><td class=\"border border-slate-300 px-2 py-1 text-center\">4</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">高度$h(cm)$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">18</td><td class=\"border border-slate-300 px-2 py-1 text-center\">9</td><td class=\"border border-slate-300 px-2 py-1 text-center\">6</td><td class=\"border border-slate-300 px-2 py-1 text-center\">4.5</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td></tr></table><br>当液体密度$ρ=12g/cm^{3}$时，浸在液体中的高度$h=$______$cm$．",
+    "stem": "密度计是一种重要的密度分析仪表，用于连续测量液体的密度，进而可以计算液体浓度、固液比等工艺参数，广泛应用于化工生产装置中，其检测精度和稳定性直接影响到产品质量．如图，密度计悬浮在不同的液体中时，浸在液体中的高度$h(cm)$是液体的密度$ρ(g/cm^{3})$的函数，其函数关系的部分对应值如下表$(ρ \\gt 0)$：<br><img src=\"assets/images/ch27_3_3_img3.png\" style=\"max-width:280px; display:block; margin:8px auto;\" /><br><table class=\"w-full max-w-xl text-xs border-collapse border border-slate-300 my-2 bg-white text-center\"><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">密度$ρ(g/cm^{3})$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">1</td><td class=\"border border-slate-300 px-2 py-1 text-center\">2</td><td class=\"border border-slate-300 px-2 py-1 text-center\">3</td><td class=\"border border-slate-300 px-2 py-1 text-center\">4</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">高度$h(cm)$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">18</td><td class=\"border border-slate-300 px-2 py-1 text-center\">9</td><td class=\"border border-slate-300 px-2 py-1 text-center\">6</td><td class=\"border border-slate-300 px-2 py-1 text-center\">4.5</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td></tr></table><br>当液体密度$ρ=12g/cm^{3}$时，浸在液体中的高度$h=$______$cm$．",
     "options": [],
     "answer": "$\\frac{3}{2}$/1.5/$1\\frac{1}{2}$",
     "analysis": "此题考查了反比例函数的应用，待定系数法求反比例函数解析式和求自变量的值等知识．利用待定系数法求出函数解析式为$h=\\frac{18}{ρ}$，再把$ρ=12g/cm^{3}$代入求解即可．",
@@ -35113,9 +37288,9 @@ window.QUESTION_BANK = [
     "knowledge": "实际问题与反比例函数；求反比例函数解析式；判断反比例函数的增减性",
     "stem": "如图1，小丽设计了一个探究杠杆平衡条件的实验：取一根匀质木杆，用细绳绑在木杆的中点$O$处，并将其吊起．在中点$O$左侧固定位置$B$处悬挂重物$A$，在中点$O$右侧用一个弹簧秤向下拉，直至木杆平衡，改变弹簧秤与点$O$的距离$x(cm)$，重复上述步骤，观察弹簧秤的示数$y(N)$的变化情况．实验数据记录如下：<br><table class=\"w-full max-w-xl text-xs border-collapse border border-slate-300 my-2 bg-white text-center\"><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">$x$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$...$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$2$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$4$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$6$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$8$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$10$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$12$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$...$</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">$y$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$...$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$12$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$6$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$4$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$3$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$2.4$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$2$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$...$</td></tr></table><br><img src=\"assets/images/ch27_3_3_img4.png\" style=\"max-width:280px; display:block; margin:8px auto;\" /><br>(1)把表中$x$，$y$的各组对应值作为点的坐标，在如图2所示的平面直角坐标系中描出相应的点，用平滑的曲线连接这些点并观察所得的图象，求出$y(N)$与$x(cm)$之间的函数关系式；<br>(2)当弹簧秤的示数为5N时，弹簧秤与$O$点的距离是多少？在弹簧的弹性限度内，随着弹簧秤与$O$点的距离逐渐减小，弹簧秤的示数将发生怎样的变化？",
     "options": [],
-    "answer": "(1)<br>如图所示：<br><img src=\"assets/images/ch27_3_3_img5.png\" style=\"max-width:280px; display:block; margin:8px auto;\" /><br>$y=\\frac{24}{x}(x>0)$<br>(2)当弹簧秤的示数为$5 N$时，弹簧秤与O点的距离是$4.8cm$，随着弹簧秤与O点的距离逐渐减小，弹簧秤的示数将不断增大．",
+    "answer": "(1)<br>如图所示：<br><img src=\"assets/images/ch27_3_3_img5.png\" style=\"max-width:280px; display:block; margin:8px auto;\" /><br>$y=\\frac{24}{x}(x \\gt 0)$<br>(2)当弹簧秤的示数为$5 N$时，弹簧秤与O点的距离是$4.8cm$，随着弹簧秤与O点的距离逐渐减小，弹簧秤的示数将不断增大．",
     "analysis": "（1）根据表格数值描点、连线即可画出图形 ，根据图象特点判断出y与x之间的函数关系，最后利用待定系数法求出函数解析式即可；<br>（2）把$y=5$代入（1）所得函数解析式即可求出x，根据函数的性质即可判断弹簧秤示数的变化情况；",
-    "detail": "（1）图略<br>由函数图象可得，y是x的反比例函数，设$y=\\frac{k}{x}$，把$(4,6)$代入得，<br>$6=\\frac{k}{4}$，<br>解得$k=24$，<br>∴$y=\\frac{24}{x}(x>0)$；<br>（2）解∶把$y=5$代入$y=\\frac{24}{x}$，得$5=\\frac{24}{x}$，<br>解得$x=4.8$，<br>即当弹簧秤的示数为$5 N$时，弹簧秤与O点的距离是$4.8cm$，<br>∵$k=24>0$，在第一象限内，y的值随着x的值的增大而减小，<br>∴随着弹簧秤与O点的距离逐渐减小，弹簧秤的示数将不断增大．"
+    "detail": "（1）图略<br>由函数图象可得，y是x的反比例函数，设$y=\\frac{k}{x}$，把$(4,6)$代入得，<br>$6=\\frac{k}{4}$，<br>解得$k=24$，<br>∴$y=\\frac{24}{x}(x \\gt 0)$；<br>（2）解∶把$y=5$代入$y=\\frac{24}{x}$，得$5=\\frac{24}{x}$，<br>解得$x=4.8$，<br>即当弹簧秤的示数为$5 N$时，弹簧秤与O点的距离是$4.8cm$，<br>∵$k=24 \\gt 0$，在第一象限内，y的值随着x的值的增大而减小，<br>∴随着弹簧秤与O点的距离逐渐减小，弹簧秤的示数将不断增大．"
   },
   {
     "id": "ch27_3_3_q12",
@@ -35167,9 +37342,9 @@ window.QUESTION_BANK = [
     "knowledge": "实际问题与反比例函数；求反比例函数解析式；由反比例函数值求自变量；用描点法画函数图象",
     "stem": "“道路千万条，安全第一条”．为研究汽车驾驶员的视野大小与行车速度之间的关系，某研究小组在一定条件下进行了一系列的测试．【数据收集】下表是测试所得的数据：<br><table class=\"w-full max-w-xl text-xs border-collapse border border-slate-300 my-2 bg-white text-center\"><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">行车速度$v$（$km/h$）</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$40$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$45$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$55$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$70$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$80$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$100$</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">视野角度$f$（度）</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$100$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$89$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$73$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$57$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$50$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$40$</td></tr></table><br>(1)根据表中数据，在如图所示的平面直角坐标系中描出相应的点，并用平滑的曲线顺次连接各点．<br><img src=\"assets/images/ch27_3_3_img9.png\" style=\"max-width:280px; display:block; margin:8px auto;\" /><br>【数学表达】<br>(2)请结合数据与图象，直接写出能近似体现视野角度$f$（度）与行车速度$v$（$km/h$）之间关系的函数表达式．<br>【问题解决】<br>(3)在相同测试条件下，若要求驾驶员的视野角度不小于80度，那么车辆的行驶速度应控制在什么范围？",
     "options": [],
-    "answer": "(1)<br><img src=\"assets/images/ch27_3_3_img10.png\" style=\"max-width:280px; display:block; margin:8px auto;\" /><br>(2)$f=\\frac{4000}{v}(v>0)$<br>(3)车辆的行驶速度应控制在不超过$50km/h$，即$0<v≤50km/h$",
+    "answer": "(1)<br><img src=\"assets/images/ch27_3_3_img10.png\" style=\"max-width:280px; display:block; margin:8px auto;\" /><br>(2)$f=\\frac{4000}{v}(v \\gt 0)$<br>(3)车辆的行驶速度应控制在不超过$50km/h$，即$0 \\lt v≤50km/h$",
     "analysis": "（1）根据表格数据在坐标系中描出对应点，按自变量从小到大的顺序用平滑曲线顺次连接各点即可；<br>（2）观察数据得行车速度与视野角度的乘积近似为定值$4000$，判断为反比例函数，写出近似函数表达式并标注自变量取值范围即可；<br>（3）根据视野角度的要求列不等式，代入反比例函数解析式，结合实际意义求解，即可得到行驶速度的控制范围．",
-    "detail": "（1）略<br>（2）解：观察表格数据，每组行车速度v与视野角度$f$的乘积近似等于$4000$，符合反比例函数的特征，因此近似函数表达式为：$f=\\frac{4000}{v}(v>0)$；<br>（3）解：由题意，要求视野角度不小于$80$度，即$f≥80$，代入函数表达式得：<br>$\\frac{4000}{v}≥80$，<br>因为行车速度$v>0$，不等式两边同时乘$v$，不等号方向不变：<br>$4000≥80v$，<br>解得$v≤50$，<br>结合实际意义，车辆的行驶速度应控制在不超过$50km/h$，即$0<v≤50km/h$．"
+    "detail": "（1）略<br>（2）解：观察表格数据，每组行车速度v与视野角度$f$的乘积近似等于$4000$，符合反比例函数的特征，因此近似函数表达式为：$f=\\frac{4000}{v}(v \\gt 0)$；<br>（3）解：由题意，要求视野角度不小于$80$度，即$f≥80$，代入函数表达式得：<br>$\\frac{4000}{v}≥80$，<br>因为行车速度$v \\gt 0$，不等式两边同时乘$v$，不等号方向不变：<br>$4000≥80v$，<br>解得$v≤50$，<br>结合实际意义，车辆的行驶速度应控制在不超过$50km/h$，即$0 \\lt v≤50km/h$．"
   },
   {
     "id": "ch27_3_3_q15",
@@ -35247,7 +37422,7 @@ window.QUESTION_BANK = [
     "typeName": "单选题",
     "difficulty": "中等",
     "knowledge": "求反比例函数解析式；求一次函数解析式",
-    "stem": "如图，在边长为1的正方形网格上建立平面直角坐标系，x轴，y轴都在格线上，其中反比例函数$y=\\frac{k}{x}(k≠0,x>0)$的图象被撕掉了一部分，已知点M，N在格点上，则$k=$（  ）<br><img src=\"assets/images/ch27_test_img5.png\" style=\"max-width:280px; display:block; margin:8px auto;\" />",
+    "stem": "如图，在边长为1的正方形网格上建立平面直角坐标系，x轴，y轴都在格线上，其中反比例函数$y=\\frac{k}{x}(k≠0,x \\gt 0)$的图象被撕掉了一部分，已知点M，N在格点上，则$k=$（  ）<br><img src=\"assets/images/ch27_test_img5.png\" style=\"max-width:280px; display:block; margin:8px auto;\" />",
     "options": [
       "A．$-2$",
       "B．$-3$",
@@ -35255,8 +37430,8 @@ window.QUESTION_BANK = [
       "D．$-5$"
     ],
     "answer": "C",
-    "analysis": "观察网格，设点$M(x,y)$、$N(x-2,y-1)$，将点$M(x,y)$、$N(x-2,y-1)$代入反比例函数$y=\\frac{k}{x}$得到$y=-\\frac{1}{2}x+1$，结合$x$、$y$均为正整数，且$x>0$，据此解答即可．",
-    "detail": "解：观察网格，设点$M(x,y)$、$N(x-2,y-1)$，<br>将点$M(x,y)$、$N(x-2,y-1)$代入反比例函数$y=\\frac{k}{x}$得<br>$\\begin{cases}xy=k\\\\(x-2)(y-1)=k\\end{cases}$，<br>整理得$y=-\\frac{1}{2}x+1$，<br>由于点$M$，$N$在格点上，且在$y$轴右侧，<br>则$x$、$y$均为正整数，且$x>0$，<br>当$y=-1$时，$-1=-\\frac{1}{2}x+1$，解得，$x=4$，<br>∴点$M(4,-1)$，$k=4×(-1)=-4$，<br>则点$N(2,-2)$，满足$k=2×(-2)=-4$；<br>∴$k=-4$．"
+    "analysis": "观察网格，设点$M(x,y)$、$N(x-2,y-1)$，将点$M(x,y)$、$N(x-2,y-1)$代入反比例函数$y=\\frac{k}{x}$得到$y=-\\frac{1}{2}x+1$，结合$x$、$y$均为正整数，且$x \\gt 0$，据此解答即可．",
+    "detail": "解：观察网格，设点$M(x,y)$、$N(x-2,y-1)$，<br>将点$M(x,y)$、$N(x-2,y-1)$代入反比例函数$y=\\frac{k}{x}$得<br>$\\begin{cases}xy=k\\\\(x-2)(y-1)=k\\end{cases}$，<br>整理得$y=-\\frac{1}{2}x+1$，<br>由于点$M$，$N$在格点上，且在$y$轴右侧，<br>则$x$、$y$均为正整数，且$x \\gt 0$，<br>当$y=-1$时，$-1=-\\frac{1}{2}x+1$，解得，$x=4$，<br>∴点$M(4,-1)$，$k=4×(-1)=-4$，<br>则点$N(2,-2)$，满足$k=2×(-2)=-4$；<br>∴$k=-4$．"
   },
   {
     "id": "ch27_test_q4",
@@ -35295,14 +37470,14 @@ window.QUESTION_BANK = [
     "knowledge": "比较反比例函数值或自变量的大小",
     "stem": "若点$A(-10,y_{1})$，$B(1,y_{2})$，$C(5,y_{3})$都在反比例函数$y=-\\frac{3}{x}$的图象上，则$y_{1}$，$y_{2}$，$y_{3}$的大小关系是（ ）",
     "options": [
-      "A．$y_{1}<y_{2}<y_{3}$",
-      "B．$y_{3}<y_{2}<y_{1}$",
-      "C．$y_{1}<y_{3}<y_{2}$",
-      "D．$y_{2}<y_{3}<y_{1}$"
+      "A．$y_{1} \\lt y_{2} \\lt y_{3}$",
+      "B．$y_{3} \\lt y_{2} \\lt y_{1}$",
+      "C．$y_{1} \\lt y_{3} \\lt y_{2}$",
+      "D．$y_{2} \\lt y_{3} \\lt y_{1}$"
     ],
     "answer": "D",
     "analysis": "根据反比例函数的比例系数判断图象所在象限和增减性，再结合各点横坐标的范围判断点所在象限，即可比较函数值的大小．",
-    "detail": "解：∵ 反比例函数$y=-\\frac{3}{x}$中，比例系数$k=-3<0$，<br>∴ 函数图象的两个分支分别位于第二、四象限，且在每个象限内，$y$随$x$的增大而增大，<br>∵ $-10<0$，<br>∴ 点$A(-10,y_{1})$在第二象限，可得$y_{1}>0$，<br>∵ $1>0$，$5>0$，<br>∴ 点$B(1,y_{2})$，$C(5,y_{3})$都在第四象限，<br>∴$y_{2}<0$，$y_{3}<0$，<br>又∵ $1<5$，且第四象限内$y$随$x$的增大而增大，<br>∴ $y_{2}<y_{3}<0$，<br>综上可得 $y_{2}<y_{3}<y_{1}$．"
+    "detail": "解：∵ 反比例函数$y=-\\frac{3}{x}$中，比例系数$k=-3 \\lt 0$，<br>∴ 函数图象的两个分支分别位于第二、四象限，且在每个象限内，$y$随$x$的增大而增大，<br>∵ $-10 \\lt 0$，<br>∴ 点$A(-10,y_{1})$在第二象限，可得$y_{1} \\gt 0$，<br>∵ $1 \\gt 0$，$5 \\gt 0$，<br>∴ 点$B(1,y_{2})$，$C(5,y_{3})$都在第四象限，<br>∴$y_{2} \\lt 0$，$y_{3} \\lt 0$，<br>又∵ $1 \\lt 5$，且第四象限内$y$随$x$的增大而增大，<br>∴ $y_{2} \\lt y_{3} \\lt 0$，<br>综上可得 $y_{2} \\lt y_{3} \\lt y_{1}$．"
   },
   {
     "id": "ch27_test_q6",
@@ -35325,7 +37500,7 @@ window.QUESTION_BANK = [
     ],
     "answer": "A",
     "analysis": "先利用反比例函数的性质判断k的符号，再根据给定x区间的y最大值求出k的值，最后结合反比例函数性质求出目标区间y的最大值．",
-    "detail": "解：$∵$当$-6≤x≤-2$时，y的最大值为$-1<0$，<br>$∴$$x<0$，$y<0$，<br>$∴k=xy＞0$，<br>$∵$对于反比例函数$y=\\frac{k}{x}$，当$k>0$时，每个象限内y随x的增大而减小，<br>$∴$在区间$-6≤x≤-2$，x取最小值$-6$时y取得最大值，<br>将$(-6,-1)$代入$y=\\frac{k}{x}$，得$k=6$，即反比例函数为$y=\\frac{6}{x}$，<br>在区间$2≤x≤3$中，x取最小值2时y取最大值$\\frac{6}{2}=3$．"
+    "detail": "解：$∵$当$-6≤x≤-2$时，y的最大值为$-1 \\lt 0$，<br>$∴$$x \\lt 0$，$y \\lt 0$，<br>$∴k=xy＞0$，<br>$∵$对于反比例函数$y=\\frac{k}{x}$，当$k \\gt 0$时，每个象限内y随x的增大而减小，<br>$∴$在区间$-6≤x≤-2$，x取最小值$-6$时y取得最大值，<br>将$(-6,-1)$代入$y=\\frac{k}{x}$，得$k=6$，即反比例函数为$y=\\frac{6}{x}$，<br>在区间$2≤x≤3$中，x取最小值2时y取最大值$\\frac{6}{2}=3$．"
   },
   {
     "id": "ch27_test_q7",
@@ -35341,14 +37516,14 @@ window.QUESTION_BANK = [
     "knowledge": "由反比例函数值求自变量；比较反比例函数值或自变量的大小",
     "stem": "已知点$M(-2,y_{1})$，$N(-\\frac{8}{3},\\frac{3}{2})$，$Q(t,y_{2})$三点均在反比例函数$y=\\frac{k}{x}$的图象上，若$y_{1}+y_{2}$为正数，则t的取值范围是（ ）",
     "options": [
-      "A．$t>2$",
-      "B．$t<0$",
-      "C．$t>2$或$t<0$",
-      "D．$0<t<2$"
+      "A．$t \\gt 2$",
+      "B．$t \\lt 0$",
+      "C．$t \\gt 2$或$t \\lt 0$",
+      "D．$0 \\lt t \\lt 2$"
     ],
     "answer": "C",
-    "analysis": "先将点$N(-\\frac{8}{3},\\frac{3}{2})$代入反比例函数$y=\\frac{k}{x}$，求出$k=-4$，确定函数解析式$y=-\\frac{4}{x}$．把点$M(-2,y_{1})$代入解析式，算出$y_{1}$．根据$Q(t,y_{2})$在函数上，得$y_{2}=-\\frac{4}{t}$，结合条件$y_{1}+y_{2}>0$，列出不等式$2-\\frac{4}{t}>0$．然后分$t>0$、$t<0$两种情况解不等式即可解答．",
-    "detail": "解：∵点$N(-\\frac{8}{3},\\frac{3}{2})$在$y=\\frac{k}{x}$上，<br>∴$\\frac{3}{2}=\\frac{k}{-\\frac{8}{3}}$，<br>$k=\\frac{3}{2}×(-\\frac{8}{3})=-4$<br>∴反比例函数为$y=-\\frac{4}{x}$．<br>∵点$M(-2,y_{1})$在$y=-\\frac{4}{x}$上，<br>∴$y_{1}=-\\frac{4}{-2}=2$，<br>∵点$Q(t,y_{2})$在$y=-\\frac{4}{x}$上，<br>∴$y_{2}=-\\frac{4}{t}$．<br>∵$y_{1}+y_{2}>0$，<br>∴$2+(-\\frac{4}{t})>0$<br>即$2>\\frac{4}{t}$，<br>当$t>0$时：不等式两边同乘$t$，不等号方向不变，得$2t>4$，<br>∴$t>2$；<br>当$t<0$时：不等式两边同乘$t$，不等号方向改变，得$2t<4$，<br>∴$2t<0<4$，该不等式恒成立，即$t<0$都满足条件．<br>综上，$t$的取值范围是$t>2$或$t<0$．"
+    "analysis": "先将点$N(-\\frac{8}{3},\\frac{3}{2})$代入反比例函数$y=\\frac{k}{x}$，求出$k=-4$，确定函数解析式$y=-\\frac{4}{x}$．把点$M(-2,y_{1})$代入解析式，算出$y_{1}$．根据$Q(t,y_{2})$在函数上，得$y_{2}=-\\frac{4}{t}$，结合条件$y_{1}+y_{2} \\gt 0$，列出不等式$2-\\frac{4}{t} \\gt 0$．然后分$t \\gt 0$、$t \\lt 0$两种情况解不等式即可解答．",
+    "detail": "解：∵点$N(-\\frac{8}{3},\\frac{3}{2})$在$y=\\frac{k}{x}$上，<br>∴$\\frac{3}{2}=\\frac{k}{-\\frac{8}{3}}$，<br>$k=\\frac{3}{2}×(-\\frac{8}{3})=-4$<br>∴反比例函数为$y=-\\frac{4}{x}$．<br>∵点$M(-2,y_{1})$在$y=-\\frac{4}{x}$上，<br>∴$y_{1}=-\\frac{4}{-2}=2$，<br>∵点$Q(t,y_{2})$在$y=-\\frac{4}{x}$上，<br>∴$y_{2}=-\\frac{4}{t}$．<br>∵$y_{1}+y_{2} \\gt 0$，<br>∴$2+(-\\frac{4}{t}) \\gt 0$<br>即$2 \\gt \\frac{4}{t}$，<br>当$t \\gt 0$时：不等式两边同乘$t$，不等号方向不变，得$2t \\gt 4$，<br>∴$t \\gt 2$；<br>当$t \\lt 0$时：不等式两边同乘$t$，不等号方向改变，得$2t \\lt 4$，<br>∴$2t \\lt 0 \\lt 4$，该不等式恒成立，即$t \\lt 0$都满足条件．<br>综上，$t$的取值范围是$t \\gt 2$或$t \\lt 0$．"
   },
   {
     "id": "ch27_test_q8",
@@ -35362,16 +37537,16 @@ window.QUESTION_BANK = [
     "typeName": "单选题",
     "difficulty": "中等",
     "knowledge": "已知反比例函数的增减性求参数；比较反比例函数值或自变量的大小",
-    "stem": "若点$P(a-2,y_{1})$，$Q(a+1,y_{2})$在反比例函数$y=\\frac{k}{x}(k<0)$的图象上，且$y_{1}>y_{2}$，则$a$的取值范围是（ ）",
+    "stem": "若点$P(a-2,y_{1})$，$Q(a+1,y_{2})$在反比例函数$y=\\frac{k}{x}(k \\lt 0)$的图象上，且$y_{1} \\gt y_{2}$，则$a$的取值范围是（ ）",
     "options": [
-      "A．$a<-1$",
-      "B．$a>2$",
-      "C．$-1<a<2$",
+      "A．$a \\lt -1$",
+      "B．$a \\gt 2$",
+      "C．$-1 \\lt a \\lt 2$",
       "D．任意实数"
     ],
     "answer": "C",
-    "analysis": "利用反比例函数的性质，$k<0$时图象在第二、四象限，每个象限内y随x增大而增大，结合两点横坐标的大小关系，分象限讨论求解a的取值范围．",
-    "detail": "解：∵反比例函数$y=\\frac{k}{x}(k<0)$，<br>∴函数图象的两个分支分别位于第二、四象限，且每个象限内y随x的增大而增大，<br>∵$(a+1)-(a-2)=3>0$，即$a-2< a+1$，<br>若两点在同一象限，根据y随x增大而增大，可得$y_{1}<y_{2}$，与已知$y_{1}>y_{2}$矛盾，<br>∴两点不在同一象限，即点P在第二象限，点Q在第四象限，<br>可得不等式组$a-2<0$，$a+1>0$，<br>解得$-1<a<2$，<br>故选：C．"
+    "analysis": "利用反比例函数的性质，$k \\lt 0$时图象在第二、四象限，每个象限内y随x增大而增大，结合两点横坐标的大小关系，分象限讨论求解a的取值范围．",
+    "detail": "解：∵反比例函数$y=\\frac{k}{x}(k \\lt 0)$，<br>∴函数图象的两个分支分别位于第二、四象限，且每个象限内y随x的增大而增大，<br>∵$(a+1)-(a-2)=3 \\gt 0$，即$a-2 \\lt a+1$，<br>若两点在同一象限，根据y随x增大而增大，可得$y_{1} \\lt y_{2}$，与已知$y_{1} \\gt y_{2}$矛盾，<br>∴两点不在同一象限，即点P在第二象限，点Q在第四象限，<br>可得不等式组$a-2 \\lt 0$，$a+1 \\gt 0$，<br>解得$-1 \\lt a \\lt 2$，<br>故选：C．"
   },
   {
     "id": "ch27_test_q9",
@@ -35387,14 +37562,14 @@ window.QUESTION_BANK = [
     "knowledge": "已知反比例函数的增减性求参数；比较反比例函数值或自变量的大小",
     "stem": "已知点$A(m,y_{1})$，$B(m+1,y_{2})$都在反比例函数$y=-\\frac{3}{x}$的图象上，则下列结论一定正确的是（ ）",
     "options": [
-      "A．$y_{1}>y_{2}$",
-      "B．$y_{1}<y_{2}$",
-      "C．当$m<0$时，$y_{1}<y_{2}$",
-      "D．当$m<-1$时，$y_{1}<y_{2}$"
+      "A．$y_{1} \\gt y_{2}$",
+      "B．$y_{1} \\lt y_{2}$",
+      "C．当$m \\lt 0$时，$y_{1} \\lt y_{2}$",
+      "D．当$m \\lt -1$时，$y_{1} \\lt y_{2}$"
     ],
     "answer": "D",
     "analysis": "本题考查反比例函数的图象与性质，熟练掌握反比例函数的性质是解题的关键．根据反比例函数$y=-\\frac{3}{x}$的性质，分情况讨论$m$的取值范围，比较$y_{1}$和$y_{2}$的大小关系即可．",
-    "detail": "解：对于反比例函数$y=-\\frac{3}{x}$的图象上，在各个象限内，$y$随$x$的增大而增大，且第二象限的函数值大于第四象限的函数值，<br>∵$m<m+1$，<br>当$m<m+1<0$时，即$m<-1$时，<br>则$y_{1}<y_{2}$，<br>当$0<m<m+1$时，即$m>0$时，<br>则$y_{1}<y_{2}$，<br>当$m<0<m+1$时，即$-1<m<0$时，<br>则$y_{1}>y_{2}$，<br>综上，只有选项D正确，<br>故选：D．"
+    "detail": "解：对于反比例函数$y=-\\frac{3}{x}$的图象上，在各个象限内，$y$随$x$的增大而增大，且第二象限的函数值大于第四象限的函数值，<br>∵$m \\lt m+1$，<br>当$m \\lt m+1 \\lt 0$时，即$m \\lt -1$时，<br>则$y_{1} \\lt y_{2}$，<br>当$0 \\lt m \\lt m+1$时，即$m \\gt 0$时，<br>则$y_{1} \\lt y_{2}$，<br>当$m \\lt 0 \\lt m+1$时，即$-1 \\lt m \\lt 0$时，<br>则$y_{1} \\gt y_{2}$，<br>综上，只有选项D正确，<br>故选：D．"
   },
   {
     "id": "ch27_test_q10",
@@ -35408,7 +37583,7 @@ window.QUESTION_BANK = [
     "typeName": "单选题",
     "difficulty": "中等",
     "knowledge": "一次函数与反比例函数的交点问题；由反比例函数图象的对称性求点的坐标",
-    "stem": "已知正比例函数$y=kx(k≠0)$与反比例函数$y=\\frac{4}{x}$的图象交于点$A(x_{1},y_{1})$，$B(x_{2},y_{2})$，则下列结论：①k的值可以为$-2$；②$AB=2\\sqrt{x_{1}^{2}+y_{1}^{2}}$；③若点$A(4,1)$，则$kx>\\frac{4}{x}$的解集是$-4<x<0$或$x>4$；④$x_{1}y_{2}+x_{2}y_{1}=-8$．其中结论正确的是（ ）",
+    "stem": "已知正比例函数$y=kx(k≠0)$与反比例函数$y=\\frac{4}{x}$的图象交于点$A(x_{1},y_{1})$，$B(x_{2},y_{2})$，则下列结论：①k的值可以为$-2$；②$AB=2\\sqrt{x_{1}^{2}+y_{1}^{2}}$；③若点$A(4,1)$，则$kx \\gt \\frac{4}{x}$的解集是$-4 \\lt x \\lt 0$或$x \\gt 4$；④$x_{1}y_{2}+x_{2}y_{1}=-8$．其中结论正确的是（ ）",
     "options": [
       "A．①②",
       "B．②③",
@@ -35417,7 +37592,7 @@ window.QUESTION_BANK = [
     ],
     "answer": "D",
     "analysis": "根据反比例函数的图象与性质逐步分析求解即可．",
-    "detail": "解：结论①：∵正比例函数$y=kx(k≠0)$与反比例函数$y=\\frac{4}{x}$的图象交于点$A$，$B$，反比例函数图象在第一、三象限，<br>∴正比例函数$y=kx$的图象经过第一、三象限，<br>$∴k>0$，故$k$不可能为$-2$．①错误；<br>结论②：∵正比例函数$y=kx(k≠0)$与反比例函数$y=\\frac{4}{x}$图象的交点$A$，$B$关于原点对称，$∴AB=2OA=2\\sqrt{x_{1}^{2}+y_{1}^{2}}$．②正确；<br>结论③：$∵A(4,1)$，点$A$与点$B$关于原点中心对称，<br>$∴$点$B(-4,-1)$，<br>当$kx>\\frac{4}{x}$时，正比例函数图象在反比例函数图象上方，<br>此时，$-4<x<0$或$x>4$．③正确；<br>结论④：$∵A(x_{1},y_{1})$，$B(x_{2},y_{2})$两点关于原点对称，<br>$∴x_{1}=-x_{2}$，$y_{1}=-y_{2}$，<br>把$A(x_{1},y_{1})$代入反比例函数解析式得：$x_{1}⋅y_{1}=4$，$∴x_{1}y_{2}+x_{2}y_{1}=-x_{1}y_{1}-x_{2}y_{2}=-4-4=-8$．④正确．"
+    "detail": "解：结论①：∵正比例函数$y=kx(k≠0)$与反比例函数$y=\\frac{4}{x}$的图象交于点$A$，$B$，反比例函数图象在第一、三象限，<br>∴正比例函数$y=kx$的图象经过第一、三象限，<br>$∴k \\gt 0$，故$k$不可能为$-2$．①错误；<br>结论②：∵正比例函数$y=kx(k≠0)$与反比例函数$y=\\frac{4}{x}$图象的交点$A$，$B$关于原点对称，$∴AB=2OA=2\\sqrt{x_{1}^{2}+y_{1}^{2}}$．②正确；<br>结论③：$∵A(4,1)$，点$A$与点$B$关于原点中心对称，<br>$∴$点$B(-4,-1)$，<br>当$kx \\gt \\frac{4}{x}$时，正比例函数图象在反比例函数图象上方，<br>此时，$-4 \\lt x \\lt 0$或$x \\gt 4$．③正确；<br>结论④：$∵A(x_{1},y_{1})$，$B(x_{2},y_{2})$两点关于原点对称，<br>$∴x_{1}=-x_{2}$，$y_{1}=-y_{2}$，<br>把$A(x_{1},y_{1})$代入反比例函数解析式得：$x_{1}⋅y_{1}=4$，$∴x_{1}y_{2}+x_{2}y_{1}=-x_{1}y_{1}-x_{2}y_{2}=-4-4=-8$．④正确．"
   },
   {
     "id": "ch27_test_q11",
@@ -35440,7 +37615,7 @@ window.QUESTION_BANK = [
     ],
     "answer": "D",
     "analysis": "A、根据平均每分钟水温上升$10°C$计算，即可判断；<br>B、根据y与x满足反比例函数关系，用待定系数法求解，即可判断；<br>C、分别求出水温第一次上升到$50°C$所需的时间，及水温再次回落到$50°C$的时间，即可判断；<br>D、$0min∼40min$正好是一次循环，$8:40$是第二次循环的开始，当水温达到$70°C$时，用时$5min$，时间为恰好时$8:45$，再计算水温维持在$70°C$所用的时间，即可判断答案．",
-    "detail": "解：A、第一次加热到$70°C$，水温上升了$50°C$，用时$5min$，所以选项A错误，不符合题意；<br>B、设y关于x的函数解析式为$y=\\frac{k}{x}$，<br>将$(8,100)$代入得$100=\\frac{k}{8}$，<br>解得$k=800$，<br>$∴y$关于x的函数解析式为$y=\\frac{800}{x}$，<br>所以选项B错误，不符合题意；<br>C、当水温第一次上升到$50°C$时，用时$3min$，<br>通电$8min∼40min$内，令$y=50$，<br>则$50=\\frac{800}{x}$，<br>解得$x=16$，<br>$∴$一个循环内水温高于$50°C$的时间为$16-3=13$($min$)，<br>所以选项C错误，不符合题意；<br>D、由图可知，$0min∼40min$正好是一次循环，<br>$8:40$后，当水温再上升到$70°C$时，用时$5min$，时间为$8:45$，<br>令$y=70$，则$70=\\frac{800}{x}$，<br>解得$x=11\\frac{3}{7}$，<br>$∴$水温在$70°C$以上的时间是$11\\frac{3}{7}-5=6\\frac{3}{7}$($min$)，<br>$∵6\\frac{3}{7}>5$，<br>$∴$小林在$8:45∼8:50$期间可以接到不低于$70°C$的水，<br>所以选项D正确，符合题意．"
+    "detail": "解：A、第一次加热到$70°C$，水温上升了$50°C$，用时$5min$，所以选项A错误，不符合题意；<br>B、设y关于x的函数解析式为$y=\\frac{k}{x}$，<br>将$(8,100)$代入得$100=\\frac{k}{8}$，<br>解得$k=800$，<br>$∴y$关于x的函数解析式为$y=\\frac{800}{x}$，<br>所以选项B错误，不符合题意；<br>C、当水温第一次上升到$50°C$时，用时$3min$，<br>通电$8min∼40min$内，令$y=50$，<br>则$50=\\frac{800}{x}$，<br>解得$x=16$，<br>$∴$一个循环内水温高于$50°C$的时间为$16-3=13$($min$)，<br>所以选项C错误，不符合题意；<br>D、由图可知，$0min∼40min$正好是一次循环，<br>$8:40$后，当水温再上升到$70°C$时，用时$5min$，时间为$8:45$，<br>令$y=70$，则$70=\\frac{800}{x}$，<br>解得$x=11\\frac{3}{7}$，<br>$∴$水温在$70°C$以上的时间是$11\\frac{3}{7}-5=6\\frac{3}{7}$($min$)，<br>$∵6\\frac{3}{7} \\gt 5$，<br>$∴$小林在$8:45∼8:50$期间可以接到不低于$70°C$的水，<br>所以选项D正确，符合题意．"
   },
   {
     "id": "ch27_test_q12",
@@ -35481,7 +37656,7 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "第二、四象限",
     "analysis": "先根据一次函数的图象性质判断$k$和$b$的正负，得到$kb$的正负，再根据反比例函数的性质确定其图象所在象限.",
-    "detail": "解：$∵$一次函数$y=kx+b$的图象经过第一、三、四象限，<br>$∴$根据一次函数的性质可得$k>0$，$b<0$，<br>$∴kb<0$，<br>对于反比例函数$y=\\frac{kb}{x}$，$kb<0$，<br>∴反比例函数的图象位于第二、四象限."
+    "detail": "解：$∵$一次函数$y=kx+b$的图象经过第一、三、四象限，<br>$∴$根据一次函数的性质可得$k \\gt 0$，$b \\lt 0$，<br>$∴kb \\lt 0$，<br>对于反比例函数$y=\\frac{kb}{x}$，$kb \\lt 0$，<br>∴反比例函数的图象位于第二、四象限."
   },
   {
     "id": "ch27_test_q14",
@@ -35495,11 +37670,11 @@ window.QUESTION_BANK = [
     "typeName": "填空题",
     "difficulty": "中等",
     "knowledge": "已知反比例函数的增减性求参数",
-    "stem": "若点$A(-2,y_{1})$、$B(1,y_{2})$、$C(2,y_{3})$都在反比例函数$y=\\frac{k}{x}$（$k$为常数，$k≠0$）的图象上，且$y_{1}>y_{3}>y_{2}$，则$k$的取值范围是______．",
+    "stem": "若点$A(-2,y_{1})$、$B(1,y_{2})$、$C(2,y_{3})$都在反比例函数$y=\\frac{k}{x}$（$k$为常数，$k≠0$）的图象上，且$y_{1} \\gt y_{3} \\gt y_{2}$，则$k$的取值范围是______．",
     "options": [],
-    "answer": "$k<0$",
+    "answer": "$k \\lt 0$",
     "analysis": "根据反比例函数的图象与性质逐步分析求解即可．",
-    "detail": "解：∵$B(1,y_{2})$、$C(2,y_{3})$都在反比例函数$y=\\frac{k}{x}$（$k$为常数，$k≠0$）的图象上，且$y_{3}>y_{2}$，<br>∴$x>0$时，$y$随着$x$的增大而增大，<br>∴$k<0$，<br>当$k<0$时，点$A(-2,y_{1})$在第二象限，$y_{1}>0$；点$B(1,y_{2})$、$C(2,y_{3})$在第四象限，$y_{2}<y_{3}<0$，此时满足$y_{1}>y_{3}>y_{2}$，<br>∴$k$的取值范围是$k<0$．"
+    "detail": "解：∵$B(1,y_{2})$、$C(2,y_{3})$都在反比例函数$y=\\frac{k}{x}$（$k$为常数，$k≠0$）的图象上，且$y_{3} \\gt y_{2}$，<br>∴$x \\gt 0$时，$y$随着$x$的增大而增大，<br>∴$k \\lt 0$，<br>当$k \\lt 0$时，点$A(-2,y_{1})$在第二象限，$y_{1} \\gt 0$；点$B(1,y_{2})$、$C(2,y_{3})$在第四象限，$y_{2} \\lt y_{3} \\lt 0$，此时满足$y_{1} \\gt y_{3} \\gt y_{2}$，<br>∴$k$的取值范围是$k \\lt 0$．"
   },
   {
     "id": "ch27_test_q15",
@@ -35517,7 +37692,7 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "$18$",
     "analysis": "设出点$A$和点$B$的坐标，利用点在反比例函数图象上满足解析式表示出坐标，再代入一次函数解析式建立关于$a$和$k$的方程组，消去$k$求解$a$的值，最后根据图象所在象限确定$a$的符号．",
-    "detail": "解：设点$A$的坐标为$(x_{A},4)$，点$B$的坐标为$(-6,y_{B})$，<br>$∵$ 点$A,B$在反比例函数$y_{2}=\\frac{a}{x}$的图象上 ，<br>$∴x_{A}=\\frac{a}{4},y_{B}=-\\frac{a}{6}$，<br>$∴A(\\frac{a}{4},4),B(-6,-\\frac{a}{6})$，<br>$∵$ 点$A,B$在一次函数$y_{1}=kx+1$的图象上，<br>$∴\\begin{cases}4=\\frac{a}{4}k+1\\\\-\\frac{a}{6}=-6k+1\\end{cases}$ ，<br>由$4=\\frac{a}{4}k+1$得$ak=12$，即$k=\\frac{12}{a}$ ，<br>将$k=\\frac{12}{a}$代入$-\\frac{a}{6}=-6k+1$得$-\\frac{a}{6}=-6×\\frac{12}{a}+1$，<br>整理得$a^{2}+6a-432=0$ ，<br>解得$a_{1}=18,a_{2}=-24$ ，<br>$∵$ 反比例函数图象位于第一、三象限，<br>$∴a>0$<br>$∴a=18$ ．"
+    "detail": "解：设点$A$的坐标为$(x_{A},4)$，点$B$的坐标为$(-6,y_{B})$，<br>$∵$ 点$A,B$在反比例函数$y_{2}=\\frac{a}{x}$的图象上 ，<br>$∴x_{A}=\\frac{a}{4},y_{B}=-\\frac{a}{6}$，<br>$∴A(\\frac{a}{4},4),B(-6,-\\frac{a}{6})$，<br>$∵$ 点$A,B$在一次函数$y_{1}=kx+1$的图象上，<br>$∴\\begin{cases}4=\\frac{a}{4}k+1\\\\-\\frac{a}{6}=-6k+1\\end{cases}$ ，<br>由$4=\\frac{a}{4}k+1$得$ak=12$，即$k=\\frac{12}{a}$ ，<br>将$k=\\frac{12}{a}$代入$-\\frac{a}{6}=-6k+1$得$-\\frac{a}{6}=-6×\\frac{12}{a}+1$，<br>整理得$a^{2}+6a-432=0$ ，<br>解得$a_{1}=18,a_{2}=-24$ ，<br>$∵$ 反比例函数图象位于第一、三象限，<br>$∴a \\gt 0$<br>$∴a=18$ ．"
   },
   {
     "id": "ch27_test_q16",
@@ -35535,7 +37710,7 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "$1.5$",
     "analysis": "因为牵引力F和速度v是反比例函数关系，所以先设反比例函数的一般形式$F=\\frac{k}{v}$，其中k为常数且$k≠0$，把已知的$v=3$、$F=20$代入反比例函数表达式，求出k的值，确定F与v的函数解析式，因为要求$F≥40$，所以将$F=40$代入已得到的函数解析式，求解对应的v值，结合反比例函数的增减性，得到v的最大值．",
-    "detail": "∵牵引力$F$和速度$v$是反比例函数关系，<br>∴设$F=\\frac{P}{v}$，<br>将$v=3$，$F=20$代入解析式，得$P=Fv=20×3=60$，<br>∴函数关系式为$F=\\frac{60}{v}$，<br>当$F≥40$时，代入得$\\frac{60}{v}≥40$，<br>∵$v>0$，<br>解得$v≤1.5$，<br>∴拖拉机速度$v$的最大值为$1.5 m/s$．"
+    "detail": "∵牵引力$F$和速度$v$是反比例函数关系，<br>∴设$F=\\frac{P}{v}$，<br>将$v=3$，$F=20$代入解析式，得$P=Fv=20×3=60$，<br>∴函数关系式为$F=\\frac{60}{v}$，<br>当$F≥40$时，代入得$\\frac{60}{v}≥40$，<br>∵$v \\gt 0$，<br>解得$v≤1.5$，<br>∴拖拉机速度$v$的最大值为$1.5 m/s$．"
   },
   {
     "id": "ch27_test_q17",
@@ -35551,9 +37726,9 @@ window.QUESTION_BANK = [
     "knowledge": "求反比例函数解析式；已知双曲线分布的象限，求参数范围；比较反比例函数值或自变量的大小",
     "stem": "已知反比例函数$y=\\frac{2a+6}{x}$（$a$为常数）．<br>(1)若该反比例函数的图象位于第二、四象限，求$a$的取值范围；<br>(2)若$a=1,A(-4,y_{1})$、$B(-1,y_{2})$是该反比例函数图象上的点，直接写出函数值$y_{1}$、$y_{2}$的大小．",
     "options": [],
-    "answer": "(1)$a<-3$<br>(2)$y_{1}>y_{2}$",
-    "analysis": "本题考查了反比例函数的性质，掌握反比例函数的性质是解题的关键．<br>（1）由反比例函数$y=\\frac{2a+6}{x}$的图象位于第二、四象限，得到$2a+6<0$，然后求解即可；<br>（2）将$a=1$代入反比例函数$y=\\frac{2a+6}{x}$得$y=\\frac{8}{x}$，图象位于第一、三象限，在每一象限y随x的增大而减小，再由$-4<-1$即可得出答案．",
-    "detail": "（1）解：∵反比例函数$y=\\frac{2a+6}{x}$的图象位于第二、四象限，<br>∴$2a+6<0$，<br>解得$a<-3$，<br>∴a的取值范围是$a<-3$；<br>（2）解：当$a=1$时，反比例函数$y=\\frac{2×1+6}{x}=\\frac{8}{x}$，<br>∵$8>0$，<br>∴图象位于第一、三象限，在每一象限y随x的增大而减小，<br>∴$A(-4,y_{1})$、$B(-1,y_{2})$是该反比例函数图象上位于第三象限的点，<br>∵$-4<-1$，<br>∴$y_{1}>y_{2}$．"
+    "answer": "(1)$a \\lt -3$<br>(2)$y_{1} \\gt y_{2}$",
+    "analysis": "本题考查了反比例函数的性质，掌握反比例函数的性质是解题的关键．<br>（1）由反比例函数$y=\\frac{2a+6}{x}$的图象位于第二、四象限，得到$2a+6 \\lt 0$，然后求解即可；<br>（2）将$a=1$代入反比例函数$y=\\frac{2a+6}{x}$得$y=\\frac{8}{x}$，图象位于第一、三象限，在每一象限y随x的增大而减小，再由$-4 \\lt -1$即可得出答案．",
+    "detail": "（1）解：∵反比例函数$y=\\frac{2a+6}{x}$的图象位于第二、四象限，<br>∴$2a+6 \\lt 0$，<br>解得$a \\lt -3$，<br>∴a的取值范围是$a \\lt -3$；<br>（2）解：当$a=1$时，反比例函数$y=\\frac{2×1+6}{x}=\\frac{8}{x}$，<br>∵$8 \\gt 0$，<br>∴图象位于第一、三象限，在每一象限y随x的增大而减小，<br>∴$A(-4,y_{1})$、$B(-1,y_{2})$是该反比例函数图象上位于第三象限的点，<br>∵$-4 \\lt -1$，<br>∴$y_{1} \\gt y_{2}$．"
   },
   {
     "id": "ch27_test_q18",
@@ -35567,11 +37742,11 @@ window.QUESTION_BANK = [
     "typeName": "解答题",
     "difficulty": "中等",
     "knowledge": "求一次函数解析式；根据反比例函数的定义求参数；一次函数与反比例函数图象综合判断；一次函数与反比例函数的交点问题",
-    "stem": "如图，在同一平面直角坐标系中，一次函数$y=kx+b$和反比例函数$y=\\frac{4}{x}$的图象相交于点$A(1,m)$，$B(n,-2)$．<br><img src=\"assets/images/ch27_test_img11.png\" style=\"max-width:280px; display:block; margin:8px auto;\" /><br>(1)直接写出点$A$、$B$的坐标；<br>(2)求一次函数的解析式；<br>(3)根据图象，直接写出不等式$\\frac{4}{x}<kx+b<0$的解集．",
+    "stem": "如图，在同一平面直角坐标系中，一次函数$y=kx+b$和反比例函数$y=\\frac{4}{x}$的图象相交于点$A(1,m)$，$B(n,-2)$．<br><img src=\"assets/images/ch27_test_img11.png\" style=\"max-width:280px; display:block; margin:8px auto;\" /><br>(1)直接写出点$A$、$B$的坐标；<br>(2)求一次函数的解析式；<br>(3)根据图象，直接写出不等式$\\frac{4}{x} \\lt kx+b \\lt 0$的解集．",
     "options": [],
-    "answer": "(1)$A(1,4)$ ，$B(-2,-2)$<br>(2)$y=2x+2$<br>(3)$-2<x<-1$",
+    "answer": "(1)$A(1,4)$ ，$B(-2,-2)$<br>(2)$y=2x+2$<br>(3)$-2 \\lt x \\lt -1$",
     "analysis": "本题考查待定系数法求函数解析式，一次函数与反比例函数的交点问题，根据图象解不等式，熟练掌握相关知识并运用数形结合思想是解题关键．<br>（1）运用反比例函数解析式求出点$A$、$B$的坐标即可；<br>（2）使用待定系数法求出一次函数的解析式；<br>（3）根据图象判断不等式的解集即可．",
-    "detail": "（1）解：将$x=1$代入$y=\\frac{4}{x}$，得$y=4$，<br>∴点$A$坐标为$(1,4)$，<br>将$y=-2$代入$y=\\frac{4}{x}$，得$x=-2$，<br>∴点$B$坐标为$(-2,-2)$；<br>（2）解：将$A(1,4)$ ，$B(-2,-2)$代入$y=kx+b$，得$\\begin{cases}4=k+b\\\\-2=-2k+b\\end{cases}$，<br>解得：$\\begin{cases}k=2\\\\b=2\\end{cases}$，<br>∴一次函数的解析式为$y=2x+2$；<br>（3）解：不等式$\\frac{4}{x}<kx+b<0$，意味着反比例函数图象低于一次函数的图象，且两个函数的图象都在$x$轴下方，<br>将$y=0$代入$y=2x+2$，得$0=2x+2$，<br>解得：$x=-1$，<br>由图象可知，不等式$\\frac{4}{x}<kx+b<0$的解集为$-2<x<-1$．"
+    "detail": "（1）解：将$x=1$代入$y=\\frac{4}{x}$，得$y=4$，<br>∴点$A$坐标为$(1,4)$，<br>将$y=-2$代入$y=\\frac{4}{x}$，得$x=-2$，<br>∴点$B$坐标为$(-2,-2)$；<br>（2）解：将$A(1,4)$ ，$B(-2,-2)$代入$y=kx+b$，得$\\begin{cases}4=k+b\\\\-2=-2k+b\\end{cases}$，<br>解得：$\\begin{cases}k=2\\\\b=2\\end{cases}$，<br>∴一次函数的解析式为$y=2x+2$；<br>（3）解：不等式$\\frac{4}{x} \\lt kx+b \\lt 0$，意味着反比例函数图象低于一次函数的图象，且两个函数的图象都在$x$轴下方，<br>将$y=0$代入$y=2x+2$，得$0=2x+2$，<br>解得：$x=-1$，<br>由图象可知，不等式$\\frac{4}{x} \\lt kx+b \\lt 0$的解集为$-2 \\lt x \\lt -1$．"
   },
   {
     "id": "ch27_test_q19",
@@ -35585,11 +37760,11 @@ window.QUESTION_BANK = [
     "typeName": "解答题",
     "difficulty": "中等",
     "knowledge": "求反比例函数值；已知反比例函数的增减性求参数",
-    "stem": "已知点$A(x_{1},y_{1})$，$B(x_{2},y_{2})$在反比例函数$y=\\frac{3}{x}$的图象上．<br>(1)若$x_{1}=1$，$x_{2}=-3$，求$y_{1}-y_{2}$的值；<br>(2)若$x_{1}=m-2$，$x_{2}=m+2$，$y_{1}<y_{2}$，且点$A,B$在不同象限，求$m$的取值范围．",
+    "stem": "已知点$A(x_{1},y_{1})$，$B(x_{2},y_{2})$在反比例函数$y=\\frac{3}{x}$的图象上．<br>(1)若$x_{1}=1$，$x_{2}=-3$，求$y_{1}-y_{2}$的值；<br>(2)若$x_{1}=m-2$，$x_{2}=m+2$，$y_{1} \\lt y_{2}$，且点$A,B$在不同象限，求$m$的取值范围．",
     "options": [],
-    "answer": "(1)4<br>(2)$-2<m<2$",
+    "answer": "(1)4<br>(2)$-2 \\lt m \\lt 2$",
     "analysis": "（1）把$x_{1}=1$，$x_{2}=-3$分别代入$y=\\frac{3}{x}$求出$y_{1},y_{2}$，即可求解差值；<br>（2）易得点$A$在第三象限，点$B$在第一象限，列出不等式组求解即可．",
-    "detail": "（1）解：当$x_{1}=1$时，$y_{1}=\\frac{3}{1}=3$，<br>当$x_{2}=-3$时，$y_{2}=\\frac{3}{-3}=-1$<br>$∴y_{1}-y_{2}=3-(-1)=4$；<br>（2）解：∵$y=\\frac{3}{x}$，$3>0$，<br>∴反比例函数的图象过一，三象限，<br>∵$y_{1}<y_{2}$，点$A,B$在不同象限，<br>∴点$A$在第三象限，点$B$在第一象限，<br>$∴\\begin{cases}m-2<0\\\\m+2>0\\end{cases}$，解得$-2<m<2$，<br>即$m$的取值范围是$-2<m<2$．"
+    "detail": "（1）解：当$x_{1}=1$时，$y_{1}=\\frac{3}{1}=3$，<br>当$x_{2}=-3$时，$y_{2}=\\frac{3}{-3}=-1$<br>$∴y_{1}-y_{2}=3-(-1)=4$；<br>（2）解：∵$y=\\frac{3}{x}$，$3 \\gt 0$，<br>∴反比例函数的图象过一，三象限，<br>∵$y_{1} \\lt y_{2}$，点$A,B$在不同象限，<br>∴点$A$在第三象限，点$B$在第一象限，<br>$∴\\begin{cases}m-2 \\lt 0\\\\m+2 \\gt 0\\end{cases}$，解得$-2 \\lt m \\lt 2$，<br>即$m$的取值范围是$-2 \\lt m \\lt 2$．"
   },
   {
     "id": "ch27_test_q20",
@@ -35603,11 +37778,11 @@ window.QUESTION_BANK = [
     "typeName": "解答题",
     "difficulty": "较易",
     "knowledge": "判断（画）反比例函数图象；判断反比例函数的增减性；判断反比例函数图象所在象限",
-    "stem": "九年级某数学兴趣小组在学习了反比例函数的图像与性质后，进一步研究了函数$y=\\frac{2-x}{x}$的图像与性质，其探究过程如下：<br>(1)绘制函数图像，如图．列表：<br><table class=\"w-full max-w-xl text-xs border-collapse border border-slate-300 my-2 bg-white text-center\"><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">x</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">y</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td></tr></table><br>描点，连线得到函数图像：<br><img src=\"assets/images/ch27_test_img12.png\" style=\"max-width:280px; display:block; margin:8px auto;\" /><br>(2)观察图像并分析表格，回答下列问题：①当$x>0$时，y随x增大而______；（填“增大”或“减小”）②函数$y=\\frac{2-x}{x}$的图像是由函数$y=\\frac{2}{x}$的图像向______平移______个单位长度而得到；③函数$y=\\frac{2-x}{x}$的图像关于点______成中心对称；（填点的坐标）<br>(3)设$A(x_{1},y_{1})$、$B(x_{2},y_{2})$是函数$y=\\frac{2-x}{x}$的图像上的两点，且$x_{1}+x_{2}=0$，试求$y_{1}+y_{2}$的值．",
+    "stem": "九年级某数学兴趣小组在学习了反比例函数的图像与性质后，进一步研究了函数$y=\\frac{2-x}{x}$的图像与性质，其探究过程如下：<br>(1)绘制函数图像，如图．列表：<br><table class=\"w-full max-w-xl text-xs border-collapse border border-slate-300 my-2 bg-white text-center\"><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">x</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">y</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td></tr></table><br>描点，连线得到函数图像：<br><img src=\"assets/images/ch27_test_img12.png\" style=\"max-width:280px; display:block; margin:8px auto;\" /><br>(2)观察图像并分析表格，回答下列问题：①当$x \\gt 0$时，y随x增大而______；（填“增大”或“减小”）②函数$y=\\frac{2-x}{x}$的图像是由函数$y=\\frac{2}{x}$的图像向______平移______个单位长度而得到；③函数$y=\\frac{2-x}{x}$的图像关于点______成中心对称；（填点的坐标）<br>(3)设$A(x_{1},y_{1})$、$B(x_{2},y_{2})$是函数$y=\\frac{2-x}{x}$的图像上的两点，且$x_{1}+x_{2}=0$，试求$y_{1}+y_{2}$的值．",
     "options": [],
     "answer": "(1)<br>描点、连线，如图：<br><img src=\"assets/images/ch27_test_img13.png\" style=\"max-width:280px; display:block; margin:8px auto;\" /><br>(2)①减小；②下，1；③ $(0，-1)$；<br>(3)$y_{1}+y_{2}=-2$．",
     "analysis": "（1）列表、描点，用平滑的曲线进行连接即可；<br>（2）根据图像进行解答即可；<br>（3）将点代入解析式，结合$x_{1}+x_{2}=0$进行计算即可．",
-    "detail": "（1）解：列表：<br><table class=\"w-full max-w-xl text-xs border-collapse border border-slate-300 my-2 bg-white text-center\"><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">x</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-4$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-3$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-2$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-1$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-\\frac{1}{2}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$\\frac{1}{2}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">1</td><td class=\"border border-slate-300 px-2 py-1 text-center\">2</td><td class=\"border border-slate-300 px-2 py-1 text-center\">3</td><td class=\"border border-slate-300 px-2 py-1 text-center\">4</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">y</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-\\frac{3}{2}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-\\frac{5}{3}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-2$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-3$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-5$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">3</td><td class=\"border border-slate-300 px-2 py-1 text-center\">1</td><td class=\"border border-slate-300 px-2 py-1 text-center\">0</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-\\frac{1}{3}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-\\frac{1}{2}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td></tr></table><br>描点、连线，如图：<br><img src=\"assets/images/ch27_test_img14.png\" style=\"max-width:280px; display:block; margin:8px auto;\" /><br>（2）解：由图像知，<br>①当$x>0$时，y随x增大而减小；<br>②$y=\\frac{2-x}{x}=\\frac{2}{x}-1$，<br>∴函数$y=\\frac{2-x}{x}$的图像是由函数$y=\\frac{2}{x}$的图像向下平移1个单位长度而得到；<br>③∵$y=\\frac{2}{x}$的图像关于原点对称，<br>∴$y=\\frac{2-x}{x}$的图像关于$(0，-1)$对称．<br>故答案为：减小；下，1；$(0，-1)$；<br>（3）解：把$A(x_{1},y_{1})$、$B(x_{2},y_{2})$代入函数$y=\\frac{2-x}{x}$得：<br>$y_{1}=\\frac{2-x_{1}}{x_{1}}=\\frac{2}{x_{1}}-1$，$y_{2}=\\frac{2-x_{2}}{x_{2}}=\\frac{2}{x_{2}}-1$，<br>∵$x_{1}+x_{2}=0$，<br>∴$y_{1}+y_{2}=\\frac{2}{x_{1}}-1+\\frac{2}{x_{2}}-1=\\frac{2(x_{1}+x_{2})}{x_{1}x_{2}}-2=-2$．<br>【点睛】本题考查反比例函数的图像的平移和性质．根据列表、描点、连线画出函数图像，根据图像得到函数的性质是解题的关键．"
+    "detail": "（1）解：列表：<br><table class=\"w-full max-w-xl text-xs border-collapse border border-slate-300 my-2 bg-white text-center\"><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">x</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-4$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-3$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-2$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-1$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-\\frac{1}{2}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$\\frac{1}{2}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">1</td><td class=\"border border-slate-300 px-2 py-1 text-center\">2</td><td class=\"border border-slate-300 px-2 py-1 text-center\">3</td><td class=\"border border-slate-300 px-2 py-1 text-center\">4</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">y</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-\\frac{3}{2}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-\\frac{5}{3}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-2$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-3$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-5$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">3</td><td class=\"border border-slate-300 px-2 py-1 text-center\">1</td><td class=\"border border-slate-300 px-2 py-1 text-center\">0</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-\\frac{1}{3}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-\\frac{1}{2}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td></tr></table><br>描点、连线，如图：<br><img src=\"assets/images/ch27_test_img14.png\" style=\"max-width:280px; display:block; margin:8px auto;\" /><br>（2）解：由图像知，<br>①当$x \\gt 0$时，y随x增大而减小；<br>②$y=\\frac{2-x}{x}=\\frac{2}{x}-1$，<br>∴函数$y=\\frac{2-x}{x}$的图像是由函数$y=\\frac{2}{x}$的图像向下平移1个单位长度而得到；<br>③∵$y=\\frac{2}{x}$的图像关于原点对称，<br>∴$y=\\frac{2-x}{x}$的图像关于$(0，-1)$对称．<br>故答案为：减小；下，1；$(0，-1)$；<br>（3）解：把$A(x_{1},y_{1})$、$B(x_{2},y_{2})$代入函数$y=\\frac{2-x}{x}$得：<br>$y_{1}=\\frac{2-x_{1}}{x_{1}}=\\frac{2}{x_{1}}-1$，$y_{2}=\\frac{2-x_{2}}{x_{2}}=\\frac{2}{x_{2}}-1$，<br>∵$x_{1}+x_{2}=0$，<br>∴$y_{1}+y_{2}=\\frac{2}{x_{1}}-1+\\frac{2}{x_{2}}-1=\\frac{2(x_{1}+x_{2})}{x_{1}x_{2}}-2=-2$．<br>【点睛】本题考查反比例函数的图像的平移和性质．根据列表、描点、连线画出函数图像，根据图像得到函数的性质是解题的关键．"
   },
   {
     "id": "ch27_test_q21",
@@ -35621,11 +37796,11 @@ window.QUESTION_BANK = [
     "typeName": "解答题",
     "difficulty": "较易",
     "knowledge": "求反比例函数值；判断（画）反比例函数图象；判断反比例函数的增减性；比较反比例函数值或自变量的大小",
-    "stem": "小灵同学在学习了反比例函数的图象与性质后，进一步研究了函数$y=-\\frac{2}{|x|}$的图象与性质．其探究过程如下：<br><img src=\"assets/images/ch27_test_img15.png\" style=\"max-width:280px; display:block; margin:8px auto;\" /><br>(1)绘制函数图像<br><table class=\"w-full max-w-xl text-xs border-collapse border border-slate-300 my-2 bg-white text-center\"><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">$x$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-3$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-2$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-1$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-\\frac{1}{2}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$\\frac{1}{2}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">1</td><td class=\"border border-slate-300 px-2 py-1 text-center\">2</td><td class=\"border border-slate-300 px-2 py-1 text-center\">3</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">$y$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-\\frac{2}{3}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-1$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-2$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-4$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$m$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-2$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-1$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-\\frac{2}{3}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td></tr></table><br>①列表：下表是x与y的几组对应值，其中$m=$______；②描点：根据表中各组对应值$(x,y)$，在平面直角坐标系中描出各点；③连线：用平滑的曲线顺次连接各点，画出了部分图象，请你把图象补充完整．<br>(2)探究函数性质通过观察图象，写出该函数的两条性质：①______②______<br>(3)运用图象和函数性质，当$-2<-\\frac{2}{|x|}<0$时，写出自变量$x$的取值范围______．",
+    "stem": "小灵同学在学习了反比例函数的图象与性质后，进一步研究了函数$y=-\\frac{2}{|x|}$的图象与性质．其探究过程如下：<br><img src=\"assets/images/ch27_test_img15.png\" style=\"max-width:280px; display:block; margin:8px auto;\" /><br>(1)绘制函数图像<br><table class=\"w-full max-w-xl text-xs border-collapse border border-slate-300 my-2 bg-white text-center\"><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">$x$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-3$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-2$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-1$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-\\frac{1}{2}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$\\frac{1}{2}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">1</td><td class=\"border border-slate-300 px-2 py-1 text-center\">2</td><td class=\"border border-slate-300 px-2 py-1 text-center\">3</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">$y$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-\\frac{2}{3}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-1$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-2$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-4$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$m$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-2$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-1$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-\\frac{2}{3}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td></tr></table><br>①列表：下表是x与y的几组对应值，其中$m=$______；②描点：根据表中各组对应值$(x,y)$，在平面直角坐标系中描出各点；③连线：用平滑的曲线顺次连接各点，画出了部分图象，请你把图象补充完整．<br>(2)探究函数性质通过观察图象，写出该函数的两条性质：①______②______<br>(3)运用图象和函数性质，当$-2 \\lt -\\frac{2}{|x|} \\lt 0$时，写出自变量$x$的取值范围______．",
     "options": [],
-    "answer": "(1)①$m=-4$；<br>②③如图：<br><img src=\"assets/images/ch27_test_img16.png\" style=\"max-width:280px; display:block; margin:8px auto;\" /><br>(2)①图象关于y轴对称；②当$x<0$时，y随x的增大而减小，当$x>0$时，y随x的增大而增大（不唯一）．<br>(3)$x<-1$或$x>1$",
+    "answer": "(1)①$m=-4$；<br>②③如图：<br><img src=\"assets/images/ch27_test_img16.png\" style=\"max-width:280px; display:block; margin:8px auto;\" /><br>(2)①图象关于y轴对称；②当$x \\lt 0$时，y随x的增大而减小，当$x \\gt 0$时，y随x的增大而增大（不唯一）．<br>(3)$x \\lt -1$或$x \\gt 1$",
     "analysis": "本题考查反比例函数的图象和性质，列表、描点、连线是作函数图象的基本方法，利用图象得出性质和结论是解决问题的根本目的．<br>（1）把$x=\\frac{1}{2}$代入解析式即可求得，进而即可描点连线，补充图象；<br>（2）根据（1）中的图象，从函数的对称性，增减性方面得出函数图象的两条性质即可；<br>（3）根据图象即可得出答案．",
-    "detail": "（1）解：（1）①把$x=\\frac{1}{2}$代入$y=-\\frac{2}{|x|}$，<br>得$m=-\\frac{2}{\\frac{1}{2}}=-4$，<br>故答案为：$m=-4$；<br>②略<br>③略<br>（2）解：答案不唯一，如：①图象关于y轴对称；<br>②当$x<0$时，y随x的增大而减小，当$x>0$时，y随x的增大而增大．<br>③函数值小于0．<br>（3）解：由图象可知，当$-2<-\\frac{2}{|x|}<0$时，自变量x的取值范围$x<-1$或$x>1$．"
+    "detail": "（1）解：（1）①把$x=\\frac{1}{2}$代入$y=-\\frac{2}{|x|}$，<br>得$m=-\\frac{2}{\\frac{1}{2}}=-4$，<br>故答案为：$m=-4$；<br>②略<br>③略<br>（2）解：答案不唯一，如：①图象关于y轴对称；<br>②当$x \\lt 0$时，y随x的增大而减小，当$x \\gt 0$时，y随x的增大而增大．<br>③函数值小于0．<br>（3）解：由图象可知，当$-2 \\lt -\\frac{2}{|x|} \\lt 0$时，自变量x的取值范围$x \\lt -1$或$x \\gt 1$．"
   },
   {
     "id": "ch27_test_q22",
@@ -35639,11 +37814,11 @@ window.QUESTION_BANK = [
     "typeName": "解答题",
     "difficulty": "中等",
     "knowledge": "由反比例函数值求自变量；由反比例函数图象的对称性求点的坐标；用描点法画函数图象；一次函数与反比例函数的交点问题",
-    "stem": "乐乐同学在学习了反比例函数的基础上，进一步探究函数$y=\\frac{2}{x-1}$的性质．以下是他的研究过程，请补充完整．<br>(1)如表是y与x的几组对应值．<br><table class=\"w-full max-w-xl text-xs border-collapse border border-slate-300 my-2 bg-white text-center\"><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">x</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-1$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-2$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-1$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">0</td><td class=\"border border-slate-300 px-2 py-1 text-center\">2</td><td class=\"border border-slate-300 px-2 py-1 text-center\">3</td><td class=\"border border-slate-300 px-2 py-1 text-center\">4</td><td class=\"border border-slate-300 px-2 py-1 text-center\">5</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">y</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-\\frac{1}{2}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-\\frac{2}{3}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-1$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-2$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">2</td><td class=\"border border-slate-300 px-2 py-1 text-center\">1</td><td class=\"border border-slate-300 px-2 py-1 text-center\">m</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$\\frac{1}{2}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td></tr></table><br>直接写出m的值，$m=$______；<br>(2)在平面直角坐标系$xOy$中，描出了以表中各对对应值为坐标的点，根据描出的点，画出该函数的图象；<br><img src=\"assets/images/ch27_test_img17.png\" style=\"max-width:280px; display:block; margin:8px auto;\" /><br>(3)观察图象，发现这个函数图象为中心对称图形，则它的对称中心为______；<br>(4)若直线$y=2x$与函数$y=\\frac{2}{x-1}$的图象交于第一象限内一点$P(x,y)$，则下面关于x的取值范围描述正确的是（ ）A．$1<x<1.25$ B．$1.25<x<1.5$ C．$1.5<x<1.75$ D．$1.75<x<2$",
+    "stem": "乐乐同学在学习了反比例函数的基础上，进一步探究函数$y=\\frac{2}{x-1}$的性质．以下是他的研究过程，请补充完整．<br>(1)如表是y与x的几组对应值．<br><table class=\"w-full max-w-xl text-xs border-collapse border border-slate-300 my-2 bg-white text-center\"><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">x</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-1$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-2$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-1$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">0</td><td class=\"border border-slate-300 px-2 py-1 text-center\">2</td><td class=\"border border-slate-300 px-2 py-1 text-center\">3</td><td class=\"border border-slate-300 px-2 py-1 text-center\">4</td><td class=\"border border-slate-300 px-2 py-1 text-center\">5</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td></tr><tr><td class=\"border border-slate-300 px-2 py-1 text-center\">y</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-\\frac{1}{2}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-\\frac{2}{3}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-1$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$-2$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">2</td><td class=\"border border-slate-300 px-2 py-1 text-center\">1</td><td class=\"border border-slate-300 px-2 py-1 text-center\">m</td><td class=\"border border-slate-300 px-2 py-1 text-center\">$\\frac{1}{2}$</td><td class=\"border border-slate-300 px-2 py-1 text-center\">…</td></tr></table><br>直接写出m的值，$m=$______；<br>(2)在平面直角坐标系$xOy$中，描出了以表中各对对应值为坐标的点，根据描出的点，画出该函数的图象；<br><img src=\"assets/images/ch27_test_img17.png\" style=\"max-width:280px; display:block; margin:8px auto;\" /><br>(3)观察图象，发现这个函数图象为中心对称图形，则它的对称中心为______；<br>(4)若直线$y=2x$与函数$y=\\frac{2}{x-1}$的图象交于第一象限内一点$P(x,y)$，则下面关于x的取值范围描述正确的是（ ）A．$1 \\lt x \\lt 1.25$ B．$1.25 \\lt x \\lt 1.5$ C．$1.5 \\lt x \\lt 1.75$ D．$1.75 \\lt x \\lt 2$",
     "options": [],
     "answer": "(1)$\\frac{2}{3}$<br>(2)<br>如图：<br><img src=\"assets/images/ch27_test_img18.png\" style=\"max-width:280px; display:block; margin:8px auto;\" /><br>(3)$(1,0)$<br>(4)C",
     "analysis": "本题考查了反比例函数与一次函数的交点，函数的图象及性质，解题的关键是熟练掌握研究函数的方法：用列表、描点、连线作出图象，再数形结合研究函数性质．<br>（1）①将$x=4$代入$y=\\frac{2}{x-1}$即得$m$的值；<br>（2）描点、连线即可；<br>（3）根据图象即可求解；<br>（4）求得$y=3$时，函数$y=2x$和函数$y=\\frac{2}{x-1}$的$x$的值，结合图象即可判断．",
-    "detail": "（1）解：①$x=4$时，$y=\\frac{2}{4-1}=\\frac{2}{3}$，<br>$∴m=\\frac{2}{3}$，<br>故答案为：$\\frac{2}{3}$；<br>（2）略<br>（3）解：观察图象，发现这个函数图象为中心对称图形，则它的对称中心为$(1,0)$；<br>故答案为：$(1,0)$；<br>（4）解：作出直线$y=2x$如图：<br><img src=\"assets/images/ch27_test_img19.png\" style=\"max-width:280px; display:block; margin:8px auto;\" /><br>把$y=3$代入$y=2x$求得$x=1.5$，<br>把$y=3$代入$y=\\frac{2}{x-1}$，求得$x=\\frac{5}{3}$，<br>观察图象，若直线$y=2x$与函数$y=\\frac{2}{x-1}$的图象交于第一象限内一点$P(x,y)$，则$x$的取值范围是$1.5<x<\\frac{5}{3}$，<br>$∴$关于$x$的取值范围描述正确的是C，<br>故答案为：C．"
+    "detail": "（1）解：①$x=4$时，$y=\\frac{2}{4-1}=\\frac{2}{3}$，<br>$∴m=\\frac{2}{3}$，<br>故答案为：$\\frac{2}{3}$；<br>（2）略<br>（3）解：观察图象，发现这个函数图象为中心对称图形，则它的对称中心为$(1,0)$；<br>故答案为：$(1,0)$；<br>（4）解：作出直线$y=2x$如图：<br><img src=\"assets/images/ch27_test_img19.png\" style=\"max-width:280px; display:block; margin:8px auto;\" /><br>把$y=3$代入$y=2x$求得$x=1.5$，<br>把$y=3$代入$y=\\frac{2}{x-1}$，求得$x=\\frac{5}{3}$，<br>观察图象，若直线$y=2x$与函数$y=\\frac{2}{x-1}$的图象交于第一象限内一点$P(x,y)$，则$x$的取值范围是$1.5 \\lt x \\lt \\frac{5}{3}$，<br>$∴$关于$x$的取值范围描述正确的是C，<br>故答案为：C．"
   },
   {
     "id": "ch27_test_q23",
@@ -36367,7 +38542,7 @@ window.QUESTION_BANK = [
     ],
     "answer": "A",
     "analysis": "根据正负数的定义和大小比较规则，逐项判断即可。",
-    "detail": "A．负数比较大小时，负号后面的数字越大，这个数越小，$-5<-3$，因此$-5℃$低于$-3℃$，该说法错误；<br>B．0既不是正数也不是负数，说法正确；<br>C．正数都大于0，负数都小于0，因此正数一定大于负数，说法正确。",
+    "detail": "A．负数比较大小时，负号后面的数字越大，这个数越小，$-5 \\lt -3$，因此$-5℃$低于$-3℃$，该说法错误；<br>B．0既不是正数也不是负数，说法正确；<br>C．正数都大于0，负数都小于0，因此正数一定大于负数，说法正确。",
     "grade": "六年级",
     "term": "上册"
   },
@@ -36389,7 +38564,7 @@ window.QUESTION_BANK = [
     ],
     "answer": "A",
     "analysis": "先根据包装袋上的净重标注算出合格质量的范围，再把各选项的质量和范围对比，不在范围内的就是不合格的。",
-    "detail": "合格质量的最小值：$40.5-0.2=40.3$（g）<br>合格质量的最大值：$40.5+0.2=40.7$（g）<br>合格质量范围是$40.3g~40.7g$。<br>对比可知$40.25<40.3$，不在合格范围内，是不合格的。",
+    "detail": "合格质量的最小值：$40.5-0.2=40.3$（g）<br>合格质量的最大值：$40.5+0.2=40.7$（g）<br>合格质量范围是$40.3g~40.7g$。<br>对比可知$40.25 \\lt 40.3$，不在合格范围内，是不合格的。",
     "grade": "六年级",
     "term": "上册"
   },
@@ -36587,7 +38762,7 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "×",
     "analysis": "大于0的数都是正数，小于0的数都是负数，0既不是正数也不是负数，其实0就是正数和负数的分界点。据此作出判断即可。",
-    "detail": "比0小的数是负数，$-9.5<0$，$-\\frac{4}{3}<0$，这两个数是负数；0既不是正数也不是负数，因此原说法错误。<br>故答案为：×",
+    "detail": "比0小的数是负数，$-9.5 \\lt 0$，$-\\frac{4}{3} \\lt 0$，这两个数是负数；0既不是正数也不是负数，因此原说法错误。<br>故答案为：×",
     "grade": "六年级",
     "term": "上册"
   },
@@ -37044,7 +39219,7 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "√",
     "analysis": "在数轴上，一个数到0的距离越短，就越接近0。分别确定−3和5到0的距离，通过比较距离的大小即可判断原题说法是否正确。",
-    "detail": "−3在0的左边，到0的距离是3个单位长度；5在0的右边，到0的距离是5个单位长度。因为$3<5$，所以−3比5更接近0。原题说法正确。<br>故答案为：√。",
+    "detail": "−3在0的左边，到0的距离是3个单位长度；5在0的右边，到0的距离是5个单位长度。因为$3 \\lt 5$，所以−3比5更接近0。原题说法正确。<br>故答案为：√。",
     "grade": "六年级",
     "term": "上册"
   },
@@ -37170,7 +39345,7 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "28分；可以晋级",
     "analysis": "题目规定6分记作0分，意味着6分是基准。正数表示比6分高，负数表示比6分低。首先需要将每位评委给出的相对分数还原为实际分数，<br>即实际分数＝基准分＋相对分数。将4位评委的实际分数相加得到总分，最后将总分与晋级分数线25分进行比较，若总分大于或等于25分则可以晋级。",
-    "detail": "1号评委实际得分：$6+0=6$（分）<br>2号评委实际得分：$6+2=8$（分）<br>3号评委实际得分：$6+3=9$（分）<br>4号评委实际得分：$6-1=5$（分）<br>小刚的总分：<br>$6+8+9+5$<br>$=14+9+5$<br>$=23+5$<br>$=28$（分）<br>$28>25$<br>答：小刚的总分是28分，可以晋级。",
+    "detail": "1号评委实际得分：$6+0=6$（分）<br>2号评委实际得分：$6+2=8$（分）<br>3号评委实际得分：$6+3=9$（分）<br>4号评委实际得分：$6-1=5$（分）<br>小刚的总分：<br>$6+8+9+5$<br>$=14+9+5$<br>$=23+5$<br>$=28$（分）<br>$28 \\gt 25$<br>答：小刚的总分是28分，可以晋级。",
     "grade": "六年级",
     "term": "上册"
   },
@@ -37350,14 +39525,14 @@ window.QUESTION_BANK = [
     "chapter": "18.1.2 分式的求值",
     "stem": "若分式$\\frac{2x+1}{x^{2}}$的值为正，则$x$的取值范围是（ ）",
     "options": [
-      "A．$x>-\\frac{1}{2}$",
+      "A．$x \\gt -\\frac{1}{2}$",
       "B．$x≥-\\frac{1}{2}$",
-      "C．$x>-\\frac{1}{2}$，且$x≠0$",
-      "D．$x<-\\frac{1}{2}$"
+      "C．$x \\gt -\\frac{1}{2}$，且$x≠0$",
+      "D．$x \\lt -\\frac{1}{2}$"
     ],
     "answer": "C",
     "analysis": "根据题意，因为任何实数的平方都是非负数，分母不能为0，所以分母是正数，主要分子的值是正数则可，从而列出不等式．",
-    "detail": "解：∵$x^{2}>0$，且$x≠0$，分式$\\frac{2x＋1}{x^{2}}$的值为正，<br>∴$2x+1>0$，<br>∴$x>-\\frac{1}{2}$，<br>∴$x>-\\frac{1}{2}$且$x≠0$．<br>故选：C．<br>【点睛】本题考查不等式的解法和分式值的正负条件．解不等式时当未知数的系数是负数时，两边同除以未知数的系数需改变不等号的方向，当未知数的系数是正数时，两边同除以未知数的系数不需改变不等号的方向．",
+    "detail": "解：∵$x^{2} \\gt 0$，且$x≠0$，分式$\\frac{2x＋1}{x^{2}}$的值为正，<br>∴$2x+1 \\gt 0$，<br>∴$x \\gt -\\frac{1}{2}$，<br>∴$x \\gt -\\frac{1}{2}$且$x≠0$．<br>故选：C．<br>【点睛】本题考查不等式的解法和分式值的正负条件．解不等式时当未知数的系数是负数时，两边同除以未知数的系数需改变不等号的方向，当未知数的系数是正数时，两边同除以未知数的系数不需改变不等号的方向．",
     "grade": "初二",
     "term": "上册"
   },
@@ -37455,9 +39630,9 @@ window.QUESTION_BANK = [
     "chapter": "18.1.2 分式的求值",
     "stem": "填空：（1）当$x$______时，分式$\\frac{1}{-x+5}$的值为正；（2）当$x$为______时，分式$\\frac{-4}{x^{2}+1}$的值为负；（3）当$x$为______时，分式$\\frac{2}{x-1}$的值为正整数．",
     "options": [],
-    "answer": "$<5$ 任意实数 3或2",
-    "analysis": "本题考查了分式的值，解一元一次不等式，解一元一次方程，掌握分式的性质是解题关键．<br>（1）由分式的值为正，得到$-x+5>0$，解不等式即可；<br>（2）根据平方的非负性以及分式的性质，即可求解；<br>（3）由分式的值为正整数，得到$x-1=1$或$x-1=2$，即可求解．",
-    "detail": "解：（1）$∵$分式$\\frac{1}{-x+5}$的值为正，<br>$∴-x+5>0$，<br>$∴x<5$，<br>故答案为：$<5$<br>（2）$∵x^{2}≥0$，<br>$∴x^{2}+1>0$，<br>$∴\\frac{-4}{x^{2}+1}<0$，<br>$∴x$的取值为任意实数，<br>故答案为：任意实数；<br>（3）$∵$分式$\\frac{2}{x-1}$的值为正整数，<br>$∴x-1=1$或$x-1=2$，<br>$∴x=3$或2，<br>故答案为：3或2．",
+    "answer": "$ \\lt 5$ 任意实数 3或2",
+    "analysis": "本题考查了分式的值，解一元一次不等式，解一元一次方程，掌握分式的性质是解题关键．<br>（1）由分式的值为正，得到$-x+5 \\gt 0$，解不等式即可；<br>（2）根据平方的非负性以及分式的性质，即可求解；<br>（3）由分式的值为正整数，得到$x-1=1$或$x-1=2$，即可求解．",
+    "detail": "解：（1）$∵$分式$\\frac{1}{-x+5}$的值为正，<br>$∴-x+5 \\gt 0$，<br>$∴x \\lt 5$，<br>故答案为：$ \\lt 5$<br>（2）$∵x^{2}≥0$，<br>$∴x^{2}+1 \\gt 0$，<br>$∴\\frac{-4}{x^{2}+1} \\lt 0$，<br>$∴x$的取值为任意实数，<br>故答案为：任意实数；<br>（3）$∵$分式$\\frac{2}{x-1}$的值为正整数，<br>$∴x-1=1$或$x-1=2$，<br>$∴x=3$或2，<br>故答案为：3或2．",
     "grade": "初二",
     "term": "上册"
   },
@@ -37525,11 +39700,11 @@ window.QUESTION_BANK = [
     "difficulty": "中等",
     "knowledge": "求分式值为正（负）数时未知数的取值范围；求不等式组的解集",
     "chapter": "18.1.2 分式的求值",
-    "stem": "仔细阅读下面例题，解答问题．例题：当x取何值时，分式$\\frac{1-x}{2x-1}$的值为正？解：依题意，得$\\frac{1-x}{2x-1}>0$．则有（1）$\\begin{cases}2x-1>0 \\\\ 1-x>0\\end{cases}$或（2）$\\begin{cases}2x-1<0 \\\\ 1-x<0\\end{cases}$解不等式组（1），得$\\frac{1}{2}<x<1$；解不等式组（2），得不等式组无解．∴不等式的解集是$\\frac{1}{2}<x<1$．∴当$\\frac{1}{2}<x<1$时，分式的值为正．问题：仿照以上方法解答问题：当x取何值时，分式$\\frac{2x-4}{x+3}$的值为负？",
+    "stem": "仔细阅读下面例题，解答问题．例题：当x取何值时，分式$\\frac{1-x}{2x-1}$的值为正？解：依题意，得$\\frac{1-x}{2x-1} \\gt 0$．则有（1）$\\begin{cases}2x-1 \\gt 0 \\\\ 1-x \\gt 0\\end{cases}$或（2）$\\begin{cases}2x-1 \\lt 0 \\\\ 1-x \\lt 0\\end{cases}$解不等式组（1），得$\\frac{1}{2} \\lt x \\lt 1$；解不等式组（2），得不等式组无解．∴不等式的解集是$\\frac{1}{2} \\lt x \\lt 1$．∴当$\\frac{1}{2} \\lt x \\lt 1$时，分式的值为正．问题：仿照以上方法解答问题：当x取何值时，分式$\\frac{2x-4}{x+3}$的值为负？",
     "options": [],
-    "answer": "当$-3<x<2$时，分式$\\frac{2x-4}{x+3}$的值为负．",
+    "answer": "当$-3 \\lt x \\lt 2$时，分式$\\frac{2x-4}{x+3}$的值为负．",
     "analysis": "本题主要考查分式的值为负的条件和解一元一次不等式组的知识点，根据题列出不等式组是解题的关键．由题意分式$\\frac{2x-4}{x+3}$的值为负，此时要分两种情况讨论，然后再根据求不等式的口诀，分别解出不等式组的解集．",
-    "detail": "解：依题意，得$\\frac{2x-4}{x+3}<0$，<br>则有$\\begin{cases}2x-4<0 \\\\ x+3>0\\end{cases}$①或$\\begin{cases}2x-4>0 \\\\ x+3<0\\end{cases}$ ②<br>解不等式组①得：$-3<x<2$；<br>解不等式组②得：不等式组无解，<br>∴不等式的解集是：$-3<x<2$，<br>∴当$-3<x<2$时，分式$\\frac{2x-4}{x+3}$的值为负．",
+    "detail": "解：依题意，得$\\frac{2x-4}{x+3} \\lt 0$，<br>则有$\\begin{cases}2x-4 \\lt 0 \\\\ x+3 \\gt 0\\end{cases}$①或$\\begin{cases}2x-4 \\gt 0 \\\\ x+3 \\lt 0\\end{cases}$ ②<br>解不等式组①得：$-3 \\lt x \\lt 2$；<br>解不等式组②得：不等式组无解，<br>∴不等式的解集是：$-3 \\lt x \\lt 2$，<br>∴当$-3 \\lt x \\lt 2$时，分式$\\frac{2x-4}{x+3}$的值为负．",
     "grade": "初二",
     "term": "上册"
   },
@@ -37814,9 +39989,9 @@ window.QUESTION_BANK = [
     "chapter": "18.1.3 分式的基本性质",
     "stem": "（1）不改变分式的值，使分式$\\frac{x-\\frac{1}{5}y^{2}}{\\frac{1}{2}x+y^{2}}$的分子与分母中各项的系数都是整数；（2）不改变分式的值，使分式$\\frac{x-y^{2}}{x^{3}+y^{2}}$的分子与分母的最高次项的系数是正数；（3）当$x$满足什么条件时，分式$\\frac{2-3x}{4x^{2}+1}$的值：①等于0？②小于0？",
     "options": [],
-    "answer": "（1）$\\frac{10x-2y^{2}}{5x+10y^{2}}$；（2）$-\\frac{y^{2}-x}{x^{3}+y^{2}}$；（3）①$x=\\frac{2}{3}$，②$x>\\frac{2}{3}$",
+    "answer": "（1）$\\frac{10x-2y^{2}}{5x+10y^{2}}$；（2）$-\\frac{y^{2}-x}{x^{3}+y^{2}}$；（3）①$x=\\frac{2}{3}$，②$x \\gt \\frac{2}{3}$",
     "analysis": "本题考查了分式的性质，分式的分子分母都乘以（或除以）同一个不为零的数，分式的值不变；分式的分子、分母、分式改变其中任意两个的符号，分式的值不变．<br>（1）根据分式的性质：分式的分子分母都乘以或除以同一个不为零的数，分式的值不变，可得答案；<br>（2）根据分式的分子、分母、分式改变其中任意两个的符号，分式的值不变，可得答案；<br>（3）根据解分式方程，可得答案；根据解不等式，可得答案．",
-    "detail": "解：（1）原式$=\\frac{10x-2y^{2}}{5x+10y^{2}}$；<br>（2）原式$=-\\frac{y^{2}-x}{x^{3}+y^{2}}$；<br>（3）①∵$4x^{2}+1>0$，<br>∴由$\\frac{2-3x}{4x^{2}+1}=0$得$2-3x=0$，<br>解得：$x=\\frac{2}{3}$；<br>②$\\frac{2-3x}{4x^{2}+1}<0$，得$2-3x<0$，<br>解得：$x>\\frac{2}{3}$．",
+    "detail": "解：（1）原式$=\\frac{10x-2y^{2}}{5x+10y^{2}}$；<br>（2）原式$=-\\frac{y^{2}-x}{x^{3}+y^{2}}$；<br>（3）①∵$4x^{2}+1 \\gt 0$，<br>∴由$\\frac{2-3x}{4x^{2}+1}=0$得$2-3x=0$，<br>解得：$x=\\frac{2}{3}$；<br>②$\\frac{2-3x}{4x^{2}+1} \\lt 0$，得$2-3x \\lt 0$，<br>解得：$x \\gt \\frac{2}{3}$．",
     "grade": "初二",
     "term": "上册"
   },
@@ -37994,7 +40169,7 @@ window.QUESTION_BANK = [
     "difficulty": "较易",
     "knowledge": "提公因式法分解因式；综合提公因式和公式法分解因式；约分",
     "chapter": "18.1.4 约分",
-    "stem": "已知$a>3$，代数式：$A=2a^{2}-8$，$B=3a^{2}+6a$，$C=a^{3}-4a^{2}+4a$．(1)在A，B，C中任选一个代数式因式分解；(2)在A，B，C中任选两个代数式，分别作为分子、分母，组成一个分式，并化简该分式．",
+    "stem": "已知$a \\gt 3$，代数式：$A=2a^{2}-8$，$B=3a^{2}+6a$，$C=a^{3}-4a^{2}+4a$．(1)在A，B，C中任选一个代数式因式分解；(2)在A，B，C中任选两个代数式，分别作为分子、分母，组成一个分式，并化简该分式．",
     "options": [],
     "answer": "(1)$A=2(a+2)(a-2)$；$B=3a(a+2)$；$C=a(a-2)^{2}$（选择一个进行分解因式）<br>(2)选择A、B，$\\frac{A}{B}=\\frac{2a-4}{3a}$（答案不唯一）",
     "analysis": "本题主要考查了因式分解，分式化简求值，解题的关键是熟练掌握因式分解的方法，准确计算．<br>（1）根据提公因式法和公式法分解因式即可；<br>（2）利用分式的基本性质性质进行化简即可．",
@@ -38545,8 +40720,8 @@ window.QUESTION_BANK = [
     "chapter": "18.3.1 同分母的分式加减法",
     "stem": "已知实数a，b互为倒数，设$M=\\frac{1}{a+1}+\\frac{1}{b+1},N=\\frac{a}{a+1}+\\frac{b}{b+1}$，则M，N的大小关系是（ ）",
     "options": [
-      "A．$M>N$",
-      "B．$M<N$",
+      "A．$M \\gt N$",
+      "B．$M \\lt N$",
       "C．$M=N$",
       "D．无法确定"
     ],
@@ -38920,8 +41095,8 @@ window.QUESTION_BANK = [
       "D．④"
     ],
     "answer": "B",
-    "analysis": "先根据分式的混合计算法则求出$(x+\\frac{2x}{x-1})÷\\frac{x^{2}+2x+1}{x-1}=\\frac{x}{x+1}$，然后求出$\\frac{1}{2}≤\\frac{x}{x+1}<1$即可得到答案．",
-    "detail": "解：$(x+\\frac{2x}{x-1})÷\\frac{x^{2}+2x+1}{x-1}$<br>$=\\frac{x^{2}-x+2x}{x-1}÷\\frac{(x+1)^{2}}{x-1}$<br>$=\\frac{x^{2}+x}{x-1}⋅\\frac{x-1}{(x+1)^{2}}$<br>$=\\frac{x(x+1)}{x-1}⋅\\frac{x-1}{(x+1)^{2}}$<br>$=\\frac{x}{x+1}$，<br>∵$x$为正整数，<br>∴$x≥1$，<br>∴$x+x≥x+1$，即$2x≥x+1$，<br>∴$\\frac{1}{2}≤\\frac{x}{x+1}<1$，<br>∴表示$(x+\\frac{2x}{x-1})÷\\frac{x^{2}+2x+1}{x-1}$的值的点落在如图所示的区域②，<br>故选B．<br>【点睛】本题主要考查了分式的化简，不等式的性质，正确求出$(x+\\frac{2x}{x-1})÷\\frac{x^{2}+2x+1}{x-1}=\\frac{x}{x+1}$是解题的关键．",
+    "analysis": "先根据分式的混合计算法则求出$(x+\\frac{2x}{x-1})÷\\frac{x^{2}+2x+1}{x-1}=\\frac{x}{x+1}$，然后求出$\\frac{1}{2}≤\\frac{x}{x+1} \\lt 1$即可得到答案．",
+    "detail": "解：$(x+\\frac{2x}{x-1})÷\\frac{x^{2}+2x+1}{x-1}$<br>$=\\frac{x^{2}-x+2x}{x-1}÷\\frac{(x+1)^{2}}{x-1}$<br>$=\\frac{x^{2}+x}{x-1}⋅\\frac{x-1}{(x+1)^{2}}$<br>$=\\frac{x(x+1)}{x-1}⋅\\frac{x-1}{(x+1)^{2}}$<br>$=\\frac{x}{x+1}$，<br>∵$x$为正整数，<br>∴$x≥1$，<br>∴$x+x≥x+1$，即$2x≥x+1$，<br>∴$\\frac{1}{2}≤\\frac{x}{x+1} \\lt 1$，<br>∴表示$(x+\\frac{2x}{x-1})÷\\frac{x^{2}+2x+1}{x-1}$的值的点落在如图所示的区域②，<br>故选B．<br>【点睛】本题主要考查了分式的化简，不等式的性质，正确求出$(x+\\frac{2x}{x-1})÷\\frac{x^{2}+2x+1}{x-1}=\\frac{x}{x+1}$是解题的关键．",
     "grade": "初二",
     "term": "上册"
   },
@@ -39030,7 +41205,7 @@ window.QUESTION_BANK = [
     "difficulty": "中等",
     "knowledge": "分式加减乘除混合运算；用代数式表示数、图形的规律",
     "chapter": "18.3.3 分式的混合运算",
-    "stem": "如图（1），标号分别为Ⅰ，Ⅱ，Ⅲ，Ⅳ的四个面积相等的长方形，已知Ⅰ和Ⅱ能够完全重合，Ⅲ和Ⅳ能够完全重合，如图（2），将这四个长方形不重叠地围成两个新的长方形$ABCD$和长方形$PQMN$．若设$AE=x,DE=y$，其中$x>y$，且代数式$x^{2}-5xy+4y^{2}=0$，则$S_{\\text{长方形}PQMN}\\div S_{\\text{长方形}ABCD}=$______．<br><img src=\"assets/images/g8_18_3_2_img2.png\" style=\"width:415px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\" data-cx=\"3952875\" data-cy=\"1333500\">",
+    "stem": "如图（1），标号分别为Ⅰ，Ⅱ，Ⅲ，Ⅳ的四个面积相等的长方形，已知Ⅰ和Ⅱ能够完全重合，Ⅲ和Ⅳ能够完全重合，如图（2），将这四个长方形不重叠地围成两个新的长方形$ABCD$和长方形$PQMN$．若设$AE=x,DE=y$，其中$x \\gt y$，且代数式$x^{2}-5xy+4y^{2}=0$，则$S_{\\text{长方形}PQMN}\\div S_{\\text{长方形}ABCD}=$______．<br><img src=\"assets/images/g8_18_3_2_img2.png\" style=\"width:415px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\" data-cx=\"3952875\" data-cy=\"1333500\">",
     "options": [],
     "answer": "$\\frac{9}{25}$",
     "analysis": "本题主要考查了分式的混合运算，熟练掌握分式混合运算法则是解本题的关键．<br>根据$x^{2}-5xy+4y^{2}=0$得出$x=4y$，设设四个长方形的面积都是$S$，可得$EN=\\frac{S}{x}=\\frac{S}{4y}$，$EM=\\frac{S}{y}$，然后用$y$表示长方形$ABCD$和长方形$PQMN$的边长和面积，进而求出结果．",
@@ -39084,9 +41259,9 @@ window.QUESTION_BANK = [
     "difficulty": "中等",
     "knowledge": "分式加减乘除混合运算",
     "chapter": "18.3.3 分式的混合运算",
-    "stem": "已知分式$A=(a+1-\\frac{3}{a-1})÷\\frac{a^{2}-4a+4}{a-1}$(1)化简这个分式；(2)当$a>2$时，把分式A化简结果的分子与分母同时加上1后得到分式B，问：分式B的值较原来分式A的值是变大了还是变小了？试说明理由．",
+    "stem": "已知分式$A=(a+1-\\frac{3}{a-1})÷\\frac{a^{2}-4a+4}{a-1}$(1)化简这个分式；(2)当$a \\gt 2$时，把分式A化简结果的分子与分母同时加上1后得到分式B，问：分式B的值较原来分式A的值是变大了还是变小了？试说明理由．",
     "options": [],
-    "answer": "(1)$\\frac{a+2}{a-2}$<br>(2)<br>分式$B$的值较原来分式$A$的值是变小了，<br>理由：$B=\\frac{a+2+1}{a-2+1}=\\frac{a+3}{a-1}$．<br>$A-B=\\frac{a+2}{a-2}-\\frac{a+3}{a-1}=\\frac{a^{2}+a-2}{(a-2)(a-1)}-\\frac{a^{2}+a-6}{(a-2)(a-1)}=\\frac{4}{(a-2)(a-1)}$．<br>∵$a>2$，<br>∴$a-2>0, a-1>0$，<br>∴$\\frac{4}{(a-2)(a-1)}>0$，即$A-B>0$．<br>∴$A>B$，即分式$B$的值较原来分式$A$的值是变小了．",
+    "answer": "(1)$\\frac{a+2}{a-2}$<br>(2)<br>分式$B$的值较原来分式$A$的值是变小了，<br>理由：$B=\\frac{a+2+1}{a-2+1}=\\frac{a+3}{a-1}$．<br>$A-B=\\frac{a+2}{a-2}-\\frac{a+3}{a-1}=\\frac{a^{2}+a-2}{(a-2)(a-1)}-\\frac{a^{2}+a-6}{(a-2)(a-1)}=\\frac{4}{(a-2)(a-1)}$．<br>∵$a \\gt 2$，<br>∴$a-2 \\gt 0, a-1 \\gt 0$，<br>∴$\\frac{4}{(a-2)(a-1)} \\gt 0$，即$A-B \\gt 0$．<br>∴$A \\gt B$，即分式$B$的值较原来分式$A$的值是变小了．",
     "analysis": "本题考查了分式的混合运算，掌握分式的运算法则、运算顺序及分式有无意义的条件是解决本题的关键．<br>（1）先计算括号里面的，再算除法得结论；<br>（2）计算$A-B$，根据计算结果与0的关系说明变大变小的原因．",
     "detail": "（1）解：$A=(a+1-\\frac{3}{a-1})÷\\frac{a^{2}-4a+4}{a-1}$<br>$=[\\frac{(a+1)(a-1)}{a-1}-\\frac{3}{a-1}]÷\\frac{(a-2)^{2}}{a-1}$<br>$=(\\frac{a^{2}-1}{a-1}-\\frac{3}{a-1})×\\frac{a-1}{(a-2)^{2}}$<br>$=\\frac{a^{2}-4}{a-1}×\\frac{a-1}{(a-2)^{2}}$<br>$=\\frac{(a+2)(a-2)}{a-1}×\\frac{a-1}{(a-2)^{2}}$<br>$=\\frac{a+2}{a-2}$．<br>（2）略",
     "grade": "初二",
@@ -39347,8 +41522,8 @@ window.QUESTION_BANK = [
       "D．4个"
     ],
     "answer": "D",
-    "analysis": "过$E$作$EQ\\perp AB$于$Q$，作$\\angle ACN=\\angle BCD$，交$AD$于$N$，过$D$作$DH\\perp AB$于$H$，根据角平分线性质求出$CE=EQ$，$DM=DH$，根据勾股定理求出$AC=AQ$，$AM=AH$，根据等腰三角形的性质和判定求出$BQ=QE$，即可求出①；根据三角形外角性质求出$\\angle CND=45^\\circ$，证$\\triangle ACN\\cong \\triangle BCD$，推出$CD=CN$，即可求出②④；由$\\triangle ACN\\cong \\triangle BCD(ASA)$得到$S_{\\triangle ACN}=S_{\\triangle BCD}$，然后根据$S_{\\triangle AEC}=S_{\\triangle ACN}+S_{\\triangle ECN}$即可得到$S_{\\triangle AEC}>S_{\\triangle BCD}$，进而可判断③；证得$\\triangle DCM\\cong \\triangle DBH$，得到$CM=BH$，$AM=AH$，即可求出⑤，即可求解．",
-    "detail": "解：如图，过$E$作$EQ\\perp AB$于$Q$，作$\\angle ACN=\\angle BCD$，交$AD$于$N$，过$D$作$DH\\perp AB$于$H$，<br/><img src=\"assets/images/ch15_test_b_img14.png\" style=\"max-width:260px; display:block; margin:6px auto;\" />$\\because \\angle ACB=90^\\circ$，$AE$平分$\\angle CAB$，<br/>$\\therefore CE=EQ$，<br/>$\\because \\angle ACB=90^\\circ$，$AC=BC$，<br/>$\\therefore \\angle CBA=\\angle CAB=45^\\circ$，<br/>$\\because EQ\\perp AB$，<br/>$\\therefore \\angle EQA=\\angle EQB=90^\\circ$，<br/>由勾股定理得：$AC=AQ$，<br/>$\\therefore \\angle QEB=45^\\circ =\\angle CBA$，<br/>$\\therefore EQ=BQ$，<br/>$\\therefore AB=AQ+BQ=AC+CE$，故①正确；<br/>$\\because \\angle CAD=\\frac{1}{2}\\angle CAB=22.5^\\circ =\\angle BAD$，<br/>$\\therefore \\angle DBA=90^\\circ -22.5^\\circ =67.5^\\circ$，<br/>$\\therefore \\angle DBC=67.5^\\circ -45^\\circ =22.5^\\circ =\\angle CAD$，<br/>$\\therefore \\angle DBC=\\angle CAD$，<br/>在$\\triangle ACN$和$\\triangle BCD$中，<br/>${\\begin{cases}\\angle ACN=\\angle DCB\\\\AC=BC\\\\\\angle DBC=\\angle CAD\\end{cases}$，<br/>$\\therefore \\triangle ACN\\cong \\triangle BCD(ASA)$，<br/>$\\therefore CN=CD$，<br/>$\\because \\angle ACN+\\angle NCE=90^\\circ$，<br/>$\\therefore \\angle NCB+\\angle BCD=90^\\circ$，<br/>$\\therefore \\angle CND=\\angle CDN=45^\\circ$，<br/>$\\therefore \\angle ACN=45^\\circ -22.5^\\circ =22.5^\\circ =\\angle CAN$，<br/>$\\therefore AN=CN$，<br/>$\\therefore \\angle NCE=\\angle AEC=67.5^\\circ$，<br/>$\\therefore CN=NE$，<br/>$\\therefore CD=AN=EN=\\frac{1}{2}AE$，故②正确，④正确；<br/>∵$\\triangle ACN\\cong \\triangle BCD(ASA)$<br/>∴$S_{\\triangle ACN}=S_{\\triangle BCD}$<br/>∵$S_{\\triangle AEC}=S_{\\triangle ACN}+S_{\\triangle ECN}$<br/>∴$S_{\\triangle AEC}>S_{\\triangle ACN}$<br/>∴$S_{\\triangle AEC}>S_{\\triangle BCD}$，故③错误，<br/>$\\because \\angle MCD=\\angle CAD+\\angle CDA=67.5^\\circ$，<br/>$\\angle DBA=90^\\circ -\\angle DAB=67.5^\\circ$，<br/>$\\therefore \\angle MCD=\\angle DBA$，<br/>$\\because AE$平分$\\angle CAB$，$DM\\perp AC$，$DH\\perp AB$，<br/>$\\therefore DM=DH$，<br/>$\\therefore AM=AH$，<br/>在$\\triangle DCM$和$\\triangle DBH$中，<br/>${\\begin{cases}\\angle M=\\angle DHB=90^\\circ \\\\\\angle MCD=\\angle DBA\\\\DM=DH\\end{cases}$，<br/>$\\therefore \\triangle DCM\\cong \\triangle DBH(AAS)$，<br/>$\\therefore BH=CM$，<br/>$\\therefore\\frac{AC+AB}{AM}=\\frac{AC+AH+BH}{AM}=\\frac{AC+AM+CM}{AM}=\\frac{2AM}{AM}=2$，<br/>即$\\frac{AM}{AC+AB}=\\frac{1}{2}$，故⑤正确．<br/>$\\therefore$正确的结论有4个．<br/>故选：D．<br/>【点睛】本题考查了全等三角形的判定和性质，角平分线的特，直角三角形的性质，等腰三角形的性质，证明三角形全等是解题的关键．"
+    "analysis": "过$E$作$EQ\\perp AB$于$Q$，作$\\angle ACN=\\angle BCD$，交$AD$于$N$，过$D$作$DH\\perp AB$于$H$，根据角平分线性质求出$CE=EQ$，$DM=DH$，根据勾股定理求出$AC=AQ$，$AM=AH$，根据等腰三角形的性质和判定求出$BQ=QE$，即可求出①；根据三角形外角性质求出$\\angle CND=45^\\circ$，证$\\triangle ACN\\cong \\triangle BCD$，推出$CD=CN$，即可求出②④；由$\\triangle ACN\\cong \\triangle BCD(ASA)$得到$S_{\\triangle ACN}=S_{\\triangle BCD}$，然后根据$S_{\\triangle AEC}=S_{\\triangle ACN}+S_{\\triangle ECN}$即可得到$S_{\\triangle AEC} \\gt S_{\\triangle BCD}$，进而可判断③；证得$\\triangle DCM\\cong \\triangle DBH$，得到$CM=BH$，$AM=AH$，即可求出⑤，即可求解．",
+    "detail": "解：如图，过$E$作$EQ\\perp AB$于$Q$，作$\\angle ACN=\\angle BCD$，交$AD$于$N$，过$D$作$DH\\perp AB$于$H$，<br/><img src=\"assets/images/ch15_test_b_img14.png\" style=\"max-width:260px; display:block; margin:6px auto;\" />$\\because \\angle ACB=90^\\circ$，$AE$平分$\\angle CAB$，<br/>$\\therefore CE=EQ$，<br/>$\\because \\angle ACB=90^\\circ$，$AC=BC$，<br/>$\\therefore \\angle CBA=\\angle CAB=45^\\circ$，<br/>$\\because EQ\\perp AB$，<br/>$\\therefore \\angle EQA=\\angle EQB=90^\\circ$，<br/>由勾股定理得：$AC=AQ$，<br/>$\\therefore \\angle QEB=45^\\circ =\\angle CBA$，<br/>$\\therefore EQ=BQ$，<br/>$\\therefore AB=AQ+BQ=AC+CE$，故①正确；<br/>$\\because \\angle CAD=\\frac{1}{2}\\angle CAB=22.5^\\circ =\\angle BAD$，<br/>$\\therefore \\angle DBA=90^\\circ -22.5^\\circ =67.5^\\circ$，<br/>$\\therefore \\angle DBC=67.5^\\circ -45^\\circ =22.5^\\circ =\\angle CAD$，<br/>$\\therefore \\angle DBC=\\angle CAD$，<br/>在$\\triangle ACN$和$\\triangle BCD$中，<br/>${\\begin{cases}\\angle ACN=\\angle DCB\\\\AC=BC\\\\\\angle DBC=\\angle CAD\\end{cases}$，<br/>$\\therefore \\triangle ACN\\cong \\triangle BCD(ASA)$，<br/>$\\therefore CN=CD$，<br/>$\\because \\angle ACN+\\angle NCE=90^\\circ$，<br/>$\\therefore \\angle NCB+\\angle BCD=90^\\circ$，<br/>$\\therefore \\angle CND=\\angle CDN=45^\\circ$，<br/>$\\therefore \\angle ACN=45^\\circ -22.5^\\circ =22.5^\\circ =\\angle CAN$，<br/>$\\therefore AN=CN$，<br/>$\\therefore \\angle NCE=\\angle AEC=67.5^\\circ$，<br/>$\\therefore CN=NE$，<br/>$\\therefore CD=AN=EN=\\frac{1}{2}AE$，故②正确，④正确；<br/>∵$\\triangle ACN\\cong \\triangle BCD(ASA)$<br/>∴$S_{\\triangle ACN}=S_{\\triangle BCD}$<br/>∵$S_{\\triangle AEC}=S_{\\triangle ACN}+S_{\\triangle ECN}$<br/>∴$S_{\\triangle AEC} \\gt S_{\\triangle ACN}$<br/>∴$S_{\\triangle AEC} \\gt S_{\\triangle BCD}$，故③错误，<br/>$\\because \\angle MCD=\\angle CAD+\\angle CDA=67.5^\\circ$，<br/>$\\angle DBA=90^\\circ -\\angle DAB=67.5^\\circ$，<br/>$\\therefore \\angle MCD=\\angle DBA$，<br/>$\\because AE$平分$\\angle CAB$，$DM\\perp AC$，$DH\\perp AB$，<br/>$\\therefore DM=DH$，<br/>$\\therefore AM=AH$，<br/>在$\\triangle DCM$和$\\triangle DBH$中，<br/>${\\begin{cases}\\angle M=\\angle DHB=90^\\circ \\\\\\angle MCD=\\angle DBA\\\\DM=DH\\end{cases}$，<br/>$\\therefore \\triangle DCM\\cong \\triangle DBH(AAS)$，<br/>$\\therefore BH=CM$，<br/>$\\therefore\\frac{AC+AB}{AM}=\\frac{AC+AH+BH}{AM}=\\frac{AC+AM+CM}{AM}=\\frac{2AM}{AM}=2$，<br/>即$\\frac{AM}{AC+AB}=\\frac{1}{2}$，故⑤正确．<br/>$\\therefore$正确的结论有4个．<br/>故选：D．<br/>【点睛】本题考查了全等三角形的判定和性质，角平分线的特，直角三角形的性质，等腰三角形的性质，证明三角形全等是解题的关键．"
   },
   {
     "id": "ch15_test_b_q13",
@@ -39363,7 +41538,7 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "$22cm$/22厘米",
     "analysis": "本题考查了等腰三角形的定义，三角形的三边关系．熟练掌握三角形的三边关系确定第三边的长是解题的关键．<br/>分两种情况讨论：当腰长为$4cm$或当腰长为$9cm$，根据三角形三边关系进行判断能否组成三角形，再求解三角形周长．",
-    "detail": "解：当腰长为$4cm$，则三边为$4cm,4cm,9cm$，<br/>此时$4+4<9$，不能组成三角形，舍去；<br/>当腰长为$9cm$，则三边为$4cm,9cm,9cm$，<br/>此时$4+9>9$，能组成三角形，符合题意，<br/>∴它的周长是$4+9+9=22cm$，<br/>故答案为：$22cm$．"
+    "detail": "解：当腰长为$4cm$，则三边为$4cm,4cm,9cm$，<br/>此时$4+4 \\lt 9$，不能组成三角形，舍去；<br/>当腰长为$9cm$，则三边为$4cm,9cm,9cm$，<br/>此时$4+9 \\gt 9$，能组成三角形，符合题意，<br/>∴它的周长是$4+9+9=22cm$，<br/>故答案为：$22cm$．"
   },
   {
     "id": "ch15_test_b_q14",
@@ -39509,7 +41684,7 @@ window.QUESTION_BANK = [
     "typeName": "解答题",
     "difficulty": "中等",
     "knowledge": "等边三角形的性质；全等的性质和SAS综合（SAS）；等腰三角形的定义",
-    "stem": "感知：<br/><img src=\"assets/images/ch15_test_b_img27.png\" style=\"max-width:260px; display:block; margin:6px auto;\" /><br/>如图（1），在$\\triangle ABC$中，分别以$AB$、$AC$为边在$\\triangle ABC$外部作等边三角形$\\triangle ABD$、$\\triangle ACE$，连接$CD$、$BE$．求证：$BE=DC$；<br/>应用：<br/>如图（2），在$\\triangle ABC$中，$AB>AC$，分别以$AB$、$AC$为边在$\\triangle ABC$内部作等腰三角形$\\triangle ABD$、$\\triangle ACE$，点$E$恰好在$BC$边上，使$AB=AD$，$AC=AE$，且$\\angle BAD=\\angle CAE$，连接$CD$，$CE=3cm$，$CD=2cm$，$\\triangle ABC$的面积为$10cm^{2}$，求$\\triangle ABE$的面积．",
+    "stem": "感知：<br/><img src=\"assets/images/ch15_test_b_img27.png\" style=\"max-width:260px; display:block; margin:6px auto;\" /><br/>如图（1），在$\\triangle ABC$中，分别以$AB$、$AC$为边在$\\triangle ABC$外部作等边三角形$\\triangle ABD$、$\\triangle ACE$，连接$CD$、$BE$．求证：$BE=DC$；<br/>应用：<br/>如图（2），在$\\triangle ABC$中，$AB \\gt AC$，分别以$AB$、$AC$为边在$\\triangle ABC$内部作等腰三角形$\\triangle ABD$、$\\triangle ACE$，点$E$恰好在$BC$边上，使$AB=AD$，$AC=AE$，且$\\angle BAD=\\angle CAE$，连接$CD$，$CE=3cm$，$CD=2cm$，$\\triangle ABC$的面积为$10cm^{2}$，求$\\triangle ABE$的面积．",
     "options": [],
     "answer": "感知：证明：∵$\\triangle ABD$和$\\triangle ACE$为等边三角形，<br/>∴$\\angle EAC=\\angle DAB=60^\\circ$，<br/>∴$\\angle DAB+\\angle BAC=\\angle EAC+\\angle CAB$，<br/>∴$\\angle DAC=\\angle EAB$，<br/>∵$AD=AB$，$AC=AE$，<br/>∴$\\triangle ADC\\cong \\triangle ABE(SAS)$，<br/>∴$BE=DC$；<br/>应用：$4cm^{2}$",
     "analysis": "本题为三角形的综合运用，等边三角形的性质，全等三角形的判定与性质，关键在于通过三角形全等找出对应的边角关系.<br/>探究：证明$\\triangle ADC\\cong \\triangle ABE(SAS)$，可得$BE=DC$；<br/>应用：过A点作$\\triangle ABC$的高线，垂足为F．先证明$\\triangle ABE\\cong \\triangle ADC(SAS)$，可得$DC=BE=2$，利用面积求得$AF=4$，则$\\triangle ABE$的面积可求出．",
@@ -39524,11 +41699,11 @@ window.QUESTION_BANK = [
     "typeName": "解答题",
     "difficulty": "中等",
     "knowledge": "角度问题(轴对称综合题)；线段垂直平分线的性质；三角形三边关系的应用；线段问题(轴对称综合题)",
-    "stem": "综合与实践<br/>【模型背景】相传，有一位将军拜访古希腊数学家海伦，求教一个百思不得其解的问题：如图①，将军从A地出发，到一条笔直的河边l饮马，然后到B地，到河边什么地方饮马可使他所走的路线全程最短？海伦利用轴对称的知识回答了这个问题，这个问题后来被称为“将军饮马问题”．<br/>【模型解决】如图①，小明将A，B两地抽象为两个点，将河l抽象为一条直线．如图②，小明作点B关于直线l的对称点$B'$，连结$AB'$与直线l交于点C，点C就是饮马的地方，此时所走的路程就是最短的，小明对此进行了说明，以下是说明过程：<br/>如图③，在直线l上另取任意一点$C'$（与点C不重合），连接$AC'$，$BC'$，$B'C'$．<br/>$\\because$点B与点$B'$关于直线l对称，<br/>$\\therefore$直线l是$BB'$的垂直平分线．<br/>$\\therefore CB=$________，$C'B=$________，<br/>$\\therefore AC+CB=AC+$______=______．<br/>$\\because$在$\\triangle AC'B'$中，$AB'<AC'+C'B'$，<br/>$\\therefore AC+CB<AC'+C'B'$，即$AC+CB$最小．<br/>“将军饮马”问题本质上是运用转化思想，通过对称变换将直线l“同侧”两点距离之和最小这一难于解决的问题，转化为直线l“异侧”线段距离问题解决．小明在说明这个问题的过程中，用到的数学依据是________．<br/>请你完成上面填空．<br/><img src=\"assets/images/ch15_test_b_img29.png\" style=\"max-width:260px; display:block; margin:6px auto;\" /><br/>【模型应用】如图④，在$\\triangle ABC$中，直线m是边$BC$的垂直平分线，点P是直线m上的动点．若$AB=5$，$AC=4$，$BC=7$，则$\\triangle APC$周长的最小值为________．<br/><img src=\"assets/images/ch15_test_b_img30.png\" style=\"max-width:260px; display:block; margin:6px auto;\" /><br/>【模型拓展】如图⑤，已知$\\angle MON=40^\\circ$，P为$\\angle MON$内一定点，$OM$上有一点A，$ON$上有一点B，当$\\triangle PAB$的周长取最小值时，$\\angle APB$的大小是为________度．",
+    "stem": "综合与实践<br/>【模型背景】相传，有一位将军拜访古希腊数学家海伦，求教一个百思不得其解的问题：如图①，将军从A地出发，到一条笔直的河边l饮马，然后到B地，到河边什么地方饮马可使他所走的路线全程最短？海伦利用轴对称的知识回答了这个问题，这个问题后来被称为“将军饮马问题”．<br/>【模型解决】如图①，小明将A，B两地抽象为两个点，将河l抽象为一条直线．如图②，小明作点B关于直线l的对称点$B'$，连结$AB'$与直线l交于点C，点C就是饮马的地方，此时所走的路程就是最短的，小明对此进行了说明，以下是说明过程：<br/>如图③，在直线l上另取任意一点$C'$（与点C不重合），连接$AC'$，$BC'$，$B'C'$．<br/>$\\because$点B与点$B'$关于直线l对称，<br/>$\\therefore$直线l是$BB'$的垂直平分线．<br/>$\\therefore CB=$________，$C'B=$________，<br/>$\\therefore AC+CB=AC+$______=______．<br/>$\\because$在$\\triangle AC'B'$中，$AB' \\lt AC'+C'B'$，<br/>$\\therefore AC+CB \\lt AC'+C'B'$，即$AC+CB$最小．<br/>“将军饮马”问题本质上是运用转化思想，通过对称变换将直线l“同侧”两点距离之和最小这一难于解决的问题，转化为直线l“异侧”线段距离问题解决．小明在说明这个问题的过程中，用到的数学依据是________．<br/>请你完成上面填空．<br/><img src=\"assets/images/ch15_test_b_img29.png\" style=\"max-width:260px; display:block; margin:6px auto;\" /><br/>【模型应用】如图④，在$\\triangle ABC$中，直线m是边$BC$的垂直平分线，点P是直线m上的动点．若$AB=5$，$AC=4$，$BC=7$，则$\\triangle APC$周长的最小值为________．<br/><img src=\"assets/images/ch15_test_b_img30.png\" style=\"max-width:260px; display:block; margin:6px auto;\" /><br/>【模型拓展】如图⑤，已知$\\angle MON=40^\\circ$，P为$\\angle MON$内一定点，$OM$上有一点A，$ON$上有一点B，当$\\triangle PAB$的周长取最小值时，$\\angle APB$的大小是为________度．",
     "options": [],
     "answer": "模型解决：$CB'$，$C'B'$，$CB'，AB'$，两点之间，线段最短或三角形两边之和大于第三边<br/>模型应用：9<br/>模型拓展：100",
     "analysis": "本题考查轴对称性质、垂直平分线性质、三角形三边关系及周长最值问题，解题关键是用轴对称转化线段，结合几何性质（垂直平分线、三角形三边关系等）求解最短路径与周长最值．<br/>模型解决：利用点B与点$B'$关于直线l对称，根据垂直平分线性质得$CB=CB'$，$C'B=C'B'$，将$AC+CB$转化为$AC+CB'=AB'$，再依据三角形三边关系，证得最小，核心是借轴对称和三角形性质转化、推导最短路径 ．<br/>模型应用：根据题意知点C关于直线m的对称点为点B，故当点P与点D重合时，$AP+CP$值的最小，$\\triangle APC$周长有最小值，求出$AB$长度即可得到结论．<br/>模型拓展：设点P关于$OM$、$ON$对称点分别为$P'$、$P^{″}$，当点A、B在$P'P^{″}$上时，$\\triangle PAB$周长为$PA+AB+BP=P'P^{″}$，此时周长最小．根据轴对称的性质，可求出$\\angle APB$的度数．",
-    "detail": "模型解决：如图③，在直线l上另取任意一点$C'$（与点C不重合），连接$AC'$，$BC'$，$B'C'$．<br/>$\\because$点B与点$B'$关于直线l对称，<br/>$\\therefore$直线l是$BB'$的垂直平分线．<br/>$\\therefore CB=CB'$，$C'B=C'B'$，<br/>$\\therefore AC+CB=AC+CB'=AB'$．<br/>$\\because$在$\\triangle AC'B'$中，$AB'<AC'+C'B'$，<br/>$\\therefore AC+CB<AC'+C'B'$，即$AC+CB$最小．<br/>“将军饮马”问题本质上是运用转化思想，通过对称变换将直线l“同侧”两点距离之和最小这一难于解决的问题，转化为直线l“异侧”线段距离问题解决．小明在说明这个问题的过程中，把A，B在直线同侧的问题转化为在直线的两侧，从而可利用“两点之间线段最短”，或即“三角形两边之和大于第三边”的问题加以解决．<br/>故答案为：$CB'$，$C'B'$，$CB'，AB'$，两点之间，线段最短或三角形两边之和大于第三边；<br/>模型应用：解：如图，直线m与$AB$交于点D，<br/><img src=\"assets/images/ch15_test_b_img31.png\" style=\"max-width:260px; display:block; margin:6px auto;\" /><br/>∵直线m垂直平分$BC$，<br/>∴B、C关于直线m对称，<br/>∴当P和D重合时，$AP+CP$的值最小，最小值等于$AB$的长，<br/>∵$AB=5$，$AC=4$，<br/>∴$\\triangle APC$周长的最小值是$AB+AC=5+4=9$．<br/>故答案为：9；<br/>模型拓展：分别作点P关于$OM$、$ON$的对称点P′、P″，连接$OP'$、$OP^{″}$、$P'P^{″}$，交$OM$、$ON$于点A、B，连接$PA$、$PB$，此时$\\triangle PAB$周长的最小值等于$P'P^{″}$．<br/><img src=\"assets/images/ch15_test_b_img32.png\" style=\"max-width:260px; display:block; margin:6px auto;\" /><br/>由轴对称性质可得，$OP'=OP^{″}=OP$，$\\angle P'OA=\\angle POA$，$\\angle P^{″}OB=\\angle POB$，<br/>∴$\\angle P'OP^{″}=2\\angle MON=2\\times 40^\\circ =80^\\circ$，<br/>∴$\\angle OP'P^{″}=\\angle OP^{″}P'=(180^\\circ -80^\\circ )\\div 2=50^\\circ$，<br/>又∵$\\angle BPO=\\angle OP^{″}B=50^\\circ$，$\\angle APO=\\angle AP'O=50^\\circ$，<br/>∴$\\angle APB=\\angle APO+\\angle BPO=100^\\circ$．<br/>故答案为100．"
+    "detail": "模型解决：如图③，在直线l上另取任意一点$C'$（与点C不重合），连接$AC'$，$BC'$，$B'C'$．<br/>$\\because$点B与点$B'$关于直线l对称，<br/>$\\therefore$直线l是$BB'$的垂直平分线．<br/>$\\therefore CB=CB'$，$C'B=C'B'$，<br/>$\\therefore AC+CB=AC+CB'=AB'$．<br/>$\\because$在$\\triangle AC'B'$中，$AB' \\lt AC'+C'B'$，<br/>$\\therefore AC+CB \\lt AC'+C'B'$，即$AC+CB$最小．<br/>“将军饮马”问题本质上是运用转化思想，通过对称变换将直线l“同侧”两点距离之和最小这一难于解决的问题，转化为直线l“异侧”线段距离问题解决．小明在说明这个问题的过程中，把A，B在直线同侧的问题转化为在直线的两侧，从而可利用“两点之间线段最短”，或即“三角形两边之和大于第三边”的问题加以解决．<br/>故答案为：$CB'$，$C'B'$，$CB'，AB'$，两点之间，线段最短或三角形两边之和大于第三边；<br/>模型应用：解：如图，直线m与$AB$交于点D，<br/><img src=\"assets/images/ch15_test_b_img31.png\" style=\"max-width:260px; display:block; margin:6px auto;\" /><br/>∵直线m垂直平分$BC$，<br/>∴B、C关于直线m对称，<br/>∴当P和D重合时，$AP+CP$的值最小，最小值等于$AB$的长，<br/>∵$AB=5$，$AC=4$，<br/>∴$\\triangle APC$周长的最小值是$AB+AC=5+4=9$．<br/>故答案为：9；<br/>模型拓展：分别作点P关于$OM$、$ON$的对称点P′、P″，连接$OP'$、$OP^{″}$、$P'P^{″}$，交$OM$、$ON$于点A、B，连接$PA$、$PB$，此时$\\triangle PAB$周长的最小值等于$P'P^{″}$．<br/><img src=\"assets/images/ch15_test_b_img32.png\" style=\"max-width:260px; display:block; margin:6px auto;\" /><br/>由轴对称性质可得，$OP'=OP^{″}=OP$，$\\angle P'OA=\\angle POA$，$\\angle P^{″}OB=\\angle POB$，<br/>∴$\\angle P'OP^{″}=2\\angle MON=2\\times 40^\\circ =80^\\circ$，<br/>∴$\\angle OP'P^{″}=\\angle OP^{″}P'=(180^\\circ -80^\\circ )\\div 2=50^\\circ$，<br/>又∵$\\angle BPO=\\angle OP^{″}B=50^\\circ$，$\\angle APO=\\angle AP'O=50^\\circ$，<br/>∴$\\angle APB=\\angle APO+\\angle BPO=100^\\circ$．<br/>故答案为100．"
   },
   {
     "id": "ch15_test_b_q25",
@@ -39544,5 +41719,1205 @@ window.QUESTION_BANK = [
     "answer": "(1)$50$<br/>(2)<br/>解：当$AP=5$时，$\\triangle ADP\\cong \\triangle BPC$；理由如下：<br/>∵$\\angle ACB=120^\\circ$，$CA=CB$，<br/>∴$\\angle A=\\angle B=30^\\circ$，<br/>∵$\\angle APC$是$\\triangle BPC$的一个外角，<br/>∴$\\angle APC=\\angle B+\\angle \\alpha =30^\\circ +\\angle \\alpha$，<br/>∵$\\angle APC=\\angle DPC+\\angle APD=30^\\circ +\\angle APD$，<br/>∴$\\angle \\alpha =\\angle APD$，<br/>∵$AP=BC=5$，<br/>在$\\triangle ADP$和$\\triangle BPC$中，<br/>${\\begin{cases}\\angle A=\\angle B\\\\AP=BC\\\\\\angle APD=\\angle BCP\\end{cases}$，<br/>∴$\\triangle ADP\\cong \\triangle BPC$（$ASA$）；<br/>(3)存在，$\\alpha =45^\\circ$或$90^\\circ$",
     "analysis": "（1）根据等腰三角形的性质可得$\\angle B=30^\\circ$，进而可以解决问题；<br/>（2）当$AP=5$时，$\\triangle ADP$与$\\triangle BPC$全等，理由为：根据$CA=CB$，且$\\angle ACB$度数，求出$\\angle A$与$\\angle B$度数，再由外角性质得到$\\angle \\alpha =\\angle APD$，根据$AP=BC$，利用$ASA$即可得证；<br/>（3）点$P$在滑动时，$\\triangle PCD$的形状可以是等腰三角形，分三种情况考虑：当$PC=PD$；$PD=CD$；$PC=CD$，分别求出夹角$\\alpha$的大小即可．<br/>本题属于三角形综合题，主要考查了等腰三角形的判定和性质，三角形的内角和定理，用分类讨论的思想解决问题是解本题的关键．",
     "detail": "（1）解：∵$CA=CB$，$\\angle ACB=120^\\circ$，<br/>∴$\\angle B=30^\\circ$，<br/>∴$\\alpha =180^\\circ -100^\\circ -30^\\circ =50^\\circ$；<br/>故答案为：$50$；<br/>（2）略<br/>（3）解：存在$\\triangle PCD$是等腰三角形；理由如下：<br/>∵$\\triangle PCD$是等腰三角形，<br/>$\\angle PCD=120^\\circ -\\alpha$，$\\angle CPD=30^\\circ$，<br/>①当$PC=PD$时，<br/>∴$\\angle PCD=\\angle PDC=\\frac{1}{2}(180^\\circ -30^\\circ )=75^\\circ$，<br/>即$120^\\circ -\\alpha =75^\\circ$，<br/>∴$\\angle \\alpha =45^\\circ$；<br/>②当$PD=CD$时，$\\triangle PCD$是等腰三角形，<br/>∴$\\angle PCD=\\angle CPD=30^\\circ$，即$120^\\circ -\\alpha =30^\\circ$，<br/>∴$\\alpha =90^\\circ$；<br/>③当$PC=CD$时，$\\triangle PCD$是等腰三角形，<br/>∴$\\angle CDP=\\angle CPD=30^\\circ$，<br/>∴$\\angle PCD=180^\\circ -2\\times 30^\\circ =120^\\circ$，<br/>即$120^\\circ -\\alpha =120^\\circ$，<br/>∴$\\alpha =0^\\circ$，<br/>此时点$P$与点$B$重合，点$D$和$A$重合，<br/>∵点$P$不与$A$，$B$重合，<br/>∴$\\alpha =0^\\circ$，舍去，<br/>综合所述，存在$\\triangle PCD$是等腰三角形；$\\alpha =45^\\circ$或$90^\\circ$．"
+  },
+  {
+    "id": "ch28_1_1_b_q1",
+    "number": 1,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.1 旋转及其性质",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "判断生活中的旋转现象",
+    "stem": "下列运动属于旋转的有（     ）",
+    "options": [
+      "A. 钟表上的时针运动",
+      "B. 国旗上升的过程",
+      "C. 传输带运输的东西",
+      "D. 飞驰的火车"
+    ],
+    "answer": "A",
+    "analysis": "解：A．钟表上的时针运动，属于旋转，符合题意；<br/>B．国旗上升的过程，属于平移，不符合题意；<br/>C．传输带运输的东西，属于平移，不符合题意；<br/>D．飞驰的火车沿轨道移动，属于平移，不符合题意．",
+    "detail": "解：A．钟表上的时针运动，属于旋转，符合题意；<br/>B．国旗上升的过程，属于平移，不符合题意；<br/>C．传输带运输的东西，属于平移，不符合题意；<br/>D．飞驰的火车沿轨道移动，属于平移，不符合题意．"
+  },
+  {
+    "id": "ch28_1_1_b_q2",
+    "number": 2,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.1 旋转及其性质",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "找旋转中心、旋转角、对应点",
+    "stem": "如图，在正三角形网格中，以某点为中心，将$\\triangle MNP$旋转，得到$\\triangle M_{1}N_{1}P_{1}$，则旋转中心是（       ）<br/><img src=\"assets/images/ch28_1_b1_image1.png\" style=\"width:152px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [
+      "A. 点$A$",
+      "B. 点$B$",
+      "C. 点$C$",
+      "D. 点$D$"
+    ],
+    "answer": "B",
+    "analysis": "解：如图，线段与线段的垂直平分线交于点B，<br/><img src=\"assets/images/ch28_1_b1_image2.png\" style=\"width:151px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>∴旋转中心是点B．",
+    "detail": "解：如图，线段与线段的垂直平分线交于点B，<br/><img src=\"assets/images/ch28_1_b1_image2.png\" style=\"width:151px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>∴旋转中心是点B．"
+  },
+  {
+    "id": "ch28_1_1_b_q3",
+    "number": 3,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.1 旋转及其性质",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "根据旋转的性质说明线段或角相等",
+    "stem": "如图，将$\\triangle ABC$绕点O按逆时针方向旋转一定的角度得到$\\triangle DEF$，其中点A，B，C的对应点分别是点D，E，F．在旋转过程中，与$\\angle AOB$始终相等的是（     ）<br/><img src=\"assets/images/ch28_1_b1_image3.png\" style=\"width:196px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [
+      "A. $\\angle FOE$",
+      "B. $\\angle BOC$",
+      "C. $\\angle DOE$",
+      "D. $\\angle AOE$"
+    ],
+    "answer": "C",
+    "analysis": "本题考查了旋转的性质，熟练掌握旋转的性质是解题的关键．<br/>由旋转的性质可知，对应点与旋转中心所连线段的夹角等于旋转角，因而可得$\\angle AOD=\\angle BOE$，进而可得$\\angle AOB+\\angle BOD=\\angle BOD+\\angle DOE$，由此即可得出答案．",
+    "detail": "解：由旋转的性质可知，对应点与旋转中心所连线段的夹角等于旋转角，<br/>$\\therefore \\angle AOD=\\angle BOE$，<br/>$\\therefore \\angle AOB+\\angle BOD=\\angle BOD+\\angle DOE$，<br/>$\\therefore \\angle AOB=\\angle DOE$，<br/>$\\therefore$在旋转过程中，与$\\angle AOB$始终相等的是$\\angle DOE$，<br/>故选：$C$．"
+  },
+  {
+    "id": "ch28_1_1_b_q4",
+    "number": 4,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.1 旋转及其性质",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "根据旋转的性质求解",
+    "stem": "如图，在$\\triangle ABC$中， $\\angle BAC=35^\\circ$，将$\\triangle ABC$绕点$A$按逆时针方向旋转$60^\\circ$得到$\\triangle ADE$，则$\\angle BAE$的度数是（        ）<br/><img src=\"assets/images/ch28_1_b1_image4.png\" style=\"width:114px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [
+      "A. 120°",
+      "B. 105°",
+      "C. 95°",
+      "D. 70°"
+    ],
+    "answer": "C",
+    "analysis": "由旋转的性质得$\\angle CAE=60^\\circ$，再根据角的和差即可求解．",
+    "detail": "由旋转的性质得：$\\angle CAE=60^\\circ$，<br/>∴$\\angle BAE=\\angle BAC+\\angle CAE=35^\\circ +60^\\circ =95^\\circ$．"
+  },
+  {
+    "id": "ch28_1_1_b_q5",
+    "number": 5,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.1 旋转及其性质",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "根据旋转的性质求解",
+    "stem": "如图，$\\triangle ADE$由$\\triangle ABC$绕点$A$逆时针旋转$66^\\circ$得到，若$\\angle BAC=30^\\circ$，则$\\angle CAD=$（        ）<br/><img src=\"assets/images/ch28_1_b1_image5.png\" style=\"width:161px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [
+      "A. $30^\\circ$",
+      "B. $66^\\circ$",
+      "C. $36^\\circ$",
+      "D. $46^\\circ$"
+    ],
+    "answer": "C",
+    "analysis": "解：由旋转可得，$\\angle BAD=66^\\circ$，<br/>∵$\\angle BAC=30^\\circ$<br/>∴$\\angle CAD=\\angle BAD-\\angle BAC=36^\\circ$．",
+    "detail": "解：由旋转可得，$\\angle BAD=66^\\circ$，<br/>∵$\\angle BAC=30^\\circ$<br/>∴$\\angle CAD=\\angle BAD-\\angle BAC=36^\\circ$．"
+  },
+  {
+    "id": "ch28_1_1_b_q6",
+    "number": 6,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.1 旋转及其性质",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "容易",
+    "knowledge": "求旋转角",
+    "stem": "钟表的分针匀速旋转一周需要60分钟，经过20分钟，分针旋转了______．",
+    "options": [],
+    "answer": "$120^\\circ$/120度",
+    "analysis": "根据钟表一周为$360^\\circ$，分针匀速旋转一周需要60分钟，得到1分钟分针旋转$6^\\circ$，进而求出20分钟，分针旋转的度数即可．<br/>【点睛】本题考查钟表中的旋转．熟练掌握钟表一周为$360^\\circ$，分针旋转一分钟是$6^\\circ$，是解题的关键．",
+    "detail": "解：∵钟表一周为$360^\\circ$，分针匀速旋转一周需要60分钟，<br/>∴1分钟分针旋转$6^\\circ$，<br/>∴经过20分钟，分针旋转了：$20\\times 6^\\circ =120^\\circ$；<br/>故答案为：$120^\\circ$．"
+  },
+  {
+    "id": "ch28_1_1_b_q7",
+    "number": 7,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.1 旋转及其性质",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "容易",
+    "knowledge": "找旋转中心、旋转角、对应点",
+    "stem": "如图，在小正方形组成的网格中，图②是由图①经过旋转变换得到的，其旋转中心是点______（填“$A$”或“$B$”或“$C$”）．<br/><img src=\"assets/images/ch28_1_b1_image6.png\" style=\"width:125px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [],
+    "answer": "$B$",
+    "analysis": "解：根据两组对应点连线的垂直平分线的交点是旋转中心，可知图②经过旋转变换得到图①的旋转中心是$B$．",
+    "detail": "解：根据两组对应点连线的垂直平分线的交点是旋转中心，可知图②经过旋转变换得到图①的旋转中心是$B$．"
+  },
+  {
+    "id": "ch28_1_1_b_q8",
+    "number": 8,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.1 旋转及其性质",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "容易",
+    "knowledge": "根据旋转的性质求解",
+    "stem": "如图，$\\triangle AOB$绕点O逆时针旋转$65^\\circ$得到$\\triangle COD$，若$\\angle AOB=30^\\circ$，$\\angle BOC$的度数是______．<br/><img src=\"assets/images/ch28_1_b1_image7.png\" style=\"width:117px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [],
+    "answer": "$35^\\circ$/35度",
+    "analysis": "此题考查了旋转的性质，首先根据旋转的性质得到$\\angle AOC=65^\\circ$，然后利用角的和差求解即可．解题的关键是熟练掌握旋转的性质．",
+    "detail": "∵$\\triangle AOB$绕点O逆时针旋转$65^\\circ$得到$\\triangle COD$，<br/>∴$\\angle AOC=65^\\circ$<br/>∵$\\angle AOB=30^\\circ$<br/>∴$\\angle BOC=\\angle AOC-\\angle AOB=35^\\circ$．<br/>故答案为：$35^\\circ$．"
+  },
+  {
+    "id": "ch28_1_1_b_q9",
+    "number": 9,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.1 旋转及其性质",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "容易",
+    "knowledge": "根据旋转的性质求解",
+    "stem": "如图，将$\\triangle AOB$绕点$O$按逆时针方向旋转$45^\\circ$后得到$\\triangle COD$，若$\\angle AOB=15^\\circ$，则$\\angle BOC$的度数是______．<br/><img src=\"assets/images/ch28_1_b1_image8.png\" style=\"width:144px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [],
+    "answer": "$30^\\circ$",
+    "analysis": "首先根据旋转变换的性质求出$\\angle AOC,\\angle BOD$的度数，结合$\\angle AOB=15^\\circ$即可解决问题．",
+    "detail": "解：由题意及旋转变换的性质得$\\angle AOC=\\angle BOD=45^\\circ$，<br/>又 ∵$\\angle AOB=15^\\circ$，<br/>$\\therefore \\angle BOC=\\angle AOC-\\angle AOB=45^\\circ -15^\\circ =30^\\circ$．"
+  },
+  {
+    "id": "ch28_1_1_b_q10",
+    "number": 10,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.1 旋转及其性质",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "容易",
+    "knowledge": "根据旋转的性质求解",
+    "stem": "如图，将$\\triangle AOB$绕着点O顺时针旋转，得到$\\triangle COD$，若$\\angle AOB=40^\\circ$，$\\angle BOC=15^\\circ$，则$\\angle BOD=$______．<br/><img src=\"assets/images/ch28_1_b1_image9.png\" style=\"width:131px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [],
+    "answer": "$55^\\circ$",
+    "analysis": "根据旋转的性质得出$\\angle COD=\\angle AOB=40^\\circ$，然后求出结果即可．",
+    "detail": "解：∵将$\\triangle AOB$绕着点O顺时针旋转，得到$\\triangle COD$，<br/>∴$\\angle COD=\\angle AOB=40^\\circ$，<br/>∴$\\angle BOD=\\angle BOC+\\angle COD=15^\\circ +40^\\circ =55^\\circ$．"
+  },
+  {
+    "id": "ch28_1_1_b_q11",
+    "number": 11,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.1 旋转及其性质",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "容易",
+    "knowledge": "找旋转中心、旋转角、对应点",
+    "stem": "如图，将$\\triangle ABD$经旋转后到达$\\triangle ACE$的位置．问：<br/><img src=\"assets/images/ch28_1_b1_image10.png\" style=\"width:158px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>（1）旋转中心是哪一点？（2）如果M是边$AB$的中点，那么经过上述旋转后，点M转到了什么位置？",
+    "options": [],
+    "answer": "（1）旋转中心是点A<br/>（2）经过旋转后，点M转到了边$AC$的中点处",
+    "analysis": "本题考查了图形的旋转变化；<br/>（1）观察图形，找到公共顶点可得出旋转中心；<br/>（2）因为旋转前后$AB、AC$是对应边，故$AB$的中点M，旋转后就是$AC$的中点了．",
+    "detail": "（1）∵将$\\triangle ABD$经旋转后到达$\\triangle ACE$的位置，它们的公共顶点为A，<br/>∴旋转中心是点A．<br/>（2）∵旋转前后$AB、AC$是对应边，M是边$AB$的中点，<br/>∴经过旋转后，点M转到了边$AC$的中点处．"
+  },
+  {
+    "id": "ch28_1_1_b_q12",
+    "number": 12,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.1 旋转及其性质",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "容易",
+    "knowledge": "根据旋转的性质求解；用勾股定理解三角形",
+    "stem": "如图，在$Rt\\triangle ABC$中，$\\angle C=90^\\circ$，$CB=3$，$CA=4$，将$\\triangle ABC$绕点$B$按逆时针方向旋转得$\\triangle DBM$，使点$C$的对应点$M$落在$AB$边上，点$A$的对应点为点$D$，连接$AD$．求$AD$的长．<br/><img src=\"assets/images/ch28_1_b1_image11.png\" style=\"width:109px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [],
+    "answer": "$2\\sqrt{5}$",
+    "analysis": "本题主要考查了旋转的性质，勾股定理等知识点，熟练掌握勾股定理是解题的关键．<br/>由旋转的性质可求得$MB$，$MD$的长和$\\angle DMB$的大小，由勾股定理可求得$AB$的长，进而可求得$MA$的长，再次利用勾股定理即可求得$AD$的长．",
+    "detail": "解：由旋转的性质可知：<br/>$MB=CB=3$，$MD=CA=4$，$\\angle DMB=\\angle C=90^\\circ$，<br/>在$Rt\\triangle ABC$中，根据勾股定理可得：<br/>$AB=\\sqrt{CB^{2}+CA^{2}}=\\sqrt{3^{2}+4^{2}}=5$，<br/>$\\therefore MA=AB-MB=5-3=2$，<br/>$\\because \\angle DMA=180^\\circ -\\angle DMB=180^\\circ -90^\\circ =90^\\circ$，<br/>$\\therefore$在$Rt\\triangle DMA$中，根据勾股定理可得：<br/>$AD=\\sqrt{MD^{2}+MA^{2}}=\\sqrt{4^{2}+2^{2}}=2\\sqrt{5}$．"
+  },
+  {
+    "id": "ch28_1_1_b_q13",
+    "number": 13,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.1 旋转及其性质",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "容易",
+    "knowledge": "根据旋转的性质证明；等腰三角形的性质",
+    "stem": "如图，将$\\triangle ABC$绕点B旋转得到$\\triangle DBE$，且A，D，C三点在同一条直线上．求证：$BD$平分$\\angle ADE$<br/><img src=\"assets/images/ch28_1_b1_image12.png\" style=\"width:162px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [],
+    "answer": "证明：∵将$\\triangle ABC$绕点B旋转得到$\\triangle DBE$，<br/>∴$\\triangle ABC\\cong \\triangle DBE$<br/>∴$BA=BD$，$\\angle A=\\angle BDE$，<br/>∴$\\angle A=\\angle ADB$．<br/>∴$\\angle ADB=\\angle BDE$．<br/>∴$BD$平分$\\angle ADE$．",
+    "analysis": "本题考查了旋转的性质，全等三角形的判定与性质，角平分线的定义，等边对等角，正确掌握相关性质内容是解题的关键．先根据旋转得$\\triangle ABC\\cong \\triangle DBE$，则$BA=BD$，$\\angle A=\\angle BDE$，故$\\angle A=\\angle ADB$，所以$\\angle ADB=\\angle BDE$，即可作答．",
+    "detail": "略"
+  },
+  {
+    "id": "ch28_1_1_b_q14",
+    "number": 14,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.1 旋转及其性质",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "容易",
+    "knowledge": "根据旋转的性质求解",
+    "stem": "如图，将$\\triangle ABC$绕点A按逆时针方向旋转后到达$\\triangle ADE$的位置，设$DE$与$AC$，$BC$分别交于点O，F．若$\\triangle ABC$的周长为$24$，$AD=6,AE=8$，求$BC$的长．<br/><img src=\"assets/images/ch28_1_b1_image13.png\" style=\"width:155px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [],
+    "answer": "10",
+    "analysis": "本题考查旋转的性质，熟练掌握旋转的性质是解题的关键，根据旋转的性质可得$AB=AD=6,AC=AE=8$，从而可得$AB+AC$的长，由于$\\triangle ABC$的周长为24，进而求得$BC$的长．",
+    "detail": "解：由旋转的性质得$AB=AD=6,AC=AE=8$，<br/>∵$AB+AC=6+8=14$，<br/>∴$\\triangle ABC$的周长为24，<br/>∴$AB+AC+BC=24$，<br/>∴$BC=24-(AB+AC)=10$．"
+  },
+  {
+    "id": "ch28_1_1_b_q15",
+    "number": 15,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.1 旋转及其性质",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "容易",
+    "knowledge": "旋转综合探究；根据旋转的性质求解",
+    "stem": "数学实验课上，同学们探究角度之间的关系．将两块直角三角板的顶点$O$叠在一起，已知$\\angle COD=\\angle A=90^\\circ$，$\\angle AOB=30^\\circ$，将三角板$AOB$绕点$O$旋转，在旋转过程中，保持$\\angle AOB$始终在$\\angle COD$的内部．<br/><img src=\"assets/images/ch28_1_b1_image14.png\" style=\"width:261px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>（1）将两块直角三角板按如图1方式摆放．①若$\\angle AOC=36^\\circ$时，求$\\angle BOD$的度数；②试探究$\\angle AOD$与$\\angle BOC$之间的数量关系，并说明理由．（2）如图2，若$OE$平分$\\angle AOC$，$OF$平分$\\angle BOD$，在三角板$AOB$旋转过程中，$\\angle EOF$的大小是否发生改变？若不变，请说明理由；若改变，请求出变化范围．",
+    "options": [],
+    "answer": "（1）①$24^\\circ$；<br/>②$\\angle AOD+\\angle BOC=120^\\circ$，<br/>理由如下：<br/>∵$\\angle AOD+\\angle BOC$<br/>$=(\\angle AOB+\\angle BOD)+(\\angle AOB+\\angle AOC)$<br/>$=(\\angle AOC+\\angle AOB+\\angle BOD)+\\angle AOB$<br/>$=\\angle COD+\\angle AOB=90^\\circ +30^\\circ =120^\\circ$，<br/>∴$\\angle AOD+\\angle BOC=120^\\circ$；<br/><img src=\"assets/images/ch28_1_b1_image15.png\" style=\"width:121px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>（2）不变，<br/>理由如下：<br/>∵$OE$平分$\\angle AOC$，$OF$平分$\\angle BOD$<br/>∴$\\angle AOE=\\frac{1}{2}\\angle AOC$，$\\angle BOF=\\frac{1}{2}\\angle BOD$<br/>∵$\\angle EOF=\\angle AOE+\\angle AOB+\\angle BOF$<br/>$=\\frac{1}{2}\\angle AOC+\\angle AOB+\\frac{1}{2}\\angle BOD$<br/>$=\\frac{1}{2}(\\angle AOC+\\angle AOB+\\angle BOD)+\\frac{1}{2}\\angle AOB$<br/>$=\\frac{1}{2}\\angle COD+\\frac{1}{2}\\angle AOB=\\frac{1}{2}\\times 90^\\circ +\\frac{1}{2}\\times 30^\\circ =60^\\circ$<br/>∴$\\angle EOF=60^\\circ$．<br/><img src=\"assets/images/ch28_1_b1_image16.png\" style=\"width:127px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "analysis": "本题主要考查三角形的内角和定理，解答的关键是结合图形分析清楚各角之间的关系．<br/>（1）①根据角的和差即可得结论；②根据角的和差即可得结论；<br/>（2）由$OE$平分$\\angle AOC$，$OF$平分$\\angle BOD$，得$\\angle AOE=\\frac{1}{2}\\angle AOC$，$\\angle BOF=\\frac{1}{2}\\angle BOD$，由$\\angle EOF=\\angle AOE+\\angle AOB+\\angle BOF$即可得结论．",
+    "detail": "（1）解：①∵$\\angle COD=90^\\circ$，<br/>$\\angle AOB=30^\\circ$，$\\angle AOC=36^\\circ$，<br/>∴$\\angle BOD=\\angle COD-\\angle AOC-\\angle AOB$，<br/>$=90^\\circ -36^\\circ -30^\\circ =24^\\circ$，<br/>② 略<br/>（2）略"
+  },
+  {
+    "id": "ch28_1_1_a_q1",
+    "number": 1,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.1 旋转及其性质",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "判断生活中的旋转现象",
+    "stem": "数学来源于生活，下列生活中的运动属于旋转的是（       ）",
+    "options": [
+      "A. 地下水位逐年下降",
+      "B. 传送带的移动",
+      "C. 升国旗的过程",
+      "D. 工作中的风力发电机叶片"
+    ],
+    "answer": "D",
+    "analysis": "题目主要考查旋转的定义，旋转是指物体围绕一个固定点或轴做圆周运动，据此依次判断即可．",
+    "detail": "解：旋转的定义是物体绕一个固定点或轴做圆周运动，<br/>A、地下水位逐年下降是垂直方向的变化，无旋转中心；<br/>B、传送带的移动是物体沿直线运动，属于平移；<br/>C、升国旗的过程是国旗沿旗杆直线上升，属于平移；<br/>D、工作中的风力发电机叶片绕中心轴转动，属于旋转；<br/>故选：D．"
+  },
+  {
+    "id": "ch28_1_1_a_q2",
+    "number": 2,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.1 旋转及其性质",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "中等",
+    "knowledge": "找旋转中心、旋转角、对应点",
+    "stem": "如图，在平面直角坐标系中，$A$的坐标为$(-1,5)$，点$B$的坐标为$(3,3)$，线段$AB$绕点$P$旋转一定的角度后与线段$CD$重合$C,D$均为格点，$A$的对应点是点$C$，则旋转中心$P$点的坐标为（        ）<br/><img src=\"assets/images/ch28_1_a1_image1.png\" style=\"width:165px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [
+      "A. $(1,1)$",
+      "B. $(4,4)$",
+      "C. $(2,1)$",
+      "D. $(1,1)$或$(4,4)$"
+    ],
+    "answer": "A",
+    "analysis": "本题考查坐标与图形变换旋转，画出平面直角坐标系，对应点连线的垂直平分线的交点即为旋转中心点$P$．",
+    "detail": "解：作$AC,BD$的垂直平分线交于点$E$，<br/><img src=\"assets/images/ch28_1_a1_image2.png\" style=\"width:166px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>点$E$即为旋转中心，$E(1,1)$．"
+  },
+  {
+    "id": "ch28_1_1_a_q3",
+    "number": 3,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.1 旋转及其性质",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "中等",
+    "knowledge": "根据旋转的性质说明线段或角相等",
+    "stem": "如图，$\\triangle ABC$由$\\triangle A'B'C'$绕О点旋转$180^\\circ$而得到，则下列结论不成立的是（       ）<br/><img src=\"assets/images/ch28_1_a1_image3.png\" style=\"width:168px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [
+      "A. 点A与点$A'$是对应点",
+      "B. $BO=B'O$",
+      "C. $\\angle ACB=\\angle C'AB'$",
+      "D. $AB=A'B'$"
+    ],
+    "answer": "C",
+    "analysis": "本题考查了旋转的性质，根据旋转的性质：（1）对应点到旋转中心的距离相等；（2）对应点与旋转中心所连线段的夹角等于旋转角；（3）旋转前后的图形全等．进行判断即可．",
+    "detail": "解：$\\because$$\\triangle ABC$由$\\triangle A'B'C'$绕O旋转$180^\\circ$而得到，<br/>$\\therefore$点A与$A'$是一组对应点，$BO=B'O$，$AB=A'B'$，故A，B，D都不合题意．<br/>$\\because$$\\angle ACB$与$\\angle C'AB'$不是对应角，<br/>$\\therefore$$\\angle ACB$与$\\angle C'AB'$不一定相等，$\\angle ACB=\\angle C'A'B'$不成立，故C符合题意．<br/>故选：C．"
+  },
+  {
+    "id": "ch28_1_1_a_q4",
+    "number": 4,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.1 旋转及其性质",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "根据旋转的性质求解",
+    "stem": "如图，把$\\triangle ABC$绕点$A$按逆时针方向旋转$45^\\circ$得到$\\triangle AB'C'$，若$\\angle BAC=65^\\circ$，则$\\angle B'AC$的度数为（        ）<br/><img src=\"assets/images/ch28_1_a1_image4.png\" style=\"width:117px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [
+      "A. $15^\\circ$",
+      "B. $20^\\circ$",
+      "C. $25^\\circ$",
+      "D. $30^\\circ$"
+    ],
+    "answer": "B",
+    "analysis": "解：由旋转的性质可知，$\\angle BAB'=45^\\circ$，<br/>$\\because \\angle BAC=65^\\circ$，<br/>$\\therefore \\angle B'AC=\\angle BAC-\\angle BAB'=65^\\circ -45^\\circ =20^\\circ$．",
+    "detail": "解：由旋转的性质可知，$\\angle BAB'=45^\\circ$，<br/>$\\because \\angle BAC=65^\\circ$，<br/>$\\therefore \\angle B'AC=\\angle BAC-\\angle BAB'=65^\\circ -45^\\circ =20^\\circ$．"
+  },
+  {
+    "id": "ch28_1_1_a_q5",
+    "number": 5,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.1 旋转及其性质",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "根据旋转的性质求解；等边对等角；三角形内角和定理的应用",
+    "stem": "如图，$\\triangle ABC$绕点$C$顺时针旋转$90^\\circ$得到$\\triangle EDC$．若点$A$，$D$，$E$在同一条直线上，$\\angle ACB=30^\\circ$，$\\angle ADC$的度数是（        ）<br/><img src=\"assets/images/ch28_1_a1_image5.png\" style=\"width:139px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [
+      "A. $105^\\circ$",
+      "B. $75^\\circ$",
+      "C. $60^\\circ$",
+      "D. $90^\\circ$"
+    ],
+    "answer": "B",
+    "analysis": "由旋转得，$\\angle DCB=90^\\circ$，$\\angle ACE=90^\\circ$，$CA=CE$，故$\\angle CAE=45^\\circ$，又$\\angle ACB=30^\\circ$，故$\\angle ACD=60^\\circ$，在$\\triangle ACD$中，$\\angle ADC=75^\\circ$．",
+    "detail": "解：由旋转得，$\\angle DCB=90^\\circ$，$\\angle ACE=90^\\circ$，$CA=CE$，<br/>$\\therefore \\angle CAE=\\angle CEA=45^\\circ$，<br/>$\\because \\angle ACB=30^\\circ$，<br/>$\\therefore \\angle ACD=60^\\circ$，<br/>在$\\triangle ACD$中，$\\angle ADC=180^\\circ -\\angle ACD-\\angle CAD=180^\\circ -60^\\circ -45^\\circ =75^\\circ$．"
+  },
+  {
+    "id": "ch28_1_1_a_q6",
+    "number": 6,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.1 旋转及其性质",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "容易",
+    "knowledge": "判断生活中的旋转现象",
+    "stem": "图中，甲图怎样变成乙图：______．<br/><img src=\"assets/images/ch28_1_a1_image6.png\" style=\"width:153px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [],
+    "answer": "绕点A顺时针旋转",
+    "analysis": "根据旋转的定义即可求解．<br/>【点睛】此题主要考查旋转的判断，解题的关键是熟知旋转的特点及定义．",
+    "detail": "解：观察可知，甲图绕点A顺时针旋转即可变成乙图．<br/>故答案为：绕点A顺时针旋转．<br/><img src=\"assets/images/ch28_1_a1_image7.png\" style=\"width:153px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">"
+  },
+  {
+    "id": "ch28_1_1_a_q7",
+    "number": 7,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.1 旋转及其性质",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "中等",
+    "knowledge": "找旋转中心、旋转角、对应点",
+    "stem": "如图，在正三角形网格中，若以D，E，F，M，N中的一点为中心，将$\\triangle ABC$按某个方向旋转一定的角度，得到$\\triangle A_{1}B_{1}C_{1}$，则该旋转的旋转中心是点______．<br/><img src=\"assets/images/ch28_1_a1_image8.png\" style=\"width:154px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [],
+    "answer": "$F$",
+    "analysis": "分别作出$BB_{1},CC_{1}$的垂直平分线，即可确定旋转中心．",
+    "detail": "如图，连接$BB_{1},CC_{1}$，分别作出$BB_{1},CC_{1}$的垂直平分线，交点为$F$，<br/><img src=\"assets/images/ch28_1_a1_image9.png\" style=\"width:213px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>故该旋转的旋转中心是点$F$．"
+  },
+  {
+    "id": "ch28_1_1_a_q8",
+    "number": 8,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.1 旋转及其性质",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "中等",
+    "knowledge": "根据旋转的性质说明线段或角相等；等边对等角；三角形内角和定理的应用",
+    "stem": "如图，将$\\triangle ABC$绕点$A$顺时针旋转$56^\\circ$得到$\\triangle ADE$，点$D$在$AC$的延长线上，连接$CE$，则$\\angle ACE=$______°．<br/><img src=\"assets/images/ch28_1_a1_image10.png\" style=\"width:157px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [],
+    "answer": "$62$",
+    "analysis": "根据旋转的性质得出$AC=AE$，$\\angle CAE$等于旋转角$56^\\circ$，再利用等腰三角形的性质及三角形内角和定理求解即可．",
+    "detail": "解：∵将$\\triangle ABC$绕点$A$顺时针旋转$56^\\circ$得到$\\triangle ADE$，点$D$在$AC$的延长线上，<br/>∴$AC=AE$ ，$\\angle CAE=56^\\circ$，<br/>∴$\\angle ACE=\\angle AEC$，<br/>在$\\triangle ACE$中，根据三角形内角和定理得： $\\angle ACE+\\angle AEC+\\angle CAE=180^\\circ$，<br/>∴$2\\angle ACE+56^\\circ =180^\\circ$，解得：$\\angle ACE=62^\\circ$．"
+  },
+  {
+    "id": "ch28_1_1_a_q9",
+    "number": 9,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.1 旋转及其性质",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "中等",
+    "knowledge": "根据旋转的性质求解；等边对等角；三角形内角和定理的应用",
+    "stem": "如图所示，在$\\triangle ABC$中，$\\angle B=35^\\circ$，将$\\triangle ABC$绕点A逆时针旋转至$\\triangle ADE$处，使点B落在$BC$延长线上的D点处，则$\\angle CAE=$______度．<br/><img src=\"assets/images/ch28_1_a1_image11.png\" style=\"width:170px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [],
+    "answer": "$110$",
+    "analysis": "根据旋转的性质可得 $AB=AD$，$\\angle CAE=\\angle BAD$，利用等腰三角形的性质和三角形内角和定理求出 $\\angle BAD$ 的度数即可．",
+    "detail": "解： ∵ $\\triangle ABC$ 绕点 $A$ 逆时针旋转至 $\\triangle ADE$ 处，<br/>∴ $AB=AD$，$\\angle CAE=\\angle BAD$，<br/>∵ 点 $B$ 落在 $BC$ 延长线上的 $D$ 点处，<br/>∴ $\\angle ADB=\\angle B=35^\\circ$，<br/>∴ $\\angle BAD=180^\\circ -\\angle B-\\angle ADB=180^\\circ -35^\\circ -35^\\circ =110^\\circ$，<br/>∴ $\\angle CAE=110^\\circ$．"
+  },
+  {
+    "id": "ch28_1_1_a_q10",
+    "number": 10,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.1 旋转及其性质",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "中等",
+    "knowledge": "含30度角的直角三角形；根据旋转的性质求解；等边三角形的判定和性质；用勾股定理解三角形",
+    "stem": "如图，在$Rt\\triangle ABC$中，$\\angle ACB=90^\\circ$，$AB=2\\sqrt{3}$，$\\angle A=60^\\circ$，将$\\triangle ABC$绕点$C$按逆时针方向旋转得到$\\triangle A'B'C$，$A'$恰好落在$AB$上，则点$B'$与点$B$之间的距离为______．<br/><img src=\"assets/images/ch28_1_a1_image12.png\" style=\"width:110px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [],
+    "answer": "3",
+    "analysis": "连接$BB'$，由旋转的性质可知：$\\angle CA'B'=\\angle A=60^\\circ ,\\angle ACA'=\\angle BCB',AC=A'C,BC=B'C$，则有$\\triangle ACA'$是等边三角形，$\\angle ABC=90^\\circ -\\angle A=30^\\circ$，然后可得$AC=\\frac{1}{2}AB=\\sqrt{3}$，$BC=\\sqrt{AB^{2}-AC^{2}}=3$，进而可得$\\triangle BCB'$是等边三角形，最后问题可求解．",
+    "detail": "解：连接$BB'$，如图所示：<br/><img src=\"assets/images/ch28_1_a1_image13.png\" style=\"width:110px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>由旋转的性质可知：$\\angle CA'B'=\\angle A=60^\\circ ,\\angle ACA'=\\angle BCB',AC=A'C,BC=B'C$，<br/>∴$\\triangle ACA'$是等边三角形，$\\angle ABC=90^\\circ -\\angle A=30^\\circ$，<br/>∴$\\angle ACA'=\\angle A=60^\\circ$，<br/>∵$\\angle ACB=90^\\circ$，$AB=2\\sqrt{3}$，$\\angle ABC=30^\\circ$，<br/>∴$AC=\\frac{1}{2}AB=\\sqrt{3}$，$BC=\\sqrt{AB^{2}-AC^{2}}=3$，<br/>∵$\\angle BCB'=\\angle ACA'=60^\\circ$，$BC=B'C$，<br/>∴$\\triangle BCB'$是等边三角形，<br/>∴$BB'=BC=3$．"
+  },
+  {
+    "id": "ch28_1_1_a_q11",
+    "number": 11,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.1 旋转及其性质",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "找旋转中心、旋转角、对应点",
+    "stem": "如图，半圆O绕着点P顺时针旋转后成为半圆$O'$，试量出旋转角度的大小．（精确到$1^\\circ$）<br/><img src=\"assets/images/ch28_1_a1_image14.png\" style=\"width:181px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [],
+    "answer": "$120^\\circ$",
+    "analysis": "先画出旋转角，再用量角器测量即可得到结论．",
+    "detail": "解：如图，连接$PO，PO'$，<br/>经测量$\\angle OPO'=120^\\circ$，<br/>即旋转角$=120^\\circ$．<br/><img src=\"assets/images/ch28_1_a1_image15.png\" style=\"width:189px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">"
+  },
+  {
+    "id": "ch28_1_1_a_q12",
+    "number": 12,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.1 旋转及其性质",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "容易",
+    "knowledge": "根据旋转的性质求解；等边对等角；三角形内角和定理的应用",
+    "stem": "如图，在$\\triangle ABC$中，$\\angle BAC=90^\\circ$．将$\\triangle ABC$绕点A逆时针旋转得到$\\triangle ADE$，点D恰好落在$BC$上，连接$CE$．<br/><img src=\"assets/images/ch28_1_a1_image16.png\" style=\"width:120px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>（1）填空：$\\angle BAE+\\angle DAC=$ ________$^\\circ$；（2）求证：$BC\\perp CE$",
+    "options": [],
+    "answer": "（1）180<br/>（2）<br/>证明：由旋转知：$\\angle BAD=\\angle CAE$，$BA=DA$，$CA=EA$，<br/>$\\therefore \\angle B=\\angle ADB=\\frac{1}{2}(180^\\circ -\\angle BAD)$，<br/>$\\angle ACE=\\angle AEC=\\frac{1}{2}(180^\\circ -\\angle CAE)$，<br/>$\\therefore \\angle ACE=\\angle B$，<br/>$\\because \\angle BAC=90^\\circ$，<br/>$\\therefore \\angle B+\\angle BCA=180^\\circ -90^\\circ =90^\\circ$，<br/>$\\therefore \\angle BCE=\\angle BCA+\\angle ACE=\\angle BCA+\\angle B=90^\\circ$，<br/>$\\therefore BC\\perp CE$．",
+    "analysis": "本题考查了旋转的性质，等腰三角形两底角相等的性质，垂直的定义，熟练掌握旋转的性质是解题的关键．<br/>（1）根据旋转的性质可得$\\angle BAC=\\angle DAE=90^\\circ$，然后表示出$\\angle CAE$，再根据$\\angle BAE=\\angle BAC+\\angle CAE$列式整理即可得解；<br/>（2）根据旋转的性质可得$\\angle BAD=\\angle CAE$，$AB=AD$，$AC=AE$，再利用等腰三角形两底角相等表示出$\\angle B$、$\\angle ACE$，然后求出$\\angle BCE=90^\\circ$，根据垂直的定义即可得解．",
+    "detail": "（1）解：由旋转的性质知：$\\angle BAC=\\angle DAE=90^\\circ$，<br/>$\\therefore \\angle CAE=\\angle DAE-\\angle DAC=90^\\circ -\\angle DAC$，<br/>$\\because \\angle BAE=\\angle BAC+\\angle CAE=90^\\circ +(90^\\circ -\\angle DAC)=180^\\circ -\\angle DAC$，<br/>$\\therefore \\angle BAE+\\angle DAC=180^\\circ$，<br/>故答案为：180；<br/>（2）略"
+  },
+  {
+    "id": "ch28_1_1_a_q13",
+    "number": 13,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.1 旋转及其性质",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "全等的性质和SAS综合（SAS）；根据旋转的性质求解；等腰三角形的性质和判定；三线合一",
+    "stem": "综合与探究：如图1，$\\triangle ABE$是等腰三角形，$AB=AE$，$\\angle BAE=45^\\circ$，过点B作$BC\\perp AE$于点C，在$BC$上截取$CD=CE$，连接$AD$、$DE$并延长$AD$交$BE$于点P；<br/><img src=\"assets/images/ch28_1_a1_image17.png\" style=\"width:321px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>（1）求证：$AD=BE$；（2）试说明$AD$平分$\\angle BAE$；（3）如图2，将$\\triangle CDE$绕着点C旋转一定的角度，那么$AD$与$BE$的位置关系是否发生变化，说明理由．",
+    "options": [],
+    "answer": "（1）证明：∵$BC\\perp AE$，$\\angle BAE=45^\\circ$，<br/>∴$\\angle CBA=\\angle CAB$，<br/>∴$BC=CA$，<br/>在$\\triangle BCE$和$\\triangle ACD$中，<br/>$\\begin{cases} BC=AC \\\\ \\angle BCE=\\angle ACD=90^\\circ \\\\ CE=CD \\end{cases}$<br/>∴$\\triangle BCE\\cong \\triangle ACD(SAS)$，<br/>∴$AD=BE$<br/>（2）证明：∵$\\triangle BCE\\cong \\triangle ACD$，<br/>∴$\\angle EBC=\\angle DAC$，<br/>∵$\\angle BDP=\\angle ADC$，<br/>∴$\\angle BPD=\\angle DCA=90^\\circ$，<br/>∴$AD\\perp BE$<br/>∵$AB=AE$<br/>∴$AD$平分$\\angle BAE$（等腰三角形的三线合一）<br/>（3）不发生变化；<br/>理由如下：∵$BC\\perp AE$，$\\angle BAE=45^\\circ$，<br/>∴$\\angle CBA=\\angle CAB$，<br/>∴$BC=CA$，<br/>$\\because \\angle BCE=90^\\circ +\\angle BCD,\\angle ACD=90^\\circ +\\angle BCD$<br/>∴$\\angle BCE=\\angle ACD$<br/>∵$CD=CE$<br/>∴$\\triangle BCE\\cong \\triangle ACD(SAS)$<br/>∴$\\angle EBC=\\angle DAC$，<br/>∵$\\angle BFP=\\angle AFC$，<br/>∴$\\angle BPF=\\angle ACF=90^\\circ$，<br/>∴$AD\\perp BE$．",
+    "analysis": "（1）由条件推出$BC=CA$，即可求证$\\triangle BCE\\cong \\triangle ACD$，再根据全等三角形的性质即可得出答案．<br/>（2）由$\\triangle BCE\\cong \\triangle ACD$推出$\\angle EBC=\\angle DAC$，即可求证；<br/>（3）根据$\\angle BCE=90^\\circ +\\angle BCD,\\angle ACD=90^\\circ +\\angle BCD$证$\\angle BCE=\\angle ACD$，再得出$\\triangle BCE\\cong \\triangle ACD$即可求解．",
+    "detail": "（1）略<br/>（2）略<br/>（3）略"
+  },
+  {
+    "id": "ch28_1_1_a_q14",
+    "number": 14,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.1 旋转及其性质",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "证明四边形是矩形；利用菱形的性质求线段长；根据旋转的性质求解；利用平行四边形的性质求解；用勾股定理解三角形；利用平行四边形性质和判定证明",
+    "stem": "如图1，在▱$ABCD$中，连接$AC$．已知$AB=2$，$AC=BC=3$．<br/><img src=\"assets/images/ch28_1_a1_image18.png\" style=\"width:360px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>（1）求对边$AD$，$BC$间的距离$CG$；（2）如图2，线段$AC$绕中点$O$顺时针旋转，得到线段$EF$，顺次连接$A$，$E$，$C$，$F$，且$CE$交边$AD$于点$H$，$AF$交边$BC$于点$K$．①求证：四边形$AECF$是矩形；②当四边形$AHCK$为菱形时，求菱形的面积．",
+    "options": [],
+    "answer": "（1）$\\frac{4\\sqrt{2}}{3}$<br/>（2）①证明：∵点O是$AC$的中点，<br/>∴$OA=OC$，<br/>由旋转得，$OE=OA$，$OF=OC$，<br/>∴$OA=OE=OC=OF$，$AC=EF$，<br/>∴四边形$AECF$是平行四边形，<br/>又∵$AC=EF$，<br/>∴四边形$AECF$是矩形；<br/>②$\\frac{18\\sqrt{2}}{7}$",
+    "analysis": "（1）如图，过点C作$CG\\perp AD$于点G，首先根据平行四边形的性质得到$CD=AB=2$，$AD=BC=3$，设$AG=x$，则$DG=AD-AG=3-x$，利用勾股定理求出$AG=\\frac{7}{3}$，然后利用勾股定理求解即可；<br/>（2）①由旋转得到$OA=OE=OC=OF$，证明四边形$AECF$是平行四边形，然后结合$AC=EF$即可证明四边形$AECF$是矩形；<br/>②如图，过点C作$CG\\perp AD$于点G，设$AH=CH=y$，则$HG=AG-AH=\\frac{7}{3}-y$，利用勾股定理求出$AH=\\frac{27}{14}$，然后利用菱形的面积公式求解即可．",
+    "detail": "（1）解：如图，过点C作$CG\\perp AD$于点G，<br/><img src=\"assets/images/ch28_1_a1_image19.png\" style=\"width:136px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>∵四边形$ABCD$是平行四边形，$AB=2$，$AC=BC=3$，<br/>∴$CD=AB=2$，$AD=BC=3$，<br/>设$AG=x$，则$DG=AD-AG=3-x$，<br/>∵$CG\\perp AD$，<br/>∴$AC^{2}-AG^{2}=CG^{2}=CD^{2}-DG^{2}$，<br/>∴$3^{2}-x^{2}=2^{2}-(3-x)^{2}$，<br/>解得$x=\\frac{7}{3}$，<br/>∴$AG=\\frac{7}{3}$，<br/>∴$CG=\\sqrt{AC^{2}-AG^{2}}=\\sqrt{3^{2}-(\\frac{7}{3})^{2}}=\\frac{4\\sqrt{2}}{3}$；<br/>（2）解：①略<br/>②如图，过点C作$CG\\perp AD$于点G，<br/><img src=\"assets/images/ch28_1_a1_image20.png\" style=\"width:145px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>由（1）得，$CG=\\frac{4\\sqrt{2}}{3}$，$AG=\\frac{7}{3}$，<br/>∵四边形$AHCK$为菱形，<br/>∴$AH=CH$，设$AH=CH=y$，则$HG=AG-AH=\\frac{7}{3}-y$，<br/>∵$CG\\perp AD$，<br/>∴$HG^{2}+GC^{2}=HC^{2}$，即$(\\frac{7}{3}-y)^{2}+(\\frac{4\\sqrt{2}}{3})^{2}=y^{2}$，<br/>解得$y=\\frac{27}{14}$，<br/>∴$AH=\\frac{27}{14}$，<br/>∴菱形的面积为$AH\\cdot CG=\\frac{27}{14}\\times \\frac{4\\sqrt{2}}{3}=\\frac{18\\sqrt{2}}{7}$．"
+  },
+  {
+    "id": "ch28_1_1_a_q15",
+    "number": 15,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.1 旋转及其性质",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "全等的性质和SSS综合（SSS）；全等的性质和SAS综合（SAS）；根据旋转的性质求解；根据正方形的性质求角度；根据正方形的性质证明；用勾股定理解三角形",
+    "stem": "如图（1），点$E$，$F$分别在正方形$ABCD$的边$BC$，$CD$上，连接$EF$．已知$EF=BE+DF$，猜想$\\angle EAF$的度数．<br/><img src=\"assets/images/ch28_1_a1_image21.jpeg\" style=\"width:356px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>（1）【思路梳理】数学课上小明同学对这个问题进行了探究，并向同学们阐述了自己的证明思路：如图（1），把$\\triangle ABE$绕点$A$逆时针旋转$90^\\circ$至$\\triangle ADG$．可使$AB$与$AD$重合，由$\\angle ADG=\\angle B=90^\\circ$，得$\\angle FDG=180^\\circ$，即点$F$，$D$，$G$共线，从而证明出$\\triangle AFG\\cong \\triangle AFE$，故得出$\\angle EAF$的度数．请你根据小明同学的解题思路，求$\\angle EAF$的度数；（2）【类比引申】如图（2），在四边形$ABCD$中，$\\angle B=\\angle D=90^\\circ$，$\\angle BAD=120^\\circ$，$AB=AD$，点$E$，$F$分别在边$BC$，$CD$上，且$EF=BE+DF$，试猜想$\\angle EAF$的度数，并给出证明；（3）【联想拓展】如图（3），在$\\triangle ABC$中，$\\angle BAC=90^\\circ$，$AB=AC$，点$D$、$E$均在边$BC$上，且$\\angle DAE=45^\\circ$，试猜想$BD$、$DE$、$EC$满足的等量关系，并写出推理过程．",
+    "options": [],
+    "answer": "（1）$45^\\circ$<br/>（2）$\\angle EAF=60^\\circ$．证明如下：<br/>将$\\triangle ABE$绕点$A$逆时针旋转$120^\\circ$至$\\triangle ADG$，使$AB$与$AD$重合．<br/><img src=\"assets/images/ch28_1_a1_image22.jpeg\" style=\"width:113px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>由旋转的性质可知：$\\triangle ABE\\cong \\triangle ADG$．<br/>∴$\\angle BAE=\\angle DAG$，$\\angle ADG=\\angle B=90^\\circ$，$AE=AG$，<br/>∴$\\angle ADG+\\angle ADF=180^\\circ$，即点$F$、$D$、$G$共线，<br/>∴$EF=BE+DF=DG+DF=FG$，<br/>在$\\triangle AFG$和$\\triangle AFE$中，<br/>$\\begin{cases} AF=AF \\\\ AE=AG \\\\ EF=GF \\end{cases}$<br/>∴$\\triangle AFG\\cong \\triangle AFE(SSS)$．<br/>$\\therefore \\angle EAF=\\angle GAF=\\angle DAF+\\angle DAG=\\angle DAF+\\angle BAE=\\frac{1}{2}\\angle BAD=\\frac{1}{2}\\times 120^\\circ =60^\\circ$．<br/>（3）$DE^{2}=BD^{2}+EC^{2}$，理由如下：<br/>如图（3），<br/><img src=\"assets/images/ch28_1_a1_image23.jpeg\" style=\"width:132px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>将$\\triangle ABD$绕点$A$逆时针旋转$90^\\circ$至$\\triangle ACG$，<br/>由旋转的性质可知：$AD=AG$，$BD=CG$，$\\angle BAD=\\angle CAG$，$\\angle B=\\angle ACG$．<br/>$\\because \\angle BAC=90^\\circ$，$AB=AC$，<br/>$\\therefore \\angle B=\\angle ACB=45^\\circ$，<br/>$\\therefore \\angle ACG=45^\\circ$，<br/>$\\therefore \\angle GCE=\\angle ACG+\\angle ACB=45^\\circ +45^\\circ =90^\\circ$．<br/>$\\because \\angle BAC=90^\\circ$，$\\angle DAE=45^\\circ$，<br/>$\\therefore \\angle BAD+\\angle CAE=90^\\circ -45^\\circ =45^\\circ$．<br/>$\\because \\angle CAG=\\angle BAD$，<br/>$\\therefore \\angle GAE=\\angle CAG+\\angle CAE=\\angle BAD+\\angle CAE=45^\\circ$，<br/>$\\therefore \\angle GAE=\\angle DAE$．<br/>在$\\triangle ADE$和$\\triangle AGE$中，<br/>$\\begin{cases} AD=AG \\\\ \\angle DAE=\\angle GAE \\\\ AE=AE \\end{cases}$<br/>$\\therefore \\triangle ADE\\cong \\triangle AGE(SAS)$，<br/>$\\therefore DE=GE$．<br/>在$Rt\\triangle GCE$中，由勾股定理得：$GE^{2}=CG^{2}+EC^{2}$，<br/>又$\\because DE=GE$，$BD=CG$，<br/>$\\therefore DE^{2}=BD^{2}+EC^{2}$．",
+    "analysis": "（1）将$\\triangle ABE$绕点$A$逆时针旋转$90^\\circ$至$\\triangle ADG$，由旋转的性质可知：$\\triangle ABE\\cong \\triangle ADG$．进而可得出$EF=BE+DF=DG+DF=GF$，证明$\\triangle AFG\\cong \\triangle AFE(SSS)$，由全等三角形的性质结合正方形的性质即可得出$\\therefore \\angle EAF=\\frac{1}{2}\\angle BAD=\\frac{1}{2}\\times 90^\\circ =45^\\circ$．<br/>（2）将$\\triangle ABE$绕点$A$逆时针旋转$120^\\circ$至$\\triangle ADG$，使$AB$与$AD$重合．由旋转的性质可知：$\\triangle ABE\\cong \\triangle ADG$，进而可得出$EF=BE+DF=DG+DF=FG$，证明$\\triangle AFG\\cong \\triangle AFE(SSS)$，由全等三角形的性质进而可得出$\\angle EAF=\\angle GAF=\\frac{1}{2}\\angle BAD=60^\\circ$．<br/>（3）将$\\triangle ABD$绕点$A$逆时针旋转$90^\\circ$至$\\triangle ACG$，得出$\\angle BAD=\\angle CAG$，$BD=CG$，$\\angle DAG=90^\\circ$，$\\angle B=\\angle ACG$，然后证明$\\triangle AED\\cong \\triangle AEG(SAS)$，所以$DE=GE$，再通过勾股定理得$EC^{2}+CG^{2}=GE^{2}$，则$BD^{2}+EC^{2}=DE^{2}$．",
+    "detail": "（1）解：如图（1），<br/><img src=\"assets/images/ch28_1_a1_image24.jpeg\" style=\"width:133px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>将$\\triangle ABE$绕点$A$逆时针旋转$90^\\circ$至$\\triangle ADG$，<br/>由旋转的性质可知：$\\triangle ABE\\cong \\triangle ADG$．<br/>$\\therefore AE=AG$，$BE=DG$，$\\angle BAE=\\angle DAG$，$\\angle B=\\angle ADG=90^\\circ =\\angle ADC$，<br/>$\\therefore \\angle ADG+\\angle ADC=180^\\circ$，即点$F$、$D$、$G$三点共线，<br/>$\\therefore EF=BE+DF=DG+DF=GF$．<br/>在$\\triangle AFG$和$\\triangle AFE$中，<br/>$\\begin{cases} AG=AE \\\\ EF=GF \\\\ AF=AF \\end{cases}$，<br/>$\\therefore \\triangle AFG\\cong \\triangle AFE(SSS)$，<br/>$\\therefore \\angle EAF=\\angle GAF=\\angle DAF+\\angle DAG=\\angle DAF+\\angle BAE=\\frac{1}{2}\\angle BAD=\\frac{1}{2}\\times 90^\\circ =45^\\circ$．<br/>（2）解：略；<br/>（3）解：略；"
+  },
+  {
+    "id": "ch28_1_2_b_q1",
+    "number": 1,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.2 图形的旋转",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "画旋转图形",
+    "stem": "如图，将正方形图案绕中心$O$旋转$180^\\circ$后，得到的图案是（     ）<br/><img src=\"assets/images/ch28_1_b2_image1.png\" style=\"width:88px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [
+      "A. <img src=\"assets/images/ch28_1_b2_image2.png\" style=\"width:87px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+      "B. <img src=\"assets/images/ch28_1_b2_image3.png\" style=\"width:87px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+      "C. <img src=\"assets/images/ch28_1_b2_image4.png\" style=\"width:85px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+      "D. <img src=\"assets/images/ch28_1_b2_image5.png\" style=\"width:88px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">"
+    ],
+    "answer": "C",
+    "analysis": "根据旋转的定义进行分析即可解答<br/>【点睛】本题考查了图纸旋转的性质,熟练掌握是解题的关键.",
+    "detail": "解：根据旋转的性质，旋转前后，各点的相对位置不变，得到的图形全等，<br/>分析选项，可得正方形图案绕中心$O$旋转$180^\\circ$后，得到的图案是$C$．<br/>故选：$C$．"
+  },
+  {
+    "id": "ch28_1_2_b_q2",
+    "number": 2,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.2 图形的旋转",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "判断由一个图形旋转而成的图案",
+    "stem": "北京冬奥会于$2022$年2月4日在北京和张家口联合举行．下图是冬奥会的吉祥物“冰墩墩”，将该图片按顺时针方向旋转$90^\\circ$后得到的图片是（     ）<br/><img src=\"assets/images/ch28_1_b2_image6.png\" style=\"width:43px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [
+      "A. <img src=\"assets/images/ch28_1_b2_image7.png\" style=\"width:50px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+      "B. <img src=\"assets/images/ch28_1_b2_image8.png\" style=\"width:47px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+      "C. <img src=\"assets/images/ch28_1_b2_image9.png\" style=\"width:41px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+      "D. <img src=\"assets/images/ch28_1_b2_image10.png\" style=\"width:43px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">"
+    ],
+    "answer": "D",
+    "analysis": "本题考查了生活中的旋转现象，熟知旋转的概念和性质是解题的关键．根据旋转的性质解答即可．",
+    "detail": "解：根据题意得：将该图片按顺时针方向旋转$90^\\circ$后得到的图片是：<br/><img src=\"assets/images/ch28_1_b2_image11.png\" style=\"width:93px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>故选：D．"
+  },
+  {
+    "id": "ch28_1_2_b_q3",
+    "number": 3,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.2 图形的旋转",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "判断由一个图形旋转而成的图案",
+    "stem": "下列图形中不能由下图旋转得到的是（　　）<br/><img src=\"assets/images/ch28_1_b2_image12.png\" style=\"width:80px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [
+      "A. <img src=\"assets/images/ch28_1_b2_image13.png\" style=\"width:80px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+      "B. <img src=\"assets/images/ch28_1_b2_image14.png\" style=\"width:79px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+      "C. <img src=\"assets/images/ch28_1_b2_image15.png\" style=\"width:81px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+      "D. <img src=\"assets/images/ch28_1_b2_image16.png\" style=\"width:79px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">"
+    ],
+    "answer": "C",
+    "analysis": "在平面内，将一个图形绕一点按某个方向转动一个角度，这样的运动叫作图形的旋转．",
+    "detail": "解：<img src=\"assets/images/ch28_1_b2_image17.png\" style=\"width:81px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">是<img src=\"assets/images/ch28_1_b2_image18.png\" style=\"width:79px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">通过轴对称得到的，不是通过旋转得到的．<br/>故选：C．"
+  },
+  {
+    "id": "ch28_1_2_b_q4",
+    "number": 4,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.2 图形的旋转",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "判断由一个图形旋转而成的图案",
+    "stem": "在下列绿色食品，回收，节能，节水四个标志中，是由某个基本图形经过旋转得到的是（       ）",
+    "options": [
+      "A. <img src=\"assets/images/ch28_1_b2_image19.jpeg\" style=\"width:100px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+      "B. <img src=\"assets/images/ch28_1_b2_image20.png\" style=\"width:105px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+      "C. <img src=\"assets/images/ch28_1_b2_image21.png\" style=\"width:105px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+      "D. <img src=\"assets/images/ch28_1_b2_image22.jpeg\" style=\"width:114px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">"
+    ],
+    "answer": "B",
+    "analysis": "本题考查了运用旋转设计图案，通过旋转变换不同角度或者绕着不同的旋转中心向着不同的方向进行旋转，进而判断得出即可，正确理解旋转图形的特点是解题的关键．",
+    "detail": "解：$A$、不是通过一个基本图形旋转得到的，不符合题意；<br/>$B$、是通过一个基本图形经过旋转得到的，符合题意；<br/>$C$、不是通过一个基本图形旋转得到的，不符合题意；<br/>$D$、不是通过一个基本图形旋转得到的，不符合题意；<br/>故选：$B$．"
+  },
+  {
+    "id": "ch28_1_2_b_q5",
+    "number": 5,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.2 图形的旋转",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "容易",
+    "knowledge": "画旋转图形；根据旋转的性质求解",
+    "stem": "如图，在平面直角坐标系中，已知$A(2,0),B(1,1),C(4,2)$．将$\\triangle ABC$绕某点逆时针旋转$90^\\circ$后，其对应点分别为$A_{2}(-1,1),B_{2}(-2,0),C_{2}(-3,3)$，画出$\\triangle A_{2}B_{2}C_{2}$和旋转中心P，并直接写出旋转中心P的坐标为_______．<br/><img src=\"assets/images/ch28_1_b2_image23.png\" style=\"width:198px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [],
+    "answer": "$(0,-1)$",
+    "analysis": "本题主要考查了旋转作图，先画出旋转的$\\triangle A_{2}B_{2}C_{2}$，连接$AA_{2}$，作$AA_{2}$的垂直平分线，连接$BB_{2}$，作$BB_{2}$的垂直平分线，两直线交于一点即为点P，并写出坐标．",
+    "detail": "如图所示．<br/><img src=\"assets/images/ch28_1_b2_image24.png\" style=\"width:200px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>点P的坐标是$(0,-1)$．<br/>故答案为：$(0,-1)$．"
+  },
+  {
+    "id": "ch28_1_2_b_q6",
+    "number": 6,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.2 图形的旋转",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "容易",
+    "knowledge": "坐标系中描点；平移(作图)；画旋转图形",
+    "stem": "按要求画一画．<br/><img src=\"assets/images/ch28_1_b2_image25.png\" style=\"width:204px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>（1）描出下列各点，并依次连成封闭图形．$A(2,8)$　　　$B(2,3)$　　　$C(4,3)$（2）画出把（1）题中的图形向右平移3格后的图形．（3）画出把（1）题中的图形绕B点顺时针旋转$90^\\circ$后的图形．",
+    "options": [],
+    "answer": "（1）解：如图即为所求，<br/><img src=\"assets/images/ch28_1_b2_image26.png\" style=\"width:189px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>（2）解：如图即为所求，<br/><img src=\"assets/images/ch28_1_b2_image27.png\" style=\"width:195px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>（3）解：如图即为所求，<br/><img src=\"assets/images/ch28_1_b2_image28.png\" style=\"width:198px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "analysis": "（1）描出各点的位置，顺次连接即可；<br/>（2）描出各对应点，顺次连接即可；<br/>（3）描出各对应点，顺次连接即可；",
+    "detail": "（1）略<br/>（2）略<br/>（3）略"
+  },
+  {
+    "id": "ch28_1_2_b_q7",
+    "number": 7,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.2 图形的旋转",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "轴对称图形的识别；旋转对称图形的识别；求旋转对称图形的旋转角度；利用旋转设计图案",
+    "stem": "请设计一个旋转$45^\\circ$后能与自身重合的旋转对称图形，且该图形不是轴对称图形．",
+    "options": [],
+    "answer": "解：以点O为中心，将$\\triangle AOB$绕点$O$逆时针旋转$45^\\circ$，旋转$8$次与原图形重合，则整个图形符合题意（不含字母），如图：<br/><img src=\"assets/images/ch28_1_b2_image29.png\" style=\"width:167px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "analysis": "根据旋转对称图形的定义，轴对称图形的定义进行设计即可.",
+    "detail": "略"
+  },
+  {
+    "id": "ch28_1_2_b_q8",
+    "number": 8,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.2 图形的旋转",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "点坐标规律探索；求绕原点旋转90度的点的坐标；全等的性质和ASA（AAS）综合（ASA或者AAS）",
+    "stem": "在平面直角坐标系中，按如图所示的方式放置正方形$OABC$，点$A$的坐标为$(1,3)$．将正方形$OABC$绕坐标原点$O$顺时针旋转，每秒旋转$90^\\circ$，旋转$2026$秒后，点$A$的对应点$A'$的坐标为（     ）<br/><img src=\"assets/images/ch28_1_b2_image30.png\" style=\"width:114px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [
+      "A. $(-1,-3)$",
+      "B. $(3,1)$",
+      "C. $(3,-1)$",
+      "D. $(1,3)$"
+    ],
+    "answer": "A",
+    "analysis": "设旋转$1$秒后，点$A$的对应点为$A_{1}$，作$AM\\perp y$轴于点$M$，作$A_{1}N\\perp x$轴于点$N$，证明$\\triangle AMO\\cong \\triangle A_{1}NO(AAS)$，可得$A_{1}(3,-1)$，同理可得旋转$2$、$3$、$4$、$5$秒后，点$A$对应点的坐标，总结规律，即可得旋转$2026$秒后，点$A$的对应点$A'$的坐标．",
+    "detail": "解：设旋转$1$秒后，点$A$的对应点为$A_{1}$，<br/>如图，作$AM\\perp y$轴于点$M$，作$A_{1}N\\perp x$轴于点$N$，<br/><img src=\"assets/images/ch28_1_b2_image31.png\" style=\"width:164px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>∵点$A$的坐标为$(1,3)$，<br/>∴$AM=1$，$OM=3$，<br/>由旋转可得$OA_{1}=OA$，$\\angle AOA_{1}=90^\\circ$，<br/>∴$\\angle AOM=90^\\circ -\\angle AON=\\angle A_{1}ON$，<br/>在$\\triangle AMO$和$\\triangle A_{1}NO$中，<br/>$\\begin{cases} \\angle AMO=\\angle A_{1}NO \\\\ \\angle AOM=\\angle A_{1}ON \\\\ OA_{1}=OA \\end{cases}$，<br/>∴$\\triangle AMO\\cong \\triangle A_{1}NO(AAS)$，<br/>∴$A_{1}N=AM=1$，$ON=OM=3$，<br/>∴$A_{1}(3,-1)$，<br/>同理可得，<br/>旋转$2$秒后，点$A$对应点的坐标为$(-1,-3)$，<br/>旋转$3$秒后，点$A$对应点的坐标为$(-3,1)$，<br/>旋转$4$秒后，点$A$对应点的坐标为$(1,3)$，<br/>旋转$5$秒后，点$A$对应点的坐标为$(3,-1)$，<br/>$\\cdots$<br/>由此可得，点$A$对应点的坐标按照$(3,-1)$，$(-1,-3)$，$(-3,1)$，$(1,3)$循环出现，<br/>又∵$2026\\div 4=506\\cdots \\cdots 2$，<br/>∴旋转$2026$秒后，点$A$的对应点$A'$的坐标为$(-1,-3)$．"
+  },
+  {
+    "id": "ch28_1_3_b_q9",
+    "number": 9,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.3 坐标系中的旋转",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "根据旋转的性质求解；求绕某点（非原点）旋转90度的点的坐标；全等的性质和ASA（AAS）综合（ASA或者AAS）",
+    "stem": "如图，在平面直角坐标系中，点$A(3,0)$，$B(0,4)$，连接$AB$，将线段$AB$绕着点B逆时针旋转$90^\\circ$，则点A的对应点$A'$的坐标为（       ）<br/><img src=\"assets/images/ch28_1_b2_image32.png\" style=\"width:124px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [
+      "A. $(4,7)$",
+      "B. $(\\frac{3\\sqrt{2}}{2},\\frac{7\\sqrt{2}}{2})$",
+      "C. $(\\frac{3\\sqrt{2}}{3},\\frac{7\\sqrt{3}}{3})$",
+      "D. $(4,5)$"
+    ],
+    "answer": "A",
+    "analysis": "由题意可得$OA=3$，$OB=4$，由旋转的性质可得$AB=A'B$，$\\angle ABA'=90^\\circ$，作$A'C\\perp y$轴于点$C$，再证明$\\triangle A'CB\\cong \\triangle BOA(AAS)$，得出$BC=OA=3$，$A'C=OB=4$，即可得出结果．",
+    "detail": "解：∵在平面直角坐标系中，点$A(3,0)$，$B(0,4)$，<br/>∴$OA=3$，$OB=4$，<br/>由旋转的性质可得$AB=A'B$，$\\angle ABA'=90^\\circ$，<br/>如图，作$A'C\\perp y$轴于点$C$，<br/><img src=\"assets/images/ch28_1_b2_image33.png\" style=\"width:119px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>则$\\angle A'CB=\\angle BOA=90^\\circ$，<br/>∵$\\angle A'BC+\\angle ABO=\\angle ABO+\\angle OAB=90^\\circ$，<br/>∴$\\angle A'BC=\\angle OAB$，<br/>∴$\\triangle A'CB\\cong \\triangle BOA(AAS)$，<br/>∴$BC=OA=3$，$A'C=OB=4$，<br/>∴$OC=OB+BC=7$，<br/>∴点A的对应点$A'$的坐标为$(4,7)$．"
+  },
+  {
+    "id": "ch28_1_3_b_q10",
+    "number": 10,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.3 坐标系中的旋转",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "根据旋转的性质求解；坐标与旋转规律问题；用勾股定理解三角形",
+    "stem": "如图，在平面直角坐标系中，将$\\triangle ABO$绕点A顺时针旋转到$\\triangle AB_{1}C_{1}$的位置，点B，O分别落在点$B_{1}$，$C_{1}$处，点$B_{1}$在x轴上，再将$\\triangle AB_{1}C_{1}$绕点$B_{1}$顺时针旋转到$\\triangle A_{1}B_{1}C_{2}$的位置，点$C_{2}$在x轴上，将$\\triangle A_{1}B_{1}C_{2}$绕点$C_{2}$顺时针旋转到$\\triangle A_{2}B_{2}C_{2}$的位置，点$A_{2}$在x轴上，…，若点$A(3,0)$，$B(0,4)$，则点$A_{2025}$的坐标为（    ）<br/><img src=\"assets/images/ch28_1_b2_image34.png\" style=\"width:360px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [
+      "A. $(12153,0)$",
+      "B. $(12159,0)$",
+      "C. $(12156,3)$",
+      "D. $(12152,3)$"
+    ],
+    "answer": "C",
+    "analysis": "本题考查坐标与图形变换-旋转，解题的关键是根据题意找到坐标变化的规律．求出$AB$和$\\triangle ABO$的周长，观察旋转的规律可得答案．",
+    "detail": "解：$\\because A(3,0)，B(0,4)，\\angle AOB=90^{∘}$，<br/>$\\therefore AB=\\sqrt{3^{2}+4^{2}}=5$，<br/>$\\therefore \\triangle ABO$的周长为$3+4+5=12$，<br/>由图可知，$A_{1}(12,3)，A_{3}(12\\times 2,3)$，<br/>根据旋转的规律可得，$A_{2n-1}(12n,3)$，<br/>$\\therefore$当$n=1013$时，$A_{2025}(12\\times 1013,3)$；<br/>即$A_{2025}(12156,3)$；<br/>故选：C．"
+  },
+  {
+    "id": "ch28_1_3_b_q11",
+    "number": 11,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.3 坐标系中的旋转",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "容易",
+    "knowledge": "求绕原点旋转90度的点的坐标；全等的性质和ASA（AAS）综合（ASA或者AAS）",
+    "stem": "在平面直角坐标系$xOy$中，将点$A(3,1)$绕原点顺时针旋转$90^\\circ$到点$B$，则点$B$的坐标为______．",
+    "options": [],
+    "answer": "$(1,-3)$",
+    "analysis": "根据题意标出点$A$，分别过点$A,B$作$y$轴的垂线，垂足为点$M,N$，证明$\\triangle AOM\\cong \\triangle OBN(AAS)$，即可求解．",
+    "detail": "解：分别过点$A,B$作$y$轴的垂线，垂足为点$M,N$，则$\\angle AMO=\\angle ONB=90^\\circ$<br/><img src=\"assets/images/ch28_1_b2_image35.png\" style=\"width:136px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>由题意得，$OA=OB$，$\\angle AOB=90^\\circ$，$AM=3,OM=1$，<br/>∴$\\angle AOM=\\angle OBN=90^\\circ -\\angle BAN$，<br/>∴$\\triangle AOM\\cong \\triangle OBN(AAS)$，<br/>∴$BN=OM=1,ON=AM=3$，<br/>$\\therefore$点$B$的坐标为$(1,-3)$．"
+  },
+  {
+    "id": "ch28_1_3_b_q12",
+    "number": 12,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.3 坐标系中的旋转",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "中等",
+    "knowledge": "根据旋转的性质求解；求绕某点（非原点）旋转90度的点的坐标；利用菱形的性质求线段长",
+    "stem": "如图，菱形$ABCD$的顶点$A$的坐标为$(-2,0)$，顶点$B$的坐标为$(0,-1)$，将菱形$ABCD$绕着点$A$按顺时针方向旋转$90^\\circ$得到菱形$AB'C'D'$，点$C$的对应点$C'$在$x$轴上，则点$D$的对应点$D'$的坐标为______．<br/><img src=\"assets/images/ch28_1_b2_image36.png\" style=\"width:183px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [],
+    "answer": "$(-3,2)$",
+    "analysis": "连接$AC,BD$交于点E，先根据题意可得点$E(-2,-1),D(-4,-1)$，进而得出$AE=1,DE=2,OA=2$，再由旋转的性质可得$D'E'=DE=2,AE'=AE=1$，进而得出$OE'=OA+AE'=2+1=3$，则此题可解．",
+    "detail": "解：如图所示，连接$AC,BD$交于点E，<br/>∵菱形$ABCD$的顶点A的坐标为$(-2,0)$，顶点B的坐标为$(0,-1)$，<br/>∴点$E(-2,-1),D(-4,-1)$，<br/>∴$AE=1,DE=2,OA=2$．<br/>由旋转的性质可得$D'E'=DE=2,AE'=AE=1$，<br/>∴$OE'=OA+AE'=2+1=3$，<br/>∴点D的对应点$D'$的坐标为$(-3,2)$．<br/><img src=\"assets/images/ch28_1_b2_image37.png\" style=\"width:194px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">"
+  },
+  {
+    "id": "ch28_1_3_b_q13",
+    "number": 13,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.3 坐标系中的旋转",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "容易",
+    "knowledge": "坐标与旋转规律问题；用勾股定理解三角形",
+    "stem": "如图，在平面直角坐标系中，正方形$OABC$的边$OA$，$OC$分别落在$y$轴正半轴和$x$轴正半轴上，$OA=\\sqrt{2}$．若将正方形$OABC$绕点$O$按顺时针方向依次旋转$45^\\circ$后得到正方形$OA_{1}B_{1}C_{1}$、正方形$OA_{2}B_{2}C_{2}$、正方形$OA_{3}B_{3}C_{3}$、正方形$OA_{4}B_{4}C_{4}$……则点$A_{2025}$的坐标是______．<br/><img src=\"assets/images/ch28_1_b2_image38.png\" style=\"width:199px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [],
+    "answer": "$(1,1)$",
+    "analysis": "本题考查了旋转规律探究，坐标与图形，勾股定理，熟练掌握旋转的性质是解题的关键；根据题意得出规律为每旋转$8$次后点回到初始位置，点$A_{2025}$的坐标与$A_{1}$的坐标相等，进而求得$A_{1}(1,1)$，即可求解．",
+    "detail": "解：∵将正方形$OABC$绕点$O$按顺时针方向依次旋转$45^\\circ$，$360\\div 45=8$<br/>∴每旋转$8$次后点回到初始位置，<br/>∵$2025=8\\times 253+1$<br/>∴点$A_{2025}$的坐标与$A_{1}$的坐标相等，<br/>如图，过点$A_{1}$作$x$轴的垂线$A_{1}E$，垂足为点$E$，<br/><img src=\"assets/images/ch28_1_b2_image39.png\" style=\"width:199px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>∵$\\angle A_{1}OE=90^\\circ -45^\\circ =45^\\circ$<br/>∴$OE=A_{1}E=\\frac{\\sqrt{2}}{2}OA_{1}=\\frac{\\sqrt{2}}{2}OA=1$<br/>∴$A_{1}(1,1)$，即点$A_{2025}$的坐标是$(1,1)$<br/>故答案为：$(1,1)$．"
+  },
+  {
+    "id": "ch28_1_3_b_q14",
+    "number": 14,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.3 坐标系中的旋转",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "容易",
+    "knowledge": "根据旋转的性质求解；求绕原点旋转90度的点的坐标；全等的性质和ASA（AAS）综合（ASA或者AAS）",
+    "stem": "如图，在平面直角坐标系中，将点$P(-4,2)$绕原点顺时针旋转$90^\\circ$，求其对应点Q的坐标．<br/><img src=\"assets/images/ch28_1_b2_image40.png\" style=\"width:209px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [],
+    "answer": "$(2,4)$",
+    "analysis": "根据点P绕原点顺时针旋转$90^\\circ$，得到$\\angle POQ=90^\\circ$，首先求出$\\angle MPO=\\angle QON$，利用$AAS$证明$\\triangle PMO\\cong \\triangle ONQ(AAS)$，即可得到$PM=ON,OM=QN$，进而求出Q点坐标．",
+    "detail": "解：分别过点$P,Q$作$x$轴的垂线，垂足分别为$M,N$，<br/><img src=\"assets/images/ch28_1_b2_image41.png\" style=\"width:204px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>由旋转的性质得$\\angle POQ=90^\\circ$，$PO=QO$，<br/>∴$\\angle QON+\\angle POM=90^\\circ$，<br/>∵$\\angle MPO+\\angle POM=90^\\circ$，<br/>∴$\\angle MPO=\\angle QON$，<br/>在$\\triangle PMO$和$\\triangle ONQ$中，$\\begin{cases} \\angle PMO=\\angle ONQ \\\\ \\angle MPO=\\angle NOQ \\\\ PO=OQ \\end{cases}$，<br/>∴$\\triangle PMO\\cong \\triangle ONQ(AAS)$，<br/>∴$PM=ON,OM=QN$，<br/>∵P点坐标为$(-4,2)$，<br/>∴$PM=2,OM=4$，<br/>∴$ON=2,QN=4$，<br/>∴Q点坐标为$(2,4)$．"
+  },
+  {
+    "id": "ch28_1_3_b_q15",
+    "number": 15,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.3 坐标系中的旋转",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "容易",
+    "knowledge": "求绕原点旋转90度的点的坐标；画旋转图形",
+    "stem": "如图，$\\triangle ABC$三个顶点的坐标分别为$A(2,4),B(1,1),C(4,3)$．<br/><img src=\"assets/images/ch28_1_b2_image42.png\" style=\"width:234px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>（1）请画出$\\triangle ABC$关于原点对称的图形$\\triangle A_{1}B_{1}C_{1}$；（2）请画出$\\triangle ABC$绕原点$O$按逆时针方向旋转$90^\\circ$后的图形$\\triangle A_{2}B_{2}C_{2}$；（3）按照（2）作图，回答下列问题：$\\triangle A_{2}B_{2}C_{2}$中顶点$A_{2}$坐标为__________，若$P(a,b)$为$\\triangle ABC$边上一点，则点$P$对应的点$Q$的坐标为__________．",
+    "options": [],
+    "answer": "（1）<br/>解：如图所示：<br/><img src=\"assets/images/ch28_1_b2_image43.png\" style=\"width:227px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>$\\therefore$$\\triangle A_{1}B_{1}C_{1}$即为所求；<br/>（2）<br/>解：如图所示：<br/><img src=\"assets/images/ch28_1_b2_image44.png\" style=\"width:230px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>$\\therefore$$\\triangle A_{2}B_{2}C_{2}$即为所求；<br/>（3）$(-4,2)$，$(-b,a)$",
+    "analysis": "本题考查平面直角坐标系中变换作图，涉及关于原点对称作图、旋转作图及旋转$90^\\circ$的坐标特征，数形结合是解决问题的关键．<br/>（1）分别作出$\\triangle ABC$三个顶点关于原点对称的点$A_{1}、B_{1}、C_{1}$，连接三个顶点即可得到答案；<br/>（2）分别作出$\\triangle ABC$三个顶点绕原点$O$按逆时针方向旋转$90^\\circ$后的点$A_{2}、B_{2}、C_{2}$，连接三个顶点即可得到答案；<br/>（3）由（2）中图形，数形结合即可得到答案．",
+    "detail": "（1）略<br/>（2）略<br/>（3）解：$\\triangle A_{2}B_{2}C_{2}$中顶点$A_{2}$坐标为$(-4,2)$，若$P(a,b)$为$\\triangle ABC$边上一点，则点$P$对应的点$Q$的坐标为$(-b,a)$，<br/>故答案为：$(-4,2)$，$(-b,a)$．"
+  },
+  {
+    "id": "ch28_1_2_a_q1",
+    "number": 1,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.2 图形的旋转",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "画旋转图形",
+    "stem": "如图，将图形按顺时针方向旋转$90^\\circ$后的图形是（  ）<br/><img src=\"assets/images/ch28_1_a2_image1.png\" style=\"width:69px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [
+      "A. <img src=\"assets/images/ch28_1_a2_image2.png\" style=\"width:74px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+      "B. <img src=\"assets/images/ch28_1_a2_image3.png\" style=\"width:73px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+      "C. <img src=\"assets/images/ch28_1_a2_image4.png\" style=\"width:79px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+      "D. <img src=\"assets/images/ch28_1_a2_image5.png\" style=\"width:73px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">"
+    ],
+    "answer": "B",
+    "analysis": "本题考查了旋转的定义，理解其定义是解题的关键．<br/>根据旋转的定义逐项判断即可．",
+    "detail": "解：A：形状发生了改变，不是旋转，故该选项不合题意；<br/>B：符合原图形顺时针旋转$90^\\circ$后的形状、图案和方向，故该选项符合题意；<br/>C：是原图形的镜像或旋转$180^\\circ$后的图案，故该选项不合题意；<br/>D：是原图形逆时针旋转$90^\\circ$后的图案，故该选项不合题意．<br/>故选：B．"
+  },
+  {
+    "id": "ch28_1_2_a_q2",
+    "number": 2,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.2 图形的旋转",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "中等",
+    "knowledge": "判断由一个图形旋转而成的图案",
+    "stem": "如图是经典微信表情，下列选项是由该图经过旋转得到的是（       ）<br/><img src=\"assets/images/ch28_1_a2_image6.png\" style=\"width:70px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [
+      "A. <img src=\"assets/images/ch28_1_a2_image7.png\" style=\"width:68px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+      "B. <img src=\"assets/images/ch28_1_a2_image8.png\" style=\"width:69px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+      "C. <img src=\"assets/images/ch28_1_a2_image9.png\" style=\"width:66px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+      "D. <img src=\"assets/images/ch28_1_a2_image10.png\" style=\"width:77px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">"
+    ],
+    "answer": "C",
+    "analysis": "根据平移的定义和旋转的性质进行判断．<br/>【点睛】此题考查平移的定义和旋转的性质，解答此题要明确平移和旋转的性质：（1）平移：①经过平移，对应线段平行（或共线）且相等，对应角相等，对应点所连接的线段平行且相等；②平移变换不改变图形的形状、大小和方向（平移前后的两个图形是全等形）．（2）旋转：①对应点到旋转中心的距离相等；②对应点与旋转中心所连线段的夹角等于旋转角；③旋转前、后的图形全等．",
+    "detail": "解：A．由平移变换得到，故本选项不合题意；<br/>B．由轴对称变换得到，故本选项不合题意；<br/>C．由旋转变换得到，故本选项符合题意；<br/>D．由轴对称变换和旋转变换得到，故本选项不合题意；<br/>故选：C．"
+  },
+  {
+    "id": "ch28_1_2_a_q3",
+    "number": 3,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.2 图形的旋转",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "判断由一个图形旋转而成的图案",
+    "stem": "杭州亚运会吉祥物是一组承载深厚底蕴和充满时代活力的机器人，如图所示的“遂珍”经过旋转不能得到的是（　　）<br/><img src=\"assets/images/ch28_1_a2_image11.png\" style=\"width:64px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [
+      "A. <img src=\"assets/images/ch28_1_a2_image12.png\" style=\"width:86px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+      "B. <img src=\"assets/images/ch28_1_a2_image13.png\" style=\"width:63px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+      "C. <img src=\"assets/images/ch28_1_a2_image14.png\" style=\"width:64px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+      "D. <img src=\"assets/images/ch28_1_a2_image15.png\" style=\"width:87px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">"
+    ],
+    "answer": "B",
+    "analysis": "本题考查了图形的旋转，旋转是围绕一点旋转一定的角度的图形变换，因而旋转一定有旋转中心和旋转角，且旋转前后图形能够重合，这是判断旋转的关键．由如图图形旋转，分别判断、解答即可．",
+    "detail": "解：A．由图形旋转而得出，故本选项不符合题意；<br/>B．由图形对称而得出，故本选项符合题意；<br/>C．由图形旋转而得出，故本选项不符合题意；<br/>D．由图形旋转而得出，故本选项不符合题意；<br/>故选：B．"
+  },
+  {
+    "id": "ch28_1_2_a_q4",
+    "number": 4,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.2 图形的旋转",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "判断由一个图形旋转而成的图案",
+    "stem": "下列选项中不能由下图旋转得到的是（　　）<br/><img src=\"assets/images/ch28_1_a2_image16.jpeg\" style=\"width:77px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [
+      "A. <img src=\"assets/images/ch28_1_a2_image17.jpeg\" style=\"width:76px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+      "B. <img src=\"assets/images/ch28_1_a2_image18.jpeg\" style=\"width:75px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+      "C. <img src=\"assets/images/ch28_1_a2_image19.jpeg\" style=\"width:75px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+      "D. <img src=\"assets/images/ch28_1_a2_image20.jpeg\" style=\"width:75px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">"
+    ],
+    "answer": "C",
+    "analysis": "本题重点考查旋转的三要素即旋转中心，旋转角，旋转方向的应用．<br/>根据旋转的性质，判断每个选项的图形是否可由原图形旋转得到。",
+    "detail": "解：A．该图形与原图形完全相同，可由原图形旋转$360^\\circ$（或$0^\\circ$）得到，故此选项不符合题意；<br/>B．原图形绕某点旋转一定角度（如$90^\\circ$）后，可得到此图形，因为形状、大小未变，只是方向改变，故此选项不符合题意；<br/>C．图形不能由由原图形经过旋转得到，故此选项符合题意；<br/>D．原图形绕某点旋转一定角度（如$90^\\circ$）后，可得到此图形，形状、大小不变，方向改变符合旋转性质，故此选项不符合题意；<br/>故选：C．"
+  },
+  {
+    "id": "ch28_1_2_a_q5",
+    "number": 5,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.2 图形的旋转",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "容易",
+    "knowledge": "画旋转图形；根据旋转的性质求解",
+    "stem": "如图，在平面直角坐标系$xOy$中，$A(-2,4),B(-2,0)$，将$\\triangle OAB$绕原点$O$顺时针旋转$90^\\circ$得到$\\triangle OA'B'$（$A',B'$分别是A，B的对应点）．若点$M(m,2)$位于$\\triangle OAB$内（不含边界），点$M'$为点$M$绕原点$O$顺时针旋转$90^\\circ$的对应点，则点$M'$的纵坐标$n$的取值范围是______．<br/><img src=\"assets/images/ch28_1_a2_image21.png\" style=\"width:192px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [],
+    "answer": "$1\\lt n\\lt 2$",
+    "analysis": "本题考查了旋转作图，旋转的性质．熟练掌握旋转的性质是解题的关键．<br/>由旋转的性质可确定点$M$旋转后对应点$M'$在线段$CD$上，且不与点$C,D$重合，然后作答即可．",
+    "detail": "解：∵点$M(m,2)$位于$\\triangle OAB$内，<br/>∴$-2\\lt m\\lt -1$，<br/>$\\therefore$旋转后对应点$M'$在线段$CD$上，且不与点$C$，$D$重合，如图，<br/><img src=\"assets/images/ch28_1_a2_image22.png\" style=\"width:206px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>∴$1\\lt n\\lt 2$，<br/>故答案为：$1\\lt n\\lt 2$．"
+  },
+  {
+    "id": "ch28_1_2_a_q6",
+    "number": 6,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.2 图形的旋转",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "利用网格求三角形面积；平移(作图)；画旋转图形",
+    "stem": "如图，在平面直角坐标系中，$\\triangle ABC$的三个顶点的坐标分别为$A(-3,5),B(-2,1),C(-1,3)$．<br/><img src=\"assets/images/ch28_1_a2_image23.png\" style=\"width:183px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>（1）将$\\triangle ABC$先向下平移4个单位，再向右平移4个单位，得到$\\triangle A_{1}B_{1}C_{1}$，请在图中画出$\\triangle A_{1}B_{1}C_{1}$；（2）画出$\\triangle ABC$绕着点C按顺时针方向旋转$90^\\circ$得到的图形$\\triangle A_{2}B_{2}C_{2}$，并写出点$A_{2}$的坐标；（3）求$\\triangle ABC$的面积．",
+    "options": [],
+    "answer": "（1）<img src=\"assets/images/ch28_1_a2_image24.png\" style=\"width:223px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>（2）<img src=\"assets/images/ch28_1_a2_image25.png\" style=\"width:211px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">，$A_{2}(1,5)$<br/>（3）3",
+    "analysis": "（1）将点A先向下平移4个单位，再向右平移4个单位，得到点$A_{2}$，同理可得点$B_{2}$和点$C_{2}$，依次连接点$A_{2}$，点$B_{2}$和点$C_{2}$即可求解．<br/>（2）将$AC$绕点C旋转$90^\\circ$得点$A_{1}$，同理可得点$B_{1}$，连接$A_{1}B_{1}$，即可求解．<br/>（3）采用割补法，用包含$\\triangle ABC$的矩形面积减去周围三个直角三角形的面积计算$\\triangle ABC$的面积”．",
+    "detail": "（1）略<br/>（2）略<br/>（3）解：$S_{\\triangle ABC}=2\\times 4-\\frac{1}{2}\\times 1\\times 2-\\frac{1}{2}\\times 1\\times 4-\\frac{1}{2}\\times 2\\times 2=3$．"
+  },
+  {
+    "id": "ch28_1_2_a_q7",
+    "number": 7,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.2 图形的旋转",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "利用平移、轴对称、旋转、中心对称设计图案；利用旋转设计图案",
+    "stem": "七巧板又称智慧板，是中国民间流传的智力玩具，它是由七块板组成（如图1），用这七块板可拼出许多图形（1600种以上），例如：三角形、平行四边形、以及不规则的多边形，它还可以拼出各种人物、动物、建筑等．请你用七巧板中标号为①②③的三块板（如图2经过平移、旋转拼出下列图形（相邻两块板之间无空隙，无重叠；示意图的顶点画在小方块顶点上）：（1）拼成长方形，在图3中画出示意图；（2）拼成等腰直角三角形，在图4中面出示意图．<br/><img src=\"assets/images/ch28_1_a2_image26.png\" style=\"width:360px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [],
+    "answer": "（1）如图3所示：长方形即为所求；<br/><img src=\"assets/images/ch28_1_a2_image27.png\" style=\"width:247px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>（2）如图4所示：等腰直角三角形即为所求．",
+    "analysis": "（1）利用网格结合矩形的性质得出答案；<br/>（2）利用网格结合等腰直角三角形的性质得出答案．<br/>【点睛】此题考查旋转变换，正确利用已知图形面积不变是解题关键．",
+    "detail": "略．"
+  },
+  {
+    "id": "ch28_1_2_a_q8",
+    "number": 8,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.2 图形的旋转",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "根据旋转的性质求解；求绕原点旋转90度的点的坐标；等边三角形的性质；特殊三角形的三角函数",
+    "stem": "如图，将边长为2的等边$\\triangle AOB$绕点O逆时针旋转$90^\\circ$得到$\\triangle A'O'B'$，则点$B'$的纵坐标是（     ）<br/><img src=\"assets/images/ch28_1_a2_image28.png\" style=\"width:153px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [
+      "A. 1",
+      "B. $\\sqrt{3}$",
+      "C. $-1$",
+      "D. $-\\sqrt{3}$"
+    ],
+    "answer": "B",
+    "analysis": "先求出点B的坐标，再根据旋转性质得到点$B'$的坐标，进而确定其纵坐标．",
+    "detail": "过点B作$BC\\perp x$轴于点C，<br/>$\\because \\triangle AOB$是边长为2的等边三角形，<br/>$\\therefore OB=2$，$\\angle BOC=30^\\circ$，<br/>在$Rt\\triangle OBC$中，$BC=OB\\cdot sin30^\\circ =1$，$OC=OB\\cdot cos30^\\circ =\\sqrt{3}$，<br/>$\\therefore B(\\sqrt{3},1)$．<br/>将点B绕点O逆时针旋转$90^\\circ$，根据坐标旋转规律：点$(x,y)$绕原点逆时针旋转$90^\\circ$后的坐标为$(-y,x)$，<br/>可得$B'(-1,\\sqrt{3})$，<br/>因此点$B'$的纵坐标为$\\sqrt{3}$，对应选项为B．<br/><img src=\"assets/images/ch28_1_a2_image29.png\" style=\"width:155px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">"
+  },
+  {
+    "id": "ch28_1_3_a_q9",
+    "number": 9,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.3 坐标系中的旋转",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "找旋转中心、旋转角、对应点；求绕某点（非原点）旋转90度的点的坐标",
+    "stem": "如图，在平面直角坐标系$xOy$中，点$A,B,C,D,E,F$的横、纵坐标均为整数，$\\triangle DEF$可由$\\triangle ABC$绕点$M$旋转得到，则点$M$的坐标是（     ）<br/><img src=\"assets/images/ch28_1_a2_image30.png\" style=\"width:249px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [
+      "A. $(3,0)$",
+      "B. $(0,3)$",
+      "C. $(2,2)$",
+      "D. $(3,2)$"
+    ],
+    "answer": "A",
+    "analysis": "本题主要考查图形的旋转变换．利用网格特点，作$AD$和$BE$的垂直平分线，它们相交于点$M$，然后写出$M$点坐标即可．",
+    "detail": "解：如图，$\\triangle DEF$可由$\\triangle ABC$绕点$M$顺时针旋转$90^\\circ$得到，所以旋转中心的坐标为$(3,0)$．<br/><img src=\"assets/images/ch28_1_a2_image31.png\" style=\"width:251px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>故选：A．"
+  },
+  {
+    "id": "ch28_1_3_a_q10",
+    "number": 10,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.3 坐标系中的旋转",
+    "type": "choice",
+    "typeName": "单选题",
+    "difficulty": "容易",
+    "knowledge": "根据旋转的性质求解；求绕某点（非原点）旋转90度的点的坐标；坐标与旋转规律问题",
+    "stem": "如图，在平面直角坐标系中，$\\triangle ABC$的顶点均为格点（网格线的交点），将$\\triangle ABC$绕某点顺时针旋转，每次旋转$90^\\circ$．已知第1次旋转结束时，得到$\\triangle DEF$（点$D$，$E$，$F$均为格点），则第82次旋转结束时，点$B$的对应点的坐标为（     ）<br/><img src=\"assets/images/ch28_1_a2_image32.jpeg\" style=\"width:239px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [
+      "A. $(4,-1)$",
+      "B. $(4,-2)$",
+      "C. $(-1,-1)$",
+      "D. $(-2,-1)$"
+    ],
+    "answer": "A",
+    "analysis": "本题考查了坐标与图形变化—旋转，由旋转的性质可得$A$的对应点为$D$，$B$的对应点为$E$，$C$的对应点为$F$，同时旋转中心在$BE$和$CF$的垂直平分线上，进而求出旋转中心坐标，然后得到每旋转4次一个周期，由$82\\div 4=20\\cdot \\cdot \\cdot \\cdot \\cdot \\cdot 2$得到第82次旋转结束时，点$B$的对应点的坐标和点H的坐标相等，进而求解即可．掌握知识点的应用是解题的关键．",
+    "detail": "解：如图所示，<br/>由旋转的性质可得$A$的对应点为$D$，$B$的对应点为$E$，$C$的对应点为$F$，<br/>∴交点在$BE$和$CF$的垂直平分线上，如图，<br/><img src=\"assets/images/ch28_1_a2_image33.jpeg\" style=\"width:238px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>∴旋转中心的坐标为$(1,0)$，<br/>如图所示，设旋转中心为M，将$\\triangle DEF$绕点M顺时针旋转$90^\\circ$得到$\\triangle GHI$，将$\\triangle GHI$绕点M顺时针旋转$90^\\circ$得到$\\triangle JKL$，将$\\triangle JKL$绕点M顺时针旋转$90^\\circ$得到$\\triangle ABC$，<br/><img src=\"assets/images/ch28_1_a2_image34.jpeg\" style=\"width:229px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>∴每旋转4次一个周期<br/>∵$82\\div 4=20\\cdot \\cdot \\cdot \\cdot \\cdot \\cdot 2$<br/>∴第82次旋转结束时，点$B$的对应点的坐标和点H的坐标相等<br/>∴点$B$的对应点的坐标为$(4,-1)$．<br/>故选：A．"
+  },
+  {
+    "id": "ch28_1_3_a_q11",
+    "number": 11,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.3 坐标系中的旋转",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "中等",
+    "knowledge": "根据旋转的性质求解；求绕原点旋转90度的点的坐标",
+    "stem": "传统荷兰风车有四个扇叶，绕着轮毂顺时针旋转，每两个扇叶之间的夹角是$90^\\circ$，平均每4秒转一圈．如图，将扇叶看作四条线段，以四个扇叶相交处为原点，建立平面直角坐标系，一个扇叶的顶点$A$的坐标为$(1,2)$，若风车转速不变，1005秒后点$A$转到点$A'$处，则点$A'$的坐标为______．<br/><img src=\"assets/images/ch28_1_a2_image35.png\" style=\"width:284px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [],
+    "answer": "$(2,-1)$",
+    "analysis": "先确定风车每4秒转顺时针一圈，1005秒后点$A'$的位置，然后根据旋转的性质，即可写出点$A'$的坐标．",
+    "detail": "解：风车平均每4秒转一圈，1005秒转动$1005\\div 4=251\\frac{1}{4}$（圈），<br/>即风车在转动251圈后，又转动$\\frac{1}{4}$圈，<br/>如图，$AO=A'O$，过$A$、$A'$分别作$AB$、$A'C$垂直于$x$轴垂足分别为$B$、$C$，<br/><img src=\"assets/images/ch28_1_a2_image36.png\" style=\"width:151px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>∴$\\angle ABO=90^\\circ$，$\\angle A'CO=90^\\circ$，<br/>∴$\\angle OA'C+\\angle A'OC=90^\\circ$，<br/>又∵$\\angle AOA'=90^\\circ$，即$\\angle AOB+\\angle A'OC=90^\\circ$，<br/>∴$\\angle AOB=\\angle OA'C$，<br/>在$\\triangle ABO$和$\\triangle OCA'$中，<br/>$\\begin{cases} \\angle ABO=\\angle A'CO \\\\ \\angle AOB=\\angle OA'C \\\\ AO=A'O \\end{cases}$<br/>$\\triangle ABO\\cong \\triangle OCA'(AAS)$，<br/>∴$AB=OC=2$，$BO=CA'=1$，<br/>∵$A'$是第四象限的点，<br/>∴$A'(2,-1)$．"
+  },
+  {
+    "id": "ch28_1_3_a_q12",
+    "number": 12,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.3 坐标系中的旋转",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "中等",
+    "knowledge": "根据旋转的性质求解；求绕某点（非原点）旋转90度的点的坐标；全等的性质和ASA（AAS）综合（ASA或者AAS）",
+    "stem": "如图，将$\\triangle ABC$绕点$C(0,-1)$旋转$180^\\circ$得到$\\triangle A'B'C$，设点$A$的坐标为$(-3,-3)$，则点$A'$的坐标是______．<br/><img src=\"assets/images/ch28_1_a2_image37.png\" style=\"width:141px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [],
+    "answer": "$(3,1)$",
+    "analysis": "分别过$A$、$A'$向$y$轴作垂线，可得$\\triangle A'EC\\cong \\triangle ADC$，利用全等得到$A'$到$x$轴，$y$轴的距离，进而根据所在象限可得相应坐标．",
+    "detail": "解：∵旋转，<br/>∴$AC=A'C$，<br/>作$A'E\\perp y$轴于点$E$，$AD\\perp y$轴于点$D$，如图所示：<br/><img src=\"assets/images/ch28_1_a2_image38.png\" style=\"width:142px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>∴$\\angle A'EC=\\angle ADC$，<br/>∵$\\angle A'CE=\\angle ACD$，$AC=A'C$，<br/>∴$\\triangle A'EC\\cong \\triangle ADC(AAS)$，<br/>∴$AD=A'E$，$CE=CD$，<br/>∵点$A$的坐标为$(-3,-3)$，$C(0,-1)$，<br/>∴$AD=A'E=3$，$CE=CD=2$，$OC=1$，<br/>∴$OE=1$，<br/>∴点$A'$的坐标为$(3,1)$．"
+  },
+  {
+    "id": "ch28_1_3_a_q13",
+    "number": 13,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.3 坐标系中的旋转",
+    "type": "blank",
+    "typeName": "填空题",
+    "difficulty": "中等",
+    "knowledge": "根据旋转的性质求解；坐标与旋转规律问题",
+    "stem": "如图，平面直角坐标系中，$A(0,0),B(4,0),\\triangle AP_{1}B$是等腰直角三角形且$\\angle P_{1}=90^\\circ$，把$\\triangle AP_{1}B$绕点$B$顺时针旋转$180^\\circ$得到$\\triangle CP_{2}B$，把$\\triangle CP_{2}B$绕点$C$顺时针旋转$180^\\circ$得到$\\triangle CP_{3}D$，以此类推，得到的等腰直角三角形的直角顶点$P_{2026}$的坐标为______．<br/><img src=\"assets/images/ch28_1_a2_image39.png\" style=\"width:313px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">",
+    "options": [],
+    "answer": "$(8102,2)$",
+    "analysis": "依次求出等腰直角三角形的顶点的坐标，发现规律即可解决问题．",
+    "detail": "解：如图，过点$P_{1}$作$P_{1}H\\perp x$轴交于点$H$，<br/><img src=\"assets/images/ch28_1_a2_image40.png\" style=\"width:334px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>由题意知，$P_{1}A=P_{1}B$，<br/>∴$AH=BH=\\frac{1}{2}AB=\\frac{1}{2}\\times 4=2$，<br/>$P_{1}H=\\frac{1}{2}AB=2$，<br/>∴$P_{1}(2,-2)$；<br/>同理可得，$P_{2}(6,2)$，$P_{3}(10,-2)$，$P_{4}(14,2)$，<br/>以此类推，点$P_{n}$的横坐标为$4n-2$，<br/>当$n$为奇数时，点$P_{n}$的纵坐标为$-2$；<br/>当$n$为偶数时，点$P_{n}$的纵坐标为$2$；<br/>当$n=2026$时，$4n-2=4\\times 2026-2=8102$，<br/>∴$P_{2026}(8102,2)$．"
+  },
+  {
+    "id": "ch28_1_3_a_q14",
+    "number": 14,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.3 坐标系中的旋转",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "中等",
+    "knowledge": "求绕原点旋转90度的点的坐标；画旋转图形",
+    "stem": "如图，在平面直角坐标系中，点$A(-2,3)$，$B(-3,1)$<br/><img src=\"assets/images/ch28_1_a2_image41.png\" style=\"width:156px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>（1）画出$\\triangle AOB$绕点$O$顺时针旋转$90^\\circ$后所得的图形$\\triangle A_{1}OB_{1}$．（2）请直接写出点$A_{1}$和$B_{1}$的坐标．",
+    "options": [],
+    "answer": "（1）<img src=\"assets/images/ch28_1_a2_image42.png\" style=\"width:165px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>（2）$A_{1}(3,2)$，$B_{1}(1,3)$",
+    "analysis": "（1）根据网格结构找出点$A$、$B$绕点$O$顺时针旋转后的对应点的位置，然后顺次连接即可；<br/>（2）由（1）确定出点$A_{1}$和$B_{1}$的坐标即可．",
+    "detail": "（1）略<br/>（2）解：由图可得，$A_{1}(3,2)$，$B_{1}(1,3)$．"
+  },
+  {
+    "id": "ch28_1_3_a_q15",
+    "number": 15,
+    "grade": "初三",
+    "semester": "上册",
+    "term": "上册",
+    "chapterGroup": "第28章 旋转",
+    "chapter": "28.1.3 坐标系中的旋转",
+    "type": "calc",
+    "typeName": "解答题",
+    "difficulty": "容易",
+    "knowledge": "求绕某点（非原点）旋转90度的点的坐标；画旋转图形",
+    "stem": "已知$\\triangle ABC$：<br/><img src=\"assets/images/ch28_1_a2_image43.png\" style=\"width:205px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>（1）若将$\\triangle ABC$绕点$C$按逆时针方向旋转$90^\\circ$后得到$\\triangle A_{1}B_{1}C_{1}$，画出$\\triangle A_{1}B_{1}C_{1}$；（2）写出$A$点对应点$A_{1}$的坐标．",
+    "options": [],
+    "answer": "（1）<br/>如图：$\\triangle A_{1}B_{1}C_{1}$即为所求；<br/><img src=\"assets/images/ch28_1_a2_image44.png\" style=\"width:221px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>（2）$A_{1}(-3,-2)$",
+    "analysis": "本题考查了旋转变换的性质，熟练掌握其性质是解题的关键．<br/>（1）根据旋转变换的性质找出对应点即可求解；<br/>（2）根据点的位置直接写出坐标即可．",
+    "detail": "（1）略<br/>（2）略"
   }
 ];

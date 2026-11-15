@@ -3004,6 +3004,876 @@
         "subType": "P10_isosceles_three_lines_in_one",
         "operationSummary": "在等腰三角形中锁定两腰与底边，运用“三线合一”进行垂直、线段平分与角度互余转化（原题考点：三线合一、三角形内角和定理的应用、含30度角的直角三角形）。",
         "status": "published"
+    },
+
+    // =========================================================================
+    // P11：识别反比例函数与由定义求参数（共 11 道关联题，严格按学习顺序 sortOrder 1~11 排列）
+    // =========================================================================
+    {
+      questionId: 'ch27_1_hw_q2',
+      procedureId: 'P11',
+      partId: null,
+      sortOrder: 1,
+      order: 1,
+      role: 'primary',
+      subType: 'P11_identify_standard_form',
+      operationSummary: '排除正比例函数 y=x/3、分母为一次多项式 y=3/(2x+1) 及二次式 y=x²/2，识别 y=3/(2x) 符合反比例函数标准形式（k=3/2）。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_1_q5',
+      procedureId: 'P11',
+      partId: null,
+      sortOrder: 2,
+      order: 2,
+      role: 'primary',
+      subType: 'P11_identify_standard_form',
+      operationSummary: '排除正比例函数 ①y=√3x 与分母为 x² 的 ④y=k/x²，识别出符合 y=k/x 形式的 ②y=π/x 与 ③y=1/x。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_1_q2',
+      procedureId: 'P11',
+      partId: null,
+      sortOrder: 3,
+      order: 3,
+      role: 'primary',
+      subType: 'P11_identify_three_forms',
+      operationSummary: '对照分式 y=k/x、负指数 y=kx⁻¹ 与乘积 xy=k 三种标准形式，在7个式子中识别出 ②y=3/x、③y=x⁻¹、⑤xy=11 共3个反比例函数。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_1_hw_q5',
+      procedureId: 'P11',
+      partId: null,
+      sortOrder: 4,
+      order: 4,
+      role: 'primary',
+      subType: 'P11_identify_three_forms',
+      operationSummary: '逐一核对7个函数的结构与自变量次数，选出负指数形式 ②y=2x⁻¹、分式形式 ④y=1/(2x) 与乘积形式 ⑥xy=-1。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_1_q8',
+      procedureId: 'P11',
+      partId: null,
+      sortOrder: 5,
+      order: 5,
+      role: 'primary',
+      subType: 'P11_identify_and_explain',
+      operationSummary: '按自变量 x 的指数是否为 -1、分母是否为单项式 x 及是否含额外常数加减项，逐一判定6个函数是否为反比例函数并说明理由。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_1_hw_q8',
+      procedureId: 'P11',
+      partId: null,
+      sortOrder: 6,
+      order: 6,
+      role: 'primary',
+      subType: 'P11_identify_and_explain',
+      operationSummary: '对照 y=k/x 与 y=kx⁻¹ 标准形式，判定（2）y=2x⁻¹、（4）y=-4/x 是反比例函数，其余4个因次数非 -1、分母为 2x-1 或含常数 -5 而排除。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_1_hw_q6',
+      procedureId: 'P11',
+      partId: null,
+      sortOrder: 7,
+      order: 7,
+      role: 'primary',
+      subType: 'P11_param_exponent_only',
+      operationSummary: '将 y=x⁻³ᵃ 对照 y=kx⁻¹（系数 k=1≠0），令自变量 x 的指数 -3a = -1，解得 a = 1/3。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_1_q3',
+      procedureId: 'P11',
+      partId: null,
+      sortOrder: 8,
+      order: 8,
+      role: 'primary',
+      subType: 'P11_param_exponent_and_coeff',
+      operationSummary: '由 y=(m-2)x³⁻ᵐ² 是反比例函数，令指数 3-m²=-1 解得 m=±2，结合比例系数 m-2≠0 舍去 m=2，定解为 m=-2。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_1_q6',
+      procedureId: 'P11',
+      partId: null,
+      sortOrder: 9,
+      order: 9,
+      role: 'primary',
+      subType: 'P11_param_exponent_and_coeff',
+      operationSummary: '由 y=(k-2)xᵏ²⁻⁵ 是反比例函数，令指数 k²-5=-1 得 k=±2，结合系数 k-2≠0 排除 k=2，定解为 k=-2。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_1_hw_q9',
+      procedureId: 'P11',
+      partId: null,
+      sortOrder: 10,
+      order: 10,
+      role: 'primary',
+      subType: 'P11_param_abs_and_coeff',
+      operationSummary: '由 y=(m+1)x^|2m|-3 是反比例函数，令 |2m|-3=-1 解得 m=±1，结合系数 m+1≠0 舍去 m=-1，求得 m=1。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_1_hw_q3',
+      procedureId: 'P11',
+      partId: null,
+      sortOrder: 11,
+      order: 11,
+      role: 'primary',
+      subType: 'P11_param_exponent_and_coeff',
+      operationSummary: '由 y=(m+√3)(m-√2)xᵐ²⁻³ 是反比例函数，令指数 m²-3=-1 得 m=±√2，结合系数 (m+√3)(m-√2)≠0 舍去 √2，定解为 m=-√2。',
+      status: 'published'
+    },
+
+    // =========================================================================
+    // P12：用待定系数法求反比例函数解析式（共 16 道关联题，严格按学习顺序 sortOrder 1~16 排列）
+    // =========================================================================
+    {
+      questionId: 'ch27_1_hw_q12',
+      procedureId: 'P12',
+      partId: null,
+      sortOrder: 1,
+      order: 1,
+      role: 'primary',
+      subType: 'P12_find_y_from_x',
+      operationSummary: '将 x=2 直接代入已知反比例函数 y=3/x，算得对应的函数值 y=3/2。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_1_q10',
+      procedureId: 'P12',
+      partId: null,
+      sortOrder: 2,
+      order: 2,
+      role: 'primary',
+      subType: 'P12_find_y_from_x',
+      operationSummary: '将点 P(-2,n) 的横坐标 x=-2 代入 y=-10/x，算得纵坐标 n = -10/(-2) = 5。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_1_q11',
+      procedureId: 'P12',
+      partId: null,
+      sortOrder: 3,
+      order: 3,
+      role: 'primary',
+      subType: 'P12_find_y_from_x',
+      operationSummary: '将点 A(2,m) 代入反比例函数 y=-2/x，算得 m = -2/2 = -1。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_1_q12',
+      procedureId: 'P12',
+      partId: null,
+      sortOrder: 4,
+      order: 4,
+      role: 'primary',
+      subType: 'P12_find_y_from_x',
+      operationSummary: '将点 (-2,n) 代入反比例函数 y=2/x，算得 n = 2/(-2) = -1。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_1_q13',
+      procedureId: 'P12',
+      partId: null,
+      sortOrder: 5,
+      order: 5,
+      role: 'primary',
+      subType: 'P12_find_x_from_y',
+      operationSummary: '将 y=6 代入反比例函数 y=12/x（或由 xy=12），算得自变量 x = 12/6 = 2。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_1_hw_q11',
+      procedureId: 'P12',
+      partId: null,
+      sortOrder: 6,
+      order: 6,
+      role: 'primary',
+      subType: 'P12_find_x_from_y',
+      operationSummary: '利用点 (m,-3) 在 y=6/x 上满足横纵坐标之积等于 6，列 -3m=6 解得 m=-2。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_1_hw_q13',
+      procedureId: 'P12',
+      partId: null,
+      sortOrder: 7,
+      order: 7,
+      role: 'primary',
+      subType: 'P12_find_x_from_y',
+      operationSummary: '利用点 A(a,-4) 在 y=8/x 上满足横纵坐标之积等于 8，列 -4a=8 解得 a=-2。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_1_hw_q10',
+      procedureId: 'P12',
+      partId: null,
+      sortOrder: 8,
+      order: 8,
+      role: 'primary',
+      subType: 'P12_verify_point_on_curve',
+      operationSummary: '检验四个选项点的横、纵坐标乘积是否等于 k=10，由 2×5=10 判定图象一定经过点 (2,5)。',
+      status: 'published'
+    },
+    {
+      questionId: 'g9_wy_mid_3',
+      procedureId: 'P12',
+      partId: null,
+      sortOrder: 9,
+      order: 9,
+      role: 'primary',
+      subType: 'P12_verify_point_on_curve',
+      operationSummary: '检验各选项横、纵坐标乘积是否等于比例系数 k=2，由 1×2=2 确定点 A 的坐标可能为 (1,2)。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_2_ex_q1',
+      procedureId: 'P12',
+      partId: null,
+      sortOrder: 10,
+      order: 10,
+      role: 'primary',
+      subType: 'P12_find_k_from_point',
+      operationSummary: '将图象上点 A(1,3) 的横、纵坐标相乘，直接求出比例系数 k = 1×3 = 3。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_2_hw_q1',
+      procedureId: 'P12',
+      partId: null,
+      sortOrder: 11,
+      order: 11,
+      role: 'primary',
+      subType: 'P12_find_expr_from_point',
+      operationSummary: '由 y=k/x 经过点 (1,-2) 算得 k = 1×(-2) = -2，回代写出反比例函数表达式 y=-2/x。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_2_hw_q5',
+      procedureId: 'P12',
+      partId: null,
+      sortOrder: 12,
+      order: 12,
+      role: 'primary',
+      subType: 'P12_find_expr_from_point',
+      operationSummary: '设解析式为 y=k/x，将点 (-2,3) 代入得 k = (-2)×3 = -6，写出函数表达式 y=-6/x。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_2_ex_q2',
+      procedureId: 'P12',
+      partId: null,
+      sortOrder: 13,
+      order: 13,
+      role: 'primary',
+      subType: 'P12_two_points_equal_product',
+      operationSummary: '先由点 A(1,2) 算得 k = 1×2 = 2，再将点 B(-1,m) 代入 -1·m = 2 求得 m = -2。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_test_q1',
+      procedureId: 'P12',
+      partId: null,
+      sortOrder: 14,
+      order: 14,
+      role: 'primary',
+      subType: 'P12_two_points_equal_product',
+      operationSummary: '先由已知点 (2,-3) 算得横纵坐标乘积 k = 2×(-3) = -6，再检验各选项乘积，选出乘积同为 -6 的点 (-2,3)。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_1_q15',
+      procedureId: 'P12',
+      partId: '(1)',
+      sortOrder: 15,
+      order: 15,
+      partOrder: 1,
+      role: 'primary',
+      subType: 'P12_extract_k',
+      operationSummary: '第(1)问：将 y=-5/(3x) 化为标准形式 y=(-5/3)/x，读取比例系数 k = -5/3。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_1_q15',
+      procedureId: 'P12',
+      partId: '(2)',
+      sortOrder: 15,
+      order: 15,
+      partOrder: 2,
+      role: 'primary',
+      subType: 'P12_find_y_from_x',
+      operationSummary: '第(2)问：将 x=-10 代入 y=-5/(3x)，算得函数值 y = -5/[3×(-10)] = 1/6。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_1_q15',
+      procedureId: 'P12',
+      partId: '(3)',
+      sortOrder: 15,
+      order: 15,
+      partOrder: 3,
+      role: 'primary',
+      subType: 'P12_find_x_from_y',
+      operationSummary: '第(3)问：将 y=5/2 代入 y=-5/(3x)，解得自变量 x = -2/3。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_2_ex_q3',
+      procedureId: 'P12',
+      partId: '(1)',
+      sortOrder: 16,
+      order: 16,
+      partOrder: 1,
+      role: 'primary',
+      subType: 'P12_find_expr_from_point',
+      operationSummary: '第(1)问：将点 (2,-3) 代入 y=k/x 算得 k = 2×(-3) = -6，写出表达式 y=-6/x。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_2_ex_q3',
+      procedureId: 'P12',
+      partId: '(2)',
+      sortOrder: 16,
+      order: 16,
+      partOrder: 2,
+      role: 'primary',
+      subType: 'P12_verify_point_on_curve',
+      operationSummary: '第(2)问：将 x=1 代入 y=-6/x 得 y=-6≠6（或检验 1×6≠-6），判定点 (1,6) 不在图象上。',
+      status: 'published'
+    },
+
+    // =========================================================================
+    // P13：由比例系数 k 判断反比例函数象限与增减性（共 25 道关联题，严格按学习顺序 sortOrder 1~25 排列）
+    // =========================================================================
+    {
+      questionId: 'ch27_2_1_ex_q7',
+      procedureId: 'P13',
+      partId: null,
+      sortOrder: 1,
+      order: 1,
+      role: 'primary',
+      subType: 'P13_direct_quadrant_from_k',
+      operationSummary: '提取反比例函数 y=10/x 的比例系数 k=10>0，直接判定双曲线位于第一、第三象限。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_1_ex_q1',
+      procedureId: 'P13',
+      partId: null,
+      sortOrder: 2,
+      order: 2,
+      role: 'primary',
+      subType: 'P13_direct_quadrant_from_k',
+      operationSummary: '提取反比例函数 y=-1/x 的比例系数 k=-1<0，判定双曲线位于第二、四象限，选出对应大致图象。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_1_ex_q3',
+      procedureId: 'P13',
+      partId: null,
+      sortOrder: 3,
+      order: 3,
+      role: 'primary',
+      subType: 'P13_direct_quadrant_from_k',
+      operationSummary: '由 y=-2/x 中 k=-2<0 判定其图象位于第二、四象限，而 y=2/x (k=2>0) 位于第一、三象限，从而识别图(1)为 y=-2/x。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_1_ex_q9',
+      procedureId: 'P13',
+      partId: '(1)',
+      sortOrder: 4,
+      order: 4,
+      partOrder: 1,
+      role: 'primary',
+      subType: 'P13_direct_quadrant_from_k',
+      operationSummary: '第(1)问：提取 y=3/x 的比例系数 k=3>0，判定其图象位于第一、三象限。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_1_ex_q9',
+      procedureId: 'P13',
+      partId: '(2)',
+      sortOrder: 4,
+      order: 4,
+      partOrder: 2,
+      role: 'primary',
+      subType: 'P13_direct_quadrant_from_k',
+      operationSummary: '第(2)问：提取 y=-1/x 的比例系数 k=-1<0，判定其图象位于第二、四象限。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_1_q10',
+      procedureId: 'P13',
+      partId: null,
+      sortOrder: 5,
+      order: 5,
+      role: 'primary',
+      subType: 'P13_nonnegative_k_quadrant',
+      operationSummary: '利用偶次方非负性 k²≥0 判定分子比例系数 k²+1>0 恒成立，得出 y=(k²+1)/x 的图象位于第一、三象限。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_1_ex_q8',
+      procedureId: 'P13',
+      partId: null,
+      sortOrder: 6,
+      order: 6,
+      role: 'primary',
+      subType: 'P13_nonnegative_k_quadrant',
+      operationSummary: '由实数平方非负性知比例系数 k²+1≥1>0，直接判定双曲线位于第一、三象限。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_2_hw_q2',
+      procedureId: 'P13',
+      partId: null,
+      sortOrder: 7,
+      order: 7,
+      role: 'primary',
+      subType: 'P13_direct_monotonicity_from_k',
+      operationSummary: '提取 y=-8/x 的比例系数 k=-8<0，直接得出在第二象限内 y 随 x 的增大而增大。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_2_ex_q5',
+      procedureId: 'P13',
+      partId: null,
+      sortOrder: 8,
+      order: 8,
+      role: 'primary',
+      subType: 'P13_direct_monotonicity_from_k',
+      operationSummary: '由已知比例系数 k>0，直接得出在第三象限内 y 随 x 的增大而减小。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_2_ex_q4',
+      procedureId: 'P13',
+      partId: null,
+      sortOrder: 9,
+      order: 9,
+      role: 'primary',
+      subType: 'P13_direct_monotonicity_from_k',
+      operationSummary: '由双曲线 (x<0) 分支位于第三象限判定 k>0，得出在该象限内随着 x 值的增大，y 值减小。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_1_prop_q2',
+      procedureId: 'P13',
+      partId: null,
+      sortOrder: 10,
+      order: 10,
+      role: 'primary',
+      subType: 'P13_monotonicity_domain_condition',
+      operationSummary: '核对“k>0 且限定在同一象限（x<0）”两个条件，排除未限定象限的 A、B 与 k=-1<0 的 C，选出 y=1/x (x<0)。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_1_ex_q5',
+      procedureId: 'P13',
+      partId: null,
+      sortOrder: 11,
+      order: 11,
+      role: 'primary',
+      subType: 'P13_inverse_param_from_quadrant',
+      operationSummary: '由反比例函数图象在第一、三象限推出比例系数 k>0，任取正数 k=1 写出解析式 y=1/x。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_1_ex_q11',
+      procedureId: 'P13',
+      partId: null,
+      sortOrder: 12,
+      order: 12,
+      role: 'primary',
+      subType: 'P13_inverse_param_from_quadrant',
+      operationSummary: '由 y=(k+1)/x 的图象位于第一、三象限列出不等式 k+1>0，解得 k>-1，赋予符合条件的值 k=1。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_1_q11',
+      procedureId: 'P13',
+      partId: null,
+      sortOrder: 13,
+      order: 13,
+      role: 'primary',
+      subType: 'P13_inverse_param_from_quadrant',
+      operationSummary: '由 y=(m-1)/x 的图象在第二、四象限内列出不等式 m-1<0，移项解得参数范围 m<1。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_1_q6',
+      procedureId: 'P13',
+      partId: null,
+      sortOrder: 14,
+      order: 14,
+      role: 'primary',
+      subType: 'P13_inverse_param_from_quadrant',
+      operationSummary: '由 y=(k-1)/x 位于第二、四象限列 k-1<0 解得 k<1，在四个选项中筛选出满足 k<1 的值 0。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_1_ex_q10',
+      procedureId: 'P13',
+      partId: null,
+      sortOrder: 15,
+      order: 15,
+      role: 'primary',
+      subType: 'P13_inverse_param_from_quadrant',
+      operationSummary: '由 y=(4-k)/x 位于第二、四象限列出不等式 4-k<0，解得 k>4，从选项中选出 k=5。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_1_ex_q12',
+      procedureId: 'P13',
+      partId: null,
+      sortOrder: 16,
+      order: 16,
+      role: 'primary',
+      subType: 'P13_inverse_param_from_quadrant',
+      operationSummary: '由 y=(3m+4)/x 的图象位于第二、四象限列出不等式 3m+4<0，移项并除以 3 解得 m < -4/3。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_2_ex_q8',
+      procedureId: 'P13',
+      partId: null,
+      sortOrder: 17,
+      order: 17,
+      role: 'primary',
+      subType: 'P13_inverse_param_from_monotonicity',
+      operationSummary: '由 y=m/x 在 x>0 时 y 随 x 增大而增大推出比例系数 m<0，写出符合条件的负数值 m=-1。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_2_ex_q7',
+      procedureId: 'P13',
+      partId: null,
+      sortOrder: 18,
+      order: 18,
+      role: 'primary',
+      subType: 'P13_inverse_param_from_monotonicity',
+      operationSummary: '由 y=(k-1)/x 在任意一支上 y 随 x 增大而减小列出 k-1>0，解得 k>1，选出符合条件的 k=2。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_2_hw_q7',
+      procedureId: 'P13',
+      partId: null,
+      sortOrder: 19,
+      order: 19,
+      role: 'primary',
+      subType: 'P13_inverse_param_from_monotonicity',
+      operationSummary: '由同在 x>0 分支上的两点 A(2,y₁)、B(4,y₂) 满足 2<4 且 y₁>y₂，判定该分支单调递减，推出 k>0 并取 k=1。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_2_hw_q3',
+      procedureId: 'P13',
+      partId: null,
+      sortOrder: 20,
+      order: 20,
+      role: 'primary',
+      subType: 'P13_inverse_param_from_monotonicity',
+      operationSummary: '由当 x₁>x₂>0 时 y₁<y₂ 知第一象限内 y 随 x 增大而减小，列出不等式 m+1>0，解得 m>-1。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_1_prop_q3',
+      procedureId: 'P13',
+      partId: null,
+      sortOrder: 21,
+      order: 21,
+      role: 'primary',
+      subType: 'P13_inverse_param_from_monotonicity',
+      operationSummary: '两点 (-2,m)、(-1,n) 横坐标满足 -2<-1<0（同在 x<0 分支），由 m<n 知 y 随 x 增大而增大，推出 k<0 并选出 k=-2。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_1_prop_q9',
+      procedureId: 'P13',
+      partId: '(1)',
+      sortOrder: 22,
+      order: 22,
+      partOrder: 1,
+      role: 'primary',
+      subType: 'P13_direct_quadrant_from_k',
+      operationSummary: '第(1)问：将 k=2 代入得比例系数 k-3 = -1 < 0，判定双曲线位于第二、第四象限。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_1_prop_q9',
+      procedureId: 'P13',
+      partId: '(2)',
+      sortOrder: 22,
+      order: 22,
+      partOrder: 2,
+      role: 'primary',
+      subType: 'P13_inverse_param_from_monotonicity',
+      operationSummary: '第(2)问：由当 x>0 时 y 随 x 增大而增大列出比例系数不等式 k-3<0，解得 k<3。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_test_q17',
+      procedureId: 'P13',
+      partId: '(1)',
+      sortOrder: 23,
+      order: 23,
+      partOrder: 1,
+      role: 'primary',
+      subType: 'P13_inverse_param_from_quadrant',
+      operationSummary: '第(1)问：由 y=(2a+6)/x 的图象位于第二、四象限列出不等式 2a+6<0，移项除以 2 解得 a<-3。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_2_ex_q9',
+      procedureId: 'P13',
+      partId: '(1)',
+      sortOrder: 24,
+      order: 24,
+      partOrder: 1,
+      role: 'primary',
+      subType: 'P13_inverse_param_from_monotonicity',
+      operationSummary: '第(1)问：由 y=(3-m)/x 在每个象限内 y 随 x 增大而减小列出 3-m>0，解得 m<3。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_2_hw_q9',
+      procedureId: 'P13',
+      partId: '(1)',
+      sortOrder: 25,
+      order: 25,
+      partOrder: 1,
+      role: 'primary',
+      subType: 'P13_inverse_param_from_monotonicity',
+      operationSummary: '第(1)问：由 y=(k-1)/x 在每一支上 y 随 x 增大而增大列出 k-1<0，解得 k<1。',
+      status: 'published'
+    },
+
+    // =========================================================================
+    // P14：利用反比例函数增减性与象限分布比较函数值大小（共 12 道关联题，严格按学习顺序 sortOrder 1~12 排列）
+    // =========================================================================
+    {
+      questionId: 'ch27_2_2_ex_q11',
+      procedureId: 'P14',
+      partId: null,
+      sortOrder: 1,
+      order: 1,
+      role: 'primary',
+      subType: 'P14_same_quadrant_compare',
+      operationSummary: '由 y=4/x 中 k=4>0 知第一象限内 y 随 x 增大而减小，因 0<2<3，直接得出 y₁ > y₂。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_2_hw_q4',
+      procedureId: 'P14',
+      partId: null,
+      sortOrder: 2,
+      order: 2,
+      role: 'primary',
+      subType: 'P14_same_quadrant_compare',
+      operationSummary: '由 y=-4/x 中 k=-4<0 知第二象限内 y 随 x 增大而增大，因 -2<-1<0，直接得出 y₁ < y₂。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_2_ex_q10',
+      procedureId: 'P14',
+      partId: null,
+      sortOrder: 3,
+      order: 3,
+      role: 'primary',
+      subType: 'P14_same_quadrant_compare',
+      operationSummary: '由 y=7/x 中 k=7>0 知第一象限内 y 随 x 增大而减小，结合三点横坐标 0<1<4<7，排出 a > b > c。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_2_hw_q8',
+      procedureId: 'P14',
+      partId: null,
+      sortOrder: 4,
+      order: 4,
+      role: 'primary',
+      subType: 'P14_cross_quadrant_sign_compare',
+      operationSummary: '由 y=-1/x 中 k=-1<0 知图象在第二、四象限，当 x₁<0<x₂ 时点 (x₁,y₁) 在第二象限 (y₁>0)、(x₂,y₂) 在第四象限 (y₂<0)，故 y₁ > y₂。',
+      status: 'published'
+    },
+    {
+      questionId: 'g9_wy_mid_7',
+      procedureId: 'P14',
+      partId: null,
+      sortOrder: 5,
+      order: 5,
+      role: 'primary',
+      subType: 'P14_cross_and_same_quadrant_order',
+      operationSummary: '在 y=-4/x (k=-4<0) 中，先按横坐标正负判定 C(2,y₃) 在第四象限 y₃<0、A(-4,y₁) 与 B(-2,y₂) 在第二象限 y₁,y₂>0，再由 -4<-2<0 递增排出 y₃ < y₁ < y₂。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_test_q5',
+      procedureId: 'P14',
+      partId: null,
+      sortOrder: 6,
+      order: 6,
+      role: 'primary',
+      subType: 'P14_cross_and_same_quadrant_order',
+      operationSummary: '在 y=-3/x (k=-3<0) 中，先由 -10<0 判定 y₁>0，再对同在第四象限的 B(1,y₂)、C(5,y₃) 按单调递增由 1<5 得出 y₂<y₃<0，汇总得 y₂ < y₃ < y₁。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_1_prop_q8',
+      procedureId: 'P14',
+      partId: null,
+      sortOrder: 7,
+      order: 7,
+      role: 'primary',
+      subType: 'P14_abstract_x_cross_quadrant_order',
+      operationSummary: '先由 -(m²+1)<0 判定双曲线在第二、四象限且每象限内递增；再由 x₁<0<x₂<x₃ 知 y₁>0 且 y₂<y₃<0，排出 y₂ < y₃ < y₁。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_test_q17',
+      procedureId: 'P14',
+      partId: '(2)',
+      sortOrder: 8,
+      order: 8,
+      partOrder: 1,
+      role: 'primary',
+      subType: 'P14_same_quadrant_compare',
+      operationSummary: '第(2)问：当 a=1 时比例系数 2a+6=8>0，第三象限内 y 随 x 增大而减小，由 -4<-1<0 得出 y₁ > y₂。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_test_q9',
+      procedureId: 'P14',
+      partId: null,
+      sortOrder: 9,
+      order: 9,
+      role: 'primary',
+      subType: 'P14_parametric_x_compare',
+      operationSummary: '在 y=-3/x (k=-3<0) 中，当 m<-1 时 m < m+1 < 0，A(m,y₁)、B(m+1,y₂) 同在第二象限，由第二象限内 y 随 x 增大而增大判定 y₁ < y₂。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_1_prop_q4',
+      procedureId: 'P14',
+      partId: null,
+      sortOrder: 10,
+      order: 10,
+      role: 'primary',
+      subType: 'P14_parametric_x_compare',
+      operationSummary: '在 y=-2/x (k=-2<0) 中，当 -1<m<0 时 m-1 < m < 0 < m+1，A、B 在第二象限得 0<y₁<y₂，C 在第四象限得 y₃<0，故 y₃ < 0 < y₁ < y₂。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_test_q8',
+      procedureId: 'P14',
+      partId: null,
+      sortOrder: 11,
+      order: 11,
+      role: 'primary',
+      subType: 'P14_parametric_x_compare',
+      operationSummary: '在 y=k/x (k<0，每象限内递增) 中，因横坐标 a-2 < a+1 却有 y₁ > y₂，判定两点必跨象限（P 在第二象限、Q 在第四象限），列 a-2<0<a+1 得 -1<a<2。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_1_prop_q9',
+      procedureId: 'P14',
+      partId: '(3)',
+      sortOrder: 12,
+      order: 12,
+      partOrder: 1,
+      role: 'primary',
+      subType: 'P14_cross_quadrant_sign_compare',
+      operationSummary: '第(3)问：点 (-1,m) 与 (2,n) 横坐标异号分处不同象限，分 k>3（k-3>0 时 m<0<n 即 m<n）与 k<3（k-3<0 时 m>0>n 即 m>n）讨论。',
+      status: 'published'
+    },
+
+    // =========================================================================
+    // P15：利用反比例函数中心对称性求正比例交点坐标与对称式的值（共 7 道关联题，严格按 sortOrder 1~7 排列）
+    // =========================================================================
+    {
+      questionId: 'ch27_2_2_ex_q13',
+      procedureId: 'P15',
+      partId: null,
+      sortOrder: 1,
+      order: 1,
+      role: 'primary',
+      subType: 'P15_symmetric_intersection_coords',
+      operationSummary: '过原点的直线与双曲线 y=k/x 均关于原点中心对称，由交点 A(2,5) 横、纵坐标同时取相反数，直接写出另一交点 B(-2,-5)。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_2_hw_q10',
+      procedureId: 'P15',
+      partId: null,
+      sortOrder: 2,
+      order: 2,
+      role: 'primary',
+      subType: 'P15_symmetric_intersection_coords',
+      operationSummary: '利用双曲线 y=k₁/x 与正比例直线 y=k₂x 的交点 A、B 关于原点对称，由 A(1,2) 直接得出 B(-1,-2)。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_2_hw_q12',
+      procedureId: 'P15',
+      partId: null,
+      sortOrder: 3,
+      order: 3,
+      role: 'primary',
+      subType: 'P15_symmetric_coords_sum_zero',
+      operationSummary: '双曲线 y=k/x 上两点 (x₁,y₁) 与 (3,y₂) 满足 y₁+y₂=0（纵坐标互为相反数），由关于原点中心对称知横坐标也互为相反数，得 x₁=-3。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_2_hw_q13',
+      procedureId: 'P15',
+      partId: null,
+      sortOrder: 4,
+      order: 4,
+      role: 'primary',
+      subType: 'P15_complete_coord_then_symmetry',
+      operationSummary: '先将交点 (-1,m) 代入 y=4/x 算得 m=-4（即交点为 (-1,-4)），再由正比例函数与双曲线交点关于原点对称得出另一交点为 (1,4)。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_2_q1',
+      procedureId: 'P15',
+      partId: null,
+      sortOrder: 5,
+      order: 5,
+      role: 'primary',
+      subType: 'P15_symmetric_algebraic_eval',
+      operationSummary: '由两交点关于原点对称得 x₂=-x₁, y₂=-y₁，代入 2x₁y₂-5x₂y₁ 化为 -2x₁y₁+5x₁y₁=3x₁y₁，结合 x₁y₁=√3 算得 3√3。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_2_q3',
+      procedureId: 'P15',
+      partId: null,
+      sortOrder: 6,
+      order: 6,
+      role: 'primary',
+      subType: 'P15_symmetric_algebraic_eval',
+      operationSummary: '由交点关于原点对称得 x₂=-x₁, y₂=-y₁，代入 2x₁y₂+3x₂y₁ 化为 -2x₁y₁-3x₁y₁=-5x₁y₁，结合 x₁y₁=4 算得 -20。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch27_2_2_ex_q15',
+      procedureId: 'P15',
+      partId: null,
+      sortOrder: 7,
+      order: 7,
+      role: 'primary',
+      subType: 'P15_symmetric_param_solve_k',
+      operationSummary: '利用过原点直线与双曲线两交点 A(m,n)、B(m-2,n-8) 关于原点对称，列 m+(m-2)=0、n+(n-8)=0 解得 m=1, n=4，进而算得 k=mn=4。',
+      status: 'published'
     }
   ];
 

@@ -19,6 +19,8 @@
         .replace(/\\cong\b/g, '&cong;')
         .replace(/\\le\b/g, '&le;')
         .replace(/\\ge\b/g, '&ge;')
+        .replace(/\\lt\b/g, '&lt;')
+        .replace(/\\gt\b/g, '&gt;')
         .replace(/\\times/g, ' &times; ')
         .replace(/\\div/g, ' &divide; ')
         .replace(/\\neq/g, ' &ne; ')
@@ -74,8 +76,11 @@
           .replace(/(?<!\\)%/g, '\\%')
           .replace(/[\ufe63\u2212\uff0d]/g, '-')
           .replace(/[\ufe62\uff0b]/g, '+')
-          .replace(/\\\\(frac|dfrac|tfrac|sqrt|text|triangle|angle|circ|parallel|perp|cong|alpha|beta|gamma|theta|pi|pm|mp|le|ge|cdot|times|div|neq|approx|because|therefore|quad|qquad|dots|cdots|mathbf|mathrm|left|right|begin|end)\b/g, '\\$1')
-          .replace(/\\(therefore|because|angle|triangle|parallel|perp|cong|pm|mp|times|div|cdot|cdots|approx|neq)(?=[a-zA-Z])/g, (m, cmd, offset, full) => {
+          .replace(/\\\\\\(frac|dfrac|tfrac|sqrt|text|triangle|angle|circ|parallel|perp|cong|alpha|beta|gamma|theta|pi|pm|mp|le|ge|cdot|times|div|neq|approx|because|therefore|quad|qquad|dots|cdots|mathbf|mathrm|left|right|begin|end)\b/g, '\\\\ \\$1')
+          .replace(/(?<!\\)\\\\(frac|dfrac|tfrac|sqrt|text|triangle|angle|circ|parallel|perp|cong|alpha|beta|gamma|theta|pi|pm|mp|le|ge|cdot|times|div|neq|approx|because|therefore|quad|qquad|dots|cdots|mathbf|mathrm|left|right|begin|end)\b/g, '\\$1')
+          .replace(/^\{\s*(\\begin\{cases\}[\s\S]*\\end\{cases\})\s*$/g, '$1')
+          .replace(/(\\therefore|\\because)\s*\{\s*(\\begin\{cases\}[\s\S]*\\end\{cases\})/g, '$1 $2')
+          .replace(/\\(therefore|because|angle|triangle|parallel|perp|cong|pm|mp|times|div|cdot|cdots|approx|neq|pi)(?=[a-zA-Z])/g, (m, cmd, offset, full) => {
             const after = full.slice(offset + m.length);
             if (cmd === 'triangle' && /^(left|right|down|eq)/.test(after)) return m;
             if (cmd === 'div' && /^ideontimes/.test(after)) return m;
@@ -85,7 +90,7 @@
           })
           .replace(/\\therefore\b/g, '∴')
           .replace(/\\because\b/g, '∵')
-          .replace(/\\\\(?=[a-zA-Z0-9+\-])/g, '\\\\ ')
+          .replace(/\\\\(?=[a-zA-Z0-9+\-\\])/g, '\\\\ ')
           .trim();
         if (!cleanTex) return '';
         let rendered = '';

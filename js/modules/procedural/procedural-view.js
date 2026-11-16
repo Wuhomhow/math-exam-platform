@@ -1,8 +1,8 @@
 // 题典网「程序性知识」独立模块视图控制器 (procedural-view.js)
-// 包含三个层级：
+// 包含三个层级 + 60fps 网课级互动演算白板引擎（配方法样板 P03）：
 // 1. 程序性知识首页（统一浏览入口、搜索、年级/学科筛选）
-// 2. 章节下的程序性知识列表（按年级/章节分类浏览集合卡片，不堆砌过多操作细节）
-// 3. 单项程序性知识详情页（基本信息、步骤清单式核心操作、适用条件/前置知识/易错边界、典型例题步骤映射、关联题目集合与前后知识/图谱跳转）
+// 2. 章节下的程序性知识列表（按年级/章节分类浏览集合卡片）
+// 3. 单项程序性知识详情页（基本信息、步骤清单式核心操作 + [动态演示] 60fps 互动白板、适用条件/前置知识/易错边界、典型例题步骤映射、关联题目集合与前后知识/图谱跳转）
 // 4. 关联题目详情查看（点击任意关联题目可进入原题详情页并定位展开标准解答）
 (function () {
   function escapeHtml(str) {
@@ -16,14 +16,85 @@
     return escapeHtml(str);
   }
 
+  function clamp01(v) {
+    return v < 0 ? 0 : (v > 1 ? 1 : v);
+  }
+
+  function easeOutCubic(x) {
+    const t = clamp01(x);
+    return 1 - Math.pow(1 - t, 3);
+  }
+
+  function formatTimeSec(sec) {
+    const s = Math.max(0, Math.floor(sec));
+    const m = Math.floor(s / 60);
+    const rem = s % 60;
+    const tenths = Math.floor((Math.max(0, sec) % 1) * 10);
+    return `${String(m).padStart(2, '0')}:${String(rem).padStart(2, '0')}.${tenths}`;
+  }
+
   const ProceduralState = {
     subView: 'home',          // 'home' | 'detail'
     selectedProcedureId: 'P01',
     searchKeyword: '',
-    gradeFilter: 'all',       // 'all' | '九年级'
-    subjectFilter: 'all',     // 'all' | '数学'
-    chapterFilter: 'all'      // 'all' | '25.3 直接开平方法' | '25.4 配方法'
+    gradeFilter: 'all',
+    subjectFilter: 'all',
+    chapterFilter: 'all',
+    // 60fps 网课互动白板时间轴状态
+    dynamicDemoOpen: false,
+    dynamicStep: 1,
+    currentTime: 0.0,
+    targetStopTime: 6.5,
+    playbackRate: 1.0,
+    isPlaying: false,
+    isContinuousMode: false,
+    rafId: null,
+    lastFrameTs: 0,
+    activeTimelineRenderFn: null,
+    practiceVisible: false
   };
+
+  function stopDynamicPlayback() {
+    if (ProceduralState.rafId) {
+      cancelAnimationFrame(ProceduralState.rafId);
+      ProceduralState.rafId = null;
+    }
+    ProceduralState.isPlaying = false;
+    ProceduralState.lastFrameTs = 0;
+    const playBtnText = document.getElementById('procDynPlayBtnText');
+    const playBtnIcon = document.getElementById('procDynPlayBtnIcon');
+    if (playBtnText) playBtnText.textContent = ProceduralState.isContinuousMode ? '继续连播' : '连续播放';
+    if (playBtnIcon) playBtnIcon.textContent = '▶';
+  }
+
+  function resetDynamicDemoState(keepOpen = false) {
+    stopDynamicPlayback();
+    ProceduralState.dynamicDemoOpen = Boolean(keepOpen);
+    ProceduralState.dynamicStep = 1;
+    ProceduralState.currentTime = 0.0;
+    ProceduralState.targetStopTime = 6.5;
+    ProceduralState.isContinuousMode = false;
+    ProceduralState.practiceVisible = false;
+  }
+
+  // 页面隐藏或切换标签页时自动暂停 60fps 时间轴
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden && ProceduralState.isPlaying) {
+      stopDynamicPlayback();
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (ProceduralState.dynamicDemoOpen && typeof ProceduralState.activeTimelineRenderFn === 'function') {
+      ProceduralState.activeTimelineRenderFn(ProceduralState.currentTime);
+    }
+  });
+
+  ['navBankBtn', 'navGraphBtn', 'navPaperBtn', 'mobileNavBank', 'mobileNavGraph', 'mobileNavPaper'].forEach(btnId => {
+    document.getElementById(btnId)?.addEventListener('click', () => {
+      stopDynamicPlayback();
+    });
+  });
 
   const ProceduralView = {
     init() {
@@ -39,6 +110,7 @@
         searchInput.addEventListener('input', (e) => {
           clearTimeout(timer);
           timer = setTimeout(() => {
+            stopDynamicPlayback();
             ProceduralState.searchKeyword = e.target.value.trim();
             if (ProceduralState.subView !== 'home') {
               ProceduralState.subView = 'home';
@@ -52,6 +124,7 @@
       if (gradeSelect && !gradeSelect.dataset.bound) {
         gradeSelect.dataset.bound = '1';
         gradeSelect.addEventListener('change', (e) => {
+          stopDynamicPlayback();
           ProceduralState.gradeFilter = e.target.value;
           ProceduralState.subView = 'home';
           this.render();
@@ -62,6 +135,7 @@
       if (subjectSelect && !subjectSelect.dataset.bound) {
         subjectSelect.dataset.bound = '1';
         subjectSelect.addEventListener('change', (e) => {
+          stopDynamicPlayback();
           ProceduralState.subjectFilter = e.target.value;
           ProceduralState.subView = 'home';
           this.render();
@@ -72,6 +146,7 @@
       if (resetBtn && !resetBtn.dataset.bound) {
         resetBtn.dataset.bound = '1';
         resetBtn.addEventListener('click', () => {
+          stopDynamicPlayback();
           ProceduralState.searchKeyword = '';
           ProceduralState.gradeFilter = 'all';
           ProceduralState.subjectFilter = 'all';
@@ -85,6 +160,7 @@
     },
 
     openHome(chapter = undefined) {
+      resetDynamicDemoState(false);
       ProceduralState.subView = 'home';
       if (chapter !== undefined) {
         ProceduralState.chapterFilter = chapter;
@@ -93,17 +169,18 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     },
 
-    openDetail(procedureId) {
+    openDetail(procedureId, autoOpenDemo = false) {
       const proc = window.ProceduralKnowledgeService?.getProcedureById(procedureId);
       if (!proc) return;
+      resetDynamicDemoState(Boolean(autoOpenDemo));
       ProceduralState.selectedProcedureId = procedureId;
       ProceduralState.subView = 'detail';
       this.render();
       window.scrollTo({ top: 0, behavior: 'smooth' });
     },
 
-    // Jump to the existing Question Bank detail view for a specific question and auto-expand its full answer/analysis
     openQuestionInBankDetail(questionId, chapter) {
+      stopDynamicPlayback();
       if (typeof switchView === 'function') {
         switchView('bank');
       }
@@ -113,7 +190,6 @@
       state.searchKeyword = '';
       state.currentPage = 1;
 
-      // Locate which page the question is on within its chapter so it is immediately visible
       const pool = (window.QUESTION_BANK || []).filter(q => state.chapterFilter === 'all' ? true : q.chapter === state.chapterFilter);
       const qIdx = pool.findIndex(q => q.id === questionId);
       const pageSize = state.pageSize || 15;
@@ -175,6 +251,7 @@
         detailContainer.classList.remove('hidden');
         this.renderDetailView(detailContainer);
       } else {
+        stopDynamicPlayback();
         detailContainer.classList.add('hidden');
         homeContainer.classList.remove('hidden');
         this.renderHomeView();
@@ -185,9 +262,6 @@
       }
     },
 
-    // =========================================================================
-    // 层级 1 & 2：程序性知识首页 & 年级/章节下的程序性知识集合列表
-    // =========================================================================
     renderHomeView() {
       const chapterNavEl = document.getElementById('procChapterSidebar');
       const listContainer = document.getElementById('procCollectionListContainer');
@@ -198,7 +272,6 @@
       );
       const filteredCols = this.getFilteredCollections();
 
-      // Build Grade -> Chapter Group -> Section hierarchy dynamically across all grades
       const gradeDisplayMap = {
         '七年级': { title: '初一（七年级）', semester: '上册' },
         '八年级': { title: '初二（八年级）', semester: '上册' },
@@ -274,7 +347,7 @@
           `;
         }).join('');
 
-      let sidebarHtml = `
+      chapterNavEl.innerHTML = `
         <button type="button" class="proc-chap-btn chapter-tree-btn ${isAllChap ? 'is-active' : ''} w-full flex items-center justify-between gap-3 px-3 py-2.5 rounded-lg border border-slate-200 text-sm font-semibold" data-proc-chap="all">
           <span>全部程序性知识</span>
           <span class="text-xs font-bold">${allCols.length} 项</span>
@@ -284,7 +357,6 @@
           ${gradeCardsHtml}
         </div>
       `;
-      chapterNavEl.innerHTML = sidebarHtml;
 
       chapterNavEl.querySelectorAll('.proc-chap-btn').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -294,7 +366,6 @@
         });
       });
 
-      // Render Collection Cards (clean, modern, uncluttered aesthetic)
       if (filteredCols.length === 0) {
         listContainer.innerHTML = `
           <div class="ui-card py-14 text-center text-slate-400 text-xs">
@@ -308,6 +379,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           ${filteredCols.map(col => {
             const p = col.procedure;
+            const hasDynDemo = Boolean(window.PROCEDURAL_DYNAMIC_DEMOS && window.PROCEDURAL_DYNAMIC_DEMOS[p.id]);
             return `
               <div class="proc-collection-card ui-card p-5 hover:border-[#0F766E] hover:shadow-sm cursor-pointer transition-all duration-150 flex flex-col justify-between group" data-open-proc="${escapeHtml(p.id)}">
                 <div class="space-y-2.5">
@@ -316,6 +388,7 @@
                       <span class="px-2 py-0.5 rounded bg-[#0F766E] text-white font-bold tracking-wide">${escapeHtml(p.id)}</span>
                       <span class="px-2 py-0.5 rounded bg-[#F0FDFA] text-[#115E59] border border-[#CCFBF1] font-medium">${escapeHtml(p.grade)}</span>
                       <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-600 font-medium">${escapeHtml(p.chapter)}</span>
+                      ${hasDynDemo ? `<span class="px-2 py-0.5 rounded bg-teal-50 text-[#0F766E] border border-[#99F6E4] font-semibold">▶ 动态演示</span>` : ''}
                     </div>
                     <div class="flex items-center gap-1.5 shrink-0">
                       <span class="px-2 py-0.5 rounded-full bg-teal-50 text-[#0F766E] text-[11px] font-semibold">${col.totalQuestions} 题</span>
@@ -348,9 +421,1014 @@
     },
 
     // =========================================================================
+    // 60fps 网课级互动演算白板（单一视觉焦点画布 + 逐项 Token 书写 + 真实 DOM 坐标 SVG 弧线批注 + 同步字幕）
+    // =========================================================================
+    buildDynamicTeachingModuleHtml(demoData) {
+      if (!demoData) return '';
+      const totalSteps = demoData.steps.length;
+      const curStep = ProceduralState.dynamicStep || 1;
+      const prac1 = demoData.practices.practice1;
+      const prac2 = demoData.practices.practice2;
+
+      // 预先渲染主白板的 8 行算式与每一个独立 Token（初始化时一次性完成 KaTeX 渲染，播放期间 0 重排）
+      const boardRowsHtml = (demoData.boardRows || []).map(row => {
+        const tokensHtml = row.tokens.map(tk => `
+          <span class="proc-wb-token" id="proc_tk_${escapeHtml(tk.id)}" data-token-id="${escapeHtml(tk.id)}" data-appear-at="${tk.appearAt}" data-dur="${tk.dur || 0.4}" style="opacity:0; transform:translateY(8px) scale(0.94);">
+            ${renderMathText(tk.math)}
+          </span>
+        `).join('');
+
+        return `
+          <div class="proc-wb-row ${row.isConclusion ? 'is-row-conclusion' : ''}" id="proc_${escapeHtml(row.rowId)}" data-row-appear="${row.appearAt}" style="opacity:0; pointer-events:none;">
+            <div class="text-base sm:text-[18px] font-semibold text-slate-900 leading-relaxed flex flex-wrap items-baseline gap-x-0.5">
+              ${tokensHtml}
+            </div>
+            <span class="proc-wb-row-badge px-2 py-0.5 rounded text-[11px] font-semibold bg-white text-slate-500 border border-slate-200 shrink-0">
+              ${escapeHtml(row.stepBadge)}
+            </span>
+          </div>
+        `;
+      }).join('');
+
+      // 预先渲染右侧「同步草稿演算浮窗」卡片（同一时间最多只浮现当前正在演算的 1 张卡片）
+      const scratchpadCardsHtml = (demoData.scratchpadCards || []).map(sp => {
+        const spTokensHtml = sp.tokens.map(tk => `
+          <div class="proc-wb-token block py-0.5 text-sm sm:text-base font-bold text-slate-900" id="proc_tk_${escapeHtml(tk.id)}" data-token-id="${escapeHtml(tk.id)}" data-appear-at="${tk.appearAt}" data-dur="${tk.dur || 0.4}" style="opacity:0; transform:translateY(6px);">
+            ${renderMathText(tk.math)}
+          </div>
+        `).join('');
+
+        return `
+          <div class="proc-wb-scratchpad-card hidden space-y-2" id="proc_${escapeHtml(sp.id)}" data-show-start="${sp.showStart}" data-show-end="${sp.showEnd}">
+            <div class="flex items-center justify-between pb-1.5 border-b border-teal-100">
+              <span class="text-xs font-bold text-[#0F766E] inline-flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-[#0F766E]"></span>
+                <span>${escapeHtml(sp.title)}</span>
+              </span>
+              <span class="px-1.5 py-0.5 rounded bg-[#F0FDFA] text-[#0F766E] text-[10px] font-bold">草稿演算</span>
+            </div>
+            <div class="space-y-1 pl-1">
+              ${spTokensHtml}
+            </div>
+            <div class="pt-1.5 border-t border-slate-100 text-[11px] text-slate-500 leading-relaxed">
+              ${renderMathText(sp.note)}
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      // 预先渲染讲师同步字幕（每条字幕独立完成 KaTeX 渲染，播放时按时间区间切换显隐）
+      const subtitlesHtml = (demoData.subtitles || []).map((sub, idx) => `
+        <span class="proc-wb-sub-item ${idx === 0 ? 'inline' : 'hidden'}" data-sub-idx="${idx}" data-t-start="${sub.tStart}" data-t-end="${sub.tEnd}" data-focus-token="${escapeHtml(sub.focusToken || '')}">
+          ${renderMathText(sub.text)}
+        </span>
+      `).join('');
+
+      // 预先渲染底部 C. 原理解释区的 5 条步骤核心原理
+      const stepExplanationsHtml = demoData.steps.map(st => `
+        <span class="proc-wb-step-exp ${st.step === curStep ? 'inline' : 'hidden'}" data-exp-step="${st.step}">
+          ${renderMathText(st.explanation)}
+        </span>
+      `).join('');
+
+      return `
+        <div id="procDynamicDemoModule" class="${ProceduralState.dynamicDemoOpen ? 'block' : 'hidden'} space-y-3.5 pt-1">
+          <!-- A. 学习进度与五步章节导航区 -->
+          <div class="p-4 rounded-xl bg-white border border-[#99F6E4] space-y-3">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="px-2 py-0.5 rounded bg-[#0F766E] text-white text-xs font-bold">网课互动白板</span>
+                <h4 class="text-sm sm:text-base font-bold text-slate-900">${escapeHtml(demoData.title)}</h4>
+                <span class="text-xs text-slate-500">示例题：${renderMathText(demoData.exampleTitle)}</span>
+              </div>
+              <button type="button" id="btnProcCloseDynamicDemo" class="btn-secondary px-3 py-1.5 rounded-lg text-xs font-semibold inline-flex items-center gap-1">
+                <span>← 返回核心操作</span>
+              </button>
+            </div>
+
+            <div class="space-y-2 pt-1 border-t border-slate-100">
+              <div class="flex flex-wrap items-center justify-between gap-2 text-xs">
+                <span id="procDynStepStatusText" class="font-bold text-[#0F766E]">
+                  当前进度：第 ${curStep} / ${totalSteps} 步 · ${escapeHtml(demoData.steps[curStep - 1].name)}
+                </span>
+                <span id="procDynBeatLabelText" class="text-slate-500 font-medium">正在书写：1.1 观察原式</span>
+              </div>
+
+              <div class="grid grid-cols-2 sm:grid-cols-5 gap-2">
+                ${demoData.steps.map(st => {
+                  const isAct = st.step === curStep;
+                  return `
+                    <button type="button" class="proc-dyn-step-tab px-2.5 py-2 rounded-lg border text-left text-xs transition-all flex items-center gap-2 ${
+                      isAct
+                        ? 'bg-[#0F766E] text-white border-[#0F766E] font-bold'
+                        : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-[#F0FDFA] hover:border-[#99F6E4]'
+                    }" data-step="${st.step}">
+                      <span class="w-5 h-5 rounded-full flex items-center justify-center text-[11px] font-bold shrink-0 ${
+                        isAct ? 'bg-white text-[#0F766E]' : 'bg-white text-slate-600 border border-slate-200'
+                      }">${st.step}</span>
+                      <span class="truncate">${escapeHtml(st.name)}</span>
+                    </button>
+                  `;
+                }).join('')}
+              </div>
+            </div>
+          </div>
+
+          <!-- B-Top. 60fps 视频级时间轴与播放控制栏（置顶于白板正上方，进入即可直观控制与拖拽进度） -->
+          <div class="p-3.5 rounded-xl bg-white border border-[#99F6E4] shadow-sm space-y-2.5">
+            <!-- 可自由拖拽的毫秒级时间轴滑块 -->
+            <div class="flex items-center gap-3">
+              <span id="procTimeCurrentLabel" class="text-xs font-mono font-bold text-[#0F766E] w-14 shrink-0">00:00.0</span>
+              <div class="relative flex-1 flex items-center">
+                <input type="range" id="procTimelineRange" class="proc-timeline-range" min="0" max="${demoData.totalDuration}" step="0.05" value="0">
+              </div>
+              <span class="text-xs font-mono text-slate-400 w-14 text-right shrink-0">${formatTimeSec(demoData.totalDuration)}</span>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div class="flex flex-wrap items-center gap-1.5 sm:gap-2">
+                <button type="button" id="btnProcDynPlayPause" class="btn-primary px-3.5 py-1.5 rounded-lg text-xs font-bold inline-flex items-center gap-1.5">
+                  <span id="procDynPlayBtnIcon">▶</span>
+                  <span id="procDynPlayBtnText">开始演示</span>
+                </button>
+                <button type="button" id="btnProcDynPrev" class="proc-dyn-ctrl-btn btn-secondary px-3 py-1.5 rounded-lg text-xs font-semibold" ${curStep <= 1 ? 'disabled' : ''}>
+                  ← 上一步
+                </button>
+                <button type="button" id="btnProcDynNext" class="proc-dyn-ctrl-btn btn-secondary px-3 py-1.5 rounded-lg text-xs font-semibold">
+                  下一步 →
+                </button>
+                <button type="button" id="btnProcDynPrevBeat" class="btn-secondary px-2.5 py-1.5 rounded-lg text-xs font-medium" title="后退一个微动作帧">
+                  ◀ 上一帧
+                </button>
+                <button type="button" id="btnProcDynNextBeat" class="btn-secondary px-2.5 py-1.5 rounded-lg text-xs font-medium" title="前进一个微动作帧">
+                  下一帧 ▶
+                </button>
+                <button type="button" id="btnProcDynReplayStep" class="btn-secondary px-2.5 py-1.5 rounded-lg text-xs font-medium" title="从头重播当前步骤的板书过程">
+                  ↻ 重播本步
+                </button>
+                <button type="button" id="btnProcDynRestart" class="btn-secondary px-2.5 py-1.5 rounded-lg text-xs font-medium" title="回到开头静止状态">
+                  ↺ 回到开头
+                </button>
+              </div>
+
+              <div class="flex flex-wrap items-center gap-2">
+                <!-- 倍速切换 -->
+                <div class="inline-flex items-center rounded-lg border border-slate-200 bg-slate-50 p-0.5 text-xs">
+                  ${[0.75, 1.0, 1.5].map(rate => `
+                    <button type="button" class="proc-speed-btn px-2 py-1 rounded-md font-semibold transition ${
+                      ProceduralState.playbackRate === rate ? 'bg-[#0F766E] text-white' : 'text-slate-600 hover:text-[#0F766E]'
+                    }" data-rate="${rate}">${rate}x</button>
+                  `).join('')}
+                </div>
+
+                <button type="button" id="btnProcDynGoPractice" class="btn-primary px-3.5 py-1.5 rounded-lg text-xs font-bold inline-flex items-center gap-1">
+                  <span>✎ 进入跟做练习</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- B. 单一视觉焦点「网课互动演算白板」 -->
+          <div id="procWhiteboardStage" class="proc-wb-stage proc-wb-grid-bg p-4 space-y-3">
+            <!-- SVG 实时几何手写批注层（基于真实 DOM 坐标动态绘制弧线箭头与底部花括号） -->
+            <svg id="procBoardSvgOverlay" class="proc-wb-svg-overlay" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <marker id="procArrowTeal" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#0F766E"></path>
+                </marker>
+                <marker id="procArrowAmber" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#D97706"></path>
+                </marker>
+              </defs>
+              <g id="procSvgDynamicGroup"></g>
+            </svg>
+
+            <!-- KaTeX 批注标签悬浮层（预渲染规范分式，高清不裁剪） -->
+            <div id="procBoardLabelLayer" class="proc-wb-label-layer"></div>
+
+            <!-- 讲师激光笔/手写笔焦点光标 -->
+            <div id="procTeacherPen" class="proc-teacher-pen" style="left: 48px; top: 48px; opacity: 0;"></div>
+
+            <!-- 白板顶部状态栏 -->
+            <div class="flex flex-wrap items-center justify-between gap-2 pb-2 border-b border-teal-100/80 relative z-10">
+              <div class="flex items-center gap-2 text-xs">
+                <span class="w-2.5 h-2.5 rounded-full bg-[#0F766E]"></span>
+                <span class="font-bold text-slate-800">例题板书推演区：${renderMathText(demoData.exampleTitle)}</span>
+              </div>
+              <div class="flex items-center gap-3 text-[11px] text-slate-500">
+                <span class="inline-flex items-center gap-1">
+                  <span class="w-2 h-2 rounded-full bg-[#0F766E]"></span>
+                  <span>青绿圈点：当前视线焦点</span>
+                </span>
+                <span class="inline-flex items-center gap-1">
+                  <span class="w-2.5 h-2.5 rounded-sm bg-[#FEF3C7] border border-[#FCD34D]"></span>
+                  <span>琥珀高亮：正在变形的数</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- 白板核心内容：左侧主等式逐项书写区 + 右侧同步草稿浮窗 -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start relative z-10 min-h-[280px]">
+              <!-- 主等式板书区 -->
+              <div class="lg:col-span-8 space-y-2.5" id="procWbMainEquations">
+                ${boardRowsHtml}
+              </div>
+
+              <!-- 右侧动态几何图形（若有）与同步草稿演算区 -->
+              <div class="lg:col-span-4 lg:sticky lg:top-4 space-y-2.5">
+                ${demoData.geometryDiagram ? `
+                  <div class="p-3.5 rounded-xl bg-white border border-[#99F6E4] shadow-sm space-y-2">
+                    <div class="flex items-center justify-between pb-1.5 border-b border-teal-100">
+                      <span class="text-xs font-bold text-[#0F766E] inline-flex items-center gap-1.5">
+                        <span class="w-2 h-2 rounded-full bg-[#0F766E]"></span>
+                        <span>${escapeHtml(demoData.geometryDiagram.title || '动态几何图形')}</span>
+                      </span>
+                      <span class="px-1.5 py-0.5 rounded bg-[#F0FDFA] text-[#0F766E] text-[10px] font-bold">实时几何联动</span>
+                    </div>
+                    <div class="flex justify-center items-center bg-[#F8FAFC] rounded-lg p-2 border border-slate-100">
+                      ${demoData.geometryDiagram.svgHtml}
+                    </div>
+                    ${demoData.geometryDiagram.caption ? `<div class="text-[11px] text-slate-500 text-center leading-relaxed">${escapeHtml(demoData.geometryDiagram.caption)}</div>` : ''}
+                  </div>
+                ` : ''}
+                ${scratchpadCardsHtml}
+                <div id="procScratchpadIdleHint" class="p-3.5 rounded-xl border border-dashed border-slate-200 bg-white/60 text-xs text-slate-400 text-center">
+                  ${escapeHtml(demoData.scratchpadIdleHint || '旁白草稿演算区（当步骤涉及辅助运算时在此同步展开）')}
+                </div>
+              </div>
+            </div>
+
+            <!-- 底部：讲师同步讲解字幕栏（像看网课视频一样逐句引导视线） -->
+            <div class="proc-wb-subtitle-bar flex items-center gap-3 relative z-10">
+              <span class="px-2 py-0.5 rounded bg-white/20 text-white text-[11px] font-bold shrink-0">讲师讲解</span>
+              <div class="text-xs sm:text-sm font-medium leading-relaxed flex-1">
+                ${subtitlesHtml}
+              </div>
+            </div>
+          </div>
+
+          <!-- C. 原理解释区 -->
+          <div class="p-3.5 rounded-xl bg-[#F0FDFA] border border-[#CCFBF1] flex items-start gap-2.5">
+            <span class="px-2 py-0.5 rounded bg-[#115E59] text-white text-[11px] font-bold shrink-0 mt-0.5">本步核心原理</span>
+            <p class="text-xs sm:text-sm text-[#115E59] font-medium leading-relaxed">
+              ${stepExplanationsHtml}
+            </p>
+          </div>
+
+          <!-- 六、跟做练习模块 -->
+          <div id="procDynPracticeSection" class="${ProceduralState.practiceVisible ? 'block' : 'hidden'} p-5 rounded-xl bg-white border-2 border-[#0F766E] space-y-5">
+            <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-100">
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-0.5 rounded bg-[#0F766E] text-white text-xs font-bold">跟着操作</span>
+                <h4 class="text-sm sm:text-base font-bold text-slate-900">${escapeHtml(demoData.practiceSectionTitle || `${demoData.title}关键动作跟做练习`)}</h4>
+              </div>
+              <span class="text-xs text-slate-500">${escapeHtml(demoData.practiceSectionSub || '完成以下两道关键操作练习，检验是否掌握核心解题动作')}</span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 items-start">
+              <!-- 练习一 -->
+              <div class="p-4 rounded-xl bg-slate-50/80 border border-slate-200 space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs sm:text-sm font-bold text-slate-900">${escapeHtml(prac1.title)}</span>
+                  <button type="button" id="btnPrac1Reset" class="text-xs text-[#0F766E] hover:underline font-medium">重新作答</button>
+                </div>
+
+                <div class="p-3 rounded-lg bg-white border border-slate-200 space-y-1.5 text-xs sm:text-sm text-slate-800">
+                  <div>${escapeHtml(prac1.givenLabel || '已知：')}${renderMathText(prac1.givenFormula)}</div>
+                  ${prac1.extractedFormula ? `<div>${escapeHtml(prac1.extractedLabel || '整理变形后：')}${renderMathText(prac1.extractedFormula)}</div>` : ''}
+                  <div class="font-bold text-slate-900 pt-1">${renderMathText(prac1.questionText)}</div>
+                </div>
+
+                <div class="space-y-2" id="prac1OptionsList">
+                  ${prac1.options.map(opt => `
+                    <button type="button" class="prac1-opt-btn w-full text-left px-3.5 py-2.5 rounded-lg border border-slate-200 bg-white hover:bg-[#F0FDFA] hover:border-[#99F6E4] text-xs sm:text-sm text-slate-800 transition flex items-center justify-between" data-opt-key="${opt.key}">
+                      <span>${renderMathText(opt.text)}</span>
+                      <span class="prac1-opt-indicator text-xs font-bold text-slate-400">选择</span>
+                    </button>
+                  `).join('')}
+                </div>
+
+                <div id="prac1FeedbackCorrect" class="hidden p-3.5 rounded-lg bg-[#F0FDFA] border border-[#0F766E] space-y-1.5 text-xs sm:text-sm text-[#115E59]">
+                  <div class="font-bold text-[#0F766E]">✓ ${escapeHtml(prac1.correctFeedback.title)}</div>
+                  <div class="pl-3 border-l-2 border-[#0F766E] space-y-1 font-semibold text-slate-900">
+                    ${prac1.correctFeedback.calcLines.map(line => `<div>${renderMathText(line)}</div>`).join('')}
+                  </div>
+                  <div class="text-xs text-slate-700 pt-0.5">${renderMathText(prac1.correctFeedback.summary)}</div>
+                </div>
+
+                <div id="prac1FeedbackWrong" class="hidden p-3.5 rounded-lg bg-amber-50 border border-amber-300 text-xs sm:text-sm text-amber-900 space-y-1">
+                  <div class="font-bold">${escapeHtml(prac1.wrongTitle || '提示：请留意当前步骤的核心法则')}</div>
+                  <div>${renderMathText(prac1.wrongFeedback)}</div>
+                </div>
+              </div>
+
+              <!-- 练习二 -->
+              <div class="p-4 rounded-xl bg-slate-50/80 border border-slate-200 space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs sm:text-sm font-bold text-slate-900">${escapeHtml(prac2.title)}</span>
+                  <button type="button" id="btnPrac2Reset" class="text-xs text-[#0F766E] hover:underline font-medium">重新作答</button>
+                </div>
+
+                <div class="p-3 rounded-lg bg-white border border-slate-200 space-y-1.5 text-xs sm:text-sm text-slate-800">
+                  <div>${escapeHtml(prac2.givenLabel || '给出条件：')}${renderMathText(prac2.givenFormula)}</div>
+                  <div class="font-bold text-slate-900 pt-1">${renderMathText(prac2.questionText)}</div>
+                </div>
+
+                <div class="p-3.5 rounded-lg bg-white border border-slate-200 space-y-3 text-xs sm:text-sm">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span class="text-slate-700 font-medium">${renderMathText(prac2.input1Prefix || '当 $x =$')}</span>
+                    <input type="text" id="prac2InputX" placeholder="${escapeHtml(prac2.input1Placeholder || '如 -2')}" class="w-24 px-2.5 py-1.5 rounded-lg border border-slate-200 text-center font-bold text-sm">
+                    <span class="text-slate-700 font-medium">${renderMathText(prac2.input2Prefix || '时，取得最小值')}</span>
+                    <input type="text" id="prac2InputMin" placeholder="${escapeHtml(prac2.input2Placeholder || '如 -5')}" class="w-24 px-2.5 py-1.5 rounded-lg border border-slate-200 text-center font-bold text-sm">
+                    ${prac2.input2Suffix ? `<span class="text-xs text-slate-400">${escapeHtml(prac2.input2Suffix)}</span>` : ''}
+                  </div>
+
+                  <div class="flex flex-wrap items-center gap-2 pt-1">
+                    <button type="button" id="btnPrac2Submit" class="btn-primary px-4 py-1.5 rounded-lg text-xs font-semibold">
+                      提交检验
+                    </button>
+                    <span class="text-xs text-slate-400">可输入数值后点击「提交检验」</span>
+                  </div>
+                </div>
+
+                <div id="prac2FeedbackCorrect" class="hidden p-3.5 rounded-lg bg-[#F0FDFA] border border-[#0F766E] space-y-1.5 text-xs sm:text-sm text-[#115E59]">
+                  <div class="font-bold text-[#0F766E]">✓ 回答正确！${renderMathText(prac2.correctFeedback)}</div>
+                  <div class="text-xs text-slate-700 leading-relaxed">${renderMathText(prac2.correctDetail)}</div>
+                </div>
+
+                <div id="prac2FeedbackWrong" class="hidden p-3.5 rounded-lg bg-amber-50 border border-amber-300 text-xs sm:text-sm text-amber-900 space-y-1">
+                  <div class="font-bold">提示：请再检查一下</div>
+                  <div id="prac2WrongHintText">${renderMathText(prac2.wrongFeedback)}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    },
+
+    bindDynamicTeachingEvents(container, demoData) {
+      if (!demoData) return;
+      const totalSteps = demoData.steps.length;
+      const totalDuration = demoData.totalDuration || 32.0;
+      const staticChecklistEl = container.querySelector('#procStaticStepsList');
+      const dynModuleEl = container.querySelector('#procDynamicDemoModule');
+      const openBtn = container.querySelector('#btnOpenDynamicDemo');
+      const closeBtn = container.querySelector('#btnProcCloseDynamicDemo');
+      const wbStage = container.querySelector('#procWhiteboardStage');
+      const svgGroup = container.querySelector('#procSvgDynamicGroup');
+      const labelLayer = container.querySelector('#procBoardLabelLayer');
+      const teacherPen = container.querySelector('#procTeacherPen');
+      const timelineRange = container.querySelector('#procTimelineRange');
+      const timeCurrentLabel = container.querySelector('#procTimeCurrentLabel');
+
+      // 预渲染 SVG 批注标签与微动作提示的 KaTeX HTML（保证分式规范展示且 60fps 零重排）
+      const annPillElsMap = new Map();
+      if (labelLayer) {
+        labelLayer.innerHTML = '';
+        (demoData.svgAnnotations || []).forEach(ann => {
+          if (!ann.label) return;
+          const pillEl = document.createElement('div');
+          const isBrace = ann.type === 'under-brace';
+          pillEl.className = 'proc-svg-label-pill';
+          pillEl.style.backgroundColor = isBrace ? '#F0FDFA' : '#FFFFFF';
+          pillEl.style.border = `1.2px solid ${ann.color}`;
+          pillEl.style.color = ann.color;
+          pillEl.style.opacity = '0';
+          pillEl.style.display = 'none';
+          pillEl.innerHTML = renderMathText(ann.label);
+          labelLayer.appendChild(pillEl);
+          annPillElsMap.set(ann.id, pillEl);
+        });
+      }
+
+      const beatHtmlCache = new Map();
+      (demoData.microBeats || []).forEach(b => {
+        beatHtmlCache.set(b.label, renderMathText(`当前焦点：${b.label}`));
+      });
+      let lastBeatRendered = '';
+
+      // 缓存所有 Token 与行节点引用，保证 60fps 帧循环内零 DOM 查询开销
+      const tokenElsMap = new Map();
+      container.querySelectorAll('.proc-wb-token').forEach(el => {
+        const tid = el.getAttribute('data-token-id');
+        if (tid) {
+          tokenElsMap.set(tid, {
+            el,
+            appearAt: parseFloat(el.getAttribute('data-appear-at') || '0'),
+            dur: parseFloat(el.getAttribute('data-dur') || '0.4')
+          });
+        }
+      });
+
+      const rowElsList = Array.from(container.querySelectorAll('.proc-wb-row')).map(el => ({
+        el,
+        appearAt: parseFloat(el.getAttribute('data-row-appear') || '0')
+      }));
+
+      const scratchpadList = Array.from(container.querySelectorAll('.proc-wb-scratchpad-card')).map(el => ({
+        el,
+        showStart: parseFloat(el.getAttribute('data-show-start') || '0'),
+        showEnd: parseFloat(el.getAttribute('data-show-end') || '0')
+      }));
+      const scratchpadIdleHint = container.querySelector('#procScratchpadIdleHint');
+
+      const subtitleList = Array.from(container.querySelectorAll('.proc-wb-sub-item')).map(el => ({
+        el,
+        tStart: parseFloat(el.getAttribute('data-t-start') || '0'),
+        tEnd: parseFloat(el.getAttribute('data-t-end') || '0'),
+        focusToken: el.getAttribute('data-focus-token') || ''
+      }));
+
+      const geoAnimList = Array.from(container.querySelectorAll('.proc-geo-anim')).map(el => ({
+        el,
+        appearAt: parseFloat(el.getAttribute('data-appear-at') || '0'),
+        dur: parseFloat(el.getAttribute('data-dur') || '0.5'),
+        dashLen: parseFloat(el.getAttribute('data-dash-len') || '0')
+      }));
+
+      // 根据给定时间戳 t 定位所属教学步骤 (1..5)
+      const getStepAtTime = (t) => {
+        for (let i = demoData.steps.length - 1; i >= 0; i--) {
+          if (t >= demoData.steps[i].tStart - 0.01) {
+            return demoData.steps[i].step;
+          }
+        }
+        return 1;
+      };
+
+      // 计算某个 Token 相对于白板容器的像素几何矩形
+      const getTokenRectInStage = (tokenId) => {
+        const item = tokenElsMap.get(tokenId);
+        if (!item || !wbStage) return null;
+        const stageRect = wbStage.getBoundingClientRect();
+        const tkRect = item.el.getBoundingClientRect();
+        if (tkRect.width === 0 && tkRect.height === 0) return null;
+        return {
+          left: tkRect.left - stageRect.left,
+          right: tkRect.right - stageRect.left,
+          top: tkRect.top - stageRect.top,
+          bottom: tkRect.bottom - stageRect.top,
+          cx: (tkRect.left + tkRect.right) / 2 - stageRect.left,
+          cy: (tkRect.top + tkRect.bottom) / 2 - stageRect.top,
+          width: tkRect.width,
+          height: tkRect.height
+        };
+      };
+
+      // 实时绘制 SVG 手写弧线箭头与底部花括号，并定位预渲染的 KaTeX 分式标签悬浮层
+      const renderSvgAnnotationsAt = (t) => {
+        if (!svgGroup) return;
+        const activeMarkup = [];
+        const visibleLabelIds = new Set();
+
+        (demoData.svgAnnotations || []).forEach(ann => {
+          if (t < ann.tStart || t > ann.tEnd) return;
+          const drawP = easeOutCubic((t - ann.tStart) / Math.max(0.1, ann.tDrawEnd - ann.tStart));
+          let alpha = 1;
+          if (t > ann.tFadeStart) {
+            alpha = 1 - clamp01((t - ann.tFadeStart) / Math.max(0.1, ann.tEnd - ann.tFadeStart));
+          }
+
+          const pillEl = annPillElsMap.get(ann.id);
+
+          if (ann.type === 'arrow') {
+            const rFrom = getTokenRectInStage(ann.fromToken);
+            const rTo = getTokenRectInStage(ann.toToken);
+            if (!rFrom || !rTo) return;
+
+            const isSameRow = Math.abs(rFrom.cy - rTo.cy) < 22;
+            const isCrossCol = Math.abs(rFrom.cx - rTo.cx) > 160;
+            let x1, y1, x2, y2, mx, my;
+
+            if (isSameRow && !isCrossCol) {
+              x1 = rFrom.cx;
+              y1 = rFrom.top - 2;
+              x2 = rTo.cx;
+              y2 = rTo.top - 3;
+              mx = (x1 + x2) / 2;
+              my = Math.min(y1, y2) - Math.abs(ann.curveOffset || 24);
+            } else if (isCrossCol) {
+              const goingRight = rTo.cx > rFrom.cx;
+              x1 = goingRight ? rFrom.right + 4 : rFrom.left - 4;
+              y1 = rFrom.cy;
+              x2 = goingRight ? rTo.left - 4 : rTo.right + 4;
+              y2 = rTo.cy;
+              mx = (x1 + x2) / 2;
+              my = Math.min(y1, y2) - Math.abs(ann.curveOffset || 26);
+            } else {
+              x1 = rFrom.cx;
+              y1 = rFrom.bottom + 2;
+              x2 = rTo.cx;
+              y2 = rTo.top - 4;
+              mx = (x1 + x2) / 2 + (ann.curveOffset || 0);
+              my = (y1 + y2) / 2 - Math.abs(ann.curveOffset || 20) * 0.25;
+            }
+
+            const approxLen = Math.hypot(x2 - x1, y2 - y1) * 1.35 + 40;
+            const dashOffset = approxLen * (1 - drawP);
+            const markerId = ann.color === '#D97706' ? 'url(#procArrowAmber)' : 'url(#procArrowTeal)';
+            const labelX = (x1 + 2 * mx + x2) / 4;
+            const labelY = isSameRow ? ((y1 + 2 * my + y2) / 4 - 10) : ((y1 + 2 * my + y2) / 4);
+
+            activeMarkup.push(`
+              <g opacity="${alpha.toFixed(2)}">
+                <path d="M ${x1.toFixed(1)} ${y1.toFixed(1)} Q ${mx.toFixed(1)} ${my.toFixed(1)} ${x2.toFixed(1)} ${y2.toFixed(1)}"
+                      fill="none" stroke="${ann.color}" stroke-width="2.2" stroke-linecap="round"
+                      stroke-dasharray="${approxLen.toFixed(1)}" stroke-dashoffset="${dashOffset.toFixed(1)}"
+                      marker-end="${drawP > 0.85 ? markerId : ''}" />
+              </g>
+            `);
+
+            if (pillEl && drawP > 0.35) {
+              visibleLabelIds.add(ann.id);
+              pillEl.style.display = 'block';
+              pillEl.style.left = `${labelX.toFixed(1)}px`;
+              pillEl.style.top = `${labelY.toFixed(1)}px`;
+              pillEl.style.opacity = (alpha * clamp01((drawP - 0.35) * 2)).toFixed(2);
+            }
+          } else if (ann.type === 'under-brace') {
+            const rStart = getTokenRectInStage(ann.startToken);
+            const rEnd = getTokenRectInStage(ann.endToken);
+            if (!rStart || !rEnd) return;
+
+            const x1 = Math.min(rStart.left, rEnd.left) - 1;
+            const x2 = Math.max(rStart.right, rEnd.right) + 1;
+            const y = Math.max(rStart.bottom, rEnd.bottom) + 2;
+            const midX = (x1 + x2) / 2;
+            const approxLen = (x2 - x1) + 32;
+            const dashOffset = approxLen * (1 - drawP);
+
+            activeMarkup.push(`
+              <g opacity="${alpha.toFixed(2)}">
+                <path d="M ${x1.toFixed(1)} ${y.toFixed(1)} Q ${x1.toFixed(1)} ${(y + 6).toFixed(1)} ${(x1 + 7).toFixed(1)} ${(y + 6).toFixed(1)} L ${(midX - 5).toFixed(1)} ${(y + 6).toFixed(1)} L ${midX.toFixed(1)} ${(y + 11).toFixed(1)} L ${(midX + 5).toFixed(1)} ${(y + 6).toFixed(1)} L ${(x2 - 7).toFixed(1)} ${(y + 6).toFixed(1)} Q ${x2.toFixed(1)} ${(y + 6).toFixed(1)} ${x2.toFixed(1)} ${y.toFixed(1)}"
+                      fill="none" stroke="${ann.color}" stroke-width="2" stroke-linecap="round"
+                      stroke-dasharray="${approxLen.toFixed(1)}" stroke-dashoffset="${dashOffset.toFixed(1)}" />
+              </g>
+            `);
+
+            if (pillEl && drawP > 0.4) {
+              visibleLabelIds.add(ann.id);
+              pillEl.style.display = 'block';
+              pillEl.style.left = `${midX.toFixed(1)}px`;
+              pillEl.style.top = `${(y + 27).toFixed(1)}px`;
+              pillEl.style.opacity = (alpha * clamp01((drawP - 0.4) * 2)).toFixed(2);
+            }
+          }
+        });
+
+        annPillElsMap.forEach((pillEl, id) => {
+          if (!visibleLabelIds.has(id)) {
+            pillEl.style.display = 'none';
+            pillEl.style.opacity = '0';
+          }
+        });
+
+        svgGroup.innerHTML = activeMarkup.join('');
+      };
+
+      // 核心 60fps 渲染函数：根据当前精确秒数 t 同步更新所有视觉层
+      const renderTimelineAt = (rawTime) => {
+        const t = Math.max(0, Math.min(totalDuration, rawTime));
+        ProceduralState.currentTime = t;
+        const step = getStepAtTime(t);
+        ProceduralState.dynamicStep = step;
+
+        // 1. 更新时间轴滑块与时间读数
+        if (timelineRange && document.activeElement !== timelineRange) {
+          timelineRange.value = String(t);
+        }
+        if (timeCurrentLabel) {
+          timeCurrentLabel.textContent = formatTimeSec(t);
+        }
+
+        // 2. 更新顶部步骤状态与微动作节点提示
+        const stepObj = demoData.steps[step - 1];
+        const statusText = container.querySelector('#procDynStepStatusText');
+        if (statusText && stepObj) {
+          statusText.textContent = `当前进度：第 ${step} / ${totalSteps} 步 · ${stepObj.name}`;
+        }
+
+        let currentBeat = demoData.microBeats[0];
+        for (const b of demoData.microBeats) {
+          if (t >= b.time - 0.6) currentBeat = b;
+        }
+        const beatLabelText = container.querySelector('#procDynBeatLabelText');
+        if (beatLabelText && currentBeat && lastBeatRendered !== currentBeat.label) {
+          lastBeatRendered = currentBeat.label;
+          beatLabelText.innerHTML = beatHtmlCache.get(currentBeat.label) || escapeHtml(`当前焦点：${currentBeat.label}`);
+        }
+
+        // 3. 更新顶部 5 个步骤按钮与底部原理解释显隐
+        container.querySelectorAll('.proc-dyn-step-tab').forEach(tab => {
+          const sNum = Number(tab.getAttribute('data-step'));
+          const isAct = sNum === step;
+          tab.className = `proc-dyn-step-tab px-2.5 py-2 rounded-lg border text-left text-xs transition-all flex items-center gap-2 ${
+            isAct
+              ? 'bg-[#0F766E] text-white border-[#0F766E] font-bold'
+              : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-[#F0FDFA] hover:border-[#99F6E4]'
+          }`;
+          const badge = tab.querySelector('span:first-child');
+          if (badge) {
+            badge.className = `w-5 h-5 rounded-full flex items-center justify-center text-[11px] font-bold shrink-0 ${
+              isAct ? 'bg-white text-[#0F766E]' : 'bg-white text-slate-600 border border-slate-200'
+            }`;
+          }
+        });
+
+        container.querySelectorAll('.proc-wb-step-exp').forEach(expEl => {
+          const sNum = Number(expEl.getAttribute('data-exp-step'));
+          expEl.classList.toggle('inline', sNum === step);
+          expEl.classList.toggle('hidden', sNum !== step);
+        });
+
+        // 4. 更新主白板各行显隐与当前激活行
+        let latestActiveRow = null;
+        rowElsList.forEach(rItem => {
+          const visible = t >= rItem.appearAt;
+          rItem.el.style.opacity = visible ? '1' : '0';
+          rItem.el.style.pointerEvents = visible ? 'auto' : 'none';
+          rItem.el.classList.remove('is-row-active');
+          if (visible) latestActiveRow = rItem.el;
+        });
+        if (latestActiveRow && !latestActiveRow.classList.contains('is-row-conclusion')) {
+          latestActiveRow.classList.add('is-row-active');
+        }
+
+        // 5. 更新右侧同步草稿演算浮窗（同一时刻只展示当前时间窗口内的草稿卡）
+        let anyScratchpadShown = false;
+        scratchpadList.forEach(spItem => {
+          const show = t >= spItem.showStart && t <= spItem.showEnd;
+          spItem.el.classList.toggle('hidden', !show);
+          if (show) anyScratchpadShown = true;
+        });
+        if (scratchpadIdleHint) {
+          scratchpadIdleHint.classList.toggle('hidden', anyScratchpadShown);
+        }
+
+        // 6. 计算当前时间点下的 Token 高亮集合
+        const activeHlMap = new Map();
+        (demoData.tokenHighlights || []).forEach(hl => {
+          if (t >= hl.tStart && t <= hl.tEnd) {
+            activeHlMap.set(hl.tokenId, hl.color);
+          }
+        });
+
+        // 7. 逐个 Token 插值更新书写透明度、位移与高亮样式，并记录正在书写的最新 Token
+        let writingTokenId = null;
+        tokenElsMap.forEach((tkItem, tid) => {
+          const p = easeOutCubic((t - tkItem.appearAt) / Math.max(0.08, tkItem.dur));
+          tkItem.el.style.opacity = p.toFixed(3);
+          const ty = (1 - p) * 7;
+          const sc = 0.94 + 0.06 * p;
+          tkItem.el.style.transform = `translateY(${ty.toFixed(2)}px) scale(${sc.toFixed(3)})`;
+
+          if (t >= tkItem.appearAt && t <= tkItem.appearAt + tkItem.dur + 0.15) {
+            writingTokenId = tid;
+          }
+
+          const hlColor = activeHlMap.get(tid);
+          tkItem.el.classList.toggle('is-hl-teal', hlColor === 'teal');
+          tkItem.el.classList.toggle('is-hl-amber', hlColor === 'amber');
+          tkItem.el.classList.toggle('is-hl-rose', hlColor === 'rose');
+        });
+
+        // 8. 更新底部同步讲师字幕与激光笔追踪坐标
+        let activeFocusToken = writingTokenId;
+        subtitleList.forEach((subItem, idx) => {
+          const isCur = (t >= subItem.tStart && t < subItem.tEnd) || (idx === subtitleList.length - 1 && t >= subItem.tStart);
+          subItem.el.classList.toggle('inline', isCur);
+          subItem.el.classList.toggle('hidden', !isCur);
+          if (isCur && !activeFocusToken && subItem.focusToken) {
+            activeFocusToken = subItem.focusToken;
+          }
+        });
+
+        if (teacherPen && activeFocusToken) {
+          const rect = getTokenRectInStage(activeFocusToken);
+          if (rect) {
+            teacherPen.style.opacity = '1';
+            teacherPen.style.left = `${(rect.right - 2).toFixed(1)}px`;
+            teacherPen.style.top = `${(rect.bottom - 2).toFixed(1)}px`;
+          } else {
+            teacherPen.style.opacity = '0';
+          }
+        } else if (teacherPen) {
+          teacherPen.style.opacity = '0';
+        }
+
+        // 9. 更新 SVG 几何手写批注层与右侧动态几何图形层
+        renderSvgAnnotationsAt(t);
+        geoAnimList.forEach(gItem => {
+          const p = easeOutCubic((t - gItem.appearAt) / Math.max(0.08, gItem.dur));
+          gItem.el.style.opacity = p.toFixed(3);
+          if (gItem.dashLen > 0) {
+            gItem.el.style.strokeDasharray = String(gItem.dashLen);
+            gItem.el.style.strokeDashoffset = (gItem.dashLen * (1 - p)).toFixed(1);
+          }
+        });
+
+        // 10. 更新上一步/下一步按钮状态
+        const prevBtn = container.querySelector('#btnProcDynPrev');
+        const nextBtn = container.querySelector('#btnProcDynNext');
+        if (prevBtn) prevBtn.disabled = step <= 1 && t <= 0.2;
+        if (nextBtn) nextBtn.disabled = step >= totalSteps && t >= totalDuration - 0.1;
+      };
+
+      ProceduralState.activeTimelineRenderFn = renderTimelineAt;
+
+      // 启动 60fps 时间轴播放（播放至 targetStopTime 自动平滑停住）
+      const playTimelineTo = (startTime, stopTime, isContinuous = false) => {
+        stopDynamicPlayback();
+        ProceduralState.currentTime = startTime;
+        ProceduralState.targetStopTime = stopTime;
+        ProceduralState.isContinuousMode = isContinuous;
+        ProceduralState.isPlaying = true;
+        ProceduralState.lastFrameTs = performance.now();
+
+        const playBtnText = document.getElementById('procDynPlayBtnText');
+        const playBtnIcon = document.getElementById('procDynPlayBtnIcon');
+        if (playBtnText) playBtnText.textContent = '暂停';
+        if (playBtnIcon) playBtnIcon.textContent = '⏸';
+
+        renderTimelineAt(startTime);
+
+        const tick = (now) => {
+          if (!ProceduralState.isPlaying) return;
+          const dt = Math.min(0.06, Math.max(0, (now - ProceduralState.lastFrameTs) / 1000));
+          ProceduralState.lastFrameTs = now;
+          const nextT = ProceduralState.currentTime + dt * (ProceduralState.playbackRate || 1.0);
+
+          if (nextT >= ProceduralState.targetStopTime) {
+            renderTimelineAt(ProceduralState.targetStopTime);
+            stopDynamicPlayback();
+            return;
+          }
+
+          renderTimelineAt(nextT);
+          ProceduralState.rafId = requestAnimationFrame(tick);
+        };
+
+        ProceduralState.rafId = requestAnimationFrame(tick);
+      };
+
+      // 播放指定步骤（如第 1 步：从 0.0s 流畅演播到 6.5s 后自动暂停）
+      const playSingleStep = (stepNum) => {
+        const sIdx = Math.max(0, Math.min(totalSteps - 1, stepNum - 1));
+        const stObj = demoData.steps[sIdx];
+        playTimelineTo(stObj.tStart, stObj.tEnd, false);
+      };
+
+      const toggleDemoMode = (open) => {
+        ProceduralState.dynamicDemoOpen = open;
+        stopDynamicPlayback();
+        if (dynModuleEl) dynModuleEl.classList.toggle('hidden', !open);
+        if (staticChecklistEl) staticChecklistEl.classList.toggle('hidden', open);
+        if (openBtn) {
+          openBtn.innerHTML = open
+            ? '<span>返回核心操作</span>'
+            : '<span>▶ 动态演示</span>';
+        }
+        if (open) {
+          // 进入动态演示时不自动播放第一步，停在 0 秒静止帧由用户决定何时开始
+          ProceduralState.currentTime = 0.0;
+          ProceduralState.dynamicStep = 1;
+          requestAnimationFrame(() => {
+            renderTimelineAt(0.0);
+            const playBtnText = document.getElementById('procDynPlayBtnText');
+            if (playBtnText) playBtnText.textContent = '开始演示';
+          });
+        }
+      };
+
+      openBtn?.addEventListener('click', () => {
+        toggleDemoMode(!ProceduralState.dynamicDemoOpen);
+      });
+
+      closeBtn?.addEventListener('click', () => {
+        toggleDemoMode(false);
+      });
+
+      // 点击顶部步骤标签：播放对应步骤区间
+      container.querySelectorAll('.proc-dyn-step-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+          const s = Number(tab.getAttribute('data-step')) || 1;
+          playSingleStep(s);
+        });
+      });
+
+      // 拖拽时间轴滑块：实时 60fps 预览任意时刻帧
+      timelineRange?.addEventListener('input', (e) => {
+        stopDynamicPlayback();
+        const val = parseFloat(e.target.value || '0');
+        renderTimelineAt(val);
+      });
+
+      // 上一步 / 下一步
+      container.querySelector('#btnProcDynPrev')?.addEventListener('click', () => {
+        const curStep = getStepAtTime(ProceduralState.currentTime);
+        const targetStep = Math.max(1, curStep - 1);
+        playSingleStep(targetStep);
+      });
+
+      container.querySelector('#btnProcDynNext')?.addEventListener('click', () => {
+        const curStep = getStepAtTime(ProceduralState.currentTime);
+        const curStepObj = demoData.steps[curStep - 1];
+        // 如果当前步骤还没开始或尚未演播完（例如刚进入时停在 00:00.0），先演播当前步
+        if (ProceduralState.currentTime < curStepObj.tEnd - 0.25) {
+          playTimelineTo(ProceduralState.currentTime, curStepObj.tEnd, false);
+        } else {
+          const targetStep = Math.min(totalSteps, curStep + 1);
+          playSingleStep(targetStep);
+        }
+      });
+
+      // 上一帧 / 下一帧（微动作级步进，方便老师或学生定格观察每一处细节）
+      container.querySelector('#btnProcDynPrevBeat')?.addEventListener('click', () => {
+        stopDynamicPlayback();
+        const beats = demoData.microBeats || [];
+        let targetTime = 0.0;
+        for (let i = beats.length - 1; i >= 0; i--) {
+          if (beats[i].time < ProceduralState.currentTime - 0.25) {
+            targetTime = beats[i].time;
+            break;
+          }
+        }
+        renderTimelineAt(targetTime);
+      });
+
+      container.querySelector('#btnProcDynNextBeat')?.addEventListener('click', () => {
+        stopDynamicPlayback();
+        const beats = demoData.microBeats || [];
+        let targetTime = totalDuration;
+        for (let i = 0; i < beats.length; i++) {
+          if (beats[i].time > ProceduralState.currentTime + 0.15) {
+            targetTime = beats[i].time;
+            break;
+          }
+        }
+        renderTimelineAt(targetTime);
+      });
+
+      // 开始演示 / 连续播放 / 暂停
+      container.querySelector('#btnProcDynPlayPause')?.addEventListener('click', () => {
+        if (ProceduralState.isPlaying) {
+          stopDynamicPlayback();
+        } else {
+          const startT = ProceduralState.currentTime >= totalDuration - 0.2 ? 0 : ProceduralState.currentTime;
+          playTimelineTo(startT, totalDuration, true);
+        }
+      });
+
+      // 重播本步
+      container.querySelector('#btnProcDynReplayStep')?.addEventListener('click', () => {
+        const curStep = getStepAtTime(ProceduralState.currentTime);
+        playSingleStep(curStep);
+      });
+
+      // 回到开头静止状态
+      container.querySelector('#btnProcDynRestart')?.addEventListener('click', () => {
+        stopDynamicPlayback();
+        renderTimelineAt(0.0);
+        const playBtnText = document.getElementById('procDynPlayBtnText');
+        if (playBtnText) playBtnText.textContent = '开始演示';
+      });
+
+      // 倍速切换 (0.75x / 1.0x / 1.5x)
+      container.querySelectorAll('.proc-speed-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const rate = parseFloat(btn.getAttribute('data-rate') || '1.0');
+          ProceduralState.playbackRate = rate;
+          container.querySelectorAll('.proc-speed-btn').forEach(b => {
+            const r = parseFloat(b.getAttribute('data-rate') || '1.0');
+            b.className = `proc-speed-btn px-2 py-1 rounded-md font-semibold transition ${
+              r === rate ? 'bg-[#0F766E] text-white' : 'text-slate-600 hover:text-[#0F766E]'
+            }`;
+          });
+        });
+      });
+
+      container.querySelector('#btnProcDynGoPractice')?.addEventListener('click', () => {
+        stopDynamicPlayback();
+        ProceduralState.practiceVisible = true;
+        const pracSection = container.querySelector('#procDynPracticeSection');
+        if (pracSection) {
+          pracSection.classList.remove('hidden');
+          pracSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      });
+
+      // 练习一交互：判断配方操作
+      const prac1CorrectEl = container.querySelector('#prac1FeedbackCorrect');
+      const prac1WrongEl = container.querySelector('#prac1FeedbackWrong');
+      const prac1Btns = container.querySelectorAll('.prac1-opt-btn');
+
+      prac1Btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const key = btn.getAttribute('data-opt-key');
+          const optObj = demoData.practices.practice1.options.find(o => o.key === key);
+          if (!optObj) return;
+
+          prac1Btns.forEach(b => {
+            const bKey = b.getAttribute('data-opt-key');
+            const ind = b.querySelector('.prac1-opt-indicator');
+            if (bKey === key) {
+              if (optObj.isCorrect) {
+                b.className = 'prac1-opt-btn w-full text-left px-3.5 py-2.5 rounded-lg border-2 border-[#0F766E] bg-[#F0FDFA] text-xs sm:text-sm text-[#115E59] font-bold transition flex items-center justify-between';
+                if (ind) { ind.textContent = '✓ 正确'; ind.className = 'prac1-opt-indicator text-xs font-bold text-[#0F766E]'; }
+              } else {
+                b.className = 'prac1-opt-btn w-full text-left px-3.5 py-2.5 rounded-lg border-2 border-amber-400 bg-amber-50 text-xs sm:text-sm text-amber-900 font-semibold transition flex items-center justify-between';
+                if (ind) { ind.textContent = '请再试一次'; ind.className = 'prac1-opt-indicator text-xs font-bold text-amber-700'; }
+              }
+            } else {
+              b.className = 'prac1-opt-btn w-full text-left px-3.5 py-2.5 rounded-lg border border-slate-200 bg-white hover:bg-[#F0FDFA] hover:border-[#99F6E4] text-xs sm:text-sm text-slate-800 transition flex items-center justify-between';
+              if (ind) { ind.textContent = '选择'; ind.className = 'prac1-opt-indicator text-xs font-bold text-slate-400'; }
+            }
+          });
+
+          if (optObj.isCorrect) {
+            prac1CorrectEl?.classList.remove('hidden');
+            prac1WrongEl?.classList.add('hidden');
+          } else {
+            prac1WrongEl?.classList.remove('hidden');
+            prac1CorrectEl?.classList.add('hidden');
+          }
+        });
+      });
+
+      container.querySelector('#btnPrac1Reset')?.addEventListener('click', () => {
+        prac1CorrectEl?.classList.add('hidden');
+        prac1WrongEl?.classList.add('hidden');
+        prac1Btns.forEach(b => {
+          const ind = b.querySelector('.prac1-opt-indicator');
+          b.className = 'prac1-opt-btn w-full text-left px-3.5 py-2.5 rounded-lg border border-slate-200 bg-white hover:bg-[#F0FDFA] hover:border-[#99F6E4] text-xs sm:text-sm text-slate-800 transition flex items-center justify-between';
+          if (ind) { ind.textContent = '选择'; ind.className = 'prac1-opt-indicator text-xs font-bold text-slate-400'; }
+        });
+      });
+
+      // 练习二交互：判断最值
+      const inputX = container.querySelector('#prac2InputX');
+      const inputMin = container.querySelector('#prac2InputMin');
+      const prac2CorrectEl = container.querySelector('#prac2FeedbackCorrect');
+      const prac2WrongEl = container.querySelector('#prac2FeedbackWrong');
+      const prac2WrongHintText = container.querySelector('#prac2WrongHintText');
+
+      const normalizeNumStr = (val) => String(val || '').trim().replace(/[−﹣－]/g, '-').replace(/^\+/, '');
+
+      const checkPrac2 = () => {
+        const xVal = normalizeNumStr(inputX?.value);
+        const minVal = normalizeNumStr(inputMin?.value);
+        const p2Cfg = demoData.practices.practice2;
+        const expX = p2Cfg.expectedX;
+        const expMin = p2Cfg.expectedMin;
+        const isMatch = (xVal === expX && minVal === expMin) ||
+          (Boolean(p2Cfg.allowOrderSwap) && xVal === expMin && minVal === expX);
+
+        if (isMatch) {
+          prac2CorrectEl?.classList.remove('hidden');
+          prac2WrongEl?.classList.add('hidden');
+        } else {
+          prac2CorrectEl?.classList.add('hidden');
+          prac2WrongEl?.classList.remove('hidden');
+          if (prac2WrongHintText) {
+            let customHint = '';
+            if (Array.isArray(p2Cfg.specificWrongHints)) {
+              for (const rule of p2Cfg.specificWrongHints) {
+                if (rule.checkType === 'firstVal' && xVal === rule.val) { customHint = rule.hint; break; }
+                if (rule.checkType === 'secondVal' && minVal === rule.val) { customHint = rule.hint; break; }
+                if (rule.checkType === 'sameVal' && xVal === rule.val && (minVal === rule.val || !minVal)) { customHint = rule.hint; break; }
+                if (rule.checkType === 'anyVal' && (xVal === rule.val || minVal === rule.val)) { customHint = rule.hint; break; }
+              }
+            }
+            prac2WrongHintText.innerHTML = renderMathText(customHint || p2Cfg.wrongFeedback);
+          }
+        }
+      };
+
+      container.querySelector('#btnPrac2Submit')?.addEventListener('click', checkPrac2);
+      inputX?.addEventListener('keydown', (e) => { if (e.key === 'Enter') checkPrac2(); });
+      inputMin?.addEventListener('keydown', (e) => { if (e.key === 'Enter') checkPrac2(); });
+
+      container.querySelector('#btnPrac2Reset')?.addEventListener('click', () => {
+        if (inputX) inputX.value = '';
+        if (inputMin) inputMin.value = '';
+        prac2CorrectEl?.classList.add('hidden');
+        prac2WrongEl?.classList.add('hidden');
+      });
+
+      if (ProceduralState.dynamicDemoOpen) {
+        requestAnimationFrame(() => {
+          renderTimelineAt(ProceduralState.currentTime || 0.0);
+          const playBtnText = document.getElementById('procDynPlayBtnText');
+          if (playBtnText && !ProceduralState.isPlaying) {
+            playBtnText.textContent = ProceduralState.currentTime > 0.05 ? '继续播放' : '开始演示';
+          }
+        });
+      }
+    },
+
+    // =========================================================================
     // 层级 3：单项程序性知识详情页
-    // 4.1 页面基本信息 | 4.2 步骤清单式核心操作 | 4.3 适用条件/前置知识/易错边界
-    // 4.4 典型例题 | 4.5 关联题目集合 | 4.6 前后知识关联与题目图谱跳转
     // =========================================================================
     renderDetailView(container) {
       const col = window.ProceduralKnowledgeService?.getQuestionCollectionByProcedure(ProceduralState.selectedProcedureId);
@@ -361,6 +1439,7 @@
       }
 
       const p = col.procedure;
+      const demoData = window.PROCEDURAL_DYNAMIC_DEMOS ? window.PROCEDURAL_DYNAMIC_DEMOS[p.id] : null;
       const bank = window.QUESTION_BANK || [];
       const qMap = new Map(bank.map(q => [q.id, q]));
       const exampleQ = p.exampleQuestionId ? qMap.get(p.exampleQuestionId) : null;
@@ -375,7 +1454,6 @@
         .map(id => window.ProceduralKnowledgeService.getProcedureById(id))
         .filter(Boolean);
 
-      // 4.2 Core Operations Step List HTML
       const stepsHtml = (p.steps || []).map((st, idx) => {
         const stepNum = st.step || (idx + 1);
         return `
@@ -402,7 +1480,6 @@
         `;
       }).join('');
 
-      // 4.3 Applicability, Prerequisites & Pitfalls HTML
       const applicabilityHtml = (p.applicability || []).map(item => `
         <li class="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed">
           <span class="w-1.5 h-1.5 rounded-full bg-[#0F766E] mt-2 shrink-0"></span>
@@ -439,7 +1516,6 @@
         </li>
       `).join('');
 
-      // 4.4 Typical Example Question HTML (only rendered when valid exampleQuestionId exists in QUESTION_BANK)
       let exampleSectionHtml = '';
       if (exampleQ) {
         const exOptionsHtml = (exampleQ.options && exampleQ.options.length > 0) ? `
@@ -494,7 +1570,6 @@
         `;
       }
 
-      // 4.5 Associated Questions List HTML (ordered strictly by sortOrder)
       const questionsListHtml = col.items.map((item, idx) => {
         const q = item.question;
         const seqNum = idx + 1;
@@ -596,14 +1671,25 @@
           ${p.description ? `<p class="text-xs sm:text-sm text-slate-600 leading-relaxed">${renderMathText(p.description)}</p>` : ''}
         </section>
 
-        <!-- 4.2 Core Operations: Step-by-Step Checklist (Visual Focus) -->
+        <!-- 4.2 Core Operations: Step-by-Step Checklist + [动态演示] Module -->
         <section class="ui-card p-5 space-y-3.5 border-[#99F6E4] bg-gradient-to-b from-[#F0FDFA]/50 to-white">
-          <div class="pb-2 border-b border-teal-100">
-            <h3 class="text-base font-bold text-slate-900">核心操作</h3>
+          <div class="pb-2.5 border-b border-teal-100 flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center gap-2.5">
+              <h3 class="text-base font-bold text-slate-900">核心操作</h3>
+              ${demoData ? `<span class="text-xs text-slate-500">（点击右侧「动态演示」可打开网课级互动白板，观看逐项书写与几何批注推演）</span>` : ''}
+            </div>
+            ${demoData ? `
+              <button type="button" id="btnOpenDynamicDemo" class="btn-primary px-3.5 py-1.5 rounded-lg text-xs font-bold inline-flex items-center gap-1.5">
+                <span>${ProceduralState.dynamicDemoOpen ? '返回核心操作' : '▶ 动态演示'}</span>
+              </button>
+            ` : ''}
           </div>
-          <div class="space-y-3">
+
+          <div id="procStaticStepsList" class="${ProceduralState.dynamicDemoOpen && demoData ? 'hidden' : 'block'} space-y-3">
             ${stepsHtml}
           </div>
+
+          ${demoData ? this.buildDynamicTeachingModuleHtml(demoData) : ''}
         </section>
 
         <!-- 4.3 Applicability, Prerequisites & Pitfalls -->
@@ -698,7 +1784,10 @@
         </section>
       `;
 
-      // Bind detail view events
+      if (demoData) {
+        this.bindDynamicTeachingEvents(container, demoData);
+      }
+
       container.querySelector('#btnProcBackHome')?.addEventListener('click', () => this.openHome('all'));
       container.querySelector('#btnProcBackChap')?.addEventListener('click', (e) => {
         const ch = e.currentTarget.getAttribute('data-chap');
@@ -713,6 +1802,7 @@
       });
 
       container.querySelector('#btnProcGoKnowledgeGraph')?.addEventListener('click', (e) => {
+        stopDynamicPlayback();
         const nodeId = e.currentTarget.getAttribute('data-graph-node') || 'kp_g9_qe_solve';
         if (typeof window.jumpToKnowledgeGraphNode === 'function') {
           window.jumpToKnowledgeGraphNode(nodeId);

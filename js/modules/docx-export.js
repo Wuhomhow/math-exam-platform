@@ -121,8 +121,29 @@
       return out;
     }
 
-    function escXml(str) {
+    function decodeHtmlEntities(str) {
+      if (!str) return '';
       return String(str)
+        .replace(/&nbsp;/gi, ' ')
+        .replace(/&emsp;/gi, '　')
+        .replace(/&ensp;/gi, ' ')
+        .replace(/&thinsp;/gi, ' ')
+        .replace(/&lt;/gi, '<')
+        .replace(/&gt;/gi, '>')
+        .replace(/&quot;/gi, '"')
+        .replace(/&#39;|&apos;/gi, "'")
+        .replace(/&times;/gi, '×')
+        .replace(/&divide;/gi, '÷')
+        .replace(/&le;/gi, '≤')
+        .replace(/&ge;/gi, '≥')
+        .replace(/&ne;/gi, '≠')
+        .replace(/&deg;/gi, '°')
+        .replace(/&plusmn;/gi, '±')
+        .replace(/&amp;/gi, '&');
+    }
+
+    function escXml(str) {
+      return decodeHtmlEntities(str)
         .replace(/&/g, '&amp;')
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;')
@@ -249,6 +270,8 @@
         .replace(/\\mp\b/g, '∓')
         .replace(/\\leq?\b/g, '≤')
         .replace(/\\geq?\b/g, '≥')
+        .replace(/\\lt\b/g, '<')
+        .replace(/\\gt\b/g, '>')
         .replace(/\\notin\b/g, '∉')
         .replace(/\\infty\b/g, '∞')
         .replace(/\\cdot\b/g, '·')
@@ -388,7 +411,11 @@
           }
           if (depth === 0) {
             const innerStr = s.slice(i + 1, k - 1);
-            atoms.push(ommlDelim(begChr, endChr, parseLatexInner(innerStr)));
+            if (/\\(?:frac|dfrac|tfrac|sqrt|begin)\b/.test(innerStr)) {
+              atoms.push(ommlDelim(begChr, endChr, parseLatexInner(innerStr)));
+            } else {
+              atoms.push(ommlRun(begChr) + parseLatexInner(innerStr) + ommlRun(endChr));
+            }
             i = k;
           } else {
             atoms.push(ommlRun(begChr));
@@ -828,6 +855,7 @@
           .replace(/<div[^>]*>/gi, '\n')
           .replace(/<\/div>/gi, '')
           .replace(/<\/?(?!img\b)[a-zA-Z][^>]*>/g, '');
+        s = decodeHtmlEntities(s);
         return s.split('\n').map(l => l.trim()).filter(Boolean);
       }
 
@@ -836,11 +864,12 @@
         if (trMatches.length === 0) return '';
         let maxCols = 1;
         const parsedRows = trMatches.map(trM => {
-          const tds = [...trM[1].matchAll(/<td([^>]*)>([\s\S]*?)<\/td>/gi)].map(tdM => {
-            const attrs = tdM[1] || '';
+          const tds = [...trM[1].matchAll(/<t([hd])([^>]*)>([\s\S]*?)<\/t\1>/gi)].map(tdM => {
+            const isHeader = tdM[1].toLowerCase() === 'h';
+            const attrs = tdM[2] || '';
             const csM = attrs.match(/colspan="(\d+)"/i);
             const span = csM ? parseInt(csM[1], 10) : 1;
-            return { span, content: tdM[2] };
+            return { span, isHeader, content: tdM[3] };
           });
           const rowCols = tds.reduce((s, c) => s + c.span, 0);
           if (rowCols > maxCols) maxCols = rowCols;
@@ -856,8 +885,8 @@
             const gridSpanXml = td.span > 1 ? `<w:gridSpan w:val="${td.span}"/>` : '';
             const cellLines = splitHtmlLinesPreserveImg(td.content);
             const pXml = cellLines.length > 0
-              ? cellLines.map(cl => makeParagraph(textWithMathAndImgToRuns(cl, { sz: 19, maxCx: Math.max(800000, w * 550) }), { align: 'center', before: 20, after: 20, line: 260 })).join('')
-              : makeParagraph('', { before: 20, after: 20 });
+              ? cellLines.map(cl => makeParagraph(textWithMathAndImgToRuns(cl, { sz: 19, bold: td.isHeader, maxCx: Math.max(800000, w * 550) }), { align: 'center', before: 20, after: 20, line: 260 })).join('')
+              : makeParagraph('', { align: 'center', before: 20, after: 20, line: 260 });
             cellsXml += `<w:tc><w:tcPr><w:tcW w:w="${w}" w:type="dxa"/>${gridSpanXml}</w:tcPr>${pXml}</w:tc>`;
           }
           rowsXml += `<w:tr>${cellsXml}</w:tr>`;

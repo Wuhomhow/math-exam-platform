@@ -1,0 +1,4253 @@
+// 题典网「程序性知识」动态教学模块数据层 (procedural-dynamic-demos.js)
+// 包含：
+// - P01 利用直接开平方法解一元二次方程
+// - P02 利用配方法解一元二次方程
+// - P03 利用配方法求代数式的最值
+// 统一采用「60fps 连续时间轴 + 逐项 Token 书写 + 真实 DOM 坐标 SVG 动态几何批注 + 同步讲师字幕 + 跟做练习」架构
+(function () {
+  const PROCEDURAL_DYNAMIC_DEMOS = {
+    // =========================================================================
+    // P01：利用直接开平方法解一元二次方程
+    // =========================================================================
+    P01: {
+      procedureId: 'P01',
+      title: '利用直接开平方法解一元二次方程',
+      exampleTitle: '解方程 $\\frac{1}{4}(2x + 3)^{2} - 1 = 3$',
+      exampleFormula: '$\\frac{1}{4}(2x + 3)^{2} - 1 = 3$',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（当步骤涉及常数合并、系数化 1、开平方或解一次方程时在此同步展开）',
+      practiceSectionTitle: '直接开平方法关键动作跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握直接开平方法降次求根',
+
+      steps: [
+        {
+          step: 1,
+          name: '移常数项并合并',
+          tStart: 0.0,
+          tEnd: 5.8,
+          explanation: '先将左边的常数项 $-1$ 移到等号右边变为 $+1$，合并同类项得 $\\frac{1}{4}(2x + 3)^{2} = 4$。'
+        },
+        {
+          step: 2,
+          name: '平方项系数化为 1',
+          tStart: 5.8,
+          tEnd: 11.5,
+          explanation: '在等式两边同时乘以 $4$，消去完全平方式前面的系数 $\\frac{1}{4}$，化为标准形式 $(2x + 3)^{2} = 16$。'
+        },
+        {
+          step: 3,
+          name: '两边直接开平方降次',
+          tStart: 11.5,
+          tEnd: 17.5,
+          explanation: '因为右边常数 $16 \\gt 0$，根据平方根的意义对两边同时开平方，降次得 $2x + 3 = \\pm 4$（注意正负两个平方根）。'
+        },
+        {
+          step: 4,
+          name: '拆分为两个一次方程',
+          tStart: 17.5,
+          tEnd: 23.2,
+          explanation: '按正号 $+4$ 与负号 $-4$，将等式拆分为两个独立的一元一次方程：$2x + 3 = 4$ 或 $2x + 3 = -4$。'
+        },
+        {
+          step: 5,
+          name: '分别求解得出两根',
+          tStart: 23.2,
+          tEnd: 30.0,
+          explanation: '分别解两个一元一次方程，移项、系数化为 $1$，解得 $x_{1} = \\frac{1}{2}$，$x_{2} = -\\frac{7}{2}$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.6, step: 1, label: '1.1 观察原方程结构' },
+        { time: 2.2, step: 1, label: '1.2 将常数项 $-1$ 移项变号为 $+1$' },
+        { time: 4.5, step: 1, label: '1.3 合并右边常数得 $4$' },
+        { time: 7.2, step: 2, label: '2.1 定位平方项前的系数 $\\frac{1}{4}$' },
+        { time: 9.8, step: 2, label: '2.2 等式两边同乘 $4$ 得 $(2x + 3)^{2} = 16$' },
+        { time: 13.0, step: 3, label: '3.1 检验右边 $16 \\gt 0$ 并开平方' },
+        { time: 15.8, step: 3, label: '3.2 降次写出 $2x + 3 = \\pm 4$' },
+        { time: 19.5, step: 4, label: '4.1 按 $+4$ 与 $-4$ 拆成两个一次方程' },
+        { time: 25.5, step: 5, label: '5.1 分别移项得 $2x = 1$ 或 $2x = -7$' },
+        { time: 28.8, step: 5, label: '5.2 解得 $x_{1} = \\frac{1}{2}$，$x_{2} = -\\frac{7}{2}$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p1_row_0',
+          stepBadge: '原方程',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p1_r0_coef', math: '$\\frac{1}{4}$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p1_r0_sq', math: '$(2x + 3)^{2}$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p1_r0_m1', math: '$- 1$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p1_r0_eq', math: '$=$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p1_r0_3', math: '$3$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p1_row_1',
+          stepBadge: '第 1 步 ① · 移常数项',
+          appearAt: 1.8,
+          tokens: [
+            { id: 'p1_r1_coef', math: '$\\frac{1}{4}$', appearAt: 1.85, dur: 0.30 },
+            { id: 'p1_r1_sq', math: '$(2x + 3)^{2}$', appearAt: 2.05, dur: 0.30 },
+            { id: 'p1_r1_eq', math: '$=$', appearAt: 2.25, dur: 0.25 },
+            { id: 'p1_r1_3', math: '$3$', appearAt: 2.45, dur: 0.25 },
+            { id: 'p1_r1_p1', math: '$+ 1$', appearAt: 2.75, dur: 0.40 }
+          ]
+        },
+        {
+          rowId: 'p1_row_2',
+          stepBadge: '第 1 步 ② · 合并常数',
+          appearAt: 3.9,
+          tokens: [
+            { id: 'p1_r2_coef', math: '$\\frac{1}{4}$', appearAt: 3.95, dur: 0.30 },
+            { id: 'p1_r2_sq', math: '$(2x + 3)^{2}$', appearAt: 4.15, dur: 0.30 },
+            { id: 'p1_r2_eq', math: '$=$', appearAt: 4.35, dur: 0.25 },
+            { id: 'p1_r2_4', math: '$4$', appearAt: 4.60, dur: 0.40 }
+          ]
+        },
+        {
+          rowId: 'p1_row_3',
+          stepBadge: '第 2 步 · 系数化为 1',
+          appearAt: 8.6,
+          tokens: [
+            { id: 'p1_r3_sq', math: '$(2x + 3)^{2}$', appearAt: 8.70, dur: 0.40 },
+            { id: 'p1_r3_eq', math: '$=$', appearAt: 9.10, dur: 0.30 },
+            { id: 'p1_r3_16', math: '$16$', appearAt: 9.45, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p1_row_4',
+          stepBadge: '第 3 步 · 开平方降次',
+          appearAt: 14.5,
+          tokens: [
+            { id: 'p1_r4_lhs', math: '$2x + 3$', appearAt: 14.60, dur: 0.40 },
+            { id: 'p1_r4_eq', math: '$=$', appearAt: 15.00, dur: 0.30 },
+            { id: 'p1_r4_pm4', math: '$\\pm 4$', appearAt: 15.35, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p1_row_5',
+          stepBadge: '第 4 步 · 拆分一次方程',
+          appearAt: 18.8,
+          tokens: [
+            { id: 'p1_r5_eq1', math: '$2x + 3 = 4$', appearAt: 18.90, dur: 0.45 },
+            { id: 'p1_r5_or', math: '或', appearAt: 19.60, dur: 0.30 },
+            { id: 'p1_r5_eq2', math: '$2x + 3 = -4$', appearAt: 20.00, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p1_row_6',
+          stepBadge: '第 5 步 ① · 移项整理',
+          appearAt: 24.4,
+          tokens: [
+            { id: 'p1_r6_eq1', math: '$2x = 1$', appearAt: 24.50, dur: 0.40 },
+            { id: 'p1_r6_or', math: '或', appearAt: 25.10, dur: 0.30 },
+            { id: 'p1_r6_eq2', math: '$2x = -7$', appearAt: 25.50, dur: 0.40 }
+          ]
+        },
+        {
+          rowId: 'p1_row_7',
+          stepBadge: '最终结论',
+          appearAt: 27.6,
+          isConclusion: true,
+          tokens: [
+            { id: 'p1_r7_conc', math: '$\\therefore x_{1} = \\frac{1}{2}$，$x_{2} = -\\frac{7}{2}$。', appearAt: 27.70, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p1_sp_step2',
+          title: '草稿演算 · 第 2 步：等式两边同乘 4',
+          showStart: 6.0,
+          showEnd: 11.4,
+          tokens: [
+            { id: 'p1_sp2_t1', math: '左边：$\\frac{1}{4}(2x + 3)^{2} \\times 4 = (2x + 3)^{2}$', appearAt: 6.5, dur: 0.45 },
+            { id: 'p1_sp2_t2', math: '右边：$4 \\times 4 = 16$', appearAt: 7.5, dur: 0.45 }
+          ],
+          note: '将平方项前面的系数化为 $1$，切勿先把 $(2x + 3)^{2}$ 盲目展开'
+        },
+        {
+          id: 'p1_sp_step3',
+          title: '草稿演算 · 第 3 步：平方根的意义',
+          showStart: 11.7,
+          showEnd: 17.4,
+          tokens: [
+            { id: 'p1_sp3_t1', math: '$\\because (\\pm 4)^{2} = 16$', appearAt: 12.2, dur: 0.45 },
+            { id: 'p1_sp3_t2', math: '$\\therefore \\pm\\sqrt{16} = \\pm 4$', appearAt: 13.2, dur: 0.45 }
+          ],
+          note: '易错提醒：正数 $16$ 有两个互为相反数的平方根，$+4$ 和 $-4$ 缺一不可'
+        },
+        {
+          id: 'p1_sp_step5',
+          title: '草稿演算 · 第 5 步：分别解两个一次方程',
+          showStart: 23.4,
+          showEnd: 29.8,
+          tokens: [
+            { id: 'p1_sp5_t1', math: '① $2x + 3 = 4 \\implies 2x = 1 \\implies x_{1} = \\frac{1}{2}$', appearAt: 23.8, dur: 0.45 },
+            { id: 'p1_sp5_t2', math: '② $2x + 3 = -4 \\implies 2x = -7 \\implies x_{2} = -\\frac{7}{2}$', appearAt: 26.0, dur: 0.45 }
+          ],
+          note: '把二次方程降次拆解为两个一元一次方程后，按常规移项、除以系数 $2$ 即可'
+        }
+      ],
+
+      tokenHighlights: [
+        // Step 1
+        { tokenId: 'p1_r0_m1', tStart: 0.8, tEnd: 2.9, color: 'amber' },
+        { tokenId: 'p1_r1_p1', tStart: 2.75, tEnd: 4.0, color: 'amber' },
+        { tokenId: 'p1_r2_4', tStart: 4.6, tEnd: 5.7, color: 'teal' },
+        // Step 2
+        { tokenId: 'p1_r2_coef', tStart: 5.9, tEnd: 8.8, color: 'amber' },
+        { tokenId: 'p1_sp2_t1', tStart: 6.5, tEnd: 8.5, color: 'teal' },
+        { tokenId: 'p1_sp2_t2', tStart: 7.5, tEnd: 9.8, color: 'amber' },
+        { tokenId: 'p1_r3_sq', tStart: 8.7, tEnd: 11.4, color: 'teal' },
+        { tokenId: 'p1_r3_16', tStart: 9.45, tEnd: 11.4, color: 'amber' },
+        // Step 3
+        { tokenId: 'p1_r3_sq', tStart: 11.6, tEnd: 14.6, color: 'teal' },
+        { tokenId: 'p1_r3_16', tStart: 11.6, tEnd: 14.6, color: 'amber' },
+        { tokenId: 'p1_sp3_t2', tStart: 13.2, tEnd: 16.0, color: 'amber' },
+        { tokenId: 'p1_r4_lhs', tStart: 14.6, tEnd: 17.4, color: 'teal' },
+        { tokenId: 'p1_r4_pm4', tStart: 15.35, tEnd: 17.4, color: 'amber' },
+        // Step 4
+        { tokenId: 'p1_r4_pm4', tStart: 17.6, tEnd: 20.5, color: 'amber' },
+        { tokenId: 'p1_r5_eq1', tStart: 18.9, tEnd: 23.0, color: 'teal' },
+        { tokenId: 'p1_r5_eq2', tStart: 20.0, tEnd: 23.0, color: 'rose' },
+        // Step 5
+        { tokenId: 'p1_r6_eq1', tStart: 24.5, tEnd: 27.5, color: 'teal' },
+        { tokenId: 'p1_r6_eq2', tStart: 25.5, tEnd: 27.5, color: 'rose' },
+        { tokenId: 'p1_sp5_t1', tStart: 23.8, tEnd: 27.8, color: 'teal' },
+        { tokenId: 'p1_sp5_t2', tStart: 26.0, tEnd: 28.5, color: 'rose' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p1_svg_s1_move1',
+          type: 'arrow',
+          fromToken: 'p1_r0_m1',
+          toToken: 'p1_r1_p1',
+          label: '移项变号 $+1$',
+          color: '#D97706',
+          curveOffset: 30,
+          tStart: 1.2,
+          tDrawEnd: 2.1,
+          tFadeStart: 3.3,
+          tEnd: 3.7
+        },
+        {
+          id: 'p1_svg_s1_brace_add',
+          type: 'under-brace',
+          startToken: 'p1_r1_3',
+          endToken: 'p1_r1_p1',
+          label: '$3 + 1 = 4$',
+          color: '#0F766E',
+          tStart: 3.1,
+          tDrawEnd: 3.6,
+          tFadeStart: 3.75,
+          tEnd: 3.95
+        },
+        {
+          id: 'p1_svg_s2_mult4',
+          type: 'arrow',
+          fromToken: 'p1_r2_4',
+          toToken: 'p1_r3_16',
+          label: '两边同乘 $4$',
+          color: '#D97706',
+          curveOffset: 34,
+          tStart: 7.6,
+          tDrawEnd: 8.5,
+          tFadeStart: 10.6,
+          tEnd: 11.2
+        },
+        {
+          id: 'p1_svg_s3_sqrt',
+          type: 'under-brace',
+          startToken: 'p1_r3_sq',
+          endToken: 'p1_r3_16',
+          label: '两边开平方：$\\pm\\sqrt{16} = \\pm 4$',
+          color: '#0F766E',
+          tStart: 12.2,
+          tDrawEnd: 13.1,
+          tFadeStart: 14.0,
+          tEnd: 14.4
+        },
+        {
+          id: 'p1_svg_s4_split',
+          type: 'arrow',
+          fromToken: 'p1_r4_pm4',
+          toToken: 'p1_r5_eq2',
+          label: '拆为 $+4$ 与 $-4$',
+          color: '#D97706',
+          curveOffset: 28,
+          tStart: 17.8,
+          tDrawEnd: 18.7,
+          tFadeStart: 21.8,
+          tEnd: 22.5
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 1.2, text: '来看典型例题：用直接开平方法解方程 $\\frac{1}{4}(2x + 3)^{2} - 1 = 3$。观察发现左边含有平方整体 $(2x + 3)^{2}$。', focusToken: 'p1_r0_sq' },
+        { tStart: 1.2, tEnd: 3.8, text: '第一步移常数项：把左边的常数项 $-1$ 移到等号右边，注意移项要变号为 $+1$。', focusToken: 'p1_r1_p1' },
+        { tStart: 3.8, tEnd: 5.8, text: '合并等号右边的常数 $3 + 1 = 4$，得到 $\\frac{1}{4}(2x + 3)^{2} = 4$。', focusToken: 'p1_r2_4' },
+        { tStart: 5.8, tEnd: 8.5, text: '第二步将平方项系数化为 $1$：左边平方项前有系数 $\\frac{1}{4}$，我们在等式两边同时乘以 $4$。', focusToken: 'p1_r2_coef' },
+        { tStart: 8.5, tEnd: 11.5, text: '左边约去 $\\frac{1}{4}$ 只剩 $(2x + 3)^{2}$，右边 $4 \\times 4 = 16$，整理成标准形式 $(2x + 3)^{2} = 16$。', focusToken: 'p1_r3_16' },
+        { tStart: 11.5, tEnd: 14.4, text: '第三步直接开平方降次：因为右边 $16 \\gt 0$，根据平方根的意义对等式两边同时开平方。', focusToken: 'p1_sp3_t2' },
+        { tStart: 14.4, tEnd: 17.5, text: '左边开方得 $2x + 3$，右边得 $\\pm 4$。切记正数有两个平方根，千万不能漏掉负号！', focusToken: 'p1_r4_pm4' },
+        { tStart: 17.5, tEnd: 23.2, text: '第四步拆分方程：把 $2x + 3 = \\pm 4$ 按正负号拆成两个一元一次方程：$2x + 3 = 4$ 或 $2x + 3 = -4$。', focusToken: 'p1_r5_eq2' },
+        { tStart: 23.2, tEnd: 27.5, text: '第五步分别求解：将两个方程中的 $+3$ 移到右边减 $3$，得到 $2x = 1$ 或 $2x = -7$。', focusToken: 'p1_r6_eq2' },
+        { tStart: 27.5, tEnd: 30.0, text: '两边同除以 $2$，得出原方程的两个实数根为 $x_{1} = \\frac{1}{2}$，$x_{2} = -\\frac{7}{2}$。求解完成！', focusToken: 'p1_r7_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：判断直接开平方降次操作',
+          givenLabel: '已知方程：',
+          givenFormula: '$3(x - 1)^{2} = 12$',
+          extractedLabel: '两边同除以 3 整理后：',
+          extractedFormula: '$(x - 1)^{2} = 4$',
+          questionText: '下一步对等式两边直接开平方，正确的变形结果是？',
+          options: [
+            { key: 'A', text: 'A. $x - 1 = \\pm 2$', isCorrect: true },
+            { key: 'B', text: 'B. $x - 1 = 2$', isCorrect: false },
+            { key: 'C', text: 'C. $x^{2} - 2x + 1 = 4$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！正数 4 的平方根有两个（互为相反数）：',
+            calcLines: [
+              '$x - 1 = \\pm\\sqrt{4} = \\pm 2$',
+              '$x - 1 = 2 \\quad\\text{或}\\quad x - 1 = -2$'
+            ],
+            summary: '由此可进一步解得 $x_{1} = 3$，$x_{2} = -1$。'
+          },
+          wrongTitle: '提示：请回顾平方根的意义',
+          wrongFeedback: '已有完全平方结构 $(x - 1)^{2} = 4$ 时无需展开括号，且正数 $4$ 的平方根是 $\\pm 2$（不能漏掉 $-2$），请再试一次。'
+        },
+        practice2: {
+          title: '练习二：用直接开平方法求方程的两根',
+          givenLabel: '给出标准平方形式：',
+          givenFormula: '$(x - 3)^{2} = 16$',
+          questionText: '开平方降次后，这个方程的两个实数根分别是多少？',
+          input1Prefix: '$x_{1} =$',
+          input1Placeholder: '如 7',
+          input2Prefix: '，$x_{2} =$',
+          input2Placeholder: '如 -1',
+          input2Suffix: '（两根顺序可互换）',
+          expectedX: '7',
+          expectedMin: '-1',
+          allowOrderSwap: true,
+          correctFeedback: '方程的两个实数根为 $x_{1} = 7$，$x_{2} = -1$。',
+          correctDetail: '两边开平方得 $x - 3 = \\pm 4$，即 $x - 3 = 4$ 或 $x - 3 = -4$，解得 $x_{1} = 7$，$x_{2} = -1$。',
+          wrongFeedback: '请先写出 $x - 3 = \\pm 4$，再分别计算 $x = 3 + 4$ 与 $x = 3 - 4$ 的值。',
+          specificWrongHints: [
+            {
+              checkType: 'sameVal',
+              val: '7',
+              hint: '你求出了正平方根对应的 $x = 7$，但别忘了 $x - 3 = -4$ 还会得出另一个根，请补充完整。'
+            },
+            {
+              checkType: 'anyVal',
+              val: '1',
+              hint: '注意第二个方程是 $x - 3 = -4$，移项后 $x = -4 + 3 = -1$ 而不是 $1$，请检查符号。'
+            }
+          ]
+        }
+      }
+    },
+
+    // =========================================================================
+    // P02：利用配方法解一元二次方程
+    // =========================================================================
+    P02: {
+      procedureId: 'P02',
+      title: '利用配方法解一元二次方程',
+      exampleTitle: '将方程 $x^{2} - 8x - 5 = 0$ 配成 $(x + a)^{2} = b$ 并求解',
+      exampleFormula: '$x^{2} - 8x - 5 = 0$',
+      totalDuration: 31.0,
+      scratchpadIdleHint: '旁白草稿演算区（当步骤涉及计算一次项系数一半的平方、比对参数 a/b 时在此同步展开）',
+      practiceSectionTitle: '配方法解方程关键动作跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握等式两边同加配方常数与化为完全平方形式',
+
+      steps: [
+        {
+          step: 1,
+          name: '移常数项到等号右边',
+          tStart: 0.0,
+          tEnd: 5.5,
+          explanation: '将方程中的常数项 $-5$ 移到等号右边变为 $+5$，使左边仅保留二次项与一次项 $x^{2} - 8x = 5$。'
+        },
+        {
+          step: 2,
+          name: '算一次项系数一半的平方',
+          tStart: 5.5,
+          tEnd: 11.5,
+          explanation: '取一次项系数 $-8$ 的一半得 $-4$，再平方得 $(-4)^{2} = 16$，确定需要配入等式两边的常数。'
+        },
+        {
+          step: 3,
+          name: '等式两边同时加上 16',
+          tStart: 11.5,
+          tEnd: 17.5,
+          explanation: '在等号左边和右边同时加上 $16$，得到 $x^{2} - 8x + 16 = 5 + 16$，保证等式平衡。'
+        },
+        {
+          step: 4,
+          name: '写成完全平方 $(x + a)^{2} = b$',
+          tStart: 17.5,
+          tEnd: 24.5,
+          explanation: '左边逆用完全平方公式化为 $(x - 4)^{2}$，右边合并为 $21$，即 $(x - 4)^{2} = 21$（对照得 $a = -4$，$b = 21$）。'
+        },
+        {
+          step: 5,
+          name: '调用直接开平方法求根',
+          tStart: 24.5,
+          tEnd: 31.0,
+          explanation: '因为右边 $21 \\gt 0$，调用直接开平方法（P01）两边开平方得 $x - 4 = \\pm\\sqrt{21}$，解得 $x_{1} = 4 + \\sqrt{21}$，$x_{2} = 4 - \\sqrt{21}$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.6, step: 1, label: '1.1 观察原方程 $x^{2} - 8x - 5 = 0$' },
+        { time: 2.5, step: 1, label: '1.2 将常数项 $-5$ 移到等号右边变为 $5$' },
+        { time: 7.0, step: 2, label: '2.1 提取一次项系数 $-8$ 并除以 $2$ 得 $-4$' },
+        { time: 10.0, step: 2, label: '2.2 计算平方 $(-4)^{2} = 16$' },
+        { time: 13.5, step: 3, label: '3.1 等号左边加上 $+16$' },
+        { time: 15.5, step: 3, label: '3.2 等号右边同步加上 $+16$' },
+        { time: 19.5, step: 4, label: '4.1 左边合为 $(x - 4)^{2}$，右边合为 $21$' },
+        { time: 22.5, step: 4, label: '4.2 对照 $(x + a)^{2} = b$ 得 $a = -4，b = 21$' },
+        { time: 26.5, step: 5, label: '5.1 两边开平方得 $x - 4 = \\pm\\sqrt{21}$' },
+        { time: 29.5, step: 5, label: '5.2 移项得出两根 $4 \\pm \\sqrt{21}$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p2_row_0',
+          stepBadge: '原方程',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p2_r0_x2', math: '$x^{2}$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p2_r0_m8x', math: '$- 8x$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p2_r0_m5', math: '$- 5$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p2_r0_eq0', math: '$= 0$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p2_row_1',
+          stepBadge: '第 1 步 · 移常数项',
+          appearAt: 2.0,
+          tokens: [
+            { id: 'p2_r1_x2', math: '$x^{2}$', appearAt: 2.05, dur: 0.30 },
+            { id: 'p2_r1_m8', math: '$- 8$', appearAt: 2.30, dur: 0.35 },
+            { id: 'p2_r1_x', math: '$x$', appearAt: 2.55, dur: 0.25 },
+            { id: 'p2_r1_eq', math: '$=$', appearAt: 2.80, dur: 0.25 },
+            { id: 'p2_r1_5', math: '$5$', appearAt: 3.10, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p2_row_2',
+          stepBadge: '第 3 步 · 两边同加 16',
+          appearAt: 12.4,
+          tokens: [
+            { id: 'p2_r2_x2m8x', math: '$x^{2} - 8x$', appearAt: 12.50, dur: 0.35 },
+            { id: 'p2_r2_addL', math: '$+ 16$', appearAt: 13.30, dur: 0.50 },
+            { id: 'p2_r2_eq', math: '$=$', appearAt: 14.10, dur: 0.30 },
+            { id: 'p2_r2_5', math: '$5$', appearAt: 14.45, dur: 0.30 },
+            { id: 'p2_r2_addR', math: '$+ 16$', appearAt: 15.10, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p2_row_3',
+          stepBadge: '第 4 步 · 写成完全平方',
+          appearAt: 19.2,
+          tokens: [
+            { id: 'p2_r3_sq', math: '$(x - 4)^{2}$', appearAt: 19.30, dur: 0.50 },
+            { id: 'p2_r3_eq', math: '$=$', appearAt: 19.90, dur: 0.30 },
+            { id: 'p2_r3_21', math: '$21$', appearAt: 20.30, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p2_row_4',
+          stepBadge: '第 5 步 ① · 直接开平方',
+          appearAt: 25.8,
+          tokens: [
+            { id: 'p2_r4_lhs', math: '$x - 4$', appearAt: 25.90, dur: 0.40 },
+            { id: 'p2_r4_eq', math: '$=$', appearAt: 26.35, dur: 0.30 },
+            { id: 'p2_r4_pm', math: '$\\pm\\sqrt{21}$', appearAt: 26.70, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p2_row_5',
+          stepBadge: '最终结论',
+          appearAt: 28.5,
+          isConclusion: true,
+          tokens: [
+            { id: 'p2_r5_conc', math: '$\\therefore a = -4，b = 21$；方程的根为 $x_{1} = 4 + \\sqrt{21}，x_{2} = 4 - \\sqrt{21}$。', appearAt: 28.60, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p2_sp_step2',
+          title: '草稿演算 · 第 2 步：一次项系数一半的平方',
+          showStart: 5.7,
+          showEnd: 17.3,
+          tokens: [
+            { id: 'p2_sp2_t1', math: '一次项系数：$-8$', appearAt: 6.2, dur: 0.40 },
+            { id: 'p2_sp2_t2', math: '取一半：$-8 \\div 2 = -4$', appearAt: 7.4, dur: 0.45 },
+            { id: 'p2_sp2_t3', math: '再平方：$(-4)^{2} = 16$', appearAt: 9.2, dur: 0.50 }
+          ],
+          note: '算出的 $-4$ 是下一步完全平方式 $(x - 4)^{2}$ 中的常数项，$16$ 是等式两边要同加的数'
+        },
+        {
+          id: 'p2_sp_step4',
+          title: '草稿演算 · 第 4 步：比对参数 a 与 b',
+          showStart: 20.8,
+          showEnd: 24.4,
+          tokens: [
+            { id: 'p2_sp4_t1', math: '配方结果：$(x - 4)^{2} = 21$', appearAt: 21.1, dur: 0.40 },
+            { id: 'p2_sp4_t2', math: '对照目标：$(x + a)^{2} = b$', appearAt: 21.8, dur: 0.40 },
+            { id: 'p2_sp4_t3', math: '$\\implies a = -4，\\quad b = 21$', appearAt: 22.5, dur: 0.45 }
+          ],
+          note: '注意 $(x - 4)^{2} = [x + (-4)]^{2}$，因此 $a = -4$（连同负号），切勿误写为 $4$'
+        }
+      ],
+
+      tokenHighlights: [
+        // Step 1
+        { tokenId: 'p2_r0_m5', tStart: 0.8, tEnd: 3.0, color: 'amber' },
+        { tokenId: 'p2_r1_5', tStart: 3.1, tEnd: 5.4, color: 'amber' },
+        // Step 2
+        { tokenId: 'p2_r1_m8', tStart: 5.7, tEnd: 11.4, color: 'teal' },
+        { tokenId: 'p2_sp2_t2', tStart: 7.4, tEnd: 9.2, color: 'teal' },
+        { tokenId: 'p2_sp2_t3', tStart: 9.2, tEnd: 11.4, color: 'amber' },
+        // Step 3
+        { tokenId: 'p2_sp2_t3', tStart: 11.6, tEnd: 16.5, color: 'amber' },
+        { tokenId: 'p2_r2_addL', tStart: 13.3, tEnd: 17.4, color: 'amber' },
+        { tokenId: 'p2_r2_addR', tStart: 15.1, tEnd: 17.4, color: 'amber' },
+        // Step 4
+        { tokenId: 'p2_r2_x2m8x', tStart: 17.6, tEnd: 19.5, color: 'teal' },
+        { tokenId: 'p2_r2_addL', tStart: 17.6, tEnd: 19.5, color: 'teal' },
+        { tokenId: 'p2_r3_sq', tStart: 19.3, tEnd: 24.4, color: 'teal' },
+        { tokenId: 'p2_r3_21', tStart: 20.3, tEnd: 24.4, color: 'amber' },
+        { tokenId: 'p2_sp4_t3', tStart: 22.5, tEnd: 24.4, color: 'teal' },
+        // Step 5
+        { tokenId: 'p2_r3_sq', tStart: 24.6, tEnd: 26.2, color: 'teal' },
+        { tokenId: 'p2_r4_pm', tStart: 26.7, tEnd: 28.5, color: 'amber' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p2_svg_s1_move5',
+          type: 'arrow',
+          fromToken: 'p2_r0_m5',
+          toToken: 'p2_r1_5',
+          label: '移项变号 $+5$',
+          color: '#D97706',
+          curveOffset: 30,
+          tStart: 1.2,
+          tDrawEnd: 2.2,
+          tFadeStart: 4.5,
+          tEnd: 5.2
+        },
+        {
+          id: 'p2_svg_s2_pick8',
+          type: 'arrow',
+          fromToken: 'p2_r1_m8',
+          toToken: 'p2_sp2_t1',
+          label: '提取一次项系数 $-8$',
+          color: '#0F766E',
+          curveOffset: -24,
+          tStart: 5.8,
+          tDrawEnd: 6.6,
+          tFadeStart: 10.6,
+          tEnd: 11.2
+        },
+        {
+          id: 'p2_svg_s3_add_both',
+          type: 'arrow',
+          fromToken: 'p2_r2_addL',
+          toToken: 'p2_r2_addR',
+          label: '等式两边同步 $+16$',
+          color: '#D97706',
+          curveOffset: -28,
+          tStart: 13.8,
+          tDrawEnd: 15.0,
+          tFadeStart: 16.6,
+          tEnd: 17.2
+        },
+        {
+          id: 'p2_svg_s4_brace_lhs',
+          type: 'under-brace',
+          startToken: 'p2_r2_x2m8x',
+          endToken: 'p2_r2_addL',
+          label: '$x^{2} - 2 \\cdot x \\cdot 4 + 4^{2} = (x - 4)^{2}$',
+          color: '#0F766E',
+          tStart: 17.7,
+          tDrawEnd: 18.4,
+          tFadeStart: 18.8,
+          tEnd: 19.15
+        },
+        {
+          id: 'p2_svg_s5_sqrt',
+          type: 'under-brace',
+          startToken: 'p2_r3_sq',
+          endToken: 'p2_r3_21',
+          label: '两边开平方：$x - 4 = \\pm\\sqrt{21}$',
+          color: '#0F766E',
+          tStart: 24.6,
+          tDrawEnd: 25.2,
+          tFadeStart: 25.45,
+          tEnd: 25.75
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 1.2, text: '来看典型例题：将方程 $x^{2} - 8x - 5 = 0$ 配成 $(x + a)^{2} = b$ 的形式并求解。', focusToken: 'p2_r0_m8x' },
+        { tStart: 1.2, tEnd: 5.5, text: '第一步移常数项：将左边的常数项 $-5$ 移到等号右边，变号为 $+5$，使左边只留二次项与一次项 $x^{2} - 8x = 5$。', focusToken: 'p2_r1_5' },
+        { tStart: 5.5, tEnd: 8.8, text: '第二步确定配方常数：提取一次项系数 $-8$，先除以 $2$ 得到一次项系数的一半 $-4$。', focusToken: 'p2_sp2_t2' },
+        { tStart: 8.8, tEnd: 11.5, text: '再将 $-4$ 平方，计算出 $(-4)^{2} = 16$。这就是要在方程两边同时添加的配方常数。', focusToken: 'p2_sp2_t3' },
+        { tStart: 11.5, tEnd: 14.5, text: '第三步等式两边同加 $16$：先在等号左边加上 $+16$，凑成完全平方式所需的三项。', focusToken: 'p2_r2_addL' },
+        { tStart: 14.5, tEnd: 17.5, text: '关键易错点：这是解方程（不是代数式变形），左边加了 $16$，等号右边也必须同时加上 $+16$ 才能保持等式成立！', focusToken: 'p2_r2_addR' },
+        { tStart: 17.5, tEnd: 20.8, text: '第四步写成完全平方形式：左边逆用完全平方公式化为 $(x - 4)^{2}$，右边 $5 + 16$ 合并为 $21$。', focusToken: 'p2_r3_sq' },
+        { tStart: 20.8, tEnd: 24.5, text: '将 $(x - 4)^{2} = 21$ 与 $(x + a)^{2} = b$ 比对，注意括号内是减 $4$，所以 $a = -4$，$b = 21$。', focusToken: 'p2_sp4_t3' },
+        { tStart: 24.5, tEnd: 28.0, text: '第五步直接开平方求根：因为右边 $21 \\gt 0$，调用 P01 直接开平方法，两边开方得 $x - 4 = \\pm\\sqrt{21}$。', focusToken: 'p2_r4_pm' },
+        { tStart: 28.0, tEnd: 31.0, text: '将 $-4$ 移项到右边，解得原方程的两个根为 $x_{1} = 4 + \\sqrt{21}$，$x_{2} = 4 - \\sqrt{21}$。推导完成！', focusToken: 'p2_r5_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：判断方程两边的配方操作',
+          givenLabel: '已知方程：',
+          givenFormula: '$x^{2} - 6x - 2 = 0$',
+          extractedLabel: '移常数项后：',
+          extractedFormula: '$x^{2} - 6x = 2$',
+          questionText: '下一步应该在等式两边怎样操作？',
+          options: [
+            { key: 'A', text: 'A. 在等号左边和右边同时加上 $(-3)^{2} = 9$。', isCorrect: true },
+            { key: 'B', text: 'B. 只在等号左边加上 $9$，右边保持 $2$ 不变。', isCorrect: false },
+            { key: 'C', text: 'C. 在等号左边和右边同时加上 $(-6)^{2} = 36$。', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！方程配方必须在等式两边同时加上一次项系数一半的平方：',
+            calcLines: [
+              '$(-6 \\div 2)^{2} = (-3)^{2} = 9$',
+              '$x^{2} - 6x + 9 = 2 + 9$'
+            ],
+            summary: '整理后即可得到完全平方形式 $(x - 3)^{2} = 11$。'
+          },
+          wrongTitle: '提示：请留意等式平衡与一次项系数的一半',
+          wrongFeedback: '一次项系数为 $-6$，一半的平方为 $(-3)^{2} = 9$，且等式左边和右边必须同时加上 $9$，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：确定配方后的参数 a 与 b',
+          givenLabel: '给出两边同加 9 后的等式：',
+          givenFormula: '$x^{2} - 6x + 9 = 2 + 9$',
+          questionText: '将其化为 $(x + a)^{2} = b$ 的形式，常数 $a$ 和 $b$ 分别是多少？',
+          input1Prefix: '常数 $a =$',
+          input1Placeholder: '如 -3',
+          input2Prefix: '，常数 $b =$',
+          input2Placeholder: '如 11',
+          input2Suffix: '',
+          expectedX: '-3',
+          expectedMin: '11',
+          allowOrderSwap: false,
+          correctFeedback: '当配成 $(x + a)^{2} = b$ 时，$a = -3$，$b = 11$。',
+          correctDetail: '左边 $x^{2} - 6x + 9 = (x - 3)^{2}$，右边 $2 + 9 = 11$，对照 $(x + a)^{2} = b$ 可得 $a = -3$，$b = 11$。',
+          wrongFeedback: '请观察左边 $x^{2} - 6x + 9$ 可写成 $(x - 3)^{2}$，对照 $(x + a)^{2}$ 时注意 $a$ 的正负号，右边合并 $2 + 9$。',
+          specificWrongHints: [
+            {
+              checkType: 'firstVal',
+              val: '3',
+              hint: '注意左边是 $(x - 3)^{2} = [x + (-3)]^{2}$，对照 $(x + a)^{2}$ 时 $a$ 应当等于 $-3$ 而不是 $3$。'
+            },
+            {
+              checkType: 'secondVal',
+              val: '2',
+              hint: '注意等号右边也加上了 $9$，因此 $b = 2 + 9 = 11$ 而不是 $2$。'
+            }
+          ]
+        }
+      }
+    },
+
+    // =========================================================================
+    // P03：利用配方法求代数式的最值
+    // =========================================================================
+    P03: {
+      procedureId: 'P03',
+      title: '配方法求二次三项式的最值',
+      exampleTitle: '求二次三项式 $y = 8x^{2} - 12x + 5$ 的最小值',
+      exampleFormula: '$y = 8x^{2} - 12x + 5$',
+      totalDuration: 32.0,
+      scratchpadIdleHint: '旁白草稿演算区（当步骤涉及系数相除、除以 2、平方或通分时在此同步展开）',
+      practiceSectionTitle: '配方法求最值关键动作跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握配方法求最值',
+
+      steps: [
+        {
+          step: 1,
+          name: '提取二次项系数',
+          tStart: 0.0,
+          tEnd: 6.5,
+          explanation: '先提取二次项系数 $8$，使括号内二次项的系数变为 $1$。'
+        },
+        {
+          step: 2,
+          name: '确定一次项系数的一半',
+          tStart: 6.5,
+          tEnd: 12.0,
+          explanation: '配方法的关键是取括号内一次项系数的一半：$-\\frac{3}{2} \\div 2 = -\\frac{3}{4}$。'
+        },
+        {
+          step: 3,
+          name: '将所得结果平方',
+          tStart: 12.0,
+          tEnd: 17.0,
+          explanation: '将一次项系数的一半平方，得到需要配入括号的常数：$\\left(-\\frac{3}{4}\\right)^{2} = \\frac{9}{16}$。'
+        },
+        {
+          step: 4,
+          name: '添加并减去相同的数',
+          tStart: 17.0,
+          tEnd: 26.5,
+          explanation: '加上一个数的同时减去相同的数保证原式不变，再将前三项合为完全平方式、常数项移出括号合并。'
+        },
+        {
+          step: 5,
+          name: '利用完全平方的非负性求最值',
+          tStart: 26.5,
+          tEnd: 32.0,
+          explanation: '利用偶次方非负性 $\\left(x - \\frac{3}{4}\\right)^{2} \\ge 0$ 且二次项系数 $8 \\gt 0$，得出当 $x = \\frac{3}{4}$ 时取得最小值 $\\frac{1}{2}$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 观察原式' },
+        { time: 2.0, step: 1, label: '1.2 定位二次项系数 $8$' },
+        { time: 3.8, step: 1, label: '1.3 一次项系数 $-12 \\div 8$' },
+        { time: 6.2, step: 1, label: '1.4 写出提系数后算式' },
+        { time: 7.8, step: 2, label: '2.1 锁定括号内一次项系数 $-\\frac{3}{2}$' },
+        { time: 11.5, step: 2, label: '2.2 计算除以 $2$ 得 $-\\frac{3}{4}$' },
+        { time: 13.5, step: 3, label: '3.1 对 $-\\frac{3}{4}$ 整体取平方' },
+        { time: 16.5, step: 3, label: '3.2 算出配方常数 $\\frac{9}{16}$' },
+        { time: 19.2, step: 4, label: '4.1 括号内同加 $+\\frac{9}{16}$ 同减 $-\\frac{9}{16}$' },
+        { time: 21.6, step: 4, label: '4.2 前三项合并为 $\\left(x - \\frac{3}{4}\\right)^{2}$' },
+        { time: 23.8, step: 4, label: '4.3 尾项 $-\\frac{9}{16}$ 乘系数 $8$ 移出括号' },
+        { time: 25.8, step: 4, label: '4.4 合并括号外常数得 $+\\frac{1}{2}$' },
+        { time: 27.8, step: 5, label: '5.1 平方项非负性 $\\left(x - \\frac{3}{4}\\right)^{2} \\ge 0$' },
+        { time: 29.6, step: 5, label: '5.2 乘正系数 $8$ 推导 $y \\ge \\frac{1}{2}$' },
+        { time: 31.8, step: 5, label: '5.3 得出最小值 $\\frac{1}{2}$ 与 $x = \\frac{3}{4}$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'row_0',
+          stepBadge: '原式',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'r0_y', math: '$y =$', appearAt: 0.0, dur: 0.01 },
+            { id: 'r0_8', math: '$8$', appearAt: 0.0, dur: 0.01 },
+            { id: 'r0_x2', math: '$x^{2}$', appearAt: 0.0, dur: 0.01 },
+            { id: 'r0_m12', math: '$- 12$', appearAt: 0.0, dur: 0.01 },
+            { id: 'r0_x', math: '$x$', appearAt: 0.0, dur: 0.01 },
+            { id: 'r0_p5', math: '$+ 5$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'row_1',
+          stepBadge: '第 1 步 · 提系数',
+          appearAt: 2.2,
+          tokens: [
+            { id: 'r1_eq', math: '$=$', appearAt: 2.3, dur: 0.35 },
+            { id: 'r1_8', math: '$8$', appearAt: 2.6, dur: 0.40 },
+            { id: 'r1_lp', math: '$\\Big($', appearAt: 3.0, dur: 0.35 },
+            { id: 'r1_x2', math: '$x^{2}$', appearAt: 3.3, dur: 0.35 },
+            { id: 'r1_m32', math: '$- \\frac{3}{2}$', appearAt: 4.5, dur: 0.50 },
+            { id: 'r1_x', math: '$x$', appearAt: 4.9, dur: 0.35 },
+            { id: 'r1_rp', math: '$\\Big)$', appearAt: 5.3, dur: 0.35 },
+            { id: 'r1_p5', math: '$+ 5$', appearAt: 5.6, dur: 0.40 }
+          ]
+        },
+        {
+          rowId: 'row_2',
+          stepBadge: '第 4 步 ① · 同加同减',
+          appearAt: 17.2,
+          tokens: [
+            { id: 'r2_eq', math: '$=$', appearAt: 17.3, dur: 0.30 },
+            { id: 'r2_8', math: '$8$', appearAt: 17.5, dur: 0.30 },
+            { id: 'r2_lp', math: '$\\Big($', appearAt: 17.7, dur: 0.30 },
+            { id: 'r2_x2m32x', math: '$x^{2} - \\frac{3}{2}x$', appearAt: 17.9, dur: 0.35 },
+            { id: 'r2_add', math: '$+ \\frac{9}{16}$', appearAt: 18.4, dur: 0.45 },
+            { id: 'r2_sub', math: '$- \\frac{9}{16}$', appearAt: 18.9, dur: 0.45 },
+            { id: 'r2_rp', math: '$\\Big)$', appearAt: 19.3, dur: 0.30 },
+            { id: 'r2_p5', math: '$+ 5$', appearAt: 19.5, dur: 0.30 }
+          ]
+        },
+        {
+          rowId: 'row_3',
+          stepBadge: '第 4 步 ② · 配完全平方',
+          appearAt: 21.0,
+          tokens: [
+            { id: 'r3_eq', math: '$=$', appearAt: 21.05, dur: 0.25 },
+            { id: 'r3_8', math: '$8$', appearAt: 21.25, dur: 0.25 },
+            { id: 'r3_lb', math: '$\\Big[$', appearAt: 21.45, dur: 0.25 },
+            { id: 'r3_sq', math: '$\\left(x - \\frac{3}{4}\\right)^{2}$', appearAt: 21.65, dur: 0.45 },
+            { id: 'r3_sub', math: '$- \\frac{9}{16}$', appearAt: 22.05, dur: 0.30 },
+            { id: 'r3_rb', math: '$\\Big]$', appearAt: 22.25, dur: 0.25 },
+            { id: 'r3_p5', math: '$+ 5$', appearAt: 22.40, dur: 0.25 }
+          ]
+        },
+        {
+          rowId: 'row_4',
+          stepBadge: '第 4 步 ③ · 移出括号',
+          appearAt: 22.9,
+          tokens: [
+            { id: 'r4_eq', math: '$=$', appearAt: 22.95, dur: 0.25 },
+            { id: 'r4_8', math: '$8$', appearAt: 23.15, dur: 0.25 },
+            { id: 'r4_sq', math: '$\\left(x - \\frac{3}{4}\\right)^{2}$', appearAt: 23.35, dur: 0.30 },
+            { id: 'r4_mult', math: '$- 8 \\times \\frac{9}{16}$', appearAt: 23.65, dur: 0.40 },
+            { id: 'r4_p5', math: '$+ 5$', appearAt: 24.00, dur: 0.30 }
+          ]
+        },
+        {
+          rowId: 'row_5',
+          stepBadge: '第 4 步 ④ · 化为顶点式',
+          appearAt: 25.4,
+          tokens: [
+            { id: 'r5_eq', math: '$=$', appearAt: 25.45, dur: 0.25 },
+            { id: 'r5_8', math: '$8$', appearAt: 25.65, dur: 0.25 },
+            { id: 'r5_sq', math: '$\\left(x - \\frac{3}{4}\\right)^{2}$', appearAt: 25.85, dur: 0.35 },
+            { id: 'r5_half', math: '$+ \\frac{1}{2}$', appearAt: 26.15, dur: 0.40 }
+          ]
+        },
+        {
+          rowId: 'row_6',
+          stepBadge: '第 5 步 · 非负性推导',
+          appearAt: 27.9,
+          tokens: [
+            { id: 'r6_bec', math: '$\\because \\left(x - \\frac{3}{4}\\right)^{2} \\ge 0$', appearAt: 27.95, dur: 0.45 },
+            { id: 'r6_and8', math: '，且 $8 \\gt 0$', appearAt: 28.60, dur: 0.40 },
+            { id: 'r6_imp1', math: '$\\implies 8\\left(x - \\frac{3}{4}\\right)^{2} \\ge 0$', appearAt: 29.15, dur: 0.45 },
+            { id: 'r6_imp2', math: '$\\implies y \\ge \\frac{1}{2}$', appearAt: 29.75, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'row_7',
+          stepBadge: '最终结论',
+          appearAt: 30.4,
+          isConclusion: true,
+          tokens: [
+            { id: 'r7_conc', math: '$\\therefore$ 当 $x = \\frac{3}{4}$ 时，$y$ 取得最小值 $\\frac{1}{2}$。', appearAt: 30.45, dur: 0.55 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'sp_step1',
+          title: '草稿演算 · 一次项除以 8',
+          showStart: 3.1,
+          showEnd: 6.4,
+          tokens: [
+            { id: 'sp1_t1', math: '$-12 \\div 8$', appearAt: 3.3, dur: 0.40 },
+            { id: 'sp1_t2', math: '$= -\\frac{12}{8}$', appearAt: 3.7, dur: 0.40 },
+            { id: 'sp1_t3', math: '$= -\\frac{3}{2}$', appearAt: 4.1, dur: 0.40 }
+          ],
+          note: '提取 8 后，括号内一次项系数由 $-12$ 变为 $-\\frac{3}{2}$'
+        },
+        {
+          id: 'sp_step2',
+          title: '草稿演算 · 第 2 步：取一次项系数的一半',
+          showStart: 6.6,
+          showEnd: 17.0,
+          tokens: [
+            { id: 'sp2_t1', math: '一次项系数：$-\\frac{3}{2}$', appearAt: 7.2, dur: 0.45 },
+            { id: 'sp2_t2', math: '$\\implies -\\frac{3}{2} \\div 2$', appearAt: 8.6, dur: 0.45 },
+            { id: 'sp2_t3', math: '$= -\\frac{3}{2} \\times \\frac{1}{2}$', appearAt: 9.5, dur: 0.45 },
+            { id: 'sp2_t4', math: '$= -\\frac{3}{4}$', appearAt: 10.4, dur: 0.50 }
+          ],
+          note: '记住 $-\\frac{3}{4}$：它既是下一步要平方的数，也是完全平方式中的常数项'
+        },
+        {
+          id: 'sp_step3',
+          title: '草稿演算 · 第 3 步：将一半的结果平方',
+          showStart: 12.1,
+          showEnd: 19.8,
+          tokens: [
+            { id: 'sp3_t1', math: '$\\left(-\\frac{3}{4}\\right)^{2}$', appearAt: 12.8, dur: 0.45 },
+            { id: 'sp3_t2', math: '$= \\left(-\\frac{3}{4}\\right) \\times \\left(-\\frac{3}{4}\\right)$', appearAt: 13.8, dur: 0.45 },
+            { id: 'sp3_t3', math: '$= +\\frac{9}{16}$', appearAt: 14.9, dur: 0.50 }
+          ],
+          note: '得到需要在括号内部「同加同减」的配方常数 $\\frac{9}{16}$'
+        },
+        {
+          id: 'sp_step4_const',
+          title: '草稿演算 · 括号外常数项通分合并',
+          showStart: 24.0,
+          showEnd: 26.5,
+          tokens: [
+            { id: 'sp4_t1', math: '$-8 \\times \\frac{9}{16} + 5$', appearAt: 24.15, dur: 0.30 },
+            { id: 'sp4_t2', math: '$= -\\frac{9}{2} + \\frac{10}{2}$', appearAt: 24.55, dur: 0.35 },
+            { id: 'sp4_t3', math: '$= +\\frac{1}{2}$', appearAt: 24.95, dur: 0.35 }
+          ],
+          note: '注意 $-8 \\times \\frac{9}{16}$ 约分后为 $-\\frac{9}{2}$，加上 $5$ 得 $+\\frac{1}{2}$'
+        }
+      ],
+
+      tokenHighlights: [
+        // Step 1
+        { tokenId: 'r0_8', tStart: 1.2, tEnd: 3.2, color: 'teal' },
+        { tokenId: 'r1_8', tStart: 2.5, tEnd: 3.5, color: 'teal' },
+        { tokenId: 'r0_m12', tStart: 3.2, tEnd: 5.2, color: 'amber' },
+        { tokenId: 'sp1_t3', tStart: 4.1, tEnd: 5.5, color: 'amber' },
+        { tokenId: 'r1_m32', tStart: 4.5, tEnd: 6.4, color: 'amber' },
+        // Step 2
+        { tokenId: 'r1_m32', tStart: 6.6, tEnd: 11.8, color: 'teal' },
+        { tokenId: 'sp2_t1', tStart: 7.2, tEnd: 8.8, color: 'teal' },
+        { tokenId: 'sp2_t4', tStart: 10.4, tEnd: 12.0, color: 'amber' },
+        // Step 3
+        { tokenId: 'sp2_t4', tStart: 12.1, tEnd: 13.8, color: 'teal' },
+        { tokenId: 'sp3_t1', tStart: 12.8, tEnd: 14.8, color: 'teal' },
+        { tokenId: 'sp3_t3', tStart: 14.9, tEnd: 17.0, color: 'amber' },
+        // Step 4
+        { tokenId: 'sp3_t3', tStart: 17.1, tEnd: 19.2, color: 'amber' },
+        { tokenId: 'r2_add', tStart: 18.4, tEnd: 19.8, color: 'amber' },
+        { tokenId: 'r2_sub', tStart: 18.9, tEnd: 19.8, color: 'rose' },
+        { tokenId: 'r2_x2m32x', tStart: 19.8, tEnd: 21.3, color: 'teal' },
+        { tokenId: 'r2_add', tStart: 19.8, tEnd: 21.3, color: 'teal' },
+        { tokenId: 'r3_sq', tStart: 21.65, tEnd: 22.6, color: 'teal' },
+        { tokenId: 'r3_8', tStart: 22.5, tEnd: 23.8, color: 'amber' },
+        { tokenId: 'r3_sub', tStart: 22.5, tEnd: 23.8, color: 'rose' },
+        { tokenId: 'r4_mult', tStart: 23.65, tEnd: 25.3, color: 'amber' },
+        { tokenId: 'sp4_t3', tStart: 24.95, tEnd: 26.3, color: 'teal' },
+        { tokenId: 'r5_half', tStart: 26.15, tEnd: 26.8, color: 'teal' },
+        // Step 5
+        { tokenId: 'r5_sq', tStart: 26.7, tEnd: 28.4, color: 'teal' },
+        { tokenId: 'r6_bec', tStart: 27.95, tEnd: 29.0, color: 'teal' },
+        { tokenId: 'r5_8', tStart: 28.5, tEnd: 29.6, color: 'amber' },
+        { tokenId: 'r6_imp2', tStart: 29.75, tEnd: 30.8, color: 'teal' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'svg_s1_factor8',
+          type: 'arrow',
+          fromToken: 'r0_8',
+          toToken: 'r1_8',
+          label: '提公因式 8',
+          color: '#0F766E',
+          curveOffset: -36,
+          tStart: 1.5,
+          tDrawEnd: 2.5,
+          tFadeStart: 3.3,
+          tEnd: 3.6
+        },
+        {
+          id: 'svg_s1_div8',
+          type: 'arrow',
+          fromToken: 'r0_m12',
+          toToken: 'r1_m32',
+          label: '$\\div 8 = -\\frac{3}{2}$',
+          color: '#D97706',
+          curveOffset: 38,
+          tStart: 3.5,
+          tDrawEnd: 4.4,
+          tFadeStart: 5.7,
+          tEnd: 6.2
+        },
+        {
+          id: 'svg_s2_pick_half',
+          type: 'arrow',
+          fromToken: 'r1_m32',
+          toToken: 'sp2_t1',
+          label: '取一次项系数',
+          color: '#0F766E',
+          curveOffset: -24,
+          tStart: 6.8,
+          tDrawEnd: 7.6,
+          tFadeStart: 11.2,
+          tEnd: 11.8
+        },
+        {
+          id: 'svg_s3_square',
+          type: 'arrow',
+          fromToken: 'sp2_t4',
+          toToken: 'sp3_t1',
+          label: '平方',
+          color: '#0F766E',
+          curveOffset: 24,
+          tStart: 12.2,
+          tDrawEnd: 13.0,
+          tFadeStart: 16.2,
+          tEnd: 16.8
+        },
+        {
+          id: 'svg_s4_inject',
+          type: 'arrow',
+          fromToken: 'sp3_t3',
+          toToken: 'r2_add',
+          label: '配入括号内',
+          color: '#D97706',
+          curveOffset: -28,
+          tStart: 17.8,
+          tDrawEnd: 18.6,
+          tFadeStart: 19.4,
+          tEnd: 19.7
+        },
+        {
+          id: 'svg_s4_brace_trinomial',
+          type: 'under-brace',
+          startToken: 'r2_x2m32x',
+          endToken: 'r2_add',
+          label: '$a^{2} - 2ab + b^{2} = \\left(x - \\frac{3}{4}\\right)^{2}$',
+          color: '#0F766E',
+          tStart: 19.7,
+          tDrawEnd: 20.3,
+          tFadeStart: 20.8,
+          tEnd: 21.1
+        },
+        {
+          id: 'svg_s4_dist_8',
+          type: 'arrow',
+          fromToken: 'r3_8',
+          toToken: 'r3_sub',
+          label: '$\\times 8$ 移出括号',
+          color: '#D97706',
+          curveOffset: -24,
+          tStart: 22.4,
+          tDrawEnd: 23.0,
+          tFadeStart: 23.6,
+          tEnd: 23.9
+        },
+        {
+          id: 'svg_s4_brace_const',
+          type: 'under-brace',
+          startToken: 'r4_mult',
+          endToken: 'r4_p5',
+          label: '$-\\frac{9}{2} + \\frac{10}{2} = +\\frac{1}{2}$',
+          color: '#0F766E',
+          tStart: 24.1,
+          tDrawEnd: 24.7,
+          tFadeStart: 25.1,
+          tEnd: 25.4
+        },
+        {
+          id: 'svg_s5_brace_nonneg',
+          type: 'under-brace',
+          startToken: 'r5_sq',
+          endToken: 'r5_sq',
+          label: '平方项恒 $\\ge 0$',
+          color: '#0F766E',
+          tStart: 26.6,
+          tDrawEnd: 27.1,
+          tFadeStart: 27.6,
+          tEnd: 27.9
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 1.2, text: '来看示例题：求二次三项式 $y = 8x^{2} - 12x + 5$ 的最小值。先把原式写在黑板上。', focusToken: 'r0_x2' },
+        { tStart: 1.2, tEnd: 3.1, text: '第一步提取二次项系数：先观察二次项系数的 $8$，我们要将前两项中的 $8$ 提取到括号外。', focusToken: 'r0_8' },
+        { tStart: 3.1, tEnd: 4.5, text: '注意一次项系数是 $-12$，提取 $8$ 就相当于用 $-12 \\div 8$，约分后得到 $-\\frac{3}{2}$。', focusToken: 'sp1_t3' },
+        { tStart: 4.5, tEnd: 6.5, text: '把 $-\\frac{3}{2}x$ 写进括号里，常数项 $+5$ 留在括号外，括号内二次项系数就化为 $1$ 了。', focusToken: 'r1_m32' },
+        { tStart: 6.5, tEnd: 8.5, text: '第二步确定一次项系数的一半：把目光聚焦到括号内部，一次项系数是 $-\\frac{3}{2}$（别漏掉负号）。', focusToken: 'r1_m32' },
+        { tStart: 8.5, tEnd: 12.0, text: '将 $-\\frac{3}{2}$ 除以 $2$，也就是乘 $\\frac{1}{2}$，算出一次项系数的一半等于 $-\\frac{3}{4}$。', focusToken: 'sp2_t4' },
+        { tStart: 12.0, tEnd: 14.8, text: '第三步将所得结果平方：对刚才算出的 $-\\frac{3}{4}$ 整体取平方，即 $\\left(-\\frac{3}{4}\\right)^{2}$。', focusToken: 'sp3_t1' },
+        { tStart: 14.8, tEnd: 17.0, text: '负数的平方是正数，分子分母分别平方，得到需要配入括号的常数 $+\\frac{9}{16}$。', focusToken: 'sp3_t3' },
+        { tStart: 17.0, tEnd: 19.7, text: '第四步同加同减：在括号里加上 $+\\frac{9}{16}$，同时立刻减去 $-\\frac{9}{16}$，一加一减抵消，保证原式恒等。', focusToken: 'r2_sub' },
+        { tStart: 19.7, tEnd: 22.3, text: '观察括号内前三项 $x^{2} - \\frac{3}{2}x + \\frac{9}{16}$，正好构成完全平方式 $\\left(x - \\frac{3}{4}\\right)^{2}$。', focusToken: 'r3_sq' },
+        { tStart: 22.3, tEnd: 24.1, text: '关键易错点：把括号里多余的 $-\\frac{9}{16}$ 移出括号时，必须乘上括号前面的系数 $8$，写成 $-8 \\times \\frac{9}{16}$！', focusToken: 'r4_mult' },
+        { tStart: 24.1, tEnd: 26.5, text: '合并括号外常数项：$-8 \\times \\frac{9}{16} + 5 = -\\frac{9}{2} + \\frac{10}{2} = +\\frac{1}{2}$，得到标准顶点式。', focusToken: 'r5_half' },
+        { tStart: 26.5, tEnd: 28.5, text: '第五步求最值：因为任何实数的偶次方都大于或等于 $0$，所以 $\\left(x - \\frac{3}{4}\\right)^{2} \\ge 0$。', focusToken: 'r6_bec' },
+        { tStart: 28.5, tEnd: 30.3, text: '又因为二次项系数 $8 \\gt 0$，乘正数不等号方向不变，两边再加上 $\\frac{1}{2}$，得出 $y \\ge \\frac{1}{2}$。', focusToken: 'r6_imp2' },
+        { tStart: 30.3, tEnd: 32.0, text: '当平方项为 $0$、即 $x = \\frac{3}{4}$ 时，等号成立，$y$ 取得最小值 $\\frac{1}{2}$。推导完成！', focusToken: 'r7_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：判断配方操作',
+          givenLabel: '已知：',
+          givenFormula: '$y = 2x^{2} + 8x + 3$',
+          extractedLabel: '提取二次项系数后：',
+          extractedFormula: '$y = 2(x^{2} + 4x) + 3$',
+          questionText: '下一步应该怎样操作？',
+          options: [
+            { key: 'A', text: 'A. 将 $4$ 除以 $2$，再将结果平方。', isCorrect: true },
+            { key: 'B', text: 'B. 将 $4$ 直接平方。', isCorrect: false },
+            { key: 'C', text: 'C. 将 $2$ 除以 $2$，再将结果平方。', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！配方法应取括号内一次项系数的一半再平方：',
+            calcLines: [
+              '$4 \\div 2 = 2$',
+              '$2^{2} = 4$'
+            ],
+            summary: '因此在括号内同时加上并减去 $4$，即 $y = 2(x^{2} + 4x + 4 - 4) + 3$。'
+          },
+          wrongTitle: '提示：请留意括号内的一次项系数',
+          wrongFeedback: '请留意括号 $(x^{2} + 4x)$ 内部的一次项系数，配方法需要先取括号内一次项系数的一半再平方，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：判断最值',
+          givenLabel: '给出配方结果：',
+          givenFormula: '$y = 2(x + 2)^{2} - 5$',
+          questionText: '这个二次三项式的最小值是多少？在什么情况下取得？',
+          input1Prefix: '当 $x =$',
+          input1Placeholder: '如 -2',
+          input2Prefix: '时，取得最小值',
+          input2Placeholder: '如 -5',
+          input2Suffix: '',
+          expectedX: '-2',
+          expectedMin: '-5',
+          allowOrderSwap: false,
+          correctFeedback: '当 $x = -2$ 时，取得最小值 $-5$。',
+          correctDetail: '因为 $(x + 2)^{2} \\ge 0$ 且系数 $2 \\gt 0$，当 $x + 2 = 0$（即 $x = -2$）时，$(x + 2)^{2} = 0$，此时 $y$ 取得最小值 $-5$。',
+          wrongFeedback: '请观察完全平方式 $(x + 2)^{2}$：当 $x$ 取何值时括号内为 $0$？此时剩余的常数项是多少？请调整后重试。',
+          specificWrongHints: [
+            {
+              checkType: 'firstVal',
+              val: '2',
+              hint: '注意括号内是 $(x + 2)^{2}$，要使 $x + 2 = 0$，$x$ 应当等于 $-2$ 而不是 $2$，请修改后再试。'
+            },
+            {
+              checkType: 'secondVal',
+              val: '5',
+              hint: '注意括号外的常数项是 $-5$（带负号），请检查最小值的正负号后再试。'
+            }
+          ]
+        }
+      }
+    },
+
+    // =========================================================================
+    // P04：识别代数式与判断规范书写
+    // =========================================================================
+    P04: {
+      procedureId: 'P04',
+      title: '识别代数式与判断规范书写',
+      exampleTitle: '辨析并规范书写：① $S = ab$；② $a^{4}$；③ $1\\frac{1}{2}x$；④ $m - 2$ 米；⑤ $a \\div 5$',
+      exampleFormula: '① $S = ab$；② $a^{4}$；③ $1\\frac{1}{2}x$；④ $m - 2$ 米；⑤ $a \\div 5$',
+      totalDuration: 31.0,
+      scratchpadIdleHint: '旁白草稿演算区（在此同步展示初中数学代数式书写的五项核心规范准则）',
+      practiceSectionTitle: '代数式识别与规范书写跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握代数式的识别与五项书写规范',
+
+      steps: [
+        {
+          step: 1,
+          name: '排查关系符号',
+          tStart: 0.0,
+          tEnd: 6.2,
+          explanation: '凡含有等号或不等号（$=、\\neq、\\gt、\\lt、\\ge、\\le$）的式子均为等式或不等式，不属于代数式；故 ① $S = ab$ 不是代数式。'
+        },
+        {
+          step: 2,
+          name: '检查乘号与乘方规范',
+          tStart: 6.2,
+          tEnd: 11.8,
+          explanation: '数字与字母、字母与字母相乘应省略乘号且数字在前，相同字母相乘写成幂的形式；故 ② $a^{4}$ 符合规范。'
+        },
+        {
+          step: 3,
+          name: '带分数系数化假分数',
+          tStart: 11.8,
+          tEnd: 18.2,
+          explanation: '字母前面的带分数系数必须化为假分数（防止误读为加号）：③ $1\\frac{1}{2}x$ 不规范，应改为 $\\frac{3}{2}x$。'
+        },
+        {
+          step: 4,
+          name: '和差代数式带单位加括号',
+          tStart: 18.2,
+          tEnd: 24.6,
+          explanation: '代数式最外层为加减运算（和或差）且后带单位时，必须整体加括号：④ $m - 2$ 米不规范，应改为 $(m - 2)$ 米。'
+        },
+        {
+          step: 5,
+          name: '除号改写为分数线',
+          tStart: 24.6,
+          tEnd: 31.0,
+          explanation: '代数式中出现除法运算时，除号“$\\div$”必须改写为分数线形式：⑤ $a \\div 5$ 应改为 $\\frac{a}{5}$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.6, step: 1, label: '1.1 观察五个待检式子' },
+        { time: 2.5, step: 1, label: '1.2 排查 ① $S = ab$ 中的等号 $=$' },
+        { time: 7.5, step: 2, label: '2.1 核对 ② $a^{4}$ 乘方书写规范' },
+        { time: 13.5, step: 3, label: '3.1 发现 ③ $1\\frac{1}{2}x$ 含带分数系数' },
+        { time: 16.0, step: 3, label: '3.2 将带分数化为假分数 $\\frac{3}{2}x$' },
+        { time: 19.8, step: 4, label: '4.1 发现 ④ $m - 2$ 米为差的形式带单位' },
+        { time: 22.2, step: 4, label: '4.2 整体加括号改写为 $(m - 2)$ 米' },
+        { time: 26.0, step: 5, label: '5.1 将 ⑤ $a \\div 5$ 改写为分数线 $\\frac{a}{5}$' },
+        { time: 29.2, step: 5, label: '5.2 汇总代数式识别与规范判断结论' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p4_row_0',
+          stepBadge: '待检式子',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p4_r0_1', math: '① $S = ab$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p4_r0_2', math: '② $a^{4}$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p4_r0_3', math: '③ $1\\frac{1}{2}x$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p4_r0_4', math: '④ $m - 2$ 米', appearAt: 0.0, dur: 0.01 },
+            { id: 'p4_r0_5', math: '⑤ $a \\div 5$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p4_row_1',
+          stepBadge: '第 1 步 · 排查关系符',
+          appearAt: 1.6,
+          tokens: [
+            { id: 'p4_r1_item', math: '检查 ① $S = ab$：', appearAt: 1.7, dur: 0.35 },
+            { id: 'p4_r1_rel', math: '含关系符号 $=$', appearAt: 2.3, dur: 0.40 },
+            { id: 'p4_r1_res', math: '$\\implies$ 是等式（不是代数式）', appearAt: 3.1, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p4_row_2',
+          stepBadge: '第 2 步 · 乘方与乘号',
+          appearAt: 6.8,
+          tokens: [
+            { id: 'p4_r2_item', math: '检查 ② $a^{4}$：', appearAt: 6.9, dur: 0.35 },
+            { id: 'p4_r2_rule', math: '相同字母相乘写成幂', appearAt: 7.5, dur: 0.40 },
+            { id: 'p4_r2_res', math: '$\\implies$ 代数式，且书写规范 ✓', appearAt: 8.3, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p4_row_3',
+          stepBadge: '第 3 步 · 带分数化假分数',
+          appearAt: 12.6,
+          tokens: [
+            { id: 'p4_r3_item', math: '检查 ③ $1\\frac{1}{2}x$：', appearAt: 12.7, dur: 0.35 },
+            { id: 'p4_r3_err', math: '带分数系数不规范', appearAt: 13.4, dur: 0.40 },
+            { id: 'p4_r3_fix', math: '$\\implies$ 应化为假分数 $\\frac{3}{2}x$', appearAt: 15.2, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p4_row_4',
+          stepBadge: '第 4 步 · 单位加括号',
+          appearAt: 19.0,
+          tokens: [
+            { id: 'p4_r4_item', math: '检查 ④ $m - 2$ 米：', appearAt: 19.1, dur: 0.35 },
+            { id: 'p4_r4_err', math: '差的形式带单位漏括号', appearAt: 19.8, dur: 0.40 },
+            { id: 'p4_r4_fix', math: '$\\implies$ 应写为 $(m - 2)$ 米', appearAt: 21.5, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p4_row_5',
+          stepBadge: '第 5 步 · 除号改分数线',
+          appearAt: 25.2,
+          tokens: [
+            { id: 'p4_r5_item', math: '检查 ⑤ $a \\div 5$：', appearAt: 25.3, dur: 0.35 },
+            { id: 'p4_r5_err', math: '含除号 $\\div$ 不规范', appearAt: 25.9, dur: 0.40 },
+            { id: 'p4_r5_fix', math: '$\\implies$ 应改写为 $\\frac{a}{5}$', appearAt: 26.8, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p4_row_6',
+          stepBadge: '最终结论',
+          appearAt: 28.5,
+          isConclusion: true,
+          tokens: [
+            { id: 'p4_r6_conc', math: '$\\therefore$ 属于代数式的有 ②③④⑤；完全符合书写规范的仅有 ② $a^{4}$。', appearAt: 28.6, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p4_sp_step1',
+          title: '核心准则 1 · 什么是代数式？',
+          showStart: 0.8,
+          showEnd: 6.1,
+          tokens: [
+            { id: 'p4_sp1_t1', math: '仅含数、字母与运算符号（$+、-、\\times、\\div$、乘方）', appearAt: 1.2, dur: 0.40 },
+            { id: 'p4_sp1_t2', math: '禁含关系符号：$=、\\neq、\\gt、\\lt、\\ge、\\le$', appearAt: 2.6, dur: 0.45 }
+          ],
+          note: '单独的一个数（如 $0, \\pi$）或一个字母（如 $a$）也是代数式'
+        },
+        {
+          id: 'p4_sp_step2',
+          title: '核心准则 2 · 乘号与系数 ±1 规范',
+          showStart: 6.3,
+          showEnd: 11.7,
+          tokens: [
+            { id: 'p4_sp2_t1', math: '数与字母相乘：$m \\times 4 \\to 4m$（数字在前）', appearAt: 6.8, dur: 0.40 },
+            { id: 'p4_sp2_t2', math: '系数为 $\\pm 1$：$1a \\to a$，$-1a \\to -a$（省去 $1$）', appearAt: 8.2, dur: 0.45 }
+          ],
+          note: '相同字母相乘必须写成乘方幂的形式，如 $a \\cdot a \\cdot a \\cdot a = a^{4}$'
+        },
+        {
+          id: 'p4_sp_step3',
+          title: '核心准则 3 · 带分数必须化假分数',
+          showStart: 12.0,
+          showEnd: 18.1,
+          tokens: [
+            { id: 'p4_sp3_t1', math: '$1\\frac{1}{2} = \\frac{1 \\times 2 + 1}{2} = \\frac{3}{2}$', appearAt: 13.8, dur: 0.45 },
+            { id: 'p4_sp3_t2', math: '$\\therefore 1\\frac{1}{2}x \\to \\frac{3}{2}x$', appearAt: 15.0, dur: 0.45 }
+          ],
+          note: '省略乘号后，带分数 $1\\frac{1}{2}$ 极易被误认为是 $1 \\times \\frac{1}{2}$，故必须化为假分数'
+        },
+        {
+          id: 'p4_sp_step45',
+          title: '核心准则 4 & 5 · 单位括号与分数线',
+          showStart: 18.4,
+          showEnd: 30.8,
+          tokens: [
+            { id: 'p4_sp4_t1', math: '和差带单位：$m - 2\\text{ 米} \\to (m - 2)\\text{ 米}$', appearAt: 19.6, dur: 0.45 },
+            { id: 'p4_sp4_t2', math: '除法变分数线：$a \\div 5 \\to \\frac{a}{5}$', appearAt: 25.6, dur: 0.45 }
+          ],
+          note: '若最外层是乘积或分式（如 $3x$ 米、$\\frac{a}{5}$ 米），则不需要加括号'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p4_r0_1', tStart: 1.0, tEnd: 5.8, color: 'rose' },
+        { tokenId: 'p4_r1_rel', tStart: 2.3, tEnd: 5.8, color: 'rose' },
+        { tokenId: 'p4_r0_2', tStart: 6.3, tEnd: 11.5, color: 'teal' },
+        { tokenId: 'p4_r2_res', tStart: 8.3, tEnd: 11.5, color: 'teal' },
+        { tokenId: 'p4_r0_3', tStart: 12.0, tEnd: 18.0, color: 'amber' },
+        { tokenId: 'p4_r3_fix', tStart: 15.2, tEnd: 18.0, color: 'teal' },
+        { tokenId: 'p4_r0_4', tStart: 18.4, tEnd: 24.4, color: 'amber' },
+        { tokenId: 'p4_r4_fix', tStart: 21.5, tEnd: 24.4, color: 'teal' },
+        { tokenId: 'p4_r0_5', tStart: 24.8, tEnd: 28.2, color: 'amber' },
+        { tokenId: 'p4_r5_fix', tStart: 26.8, tEnd: 28.4, color: 'teal' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p4_svg_s1',
+          type: 'arrow',
+          fromToken: 'p4_r0_1',
+          toToken: 'p4_r1_rel',
+          label: '含等号 $=$ 排除',
+          color: '#D97706',
+          curveOffset: -24,
+          tStart: 1.8,
+          tDrawEnd: 2.6,
+          tFadeStart: 5.2,
+          tEnd: 5.8
+        },
+        {
+          id: 'p4_svg_s3',
+          type: 'arrow',
+          fromToken: 'p4_r3_err',
+          toToken: 'p4_r3_fix',
+          label: '$1\\frac{1}{2} = \\frac{3}{2}$',
+          color: '#0F766E',
+          curveOffset: -26,
+          tStart: 14.2,
+          tDrawEnd: 15.1,
+          tFadeStart: 17.3,
+          tEnd: 17.9
+        },
+        {
+          id: 'p4_svg_s4',
+          type: 'arrow',
+          fromToken: 'p4_r4_err',
+          toToken: 'p4_r4_fix',
+          label: '整体加括号',
+          color: '#0F766E',
+          curveOffset: -26,
+          tStart: 20.6,
+          tDrawEnd: 21.4,
+          tFadeStart: 23.8,
+          tEnd: 24.3
+        },
+        {
+          id: 'p4_svg_s5',
+          type: 'arrow',
+          fromToken: 'p4_r5_err',
+          toToken: 'p4_r5_fix',
+          label: '除号改分数线',
+          color: '#0F766E',
+          curveOffset: -26,
+          tStart: 26.1,
+          tDrawEnd: 26.8,
+          tFadeStart: 28.0,
+          tEnd: 28.4
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 1.5, text: '来看代数式识别与规范书写例题：屏幕上给出了 ① 到 ⑤ 五个式子，我们逐一排查。', focusToken: 'p4_r0_1' },
+        { tStart: 1.5, tEnd: 6.2, text: '第一步排查关系符号：① $S = ab$ 中含有等号 $=$，它是表示相等关系的等式，不属于代数式！', focusToken: 'p4_r1_rel' },
+        { tStart: 6.2, tEnd: 11.8, text: '第二步检查乘方与乘号：② $a^{4}$ 不含关系符号，且相同字母相乘写成了幂的形式，完全符合代数式书写规范。', focusToken: 'p4_r2_res' },
+        { tStart: 11.8, tEnd: 15.0, text: '第三步检查带分数系数：③ $1\\frac{1}{2}x$ 的系数是带分数，省略乘号后容易与加法或乘法混淆。', focusToken: 'p4_r3_err' },
+        { tStart: 15.0, tEnd: 18.2, text: '因此带分数系数必须化为假分数，将 $1\\frac{1}{2}$ 化为 $\\frac{3}{2}$，规范写法应为 $\\frac{3}{2}x$。', focusToken: 'p4_r3_fix' },
+        { tStart: 18.2, tEnd: 24.6, text: '第四步检查单位括号：④ $m - 2$ 米的最外层是减法（差的形式），后面带单位“米”时，必须用括号括起来写成 $(m - 2)$ 米。', focusToken: 'p4_r4_fix' },
+        { tStart: 24.6, tEnd: 28.4, text: '第五步检查除号：⑤ $a \\div 5$ 中出现了除号 $\\div$，在代数式中必须改写为分数线形式 $\\frac{a}{5}$。', focusToken: 'p4_r5_fix' },
+        { tStart: 28.4, tEnd: 31.0, text: '综上：属于代数式的有 ②③④⑤，而原式书写完全规范的只有 ② $a^{4}$。辨析完成！', focusToken: 'p4_r6_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：判断代数式书写规范',
+          givenLabel: '给出四个代数式：',
+          givenFormula: '① $-1ab$；② $2\\frac{1}{3}m$；③ $\\frac{3x^{2}}{4}$；④ $x + 3$ 元',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '其中完全符合初中数学代数式书写规范的是哪一个？',
+          options: [
+            { key: 'A', text: 'A. ③ $\\frac{3x^{2}}{4}$', isCorrect: true },
+            { key: 'B', text: 'B. ② $2\\frac{1}{3}m$', isCorrect: false },
+            { key: 'C', text: 'C. ① $-1ab$ 与 ④ $x + 3$ 元', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！其余三项的规范改写如下：',
+            calcLines: [
+              '① $-1ab \\to -ab$（系数 $-1$ 中的 $1$ 必须省略）',
+              '② $2\\frac{1}{3}m \\to \\frac{7}{3}m$（带分数必须化为假分数）',
+              '④ $x + 3\\text{ 元} \\to (x + 3)\\text{ 元}$（和差带单位必须加括号）'
+            ],
+            summary: '只有 ③ $\\frac{3x^{2}}{4}$ 用分数线表示除法且数字系数在前，完全符合规范。'
+          },
+          wrongTitle: '提示：请对照五项书写规范逐一排查',
+          wrongFeedback: '注意系数为 $-1$ 时应省去 $1$、带分数系数须化为假分数、和差后带单位须加括号，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：将带分数系数化为规范假分数',
+          givenLabel: '给出不规范代数式：',
+          givenFormula: '$2\\frac{3}{4}x$',
+          questionText: '将其规范改写为假分数系数 $\\frac{p}{q}x$ 的形式，分子 $p$ 与分母 $q$ 分别是多少？',
+          input1Prefix: '分子 $p =$',
+          input1Placeholder: '如 11',
+          input2Prefix: '，分母 $q =$',
+          input2Placeholder: '如 4',
+          input2Suffix: '',
+          expectedX: '11',
+          expectedMin: '4',
+          allowOrderSwap: false,
+          correctFeedback: '规范写法为 $\\frac{11}{4}x$（分子 $p = 11$，分母 $q = 4$）。',
+          correctDetail: '将带分数化为假分数：$2\\frac{3}{4} = \\frac{2 \\times 4 + 3}{4} = \\frac{11}{4}$，故规范书写为 $\\frac{11}{4}x$。',
+          wrongFeedback: '请按“整数部分 $\\times$ 分母 $+$ 分子”计算假分数的分子：$2 \\times 4 + 3$，分母保持 $4$ 不变。',
+          specificWrongHints: [
+            {
+              checkType: 'firstVal',
+              val: '6',
+              hint: '注意不是 $2 \\times 3 = 6$，而是整数部分 $2$ 乘分母 $4$ 再加分子 $3$：$2 \\times 4 + 3 = 11$。'
+            }
+          ]
+        }
+      }
+    },
+
+    // =========================================================================
+    // P10：利用等腰三角形“三线合一”求解与构造辅助线
+    // =========================================================================
+    P10: {
+      procedureId: 'P10',
+      title: '利用等腰三角形“三线合一”求解与构造辅助线',
+      exampleTitle: '在 $\\triangle ABC$ 中，$AB = AC = 5$，$D$ 是底边 $BC$ 中点，$BC = 6$，$\\angle BAC = 74^{\\circ}$，求 $\\angle BAD$、$\\angle ADB$ 与 $AD$',
+      exampleFormula: '$AB = AC = 5，BD = CD，BC = 6，\\angle BAC = 74^{\\circ}$',
+      totalDuration: 31.0,
+      scratchpadIdleHint: '旁白草稿演算区（配合上方动态几何图形，同步展示三线合一结论与勾股计算）',
+      practiceSectionTitle: '等腰三角形“三线合一”关键动作跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握三线合一的前提核对与边角转化',
+
+      // 右侧实时几何联动 SVG 图形（随 60fps 时间轴同步高亮两腰、绘制中线 AD、标注直角符号与等分弧）
+      geometryDiagram: {
+        title: '动态几何图形 · 等腰 △ABC 三线合一',
+        caption: '随推演进度实时绘制两腰标记、底边中线 AD、顶角平分弧与底边直角符号',
+        svgHtml: `
+          <svg viewBox="0 0 260 185" class="w-full max-w-[260px] h-auto select-none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Step 5 直角三角形 Rt△ABD 浅青绿高亮底色 -->
+            <polygon class="proc-geo-anim" data-appear-at="24.6" data-dur="0.6" points="130,26 34,154 130,154" fill="rgba(15, 118, 110, 0.10)" style="opacity:0;" />
+
+            <!-- 基础三角形底边 BC -->
+            <line x1="34" y1="154" x2="226" y2="154" stroke="#334155" stroke-width="2.2" stroke-linecap="round" />
+            <!-- 基础两腰 AB, AC -->
+            <line x1="130" y1="26" x2="34" y2="154" stroke="#334155" stroke-width="2.2" stroke-linecap="round" />
+            <line x1="130" y1="26" x2="226" y2="154" stroke="#334155" stroke-width="2.2" stroke-linecap="round" />
+
+            <!-- Step 1：高亮相等两腰 AB = AC = 5 及等腰短线标记 -->
+            <g class="proc-geo-anim" data-appear-at="1.2" data-dur="0.5" style="opacity:0;">
+              <line x1="130" y1="26" x2="34" y2="154" stroke="#0F766E" stroke-width="3.2" stroke-linecap="round" />
+              <line x1="130" y1="26" x2="226" y2="154" stroke="#0F766E" stroke-width="3.2" stroke-linecap="round" />
+              <!-- AB 腰上的单刻线 -->
+              <line x1="76" y1="86" x2="88" y2="95" stroke="#0F766E" stroke-width="2.2" />
+              <!-- AC 腰上的单刻线 -->
+              <line x1="184" y1="86" x2="172" y2="95" stroke="#0F766E" stroke-width="2.2" />
+              <text x="60" y="84" fill="#0F766E" font-size="12" font-weight="700">5</text>
+              <text x="192" y="84" fill="#0F766E" font-size="12" font-weight="700">5</text>
+            </g>
+
+            <!-- Step 2：底边中点 D、等分双刻线 BD=CD=3 与动态连接中线 AD -->
+            <g class="proc-geo-anim" data-appear-at="6.3" data-dur="0.5" style="opacity:0;">
+              <circle cx="130" cy="154" r="3.5" fill="#D97706" />
+              <text x="125" y="173" fill="#B45309" font-size="12" font-weight="700">D</text>
+              <!-- BD 双刻线 -->
+              <line x1="79" y1="148" x2="79" y2="160" stroke="#D97706" stroke-width="2" />
+              <line x1="84" y1="148" x2="84" y2="160" stroke="#D97706" stroke-width="2" />
+              <!-- CD 双刻线 -->
+              <line x1="176" y1="148" x2="176" y2="160" stroke="#D97706" stroke-width="2" />
+              <line x1="181" y1="148" x2="181" y2="160" stroke="#D97706" stroke-width="2" />
+              <text x="76" y="143" fill="#B45309" font-size="11" font-weight="700">3</text>
+              <text x="174" y="143" fill="#B45309" font-size="11" font-weight="700">3</text>
+            </g>
+
+            <line class="proc-geo-anim" data-appear-at="7.4" data-dur="0.7" data-dash-len="130" x1="130" y1="26" x2="130" y2="154" stroke="#D97706" stroke-width="2.5" stroke-dasharray="130" stroke-dashoffset="130" style="opacity:0;" />
+
+            <!-- Step 3：顶角平分线双弧标记 ∠BAD = ∠CAD = 37° -->
+            <g class="proc-geo-anim" data-appear-at="13.0" data-dur="0.5" style="opacity:0;">
+              <path d="M 115 46 A 25 25 0 0 0 130 51" fill="none" stroke="#0F766E" stroke-width="2" />
+              <path d="M 130 55 A 29 29 0 0 0 147 49" fill="none" stroke="#0F766E" stroke-width="2" />
+              <text x="90" y="62" fill="#0F766E" font-size="10" font-weight="700">37°</text>
+              <text x="145" y="62" fill="#0F766E" font-size="10" font-weight="700">37°</text>
+            </g>
+
+            <!-- Step 4：底边高线垂直符号 AD ⊥ BC -->
+            <g class="proc-geo-anim" data-appear-at="19.2" data-dur="0.5" style="opacity:0;">
+              <polyline points="118,154 118,142 130,142" fill="none" stroke="#BE123C" stroke-width="2" />
+              <text x="95" y="138" fill="#BE123C" font-size="10" font-weight="700">90°</text>
+            </g>
+
+            <!-- Step 5：高 AD = 4 长度标注 -->
+            <g class="proc-geo-anim" data-appear-at="26.2" data-dur="0.5" style="opacity:0;">
+              <rect x="135" y="88" width="44" height="18" rx="4" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.2" />
+              <text x="157" y="100" text-anchor="middle" fill="#0F766E" font-size="11" font-weight="700">AD=4</text>
+            </g>
+
+            <!-- 顶点 A, B, C 标签 -->
+            <circle cx="130" cy="26" r="3" fill="#0F172A" />
+            <circle cx="34" cy="154" r="3" fill="#0F172A" />
+            <circle cx="226" cy="154" r="3" fill="#0F172A" />
+            <text x="125" y="16" fill="#0F172A" font-size="13" font-weight="700">A</text>
+            <text x="18" y="162" fill="#0F172A" font-size="13" font-weight="700">B</text>
+            <text x="232" y="162" fill="#0F172A" font-size="13" font-weight="700">C</text>
+          </svg>
+        `
+      },
+
+      steps: [
+        {
+          step: 1,
+          name: '锁定两腰与底边',
+          tStart: 0.0,
+          tEnd: 6.0,
+          explanation: '在 $\\triangle ABC$ 中确认相等的两腰 $AB = AC = 5$，明确顶角顶点为 $A$，对应的底边为 $BC$（仅底边上的三线重合）。'
+        },
+        {
+          step: 2,
+          name: '识别底边上的已知一线',
+          tStart: 6.0,
+          tEnd: 12.2,
+          explanation: '点 $D$ 是底边 $BC$ 的中点，即 $AD$ 是底边上的中线，由此先得出 $BD = CD = \\frac{1}{2}BC = 3$。'
+        },
+        {
+          step: 3,
+          name: '导出顶角平分线求角度',
+          tStart: 12.2,
+          tEnd: 18.5,
+          explanation: '由等腰三角形“三线合一”，底边上的中线 $AD$ 也是顶角 $\\angle BAC$ 的平分线，故 $\\angle BAD = \\frac{1}{2}\\angle BAC = 37^{\\circ}$。'
+        },
+        {
+          step: 4,
+          name: '导出底边上的高得直角',
+          tStart: 18.5,
+          tEnd: 24.5,
+          explanation: '由“三线合一”，底边上的中线 $AD$ 也是底边 $BC$ 上的高，故 $AD \\perp BC$，$\\angle ADB = \\angle ADC = 90^{\\circ}$。'
+        },
+        {
+          step: 5,
+          name: '在 Rt△ABD 中求高 AD',
+          tStart: 24.5,
+          tEnd: 31.0,
+          explanation: '在 $\\text{Rt}\\triangle ABD$ 中，已知斜边 $AB = 5$、直角边 $BD = 3$，由勾股定理得 $AD = \\sqrt{5^{2} - 3^{2}} = 4$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 观察等腰 $\\triangle ABC$ 已知条件' },
+        { time: 2.5, step: 1, label: '1.2 锁定两腰 $AB = AC = 5$ 与底边 $BC$' },
+        { time: 7.5, step: 2, label: '2.1 识别 $D$ 为 $BC$ 中点（连接中线 $AD$）' },
+        { time: 10.2, step: 2, label: '2.2 算出 $BD = CD = \\frac{1}{2}BC = 3$' },
+        { time: 14.0, step: 3, label: '3.1 三线合一导出 $AD$ 平分 $\\angle BAC$' },
+        { time: 16.5, step: 3, label: '3.2 算出 $\\angle BAD = \\frac{1}{2} \\times 74^{\\circ} = 37^{\\circ}$' },
+        { time: 20.0, step: 4, label: '4.1 三线合一导出 $AD \\perp BC$（$\\angle ADB = 90^{\\circ}$）' },
+        { time: 26.5, step: 5, label: '5.1 在 $\\text{Rt}\\triangle ABD$ 中用勾股定理算 $AD = 4$' },
+        { time: 29.5, step: 5, label: '5.2 汇总角度与线段长度结论' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p10_row_0',
+          stepBadge: '已知条件',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p10_r0_1', math: '在 $\\triangle ABC$ 中，', appearAt: 0.0, dur: 0.01 },
+            { id: 'p10_r0_abac', math: '$AB = AC = 5$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p10_r0_bc', math: '，$BC = 6$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p10_r0_mid', math: '，$D$ 为 $BC$ 中点', appearAt: 0.0, dur: 0.01 },
+            { id: 'p10_r0_ang', math: '，$\\angle BAC = 74^{\\circ}$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p10_row_1',
+          stepBadge: '第 1 步 · 锁定腰与底',
+          appearAt: 1.5,
+          tokens: [
+            { id: 'p10_r1_bec', math: '$\\because AB = AC = 5$', appearAt: 1.6, dur: 0.40 },
+            { id: 'p10_r1_imp', math: '$\\implies A$ 为顶角顶点，$BC$ 为底边', appearAt: 2.3, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p10_row_2',
+          stepBadge: '第 2 步 · 识别一线（中线）',
+          appearAt: 6.6,
+          tokens: [
+            { id: 'p10_r2_mid', math: '$\\because D$ 是底边 $BC$ 的中点', appearAt: 6.7, dur: 0.40 },
+            { id: 'p10_r2_bd', math: '$\\implies BD = CD = \\frac{1}{2}BC = \\frac{1}{2} \\times 6 = 3$', appearAt: 8.2, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p10_row_3',
+          stepBadge: '第 3 步 · 导出角平分线',
+          appearAt: 12.8,
+          tokens: [
+            { id: 'p10_r3_rule', math: '由“三线合一”得 $AD$ 平分 $\\angle BAC$', appearAt: 12.9, dur: 0.45 },
+            { id: 'p10_r3_val', math: '$\\implies \\angle BAD = \\frac{1}{2}\\angle BAC = \\frac{1}{2} \\times 74^{\\circ} = 37^{\\circ}$', appearAt: 14.5, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p10_row_4',
+          stepBadge: '第 4 步 · 导出底边高线',
+          appearAt: 19.0,
+          tokens: [
+            { id: 'p10_r4_rule', math: '由“三线合一”得 $AD \\perp BC$', appearAt: 19.1, dur: 0.45 },
+            { id: 'p10_r4_val', math: '$\\implies \\angle ADB = \\angle ADC = 90^{\\circ}$', appearAt: 20.5, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p10_row_5',
+          stepBadge: '第 5 步 · 勾股定理求高',
+          appearAt: 25.0,
+          tokens: [
+            { id: 'p10_r5_rt', math: '在 $\\text{Rt}\\triangle ABD$ 中，', appearAt: 25.1, dur: 0.35 },
+            { id: 'p10_r5_ad', math: '$AD = \\sqrt{AB^{2} - BD^{2}} = \\sqrt{5^{2} - 3^{2}} = 4$', appearAt: 25.8, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p10_row_6',
+          stepBadge: '最终结论',
+          appearAt: 28.5,
+          isConclusion: true,
+          tokens: [
+            { id: 'p10_r6_conc', math: '$\\therefore \\angle BAD = 37^{\\circ}$，$\\angle ADB = 90^{\\circ}$，$AD = 4$。', appearAt: 28.6, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p10_sp_1',
+          title: '草稿提示 · “三线合一”知一推二',
+          showStart: 12.4,
+          showEnd: 24.4,
+          tokens: [
+            { id: 'p10_sp1_t1', math: '前提：等腰 $\\triangle ABC$ 中 $AB = AC$', appearAt: 12.8, dur: 0.40 },
+            { id: 'p10_sp1_t2', math: '已知一线：$D$ 为底边 $BC$ 中点（中线）', appearAt: 13.6, dur: 0.40 },
+            { id: 'p10_sp1_t3', math: '$\\implies$ ① 顶角平分线：$\\angle BAD = \\angle CAD$', appearAt: 14.4, dur: 0.45 },
+            { id: 'p10_sp1_t4', math: '$\\implies$ ② 底边上的高：$AD \\perp BC$', appearAt: 19.3, dur: 0.45 }
+          ],
+          note: '切记：只有底边 $BC$ 上的中线、高线与顶角平分线重合，腰上的线不满足三线合一'
+        },
+        {
+          id: 'p10_sp_2',
+          title: '草稿演算 · 直角三角形勾股计算',
+          showStart: 24.6,
+          showEnd: 30.8,
+          tokens: [
+            { id: 'p10_sp2_t1', math: '斜边 $AB = 5$，直角边 $BD = 3$', appearAt: 25.0, dur: 0.40 },
+            { id: 'p10_sp2_t2', math: '$AD = \\sqrt{25 - 9} = \\sqrt{16} = 4$', appearAt: 26.0, dur: 0.45 }
+          ],
+          note: '若图中没有现成的底边中线或高线，常过顶角顶点 $A$ 作 $AD \\perp BC$ 构造直角三角形'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p10_r0_abac', tStart: 1.0, tEnd: 5.8, color: 'teal' },
+        { tokenId: 'p10_r1_bec', tStart: 1.6, tEnd: 5.8, color: 'teal' },
+        { tokenId: 'p10_r0_mid', tStart: 6.2, tEnd: 12.0, color: 'amber' },
+        { tokenId: 'p10_r2_bd', tStart: 8.2, tEnd: 12.0, color: 'amber' },
+        { tokenId: 'p10_r0_ang', tStart: 12.4, tEnd: 18.2, color: 'teal' },
+        { tokenId: 'p10_r3_val', tStart: 14.5, tEnd: 18.2, color: 'teal' },
+        { tokenId: 'p10_r4_val', tStart: 20.5, tEnd: 24.3, color: 'rose' },
+        { tokenId: 'p10_r5_ad', tStart: 25.8, tEnd: 28.4, color: 'teal' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p10_svg_s2',
+          type: 'arrow',
+          fromToken: 'p10_r0_bc',
+          toToken: 'p10_r2_bd',
+          label: '中点平分底边 $\\frac{1}{2} \\times 6 = 3$',
+          color: '#D97706',
+          curveOffset: 30,
+          tStart: 7.4,
+          tDrawEnd: 8.3,
+          tFadeStart: 11.2,
+          tEnd: 11.8
+        },
+        {
+          id: 'p10_svg_s3',
+          type: 'arrow',
+          fromToken: 'p10_r2_mid',
+          toToken: 'p10_r3_rule',
+          label: '三线合一 · 推角平分线',
+          color: '#0F766E',
+          curveOffset: -26,
+          tStart: 12.3,
+          tDrawEnd: 13.2,
+          tFadeStart: 17.5,
+          tEnd: 18.2
+        },
+        {
+          id: 'p10_svg_s4',
+          type: 'arrow',
+          fromToken: 'p10_r2_mid',
+          toToken: 'p10_r4_rule',
+          label: '三线合一 · 推底边垂直',
+          color: '#D97706',
+          curveOffset: -28,
+          tStart: 18.6,
+          tDrawEnd: 19.5,
+          tFadeStart: 23.6,
+          tEnd: 24.2
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 1.5, text: '来看等腰三角形“三线合一”典型例题：在 $\\triangle ABC$ 中，$AB = AC = 5$，$BC = 6$，$D$ 是底边 $BC$ 的中点，$\\angle BAC = 74^{\\circ}$。', focusToken: 'p10_r0_abac' },
+        { tStart: 1.5, tEnd: 6.0, text: '第一步锁定两腰与底边：先看右侧几何图，高亮相等的两腰 $AB = AC = 5$，确定 $A$ 是顶角顶点、$BC$ 是底边。', focusToken: 'p10_r1_imp' },
+        { tStart: 6.0, tEnd: 12.2, text: '第二步识别底边上的一线：已知点 $D$ 是底边 $BC$ 的中点，连接 $AD$，则 $AD$ 是底边中线，且 $BD = CD = \\frac{1}{2}BC = 3$。', focusToken: 'p10_r2_bd' },
+        { tStart: 12.2, tEnd: 18.5, text: '第三步导出顶角平分线：由“三线合一”，底边中线 $AD$ 同时平分顶角 $\\angle BAC$，故 $\\angle BAD = \\frac{1}{2} \\times 74^{\\circ} = 37^{\\circ}$。', focusToken: 'p10_r3_val' },
+        { tStart: 18.5, tEnd: 24.5, text: '第四步导出底边上的高：由“三线合一”，$AD$ 同时垂直于底边 $BC$，因此在点 $D$ 处标出直角符号，$\\angle ADB = 90^{\\circ}$。', focusToken: 'p10_r4_val' },
+        { tStart: 24.5, tEnd: 28.4, text: '第五步在直角三角形中求线段：在 $\\text{Rt}\\triangle ABD$ 中，斜边 $AB = 5$、直角边 $BD = 3$，由勾股定理算出高 $AD = 4$。', focusToken: 'p10_r5_ad' },
+        { tStart: 28.4, tEnd: 31.0, text: '汇总得出 $\\angle BAD = 37^{\\circ}$，$\\angle ADB = 90^{\\circ}$，$AD = 4$。边角转化完成！', focusToken: 'p10_r6_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：判断“三线合一”导出的结论',
+          givenLabel: '已知条件：',
+          givenFormula: '在 $\\triangle ABC$ 中，$AB = AC = 10$，$BC = 12$',
+          extractedLabel: '底边上的一线：',
+          extractedFormula: '$AD$ 平分顶角 $\\angle BAC$ 交 $BC$ 于点 $D$',
+          questionText: '根据等腰三角形“三线合一”性质，下列直接导出的结论哪一项正确？',
+          options: [
+            { key: 'A', text: 'A. $AD \\perp BC$（$\\angle ADB = 90^{\\circ}$），且 $BD = CD = 6$。', isCorrect: true },
+            { key: 'B', text: 'B. $AD \\perp AB$，且 $BD = 10$。', isCorrect: false },
+            { key: 'C', text: 'C. $AD = BC = 12$。', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！顶角平分线、底边上的中线、底边上的高三线重合：',
+            calcLines: [
+              '$AD \\perp BC \\implies \\angle ADB = \\angle ADC = 90^{\\circ}$',
+              '$BD = CD = \\frac{1}{2}BC = \\frac{1}{2} \\times 12 = 6$'
+            ],
+            summary: '再在 $\\text{Rt}\\triangle ABD$ 中用勾股定理即可算出高 $AD = \\sqrt{10^{2} - 6^{2}} = 8$。'
+          },
+          wrongTitle: '提示：请确认哪条边是底边',
+          wrongFeedback: '因为 $AB = AC$，所以 $BC$ 是底边，顶角平分线 $AD$ 垂直且平分的是底边 $BC$，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：利用“三线合一”求线段与角度',
+          givenLabel: '给出等腰三角形条件：',
+          givenFormula: '在 $\\triangle ABC$ 中，$AB = AC$，$AD \\perp BC$ 于点 $D$，$BC = 10$，$\\angle B = 55^{\\circ}$',
+          questionText: '由“三线合一”与直角三角形两锐角互余，$BD$ 的长和 $\\angle BAD$ 的度数分别是多少？',
+          input1Prefix: '$BD =$',
+          input1Placeholder: '如 5',
+          input2Prefix: '，$\\angle BAD =$',
+          input2Placeholder: '如 35',
+          input2Suffix: '°（只填数字）',
+          expectedX: '5',
+          expectedMin: '35',
+          allowOrderSwap: false,
+          correctFeedback: '$BD = 5$，$\\angle BAD = 35^{\\circ}$。',
+          correctDetail: '由 $AB = AC$ 且 $AD \\perp BC$（三线合一），得 $BD = \\frac{1}{2}BC = 5$；在 $\\text{Rt}\\triangle ABD$ 中，$\\angle BAD = 90^{\\circ} - \\angle B = 90^{\\circ} - 55^{\\circ} = 35^{\\circ}$。',
+          wrongFeedback: '请先由 $AD$ 平分底边 $BC$ 算出 $BD = \\frac{1}{2} \\times 10$，再在 $\\text{Rt}\\triangle ABD$ 中利用 $90^{\\circ} - 55^{\\circ}$ 算出 $\\angle BAD$。',
+          specificWrongHints: [
+            {
+              checkType: 'firstVal',
+              val: '10',
+              hint: '注意 $D$ 是底边 $BC$ 的中点，$BD$ 是 $BC$ 的一半，即 $10 \\div 2 = 5$。'
+            },
+            {
+              checkType: 'secondVal',
+              val: '55',
+              hint: '注意 $\\angle B = 55^{\\circ}$，在 $\\text{Rt}\\triangle ABD$ 中 $\\angle BAD$ 与 $\\angle B$ 互余，应为 $90^{\\circ} - 55^{\\circ} = 35^{\\circ}$。'
+            }
+          ]
+        }
+      }
+    },
+
+    // =========================================================================
+    // P05：根据数量关系列代数式
+    // =========================================================================
+    P05: {
+      procedureId: 'P05',
+      title: '根据数量关系列代数式',
+      exampleTitle: '将 $3$ 千克单价 $m$ 元的甲糖与 $n$ 千克单价 $18$ 元的乙糖混合，求混合什锦糖的平均单价',
+      exampleFormula: '甲糖：$3\\text{ kg} \\times m\\text{ 元/kg}$；乙糖：$n\\text{ kg} \\times 18\\text{ 元/kg}$',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示混合问题核心公式与“先读先算”添括号准则）',
+      practiceSectionTitle: '根据数量关系列代数式跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握运算先后顺序与整体加括号法则',
+
+      steps: [
+        {
+          step: 1,
+          name: '分别表示两种糖果的总价',
+          tStart: 0.0,
+          tEnd: 6.0,
+          explanation: '由“总价 $=$ 单价 $\\times$ 数量”，甲糖总价为 $3m$ 元，乙糖总价为 $18n$ 元。'
+        },
+        {
+          step: 2,
+          name: '求出混合后的总金额与总质量',
+          tStart: 6.0,
+          tEnd: 12.2,
+          explanation: '混合后什锦糖的总金额为 $(3m + 18n)$ 元，混合后的总质量为 $(n + 3)$ 千克。'
+        },
+        {
+          step: 3,
+          name: '确立平均单价数量关系',
+          tStart: 12.2,
+          tEnd: 18.2,
+          explanation: '混合什锦糖的平均单价等于“混合总金额 $\\div$ 混合总质量”。'
+        },
+        {
+          step: 4,
+          name: '对先算的加法整体添括号相除',
+          tStart: 18.2,
+          tEnd: 24.2,
+          explanation: '因为要先算加法求和、再算除法，必须给总金额与总质量分别加上括号：$(3m + 18n) \\div (n + 3)$。'
+        },
+        {
+          step: 5,
+          name: '按规范将除号写为分数线',
+          tStart: 24.2,
+          tEnd: 30.0,
+          explanation: '调用代数式书写规范（P04），用分数线代替除号并省去分子分母外层括号，得 $\\frac{3m + 18n}{n + 3}$ 元/千克。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 梳理甲、乙两种糖果的单价与质量' },
+        { time: 3.0, step: 1, label: '1.2 写出甲糖总价 $3m$ 元、乙糖总价 $18n$ 元' },
+        { time: 7.5, step: 2, label: '2.1 求和得混合总金额 $(3m + 18n)$ 元' },
+        { time: 10.0, step: 2, label: '2.2 求和得混合总质量 $(n + 3)$ 千克' },
+        { time: 14.0, step: 3, label: '3.1 建立平均单价 $=$ 总金额 $\\div$ 总质量' },
+        { time: 20.0, step: 4, label: '4.1 先加后除添括号：$(3m + 18n) \\div (n + 3)$' },
+        { time: 26.5, step: 5, label: '5.1 化为规范分式 $\\frac{3m + 18n}{n + 3}$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p5_row_0',
+          stepBadge: '已知条件',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p5_r0_a', math: '甲糖：$3$ 千克，单价 $m$ 元/千克；', appearAt: 0.0, dur: 0.01 },
+            { id: 'p5_r0_b', math: '乙糖：$n$ 千克，单价 $18$ 元/千克', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p5_row_1',
+          stepBadge: '第 1 步 · 单项总价',
+          appearAt: 1.5,
+          tokens: [
+            { id: 'p5_r1_costA', math: '甲糖总价 $= 3m$（元），', appearAt: 1.6, dur: 0.40 },
+            { id: 'p5_r1_costB', math: '乙糖总价 $= 18n$（元）', appearAt: 2.8, dur: 0.40 }
+          ]
+        },
+        {
+          rowId: 'p5_row_2',
+          stepBadge: '第 2 步 · 混合总量',
+          appearAt: 6.4,
+          tokens: [
+            { id: 'p5_r2_sumCost', math: '混合总金额 $= (3m + 18n)$ 元，', appearAt: 6.5, dur: 0.45 },
+            { id: 'p5_r2_sumMass', math: '混合总质量 $= (n + 3)$ 千克', appearAt: 9.0, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p5_row_3',
+          stepBadge: '第 3 步 · 数量关系',
+          appearAt: 12.8,
+          tokens: [
+            { id: 'p5_r3_rel', math: '混合平均单价 $=$ 混合总金额 $\\div$ 混合总质量', appearAt: 12.9, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p5_row_4',
+          stepBadge: '第 4 步 · 整体相除',
+          appearAt: 18.8,
+          tokens: [
+            { id: 'p5_r4_eq', math: '$=$', appearAt: 18.9, dur: 0.25 },
+            { id: 'p5_r4_num', math: '$(3m + 18n)$', appearAt: 19.3, dur: 0.45 },
+            { id: 'p5_r4_div', math: '$\\div$', appearAt: 20.1, dur: 0.30 },
+            { id: 'p5_r4_den', math: '$(n + 3)$', appearAt: 20.6, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p5_row_5',
+          stepBadge: '最终结论',
+          appearAt: 25.0,
+          isConclusion: true,
+          tokens: [
+            { id: 'p5_r5_conc', math: '$\\therefore$ 混合什锦糖的平均单价为 $\\frac{3m + 18n}{n + 3}$ 元/千克。', appearAt: 25.1, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p5_sp_1',
+          title: '草稿演算 · 基本商业数量关系',
+          showStart: 0.8,
+          showEnd: 12.0,
+          tokens: [
+            { id: 'p5_sp1_t1', math: '单项总价 $=$ 单价 $\\times$ 数量', appearAt: 1.2, dur: 0.40 },
+            { id: 'p5_sp1_t2', math: '混合总金额 $=$ 甲糖总价 $+$ 乙糖总价', appearAt: 6.6, dur: 0.40 },
+            { id: 'p5_sp1_t3', math: '混合总质量 $=$ 甲糖质量 $+$ 乙糖质量', appearAt: 9.2, dur: 0.40 }
+          ],
+          note: '切勿把平均单价直接算成 $(m + 18) \\div 2$，必须用总金额除以总质量'
+        },
+        {
+          id: 'p5_sp_2',
+          title: '草稿提示 · “先读先算”添括号原则',
+          showStart: 12.5,
+          showEnd: 29.8,
+          tokens: [
+            { id: 'p5_sp2_t1', math: '若不加括号：$3m + 18n \\div n + 3$（会先算 $18n \\div n$）', appearAt: 18.6, dur: 0.45 },
+            { id: 'p5_sp2_t2', math: '改写分数线：分数线自带括号作用 $\\to \\frac{3m + 18n}{n + 3}$', appearAt: 24.8, dur: 0.45 }
+          ],
+          note: '当加减法的结果作为被除数或除数时，用分数线表示既规范又不会弄错运算顺序'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p5_r1_costA', tStart: 1.6, tEnd: 5.8, color: 'teal' },
+        { tokenId: 'p5_r1_costB', tStart: 2.8, tEnd: 5.8, color: 'amber' },
+        { tokenId: 'p5_r2_sumCost', tStart: 6.5, tEnd: 12.0, color: 'teal' },
+        { tokenId: 'p5_r2_sumMass', tStart: 9.0, tEnd: 12.0, color: 'amber' },
+        { tokenId: 'p5_r4_num', tStart: 19.3, tEnd: 24.0, color: 'teal' },
+        { tokenId: 'p5_r4_den', tStart: 20.6, tEnd: 24.0, color: 'amber' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p5_svg_s2_cost',
+          type: 'arrow',
+          fromToken: 'p5_r1_costA',
+          toToken: 'p5_r2_sumCost',
+          label: '两项总价相加',
+          color: '#0F766E',
+          curveOffset: -26,
+          tStart: 6.2,
+          tDrawEnd: 7.1,
+          tFadeStart: 11.2,
+          tEnd: 11.8
+        },
+        {
+          id: 'p5_svg_s4_div',
+          type: 'under-brace',
+          startToken: 'p5_r4_num',
+          endToken: 'p5_r4_den',
+          label: '除号改分数线 $\\frac{3m + 18n}{n + 3}$',
+          color: '#0F766E',
+          tStart: 21.5,
+          tDrawEnd: 22.4,
+          tFadeStart: 24.3,
+          tEnd: 24.8
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 6.0, text: '第一步提取单项总价：$3$ 千克单价 $m$ 元的甲糖总价为 $3m$ 元，$n$ 千克单价 $18$ 元的乙糖总价为 $18n$ 元。', focusToken: 'p5_r1_costB' },
+        { tStart: 6.0, tEnd: 12.2, text: '第二步求混合总量：将两种糖果的总价相加得混合总金额 $(3m + 18n)$ 元，质量相加得混合总质量 $(n + 3)$ 千克。', focusToken: 'p5_r2_sumMass' },
+        { tStart: 12.2, tEnd: 18.2, text: '第三步确立等量关系：混合什锦糖的平均单价等于“混合总金额 $\\div$ 混合总质量”。', focusToken: 'p5_r3_rel' },
+        { tStart: 18.2, tEnd: 24.2, text: '第四步整体相除：因为要先算加法求和再相除，必须把 $(3m + 18n)$ 与 $(n + 3)$ 分别加上括号作为整体。', focusToken: 'p5_r4_den' },
+        { tStart: 24.2, tEnd: 30.0, text: '第五步规范化为分式：用分数线代替除号，得到每千克什锦糖的平均单价为 $\\frac{3m + 18n}{n + 3}$ 元。', focusToken: 'p5_r5_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：辨析“先读先算”与括号位置',
+          givenLabel: '文字叙述：',
+          givenFormula: '“$a$ 与 $b$ 两数差的平方”与“$a, b$ 两数的平方差”',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '这两个文字叙述对应的正确代数式分别是？',
+          options: [
+            { key: 'A', text: 'A. $(a - b)^{2}$ 与 $a^{2} - b^{2}$', isCorrect: true },
+            { key: 'B', text: 'B. $a^{2} - b^{2}$ 与 $(a - b)^{2}$', isCorrect: false },
+            { key: 'C', text: 'C. $a - b^{2}$ 与 $a^{2} - b^{2}$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！按“先读先算”原则断句：',
+            calcLines: [
+              '“$a$ 与 $b$ 差的平方”：先算差 $(a - b)$，再整体平方 $\\to (a - b)^{2}$',
+              '“$a, b$ 两数的平方差”：先分别算平方 $a^{2}, b^{2}$，再求差 $\\to a^{2} - b^{2}$'
+            ],
+            summary: '读题时抓住最后一个“的”字前面的运算作为内层整体即可准确判断括号。'
+          },
+          wrongTitle: '提示：请按“先读先算”原则断句',
+          wrongFeedback: '“差的平方”是先求差再平方（需加括号），“平方差”是先平方再求差，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：阶梯计费问题列代数式并化简',
+          givenLabel: '实际情境：',
+          givenFormula: '租书前 $3$ 天共收基础费 $5$ 元，超过 $3$ 天的部分每天收 $2$ 元',
+          questionText: '若租书 $x$ 天（$x \\gt 3$），总费用列出 $5 + 2(x - 3)$ 并化简为 $px - q$ 元后，$p$ 和 $q$ 分别是多少？',
+          input1Prefix: '一次项系数 $p =$',
+          input1Placeholder: '如 2',
+          input2Prefix: '，常数项 $q =$',
+          input2Placeholder: '如 1',
+          input2Suffix: '（使化简结果为 px - q）',
+          expectedX: '2',
+          expectedMin: '1',
+          allowOrderSwap: false,
+          correctFeedback: '化简结果为 $(2x - 1)$ 元（即 $p = 2$，$q = 1$）。',
+          correctDetail: '超过 $3$ 天的天数为 $(x - 3)$ 天，总费用为 $5 + 2(x - 3) = 5 + 2x - 6 = 2x - 1$。',
+          wrongFeedback: '请展开 $5 + 2(x - 3) = 5 + 2x - 6$，合并常数项 $5 - 6 = -1$，对照 $px - q$ 填写。',
+          specificWrongHints: [
+            {
+              checkType: 'secondVal',
+              val: '-1',
+              hint: '式子已写为 $px - q$（带减号），由 $2x - 1$ 对照 $px - q$ 可知 $q = 1$。'
+            }
+          ]
+        }
+      }
+    },
+
+    // =========================================================================
+    // P06：从数字与图形规律中归纳代数式
+    // =========================================================================
+    P06: {
+      procedureId: 'P06',
+      title: '从数字与图形规律中归纳代数式',
+      exampleTitle: '用棋子按规律摆图案：第 $1$ 个有 $2$ 颗，第 $2$ 个有 $5$ 颗，第 $3$ 个有 $8$ 颗，第 $4$ 个有 $11$ 颗，求第 $n$ 个图案的棋子数',
+      exampleFormula: '$a_{1} = 2，a_{2} = 5，a_{3} = 8，a_{4} = 11 \\implies a_{n} = ?$',
+      totalDuration: 31.0,
+      scratchpadIdleHint: '旁白草稿演算区（配合上方动态棋子增量图，展示固定量与变化量的分离）',
+      practiceSectionTitle: '数字与图形规律归纳跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握“首项 + 公差 × (n - 1)”规律归纳与回代验证',
+
+      geometryDiagram: {
+        title: '动态图形规律 · 棋子增量拆解',
+        caption: '青绿圆点为固定首项 2 颗，琥珀圆点为每增加 1 个图案新增的 3 颗棋子',
+        svgHtml: `
+          <svg viewBox="0 0 260 155" class="w-full max-w-[260px] h-auto select-none" xmlns="http://www.w3.org/2000/svg">
+            <!-- n=1 (2颗) -->
+            <g>
+              <text x="28" y="22" text-anchor="middle" fill="#334155" font-size="11" font-weight="700">n=1</text>
+              <circle cx="20" cy="42" r="5.5" fill="#0F766E" />
+              <circle cx="36" cy="42" r="5.5" fill="#0F766E" />
+              <text x="28" y="142" text-anchor="middle" fill="#0F766E" font-size="11" font-weight="700">2</text>
+            </g>
+            <!-- n=2 (2+3=5颗) -->
+            <g class="proc-geo-anim" data-appear-at="1.4" data-dur="0.5" style="opacity:0;">
+              <text x="88" y="22" text-anchor="middle" fill="#334155" font-size="11" font-weight="700">n=2</text>
+              <circle cx="80" cy="42" r="5.5" fill="#0F766E" />
+              <circle cx="96" cy="42" r="5.5" fill="#0F766E" />
+              <circle cx="72" cy="64" r="5.5" fill="#D97706" />
+              <circle cx="88" cy="64" r="5.5" fill="#D97706" />
+              <circle cx="104" cy="64" r="5.5" fill="#D97706" />
+              <text x="88" y="142" text-anchor="middle" fill="#B45309" font-size="11" font-weight="700">2+3×1</text>
+            </g>
+            <!-- n=3 (2+3×2=8颗) -->
+            <g class="proc-geo-anim" data-appear-at="2.2" data-dur="0.5" style="opacity:0;">
+              <text x="154" y="22" text-anchor="middle" fill="#334155" font-size="11" font-weight="700">n=3</text>
+              <circle cx="146" cy="42" r="5.5" fill="#0F766E" />
+              <circle cx="162" cy="42" r="5.5" fill="#0F766E" />
+              <circle cx="138" cy="64" r="5.5" fill="#D97706" />
+              <circle cx="154" cy="64" r="5.5" fill="#D97706" />
+              <circle cx="170" cy="64" r="5.5" fill="#D97706" />
+              <circle cx="138" cy="86" r="5.5" fill="#D97706" />
+              <circle cx="154" cy="86" r="5.5" fill="#D97706" />
+              <circle cx="170" cy="86" r="5.5" fill="#D97706" />
+              <text x="154" y="142" text-anchor="middle" fill="#B45309" font-size="11" font-weight="700">2+3×2</text>
+            </g>
+            <!-- n=4 (2+3×3=11颗) -->
+            <g class="proc-geo-anim" data-appear-at="3.0" data-dur="0.5" style="opacity:0;">
+              <text x="222" y="22" text-anchor="middle" fill="#334155" font-size="11" font-weight="700">n=4</text>
+              <circle cx="214" cy="42" r="5.5" fill="#0F766E" />
+              <circle cx="230" cy="42" r="5.5" fill="#0F766E" />
+              <circle cx="206" cy="64" r="5.5" fill="#D97706" />
+              <circle cx="222" cy="64" r="5.5" fill="#D97706" />
+              <circle cx="238" cy="64" r="5.5" fill="#D97706" />
+              <circle cx="206" cy="86" r="5.5" fill="#D97706" />
+              <circle cx="222" cy="86" r="5.5" fill="#D97706" />
+              <circle cx="238" cy="86" r="5.5" fill="#D97706" />
+              <circle cx="206" cy="108" r="5.5" fill="#D97706" />
+              <circle cx="222" cy="108" r="5.5" fill="#D97706" />
+              <circle cx="238" cy="108" r="5.5" fill="#D97706" />
+              <text x="222" y="142" text-anchor="middle" fill="#B45309" font-size="11" font-weight="700">2+3×3</text>
+            </g>
+          </svg>
+        `
+      },
+
+      steps: [
+        {
+          step: 1,
+          name: '列出前四项并求相邻增量',
+          tStart: 0.0,
+          tEnd: 6.2,
+          explanation: '统计前 $4$ 个图案的棋子数分别为 $2, 5, 8, 11$，发现后一个图案总比前一个图案多 $3$ 颗（等差增量 $d = 3$）。'
+        },
+        {
+          step: 2,
+          name: '改写为“固定首项 + 增量倍数”',
+          tStart: 6.2,
+          tEnd: 13.0,
+          explanation: '将前四项统一拆解为：$a_{1} = 2 + 3 \\times 0$，$a_{2} = 2 + 3 \\times 1$，$a_{3} = 2 + 3 \\times 2$，$a_{4} = 2 + 3 \\times 3$。'
+        },
+        {
+          step: 3,
+          name: '用 (n - 1) 替换变化倍数',
+          tStart: 13.0,
+          tEnd: 19.2,
+          explanation: '观察发现第 $n$ 个图案中 $3$ 的倍数比序号 $n$ 少 $1$（即为 $n - 1$），写出第 $n$ 项表达式 $2 + 3(n - 1)$。'
+        },
+        {
+          step: 4,
+          name: '去括号合并化简通项式',
+          tStart: 19.2,
+          tEnd: 25.0,
+          explanation: '利用乘法分配律展开 $2 + 3n - 3$，合并同类项化简为最简代数式 $(3n - 1)$。'
+        },
+        {
+          step: 5,
+          name: '代入 n = 1, 2 回代验证',
+          tStart: 25.0,
+          tEnd: 31.0,
+          explanation: '将 $n = 1, 2, 4$ 代入 $3n - 1$ 检验：$3 \\times 1 - 1 = 2$，$3 \\times 4 - 1 = 11$，与已知完全吻合。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 列出前四项 $2, 5, 8, 11$' },
+        { time: 3.5, step: 1, label: '1.2 计算相邻两项差值 $\\Delta = +3$' },
+        { time: 8.5, step: 2, label: '2.1 拆解为 $2 + 3 \\times 0$ 至 $2 + 3 \\times 3$' },
+        { time: 15.0, step: 3, label: '3.1 归纳第 $n$ 项为 $2 + 3(n - 1)$' },
+        { time: 21.0, step: 4, label: '4.1 去括号化简得 $3n - 1$' },
+        { time: 27.5, step: 5, label: '5.1 代入 $n = 1, 4$ 回代验算' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p6_row_0',
+          stepBadge: '前 4 项数据',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p6_r0_1', math: '$n=1 \\to 2$；', appearAt: 0.0, dur: 0.01 },
+            { id: 'p6_r0_2', math: '$n=2 \\to 5$；', appearAt: 1.4, dur: 0.35 },
+            { id: 'p6_r0_3', math: '$n=3 \\to 8$；', appearAt: 2.2, dur: 0.35 },
+            { id: 'p6_r0_4', math: '$n=4 \\to 11$', appearAt: 3.0, dur: 0.35 }
+          ]
+        },
+        {
+          rowId: 'p6_row_1',
+          stepBadge: '第 1 步 · 找固定增量',
+          appearAt: 3.8,
+          tokens: [
+            { id: 'p6_r1_diff', math: '相邻两项差值：$5 - 2 = 3$，$8 - 5 = 3$，$11 - 8 = 3$（每次固定增加 $3$ 颗）', appearAt: 3.9, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p6_row_2',
+          stepBadge: '第 2 步 · 改写统一结构',
+          appearAt: 6.6,
+          tokens: [
+            { id: 'p6_r2_1', math: '$a_{1} = 2 + 3 \\times 0$，', appearAt: 6.7, dur: 0.35 },
+            { id: 'p6_r2_2', math: '$a_{2} = 2 + 3 \\times 1$，', appearAt: 7.8, dur: 0.35 },
+            { id: 'p6_r2_3', math: '$a_{3} = 2 + 3 \\times 2$，', appearAt: 8.9, dur: 0.35 },
+            { id: 'p6_r2_4', math: '$a_{4} = 2 + 3 \\times 3$', appearAt: 10.0, dur: 0.35 }
+          ]
+        },
+        {
+          rowId: 'p6_row_3',
+          stepBadge: '第 3 步 · 归纳第 n 项',
+          appearAt: 13.5,
+          tokens: [
+            { id: 'p6_r3_an', math: '第 $n$ 个图案：$a_{n} =$', appearAt: 13.6, dur: 0.35 },
+            { id: 'p6_r3_fix', math: '$2$', appearAt: 14.3, dur: 0.35 },
+            { id: 'p6_r3_var', math: '$+ 3(n - 1)$', appearAt: 15.0, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p6_row_4',
+          stepBadge: '第 4 步 · 去括号化简',
+          appearAt: 19.6,
+          tokens: [
+            { id: 'p6_r4_exp', math: '$= 2 + 3n - 3$', appearAt: 19.7, dur: 0.40 },
+            { id: 'p6_r4_sim', math: '$= 3n - 1$', appearAt: 21.2, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p6_row_5',
+          stepBadge: '第 5 步 · 回代验证',
+          appearAt: 25.4,
+          tokens: [
+            { id: 'p6_r5_chk', math: '验证：当 $n=1$ 时 $3 \\times 1 - 1 = 2$ ✓；当 $n=4$ 时 $3 \\times 4 - 1 = 11$ ✓', appearAt: 25.5, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p6_row_6',
+          stepBadge: '最终结论',
+          appearAt: 28.4,
+          isConclusion: true,
+          tokens: [
+            { id: 'p6_r6_conc', math: '$\\therefore$ 第 $n$ 个图案需要 $(3n - 1)$ 颗棋子。', appearAt: 28.5, dur: 0.55 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p6_sp_1',
+          title: '草稿提示 · 为什么是 (n - 1) 而不是 n？',
+          showStart: 13.2,
+          showEnd: 24.8,
+          tokens: [
+            { id: 'p6_sp1_t1', math: '第 $1$ 个图案：首项 $2$，增加了 $0$ 次 $3$', appearAt: 13.6, dur: 0.40 },
+            { id: 'p6_sp1_t2', math: '第 $2$ 个图案：首项 $2$，增加了 $1$ 次 $3$', appearAt: 14.5, dur: 0.40 },
+            { id: 'p6_sp1_t3', math: '第 $n$ 个图案：首项 $2$，增加了 $(n - 1)$ 次 $3$', appearAt: 15.4, dur: 0.45 }
+          ],
+          note: '切勿盲目写成“首项 $+ 3n = 2 + 3n$”，否则当 $n = 1$ 时等于 $5$，与首项 $2$ 矛盾'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p6_r1_diff', tStart: 3.9, tEnd: 6.1, color: 'amber' },
+        { tokenId: 'p6_r2_4', tStart: 10.0, tEnd: 12.8, color: 'amber' },
+        { tokenId: 'p6_r3_fix', tStart: 14.3, tEnd: 19.0, color: 'teal' },
+        { tokenId: 'p6_r3_var', tStart: 15.0, tEnd: 19.0, color: 'amber' },
+        { tokenId: 'p6_r4_sim', tStart: 21.2, tEnd: 25.0, color: 'teal' },
+        { tokenId: 'p6_r5_chk', tStart: 25.5, tEnd: 28.2, color: 'teal' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p6_svg_s3',
+          type: 'arrow',
+          fromToken: 'p6_r2_4',
+          toToken: 'p6_r3_var',
+          label: '序号 $4 \\to$ 乘 $(4-1)$',
+          color: '#D97706',
+          curveOffset: 28,
+          tStart: 13.8,
+          tDrawEnd: 14.8,
+          tFadeStart: 18.2,
+          tEnd: 18.8
+        },
+        {
+          id: 'p6_svg_s4',
+          type: 'under-brace',
+          startToken: 'p6_r4_exp',
+          endToken: 'p6_r4_sim',
+          label: '合并常数 $2 - 3 = -1$',
+          color: '#0F766E',
+          tStart: 20.5,
+          tDrawEnd: 21.3,
+          tFadeStart: 24.2,
+          tEnd: 24.8
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 6.2, text: '第一步列出前四项并观察增量：前 $4$ 个图案棋子数为 $2, 5, 8, 11$，每往后一个图案都固定增加 $3$ 颗棋子。', focusToken: 'p6_r1_diff' },
+        { tStart: 6.2, tEnd: 13.0, text: '第二步改写为统一结构：以第 $1$ 项的 $2$ 颗为固定基数，前四项依次写成 $2 + 3 \\times 0$、$2 + 3 \\times 1$、$2 + 3 \\times 2$、$2 + 3 \\times 3$。', focusToken: 'p6_r2_4' },
+        { tStart: 13.0, tEnd: 19.2, text: '第三步分离固定量与变化量：第 $n$ 个图案比第 $1$ 个图案多增加了 $(n - 1)$ 次 $3$，所以表达式为 $2 + 3(n - 1)$。', focusToken: 'p6_r3_var' },
+        { tStart: 19.2, tEnd: 25.0, text: '第四步去括号合并同类项：$2 + 3(n - 1) = 2 + 3n - 3 = 3n - 1$。', focusToken: 'p6_r4_sim' },
+        { tStart: 25.0, tEnd: 31.0, text: '第五步回代验证：将 $n = 1$ 和 $n = 4$ 代入 $3n - 1$，分别得 $2$ 和 $11$，验证无误！', focusToken: 'p6_r6_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：用火柴棒摆正方形规律归纳',
+          givenLabel: '已知规律：',
+          givenFormula: '摆第 $1$ 个正方形用 $4$ 根，第 $2$ 个用 $7$ 根，第 $3$ 个用 $10$ 根',
+          extractedLabel: '相邻增量：',
+          extractedFormula: '每多摆 $1$ 个正方形，固定增加 $3$ 根火柴棒',
+          questionText: '摆第 $n$ 个图形需要多少根火柴棒？',
+          options: [
+            { key: 'A', text: 'A. $4 + 3(n - 1) = 3n + 1$', isCorrect: true },
+            { key: 'B', text: 'B. $4 + 3n$', isCorrect: false },
+            { key: 'C', text: 'C. $4n$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！首项 4 加上 (n - 1) 个公差 3：',
+            calcLines: [
+              '$a_{n} = 4 + 3(n - 1) = 4 + 3n - 3 = 3n + 1$',
+              '验证：当 $n = 1$ 时，$3 \\times 1 + 1 = 4$；当 $n = 2$ 时，$3 \\times 2 + 1 = 7$'
+            ],
+            summary: '等差型规律通项公式始终满足“公差 $\\times n + ($首项 $-$ 公差$)$”。'
+          },
+          wrongTitle: '提示：请将 n = 1 代入选项验证',
+          wrongFeedback: '当 $n = 1$ 时结果应等于首项 $4$（若选 $4 + 3n$，当 $n = 1$ 时等于 $7 \\neq 4$），请再试一次。'
+        },
+        practice2: {
+          title: '练习二：归纳等差数列通项并求第 10 项',
+          givenLabel: '按规律排列的一列数：',
+          givenFormula: '$5，9，13，17，\\dots$',
+          questionText: '若第 $n$ 个数表示为 $4n + c$，则常数 $c$ 是多少？第 $10$ 个数是多少？',
+          input1Prefix: '常数 $c =$',
+          input1Placeholder: '如 1',
+          input2Prefix: '，第 $10$ 个数 $=$',
+          input2Placeholder: '如 41',
+          input2Suffix: '',
+          expectedX: '1',
+          expectedMin: '41',
+          allowOrderSwap: false,
+          correctFeedback: '通项为 $4n + 1$（$c = 1$），第 $10$ 个数为 $41$。',
+          correctDetail: '首项为 $5$，公差为 $4$，故 $a_{n} = 5 + 4(n - 1) = 4n + 1$（得 $c = 1$）；当 $n = 10$ 时，$4 \\times 10 + 1 = 41$。',
+          wrongFeedback: '将 $n = 1$ 代入 $4n + c = 5$ 即可求出 $c$，再将 $n = 10$ 代入 $4n + c$ 求出第 $10$ 个数。',
+          specificWrongHints: [
+            {
+              checkType: 'firstVal',
+              val: '5',
+              hint: '注意首项是 $5$，当 $n = 1$ 时 $4 \\times 1 + c = 5$，所以 $c = 1$ 而不是 $5$。'
+            }
+          ]
+        }
+      }
+    },
+
+    // =========================================================================
+    // P07：判断与表示正、反比例关系
+    // =========================================================================
+    P07: {
+      procedureId: 'P07',
+      title: '判断与表示正、反比例关系',
+      exampleTitle: '已知 $x$ 与 $y$ 成反比例关系，当 $x = 2.5$ 时 $y = 4$；求当 $y = \\frac{5}{8}$ 时对应 $x = m$ 的值',
+      exampleFormula: '$x, y$ 成反比例：$(2.5, 4) \\to (m, \\frac{5}{8})$',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步对比正比例“比值一定”与反比例“乘积一定”判定准则）',
+      practiceSectionTitle: '正、反比例关系判定与求解跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握比值/乘积定值检验与利用定值 k 求未知量',
+
+      steps: [
+        {
+          step: 1,
+          name: '确立反比例“乘积一定”关系式',
+          tStart: 0.0,
+          tEnd: 6.0,
+          explanation: '因为两个相关联的量 $x$ 和 $y$ 成反比例关系，所以它们的乘积为非零定值 $k$，即 $x \\cdot y = k$。'
+        },
+        {
+          step: 2,
+          name: '代入已知对应值求出定值 k',
+          tStart: 6.0,
+          tEnd: 12.2,
+          explanation: '将已知的一组对应值 $x = 2.5，y = 4$ 代入 $x \\cdot y = k$，算出定值 $k = 2.5 \\times 4 = 10$。'
+        },
+        {
+          step: 3,
+          name: '写出完整的反比例乘积等式',
+          tStart: 12.2,
+          tEnd: 17.5,
+          explanation: '将 $k = 10$ 回代，确定这两个变量在任意对应状态下都满足 $xy = 10$。'
+        },
+        {
+          step: 4,
+          name: '代入另一组条件列出关于 m 的方程',
+          tStart: 17.5,
+          tEnd: 23.5,
+          explanation: '将 $x = m，y = \\frac{5}{8}$ 代入 $xy = 10$，得到方程 $\\frac{5}{8}m = 10$。'
+        },
+        {
+          step: 5,
+          name: '系数化为 1 解出未知数 m',
+          tStart: 23.5,
+          tEnd: 30.0,
+          explanation: '方程两边同时乘以 $\\frac{8}{5}$（或除以 $\\frac{5}{8}$），解得 $m = 10 \\times \\frac{8}{5} = 16$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 由反比例关系建立 $x \\cdot y = k$' },
+        { time: 7.5, step: 2, label: '2.1 代入 $x = 2.5, y = 4$ 算得 $k = 10$' },
+        { time: 14.0, step: 3, label: '3.1 确立定值等式 $xy = 10$' },
+        { time: 19.5, step: 4, label: '4.1 代入 $x = m, y = \\frac{5}{8}$ 得 $\\frac{5}{8}m = 10$' },
+        { time: 26.0, step: 5, label: '5.1 计算 $m = 10 \\div \\frac{5}{8} = 16$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p7_row_0',
+          stepBadge: '已知条件',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p7_r0_cond', math: '已知 $x, y$ 成反比例关系：', appearAt: 0.0, dur: 0.01 },
+            { id: 'p7_r0_p1', math: '当 $x = 2.5$ 时 $y = 4$；', appearAt: 0.0, dur: 0.01 },
+            { id: 'p7_r0_p2', math: '当 $y = \\frac{5}{8}$ 时 $x = m$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p7_row_1',
+          stepBadge: '第 1 步 · 建立乘积关系',
+          appearAt: 1.5,
+          tokens: [
+            { id: 'p7_r1_rel', math: '$\\because x$ 与 $y$ 成反比例关系 $\\implies x \\cdot y = k$（定值）', appearAt: 1.6, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p7_row_2',
+          stepBadge: '第 2 步 · 求出定值 k',
+          appearAt: 6.5,
+          tokens: [
+            { id: 'p7_r2_sub', math: '代入 $x = 2.5, y = 4$：', appearAt: 6.6, dur: 0.35 },
+            { id: 'p7_r2_k', math: '$k = 2.5 \\times 4 = 10$', appearAt: 7.4, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p7_row_3',
+          stepBadge: '第 3 步 · 确定关系式',
+          appearAt: 12.6,
+          tokens: [
+            { id: 'p7_r3_eq', math: '$\\therefore$ 关系式为 $xy = 10$', appearAt: 12.7, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p7_row_4',
+          stepBadge: '第 4 步 · 代入目标组',
+          appearAt: 18.0,
+          tokens: [
+            { id: 'p7_r4_sub', math: '当 $x = m，y = \\frac{5}{8}$ 时：', appearAt: 18.1, dur: 0.35 },
+            { id: 'p7_r4_eq', math: '$\\frac{5}{8}m = 10$', appearAt: 19.0, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p7_row_5',
+          stepBadge: '最终结论',
+          appearAt: 24.2,
+          isConclusion: true,
+          tokens: [
+            { id: 'p7_r5_conc', math: '$\\therefore m = 10 \\div \\frac{5}{8} = 10 \\times \\frac{8}{5} = 16$。', appearAt: 24.3, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p7_sp_1',
+          title: '核心对比 · 正比例 vs 反比例 vs 不成比例',
+          showStart: 0.8,
+          showEnd: 17.2,
+          tokens: [
+            { id: 'p7_sp1_t1', math: '① 比值一定 $\\frac{y}{x} = k \\implies$ 正比例', appearAt: 1.2, dur: 0.40 },
+            { id: 'p7_sp1_t2', math: '② 乘积一定 $x \\cdot y = k \\implies$ 反比例', appearAt: 2.0, dur: 0.40 },
+            { id: 'p7_sp1_t3', math: '③ 和差一定 $x + y = k$ 或含平方 $\\implies$ 不成比例', appearAt: 3.0, dur: 0.40 }
+          ],
+          note: '易错提醒：长方形周长一定时，“长 + 宽 = 周长的一半”（和一定），故不成反比例'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p7_r1_rel', tStart: 1.6, tEnd: 5.8, color: 'teal' },
+        { tokenId: 'p7_r0_p1', tStart: 6.1, tEnd: 11.8, color: 'amber' },
+        { tokenId: 'p7_r2_k', tStart: 7.4, tEnd: 12.0, color: 'teal' },
+        { tokenId: 'p7_r3_eq', tStart: 12.7, tEnd: 17.3, color: 'teal' },
+        { tokenId: 'p7_r0_p2', tStart: 17.6, tEnd: 23.2, color: 'amber' },
+        { tokenId: 'p7_r4_eq', tStart: 19.0, tEnd: 23.8, color: 'amber' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p7_svg_s2',
+          type: 'arrow',
+          fromToken: 'p7_r0_p1',
+          toToken: 'p7_r2_k',
+          label: '$2.5 \\times 4 = 10$',
+          color: '#0F766E',
+          curveOffset: 28,
+          tStart: 6.8,
+          tDrawEnd: 7.6,
+          tFadeStart: 11.4,
+          tEnd: 12.0
+        },
+        {
+          id: 'p7_svg_s4',
+          type: 'arrow',
+          fromToken: 'p7_r3_eq',
+          toToken: 'p7_r4_eq',
+          label: '代入 $xy = 10$',
+          color: '#D97706',
+          curveOffset: -26,
+          tStart: 18.2,
+          tDrawEnd: 19.0,
+          tFadeStart: 22.8,
+          tEnd: 23.4
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 6.0, text: '第一步建立数量关系：已知 $x$ 与 $y$ 成反比例关系，因此它们的乘积恒等于非零定值 $k$，即 $x \\cdot y = k$。', focusToken: 'p7_r1_rel' },
+        { tStart: 6.0, tEnd: 12.2, text: '第二步求出定值 $k$：将已知的一组对应值 $x = 2.5, y = 4$ 代入，算得 $k = 2.5 \\times 4 = 10$。', focusToken: 'p7_r2_k' },
+        { tStart: 12.2, tEnd: 17.5, text: '第三步确定关系式：不论 $x, y$ 如何变化，只要在这组反比例关系中，始终满足 $xy = 10$。', focusToken: 'p7_r3_eq' },
+        { tStart: 17.5, tEnd: 23.5, text: '第四步代入目标组：将 $x = m, y = \\frac{5}{8}$ 代入 $xy = 10$，得到方程 $\\frac{5}{8}m = 10$。', focusToken: 'p7_r4_eq' },
+        { tStart: 23.5, tEnd: 30.0, text: '第五步解出未知数：两边同时除以 $\\frac{5}{8}$（即乘 $\\frac{8}{5}$），算出 $m = 16$。', focusToken: 'p7_r5_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：辨析正比例、反比例与不成比例',
+          givenLabel: '给出三个常见情境：',
+          givenFormula: '① 路程一定时的速度 $v$ 与时间 $t$；② 总页数一定时的已看页数与未看页数；③ 圆的面积 $S$ 与半径 $r$',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '其中两个变量成反比例关系的是哪一个？',
+          options: [
+            { key: 'A', text: 'A. 只有 ①（满足 $v \\cdot t = s$ 定值）', isCorrect: true },
+            { key: 'B', text: 'B. ① 和 ②', isCorrect: false },
+            { key: 'C', text: 'C. ③（$S = \\pi r^{2}$）', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！必须满足“乘积为定值”才是反比例关系：',
+            calcLines: [
+              '① $v \\cdot t = s$（乘积一定）$\\implies$ 成反比例关系 ✓',
+              '② 已看 $+$ 未看 $=$ 总页数（和一定）$\\implies$ 不成比例',
+              '③ $\\frac{S}{r} = \\pi r$（随 $r$ 变化，非定值）$\\implies$ $S$ 与 $r$ 不成正/反比例'
+            ],
+            summary: '判断比例关系时，务必先写出等量关系式再看是“乘积一定”还是“比值一定”。'
+          },
+          wrongTitle: '提示：请区分“乘积一定”与“和一定”',
+          wrongFeedback: '已看页数与未看页数之和一定（不是乘积一定），圆面积与半径平方成正比但与半径不成比例，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：利用反比例定值求未知量',
+          givenLabel: '已知条件：',
+          givenFormula: '变量 $x$ 与 $y$ 成反比例关系，且当 $x = 6$ 时，$y = -4$',
+          questionText: '它们的乘积定值 $k$ 是多少？当 $x = -8$ 时，对应的 $y$ 值是多少？',
+          input1Prefix: '定值 $k =$',
+          input1Placeholder: '如 -24',
+          input2Prefix: '，当 $x = -8$ 时 $y =$',
+          input2Placeholder: '如 3',
+          input2Suffix: '',
+          expectedX: '-24',
+          expectedMin: '3',
+          allowOrderSwap: false,
+          correctFeedback: '定值 $k = -24$，当 $x = -8$ 时 $y = 3$。',
+          correctDetail: '由 $k = xy = 6 \\times (-4) = -24$ 得 $xy = -24$；当 $x = -8$ 时，$-8y = -24 \\implies y = 3$。',
+          wrongFeedback: '先由 $k = 6 \\times (-4)$ 算出定值 $k$（注意负号），再由 $(-8) \\times y = k$ 算出 $y$。',
+          specificWrongHints: [
+            {
+              checkType: 'firstVal',
+              val: '24',
+              hint: '注意 $6 \\times (-4)$ 异号相乘得负数，$k$ 应当等于 $-24$。'
+            },
+            {
+              checkType: 'secondVal',
+              val: '-3',
+              hint: '注意 $(-24) \\div (-8)$ 同号相除得正数，$y$ 应当等于 $3$。'
+            }
+          ]
+        }
+      }
+    },
+
+    // =========================================================================
+    // P08：代入字母数值求代数式的值
+    // =========================================================================
+    P08: {
+      procedureId: 'P08',
+      title: '代入字母数值求代数式的值',
+      exampleTitle: '已知 $|x - 2| + (y + 3)^{2} = 0$，求代数式 $x^{2} - 2xy + y^{2}$ 的值',
+      exampleFormula: '$|x - 2| + (y + 3)^{2} = 0 \\implies x^{2} - 2xy + y^{2} = ?$',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示“0+0=0”非负性模型与负数代入加括号准则）',
+      practiceSectionTitle: '代入字母数值求代数式的值跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握非负性求字母值与负数加括号乘方',
+
+      steps: [
+        {
+          step: 1,
+          name: '由非负性求出字母 x, y 的值',
+          tStart: 0.0,
+          tEnd: 6.5,
+          explanation: '因为 $|x - 2| \\ge 0$ 且 $(y + 3)^{2} \\ge 0$，两个非负数之和为 $0$，则每一项必为 $0$，解得 $x = 2，y = -3$。'
+        },
+        {
+          step: 2,
+          name: '写出“当……时”准备代入',
+          tStart: 6.5,
+          tEnd: 11.5,
+          explanation: '规范写出“当 $x = 2，y = -3$ 时”，准备将字母替换为对应数值。'
+        },
+        {
+          step: 3,
+          name: '恢复乘号并为负数加括号代入',
+          tStart: 11.5,
+          tEnd: 18.2,
+          explanation: '将 $x = 2，y = -3$ 代入原式：省略的乘号恢复为“$\\times$”，负数 $-3$ 参与乘法和乘方时必须加上括号！'
+        },
+        {
+          step: 4,
+          name: '先算乘方，再算乘法',
+          tStart: 18.2,
+          tEnd: 24.5,
+          explanation: '按有理数混合运算顺序：先算乘方 $2^{2} = 4$、$(-3)^{2} = 9$，再算中间乘法 $-2 \\times 2 \\times (-3) = +12$。'
+        },
+        {
+          step: 5,
+          name: '最后算加减得出结果',
+          tStart: 24.5,
+          tEnd: 30.0,
+          explanation: '将各项计算结果相加：$4 + 12 + 9 = 25$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 识别绝对值与偶次方非负性' },
+        { time: 3.5, step: 1, label: '1.2 令 $x - 2 = 0, y + 3 = 0$ 得 $x = 2, y = -3$' },
+        { time: 8.0, step: 2, label: '2.1 对号入座准备替换字母' },
+        { time: 14.0, step: 3, label: '3.1 恢复乘号并为 $-3$ 加上括号' },
+        { time: 20.5, step: 4, label: '4.1 先算乘方 $4, 9$ 与乘法 $+12$' },
+        { time: 26.5, step: 5, label: '5.1 相加得出最终结果 $25$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p8_row_0',
+          stepBadge: '已知条件',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p8_r0_cond', math: '已知 $|x - 2| + (y + 3)^{2} = 0$，', appearAt: 0.0, dur: 0.01 },
+            { id: 'p8_r0_target', math: '求 $x^{2} - 2xy + y^{2}$ 的值', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p8_row_1',
+          stepBadge: '第 1 步 · 非负性求值',
+          appearAt: 1.5,
+          tokens: [
+            { id: 'p8_r1_nonneg', math: '$\\because |x - 2| \\ge 0，(y + 3)^{2} \\ge 0$', appearAt: 1.6, dur: 0.40 },
+            { id: 'p8_r1_zero', math: '$\\implies x - 2 = 0，y + 3 = 0$', appearAt: 2.8, dur: 0.40 },
+            { id: 'p8_r1_xy', math: '$\\implies x = 2，y = -3$', appearAt: 4.0, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p8_row_2',
+          stepBadge: '第 2 & 3 步 · 加括号代入',
+          appearAt: 7.2,
+          tokens: [
+            { id: 'p8_r2_when', math: '当 $x = 2，y = -3$ 时，原式 $=$', appearAt: 7.3, dur: 0.45 },
+            { id: 'p8_r2_t1', math: '$2^{2}$', appearAt: 12.0, dur: 0.40 },
+            { id: 'p8_r2_t2', math: '$- 2 \\times 2 \\times (-3)$', appearAt: 13.2, dur: 0.50 },
+            { id: 'p8_r2_t3', math: '$+ (-3)^{2}$', appearAt: 14.8, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p8_row_3',
+          stepBadge: '第 4 步 · 先乘方再乘除',
+          appearAt: 18.8,
+          tokens: [
+            { id: 'p8_r3_eq', math: '$=$', appearAt: 18.9, dur: 0.25 },
+            { id: 'p8_r3_4', math: '$4$', appearAt: 19.3, dur: 0.35 },
+            { id: 'p8_r3_12', math: '$+ 12$', appearAt: 20.4, dur: 0.45 },
+            { id: 'p8_r3_9', math: '$+ 9$', appearAt: 21.6, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p8_row_4',
+          stepBadge: '最终结论',
+          appearAt: 25.0,
+          isConclusion: true,
+          tokens: [
+            { id: 'p8_r4_conc', math: '$= 25$。$\\quad\\therefore$ 代数式的值为 $25$。', appearAt: 25.1, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p8_sp_1',
+          title: '草稿演算 · “0 + 0 = 0”非负性模型',
+          showStart: 0.8,
+          showEnd: 6.4,
+          tokens: [
+            { id: 'p8_sp1_t1', math: '若 $|A| + B^{2} = 0$', appearAt: 1.2, dur: 0.40 },
+            { id: 'p8_sp1_t2', math: '则必有 $A = 0$ 且 $B = 0$', appearAt: 2.2, dur: 0.40 }
+          ],
+          note: '初中阶段三大非负数：绝对值 $|A| \\ge 0$、偶次方 $B^{2} \\ge 0$、算术平方根 $\\sqrt{C} \\ge 0$'
+        },
+        {
+          id: 'p8_sp_2',
+          title: '草稿警示 · 负数乘方必须加括号！',
+          showStart: 11.6,
+          showEnd: 24.4,
+          tokens: [
+            { id: 'p8_sp2_t1', math: '正确：当 $y = -3$ 时，$y^{2} = (-3)^{2} = +9$', appearAt: 12.2, dur: 0.45 },
+            { id: 'p8_sp2_t2', math: '错误：漏括号写成 $-3^{2} = -9$（变成了 $3^{2}$ 的相反数）', appearAt: 15.6, dur: 0.45 }
+          ],
+          note: '同理，恢复乘号时 $-2xy = -2 \\times 2 \\times (-3) = +12$（负负得正）'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p8_r1_xy', tStart: 4.0, tEnd: 6.4, color: 'teal' },
+        { tokenId: 'p8_r2_t2', tStart: 13.2, tEnd: 18.0, color: 'amber' },
+        { tokenId: 'p8_r2_t3', tStart: 14.8, tEnd: 18.0, color: 'rose' },
+        { tokenId: 'p8_r3_12', tStart: 20.4, tEnd: 24.2, color: 'amber' },
+        { tokenId: 'p8_r3_9', tStart: 21.6, tEnd: 24.2, color: 'teal' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p8_svg_s3',
+          type: 'arrow',
+          fromToken: 'p8_r1_xy',
+          toToken: 'p8_r2_t3',
+          label: '负数 $-3$ 加括号代入',
+          color: '#D97706',
+          curveOffset: 30,
+          tStart: 13.8,
+          tDrawEnd: 14.8,
+          tFadeStart: 17.2,
+          tEnd: 17.8
+        },
+        {
+          id: 'p8_svg_s4',
+          type: 'under-brace',
+          startToken: 'p8_r2_t2',
+          endToken: 'p8_r2_t3',
+          label: '负负得正：$+12 + 9$',
+          color: '#0F766E',
+          tStart: 19.8,
+          tDrawEnd: 20.6,
+          tFadeStart: 23.6,
+          tEnd: 24.2
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 6.5, text: '第一步利用非负性求字母值：绝对值 $|x - 2|$ 与平方项 $(y + 3)^{2}$ 都大于或等于 $0$，和为 $0$ 说明两者都等于 $0$，解得 $x = 2，y = -3$。', focusToken: 'p8_r1_xy' },
+        { tStart: 6.5, tEnd: 11.5, text: '第二步准备代入：先写出“当 $x = 2，y = -3$ 时”，对号入座替换代数式中的字母。', focusToken: 'p8_r2_when' },
+        { tStart: 11.5, tEnd: 18.2, text: '第三步恢复乘号并加括号：把 $-2xy$ 写成 $-2 \\times 2 \\times (-3)$，把 $y^{2}$ 写成 $(-3)^{2}$。负数代入乘方千万不能漏掉括号！', focusToken: 'p8_r2_t3' },
+        { tStart: 18.2, tEnd: 24.5, text: '第四步先算乘方再算乘除：$2^{2} = 4$，$-2 \\times 2 \\times (-3) = +12$，$(-3)^{2} = +9$。', focusToken: 'p8_r3_9' },
+        { tStart: 24.5, tEnd: 30.0, text: '第五步相加得出结果：$4 + 12 + 9 = 25$。求解完成！', focusToken: 'p8_r4_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：判断负数与分数代入的规范写法',
+          givenLabel: '已知条件：',
+          givenFormula: '当 $a = -2，b = \\frac{1}{3}$ 时，代入代数式 $a^{2} - 3b^{2}$',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '下列代入后的算式中，书写完全正确的是哪一项？',
+          options: [
+            { key: 'A', text: 'A. $(-2)^{2} - 3 \\times \\left(\\frac{1}{3}\\right)^{2}$', isCorrect: true },
+            { key: 'B', text: 'B. $-2^{2} - 3 \\times \\frac{1}{3}^{2}$', isCorrect: false },
+            { key: 'C', text: 'C. $(-2)^{2} - 3\\frac{1}{3}^{2}$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！负数与分数参与乘方时都必须加括号，且恢复乘号：',
+            calcLines: [
+              '$(-2)^{2} = 4，\\quad \\left(\\frac{1}{3}\\right)^{2} = \\frac{1}{9}$',
+              '原式 $= 4 - 3 \\times \\frac{1}{9} = 4 - \\frac{1}{3} = \\frac{11}{3}$'
+            ],
+            summary: '牢记“一恢复（乘号）、二添括（负数与分数乘方）”可避免绝大多数代入错误。'
+          },
+          wrongTitle: '提示：请检查负数、分数乘方的括号与乘号',
+          wrongFeedback: '负数 $-2$ 和分数 $\\frac{1}{3}$ 平方时都必须加括号，且 $3$ 与 $\\left(\\frac{1}{3}\\right)^{2}$ 之间要恢复乘号 $\\times$，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：由非负性求字母值并代入计算',
+          givenLabel: '给出非负性等式：',
+          givenFormula: '$|a + 1| + (b - 4)^{2} = 0$',
+          questionText: '先求出 $a$ 的值，再代入求代数式 $a^{2} + 2b$ 的值分别是多少？',
+          input1Prefix: '$a =$',
+          input1Placeholder: '如 -1',
+          input2Prefix: '，$a^{2} + 2b =$',
+          input2Placeholder: '如 9',
+          input2Suffix: '',
+          expectedX: '-1',
+          expectedMin: '9',
+          allowOrderSwap: false,
+          correctFeedback: '$a = -1$，$a^{2} + 2b = 9$。',
+          correctDetail: '由 $a + 1 = 0，b - 4 = 0$ 得 $a = -1，b = 4$；代入得 $(-1)^{2} + 2 \\times 4 = 1 + 8 = 9$。',
+          wrongFeedback: '先由 $a + 1 = 0$ 解出 $a = -1$，由 $b - 4 = 0$ 解出 $b = 4$，再计算 $(-1)^{2} + 2 \\times 4$。',
+          specificWrongHints: [
+            {
+              checkType: 'secondVal',
+              val: '7',
+              hint: '注意 $a = -1$ 时，$a^{2} = (-1)^{2} = +1$ 而不是 $-1$，故 $1 + 8 = 9$。'
+            }
+          ]
+        }
+      }
+    },
+
+    // =========================================================================
+    // P09：利用整体代入法求代数式的值
+    // =========================================================================
+    P09: {
+      procedureId: 'P09',
+      title: '利用整体代入法求代数式的值',
+      exampleTitle: '已知 $x - 2y = 3$，求代数式 $12 - 2x + 4y$ 的值',
+      exampleFormula: '已知整体：$x - 2y = 3 \\implies 12 - 2x + 4y = ?$',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示系数倍数观察与提取负因数添括号变号法则）',
+      practiceSectionTitle: '整体代入法求代数式的值跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握提取公因数构造已知整体与整体替换',
+
+      steps: [
+        {
+          step: 1,
+          name: '锁定已知的“核心整体”数值',
+          tStart: 0.0,
+          tEnd: 5.8,
+          explanation: '从已知条件中提炼出字母组合整体 $x - 2y = 3$（无需单独求出 $x, y$ 各自的值）。'
+        },
+        {
+          step: 2,
+          name: '观察目标式与已知整体的系数倍数',
+          tStart: 5.8,
+          tEnd: 12.0,
+          explanation: '对比目标式中的含字母项 $-2x + 4y$ 与已知整体 $x - 2y$：系数 $-2$ 与 $1$、$+4$ 与 $-2$ 恰好成 $-2$ 倍关系。'
+        },
+        {
+          step: 3,
+          name: '提取公因数 -2 添括号构造整体',
+          tStart: 12.0,
+          tEnd: 18.8,
+          explanation: '对 $-2x + 4y$ 提取公因数 $-2$，注意括号内各项都要变号，变形为 $12 - 2(x - 2y)$。'
+        },
+        {
+          step: 4,
+          name: '将核心整体替换为常数 3',
+          tStart: 18.8,
+          tEnd: 24.5,
+          explanation: '把括号内的整体 $(x - 2y)$ 直接替换为已知数值 $3$，原式化为 $12 - 2 \\times 3$。'
+        },
+        {
+          step: 5,
+          name: '执行有理数运算得出最终结果',
+          tStart: 24.5,
+          tEnd: 30.0,
+          explanation: '先算乘法 $2 \\times 3 = 6$，再算减法 $12 - 6 = 6$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 锁定已知整体 $x - 2y = 3$' },
+        { time: 7.5, step: 2, label: '2.1 发现 $-2x + 4y$ 是 $(x - 2y)$ 的 $-2$ 倍' },
+        { time: 14.2, step: 3, label: '3.1 提取 $-2$ 添括号得 $12 - 2(x - 2y)$' },
+        { time: 20.5, step: 4, label: '4.1 将 $(x - 2y)$ 整体替换为 $3$' },
+        { time: 26.5, step: 5, label: '5.1 计算 $12 - 2 \\times 3 = 6$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p9_row_0',
+          stepBadge: '已知与目标',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p9_r0_known', math: '已知：$x - 2y = 3$；', appearAt: 0.0, dur: 0.01 },
+            { id: 'p9_r0_target', math: '求：$12 - 2x + 4y$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p9_row_1',
+          stepBadge: '第 1 & 2 步 · 对比系数',
+          appearAt: 6.2,
+          tokens: [
+            { id: 'p9_r1_ start', math: '原式 $= 12$', appearAt: 6.3, dur: 0.35 },
+            { id: 'p9_r1_vars', math: '$- 2x + 4y$', appearAt: 6.9, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p9_row_2',
+          stepBadge: '第 3 步 · 提取 -2 构造整体',
+          appearAt: 12.6,
+          tokens: [
+            { id: 'p9_r2_12', math: '$= 12$', appearAt: 12.7, dur: 0.30 },
+            { id: 'p9_r2_m2', math: '$- 2$', appearAt: 13.2, dur: 0.35 },
+            { id: 'p9_r2_grp', math: '$(x - 2y)$', appearAt: 13.8, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p9_row_3',
+          stepBadge: '第 4 步 · 整体代入数值',
+          appearAt: 19.2,
+          tokens: [
+            { id: 'p9_r3_12', math: '$= 12 - 2 \\times$', appearAt: 19.3, dur: 0.35 },
+            { id: 'p9_r3_val', math: '$3$', appearAt: 19.9, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p9_row_4',
+          stepBadge: '最终结论',
+          appearAt: 25.0,
+          isConclusion: true,
+          tokens: [
+            { id: 'p9_r4_conc', math: '$= 12 - 6 = 6$。$\\quad\\therefore 12 - 2x + 4y$ 的值为 $6$。', appearAt: 25.1, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p9_sp_1',
+          title: '草稿演算 · 提取负因数添括号法则',
+          showStart: 6.0,
+          showEnd: 18.6,
+          tokens: [
+            { id: 'p9_sp1_t1', math: '目标含字母项：$-2x + 4y$', appearAt: 6.6, dur: 0.40 },
+            { id: 'p9_sp1_t2', math: '提取 $-2$：$(-2x) \\div (-2) = x$，$(+4y) \\div (-2) = -2y$', appearAt: 12.8, dur: 0.45 },
+            { id: 'p9_sp1_t3', math: '$\\implies -2(x - 2y)$（注意括号内是 $-2y$ 而非 $+2y$）', appearAt: 14.5, dur: 0.45 }
+          ],
+          note: '检验方法：把 $-2(x - 2y)$ 重新去括号展开得 $-2x + 4y$，与原式一致'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p9_r0_known', tStart: 0.8, tEnd: 5.7, color: 'teal' },
+        { tokenId: 'p9_r1_vars', tStart: 6.9, tEnd: 12.2, color: 'amber' },
+        { tokenId: 'p9_r2_m2', tStart: 13.2, tEnd: 18.5, color: 'amber' },
+        { tokenId: 'p9_r2_grp', tStart: 13.8, tEnd: 18.5, color: 'teal' },
+        { tokenId: 'p9_r3_val', tStart: 19.9, tEnd: 24.4, color: 'teal' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p9_svg_s3',
+          type: 'under-brace',
+          startToken: 'p9_r1_vars',
+          endToken: 'p9_r1_vars',
+          label: '提取 $-2$ 得 $-2(x - 2y)$',
+          color: '#D97706',
+          tStart: 8.5,
+          tDrawEnd: 9.4,
+          tFadeStart: 11.8,
+          tEnd: 12.4
+        },
+        {
+          id: 'p9_svg_s4',
+          type: 'arrow',
+          fromToken: 'p9_r0_known',
+          toToken: 'p9_r3_val',
+          label: '整体替换 $x - 2y = 3$',
+          color: '#0F766E',
+          curveOffset: 34,
+          tStart: 19.0,
+          tDrawEnd: 19.8,
+          tFadeStart: 23.6,
+          tEnd: 24.2
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 5.8, text: '第一步锁定核心整体：已知条件给出 $x - 2y = 3$，只有一个方程含两个未知数，我们把 $(x - 2y)$ 看作一个整体。', focusToken: 'p9_r0_known' },
+        { tStart: 5.8, tEnd: 12.0, text: '第二步观察系数倍数：目标式中的 $-2x + 4y$ 与已知整体 $x - 2y$ 对比，系数恰好是已知整体的 $-2$ 倍。', focusToken: 'p9_r1_vars' },
+        { tStart: 12.0, tEnd: 18.8, text: '第三步提取公因数构造整体：对 $-2x + 4y$ 提取公因数 $-2$，注意 $+4y$ 除以 $-2$ 变为 $-2y$，得到 $12 - 2(x - 2y)$。', focusToken: 'p9_r2_grp' },
+        { tStart: 18.8, tEnd: 24.5, text: '第四步整体代入：把括号里的 $(x - 2y)$ 直接替换为常数 $3$，得到 $12 - 2 \\times 3$。', focusToken: 'p9_r3_val' },
+        { tStart: 24.5, tEnd: 30.0, text: '第五步计算结果：$12 - 6 = 6$。无需解出单个字母即可快速求值！', focusToken: 'p9_r4_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：提取公因数构造已知整体',
+          givenLabel: '已知条件：',
+          givenFormula: '$a^{2} + 2a = 1$',
+          extractedLabel: '目标代数式：',
+          extractedFormula: '$3a^{2} + 6a - 5$',
+          questionText: '将目标代数式变形构造出 $(a^{2} + 2a)$ 整体，正确的变形是？',
+          options: [
+            { key: 'A', text: 'A. $3(a^{2} + 2a) - 5$', isCorrect: true },
+            { key: 'B', text: 'B. $3(a^{2} + 6a) - 5$', isCorrect: false },
+            { key: 'C', text: 'C. $3(a^{2} + 2a - 5)$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！前两项提取公因数 3 即可构造已知整体：',
+            calcLines: [
+              '$3a^{2} + 6a - 5 = 3(a^{2} + 2a) - 5$',
+              '将 $a^{2} + 2a = 1$ 整体代入：$3 \\times 1 - 5 = -2$'
+            ],
+            summary: '提取公因数时只对含字母的目标项提取，常数项 $-5$ 留在括号外。'
+          },
+          wrongTitle: '提示：请检查前两项与已知整体的倍数关系',
+          wrongFeedback: '$3a^{2} + 6a$ 提取 $3$ 后括号内应为 $(a^{2} + 2a)$，且常数项 $-5$ 不在括号内，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：用整体代入法求值',
+          givenLabel: '已知条件：',
+          givenFormula: '$2m - n = 4$',
+          questionText: '将目标代数式 $10 - 6m + 3n$ 变形为 $10 - k(2m - n)$ 后，系数 $k$ 和最终求得的值分别是多少？',
+          input1Prefix: '提取系数 $k =$',
+          input1Placeholder: '如 3',
+          input2Prefix: '，代数式的值 $=$',
+          input2Placeholder: '如 -2',
+          input2Suffix: '',
+          expectedX: '3',
+          expectedMin: '-2',
+          allowOrderSwap: false,
+          correctFeedback: '变形为 $10 - 3(2m - n)$（$k = 3$），代入得 $10 - 3 \\times 4 = -2$。',
+          correctDetail: '因为 $-6m + 3n = -3(2m - n)$，所以 $k = 3$；将 $2m - n = 4$ 代入得 $10 - 3 \\times 4 = 10 - 12 = -2$。',
+          wrongFeedback: '观察 $-6m + 3n = -3(2m - n)$ 可得 $k = 3$，再计算 $10 - 3 \\times 4$。',
+          specificWrongHints: [
+            {
+              checkType: 'secondVal',
+              val: '2',
+              hint: '注意是 $10 - 12 = -2$（小减大为负数），请检查结果的负号。'
+            }
+          ]
+        }
+      }
+    },
+
+    // =========================================================================
+    // P11：识别反比例函数与由定义求参数
+    // =========================================================================
+    P11: {
+      procedureId: 'P11',
+      title: '识别反比例函数与由定义求参数',
+      exampleTitle: '已知函数 $y = (m - 2)x^{3 - m^{2}}$ 是 $y$ 关于 $x$ 的反比例函数，求参数 $m$ 的值',
+      exampleFormula: '$y = (m - 2)x^{3 - m^{2}} \\iff y = kx^{-1}\\ (k \\neq 0)$',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示反比例函数三种标准形式与“指数=-1 且 系数≠0”双重条件）',
+      practiceSectionTitle: '反比例函数定义与求参跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握三种标准形式辨析与含参双条件舍增根',
+
+      steps: [
+        {
+          step: 1,
+          name: '对照负指数标准形式 $y = kx^{-1}$',
+          tStart: 0.0,
+          tEnd: 6.0,
+          explanation: '将 $y = (m - 2)x^{3 - m^{2}}$ 对照反比例函数负整数指数幂标准形式 $y = kx^{-1}\\ (k \\neq 0)$，识别出比例系数为 $(m - 2)$，自变量 $x$ 的指数为 $(3 - m^{2})$。'
+        },
+        {
+          step: 2,
+          name: '列出指数等于 -1 与系数不为 0 双条件',
+          tStart: 6.0,
+          tEnd: 12.2,
+          explanation: '根据反比例函数定义，必须同时满足两个条件：① 自变量 $x$ 的次数等于 $-1$（即 $3 - m^{2} = -1$）；② 比例系数不等于 $0$（即 $m - 2 \\neq 0$）。'
+        },
+        {
+          step: 3,
+          name: '由指数方程解出 m 的候选值',
+          tStart: 12.2,
+          tEnd: 18.2,
+          explanation: '解方程 $3 - m^{2} = -1$，移项得 $m^{2} = 4$，开平方得 $m_{1} = 2$ 或 $m_{2} = -2$。'
+        },
+        {
+          step: 4,
+          name: '检验比例系数 k ≠ 0 排除增根',
+          tStart: 18.2,
+          tEnd: 24.5,
+          explanation: '由比例系数限制条件 $m - 2 \\neq 0$ 可知 $m \\neq 2$，因此必须将使系数为 $0$ 的 $m = 2$ 舍去！'
+        },
+        {
+          step: 5,
+          name: '确定参数最终值并验证解析式',
+          tStart: 24.5,
+          tEnd: 30.0,
+          explanation: '保留唯一定解 $m = -2$（此时函数为 $y = -4x^{-1} = -\\frac{4}{x}$，完全符合反比例函数定义）。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 对照负指数形式 $y = kx^{-1}$' },
+        { time: 7.5, step: 2, label: '2.1 建立 $3 - m^{2} = -1$ 且 $m - 2 \\neq 0$' },
+        { time: 14.0, step: 3, label: '3.1 解 $m^{2} = 4$ 得 $m = \\pm 2$' },
+        { time: 20.0, step: 4, label: '4.1 由 $m - 2 \\neq 0$ 舍去 $m = 2$' },
+        { time: 26.5, step: 5, label: '5.1 定解 $m = -2$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p11_row_0',
+          stepBadge: '已知函数',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p11_r0_y', math: '$y =$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p11_r0_coef', math: '$(m - 2)$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p11_r0_exp', math: '$x^{3 - m^{2}}$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p11_row_1',
+          stepBadge: '第 1 步 · 对照标准式',
+          appearAt: 1.5,
+          tokens: [
+            { id: 'p11_r1_std', math: '对照 $y = kx^{-1}\\ (k \\neq 0)$：', appearAt: 1.6, dur: 0.40 },
+            { id: 'p11_r1_part', math: '比例系数 $k = m - 2$，指数 $= 3 - m^{2}$', appearAt: 2.3, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p11_row_2',
+          stepBadge: '第 2 步 · 列双重条件',
+          appearAt: 6.4,
+          tokens: [
+            { id: 'p11_r2_c1', math: '① 指数条件：$3 - m^{2} = -1$；', appearAt: 6.5, dur: 0.45 },
+            { id: 'p11_r2_c2', math: '② 系数条件：$m - 2 \\neq 0$', appearAt: 8.5, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p11_row_3',
+          stepBadge: '第 3 步 · 解指数方程',
+          appearAt: 12.6,
+          tokens: [
+            { id: 'p11_r3_s1', math: '由 ① 得 $m^{2} = 4$', appearAt: 12.7, dur: 0.40 },
+            { id: 'p11_r3_s2', math: '$\\implies m = 2$ 或 $m = -2$', appearAt: 14.2, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p11_row_4',
+          stepBadge: '第 4 步 · 检验舍增根',
+          appearAt: 18.6,
+          tokens: [
+            { id: 'p11_r4_chk', math: '由 ② 得 $m \\neq 2$', appearAt: 18.7, dur: 0.40 },
+            { id: 'p11_r4_drop', math: '$\\implies$ 舍去 $m = 2$', appearAt: 20.0, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p11_row_5',
+          stepBadge: '最终结论',
+          appearAt: 25.0,
+          isConclusion: true,
+          tokens: [
+            { id: 'p11_r5_conc', math: '$\\therefore$ 参数 $m$ 的值为 $-2$（此时 $y = -\\frac{4}{x}$）。', appearAt: 25.1, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p11_sp_1',
+          title: '草稿提示 · 反比例函数的三种等价标准形式',
+          showStart: 0.8,
+          showEnd: 12.0,
+          tokens: [
+            { id: 'p11_sp1_t1', math: '① 分式形式：$y = \\frac{k}{x}\\ (k \\neq 0)$', appearAt: 1.2, dur: 0.40 },
+            { id: 'p11_sp1_t2', math: '② 乘积形式：$xy = k\\ (k \\neq 0)$', appearAt: 2.0, dur: 0.40 },
+            { id: 'p11_sp1_t3', math: '③ 负指数形式：$y = kx^{-1}\\ (k \\neq 0)$', appearAt: 2.8, dur: 0.40 }
+          ],
+          note: '无论哪种形式，比例系数 $k \\neq 0$ 都是必不可少的隐含前提'
+        },
+        {
+          id: 'p11_sp_2',
+          title: '草稿警示 · 为什么必须舍去 m = 2？',
+          showStart: 18.2,
+          showEnd: 29.8,
+          tokens: [
+            { id: 'p11_sp2_t1', math: '若 $m = 2$，则系数 $m - 2 = 0$', appearAt: 18.8, dur: 0.40 },
+            { id: 'p11_sp2_t2', math: '此时 $y = 0 \\cdot x^{-1} = 0$（变成了常函数，不再是反比例函数）', appearAt: 20.2, dur: 0.45 }
+          ],
+          note: '含参反比例函数求值题 90% 的易错点都是忘记检验系数 $k \\neq 0$'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p11_r0_coef', tStart: 1.2, tEnd: 5.8, color: 'amber' },
+        { tokenId: 'p11_r0_exp', tStart: 1.2, tEnd: 5.8, color: 'teal' },
+        { tokenId: 'p11_r2_c1', tStart: 6.5, tEnd: 12.0, color: 'teal' },
+        { tokenId: 'p11_r2_c2', tStart: 8.5, tEnd: 12.0, color: 'amber' },
+        { tokenId: 'p11_r3_s2', tStart: 14.2, tEnd: 18.0, color: 'teal' },
+        { tokenId: 'p11_r4_drop', tStart: 20.0, tEnd: 24.4, color: 'rose' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p11_svg_s2',
+          type: 'arrow',
+          fromToken: 'p11_r0_exp',
+          toToken: 'p11_r2_c1',
+          label: '令 $x$ 的次数等于 $-1$',
+          color: '#0F766E',
+          curveOffset: 28,
+          tStart: 6.2,
+          tDrawEnd: 7.0,
+          tFadeStart: 11.4,
+          tEnd: 12.0
+        },
+        {
+          id: 'p11_svg_s4',
+          type: 'arrow',
+          fromToken: 'p11_r2_c2',
+          toToken: 'p11_r4_drop',
+          label: '系数不为 $0$ 排除 $m=2$',
+          color: '#D97706',
+          curveOffset: 32,
+          tStart: 18.8,
+          tDrawEnd: 19.8,
+          tFadeStart: 23.6,
+          tEnd: 24.2
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 6.0, text: '第一步对照标准形式：将 $y = (m - 2)x^{3 - m^{2}}$ 对照负指数形式 $y = kx^{-1}$，比例系数为 $(m - 2)$，$x$ 的指数为 $3 - m^{2}$。', focusToken: 'p11_r1_part' },
+        { tStart: 6.0, tEnd: 12.2, text: '第二步列出双重条件：反比例函数要求 $x$ 的指数等于 $-1$，同时比例系数 $m - 2$ 绝不能等于 $0$！', focusToken: 'p11_r2_c2' },
+        { tStart: 12.2, tEnd: 18.2, text: '第三步解指数方程：由 $3 - m^{2} = -1$ 得 $m^{2} = 4$，开平方解得 $m = 2$ 或 $m = -2$。', focusToken: 'p11_r3_s2' },
+        { tStart: 18.2, tEnd: 24.5, text: '第四步检验比例系数：由 $m - 2 \\neq 0$ 知 $m \\neq 2$，必须把使系数为 $0$ 的增根 $m = 2$ 舍去。', focusToken: 'p11_r4_drop' },
+        { tStart: 24.5, tEnd: 30.0, text: '第五步锁定最终答案：参数 $m$ 的值为 $-2$。', focusToken: 'p11_r5_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：识别反比例函数与提取比例系数 k',
+          givenLabel: '给出四个函数关系式：',
+          givenFormula: '① $y = -\\frac{5}{3x}$；② $y = \\frac{2}{x + 1}$；③ $y = \\frac{8}{x} - 1$；④ $y = \\frac{x}{3}$',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '其中属于 $y$ 关于 $x$ 的反比例函数的是哪一个？其比例系数 $k$ 是多少？',
+          options: [
+            { key: 'A', text: 'A. ① $y = -\\frac{5}{3x}$，比例系数 $k = -\\frac{5}{3}$', isCorrect: true },
+            { key: 'B', text: 'B. ① $y = -\\frac{5}{3x}$，比例系数 $k = -5$', isCorrect: false },
+            { key: 'C', text: 'C. ② 与 ③ 都是反比例函数', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！注意分母含常数倍数时的比例系数提取：',
+            calcLines: [
+              '$y = -\\frac{5}{3x} = \\frac{-\\frac{5}{3}}{x} \\implies$ 是反比例函数，且 $k = -\\frac{5}{3}$',
+              '② 分母是 $x + 1$，③ 外层有 $-1$，④ 是正比例函数（$k = \\frac{1}{3}$）'
+            ],
+            summary: '形如 $y = \\frac{a}{bx}$ 的反比例函数，比例系数是 $\\frac{a}{b}$ 而不是 $a$。'
+          },
+          wrongTitle: '提示：请将解析式变形为 y = k/x 的标准形式',
+          wrongFeedback: '在 $y = -\\frac{5}{3x}$ 中，分母的 $3$ 属于系数的一部分，即 $y = \\frac{-5/3}{x}$，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：利用反比例函数定义求参数',
+          givenLabel: '已知条件：',
+          givenFormula: '函数 $y = (m + 3)x^{m^{2} - 10}$ 是反比例函数',
+          questionText: '令指数 $m^{2} - 10 = -1$ 时，$m^{2}$ 等于多少？排除使系数为 $0$ 的值后，$m$ 最终等于多少？',
+          input1Prefix: '$m^{2} =$',
+          input1Placeholder: '如 9',
+          input2Prefix: '，最终定解 $m =$',
+          input2Placeholder: '如 3',
+          input2Suffix: '',
+          expectedX: '9',
+          expectedMin: '3',
+          allowOrderSwap: false,
+          correctFeedback: '$m^{2} = 9$，排除 $m = -3$ 后最终定解 $m = 3$。',
+          correctDetail: '由 $m^{2} - 10 = -1$ 得 $m^{2} = 9 \\implies m = \\pm 3$；又因比例系数 $m + 3 \\neq 0 \\implies m \\neq -3$，故 $m = 3$。',
+          wrongFeedback: '先由 $m^{2} - 10 = -1$ 算出 $m^{2} = 9$（得 $m = \\pm 3$），再由 $m + 3 \\neq 0$ 舍去 $-3$。',
+          specificWrongHints: [
+            {
+              checkType: 'secondVal',
+              val: '-3',
+              hint: '若 $m = -3$，则比例系数 $m + 3 = 0$，函数不再是反比例函数，必须舍去 $-3$ 取 $m = 3$。'
+            }
+          ]
+        }
+      }
+    },
+
+    // =========================================================================
+    // P12：用待定系数法求反比例函数解析式
+    // =========================================================================
+    P12: {
+      procedureId: 'P12',
+      title: '用待定系数法求反比例函数解析式',
+      exampleTitle: '已知反比例函数图象经过点 $A(-2, 5)$，求其解析式，并求图象上点 $P(4, n)$ 的纵坐标 $n$',
+      exampleFormula: '过点 $A(-2, 5) \\implies y = \\frac{k}{x} \\implies P(4, n)$',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示双曲线上任意一点横纵坐标乘积恒等于 k 的核心性质）',
+      practiceSectionTitle: '待定系数法求反比例函数解析式跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握 k = xy 快速求解析式与判点求坐标',
+
+      steps: [
+        {
+          step: 1,
+          name: '设反比例函数标准解析式',
+          tStart: 0.0,
+          tEnd: 5.8,
+          explanation: '设反比例函数的解析式为 $y = \\frac{k}{x}\\ (k \\neq 0)$，图象上任意一点的坐标都满足乘积关系 $x \\cdot y = k$。'
+        },
+        {
+          step: 2,
+          name: '代入已知点坐标求出比例系数 k',
+          tStart: 5.8,
+          tEnd: 12.0,
+          explanation: '将双曲线上已知点 $A(-2, 5)$ 的横、纵坐标相乘，算得 $k = (-2) \\times 5 = -10$（注意负号）。'
+        },
+        {
+          step: 3,
+          name: '回代 k 写出完整函数解析式',
+          tStart: 12.0,
+          tEnd: 17.8,
+          explanation: '将 $k = -10$ 代回所设解析式，得到反比例函数解析式为 $y = -\\frac{10}{x}$。'
+        },
+        {
+          step: 4,
+          name: '将待求点 P(4, n) 代入解析式',
+          tStart: 17.8,
+          tEnd: 23.8,
+          explanation: '因为点 $P(4, n)$ 也在这个反比例函数图象上，将 $x = 4, y = n$ 代入得 $n = -\\frac{10}{4}$（或 $4n = -10$）。'
+        },
+        {
+          step: 5,
+          name: '约分化简求出未知坐标 n',
+          tStart: 23.8,
+          tEnd: 30.0,
+          explanation: '约分化简得 $n = -\\frac{5}{2}$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 设解析式 $y = \\frac{k}{x}\\ (k \\neq 0)$' },
+        { time: 7.5, step: 2, label: '2.1 代入 $A(-2, 5)$ 算得 $k = (-2) \\times 5 = -10$' },
+        { time: 14.0, step: 3, label: '3.1 写出解析式 $y = -\\frac{10}{x}$' },
+        { time: 19.5, step: 4, label: '4.1 代入 $P(4, n)$ 得 $n = -\\frac{10}{4}$' },
+        { time: 26.0, step: 5, label: '5.1 化简得出 $n = -\\frac{5}{2}$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p12_row_0',
+          stepBadge: '已知条件',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p12_r0_a', math: '双曲线过点 $A(-2, 5)$，', appearAt: 0.0, dur: 0.01 },
+            { id: 'p12_r0_p', math: '求解析式及图象上点 $P(4, n)$ 的纵坐标 $n$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p12_row_1',
+          stepBadge: '第 1 步 · 设解析式',
+          appearAt: 1.5,
+          tokens: [
+            { id: 'p12_r1_set', math: '设反比例函数解析式为 $y = \\frac{k}{x}\\ (k \\neq 0)$，即 $xy = k$', appearAt: 1.6, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p12_row_2',
+          stepBadge: '第 2 步 · 坐标相乘求 k',
+          appearAt: 6.2,
+          tokens: [
+            { id: 'p12_r2_sub', math: '把 $A(-2, 5)$ 代入：', appearAt: 6.3, dur: 0.35 },
+            { id: 'p12_r2_k', math: '$k = (-2) \\times 5 = -10$', appearAt: 7.1, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p12_row_3',
+          stepBadge: '第 3 步 · 写出解析式',
+          appearAt: 12.4,
+          tokens: [
+            { id: 'p12_r3_func', math: '$\\therefore$ 反比例函数解析式为 $y = -\\frac{10}{x}$', appearAt: 12.5, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p12_row_4',
+          stepBadge: '第 4 步 · 代入求坐标',
+          appearAt: 18.2,
+          tokens: [
+            { id: 'p12_r4_sub', math: '把 $P(4, n)$ 代入 $y = -\\frac{10}{x}$：', appearAt: 18.3, dur: 0.35 },
+            { id: 'p12_r4_eq', math: '$n = -\\frac{10}{4} = -\\frac{5}{2}$', appearAt: 19.2, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p12_row_5',
+          stepBadge: '最终结论',
+          appearAt: 24.4,
+          isConclusion: true,
+          tokens: [
+            { id: 'p12_r5_conc', math: '$\\therefore$ 解析式为 $y = -\\frac{10}{x}$，点 $P$ 的纵坐标 $n = -\\frac{5}{2}$。', appearAt: 24.5, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p12_sp_1',
+          title: '草稿秒杀技巧 · 横纵坐标之积恒等于 k',
+          showStart: 5.8,
+          showEnd: 29.8,
+          tokens: [
+            { id: 'p12_sp1_t1', math: '同一双曲线上任意两点 $(x_{1}, y_{1}), (x_{2}, y_{2})$：', appearAt: 6.4, dur: 0.40 },
+            { id: 'p12_sp1_t2', math: '恒有 $x_{1}y_{1} = x_{2}y_{2} = k$', appearAt: 7.4, dur: 0.45 },
+            { id: 'p12_sp1_t3', math: '本题：$(-2) \\times 5 = 4 \\times n = -10 \\implies n = -\\frac{5}{2}$', appearAt: 18.6, dur: 0.45 }
+          ],
+          note: '判断一个点是否在反比例函数图象上，只需看它的横、纵坐标乘积是否等于 $k$'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p12_r0_a', tStart: 5.8, tEnd: 11.8, color: 'amber' },
+        { tokenId: 'p12_r2_k', tStart: 7.1, tEnd: 11.8, color: 'teal' },
+        { tokenId: 'p12_r3_func', tStart: 12.5, tEnd: 17.6, color: 'teal' },
+        { tokenId: 'p12_r4_eq', tStart: 19.2, tEnd: 24.2, color: 'amber' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p12_svg_s2',
+          type: 'arrow',
+          fromToken: 'p12_r0_a',
+          toToken: 'p12_r2_k',
+          label: '横纵坐标相乘 $k = x_{0}y_{0}$',
+          color: '#0F766E',
+          curveOffset: -26,
+          tStart: 6.4,
+          tDrawEnd: 7.2,
+          tFadeStart: 11.2,
+          tEnd: 11.8
+        },
+        {
+          id: 'p12_svg_s4',
+          type: 'arrow',
+          fromToken: 'p12_r3_func',
+          toToken: 'p12_r4_eq',
+          label: '代入 $x = 4$',
+          color: '#D97706',
+          curveOffset: 28,
+          tStart: 18.4,
+          tDrawEnd: 19.2,
+          tFadeStart: 23.2,
+          tEnd: 23.8
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 5.8, text: '第一步设出标准解析式：设反比例函数为 $y = \\frac{k}{x}\\ (k \\neq 0)$，图象上点的横纵坐标乘积满足 $xy = k$。', focusToken: 'p12_r1_set' },
+        { tStart: 5.8, tEnd: 12.0, text: '第二步求比例系数 $k$：把已知点 $A(-2, 5)$ 的横纵坐标直接相乘，得 $k = (-2) \\times 5 = -10$。', focusToken: 'p12_r2_k' },
+        { tStart: 12.0, tEnd: 17.8, text: '第三步写出解析式：将 $k = -10$ 回代，得到反比例函数解析式为 $y = -\\frac{10}{x}$。', focusToken: 'p12_r3_func' },
+        { tStart: 17.8, tEnd: 23.8, text: '第四步代入待求点：把点 $P(4, n)$ 的横坐标 $x = 4$ 代入解析式，得 $n = -\\frac{10}{4}$。', focusToken: 'p12_r4_eq' },
+        { tStart: 23.8, tEnd: 30.0, text: '第五步化简结果：约分得 $n = -\\frac{5}{2}$。', focusToken: 'p12_r5_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：检验哪个点在反比例函数图象上',
+          givenLabel: '已知反比例函数：',
+          givenFormula: '$y = -\\frac{6}{x}$（即图象上点的坐标满足 $xy = -6$）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '下列四个点中，哪一个点在该反比例函数的图象上？',
+          options: [
+            { key: 'A', text: 'A. $(2, -3)$', isCorrect: true },
+            { key: 'B', text: 'B. $(1, 6)$', isCorrect: false },
+            { key: 'C', text: 'C. $(-2, -3)$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！只需检验横、纵坐标之积是否等于 -6：',
+            calcLines: [
+              'A. $2 \\times (-3) = -6 = k \\implies$ 在图象上 ✓',
+              'B. $1 \\times 6 = 6 \\neq -6$；C. $(-2) \\times (-3) = 6 \\neq -6$'
+            ],
+            summary: '利用 $xy = k$ 口算横纵坐标乘积是判点最快且最稳的方法。'
+          },
+          wrongTitle: '提示：请计算各点横坐标与纵坐标的乘积',
+          wrongFeedback: '只有横、纵坐标相乘等于 $-6$ 的点才在 $y = -\\frac{6}{x}$ 的图象上，注意正负号，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：由已知点求 k 与未知点坐标',
+          givenLabel: '已知条件：',
+          givenFormula: '反比例函数 $y = \\frac{k}{x}$ 的图象经过点 $(3, -4)$，且经过点 $(-2, m)$',
+          questionText: '比例系数 $k$ 的值是多少？点 $(-2, m)$ 中的纵坐标 $m$ 是多少？',
+          input1Prefix: '$k =$',
+          input1Placeholder: '如 -12',
+          input2Prefix: '，$m =$',
+          input2Placeholder: '如 6',
+          input2Suffix: '',
+          expectedX: '-12',
+          expectedMin: '6',
+          allowOrderSwap: false,
+          correctFeedback: '$k = -12$，$m = 6$。',
+          correctDetail: '由 $k = 3 \\times (-4) = -12$；又因 $(-2) \\times m = -12$，解得 $m = 6$。',
+          wrongFeedback: '先算 $k = 3 \\times (-4)$，再由 $(-2) \\times m = k$ 解出 $m$。',
+          specificWrongHints: [
+            {
+              checkType: 'secondVal',
+              val: '-6',
+              hint: '注意 $(-12) \\div (-2)$ 同号相除得正数，所以 $m = 6$ 而不是 $-6$。'
+            }
+          ]
+        }
+      }
+    },
+
+    // =========================================================================
+    // P13：由比例系数 k 判断反比例函数象限与增减性
+    // =========================================================================
+    P13: {
+      procedureId: 'P13',
+      title: '由比例系数 $k$ 判断反比例函数象限与增减性',
+      exampleTitle: '已知反比例函数 $y = \\frac{4 - k}{x}$ 的图象位于第二、四象限，求 $k$ 的取值范围及各象限内的增减性',
+      exampleFormula: '$y = \\frac{4 - k}{x}$ 位于二、四象限 $\\iff 4 - k \\lt 0$',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（配合上方双曲线象限动态图，展示 k 的正负与象限、单调性的充要对应）',
+      practiceSectionTitle: '反比例函数象限与增减性判定跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握比例系数正负与象限、各象限内单调性的双向互推',
+
+      geometryDiagram: {
+        title: '动态函数图象 · 双曲线象限与增减性',
+        caption: '比例系数 < 0 时双曲线位于第二、四象限，在每个象限内 y 随 x 增大而增大（向右上方上升）',
+        svgHtml: `
+          <svg viewBox="0 0 260 175" class="w-full max-w-[260px] h-auto select-none" xmlns="http://www.w3.org/2000/svg">
+            <!-- 坐标轴 -->
+            <line x1="20" y1="88" x2="240" y2="88" stroke="#64748B" stroke-width="1.5" />
+            <line x1="130" y1="12" x2="130" y2="164" stroke="#64748B" stroke-width="1.5" />
+            <polygon points="240,88 233,84 233,92" fill="#64748B" />
+            <polygon points="130,12 126,19 134,19" fill="#64748B" />
+            <text x="234" y="102" fill="#475569" font-size="11" font-weight="700">x</text>
+            <text x="137" y="20" fill="#475569" font-size="11" font-weight="700">y</text>
+            <text x="118" y="101" fill="#64748B" font-size="10">O</text>
+
+            <!-- 象限标签 -->
+            <text x="185" y="32" fill="#94A3B8" font-size="10" font-weight="600">第一象限</text>
+            <text x="42" y="32" fill="#0F766E" font-size="10" font-weight="700">第二象限</text>
+            <text x="42" y="156" fill="#94A3B8" font-size="10" font-weight="600">第三象限</text>
+            <text x="185" y="156" fill="#0F766E" font-size="10" font-weight="700">第四象限</text>
+
+            <!-- 第二象限分支 (x < 0, y > 0, 随 x 增大而增大) -->
+            <path class="proc-geo-anim" data-appear-at="6.2" data-dur="0.8" data-dash-len="150"
+                  d="M 35 76 Q 95 72 118 18" fill="none" stroke="#0F766E" stroke-width="2.8" stroke-linecap="round"
+                  stroke-dasharray="150" stroke-dashoffset="150" style="opacity:0;" />
+            <!-- 第四象限分支 (x > 0, y < 0, 随 x 增大而增大) -->
+            <path class="proc-geo-anim" data-appear-at="6.8" data-dur="0.8" data-dash-len="150"
+                  d="M 142 158 Q 165 104 225 100" fill="none" stroke="#0F766E" stroke-width="2.8" stroke-linecap="round"
+                  stroke-dasharray="150" stroke-dashoffset="150" style="opacity:0;" />
+
+            <!-- 单调递增趋势指示箭头 -->
+            <g class="proc-geo-anim" data-appear-at="13.0" data-dur="0.5" style="opacity:0;">
+              <text x="64" y="54" fill="#D97706" font-size="10" font-weight="700">y随x增大而增大 ↗</text>
+              <text x="156" y="132" fill="#D97706" font-size="10" font-weight="700">y随x增大而增大 ↗</text>
+            </g>
+          </svg>
+        `
+      },
+
+      steps: [
+        {
+          step: 1,
+          name: '提取分子上的含参比例系数',
+          tStart: 0.0,
+          tEnd: 5.8,
+          explanation: '将函数 $y = \\frac{4 - k}{x}$ 对照标准形式 $y = \\frac{A}{x}$，完整提取分子上的比例系数整体 $A = 4 - k$。'
+        },
+        {
+          step: 2,
+          name: '由所在象限建立比例系数不等式',
+          tStart: 5.8,
+          tEnd: 12.2,
+          explanation: '因为双曲线位于第二、第四象限，根据符号法则可知比例系数必小于 $0$，列出不等式 $4 - k \\lt 0$。'
+        },
+        {
+          step: 3,
+          name: '判定各象限内的增减性',
+          tStart: 12.2,
+          tEnd: 18.2,
+          explanation: '当比例系数小于 $0$ 时，在每一个象限内（第二象限或第四象限内），函数值 $y$ 随自变量 $x$ 的增大而增大。'
+        },
+        {
+          step: 4,
+          name: '解一元一次不等式求参数范围',
+          tStart: 18.2,
+          tEnd: 24.5,
+          explanation: '解不等式 $4 - k \\lt 0$：移项得 $-k \\lt -4$，两边同除以 $-1$（注意乘除负数不等号方向改变），得 $k \\gt 4$。'
+        },
+        {
+          step: 5,
+          name: '汇总参数范围与单调性结论',
+          tStart: 24.5,
+          tEnd: 30.0,
+          explanation: '得出最终结论：参数 $k$ 的取值范围为 $k \\gt 4$，且在每个象限内 $y$ 随 $x$ 的增大而增大。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 提取分子比例系数 $4 - k$' },
+        { time: 7.5, step: 2, label: '2.1 由二、四象限列不等式 $4 - k \\lt 0$' },
+        { time: 14.0, step: 3, label: '3.1 判定每象限内 $y$ 随 $x$ 增大而增大' },
+        { time: 20.0, step: 4, label: '4.1 移项变号解得 $k \\gt 4$' },
+        { time: 26.5, step: 5, label: '5.1 汇总结论 $k \\gt 4$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p13_row_0',
+          stepBadge: '已知条件',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p13_r0_func', math: '反比例函数 $y = \\frac{4 - k}{x}$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p13_r0_quad', math: '的图象位于第二、四象限', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p13_row_1',
+          stepBadge: '第 1 步 · 提取比例系数',
+          appearAt: 1.5,
+          tokens: [
+            { id: 'p13_r1_ext', math: '对照 $y = \\frac{A}{x}$：分子上的比例系数为 $A = 4 - k$', appearAt: 1.6, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p13_row_2',
+          stepBadge: '第 2 步 · 象限对应符号',
+          appearAt: 6.2,
+          tokens: [
+            { id: 'p13_r2_quad', math: '$\\because$ 图象位于第二、四象限', appearAt: 6.3, dur: 0.40 },
+            { id: 'p13_r2_ineq', math: '$\\implies 4 - k \\lt 0$', appearAt: 7.4, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p13_row_3',
+          stepBadge: '第 3 步 · 判定增减性',
+          appearAt: 12.6,
+          tokens: [
+            { id: 'p13_r3_mono', math: '且在每一个象限内，$y$ 随 $x$ 的增大而增大', appearAt: 12.7, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p13_row_4',
+          stepBadge: '第 4 步 · 解不等式求参',
+          appearAt: 18.6,
+          tokens: [
+            { id: 'p13_r4_s1', math: '由 $4 - k \\lt 0 \\implies -k \\lt -4$', appearAt: 18.7, dur: 0.40 },
+            { id: 'p13_r4_s2', math: '$\\implies k \\gt 4$（除以 $-1$ 不等号反向）', appearAt: 20.2, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p13_row_5',
+          stepBadge: '最终结论',
+          appearAt: 25.0,
+          isConclusion: true,
+          tokens: [
+            { id: 'p13_r5_conc', math: '$\\therefore k \\gt 4$，且在每个象限内 $y$ 随 $x$ 的增大而增大。', appearAt: 25.1, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p13_sp_1',
+          title: '核心法则 · 比例系数正负 ⇔ 象限与单调性',
+          showStart: 5.8,
+          showEnd: 29.8,
+          tokens: [
+            { id: 'p13_sp1_t1', math: '当系数 $\\gt 0 \\iff$ 一、三象限，每象限内 $y$ 随 $x$ 增大而减小', appearAt: 6.4, dur: 0.45 },
+            { id: 'p13_sp1_t2', math: '当系数 $\\lt 0 \\iff$ 二、四象限，每象限内 $y$ 随 $x$ 增大而增大', appearAt: 7.8, dur: 0.45 }
+          ],
+          note: '必须强调“在每一个象限内”，不能说在整个定义域上单调递增或递减'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p13_r1_ext', tStart: 1.6, tEnd: 5.8, color: 'teal' },
+        { tokenId: 'p13_r2_ineq', tStart: 7.4, tEnd: 12.0, color: 'amber' },
+        { tokenId: 'p13_r3_mono', tStart: 12.7, tEnd: 18.0, color: 'teal' },
+        { tokenId: 'p13_r4_s2', tStart: 20.2, tEnd: 24.4, color: 'rose' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p13_svg_s2',
+          type: 'arrow',
+          fromToken: 'p13_r0_quad',
+          toToken: 'p13_r2_ineq',
+          label: '二、四象限 $\\implies$ 系数 $\\lt 0$',
+          color: '#0F766E',
+          curveOffset: 28,
+          tStart: 6.6,
+          tDrawEnd: 7.4,
+          tFadeStart: 11.4,
+          tEnd: 12.0
+        },
+        {
+          id: 'p13_svg_s4',
+          type: 'arrow',
+          fromToken: 'p13_r4_s1',
+          toToken: 'p13_r4_s2',
+          label: '同除以 $-1$ 变号',
+          color: '#D97706',
+          curveOffset: -26,
+          tStart: 19.3,
+          tDrawEnd: 20.1,
+          tFadeStart: 23.6,
+          tEnd: 24.2
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 5.8, text: '第一步提取比例系数：在 $y = \\frac{4 - k}{x}$ 中，分子上的含参式 $(4 - k)$ 就是比例系数整体。', focusToken: 'p13_r1_ext' },
+        { tStart: 5.8, tEnd: 12.2, text: '第二步由象限列不等式：已知双曲线位于第二、第四象限，说明比例系数小于 $0$，即 $4 - k \\lt 0$。', focusToken: 'p13_r2_ineq' },
+        { tStart: 12.2, tEnd: 18.2, text: '第三步判定单调性：观察右侧动态图象，在第二、第四象限的每一支上，曲线都向右上方上升，即 $y$ 随 $x$ 的增大而增大。', focusToken: 'p13_r3_mono' },
+        { tStart: 18.2, tEnd: 24.5, text: '第四步解不等式：由 $4 - k \\lt 0$ 移项得 $-k \\lt -4$，两边同除以 $-1$ 时不等号反向，解得 $k \\gt 4$。', focusToken: 'p13_r4_s2' },
+        { tStart: 24.5, tEnd: 30.0, text: '第五步得出结论：$k \\gt 4$，且在每个象限内 $y$ 随 $x$ 的增大而增大。', focusToken: 'p13_r5_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：含偶次方比例系数的象限与增减性判定',
+          givenLabel: '已知反比例函数：',
+          givenFormula: '$y = \\frac{m^{2} + 1}{x}$（其中 $m$ 为任意实数）',
+          extractedLabel: '分子非负性分析：',
+          extractedFormula: '因为 $m^{2} \\ge 0$，所以比例系数 $m^{2} + 1 \\ge 1 \\gt 0$',
+          questionText: '关于该函数图象的性质，下列说法正确的是？',
+          options: [
+            { key: 'A', text: 'A. 位于第一、三象限，且在每个象限内 $y$ 随 $x$ 的增大而减小。', isCorrect: true },
+            { key: 'B', text: 'B. 位于第一、三象限，且在整个定义域上 $y$ 随 $x$ 的增大而减小。', isCorrect: false },
+            { key: 'C', text: 'C. 位于第二、四象限，且在每个象限内 $y$ 随 $x$ 的增大而增大。', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！比例系数恒正，且单调性必须限定在“每个象限内”：',
+            calcLines: [
+              '$m^{2} + 1 \\gt 0 \\implies$ 图象必在第一、第三象限',
+              '在每一个象限内，$y$ 随 $x$ 的增大而减小'
+            ],
+            summary: '反比例函数的两支在原点处断开，绝不能遗漏“在每一个象限内”这一前提。'
+          },
+          wrongTitle: '提示：请留意比例系数正负与“在每个象限内”的前提',
+          wrongFeedback: '$m^{2} + 1 \\gt 0$ 对应第一、三象限，且必须在“每一个象限内”单调递减（跨象限不满足递减），请再试一次。'
+        },
+        practice2: {
+          title: '练习二：由增减性逆向求参数范围',
+          givenLabel: '已知条件：',
+          givenFormula: '反比例函数 $y = \\frac{2m - 6}{x}$ 在每一个象限内，$y$ 随 $x$ 的增大而减小',
+          questionText: '由此可知 $2m - 6 \\gt 0$，解得 $m \\gt a$。若从 $\\{1, 2, 3, 5\\}$ 中选一个符合条件的 $m$，则临界值 $a$ 与所选的 $m$ 分别是多少？',
+          input1Prefix: '临界值 $a =$',
+          input1Placeholder: '如 3',
+          input2Prefix: '，符合条件的 $m =$',
+          input2Placeholder: '如 5',
+          input2Suffix: '',
+          expectedX: '3',
+          expectedMin: '5',
+          allowOrderSwap: false,
+          correctFeedback: '由 $2m - 6 \\gt 0$ 得 $m \\gt 3$（$a = 3$），在候选集中只有 $m = 5$ 符合条件。',
+          correctDetail: '在每个象限内 $y$ 随 $x$ 增大而减小 $\\implies 2m - 6 \\gt 0 \\implies 2m \\gt 6 \\implies m \\gt 3$，故选 $m = 5$。',
+          wrongFeedback: '解不等式 $2m - 6 \\gt 0$ 得 $m \\gt 3$，因此在 $\\{1, 2, 3, 5\\}$ 中只有大于 $3$ 的数符合要求。',
+          specificWrongHints: [
+            {
+              checkType: 'secondVal',
+              val: '3',
+              hint: '注意当 $m = 3$ 时，$2m - 6 = 0$，必须严格大于 $3$，所以只能选 $5$。'
+            }
+          ]
+        }
+      }
+    },
+
+    // =========================================================================
+    // P14：利用反比例函数增减性与象限分布比较函数值大小
+    // =========================================================================
+    P14: {
+      procedureId: 'P14',
+      title: '利用反比例函数增减性与象限分布比较函数值大小',
+      exampleTitle: '已知点 $A(-10, y_{1})$、$B(1, y_{2})$、$C(5, y_{3})$ 都在反比例函数 $y = -\\frac{3}{x}$ 的图象上，比较 $y_{1}, y_{2}, y_{3}$ 的大小',
+      exampleFormula: '$y = -\\frac{3}{x}：A(-10, y_{1})，B(1, y_{2})，C(5, y_{3})$',
+      totalDuration: 31.0,
+      scratchpadIdleHint: '旁白草稿演算区（配合上方双曲线三点分布图，展示“先跨象限判正负、再同象限比单调”法则）',
+      practiceSectionTitle: '反比例函数值大小比较跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握跨象限比正负与同象限用单调性（或代入法）排序',
+
+      geometryDiagram: {
+        title: '动态函数图象 · 双曲线三点分布图',
+        caption: '点 A 在第二象限（y₁ > 0），点 B、C 同在第四象限（y₂ < y₃ < 0）',
+        svgHtml: `
+          <svg viewBox="0 0 260 175" class="w-full max-w-[260px] h-auto select-none" xmlns="http://www.w3.org/2000/svg">
+            <!-- 坐标轴 -->
+            <line x1="20" y1="88" x2="240" y2="88" stroke="#64748B" stroke-width="1.5" />
+            <line x1="130" y1="12" x2="130" y2="164" stroke="#64748B" stroke-width="1.5" />
+            <text x="234" y="102" fill="#475569" font-size="11" font-weight="700">x</text>
+            <text x="137" y="20" fill="#475569" font-size="11" font-weight="700">y</text>
+            <text x="118" y="101" fill="#64748B" font-size="10">O</text>
+
+            <!-- 双曲线 y = -3/x (二、四象限) -->
+            <path d="M 30 78 Q 95 72 118 18" fill="none" stroke="#94A3B8" stroke-width="2" />
+            <path d="M 142 158 Q 165 104 225 98" fill="none" stroke="#94A3B8" stroke-width="2" />
+
+            <!-- Step 2：点 A(-10, y1) 在第二象限 (y1 > 0) -->
+            <g class="proc-geo-anim" data-appear-at="6.5" data-dur="0.5" style="opacity:0;">
+              <circle cx="48" cy="74" r="4" fill="#0F766E" />
+              <line x1="48" y1="74" x2="48" y2="88" stroke="#0F766E" stroke-width="1.2" stroke-dasharray="3 2" />
+              <text x="28" y="65" fill="#0F766E" font-size="10" font-weight="700">A(-10, y₁&gt;0)</text>
+            </g>
+
+            <!-- Step 3：点 B(1, y2) 与 C(5, y3) 在第四象限 (y2 < y3 < 0) -->
+            <g class="proc-geo-anim" data-appear-at="13.0" data-dur="0.5" style="opacity:0;">
+              <circle cx="148" cy="145" r="4" fill="#BE123C" />
+              <line x1="148" y1="88" x2="148" y2="145" stroke="#BE123C" stroke-width="1.2" stroke-dasharray="3 2" />
+              <text x="154" y="152" fill="#BE123C" font-size="10" font-weight="700">B(1, y₂)</text>
+
+              <circle cx="202" cy="103" r="4" fill="#D97706" />
+              <line x1="202" y1="88" x2="202" y2="103" stroke="#D97706" stroke-width="1.2" stroke-dasharray="3 2" />
+              <text x="186" y="120" fill="#B45309" font-size="10" font-weight="700">C(5, y₃)</text>
+            </g>
+          </svg>
+        `
+      },
+
+      steps: [
+        {
+          step: 1,
+          name: '由 k 的正负确定象限与单调性',
+          tStart: 0.0,
+          tEnd: 6.0,
+          explanation: '在 $y = -\\frac{3}{x}$ 中，比例系数 $k = -3 \\lt 0$，故双曲线位于第二、第四象限，且在每个象限内 $y$ 随 $x$ 的增大而增大。'
+        },
+        {
+          step: 2,
+          name: '按横坐标正负跨象限判函数值正负',
+          tStart: 6.0,
+          tEnd: 12.5,
+          explanation: '点 $A(-10, y_{1})$ 的横坐标 $-10 \\lt 0$，位于第二象限，故 $y_{1} \\gt 0$；点 $B(1, y_{2}), C(5, y_{3})$ 的横坐标均 $\\gt 0$，位于第四象限，故 $y_{2} \\lt 0, y_{3} \\lt 0$。'
+        },
+        {
+          step: 3,
+          name: '正数大于负数，先锁定最大值 y₁',
+          tStart: 12.5,
+          tEnd: 18.0,
+          explanation: '因为 $y_{1}$ 是正数，而 $y_{2}, y_{3}$ 都是负数，正数永远大于负数，所以 $y_{1}$ 最大！'
+        },
+        {
+          step: 4,
+          name: '同一象限内利用单调性比较 y₂ 与 y₃',
+          tStart: 18.0,
+          tEnd: 24.8,
+          explanation: '点 $B(1, y_{2})$ 与 $C(5, y_{3})$ 同在第四象限，第四象限内 $y$ 随 $x$ 增大而增大，由 $1 \\lt 5$ 得 $y_{2} \\lt y_{3} \\lt 0$。'
+        },
+        {
+          step: 5,
+          name: '汇总完整大小关系（并可用代入法验算）',
+          tStart: 24.8,
+          tEnd: 31.0,
+          explanation: '综合跨象限与同象限比较结果，得 $y_{2} \\lt y_{3} \\lt y_{1}$（代入验算：$y_{2} = -3, y_{3} = -\\frac{3}{5}, y_{1} = \\frac{3}{10}$，完全一致）。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 判定 $k = -3 \\lt 0$（二、四象限，每象限递增）' },
+        { time: 7.5, step: 2, label: '2.1 点 $A(-10, y_{1})$ 在第二象限得 $y_{1} \\gt 0$' },
+        { time: 14.0, step: 3, label: '3.1 点 $B, C$ 在第四象限得 $y_{2} \\lt 0, y_{3} \\lt 0$' },
+        { time: 20.0, step: 4, label: '4.1 第四象限内由 $1 \\lt 5$ 得 $y_{2} \\lt y_{3} \\lt 0$' },
+        { time: 27.0, step: 5, label: '5.1 汇总得出 $y_{2} \\lt y_{3} \\lt y_{1}$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p14_row_0',
+          stepBadge: '已知条件',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p14_r0_func', math: '在 $y = -\\frac{3}{x}$ 上：', appearAt: 0.0, dur: 0.01 },
+            { id: 'p14_r0_pts', math: '$A(-10, y_{1})$，$B(1, y_{2})$，$C(5, y_{3})$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p14_row_1',
+          stepBadge: '第 1 步 · 象限与单调性',
+          appearAt: 1.5,
+          tokens: [
+            { id: 'p14_r1_k', math: '$\\because k = -3 \\lt 0 \\implies$ 图象在二、四象限，每象限内 $y$ 随 $x$ 增大而增大', appearAt: 1.6, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p14_row_2',
+          stepBadge: '第 2 & 3 步 · 跨象限判正负',
+          appearAt: 6.4,
+          tokens: [
+            { id: 'p14_r2_a', math: '$\\because -10 \\lt 0 \\implies A$ 在第二象限，$y_{1} \\gt 0$；', appearAt: 6.5, dur: 0.45 },
+            { id: 'p14_r2_bc', math: '$1 \\gt 0, 5 \\gt 0 \\implies B, C$ 在第四象限，$y_{2} \\lt 0, y_{3} \\lt 0$', appearAt: 12.8, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p14_row_3',
+          stepBadge: '第 4 步 · 同象限比大小',
+          appearAt: 18.4,
+          tokens: [
+            { id: 'p14_r3_same', math: '在第四象限内，由 $0 \\lt 1 \\lt 5$', appearAt: 18.5, dur: 0.40 },
+            { id: 'p14_r3_ord', math: '$\\implies y_{2} \\lt y_{3} \\lt 0$', appearAt: 19.8, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p14_row_4',
+          stepBadge: '最终结论',
+          appearAt: 25.2,
+          isConclusion: true,
+          tokens: [
+            { id: 'p14_r4_conc', math: '$\\therefore y_{2} \\lt y_{3} \\lt y_{1}$。', appearAt: 25.3, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p14_sp_1',
+          title: '草稿验算法 · 直接代入横坐标算具体值',
+          showStart: 18.2,
+          showEnd: 30.8,
+          tokens: [
+            { id: 'p14_sp1_t1', math: '$y_{1} = -\\frac{3}{-10} = +\\frac{3}{10} = 0.3$', appearAt: 18.8, dur: 0.40 },
+            { id: 'p14_sp1_t2', math: '$y_{2} = -\\frac{3}{1} = -3$', appearAt: 20.0, dur: 0.40 },
+            { id: 'p14_sp1_t3', math: '$y_{3} = -\\frac{3}{5} = -0.6$', appearAt: 21.2, dur: 0.40 },
+            { id: 'p14_sp1_t4', math: '$\\because -3 \\lt -0.6 \\lt 0.3 \\implies y_{2} \\lt y_{3} \\lt y_{1}$', appearAt: 25.4, dur: 0.45 }
+          ],
+          note: '当横坐标是具体数字（或可赋特殊值）时，直接代入算出数值能 100% 避免跨象限排序出错'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p14_r1_k', tStart: 1.6, tEnd: 5.8, color: 'teal' },
+        { tokenId: 'p14_r2_a', tStart: 6.5, tEnd: 12.4, color: 'teal' },
+        { tokenId: 'p14_r2_bc', tStart: 12.8, tEnd: 17.8, color: 'amber' },
+        { tokenId: 'p14_r3_ord', tStart: 19.8, tEnd: 24.6, color: 'rose' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p14_svg_s2',
+          type: 'arrow',
+          fromToken: 'p14_r0_pts',
+          toToken: 'p14_r2_a',
+          label: '以 $x = 0$ 为界分组',
+          color: '#0F766E',
+          curveOffset: -26,
+          tStart: 6.2,
+          tDrawEnd: 7.0,
+          tFadeStart: 11.8,
+          tEnd: 12.4
+        },
+        {
+          id: 'p14_svg_s4',
+          type: 'arrow',
+          fromToken: 'p14_r2_bc',
+          toToken: 'p14_r3_ord',
+          label: '第四象限内单调递增',
+          color: '#D97706',
+          curveOffset: 28,
+          tStart: 18.6,
+          tDrawEnd: 19.5,
+          tFadeStart: 24.0,
+          tEnd: 24.6
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 6.0, text: '第一步判定比例系数：在 $y = -\\frac{3}{x}$ 中，$k = -3 \\lt 0$，图象位于第二、第四象限，在每个象限内 $y$ 随 $x$ 增大而增大。', focusToken: 'p14_r1_k' },
+        { tStart: 6.0, tEnd: 12.5, text: '第二步跨象限判正负：千万不能把 $-10 \\lt 1 \\lt 5$ 直接套单调性！先看点 $A(-10, y_{1})$，因 $-10 \\lt 0$ 在第二象限，故 $y_{1} \\gt 0$。', focusToken: 'p14_r2_a' },
+        { tStart: 12.5, tEnd: 18.0, text: '第三步看点 $B(1, y_{2})$ 和 $C(5, y_{3})$：横坐标都大于 $0$，同在第四象限，故 $y_{2}, y_{3}$ 都是负数，所以正数 $y_{1}$ 最大！', focusToken: 'p14_r2_bc' },
+        { tStart: 18.0, tEnd: 24.8, text: '第四步同象限比单调：在第四象限内 $y$ 随 $x$ 增大而增大，因为 $1 \\lt 5$，所以 $y_{2} \\lt y_{3} \\lt 0$。', focusToken: 'p14_r3_ord' },
+        { tStart: 24.8, tEnd: 31.0, text: '第五步汇总排序：得出 $y_{2} \\lt y_{3} \\lt y_{1}$（也可用右侧草稿板的代入法直接验算）。', focusToken: 'p14_r4_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：抽象不等条件下的跨象限函数值比较',
+          givenLabel: '已知反比例函数：',
+          givenFormula: '$y = \\frac{6}{x}$（其中 $k = 6 \\gt 0$，位于第一、三象限，每象限内递减）',
+          extractedLabel: '图象上三点横坐标关系：',
+          extractedFormula: '$x_{1} \\lt x_{2} \\lt 0 \\lt x_{3}$',
+          questionText: '对应的函数值 $y_{1}, y_{2}, y_{3}$ 的大小关系是？',
+          options: [
+            { key: 'A', text: 'A. $y_{2} \\lt y_{1} \\lt 0 \\lt y_{3}$（即 $y_{2} \\lt y_{1} \\lt y_{3}$）', isCorrect: true },
+            { key: 'B', text: 'B. $y_{3} \\lt y_{2} \\lt y_{1}$', isCorrect: false },
+            { key: 'C', text: 'C. $y_{1} \\lt y_{2} \\lt y_{3}$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！先跨象限判正负，再在第三象限内用递减性质（或特殊值法）：',
+            calcLines: [
+              '$x_{3} \\gt 0 \\implies$ 在第一象限，$y_{3} \\gt 0$（最大）',
+              '$x_{1} \\lt x_{2} \\lt 0 \\implies$ 同在第三象限（递减），故 $y_{2} \\lt y_{1} \\lt 0$',
+              '特殊值验证：令 $x_{1}=-2, x_{2}=-1, x_{3}=1 \\implies y_{1}=-3, y_{2}=-6, y_{3}=6$'
+            ],
+            summary: '遇到 $x_{1} \\lt x_{2} \\lt 0 \\lt x_{3}$ 类抽象题，赋特殊值代入能瞬间得出准确顺序。'
+          },
+          wrongTitle: '提示：请先以 0 为界区分正负，或赋特殊值 x₁=-2, x₂=-1, x₃=1 代入',
+          wrongFeedback: '$k = 6 \\gt 0$ 时，$x_{3} \\gt 0$ 对应的 $y_{3} \\gt 0$ 最大；而在第三象限内 $y$ 随 $x$ 增大而减小，故 $x_{1} \\lt x_{2} \\lt 0 \\implies y_{2} \\lt y_{1} \\lt 0$，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：代入计算比较反比例函数值',
+          givenLabel: '已知条件：',
+          givenFormula: '点 $A(-2, y_{1})$ 与点 $B(4, y_{2})$ 在反比例函数 $y = \\frac{8}{x}$ 的图象上',
+          questionText: '请分别算出 $y_{1}$ 和 $y_{2}$ 的具体数值（从而確認 $y_{1} \\lt y_{2}$）：',
+          input1Prefix: '$y_{1} =$',
+          input1Placeholder: '如 -4',
+          input2Prefix: '，$y_{2} =$',
+          input2Placeholder: '如 2',
+          input2Suffix: '',
+          expectedX: '-4',
+          expectedMin: '2',
+          allowOrderSwap: false,
+          correctFeedback: '$y_{1} = -4$，$y_{2} = 2$（故 $y_{1} \\lt y_{2}$）。',
+          correctDetail: '将 $x = -2$ 代入得 $y_{1} = \\frac{8}{-2} = -4$；将 $x = 4$ 代入得 $y_{2} = \\frac{8}{4} = 2$。',
+          wrongFeedback: '分别计算 $y_{1} = 8 \\div (-2)$ 与 $y_{2} = 8 \\div 4$。',
+          specificWrongHints: [
+            {
+              checkType: 'firstVal',
+              val: '4',
+              hint: '注意 $x = -2$ 带负号，$8 \\div (-2) = -4$。'
+            }
+          ]
+        }
+      }
+    },
+
+    // =========================================================================
+    // P15：利用反比例函数中心对称性求正比例交点坐标与对称式的值
+    // =========================================================================
+    P15: {
+      procedureId: 'P15',
+      title: '利用反比例函数中心对称性求正比例交点坐标与对称式的值',
+      exampleTitle: '已知正比例函数 $y = kx$ 与反比例函数 $y = \\frac{\\sqrt{3}}{x}$ 交于 $A(x_{1}, y_{1})$、$B(x_{2}, y_{2})$ 两点，求 $2x_{1}y_{2} - 5x_{2}y_{1}$ 的值',
+      exampleFormula: '$y = kx$ 与 $y = \\frac{\\sqrt{3}}{x}$ 交于 $A(x_{1}, y_{1}), B(x_{2}, y_{2})$',
+      totalDuration: 31.0,
+      scratchpadIdleHint: '旁白草稿演算区（配合上方中心对称交点图，展示 x₂=-x₁, y₂=-y₁ 消元化归为 x₁y₁=k₁）',
+      practiceSectionTitle: '反比例函数中心对称交点跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握关于原点对称交点坐标互为相反数与对称代数式化简',
+
+      geometryDiagram: {
+        title: '动态函数图象 · 原点中心对称交点',
+        caption: '过原点的直线与双曲线均关于原点对称，两交点 A(x₁, y₁) 与 B(-x₁, -y₁) 关于原点对称',
+        svgHtml: `
+          <svg viewBox="0 0 260 175" class="w-full max-w-[260px] h-auto select-none" xmlns="http://www.w3.org/2000/svg">
+            <!-- 坐标轴 -->
+            <line x1="20" y1="88" x2="240" y2="88" stroke="#64748B" stroke-width="1.5" />
+            <line x1="130" y1="12" x2="130" y2="164" stroke="#64748B" stroke-width="1.5" />
+            <text x="234" y="102" fill="#475569" font-size="11" font-weight="700">x</text>
+            <text x="137" y="20" fill="#475569" font-size="11" font-weight="700">y</text>
+            <circle cx="130" cy="88" r="3" fill="#0F172A" />
+            <text x="117" y="101" fill="#0F172A" font-size="10" font-weight="700">O</text>
+
+            <!-- 双曲线 y = k1/x (一、三象限) -->
+            <path d="M 142 18 Q 162 70 225 76" fill="none" stroke="#0F766E" stroke-width="2.4" />
+            <path d="M 35 100 Q 98 106 118 158" fill="none" stroke="#0F766E" stroke-width="2.4" />
+
+            <!-- 过原点的正比例直线 y = kx -->
+            <line class="proc-geo-anim" data-appear-at="1.2" data-dur="0.6" data-dash-len="210"
+                  x1="46" y1="144" x2="214" y2="32" stroke="#D97706" stroke-width="2.2"
+                  stroke-dasharray="210" stroke-dashoffset="210" style="opacity:0;" />
+
+            <!-- 交点 A 与 B (关于原点对称) -->
+            <g class="proc-geo-anim" data-appear-at="6.4" data-dur="0.5" style="opacity:0;">
+              <circle cx="172" cy="60" r="4" fill="#BE123C" />
+              <text x="176" y="54" fill="#BE123C" font-size="10" font-weight="700">A(x₁, y₁)</text>
+
+              <circle cx="88" cy="116" r="4" fill="#BE123C" />
+              <text x="26" y="132" fill="#BE123C" font-size="10" font-weight="700">B(-x₁, -y₁)</text>
+            </g>
+          </svg>
+        `
+      },
+
+      steps: [
+        {
+          step: 1,
+          name: '确认中心对称结构与定值 $x_{1}y_{1}$',
+          tStart: 0.0,
+          tEnd: 6.0,
+          explanation: '正比例函数 $y = kx$（过原点）与双曲线 $y = \\frac{\\sqrt{3}}{x}$ 均关于原点中心对称，且双曲线上点 $A$ 满足 $x_{1}y_{1} = \\sqrt{3}$。'
+        },
+        {
+          step: 2,
+          name: '写出两交点坐标的相反数关系',
+          tStart: 6.0,
+          tEnd: 12.2,
+          explanation: '因为两个交点 $A(x_{1}, y_{1})$ 与 $B(x_{2}, y_{2})$ 关于原点 $(0, 0)$ 对称，所以 $x_{2} = -x_{1}$，$y_{2} = -y_{1}$。'
+        },
+        {
+          step: 3,
+          name: '将 $x_{2} = -x_{1}, y_{2} = -y_{1}$ 代入目标式',
+          tStart: 12.2,
+          tEnd: 18.8,
+          explanation: '把目标式中的 $x_{2}, y_{2}$ 全部替换为 $-x_{1}, -y_{1}$，得 $2x_{1}(-y_{1}) - 5(-x_{1})y_{1}$。'
+        },
+        {
+          step: 4,
+          name: '确定符号并合并同类项',
+          tStart: 18.8,
+          tEnd: 24.8,
+          explanation: '化简符号得 $-2x_{1}y_{1} + 5x_{1}y_{1}$，合并同类项得 $3x_{1}y_{1}$。'
+        },
+        {
+          step: 5,
+          name: '整体代入 $x_{1}y_{1} = \\sqrt{3}$ 得出结果',
+          tStart: 24.8,
+          tEnd: 31.0,
+          explanation: '将步骤 1 的双曲线定值 $x_{1}y_{1} = \\sqrt{3}$ 整体代入 $3x_{1}y_{1}$，算出最终结果为 $3\\sqrt{3}$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 确认双曲线定值 $x_{1}y_{1} = \\sqrt{3}$' },
+        { time: 7.5, step: 2, label: '2.1 由关于原点对称得 $x_{2} = -x_{1}, y_{2} = -y_{1}$' },
+        { time: 14.0, step: 3, label: '3.1 代入目标式消去 $x_{2}, y_{2}$' },
+        { time: 20.5, step: 4, label: '4.1 合并同类项得 $3x_{1}y_{1}$' },
+        { time: 27.0, step: 5, label: '5.1 代入 $x_{1}y_{1} = \\sqrt{3}$ 得 $3\\sqrt{3}$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p15_row_0',
+          stepBadge: '已知条件',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p15_r0_cond', math: '$y = kx$ 与 $y = \\frac{\\sqrt{3}}{x}$ 交于 $A(x_{1}, y_{1}), B(x_{2}, y_{2})$，', appearAt: 0.0, dur: 0.01 },
+            { id: 'p15_r0_target', math: '求 $2x_{1}y_{2} - 5x_{2}y_{1}$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p15_row_1',
+          stepBadge: '第 1 步 · 乘积定值',
+          appearAt: 1.5,
+          tokens: [
+            { id: 'p15_r1_prod', math: '$\\because$ 点 $A(x_{1}, y_{1})$ 在 $y = \\frac{\\sqrt{3}}{x}$ 上 $\\implies x_{1}y_{1} = \\sqrt{3}$', appearAt: 1.6, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p15_row_2',
+          stepBadge: '第 2 步 · 原点对称关系',
+          appearAt: 6.4,
+          tokens: [
+            { id: 'p15_r2_sym', math: '$\\because A, B$ 关于原点对称', appearAt: 6.5, dur: 0.40 },
+            { id: 'p15_r2_opp', math: '$\\implies x_{2} = -x_{1}，\\quad y_{2} = -y_{1}$', appearAt: 7.4, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p15_row_3',
+          stepBadge: '第 3 步 · 消元代换',
+          appearAt: 12.6,
+          tokens: [
+            { id: 'p15_r3_start', math: '原式 $=$', appearAt: 12.7, dur: 0.30 },
+            { id: 'p15_r3_t1', math: '$2x_{1}(-y_{1})$', appearAt: 13.3, dur: 0.45 },
+            { id: 'p15_r3_t2', math: '$- 5(-x_{1})y_{1}$', appearAt: 14.3, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p15_row_4',
+          stepBadge: '第 4 步 · 合并同类项',
+          appearAt: 19.2,
+          tokens: [
+            { id: 'p15_r4_exp', math: '$= -2x_{1}y_{1} + 5x_{1}y_{1}$', appearAt: 19.3, dur: 0.45 },
+            { id: 'p15_r4_sim', math: '$= 3x_{1}y_{1}$', appearAt: 20.6, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p15_row_5',
+          stepBadge: '最终结论',
+          appearAt: 25.2,
+          isConclusion: true,
+          tokens: [
+            { id: 'p15_r5_conc', math: '$= 3\\sqrt{3}$。$\\quad\\therefore 2x_{1}y_{2} - 5x_{2}y_{1}$ 的值为 $3\\sqrt{3}$。', appearAt: 25.3, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p15_sp_1',
+          title: '草稿速记 · 交叉坐标乘积公式',
+          showStart: 12.4,
+          showEnd: 30.8,
+          tokens: [
+            { id: 'p15_sp1_t1', math: '同点乘积：$x_{1}y_{1} = x_{2}y_{2} = k_{1}$', appearAt: 12.8, dur: 0.40 },
+            { id: 'p15_sp1_t2', math: '交叉乘积：$x_{1}y_{2} = x_{1}(-y_{1}) = -k_{1}$', appearAt: 13.8, dur: 0.45 },
+            { id: 'p15_sp1_t3', math: '交叉乘积：$x_{2}y_{1} = (-x_{1})y_{1} = -k_{1}$', appearAt: 14.8, dur: 0.45 }
+          ],
+          note: '记住“同号下标积为 $+k_{1}$，异号交叉积为 $-k_{1}$”，可直接在 3 秒内口算任意对称式'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p15_r1_prod', tStart: 1.6, tEnd: 5.8, color: 'teal' },
+        { tokenId: 'p15_r2_opp', tStart: 7.4, tEnd: 12.0, color: 'amber' },
+        { tokenId: 'p15_r3_t1', tStart: 13.3, tEnd: 18.6, color: 'amber' },
+        { tokenId: 'p15_r3_t2', tStart: 14.3, tEnd: 18.6, color: 'rose' },
+        { tokenId: 'p15_r4_sim', tStart: 20.6, tEnd: 24.6, color: 'teal' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p15_svg_s3',
+          type: 'arrow',
+          fromToken: 'p15_r2_opp',
+          toToken: 'p15_r3_t2',
+          label: '代入 $x_{2}=-x_{1}, y_{2}=-y_{1}$',
+          color: '#D97706',
+          curveOffset: 30,
+          tStart: 12.8,
+          tDrawEnd: 13.8,
+          tFadeStart: 17.8,
+          tEnd: 18.5
+        },
+        {
+          id: 'p15_svg_s5',
+          type: 'arrow',
+          fromToken: 'p15_r1_prod',
+          toToken: 'p15_r4_sim',
+          label: '代入 $x_{1}y_{1} = \\sqrt{3}$',
+          color: '#0F766E',
+          curveOffset: -32,
+          tStart: 21.5,
+          tDrawEnd: 22.5,
+          tFadeStart: 24.4,
+          tEnd: 25.0
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 6.0, text: '第一步确认中心对称与乘积定值：正比例函数 $y = kx$ 与双曲线 $y = \\frac{\\sqrt{3}}{x}$ 均关于原点对称，且 $x_{1}y_{1} = \\sqrt{3}$。', focusToken: 'p15_r1_prod' },
+        { tStart: 6.0, tEnd: 12.2, text: '第二步写出相反数关系：两交点 $A(x_{1}, y_{1})$ 与 $B(x_{2}, y_{2})$ 关于原点对称，横纵坐标互为相反数，即 $x_{2} = -x_{1}, y_{2} = -y_{1}$。', focusToken: 'p15_r2_opp' },
+        { tStart: 12.2, tEnd: 18.8, text: '第三步消元代换：把 $y_{2} = -y_{1}$ 和 $x_{2} = -x_{1}$ 代入目标式，得到 $2x_{1}(-y_{1}) - 5(-x_{1})y_{1}$。', focusToken: 'p15_r3_t2' },
+        { tStart: 18.8, tEnd: 24.8, text: '第四步合并同类项：注意负负得正，$-2x_{1}y_{1} + 5x_{1}y_{1}$ 合并后等于 $3x_{1}y_{1}$。', focusToken: 'p15_r4_sim' },
+        { tStart: 24.8, tEnd: 31.0, text: '第五步整体代入定值：将 $x_{1}y_{1} = \\sqrt{3}$ 代入 $3x_{1}y_{1}$，得出最终结果为 $3\\sqrt{3}$！', focusToken: 'p15_r5_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：利用原点中心对称直接求另一交点坐标',
+          givenLabel: '已知条件：',
+          givenFormula: '正比例函数 $y = 2x$ 与反比例函数 $y = \\frac{8}{x}$ 的图象相交于 $A, B$ 两点',
+          extractedLabel: '其中一个交点坐标：',
+          extractedFormula: '点 $A$ 的坐标为 $(2, 4)$',
+          questionText: '不解方程组，直接写出另一个交点 $B$ 的坐标是？',
+          options: [
+            { key: 'A', text: 'A. $(-2, -4)$', isCorrect: true },
+            { key: 'B', text: 'B. $(-2, 4)$', isCorrect: false },
+            { key: 'C', text: 'C. $(-4, -2)$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！关于原点对称的两点横、纵坐标均互为相反数：',
+            calcLines: [
+              '$A(x_{1}, y_{1}) = (2, 4) \\implies B(-x_{1}, -y_{1}) = (-2, -4)$'
+            ],
+            summary: '过原点的直线与双曲线的交点一定成对关于原点中心对称。'
+          },
+          wrongTitle: '提示：请回顾关于原点对称的坐标特征',
+          wrongFeedback: '点 $(x, y)$ 关于原点对称的点是 $(-x, -y)$（横、纵坐标同时变号，且不对调位置），请再试一次。'
+        },
+        practice2: {
+          title: '练习二：求关于原点对称交点的代数式的值',
+          givenLabel: '已知条件：',
+          givenFormula: '正比例函数 $y = kx$ 与反比例函数 $y = \\frac{6}{x}$ 交于 $A(x_{1}, y_{1}), B(x_{2}, y_{2})$ 两点',
+          questionText: '此时同点乘积 $x_{1}y_{1}$ 与交叉乘积代数式 $3x_{1}y_{2} - x_{2}y_{1}$ 的值分别是多少？',
+          input1Prefix: '$x_{1}y_{1} =$',
+          input1Placeholder: '如 6',
+          input2Prefix: '，$3x_{1}y_{2} - x_{2}y_{1} =$',
+          input2Placeholder: '如 -12',
+          input2Suffix: '',
+          expectedX: '6',
+          expectedMin: '-12',
+          allowOrderSwap: false,
+          correctFeedback: '$x_{1}y_{1} = 6$，$3x_{1}y_{2} - x_{2}y_{1} = -12$。',
+          correctDetail: '由 $y = \\frac{6}{x}$ 得 $x_{1}y_{1} = 6$；又因 $x_{2} = -x_{1}, y_{2} = -y_{1}$，故 $3x_{1}(-y_{1}) - (-x_{1})y_{1} = -3x_{1}y_{1} + x_{1}y_{1} = -2x_{1}y_{1} = -2 \\times 6 = -12$。',
+          wrongFeedback: '先由 $y = \\frac{6}{x}$ 得 $x_{1}y_{1} = 6$，再将 $x_{1}y_{2} = -6, x_{2}y_{1} = -6$ 代入 $3x_{1}y_{2} - x_{2}y_{1}$ 计算。',
+          specificWrongHints: [
+            {
+              checkType: 'secondVal',
+              val: '12',
+              hint: '注意 $3x_{1}(-y_{1}) - (-x_{1})y_{1} = -3x_{1}y_{1} + x_{1}y_{1} = -2x_{1}y_{1} = -12$（带负号）。'
+            }
+          ]
+        }
+      }
+    }
+  };
+
+  window.PROCEDURAL_DYNAMIC_DEMOS = PROCEDURAL_DYNAMIC_DEMOS;
+})();

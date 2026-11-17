@@ -18,6 +18,10 @@
     // Switch Main Views (题库 / 题目图谱 / 程序性知识 / 试卷预览)
     function switchView(viewName) {
       if (viewName !== 'paper' && viewName !== 'graph' && viewName !== 'procedural') viewName = 'bank';
+      const prevView = state.currentView;
+      if (prevView === 'procedural' && viewName !== 'procedural' && window.ProceduralView && typeof window.ProceduralView.suspendCurrentDetailState === 'function') {
+        window.ProceduralView.suspendCurrentDetailState();
+      }
       state.currentView = viewName;
       try {
         localStorage.setItem(LAST_VIEW_STORAGE_KEY, viewName);
@@ -52,10 +56,17 @@
       if (viewName === 'graph' && window.GraphFilter) {
         window.GraphFilter.refreshAllViews({ keepNetworkTransform: true });
       }
+      let restoredProceduralScroll = false;
       if (viewName === 'procedural' && window.ProceduralView) {
-        window.ProceduralView.render();
+        if (typeof window.ProceduralView.hasSuspendedDetailSnapshot === 'function' && window.ProceduralView.hasSuspendedDetailSnapshot()) {
+          restoredProceduralScroll = Boolean(window.ProceduralView.resumeSuspendedDetail());
+        } else {
+          window.ProceduralView.render();
+        }
       }
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (!restoredProceduralScroll) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
       setTimeout(renderMath, 50);
     }
     // Render Question Bank Cards

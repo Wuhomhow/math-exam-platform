@@ -184,8 +184,181 @@
       return `<m:d><m:dPr><m:begChr m:val="${escXml(begChr)}"/><m:endChr m:val="${escXml(endChr)}"/><m:grow m:val="1"/><m:shp m:val="match"/><m:ctrlPr><w:rPr><w:rFonts w:ascii="Cambria Math" w:hAnsi="Cambria Math" w:cs="Cambria Math"/><w:sz w:val="21"/><w:szCs w:val="21"/></w:rPr></m:ctrlPr></m:dPr><m:e>${innerXml}</m:e></m:d>`;
     }
 
+    function ommlBar(baseXml, pos = 'top') {
+      return `<m:bar><m:barPr><m:pos m:val="${escXml(pos)}"/><m:ctrlPr><w:rPr><w:rFonts w:ascii="Cambria Math" w:hAnsi="Cambria Math" w:cs="Cambria Math"/><w:sz w:val="21"/><w:szCs w:val="21"/></w:rPr></m:ctrlPr></m:barPr><m:e>${baseXml}</m:e></m:bar>`;
+    }
+
     function ommlCases(rowsXml) {
       return `<m:d><m:dPr><m:begChr m:val="{"/><m:endChr m:val=""/><m:grow m:val="1"/><m:shp m:val="match"/><m:ctrlPr><w:rPr><w:rFonts w:ascii="Cambria Math" w:hAnsi="Cambria Math" w:cs="Cambria Math"/><w:sz w:val="21"/><w:szCs w:val="21"/></w:rPr></m:ctrlPr></m:dPr><m:e><m:eqArr><m:eqArrPr/>${rowsXml}</m:eqArr></m:e></m:d>`;
+    }
+
+    function ommlMatrix(rowsCellsXml, colCount = 1, begChr = '', endChr = '') {
+      const safeCols = Math.max(1, colCount);
+      const mrXml = rowsCellsXml.map(cells => {
+        const padded = cells.slice();
+        while (padded.length < safeCols) padded.push('');
+        return `<m:mr>${padded.map(c => `<m:e>${c}</m:e>`).join('')}</m:mr>`;
+      }).join('');
+      const mXml = `<m:m><m:mPr><m:mcs><m:mc><m:mcPr><m:count m:val="${safeCols}"/><m:mcJc m:val="center"/></m:mcPr></m:mc></m:mcs><m:ctrlPr><w:rPr><w:rFonts w:ascii="Cambria Math" w:hAnsi="Cambria Math" w:cs="Cambria Math"/><w:sz w:val="21"/><w:szCs w:val="21"/></w:rPr></m:ctrlPr></m:mPr>${mrXml}</m:m>`;
+      if (begChr || endChr) {
+        return ommlDelim(begChr, endChr, mXml);
+      }
+      return mXml;
+    }
+
+    // 独立封装的环境行拆分函数（供 cases 和各类 matrix 共用）：
+    // - 严格追踪花括号深度与嵌套 \begin...\end 环境深度
+    // - 仅识别真正的 LaTeX 行分隔符 \\（含可选间距如 \\[2pt]）或顶层换行符
+    // - 绝不将 \frac、\text、\ne 等单反斜杠命令误判为换行符
+    function splitLatexEnvRows(body) {
+      const str = String(body || '');
+      const rows = [];
+      let cur = '';
+      let braceDepth = 0;
+      let envDepth = 0;
+      let i = 0;
+
+      while (i < str.length) {
+        if (str[i] === '\\') {
+          if (str[i + 1] === '\\') {
+            if (braceDepth === 0 && envDepth === 0) {
+              rows.push(cur.trim());
+              cur = '';
+              i += 2;
+              while (i < str.length && str[i] === '\\') i++;
+              // 跳过可选行距参数如 \\[4pt]
+              let tempI = i;
+              while (tempI < str.length && (str[tempI] === ' ' || str[tempI] === '\t')) tempI++;
+              if (str[tempI] === '[') {
+                const closeB = str.indexOf(']', tempI + 1);
+                if (closeB !== -1) i = closeB + 1;
+              }
+              // 若紧接换行符则一并消费，避免产生空行
+              while (i < str.length && (str[i] === ' ' || str[i] === '\t')) i++;
+              if (str[i] === '\r') i++;
+              if (str[i] === '\n') i++;
+              continue;
+            }
+            cur += '\\\\';
+            i += 2;
+            continue;
+          }
+          if (str[i + 1] === '{' || str[i + 1] === '}' || str[i + 1] === '&') {
+            cur += str.slice(i, i + 2);
+            i += 2;
+            continue;
+          }
+          if (str.startsWith('\\begin{', i)) {
+            envDepth++;
+          } else if (str.startsWith('\\end{', i)) {
+            if (envDepth > 0) envDepth--;
+          }
+          // 保留单反斜杠及其后的命令名或字符
+          cur += str[i];
+          i++;
+          while (i < str.length && /[A-Za-z]/.test(str[i])) {
+            cur += str[i];
+            i++;
+          }
+          continue;
+        }
+        if (str[i] === '{') {
+          braceDepth++;
+          cur += str[i];
+          i++;
+          continue;
+        }
+        if (str[i] === '}') {
+          if (braceDepth > 0) braceDepth--;
+          cur += str[i];
+          i++;
+          continue;
+        }
+        if ((str[i] === '\n' || str[i] === '\r') && braceDepth === 0 && envDepth === 0) {
+          if (cur.trim()) {
+            rows.push(cur.trim());
+            cur = '';
+          }
+          if (str[i] === '\r' && str[i + 1] === '\n') i += 2;
+          else i++;
+          continue;
+        }
+        cur += str[i];
+        i++;
+      }
+      if (cur.trim()) rows.push(cur.trim());
+      return rows.filter(Boolean);
+    }
+
+    // 独立封装的环境列拆分函数（按顶层未转义的 & 拆分单元格）
+    function splitLatexEnvCols(row) {
+      const str = String(row || '');
+      const cols = [];
+      let cur = '';
+      let braceDepth = 0;
+      let envDepth = 0;
+      let i = 0;
+
+      while (i < str.length) {
+        if (str[i] === '\\') {
+          if (str[i + 1] === '&' || str[i + 1] === '{' || str[i + 1] === '}' || str[i + 1] === '\\') {
+            cur += str.slice(i, i + 2);
+            i += 2;
+            continue;
+          }
+          if (str.startsWith('\\begin{', i)) envDepth++;
+          else if (str.startsWith('\\end{', i) && envDepth > 0) envDepth--;
+          cur += str[i];
+          i++;
+          while (i < str.length && /[A-Za-z]/.test(str[i])) {
+            cur += str[i];
+            i++;
+          }
+          continue;
+        }
+        if (str[i] === '{') {
+          braceDepth++;
+          cur += str[i];
+          i++;
+          continue;
+        }
+        if (str[i] === '}') {
+          if (braceDepth > 0) braceDepth--;
+          cur += str[i];
+          i++;
+          continue;
+        }
+        if (str[i] === '&' && braceDepth === 0 && envDepth === 0) {
+          cols.push(cur.trim());
+          cur = '';
+          i++;
+          continue;
+        }
+        cur += str[i];
+        i++;
+      }
+      cols.push(cur.trim());
+      return cols;
+    }
+
+    function findMatchingEnvEnd(str, startAfterBegin, envName) {
+      const beginTag = `\\begin{${envName}}`;
+      const endTag = `\\end{${envName}}`;
+      let depth = 1;
+      let k = startAfterBegin;
+      while (k < str.length) {
+        if (str.startsWith(beginTag, k)) {
+          depth++;
+          k += beginTag.length;
+        } else if (str.startsWith(endTag, k)) {
+          depth--;
+          if (depth === 0) return k;
+          k += endTag.length;
+        } else {
+          k++;
+        }
+      }
+      return -1;
     }
 
     // 将题库中常见的紧凑分数写法（如 \frac12、\frac18、\frac32）
@@ -206,6 +379,10 @@
         if (input[pos] === '{') {
           let depth = 0;
           for (let k = pos; k < input.length; k++) {
+            if (input[k] === '\\' && (input[k + 1] === '{' || input[k + 1] === '}')) {
+              k++;
+              continue;
+            }
             if (input[k] === '{') depth++;
             else if (input[k] === '}') {
               depth--;
@@ -243,59 +420,92 @@
 
     function parseLatexInner(tex) {
       // Convert common LaTeX commands to actual math glyphs before building OMML.
-      // Word's native math format does not understand raw TeX command names such as \angle or \circ.
+      // Use (?![a-zA-Z]) instead of \b so commands followed immediately by digits (e.g. \cdot3, \ne0, \ge3, \langle1) are accurately matched.
       let s = normalizeCompactFractions(String(tex)
-        .replace(/\\(?:dfrac|tfrac)\b/g, '\\frac'))
+        .replace(/\\(?:dfrac|tfrac)(?![a-zA-Z])/g, '\\frac'))
         .replace(/\\%/g, '%')
-        .replace(/\\underset\{\\cdot\}\{([^{}]*)\}/g, '$1\u0323').replace(/\\dot\{([^{}]*)\}/g, '$1\u0307').replace(/\\dot\s+([0-9A-Za-z])/g, '$1\u0307')
+        .replace(/\\&/g, '&')
+        .replace(/\\(?:Big|big|bigg|Bigg)[lrm]?\s*(\\[{}]|\\langle|\\rangle|[(\[\]|)])/g, '$1')
+        .replace(/\\underset\{\\cdot\}\{([^{}]*)\}/g, '$1\u0323')
+        .replace(/\\dot\{([^{}]*)\}/g, '$1\u0307')
+        .replace(/\\dot\s+([0-9A-Za-z])/g, '$1\u0307')
         .replace(/\\,/g, ' ')
-        .replace(/\\(?:qquad|quad|enspace)\b/g, '  ')
+        .replace(/\\(?:qquad|quad|enspace)(?![a-zA-Z])/g, '  ')
         .replace(/\\[;:!]/g, ' ')
+        .replace(/[\u00a0\u2002-\u200a\u202f\u205f\u3000]/g, ' ')
         .replace(/\\overset\{\\frown\}\{([^{}]*)\}/g, '$1⏜')
         .replace(/\\wideparen\{([^{}]*)\}/g, '$1⏜')
-        .replace(/\\odot\b/g, '⊙')
-        .replace(/\\backsim\b/g, '∽')
-        .replace(/\\sim\b/g, '∽')
-        .replace(/\\angle\b/g, '∠')
-        .replace(/\\circ\b/g, '°')
-        .replace(/\\parallel\b/g, '∥')
-        .replace(/\\perp\b/g, '⊥')
-        .replace(/\\cong\b/g, '≅')
-        .replace(/\\alpha\b/g, 'α')
-        .replace(/\\beta\b/g, 'β')
-        .replace(/\\gamma\b/g, 'γ')
-        .replace(/\\theta\b/g, 'θ')
-        .replace(/\\pi\b/g, 'π')
-        .replace(/\\pm\b/g, '±')
-        .replace(/\\mp\b/g, '∓')
-        .replace(/\\leq?\b/g, '≤')
-        .replace(/\\geq?\b/g, '≥')
-        .replace(/\\lt\b/g, '<')
-        .replace(/\\gt\b/g, '>')
-        .replace(/\\notin\b/g, '∉')
-        .replace(/\\infty\b/g, '∞')
-        .replace(/\\cdot\b/g, '·')
-        .replace(/\\times/g, '×')
-        .replace(/\\div/g, '÷')
-        .replace(/\\neq/g, '≠')
-        .replace(/\\approx/g, '≈')
-        .replace(/\\because/g, '∵')
-        .replace(/\\therefore/g, '∴')
-        .replace(/\\triangle/g, '△')
-        .replace(/\\Delta\b/g, '△')
-        .replace(/\\square\b/g, '□')
-        .replace(/\\Box\b/g, '□')
-        .replace(/\\dots/g, '…')
-        .replace(/\\cdots/g, '⋯')
+        .replace(/\\(?:implies|Rightarrow)(?![a-zA-Z])/g, '⇒')
+        .replace(/\\(?:iff|Leftrightarrow)(?![a-zA-Z])/g, '⇔')
+        .replace(/\\leftrightarrow(?![a-zA-Z])/g, '↔')
+        .replace(/\\(?:rightarrow|to)(?![a-zA-Z])/g, '→')
+        .replace(/\\leftarrow(?![a-zA-Z])/g, '←')
+        .replace(/\\uparrow(?![a-zA-Z])/g, '↑')
+        .replace(/\\downarrow(?![a-zA-Z])/g, '↓')
+        .replace(/\\otimes(?![a-zA-Z])/g, '⊗')
+        .replace(/\\oplus(?![a-zA-Z])/g, '⊕')
+        .replace(/\\odot(?![a-zA-Z])/g, '⊙')
+        .replace(/\\langle(?![a-zA-Z])/g, '⟨')
+        .replace(/\\rangle(?![a-zA-Z])/g, '⟩')
+        .replace(/\\Omega(?![a-zA-Z])/g, 'Ω')
+        .replace(/\\Phi(?![a-zA-Z])/g, 'Φ')
+        .replace(/\\checkmark(?![a-zA-Z])/g, '✓')
+        .replace(/\\varnothing(?![a-zA-Z])/g, '∅')
+        .replace(/\\blacksquare(?![a-zA-Z])/g, '■')
+        .replace(/\\star(?![a-zA-Z])/g, '⋆')
+        .replace(/\\ast(?![a-zA-Z])/g, '∗')
+        .replace(/\\sum(?![a-zA-Z])/g, '∑')
+        .replace(/\\backsim(?![a-zA-Z])/g, '∽')
+        .replace(/\\sim(?![a-zA-Z])/g, '∽')
+        .replace(/\\angle(?![a-zA-Z])/g, '∠')
+        .replace(/\\circ(?![a-zA-Z])/g, '°')
+        .replace(/\\parallel(?![a-zA-Z])/g, '∥')
+        .replace(/\\perp(?![a-zA-Z])/g, '⊥')
+        .replace(/\\cong(?![a-zA-Z])/g, '≅')
+        .replace(/\\alpha(?![a-zA-Z])/g, 'α')
+        .replace(/\\beta(?![a-zA-Z])/g, 'β')
+        .replace(/\\gamma(?![a-zA-Z])/g, 'γ')
+        .replace(/\\theta(?![a-zA-Z])/g, 'θ')
+        .replace(/\\lambda(?![a-zA-Z])/g, 'λ')
+        .replace(/\\mu(?![a-zA-Z])/g, 'μ')
+        .replace(/\\sigma(?![a-zA-Z])/g, 'σ')
+        .replace(/\\omega(?![a-zA-Z])/g, 'ω')
+        .replace(/\\pi(?![a-zA-Z])/g, 'π')
+        .replace(/\\pm(?![a-zA-Z])/g, '±')
+        .replace(/\\mp(?![a-zA-Z])/g, '∓')
+        .replace(/\\leq?(?![a-zA-Z])/g, '≤')
+        .replace(/\\geq?(?![a-zA-Z])/g, '≥')
+        .replace(/\\lt(?![a-zA-Z])/g, '<')
+        .replace(/\\gt(?![a-zA-Z])/g, '>')
+        .replace(/\\notin(?![a-zA-Z])/g, '∉')
+        .replace(/\\in(?![a-zA-Z])/g, '∈')
+        .replace(/\\infty(?![a-zA-Z])/g, '∞')
+        .replace(/\\cdots(?![a-zA-Z])/g, '⋯')
+        .replace(/\\dots(?![a-zA-Z])/g, '…')
+        .replace(/\\cdot(?![a-zA-Z])/g, '·')
+        .replace(/\\times(?![a-zA-Z])/g, '×')
+        .replace(/\\div(?![a-zA-Z])/g, '÷')
+        .replace(/\\neq?(?![a-zA-Z])/g, '≠')
+        .replace(/\\approx(?![a-zA-Z])/g, '≈')
+        .replace(/\\because(?![a-zA-Z])/g, '∵')
+        .replace(/\\therefore(?![a-zA-Z])/g, '∴')
+        .replace(/\\triangle(?![a-zA-Z])/g, '△')
+        .replace(/\\Delta(?![a-zA-Z])/g, 'Δ')
+        .replace(/\\square(?![a-zA-Z])/g, '□')
+        .replace(/\\Box(?![a-zA-Z])/g, '□')
         .replace(/\\underbrace\{([^{}]*)\}_\{([^{}]*)\}/g, '$1（共 $2）')
         .replace(/\\underbrace\{([^{}]*)\}/g, '$1')
-        .replace(/\\\s+/g, ' ')
+        .replace(/(?<!\\)\\[ \t]+/g, ' ')
         .trim();
 
       function readBraceGroup(str, i) {
         let depth = 0;
         let start = i + 1;
         for (let k = i; k < str.length; k++) {
+          if (str[k] === '\\' && (str[k + 1] === '{' || str[k + 1] === '}')) {
+            k++;
+            continue;
+          }
           if (str[k] === '{') depth++;
           else if (str[k] === '}') {
             depth--;
@@ -305,35 +515,90 @@
         return { content: str.slice(start), nextIdx: str.length };
       }
 
+      function readDelimiterToken(str, pos) {
+        while (pos < str.length && str[pos] === ' ') pos++;
+        if (pos >= str.length) return { chr: '', nextIdx: pos };
+        if (str.startsWith('\\{', pos)) return { chr: '{', nextIdx: pos + 2 };
+        if (str.startsWith('\\}', pos)) return { chr: '}', nextIdx: pos + 2 };
+        if (str.startsWith('\\langle', pos)) return { chr: '⟨', nextIdx: pos + 7 };
+        if (str.startsWith('\\rangle', pos)) return { chr: '⟩', nextIdx: pos + 7 };
+        if (str.startsWith('\\vert', pos)) return { chr: '|', nextIdx: pos + 5 };
+        if (str.startsWith('\\Vert', pos)) return { chr: '‖', nextIdx: pos + 5 };
+        if (str[pos] === '.') return { chr: '', nextIdx: pos + 1 };
+        return { chr: str[pos], nextIdx: pos + 1 };
+      }
+
       const atoms = [];
       let i = 0;
       while (i < s.length) {
         if (s.startsWith('\\begin{cases}', i)) {
-          const endIdx = s.indexOf('\\end{cases}', i + 13);
-          const body = endIdx !== -1 ? s.slice(i + 13, endIdx) : s.slice(i + 13);
-          const rows = body.split(/\\\\+|\\(?=[a-zA-Z0-9+\-])|\n/).map(r => r.replace(/&/g, '  ').trim()).filter(Boolean);
-          const eqArrInner = rows.map(r => `<m:e>${parseLatexInner(r)}</m:e>`).join('');
+          const bodyStart = i + 13;
+          const endIdx = findMatchingEnvEnd(s, bodyStart, 'cases');
+          const body = endIdx !== -1 ? s.slice(bodyStart, endIdx) : s.slice(bodyStart);
+          const rows = splitLatexEnvRows(body);
+          const eqArrInner = rows.map(r => {
+            const cols = splitLatexEnvCols(r);
+            const rowXml = cols.map(c => parseLatexInner(c)).join(ommlRun('　', true));
+            return `<m:e>${rowXml}</m:e>`;
+          }).join('');
           atoms.push(ommlCases(eqArrInner));
           i = endIdx !== -1 ? endIdx + 11 : s.length;
-        } else if (s.startsWith('\\begin{matrix}', i) || s.startsWith('\\begin{pmatrix}', i)) {
-          const isParen = s.startsWith('\\begin{pmatrix}', i);
-          const envName = isParen ? 'pmatrix' : 'matrix';
-          const endIdx = s.indexOf(`\\end{${envName}}`, i + envName.length + 8);
-          const body = endIdx !== -1 ? s.slice(i + envName.length + 8, endIdx) : s.slice(i + envName.length + 8);
-          const rows = body.split(/\\\\+|\\(?=[a-zA-Z0-9+\-])|\n/).map(r => r.trim()).filter(Boolean);
-          const eqArrInner = rows.map(r => `<m:e>${parseLatexInner(r)}</m:e>`).join('');
-          const begChr = isParen ? '(' : '';
-          const endChr = isParen ? ')' : '';
-          atoms.push(`<m:d><m:dPr><m:begChr m:val="${begChr}"/><m:endChr m:val="${endChr}"/></m:dPr><m:e><m:eqArr>${eqArrInner}</m:eqArr></m:e></m:d>`);
+        } else if (/^\\begin\{(p?matrix|bmatrix|Bmatrix|vmatrix|Vmatrix)\}/.test(s.slice(i))) {
+          const envMatch = s.slice(i).match(/^\\begin\{(p?matrix|bmatrix|Bmatrix|vmatrix|Vmatrix)\}/);
+          const envName = envMatch[1];
+          const bodyStart = i + envMatch[0].length;
+          const endIdx = findMatchingEnvEnd(s, bodyStart, envName);
+          const body = endIdx !== -1 ? s.slice(bodyStart, endIdx) : s.slice(bodyStart);
+          const rawRows = splitLatexEnvRows(body);
+          let maxCols = 1;
+          const parsedRows = rawRows.map(r => {
+            const cols = splitLatexEnvCols(r);
+            if (cols.length > maxCols) maxCols = cols.length;
+            return cols.map(c => parseLatexInner(c));
+          });
+          const delimMap = {
+            matrix: ['', ''],
+            pmatrix: ['(', ')'],
+            bmatrix: ['[', ']'],
+            Bmatrix: ['{', '}'],
+            vmatrix: ['|', '|'],
+            Vmatrix: ['‖', '‖']
+          };
+          const [begChr, endChr] = delimMap[envName] || ['', ''];
+          atoms.push(ommlMatrix(parsedRows, maxCols, begChr, endChr));
           i = endIdx !== -1 ? endIdx + envName.length + 6 : s.length;
         } else if (s.startsWith('\\\\', i)) {
           atoms.push(ommlRun(' '));
           i += 2;
-        } else if (s.startsWith('\\text{', i)) {
-          const g = readBraceGroup(s, i + 5);
+        } else if (s.startsWith('\\{', i)) {
+          atoms.push(ommlRun('{'));
+          i += 2;
+        } else if (s.startsWith('\\}', i)) {
+          atoms.push(ommlRun('}'));
+          i += 2;
+        } else if (s.startsWith('\\overline', i) && !/[A-Za-z]/.test(s[i + 9] || '')) {
+          let nextI = i + 9;
+          while (nextI < s.length && s[nextI] === ' ') nextI++;
+          if (s[nextI] === '{') {
+            const g = readBraceGroup(s, nextI);
+            atoms.push(ommlBar(parseLatexInner(g.content), 'top'));
+            i = g.nextIdx;
+          } else if (nextI < s.length) {
+            atoms.push(ommlBar(ommlRun(s[nextI]), 'top'));
+            i = nextI + 1;
+          } else {
+            i = nextI;
+          }
+        } else if (s.startsWith('\\text{', i) || s.startsWith('\\mathrm{', i) || s.startsWith('\\mathbf{', i)) {
+          const cmdLen = s.startsWith('\\text{', i) ? 5 : 7;
+          const g = readBraceGroup(s, i + cmdLen);
           atoms.push(ommlRun(g.content, true));
           i = g.nextIdx;
-        } else if (s.startsWith('\\sqrt', i)) {
+        } else if (/^\\(min|max|sin|cos|tan|log|ln)(?![a-zA-Z])/.test(s.slice(i))) {
+          const fnMatch = s.slice(i).match(/^\\(min|max|sin|cos|tan|log|ln)(?![a-zA-Z])/);
+          atoms.push(ommlRun(fnMatch[1], true));
+          i += fnMatch[0].length;
+        } else if (s.startsWith('\\sqrt', i) && !/[A-Za-z]/.test(s[i + 5] || '')) {
           let nextI = i + 5;
           while (nextI < s.length && s[nextI] === ' ') nextI++;
           let degXml = '';
@@ -367,28 +632,26 @@
             atoms.push(ommlRun(g1.content));
             i = nextI;
           }
-        } else if (s.startsWith('\\left', i)) {
-          i += 5;
-          while (i < s.length && s[i] === ' ') i++;
-          const begChr = s[i] || '(';
-          i++;
+        } else if (s.startsWith('\\left', i) && !/[A-Za-z]/.test(s[i + 5] || '')) {
+          const begTok = readDelimiterToken(s, i + 5);
+          const begChr = begTok.chr;
+          i = begTok.nextIdx;
           let depth = 1;
           let startInner = i;
           let endInner = s.length;
-          let endChr = ')';
+          let endChr = begChr === '(' ? ')' : (begChr === '[' ? ']' : (begChr === '{' ? '}' : begChr));
           let afterRight = s.length;
           while (i < s.length) {
-            if (s.startsWith('\\left', i)) {
+            if (s.startsWith('\\left', i) && !/[A-Za-z]/.test(s[i + 5] || '')) {
               depth++;
               i += 5;
-            } else if (s.startsWith('\\right', i)) {
+            } else if (s.startsWith('\\right', i) && !/[A-Za-z]/.test(s[i + 6] || '')) {
               depth--;
               if (depth === 0) {
                 endInner = i;
-                i += 6;
-                while (i < s.length && s[i] === ' ') i++;
-                endChr = s[i] || ')';
-                afterRight = i + 1;
+                const endTok = readDelimiterToken(s, i + 6);
+                endChr = endTok.chr;
+                afterRight = endTok.nextIdx;
                 break;
               }
               i += 6;
@@ -399,6 +662,12 @@
           const innerStr = s.slice(startInner, endInner);
           atoms.push(ommlDelim(begChr, endChr, parseLatexInner(innerStr)));
           i = afterRight;
+        } else if (s[i] === '\\' && /[A-Za-z]/.test(s[i + 1] || '')) {
+          // 未被前置映射消耗的命令：保持完整命令标记，不拆碎为单字符，也不静默丢弃
+          let endCmd = i + 1;
+          while (endCmd < s.length && /[A-Za-z]/.test(s[endCmd])) endCmd++;
+          atoms.push(ommlRun(s.slice(i, endCmd), true));
+          i = endCmd;
         } else if (s[i] === '(' || s[i] === '[') {
           const begChr = s[i];
           const endChr = begChr === '(' ? ')' : ']';
@@ -411,7 +680,7 @@
           }
           if (depth === 0) {
             const innerStr = s.slice(i + 1, k - 1);
-            if (/\\(?:frac|dfrac|tfrac|sqrt|begin)\b/.test(innerStr)) {
+            if (/\\(?:frac|dfrac|tfrac|sqrt|begin)(?![a-zA-Z])/.test(innerStr)) {
               atoms.push(ommlDelim(begChr, endChr, parseLatexInner(innerStr)));
             } else {
               atoms.push(ommlRun(begChr) + parseLatexInner(innerStr) + ommlRun(endChr));
@@ -507,6 +776,14 @@
 
     function latexToOmml(tex) {
       return `<m:oMath>${parseLatexInner(tex)}</m:oMath>`;
+    }
+
+    if (typeof window !== 'undefined') {
+      window.splitLatexEnvRows = splitLatexEnvRows;
+      window.splitLatexEnvCols = splitLatexEnvCols;
+      window.normalizeCompactFractions = normalizeCompactFractions;
+      window.parseLatexInner = parseLatexInner;
+      window.latexToOmml = latexToOmml;
     }
 
     function textWithMathToRuns(text, opts = {}) {

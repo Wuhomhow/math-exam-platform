@@ -51,7 +51,15 @@
     rafId: null,
     lastFrameTs: 0,
     activeTimelineRenderFn: null,
-    practiceVisible: false
+    practiceVisible: false,
+    // 详情页内部访问历史栈与跨模块返回挂起快照
+    detailHistoryStack: [],
+    suspendedDetailSnapshot: null,
+    expandedAnalysisIds: [],
+    prac1SelectedKey: null,
+    prac2InputX: '',
+    prac2InputMin: '',
+    prac2Submitted: false
   };
 
   function stopDynamicPlayback() {
@@ -73,8 +81,57 @@
     ProceduralState.dynamicStep = 1;
     ProceduralState.currentTime = 0.0;
     ProceduralState.targetStopTime = 6.5;
+    ProceduralState.playbackRate = 1.0;
     ProceduralState.isContinuousMode = false;
     ProceduralState.practiceVisible = false;
+    ProceduralState.expandedAnalysisIds = [];
+    ProceduralState.prac1SelectedKey = null;
+    ProceduralState.prac2InputX = '';
+    ProceduralState.prac2InputMin = '';
+    ProceduralState.prac2Submitted = false;
+  }
+
+  function captureCurrentDetailSnapshot() {
+    if (!ProceduralState.selectedProcedureId) return null;
+    const inputXEl = document.getElementById('prac2InputX');
+    const inputMinEl = document.getElementById('prac2InputMin');
+    return {
+      procedureId: ProceduralState.selectedProcedureId,
+      scrollY: typeof window.scrollY === 'number' ? window.scrollY : (window.pageYOffset || 0),
+      dynamicDemoOpen: Boolean(ProceduralState.dynamicDemoOpen),
+      dynamicStep: ProceduralState.dynamicStep || 1,
+      currentTime: Number(ProceduralState.currentTime || 0.0),
+      targetStopTime: Number(ProceduralState.targetStopTime || 6.5),
+      playbackRate: Number(ProceduralState.playbackRate || 1.0),
+      isContinuousMode: Boolean(ProceduralState.isContinuousMode),
+      practiceVisible: Boolean(ProceduralState.practiceVisible),
+      expandedAnalysisIds: Array.isArray(ProceduralState.expandedAnalysisIds)
+        ? [...ProceduralState.expandedAnalysisIds]
+        : [],
+      prac1SelectedKey: ProceduralState.prac1SelectedKey || null,
+      prac2InputX: inputXEl ? inputXEl.value : (ProceduralState.prac2InputX || ''),
+      prac2InputMin: inputMinEl ? inputMinEl.value : (ProceduralState.prac2InputMin || ''),
+      prac2Submitted: Boolean(ProceduralState.prac2Submitted)
+    };
+  }
+
+  function pushDetailHistorySnapshot(snapshot, targetProcedureId) {
+    if (!snapshot || !snapshot.procedureId) return;
+    if (snapshot.procedureId === targetProcedureId) return;
+    const stack = ProceduralState.detailHistoryStack;
+    // 若目标知识已在历史栈中，截断回环，避免产生 P15 -> P12 -> P15 死循环重复记录
+    const existingTargetIdx = stack.findIndex(item => item.procedureId === targetProcedureId);
+    if (existingTargetIdx !== -1) {
+      stack.length = existingTargetIdx;
+    }
+    if (stack.length > 0 && stack[stack.length - 1].procedureId === snapshot.procedureId) {
+      stack[stack.length - 1] = snapshot;
+    } else {
+      stack.push(snapshot);
+    }
+    if (stack.length > 20) {
+      stack.shift();
+    }
   }
 
   // 页面隐藏或切换标签页时自动暂停 60fps 时间轴
@@ -111,6 +168,8 @@
           clearTimeout(timer);
           timer = setTimeout(() => {
             stopDynamicPlayback();
+            ProceduralState.detailHistoryStack = [];
+            ProceduralState.suspendedDetailSnapshot = null;
             ProceduralState.searchKeyword = e.target.value.trim();
             if (ProceduralState.subView !== 'home') {
               ProceduralState.subView = 'home';
@@ -125,6 +184,8 @@
         gradeSelect.dataset.bound = '1';
         gradeSelect.addEventListener('change', (e) => {
           stopDynamicPlayback();
+          ProceduralState.detailHistoryStack = [];
+          ProceduralState.suspendedDetailSnapshot = null;
           ProceduralState.gradeFilter = e.target.value;
           ProceduralState.subView = 'home';
           this.render();
@@ -136,6 +197,8 @@
         subjectSelect.dataset.bound = '1';
         subjectSelect.addEventListener('change', (e) => {
           stopDynamicPlayback();
+          ProceduralState.detailHistoryStack = [];
+          ProceduralState.suspendedDetailSnapshot = null;
           ProceduralState.subjectFilter = e.target.value;
           ProceduralState.subView = 'home';
           this.render();
@@ -147,6 +210,8 @@
         resetBtn.dataset.bound = '1';
         resetBtn.addEventListener('click', () => {
           stopDynamicPlayback();
+          ProceduralState.detailHistoryStack = [];
+          ProceduralState.suspendedDetailSnapshot = null;
           ProceduralState.searchKeyword = '';
           ProceduralState.gradeFilter = 'all';
           ProceduralState.subjectFilter = 'all';
@@ -161,6 +226,8 @@
 
     openHome(chapter = undefined) {
       resetDynamicDemoState(false);
+      ProceduralState.detailHistoryStack = [];
+      ProceduralState.suspendedDetailSnapshot = null;
       ProceduralState.subView = 'home';
       if (chapter !== undefined) {
         ProceduralState.chapterFilter = chapter;
@@ -169,9 +236,24 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     },
 
-    openDetail(procedureId, autoOpenDemo = false) {
+    openDetail(procedureId, autoOpenDemo = false, options = {}) {
       const proc = window.ProceduralKnowledgeService?.getProcedureById(procedureId);
       if (!proc) return;
+      const { recordHistory = false, clearHistory = false } = options;
+
+      if (clearHistory) {
+        ProceduralState.detailHistoryStack = [];
+      } else if (
+        recordHistory &&
+        ProceduralState.subView === 'detail' &&
+        ProceduralState.selectedProcedureId &&
+        ProceduralState.selectedProcedureId !== procedureId
+      ) {
+        const snap = captureCurrentDetailSnapshot();
+        pushDetailHistorySnapshot(snap, procedureId);
+      }
+
+      ProceduralState.suspendedDetailSnapshot = null;
       resetDynamicDemoState(Boolean(autoOpenDemo));
       ProceduralState.selectedProcedureId = procedureId;
       ProceduralState.subView = 'detail';
@@ -179,8 +261,138 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     },
 
-    openQuestionInBankDetail(questionId, chapter) {
+    restoreDetailSnapshot(snapshot) {
+      if (!snapshot || !snapshot.procedureId) return false;
+      const proc = window.ProceduralKnowledgeService?.getProcedureById(snapshot.procedureId);
+      if (!proc) return false;
+
       stopDynamicPlayback();
+      ProceduralState.selectedProcedureId = snapshot.procedureId;
+      ProceduralState.subView = 'detail';
+      ProceduralState.dynamicDemoOpen = Boolean(snapshot.dynamicDemoOpen);
+      ProceduralState.dynamicStep = snapshot.dynamicStep || 1;
+      ProceduralState.currentTime = Number(snapshot.currentTime || 0.0);
+      ProceduralState.targetStopTime = Number(snapshot.targetStopTime || 6.5);
+      ProceduralState.playbackRate = Number(snapshot.playbackRate || 1.0);
+      ProceduralState.isContinuousMode = Boolean(snapshot.isContinuousMode);
+      ProceduralState.isPlaying = false;
+      ProceduralState.practiceVisible = Boolean(snapshot.practiceVisible);
+      ProceduralState.expandedAnalysisIds = Array.isArray(snapshot.expandedAnalysisIds)
+        ? [...snapshot.expandedAnalysisIds]
+        : [];
+      ProceduralState.prac1SelectedKey = snapshot.prac1SelectedKey || null;
+      ProceduralState.prac2InputX = snapshot.prac2InputX || '';
+      ProceduralState.prac2InputMin = snapshot.prac2InputMin || '';
+      ProceduralState.prac2Submitted = Boolean(snapshot.prac2Submitted);
+
+      this.render();
+
+      const detailContainer = document.getElementById('procDetailSection');
+      if (detailContainer) {
+        if (ProceduralState.expandedAnalysisIds.length > 0) {
+          ProceduralState.expandedAnalysisIds.forEach(qid => {
+            const panel = document.getElementById(`proc_q_analysis_${qid}`);
+            const btn = detailContainer.querySelector(`.btn-proc-toggle-analysis[data-id="${qid}"]`);
+            const txt = btn?.querySelector('.analysis-btn-text');
+            if (panel) panel.classList.remove('hidden');
+            if (txt) txt.textContent = '收起标准解答';
+          });
+        }
+
+        if (ProceduralState.prac1SelectedKey) {
+          const optBtn = detailContainer.querySelector(`.prac1-opt-btn[data-opt-key="${ProceduralState.prac1SelectedKey}"]`);
+          if (optBtn) optBtn.click();
+        }
+        const inputXEl = detailContainer.querySelector('#prac2InputX');
+        const inputMinEl = detailContainer.querySelector('#prac2InputMin');
+        if (inputXEl && ProceduralState.prac2InputX !== '') inputXEl.value = ProceduralState.prac2InputX;
+        if (inputMinEl && ProceduralState.prac2InputMin !== '') inputMinEl.value = ProceduralState.prac2InputMin;
+        if (ProceduralState.prac2Submitted) {
+          const submitBtn = detailContainer.querySelector('#btnPrac2Submit');
+          if (submitBtn) submitBtn.click();
+        }
+      }
+
+      const syncWhiteboardAndScroll = () => {
+        if (ProceduralState.dynamicDemoOpen && typeof ProceduralState.activeTimelineRenderFn === 'function') {
+          ProceduralState.activeTimelineRenderFn(ProceduralState.currentTime);
+          const playBtnText = document.getElementById('procDynPlayBtnText');
+          const playBtnIcon = document.getElementById('procDynPlayBtnIcon');
+          if (playBtnText) {
+            playBtnText.textContent = ProceduralState.currentTime > 0.05 ? '继续播放' : '开始演示';
+          }
+          if (playBtnIcon) {
+            playBtnIcon.textContent = '▶';
+          }
+        }
+        const targetScrollY = Math.max(0, Number(snapshot.scrollY || 0));
+        window.scrollTo({ top: targetScrollY, behavior: 'auto' });
+      };
+
+      syncWhiteboardAndScroll();
+      requestAnimationFrame(syncWhiteboardAndScroll);
+      return true;
+    },
+
+    goBackDetail() {
+      if (!Array.isArray(ProceduralState.detailHistoryStack) || ProceduralState.detailHistoryStack.length === 0) {
+        return false;
+      }
+      const prevSnapshot = ProceduralState.detailHistoryStack.pop();
+      ProceduralState.suspendedDetailSnapshot = null;
+      return this.restoreDetailSnapshot(prevSnapshot);
+    },
+
+    suspendCurrentDetailState() {
+      if (ProceduralState.subView === 'detail' && ProceduralState.selectedProcedureId) {
+        stopDynamicPlayback();
+        ProceduralState.suspendedDetailSnapshot = captureCurrentDetailSnapshot();
+      }
+    },
+
+    hasSuspendedDetailSnapshot() {
+      return Boolean(ProceduralState.suspendedDetailSnapshot && ProceduralState.suspendedDetailSnapshot.procedureId);
+    },
+
+    resumeSuspendedDetail() {
+      if (!this.hasSuspendedDetailSnapshot()) return false;
+      const snap = ProceduralState.suspendedDetailSnapshot;
+      ProceduralState.suspendedDetailSnapshot = null;
+      return this.restoreDetailSnapshot(snap);
+    },
+
+    openDetailFromExternal(procedureId) {
+      const proc = window.ProceduralKnowledgeService?.getProcedureById(procedureId);
+      if (!proc) return;
+
+      if (this.hasSuspendedDetailSnapshot()) {
+        const snap = ProceduralState.suspendedDetailSnapshot;
+        if (snap.procedureId === procedureId) {
+          if (typeof switchView === 'function' && window.state && window.state.currentView !== 'procedural') {
+            switchView('procedural');
+          } else {
+            this.resumeSuspendedDetail();
+          }
+          return;
+        }
+        ProceduralState.suspendedDetailSnapshot = null;
+        pushDetailHistorySnapshot(snap, procedureId);
+      } else if (
+        ProceduralState.subView === 'detail' &&
+        ProceduralState.selectedProcedureId &&
+        ProceduralState.selectedProcedureId !== procedureId
+      ) {
+        pushDetailHistorySnapshot(captureCurrentDetailSnapshot(), procedureId);
+      }
+
+      if (typeof switchView === 'function' && window.state && window.state.currentView !== 'procedural') {
+        switchView('procedural');
+      }
+      this.openDetail(procedureId, false, { recordHistory: false, clearHistory: false });
+    },
+
+    openQuestionInBankDetail(questionId, chapter) {
+      this.suspendCurrentDetailState();
       if (typeof switchView === 'function') {
         switchView('bank');
       }
@@ -415,7 +627,7 @@
       listContainer.querySelectorAll('[data-open-proc]').forEach(card => {
         card.addEventListener('click', () => {
           const pid = card.getAttribute('data-open-proc');
-          this.openDetail(pid);
+          this.openDetail(pid, false, { clearHistory: true });
         });
       });
     },
@@ -498,7 +710,7 @@
             <div class="flex flex-wrap items-center justify-between gap-2">
               <div class="flex flex-wrap items-center gap-2">
                 <span class="px-2 py-0.5 rounded bg-[#0F766E] text-white text-xs font-bold">网课互动白板</span>
-                <h4 class="text-sm sm:text-base font-bold text-slate-900">${escapeHtml(demoData.title)}</h4>
+                <h4 class="text-sm sm:text-base font-bold text-slate-900">${renderMathText(demoData.title)}</h4>
                 <span class="text-xs text-slate-500">示例题：${renderMathText(demoData.exampleTitle)}</span>
               </div>
               <button type="button" id="btnProcCloseDynamicDemo" class="btn-secondary px-3 py-1.5 rounded-lg text-xs font-semibold inline-flex items-center gap-1">
@@ -509,7 +721,7 @@
             <div class="space-y-2 pt-1 border-t border-slate-100">
               <div class="flex flex-wrap items-center justify-between gap-2 text-xs">
                 <span id="procDynStepStatusText" class="font-bold text-[#0F766E]">
-                  当前进度：第 ${curStep} / ${totalSteps} 步 · ${escapeHtml(demoData.steps[curStep - 1].name)}
+                  ${renderMathText(`当前进度：第 ${curStep} / ${totalSteps} 步 · ${demoData.steps[curStep - 1].name}`)}
                 </span>
                 <span id="procDynBeatLabelText" class="text-slate-500 font-medium">正在书写：1.1 观察原式</span>
               </div>
@@ -526,7 +738,7 @@
                       <span class="w-5 h-5 rounded-full flex items-center justify-center text-[11px] font-bold shrink-0 ${
                         isAct ? 'bg-white text-[#0F766E]' : 'bg-white text-slate-600 border border-slate-200'
                       }">${st.step}</span>
-                      <span class="truncate">${escapeHtml(st.name)}</span>
+                      <span class="truncate">${renderMathText(st.name)}</span>
                     </button>
                   `;
                 }).join('')}
@@ -554,14 +766,14 @@
                 <button type="button" id="btnProcDynPrev" class="proc-dyn-ctrl-btn btn-secondary px-3 py-1.5 rounded-lg text-xs font-semibold" ${curStep <= 1 ? 'disabled' : ''}>
                   ← 上一步
                 </button>
-                <button type="button" id="btnProcDynNext" class="proc-dyn-ctrl-btn btn-secondary px-3 py-1.5 rounded-lg text-xs font-semibold">
+                <button type="button" id="btnProcDynNext" class="proc-dyn-ctrl-btn btn-secondary px-3 py-1.5 rounded-lg text-xs font-semibold" ${curStep >= totalSteps ? 'disabled' : ''}>
                   下一步 →
                 </button>
-                <button type="button" id="btnProcDynPrevBeat" class="btn-secondary px-2.5 py-1.5 rounded-lg text-xs font-medium" title="后退一个微动作帧">
-                  ◀ 上一帧
+                <button type="button" id="btnProcDynPrevBeat" class="proc-dyn-ctrl-btn btn-secondary px-2.5 py-1.5 rounded-lg text-xs font-medium" title="跳转到上一个关键节点">
+                  ◀ 上一个关键节点
                 </button>
-                <button type="button" id="btnProcDynNextBeat" class="btn-secondary px-2.5 py-1.5 rounded-lg text-xs font-medium" title="前进一个微动作帧">
-                  下一帧 ▶
+                <button type="button" id="btnProcDynNextBeat" class="proc-dyn-ctrl-btn btn-secondary px-2.5 py-1.5 rounded-lg text-xs font-medium" title="跳转到下一个关键节点">
+                  下一个关键节点 ▶
                 </button>
                 <button type="button" id="btnProcDynReplayStep" class="btn-secondary px-2.5 py-1.5 rounded-lg text-xs font-medium" title="从头重播当前步骤的板书过程">
                   ↻ 重播本步
@@ -680,7 +892,7 @@
             <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-100">
               <div class="flex items-center gap-2">
                 <span class="px-2.5 py-0.5 rounded bg-[#0F766E] text-white text-xs font-bold">跟着操作</span>
-                <h4 class="text-sm sm:text-base font-bold text-slate-900">${escapeHtml(demoData.practiceSectionTitle || `${demoData.title}关键动作跟做练习`)}</h4>
+                <h4 class="text-sm sm:text-base font-bold text-slate-900">${renderMathText(demoData.practiceSectionTitle || `${demoData.title}关键动作跟做练习`)}</h4>
               </div>
               <span class="text-xs text-slate-500">${escapeHtml(demoData.practiceSectionSub || '完成以下两道关键操作练习，检验是否掌握核心解题动作')}</span>
             </div>
@@ -808,6 +1020,12 @@
       });
       let lastBeatRendered = '';
 
+      const stepStatusHtmlCache = new Map();
+      (demoData.steps || []).forEach(st => {
+        stepStatusHtmlCache.set(st.step, renderMathText(`当前进度：第 ${st.step} / ${totalSteps} 步 · ${st.name}`));
+      });
+      let lastStepStatusRendered = -1;
+
       // 缓存所有 Token 与行节点引用，保证 60fps 帧循环内零 DOM 查询开销
       const tokenElsMap = new Map();
       container.querySelectorAll('.proc-wb-token').forEach(el => {
@@ -847,11 +1065,24 @@
         dashLen: parseFloat(el.getAttribute('data-dash-len') || '0')
       }));
 
-      // 根据给定时间戳 t 定位所属教学步骤 (1..5)
+      // 根据给定时间戳 t 定位所属教学步骤 (1..totalSteps)
       const getStepAtTime = (t) => {
         for (let i = demoData.steps.length - 1; i >= 0; i--) {
-          if (t >= demoData.steps[i].tStart - 0.01) {
-            return demoData.steps[i].step;
+          const st = demoData.steps[i];
+          if (t > st.tStart + 0.01) {
+            return st.step;
+          }
+          if (Math.abs(t - st.tStart) <= 0.01) {
+            // 当单步播放刚好到达上一步终点（与下一步起点重合）或处于恢复静止状态时，保持在原步骤
+            if (
+              i > 0 &&
+              !ProceduralState.isContinuousMode &&
+              (Math.abs(ProceduralState.targetStopTime - st.tStart) <= 0.05 ||
+                (!ProceduralState.isPlaying && ProceduralState.dynamicStep === demoData.steps[i - 1].step))
+            ) {
+              return demoData.steps[i - 1].step;
+            }
+            return st.step;
           }
         }
         return 1;
@@ -1005,8 +1236,9 @@
         // 2. 更新顶部步骤状态与微动作节点提示
         const stepObj = demoData.steps[step - 1];
         const statusText = container.querySelector('#procDynStepStatusText');
-        if (statusText && stepObj) {
-          statusText.textContent = `当前进度：第 ${step} / ${totalSteps} 步 · ${stepObj.name}`;
+        if (statusText && stepObj && lastStepStatusRendered !== step) {
+          lastStepStatusRendered = step;
+          statusText.innerHTML = stepStatusHtmlCache.get(step) || renderMathText(`当前进度：第 ${step} / ${totalSteps} 步 · ${stepObj.name}`);
         }
 
         let currentBeat = demoData.microBeats[0];
@@ -1128,11 +1360,23 @@
           }
         });
 
-        // 10. 更新上一步/下一步按钮状态
+        // 10. 更新上一步/下一步与关键节点按钮状态
         const prevBtn = container.querySelector('#btnProcDynPrev');
         const nextBtn = container.querySelector('#btnProcDynNext');
-        if (prevBtn) prevBtn.disabled = step <= 1 && t <= 0.2;
-        if (nextBtn) nextBtn.disabled = step >= totalSteps && t >= totalDuration - 0.1;
+        if (prevBtn) prevBtn.disabled = step <= 1;
+        if (nextBtn) nextBtn.disabled = step >= totalSteps;
+
+        const beats = demoData.microBeats || [];
+        const prevBeatBtn = container.querySelector('#btnProcDynPrevBeat');
+        const nextBeatBtn = container.querySelector('#btnProcDynNextBeat');
+        if (prevBeatBtn) {
+          const hasPrevBeat = beats.some(b => b.time < t - 0.15);
+          prevBeatBtn.disabled = !hasPrevBeat;
+        }
+        if (nextBeatBtn) {
+          const hasNextBeat = beats.some(b => b.time > t + 0.15);
+          nextBeatBtn.disabled = !hasNextBeat;
+        }
       };
 
       ProceduralState.activeTimelineRenderFn = renderTimelineAt;
@@ -1176,6 +1420,7 @@
       const playSingleStep = (stepNum) => {
         const sIdx = Math.max(0, Math.min(totalSteps - 1, stepNum - 1));
         const stObj = demoData.steps[sIdx];
+        ProceduralState.dynamicStep = stObj.step;
         playTimelineTo(stObj.tStart, stObj.tEnd, false);
       };
 
@@ -1193,10 +1438,12 @@
           // 进入动态演示时不自动播放第一步，停在 0 秒静止帧由用户决定何时开始
           ProceduralState.currentTime = 0.0;
           ProceduralState.dynamicStep = 1;
+          ProceduralState.targetStopTime = demoData.steps[0]?.tEnd || 6.5;
+          renderTimelineAt(0.0);
+          const playBtnText = document.getElementById('procDynPlayBtnText');
+          if (playBtnText) playBtnText.textContent = '开始演示';
           requestAnimationFrame(() => {
             renderTimelineAt(0.0);
-            const playBtnText = document.getElementById('procDynPlayBtnText');
-            if (playBtnText) playBtnText.textContent = '开始演示';
           });
         }
       };
@@ -1224,50 +1471,53 @@
         renderTimelineAt(val);
       });
 
-      // 上一步 / 下一步
+      // 上一步：直接回到上一步并从上一步起始位置开始播放
       container.querySelector('#btnProcDynPrev')?.addEventListener('click', () => {
-        const curStep = getStepAtTime(ProceduralState.currentTime);
-        const targetStep = Math.max(1, curStep - 1);
-        playSingleStep(targetStep);
+        const curStep = ProceduralState.dynamicStep || getStepAtTime(ProceduralState.currentTime);
+        if (curStep <= 1) return;
+        playSingleStep(curStep - 1);
       });
 
+      // 下一步：无论当前步骤是否播放完毕，直接进入下一步并从下一步起始位置开始播放
       container.querySelector('#btnProcDynNext')?.addEventListener('click', () => {
-        const curStep = getStepAtTime(ProceduralState.currentTime);
-        const curStepObj = demoData.steps[curStep - 1];
-        // 如果当前步骤还没开始或尚未演播完（例如刚进入时停在 00:00.0），先演播当前步
-        if (ProceduralState.currentTime < curStepObj.tEnd - 0.25) {
-          playTimelineTo(ProceduralState.currentTime, curStepObj.tEnd, false);
-        } else {
-          const targetStep = Math.min(totalSteps, curStep + 1);
-          playSingleStep(targetStep);
-        }
+        const curStep = ProceduralState.dynamicStep || getStepAtTime(ProceduralState.currentTime);
+        if (curStep >= totalSteps) return;
+        playSingleStep(curStep + 1);
       });
 
-      // 上一帧 / 下一帧（微动作级步进，方便老师或学生定格观察每一处细节）
+      // 上一个关键节点 / 下一个关键节点（按 microBeats 关键时间戳步进定格）
       container.querySelector('#btnProcDynPrevBeat')?.addEventListener('click', () => {
         stopDynamicPlayback();
         const beats = demoData.microBeats || [];
-        let targetTime = 0.0;
+        if (beats.length === 0) return;
+        let targetBeat = null;
         for (let i = beats.length - 1; i >= 0; i--) {
-          if (beats[i].time < ProceduralState.currentTime - 0.25) {
-            targetTime = beats[i].time;
+          if (beats[i].time < ProceduralState.currentTime - 0.15) {
+            targetBeat = beats[i];
             break;
           }
         }
-        renderTimelineAt(targetTime);
+        if (!targetBeat) return;
+        ProceduralState.dynamicStep = targetBeat.step || getStepAtTime(targetBeat.time);
+        ProceduralState.targetStopTime = demoData.steps[Math.max(0, ProceduralState.dynamicStep - 1)]?.tEnd || totalDuration;
+        renderTimelineAt(targetBeat.time);
       });
 
       container.querySelector('#btnProcDynNextBeat')?.addEventListener('click', () => {
         stopDynamicPlayback();
         const beats = demoData.microBeats || [];
-        let targetTime = totalDuration;
+        if (beats.length === 0) return;
+        let targetBeat = null;
         for (let i = 0; i < beats.length; i++) {
           if (beats[i].time > ProceduralState.currentTime + 0.15) {
-            targetTime = beats[i].time;
+            targetBeat = beats[i];
             break;
           }
         }
-        renderTimelineAt(targetTime);
+        if (!targetBeat) return;
+        ProceduralState.dynamicStep = targetBeat.step || getStepAtTime(targetBeat.time);
+        ProceduralState.targetStopTime = demoData.steps[Math.max(0, ProceduralState.dynamicStep - 1)]?.tEnd || totalDuration;
+        renderTimelineAt(targetBeat.time);
       });
 
       // 开始演示 / 连续播放 / 暂停
@@ -1282,13 +1532,15 @@
 
       // 重播本步
       container.querySelector('#btnProcDynReplayStep')?.addEventListener('click', () => {
-        const curStep = getStepAtTime(ProceduralState.currentTime);
+        const curStep = ProceduralState.dynamicStep || getStepAtTime(ProceduralState.currentTime);
         playSingleStep(curStep);
       });
 
       // 回到开头静止状态
       container.querySelector('#btnProcDynRestart')?.addEventListener('click', () => {
         stopDynamicPlayback();
+        ProceduralState.dynamicStep = 1;
+        ProceduralState.targetStopTime = demoData.steps[0]?.tEnd || 6.5;
         renderTimelineAt(0.0);
         const playBtnText = document.getElementById('procDynPlayBtnText');
         if (playBtnText) playBtnText.textContent = '开始演示';
@@ -1328,6 +1580,7 @@
           const key = btn.getAttribute('data-opt-key');
           const optObj = demoData.practices.practice1.options.find(o => o.key === key);
           if (!optObj) return;
+          ProceduralState.prac1SelectedKey = key;
 
           prac1Btns.forEach(b => {
             const bKey = b.getAttribute('data-opt-key');
@@ -1357,6 +1610,7 @@
       });
 
       container.querySelector('#btnPrac1Reset')?.addEventListener('click', () => {
+        ProceduralState.prac1SelectedKey = null;
         prac1CorrectEl?.classList.add('hidden');
         prac1WrongEl?.classList.add('hidden');
         prac1Btns.forEach(b => {
@@ -1375,7 +1629,17 @@
 
       const normalizeNumStr = (val) => String(val || '').trim().replace(/[−﹣－]/g, '-').replace(/^\+/, '');
 
+      inputX?.addEventListener('input', () => {
+        ProceduralState.prac2InputX = inputX.value;
+      });
+      inputMin?.addEventListener('input', () => {
+        ProceduralState.prac2InputMin = inputMin.value;
+      });
+
       const checkPrac2 = () => {
+        ProceduralState.prac2InputX = inputX?.value || '';
+        ProceduralState.prac2InputMin = inputMin?.value || '';
+        ProceduralState.prac2Submitted = true;
         const xVal = normalizeNumStr(inputX?.value);
         const minVal = normalizeNumStr(inputMin?.value);
         const p2Cfg = demoData.practices.practice2;
@@ -1412,16 +1676,24 @@
       container.querySelector('#btnPrac2Reset')?.addEventListener('click', () => {
         if (inputX) inputX.value = '';
         if (inputMin) inputMin.value = '';
+        ProceduralState.prac2InputX = '';
+        ProceduralState.prac2InputMin = '';
+        ProceduralState.prac2Submitted = false;
         prac2CorrectEl?.classList.add('hidden');
         prac2WrongEl?.classList.add('hidden');
       });
 
       if (ProceduralState.dynamicDemoOpen) {
+        renderTimelineAt(ProceduralState.currentTime || 0.0);
+        const playBtnText = document.getElementById('procDynPlayBtnText');
+        if (playBtnText && !ProceduralState.isPlaying) {
+          playBtnText.textContent = ProceduralState.currentTime > 0.05 ? '继续播放' : '开始演示';
+        }
         requestAnimationFrame(() => {
           renderTimelineAt(ProceduralState.currentTime || 0.0);
-          const playBtnText = document.getElementById('procDynPlayBtnText');
-          if (playBtnText && !ProceduralState.isPlaying) {
-            playBtnText.textContent = ProceduralState.currentTime > 0.05 ? '继续播放' : '开始演示';
+          const btnText = document.getElementById('procDynPlayBtnText');
+          if (btnText && !ProceduralState.isPlaying) {
+            btnText.textContent = ProceduralState.currentTime > 0.05 ? '继续播放' : '开始演示';
           }
         });
       }
@@ -1647,9 +1919,16 @@
         `;
       }).join('');
 
+      const prevHistorySnap = Array.isArray(ProceduralState.detailHistoryStack) && ProceduralState.detailHistoryStack.length > 0
+        ? ProceduralState.detailHistoryStack[ProceduralState.detailHistoryStack.length - 1]
+        : null;
+      const prevProcObj = prevHistorySnap
+        ? window.ProceduralKnowledgeService?.getProcedureById(prevHistorySnap.procedureId)
+        : null;
+
       container.innerHTML = `
         <!-- Breadcrumb Navigation -->
-        <div class="ui-card px-4 py-3 flex flex-wrap items-center gap-2 text-xs">
+        <div class="ui-card px-4 py-3 flex flex-wrap items-center justify-between gap-2 text-xs">
           <div class="flex flex-wrap items-center gap-1.5 text-slate-500">
             <button type="button" id="btnProcBackHome" class="text-[#0F766E] font-semibold hover:underline">程序性知识首页</button>
             <span>/</span>
@@ -1657,6 +1936,12 @@
             <span>/</span>
             <span class="font-bold text-slate-800">${renderMathText(p.name)}</span>
           </div>
+          ${prevHistorySnap ? `
+            <button type="button" id="btnProcBackPrevKnowledge" class="px-3 py-1 rounded-lg bg-[#F0FDFA] text-[#0F766E] border border-[#99F6E4] font-semibold hover:bg-[#CCFBF1]/60 transition inline-flex items-center gap-1.5" title="返回上一个浏览的程序性知识并恢复学习位置">
+              <span>← 返回上一个知识：${escapeHtml(prevHistorySnap.procedureId)}</span>
+              ${prevProcObj ? `<span class="hidden sm:inline text-slate-500 font-normal">· ${renderMathText(prevProcObj.name)}</span>` : ''}
+            </button>
+          ` : ''}
         </div>
 
         <!-- 4.1 Basic Information Header -->
@@ -1793,16 +2078,19 @@
         const ch = e.currentTarget.getAttribute('data-chap');
         this.openHome(ch || 'all');
       });
+      container.querySelector('#btnProcBackPrevKnowledge')?.addEventListener('click', () => {
+        this.goBackDetail();
+      });
 
       container.querySelectorAll('[data-nav-proc]').forEach(btn => {
         btn.addEventListener('click', () => {
           const targetId = btn.getAttribute('data-nav-proc');
-          if (targetId) this.openDetail(targetId);
+          if (targetId) this.openDetail(targetId, false, { recordHistory: true });
         });
       });
 
       container.querySelector('#btnProcGoKnowledgeGraph')?.addEventListener('click', (e) => {
-        stopDynamicPlayback();
+        this.suspendCurrentDetailState();
         const nodeId = e.currentTarget.getAttribute('data-graph-node') || 'kp_g9_qe_solve';
         if (typeof window.jumpToKnowledgeGraphNode === 'function') {
           window.jumpToKnowledgeGraphNode(nodeId);
@@ -1810,11 +2098,16 @@
       });
 
       container.querySelector('#btnProcAddAllToBasket')?.addEventListener('click', () => {
+        const snap = captureCurrentDetailSnapshot();
         col.items.forEach(it => state.selectedIds.add(it.question.id));
         if (typeof updateStats === 'function') updateStats();
         if (typeof renderBasketDrawer === 'function') renderBasketDrawer();
-        this.renderDetailView(container);
-        if (typeof renderMath === 'function') renderMath();
+        if (snap) {
+          this.restoreDetailSnapshot(snap);
+        } else {
+          this.renderDetailView(container);
+          if (typeof renderMath === 'function') renderMath();
+        }
         if (typeof showToast === 'function') {
           showToast(`已将「${p.name}」集合的 ${col.totalQuestions} 道题目加入试题篮！`, 'success');
         }
@@ -1829,15 +2122,29 @@
           const isHidden = panel.classList.contains('hidden');
           panel.classList.toggle('hidden', !isHidden);
           if (txt) txt.textContent = isHidden ? '收起标准解答' : '查看标准解答';
+          if (qid) {
+            if (isHidden) {
+              if (!ProceduralState.expandedAnalysisIds.includes(qid)) {
+                ProceduralState.expandedAnalysisIds.push(qid);
+              }
+            } else {
+              ProceduralState.expandedAnalysisIds = ProceduralState.expandedAnalysisIds.filter(id => id !== qid);
+            }
+          }
         });
       });
 
       container.querySelectorAll('.btn-proc-toggle-cart').forEach(btn => {
         btn.addEventListener('click', () => {
           const qid = btn.getAttribute('data-id');
+          const snap = captureCurrentDetailSnapshot();
           if (typeof toggleCartItem === 'function') toggleCartItem(qid);
-          this.renderDetailView(container);
-          if (typeof renderMath === 'function') renderMath();
+          if (snap) {
+            this.restoreDetailSnapshot(snap);
+          } else {
+            this.renderDetailView(container);
+            if (typeof renderMath === 'function') renderMath();
+          }
         });
       });
 

@@ -160,6 +160,8 @@
         if (ch.startsWith('4.') || ch.includes('第四章')) return '第四章 整式的加减法';
         if (ch.startsWith('5.') || ch.includes('第五章')) return '第五章 一元一次方程';
       } else if (grade === '初二') {
+        if (ch.startsWith('13.') || ch.includes('第十三')) return '第13章 三角形';
+        if (ch.startsWith('14.') || ch.includes('第十四')) return '第14章 全等三角形';
         if (ch.startsWith('15.') || ch.includes('第十五')) return '第15章 等腰三角形';
         if (ch.startsWith('16.') || ch.includes('第十六')) return '第16章 幂的运算';
         if (ch.startsWith('17.') || ch.includes('第十七')) return '第17章 因式分解';

@@ -4246,6 +4246,1321 @@
           ]
         }
       }
+    }    ,
+    // =========================================================================
+    // P16：利用根的判别式判断一元二次方程根的情况与求参数
+    // =========================================================================
+    P16: {
+      procedureId: 'P16',
+      title: '利用根的判别式判断一元二次方程根的情况与求参数',
+      exampleTitle: '关于 $x$ 的方程 $kx^{2} - 6x + 3 = 0$ 有两个不相等的实数根，求 $k$ 的取值范围',
+      exampleFormula: '$kx^{2} - 6x + 3 = 0$ 有两个不相等的实数根',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示判别式 Δ 三种符号对应法则与二次项系数 a≠0 双重约束）',
+      practiceSectionTitle: '根的判别式判断与求参跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握一般式系数提取、判别式计算与含参双重条件',
+
+      steps: [
+        {
+          step: 1,
+          name: '提取系数并核对二次项系数不为 0',
+          tStart: 0.0,
+          tEnd: 6.2,
+          explanation: '方程 $kx^{2} - 6x + 3 = 0$ 已是一般形式，提取 $a = k，b = -6，c = 3$；因为方程有两个不相等的实数根，必为一元二次方程，故二次项系数 $k \\neq 0$。'
+        },
+        {
+          step: 2,
+          name: '代入计算根的判别式 $\\Delta = b^{2} - 4ac$',
+          tStart: 6.2,
+          tEnd: 12.5,
+          explanation: '将 $a = k，b = -6，c = 3$ 代入判别式公式，得 $\\Delta = (-6)^{2} - 4 \\times k \\times 3 = 36 - 12k$。'
+        },
+        {
+          step: 3,
+          name: '由有两个不相等实根建立 $\\Delta \\gt 0$',
+          tStart: 12.5,
+          tEnd: 18.5,
+          explanation: '因为方程有两个不相等的实数根，所以判别式严格大于 $0$，列出不等式 $36 - 12k \\gt 0$。'
+        },
+        {
+          step: 4,
+          name: '解一元一次不等式求出 $k$ 的范围',
+          tStart: 18.5,
+          tEnd: 24.5,
+          explanation: '解不等式 $36 - 12k \\gt 0$：移项得 $-12k \\gt -36$，两边同除以 $-12$（不等号反向），得 $k \\lt 3$。'
+        },
+        {
+          step: 5,
+          name: '联立 $k \\neq 0$ 写出最终取值范围',
+          tStart: 24.5,
+          tEnd: 30.0,
+          explanation: '综合步骤 1 的 $k \\neq 0$ 与步骤 4 的 $k \\lt 3$，得出 $k$ 的最终取值范围为 $k \\lt 3$ 且 $k \\neq 0$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 提取 $a = k, b = -6, c = 3$ 并确立 $k \\neq 0$' },
+        { time: 7.5, step: 2, label: '2.1 计算 $\\Delta = (-6)^{2} - 4 \\cdot k \\cdot 3 = 36 - 12k$' },
+        { time: 14.0, step: 3, label: '3.1 两个不相等实根 $\\implies 36 - 12k \\gt 0$' },
+        { time: 20.0, step: 4, label: '4.1 解不等式得 $k \\lt 3$' },
+        { time: 26.5, step: 5, label: '5.1 合并双重条件得 $k \\lt 3$ 且 $k \\neq 0$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p16_row_0',
+          stepBadge: '已知条件',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p16_r0_eq', math: '关于 $x$ 的方程 $kx^{2} - 6x + 3 = 0$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p16_r0_cond', math: '有两个不相等的实数根', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p16_row_1',
+          stepBadge: '第 1 步 · 提系数与限制',
+          appearAt: 1.5,
+          tokens: [
+            { id: 'p16_r1_abc', math: '提取系数：$a = k，b = -6，c = 3$；', appearAt: 1.6, dur: 0.40 },
+            { id: 'p16_r1_k0', math: '且二次项系数 $k \\neq 0$', appearAt: 2.8, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p16_row_2',
+          stepBadge: '第 2 步 · 计算判别式',
+          appearAt: 6.6,
+          tokens: [
+            { id: 'p16_r2_del', math: '$\\Delta = b^{2} - 4ac = (-6)^{2} - 4 \\times k \\times 3$', appearAt: 6.7, dur: 0.45 },
+            { id: 'p16_r2_res', math: '$= 36 - 12k$', appearAt: 8.2, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p16_row_3',
+          stepBadge: '第 3 & 4 步 · 列式求解',
+          appearAt: 13.0,
+          tokens: [
+            { id: 'p16_r3_ineq', math: '由题意得 $\\Delta = 36 - 12k \\gt 0$', appearAt: 13.1, dur: 0.45 },
+            { id: 'p16_r3_sol', math: '$\\implies -12k \\gt -36 \\implies k \\lt 3$', appearAt: 19.0, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p16_row_4',
+          stepBadge: '最终结论',
+          appearAt: 25.0,
+          isConclusion: true,
+          tokens: [
+            { id: 'p16_r4_conc', math: '$\\therefore k$ 的取值范围是 $k \\lt 3$ 且 $k \\neq 0$。', appearAt: 25.1, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p16_sp_1',
+          title: '核心法则 · 判别式 Δ 与实数根的对应关系',
+          showStart: 6.2,
+          showEnd: 29.8,
+          tokens: [
+            { id: 'p16_sp1_t1', math: '① $\\Delta \\gt 0 \\iff$ 有两个不相等的实数根', appearAt: 6.8, dur: 0.40 },
+            { id: 'p16_sp1_t2', math: '② $\\Delta = 0 \\iff$ 有两个相等的实数根', appearAt: 7.8, dur: 0.40 },
+            { id: 'p16_sp1_t3', math: '③ $\\Delta \\lt 0 \\iff$ 没有实数根（$\\Delta \\ge 0 \\iff$ 有实数根）', appearAt: 8.8, dur: 0.40 }
+          ],
+          note: '易错警示：当二次项系数含参且方程有两个实数根时，千万不能漏掉二次项系数不为 0！'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p16_r1_k0', tStart: 2.8, tEnd: 6.0, color: 'rose' },
+        { tokenId: 'p16_r2_res', tStart: 8.2, tEnd: 12.3, color: 'teal' },
+        { tokenId: 'p16_r3_ineq', tStart: 13.1, tEnd: 18.4, color: 'amber' },
+        { tokenId: 'p16_r3_sol', tStart: 19.0, tEnd: 24.4, color: 'teal' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p16_svg_s1',
+          type: 'arrow',
+          fromToken: 'p16_r0_cond',
+          toToken: 'p16_r1_k0',
+          label: '有两个实根 $\\implies k \\neq 0$',
+          color: '#BE123C',
+          curveOffset: 28,
+          tStart: 2.2,
+          tDrawEnd: 3.0,
+          tFadeStart: 5.4,
+          tEnd: 6.0
+        },
+        {
+          id: 'p16_svg_s3',
+          type: 'arrow',
+          fromToken: 'p16_r2_res',
+          toToken: 'p16_r3_ineq',
+          label: '令 $\\Delta \\gt 0$',
+          color: '#0F766E',
+          curveOffset: -26,
+          tStart: 12.8,
+          tDrawEnd: 13.6,
+          tFadeStart: 17.6,
+          tEnd: 18.2
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 6.2, text: '第一步提取系数并核对限制条件：在 $kx^{2} - 6x + 3 = 0$ 中，$a = k, b = -6, c = 3$；因为有两个不相等的实数根，必为一元二次方程，故 $k \\neq 0$。', focusToken: 'p16_r1_k0' },
+        { tStart: 6.2, tEnd: 12.5, text: '第二步计算根的判别式：$\\Delta = b^{2} - 4ac = (-6)^{2} - 4 \\times k \\times 3 = 36 - 12k$。', focusToken: 'p16_r2_res' },
+        { tStart: 12.5, tEnd: 18.5, text: '第三步建立判别式不等式：有两个不相等的实数根对应 $\\Delta \\gt 0$，即 $36 - 12k \\gt 0$。', focusToken: 'p16_r3_ineq' },
+        { tStart: 18.5, tEnd: 24.5, text: '第四步解不等式：移项得 $-12k \\gt -36$，两边同除以 $-12$ 不等号反向，解得 $k \\lt 3$。', focusToken: 'p16_r3_sol' },
+        { tStart: 24.5, tEnd: 30.0, text: '第五步合并双重条件：结合第一步的 $k \\neq 0$，得出最终范围为 $k \\lt 3$ 且 $k \\neq 0$！', focusToken: 'p16_r4_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：先化一般式再算根的判别式',
+          givenLabel: '已知一元二次方程：',
+          givenFormula: '$x^{2} = 3x - 1$',
+          extractedLabel: '移项化为一般形式：',
+          extractedFormula: '$x^{2} - 3x + 1 = 0\\ (a = 1, b = -3, c = 1)$',
+          questionText: '计算该方程根的判别式 $\\Delta = b^{2} - 4ac$，正确的算式与结果是？',
+          options: [
+            { key: 'A', text: 'A. $(-3)^{2} - 4 \\times 1 \\times 1 = 5 \\gt 0$（有两个不相等的实数根）', isCorrect: true },
+            { key: 'B', text: 'B. $(-3)^{2} - 4 \\times 1 \\times (-1) = 13$', isCorrect: false },
+            { key: 'C', text: 'C. $3^{2} + 4 \\times 1 \\times (-1) = 5$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！必须先移项化为右边为 0 的一般形式再提取 a, b, c：',
+            calcLines: [
+              '$x^{2} - 3x + 1 = 0 \\implies a = 1,\\ b = -3,\\ c = 1$',
+              '$\\Delta = (-3)^{2} - 4 \\times 1 \\times 1 = 9 - 4 = 5 \\gt 0$'
+            ],
+            summary: '切勿在未移项时直接把等号右边的 $-1$ 当作 $c$。'
+          },
+          wrongTitle: '提示：请先移项将等号右边化为 0',
+          wrongFeedback: '将 $3x - 1$ 移到左边后常数项变为 $+1$（而非 $-1$），故 $\\Delta = (-3)^{2} - 4 \\times 1 \\times 1 = 5$，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：由有两个相等的实数根求参数',
+          givenLabel: '已知条件：',
+          givenFormula: '关于 $x$ 的一元二次方程 $(m - 2)x^{2} + 2x + 1 = 0$ 有两个相等的实数根',
+          questionText: '此时判别式 $\\Delta = b^{2} - 4ac$ 等于多少？解出的参数 $m$ 的值是多少？',
+          input1Prefix: '$\\Delta =$',
+          input1Placeholder: '如 0',
+          input2Prefix: '，$m =$',
+          input2Placeholder: '如 3',
+          input2Suffix: '',
+          expectedX: '0',
+          expectedMin: '3',
+          allowOrderSwap: false,
+          correctFeedback: '$\\Delta = 0$，$m = 3$。',
+          correctDetail: '有两个相等的实数根 $\\implies \\Delta = 2^{2} - 4(m - 2)\\times 1 = 0$，解得 $m = 3$（且满足 $m - 2 \\neq 0$）。',
+          wrongFeedback: '有两个相等的实数根时判别式 $\\Delta = 0$，由 $4 - 4(m - 2) = 0$ 即可解出 $m$。',
+          specificWrongHints: [
+            {
+              checkType: 'secondVal',
+              val: '2',
+              hint: '若 $m = 2$，则二次项系数 $m - 2 = 0$，方程不再是一元二次方程；由 $4 - 4(m - 2) = 0$ 得 $m - 2 = 1 \\implies m = 3$。'
+            }
+          ]
+        }
+      }
+    },
+
+    // =========================================================================
+    // P17：利用公式法解一元二次方程
+    // =========================================================================
+    P17: {
+      procedureId: 'P17',
+      title: '利用公式法解一元二次方程',
+      exampleTitle: '用公式法解一元二次方程 $3x^{2} - 5x = 2$',
+      exampleFormula: '$3x^{2} - 5x = 2 \\implies x = \\frac{-b \\pm \\sqrt{b^{2} - 4ac}}{2a}$',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示移项变号提取 a,b,c、判别式计算与求根公式分子 -b 符号）',
+      practiceSectionTitle: '公式法解一元二次方程跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握求根公式结构逆推与完整公式法求解',
+
+      steps: [
+        {
+          step: 1,
+          name: '移项化为一般形式，确定 $a, b, c$',
+          tStart: 0.0,
+          tEnd: 6.2,
+          explanation: '将右边的常数 $2$ 移到左边变号为 $-2$，化为一般形式 $3x^{2} - 5x - 2 = 0$，连同符号确定 $a = 3，b = -5，c = -2$。'
+        },
+        {
+          step: 2,
+          name: '计算根的判别式 $\\Delta = b^{2} - 4ac$',
+          tStart: 6.2,
+          tEnd: 12.5,
+          explanation: '加括号代入计算判别式：$\\Delta = (-5)^{2} - 4 \\times 3 \\times (-2) = 25 + 24 = 49 \\gt 0$，确认方程有两个不相等的实数根。'
+        },
+        {
+          step: 3,
+          name: '代入求根公式 $x = \\frac{-b \\pm \\sqrt{\\Delta}}{2a}$',
+          tStart: 12.5,
+          tEnd: 19.0,
+          explanation: '将 $a = 3, b = -5, \\Delta = 49$ 代入求根公式，注意分子 $-b = -(-5) = 5$，分母 $2a = 2 \\times 3 = 6$，得 $x = \\frac{5 \\pm \\sqrt{49}}{6}$。'
+        },
+        {
+          step: 4,
+          name: '化简算术平方根 $\\sqrt{\\Delta}$',
+          tStart: 19.0,
+          tEnd: 24.5,
+          explanation: '化简 $\\sqrt{49} = 7$，得到 $x = \\frac{5 \\pm 7}{6}$。'
+        },
+        {
+          step: 5,
+          name: '分正负号约分算出两个根 $x_{1}, x_{2}$',
+          tStart: 24.5,
+          tEnd: 30.0,
+          explanation: '当取加号时 $x_{1} = \\frac{5 + 7}{6} = 2$；当取减号时 $x_{2} = \\frac{5 - 7}{6} = -\\frac{1}{3}$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 移项变号得 $3x^{2} - 5x - 2 = 0$（$a=3, b=-5, c=-2$）' },
+        { time: 7.5, step: 2, label: '2.1 算得 $\\Delta = (-5)^{2} - 4 \\times 3 \\times (-2) = 49 \\gt 0$' },
+        { time: 14.0, step: 3, label: '3.1 代入求根公式 $x = \\frac{-(-5) \\pm \\sqrt{49}}{2 \\times 3}$' },
+        { time: 20.5, step: 4, label: '4.1 化简得 $x = \\frac{5 \\pm 7}{6}$' },
+        { time: 26.5, step: 5, label: '5.1 分别约分解得 $x_{1} = 2，x_{2} = -\\frac{1}{3}$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p17_row_0',
+          stepBadge: '原方程',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p17_r0_eq', math: '用公式法解方程：$3x^{2} - 5x = 2$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p17_row_1',
+          stepBadge: '第 1 步 · 化一般式提系数',
+          appearAt: 1.5,
+          tokens: [
+            { id: 'p17_r1_std', math: '移项化为一般形式：$3x^{2} - 5x - 2 = 0$，', appearAt: 1.6, dur: 0.40 },
+            { id: 'p17_r1_abc', math: '这里 $a = 3，b = -5，c = -2$', appearAt: 2.8, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p17_row_2',
+          stepBadge: '第 2 步 · 算判别式 Δ',
+          appearAt: 6.6,
+          tokens: [
+            { id: 'p17_r2_del', math: '$\\because \\Delta = b^{2} - 4ac = (-5)^{2} - 4 \\times 3 \\times (-2)$', appearAt: 6.7, dur: 0.45 },
+            { id: 'p17_r2_val', math: '$= 25 + 24 = 49 \\gt 0$', appearAt: 8.2, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p17_row_3',
+          stepBadge: '第 3 & 4 步 · 代入求根公式',
+          appearAt: 13.0,
+          tokens: [
+            { id: 'p17_r3_sub', math: '$\\therefore x = \\frac{-(-5) \\pm \\sqrt{49}}{2 \\times 3}$', appearAt: 13.1, dur: 0.45 },
+            { id: 'p17_r3_sim', math: '$= \\frac{5 \\pm 7}{6}$', appearAt: 19.5, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p17_row_4',
+          stepBadge: '最终结论',
+          appearAt: 25.0,
+          isConclusion: true,
+          tokens: [
+            { id: 'p17_r4_conc', math: '$\\therefore x_{1} = \\frac{5 + 7}{6} = 2$，$x_{2} = \\frac{5 - 7}{6} = -\\frac{1}{3}$。', appearAt: 25.1, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p17_sp_1',
+          title: '草稿警示 · 求根公式三大高频易错点',
+          showStart: 6.2,
+          showEnd: 29.8,
+          tokens: [
+            { id: 'p17_sp1_t1', math: '① 移项变号：$3x^{2}-5x=2 \\to 3x^{2}-5x-2=0$（$c=-2$ 而非 $2$）', appearAt: 6.8, dur: 0.40 },
+            { id: 'p17_sp1_t2', math: '② 分子 $-b$：当 $b=-5$ 时，$-b = -(-5) = +5$', appearAt: 13.2, dur: 0.45 },
+            { id: 'p17_sp1_t3', math: '③ 分母 $2a$：分母是 $2 \\times 3 = 6$（切勿漏乘 $2$）', appearAt: 14.5, dur: 0.45 }
+          ],
+          note: '若由求根公式逆推方程，分子上的首项是 $-b$（需取相反数才是 $b$），分母是 $2a$'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p17_r1_abc', tStart: 2.8, tEnd: 6.0, color: 'amber' },
+        { tokenId: 'p17_r2_val', tStart: 8.2, tEnd: 12.3, color: 'teal' },
+        { tokenId: 'p17_r3_sub', tStart: 13.1, tEnd: 18.8, color: 'amber' },
+        { tokenId: 'p17_r3_sim', tStart: 19.5, tEnd: 24.4, color: 'teal' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p17_svg_s2',
+          type: 'arrow',
+          fromToken: 'p17_r1_abc',
+          toToken: 'p17_r2_val',
+          label: '负负得正：$25 + 24 = 49$',
+          color: '#0F766E',
+          curveOffset: 28,
+          tStart: 6.8,
+          tDrawEnd: 7.6,
+          tFadeStart: 11.4,
+          tEnd: 12.0
+        },
+        {
+          id: 'p17_svg_s3',
+          type: 'arrow',
+          fromToken: 'p17_r2_val',
+          toToken: 'p17_r3_sub',
+          label: '代入 $\\sqrt{\\Delta} = \\sqrt{49} = 7$',
+          color: '#D97706',
+          curveOffset: -26,
+          tStart: 13.2,
+          tDrawEnd: 14.0,
+          tFadeStart: 18.0,
+          tEnd: 18.6
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 6.2, text: '第一步移项化为一般形式：将等号右边的 $2$ 移到左边变号为 $-2$，得 $3x^{2} - 5x - 2 = 0$，确定 $a = 3, b = -5, c = -2$。', focusToken: 'p17_r1_abc' },
+        { tStart: 6.2, tEnd: 12.5, text: '第二步计算判别式：$\\Delta = (-5)^{2} - 4 \\times 3 \\times (-2) = 25 + 24 = 49 \\gt 0$。', focusToken: 'p17_r2_val' },
+        { tStart: 12.5, tEnd: 19.0, text: '第三步代入求根公式：因为 $b = -5$，所以分子 $-b = -(-5) = 5$，分母 $2a = 2 \\times 3 = 6$。', focusToken: 'p17_r3_sub' },
+        { tStart: 19.0, tEnd: 24.5, text: '第四步开方化简：$\\sqrt{49} = 7$，算式化为 $x = \\frac{5 \\pm 7}{6}$。', focusToken: 'p17_r3_sim' },
+        { tStart: 24.5, tEnd: 30.0, text: '第五步分别约分定解：取加号得 $x_{1} = \\frac{12}{6} = 2$，取减号得 $x_{2} = \\frac{-2}{6} = -\\frac{1}{3}$。', focusToken: 'p17_r4_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：由代入后的求根公式逆推原一元二次方程',
+          givenLabel: '已知某方程用求根公式计算根的算式为：',
+          givenFormula: '$x = \\frac{-3 \\pm \\sqrt{3^{2} - 4 \\times 2 \\times (-1)}}{2 \\times 2}$',
+          extractedLabel: '对照求根公式结构：',
+          extractedFormula: '$x = \\frac{-b \\pm \\sqrt{b^{2} - 4ac}}{2a}$',
+          questionText: '该算式对应的一元二次方程一般形式是？',
+          options: [
+            { key: 'A', text: 'A. $2x^{2} + 3x - 1 = 0\\ (a = 2, b = 3, c = -1)$', isCorrect: true },
+            { key: 'B', text: 'B. $2x^{2} - 3x - 1 = 0$', isCorrect: false },
+            { key: 'C', text: 'C. $2x^{2} + 3x + 1 = 0$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！从分母、分子与根号内三处精确核对系数：',
+            calcLines: [
+              '分母 $2a = 2 \\times 2 \\implies a = 2$',
+              '分子 $-b = -3 \\implies b = 3$（注意 $-b$ 是 $-3$，故 $b = +3$）',
+              '根号内 $-4ac = -4 \\times 2 \\times (-1) \\implies c = -1$'
+            ],
+            summary: '还原一般形式即为 $2x^{2} + 3x - 1 = 0$。'
+          },
+          wrongTitle: '提示：请注意求根公式分子第一项是 -b',
+          wrongFeedback: '当分子第一项为 $-3$ 时，对照 $-b = -3$ 可知 $b = +3$（而非 $-3$），且根号内最后一项为 $-1$ 即 $c = -1$，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：移项化一般式并提取系数 a, b, c 与 Δ',
+          givenLabel: '已知一元二次方程：',
+          givenFormula: '$2x^{2} - 4 = 3x$',
+          questionText: '将其化为 $2x^{2} + bx + c = 0$（其中 $a = 2$）后，一次项系数 $b$ 和判别式 $\\Delta = b^{2} - 4ac$ 的值分别是多少？',
+          input1Prefix: '$b =$',
+          input1Placeholder: '如 -3',
+          input2Prefix: '，$\\Delta =$',
+          input2Placeholder: '如 41',
+          input2Suffix: '',
+          expectedX: '-3',
+          expectedMin: '41',
+          allowOrderSwap: false,
+          correctFeedback: '$b = -3$，$\\Delta = 41$。',
+          correctDetail: '移项得 $2x^{2} - 3x - 4 = 0$，故 $a = 2, b = -3, c = -4$；判别式 $\\Delta = (-3)^{2} - 4 \\times 2 \\times (-4) = 9 + 32 = 41$。',
+          wrongFeedback: '将 $3x$ 移到左边变号得 $b = -3$（常数项 $c = -4$），再计算 $(-3)^{2} - 4 \\times 2 \\times (-4)$。',
+          specificWrongHints: [
+            {
+              checkType: 'firstVal',
+              val: '3',
+              hint: '注意 $3x$ 在等号右边，移到等号左边后要变号为 $-3x$，因此 $b = -3$。'
+            }
+          ]
+        }
+      }
+    },
+
+    // =========================================================================
+    // P18：利用因式分解法解一元二次方程
+    // =========================================================================
+    P18: {
+      procedureId: 'P18',
+      title: '利用因式分解法解一元二次方程',
+      exampleTitle: '用因式分解法解方程 $5x(x - 2) = 3(x - 2)$',
+      exampleFormula: '$5x(x - 2) = 3(x - 2) \\implies (x - 2)(5x - 3) = 0$',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示“严禁两边同除以含 x 因式防漏根”与整体提公因式法则）',
+      practiceSectionTitle: '因式分解法解一元二次方程跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握移项提整体公因式防漏根与十字相乘法降次求解',
+
+      steps: [
+        {
+          step: 1,
+          name: '移项使等号右边化为 0（防漏根）',
+          tStart: 0.0,
+          tEnd: 6.2,
+          explanation: '观察发现等号两边都含有括号因式 $(x - 2)$，切勿两边同除以 $(x - 2)$！应将右边的 $3(x - 2)$ 整体移到左边，得 $5x(x - 2) - 3(x - 2) = 0$。'
+        },
+        {
+          step: 2,
+          name: '提取公共的括号整体因式 $(x - 2)$',
+          tStart: 6.2,
+          tEnd: 13.0,
+          explanation: '将 $(x - 2)$ 看作一个整体公因式提取出来，剩余的系数 $5x$ 与 $-3$ 放进第二个括号，分解为 $(x - 2)(5x - 3) = 0$。'
+        },
+        {
+          step: 3,
+          name: '利用 $A \\cdot B = 0$ 性质降次拆分方程',
+          tStart: 13.0,
+          tEnd: 19.0,
+          explanation: '依据两因式乘积为 $0$ 则至少有一因式为 $0$，转化为两个一元一次方程：$x - 2 = 0$ 或 $5x - 3 = 0$。'
+        },
+        {
+          step: 4,
+          name: '分别求解两个一元一次方程',
+          tStart: 19.0,
+          tEnd: 24.8,
+          explanation: '由 $x - 2 = 0$ 解得 $x_{1} = 2$；由 $5x - 3 = 0$ 移项除以 $5$ 解得 $x_{2} = \\frac{3}{5}$。'
+        },
+        {
+          step: 5,
+          name: '汇总原方程的两个实数根',
+          tStart: 24.8,
+          tEnd: 30.0,
+          explanation: '写出最终结论：$x_{1} = 2，x_{2} = \\frac{3}{5}$（完整保留了使公因式为 $0$ 的根 $x = 2$）。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 整体移项得 $5x(x - 2) - 3(x - 2) = 0$' },
+        { time: 7.5, step: 2, label: '2.1 提取整体公因式 $(x - 2)$ 得 $(x - 2)(5x - 3) = 0$' },
+        { time: 14.2, step: 3, label: '3.1 降次拆分为 $x - 2 = 0$ 或 $5x - 3 = 0$' },
+        { time: 20.5, step: 4, label: '4.1 分别解一次方程得 $x_{1} = 2, x_{2} = \\frac{3}{5}$' },
+        { time: 26.5, step: 5, label: '5.1 汇总两根结论' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p18_row_0',
+          stepBadge: '原方程',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p18_r0_lhs', math: '$5x(x - 2)$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p18_r0_eq', math: '$=$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p18_r0_rhs', math: '$3(x - 2)$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p18_row_1',
+          stepBadge: '第 1 步 · 移项右边化 0',
+          appearAt: 1.5,
+          tokens: [
+            { id: 'p18_r1_t1', math: '移项，得 $5x(x - 2)$', appearAt: 1.6, dur: 0.40 },
+            { id: 'p18_r1_t2', math: '$- 3(x - 2) = 0$', appearAt: 2.5, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p18_row_2',
+          stepBadge: '第 2 步 · 提整体公因式',
+          appearAt: 6.6,
+          tokens: [
+            { id: 'p18_r2_fac1', math: '因式分解，得 $(x - 2)$', appearAt: 6.7, dur: 0.45 },
+            { id: 'p18_r2_fac2', math: '$(5x - 3) = 0$', appearAt: 7.8, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p18_row_3',
+          stepBadge: '第 3 步 · 降次拆为一次方程',
+          appearAt: 13.4,
+          tokens: [
+            { id: 'p18_r3_eq1', math: '$\\therefore x - 2 = 0$', appearAt: 13.5, dur: 0.40 },
+            { id: 'p18_r3_or', math: '或', appearAt: 14.2, dur: 0.25 },
+            { id: 'p18_r3_eq2', math: '$5x - 3 = 0$', appearAt: 14.6, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p18_row_4',
+          stepBadge: '最终结论',
+          appearAt: 20.0,
+          isConclusion: true,
+          tokens: [
+            { id: 'p18_r4_conc', math: '解得 $x_{1} = 2$，$x_{2} = \\frac{3}{5}$。', appearAt: 20.1, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p18_sp_1',
+          title: '草稿警示 · 为什么绝对不能两边同除以 (x - 2)？',
+          showStart: 0.8,
+          showEnd: 18.8,
+          tokens: [
+            { id: 'p18_sp1_t1', math: '错误做法：两边同除以 $(x - 2)$ 得 $5x = 3 \\implies x = \\frac{3}{5}$', appearAt: 1.4, dur: 0.45 },
+            { id: 'p18_sp1_t2', math: '错因：当 $x = 2$ 时，$x - 2 = 0$，等式两边不能除以 $0$！', appearAt: 3.0, dur: 0.45 },
+            { id: 'p18_sp1_t3', math: '正确口诀：“先移项使右边为 $0$，再提公因式，绝不约含 $x$ 项”', appearAt: 7.0, dur: 0.45 }
+          ],
+          note: '同理，解 $x^{2} = 2x$ 时也必须先移项化为 $x^{2} - 2x = 0 \\implies x(x - 2) = 0$，防止漏掉 $x = 0$'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p18_r0_rhs', tStart: 0.8, tEnd: 5.8, color: 'amber' },
+        { tokenId: 'p18_r1_t2', tStart: 2.5, tEnd: 6.0, color: 'amber' },
+        { tokenId: 'p18_r2_fac1', tStart: 6.7, tEnd: 12.8, color: 'teal' },
+        { tokenId: 'p18_r2_fac2', tStart: 7.8, tEnd: 12.8, color: 'amber' },
+        { tokenId: 'p18_r3_eq1', tStart: 13.5, tEnd: 19.5, color: 'teal' },
+        { tokenId: 'p18_r3_eq2', tStart: 14.6, tEnd: 19.5, color: 'rose' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p18_svg_s1',
+          type: 'arrow',
+          fromToken: 'p18_r0_rhs',
+          toToken: 'p18_r1_t2',
+          label: '整体移项变号',
+          color: '#D97706',
+          curveOffset: 28,
+          tStart: 1.8,
+          tDrawEnd: 2.6,
+          tFadeStart: 5.4,
+          tEnd: 6.0
+        },
+        {
+          id: 'p18_svg_s2',
+          type: 'under-brace',
+          startToken: 'p18_r1_t1',
+          endToken: 'p18_r1_t2',
+          label: '提取公因式 $(x - 2)$',
+          color: '#0F766E',
+          tStart: 6.4,
+          tDrawEnd: 7.2,
+          tFadeStart: 12.0,
+          tEnd: 12.6
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 6.2, text: '第一步移项使右边为 $0$：千万不能在两边直接约去 $(x - 2)$！先把右边的 $3(x - 2)$ 整体移到左边，得 $5x(x - 2) - 3(x - 2) = 0$。', focusToken: 'p18_r1_t2' },
+        { tStart: 6.2, tEnd: 13.0, text: '第二步提取整体公因式：把 $(x - 2)$ 整体提出来，剩下的 $5x$ 和 $-3$ 组合成第二个因式，得到 $(x - 2)(5x - 3) = 0$。', focusToken: 'p18_r2_fac2' },
+        { tStart: 13.0, tEnd: 19.0, text: '第三步降次拆分：两个因式相乘等于 $0$，则 $x - 2 = 0$ 或 $5x - 3 = 0$。', focusToken: 'p18_r3_eq2' },
+        { tStart: 19.0, tEnd: 30.0, text: '第四步分别解两个一次方程：得出原方程的两个根为 $x_{1} = 2，x_{2} = \\frac{3}{5}$。求解完成！', focusToken: 'p18_r4_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：提取括号公因式并注意去括号变号',
+          givenLabel: '已知方程：',
+          givenFormula: '$2(x - 1) = (x - 1)^{2}$',
+          extractedLabel: '第一步移项使右边为 0：',
+          extractedFormula: '$2(x - 1) - (x - 1)^{2} = 0$',
+          questionText: '下一步提取公因式 $(x - 1)$ 后，正确的因式分解结果与方程的根是？',
+          options: [
+            { key: 'A', text: 'A. $(x - 1)(2 - x + 1) = 0$，解得 $x_{1} = 1，x_{2} = 3$', isCorrect: true },
+            { key: 'B', text: 'B. $(x - 1)(2 - x - 1) = 0$，解得 $x_{1} = x_{2} = 1$', isCorrect: false },
+            { key: 'C', text: 'C. 两边同除以 $(x - 1)$ 得 $x - 1 = 2$，解得 $x = 3$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！提取 (x - 1) 后，括号内减去 (x - 1) 必须变号：',
+            calcLines: [
+              '$(x - 1)[2 - (x - 1)] = (x - 1)(2 - x + 1) = (x - 1)(3 - x) = 0$',
+              '$x - 1 = 0\\text{ 或 }3 - x = 0 \\implies x_{1} = 1,\\ x_{2} = 3$'
+            ],
+            summary: '提取公因式后，被减项 $(x - 1)$ 前面有负号，去小括号时 $-1$ 必须变号为 $+1$。'
+          },
+          wrongTitle: '提示：请检查提取 (x - 1) 后剩余项的去括号符号',
+          wrongFeedback: '提取 $(x - 1)$ 后第二个括号内是 $2 - (x - 1) = 2 - x + 1$（而非 $2 - x - 1$），且不可两边同除以 $(x - 1)$，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：用十字相乘法分解因式解方程',
+          givenLabel: '给出二次三项式方程：',
+          givenFormula: '$x^{2} - 4x - 5 = 0$',
+          questionText: '因式分解为 $(x - 5)(x + 1) = 0$ 后，这个方程的两个实数根分别是多少？',
+          input1Prefix: '$x_{1} =$',
+          input1Placeholder: '如 5',
+          input2Prefix: '，$x_{2} =$',
+          input2Placeholder: '如 -1',
+          input2Suffix: '（两根顺序可互换）',
+          expectedX: '5',
+          expectedMin: '-1',
+          allowOrderSwap: true,
+          correctFeedback: '方程的两个实数根为 $x_{1} = 5$，$x_{2} = -1$。',
+          correctDetail: '由 $(x - 5)(x + 1) = 0$ 得 $x - 5 = 0$ 或 $x + 1 = 0$，解得 $x_{1} = 5，x_{2} = -1$。',
+          wrongFeedback: '令每个一次因式分别为 $0$：由 $x - 5 = 0$ 与 $x + 1 = 0$ 分别求出 $x$ 的值。',
+          specificWrongHints: [
+            {
+              checkType: 'anyVal',
+              val: '-5',
+              hint: '注意因式是 $(x - 5)$，令 $x - 5 = 0$ 解得 $x = 5$（而非 $-5$），不要把因式中的常数符号直接当作根的符号。'
+            }
+          ]
+        }
+      }
+    }    ,
+    // =========================================================================
+    // P19：识别一元二次方程、化一般形式与由定义求参数
+    // =========================================================================
+    P19: {
+      procedureId: 'P19',
+      title: '识别一元二次方程、化一般形式与由定义求参数',
+      exampleTitle: '关于 $x$ 的方程 $(m - 2)x^{m^{2} - 2} - 5x - 1 = 0$ 是一元二次方程，求参数 $m$ 的值',
+      exampleFormula: '$(m - 2)x^{m^{2} - 2} - 5x - 1 = 0 \\iff ax^{2} + bx + c = 0\\ (a \\neq 0)$',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示一元二次方程三要素、一般式提取系数与“最高次指数=2 且 二次项系数≠0”双条件）',
+      practiceSectionTitle: '一元二次方程概念、一般式与求参跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握化一般形式提取系数与含参定义双重条件',
+
+      steps: [
+        {
+          step: 1,
+          name: '对照一般形式提取最高次项系数与指数',
+          tStart: 0.0,
+          tEnd: 6.0,
+          explanation: '将 $(m - 2)x^{m^{2} - 2} - 5x - 1 = 0$ 对照一般形式 $ax^{2} + bx + c = 0\\ (a \\neq 0)$，识别出最高次项系数为 $(m - 2)$，未知数 $x$ 的指数为 $(m^{2} - 2)$。'
+        },
+        {
+          step: 2,
+          name: '列出“指数等于 2 且 二次项系数不为 0”双条件',
+          tStart: 6.0,
+          tEnd: 12.2,
+          explanation: '根据一元二次方程定义，必须同时满足两个条件：① 未知数最高次数等于 $2$（即 $m^{2} - 2 = 2$）；② 二次项系数不等于 $0$（即 $m - 2 \\neq 0$）。'
+        },
+        {
+          step: 3,
+          name: '由最高次项指数方程解出候选值',
+          tStart: 12.2,
+          tEnd: 18.2,
+          explanation: '解指数方程 $m^{2} - 2 = 2$：移项得 $m^{2} = 4$，开平方解得候选值 $m_{1} = 2$ 或 $m_{2} = -2$。'
+        },
+        {
+          step: 4,
+          name: '检验二次项系数 $a \\neq 0$ 舍去增根',
+          tStart: 18.2,
+          tEnd: 24.5,
+          explanation: '由二次项系数限制条件 $m - 2 \\neq 0$ 可知 $m \\neq 2$，故必须将使二次项消失的增根 $m = 2$ 舍去！'
+        },
+        {
+          step: 5,
+          name: '确定参数最终值并回代验证',
+          tStart: 24.5,
+          tEnd: 30.0,
+          explanation: '保留唯一定解 $m = -2$（此时原方程为 $-4x^{2} - 5x - 1 = 0$，是一元二次方程）。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 识别系数 $(m - 2)$ 与指数 $(m^{2} - 2)$' },
+        { time: 7.5, step: 2, label: '2.1 建立 $m^{2} - 2 = 2$ 且 $m - 2 \\neq 0$' },
+        { time: 14.0, step: 3, label: '3.1 解 $m^{2} = 4$ 得 $m = \\pm 2$' },
+        { time: 20.0, step: 4, label: '4.1 由 $m - 2 \\neq 0$ 舍去 $m = 2$' },
+        { time: 26.5, step: 5, label: '5.1 定解 $m = -2$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p19_row_0',
+          stepBadge: '已知方程',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p19_r0_coef', math: '$(m - 2)$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p19_r0_exp', math: '$x^{m^{2} - 2}$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p19_r0_rest', math: '$- 5x - 1 = 0$ 是一元二次方程', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p19_row_1',
+          stepBadge: '第 1 步 · 对照一般式',
+          appearAt: 1.5,
+          tokens: [
+            { id: 'p19_r1_std', math: '对照 $ax^{2} + bx + c = 0\\ (a \\neq 0)$：', appearAt: 1.6, dur: 0.40 },
+            { id: 'p19_r1_part', math: '二次项系数 $a = m - 2$，最高次指数 $= m^{2} - 2$', appearAt: 2.3, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p19_row_2',
+          stepBadge: '第 2 步 · 列双重条件',
+          appearAt: 6.4,
+          tokens: [
+            { id: 'p19_r2_c1', math: '① 次数条件：$m^{2} - 2 = 2$；', appearAt: 6.5, dur: 0.45 },
+            { id: 'p19_r2_c2', math: '② 系数条件：$m - 2 \\neq 0$', appearAt: 8.5, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p19_row_3',
+          stepBadge: '第 3 步 · 解指数方程',
+          appearAt: 12.6,
+          tokens: [
+            { id: 'p19_r3_s1', math: '由 ① 得 $m^{2} = 4$', appearAt: 12.7, dur: 0.40 },
+            { id: 'p19_r3_s2', math: '$\\implies m = 2$ 或 $m = -2$', appearAt: 14.2, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p19_row_4',
+          stepBadge: '第 4 步 · 检验舍增根',
+          appearAt: 18.6,
+          tokens: [
+            { id: 'p19_r4_chk', math: '由 ② 得 $m \\neq 2$', appearAt: 18.7, dur: 0.40 },
+            { id: 'p19_r4_drop', math: '$\\implies$ 舍去 $m = 2$', appearAt: 20.0, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p19_row_5',
+          stepBadge: '最终结论',
+          appearAt: 25.0,
+          isConclusion: true,
+          tokens: [
+            { id: 'p19_r5_conc', math: '$\\therefore m$ 的值为 $-2$。', appearAt: 25.1, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p19_sp_1',
+          title: '核心准则 · 一元二次方程判定三要素与一般式',
+          showStart: 0.8,
+          showEnd: 29.8,
+          tokens: [
+            { id: 'p19_sp1_t1', math: '① 整式方程（分母、根号内不含未知数）', appearAt: 1.2, dur: 0.40 },
+            { id: 'p19_sp1_t2', math: '② 只含一个未知数，且整理后最高次数为 $2$', appearAt: 2.2, dur: 0.40 },
+            { id: 'p19_sp1_t3', math: '③ 二次项系数 $a \\neq 0$（展开后 $x^{2}$ 不抵消）', appearAt: 8.8, dur: 0.40 }
+          ],
+          note: '若 $m = 2$，则二次项系数 $m - 2 = 0$，原方程退化为一元一次方程 $-5x - 1 = 0$'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p19_r0_coef', tStart: 1.2, tEnd: 5.8, color: 'amber' },
+        { tokenId: 'p19_r0_exp', tStart: 1.2, tEnd: 5.8, color: 'teal' },
+        { tokenId: 'p19_r2_c1', tStart: 6.5, tEnd: 12.0, color: 'teal' },
+        { tokenId: 'p19_r2_c2', tStart: 8.5, tEnd: 12.0, color: 'amber' },
+        { tokenId: 'p19_r3_s2', tStart: 14.2, tEnd: 18.0, color: 'teal' },
+        { tokenId: 'p19_r4_drop', tStart: 20.0, tEnd: 24.4, color: 'rose' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p19_svg_s2',
+          type: 'arrow',
+          fromToken: 'p19_r0_exp',
+          toToken: 'p19_r2_c1',
+          label: '令最高次数等于 $2$',
+          color: '#0F766E',
+          curveOffset: 28,
+          tStart: 6.2,
+          tDrawEnd: 7.0,
+          tFadeStart: 11.4,
+          tEnd: 12.0
+        },
+        {
+          id: 'p19_svg_s4',
+          type: 'arrow',
+          fromToken: 'p19_r2_c2',
+          toToken: 'p19_r4_drop',
+          label: '二次项系数不为 $0$',
+          color: '#BE123C',
+          curveOffset: 32,
+          tStart: 18.8,
+          tDrawEnd: 19.8,
+          tFadeStart: 23.6,
+          tEnd: 24.2
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 6.0, text: '第一步对照一般形式：在 $(m - 2)x^{m^{2} - 2} - 5x - 1 = 0$ 中，最高次项系数为 $(m - 2)$，指数为 $(m^{2} - 2)$。', focusToken: 'p19_r1_part' },
+        { tStart: 6.0, tEnd: 12.2, text: '第二步列出定义双重条件：既要满足最高次项指数 $m^{2} - 2 = 2$，又要满足二次项系数 $m - 2 \\neq 0$。', focusToken: 'p19_r2_c2' },
+        { tStart: 12.2, tEnd: 18.2, text: '第三步解指数方程：由 $m^{2} - 2 = 2$ 得 $m^{2} = 4$，解得 $m = 2$ 或 $m = -2$。', focusToken: 'p19_r3_s2' },
+        { tStart: 18.2, tEnd: 24.5, text: '第四步检验二次项系数：因为 $m - 2 \\neq 0$ 即 $m \\neq 2$，必须舍去使二次项消失的 $m = 2$。', focusToken: 'p19_r4_drop' },
+        { tStart: 24.5, tEnd: 30.0, text: '第五步得出最终结论：$m = -2$！', focusToken: 'p19_r5_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：化为一元二次方程一般形式并提取系数',
+          givenLabel: '已知一元二次方程：',
+          givenFormula: '$x(x - 6) = 6x + 25$',
+          extractedLabel: '去括号展开：',
+          extractedFormula: '$x^{2} - 6x = 6x + 25$',
+          questionText: '将其移项合并化为一般形式 $ax^{2} + bx + c = 0\\ (a = 1)$ 后，一次项系数 $b$ 和常数项 $c$ 分别是？',
+          options: [
+            { key: 'A', text: 'A. 一般式为 $x^{2} - 12x - 25 = 0$，其中 $b = -12，c = -25$', isCorrect: true },
+            { key: 'B', text: 'B. 一般式为 $x^{2} - 25 = 0$，其中 $b = 0，c = -25$', isCorrect: false },
+            { key: 'C', text: 'C. 一般式为 $x^{2} - 12x + 25 = 0$，其中 $b = -12，c = 25$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！移项必须变号，且连同各项前面的正负号提取系数：',
+            calcLines: [
+              '$x^{2} - 6x - 6x - 25 = 0 \\implies x^{2} - 12x - 25 = 0$',
+              '$a = 1，\\ b = -12，\\ c = -25$'
+            ],
+            summary: '右边的 $+6x$ 移到左边变为 $-6x$，与原有的 $-6x$ 合并为 $-12x$（切勿误以为抵消）。'
+          },
+          wrongTitle: '提示：请注意移项变号后同类项的合并',
+          wrongFeedback: '把右边的 $6x + 25$ 移到左边要变号为 $-6x - 25$，合并得 $x^{2} - 12x - 25 = 0$，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：利用一元二次方程定义求参数',
+          givenLabel: '已知条件：',
+          givenFormula: '关于 $x$ 的方程 $(a - 3)x^{|a| - 1} - x = 5$ 是一元二次方程',
+          questionText: '由最高次项指数 $|a| - 1 = 2$ 可得 $|a|$ 等于多少？排除使二次项系数为 $0$ 的值后，$a$ 最终等于多少？',
+          input1Prefix: '$|a| =$',
+          input1Placeholder: '如 3',
+          input2Prefix: '，最终定解 $a =$',
+          input2Placeholder: '如 -3',
+          input2Suffix: '',
+          expectedX: '3',
+          expectedMin: '-3',
+          allowOrderSwap: false,
+          correctFeedback: '$|a| = 3$，最终定解 $a = -3$。',
+          correctDetail: '由 $|a| - 1 = 2$ 得 $|a| = 3 \\implies a = \\pm 3$；又因二次项系数 $a - 3 \\neq 0 \\implies a \\neq 3$，故 $a = -3$。',
+          wrongFeedback: '先由 $|a| - 1 = 2$ 得 $|a| = 3$，再由 $a - 3 \\neq 0$ 舍去 $a = 3$。',
+          specificWrongHints: [
+            {
+              checkType: 'secondVal',
+              val: '3',
+              hint: '当 $a = 3$ 时，二次项系数 $a - 3 = 0$，方程不再是一元二次方程，必须舍去 $3$ 取 $a = -3$。'
+            }
+          ]
+        }
+      }
+    },
+
+    // =========================================================================
+    // P20：利用一元二次方程的根的定义代入求参数与整体降次求值
+    // =========================================================================
+    P20: {
+      procedureId: 'P20',
+      title: '利用一元二次方程的根的定义代入求参数与整体降次求值',
+      exampleTitle: '已知 $m$ 是方程 $x^{2} - 3x - 2 = 0$ 的一个根，求代数式 $2m^{2} - 6m - 2023$ 的值',
+      exampleFormula: '$m$ 是 $x^{2} - 3x - 2 = 0$ 的根 $\\implies m^{2} - 3m = 2 \\implies 2m^{2} - 6m - 2023 = ?$',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示“见根代入得等式、移项提炼降次整体、提取公因数整体代换”三步法）',
+      practiceSectionTitle: '方程根的定义代入与整体降次跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握含根为 0 的参数检验与整体降次求值',
+
+      steps: [
+        {
+          step: 1,
+          name: '将已知根 $x = m$ 代入原方程得等式',
+          tStart: 0.0,
+          tEnd: 6.0,
+          explanation: '根据方程根的定义，因为 $m$ 是方程 $x^{2} - 3x - 2 = 0$ 的一个根，把 $x = m$ 代入原方程，得到等式 $m^{2} - 3m - 2 = 0$。'
+        },
+        {
+          step: 2,
+          name: '移项提炼降次核心整体 $m^{2} - 3m$',
+          tStart: 6.0,
+          tEnd: 12.2,
+          explanation: '不解出无理数 $m$，而是将常数项 $-2$ 移到等号右边，直接提炼出核心整体 $m^{2} - 3m = 2$。'
+        },
+        {
+          step: 3,
+          name: '观察目标代数式与核心整体的倍数关系',
+          tStart: 12.2,
+          tEnd: 18.2,
+          explanation: '观察所求代数式 $2m^{2} - 6m - 2023$ 的前两项 $2m^{2} - 6m$，其系数恰好是已知整体 $(m^{2} - 3m)$ 的 $2$ 倍。'
+        },
+        {
+          step: 4,
+          name: '提取公因数 2 构造整体并代换降次',
+          tStart: 18.2,
+          tEnd: 24.5,
+          explanation: '对前两项提取公因数 $2$ 变形为 $2(m^{2} - 3m) - 2023$，将 $m^{2} - 3m = 2$ 整体代入，化为 $2 \\times 2 - 2023$。'
+        },
+        {
+          step: 5,
+          name: '计算有理数加减得出最终结果',
+          tStart: 24.5,
+          tEnd: 30.0,
+          explanation: '计算 $4 - 2023 = -2019$，得出代数式的最终值为 $-2019$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 将 $x = m$ 代入得 $m^{2} - 3m - 2 = 0$' },
+        { time: 7.5, step: 2, label: '2.1 移项提炼整体 $m^{2} - 3m = 2$' },
+        { time: 14.0, step: 3, label: '3.1 发现 $2m^{2} - 6m = 2(m^{2} - 3m)$' },
+        { time: 20.0, step: 4, label: '4.1 整体代入得 $2 \\times 2 - 2023$' },
+        { time: 26.5, step: 5, label: '5.1 计算得出 $-2019$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p20_row_0',
+          stepBadge: '已知与目标',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p20_r0_cond', math: '已知 $m$ 是 $x^{2} - 3x - 2 = 0$ 的一个根，', appearAt: 0.0, dur: 0.01 },
+            { id: 'p20_r0_target', math: '求 $2m^{2} - 6m - 2023$ 的值', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p20_row_1',
+          stepBadge: '第 1 步 · 见根代入',
+          appearAt: 1.5,
+          tokens: [
+            { id: 'p20_r1_sub', math: '把 $x = m$ 代入方程，得 $m^{2} - 3m - 2 = 0$', appearAt: 1.6, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p20_row_2',
+          stepBadge: '第 2 步 · 提炼整体',
+          appearAt: 6.4,
+          tokens: [
+            { id: 'p20_r2_whole', math: '移项，得核心整体：$m^{2} - 3m = 2$', appearAt: 6.5, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p20_row_3',
+          stepBadge: '第 3 & 4 步 · 构造并代换',
+          appearAt: 12.8,
+          tokens: [
+            { id: 'p20_r3_fac', math: '原式 $= 2(m^{2} - 3m) - 2023$', appearAt: 12.9, dur: 0.45 },
+            { id: 'p20_r3_rep', math: '$= 2 \\times 2 - 2023$', appearAt: 19.0, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p20_row_4',
+          stepBadge: '最终结论',
+          appearAt: 25.0,
+          isConclusion: true,
+          tokens: [
+            { id: 'p20_r4_conc', math: '$= 4 - 2023 = -2019$。', appearAt: 25.1, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p20_sp_1',
+          title: '核心技巧 · 方程的根三大常见考法',
+          showStart: 0.8,
+          showEnd: 29.8,
+          tokens: [
+            { id: 'p20_sp1_t1', math: '① 系数等式逆推根：$9a+3b+c=0 \\implies$ 必有根 $x=3$', appearAt: 1.4, dur: 0.40 },
+            { id: 'p20_sp1_t2', math: '② 已知一根为 $0$：常数项 $=0$，且二次项系数 $a \\neq 0$', appearAt: 6.8, dur: 0.40 },
+            { id: 'p20_sp1_t3', math: '③ 字母根求代数式：代入移项得 $am^{2}+bm=-c$ 整体降次', appearAt: 13.2, dur: 0.45 }
+          ],
+          note: '切勿用求根公式解出 $m = \\frac{3 \\pm \\sqrt{17}}{2}$ 再代入平方，整体代换只需两步口算'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p20_r1_sub', tStart: 1.6, tEnd: 5.8, color: 'teal' },
+        { tokenId: 'p20_r2_whole', tStart: 6.5, tEnd: 12.0, color: 'amber' },
+        { tokenId: 'p20_r3_fac', tStart: 12.9, tEnd: 18.8, color: 'teal' },
+        { tokenId: 'p20_r3_rep', tStart: 19.0, tEnd: 24.4, color: 'amber' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p20_svg_s2',
+          type: 'arrow',
+          fromToken: 'p20_r1_sub',
+          toToken: 'p20_r2_whole',
+          label: '常数项 $-2$ 移到右边',
+          color: '#0F766E',
+          curveOffset: -26,
+          tStart: 6.2,
+          tDrawEnd: 7.0,
+          tFadeStart: 11.4,
+          tEnd: 12.0
+        },
+        {
+          id: 'p20_svg_s4',
+          type: 'arrow',
+          fromToken: 'p20_r2_whole',
+          toToken: 'p20_r3_rep',
+          label: '整体替换 $m^{2} - 3m = 2$',
+          color: '#D97706',
+          curveOffset: 30,
+          tStart: 18.6,
+          tDrawEnd: 19.4,
+          tFadeStart: 23.6,
+          tEnd: 24.2
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 6.0, text: '第一步见根代入：因为 $m$ 是方程 $x^{2} - 3x - 2 = 0$ 的一个根，把 $x = m$ 代入得 $m^{2} - 3m - 2 = 0$。', focusToken: 'p20_r1_sub' },
+        { tStart: 6.0, tEnd: 12.2, text: '第二步移项提炼整体：不用解出 $m$ 的具体值，直接把 $-2$ 移到右边，得到核心整体 $m^{2} - 3m = 2$。', focusToken: 'p20_r2_whole' },
+        { tStart: 12.2, tEnd: 18.2, text: '第三步构造已知整体：将目标式 $2m^{2} - 6m - 2023$ 的前两项提取公因数 $2$，变形为 $2(m^{2} - 3m) - 2023$。', focusToken: 'p20_r3_fac' },
+        { tStart: 18.2, tEnd: 24.5, text: '第四步整体代换降次：把括号里的 $(m^{2} - 3m)$ 直接替换为常数 $2$，得到 $2 \\times 2 - 2023$。', focusToken: 'p20_r3_rep' },
+        { tStart: 24.5, tEnd: 30.0, text: '第五步算出结果：$4 - 2023 = -2019$！', focusToken: 'p20_r4_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：已知一元二次方程有一个根为 0 求参数（含二次项系数检验）',
+          givenLabel: '已知条件：',
+          givenFormula: '关于 $x$ 的一元二次方程 $(k + 2)x^{2} + 3x + k^{2} - 4 = 0$ 的一个根为 $0$',
+          extractedLabel: '将 $x = 0$ 代入方程：',
+          extractedFormula: '$k^{2} - 4 = 0 \\implies k = 2\\text{ 或 }k = -2$',
+          questionText: '结合“关于 $x$ 的一元二次方程”这一前提，参数 $k$ 的正确值是？',
+          options: [
+            { key: 'A', text: 'A. $k = 2$（因为 $k + 2 \\neq 0$，必须舍去 $k = -2$）', isCorrect: true },
+            { key: 'B', text: 'B. $k = 2$ 或 $k = -2$', isCorrect: false },
+            { key: 'C', text: 'C. $k = -2$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！代入求参后必须检验二次项系数不为 0：',
+            calcLines: [
+              '将 $x = 0$ 代入得常数项 $k^{2} - 4 = 0 \\implies k = \\pm 2$',
+              '又因二次项系数 $k + 2 \\neq 0 \\implies k \\neq -2$，故 $k = 2$'
+            ],
+            summary: '凡题干指明“一元二次方程”且二次项含参，最后一步务必核对二次项系数 $\\neq 0$。'
+          },
+          wrongTitle: '提示：请检查当 k = -2 时二次项系数的值',
+          wrongFeedback: '当 $k = -2$ 时，二次项系数 $k + 2 = 0$，原方程不再是一元二次方程，故须舍去 $-2$，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：由系数关系式逆推特解与整体降次求值',
+          givenLabel: '已知条件：',
+          givenFormula: '① 方程 $ax^{2} + bx + c = 0$ 满足 $4a - 2b + c = 0$；② $m$ 是 $x^{2} - 4x + 1 = 0$ 的根',
+          questionText: '由 ① 可知方程 $ax^{2} + bx + c = 0$ 必有一个根 $x_{0}$ 是多少？由 ② 可知代数式 $3m^{2} - 12m + 10$ 的值是多少？',
+          input1Prefix: '必有根 $x_{0} =$',
+          input1Placeholder: '如 -2',
+          input2Prefix: '，$3m^{2} - 12m + 10 =$',
+          input2Placeholder: '如 7',
+          input2Suffix: '',
+          expectedX: '-2',
+          expectedMin: '7',
+          allowOrderSwap: false,
+          correctFeedback: '必有根 $x_{0} = -2$，代数式 $3m^{2} - 12m + 10 = 7$。',
+          correctDetail: '① $4a - 2b + c = a(-2)^{2} + b(-2) + c = 0$，故必有根 $x_{0} = -2$；② 由 $m^{2} - 4m + 1 = 0$ 得 $m^{2} - 4m = -1$，故 $3(m^{2} - 4m) + 10 = 3 \\times (-1) + 10 = 7$。',
+          wrongFeedback: '① 注意 $-2b = b \\cdot (-2)$，故 $x_{0} = -2$；② 由 $m^{2} - 4m = -1$ 代入 $3(m^{2} - 4m) + 10$ 计算。',
+          specificWrongHints: [
+            {
+              checkType: 'firstVal',
+              val: '2',
+              hint: '注意已知等式中间是 $-2b$，当 $x = -2$ 时才是 $4a - 2b + c = 0$，所以必有根是 $-2$ 而不是 $2$。'
+            }
+          ]
+        }
+      }
+    },
+
+    // =========================================================================
+    // P21：利用一元二次方程根与系数的关系（韦达定理）求对称式的值与参数
+    // =========================================================================
+    P21: {
+      procedureId: 'P21',
+      title: '利用一元二次方程根与系数的关系（韦达定理）求对称式的值与参数',
+      exampleTitle: '已知 $x_{1}, x_{2}$ 是关于 $x$ 的方程 $x^{2} - 2kx + k - 1 = 0$ 的两个不相等的实数根，且 $x_{1} + x_{2} - x_{1}x_{2} = 5$，求 $k$ 的值',
+      exampleFormula: '$x^{2} - 2kx + k - 1 = 0：x_{1} + x_{2} = -\\frac{b}{a}，x_{1}x_{2} = \\frac{c}{a}$',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示韦达定理基本公式、四大高频对称式变形与判别式 Δ≥0 验根法则）',
+      practiceSectionTitle: '根与系数的关系（韦达定理）跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握对称式恒等变形求值与含参韦达定理验根',
+
+      steps: [
+        {
+          step: 1,
+          name: '确认一般形式并提取系数 $a, b, c$',
+          tStart: 0.0,
+          tEnd: 5.8,
+          explanation: '方程 $x^{2} - 2kx + k - 1 = 0$ 已是一般形式，提取二次项系数 $a = 1$、一次项系数 $b = -2k$、常数项 $c = k - 1$。'
+        },
+        {
+          step: 2,
+          name: '由韦达定理写出 $x_{1} + x_{2}$ 与 $x_{1}x_{2}$',
+          tStart: 5.8,
+          tEnd: 12.2,
+          explanation: '根据根与系数的关系，写出两根之和 $x_{1} + x_{2} = -\\frac{b}{a} = -\\frac{-2k}{1} = 2k$，两根之积 $x_{1}x_{2} = \\frac{c}{a} = k - 1$。'
+        },
+        {
+          step: 3,
+          name: '整体代入已知关系式建立关于 $k$ 的方程',
+          tStart: 12.2,
+          tEnd: 18.2,
+          explanation: '将 $x_{1} + x_{2} = 2k$ 与 $x_{1}x_{2} = k - 1$ 代入 $x_{1} + x_{2} - x_{1}x_{2} = 5$（注意给多项式 $k - 1$ 加括号），得 $2k - (k - 1) = 5$。'
+        },
+        {
+          step: 4,
+          name: '去括号解出参数 $k$ 的值',
+          tStart: 18.2,
+          tEnd: 24.0,
+          explanation: '去括号得 $2k - k + 1 = 5$，合并移项解得 $k = 4$。'
+        },
+        {
+          step: 5,
+          name: '代入原方程检验根的判别式 $\\Delta \\gt 0$',
+          tStart: 24.0,
+          tEnd: 30.0,
+          explanation: '当 $k = 4$ 时，原方程为 $x^{2} - 8x + 3 = 0$，检验判别式 $\\Delta = (-8)^{2} - 4 \\times 1 \\times 3 = 52 \\gt 0$ 满足有两个不相等实根，定解 $k = 4$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 提取系数 $a = 1, b = -2k, c = k - 1$' },
+        { time: 7.5, step: 2, label: '2.1 写出 $x_{1} + x_{2} = 2k$，$x_{1}x_{2} = k - 1$' },
+        { time: 14.0, step: 3, label: '3.1 整体代入得 $2k - (k - 1) = 5$' },
+        { time: 20.0, step: 4, label: '4.1 去括号解得 $k = 4$' },
+        { time: 26.0, step: 5, label: '5.1 检验 $\\Delta = 52 \\gt 0$ 符合题意' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p21_row_0',
+          stepBadge: '已知条件',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p21_r0_eq', math: '方程 $x^{2} - 2kx + k - 1 = 0$ 有两不相等实根 $x_{1}, x_{2}$，', appearAt: 0.0, dur: 0.01 },
+            { id: 'p21_r0_rel', math: '且 $x_{1} + x_{2} - x_{1}x_{2} = 5$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p21_row_1',
+          stepBadge: '第 1 & 2 步 · 韦达定理',
+          appearAt: 1.5,
+          tokens: [
+            { id: 'p21_r1_sum', math: '由根与系数的关系得：$x_{1} + x_{2} = -\\frac{-2k}{1} = 2k$，', appearAt: 1.6, dur: 0.45 },
+            { id: 'p21_r1_prod', math: '$x_{1}x_{2} = \\frac{k - 1}{1} = k - 1$', appearAt: 6.4, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p21_row_2',
+          stepBadge: '第 3 步 · 整体代入关系式',
+          appearAt: 12.6,
+          tokens: [
+            { id: 'p21_r2_sub', math: '代入 $x_{1} + x_{2} - x_{1}x_{2} = 5$，得 $2k - (k - 1) = 5$', appearAt: 12.7, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p21_row_3',
+          stepBadge: '第 4 步 · 解出参数 k',
+          appearAt: 18.6,
+          tokens: [
+            { id: 'p21_r3_sol', math: '去括号得 $2k - k + 1 = 5 \\implies k = 4$', appearAt: 18.7, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p21_row_4',
+          stepBadge: '第 5 步 · 检验 Δ > 0',
+          appearAt: 24.4,
+          isConclusion: true,
+          tokens: [
+            { id: 'p21_r4_conc', math: '检验：当 $k = 4$ 时，$\\Delta = (-8)^{2} - 4 \\times 3 = 52 \\gt 0$ 成立，$\\therefore k = 4$。', appearAt: 24.5, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p21_sp_1',
+          title: '必备工具箱 · 韦达定理四大高频对称式恒等变形',
+          showStart: 5.8,
+          showEnd: 29.8,
+          tokens: [
+            { id: 'p21_sp1_t1', math: '① 倒数和：$\\frac{1}{x_{1}} + \\frac{1}{x_{2}} = \\frac{x_{1} + x_{2}}{x_{1}x_{2}}$', appearAt: 6.4, dur: 0.40 },
+            { id: 'p21_sp1_t2', math: '② 括号积：$(x_{1} + 1)(x_{2} + 1) = x_{1}x_{2} + (x_{1} + x_{2}) + 1$', appearAt: 7.4, dur: 0.40 },
+            { id: 'p21_sp1_t3', math: '③ 平方和：$x_{1}^{2} + x_{2}^{2} = (x_{1} + x_{2})^{2} - 2x_{1}x_{2}$', appearAt: 8.4, dur: 0.40 },
+            { id: 'p21_sp1_t4', math: '④ 差平方：$(x_{1} - x_{2})^{2} = (x_{1} + x_{2})^{2} - 4x_{1}x_{2}$', appearAt: 9.4, dur: 0.40 }
+          ],
+          note: '易错提醒：两根之和是 $-\\frac{b}{a}$（带负号），且含参求值后必须检验 $\\Delta \\ge 0$'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p21_r1_sum', tStart: 1.6, tEnd: 6.2, color: 'teal' },
+        { tokenId: 'p21_r1_prod', tStart: 6.4, tEnd: 12.0, color: 'amber' },
+        { tokenId: 'p21_r2_sub', tStart: 12.7, tEnd: 18.0, color: 'amber' },
+        { tokenId: 'p21_r3_sol', tStart: 18.7, tEnd: 23.8, color: 'teal' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p21_svg_s3',
+          type: 'arrow',
+          fromToken: 'p21_r1_prod',
+          toToken: 'p21_r2_sub',
+          label: '加括号代入 $-(k - 1)$',
+          color: '#D97706',
+          curveOffset: 28,
+          tStart: 12.4,
+          tDrawEnd: 13.2,
+          tFadeStart: 17.4,
+          tEnd: 18.0
+        },
+        {
+          id: 'p21_svg_s5',
+          type: 'arrow',
+          fromToken: 'p21_r3_sol',
+          toToken: 'p21_r4_conc',
+          label: '回代检验 $\\Delta \\gt 0$',
+          color: '#0F766E',
+          curveOffset: -26,
+          tStart: 24.0,
+          tDrawEnd: 24.8,
+          tFadeStart: 28.8,
+          tEnd: 29.5
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 5.8, text: '第一步提取系数并写两根之和：在 $x^{2} - 2kx + k - 1 = 0$ 中，$b = -2k$，故 $x_{1} + x_{2} = -\\frac{-2k}{1} = 2k$（注意负负得正）。', focusToken: 'p21_r1_sum' },
+        { tStart: 5.8, tEnd: 12.2, text: '第二步写两根之积：常数项 $c = k - 1$，故 $x_{1}x_{2} = \\frac{k - 1}{1} = k - 1$。', focusToken: 'p21_r1_prod' },
+        { tStart: 12.2, tEnd: 18.2, text: '第三步整体代入关系式：把 $2k$ 和 $k - 1$ 代入 $x_{1} + x_{2} - x_{1}x_{2} = 5$，注意减去 $(k - 1)$ 要加括号！', focusToken: 'p21_r2_sub' },
+        { tStart: 18.2, tEnd: 24.0, text: '第四步解方程：去括号得 $2k - k + 1 = 5$，解得 $k = 4$。', focusToken: 'p21_r3_sol' },
+        { tStart: 24.0, tEnd: 30.0, text: '第五步检验判别式：当 $k = 4$ 时，$\\Delta = (-8)^{2} - 4 \\times 3 = 52 \\gt 0$ 满足有两个不相等的实数根，故 $k = 4$！', focusToken: 'p21_r4_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：利用韦达定理求倒数和对称式的值',
+          givenLabel: '已知条件：',
+          givenFormula: '设 $x_{1}, x_{2}$ 是方程 $2x^{2} + 4x - 3 = 0$ 的两个实数根',
+          extractedLabel: '由韦达定理写出两根之和与两根之积：',
+          extractedFormula: '$x_{1} + x_{2} = -\\frac{4}{2} = -2，\\quad x_{1}x_{2} = -\\frac{3}{2}$',
+          questionText: '将 $\\frac{1}{x_{1}} + \\frac{1}{x_{2}}$ 通分变形并代入求值，正确的结果是？',
+          options: [
+            { key: 'A', text: 'A. $\\frac{x_{1} + x_{2}}{x_{1}x_{2}} = \\frac{-2}{-\\frac{3}{2}} = \\frac{4}{3}$', isCorrect: true },
+            { key: 'B', text: 'B. $\\frac{x_{1} + x_{2}}{x_{1}x_{2}} = -\\frac{4}{3}$', isCorrect: false },
+            { key: 'C', text: 'C. $\\frac{1}{x_{1} + x_{2}} = -\\frac{1}{2}$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！异分母分式相加先通分，再整体代入：',
+            calcLines: [
+              '$\\frac{1}{x_{1}} + \\frac{1}{x_{2}} = \\frac{x_{2} + x_{1}}{x_{1}x_{2}} = \\frac{-2}{-\\frac{3}{2}} = (-2) \\times \\left(-\\frac{2}{3}\\right) = \\frac{4}{3}$'
+            ],
+            summary: '注意二次项系数 $a = 2 \\neq 1$，算两根之和与积时切勿忘记除以 $2$。'
+          },
+          wrongTitle: '提示：请先通分为 (x₁ + x₂)/(x₁x₂) 并注意同号相除得正',
+          wrongFeedback: '通分得 $\\frac{x_{1} + x_{2}}{x_{1}x_{2}}$，将 $-2$ 与 $-\\frac{3}{2}$ 代入相除（同号得正）得 $\\frac{4}{3}$，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：利用韦达定理与完全平方变形求值',
+          givenLabel: '已知条件：',
+          givenFormula: '$x_{1}, x_{2}$ 是一元二次方程 $x^{2} - 3x - 1 = 0$ 的两个实数根',
+          questionText: '由韦达定理可知两根之和 $x_{1} + x_{2}$ 是多少？平方和 $x_{1}^{2} + x_{2}^{2} = (x_{1} + x_{2})^{2} - 2x_{1}x_{2}$ 的值是多少？',
+          input1Prefix: '$x_{1} + x_{2} =$',
+          input1Placeholder: '如 3',
+          input2Prefix: '，$x_{1}^{2} + x_{2}^{2} =$',
+          input2Placeholder: '如 11',
+          input2Suffix: '',
+          expectedX: '3',
+          expectedMin: '11',
+          allowOrderSwap: false,
+          correctFeedback: '$x_{1} + x_{2} = 3$，$x_{1}^{2} + x_{2}^{2} = 11$。',
+          correctDetail: '由 $x^{2} - 3x - 1 = 0$ 得 $x_{1} + x_{2} = 3$，$x_{1}x_{2} = -1$；故 $x_{1}^{2} + x_{2}^{2} = (x_{1} + x_{2})^{2} - 2x_{1}x_{2} = 3^{2} - 2 \\times (-1) = 9 + 2 = 11$。',
+          wrongFeedback: '先由 $x_{1} + x_{2} = -\\frac{-3}{1} = 3$、$x_{1}x_{2} = -1$，再代入 $3^{2} - 2 \\times (-1)$ 计算。',
+          specificWrongHints: [
+            {
+              checkType: 'firstVal',
+              val: '-3',
+              hint: '注意韦达定理公式是 $x_{1} + x_{2} = -\\frac{b}{a}$，因为 $b = -3$，所以 $-\\frac{-3}{1} = +3$。'
+            },
+            {
+              checkType: 'secondVal',
+              val: '7',
+              hint: '注意 $x_{1}x_{2} = -1$（带负号），所以 $-2x_{1}x_{2} = -2 \\times (-1) = +2$，$9 + 2 = 11$ 而不是 $9 - 2 = 7$。'
+            }
+          ]
+        }
+      }
     }
   };
 

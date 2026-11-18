@@ -5561,6 +5561,1691 @@
           ]
         }
       }
+    }    ,
+    // =========================================================================
+    // P22：利用去括号、移项与合并同类项解一元一次方程
+    // =========================================================================
+    P22: {
+      procedureId: 'P22',
+      title: '利用去括号、移项与合并同类项解一元一次方程',
+      exampleTitle: '解一元一次方程 $6 - 2(x - 3) = x$',
+      exampleFormula: '$6 - 2(x - 3) = x \\implies -3x = -12 \\implies x = 4$',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示负因数去括号变号、跨等号移项变号与系数化为 1 三大法则）',
+      practiceSectionTitle: '解一元一次方程关键动作跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握负号去括号、移项变号与系数化为 1',
+
+      steps: [
+        {
+          step: 1,
+          name: '运用乘法分配律去括号（注意负负得正）',
+          tStart: 0.0,
+          tEnd: 6.2,
+          explanation: '观察左边括号前的因数是 $-2$，用 $-2$ 分别乘以括号内的 $x$ 和 $-3$，注意 $(-2) \\times (-3) = +6$（变号），去括号得 $6 - 2x + 6 = x$。'
+        },
+        {
+          step: 2,
+          name: '将未知数项移到左边、常数项移到右边',
+          tStart: 6.2,
+          tEnd: 12.8,
+          explanation: '把等号右边的 $+x$ 移到左边变为 $-x$，把等号左边的两个常数 $+6$ 移到右边变为 $-6 - 6$，得到 $-2x - x = -6 - 6$。'
+        },
+        {
+          step: 3,
+          name: '合并等号左右两边的同类项',
+          tStart: 12.8,
+          tEnd: 18.8,
+          explanation: '左边合并同类项 $(-2 - 1)x = -3x$，右边合并常数 $-6 - 6 = -12$，化为最简形式 $-3x = -12$。'
+        },
+        {
+          step: 4,
+          name: '等式两边同除以未知数系数 -3',
+          tStart: 18.8,
+          tEnd: 24.5,
+          explanation: '在 $-3x = -12$ 两边同时除以未知数系数 $-3$，将 $x$ 的系数化为 $1$，即 $x = \\frac{-12}{-3}$。'
+        },
+        {
+          step: 5,
+          name: '同号相除得正，写出方程的解',
+          tStart: 24.5,
+          tEnd: 30.0,
+          explanation: '根据同号两数相除得正，计算 $\\frac{-12}{-3} = 4$，得出方程的解为 $x = 4$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 用 $-2$ 乘遍 $(x - 3)$ 得 $6 - 2x + 6 = x$' },
+        { time: 7.5, step: 2, label: '2.1 跨等号移项变号得 $-2x - x = -6 - 6$' },
+        { time: 14.0, step: 3, label: '3.1 合并同类项化为 $-3x = -12$' },
+        { time: 20.0, step: 4, label: '4.1 两边同除以系数 $-3$' },
+        { time: 26.0, step: 5, label: '5.1 得出方程的解 $x = 4$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p22_row_0',
+          stepBadge: '原方程',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p22_r0_6', math: '$6$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p22_r0_m2', math: '$- 2(x - 3)$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p22_r0_eqx', math: '$= x$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p22_row_1',
+          stepBadge: '第 1 步 · 去括号',
+          appearAt: 1.5,
+          tokens: [
+            { id: 'p22_r1_6', math: '去括号，得 $6 - 2x$', appearAt: 1.6, dur: 0.40 },
+            { id: 'p22_r1_p6', math: '$+ 6$', appearAt: 2.5, dur: 0.45 },
+            { id: 'p22_r1_eqx', math: '$= x$', appearAt: 3.1, dur: 0.35 }
+          ]
+        },
+        {
+          rowId: 'p22_row_2',
+          stepBadge: '第 2 步 · 移项变号',
+          appearAt: 6.6,
+          tokens: [
+            { id: 'p22_r2_lhs', math: '移项，得 $-2x - x$', appearAt: 6.7, dur: 0.45 },
+            { id: 'p22_r2_rhs', math: '$= -6 - 6$', appearAt: 7.8, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p22_row_3',
+          stepBadge: '第 3 步 · 合并同类项',
+          appearAt: 13.2,
+          tokens: [
+            { id: 'p22_r3_comb', math: '合并同类项，得 $-3x = -12$', appearAt: 13.3, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p22_row_4',
+          stepBadge: '第 4 & 5 步 · 系数化为 1',
+          appearAt: 19.2,
+          isConclusion: true,
+          tokens: [
+            { id: 'p22_r4_div', math: '系数化为 $1$，得 $x = \\frac{-12}{-3} = 4$。', appearAt: 19.3, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p22_sp_1',
+          title: '草稿警示 · 解一元一次方程三大高频易错点',
+          showStart: 0.8,
+          showEnd: 29.8,
+          tokens: [
+            { id: 'p22_sp1_t1', math: '① 负号去括号：$-2(x - 3) = -2x + 6$（切勿写成 $-2x - 6$ 或 $-2x - 3$）', appearAt: 1.4, dur: 0.45 },
+            { id: 'p22_sp1_t2', math: '② 跨等号移项：过等号必须变号，不过等号不变号', appearAt: 6.8, dur: 0.45 },
+            { id: 'p22_sp1_t3', math: '③ 系数化为 $1$：$ax = b \\implies x = \\frac{b}{a}$（未知数系数 $a$ 作分母）', appearAt: 19.4, dur: 0.45 }
+          ],
+          note: '算完后可口头回代检验：左边 $= 6 - 2 \\times (4 - 3) = 4 =$ 右边，100% 确认无误'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p22_r0_m2', tStart: 0.8, tEnd: 5.8, color: 'amber' },
+        { tokenId: 'p22_r1_p6', tStart: 2.5, tEnd: 6.0, color: 'rose' },
+        { tokenId: 'p22_r2_lhs', tStart: 6.7, tEnd: 12.5, color: 'teal' },
+        { tokenId: 'p22_r2_rhs', tStart: 7.8, tEnd: 12.5, color: 'amber' },
+        { tokenId: 'p22_r3_comb', tStart: 13.3, tEnd: 18.6, color: 'teal' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p22_svg_s1',
+          type: 'arrow',
+          fromToken: 'p22_r0_m2',
+          toToken: 'p22_r1_p6',
+          label: '$(-2) \\times (-3) = +6$',
+          color: '#BE123C',
+          curveOffset: 28,
+          tStart: 1.8,
+          tDrawEnd: 2.6,
+          tFadeStart: 5.4,
+          tEnd: 6.0
+        },
+        {
+          id: 'p22_svg_s2',
+          type: 'arrow',
+          fromToken: 'p22_r1_eqx',
+          toToken: 'p22_r2_lhs',
+          label: '跨等号移项变号',
+          color: '#0F766E',
+          curveOffset: -26,
+          tStart: 6.8,
+          tDrawEnd: 7.6,
+          tFadeStart: 11.8,
+          tEnd: 12.4
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 6.2, text: '第一步去括号：括号前是 $-2$，乘进括号时两项都要乘且都要变号，$(-2) \\times (-3) = +6$，得 $6 - 2x + 6 = x$。', focusToken: 'p22_r1_p6' },
+        { tStart: 6.2, tEnd: 12.8, text: '第二步移项：把右边的 $x$ 移到左边变号为 $-x$，左边的两个 $+6$ 移到右边变号为 $-6 - 6$。', focusToken: 'p22_r2_rhs' },
+        { tStart: 12.8, tEnd: 18.8, text: '第三步合并同类项：左边 $-2x - x = -3x$，右边 $-6 - 6 = -12$，化为 $-3x = -12$。', focusToken: 'p22_r3_comb' },
+        { tStart: 18.8, tEnd: 30.0, text: '第四步系数化为 $1$：等式两边同除以 $-3$，同号相除得正，解得 $x = 4$！', focusToken: 'p22_r4_div' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：辨析移项与系数化为 1 的正确变形',
+          givenLabel: '给出四个方程的变形过程：',
+          givenFormula: '① $3x + 6 = 0 \\to x = 2$；② $x + 7 = 5 - 3x \\to 4x = -2$；③ $4x = -2 \\to x = -2$',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '其中变形完全正确的是哪一个？若继续解 $4x = -2$，正确的解是？',
+          options: [
+            { key: 'A', text: 'A. ② 正确；由 $4x = -2$ 两边同除以 $4$ 得 $x = -\\frac{1}{2}$', isCorrect: true },
+            { key: 'B', text: 'B. ② 和 ③ 都正确，解为 $x = -2$', isCorrect: false },
+            { key: 'C', text: 'C. ① 正确，解为 $x = 2$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！移项要变号，系数化为 1 时必须除以未知数的系数：',
+            calcLines: [
+              '② $x + 7 = 5 - 3x \\implies x + 3x = 5 - 7 \\implies 4x = -2$ ✓',
+              '系数化为 $1$：$x = \\frac{-2}{4} = -\\frac{1}{2}$（切勿用 $4 \\div (-2)$ 得 $-2$）'
+            ],
+            summary: '在 $ax = b$ 中，永远是用等号右边的 $b$ 除以未知数系数 $a$。'
+          },
+          wrongTitle: '提示：请检查移项符号与除法中的除数',
+          wrongFeedback: '① 移项应为 $3x = -6 \\implies x = -2$；③ 在 $4x = -2$ 两边应同除以 $4$ 得 $x = -\\frac{1}{2}$，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：去括号解一元一次方程',
+          givenLabel: '已知一元一次方程：',
+          givenFormula: '$3(x - 2) = 4 - 2x$',
+          questionText: '去括号、移项并合并为 $ax = 10$ 时，系数 $a$ 是多少？最终解出的 $x$ 是多少？',
+          input1Prefix: '合并后系数 $a =$',
+          input1Placeholder: '如 5',
+          input2Prefix: '，方程的解 $x =$',
+          input2Placeholder: '如 2',
+          input2Suffix: '',
+          expectedX: '5',
+          expectedMin: '2',
+          allowOrderSwap: false,
+          correctFeedback: '合并为 $5x = 10$（$a = 5$），解得 $x = 2$。',
+          correctDetail: '去括号得 $3x - 6 = 4 - 2x$，移项得 $3x + 2x = 4 + 6$，合并得 $5x = 10$（故 $a = 5$），解得 $x = 2$。',
+          wrongFeedback: '去括号得 $3x - 6 = 4 - 2x$，将 $-2x$ 移到左边变为 $+2x$，将 $-6$ 移到右边变为 $+6$。',
+          specificWrongHints: [
+            {
+              checkType: 'firstVal',
+              val: '1',
+              hint: '注意右边的 $-2x$ 移到左边要变号为 $+2x$，所以左边是 $3x + 2x = 5x$ 而不是 $3x - 2x = 1x$。'
+            }
+          ]
+        }
+      }
+    },
+
+    // =========================================================================
+    // P23：运用完全平方公式展开整式与恒等变形求值
+    // =========================================================================
+    P23: {
+      procedureId: 'P23',
+      title: '运用完全平方公式展开整式与恒等变形求值',
+      exampleTitle: '已知 $a^{2} - 3a - 7 = 0$，求代数式 $(a - 1)^{2} + a(a - 4) - 2$ 的值',
+      exampleFormula: '$a^{2} - 3a = 7 \\implies (a - 1)^{2} + a(a - 4) - 2 = ?$',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示完全平方展开口诀、完全平方式判别与“知二求二”对称变形公式）',
+      practiceSectionTitle: '完全平方公式展开与变形求值跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握完全平方式参数求解与完全平方恒等变形',
+
+      steps: [
+        {
+          step: 1,
+          name: '由已知方程移项提炼整体 $a^{2} - 3a = 7$',
+          tStart: 0.0,
+          tEnd: 5.8,
+          explanation: '由已知 $a^{2} - 3a - 7 = 0$，将常数项 $-7$ 移到等号右边，提炼出核心整体 $a^{2} - 3a = 7$。'
+        },
+        {
+          step: 2,
+          name: '按完全平方公式展开 $(a - 1)^{2}$ 与单项式乘法',
+          tStart: 5.8,
+          tEnd: 12.5,
+          explanation: '按“首平方、尾平方，首尾两倍中间放”将 $(a - 1)^{2}$ 展开为 $a^{2} - 2a + 1$，同时将 $a(a - 4)$ 展开为 $a^{2} - 4a$。'
+        },
+        {
+          step: 3,
+          name: '合并同类项化为最简多项式',
+          tStart: 12.5,
+          tEnd: 18.5,
+          explanation: '合并二次项 $a^{2} + a^{2} = 2a^{2}$、一次项 $-2a - 4a = -6a$、常数项 $1 - 2 = -1$，化简为 $2a^{2} - 6a - 1$。'
+        },
+        {
+          step: 4,
+          name: '提取公因数 2 构造已知整体 $(a^{2} - 3a)$',
+          tStart: 18.5,
+          tEnd: 24.5,
+          explanation: '对前两项 $2a^{2} - 6a$ 提取公因数 $2$，变形为 $2(a^{2} - 3a) - 1$。'
+        },
+        {
+          step: 5,
+          name: '整体代入 $a^{2} - 3a = 7$ 算出结果',
+          tStart: 24.5,
+          tEnd: 30.0,
+          explanation: '将 $a^{2} - 3a = 7$ 整体代入得 $2 \\times 7 - 1 = 13$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 移项提炼整体 $a^{2} - 3a = 7$' },
+        { time: 7.5, step: 2, label: '2.1 展开 $(a - 1)^{2} = a^{2} - 2a + 1$ 与 $a(a - 4) = a^{2} - 4a$' },
+        { time: 14.0, step: 3, label: '3.1 合并同类项得 $2a^{2} - 6a - 1$' },
+        { time: 20.0, step: 4, label: '4.1 提取 $2$ 构造 $2(a^{2} - 3a) - 1$' },
+        { time: 26.0, step: 5, label: '5.1 整体代入得 $2 \\times 7 - 1 = 13$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p23_row_0',
+          stepBadge: '已知与目标',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p23_r0_cond', math: '已知 $a^{2} - 3a - 7 = 0$，', appearAt: 0.0, dur: 0.01 },
+            { id: 'p23_r0_target', math: '求 $(a - 1)^{2} + a(a - 4) - 2$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p23_row_1',
+          stepBadge: '第 1 步 · 提炼整体',
+          appearAt: 1.5,
+          tokens: [
+            { id: 'p23_r1_whole', math: '由已知移项，得 $a^{2} - 3a = 7$', appearAt: 1.6, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p23_row_2',
+          stepBadge: '第 2 步 · 公式展开',
+          appearAt: 6.2,
+          tokens: [
+            { id: 'p23_r2_sq', math: '原式 $= (a^{2} - 2a + 1)$', appearAt: 6.3, dur: 0.45 },
+            { id: 'p23_r2_rest', math: '$+ (a^{2} - 4a) - 2$', appearAt: 7.4, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p23_row_3',
+          stepBadge: '第 3 & 4 步 · 合并与提系数',
+          appearAt: 13.0,
+          tokens: [
+            { id: 'p23_r3_comb', math: '$= 2a^{2} - 6a - 1$', appearAt: 13.1, dur: 0.45 },
+            { id: 'p23_r3_fac', math: '$= 2(a^{2} - 3a) - 1$', appearAt: 19.0, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p23_row_4',
+          stepBadge: '最终结论',
+          appearAt: 25.0,
+          isConclusion: true,
+          tokens: [
+            { id: 'p23_r4_conc', math: '$= 2 \\times 7 - 1 = 13$。', appearAt: 25.1, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p23_sp_1',
+          title: '核心工具箱 · 完全平方公式正向展开与“知二求二”变形',
+          showStart: 5.8,
+          showEnd: 29.8,
+          tokens: [
+            { id: 'p23_sp1_t1', math: '① 标准展开：$(A \\pm B)^{2} = A^{2} \\pm 2AB + B^{2}$（尾平方恒为正）', appearAt: 6.4, dur: 0.40 },
+            { id: 'p23_sp1_t2', math: '② 求平方和：$a^{2} + b^{2} = (a + b)^{2} - 2ab = (a - b)^{2} + 2ab$', appearAt: 7.4, dur: 0.40 },
+            { id: 'p23_sp1_t3', math: '③ 倒数平方和：$x^{2} + \\frac{1}{x^{2}} = \\left(x \\pm \\frac{1}{x}\\right)^{2} \\mp 2$', appearAt: 8.4, dur: 0.40 }
+          ],
+          note: '易错提醒：$(a - 1)^{2}$ 展开是三项 $a^{2} - 2a + 1$，千万不能漏掉中间项 $-2a$！'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p23_r1_whole', tStart: 1.6, tEnd: 5.8, color: 'teal' },
+        { tokenId: 'p23_r2_sq', tStart: 6.3, tEnd: 12.2, color: 'amber' },
+        { tokenId: 'p23_r3_comb', tStart: 13.1, tEnd: 18.4, color: 'teal' },
+        { tokenId: 'p23_r3_fac', tStart: 19.0, tEnd: 24.4, color: 'amber' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p23_svg_s2',
+          type: 'arrow',
+          fromToken: 'p23_r0_target',
+          toToken: 'p23_r2_sq',
+          label: '首平方、尾平方、首尾两倍中间放',
+          color: '#D97706',
+          curveOffset: 28,
+          tStart: 6.2,
+          tDrawEnd: 7.0,
+          tFadeStart: 11.6,
+          tEnd: 12.2
+        },
+        {
+          id: 'p23_svg_s5',
+          type: 'arrow',
+          fromToken: 'p23_r1_whole',
+          toToken: 'p23_r3_fac',
+          label: '整体代入 $a^{2} - 3a = 7$',
+          color: '#0F766E',
+          curveOffset: -28,
+          tStart: 19.4,
+          tDrawEnd: 20.2,
+          tFadeStart: 24.0,
+          tEnd: 24.6
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 5.8, text: '第一步提炼已知整体：由 $a^{2} - 3a - 7 = 0$ 移项得 $a^{2} - 3a = 7$。', focusToken: 'p23_r1_whole' },
+        { tStart: 5.8, tEnd: 12.5, text: '第二步运用完全平方公式展开：$(a - 1)^{2} = a^{2} - 2a + 1$，加上 $a(a - 4) = a^{2} - 4a$，再减 $2$。', focusToken: 'p23_r2_sq' },
+        { tStart: 12.5, tEnd: 18.5, text: '第三步合并同类项：$a^{2} + a^{2} = 2a^{2}$，$-2a - 4a = -6a$，$1 - 2 = -1$，化简得 $2a^{2} - 6a - 1$。', focusToken: 'p23_r3_comb' },
+        { tStart: 18.5, tEnd: 24.5, text: '第四步提取公因数构造整体：前两项提取 $2$ 得 $2(a^{2} - 3a) - 1$。', focusToken: 'p23_r3_fac' },
+        { tStart: 24.5, tEnd: 30.0, text: '第五步整体代入：把 $a^{2} - 3a = 7$ 代入得 $2 \\times 7 - 1 = 13$！', focusToken: 'p23_r4_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：由完全平方式结构特征求未知常数',
+          givenLabel: '已知二次三项式：',
+          givenFormula: '$9x^{2} + 12x + m$ 是一个完全平方式',
+          extractedLabel: '拆解首项平方与中间两倍乘积：',
+          extractedFormula: '$(3x)^{2} + 2 \\cdot (3x) \\cdot 2 + m$',
+          questionText: '对照完全平方公式 $A^{2} + 2AB + B^{2}$，常数 $m$ 的值是？',
+          options: [
+            { key: 'A', text: 'A. $m = 2^{2} = 4$', isCorrect: true },
+            { key: 'B', text: 'B. $m = 2$', isCorrect: false },
+            { key: 'C', text: 'C. $m = 6^{2} = 36$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！先由首平方确定 A = 3x，再由中间项 2AB = 12x 确定 B = 2：',
+            calcLines: [
+              '$A = 3x，\\quad 2 \\cdot (3x) \\cdot B = 12x \\implies B = 2$',
+              '$m = B^{2} = 2^{2} = 4 \\implies 9x^{2} + 12x + 4 = (3x + 2)^{2}$'
+            ],
+            summary: '当二次项系数不为 $1$ 时，不能直接取一次项系数 $12$ 的一半平方，而要先除以首项底数 $3$。'
+          },
+          wrongTitle: '提示：请注意首项是 (3x)² 而不是 x²',
+          wrongFeedback: '首项 $9x^{2} = (3x)^{2}$，中间项 $12x = 2 \\cdot (3x) \\cdot 2$，故尾项 $B = 2$，$m = 2^{2} = 4$，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：利用完全平方公式求倒数平方和',
+          givenLabel: '已知条件：',
+          givenFormula: '$x - \\frac{1}{x} = 1$',
+          questionText: '将等式两边同时平方得 $\\left(x - \\frac{1}{x}\\right)^{2} = x^{2} - 2 + \\frac{1}{x^{2}} = 1$，由此可求出 $x^{2} + \\frac{1}{x^{2}}$ 与 $x^{4} + \\frac{1}{x^{4}}$ 的值分别是多少？',
+          input1Prefix: '$x^{2} + \\frac{1}{x^{2}} =$',
+          input1Placeholder: '如 3',
+          input2Prefix: '，$x^{4} + \\frac{1}{x^{4}} =$',
+          input2Placeholder: '如 7',
+          input2Suffix: '',
+          expectedX: '3',
+          expectedMin: '7',
+          allowOrderSwap: false,
+          correctFeedback: '$x^{2} + \\frac{1}{x^{2}} = 3$，$x^{4} + \\frac{1}{x^{4}} = 7$。',
+          correctDetail: '① 由 $x^{2} - 2 + \\frac{1}{x^{2}} = 1$ 移项得 $x^{2} + \\frac{1}{x^{2}} = 1 + 2 = 3$；② 再两边平方得 $x^{4} + 2 + \\frac{1}{x^{4}} = 3^{2} = 9 \\implies x^{4} + \\frac{1}{x^{4}} = 9 - 2 = 7$。',
+          wrongFeedback: '注意第一次平方中间项是 $-2$（移项 $+2$ 得 $3$），第二次对 $x^{2} + \\frac{1}{x^{2}} = 3$ 平方中间项是 $+2$（移项 $-2$ 得 $9 - 2 = 7$）。',
+          specificWrongHints: [
+            {
+              checkType: 'secondVal',
+              val: '9',
+              hint: '注意 $\\left(x^{2} + \\frac{1}{x^{2}}\\right)^{2} = x^{4} + 2 + \\frac{1}{x^{4}} = 9$，还需要减去中间的常数 $2$，所以 $x^{4} + \\frac{1}{x^{4}} = 7$。'
+            }
+          ]
+        }
+      }
+    },
+
+    // =========================================================================
+    // P24：用提公因式法分解因式（含提取多项式整体公因式）
+    // =========================================================================
+    P24: {
+      procedureId: 'P24',
+      title: '用提公因式法分解因式（含提取多项式整体公因式）',
+      exampleTitle: '把多项式 $m^{2}(a - 2) + m(2 - a)$ 分解因式',
+      exampleFormula: '$m^{2}(a - 2) + m(2 - a) \\implies m(a - 2)(m - 1)$',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示相反数底数变号准则、三步定公因式与“某项等于公因式时保留 ±1”法则）',
+      practiceSectionTitle: '提公因式法分解因式跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握首项负号提取、末项保留 1 与多项式公因式提取',
+
+      steps: [
+        {
+          step: 1,
+          name: '识别互为相反数的括号因式 $(a - 2)$ 与 $(2 - a)$',
+          tStart: 0.0,
+          tEnd: 6.0,
+          explanation: '观察两项中的括号因式 $(a - 2)$ 与 $(2 - a)$ 互为相反数，利用 $2 - a = -(a - 2)$，将第二项变形为 $-m(a - 2)$。'
+        },
+        {
+          step: 2,
+          name: '统一底数写出变形后的多项式',
+          tStart: 6.0,
+          tEnd: 12.0,
+          explanation: '原多项式转化为 $m^{2}(a - 2) - m(a - 2)$，此时两项都含有相同的括号因式 $(a - 2)$。'
+        },
+        {
+          step: 3,
+          name: '按“最低次幂”确定最大公因式 $m(a - 2)$',
+          tStart: 12.0,
+          tEnd: 18.0,
+          explanation: '字母 $m$ 在两项中的最低次幂为 $m^{1} = m$，公共括号因式为 $(a - 2)$，故应一并提出最大公因式 $m(a - 2)$。'
+        },
+        {
+          step: 4,
+          name: '用各项除以公因式写出剩余括号（末项保留 -1）',
+          tStart: 18.0,
+          tEnd: 24.5,
+          explanation: '第一项 $m^{2}(a - 2) \\div [m(a - 2)] = m$；第二项 $-m(a - 2) \\div [m(a - 2)] = -1$（切勿漏写 $-1$），组合得 $m(a - 2)(m - 1)$。'
+        },
+        {
+          step: 5,
+          name: '检查各因式不能再分解，确认最终结果',
+          tStart: 24.5,
+          tEnd: 30.0,
+          explanation: '检查三个因式 $m$、$(a - 2)$、$(m - 1)$ 均已不能再分解，因式分解完成。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 识别 $2 - a = -(a - 2)$' },
+        { time: 7.5, step: 2, label: '2.1 统一括号底数得 $m^{2}(a - 2) - m(a - 2)$' },
+        { time: 14.0, step: 3, label: '3.1 确定最大公因式 $m(a - 2)$' },
+        { time: 20.0, step: 4, label: '4.1 提取公因式得 $m(a - 2)(m - 1)$（保留 $-1$）' },
+        { time: 26.5, step: 5, label: '5.1 检查分解彻底' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p24_row_0',
+          stepBadge: '原多项式',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p24_r0_t1', math: '$m^{2}(a - 2)$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p24_r0_t2', math: '$+ m(2 - a)$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p24_row_1',
+          stepBadge: '第 1 & 2 步 · 统一相反数底数',
+          appearAt: 1.5,
+          tokens: [
+            { id: 'p24_r1_t1', math: '$= m^{2}(a - 2)$', appearAt: 1.6, dur: 0.40 },
+            { id: 'p24_r1_t2', math: '$- m(a - 2)$', appearAt: 2.5, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p24_row_2',
+          stepBadge: '第 3 步 · 锁定最大公因式',
+          appearAt: 12.4,
+          tokens: [
+            { id: 'p24_r2_gcf', math: '各项最大公因式为：$m(a - 2)$', appearAt: 12.5, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p24_row_3',
+          stepBadge: '最终结论',
+          appearAt: 18.6,
+          isConclusion: true,
+          tokens: [
+            { id: 'p24_r3_conc', math: '$= m(a - 2)(m - 1)$。', appearAt: 18.7, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p24_sp_1',
+          title: '核心法则 · 互为相反数底数奇偶次幂变号规律',
+          showStart: 0.8,
+          showEnd: 29.8,
+          tokens: [
+            { id: 'p24_sp1_t1', math: '① 奇次幂变号：$(b - a)^{2k+1} = -(a - b)^{2k+1}$（如 $2 - a = -(a - 2)$）', appearAt: 1.4, dur: 0.40 },
+            { id: 'p24_sp1_t2', math: '② 偶次幂不变号：$(b - a)^{2k} = (a - b)^{2k}$（如 $(n - m)^{2} = (m - n)^{2}$）', appearAt: 2.6, dur: 0.40 },
+            { id: 'p24_sp1_t3', math: '③ 整项提走留 $1$：$-m(a - 2) \\div [m(a - 2)] = -1$（绝不能漏掉 $-1$）', appearAt: 18.4, dur: 0.45 }
+          ],
+          note: '提取公因式时要把单项式公因式 $m$ 和多项式公因式 $(a - 2)$ 一次性全部提出来'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p24_r0_t2', tStart: 0.8, tEnd: 5.8, color: 'amber' },
+        { tokenId: 'p24_r1_t2', tStart: 2.5, tEnd: 11.8, color: 'rose' },
+        { tokenId: 'p24_r2_gcf', tStart: 12.5, tEnd: 18.2, color: 'teal' },
+        { tokenId: 'p24_r3_conc', tStart: 18.7, tEnd: 25.0, color: 'teal' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p24_svg_s1',
+          type: 'arrow',
+          fromToken: 'p24_r0_t2',
+          toToken: 'p24_r1_t2',
+          label: '$2 - a = -(a - 2)$',
+          color: '#BE123C',
+          curveOffset: 28,
+          tStart: 1.8,
+          tDrawEnd: 2.6,
+          tFadeStart: 5.4,
+          tEnd: 6.0
+        },
+        {
+          id: 'p24_svg_s4',
+          type: 'under-brace',
+          startToken: 'p24_r1_t1',
+          endToken: 'p24_r1_t2',
+          label: '提取公因式 $m(a - 2)$',
+          color: '#0F766E',
+          tStart: 12.8,
+          tDrawEnd: 13.6,
+          tFadeStart: 17.8,
+          tEnd: 18.4
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 6.0, text: '第一步统一互为相反数的括号底数：将第二项中的 $(2 - a)$ 改写为 $-(a - 2)$，正负号相乘变为减号。', focusToken: 'p24_r1_t2' },
+        { tStart: 6.0, tEnd: 12.0, text: '第二步观察公共部分：变形后为 $m^{2}(a - 2) - m(a - 2)$。', focusToken: 'p24_r1_t1' },
+        { tStart: 12.0, tEnd: 18.0, text: '第三步确定最大公因式：字母 $m$ 取最低次幂 $m$，括号因式取 $(a - 2)$，合起来最大公因式是 $m(a - 2)$。', focusToken: 'p24_r2_gcf' },
+        { tStart: 18.0, tEnd: 30.0, text: '第四步提取公因式：第一项剩 $m$，第二项被整体提走后必须保留商 $-1$，得出最终结果 $m(a - 2)(m - 1)$！', focusToken: 'p24_r3_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：首项为负且末项等于公因式的提公因式分解',
+          givenLabel: '已知多项式：',
+          givenFormula: '$-4a^{3}b^{3} + 6a^{2}b - 2ab$',
+          extractedLabel: '确定带负号的最大公因式：',
+          extractedFormula: '系数取 $-2$，相同字母取最低次幂 $ab \\implies$ 公因式为 $-2ab$',
+          questionText: '提取公因式 $-2ab$ 后，正确的因式分解结果是？',
+          options: [
+            { key: 'A', text: 'A. $-2ab(2a^{2}b^{2} - 3a + 1)$', isCorrect: true },
+            { key: 'B', text: 'B. $-2ab(2a^{2}b^{2} - 3a)$', isCorrect: false },
+            { key: 'C', text: 'C. $-2ab(2a^{2}b^{2} + 3a - 1)$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！提负号括号内全变号，且末项除以自身商为 +1：',
+            calcLines: [
+              '$(-4a^{3}b^{3}) \\div (-2ab) = 2a^{2}b^{2}$',
+              '$(+6a^{2}b) \\div (-2ab) = -3a$，$(-2ab) \\div (-2ab) = +1$'
+            ],
+            summary: '原多项式有 $3$ 项，提取单项式公因式后括号内也必须有 $3$ 项，绝不能漏掉末尾的 $+1$。'
+          },
+          wrongTitle: '提示：请检查括号内的项数与变号情况',
+          wrongFeedback: '提出 $-2ab$ 后，括号内三项符号由“负、正、负”变为“正、负、正”，且末项 $-2ab \\div (-2ab) = +1$ 不能漏写，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：提取公因式后整体代入求值',
+          givenLabel: '已知条件：',
+          givenFormula: '$mn = 5，\\quad m - n = -3$',
+          questionText: '求代数式 $m^{2}n - mn^{2} + 5$ 的值：先将前两项因式分解为 $mn(m - n)$，则前两项的值与整个代数式的值分别是多少？',
+          input1Prefix: '$m^{2}n - mn^{2} =$',
+          input1Placeholder: '如 -15',
+          input2Prefix: '，$m^{2}n - mn^{2} + 5 =$',
+          input2Placeholder: '如 -10',
+          input2Suffix: '',
+          expectedX: '-15',
+          expectedMin: '-10',
+          allowOrderSwap: false,
+          correctFeedback: '$m^{2}n - mn^{2} = -15$，$m^{2}n - mn^{2} + 5 = -10$。',
+          correctDetail: '前两项提取公因式 $mn$ 得 $m^{2}n - mn^{2} = mn(m - n) = 5 \\times (-3) = -15$；加上 $5$ 得 $-15 + 5 = -10$。',
+          wrongFeedback: '先算 $mn(m - n) = 5 \\times (-3) = -15$，再算 $-15 + 5$。',
+          specificWrongHints: [
+            {
+              checkType: 'secondVal',
+              val: '-20',
+              hint: '注意是 $-15 + 5 = -10$ 而不是 $-15 - 5 = -20$。'
+            }
+          ]
+        }
+      }
+    },
+
+    // =========================================================================
+    // P25：用公式法（平方差公式与完全平方公式）及先提后套分解因式
+    // =========================================================================
+    P25: {
+      procedureId: 'P25',
+      title: '用公式法（平方差公式与完全平方公式）及先提后套分解因式',
+      exampleTitle: '把下列各式彻底分解因式：(1) $2x^{2} - 12x + 18$；(2) $(a^{2} + 4)^{2} - 16a^{2}$',
+      exampleFormula: '一提（公因式） $\\to$ 二套（平方差/完全平方） $\\to$ 三检查（分解到底）',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示“一提、二套、三检查”因式分解黄金三步法与常见高次连环分解结构）',
+      practiceSectionTitle: '公式法与先提后套因式分解跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握“先提公因式再套公式”与“连续多次分解到底”',
+
+      steps: [
+        {
+          step: 1,
+          name: '第(1)题“一提”：提取各项公因式 2',
+          tStart: 0.0,
+          tEnd: 6.0,
+          explanation: '观察 $2x^{2} - 12x + 18$，三项系数 $2, -12, 18$ 有最大公约数 $2$，先调用 P24 提取公因式 $2$，得 $2(x^{2} - 6x + 9)$。'
+        },
+        {
+          step: 2,
+          name: '第(1)题“二套”：括号内三项套完全平方公式',
+          tStart: 6.0,
+          tEnd: 12.0,
+          explanation: '括号内 $x^{2} - 6x + 9 = x^{2} - 2 \\cdot x \\cdot 3 + 3^{2}$ 符合完全平方式，套用完全平方公式分解为 $2(x - 3)^{2}$。'
+        },
+        {
+          step: 3,
+          name: '第(2)题外层“套平方差公式”',
+          tStart: 12.0,
+          tEnd: 18.2,
+          explanation: '观察 $(a^{2} + 4)^{2} - 16a^{2}$，将 $16a^{2}$ 写为 $(4a)^{2}$，构成两项平方差 $A^{2} - B^{2}$，先分解为 $(a^{2} + 4 + 4a)(a^{2} + 4 - 4a)$。'
+        },
+        {
+          step: 4,
+          name: '第(2)题“三检查”：识别两个括号仍为完全平方式',
+          tStart: 18.2,
+          tEnd: 24.5,
+          explanation: '按降幂排列两个括号为 $(a^{2} + 4a + 4)(a^{2} - 4a + 4)$，检查发现它们分别是 $(a + 2)^{2}$ 和 $(a - 2)^{2}$，还能继续分解！'
+        },
+        {
+          step: 5,
+          name: '继续套用完全平方公式分解到底',
+          tStart: 24.5,
+          tEnd: 30.0,
+          explanation: '将两个因式继续用完全平方公式分解，得到彻底分解结果 $(a + 2)^{2}(a - 2)^{2}$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 (1) 先提公因式 $2$ 得 $2(x^{2} - 6x + 9)$' },
+        { time: 7.5, step: 2, label: '2.1 (1) 套完全平方公式得 $2(x - 3)^{2}$' },
+        { time: 14.0, step: 3, label: '3.1 (2) 先套平方差得 $(a^{2} + 4 + 4a)(a^{2} + 4 - 4a)$' },
+        { time: 20.0, step: 4, label: '4.1 (2) 检查两个三项式均为完全平方式' },
+        { time: 26.0, step: 5, label: '5.1 (2) 继续分解到底得 $(a + 2)^{2}(a - 2)^{2}$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p25_row_0',
+          stepBadge: '例题 (1) · 一提公因式',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p25_r0_orig', math: '(1) $2x^{2} - 12x + 18$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p25_r0_ext', math: '$= 2(x^{2} - 6x + 9)$', appearAt: 1.6, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p25_row_1',
+          stepBadge: '例题 (1) · 二套完全平方',
+          appearAt: 6.4,
+          tokens: [
+            { id: 'p25_r1_res', math: '$= 2(x - 3)^{2}$', appearAt: 6.5, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p25_row_2',
+          stepBadge: '例题 (2) · 先套平方差',
+          appearAt: 12.4,
+          tokens: [
+            { id: 'p25_r2_orig', math: '(2) $(a^{2} + 4)^{2} - 16a^{2} = (a^{2} + 4)^{2} - (4a)^{2}$', appearAt: 12.5, dur: 0.45 },
+            { id: 'p25_r2_diff', math: '$= (a^{2} + 4a + 4)(a^{2} - 4a + 4)$', appearAt: 14.2, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p25_row_3',
+          stepBadge: '例题 (2) · 三检查分解到底',
+          appearAt: 24.4,
+          isConclusion: true,
+          tokens: [
+            { id: 'p25_r3_conc', math: '$= (a + 2)^{2}(a - 2)^{2}$。', appearAt: 24.5, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p25_sp_1',
+          title: '核心口诀 · 因式分解“一提、二套、三检查”',
+          showStart: 0.8,
+          showEnd: 29.8,
+          tokens: [
+            { id: 'p25_sp1_t1', math: '① 一提：有公因式先提公因式，首项为负先提负号', appearAt: 1.4, dur: 0.40 },
+            { id: 'p25_sp1_t2', math: '② 二套：两项异号平方套平方差，三项套完全平方', appearAt: 6.8, dur: 0.40 },
+            { id: 'p25_sp1_t3', math: '③ 三检查：高次因式（如 $x^{4}-y^{4}$）必须连续分解到底', appearAt: 18.6, dur: 0.45 }
+          ],
+          note: '切记：在实数范围内，两项同号的平方和（如 $x^{2} + 4$、$a^{2} + b^{2}$）不能再分解'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p25_r0_ext', tStart: 1.6, tEnd: 5.8, color: 'teal' },
+        { tokenId: 'p25_r1_res', tStart: 6.5, tEnd: 11.8, color: 'amber' },
+        { tokenId: 'p25_r2_diff', tStart: 14.2, tEnd: 24.0, color: 'amber' },
+        { tokenId: 'p25_r3_conc', tStart: 24.5, tEnd: 29.5, color: 'teal' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p25_svg_s2',
+          type: 'arrow',
+          fromToken: 'p25_r0_ext',
+          toToken: 'p25_r1_res',
+          label: '$x^{2} - 6x + 9 = (x - 3)^{2}$',
+          color: '#0F766E',
+          curveOffset: 28,
+          tStart: 6.2,
+          tDrawEnd: 7.0,
+          tFadeStart: 11.2,
+          tEnd: 11.8
+        },
+        {
+          id: 'p25_svg_s5',
+          type: 'arrow',
+          fromToken: 'p25_r2_diff',
+          toToken: 'p25_r3_conc',
+          label: '两个三项式继续用完全平方分解',
+          color: '#D97706',
+          curveOffset: -26,
+          tStart: 24.0,
+          tDrawEnd: 24.8,
+          tFadeStart: 28.8,
+          tEnd: 29.5
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 6.0, text: '先看第(1)题 $2x^{2} - 12x + 18$：牢记“一提二套”，先提取各项公因式 $2$，得 $2(x^{2} - 6x + 9)$。', focusToken: 'p25_r0_ext' },
+        { tStart: 6.0, tEnd: 12.0, text: '括号内是三项式 $x^{2} - 6x + 9$，套用完全平方公式化为 $2(x - 3)^{2}$。', focusToken: 'p25_r1_res' },
+        { tStart: 12.0, tEnd: 18.2, text: '再看第(2)题 $(a^{2} + 4)^{2} - 16a^{2}$：把 $16a^{2}$ 看作 $(4a)^{2}$，先用平方差公式分解为 $(a^{2} + 4a + 4)(a^{2} - 4a + 4)$。', focusToken: 'p25_r2_diff' },
+        { tStart: 18.2, tEnd: 24.5, text: '关键第三步“检查彻底性”：观察发现两个括号里的二次三项式都符合完全平方式！', focusToken: 'p25_r2_diff' },
+        { tStart: 24.5, tEnd: 30.0, text: '继续套用完全平方公式分解到底，得出最终结果 $(a + 2)^{2}(a - 2)^{2}$！', focusToken: 'p25_r3_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：先提公因式再用平方差公式彻底分解',
+          givenLabel: '已知多项式：',
+          givenFormula: '$2(a - 1)^{2} - 8$',
+          extractedLabel: '第一步提取公因式 2：',
+          extractedFormula: '$2[(a - 1)^{2} - 4] = 2[(a - 1)^{2} - 2^{2}]$',
+          questionText: '下一步对中括号内套用平方差公式并化简，最终彻底分解的结果是？',
+          options: [
+            { key: 'A', text: 'A. $2(a + 1)(a - 3)$', isCorrect: true },
+            { key: 'B', text: 'B. $2[(a - 1)^{2} - 4]$', isCorrect: false },
+            { key: 'C', text: 'C. $(2a + 2)(a - 3)$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！一提公因式 2，二套平方差公式，三合并括号内常数：',
+            calcLines: [
+              '$2[(a - 1) + 2][(a - 1) - 2] = 2(a + 1)(a - 3)$'
+            ],
+            summary: 'B 项未继续用平方差公式分解，C 项未把系数公因数 $2$ 单独提到括号外。'
+          },
+          wrongTitle: '提示：请对 [(a - 1)² - 2²] 继续用平方差公式并保留前面的系数 2',
+          wrongFeedback: '由 $(a - 1)^{2} - 2^{2} = (a - 1 + 2)(a - 1 - 2) = (a + 1)(a - 3)$，前面乘公因式 $2$ 得 $2(a + 1)(a - 3)$，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：高次多项式连续两次套用平方差公式',
+          givenLabel: '已知四次多项式：',
+          givenFormula: '$16 - b^{4}$',
+          questionText: '第一次用平方差公式得 $(4 + b^{2})(4 - b^{2})$，其中 $4 - b^{2}$ 还能继续分解为 $(p + b)(p - b)$；若当 $b = 1$ 时该多项式的值是多少？请分别填写正数 $p$ 与当 $b = 1$ 时的值：',
+          input1Prefix: '正数 $p =$',
+          input1Placeholder: '如 2',
+          input2Prefix: '，当 $b = 1$ 时原式 $=$',
+          input2Placeholder: '如 15',
+          input2Suffix: '',
+          expectedX: '2',
+          expectedMin: '15',
+          allowOrderSwap: false,
+          correctFeedback: '彻底分解为 $(4 + b^{2})(2 + b)(2 - b)$（$p = 2$），当 $b = 1$ 时原式值为 $15$。',
+          correctDetail: '因为 $4 - b^{2} = 2^{2} - b^{2} = (2 + b)(2 - b)$，所以 $p = 2$；当 $b = 1$ 时，$16 - 1^{4} = 15$。',
+          wrongFeedback: '注意 $4 = 2^{2}$，故 $4 - b^{2} = (2 + b)(2 - b)$，得 $p = 2$；再算 $16 - 1^{4} = 15$。',
+          specificWrongHints: [
+            {
+              checkType: 'firstVal',
+              val: '4',
+              hint: '注意 $4 - b^{2} = 2^{2} - b^{2}$，开平方后常数是 $2$ 而不是 $4$。'
+            }
+          ]
+        }
+      }
+    }
+    ,
+    // =========================================================================
+    // P26：运用平方差公式展开整式与简便运算
+    // =========================================================================
+    P26: {
+      procedureId: 'P26',
+      title: '运用平方差公式展开整式与简便运算',
+      exampleTitle: '利用平方差公式计算：(1) $(a + 2)(a - 2)(a^{2} + 4)$；(2) $(5x + 6y)(5x - 6y) - (6x + 5y)(6x - 5y)$',
+      exampleFormula: '$(a + b)(a - b) = a^{2} - b^{2}$（相同项平方 $-$ 相反项平方）',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示“相同项 a 与相反项 b 识别”、“含系数项整体平方”与“减号后乘积加括号”三大准则）',
+      practiceSectionTitle: '平方差公式展开与巧算跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握负项打头的平方差识别与大数平方差简便计算',
+
+      steps: [
+        {
+          step: 1,
+          name: '第(1)题：定位前两因式的相同项与相反项',
+          tStart: 0.0,
+          tEnd: 6.0,
+          explanation: '观察 $(a + 2)(a - 2)(a^{2} + 4)$ 的前两个因式 $(a + 2)(a - 2)$，其中相同项为 $a$、相反项为 $2$，套用平方差公式得 $(a^{2} - 4)$。'
+        },
+        {
+          step: 2,
+          name: '第(1)题：连续第二次套用平方差公式',
+          tStart: 6.0,
+          tEnd: 12.0,
+          explanation: '前两因式的积 $(a^{2} - 4)$ 与第三个因式 $(a^{2} + 4)$ 再次构成平方差结构（相同项为 $a^{2}$，相反项为 $4$），套用公式得 $(a^{2})^{2} - 4^{2} = a^{4} - 16$。'
+        },
+        {
+          step: 3,
+          name: '第(2)题：两组平方差分别加括号展开',
+          tStart: 12.0,
+          tEnd: 18.5,
+          explanation: '对 $(5x + 6y)(5x - 6y)$ 和 $(6x + 5y)(6x - 5y)$ 分别套用平方差公式（系数与字母同时平方），并在减号后保留括号：$(25x^{2} - 36y^{2}) - (36x^{2} - 25y^{2})$。'
+        },
+        {
+          step: 4,
+          name: '第(2)题：去括号变号',
+          tStart: 18.5,
+          tEnd: 24.5,
+          explanation: '去掉第二个括号，括号前是负号，括号内两项均变号，得 $25x^{2} - 36y^{2} - 36x^{2} + 25y^{2}$。'
+        },
+        {
+          step: 5,
+          name: '第(2)题：合并同类项得出最简结果',
+          tStart: 24.5,
+          tEnd: 30.0,
+          explanation: '将同类项分别合并：$(25 - 36)x^{2} + (-36 + 25)y^{2} = -11x^{2} - 11y^{2}$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 (1) 先算 $(a + 2)(a - 2) = a^{2} - 4$' },
+        { time: 7.5, step: 2, label: '2.1 (1) 连续套平方差得 $(a^{2} - 4)(a^{2} + 4) = a^{4} - 16$' },
+        { time: 14.0, step: 3, label: '3.1 (2) 两组加括号展开得 $(25x^{2} - 36y^{2}) - (36x^{2} - 25y^{2})$' },
+        { time: 20.0, step: 4, label: '4.1 (2) 去括号变号得 $25x^{2} - 36y^{2} - 36x^{2} + 25y^{2}$' },
+        { time: 26.0, step: 5, label: '5.1 (2) 合并同类项得 $-11x^{2} - 11y^{2}$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p26_row_0',
+          stepBadge: '例题 (1) · 第一次平方差',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p26_r0_orig', math: '(1) $(a + 2)(a - 2)(a^{2} + 4)$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p26_r0_step1', math: '$= (a^{2} - 4)(a^{2} + 4)$', appearAt: 1.6, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p26_row_1',
+          stepBadge: '例题 (1) · 第二次平方差',
+          appearAt: 6.4,
+          tokens: [
+            { id: 'p26_r1_res', math: '$= (a^{2})^{2} - 4^{2} = a^{4} - 16$', appearAt: 6.5, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p26_row_2',
+          stepBadge: '例题 (2) · 加括号展开',
+          appearAt: 12.4,
+          tokens: [
+            { id: 'p26_r2_orig', math: '(2) 原式 $= [(5x)^{2} - (6y)^{2}] - [(6x)^{2} - (5y)^{2}]$', appearAt: 12.5, dur: 0.45 },
+            { id: 'p26_r2_exp', math: '$= (25x^{2} - 36y^{2}) - (36x^{2} - 25y^{2})$', appearAt: 14.2, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p26_row_3',
+          stepBadge: '例题 (2) · 去括号与合并',
+          appearAt: 19.0,
+          isConclusion: true,
+          tokens: [
+            { id: 'p26_r3_rem', math: '$= 25x^{2} - 36y^{2} - 36x^{2} + 25y^{2}$', appearAt: 19.1, dur: 0.45 },
+            { id: 'p26_r3_conc', math: '$= -11x^{2} - 11y^{2}$。', appearAt: 25.0, dur: 0.55 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p26_sp_1',
+          title: '核心口诀 · 平方差公式三大防错铁律',
+          showStart: 0.8,
+          showEnd: 29.8,
+          tokens: [
+            { id: 'p26_sp1_t1', math: '① 认准符号：相同项的平方 $-$ 相反项的平方', appearAt: 1.4, dur: 0.40 },
+            { id: 'p26_sp1_t2', math: '② 系数同平方：$(5x)^{2} = 25x^{2}$（切勿漏平方写成 $5x^{2}$）', appearAt: 12.8, dur: 0.40 },
+            { id: 'p26_sp1_t3', math: '③ 减号加括号：$-(36x^{2} - 25y^{2}) = -36x^{2} + 25y^{2}$', appearAt: 18.8, dur: 0.45 }
+          ],
+          note: '面对形如 $(-a + 2)(-a - 2)$ 的式子，相同项是 $-a$，相反项是 $2$，结果为 $(-a)^{2} - 2^{2} = a^{2} - 4$'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p26_r0_step1', tStart: 1.6, tEnd: 5.8, color: 'teal' },
+        { tokenId: 'p26_r1_res', tStart: 6.5, tEnd: 11.8, color: 'amber' },
+        { tokenId: 'p26_r2_exp', tStart: 14.2, tEnd: 18.4, color: 'amber' },
+        { tokenId: 'p26_r3_rem', tStart: 19.1, tEnd: 24.4, color: 'rose' },
+        { tokenId: 'p26_r3_conc', tStart: 25.0, tEnd: 29.5, color: 'teal' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p26_svg_s2',
+          type: 'arrow',
+          fromToken: 'p26_r0_step1',
+          toToken: 'p26_r1_res',
+          label: '再次触发平方差公式',
+          color: '#0F766E',
+          curveOffset: 28,
+          tStart: 6.2,
+          tDrawEnd: 7.0,
+          tFadeStart: 11.2,
+          tEnd: 11.8
+        },
+        {
+          id: 'p26_svg_s4',
+          type: 'arrow',
+          fromToken: 'p26_r2_exp',
+          toToken: 'p26_r3_rem',
+          label: '减号去括号：$-25y^{2} \\to +25y^{2}$',
+          color: '#BE123C',
+          curveOffset: -26,
+          tStart: 18.8,
+          tDrawEnd: 19.6,
+          tFadeStart: 23.8,
+          tEnd: 24.4
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 6.0, text: '先看第(1)题：前两个因式 $(a + 2)(a - 2)$ 构成平方差，相同项为 $a$、相反项为 $2$，相乘得 $(a^{2} - 4)$。', focusToken: 'p26_r0_step1' },
+        { tStart: 6.0, tEnd: 12.0, text: '接着 $(a^{2} - 4)$ 与 $(a^{2} + 4)$ 再次构成平方差，连续套用公式得 $(a^{2})^{2} - 4^{2} = a^{4} - 16$。', focusToken: 'p26_r1_res' },
+        { tStart: 12.0, tEnd: 18.5, text: '再看第(2)题：两组乘积分别套用平方差公式，注意把系数 $5$ 和 $6$ 一并平方，且减号后面的结果必须先加括号！', focusToken: 'p26_r2_exp' },
+        { tStart: 18.5, tEnd: 24.5, text: '去括号时，括号前是减号，所以 $-25y^{2}$ 变号为 $+25y^{2}$，得 $25x^{2} - 36y^{2} - 36x^{2} + 25y^{2}$。', focusToken: 'p26_r3_rem' },
+        { tStart: 24.5, tEnd: 30.0, text: '最后合并同类项，得出最简结果 $-11x^{2} - 11y^{2}$！', focusToken: 'p26_r3_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：识别含负号项的平方差公式展开',
+          givenLabel: '已知整式乘法算式：',
+          givenFormula: '$(-a + 2)(-a - 2)$',
+          extractedLabel: '对比两括号内各项的符号：',
+          extractedFormula: '第一项均为 $-a$（符号相同），第二项为 $+2$ 与 $-2$（符号相反）',
+          questionText: '运用平方差公式“相同项的平方 $-$ 相反项的平方”展开，正确的结果是？',
+          options: [
+            { key: 'A', text: 'A. $(-a)^{2} - 2^{2} = a^{2} - 4$', isCorrect: true },
+            { key: 'B', text: 'B. $2^{2} - a^{2} = 4 - a^{2}$', isCorrect: false },
+            { key: 'C', text: 'C. $-a^{2} - 4$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！判断谁减谁只看符号，不看正负号本身：',
+            calcLines: [
+              '相同项 $A = -a \\implies A^{2} = (-a)^{2} = a^{2}$',
+              '相反项 $B = 2 \\implies B^{2} = 2^{2} = 4 \\implies A^{2} - B^{2} = a^{2} - 4$'
+            ],
+            summary: '无论相同项前面带正号还是负号，平方之后都是正的被减项。'
+          },
+          wrongTitle: '提示：请找出两个括号里符号完全相同的那一项',
+          wrongFeedback: '两个括号里 $-a$ 的符号相同（都是负号），所以相同项是 $-a$，它的平方 $(-a)^{2} = a^{2}$ 是被减数，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：利用平方差公式进行大数简便运算与整体求值',
+          givenLabel: '给出两个算式：',
+          givenFormula: '① $1186^{2} - 1185 \\times 1187$；② 已知 $3m + n = 6，3m - n = 4$，求 $9m^{2} - n^{2}$',
+          questionText: '在 ① 中将 $1185 \\times 1187$ 化为 $(1186 - 1)(1186 + 1)$ 后算得的结果是多少？在 ② 中 $9m^{2} - n^{2}$ 的值是多少？',
+          input1Prefix: '① 的结果 $=$',
+          input1Placeholder: '如 1',
+          input2Prefix: '，② $9m^{2} - n^{2} =$',
+          input2Placeholder: '如 24',
+          input2Suffix: '',
+          expectedX: '1',
+          expectedMin: '24',
+          allowOrderSwap: false,
+          correctFeedback: '① 的结果为 $1$，② $9m^{2} - n^{2} = 24$。',
+          correctDetail: '① $1186^{2} - (1186^{2} - 1^{2}) = 1186^{2} - 1186^{2} + 1 = 1$；② $9m^{2} - n^{2} = (3m + n)(3m - n) = 6 \\times 4 = 24$。',
+          wrongFeedback: '① 注意去括号 $1186^{2} - (1186^{2} - 1) = +1$；② 利用 $9m^{2} - n^{2} = (3m + n)(3m - n)$ 将 $6$ 和 $4$ 相乘。',
+          specificWrongHints: [
+            {
+              checkType: 'firstVal',
+              val: '-1',
+              hint: '注意是 $1186^{2} - (1186^{2} - 1)$，去括号后 $-(-1) = +1$ 而不是 $-1$。'
+            }
+          ]
+        }
+      }
+    },
+
+    // =========================================================================
+    // P27：运用单项式与多项式乘法法则展开整式
+    // =========================================================================
+    P27: {
+      procedureId: 'P27',
+      title: '运用单项式与多项式乘法法则展开整式',
+      exampleTitle: '计算整式乘法：$x(x^{2} + x - 1) - (2x^{2} - 1)(x - 4)$',
+      exampleFormula: '$m(a + b + c) = ma + mb + mc$；$(a + b)(p + q) = ap + aq + bp + bq$',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示“系数相乘、同底数幂指数相加”、“逐项遍乘不漏项”与“减号后乘积先加括号”）',
+      practiceSectionTitle: '整式乘法展开与化简跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握负单项式乘多项式与多项式乘多项式展开合并',
+
+      steps: [
+        {
+          step: 1,
+          name: '用单项式 $x$ 乘遍第一组括号内三项',
+          tStart: 0.0,
+          tEnd: 6.0,
+          explanation: '根据单项式乘多项式法则（乘法分配律），用 $x$ 分别乘 $x^{2}$、$+x$、$-1$，同底数幂指数相加得 $x^{3} + x^{2} - x$。'
+        },
+        {
+          step: 2,
+          name: '将减号后的多项式乘多项式放在括号内逐项展开',
+          tStart: 6.0,
+          tEnd: 13.0,
+          explanation: '因为前面是减号，先写“$-($”，在括号内用 $2x^{2}$ 和 $-1$ 分别遍乘 $(x - 4)$ 的两项，得 $-(2x^{3} - 8x^{2} - x + 4)$。'
+        },
+        {
+          step: 3,
+          name: '按去括号法则去掉减号后的括号',
+          tStart: 13.0,
+          tEnd: 19.0,
+          explanation: '去掉括号和前面的减号，括号内四项全部改变符号，化为 $x^{3} + x^{2} - x - 2x^{3} + 8x^{2} + x - 4$。'
+        },
+        {
+          step: 4,
+          name: '按同次幂分组识别同类项',
+          tStart: 19.0,
+          tEnd: 24.5,
+          explanation: '找出三次项 $(x^{3} - 2x^{3})$、二次项 $(x^{2} + 8x^{2})$、一次项 $(-x + x)$ 与常数项 $-4$。'
+        },
+        {
+          step: 5,
+          name: '合并同类项写出最简多项式',
+          tStart: 24.5,
+          tEnd: 30.0,
+          explanation: '系数相加合并：三次项得 $-x^{3}$，二次项得 $+9x^{2}$，一次项正负抵消为 $0$，最终结果为 $-x^{3} + 9x^{2} - 4$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 展开 $x(x^{2} + x - 1) = x^{3} + x^{2} - x$' },
+        { time: 7.5, step: 2, label: '2.1 加括号展开 $-(2x^{2} - 1)(x - 4) = -(2x^{3} - 8x^{2} - x + 4)$' },
+        { time: 14.2, step: 3, label: '3.1 去括号变号得 $x^{3} + x^{2} - x - 2x^{3} + 8x^{2} + x - 4$' },
+        { time: 20.5, step: 4, label: '4.1 识别同类项（$-x$ 与 $+x$ 抵消）' },
+        { time: 26.5, step: 5, label: '5.1 合并得出 $-x^{3} + 9x^{2} - 4$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p27_row_0',
+          stepBadge: '原算式',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p27_r0_p1', math: '$x(x^{2} + x - 1)$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p27_r0_p2', math: '$- (2x^{2} - 1)(x - 4)$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p27_row_1',
+          stepBadge: '第 1 & 2 步 · 分配律展开（保留括号）',
+          appearAt: 1.5,
+          tokens: [
+            { id: 'p27_r1_p1', math: '$= x^{3} + x^{2} - x$', appearAt: 1.6, dur: 0.45 },
+            { id: 'p27_r1_p2', math: '$- (2x^{3} - 8x^{2} - x + 4)$', appearAt: 6.5, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p27_row_2',
+          stepBadge: '第 3 步 · 去括号变号',
+          appearAt: 13.4,
+          tokens: [
+            { id: 'p27_r2_rem', math: '$= x^{3} + x^{2} - x - 2x^{3} + 8x^{2} + x - 4$', appearAt: 13.5, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p27_row_3',
+          stepBadge: '最终结论',
+          appearAt: 24.8,
+          isConclusion: true,
+          tokens: [
+            { id: 'p27_r3_conc', math: '$= -x^{3} + 9x^{2} - 4$。', appearAt: 24.9, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p27_sp_1',
+          title: '草稿演算 · 多项式乘多项式“四次握手”明细',
+          showStart: 5.8,
+          showEnd: 29.8,
+          tokens: [
+            { id: 'p27_sp1_t1', math: '① $2x^{2} \\cdot x = 2x^{3}$；② $2x^{2} \\cdot (-4) = -8x^{2}$', appearAt: 6.4, dur: 0.40 },
+            { id: 'p27_sp1_t2', math: '③ $(-1) \\cdot x = -x$；④ $(-1) \\cdot (-4) = +4$', appearAt: 7.6, dur: 0.40 },
+            { id: 'p27_sp1_t3', math: '易错点：前面有“$-$”号，必须先套括号 $-(2x^{3} - 8x^{2} - x + 4)$！', appearAt: 13.6, dur: 0.45 }
+          ],
+          note: '二项式乘二项式在合并同类项前共有 $2 \\times 2 = 4$ 项，逐项核对可确保不漏项'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p27_r0_p1', tStart: 0.8, tEnd: 5.8, color: 'teal' },
+        { tokenId: 'p27_r1_p1', tStart: 1.6, tEnd: 5.8, color: 'teal' },
+        { tokenId: 'p27_r0_p2', tStart: 6.0, tEnd: 12.8, color: 'amber' },
+        { tokenId: 'p27_r1_p2', tStart: 6.5, tEnd: 12.8, color: 'amber' },
+        { tokenId: 'p27_r2_rem', tStart: 13.5, tEnd: 24.4, color: 'rose' },
+        { tokenId: 'p27_r3_conc', tStart: 24.9, tEnd: 29.5, color: 'teal' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p27_svg_s2',
+          type: 'arrow',
+          fromToken: 'p27_r0_p2',
+          toToken: 'p27_r1_p2',
+          label: '减号后乘积先加括号',
+          color: '#D97706',
+          curveOffset: 28,
+          tStart: 6.2,
+          tDrawEnd: 7.0,
+          tFadeStart: 12.0,
+          tEnd: 12.6
+        },
+        {
+          id: 'p27_svg_s3',
+          type: 'arrow',
+          fromToken: 'p27_r1_p2',
+          toToken: 'p27_r2_rem',
+          label: '去括号四项全变号',
+          color: '#BE123C',
+          curveOffset: -26,
+          tStart: 13.2,
+          tDrawEnd: 14.0,
+          tFadeStart: 18.2,
+          tEnd: 18.8
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 6.0, text: '第一步展开单项式乘多项式：用 $x$ 乘遍 $(x^{2} + x - 1)$ 的每一项，指数相加得 $x^{3} + x^{2} - x$。', focusToken: 'p27_r1_p1' },
+        { tStart: 6.0, tEnd: 13.0, text: '第二步展开多项式乘多项式：注意前面是减号，必须先把乘积放在括号内，展开得 $-(2x^{3} - 8x^{2} - x + 4)$。', focusToken: 'p27_r1_p2' },
+        { tStart: 13.0, tEnd: 19.0, text: '第三步去括号变号：去掉括号和前面的减号，括号内四项全部变号，得到 $-2x^{3} + 8x^{2} + x - 4$。', focusToken: 'p27_r2_rem' },
+        { tStart: 19.0, tEnd: 30.0, text: '第四步合并同类项：$x^{3} - 2x^{3} = -x^{3}$，$x^{2} + 8x^{2} = +9x^{2}$，$-x$ 与 $+x$ 抵消，最终结果为 $-x^{3} + 9x^{2} - 4$！', focusToken: 'p27_r3_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：负单项式乘以多项式的符号与指数法则',
+          givenLabel: '已知整式乘法算式：',
+          givenFormula: '$(-3x) \\cdot (2x^{2} - 5x - 1)$',
+          extractedLabel: '按乘法分配律拆解：',
+          extractedFormula: '$(-3x) \\cdot 2x^{2} + (-3x) \\cdot (-5x) + (-3x) \\cdot (-1)$',
+          questionText: '逐项计算系数相乘与同底数幂指数相加，正确的展开结果是？',
+          options: [
+            { key: 'A', text: 'A. $-6x^{3} + 15x^{2} + 3x$', isCorrect: true },
+            { key: 'B', text: 'B. $-6x^{3} - 15x^{2} - 3x$', isCorrect: false },
+            { key: 'C', text: 'C. $-6x^{2} + 15x^{2} - 1$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！负单项式乘进括号时，括号内每一项符号都要改变：',
+            calcLines: [
+              '$(-3x) \\cdot 2x^{2} = -6x^{1+2} = -6x^{3}$',
+              '$(-3x) \\cdot (-5x) = +15x^{1+1} = +15x^{2}$',
+              '$(-3x) \\cdot (-1) = +3x$（切勿漏乘末项 $-1$）'
+            ],
+            summary: '单项式乘三项式，展开后必定也是三项。'
+          },
+          wrongTitle: '提示：请检查负负得正与末项是否漏乘',
+          wrongFeedback: '$(-3x)$ 乘以 $-5x$ 和 $-1$ 时同号相乘得正（$+15x^{2}$ 和 $+3x$），且 $x \\cdot x^{2} = x^{3}$，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：多项式乘多项式展开合并',
+          givenLabel: '已知二项式乘二项式：',
+          givenFormula: '$(2x - y)(x - 2y)$',
+          questionText: '将其展开并合并中间同类项，化为 $2x^{2} + kxy + my^{2}$ 的形式，系数 $k$ 和 $m$ 分别是多少？',
+          input1Prefix: '$xy$ 项系数 $k =$',
+          input1Placeholder: '如 -5',
+          input2Prefix: '，$y^{2}$ 项系数 $m =$',
+          input2Placeholder: '如 2',
+          input2Suffix: '',
+          expectedX: '-5',
+          expectedMin: '2',
+          allowOrderSwap: false,
+          correctFeedback: '展开合并结果为 $2x^{2} - 5xy + 2y^{2}$（$k = -5$，$m = 2$）。',
+          correctDetail: '$(2x - y)(x - 2y) = 2x^{2} - 4xy - xy + 2y^{2} = 2x^{2} - 5xy + 2y^{2}$，故 $k = -5，m = 2$。',
+          wrongFeedback: '逐项相乘得 $2x^{2} - 4xy - xy + 2y^{2}$，合并中间两项 $(-4 - 1)xy = -5xy$，末项 $(-y) \\cdot (-2y) = +2y^{2}$。',
+          specificWrongHints: [
+            {
+              checkType: 'firstVal',
+              val: '-3',
+              hint: '注意中间两项是 $-4xy$ 和 $-xy$（同为负号），相加应为 $(-4) + (-1) = -5$ 而不是 $-3$。'
+            },
+            {
+              checkType: 'secondVal',
+              val: '-2',
+              hint: '注意末项是 $(-y) \\times (-2y)$，同号相乘得正，系数 $m = 2$ 而不是 $-2$。'
+            }
+          ]
+        }
+      }
+    },
+
+    // =========================================================================
+    // P28：运用去括号与合并同类项法则进行整式加减及无关型求值
+    // =========================================================================
+    P28: {
+      procedureId: 'P28',
+      title: '运用去括号与合并同类项法则进行整式加减及无关型求值',
+      exampleTitle: '计算整式加减：$\\left(\\frac{1}{3}x^{2} - 1 + 3x\\right) - 4\\left(x - x^{2} + \\frac{1}{2}\\right)$',
+      exampleFormula: '$a - k(b - c + d) = a - kb + kc - kd$；$mx^{a}y^{b} + nx^{a}y^{b} = (m + n)x^{a}y^{b}$',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示“两相同两无关”同类项准则、负系数去括号法则与“无关型令系数=0”求参技巧）',
+      practiceSectionTitle: '整式加减去括号与无关型求值跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握负因数去括号合并与“与字母取值无关”求参数',
+
+      steps: [
+        {
+          step: 1,
+          name: '去掉第一个括号（括号前为正，各项不变号）',
+          tStart: 0.0,
+          tEnd: 5.8,
+          explanation: '第一个括号 $\\left(\\frac{1}{3}x^{2} - 1 + 3x\\right)$ 前面没有负号，直接去掉括号，各项保持原符号不变：$\\frac{1}{3}x^{2} - 1 + 3x$。'
+        },
+        {
+          step: 2,
+          name: '将负系数 -4 乘遍第二个括号内每一项并变号',
+          tStart: 5.8,
+          tEnd: 12.8,
+          explanation: '第二个括号前是 $-4$，用 $-4$ 分别乘以 $x$、$-x^{2}$、$+\\frac{1}{2}$，得 $-4x + 4x^{2} - 2$（注意 $(-4) \\times (-x^{2}) = +4x^{2}$，$(-4) \\times \\frac{1}{2} = -2$）。'
+        },
+        {
+          step: 3,
+          name: '按同类项定义将相同次数的项分组',
+          tStart: 12.8,
+          tEnd: 19.0,
+          explanation: '将所含字母相同且指数也相同的项归为一组：二次项 $\\left(\\frac{1}{3}x^{2} + 4x^{2}\\right)$，一次项 $(3x - 4x)$，常数项 $(-1 - 2)$。'
+        },
+        {
+          step: 4,
+          name: '把各组同类项的系数相加，字母和指数不变',
+          tStart: 19.0,
+          tEnd: 24.8,
+          explanation: '二次项系数 $\\frac{1}{3} + 4 = \\frac{13}{3}$，一次项系数 $3 - 4 = -1$，常数项 $-1 - 2 = -3$。'
+        },
+        {
+          step: 5,
+          name: '按降幂排列写出最简整式结果',
+          tStart: 24.8,
+          tEnd: 30.0,
+          explanation: '写出最终合并结果：$\\frac{13}{3}x^{2} - x - 3$（系数 $-1$ 中的 $1$ 省略不写）。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 去第一括号得 $\\frac{1}{3}x^{2} - 1 + 3x$' },
+        { time: 7.5, step: 2, label: '2.1 将 $-4$ 分配进第二括号得 $-4x + 4x^{2} - 2$' },
+        { time: 14.2, step: 3, label: '3.1 按二次项、一次项、常数项分组同类项' },
+        { time: 20.5, step: 4, label: '4.1 系数相加：$\\frac{1}{3} + 4 = \\frac{13}{3}$，$3 - 4 = -1$，$-1 - 2 = -3$' },
+        { time: 26.5, step: 5, label: '5.1 得出最简结果 $\\frac{13}{3}x^{2} - x - 3$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p28_row_0',
+          stepBadge: '原算式',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p28_r0_p1', math: '$\\left(\\frac{1}{3}x^{2} - 1 + 3x\\right)$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p28_r0_p2', math: '$- 4\\left(x - x^{2} + \\frac{1}{2}\\right)$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p28_row_1',
+          stepBadge: '第 1 & 2 步 · 去括号',
+          appearAt: 1.5,
+          tokens: [
+            { id: 'p28_r1_p1', math: '$= \\frac{1}{3}x^{2} - 1 + 3x$', appearAt: 1.6, dur: 0.45 },
+            { id: 'p28_r1_p2', math: '$- 4x + 4x^{2} - 2$', appearAt: 6.4, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p28_row_2',
+          stepBadge: '第 3 & 4 步 · 同类项分组',
+          appearAt: 13.4,
+          tokens: [
+            { id: 'p28_r2_g2', math: '$= \\left(\\frac{1}{3} + 4\\right)x^{2}$', appearAt: 13.5, dur: 0.45 },
+            { id: 'p28_r2_g1', math: '$+ (3 - 4)x$', appearAt: 14.4, dur: 0.40 },
+            { id: 'p28_r2_g0', math: '$+ (-1 - 2)$', appearAt: 15.2, dur: 0.40 }
+          ]
+        },
+        {
+          rowId: 'p28_row_3',
+          stepBadge: '最终结论',
+          appearAt: 25.0,
+          isConclusion: true,
+          tokens: [
+            { id: 'p28_r3_conc', math: '$= \\frac{13}{3}x^{2} - x - 3$。', appearAt: 25.1, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p28_sp_1',
+          title: '核心准则 · 同类项“两相同、两无关”与无关型求参',
+          showStart: 0.8,
+          showEnd: 29.8,
+          tokens: [
+            { id: 'p28_sp1_t1', math: '① 两相同：所含字母相同，且相同字母的指数也相同', appearAt: 1.4, dur: 0.40 },
+            { id: 'p28_sp1_t2', math: '② 负系数去括号：$-4\\left(x - x^{2} + \\frac{1}{2}\\right) = -4x + 4x^{2} - 2$', appearAt: 6.8, dur: 0.45 },
+            { id: 'p28_sp1_t3', math: '③ 与 $x$ 的取值无关（或不含某项）$\\implies$ 合并后含 $x$ 项系数 $= 0$', appearAt: 19.2, dur: 0.45 }
+          ],
+          note: '几个常数项（如 $-1$ 与 $-2$）也是同类项；字母顺序不同但对应指数相同的项（如 $-2x^{2}y$ 与 $2yx^{2}$）也是同类项'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p28_r0_p2', tStart: 5.8, tEnd: 12.5, color: 'amber' },
+        { tokenId: 'p28_r1_p2', tStart: 6.4, tEnd: 12.5, color: 'rose' },
+        { tokenId: 'p28_r2_g2', tStart: 13.5, tEnd: 24.4, color: 'teal' },
+        { tokenId: 'p28_r2_g1', tStart: 14.4, tEnd: 24.4, color: 'amber' },
+        { tokenId: 'p28_r3_conc', tStart: 25.1, tEnd: 29.5, color: 'teal' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p28_svg_s2',
+          type: 'arrow',
+          fromToken: 'p28_r0_p2',
+          toToken: 'p28_r1_p2',
+          label: '$-4$ 乘遍三项并全变号',
+          color: '#BE123C',
+          curveOffset: 28,
+          tStart: 6.2,
+          tDrawEnd: 7.0,
+          tFadeStart: 11.8,
+          tEnd: 12.4
+        },
+        {
+          id: 'p28_svg_s4',
+          type: 'under-brace',
+          startToken: 'p28_r2_g2',
+          endToken: 'p28_r2_g0',
+          label: '系数相加，字母和指数不变',
+          color: '#0F766E',
+          tStart: 19.2,
+          tDrawEnd: 20.0,
+          tFadeStart: 24.0,
+          tEnd: 24.6
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 5.8, text: '第一步去掉第一个括号：括号前是正号，直接去括号得 $\\frac{1}{3}x^{2} - 1 + 3x$。', focusToken: 'p28_r1_p1' },
+        { tStart: 5.8, tEnd: 12.8, text: '第二步去掉带负系数的括号：用 $-4$ 乘遍括号内三项，注意负负得正、正负得负，得 $-4x + 4x^{2} - 2$。', focusToken: 'p28_r1_p2' },
+        { tStart: 12.8, tEnd: 19.0, text: '第三步同类项分组：将二次项、一次项和常数项分别归类，准备把系数相加。', focusToken: 'p28_r2_g2' },
+        { tStart: 19.0, tEnd: 30.0, text: '第四步合并同类项：$\\frac{1}{3} + 4 = \\frac{13}{3}$，$3 - 4 = -1$，$-1 - 2 = -3$，得出最简结果 $\\frac{13}{3}x^{2} - x - 3$！', focusToken: 'p28_r3_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：由同类项定义求指数参数',
+          givenLabel: '已知条件：',
+          givenFormula: '单项式 $3x^{n}y^{3}$ 与 $-\\frac{1}{2}x^{2}y^{m}$ 的和仍是单项式（即二者是同类项）',
+          extractedLabel: '对照同类项“相同字母的指数相同”：',
+          extractedFormula: '$x$ 的指数分别为 $n$ 与 $2$；$y$ 的指数分别为 $3$ 与 $m$',
+          questionText: '由此求出的 $m, n$ 及 $m + n$ 的值是？',
+          options: [
+            { key: 'A', text: 'A. $n = 2，m = 3$，故 $m + n = 5$', isCorrect: true },
+            { key: 'B', text: 'B. $n = 3，m = -\\frac{1}{2}$，故 $m + n = \\frac{5}{2}$', isCorrect: false },
+            { key: 'C', text: 'C. $n = 3，m = 2$，故 $m + n = 5$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！两个单项式的和仍是单项式，说明它们必为同类项：',
+            calcLines: [
+              '相同字母 $x$ 的指数相等：$n = 2$',
+              '相同字母 $y$ 的指数相等：$m = 3 \\implies m + n = 3 + 2 = 5$'
+            ],
+            summary: '同类项的判定与前面的数字系数（$3$ 和 $-\\frac{1}{2}$）完全无关。'
+          },
+          wrongTitle: '提示：请将相同字母的指数一一对应相等',
+          wrongFeedback: '在 $3x^{n}y^{3}$ 与 $-\\frac{1}{2}x^{2}y^{m}$ 中，$x$ 的指数对应相等得 $n = 2$，$y$ 的指数对应相等得 $m = 3$，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：整式加减“与字母 x 的取值无关”求参数',
+          givenLabel: '已知合并同类项后的多项式为：',
+          givenFormula: '$(1 - b)x^{2} + (a + 3)x - 7y + 3 + b$',
+          questionText: '若该多项式的值与字母 $x$ 的取值无关，则含 $x^{2}$ 和 $x$ 项的系数均为 $0$，解出的 $a$ 和 $b$ 分别是多少？',
+          input1Prefix: '$a =$',
+          input1Placeholder: '如 -3',
+          input2Prefix: '，$b =$',
+          input2Placeholder: '如 1',
+          input2Suffix: '',
+          expectedX: '-3',
+          expectedMin: '1',
+          allowOrderSwap: false,
+          correctFeedback: '$a = -3$，$b = 1$。',
+          correctDetail: '因为值与 $x$ 的取值无关，令 $x^{2}$ 的系数 $1 - b = 0$ 得 $b = 1$；令 $x$ 的系数 $a + 3 = 0$ 得 $a = -3$。',
+          wrongFeedback: '直接令 $x$ 的一次项系数 $a + 3 = 0$ 求出 $a$，令 $x^{2}$ 的系数 $1 - b = 0$ 求出 $b$。',
+          specificWrongHints: [
+            {
+              checkType: 'firstVal',
+              val: '3',
+              hint: '注意一次项系数是 $(a + 3)$，令 $a + 3 = 0$ 解得 $a = -3$ 而不是 $3$。'
+            }
+          ]
+        }
+      }
+    },
+
+    // =========================================================================
+    // P29：识别一元一次方程与运用等式的性质变形求解
+    // =========================================================================
+    P29: {
+      procedureId: 'P29',
+      title: '识别一元一次方程与运用等式的性质变形求解',
+      exampleTitle: '严格运用等式的性质解方程：$5x - 8 = 3x - 6$',
+      exampleFormula: '性质 1：$a = b \\implies a \\pm c = b \\pm c$；性质 2：$a = b, c \\neq 0 \\implies \\frac{a}{c} = \\frac{b}{c}$',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示一元一次方程定义双重条件与等式性质 2“除数 c≠0”铁律）',
+      practiceSectionTitle: '一元一次方程定义与等式性质跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握等式两边同除以含字母因式的合法性辨析与含参定义求解',
+
+      steps: [
+        {
+          step: 1,
+          name: '运用等式的性质 1：两边同加 8 消去左边的常数项',
+          tStart: 0.0,
+          tEnd: 6.2,
+          explanation: '为了消去等号左边的 $-8$，根据等式的性质 1，在等式两边同时加上 $8$，得 $5x - 8 + 8 = 3x - 6 + 8$，化简为 $5x = 3x + 2$。'
+        },
+        {
+          step: 2,
+          name: '再次运用等式的性质 1：两边同减 3x 消去右边的未知数项',
+          tStart: 6.2,
+          tEnd: 12.8,
+          explanation: '为了消去等号右边的 $3x$，根据等式的性质 1，在等式两边同时减去 $3x$，得 $5x - 3x = 3x + 2 - 3x$。'
+        },
+        {
+          step: 3,
+          name: '合并同类项化为 $ax = b$ 的标准形式',
+          tStart: 12.8,
+          tEnd: 18.5,
+          explanation: '合并同类项，左边 $5x - 3x = 2x$，右边剩常数 $2$，方程化为 $2x = 2$。'
+        },
+        {
+          step: 4,
+          name: '运用等式的性质 2：两边同除以非零系数 2',
+          tStart: 18.5,
+          tEnd: 24.5,
+          explanation: '根据等式的性质 2，在等式 $2x = 2$ 两边同时除以非零数 $2$，得 $\\frac{2x}{2} = \\frac{2}{2}$。'
+        },
+        {
+          step: 5,
+          name: '化简得出方程的解并代入检验',
+          tStart: 24.5,
+          tEnd: 30.0,
+          explanation: '化简得出 $x = 1$（代入原方程检验：左边 $= 5 \\times 1 - 8 = -3$，右边 $= 3 \\times 1 - 6 = -3$，左边 $=$ 右边）。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 性质 1：两边同加 $8$ 得 $5x = 3x + 2$' },
+        { time: 7.5, step: 2, label: '2.1 性质 1：两边同减 $3x$ 得 $5x - 3x = 2$' },
+        { time: 14.0, step: 3, label: '3.1 合并同类项得 $2x = 2$' },
+        { time: 20.0, step: 4, label: '4.1 性质 2：两边同除以 $2$' },
+        { time: 26.0, step: 5, label: '5.1 解得 $x = 1$ 并检验左边 $=$ 右边' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p29_row_0',
+          stepBadge: '原方程',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p29_r0_eq', math: '用等式的性质解方程：$5x - 8 = 3x - 6$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p29_row_1',
+          stepBadge: '第 1 步 · 等式性质 1（同加 8）',
+          appearAt: 1.5,
+          tokens: [
+            { id: 'p29_r1_add', math: '两边同加 $8$：$5x - 8 + 8 = 3x - 6 + 8$', appearAt: 1.6, dur: 0.45 },
+            { id: 'p29_r1_res', math: '$\\implies 5x = 3x + 2$', appearAt: 3.0, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p29_row_2',
+          stepBadge: '第 2 & 3 步 · 等式性质 1（同减 3x）',
+          appearAt: 6.6,
+          tokens: [
+            { id: 'p29_r2_sub', math: '两边同减 $3x$：$5x - 3x = 3x + 2 - 3x$', appearAt: 6.7, dur: 0.45 },
+            { id: 'p29_r2_res', math: '$\\implies 2x = 2$', appearAt: 13.2, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p29_row_3',
+          stepBadge: '第 4 & 5 步 · 等式性质 2（同除以 2）',
+          appearAt: 19.0,
+          isConclusion: true,
+          tokens: [
+            { id: 'p29_r3_div', math: '两边同除以 $2$：$\\frac{2x}{2} = \\frac{2}{2}$', appearAt: 19.1, dur: 0.45 },
+            { id: 'p29_r3_conc', math: '$\\implies x = 1$。', appearAt: 24.8, dur: 0.55 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p29_sp_1',
+          title: '核心铁律 · 一元一次方程定义与等式性质 2 除数限制',
+          showStart: 0.8,
+          showEnd: 29.8,
+          tokens: [
+            { id: 'p29_sp1_t1', math: '① 一元一次方程：整式、一元、未知数次数 $= 1$ 且一次项系数 $\\neq 0$', appearAt: 1.4, dur: 0.40 },
+            { id: 'p29_sp1_t2', math: '② 等式性质 2 陷阱：若 $ac = bc$，必须有 $c \\neq 0$ 才能得出 $a = b$！', appearAt: 6.8, dur: 0.45 },
+            { id: 'p29_sp1_t3', math: '③ 恒非零除数：$\\frac{x}{a^{2} + 1} = \\frac{y}{a^{2} + 1}$ 恒合法（因 $a^{2} + 1 \\ge 1 \\neq 0$）', appearAt: 19.2, dur: 0.45 }
+          ],
+          note: '解方程中的“移项”本质上就是等式的性质 1（两边同加减），“系数化为 1”本质上就是等式的性质 2（两边同除以非零系数）'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p29_r1_add', tStart: 1.6, tEnd: 5.8, color: 'amber' },
+        { tokenId: 'p29_r1_res', tStart: 3.0, tEnd: 6.0, color: 'teal' },
+        { tokenId: 'p29_r2_sub', tStart: 6.7, tEnd: 12.6, color: 'amber' },
+        { tokenId: 'p29_r2_res', tStart: 13.2, tEnd: 18.4, color: 'teal' },
+        { tokenId: 'p29_r3_div', tStart: 19.1, tEnd: 24.4, color: 'amber' },
+        { tokenId: 'p29_r3_conc', tStart: 24.8, tEnd: 29.5, color: 'teal' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p29_svg_s1',
+          type: 'arrow',
+          fromToken: 'p29_r0_eq',
+          toToken: 'p29_r1_res',
+          label: '性质 1：两边同加 $8$',
+          color: '#0F766E',
+          curveOffset: 28,
+          tStart: 1.8,
+          tDrawEnd: 2.6,
+          tFadeStart: 5.4,
+          tEnd: 6.0
+        },
+        {
+          id: 'p29_svg_s4',
+          type: 'arrow',
+          fromToken: 'p29_r2_res',
+          toToken: 'p29_r3_div',
+          label: '性质 2：两边同除以 $2 \\neq 0$',
+          color: '#D97706',
+          curveOffset: -26,
+          tStart: 18.8,
+          tDrawEnd: 19.6,
+          tFadeStart: 23.8,
+          tEnd: 24.4
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 6.2, text: '第一步运用等式的性质 1：在方程 $5x - 8 = 3x - 6$ 两边同时加上 $8$，消去左边的 $-8$，得 $5x = 3x + 2$。', focusToken: 'p29_r1_res' },
+        { tStart: 6.2, tEnd: 12.8, text: '第二步继续运用等式的性质 1：在等式两边同时减去 $3x$，消去右边的未知数项 $3x$。', focusToken: 'p29_r2_sub' },
+        { tStart: 12.8, tEnd: 18.5, text: '第三步合并同类项：$5x - 3x = 2x$，方程化为 $2x = 2$。', focusToken: 'p29_r2_res' },
+        { tStart: 18.5, tEnd: 30.0, text: '第四步运用等式的性质 2：在等式两边同时除以非零系数 $2$，解得 $x = 1$！', focusToken: 'p29_r3_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：辨析等式的性质 2 中“除数不为 0”的前提',
+          givenLabel: '给出四个等式变形命题：',
+          givenFormula: '① 若 $a = b$，则 $\\frac{a}{c} = \\frac{b}{c}$；② 若 $a^{2} = 2a$，则 $a = 2$；③ 若 $x = y$，则 $\\frac{x}{a^{2} + 1} = \\frac{y}{a^{2} + 1}$',
+          extractedLabel: '核对除数是否可能为 0：',
+          extractedFormula: '① 中 $c$ 可能为 $0$；② 中 $a$ 可能为 $0$；③ 中 $a^{2} + 1 \\ge 1 \\neq 0$',
+          questionText: '其中一定成立的等式变形是哪一个？',
+          options: [
+            { key: 'A', text: 'A. 只有 ③（因为对任意实数 $a$，分母 $a^{2} + 1 \\ge 1 \\neq 0$ 恒成立）', isCorrect: true },
+            { key: 'B', text: 'B. ①、②、③ 都一定成立', isCorrect: false },
+            { key: 'C', text: 'C. ② 和 ③ 一定成立', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！在等式两边同除以一个式子前，必须确认它绝不为 0：',
+            calcLines: [
+              '① 未说明 $c \\neq 0$，当 $c = 0$ 时无意义',
+              '② 当 $a = 0$ 时 $a^{2} = 2a$ 也成立，不能直接两边同除以 $a$',
+              '③ 因为 $a^{2} \\ge 0 \\implies a^{2} + 1 \\ge 1 \\gt 0$，除数恒不为 $0$ ✓'
+            ],
+            summary: '凡是两边同除以单独的字母或一次式，未注明不为 $0$ 的一律判定为错误。'
+          },
+          wrongTitle: '提示：请检查每个变形中的除数有没有可能等于 0',
+          wrongFeedback: '在 ① 和 ② 中，除数 $c$ 和 $a$ 都有可能等于 $0$；只有 ③ 的除数 $a^{2} + 1 \\ge 1$ 永远不为 $0$，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：由一元一次方程的定义求参数',
+          givenLabel: '已知条件：',
+          givenFormula: '关于 $x$ 的方程 $(m + 1)x^{|m|} + 3 = 0$ 是一元一次方程',
+          questionText: '由未知数次数 $|m| = 1$ 且一次项系数 $m + 1 \\neq 0$，解出的参数 $m$ 的值以及 $m - 1$ 的值分别是多少？',
+          input1Prefix: '$m =$',
+          input1Placeholder: '如 1',
+          input2Prefix: '，$m - 1 =$',
+          input2Placeholder: '如 0',
+          input2Suffix: '',
+          expectedX: '1',
+          expectedMin: '0',
+          allowOrderSwap: false,
+          correctFeedback: '$m = 1$，$m - 1 = 0$。',
+          correctDetail: '由 $|m| = 1$ 得 $m = \\pm 1$；又因一次项系数 $m + 1 \\neq 0 \\implies m \\neq -1$，故 $m = 1$，从而 $m - 1 = 0$。',
+          wrongFeedback: '由 $|m| = 1$ 得 $m = 1$ 或 $-1$，结合一次项系数 $m + 1 \\neq 0$ 舍去 $m = -1$。',
+          specificWrongHints: [
+            {
+              checkType: 'firstVal',
+              val: '-1',
+              hint: '若 $m = -1$，则一次项系数 $m + 1 = 0$，未知数 $x$ 消失，不再是一元一次方程，必须舍去 $-1$ 取 $m = 1$。'
+            }
+          ]
+        }
+      }
     }
   };
 

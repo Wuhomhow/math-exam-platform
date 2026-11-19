@@ -8119,6 +8119,1587 @@
         }
       }
     }
+    ,
+    // =========================================================================
+    // P34：识别单项式与多项式、确定系数次数项数及由次数项数求参数
+    // =========================================================================
+    P34: {
+      procedureId: 'P34',
+      title: '识别单项式与多项式、确定系数次数项数及由次数项数求参数',
+      exampleTitle: '对于多项式 $(n - 1)x^{m+2} - 3x^{2} + 2x$（$m > -2$ 的整数）：(1) 若 $n = 2$ 且为三次三项式，求 $m$；(2) 若为五次三项式，求 $m, n$ 满足的条件',
+      exampleFormula: '几次几项式 $\\iff$ 最高次项指数 $=$ 目标次数，且最高次项系数 $\\neq 0$',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示单项式/多项式次数与系数辨析及“次数=目标且系数≠0”双重条件）',
+      practiceSectionTitle: '单项式、多项式概念与次数求参跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握含 π 单项式系数次数提取与多项式次数项数求参',
+
+      steps: [
+        {
+          step: 1,
+          name: '拆解多项式各项与已知次数',
+          tStart: 0.0,
+          tEnd: 5.8,
+          explanation: '把多项式 $(n - 1)x^{m+2} - 3x^{2} + 2x$ 拆分为三项：$(n - 1)x^{m+2}$、$-3x^{2}$、$+2x$。后两项的次数分别为 $2$ 和 $1$，且项数已有 $2$ 项。'
+        },
+        {
+          step: 2,
+          name: '第(1)问 ①：代入 $n = 2$ 核对首项系数不为 $0$',
+          tStart: 5.8,
+          tEnd: 11.5,
+          explanation: '当 $n = 2$ 时，首项系数 $n - 1 = 2 - 1 = 1 \\neq 0$，多项式化为 $x^{m+2} - 3x^{2} + 2x$，保证首项存在且不会与后两项重复合并。'
+        },
+        {
+          step: 3,
+          name: '第(1)问 ②：由“三次三项式”令首项指数等于 $3$',
+          tStart: 11.5,
+          tEnd: 17.5,
+          explanation: '因为后两项次数最高仅为 $2$，要使整个多项式为三次三项式，首项次数必须等于 $3$：列方程 $m + 2 = 3$，解得 $m = 1$。'
+        },
+        {
+          step: 4,
+          name: '第(2)问 ①：由“五次三项式”建立双重条件',
+          tStart: 17.5,
+          tEnd: 23.8,
+          explanation: '要使 $(n - 1)x^{m+2} - 3x^{2} + 2x$ 为五次三项式，必须同时满足：① 首项次数等于 $5$（$m + 2 = 5$）；② 首项系数不能为 $0$（$n - 1 \\neq 0$），否则五次项消失变为二次二项式！'
+        },
+        {
+          step: 5,
+          name: '第(2)问 ②：分别求解并汇总最终结论',
+          tStart: 23.8,
+          tEnd: 30.0,
+          explanation: '由 $m + 2 = 5$ 解得 $m = 3$，由 $n - 1 \\neq 0$ 得 $n \\neq 1$；综上：(1) $m = 1$；(2) $m = 3$ 且 $n \\neq 1$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 拆分三项并标出后两项次数 $2, 1$' },
+        { time: 7.2, step: 2, label: '2.1 代入 $n = 2$ 得首项系数 $1 \\neq 0$' },
+        { time: 13.0, step: 3, label: '3.1 令 $m + 2 = 3$ 解得 $m = 1$' },
+        { time: 19.2, step: 4, label: '4.1 建立双重条件 $m + 2 = 5$ 且 $n - 1 \\neq 0$' },
+        { time: 25.8, step: 5, label: '5.1 解得 $m = 3$ 且 $n \\neq 1$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p34_row_0',
+          stepBadge: '原多项式',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p34_r0_t1', math: '$(n - 1)x^{m+2}$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p34_r0_t2', math: '$- 3x^{2} + 2x$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p34_r0_note', math: '（后两项次数分别为 $2$、$1$）', appearAt: 1.2, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p34_row_1',
+          stepBadge: '第(1)问 · 代入 n = 2 核系数',
+          appearAt: 6.2,
+          tokens: [
+            { id: 'p34_r1_sub', math: '当 $n = 2$ 时，原式 $= x^{m+2} - 3x^{2} + 2x$', appearAt: 6.3, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p34_row_2',
+          stepBadge: '第(1)问 · 三次三项式求 m',
+          appearAt: 12.0,
+          tokens: [
+            { id: 'p34_r2_eq', math: '由三次三项式得 $m + 2 = 3$', appearAt: 12.1, dur: 0.45 },
+            { id: 'p34_r2_res', math: '$\\implies m = 1$', appearAt: 13.8, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p34_row_3',
+          stepBadge: '第(2)问 · 五次三项式双重条件',
+          appearAt: 18.0,
+          tokens: [
+            { id: 'p34_r3_c1', math: '① 次数条件：$m + 2 = 5$；', appearAt: 18.1, dur: 0.45 },
+            { id: 'p34_r3_c2', math: '② 系数条件：$n - 1 \\neq 0$', appearAt: 20.0, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p34_row_4',
+          stepBadge: '最终结论',
+          appearAt: 24.4,
+          isConclusion: true,
+          tokens: [
+            { id: 'p34_r4_conc', math: '$\\therefore$ (1) $m = 1$；(2) $m = 3$ 且 $n \\neq 1$。', appearAt: 24.5, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p34_sp_1',
+          title: '核心准则 · 整式分类与系数次数三大易错点',
+          showStart: 0.8,
+          showEnd: 29.8,
+          tokens: [
+            { id: 'p34_sp1_t1', math: '① 查分母：分母含字母（如 $\\frac{1}{x}$）不是整式；分母为数字或 $\\pi$ 是整式', appearAt: 1.4, dur: 0.40 },
+            { id: 'p34_sp1_t2', math: '② 看 $\\pi$ 与数字幂：$\\frac{3\\pi x^{2}y^{3}}{5}$ 系数 $\\frac{3\\pi}{5}$、次数 $5$；$2^{3}x^{2}y$ 次数 $3$', appearAt: 6.8, dur: 0.40 },
+            { id: 'p34_sp1_t3', math: '③ 含参求值：最高次项“指数 $=$ 目标次数”且“系数 $\\neq 0$”缺一不可', appearAt: 18.4, dur: 0.45 }
+          ],
+          note: '若 $n = 1$，则首项 $(1 - 1)x^{5} = 0$，原多项式退化为 $-3x^{2} + 2x$（二次二项式），不再是五次三项式'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p34_r0_t1', tStart: 0.8, tEnd: 5.6, color: 'amber' },
+        { tokenId: 'p34_r2_res', tStart: 13.8, tEnd: 17.4, color: 'teal' },
+        { tokenId: 'p34_r3_c1', tStart: 18.1, tEnd: 24.0, color: 'teal' },
+        { tokenId: 'p34_r3_c2', tStart: 20.0, tEnd: 24.0, color: 'rose' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p34_svg_s3',
+          type: 'arrow',
+          fromToken: 'p34_r1_sub',
+          toToken: 'p34_r2_eq',
+          label: '最高次项指数 $= 3$',
+          color: '#0F766E',
+          curveOffset: 28,
+          tStart: 12.0,
+          tDrawEnd: 12.8,
+          tFadeStart: 16.8,
+          tEnd: 17.4
+        },
+        {
+          id: 'p34_svg_s4',
+          type: 'arrow',
+          fromToken: 'p34_r0_t1',
+          toToken: 'p34_r3_c2',
+          label: '防五次项消失：$n - 1 \\neq 0$',
+          color: '#BE123C',
+          curveOffset: -28,
+          tStart: 19.6,
+          tDrawEnd: 20.4,
+          tFadeStart: 23.6,
+          tEnd: 24.2
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 5.8, text: '第一步拆解多项式：后两项 $-3x^{2}$ 与 $+2x$ 的次数分别是 $2$ 和 $1$，因此三次或五次都只能由首项 $(n - 1)x^{m+2}$ 来决定。', focusToken: 'p34_r0_t1' },
+        { tStart: 5.8, tEnd: 11.5, text: '看第(1)问：把 $n = 2$ 代入，首项系数 $2 - 1 = 1 \\neq 0$，原式变为 $x^{m+2} - 3x^{2} + 2x$。', focusToken: 'p34_r1_sub' },
+        { tStart: 11.5, tEnd: 17.5, text: '因为是三次三项式，首项指数必须等于 $3$，即 $m + 2 = 3$，解得 $m = 1$。', focusToken: 'p34_r2_res' },
+        { tStart: 17.5, tEnd: 23.8, text: '看第(2)问：要成为五次三项式，除了令首项指数 $m + 2 = 5$，还必须保证首项系数 $n - 1 \\neq 0$，否则五次项就会消失！', focusToken: 'p34_r3_c2' },
+        { tStart: 23.8, tEnd: 30.0, text: '联立解得 $m = 3$ 且 $n \\neq 1$。整式次数与项数求参完成！', focusToken: 'p34_r4_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：识别整式与确定含 $\\pi$ 单项式的系数和次数',
+          givenLabel: '给出三个判断：',
+          givenFormula: '① $-\\frac{2\\pi x^{2}y^{3}}{3}$ 的系数是 $-\\frac{2\\pi}{3}$，次数是 $5$；② $2^{3}x^{2}y$ 的次数是 $6$；③ $\\frac{1}{x} + 1$ 是多项式',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '以上说法中完全正确的是哪一项？',
+          options: [
+            { key: 'A', text: 'A. 只有 ① 正确', isCorrect: true },
+            { key: 'B', text: 'B. ① 和 ② 正确', isCorrect: false },
+            { key: 'C', text: 'C. ① 和 ③ 正确', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！准确把握常数 π、数字指数与分母字母三项规则：',
+            calcLines: [
+              '① $\\pi$ 是常数计入系数 $-\\frac{2\\pi}{3}$，字母指数和 $2 + 3 = 5$ ✓',
+              '② $2^{3}x^{2}y$ 只算字母指数和 $2 + 1 = 3$（不算数字的指数 $3$）',
+              '③ $\\frac{1}{x} + 1$ 分母含字母 $x$，不是整式也不是多项式'
+            ],
+            summary: '记住“$\\pi$ 算系数不算次，数字幂次不算次，分母含字母非整式”。'
+          },
+          wrongTitle: '提示：请核对数字指数与分母是否含字母',
+          wrongFeedback: '$2^{3}x^{2}y$ 的次数只计算字母 $x, y$ 的指数和（$2+1=3$），而 $\\frac{1}{x}+1$ 分母含字母不是整式，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：由多项式的项数、次数与常数项提取及求参',
+          givenLabel: '已知多项式：',
+          givenFormula: '$-3x^{2}y^{m-1} + x^{3}y - 3x^{4} - 1$ 是五次四项式',
+          questionText: '该多项式的常数项是多少？由最高次项为五次解出的参数 $m$ 的值是多少？',
+          input1Prefix: '常数项 $=$',
+          input1Placeholder: '如 -1',
+          input2Prefix: '，参数 $m =$',
+          input2Placeholder: '如 4',
+          input2Suffix: '',
+          expectedX: '-1',
+          expectedMin: '4',
+          allowOrderSwap: false,
+          correctFeedback: '常数项为 $-1$，参数 $m = 4$。',
+          correctDetail: '常数项须连同前面负号写为 $-1$；后三项次数为 $4, 4, 0$，故首项次数为 $5$，列 $2 + (m - 1) = 5$ 解得 $m = 4$。',
+          wrongFeedback: '注意常数项要带前面的负号 $-1$，首项 $-3x^{2}y^{m-1}$ 的次数是 $2 + (m - 1) = 5$。',
+          specificWrongHints: [
+            {
+              checkType: 'firstVal',
+              val: '1',
+              hint: '多项式的每一项都要连同它前面的符号，因此常数项是 $-1$ 而不是 $1$。'
+            },
+            {
+              checkType: 'secondVal',
+              val: '6',
+              hint: '首项同时含有 $x^{2}$ 与 $y^{m-1}$，总次数是 $2 + (m - 1) = 5$，解得 $m = 4$（别忘了 $x$ 的次数 $2$）。'
+            }
+          ]
+        }
+      }
+    }
+    ,
+    // =========================================================================
+    // P35：运用分式乘除与乘方法则化简求值
+    // =========================================================================
+    P35: {
+      procedureId: 'P35',
+      title: '运用分式乘除与乘方法则化简求值',
+      exampleTitle: '先化简，再求值：$\\frac{a+1}{a-2} \\cdot \\frac{a^{2}-4}{a^{2}+2a+1} \\div \\frac{1}{a^{2}-1}$，其中 $a^{2} + a = 1$',
+      exampleFormula: '除法转乘倒数 $\\to$ 多项式彻底因式分解 $\\to$ 约去公因式 $\\to$ 整体代入',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示分式乘除与乘方法则、三大因式分解公式与整体代入技巧）',
+      practiceSectionTitle: '分式乘除与乘方化简跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握分式乘方符号系数规则与因式分解约分',
+
+      steps: [
+        {
+          step: 1,
+          name: '按从左到右顺序将除法转化为乘以倒数',
+          tStart: 0.0,
+          tEnd: 5.8,
+          explanation: '将末尾的 $\\div \\frac{1}{a^{2}-1}$ 转化为乘以它的倒数 $(a^{2}-1)$，把原式统一为连乘形式：$\\frac{a+1}{a-2} \\cdot \\frac{a^{2}-4}{a^{2}+2a+1} \\cdot (a^{2}-1)$。'
+        },
+        {
+          step: 2,
+          name: '将所有可分解的多项式彻底因式分解',
+          tStart: 5.8,
+          tEnd: 12.2,
+          explanation: '分别套用平方差公式与完全平方公式：$a^{2}-4=(a+2)(a-2)$，$a^{2}+2a+1=(a+1)^{2}$，$a^{2}-1=(a+1)(a-1)$。'
+        },
+        {
+          step: 3,
+          name: '约去分子与分母中的全部公因式',
+          tStart: 12.2,
+          tEnd: 18.5,
+          explanation: '分子中的 $(a-2)$ 与分母的 $(a-2)$ 约去，分子中的两个 $(a+1)$ 与分母的 $(a+1)^{2}$ 恰好全部约去，剩余整式乘积 $(a+2)(a-1)$。'
+        },
+        {
+          step: 4,
+          name: '展开整式乘积构造已知整体 $a^{2} + a$',
+          tStart: 18.5,
+          tEnd: 24.5,
+          explanation: '按多项式乘多项式展开 $(a+2)(a-1) = a^{2} - a + 2a - 2 = a^{2} + a - 2$，恰好出现已知条件中的整体 $a^{2} + a$。'
+        },
+        {
+          step: 5,
+          name: '将 $a^{2} + a = 1$ 整体代入得出最终结果',
+          tStart: 24.5,
+          tEnd: 30.0,
+          explanation: '无需解出无理数 $a$，直接将 $a^{2} + a = 1$ 整体代入 $a^{2} + a - 2$，算得 $1 - 2 = -1$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 除法转乘倒数 $\\cdot (a^{2}-1)$' },
+        { time: 7.2, step: 2, label: '2.1 分解 $a^{2}-4$、$(a+1)^{2}$、$(a+1)(a-1)$' },
+        { time: 13.8, step: 3, label: '3.1 约去 $(a-2)$ 与 $(a+1)^{2}$ 得 $(a+2)(a-1)$' },
+        { time: 20.0, step: 4, label: '4.1 展开合并得 $a^{2}+a-2$' },
+        { time: 26.0, step: 5, label: '5.1 整体代入 $a^{2}+a=1$ 得 $-1$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p35_row_0',
+          stepBadge: '原式',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p35_r0_1', math: '$\\frac{a+1}{a-2} \\cdot \\frac{a^{2}-4}{a^{2}+2a+1}$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p35_r0_div', math: '$\\div \\frac{1}{a^{2}-1}$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p35_row_1',
+          stepBadge: '第 1 步 · 除法转乘倒数',
+          appearAt: 1.5,
+          tokens: [
+            { id: 'p35_r1_mul', math: '$= \\frac{a+1}{a-2} \\cdot \\frac{a^{2}-4}{a^{2}+2a+1} \\cdot (a^{2}-1)$', appearAt: 1.6, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p35_row_2',
+          stepBadge: '第 2 步 · 彻底因式分解',
+          appearAt: 6.2,
+          tokens: [
+            { id: 'p35_r2_fac', math: '$= \\frac{a+1}{a-2} \\cdot \\frac{(a+2)(a-2)}{(a+1)^{2}} \\cdot (a+1)(a-1)$', appearAt: 6.3, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p35_row_3',
+          stepBadge: '第 3 & 4 步 · 约分并展开',
+          appearAt: 12.6,
+          tokens: [
+            { id: 'p35_r3_can', math: '$= (a+2)(a-1)$', appearAt: 12.7, dur: 0.45 },
+            { id: 'p35_r3_exp', math: '$= a^{2} + a - 2$', appearAt: 18.8, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p35_row_4',
+          stepBadge: '最终结论',
+          appearAt: 24.8,
+          isConclusion: true,
+          tokens: [
+            { id: 'p35_r4_conc', math: '当 $a^{2}+a=1$ 时，原式 $= 1 - 2 = -1$。', appearAt: 24.9, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p35_sp_1',
+          title: '草稿演算 · 分式乘除与乘方核心流程',
+          showStart: 0.8,
+          showEnd: 29.8,
+          tokens: [
+            { id: 'p35_sp1_t1', math: '① 遇乘方先乘方：$\\left(\\frac{A}{B}\\right)^{n} = \\frac{A^{n}}{B^{n}}$（系数符号同步乘方）', appearAt: 1.4, dur: 0.40 },
+            { id: 'p35_sp1_t2', math: '② 除法转乘倒数：同级运算必须从左到右，整式分母看作 $1$', appearAt: 2.6, dur: 0.40 },
+            { id: 'p35_sp1_t3', math: '③ 分解再约分：$a^{2}-4=(a+2)(a-2)$，$(a+1)^{2}$ 约去两个 $(a+1)$', appearAt: 6.8, dur: 0.45 }
+          ],
+          note: '切勿在约分前把多项式展开，应当先彻底因式分解再约去公因式'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p35_r0_div', tStart: 0.8, tEnd: 5.6, color: 'amber' },
+        { tokenId: 'p35_r2_fac', tStart: 6.3, tEnd: 12.0, color: 'teal' },
+        { tokenId: 'p35_r3_can', tStart: 12.7, tEnd: 18.4, color: 'amber' },
+        { tokenId: 'p35_r3_exp', tStart: 18.8, tEnd: 24.4, color: 'teal' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p35_svg_s1',
+          type: 'arrow',
+          fromToken: 'p35_r0_div',
+          toToken: 'p35_r1_mul',
+          label: '除以倒数转乘法',
+          color: '#D97706',
+          curveOffset: 28,
+          tStart: 1.4,
+          tDrawEnd: 2.2,
+          tFadeStart: 5.2,
+          tEnd: 5.8
+        },
+        {
+          id: 'p35_svg_s3',
+          type: 'arrow',
+          fromToken: 'p35_r2_fac',
+          toToken: 'p35_r3_can',
+          label: '约去 $(a-2)$ 与 $(a+1)^{2}$',
+          color: '#0F766E',
+          curveOffset: -26,
+          tStart: 12.4,
+          tDrawEnd: 13.2,
+          tFadeStart: 17.8,
+          tEnd: 18.4
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 5.8, text: '第一步除法转乘法：把 $\\div \\frac{1}{a^{2}-1}$ 转化为乘以倒数 $(a^{2}-1)$，统一为连乘形式。', focusToken: 'p35_r1_mul' },
+        { tStart: 5.8, tEnd: 12.2, text: '第二步因式分解：$a^{2}-4=(a+2)(a-2)$，$a^{2}+2a+1=(a+1)^{2}$，$a^{2}-1=(a+1)(a-1)$。', focusToken: 'p35_r2_fac' },
+        { tStart: 12.2, tEnd: 18.5, text: '第三步约去公因式：分子分母约去 $(a-2)$ 和两个 $(a+1)$，化简为 $(a+2)(a-1)$。', focusToken: 'p35_r3_can' },
+        { tStart: 18.5, tEnd: 24.5, text: '第四步展开构造整体：$(a+2)(a-1) = a^{2} + a - 2$。', focusToken: 'p35_r3_exp' },
+        { tStart: 24.5, tEnd: 30.0, text: '第五步整体代入：把已知 $a^{2} + a = 1$ 代入，得出 $1 - 2 = -1$！', focusToken: 'p35_r4_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：辨析分式乘方与乘除同级运算顺序',
+          givenLabel: '计算下列两式：',
+          givenFormula: '① $\\left(-\\frac{2c}{3a^{2}b}\\right)^{2}$；② $\\frac{x-y}{x+y} \\div (y-x) \\cdot \\frac{1}{x-y}$',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '关于这两个算式的正确化简结果是？',
+          options: [
+            { key: 'A', text: 'A. ① $\\frac{4c^{2}}{9a^{4}b^{2}}$；② $-\\frac{1}{x^{2}-y^{2}}$（即 $\\frac{1}{y^{2}-x^{2}}$）', isCorrect: true },
+            { key: 'B', text: 'B. ① $-\\frac{4c^{2}}{9a^{4}b^{2}}$；② $\\frac{1}{x+y}$', isCorrect: false },
+            { key: 'C', text: 'C. ① $\\frac{2c^{2}}{3a^{4}b^{2}}$；② $-\\frac{1}{x^{2}-y^{2}}$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！乘方时系数与负号同步平方，乘除混合须从左到右转乘法：',
+            calcLines: [
+              '① $(-2)^{2}=4$，$3^{2}=9$，故得 $\\frac{4c^{2}}{9a^{4}b^{2}}$',
+              '② $\\frac{x-y}{x+y} \\cdot \\frac{1}{-(x-y)} \\cdot \\frac{1}{x-y} = -\\frac{1}{(x+y)(x-y)} = \\frac{1}{y^{2}-x^{2}}$'
+            ],
+            summary: '切勿把 ② 中后两项 $(y-x) \\cdot \\frac{1}{x-y}$ 先相乘。'
+          },
+          wrongTitle: '提示：请检查负号平方符号及乘除从左到右顺序',
+          wrongFeedback: '① 负数的平方为正且系数 $2, 3$ 均须平方；② 应依次转为连乘 $\\frac{x-y}{x+y} \\cdot \\frac{1}{y-x} \\cdot \\frac{1}{x-y}$，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：分式乘方化简并整体求值',
+          givenLabel: '已知等式：',
+          givenFormula: '$\\left(\\frac{a^{2}}{b}\\right)^{2} \\div \\left(\\frac{a}{b^{2}}\\right)^{2} = 3$',
+          questionText: '先将左边乘方并除法转乘法化简为 $a^{p}b^{q} = 3$，由此可得 $a^{2}b^{2}$ 与 $a^{4}b^{4}$ 的值分别是多少？',
+          input1Prefix: '$a^{2}b^{2} =$',
+          input1Placeholder: '如 3',
+          input2Prefix: '，$a^{4}b^{4} =$',
+          input2Placeholder: '如 9',
+          input2Suffix: '',
+          expectedX: '3',
+          expectedMin: '9',
+          allowOrderSwap: false,
+          correctFeedback: '$a^{2}b^{2} = 3$，$a^{4}b^{4} = 9$。',
+          correctDetail: '左边 $= \\frac{a^{4}}{b^{2}} \\cdot \\frac{b^{4}}{a^{2}} = a^{2}b^{2} = 3$；两边平方得 $a^{4}b^{4} = (a^{2}b^{2})^{2} = 3^{2} = 9$。',
+          wrongFeedback: '先算 $\\frac{a^{4}}{b^{2}} \\div \\frac{a^{2}}{b^{4}} = \\frac{a^{4}}{b^{2}} \\cdot \\frac{b^{4}}{a^{2}} = a^{2}b^{2} = 3$，再将 $a^{2}b^{2}$ 平方。',
+          specificWrongHints: [
+            {
+              checkType: 'secondVal',
+              val: '6',
+              hint: '注意 $a^{4}b^{4} = (a^{2}b^{2})^{2} = 3^{2} = 9$，不是 $3 \\times 2 = 6$。'
+            }
+          ]
+        }
+      }
+    },
+    // =========================================================================
+    // P36：运用分式加减与混合运算法则化简求值
+    // =========================================================================
+    P36: {
+      procedureId: 'P36',
+      title: '运用分式加减与混合运算法则化简求值',
+      exampleTitle: '先化简，再求值：$\\left(\\frac{x+3}{x^{2}-x} - \\frac{x}{x^{2}-2x+1}\\right) \\div \\frac{2x-3}{x}$，其中 $x$ 满足 $x^{2} - 2x - 3 = 0$',
+      exampleFormula: '分解分母定公分母 $\\to$ 括号内通分合并 $\\to$ 除法转乘约分 $\\to$ 检验定义域代入',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示异分母通分、保留分母与原式定义域检验三大铁律）',
+      practiceSectionTitle: '分式加减与混合运算化简跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握异分母通分减法加括号与混合化简验根求值',
+
+      steps: [
+        {
+          step: 1,
+          name: '分解括号内两分母，确定最简公分母',
+          tStart: 0.0,
+          tEnd: 5.8,
+          explanation: '将括号内两分母因式分解：$x^{2}-x = x(x-1)$，$x^{2}-2x+1 = (x-1)^{2}$；取各因式最高次幂之积，得最简公分母 $x(x-1)^{2}$。'
+        },
+        {
+          step: 2,
+          name: '括号内通分，分子相减并合并同类项',
+          tStart: 5.8,
+          tEnd: 12.5,
+          explanation: '第一项分子分母同乘 $(x-1)$，第二项同乘 $x$，保留公分母并合并分子：$(x+3)(x-1) - x^{2} = (x^{2}+2x-3) - x^{2} = 2x - 3$。'
+        },
+        {
+          step: 3,
+          name: '括号外除法转为乘以倒数并约分',
+          tStart: 12.5,
+          tEnd: 18.8,
+          explanation: '将 $\\div \\frac{2x-3}{x}$ 转化为 $\\cdot \\frac{x}{2x-3}$，约去分子分母中的公因式 $x$ 与 $(2x-3)$，得最简分式 $\\frac{1}{(x-1)^{2}} = \\frac{1}{x^{2}-2x+1}$。'
+        },
+        {
+          step: 4,
+          name: '核对原式有意义条件并由方程提炼整体',
+          tStart: 18.8,
+          tEnd: 24.5,
+          explanation: '原式要求 $x \\neq 0, 1, \\frac{3}{2}$。由 $x^{2}-2x-3=0$ 得 $(x-3)(x+1)=0$（$x=3$ 或 $-1$ 均使原式有意义），且直接提炼整体 $x^{2} - 2x = 3$。'
+        },
+        {
+          step: 5,
+          name: '整体代入 $x^{2} - 2x = 3$ 算出最终结果',
+          tStart: 24.5,
+          tEnd: 30.0,
+          explanation: '将 $x^{2} - 2x = 3$ 代入 $\\frac{1}{x^{2}-2x+1}$，算得 $\\frac{1}{3+1} = \\frac{1}{4}$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 分解分母得最简公分母 $x(x-1)^{2}$' },
+        { time: 7.5, step: 2, label: '2.1 通分合并分子得 $\\frac{2x-3}{x(x-1)^{2}}$' },
+        { time: 14.0, step: 3, label: '3.1 乘倒数 $\\frac{x}{2x-3}$ 约分得 $\\frac{1}{(x-1)^{2}}$' },
+        { time: 20.5, step: 4, label: '4.1 校验 $x=3,-1$ 有意义并提炼 $x^{2}-2x=3$' },
+        { time: 26.0, step: 5, label: '5.1 整体代入得 $\\frac{1}{3+1} = \\frac{1}{4}$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p36_row_0',
+          stepBadge: '原式',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p36_r0_1', math: '$\\left(\\frac{x+3}{x^{2}-x} - \\frac{x}{x^{2}-2x+1}\\right)$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p36_r0_div', math: '$\\div \\frac{2x-3}{x}$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p36_row_1',
+          stepBadge: '第 1 步 · 分解分母定公分母',
+          appearAt: 1.5,
+          tokens: [
+            { id: 'p36_r1_fac', math: '$= \\left[\\frac{x+3}{x(x-1)} - \\frac{x}{(x-1)^{2}}\\right] \\cdot \\frac{x}{2x-3}$', appearAt: 1.6, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p36_row_2',
+          stepBadge: '第 2 步 · 括号内通分合并',
+          appearAt: 6.2,
+          tokens: [
+            { id: 'p36_r2_com', math: '$= \\frac{(x+3)(x-1) - x^{2}}{x(x-1)^{2}} \\cdot \\frac{x}{2x-3}$', appearAt: 6.3, dur: 0.45 },
+            { id: 'p36_r2_sim', math: '$= \\frac{2x-3}{x(x-1)^{2}} \\cdot \\frac{x}{2x-3}$', appearAt: 9.2, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p36_row_3',
+          stepBadge: '第 3 步 · 约分化简',
+          appearAt: 13.0,
+          tokens: [
+            { id: 'p36_r3_res', math: '$= \\frac{1}{(x-1)^{2}} = \\frac{1}{x^{2}-2x+1}$', appearAt: 13.1, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p36_row_4',
+          stepBadge: '最终结论',
+          appearAt: 24.8,
+          isConclusion: true,
+          tokens: [
+            { id: 'p36_r4_conc', math: '由 $x^{2}-2x=3$（$x=3$ 或 $-1$ 均有效），原式 $= \\frac{1}{3+1} = \\frac{1}{4}$。', appearAt: 24.9, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p36_sp_1',
+          title: '草稿警示 · 分式加减混合运算三大铁律',
+          showStart: 0.8,
+          showEnd: 29.8,
+          tokens: [
+            { id: 'p36_sp1_t1', math: '① 化简留分母：通分后绝不能像解方程那样去掉公分母', appearAt: 1.4, dur: 0.40 },
+            { id: 'p36_sp1_t2', math: '② 减式加括号：$(x^{2}+2x-3) - x^{2} = 2x - 3$，注意分子符号', appearAt: 6.8, dur: 0.40 },
+            { id: 'p36_sp1_t3', math: '③ 代值查原式：须排除 $x=0$、$x=1$ 及除式分子 $2x-3=0$（$x=\\frac{3}{2}$）', appearAt: 19.2, dur: 0.45 }
+          ],
+          note: '若自选数值求值，必须同时检验原分式的所有分母及除式的分子均不为 0'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p36_r1_fac', tStart: 1.6, tEnd: 5.8, color: 'teal' },
+        { tokenId: 'p36_r2_com', tStart: 6.3, tEnd: 9.0, color: 'amber' },
+        { tokenId: 'p36_r2_sim', tStart: 9.2, tEnd: 12.8, color: 'teal' },
+        { tokenId: 'p36_r3_res', tStart: 13.1, tEnd: 18.6, color: 'amber' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p36_svg_s2',
+          type: 'arrow',
+          fromToken: 'p36_r1_fac',
+          toToken: 'p36_r2_com',
+          label: '最简公分母 $x(x-1)^{2}$',
+          color: '#0F766E',
+          curveOffset: 28,
+          tStart: 6.0,
+          tDrawEnd: 6.8,
+          tFadeStart: 11.4,
+          tEnd: 12.0
+        },
+        {
+          id: 'p36_svg_s3',
+          type: 'arrow',
+          fromToken: 'p36_r2_sim',
+          toToken: 'p36_r3_res',
+          label: '约去 $x$ 与 $(2x-3)$',
+          color: '#D97706',
+          curveOffset: -26,
+          tStart: 12.8,
+          tDrawEnd: 13.6,
+          tFadeStart: 18.0,
+          tEnd: 18.6
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 5.8, text: '第一步分解括号内两分母：$x^{2}-x=x(x-1)$，$x^{2}-2x+1=(x-1)^{2}$，最简公分母为 $x(x-1)^{2}$。', focusToken: 'p36_r1_fac' },
+        { tStart: 5.8, tEnd: 12.5, text: '第二步括号内通分合并分子：$(x+3)(x-1) - x^{2} = x^{2}+2x-3-x^{2} = 2x - 3$，得到 $\\frac{2x-3}{x(x-1)^{2}}$。', focusToken: 'p36_r2_sim' },
+        { tStart: 12.5, tEnd: 18.8, text: '第三步除法转乘倒数 $\\frac{x}{2x-3}$，约去公因式 $x$ 与 $(2x-3)$，化简为 $\\frac{1}{(x-1)^{2}}$。', focusToken: 'p36_r3_res' },
+        { tStart: 18.8, tEnd: 24.5, text: '第四步检验原式有意义条件：$x$ 不能取 $0, 1, \\frac{3}{2}$；由 $x^{2}-2x-3=0$ 得 $x=3$ 或 $-1$ 均合法，且 $x^{2}-2x=3$。', focusToken: 'p36_r3_res' },
+        { tStart: 24.5, tEnd: 30.0, text: '第五步整体代入：把 $x^{2}-2x=3$ 代入 $\\frac{1}{x^{2}-2x+1}$，得出最终结果 $\\frac{1}{4}$！', focusToken: 'p36_r4_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：同分母/相反数分母分式减法（注意加括号与变号）',
+          givenLabel: '计算分式减法：',
+          givenFormula: '$\\frac{3}{a^{2}-9} - \\frac{a}{9-a^{2}}$',
+          extractedLabel: '利用 $9 - a^{2} = -(a^{2} - 9)$ 统一分母：',
+          extractedFormula: '$\\frac{3}{a^{2}-9} + \\frac{a}{a^{2}-9} = \\frac{a+3}{(a+3)(a-3)}$',
+          questionText: '约分化简后的最简结果是？',
+          options: [
+            { key: 'A', text: 'A. $\\frac{1}{a - 3}$', isCorrect: true },
+            { key: 'B', text: 'B. $\\frac{1}{a + 3}$', isCorrect: false },
+            { key: 'C', text: 'C. $\\frac{3 - a}{a^{2} - 9} = -\\frac{1}{a + 3}$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！互为相反数分母先变号转为同分母，合并后再约分：',
+            calcLines: [
+              '$\\frac{3}{a^{2}-9} - \\frac{a}{-(a^{2}-9)} = \\frac{3 + a}{(a+3)(a-3)} = \\frac{1}{a-3}$'
+            ],
+            summary: '减号遇分母提取负号变为加号，切勿漏变中间的运算符号。'
+          },
+          wrongTitle: '提示：请注意把 9 - a² 改写为 -(a² - 9) 后中间减号变为加号',
+          wrongFeedback: '$- \\frac{a}{9-a^{2}} = + \\frac{a}{a^{2}-9}$，合并得 $\\frac{a+3}{(a+3)(a-3)} = \\frac{1}{a-3}$，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：分式混合化简并按有意义条件选值代入',
+          givenLabel: '已知原式与化简结果：',
+          givenFormula: '原式 $\\left(1 - \\frac{1}{a+1}\\right) \\div \\frac{a^{3}}{a^{2}+2a+1}$ 化简得 $\\frac{a+1}{a^{2}}$',
+          questionText: '若从 $\\{-1, 0, 1\\}$ 中选一个使原式有意义的整数 $a$ 代入求值，唯一可以取的 $a$ 是多少？代入后的值是多少？',
+          input1Prefix: '唯一可取的 $a =$',
+          input1Placeholder: '如 1',
+          input2Prefix: '，代入后的值 $=$',
+          input2Placeholder: '如 2',
+          input2Suffix: '',
+          expectedX: '1',
+          expectedMin: '2',
+          allowOrderSwap: false,
+          correctFeedback: '唯一可取的 $a = 1$，代入得 $\\frac{1+1}{1^{2}} = 2$。',
+          correctDetail: '原式要求 $a+1 \\neq 0$（$a \\neq -1$）且除式分子 $a^{3} \\neq 0$（$a \\neq 0$），故只能取 $a = 1$，代入 $\\frac{a+1}{a^{2}}$ 得 $2$。',
+          wrongFeedback: '先排除使原分母 $a+1=0$ 的 $-1$ 与使除式 $a^{3}=0$ 的 $0$，再将唯一合法值 $a=1$ 代入 $\\frac{a+1}{a^{2}}$。',
+          specificWrongHints: [
+            {
+              checkType: 'firstVal',
+              val: '-1',
+              hint: '当 $a = -1$ 时，原分母 $a+1=0$ 且 $a^{2}+2a+1=0$，分式无意义，不能取 $-1$。'
+            },
+            {
+              checkType: 'firstVal',
+              val: '0',
+              hint: '当 $a = 0$ 时，除式分子 $a^{3}=0$（除数为 $0$），原式无意义，不能取 $0$。'
+            }
+          ]
+        }
+      }
+    }
+    ,
+    // =========================================================================
+    // P37：运用等腰三角形“等边对等角”与“等角对等边”进行边角转化及判定
+    // =========================================================================
+    P37: {
+      procedureId: 'P37',
+      title: '运用等腰三角形“等边对等角”与“等角对等边”进行边角转化及判定',
+      exampleTitle: '在 $\\triangle ABC$ 中，$AB = AC$，$\\angle A = 36^{\\circ}$，$BD$ 平分 $\\angle ABC$ 交 $AC$ 于点 $D$，求图中等腰三角形的个数',
+      exampleFormula: '$AB = AC \\iff \\angle B = \\angle C$（等边对等角 $\\leftrightarrow$ 等角对等边）',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（配合上方动态几何图形，同步展示等边对等角求角与等角对等边判定等腰）',
+      practiceSectionTitle: '等腰三角形性质与判定跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握“等边对等角”求角与“角平分线 + 平行线”导等腰',
+
+      geometryDiagram: {
+        title: '动态几何图形 · 36° 黄金等腰三角形',
+        caption: '随推演进度高亮两腰 AB=AC、底角 72°、角平分线 BD（36°/36°）及两个子等腰三角形',
+        svgHtml: `
+          <svg viewBox="0 0 260 185" class="w-full max-w-[260px] h-auto select-none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Step 4 子等腰三角形 △ABD 与 △BCD 底色 -->
+            <polygon class="proc-geo-anim" data-appear-at="13.5" data-dur="0.6" points="130,22 72,158 166,106" fill="rgba(15, 118, 110, 0.10)" style="opacity:0;" />
+            <polygon class="proc-geo-anim" data-appear-at="19.5" data-dur="0.6" points="72,158 188,158 166,106" fill="rgba(217, 119, 6, 0.12)" style="opacity:0;" />
+
+            <!-- 基础 △ABC -->
+            <line x1="130" y1="22" x2="72" y2="158" stroke="#334155" stroke-width="2.2" />
+            <line x1="130" y1="22" x2="188" y2="158" stroke="#334155" stroke-width="2.2" />
+            <line x1="72" y1="158" x2="188" y2="158" stroke="#334155" stroke-width="2.2" />
+
+            <!-- Step 1：高亮 AB = AC 及顶角 36° -->
+            <g class="proc-geo-anim" data-appear-at="1.2" data-dur="0.5" style="opacity:0;">
+              <line x1="130" y1="22" x2="72" y2="158" stroke="#0F766E" stroke-width="3" />
+              <line x1="130" y1="22" x2="188" y2="158" stroke="#0F766E" stroke-width="3" />
+              <text x="121" y="54" fill="#0F766E" font-size="11" font-weight="700">36°</text>
+              <text x="164" y="150" fill="#0F766E" font-size="10" font-weight="700">72°</text>
+            </g>
+
+            <!-- Step 2：绘制角平分线 BD 及 36°/36° -->
+            <line class="proc-geo-anim" data-appear-at="6.5" data-dur="0.6" data-dash-len="120" x1="72" y1="158" x2="166" y2="106" stroke="#D97706" stroke-width="2.4" stroke-dasharray="120" stroke-dashoffset="120" style="opacity:0;" />
+            <g class="proc-geo-anim" data-appear-at="7.4" data-dur="0.5" style="opacity:0;">
+              <circle cx="166" cy="106" r="3.5" fill="#D97706" />
+              <text x="174" y="106" fill="#B45309" font-size="12" font-weight="700">D</text>
+              <text x="84" y="135" fill="#B45309" font-size="10" font-weight="700">36°</text>
+              <text x="103" y="152" fill="#B45309" font-size="10" font-weight="700">36°</text>
+            </g>
+
+            <!-- Step 3：外角 ∠BDC = 72° -->
+            <g class="proc-geo-anim" data-appear-at="18.8" data-dur="0.5" style="opacity:0;">
+              <text x="142" y="134" fill="#BE123C" font-size="10" font-weight="700">72°</text>
+            </g>
+
+            <!-- 顶点 A, B, C -->
+            <circle cx="130" cy="22" r="3" fill="#0F172A" />
+            <circle cx="72" cy="158" r="3" fill="#0F172A" />
+            <circle cx="188" cy="158" r="3" fill="#0F172A" />
+            <text x="125" y="14" fill="#0F172A" font-size="13" font-weight="700">A</text>
+            <text x="56" y="164" fill="#0F172A" font-size="13" font-weight="700">B</text>
+            <text x="194" y="164" fill="#0F172A" font-size="13" font-weight="700">C</text>
+          </svg>
+        `
+      },
+
+      steps: [
+        {
+          step: 1,
+          name: '由 $AB = AC$ 用“等边对等角”求两底角',
+          tStart: 0.0,
+          tEnd: 6.0,
+          explanation: '在 $\\triangle ABC$ 中，由 $AB = AC$ 得 $\\triangle ABC$ 是第 $1$ 个等腰三角形；由等边对等角与内角和得 $\\angle ABC = \\angle C = \\frac{180^{\\circ} - 36^{\\circ}}{2} = 72^{\\circ}$。'
+        },
+        {
+          step: 2,
+          name: '由角平分线 $BD$ 算出两个 $36^{\\circ}$ 分角',
+          tStart: 6.0,
+          tEnd: 12.0,
+          explanation: '因为 $BD$ 平分 $\\angle ABC$，所以 $\\angle ABD = \\angle DBC = \\frac{1}{2} \\times 72^{\\circ} = 36^{\\circ}$。'
+        },
+        {
+          step: 3,
+          name: '在 $\\triangle ABD$ 中用“等角对等边”判第 $2$ 个等腰',
+          tStart: 12.0,
+          tEnd: 18.0,
+          explanation: '在 $\\triangle ABD$ 中，发现 $\\angle A = \\angle ABD = 36^{\\circ}$，根据“等角对等边”得 $DA = DB$，故 $\\triangle ABD$ 是第 $2$ 个等腰三角形。'
+        },
+        {
+          step: 4,
+          name: '由外角定理与“等角对等边”判第 $3$ 个等腰',
+          tStart: 18.0,
+          tEnd: 24.5,
+          explanation: '在 $\\triangle BCD$ 中，由外角定理得 $\\angle BDC = \\angle A + \\angle ABD = 36^{\\circ} + 36^{\\circ} = 72^{\\circ}$；因 $\\angle BDC = \\angle C = 72^{\\circ}$，由“等角对等边”得 $BD = BC$，故 $\\triangle BCD$ 是第 $3$ 个等腰三角形。'
+        },
+        {
+          step: 5,
+          name: '汇总全部等腰三角形（切勿遗漏原大三角形）',
+          tStart: 24.5,
+          tEnd: 30.0,
+          explanation: '综上，图中共有 $\\triangle ABC$、$\\triangle ABD$、$\\triangle BCD$ 共 $3$ 个等腰三角形。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 由 $AB = AC$ 算两底角 $\\angle ABC = \\angle C = 72^{\\circ}$' },
+        { time: 7.2, step: 2, label: '2.1 角平分线得 $\\angle ABD = \\angle DBC = 36^{\\circ}$' },
+        { time: 13.5, step: 3, label: '3.1 $\\angle A = \\angle ABD = 36^{\\circ} \\implies \\triangle ABD$ 等腰' },
+        { time: 19.5, step: 4, label: '4.1 $\\angle BDC = \\angle C = 72^{\\circ} \\implies \\triangle BCD$ 等腰' },
+        { time: 26.0, step: 5, label: '5.1 汇总共 $3$ 个等腰三角形' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p37_row_0',
+          stepBadge: '已知条件',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p37_r0_cond', math: '在 $\\triangle ABC$ 中，$AB = AC$，$\\angle A = 36^{\\circ}$，$BD$ 平分 $\\angle ABC$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p37_row_1',
+          stepBadge: '第 1 步 · 等边对等角',
+          appearAt: 1.5,
+          tokens: [
+            { id: 'p37_r1_ang', math: '$\\because AB = AC \\implies \\angle ABC = \\angle C = \\frac{180^{\\circ} - 36^{\\circ}}{2} = 72^{\\circ}$', appearAt: 1.6, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p37_row_2',
+          stepBadge: '第 2 & 3 步 · 判 △ABD 等腰',
+          appearAt: 6.4,
+          tokens: [
+            { id: 'p37_r2_bis', math: '$\\because BD$ 平分 $\\angle ABC \\implies \\angle ABD = \\angle DBC = 36^{\\circ}$；', appearAt: 6.5, dur: 0.45 },
+            { id: 'p37_r2_iso', math: '$\\angle A = \\angle ABD \\implies DA = DB$（$\\triangle ABD$ 等腰）', appearAt: 12.6, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p37_row_3',
+          stepBadge: '第 4 步 · 外角与判 △BCD 等腰',
+          appearAt: 18.4,
+          tokens: [
+            { id: 'p37_r3_ext', math: '$\\angle BDC = \\angle A + \\angle ABD = 72^{\\circ} = \\angle C$', appearAt: 18.5, dur: 0.45 },
+            { id: 'p37_r3_iso', math: '$\\implies BD = BC$（$\\triangle BCD$ 等腰）', appearAt: 20.5, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p37_row_4',
+          stepBadge: '最终结论',
+          appearAt: 25.0,
+          isConclusion: true,
+          tokens: [
+            { id: 'p37_r4_conc', math: '$\\therefore$ 共有 $\\triangle ABC$、$\\triangle ABD$、$\\triangle BCD$ 共 $3$ 个等腰三角形。', appearAt: 25.1, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p37_sp_1',
+          title: '核心模型 · “角平分线 + 平行线 ⇒ 等腰三角形”',
+          showStart: 6.0,
+          showEnd: 29.8,
+          tokens: [
+            { id: 'p37_sp1_t1', math: '① 等边对等角：同三角形内 $AB = AC \\implies \\angle B = \\angle C$', appearAt: 6.4, dur: 0.40 },
+            { id: 'p37_sp1_t2', math: '② 等角对等边：同三角形内 $\\angle B = \\angle C \\implies AB = AC$', appearAt: 12.6, dur: 0.40 },
+            { id: 'p37_sp1_t3', math: '③ 黄金组合：角平分线 $+$ 平行线 $\\implies$ 内错角相等 $\\implies$ 等腰', appearAt: 18.8, dur: 0.45 }
+          ],
+          note: '统计等腰三角形个数时，千万不要漏掉原本的大等腰三角形 $\\triangle ABC$'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p37_r1_ang', tStart: 1.6, tEnd: 5.8, color: 'teal' },
+        { tokenId: 'p37_r2_bis', tStart: 6.5, tEnd: 11.8, color: 'amber' },
+        { tokenId: 'p37_r2_iso', tStart: 12.6, tEnd: 17.8, color: 'teal' },
+        { tokenId: 'p37_r3_iso', tStart: 20.5, tEnd: 24.4, color: 'amber' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p37_svg_s3',
+          type: 'arrow',
+          fromToken: 'p37_r2_bis',
+          toToken: 'p37_r2_iso',
+          label: '等角对等边',
+          color: '#0F766E',
+          curveOffset: 28,
+          tStart: 12.2,
+          tDrawEnd: 13.0,
+          tFadeStart: 17.2,
+          tEnd: 17.8
+        },
+        {
+          id: 'p37_svg_s4',
+          type: 'arrow',
+          fromToken: 'p37_r3_ext',
+          toToken: 'p37_r3_iso',
+          label: '等角对等边',
+          color: '#D97706',
+          curveOffset: -26,
+          tStart: 19.6,
+          tDrawEnd: 20.4,
+          tFadeStart: 23.8,
+          tEnd: 24.4
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 6.0, text: '第一步用等边对等角：在 $\\triangle ABC$ 中，$AB = AC$ 且顶角 $\\angle A = 36^{\\circ}$，故两底角 $\\angle ABC = \\angle C = 72^{\\circ}$。', focusToken: 'p37_r1_ang' },
+        { tStart: 6.0, tEnd: 12.0, text: '第二步画角平分线 $BD$：将 $72^{\\circ}$ 平分为两个 $36^{\\circ}$ 的角，即 $\\angle ABD = \\angle DBC = 36^{\\circ}$。', focusToken: 'p37_r2_bis' },
+        { tStart: 12.0, tEnd: 18.0, text: '第三步看 $\\triangle ABD$：$\\angle A = \\angle ABD = 36^{\\circ}$，由等角对等边得 $DA = DB$，这是第 $2$ 个等腰三角形。', focusToken: 'p37_r2_iso' },
+        { tStart: 18.0, tEnd: 24.5, text: '第四步看 $\\triangle BCD$：外角 $\\angle BDC = 36^{\\circ} + 36^{\\circ} = 72^{\\circ} = \\angle C$，由等角对等边得 $BD = BC$，这是第 $3$ 个等腰三角形。', focusToken: 'p37_r3_iso' },
+        { tStart: 24.5, tEnd: 30.0, text: '综上，连同原本的大 $\\triangle ABC$，图中共有 $3$ 个等腰三角形！', focusToken: 'p37_r4_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：“角平分线 + 平行线 ⇒ 等腰三角形”线段转化',
+          givenLabel: '已知条件：',
+          givenFormula: '在 $\\triangle ABC$ 中，$\\angle ABC$ 与 $\\angle ACB$ 的平分线交于点 $O$，过 $O$ 作 $EF \\parallel BC$ 交 $AB, AC$ 于 $E, F$',
+          extractedLabel: '由“角平分线 + 平行线”导出：',
+          extractedFormula: '$\\angle EBO = \\angle EOB \\implies EO = BE$；$\\angle FCO = \\angle FOC \\implies FO = CF$',
+          questionText: '若 $BE = 5$，$CF = 3$，则线段 $EF$ 的长等于多少？',
+          options: [
+            { key: 'A', text: 'A. $EF = EO + FO = BE + CF = 8$', isCorrect: true },
+            { key: 'B', text: 'B. $EF = BE - CF = 2$', isCorrect: false },
+            { key: 'C', text: 'C. $EF = 4$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！两次运用“等角对等边”将折线转化为直线段之和：',
+            calcLines: [
+              '$EO = BE = 5，\\quad FO = CF = 3$',
+              '$EF = EO + FO = 5 + 3 = 8$'
+            ],
+            summary: '记住“角平分线 + 平行线”必出等腰三角形，即可快速完成线段等量代换。'
+          },
+          wrongTitle: '提示：请用等角对等边把 EO 和 FO 分别代换为 BE 和 CF',
+          wrongFeedback: '点 $O$ 在线段 $EF$ 上，因此 $EF = EO + FO = BE + CF = 5 + 3 = 8$，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：利用“等边对等角”求等腰三角形内角',
+          givenLabel: '已知条件：',
+          givenFormula: '在等腰 $\\triangle ABC$ 中，$AB = AC$',
+          questionText: '若顶角 $\\angle A = 50^{\\circ}$，则底角 $\\angle B$ 是多少度？若另一等腰三角形底角为 $40^{\\circ}$，则其顶角是多少度？',
+          input1Prefix: '底角 $\\angle B =$',
+          input1Placeholder: '如 65',
+          input2Prefix: '°，另一顶角 $=$',
+          input2Placeholder: '如 100',
+          input2Suffix: '°（只填数字）',
+          expectedX: '65',
+          expectedMin: '100',
+          allowOrderSwap: false,
+          correctFeedback: '底角 $\\angle B = 65^{\\circ}$，另一等腰三角形顶角为 $100^{\\circ}$。',
+          correctDetail: '① $\\angle B = \\frac{180^{\\circ} - 50^{\\circ}}{2} = 65^{\\circ}$；② 顶角 $= 180^{\\circ} - 2 \\times 40^{\\circ} = 100^{\\circ}$。',
+          wrongFeedback: '按“底角 $= (180^{\\circ} - \\text{顶角}) \\div 2$”与“顶角 $= 180^{\\circ} - 2 \\times \\text{底角}$”计算。',
+          specificWrongHints: []
+        }
+      }
+    },
+    // =========================================================================
+    // P38：运用等边三角形性质判定及含 30° 角直角三角形性质求解
+    // =========================================================================
+    P38: {
+      procedureId: 'P38',
+      title: '运用等边三角形性质判定及含 $30^{\\circ}$ 角直角三角形性质求解',
+      exampleTitle: '如图，等边 $\\triangle ABC$ 中，点 $D$ 是 $AC$ 的中点，$DE \\perp BC$ 于点 $E$，若 $CE = 3$，求 $AB$ 的长',
+      exampleFormula: '等边 $\\triangle \\implies \\angle C = 60^{\\circ}$；$\\text{Rt}\\triangle CDE$ 中 $\\angle CDE = 30^{\\circ} \\implies CD = 2CE$',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（配合上方动态几何图，同步展示等边三角形 60° 与 30° 直角三角形倍半联动）',
+      practiceSectionTitle: '等边三角形与含 30° 角直角三角形跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握等边三角形判定条件与 30° 对边为斜边一半的应用',
+
+      geometryDiagram: {
+        title: '动态几何图形 · 等边 △ABC 与 Rt△CDE',
+        caption: '随推演进度标注 ∠C=60°、垂线 DE⊥BC、∠CDE=30° 及 CD=2CE=6、AC=AB=12',
+        svgHtml: `
+          <svg viewBox="0 0 260 185" class="w-full max-w-[260px] h-auto select-none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Step 2 Rt△CDE 高亮底色 -->
+            <polygon class="proc-geo-anim" data-appear-at="6.4" data-dur="0.6" points="175,90 175,158 214,158" fill="rgba(217, 119, 6, 0.14)" style="opacity:0;" />
+
+            <!-- 等边 △ABC -->
+            <line x1="130" y1="22" x2="46" y2="158" stroke="#334155" stroke-width="2.2" />
+            <line x1="130" y1="22" x2="214" y2="158" stroke="#334155" stroke-width="2.2" />
+            <line x1="46" y1="158" x2="214" y2="158" stroke="#334155" stroke-width="2.2" />
+
+            <!-- Step 1：标注等边三边相等与 ∠C = 60° -->
+            <g class="proc-geo-anim" data-appear-at="1.2" data-dur="0.5" style="opacity:0;">
+              <line x1="130" y1="22" x2="46" y2="158" stroke="#0F766E" stroke-width="3" />
+              <line x1="130" y1="22" x2="214" y2="158" stroke="#0F766E" stroke-width="3" />
+              <text x="188" y="151" fill="#0F766E" font-size="10" font-weight="700">60°</text>
+            </g>
+
+            <!-- Step 2：中点 D 与垂线 DE ⊥ BC 及 30° 角 -->
+            <line class="proc-geo-anim" data-appear-at="6.2" data-dur="0.6" data-dash-len="70" x1="175" y1="90" x2="175" y2="158" stroke="#D97706" stroke-width="2.4" stroke-dasharray="70" stroke-dashoffset="70" style="opacity:0;" />
+            <g class="proc-geo-anim" data-appear-at="7.0" data-dur="0.5" style="opacity:0;">
+              <circle cx="175" cy="90" r="3.5" fill="#D97706" />
+              <text x="182" y="88" fill="#B45309" font-size="12" font-weight="700">D</text>
+              <text x="170" y="174" fill="#B45309" font-size="12" font-weight="700">E</text>
+              <polyline points="175,148 185,148 185,158" fill="none" stroke="#BE123C" stroke-width="1.8" />
+              <text x="178" y="114" fill="#BE123C" font-size="10" font-weight="700">30°</text>
+              <text x="190" y="172" fill="#B45309" font-size="11" font-weight="700">3</text>
+            </g>
+
+            <!-- Step 3 & 4：CD=6 与 AB=12 标注 -->
+            <g class="proc-geo-anim" data-appear-at="13.5" data-dur="0.5" style="opacity:0;">
+              <text x="200" y="122" fill="#BE123C" font-size="11" font-weight="700">CD=6</text>
+            </g>
+            <g class="proc-geo-anim" data-appear-at="20.0" data-dur="0.5" style="opacity:0;">
+              <rect x="38" y="76" width="46" height="18" rx="4" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.2" />
+              <text x="61" y="89" text-anchor="middle" fill="#0F766E" font-size="11" font-weight="700">AB=12</text>
+            </g>
+
+            <!-- 顶点 A, B, C -->
+            <circle cx="130" cy="22" r="3" fill="#0F172A" />
+            <circle cx="46" cy="158" r="3" fill="#0F172A" />
+            <circle cx="214" cy="158" r="3" fill="#0F172A" />
+            <text x="125" y="14" fill="#0F172A" font-size="13" font-weight="700">A</text>
+            <text x="30" y="164" fill="#0F172A" font-size="13" font-weight="700">B</text>
+            <text x="220" y="164" fill="#0F172A" font-size="13" font-weight="700">C</text>
+          </svg>
+        `
+      },
+
+      steps: [
+        {
+          step: 1,
+          name: '由等边三角形性质标出 $AB = AC$ 与 $\\angle C = 60^{\\circ}$',
+          tStart: 0.0,
+          tEnd: 5.8,
+          explanation: '因为 $\\triangle ABC$ 是等边三角形，所以三边相等 $AB = AC = BC$，且每个内角均为 $60^{\\circ}$，即 $\\angle C = 60^{\\circ}$。'
+        },
+        {
+          step: 2,
+          name: '在 $\\text{Rt}\\triangle CDE$ 中由两锐角互余求 $\\angle CDE = 30^{\\circ}$',
+          tStart: 5.8,
+          tEnd: 12.2,
+          explanation: '因为 $DE \\perp BC$，所以 $\\angle DEC = 90^{\\circ}$；在 $\\text{Rt}\\triangle CDE$ 中，$\\angle CDE = 90^{\\circ} - \\angle C = 90^{\\circ} - 60^{\\circ} = 30^{\\circ}$。'
+        },
+        {
+          step: 3,
+          name: '用“$30^{\\circ}$ 对边等于斜边一半”求出 $CD = 6$',
+          tStart: 12.2,
+          tEnd: 18.8,
+          explanation: '在 $\\text{Rt}\\triangle CDE$ 中，$\\angle CDE = 30^{\\circ}$ 所对的直角边是 $CE = 3$，斜边是 $CD$，故 $CD = 2CE = 2 \\times 3 = 6$。'
+        },
+        {
+          step: 4,
+          name: '由中点 $D$ 求出边长 $AC = 2CD = 12$',
+          tStart: 18.8,
+          tEnd: 24.5,
+          explanation: '因为点 $D$ 是 $AC$ 的中点，所以 $AC = 2CD = 2 \\times 6 = 12$。'
+        },
+        {
+          step: 5,
+          name: '由等边三角形三边相等得出 $AB = 12$',
+          tStart: 24.5,
+          tEnd: 30.0,
+          explanation: '因为等边三角形三边相等 $AB = AC$，所以 $AB = 12$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 等边 $\\triangle ABC \\implies AB = AC$，$\\angle C = 60^{\\circ}$' },
+        { time: 7.2, step: 2, label: '2.1 在 $\\text{Rt}\\triangle CDE$ 中算得 $\\angle CDE = 30^{\\circ}$' },
+        { time: 13.8, step: 3, label: '3.1 $30^{\\circ}$ 对边 $CE = 3 \\implies$ 斜边 $CD = 6$' },
+        { time: 20.0, step: 4, label: '4.1 $D$ 为 $AC$ 中点 $\\implies AC = 2CD = 12$' },
+        { time: 26.0, step: 5, label: '5.1 等边三边相等得 $AB = 12$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p38_row_0',
+          stepBadge: '已知条件',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p38_r0_cond', math: '等边 $\\triangle ABC$ 中，$D$ 为 $AC$ 中点，$DE \\perp BC$，$CE = 3$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p38_row_1',
+          stepBadge: '第 1 步 · 等边三角形性质',
+          appearAt: 1.5,
+          tokens: [
+            { id: 'p38_r1_prop', math: '$\\because \\triangle ABC$ 是等边三角形 $\\implies AB = AC$，$\\angle C = 60^{\\circ}$', appearAt: 1.6, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p38_row_2',
+          stepBadge: '第 2 步 · 导出 30° 锐角',
+          appearAt: 6.2,
+          tokens: [
+            { id: 'p38_r2_rt', math: '$\\because DE \\perp BC \\implies \\angle DEC = 90^{\\circ}$，', appearAt: 6.3, dur: 0.40 },
+            { id: 'p38_r2_30', math: '$\\angle CDE = 90^{\\circ} - 60^{\\circ} = 30^{\\circ}$', appearAt: 8.0, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p38_row_3',
+          stepBadge: '第 3 步 · 30° 性质求斜边',
+          appearAt: 12.6,
+          tokens: [
+            { id: 'p38_r3_cd', math: '在 $\\text{Rt}\\triangle CDE$ 中，$CD = 2CE = 2 \\times 3 = 6$', appearAt: 12.7, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p38_row_4',
+          stepBadge: '最终结论',
+          appearAt: 19.2,
+          isConclusion: true,
+          tokens: [
+            { id: 'p38_r4_conc', math: '$\\because D$ 为 $AC$ 中点，$\\therefore AB = AC = 2CD = 12$。', appearAt: 19.3, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p38_sp_1',
+          title: '核心定理 · 等边判定与 30° 直角三角形倍半法则',
+          showStart: 0.8,
+          showEnd: 29.8,
+          tokens: [
+            { id: 'p38_sp1_t1', math: '① 等边判定：三边相等 / 三个角为 $60^{\\circ}$ / 含 $60^{\\circ}$ 角的等腰三角形', appearAt: 1.4, dur: 0.40 },
+            { id: 'p38_sp1_t2', math: '② $30^{\\circ}$ 性质：$\\text{Rt}\\triangle$ 中，$30^{\\circ}$ 所对直角边 $= \\frac{1}{2} \\times$ 斜边', appearAt: 12.8, dur: 0.45 }
+          ],
+          note: '切记：$30^{\\circ}$ 倍半关系必须同时满足“直角三角形”与“$30^{\\circ}$ 对边 vs 斜边”两个前提'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p38_r1_prop', tStart: 1.6, tEnd: 5.6, color: 'teal' },
+        { tokenId: 'p38_r2_30', tStart: 8.0, tEnd: 12.0, color: 'rose' },
+        { tokenId: 'p38_r3_cd', tStart: 12.7, tEnd: 18.6, color: 'amber' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p38_svg_s2',
+          type: 'arrow',
+          fromToken: 'p38_r1_prop',
+          toToken: 'p38_r2_30',
+          label: '直角三角形两锐角互余',
+          color: '#0F766E',
+          curveOffset: 28,
+          tStart: 7.4,
+          tDrawEnd: 8.2,
+          tFadeStart: 11.4,
+          tEnd: 12.0
+        },
+        {
+          id: 'p38_svg_s3',
+          type: 'arrow',
+          fromToken: 'p38_r2_30',
+          toToken: 'p38_r3_cd',
+          label: '$30^{\\circ}$ 对边 $= \\frac{1}{2}$ 斜边',
+          color: '#BE123C',
+          curveOffset: -26,
+          tStart: 12.4,
+          tDrawEnd: 13.2,
+          tFadeStart: 18.0,
+          tEnd: 18.6
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 5.8, text: '第一步标出等边三角形隐含条件：三边相等 $AB = AC = BC$，且 $\\angle C = 60^{\\circ}$。', focusToken: 'p38_r1_prop' },
+        { tStart: 5.8, tEnd: 12.2, text: '第二步看直角三角形 $\\text{Rt}\\triangle CDE$：因为 $DE \\perp BC$，由两锐角互余得 $\\angle CDE = 90^{\\circ} - 60^{\\circ} = 30^{\\circ}$。', focusToken: 'p38_r2_30' },
+        { tStart: 12.2, tEnd: 18.8, text: '第三步用 $30^{\\circ}$ 直角三角形性质：$30^{\\circ}$ 角所对的直角边 $CE = 3$ 等于斜边 $CD$ 的一半，故 $CD = 6$。', focusToken: 'p38_r3_cd' },
+        { tStart: 18.8, tEnd: 30.0, text: '最后由 $D$ 是 $AC$ 中点得 $AC = 2CD = 12$，又因等边三角形 $AB = AC$，故 $AB = 12$！', focusToken: 'p38_r4_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：辨析等边三角形的判定条件',
+          givenLabel: '给出四个三角形条件：',
+          givenFormula: '① 有两个角为 $60^{\\circ}$；② 三个外角都相等；③ 一边上的高也是这边上的中线；④ 有一个角为 $60^{\\circ}$ 的等腰三角形',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '其中一定能判定为等边三角形的条件共有几个？',
+          options: [
+            { key: 'A', text: 'A. $3$ 个（①②④ 均能判定，③ 只能判定为等腰三角形）', isCorrect: true },
+            { key: 'B', text: 'B. $4$ 个（全部都能判定）', isCorrect: false },
+            { key: 'C', text: 'C. $2$ 个（只有 ①④）', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！准确区分等腰与等边三角形的判定条件：',
+            calcLines: [
+              '① 两角 $60^{\\circ} \\implies$ 第三角 $60^{\\circ}$ ✓；② 三外角相等 $\\implies$ 三内角相等 ✓',
+              '③ 一边高与中线重合仅能推出两腰相等（等腰三角形），不能推出等边',
+              '④ 含 $60^{\\circ}$ 角的等腰三角形必为等边三角形 ✓'
+            ],
+            summary: '无论 $60^{\\circ}$ 是等腰三角形的顶角还是底角，都能唯一推出它是等边三角形。'
+          },
+          wrongTitle: '提示：请检查条件 ② 与 ③ 的推导结论',
+          wrongFeedback: '三个外角都相等则三个内角都为 $60^{\\circ}$（等边）；但一边上的高也是中线只能证出该三角形是等腰三角形，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：含 30° 角直角三角形倍半计算',
+          givenLabel: '已知条件：',
+          givenFormula: '在 $\\text{Rt}\\triangle ABC$ 中，$\\angle C = 90^{\\circ}$，$\\angle B = 30^{\\circ}$，$AC = 5$',
+          questionText: '则另一锐角 $\\angle A$ 是多少度？斜边 $AB$ 的长是多少？',
+          input1Prefix: '$\\angle A =$',
+          input1Placeholder: '如 60',
+          input2Prefix: '°，斜边 $AB =$',
+          input2Placeholder: '如 10',
+          input2Suffix: '',
+          expectedX: '60',
+          expectedMin: '10',
+          allowOrderSwap: false,
+          correctFeedback: '$\\angle A = 60^{\\circ}$，斜边 $AB = 10$。',
+          correctDetail: '由直角三角形两锐角互余得 $\\angle A = 90^{\\circ} - 30^{\\circ} = 60^{\\circ}$；由 $30^{\\circ}$ 对边 $AC = 5$ 得斜边 $AB = 2AC = 10$。',
+          wrongFeedback: '由 $\\angle A = 90^{\\circ} - 30^{\\circ}$ 求角度，由斜边 $= 2 \\times 30^{\\circ}$ 所对直角边 $AC$ 求 $AB$。',
+          specificWrongHints: []
+        }
+      }
+    }
+    ,
+    // =========================================================================
+    // P39：运用有理数加减法则与运算律进行加减混合运算
+    // =========================================================================
+    P39: {
+      procedureId: 'P39',
+      title: '运用有理数加减法则与运算律进行加减混合运算',
+      exampleTitle: '计算：(1) $14 - (-12) + (-25) - 17$；(2) $\\left(-3\\frac{2}{3}\\right) - \\left(-2\\frac{3}{4}\\right) + 3\\frac{2}{3} - (+5.75)$',
+      exampleFormula: '减法转加相反数 $\\to$ 省略括号和加号 $\\to$ 同号/相反数/凑整分组',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示双重符号化简口诀与四大分组结合巧算策略）',
+      practiceSectionTitle: '有理数加减混合运算跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握省略括号变形与交换律带符号分组巧算',
+
+      steps: [
+        {
+          step: 1,
+          name: '第(1)题化简双重符号，写成省略括号的代数和',
+          tStart: 0.0,
+          tEnd: 5.8,
+          explanation: '按“同号得正、异号得负”化简：$-(-12) = +12$，$+(-25) = -25$，将原式改写为 $14 + 12 - 25 - 17$。'
+        },
+        {
+          step: 2,
+          name: '第(1)题正负同号分组结合，先定符号再算绝对值',
+          tStart: 5.8,
+          tEnd: 12.2,
+          explanation: '将正数与负数分别同号结合：$(14 + 12) + (-25 - 17) = 26 - 42$；异号相加取较大绝对值的负号，$-(42 - 26) = -16$。'
+        },
+        {
+          step: 3,
+          name: '第(2)题化简符号并把带分数 $2\\frac{3}{4}$ 化为小数 $2.75$',
+          tStart: 12.2,
+          tEnd: 18.2,
+          explanation: '先去双重符号并统一小数：$-(-2\\frac{3}{4}) = +2.75$，$-(+5.75) = -5.75$，原式化为 $-3\\frac{2}{3} + 2.75 + 3\\frac{2}{3} - 5.75$。'
+        },
+        {
+          step: 4,
+          name: '第(2)题带符号交换位置，相反数与小数凑整分组',
+          tStart: 18.2,
+          tEnd: 24.5,
+          explanation: '运用加法交换律与结合律（连同前面符号一起移动）：$\\left(-3\\frac{2}{3} + 3\\frac{2}{3}\\right) + (2.75 - 5.75)$。'
+        },
+        {
+          step: 5,
+          name: '相反数抵消为 $0$，算出最终结果 $-3$',
+          tStart: 24.5,
+          tEnd: 30.0,
+          explanation: '第一组互为相反数相加得 $0$，第二组 $2.75 - 5.75 = -3$，最终结果为 $-3$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 (1) 省略括号化为 $14 + 12 - 25 - 17$' },
+        { time: 7.5, step: 2, label: '2.1 (1) 同号结合得 $26 - 42 = -16$' },
+        { time: 14.0, step: 3, label: '3.1 (2) 化简符号并化小数得 $-3\\frac{2}{3} + 2.75 + 3\\frac{2}{3} - 5.75$' },
+        { time: 20.0, step: 4, label: '4.1 (2) 相反数与凑整分组结合' },
+        { time: 26.0, step: 5, label: '5.1 (2) 算出 $0 - 3 = -3$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p39_row_0',
+          stepBadge: '第(1)题 · 省略括号',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p39_r0_1', math: '(1) $14 - (-12) + (-25) - 17$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p39_r0_2', math: '$= 14 + 12 - 25 - 17$', appearAt: 1.6, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p39_row_1',
+          stepBadge: '第(1)题 · 同号结合',
+          appearAt: 6.2,
+          tokens: [
+            { id: 'p39_r1_grp', math: '$= (14 + 12) + (-25 - 17) = 26 - 42 = -16$', appearAt: 6.3, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p39_row_2',
+          stepBadge: '第(2)题 · 去符号化小数',
+          appearAt: 12.6,
+          tokens: [
+            { id: 'p39_r2_1', math: '(2) $= -3\\frac{2}{3} + 2.75 + 3\\frac{2}{3} - 5.75$', appearAt: 12.7, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p39_row_3',
+          stepBadge: '第(2)题 · 分组结合',
+          appearAt: 18.6,
+          tokens: [
+            { id: 'p39_r3_grp', math: '$= \\left(-3\\frac{2}{3} + 3\\frac{2}{3}\\right) + (2.75 - 5.75)$', appearAt: 18.7, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p39_row_4',
+          stepBadge: '最终结论',
+          appearAt: 24.8,
+          isConclusion: true,
+          tokens: [
+            { id: 'p39_r4_conc', math: '$= 0 + (-3) = -3$。', appearAt: 24.9, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p39_sp_1',
+          title: '核心口诀 · 减法转加法与四大分组巧算策略',
+          showStart: 0.8,
+          showEnd: 29.8,
+          tokens: [
+            { id: 'p39_sp1_t1', math: '① 双重符号：同号得正 $-(-a)=+a$，异号得负 $+(-a)=-a$', appearAt: 1.4, dur: 0.40 },
+            { id: 'p39_sp1_t2', math: '② 优先分组：相反数抵消 $\\to$ 小数凑整 $\\to$ 同分母 $\\to$ 同号结合', appearAt: 18.8, dur: 0.45 }
+          ],
+          note: '切记：交换加数位置时，每个数必须连同它前面的正负号一起搬家'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p39_r0_2', tStart: 1.6, tEnd: 5.6, color: 'amber' },
+        { tokenId: 'p39_r1_grp', tStart: 6.3, tEnd: 12.0, color: 'teal' },
+        { tokenId: 'p39_r2_1', tStart: 12.7, tEnd: 18.0, color: 'amber' },
+        { tokenId: 'p39_r3_grp', tStart: 18.7, tEnd: 24.4, color: 'teal' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p39_svg_s1',
+          type: 'arrow',
+          fromToken: 'p39_r0_1',
+          toToken: 'p39_r0_2',
+          label: '$-(-12)=+12$，省略括号',
+          color: '#D97706',
+          curveOffset: 28,
+          tStart: 1.4,
+          tDrawEnd: 2.2,
+          tFadeStart: 5.2,
+          tEnd: 5.8
+        },
+        {
+          id: 'p39_svg_s4',
+          type: 'arrow',
+          fromToken: 'p39_r2_1',
+          toToken: 'p39_r3_grp',
+          label: '相反数抵消 $+$ 小数凑整',
+          color: '#0F766E',
+          curveOffset: -26,
+          tStart: 18.4,
+          tDrawEnd: 19.2,
+          tFadeStart: 23.8,
+          tEnd: 24.4
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 5.8, text: '看第(1)题第一步：把 $-(-12)$ 化为 $+12$，把 $+(-25)$ 化为 $-25$，省略括号得 $14 + 12 - 25 - 17$。', focusToken: 'p39_r0_2' },
+        { tStart: 5.8, tEnd: 12.2, text: '第二步同号结合：正数 $14+12=26$，负数 $-25-17=-42$，异号相加取负号得 $-16$。', focusToken: 'p39_r1_grp' },
+        { tStart: 12.2, tEnd: 18.2, text: '看第(2)题：先化简双重符号，并把 $2\\frac{3}{4}$ 化为小数 $2.75$，得到 $-3\\frac{2}{3} + 2.75 + 3\\frac{2}{3} - 5.75$。', focusToken: 'p39_r2_1' },
+        { tStart: 18.2, tEnd: 24.5, text: '把互为相反数的 $-3\\frac{2}{3}$ 与 $+3\\frac{2}{3}$ 结合，把同小数尾数的 $2.75$ 与 $-5.75$ 结合。', focusToken: 'p39_r3_grp' },
+        { tStart: 24.5, tEnd: 30.0, text: '相反数抵消得 $0$，$2.75 - 5.75 = -3$，得出最终结果 $-3$！', focusToken: 'p39_r4_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：把有理数加减算式写成省略括号和加号的形式',
+          givenLabel: '已知算式：',
+          givenFormula: '$-3 + (-5) - (-9) + (-6)$',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '将其规范改写为省略括号和加号的和的形式，正确的是？',
+          options: [
+            { key: 'A', text: 'A. $-3 - 5 + 9 - 6$', isCorrect: true },
+            { key: 'B', text: 'B. $-3 + 5 - 9 - 6$', isCorrect: false },
+            { key: 'C', text: 'C. $-3 - 5 - 9 - 6$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！按“同号得正、异号得负”逐项化简双重符号：',
+            calcLines: [
+              '$+(-5) = -5$，$-(-9) = +9$，$+(-6) = -6$',
+              '原式 $= -3 - 5 + 9 - 6 = (-3 - 5 - 6) + 9 = -14 + 9 = -5$'
+            ],
+            summary: '减去一个负数等于加上它的相反数（负负得正）。'
+          },
+          wrongTitle: '提示：请核对 -(-9) 化简后的符号',
+          wrongFeedback: '$-(-9)$ 是两个负号相逢（同号得正），化简为 $+9$，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：运用运算律分组计算有理数加减',
+          givenLabel: '计算算式：',
+          givenFormula: '$(-13) + (+12) + (-7) + (+18)$',
+          questionText: '若按同号结合为 $[(-13)+(-7)] + (12+18)$，则负数组之和与整个算式的最终结果分别是多少？',
+          input1Prefix: '负数组之和 $=$',
+          input1Placeholder: '如 -20',
+          input2Prefix: '，最终结果 $=$',
+          input2Placeholder: '如 10',
+          input2Suffix: '',
+          expectedX: '-20',
+          expectedMin: '10',
+          allowOrderSwap: false,
+          correctFeedback: '负数组之和为 $-20$，最终结果为 $10$。',
+          correctDetail: '$(-13) + (-7) = -20$，$12 + 18 = 30$，最终 $-20 + 30 = 10$。',
+          wrongFeedback: '同号两负数 $(-13)+(-7) = -20$，正数 $12+18 = 30$，再算 $-20 + 30$。',
+          specificWrongHints: []
+        }
+      }
+    },
+    // =========================================================================
+    // P40：运用有理数乘除法法则、倒数及乘法运算律计算
+    // =========================================================================
+    P40: {
+      procedureId: 'P40',
+      title: '运用有理数乘除法法则、倒数及乘法运算律计算',
+      exampleTitle: '计算：(1) $\\left(\\frac{1}{8} - \\frac{1}{3} + \\frac{1}{6}\\right) \\times 24$；(2) $(-13) \\times \\frac{2}{3} - 0.34 \\times \\frac{5}{7} + \\frac{1}{3} \\times (-13) - \\frac{2}{7} \\times 0.34$',
+      exampleFormula: '正向分配律去分母：$a(b+c)=ab+ac$；逆向分配律凑整：$ab+ac=a(b+c)$',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示乘法正逆向分配律与“除法转乘倒数、奇负偶正”法则）',
+      practiceSectionTitle: '有理数乘除与分配律巧算跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握同级乘除顺序与带负号乘法分配律',
+
+      steps: [
+        {
+          step: 1,
+          name: '第(1)题识别公倍数，正向应用乘法分配律',
+          tStart: 0.0,
+          tEnd: 5.8,
+          explanation: '观察括号内分母 $8, 3, 6$ 都是 $24$ 的约数，不必通分，直接用 $24$ 乘遍括号内每一项：$\\frac{1}{8}\\times 24 - \\frac{1}{3}\\times 24 + \\frac{1}{6}\\times 24$。'
+        },
+        {
+          step: 2,
+          name: '第(1)题分别约分并合并加减得 $-1$',
+          tStart: 5.8,
+          tEnd: 11.8,
+          explanation: '各项约分得整数 $3 - 8 + 4$，按加减合并得 $7 - 8 = -1$。'
+        },
+        {
+          step: 3,
+          name: '第(2)题锁定两组公共因数 $-13$ 与 $-0.34$',
+          tStart: 11.8,
+          tEnd: 18.2,
+          explanation: '观察四项乘积：第 $1, 3$ 项都含公共因数 $(-13)$，第 $2, 4$ 项都含公共因数 $(-0.34)$，先带符号分组排列。'
+        },
+        {
+          step: 4,
+          name: '第(2)题逆向应用乘法分配律提取公因数',
+          tStart: 18.2,
+          tEnd: 24.5,
+          explanation: '逆用分配律得 $(-13)\\times\\left(\\frac{2}{3} + \\frac{1}{3}\\right) - 0.34\\times\\left(\\frac{5}{7} + \\frac{2}{7}\\right)$（注意提出 $-0.34$ 后括号内两项均为正）。'
+        },
+        {
+          step: 5,
+          name: '括号内凑整为 $1$，口算得出最终结果 $-13.34$',
+          tStart: 24.5,
+          tEnd: 30.0,
+          explanation: '两括号内分别为 $\\frac{3}{3} = 1$ 与 $\\frac{7}{7} = 1$，化为 $-13 \\times 1 - 0.34 \\times 1 = -13.34$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 (1) 用 $24$ 正向分配乘遍三项' },
+        { time: 7.2, step: 2, label: '2.1 (1) 约分得 $3 - 8 + 4 = -1$' },
+        { time: 13.5, step: 3, label: '3.1 (2) 识别公共因数 $-13$ 与 $-0.34$' },
+        { time: 19.8, step: 4, label: '4.1 (2) 逆向提取公因数凑整 $1$' },
+        { time: 26.0, step: 5, label: '5.1 (2) 合并得 $-13 - 0.34 = -13.34$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p40_row_0',
+          stepBadge: '第(1)题 · 正向分配律',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p40_r0_1', math: '(1) $\\left(\\frac{1}{8} - \\frac{1}{3} + \\frac{1}{6}\\right) \\times 24$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p40_r0_2', math: '$= \\frac{1}{8}\\times 24 - \\frac{1}{3}\\times 24 + \\frac{1}{6}\\times 24$', appearAt: 1.6, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p40_row_1',
+          stepBadge: '第(1)题 · 约分合并',
+          appearAt: 6.2,
+          tokens: [
+            { id: 'p40_r1_res', math: '$= 3 - 8 + 4 = -1$', appearAt: 6.3, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p40_row_2',
+          stepBadge: '第(2)题 · 分组找公因数',
+          appearAt: 12.2,
+          tokens: [
+            { id: 'p40_r2_grp', math: '(2) $= \\left[(-13)\\times\\frac{2}{3} + \\frac{1}{3}\\times(-13)\\right] + \\left(-0.34\\times\\frac{5}{7} - \\frac{2}{7}\\times 0.34\\right)$', appearAt: 12.3, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p40_row_3',
+          stepBadge: '第(2)题 · 逆向分配律',
+          appearAt: 18.6,
+          tokens: [
+            { id: 'p40_r3_fac', math: '$= (-13)\\times\\left(\\frac{2}{3} + \\frac{1}{3}\\right) - 0.34\\times\\left(\\frac{5}{7} + \\frac{2}{7}\\right)$', appearAt: 18.7, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p40_row_4',
+          stepBadge: '最终结论',
+          appearAt: 24.8,
+          isConclusion: true,
+          tokens: [
+            { id: 'p40_r4_conc', math: '$= -13 \\times 1 - 0.34 \\times 1 = -13.34$。', appearAt: 24.9, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p40_sp_1',
+          title: '草稿警示 · 有理数乘除三大铁律',
+          showStart: 0.8,
+          showEnd: 29.8,
+          tokens: [
+            { id: 'p40_sp1_t1', math: '① 除法转乘倒数：$3 \\div 2 \\times \\left(-\\frac{1}{2}\\right) = 3 \\times \\frac{1}{2} \\times \\left(-\\frac{1}{2}\\right) = -\\frac{3}{4}$', appearAt: 1.4, dur: 0.40 },
+            { id: 'p40_sp1_t2', math: '② 奇负偶正：先数负因数个数定符号，再约分算绝对值', appearAt: 6.8, dur: 0.40 },
+            { id: 'p40_sp1_t3', math: '③ 负因数提公因式：$-0.34\\times\\frac{5}{7} - \\frac{2}{7}\\times 0.34 = -0.34\\times\\left(\\frac{5}{7}+\\frac{2}{7}\\right)$', appearAt: 18.8, dur: 0.45 }
+          ],
+          note: '特别提醒：乘法有分配律，但除法没有左分配律（如 $12 \\div (\\frac{1}{2} - \\frac{1}{3})$ 必须先算括号内）'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p40_r0_2', tStart: 1.6, tEnd: 5.6, color: 'amber' },
+        { tokenId: 'p40_r1_res', tStart: 6.3, tEnd: 11.6, color: 'teal' },
+        { tokenId: 'p40_r2_grp', tStart: 12.3, tEnd: 18.0, color: 'amber' },
+        { tokenId: 'p40_r3_fac', tStart: 18.7, tEnd: 24.4, color: 'teal' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p40_svg_s1',
+          type: 'arrow',
+          fromToken: 'p40_r0_1',
+          toToken: 'p40_r0_2',
+          label: '正向分配约去分母',
+          color: '#D97706',
+          curveOffset: 28,
+          tStart: 1.4,
+          tDrawEnd: 2.2,
+          tFadeStart: 5.2,
+          tEnd: 5.8
+        },
+        {
+          id: 'p40_svg_s4',
+          type: 'arrow',
+          fromToken: 'p40_r2_grp',
+          toToken: 'p40_r3_fac',
+          label: '逆向提公因数凑整 $1$',
+          color: '#0F766E',
+          curveOffset: -26,
+          tStart: 18.4,
+          tDrawEnd: 19.2,
+          tFadeStart: 23.8,
+          tEnd: 24.4
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 5.8, text: '看第(1)题：括号外是 $24$，正好是 $8, 3, 6$ 的公倍数，直接正向应用乘法分配律把 $24$ 乘遍三项。', focusToken: 'p40_r0_2' },
+        { tStart: 5.8, tEnd: 11.8, text: '分别约分得 $3 - 8 + 4$，口算得出 $-1$！', focusToken: 'p40_r1_res' },
+        { tStart: 11.8, tEnd: 18.2, text: '看第(2)题：前、后四项分别含有公共因数 $-13$ 和 $-0.34$，先带符号重新分组。', focusToken: 'p40_r2_grp' },
+        { tStart: 18.2, tEnd: 24.5, text: '逆向应用乘法分配律提取 $-13$ 和 $-0.34$，注意提取负号后第二组括号内为 $\\frac{5}{7} + \\frac{2}{7}$。', focusToken: 'p40_r3_fac' },
+        { tStart: 24.5, tEnd: 30.0, text: '两个括号都恰好凑整等于 $1$，算出最终结果 $-13 - 0.34 = -13.34$！', focusToken: 'p40_r4_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：乘除同级运算顺序与倒数转化',
+          givenLabel: '计算算式：',
+          givenFormula: '$3 \\div 2 \\times \\left(-\\frac{1}{2}\\right)$',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '按从左到右顺序将除法转为乘倒数计算，正确结果是？',
+          options: [
+            { key: 'A', text: 'A. $3 \\times \\frac{1}{2} \\times \\left(-\\frac{1}{2}\\right) = -\\frac{3}{4}$', isCorrect: true },
+            { key: 'B', text: 'B. $3 \\div (-1) = -3$', isCorrect: false },
+            { key: 'C', text: 'C. $\\frac{3}{4}$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！乘除同级运算必须从左到右先转连乘再定符号：',
+            calcLines: [
+              '$3 \\div 2 \\times \\left(-\\frac{1}{2}\\right) = 3 \\times \\frac{1}{2} \\times \\left(-\\frac{1}{2}\\right) = -\\frac{3}{4}$'
+            ],
+            summary: '切勿跳步先算后面的 $2 \\times \\left(-\\frac{1}{2}\\right)$。'
+          },
+          wrongTitle: '提示：请从左到右把 ÷ 2 改为 × 1/2 再相乘',
+          wrongFeedback: '乘除同级运算不能先算后面的乘法，应先化为 $3 \\times \\frac{1}{2} \\times \\left(-\\frac{1}{2}\\right) = -\\frac{3}{4}$，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：带负号正向应用乘法分配律',
+          givenLabel: '计算算式：',
+          givenFormula: '$\\left(\\frac{2}{3} - \\frac{5}{6} + \\frac{1}{12} - \\frac{7}{8}\\right) \\times (-24)$',
+          questionText: '用 $-24$ 乘遍括号内四项，第一项 $\\frac{2}{3} \\times (-24)$ 等于多少？四项合并后的最终结果是多少？',
+          input1Prefix: '第一项 $=$',
+          input1Placeholder: '如 -16',
+          input2Prefix: '，最终结果 $=$',
+          input2Placeholder: '如 23',
+          input2Suffix: '',
+          expectedX: '-16',
+          expectedMin: '23',
+          allowOrderSwap: false,
+          correctFeedback: '第一项为 $-16$，四项合并得 $-16 + 20 - 2 + 21 = 23$。',
+          correctDetail: '原式 $= \\frac{2}{3}\\times(-24) - \\frac{5}{6}\\times(-24) + \\frac{1}{12}\\times(-24) - \\frac{7}{8}\\times(-24) = -16 + 20 - 2 + 21 = 23$。',
+          wrongFeedback: '注意乘以负数 $-24$ 后每一项都要变号：$-16 + 20 - 2 + 21$。',
+          specificWrongHints: []
+        }
+      }
+    }
   };
 
   window.PROCEDURAL_DYNAMIC_DEMOS = PROCEDURAL_DYNAMIC_DEMOS;

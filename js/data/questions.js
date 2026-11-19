@@ -12207,7 +12207,7 @@ window.QUESTION_BANK = [
     "chapter": "3.1.1 代数式的概念和列代数式",
     "stem": "如果单项式$\\frac{2}{3}x^{a+1}y$与$-2x^{3}y^{b+2}$是同类项，则$a=$_____，$b=$______．",
     "options": [],
-    "answer": "$2-1$",
+    "answer": "$a=2$，$b=-1$",
     "analysis": "根据同类项的定义，所含字母相同且相同字母的指数也相同，据此列一元一次方程求解即可得到$a$和$b$的值即可．",
     "detail": "解：∵单项式$\\frac{2}{3}x^{a+1}y$与$-2x^{3}y^{b+2}$是同类项，<br>∴$a+1=3$，$b+2=1$，<br>解得：$a=2$，$b=-1$．"
   },
@@ -12795,7 +12795,7 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "（1）$n$，$n+1$，$\\frac{n(n+1)}{2}$；（2）①$1^{3}+2^{3}+3^{3}+4^{3}+5^{3}={15}^{2}$；②${[\\frac{n(n+1)}{2}]}^{2}$；（3）$5050$",
     "analysis": "本题考查数字规律探究，利用数形结合，探究出规律是解题的关键．<br>（1）根据平行四边形的面积公式列式即可得解；<br>（2）①根据前四个图总结规律即可得解；②根据①中的等式总结规律即可得解；<br>（3）根据（1）（2）中的结论求解即可．",
-    "detail": "解：（1）把左边三角形倒放于斜线右边，与原三角形组成一个平行四边形．此时，组成平行四边形的小圆圈共有$n$行，每行有$(n+1)$个小圆圈，<br>∴组成一个三角形小圆圈的个数为$1+2+3+4+…+n=\\frac{n(n+1)}{2}$，<br>故答案为：$n$，$n+1$，$\\frac{n(n+1)}{2}$；<br>（2）①∵由第$1$图形得$1^{3}=1^{2}$，<br>由第$2$图形得$1^{3}+2^{3}={(1+2)}^{2}=3^{2}$，<br>由第$3$图形得$1^{3}+2^{3}+3^{3}={(1+2+3)}^{2}=6^{2}$，<br>由第$4$图形得$1^{3}+2^{3}+3^{2}+4^{3}={10}^{2}={(1+2+3+4)}^{2}={10}^{2}$，<br>∴第（$5$）个图形可以表示的等式为$1^{3}+2^{3}+3^{3}+4^{3}+5^{3}={(1+2+3+4+5)}^{2}={15}^{2}$，<br>故答案为：$1^{3}+2^{3}+3^{3}+4^{3}+5^{3}={15}^{2}$；<br>②由①可得：$1^{3}+2^{3}+3^{3}+⋯+n^{3}={[\\frac{n(n+1)}{2}]}^{2}$，<br>故答案为：${[\\frac{n(n+1)}{2}]}^{2}$；<br>（3）$\\frac{1^{3}+2^{3}+3^{3}+⋯⋯+{100}^{3}}{1+2+3+⋯+100}=\\frac{{[\\frac{100\\times (100+1)}{2}]}^{2}}{\\frac{100\\times (100+1)}{2}}=\\frac{100\\times (100+1)}{2}=5050$；"
+    "detail": "解：（1）把左边三角形倒放于斜线右边，与原三角形组成一个平行四边形．此时，组成平行四边形的小圆圈共有$n$行，每行有$(n+1)$个小圆圈，<br>∴组成一个三角形小圆圈的个数为$1+2+3+4+…+n=\\frac{n(n+1)}{2}$，<br>故答案为：$n$，$n+1$，$\\frac{n(n+1)}{2}$；<br>（2）①∵由第$1$图形得$1^{3}=1^{2}$，<br>由第$2$图形得$1^{3}+2^{3}={(1+2)}^{2}=3^{2}$，<br>由第$3$图形得$1^{3}+2^{3}+3^{3}={(1+2+3)}^{2}=6^{2}$，<br>由第$4$图形得$1^{3}+2^{3}+3^{3}+4^{3}={10}^{2}={(1+2+3+4)}^{2}={10}^{2}$，<br>∴第（$5$）个图形可以表示的等式为$1^{3}+2^{3}+3^{3}+4^{3}+5^{3}={(1+2+3+4+5)}^{2}={15}^{2}$，<br>故答案为：$1^{3}+2^{3}+3^{3}+4^{3}+5^{3}={15}^{2}$；<br>②由①可得：$1^{3}+2^{3}+3^{3}+⋯+n^{3}={[\\frac{n(n+1)}{2}]}^{2}$，<br>故答案为：${[\\frac{n(n+1)}{2}]}^{2}$；<br>（3）$\\frac{1^{3}+2^{3}+3^{3}+⋯⋯+{100}^{3}}{1+2+3+⋯+100}=\\frac{{[\\frac{100\\times (100+1)}{2}]}^{2}}{\\frac{100\\times (100+1)}{2}}=\\frac{100\\times (100+1)}{2}=5050$；"
   },
   {
     "id": "alg_oct30_6",
@@ -13627,11 +13627,11 @@ window.QUESTION_BANK = [
     "difficulty": "中等",
     "knowledge": "带有字母的绝对值化简问题、有理数加减混合运算的应用、程序流程图与代数式求值",
     "chapter": "3.2.1 求代数式的值",
-    "stem": "学习完有理数加、减、乘、除运算后，数学兴趣小组对新运算“$a※b$”进行了探究．<br>探究过程如下：<br>I.给出了“$a※b$”的一些具体例子：<br>$3※2=+53※5=-2(-1.4)※(-1.4)=0$<br>$4※0=+4(-3.5)※5=-1.53※3=0$<br>$(-2)※(-5)=+7(-5)※(-3)=-2$<br>$1※(-3)=+4(-1)※0=-1$<br>$0※(-2)=+20※5=-5$<br>II.根据上面的例子，小华画出了“$a※b$”的部分流程图如下：<br><img src=\"assets/images/img_docx_06c8594e4dce.png\" data-cx=\"3390900\" data-cy=\"1809750\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>Ⅲ.小明在小华的基础上进一步完善和改进，画出了“$a※b$”的流程图如下：<br><img src=\"assets/images/img_docx_d9a92c2d6811.png\" data-cx=\"4219575\" data-cy=\"2057400\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>根据以上探究过程，完成下面问题：<br>(1)在①$a+b$，②$a-b$，③$a\\times b$中，符合小华画的部分流程图的运算有______（只填序号）；<br>(2)小明画的流程图中的A处应填______，B处应填______；<br>(3)根据小明画的流程图解决下面问题：<br>①计算：$(-1)※2024$；<br>②若$2024※x=2025$，则x的值为______．",
+    "stem": "学习完有理数加、减、乘、除运算后，数学兴趣小组对新运算“$a※b$”进行了探究．<br>探究过程如下：<br>I.给出了“$a※b$”的一些具体例子：<br>$3※2=+5$<br>$3※5=-2$<br>$(-1.4)※(-1.4)=0$<br>$4※0=+4$<br>$(-3.5)※5=-1.5$<br>$3※3=0$<br>$(-2)※(-5)=+7$<br>$(-5)※(-3)=-2$<br>$1※(-3)=+4$<br>$(-1)※0=-1$<br>$0※(-2)=+2$<br>$0※5=-5$<br>II.根据上面的例子，小华画出了“$a※b$”的部分流程图如下：<br><img src=\"assets/images/img_docx_06c8594e4dce.png\" data-cx=\"3390900\" data-cy=\"1809750\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>Ⅲ.小明在小华的基础上进一步完善和改进，画出了“$a※b$”的流程图如下：<br><img src=\"assets/images/img_docx_d9a92c2d6811.png\" data-cx=\"4219575\" data-cy=\"2057400\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>根据以上探究过程，完成下面问题：<br>(1)在①$a+b$，②$a-b$，③$a\\times b$中，符合小华画的部分流程图的运算有______（只填序号）；<br>(2)小明画的流程图中的A处应填______，B处应填______；<br>(3)根据小明画的流程图解决下面问题：<br>①计算：$(-1)※2024$；<br>②若$2024※x=2025$，则x的值为______．",
     "options": [],
     "answer": "(1)②<br>(2)$|a|+|b|$；$||a|-|b||$<br>(3)①$-2023$；②1或$-1$",
     "analysis": "本题考查了新定义运算、程序流程图、有理数的混合运算，理解题意，根据新运算结果探究出运算规律是解题的关键．<br>（1）根据小华画的部分流程图，结合题目的运算即可判断；<br>（2）根据“$a※b$”的一些具体例子，分$a \\gt b$和$a \\lt b$两种情况讨论，利用有理数的混合运算法则即可解答；<br>（3）①利用（2）中的运算规律，直接计算即可；②由$2024※x=2025 \\gt 0$可得$x \\lt 2024$，从而列出方程$|2024|+|x|=2025$，解出$x$的值即可解答．",
-    "detail": "（1）解：当$a=b$时，$a+b$和$a\\times b$不一定为0，故①③不符合小华画的部分流程图的运算；<br>当$a \\gt b$时，$a-b$符号为正；当$a=b$时，$a-b$结果为0；当$a \\lt b$时，$a-b$符号为负；故②符合小华画的部分流程图的运算；<br>故答案为：②．<br>（2）解：$\\because 3※2=+5=|3|+|2|$，$4※0=+4=|4|+|0|$，$(-2)※(-5)=+7=|-2|+|-5|$，$1※(-3)=+4=|1|+|-3|$，$0※(-2)=+2=|0|+|-2|$，<br>$\\therefore$当$a \\gt b$时，$a※b=|a|+|b|$，<br>$\\therefore$小明画的流程图中的A处应填$|a|+|b|$；<br>$\\because 3※5=-2=-||3|-|5||$，$(-3.5)※5=-1.5=-||-3.5|-|5||$，$(-5)※(-3)=-2=-||-5|-|-3||$，$(-1)※0=-||-1|-|0||$，$0※5=-5=-||0|-|5||$，<br>$\\therefore$当$a \\lt b$时，$a※b=-||a|-|b||$；<br>$\\therefore$小明画的流程图中的B处应填$||a|-|b||$；<br>故答案为：$|a|+|b|$；$||a|-|b||$．<br>（3）解：①$\\because -1 \\lt 2024$，<br>$\\therefore (-1)※2024=-||-1|-|2024||=-|1-1024|=-2023$；<br>②$\\because 2024※x=2025 \\gt 0$，<br>$\\therefore 2024 \\gt x$，即$x \\lt 2024$，<br>$\\therefore 2024※x=|2024|+|x|=2025$，<br>$\\therefore |x|=1$，<br>解得：$x=1$或$x=-1$，<br>$\\therefore x$的值为1或$-1$．<br>故答案为：1或$-1$．"
+    "detail": "（1）解：当$a=b$时，$a+b$和$a\\times b$不一定为0，故①③不符合小华画的部分流程图的运算；<br>当$a \\gt b$时，$a-b$符号为正；当$a=b$时，$a-b$结果为0；当$a \\lt b$时，$a-b$符号为负；故②符合小华画的部分流程图的运算；<br>故答案为：②．<br>（2）解：$\\because 3※2=+5=|3|+|2|$，$4※0=+4=|4|+|0|$，$(-2)※(-5)=+7=|-2|+|-5|$，$1※(-3)=+4=|1|+|-3|$，$0※(-2)=+2=|0|+|-2|$，<br>$\\therefore$当$a \\gt b$时，$a※b=|a|+|b|$，<br>$\\therefore$小明画的流程图中的A处应填$|a|+|b|$；<br>$\\because 3※5=-2=-||3|-|5||$，$(-3.5)※5=-1.5=-||-3.5|-|5||$，$(-5)※(-3)=-2=-||-5|-|-3||$，$(-1)※0=-||-1|-|0||$，$0※5=-5=-||0|-|5||$，<br>$\\therefore$当$a \\lt b$时，$a※b=-||a|-|b||$；<br>$\\therefore$小明画的流程图中的B处应填$||a|-|b||$；<br>故答案为：$|a|+|b|$；$||a|-|b||$．<br>（3）解：①$\\because -1 \\lt 2024$，<br>$\\therefore (-1)※2024=-||-1|-|2024||=-|1-2024|=-2023$；<br>②$\\because 2024※x=2025 \\gt 0$，<br>$\\therefore 2024 \\gt x$，即$x \\lt 2024$，<br>$\\therefore 2024※x=|2024|+|x|=2025$，<br>$\\therefore |x|=1$，<br>解得：$x=1$或$x=-1$，<br>$\\therefore x$的值为1或$-1$．<br>故答案为：1或$-1$．"
   },
   {
     "id": "op_oct30_21",
@@ -14433,7 +14433,7 @@ window.QUESTION_BANK = [
     "chapter": "第三章 代数式单元测试",
     "stem": "历史上，数学家欧拉最先把关于 x 的多项式用记号$f(x)$来表示，把x等于某数a时的多项式的值用$f(a)$来表示． 例如 $x=-1$ 时，多项式$f(x)=x^{2}+3x-5$的值记为$f(-1)$，则$f(-1)=-7$． 已知多项式$f(x)=ax^{5}+bx^{3}+3x+c$，且$f(0)=-1$．<br>（1）$c=$_____；<br>（2）若$f(2)=9$，则$f(-2)=$_____",
     "options": [],
-    "answer": "$-1-11$",
+    "answer": "（1）$-1$<br>（2）$-11$",
     "analysis": "本题主要考查了代数式求值，新定义，添括号，．<br>（1）直接把$x=0$代入$ax^{5}+bx^{3}+3x+c=-1$中进行求解即可；<br>（2）根据$f(2)=9$，得到$f(2)=32a+8b+6-1=9$，则$8a+2b=1$，再由$f(-2)=-32a-8b-6-1=-4(8a+2b)-7$进行求解即可．",
     "detail": "解：（1）∵$f(0)=-1$，<br>∴把$x=0$代入$ax^{5}+bx^{3}+3x+c$得$c=-1$，<br>故答案为：$-1$；<br>（2）∵$f(2)=9$，$c=-1$，<br>∴$f(2)=32a+8b+6-1=9$，<br>∴$8a+2b=1$，<br>∴$f(-2)=-32a-8b-6-1=-4(8a+2b)-7=-4\\times 1-7=-11$．<br>故答案为：$-11$．"
   },
@@ -14529,9 +14529,9 @@ window.QUESTION_BANK = [
     "chapter": "第三章 代数式单元测试",
     "stem": "2024年11月12日，温州市实验中学$(WenZhouExperimentalMiddleSchool)$即将迎来80周年校庆，学校计划在校园内制作一面分别印有“W”“E”“M”“S”的打卡墙，萌萌班负责字母“E”的设计，如图是她们的设计图——由3个长和宽分别为a和b的长方形，2个边长为b的正方形和3个半径为b的$\\frac{1}{4}$圆组成．<br><img src=\"assets/images/img_docx_aa1ce8c43ae0.png\" data-cx=\"1362075\" data-cy=\"1257300\" style=\"width:143px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)字母“E”的面积可表示为_______；（用含a、b的代数式表示，结果保留π）<br>(2)计划专门定制实验红的亚克力板进行制作，商家说：“定制的单价为100元/平方米，另外需要收取20元的加工费．”若$a=30$厘米，$b=16$厘米，则预计需要花费多少钱？（π取3，结果精确到个位）",
     "options": [],
-    "answer": "(1)$3ab+2b^{2}+\\frac{3}{4}\\pi b^{2}$<br>(2)46元",
+    "answer": "(1)$3ab+2b^{2}+\\frac{3}{4}\\pi b^{2}$<br>(2)45元",
     "analysis": "本题主要考查了列代数式，代数式求值，解题的关键是熟练掌握圆的面积公式和长方形面积公式．<br>（1）根据圆的面积公式，长方形面积公式求出结果即可；<br>（2）把$a=30$厘米，$b=16$厘米，代入求出图形面积，然后再求出结果即可．",
-    "detail": "（1）解：字母“E”的面积可表示为：<br>$3ab+2b^{2}+3\\times \\frac{1}{4}\\pi b^{2}=3ab+2b^{2}+\\frac{3}{4}\\pi b^{2}$．<br>（2）解：当$a=30$厘米，$b=16$厘米，π取3时，字母“E”的面积为：<br>$3\\times 30\\times 16+2\\times {16}^{2}+\\frac{3}{4}\\times 3\\times {16}^{2}=2528$（平方厘米），<br>$2582$平方厘米$=0.2582$平方米，"
+    "detail": "（1）解：字母“E”的面积可表示为：<br>$3ab+2b^{2}+3\\times \\frac{1}{4}\\pi b^{2}=3ab+2b^{2}+\\frac{3}{4}\\pi b^{2}$．<br>（2）解：当$a=30$厘米，$b=16$厘米，π取3时，字母“E”的面积为：<br>$3\\times 30\\times 16+2\\times {16}^{2}+\\frac{3}{4}\\times 3\\times {16}^{2}=2528$（平方厘米），<br>$2528$平方厘米$=0.2528$平方米，<br>$0.2528\\times 100+20=45.28\\approx 45$（元），<br>答：预计需要花费45元．"
   },
   {
     "id": "g7_2_0",
@@ -14543,7 +14543,7 @@ window.QUESTION_BANK = [
     "difficulty": "容易",
     "knowledge": "用代数式表示数、图形的规律",
     "chapter": "第三章 代数式单元测试",
-    "stem": "$0.2582\\times 100+20=45.82\\approx 46$（元），<br>答：预计需要花费46元．<br>38．我国著名数学家华罗庚曾经说过，“数形结合百般好，隔裂分家万事非”，数形结合的思想方法在数学中应用极为广泛．观察下列按照一定规律堆砌的小钢管的横截面图：<br><img src=\"assets/images/img_docx_0c567b8416f0.png\" data-cx=\"3286125\" data-cy=\"762000\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)当$n=1$时，钢管总数为______；<br>当$n=2$时，钢管总数为______；<br>当$n=3$时，钢管总数为______；<br>当$n=4$时，钢管总数为______；<br>(2)若按照这个规律继续堆砌小钢管，计算第25个图的钢管总数，并写出你的分析过程．",
+    "stem": "我国著名数学家华罗庚曾经说过，“数形结合百般好，隔裂分家万事非”，数形结合的思想方法在数学中应用极为广泛．观察下列按照一定规律堆砌的小钢管的横截面图：<br><img src=\"assets/images/img_docx_0c567b8416f0.png\" data-cx=\"3286125\" data-cy=\"762000\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)当$n=1$时，钢管总数为______；<br>当$n=2$时，钢管总数为______；<br>当$n=3$时，钢管总数为______；<br>当$n=4$时，钢管总数为______；<br>(2)若按照这个规律继续堆砌小钢管，计算第25个图的钢管总数，并写出你的分析过程．",
     "options": [],
     "answer": "(1)3；9；18；30<br>(2)<br>解：设钢管总数为$S_{n}$，<br>因为$S_{1}=1+2$；<br>$S_{2}=1+2+3+3$；<br>$S_{3}=1+2+3+4+4+4$；<br>$S_{4}=1+2+3+4+5+5+5+5$，<br>所以$S_{n}=(1+2+3+\\cdot \\cdot \\cdot +n)+n(n+1)=\\frac{n(n+1)}{2}+n(n+1)$，<br>将$n=25$代入，得$S_{n}=\\frac{25\\times 26}{2}+25\\times 26=975$，<br>所以第25个图的钢管总数为975个．",
     "analysis": "本题主要考查了图形规律探索，解题的关键是根据已知图形得出规律．<br>（1）根据已知图形得出对应n的值即可；<br>（2）根据已知图形得出一般规律，然后令$n=25$，求出结果即可．",
@@ -18616,7 +18616,7 @@ window.QUESTION_BANK = [
     "chapter": "15.1.2 线段的垂直平分线",
     "stem": "【阅读理解】<br>如果把一个命题（记作$p$）的题设和结论交换位置，得到另一个命题（记作$q$），那么这两个命题叫做互逆命题，其中命题$p$称为原命题，命题$q$称为原命题的逆命题．<br>例如：原命题“对顶角相等”的逆命题为“相等的角是对顶角”．<br>【解决问题】<br>给出命题$p:$“如果$a=b$，那么$|a|=|b|$．”<br>(1)写出命题$p$的题设和结论，及逆命题$q$．<br>(2)判断命题$q$是真命题还是假命题，若是假命题，请举出一个反例进行说明．",
     "options": [],
-    "answer": "(1)$a=b$是题设，$|a|=|b|$是结论；逆命题$q$是：如果$|a|=|b|$，那么$a=b$<br>(2)<br>命题$q$是假命题，<br>反倒：$a=3, b=-3, |3|=|-3|$，但是3不等于$-3$．",
+    "answer": "(1)$a=b$是题设，$|a|=|b|$是结论；逆命题$q$是：如果$|a|=|b|$，那么$a=b$<br>(2)<br>命题$q$是假命题，<br>反例：$a=3, b=-3, |3|=|-3|$，但是3不等于$-3$．",
     "analysis": "本题考查了命题：要说明一个命题的正确性，一般需要推理、论证，而判断一个命题是假命题，只需举出一个反例即可．<br>（1）命题的题设为$a=b$，“那么”后面为结论，再交换题设和结论得到原命题的逆命题；<br>（2）命题$q$是假命题，举出一个反例进行说明即可．",
     "detail": "（1）解：∵命题$p:$“如果$a=b$，那么$|a|=|b|$．<br>∴$a=b$是题设，$|a|=|b|$是结论；<br>逆命题$q$是：如果$|a|=|b|$，那么$a=b$．<br>（2）解：略．"
   },
@@ -19323,7 +19323,7 @@ window.QUESTION_BANK = [
     "difficulty": "中等",
     "knowledge": "等边三角形的性质、含30度角的直角三角形",
     "chapter": "15.3.4 等边三角形的判定",
-    "stem": "如图，$\\triangle ABC$是等边三角形，点D是$AC$的中点，$DE\\perp AC$于点E，若$CE=3$，则$AB$的长为（　　）<br><img src=\"assets/images/img_docx_e738eb1a59b5.png\" data-cx=\"1371600\" data-cy=\"1304925\" style=\"width:144px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+    "stem": "如图，$\\triangle ABC$是等边三角形，点D是$AC$的中点，$DE\\perp BC$于点E，若$CE=3$，则$AB$的长为（　　）<br><img src=\"assets/images/img_docx_e738eb1a59b5.png\" data-cx=\"1371600\" data-cy=\"1304925\" style=\"width:144px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
     "options": [
       "A. 12",
       "B. 9",
@@ -19482,7 +19482,7 @@ window.QUESTION_BANK = [
     "difficulty": "中等",
     "knowledge": "用代数式表示数、图形的规律、等边三角形的性质、含30度角的直角三角形",
     "chapter": "15.3.5 30°角的直角三角形的性质",
-    "stem": "如图，已知：∠MON=30$^{o}$，点A$_{1}$、A$_{2}$、A$_{3}$在射线ON上，点B$_{1}$、B$_{2}$、B$_{3}$…．．在射线OM上，△A$_{1}$B$_{1}$A$_{2}$. △A$_{2}$B$_{2}$A$_{3}$、△A$_{3}$B$_{3}$A$_{4}$……均为等边三角形，若OA$_{1}$=l，则△A$_{6}$B$_{6}$A$_{7}$的边长为【 】<br><img src=\"assets/images/img_docx_5837bd779059.png\" data-cx=\"2400635\" data-cy=\"1171739\" style=\"width:252px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
+    "stem": "如图，已知：∠MON=30$^{o}$，点A$_{1}$、A$_{2}$、A$_{3}$在射线ON上，点B$_{1}$、B$_{2}$、B$_{3}$…．．在射线OM上，△A$_{1}$B$_{1}$A$_{2}$. △A$_{2}$B$_{2}$A$_{3}$、△A$_{3}$B$_{3}$A$_{4}$……均为等边三角形，若OA$_{1}$=1，则△A$_{6}$B$_{6}$A$_{7}$的边长为【 】<br><img src=\"assets/images/img_docx_5837bd779059.png\" data-cx=\"2400635\" data-cy=\"1171739\" style=\"width:252px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\">",
     "options": [
       "A. 6",
       "B. 12",
@@ -19583,11 +19583,11 @@ window.QUESTION_BANK = [
     "difficulty": "中等",
     "knowledge": "全等三角形综合问题、等边三角形的性质、含30度角的直角三角形",
     "chapter": "15.3.5 30°角的直角三角形的性质",
-    "stem": "如图1所示，在边长为$6cm$的等边$\\triangle ABC$中，动点$P$以$1cm/s$的速度从点$A$出发，沿线段$AB$向点$B$运动．设点$P$的运动时间为$t(s)$，$t \\gt 0$．<br><img src=\"assets/images/img_docx_2613f862df49.png\" data-cx=\"4124325\" data-cy=\"1266825\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)当$t=$______时，$\\triangle PAC$是直角三角形；<br>(2)如图2，若另一动点$Q$从点$C$出发，沿线段$CA$向点$A$运动，且动点$P$，$Q$均以$1cm/s$的速度同时出发．那么当$t$取何值时，$\\triangle PAQ$是直角三角形？请说明理由；<br>(3)如图3，若另一动点$Q$从点$C$出发，沿射线$BC$方向运动，且动点$P$，$Q$均以$1cm/s$的速度同时出发，当点$P$到达终点$B$时，点$Q$也随之停止运动，连接$PQ$交$AC$于点$D$，过点$P$作$PE\\perp AC$于$E$．试问线段$DE$的长度是否变化？若变化，请说明如何变化；若不变，请求出$DE$的长度．",
+    "stem": "如图1所示，在边长为$6cm$的等边$\\triangle ABC$中，动点$P$以$1cm/s$的速度从点$A$出发，沿线段$AB$向点$B$运动．设点$P$的运动时间为$t(s)$，$0 \\lt t \\leq 6$．<br><img src=\"assets/images/img_docx_2613f862df49.png\" data-cx=\"4124325\" data-cy=\"1266825\" style=\"width:280px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>(1)当$t=$______时，$\\triangle PAC$是直角三角形；<br>(2)如图2，若另一动点$Q$从点$C$出发，沿线段$CA$向点$A$运动，且动点$P$，$Q$均以$1cm/s$的速度同时出发．那么当$t$取何值时，$\\triangle PAQ$是直角三角形？请说明理由；<br>(3)如图3，若另一动点$Q$从点$C$出发，沿射线$BC$方向运动，且动点$P$，$Q$均以$1cm/s$的速度同时出发，当点$P$到达终点$B$时，点$Q$也随之停止运动，连接$PQ$交$AC$于点$D$，过点$P$作$PE\\perp AC$于$E$．试问线段$DE$的长度是否变化？若变化，请说明如何变化；若不变，请求出$DE$的长度．",
     "options": [],
     "answer": "(1)$3s$<br>(2)当$t$为$2s$或$4s$时，$\\triangle PAQ$是直角三角形<br>(3)$DE$的长度不变化，为$3cm$",
-    "analysis": "（1）由等边三角形的性质可得$AB=BC=AC=6cm$，$\\angle A=\\angle B=\\angle ACB=60^\\circ$，由题意可得$\\angle APC=90^\\circ$，求出$\\angle ACP=30^\\circ$，由直角三角形的性质可得$AP=\\frac{1}{2}AC=3cm$，即可得解；<br>（2）分两种情况：当$\\angle APQ=90^\\circ$时，当$\\angle AQP=90^\\circ$时，分别利用直角三角形的性质列出一元一次方程，解方程即可得解；<br>（3）过点$Q$作$QF\\perp AC$交$AC$的延长线于$F$，证明$\\triangle APE\\cong \\triangle CQF(AAS)$，得出$AE=CF$，$PE=QF$，证明$\\triangle PDE\\cong \\triangle QDE(AAS)$，得出$DE=DF=\\frac{1}{2}EF$，求出$EF=AC=6cm$，即可得解．",
-    "detail": "（1）解：∵$\\triangle ABC$为等边三角形，<br>∴$AB=BC=AC=6cm$，$\\angle A=\\angle B=\\angle ACB=60^\\circ$，<br>∵$\\triangle PAC$是直角三角形，<br>∴$\\angle APC=90^\\circ$，<br>∴$\\angle ACP=90^\\circ -\\angle A=30^\\circ$，<br>∴$AP=\\frac{1}{2}AC=3cm$，<br>∵动点$P$以$1cm/s$的速度从点$A$出发，沿线段$AB$向点$B$运动，设点$P$的运动时间为$t(s)$，$t \\gt 0$，<br>∴$t=3\\div 1=3(s)$；<br>（2）解：∵$\\triangle PAQ$是直角三角形，<br>∴分两种情况：当$\\angle APQ=90^\\circ$时，如图：<br><img src=\"assets/images/img_docx_87f580fc27cb.png\" data-cx=\"1076325\" data-cy=\"1095375\" style=\"width:113px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>则$\\angle AQP=90^\\circ -\\angle A=30^\\circ$，<br>∴$AQ=2AP$，<br>由题意可得：$AP=CQ=tcm$，<br>∴$AQ=AC-CQ=(6-t)cm$，<br>∴$6-t=2t$，<br>解得：$t=2$；<br>当$\\angle AQP=90^\\circ$时，如图：<br><img src=\"assets/images/img_docx_71c957055589.png\" data-cx=\"1085850\" data-cy=\"1104900\" style=\"width:114px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>则$\\angle APQ=90^\\circ -\\angle A=30^\\circ$，<br>∴$AP=2AQ$，<br>∴$t=2(6-t)$，<br>解得：$t=4$；<br>综上所述，当$t$为$2s$或$4s$时，$\\triangle PAQ$是直角三角形；<br>（3）解：$DE$的长度不变化，为$3cm$，<br>如图，过点$Q$作$QF\\perp AC$交$AC$的延长线于$F$，<br><img src=\"assets/images/img_docx_23241b053981.png\" data-cx=\"1628775\" data-cy=\"1228725\" style=\"width:171px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>∵$PE\\perp AC$，$QF\\perp AC$，<br>∴$\\angle AEP=\\angle DEP=\\angle CFQ=90^\\circ$，<br>∵$\\angle QCF=\\angle ACB=60^\\circ$，<br>∴$\\angle A=\\angle QCF$，<br>∵$AP=CQ$，<br>∴$\\triangle APE\\cong \\triangle CQF(AAS)$，<br>∴$AE=CF$，$PE=QF$，<br>又∵$\\angle PDE=\\angle QDF$，<br>∴$\\triangle PDE\\cong \\triangle QDE(AAS)$，<br>∴$DE=DF=\\frac{1}{2}EF$，<br>∵$EF=CE+CF$，$AC=CE+AE$，<br>∴$EF=AC=6cm$，<br>∴$DE=\\frac{1}{2}EF=3cm$，<br>∴$DE$的长度不变化，为$3cm$．<br>【点睛】本题考查了等边三角形的性质、直角三角形的性质、一元一次方程的应用、全等三角形的判定与性质，熟练掌握以上知识点并灵活运用，添加适当的辅助线是解此题的关键．"
+    "analysis": "（1）由等边三角形的性质可得$AB=BC=AC=6cm$，$\\angle A=\\angle B=\\angle ACB=60^\\circ$，由题意可得$\\angle APC=90^\\circ$，求出$\\angle ACP=30^\\circ$，由直角三角形的性质可得$AP=\\frac{1}{2}AC=3cm$，即可得解；<br>（2）分两种情况：当$\\angle APQ=90^\\circ$时，当$\\angle AQP=90^\\circ$时，分别利用直角三角形的性质列出一元一次方程，解方程即可得解；<br>（3）过点$Q$作$QF\\perp AC$交$AC$的延长线于$F$，证明$\\triangle APE\\cong \\triangle CQF(AAS)$，得出$AE=CF$，$PE=QF$，证明$\\triangle PDE\\cong \\triangle QDF(AAS)$，得出$DE=DF=\\frac{1}{2}EF$，求出$EF=AC=6cm$，即可得解．",
+    "detail": "（1）解：∵$\\triangle ABC$为等边三角形，<br>∴$AB=BC=AC=6cm$，$\\angle A=\\angle B=\\angle ACB=60^\\circ$，<br>∵$\\triangle PAC$是直角三角形，<br>∴$\\angle APC=90^\\circ$，<br>∴$\\angle ACP=90^\\circ -\\angle A=30^\\circ$，<br>∴$AP=\\frac{1}{2}AC=3cm$，<br>∵动点$P$以$1cm/s$的速度从点$A$出发，沿线段$AB$向点$B$运动，设点$P$的运动时间为$t(s)$，$0 \\lt t \\leq 6$，<br>∴$t=3\\div 1=3(s)$；<br>（2）解：∵$\\triangle PAQ$是直角三角形，<br>∴分两种情况：当$\\angle APQ=90^\\circ$时，如图：<br><img src=\"assets/images/img_docx_87f580fc27cb.png\" data-cx=\"1076325\" data-cy=\"1095375\" style=\"width:113px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>则$\\angle AQP=90^\\circ -\\angle A=30^\\circ$，<br>∴$AQ=2AP$，<br>由题意可得：$AP=CQ=tcm$，<br>∴$AQ=AC-CQ=(6-t)cm$，<br>∴$6-t=2t$，<br>解得：$t=2$；<br>当$\\angle AQP=90^\\circ$时，如图：<br><img src=\"assets/images/img_docx_71c957055589.png\" data-cx=\"1085850\" data-cy=\"1104900\" style=\"width:114px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>则$\\angle APQ=90^\\circ -\\angle A=30^\\circ$，<br>∴$AP=2AQ$，<br>∴$t=2(6-t)$，<br>解得：$t=4$；<br>综上所述，当$t$为$2s$或$4s$时，$\\triangle PAQ$是直角三角形；<br>（3）解：$DE$的长度不变化，为$3cm$，<br>如图，过点$Q$作$QF\\perp AC$交$AC$的延长线于$F$，<br><img src=\"assets/images/img_docx_23241b053981.png\" data-cx=\"1628775\" data-cy=\"1228725\" style=\"width:171px;max-width:100%;height:auto\" class=\"inline-block align-middle my-1 rounded\"><br>∵$PE\\perp AC$，$QF\\perp AC$，<br>∴$\\angle AEP=\\angle DEP=\\angle CFQ=90^\\circ$，<br>∵$\\angle QCF=\\angle ACB=60^\\circ$，<br>∴$\\angle A=\\angle QCF$，<br>∵$AP=CQ$，<br>∴$\\triangle APE\\cong \\triangle CQF(AAS)$，<br>∴$AE=CF$，$PE=QF$，<br>又∵$\\angle PDE=\\angle QDF$，<br>∴$\\triangle PDE\\cong \\triangle QDF(AAS)$，<br>∴$DE=DF=\\frac{1}{2}EF$，<br>∵$EF=CE+CF$，$AC=CE+AE$，<br>∴$EF=AC=6cm$，<br>∴$DE=\\frac{1}{2}EF=3cm$，<br>∴$DE$的长度不变化，为$3cm$．<br>【点睛】本题考查了等边三角形的性质、直角三角形的性质、一元一次方程的应用、全等三角形的判定与性质，熟练掌握以上知识点并灵活运用，添加适当的辅助线是解此题的关键．"
   },
   {
     "id": "g8_lh_mid_q15",
@@ -48740,7 +48740,7 @@ window.QUESTION_BANK = [
     "typeName": "解答题",
     "difficulty": "中等",
     "knowledge": "画旋转图形；判断中心对称图形的对称中心；平移(作图)",
-    "stem": "如图，在平面直角坐标系中，已知$\\triangle ABC$的三个顶点坐标分别为$A(1,3)$，$B(4.4)$，$C(2,1)$．<br/><img src=\"assets/images/ch28_2_2_a_image27.png\" style=\"width:230px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>（1）将$\\triangle ABC$平移至$\\triangle A_{1}B_{1}C_{1}$，使得点$A$的对应点$A_{1}$的坐标为$(-3,3)$，请在图中直接画出平移后的<img src=\"assets/images/ch28_2_2_a_image28.png\" style=\"width:57px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">；<br/>（2）将$\\triangle ABC$绕原点$O$旋转$180^\\circ$后得到$\\triangle A_{2}B_{2}C_{2}$，直接在图中画出旋转后的$\\triangle A_{2}B_{2}C_{2}$；<br/>（3）观察图形可知，$\\triangle A_{1}B_{1}C_{1}$与$\\triangle A_{2}B_{2}C_{2}$关于点________中心对称．（直接写出该点坐标）",
+    "stem": "如图，在平面直角坐标系中，已知$\\triangle ABC$的三个顶点坐标分别为$A(1,3)$，$B(4,4)$，$C(2,1)$．<br/><img src=\"assets/images/ch28_2_2_a_image27.png\" style=\"width:230px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>（1）将$\\triangle ABC$平移至$\\triangle A_{1}B_{1}C_{1}$，使得点$A$的对应点$A_{1}$的坐标为$(-3,3)$，请在图中直接画出平移后的<img src=\"assets/images/ch28_2_2_a_image28.png\" style=\"width:57px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\">；<br/>（2）将$\\triangle ABC$绕原点$O$旋转$180^\\circ$后得到$\\triangle A_{2}B_{2}C_{2}$，直接在图中画出旋转后的$\\triangle A_{2}B_{2}C_{2}$；<br/>（3）观察图形可知，$\\triangle A_{1}B_{1}C_{1}$与$\\triangle A_{2}B_{2}C_{2}$关于点________中心对称．（直接写出该点坐标）",
     "options": [],
     "answer": "（1）<br/>$\\triangle ABC$向左平移4个单位得到$\\triangle A_{1}B_{1}C_{1}$，如图所示：<br/><img src=\"assets/images/ch28_2_2_a_image29.png\" style=\"width:208px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>（2）<br/>解：$\\triangle A_{2}B_{2}C_{2}$如图所示：<br/><img src=\"assets/images/ch28_2_2_a_image30.png\" style=\"width:208px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>（3）$(-2,0)$",
     "analysis": "（1）根据点$A(1,3)$对应点$A_{1}(-3,3)$，则三角形向左平移4个单位作图即可；<br/>（2）根据$\\triangle ABC$绕原点$O$旋转$180^\\circ$，顺次连接即可得到；<br/>（3）连接对应点即可确定交点位置，由此可得坐标．",
@@ -49096,9 +49096,9 @@ window.QUESTION_BANK = [
     "knowledge": "坐标与图形；判断两个点是否关于原点对称",
     "stem": "如图，$AB\\parallel CD\\parallel x$轴，且$AB=CD=3$，点A的坐标为$(-1,1)$，点C的坐标为$(1,-1)$．<br/><img src=\"assets/images/ch28_2_3_b_image6.png\" style=\"width:132px;max-width:100%;height:auto;\" class=\"inline-block align-middle my-1 rounded\"><br/>（1）写出点B，D的坐标；<br/>（2）你发现点A，B，C，D的坐标之间有何特征？",
     "options": [],
-    "answer": "（1）$B(2,1),D(-2,-1)$<br/>（2）<br/>$\\because$$A(-1,1)$，$C(-1,1)$的横、纵坐标互为相反数，<br/>$\\therefore A、C$关于原点对称．<br/>同理，$B、D$关于原点对称．",
+    "answer": "（1）$B(2,1),D(-2,-1)$<br/>（2）<br/>$\\because$$A(-1,1)$，$C(1,-1)$的横、纵坐标互为相反数，<br/>$\\therefore A、C$关于原点对称．<br/>同理，$B、D$关于原点对称．",
     "analysis": "本题主要考查平行于$x$轴的直线的特点，熟练掌握平行于$x$轴的直线的特点是解题的关键．<br/>（1）根据平行于$x$轴的直线的特点以及$AB=CD=3$得出$B、D$坐标；<br/>（2）对比A，B，C，D的坐标即可发现之间的关系．",
-    "detail": "（1）解：$\\because$$AB\\parallel CD\\parallel x$轴，$A(-1,1)$，$C(-1,1)$，<br/>$\\therefore$点B，D的纵坐标分别是1，$-1$．<br/>$\\because AB=CD=3$，<br/>$\\therefore B(2,1),D(-2,-1)$．<br/>（2）略"
+    "detail": "（1）解：$\\because$$AB\\parallel CD\\parallel x$轴，$A(-1,1)$，$C(1,-1)$，<br/>$\\therefore$点B，D的纵坐标分别是1，$-1$．<br/>$\\because AB=CD=3$，<br/>$\\therefore B(2,1),D(-2,-1)$．<br/>（2）略"
   },
   {
     "id": "g6_sd_q1",
@@ -53594,7 +53594,7 @@ window.QUESTION_BANK = [
     "chapter": "3.2.1 求代数式的值",
     "stem": "若a，b互为相反数，则$(-2025)+a+2024+b=$ ______ ，$|a-10+b|=$ ______ ．",
     "options": [],
-    "answer": "$-1$ ______ 10",
+    "answer": "$-1$；$10$",
     "analysis": "先根据相反数的定义求出$a+b=0$，再整体代入计算，并根据绝对值解答．",
     "detail": "解：∵a，b互为相反数，<br>∴$a+b=0$，<br>所以$(-2025)+a+2024+b=-2025+2024+(a+b)=-1+0=-1$；<br>$|a-10+b|=|(a+b)-10|=|-10|=10$．"
   },

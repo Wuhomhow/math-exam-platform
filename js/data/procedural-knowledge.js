@@ -799,17 +799,17 @@
           type: 'procedural_knowledge'
         },
         {
-          id: null,
-          name: '有理数的加、减、乘、除、乘方混合运算法则',
-          type: 'operation'
+          id: 'P32',
+          name: '运用有理数乘方符号法则与混合运算顺序计算',
+          type: 'procedural_knowledge'
         },
         {
-          id: null,
-          name: '绝对值与偶次幂的非负性（$|A|\\ge 0,\ B^{2}\\ge 0$）',
-          type: 'concept'
+          id: 'P33',
+          name: '运用绝对值的性质、非负性求值及比较有理数大小',
+          type: 'procedural_knowledge'
         }
       ],
-      prerequisiteProcedureIds: ['P05'],
+      prerequisiteProcedureIds: ['P05', 'P32', 'P33'],
       subsequentProcedureIds: ['P20', 'P28', 'P29'],
       relatedProcedureIds: ['P09'],
       pitfalls: [
@@ -909,12 +909,17 @@
           type: 'procedural_knowledge'
         },
         {
+          id: 'P32',
+          name: '运用有理数乘方符号法则与混合运算顺序计算',
+          type: 'procedural_knowledge'
+        },
+        {
           id: null,
-          name: '相反数的性质（$a+b=0$）、倒数的性质（$cd=1$）与奇次幂符号特征（$(-x)^{2k+1}=-x^{2k+1}$）',
+          name: '相反数的性质（$a+b=0$）与倒数的性质（$cd=1$）',
           type: 'concept'
         }
       ],
-      prerequisiteProcedureIds: ['P08', 'P28'],
+      prerequisiteProcedureIds: ['P08', 'P28', 'P32'],
       subsequentProcedureIds: [],
       relatedProcedureIds: ['P08'],
       pitfalls: [
@@ -1105,8 +1110,13 @@
           type: 'procedural_knowledge'
         },
         {
+          id: 'P31',
+          name: '判定分式有意义/值为0条件及运用分式基本性质约分通分',
+          type: 'procedural_knowledge'
+        },
+        {
           id: null,
-          name: '负整数指数幂的意义（$x^{-1}=\\frac{1}{x}\\ (x\\neq 0)$）与分式有意义的条件',
+          name: '负整数指数幂的意义（$x^{-1}=\\frac{1}{x}\\ (x\\neq 0)$）',
           type: 'concept'
         },
         {
@@ -1115,7 +1125,7 @@
           type: 'operation'
         }
       ],
-      prerequisiteProcedureIds: ['P07'],
+      prerequisiteProcedureIds: ['P07', 'P31'],
       subsequentProcedureIds: ['P12', 'P13'],
       relatedProcedureIds: ['P07'],
       pitfalls: [
@@ -1422,12 +1432,12 @@
           type: 'procedural_knowledge'
         },
         {
-          id: null,
-          name: '有理数大小比较法则（正数大于0，负数小于0，两个负数绝对值大的反而小）',
-          type: 'operation'
+          id: 'P33',
+          name: '运用绝对值的性质、非负性求值及比较有理数大小',
+          type: 'procedural_knowledge'
         }
       ],
-      prerequisiteProcedureIds: ['P13'],
+      prerequisiteProcedureIds: ['P13', 'P33'],
       subsequentProcedureIds: [],
       relatedProcedureIds: ['P12', 'P15'],
       pitfalls: [
@@ -1734,12 +1744,17 @@
           type: 'procedural_knowledge'
         },
         {
+          id: 'P31',
+          name: '判定分式有意义/值为0条件及运用分式基本性质约分通分',
+          type: 'procedural_knowledge'
+        },
+        {
           id: null,
-          name: '二次根式的化简与分式约分法则',
+          name: '最简二次根式的化简',
           type: 'operation'
         }
       ],
-      prerequisiteProcedureIds: ['P02', 'P16'],
+      prerequisiteProcedureIds: ['P02', 'P16', 'P31'],
       subsequentProcedureIds: [],
       relatedProcedureIds: ['P01', 'P02', 'P18'],
       pitfalls: [
@@ -2170,12 +2185,12 @@
           type: 'procedural_knowledge'
         },
         {
-          id: null,
-          name: '异分母分式通分法则 $\\frac{1}{x_{1}}+\\frac{1}{x_{2}}=\\frac{x_{1}+x_{2}}{x_{1}x_{2}}$',
-          type: 'operation'
+          id: 'P31',
+          name: '判定分式有意义/值为0条件及运用分式基本性质约分通分',
+          type: 'procedural_knowledge'
         }
       ],
-      prerequisiteProcedureIds: ['P09', 'P16', 'P19', 'P23'],
+      prerequisiteProcedureIds: ['P09', 'P16', 'P19', 'P23', 'P31'],
       subsequentProcedureIds: [],
       relatedProcedureIds: ['P16', 'P17', 'P18', 'P20'],
       pitfalls: [
@@ -2683,12 +2698,12 @@
           type: 'procedural_knowledge'
         },
         {
-          id: null,
-          name: '幂的乘方 $(a^{m})^{n}=a^{mn}$ 与积的乘方 $(ab)^{n}=a^{n}b^{n}$',
-          type: 'operation'
+          id: 'P30',
+          name: '运用同底数幂乘法、幂的乘方与积的乘方法则运算',
+          type: 'procedural_knowledge'
         }
       ],
-      prerequisiteProcedureIds: ['P27', 'P28'],
+      prerequisiteProcedureIds: ['P27', 'P28', 'P30'],
       subsequentProcedureIds: ['P23', 'P25'],
       relatedProcedureIds: ['P23', 'P25', 'P27'],
       pitfalls: [
@@ -2783,12 +2798,12 @@
           type: 'procedural_knowledge'
         },
         {
-          id: null,
-          name: '同底数幂的乘法 $a^{m}\\cdot a^{n}=a^{m+n}$、幂的乘方 $(a^{m})^{n}=a^{mn}$ 与积的乘方 $(ab)^{n}=a^{n}b^{n}$',
-          type: 'operation'
+          id: 'P30',
+          name: '运用同底数幂乘法、幂的乘方与积的乘方法则运算',
+          type: 'procedural_knowledge'
         }
       ],
-      prerequisiteProcedureIds: ['P28'],
+      prerequisiteProcedureIds: ['P28', 'P30'],
       subsequentProcedureIds: ['P02', 'P19', 'P23', 'P26'],
       relatedProcedureIds: ['P23', 'P24', 'P26', 'P28'],
       pitfalls: [
@@ -2883,12 +2898,12 @@
           type: 'procedural_knowledge'
         },
         {
-          id: null,
-          name: '有理数的加减乘除混合运算与乘法分配律 $a(b+c)=ab+ac$',
-          type: 'operation'
+          id: 'P32',
+          name: '运用有理数乘方符号法则与混合运算顺序计算',
+          type: 'procedural_knowledge'
         }
       ],
-      prerequisiteProcedureIds: ['P08'],
+      prerequisiteProcedureIds: ['P08', 'P32'],
       subsequentProcedureIds: ['P06', 'P09', 'P15', 'P19', 'P22', 'P24', 'P27', 'P29'],
       relatedProcedureIds: ['P08', 'P09', 'P22', 'P27'],
       pitfalls: [
@@ -3020,6 +3035,398 @@
         }
       ],
       graphNodeId: 'kp_g7_eq_concept_prop',
+      status: 'published'
+    }
+    ,
+    {
+      id: 'P30',
+      name: '运用同底数幂乘法、幂的乘方与积的乘方法则运算',
+      grade: '八年级',
+      subject: '数学',
+      chapterGroup: '第十六章 整式的乘法',
+      chapter: '16.1.2 幂的乘方与积的乘方',
+      description: '通过统一相反数底数与合数底数（如 $4=2^{2}, 8=2^{3}, 27=3^{3}$），遵循“先算幂的乘方 $(a^{m})^{n}=a^{mn}$ 与积的乘方 $(ab)^{n}=a^{n}b^{n}$，再算同底数幂乘法 $a^{m}\\cdot a^{n}=a^{m+n}$，最后合并同类项”的法则化简求值，并熟练逆用三大幂法则进行整体代换或指数对比求参。',
+      purpose: '夯实整式乘法与乘法公式的底层幂运算算力，直接支撑整式乘法（P27）与平方差公式（P26）。',
+      applicability: [
+        '同底数幂的乘法 $a^{m}\\cdot a^{n}=a^{m+n}$（含互为相反数底数 $(a-b)^{2}\\cdot(b-a)^{3}$ 的符号统一）。',
+        '幂的乘方 $(a^{m})^{n}=a^{mn}$ 与积的乘方 $(ab)^{n}=a^{n}b^{n}$ 混合化简及合并同类项（如 $(-2a^{2})^{3}+3a^{3}\\cdot a^{3}$）。',
+        '将底数化为相同质数（如 $4^{x}\\cdot 32^{y}=2^{2x+5y}$）后对比指数求参数，或逆用公式（如由 $a^{m}=2, a^{n}=3$ 求 $a^{2m+n}=(a^{m})^{2}\\cdot a^{n}$）。'
+      ],
+      conditions: [
+        '算式涉及同底数幂的乘法、幂的乘方、积的乘方（正向化简或逆向拆解）',
+        '或需要将不同底数化为同底数幂以利用 $a^{m}=a^{n}\\implies m=n$ 求解参数'
+      ],
+      steps: [
+        {
+          step: 1,
+          title: '统一底数与确定奇偶次幂符号',
+          description: '①若底数互为相反数（如 $a-b$ 与 $b-a$，或 $-a$ 与 $a$），利用偶次幂 $(-A)^{2k}=A^{2k}$、奇次幂 $(-A)^{2k+1}=-A^{2k+1}$ 统一底数并定号；②若底数为 $4, 8, 16, 27, 32$ 等合数幂，先改写为 $2^{2}, 2^{3}, 2^{4}, 3^{3}, 2^{5}$ 等同底数幂。',
+          formula: '$(-A)^{2k}=A^{2k}$；$(-A)^{2k+1}=-A^{2k+1}$；$8^{m}\\cdot 4^{n}=(2^{3})^{m}\\cdot(2^{2})^{n}$',
+          example: '如 $(a-b)^{2}\\cdot(b-a)^{3}=(b-a)^{2}\\cdot(b-a)^{3}$；又如 $8^{m}\\cdot 4^{n}=2^{3m}\\cdot 2^{2n}$。'
+        },
+        {
+          step: 2,
+          title: '先算幂的乘方与积的乘方，再算同底数幂的乘法',
+          description: '严格区分三条法则的指数运算：①积的乘方 $(ab)^{n}=a^{n}b^{n}$（括号内数字系数与每个字母都要乘方，切勿漏掉负号或系数）；②幂的乘方 $(a^{m})^{n}=a^{mn}$（底数不变，指数相乘）；③同底数幂乘法 $a^{m}\\cdot a^{n}=a^{m+n}$（底数不变，指数相加）。',
+          formula: '$(ab)^{n}=a^{n}b^{n}$；$(a^{m})^{n}=a^{mn}$；$a^{m}\\cdot a^{n}=a^{m+n}$',
+          example: '如 $(-2a^{2})^{3}+3a^{3}\\cdot a^{3} = (-2)^{3}(a^{2})^{3}+3a^{3+3} = -8a^{6}+3a^{6}$。'
+        },
+        {
+          step: 3,
+          title: '合并同类项化简，或逆用公式整体代入/对比指数求参',
+          description: '①混合化简：对同底同次的幂合并同类项（系数相加，字母和指数不变）；②逆用求值：将和指数拆为乘积 $a^{m+n}=a^{m}\\cdot a^{n}$、倍指数拆为乘方 $a^{2m}=(a^{m})^{2}$ 后整体代入；③求参数：由同底数幂相等 $a^{p}=a^{q}\\ (a\\gt 0, a\\neq 1)$ 得 $p=q$ 解方程。',
+          formula: '$a^{2m+n}=(a^{m})^{2}\\cdot a^{n}$；$a^{p}=a^{q} \\implies p=q$',
+          example: '如已知 $a^{m}=2,\\ a^{n}=3$，则 $a^{2m+n}=(a^{m})^{2}\\cdot a^{n}=2^{2}\\times 3=12$。'
+        }
+      ],
+      procedure: [
+        {
+          step: 1,
+          action: '统一底数与确定符号',
+          detail: '用奇偶次幂法则统一相反数底数，将 4, 8, 16, 27 等合数底数化为相同质数底数。'
+        },
+        {
+          step: 2,
+          action: '先算积/幂的乘方，再算同底数幂乘法',
+          detail: '积的乘方各因式同乘方，幂的乘方指数相乘，同底数幂乘法指数相加。'
+        },
+        {
+          step: 3,
+          action: '合并同类项或逆用公式求值/求参',
+          detail: '合并同次幂，或逆用公式整体代入数值、由同底数幂指数相等解出参数。'
+        }
+      ],
+      prerequisites: [
+        {
+          id: 'P32',
+          name: '运用有理数乘方符号法则与混合运算顺序计算',
+          type: 'procedural_knowledge'
+        },
+        {
+          id: 'P28',
+          name: '运用去括号与合并同类项法则进行整式加减及无关型求值',
+          type: 'procedural_knowledge'
+        }
+      ],
+      prerequisiteProcedureIds: ['P28', 'P32'],
+      subsequentProcedureIds: ['P26', 'P27'],
+      relatedProcedureIds: ['P26', 'P27', 'P32'],
+      pitfalls: [
+        '混淆同底数幂乘法与幂的乘方：误将 $a^{3}\\cdot a^{3}$ 的指数相乘写成 $a^{9}$（正确为 $a^{3+3}=a^{6}$），或误将 $(a^{2})^{3}$ 的指数相加写成 $a^{5}$（正确为 $a^{2\\times 3}=a^{6}$）。',
+        '积的乘方漏掉数字系数或负号的乘方：如将 $(-2a^{2})^{3}$ 错算为 $-2a^{6}$ 或 $8a^{6}$（正确应为 $(-2)^{3}a^{6}=-8a^{6}$）。',
+        '混淆幂的加法与同底数幂乘法：如将 $a^{3}+a^{3}$ 误算为 $a^{6}$（正确合并同类项为 $2a^{3}$）。'
+      ],
+      exampleQuestionId: 'g8_df_mid_q16',
+      exampleStepMapping: [
+        {
+          step: 1,
+          title: '对应步骤 1（定号与明确幂运算类型）',
+          detail: '第(1)问 $(-2a^{2})^{3}+3a^{3}\\cdot a^{3}$ 包含积的乘方与同底数幂乘法；第(2)问目标 $a^{2m+n}$ 的指数为 $2m$ 与 $n$ 之和，需逆用幂的法则拆解。'
+        },
+        {
+          step: 2,
+          title: '对应步骤 2（执行积的乘方、幂的乘方与同底数幂乘法）',
+          detail: '第(1)问先算 $(-2a^{2})^{3}=(-2)^{3}(a^{2})^{3}=-8a^{6}$，再算 $3a^{3}\\cdot a^{3}=3a^{6}$；第(2)问逆用公式拆为 $a^{2m}\\cdot a^{n}=(a^{m})^{2}\\cdot a^{n}$。'
+        },
+        {
+          step: 3,
+          title: '对应步骤 3（合并同类项与整体代入求值）',
+          detail: '第(1)问合并同类项 $-8a^{6}+3a^{6}=-5a^{6}$；第(2)问代入 $a^{m}=2,\\ a^{n}=3$ 算得 $2^{2}\\times 3=12$。'
+        }
+      ],
+      graphNodeId: 'kp_g8_power_op',
+      status: 'published'
+    },
+    {
+      id: 'P31',
+      name: '判定分式有意义/值为0条件及运用分式基本性质约分通分',
+      grade: '八年级',
+      subject: '数学',
+      chapterGroup: '第十八章 分式',
+      chapter: '18.1.4 约分',
+      description: '依据“分母含有字母的整式商”识别分式，掌握分式有意义（$B\\neq 0$）、无意义（$B=0$）与值为 $0$（$A=0$ 且 $B\\neq 0$）的判定准则，并运用分式基本性质（分子分母同乘或同除以同一个不为 $0$ 的整式）结合因式分解完成符号调整、系数化整、约分与通分。',
+      purpose: '掌握分式合法性边界与恒等变形核心技能，直接支撑反比例函数定义（P11）、求根公式约分（P17）与韦达定理分式通分（P21）。',
+      applicability: [
+        '辨识分式（注意 $\\pi$ 是常数不是字母），求分式有意义、无意义或分式值为 $0$ 时字母的取值。',
+        '运用分式基本性质判断变形正误、分析字母同时扩大 $k$ 倍后分式值的变化、将小数/分数系数化为整数及最高次项系数化正。',
+        '对分子、分母先因式分解再约去公因式（判断与化为最简分式），或找最简公分母完成异分母分式通分。'
+      ],
+      conditions: [
+        '表达式为分式 $\\frac{A}{B}$（$A,B$ 为整式且分母 $B$ 中含有字母）',
+        '需要判定有意义/值为 $0$ 条件、应用分式基本性质变形、约分化简或确定最简公分母通分'
+      ],
+      steps: [
+        {
+          step: 1,
+          title: '判定分式有意义（$B\\neq 0$）与值为 $0$（$A=0$ 且 $B\\neq 0$）',
+          description: '①分母含字母（$\\pi$ 除外）才是分式；②分式有意义 $\\iff$ 分母 $B\\neq 0$，无意义 $\\iff$ 分母 $B=0$；③分式值为 $0$ 必须同时满足“分子 $A=0$ 且分母 $B\\neq 0$”，切记舍去使分母为 $0$ 的增根。',
+          formula: '$\\frac{A}{B}=0 \\iff \\begin{cases} A=0 \\\\ B\\neq 0 \\end{cases}$',
+          example: '如分式 $\\frac{x^{2}-1}{(x+1)(x-3)}$ 值为 $0$，由 $x^{2}-1=0$ 得 $x=\\pm 1$，结合分母 $(x+1)(x-3)\\neq 0$ 舍去 $x=-1$，定解 $x=1$。'
+        },
+        {
+          step: 2,
+          title: '运用分式基本性质化整系数、调符号或分析倍增变化',
+          description: '分式的分子与分母同乘（或同除以）同一个不等于 $0$ 的整式 $C$，分式的值不变：①小数/分数系数化整时，分子分母各项同乘 $10$ 或分母最小公倍数；②调负号时满足 $\\frac{-A}{-B}=\\frac{A}{B}$、$\\frac{-A}{B}=-\\frac{A}{B}$；③判断 $x,y$ 同扩大 $k$ 倍后分式值变化时，用 $kx, ky$ 代入提公因式约分比较。',
+          formula: '$\\frac{A}{B}=\\frac{A\\cdot C}{B\\cdot C}=\\frac{A\\div C}{B\\div C}\\ (C\\neq 0)$',
+          example: '如 $\\frac{1-3x}{-x+2}=\\frac{-(3x-1)}{-(x-2)}=\\frac{3x-1}{x-2}$；又如 $\\frac{3x^{2}}{x+y}$ 中 $x,y$ 同扩大 $3$ 倍得 $\\frac{27x^{2}}{3(x+y)}=3\\cdot\\frac{3x^{2}}{x+y}$。'
+        },
+        {
+          step: 3,
+          title: '先因式分解再约去公因式，或定最简公分母通分',
+          description: '①约分：当分子或分母是多项式时，先调用 P24/P25 因式分解为乘积形式，再约去分子分母的所有公因式（严禁把多项式中的局部加减项直接约掉）；②通分：先将各分母因式分解，取各分母系数的最小公倍数与所有不同因式的最高次幂之积作为最简公分母，再按基本性质将各分式分子分母同乘缺项因式。',
+          formula: '约分：$\\frac{a^{2}-b^{2}}{a^{2}+2ab+b^{2}}=\\frac{(a+b)(a-b)}{(a+b)^{2}}=\\frac{a-b}{a+b}$',
+          example: '如 $\\frac{2x}{x^{2}-9}$ 与 $\\frac{x}{2x+6}$ 的分母分解为 $(x+3)(x-3)$ 与 $2(x+3)$，最简公分母为 $2(x+3)(x-3)$。'
+        }
+      ],
+      procedure: [
+        {
+          step: 1,
+          action: '核对分母 B≠0 与分子 A=0 条件',
+          detail: '有意义令分母≠0，无意义令分母=0，值为 0 必须联立分子=0 且分母≠0 舍去增根。'
+        },
+        {
+          step: 2,
+          action: '应用分式基本性质变形（同乘除 C≠0）',
+          detail: '分子分母各项同乘除同一非零整式，完成系数化整、首项化正与缩放倍增分析。'
+        },
+        {
+          step: 3,
+          action: '先因式分解再约分或找最简公分母通分',
+          detail: '多项式先因式分解再约去公共因式；通分取系数最小公倍数与各因式最高次幂之积。'
+        }
+      ],
+      prerequisites: [
+        {
+          id: 'P24',
+          name: '用提公因式法分解因式（含提取多项式整体公因式）',
+          type: 'procedural_knowledge'
+        },
+        {
+          id: 'P25',
+          name: '用公式法（平方差公式与完全平方公式）及先提后套分解因式',
+          type: 'procedural_knowledge'
+        }
+      ],
+      prerequisiteProcedureIds: ['P24', 'P25'],
+      subsequentProcedureIds: ['P11', 'P17', 'P21'],
+      relatedProcedureIds: ['P24', 'P25'],
+      pitfalls: [
+        '求分式值为 $0$ 时只令分子等于 $0$ 而忘记检验分母不为 $0$（如 $\\frac{x^{2}-1}{(x+1)(x-3)}=0$ 误保留使分母为 $0$ 的 $x=-1$）。',
+        '误把常数 $\\pi$ 当作未知字母，把 $\\frac{\\pi}{2}$ 误判为分式；或误把多项式加减项直接约分（如将 $\\frac{x+y}{x+z}$ 错约成 $\\frac{y}{z}$）。',
+        '分子分母系数化整时漏乘某一项，或由 $\\frac{b}{c}=\\frac{ab}{ac}$ 忽略了题目未限定 $a\\neq 0$。'
+      ],
+      exampleQuestionId: 'ch18_1_2_q9',
+      exampleStepMapping: [
+        {
+          step: 1,
+          title: '对应步骤 1（由分母等于 0 与不等于 0 判定无意义与有意义）',
+          detail: '分母为 $(x+1)(x-3)$：第(1)问无意义时令 $(x+1)(x-3)=0$，得 $x=-1$ 或 $x=3$；第(2)问有意义时须满足 $x\\neq -1$ 且 $x\\neq 3$。'
+        },
+        {
+          step: 2,
+          title: '对应步骤 2（求分式值为 0 先令分子为 0 求解）',
+          detail: '第(3)问令分子 $x^{2}-1=0$，解得候选值 $x=1$ 或 $x=-1$。'
+        },
+        {
+          step: 3,
+          title: '对应步骤 3（结合分母不为 0 舍去增根定解）',
+          detail: '因 $x=-1$ 会使分母 $(x+1)(x-3)=0$（分式无意义），必须舍去 $x=-1$，确定最终答案为 $x=1$。'
+        }
+      ],
+      graphNodeId: 'kp_g8_frac_def_prop',
+      status: 'published'
+    },
+    {
+      id: 'P32',
+      name: '运用有理数乘方符号法则与混合运算顺序计算',
+      grade: '七年级',
+      subject: '数学',
+      chapterGroup: '第二章 有理数的运算',
+      chapter: '2.5.2有理数的混合运算',
+      description: '严格区分 $(-a)^{n}$ 与 $-a^{n}$ 的底数与符号法则，按照“先算乘方（与绝对值），再算括号内及乘除（同级从左到右，除法转乘倒数），最后算加减”的运算顺序准确执行有理数混合运算，并灵活运用乘法分配律简化分数计算。',
+      purpose: '建立零失误的有理数乘方与混合运算程序，为代数式代入求值（P08）、整式加减（P28）与幂的运算（P30）奠定基础算力。',
+      applicability: [
+        '辨析有理数乘方的底数、指数与正负号，区分 $(-a)^{n}$、$-a^{n}$、$(-\\frac{a}{b})^{n}$ 与 $-\\frac{a^{n}}{b}$。',
+        '含乘方（如 $-1^{2025}$、$-2^{4}$、$(-3)^{2}$）、绝对值、多层括号及分数小数互化的有理数四则混合运算。',
+        '运用乘法分配律（正向展开或逆向提公因数）简便计算含分数的有理数乘除混合运算。'
+      ],
+      conditions: [
+        '算式为有理数的乘方或含乘方、绝对值、括号的加减乘除混合运算',
+        '需要严格遵循运算优先级、乘方符号法则与同级从左到右顺序'
+      ],
+      steps: [
+        {
+          step: 1,
+          title: '辨清乘方底数与符号，优先计算乘方与绝对值',
+          description: '先逐一算出算式中所有乘方与绝对值：①$(-a)^{n}$ 底数是 $-a$（负数的偶次幂为正、奇次幂为负）；②$-a^{n}$ 底数是 $a$，表示 $a^{n}$ 的相反数，结果恒带负号（如 $-1^{2025}=-1$，$-2^{4}=-16$，而 $(-2)^{4}=16$）；③带分数与小数参与乘方或乘除时，先统一化为假分数。',
+          formula: '$(-a)^{2k}=a^{2k}$；$(-a)^{2k+1}=-a^{2k+1}$；$-a^{n}=-(a^{n})$',
+          example: '如在 $-1^{2025}+(2-0.5)\\div(-3)^{2}\\times(-4)+|-1|$ 中，先算 $-1^{2025}=-1$、$(-3)^{2}=9$、$|-1|=1$。'
+        },
+        {
+          step: 2,
+          title: '先算括号内，再按从左到右算乘除（除法转乘倒数）',
+          description: '先算小括号、中括号内的加减；乘除同级运算必须严格按从左到右顺序执行，把除以一个非零数统一改写为乘以它的倒数，先定整体符号再约分相乘（若为括号内分数和差乘公倍数，直接用乘法分配律展开）。',
+          formula: '$a\\div b\\times c = a\\times\\frac{1}{b}\\times c\\ (b\\neq 0)$',
+          example: '接上例：先算 $2-0.5=\\frac{3}{2}$，再按从左到右算 $\\frac{3}{2}\\div 9\\times(-4) = \\frac{3}{2}\\times\\frac{1}{9}\\times(-4) = -\\frac{2}{3}$。'
+        },
+        {
+          step: 3,
+          title: '最后算加减运算，同号相加、异号相减得结果',
+          description: '将前面各独立板块算出的数值按加减法法则合并（互为相反数的项如 $-1$ 与 $+1$ 优先抵消，同分母分数优先结合），算出最终最简结果。',
+          formula: '$-1 + \\left(-\\frac{2}{3}\\right) + 1 = -\\frac{2}{3}$',
+          example: '接上例：$-1 - \\frac{2}{3} + 1 = -\\frac{2}{3}$。'
+        }
+      ],
+      procedure: [
+        {
+          step: 1,
+          action: '先算乘方与绝对值（严分 (-a)ⁿ 与 -aⁿ）',
+          detail: '区分带括号与不带括号的乘方底数符号，带分数化假分数，先算所有乘方与绝对值。'
+        },
+        {
+          step: 2,
+          action: '算括号内与乘除（同级从左到右，除变乘倒数）',
+          detail: '先算括号内，乘除全部转化为乘法后从左到右约分计算（可用乘法分配律巧算）。'
+        },
+        {
+          step: 3,
+          action: '最后算加减，抵消相反数得出结果',
+          detail: '按有理数加减法则合并各项，优先抵消互为相反数的项并化为最简分数。'
+        }
+      ],
+      prerequisites: [
+        {
+          id: 'P33',
+          name: '运用绝对值的性质、非负性求值及比较有理数大小',
+          type: 'procedural_knowledge'
+        },
+        {
+          id: null,
+          name: '有理数的加、减、乘、除基本法则与倒数、相反数概念',
+          type: 'concept'
+        }
+      ],
+      prerequisiteProcedureIds: ['P33'],
+      subsequentProcedureIds: ['P08', 'P09', 'P28', 'P30'],
+      relatedProcedureIds: ['P08', 'P28', 'P30', 'P33'],
+      pitfalls: [
+        '混淆 $-a^{n}$ 与 $(-a)^{n}$：如将 $-1^{6}$ 或 $-2^{4}$ 误算为 $+1$、$+16$（不带括号时负号不参与乘方，结果恒为 $-1$、$-16$）。',
+        '违反同级运算从左到右顺序：如将 $24\\div(-3)\\times\\frac{1}{3}$ 错误先算后半段 $(-3)\\times\\frac{1}{3}=-1$ 得 $-24$（正确应从左到右得 $-8\\times\\frac{1}{3}=-\\frac{8}{3}$）。',
+        '将除法套用乘法分配律：如把 $24\\div(3+6)$ 误拆成 $24\\div 3+24\\div 6$（只有乘法对加减法有分配律，除法不可拆除数）。'
+      ],
+      exampleQuestionId: 'op_oct30_22',
+      exampleStepMapping: [
+        {
+          step: 1,
+          title: '对应步骤 1（先算乘方 $-1^{2025}$、$(-3)^{2}$ 与绝对值 $|-1|$）',
+          detail: '区分底数与符号：$-1^{2025}=-(1^{2025})=-1$，$(-3)^{2}=9$，$|-1|=1$，同时括号内 $2-0.5=1.5=\\frac{3}{2}$。'
+        },
+        {
+          step: 2,
+          title: '对应步骤 2（按从左到右顺序执行乘除运算）',
+          detail: '将中间乘除转化为乘法：$\\frac{3}{2}\\div 9\\times(-4) = \\frac{3}{2}\\times\\frac{1}{9}\\times(-4) = -\\frac{2}{3}$。'
+        },
+        {
+          step: 3,
+          title: '对应步骤 3（最后算加减，抵消 $-1$ 与 $+1$ 得结果）',
+          detail: '原式化为 $-1 - \\frac{2}{3} + 1$，互为相反数的 $-1$ 与 $+1$ 抵消，得出最终结果 $-\\frac{2}{3}$。'
+        }
+      ],
+      graphNodeId: 'kp_g7_rat_pow_mix',
+      status: 'published'
+    },
+    {
+      id: 'P33',
+      name: '运用绝对值的性质、非负性求值及比较有理数大小',
+      grade: '七年级',
+      subject: '数学',
+      chapterGroup: '第一章 有理数',
+      chapter: '1.2.14 有理数大小的比较',
+      description: '依据绝对值的几何意义（数轴上点到原点的距离）与代数性质（正数的绝对值是它本身、$0$ 的绝对值是 $0$、负数的绝对值是它的相反数），完成绝对值化简、非负性“$0+0=0$”求值，并按“先化简、正数 $\\gt 0 \\gt$ 负数、两负数绝对值大的反而小”准则比较有理数大小。',
+      purpose: '掌握绝对值非负性模型与负数大小比较法则，直接支撑代入求值非负性（P08）、反比例函数值跨象限与负值比较（P14）及有理数混合运算（P32）。',
+      applicability: [
+        '求一个数的绝对值、由 $|m|=k\\ (k\\gt 0)$ 反推 $m=\\pm k$，或依据 $|a|=a\\ (a\\ge 0)$、$|a|=-a\\ (a\\le 0)$ 判断字母符号范围。',
+        '利用绝对值非负性 $|A|\\ge 0$ 解决“$|x-a|+|y-b|=0$”型方程求解与 $|x-a|+k$ 的最小值问题。',
+        '比较含多重符号、绝对值、负分数的有理数大小，或结合数轴上点的位置比较 $a, -a, b, -b$ 的大小。'
+      ],
+      conditions: [
+        '涉及绝对值的定义、代数性质、非负性（$|A|\\ge 0$）求值或最值',
+        '或需要比较两个及多个有理数（含负分数、多重符号、绝对值及数轴上点）的大小'
+      ],
+      steps: [
+        {
+          step: 1,
+          title: '先化简多重符号与绝对值（或由 $|m|=k$ 写出 $\\pm k$）',
+          description: '遇到多重符号与绝对值（如 $-(-0.5)$、$-|-5.7|$、$|-(+5)|$）时，先由内向外化简为最简有理数：①正数和 $0$ 的绝对值是它本身，负数的绝对值是它的相反数；②若已知 $|m|=k\\ (k\\gt 0)$，则 $m=\\pm k$（正负两个解）。',
+          formula: '$|a|=\\begin{cases} a & (a\\gt 0) \\\\ 0 & (a=0) \\\\ -a & (a\\lt 0) \\end{cases}$；$|m|=k\\ (k\\gt 0) \\implies m=\\pm k$',
+          example: '如 $-|-5.7|=-5.7$，$|-2.9|=2.9$；若 $|m|=|-(+5)|=5$，则 $m=\\pm 5$。'
+        },
+        {
+          step: 2,
+          title: '运用绝对值非负性 $|A|\\ge 0$ 求解“$0+0=0$”模型与最值',
+          description: '因为任意实数的绝对值都满足 $|A|\\ge 0$：①若 $|A|+|B|=0$，则必有 $A=0$ 且 $B=0$，联立即可直接解出各字母的值；②形如 $|x-a|+k$ 的最小值为 $k$（当 $x=a$ 时取得）。',
+          formula: '$|A|+|B|=0 \\implies A=0,\\ B=0$；$|x-a|+k\\ge k$',
+          example: '如 $|x-2|+|y-3|+|z-4|=0 \\implies x=2,\\ y=3,\\ z=4$；又如 $|x-2|+|-2|=|x-2|+2\\ge 2$，最小值为 $2$。'
+        },
+        {
+          step: 3,
+          title: '按符号分级与“两负数绝对值大的反而小”法则比大小',
+          description: '①异号比较：正数 $\\gt 0 \\gt$ 负数，直接定大小；②同为负数比较：先分别求出两个负数的绝对值并通分比较绝对值大小，再遵循“两个负数，绝对值大的反而小”反转不等号方向；③数轴比较：将 $-a, -b$ 按关于原点对称标在数轴上，利用“数轴上右边的数总比左边大”直接排序。',
+          formula: '若 $a\\lt 0,\\ b\\lt 0$ 且 $|a|\\gt |b|$，则 $a\\lt b$',
+          example: '如比较 $-\\frac{9}{7}$ 与 $-\\frac{6}{5}$：先算绝对值 $\\frac{9}{7}=\\frac{45}{35} \\gt \\frac{42}{35}=\\frac{6}{5}$，故 $-\\frac{9}{7} \\lt -\\frac{6}{5}$。'
+        }
+      ],
+      procedure: [
+        {
+          step: 1,
+          action: '先化简多重符号与绝对值',
+          detail: '按绝对值代数定义化简各数，已知 |m|=k (k>0) 时注意写出 m=±k 两个值。'
+        },
+        {
+          step: 2,
+          action: '利用绝对值非负性解 0+0=0 方程或求最值',
+          detail: '由 |A|≥0 导出各绝对值内式子同时为 0，或得出 |x-a|+k 的最小值为 k。'
+        },
+        {
+          step: 3,
+          action: '按符号分级与“两负数绝对值大的反而小”排序',
+          detail: '正数>0>负数；两个负数先通分比绝对值，绝对值大的反而小；数轴上右大左小。'
+        }
+      ],
+      prerequisites: [
+        {
+          id: null,
+          name: '数轴的三要素、相反数的几何意义及小学正分数通分比较大小',
+          type: 'concept'
+        }
+      ],
+      prerequisiteProcedureIds: [],
+      subsequentProcedureIds: ['P08', 'P14', 'P32'],
+      relatedProcedureIds: ['P08', 'P14', 'P32'],
+      pitfalls: [
+        '比较两个负数大小时忘记反转不等号：如因为 $\\frac{3}{4} \\gt \\frac{2}{3}$ 而误写成 $-\\frac{3}{4} \\gt -\\frac{2}{3}$（正确应为 $-\\frac{3}{4} \\lt -\\frac{2}{3}$）。',
+        '漏掉 $0$ 的边界情况：认为“绝对值等于它本身的数只有正数”或“绝对值等于它相反数的数只有负数”（正确应分别包含 $0$，即非负数 $a\\ge 0$ 与非正数 $a\\le 0$）。',
+        '由 $|m|=5$ 只写出正数解 $m=5$，漏掉负数解 $m=-5$。'
+      ],
+      exampleQuestionId: 'g7_1_2_5_9',
+      exampleStepMapping: [
+        {
+          step: 1,
+          title: '对应步骤 1（先化简含绝对值与负号的数）',
+          detail: '第(3)问中，先分别化简 $-|-5.7|=-5.7$ 和 $|-2.9|=2.9$，再进行比较。'
+        },
+        {
+          step: 2,
+          title: '对应步骤 2（异号直接按正数大于负数判定）',
+          detail: '第(1)问 $-7 \\lt 2$；第(3)问因 $-5.7 \\lt 0 \\lt 2.9$，故 $-|-5.7| \\lt |-2.9|$；第(4)问正数 $\\frac{1}{4}$ 最大。'
+        },
+        {
+          step: 3,
+          title: '对应步骤 3（两个负分数先通分比绝对值，绝对值大的反而小）',
+          detail: '第(2)问比较 $-\\frac{9}{7}$ 与 $-\\frac{6}{5}$：因 $\\frac{9}{7}=\\frac{45}{35} \\gt \\frac{42}{35}=\\frac{6}{5}$，故 $-\\frac{9}{7} \\lt -\\frac{6}{5}$；第(4)问因 $\\frac{1}{2} \\gt \\frac{1}{3}$，故 $-\\frac{1}{2} \\lt -\\frac{1}{3} \\lt \\frac{1}{4}$。'
+        }
+      ],
+      graphNodeId: 'kp_g7_num_line_abs',
       status: 'published'
     }
   ];

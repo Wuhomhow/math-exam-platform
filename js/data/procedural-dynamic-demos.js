@@ -7247,6 +7247,878 @@
         }
       }
     }
+    ,
+    // =========================================================================
+    // P30：运用同底数幂乘法、幂的乘方与积的乘方法则运算
+    // =========================================================================
+    P30: {
+      procedureId: 'P30',
+      title: '运用同底数幂乘法、幂的乘方与积的乘方法则运算',
+      exampleTitle: '计算：(1) $(-2a^{2})^{3} + 3a^{3} \\cdot a^{3}$；(2) 已知 $a^{m} = 2$，$a^{n} = 3$，求 $a^{2m+n}$ 的值',
+      exampleFormula: '正向：$(ab)^{n} = a^{n}b^{n}$，$a^{m}\\cdot a^{n} = a^{m+n}$；逆向：$a^{2m+n} = (a^{m})^{2}\\cdot a^{n}$',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示幂的三大运算法则正逆向对照与“数字系数同步乘方”易错提醒）',
+      practiceSectionTitle: '幂的运算正逆向法则跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握同底数幂乘法、积的乘方与逆用幂法则求值',
+
+      steps: [
+        {
+          step: 1,
+          name: '第(1)题先算积的乘方与幂的乘方',
+          tStart: 0.0,
+          tEnd: 6.2,
+          explanation: '对 $(-2a^{2})^{3}$ 运用积的乘方，把数字系数 $-2$ 与字母幂 $a^{2}$ 分别立方：$(-2)^{3} \\cdot (a^{2})^{3} = -8a^{6}$（指数相乘 $2 \\times 3 = 6$）。'
+        },
+        {
+          step: 2,
+          name: '第(1)题再算同底数幂乘法并合并同类项',
+          tStart: 6.2,
+          tEnd: 12.5,
+          explanation: '对 $3a^{3} \\cdot a^{3}$ 运用同底数幂乘法，底数不变指数相加得 $3a^{3+3} = 3a^{6}$；最后合并同类项 $-8a^{6} + 3a^{6} = -5a^{6}$（只合并系数，指数不变）。'
+        },
+        {
+          step: 3,
+          name: '第(2)题逆用同底数幂乘法拆解指数加法',
+          tStart: 12.5,
+          tEnd: 18.5,
+          explanation: '观察目标 $a^{2m+n}$ 的指数含有加法 $2m + n$，逆用同底数幂乘法法则 $a^{p+q} = a^{p} \\cdot a^{q}$，拆分为 $a^{2m} \\cdot a^{n}$。'
+        },
+        {
+          step: 4,
+          name: '第(2)题逆用幂的乘方构造已知底数 $a^{m}$',
+          tStart: 18.5,
+          tEnd: 24.5,
+          explanation: '对 $a^{2m}$ 逆用幂的乘方法则 $a^{km} = (a^{m})^{k}$，改写为 $(a^{m})^{2}$，于是 $a^{2m+n} = (a^{m})^{2} \\cdot a^{n}$。'
+        },
+        {
+          step: 5,
+          name: '整体代入 $a^{m} = 2$，$a^{n} = 3$ 算出结果',
+          tStart: 24.5,
+          tEnd: 30.0,
+          explanation: '将已知 $a^{m} = 2$，$a^{n} = 3$ 整体代入得 $2^{2} \\times 3 = 4 \\times 3 = 12$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 算 $(-2a^{2})^{3} = (-2)^{3} \\cdot (a^{2})^{3} = -8a^{6}$' },
+        { time: 7.5, step: 2, label: '2.1 算 $3a^{3} \\cdot a^{3} = 3a^{6}$ 并合并得 $-5a^{6}$' },
+        { time: 14.0, step: 3, label: '3.1 逆用同底数幂乘法拆为 $a^{2m} \\cdot a^{n}$' },
+        { time: 20.0, step: 4, label: '4.1 逆用幂的乘方化为 $(a^{m})^{2} \\cdot a^{n}$' },
+        { time: 26.0, step: 5, label: '5.1 代入 $2^{2} \\times 3 = 12$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p30_row_0',
+          stepBadge: '第(1)题 · 积的乘方与幂的乘方',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p30_r0_orig', math: '(1) $(-2a^{2})^{3} + 3a^{3} \\cdot a^{3}$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p30_r0_s1', math: '$= (-2)^{3}(a^{2})^{3} + 3a^{3+3}$', appearAt: 1.6, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p30_row_1',
+          stepBadge: '第(1)题 · 合并同类项',
+          appearAt: 6.4,
+          tokens: [
+            { id: 'p30_r1_s2', math: '$= -8a^{6} + 3a^{6}$', appearAt: 6.5, dur: 0.45 },
+            { id: 'p30_r1_res', math: '$= -5a^{6}$', appearAt: 8.5, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p30_row_2',
+          stepBadge: '第(2)题 · 逆用幂法则拆解',
+          appearAt: 12.8,
+          tokens: [
+            { id: 'p30_r2_split', math: '(2) $a^{2m+n} = a^{2m} \\cdot a^{n}$', appearAt: 12.9, dur: 0.45 },
+            { id: 'p30_r2_pow', math: '$= (a^{m})^{2} \\cdot a^{n}$', appearAt: 18.8, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p30_row_3',
+          stepBadge: '最终结论',
+          appearAt: 24.8,
+          isConclusion: true,
+          tokens: [
+            { id: 'p30_r3_conc', math: '$= 2^{2} \\times 3 = 4 \\times 3 = 12$。', appearAt: 24.9, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p30_sp_1',
+          title: '核心对照 · 幂的三大法则正逆向与同类项区分',
+          showStart: 0.8,
+          showEnd: 29.8,
+          tokens: [
+            { id: 'p30_sp1_t1', math: '① 同底数幂乘法：$a^{m} \\cdot a^{n} = a^{m+n}$（指数相加）', appearAt: 1.4, dur: 0.40 },
+            { id: 'p30_sp1_t2', math: '② 幂的乘方：$(a^{m})^{n} = a^{mn}$（指数相乘）', appearAt: 2.6, dur: 0.40 },
+            { id: 'p30_sp1_t3', math: '③ 积的乘方：$(ab)^{n} = a^{n}b^{n}$（每个因式都乘方）', appearAt: 3.8, dur: 0.40 },
+            { id: 'p30_sp1_t4', math: '④ 合并同类项：$-8a^{6} + 3a^{6} = -5a^{6}$（指数绝不变）', appearAt: 7.4, dur: 0.40 }
+          ],
+          note: '高频易错：计算 $(-2a^{2})^{3}$ 时，数字系数 $-2$ 也要立方得 $-8$，切勿写成 $-2a^{6}$ 或 $-6a^{6}$'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p30_r0_s1', tStart: 1.6, tEnd: 6.0, color: 'amber' },
+        { tokenId: 'p30_r1_res', tStart: 8.5, tEnd: 12.4, color: 'teal' },
+        { tokenId: 'p30_r2_split', tStart: 12.9, tEnd: 18.4, color: 'teal' },
+        { tokenId: 'p30_r2_pow', tStart: 18.8, tEnd: 24.4, color: 'amber' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p30_svg_s1',
+          type: 'arrow',
+          fromToken: 'p30_r0_orig',
+          toToken: 'p30_r0_s1',
+          label: '$-2$ 与 $a^{2}$ 分别立方',
+          color: '#D97706',
+          curveOffset: 28,
+          tStart: 1.8,
+          tDrawEnd: 2.6,
+          tFadeStart: 5.4,
+          tEnd: 6.0
+        },
+        {
+          id: 'p30_svg_s4',
+          type: 'arrow',
+          fromToken: 'p30_r2_split',
+          toToken: 'p30_r2_pow',
+          label: '逆用幂的乘方 $a^{2m} = (a^{m})^{2}$',
+          color: '#0F766E',
+          curveOffset: -26,
+          tStart: 18.6,
+          tDrawEnd: 19.4,
+          tFadeStart: 23.8,
+          tEnd: 24.4
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 6.2, text: '看第(1)题第一步：先算 $(-2a^{2})^{3}$，数字系数 $-2$ 立方得 $-8$，字母幂 $(a^{2})^{3}$ 指数相乘得 $a^{6}$，结果为 $-8a^{6}$。', focusToken: 'p30_r0_s1' },
+        { tStart: 6.2, tEnd: 12.5, text: '第二步算同底数幂乘法 $3a^{3} \\cdot a^{3} = 3a^{6}$，再合并同类项 $-8a^{6} + 3a^{6} = -5a^{6}$（合并同类项时指数不变）。', focusToken: 'p30_r1_res' },
+        { tStart: 12.5, tEnd: 18.5, text: '看第(2)题第一步：指数 $2m + n$ 是加法，逆用同底数幂乘法拆分为 $a^{2m} \\cdot a^{n}$。', focusToken: 'p30_r2_split' },
+        { tStart: 18.5, tEnd: 24.5, text: '第二步对 $a^{2m}$ 逆用幂的乘方，写成 $(a^{m})^{2}$，得到 $(a^{m})^{2} \\cdot a^{n}$。', focusToken: 'p30_r2_pow' },
+        { tStart: 24.5, tEnd: 30.0, text: '最后把 $a^{m} = 2$，$a^{n} = 3$ 整体代入，算出 $2^{2} \\times 3 = 12$！', focusToken: 'p30_r3_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：辨析幂的运算与合并同类项',
+          givenLabel: '给出三个幂的运算式：',
+          givenFormula: '① $a^{2} \\cdot a^{3} = a^{6}$；② $(-3x^{2})^{2} = 9x^{4}$；③ $a^{3} + a^{3} = a^{6}$',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '其中运算完全正确的是哪一个？',
+          options: [
+            { key: 'A', text: 'A. ② $(-3x^{2})^{2} = (-3)^{2} \\cdot (x^{2})^{2} = 9x^{4}$', isCorrect: true },
+            { key: 'B', text: 'B. ① $a^{2} \\cdot a^{3} = a^{6}$', isCorrect: false },
+            { key: 'C', text: 'C. ③ $a^{3} + a^{3} = a^{6}$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！准确区分“指数相加、指数相乘、指数不变”：',
+            calcLines: [
+              '① 同底数幂乘法指数相加：$a^{2} \\cdot a^{3} = a^{2+3} = a^{5}$',
+              '② 积的乘方：$(-3)^{2}(x^{2})^{2} = 9x^{4}$ ✓',
+              '③ 合并同类项指数不变：$a^{3} + a^{3} = 2a^{3}$'
+            ],
+            summary: '记住口诀：“同底乘，指相加；幂乘方，指相乘；同类加，指不变”。'
+          },
+          wrongTitle: '提示：请区分同底数幂乘法、幂的乘方与合并同类项的指数规则',
+          wrongFeedback: '同底数幂乘法是指数相加（$a^{2} \\cdot a^{3} = a^{5}$），合并同类项是指数不变（$a^{3} + a^{3} = 2a^{3}$），请再试一次。'
+        },
+        practice2: {
+          title: '练习二：逆用幂的运算法则求值',
+          givenLabel: '已知条件：',
+          givenFormula: '$x^{a} = 3，\\quad x^{b} = 2$',
+          questionText: '逆用幂的运算法则，分别求出 $x^{a+b}$ 和 $x^{2a+b}$ 的值是多少？',
+          input1Prefix: '$x^{a+b} =$',
+          input1Placeholder: '如 6',
+          input2Prefix: '，$x^{2a+b} =$',
+          input2Placeholder: '如 18',
+          input2Suffix: '',
+          expectedX: '6',
+          expectedMin: '18',
+          allowOrderSwap: false,
+          correctFeedback: '$x^{a+b} = 6$，$x^{2a+b} = 18$。',
+          correctDetail: '由 $x^{a+b} = x^{a} \\cdot x^{b} = 3 \\times 2 = 6$；$x^{2a+b} = (x^{a})^{2} \\cdot x^{b} = 3^{2} \\times 2 = 9 \\times 2 = 18$。',
+          wrongFeedback: '注意 $x^{a+b} = x^{a} \\cdot x^{b}$（相乘而非相加），$x^{2a+b} = (x^{a})^{2} \\cdot x^{b}$。',
+          specificWrongHints: [
+            {
+              checkType: 'firstVal',
+              val: '5',
+              hint: '指数相加对应同底数幂相乘，因此 $x^{a+b} = 3 \\times 2 = 6$（不是 $3 + 2 = 5$）。'
+            },
+            {
+              checkType: 'secondVal',
+              val: '12',
+              hint: '注意 $x^{2a} = (x^{a})^{2} = 3^{2} = 9$（不是 $2 \\times 3 = 6$），故 $9 \\times 2 = 18$。'
+            }
+          ]
+        }
+      }
+    },
+
+    // =========================================================================
+    // P31：判定分式有意义/值为0条件及运用分式基本性质约分通分
+    // =========================================================================
+    P31: {
+      procedureId: 'P31',
+      title: '判定分式有意义/值为0条件及运用分式基本性质约分通分',
+      exampleTitle: '已知关于 $x$ 的分式 $\\frac{x^{2}-1}{(x+1)(x-3)}$：(1) 何时无意义；(2) 何时有意义；(3) 何时值为 $0$',
+      exampleFormula: '有意义 $\\iff B \\neq 0$；值为 $0 \\iff A = 0$ 且 $B \\neq 0$（必先看原分母！）',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示“有意义/无意义/值为0”判定准则与约分前保留原分母约束）',
+      practiceSectionTitle: '分式意义条件与约分通分跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握分式值为 0 的双重检验与因式分解约分',
+
+      steps: [
+        {
+          step: 1,
+          name: '锁定原分式的分子 $A$ 与分母 $B$（切勿先约分）',
+          tStart: 0.0,
+          tEnd: 5.8,
+          explanation: '识别原分式分子 $A = x^{2} - 1$，分母 $B = (x + 1)(x - 3)$。判定分式有/无意义或值为 $0$ 时，必须直接对原分母检验，绝不能先约去 $(x + 1)$！'
+        },
+        {
+          step: 2,
+          name: '第(1)问：令原分母 $B = 0$ 求无意义条件',
+          tStart: 5.8,
+          tEnd: 11.8,
+          explanation: '分式无意义当且仅当分母等于 $0$：令 $(x + 1)(x - 3) = 0$，得 $x + 1 = 0$ 或 $x - 3 = 0$，即 $x = -1$ 或 $x = 3$。'
+        },
+        {
+          step: 3,
+          name: '第(2)问：令原分母 $B \\neq 0$ 求有意义条件',
+          tStart: 11.8,
+          tEnd: 17.5,
+          explanation: '分式有意义当且仅当分母不为 $0$：$(x + 1)(x - 3) \\neq 0$，两个因式均不能为 $0$，即 $x \\neq -1$ 且 $x \\neq 3$（注意用“且”连接）。'
+        },
+        {
+          step: 4,
+          name: '第(3)问 ①：令分子 $A = 0$ 解出候选值',
+          tStart: 17.5,
+          tEnd: 23.5,
+          explanation: '要使分式值为 $0$，先令分子 $x^{2} - 1 = 0$，分解为 $(x + 1)(x - 1) = 0$，解得两个候选值 $x = 1$ 或 $x = -1$。'
+        },
+        {
+          step: 5,
+          name: '第(3)问 ②：联立分母 $B \\neq 0$ 舍去增根定解',
+          tStart: 23.5,
+          tEnd: 30.0,
+          explanation: '将候选值代入原分母检验：当 $x = -1$ 时分母为 $0$（分式无意义），必须舍去！当 $x = 1$ 时分母 $2 \\times (-2) = -4 \\neq 0$，故 $x = 1$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 锁定原分子 $x^{2} - 1$ 与原分母 $(x + 1)(x - 3)$' },
+        { time: 7.2, step: 2, label: '2.1 令分母 $= 0$ 得无意义条件 $x = -1$ 或 $x = 3$' },
+        { time: 13.2, step: 3, label: '3.1 令分母 $\\neq 0$ 得有意义条件 $x \\neq -1$ 且 $x \\neq 3$' },
+        { time: 19.0, step: 4, label: '4.1 令分子 $x^{2} - 1 = 0$ 得候选值 $x = \\pm 1$' },
+        { time: 25.5, step: 5, label: '5.1 结合 $x \\neq -1$ 舍去 $-1$，定解 $x = 1$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p31_row_0',
+          stepBadge: '原分式',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p31_r0_frac', math: '分式 $\\frac{x^{2} - 1}{(x + 1)(x - 3)}$：', appearAt: 0.0, dur: 0.01 },
+            { id: 'p31_r0_ab', math: '分子 $A = x^{2} - 1$，分母 $B = (x + 1)(x - 3)$', appearAt: 1.2, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p31_row_1',
+          stepBadge: '第(1)问 · 无意义条件',
+          appearAt: 6.2,
+          tokens: [
+            { id: 'p31_r1_zero', math: '令 $(x + 1)(x - 3) = 0$', appearAt: 6.3, dur: 0.45 },
+            { id: 'p31_r1_res', math: '$\\implies x = -1$ 或 $x = 3$ 时无意义', appearAt: 7.8, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p31_row_2',
+          stepBadge: '第(2)问 · 有意义条件',
+          appearAt: 12.2,
+          tokens: [
+            { id: 'p31_r2_neq', math: '令 $(x + 1)(x - 3) \\neq 0$', appearAt: 12.3, dur: 0.45 },
+            { id: 'p31_r2_res', math: '$\\implies x \\neq -1$ 且 $x \\neq 3$ 时有意义', appearAt: 13.8, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p31_row_3',
+          stepBadge: '第(3)问 · 分子为 0 且分母不为 0',
+          appearAt: 18.0,
+          tokens: [
+            { id: 'p31_r3_num', math: '由 $x^{2} - 1 = 0$ 得 $x = 1$ 或 $x = -1$；', appearAt: 18.1, dur: 0.45 },
+            { id: 'p31_r3_drop', math: '又 $x \\neq -1$ 且 $x \\neq 3 \\implies$ 舍去 $x = -1$', appearAt: 23.8, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p31_row_4',
+          stepBadge: '最终结论',
+          appearAt: 26.2,
+          isConclusion: true,
+          tokens: [
+            { id: 'p31_r4_conc', math: '$\\therefore$ 当 $x = 1$ 时，分式的值等于 $0$。', appearAt: 26.3, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p31_sp_1',
+          title: '核心法则 · 分式意义判定与约分基本性质',
+          showStart: 0.8,
+          showEnd: 29.8,
+          tokens: [
+            { id: 'p31_sp1_t1', math: '① 无意义：$B = 0$（连接词用“或”）', appearAt: 6.4, dur: 0.40 },
+            { id: 'p31_sp1_t2', math: '② 有意义：$B \\neq 0$（连接词用“且”）', appearAt: 12.6, dur: 0.40 },
+            { id: 'p31_sp1_t3', math: '③ 值为 $0$：$A = 0$ 且 $B \\neq 0$（必检原分母！）', appearAt: 18.4, dur: 0.40 },
+            { id: 'p31_sp1_t4', math: '④ 约分化简：$\\frac{(x+1)(x-1)}{(x+1)(x-3)} = \\frac{x-1}{x-3}$（先分解再约公因式）', appearAt: 24.4, dur: 0.45 }
+          ],
+          note: '切记：在有意义前提下才能约去公因式 $(x + 1)$，判定定义域和值为 0 时必须看未约分的原分母'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p31_r0_ab', tStart: 1.2, tEnd: 5.6, color: 'teal' },
+        { tokenId: 'p31_r1_res', tStart: 7.8, tEnd: 11.6, color: 'amber' },
+        { tokenId: 'p31_r2_res', tStart: 13.8, tEnd: 17.4, color: 'teal' },
+        { tokenId: 'p31_r3_drop', tStart: 23.8, tEnd: 26.2, color: 'rose' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p31_svg_s2',
+          type: 'arrow',
+          fromToken: 'p31_r0_ab',
+          toToken: 'p31_r1_zero',
+          label: '直接看原分母，不先约分',
+          color: '#D97706',
+          curveOffset: 28,
+          tStart: 6.0,
+          tDrawEnd: 6.8,
+          tFadeStart: 11.0,
+          tEnd: 11.6
+        },
+        {
+          id: 'p31_svg_s5',
+          type: 'arrow',
+          fromToken: 'p31_r2_res',
+          toToken: 'p31_r3_drop',
+          label: '分母不为 $0$ 排除 $x = -1$',
+          color: '#BE123C',
+          curveOffset: 30,
+          tStart: 23.6,
+          tDrawEnd: 24.4,
+          tFadeStart: 28.4,
+          tEnd: 29.0
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 5.8, text: '第一步锁定原分子 $x^{2} - 1$ 和原分母 $(x + 1)(x - 3)$，切记判定分式有无意义之前绝对不能先约分！', focusToken: 'p31_r0_ab' },
+        { tStart: 5.8, tEnd: 11.8, text: '看第(1)问：令原分母 $(x + 1)(x - 3) = 0$，解得 $x = -1$ 或 $x = 3$ 时分式无意义。', focusToken: 'p31_r1_res' },
+        { tStart: 11.8, tEnd: 17.5, text: '看第(2)问：分式有意义要求两个分母因式都不能为 $0$，即 $x \\neq -1$ 且 $x \\neq 3$（注意连接词是“且”）。', focusToken: 'p31_r2_res' },
+        { tStart: 17.5, tEnd: 23.5, text: '看第(3)问：先令分子 $x^{2} - 1 = 0$，得到两个候选值 $x = 1$ 或 $x = -1$。', focusToken: 'p31_r3_num' },
+        { tStart: 23.5, tEnd: 30.0, text: '再联立原分母不为 $0$ 的条件，排除使分母为 $0$ 的 $x = -1$，最终定解当 $x = 1$ 时分式的值等于 $0$！', focusToken: 'p31_r4_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：运用分式基本性质因式分解约分',
+          givenLabel: '已知分式：',
+          givenFormula: '$\\frac{x^{2} - 4}{x^{2} - 4x + 4}$',
+          extractedLabel: '分子、分母分别因式分解：',
+          extractedFormula: '分子 $(x + 2)(x - 2)$，分母 $(x - 2)^{2}$',
+          questionText: '约去分子与分母的公因式 $(x - 2)$ 后，最简分式结果是？',
+          options: [
+            { key: 'A', text: 'A. $\\frac{x + 2}{x - 2}$', isCorrect: true },
+            { key: 'B', text: 'B. $\\frac{1}{x - 2}$', isCorrect: false },
+            { key: 'C', text: 'C. $\\frac{-4}{-4x + 4}$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！多项式分式约分必须“先因式分解，再约去公因式”：',
+            calcLines: [
+              '$\\frac{x^{2} - 4}{x^{2} - 4x + 4} = \\frac{(x + 2)(x - 2)}{(x - 2)^{2}} = \\frac{x + 2}{x - 2}$'
+            ],
+            summary: '切勿直接划掉分子分母中的单独项 $x^{2}$，只能约去乘积形式的公因式。'
+          },
+          wrongTitle: '提示：只能约去因式分解后的公因式',
+          wrongFeedback: '分子分解为 $(x + 2)(x - 2)$、分母分解为 $(x - 2)^{2}$，约去一个公因式 $(x - 2)$ 得 $\\frac{x + 2}{x - 2}$，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：判定分式值为 0 的条件',
+          givenLabel: '已知分式：',
+          givenFormula: '$\\frac{|x| - 2}{x + 2}$',
+          questionText: '当分式无意义时，$x$ 等于多少？当分式的值等于 $0$ 时，$x$ 等于多少？',
+          input1Prefix: '无意义时 $x =$',
+          input1Placeholder: '如 -2',
+          input2Prefix: '，值为 $0$ 时 $x =$',
+          input2Placeholder: '如 2',
+          input2Suffix: '',
+          expectedX: '-2',
+          expectedMin: '2',
+          allowOrderSwap: false,
+          correctFeedback: '分式无意义时 $x = -2$，值为 $0$ 时 $x = 2$。',
+          correctDetail: '令分母 $x + 2 = 0$ 得 $x = -2$ 时无意义；令分子 $|x| - 2 = 0$ 得 $x = \\pm 2$，结合 $x \\neq -2$ 舍去 $-2$，故 $x = 2$。',
+          wrongFeedback: '令分母 $x + 2 = 0$ 求无意义条件；令 $|x| - 2 = 0$ 得 $\\pm 2$ 后，记得排除使分母为 $0$ 的值。',
+          specificWrongHints: [
+            {
+              checkType: 'secondVal',
+              val: '-2',
+              hint: '当 $x = -2$ 时分母 $x + 2 = 0$，分式无意义，故值为 $0$ 时只能取 $x = 2$。'
+            }
+          ]
+        }
+      }
+    },
+
+    // =========================================================================
+    // P32：运用有理数乘方符号法则与混合运算顺序计算
+    // =========================================================================
+    P32: {
+      procedureId: 'P32',
+      title: '运用有理数乘方符号法则与混合运算顺序计算',
+      exampleTitle: '计算：$-1^{2025} + (2 - 0.5) \\div (-3)^{2} \\times (-4) + |-1|$',
+      exampleFormula: '先算乘方与括号内 $\\to$ 除法转乘倒数从左到右 $\\to$ 最后算加减',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示 $-a^{n}$ 与 $(-a)^{n}$ 的核心辨析及乘除同级从左到右法则）',
+      practiceSectionTitle: '有理数乘方与混合运算跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握带括号与不带括号乘方符号辨析及完整混合运算顺序',
+
+      steps: [
+        {
+          step: 1,
+          name: '辨析乘方底数符号，先算乘方、绝对值与括号内',
+          tStart: 0.0,
+          tEnd: 6.5,
+          explanation: '$-1^{2025}$ 的底数是 $1$（不是 $-1$），故 $-1^{2025} = -1$；$(-3)^{2} = 9$；$|-1| = 1$；同时括号内 $2 - 0.5 = 1.5 = \\frac{3}{2}$。'
+        },
+        {
+          step: 2,
+          name: '将化简结果回代原式',
+          tStart: 6.5,
+          tEnd: 12.0,
+          explanation: '把第一步各项结果代回，原式转化为 $-1 + \\frac{3}{2} \\div 9 \\times (-4) + 1$。'
+        },
+        {
+          step: 3,
+          name: '除法转乘倒数，乘除同级从左到右计算',
+          tStart: 12.0,
+          tEnd: 19.0,
+          explanation: '切勿先算 $9 \\times (-4)$！应将除以 $9$ 转化为乘以 $\\frac{1}{9}$，统一连乘：$\\frac{3}{2} \\times \\frac{1}{9} \\times (-4)$。'
+        },
+        {
+          step: 4,
+          name: '先定乘积负号，再约分算出中间项',
+          tStart: 19.0,
+          tEnd: 24.5,
+          explanation: '三个因数中只有 $1$ 个负因数（奇数个），积为负；约分得 $-\\frac{3 \\times 4}{2 \\times 9} = -\\frac{2}{3}$，原式化为 $-1 - \\frac{2}{3} + 1$。'
+        },
+        {
+          step: 5,
+          name: '巧用相反数抵消算加减得结果',
+          tStart: 24.5,
+          tEnd: 30.0,
+          explanation: '观察首尾 $-1$ 与 $+1$ 互为相反数，相加为 $0$，直接得出最终结果为 $-\\frac{2}{3}$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 算 $-1^{2025} = -1$，$(-3)^{2} = 9$，$|-1| = 1$，$2 - 0.5 = \\frac{3}{2}$' },
+        { time: 7.5, step: 2, label: '2.1 回代得 $-1 + \\frac{3}{2} \\div 9 \\times (-4) + 1$' },
+        { time: 14.0, step: 3, label: '3.1 除法转乘倒数：$\\frac{3}{2} \\times \\frac{1}{9} \\times (-4)$' },
+        { time: 20.5, step: 4, label: '4.1 定符号并约分得 $-\\frac{2}{3}$' },
+        { time: 26.0, step: 5, label: '5.1 $-1 + 1 = 0$ 抵消，得最终结果 $-\\frac{2}{3}$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p32_row_0',
+          stepBadge: '原式',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p32_r0_p1', math: '$-1^{2025}$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p32_r0_p2', math: '$+ (2 - 0.5) \\div (-3)^{2} \\times (-4)$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p32_r0_p3', math: '$+ |-1|$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p32_row_1',
+          stepBadge: '第 1 & 2 步 · 算乘方、绝对值与括号',
+          appearAt: 1.5,
+          tokens: [
+            { id: 'p32_r1_m1', math: '$= -1$', appearAt: 1.6, dur: 0.40 },
+            { id: 'p32_r1_mid', math: '$+ \\frac{3}{2} \\div 9 \\times (-4)$', appearAt: 3.0, dur: 0.45 },
+            { id: 'p32_r1_p1', math: '$+ 1$', appearAt: 4.5, dur: 0.35 }
+          ]
+        },
+        {
+          rowId: 'p32_row_2',
+          stepBadge: '第 3 步 · 除法转乘倒数',
+          appearAt: 12.4,
+          tokens: [
+            { id: 'p32_r2_t1', math: '$= -1 +$', appearAt: 12.5, dur: 0.35 },
+            { id: 'p32_r2_mul', math: '$\\frac{3}{2} \\times \\frac{1}{9} \\times (-4)$', appearAt: 13.4, dur: 0.45 },
+            { id: 'p32_r2_t3', math: '$+ 1$', appearAt: 14.5, dur: 0.35 }
+          ]
+        },
+        {
+          rowId: 'p32_row_3',
+          stepBadge: '第 4 步 · 约分算乘除',
+          appearAt: 19.2,
+          tokens: [
+            { id: 'p32_r3_val', math: '$= -1 - \\frac{2}{3} + 1$', appearAt: 19.3, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p32_row_4',
+          stepBadge: '最终结论',
+          appearAt: 25.0,
+          isConclusion: true,
+          tokens: [
+            { id: 'p32_r4_conc', math: '$= -\\frac{2}{3}$。', appearAt: 25.1, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p32_sp_1',
+          title: '草稿警示 · 乘方底数符号与运算顺序两大高频陷阱',
+          showStart: 0.8,
+          showEnd: 29.8,
+          tokens: [
+            { id: 'p32_sp1_t1', math: '① $-1^{2024} = -1$（底数是 $1$，负号在乘方外）', appearAt: 1.4, dur: 0.40 },
+            { id: 'p32_sp1_t2', math: '② $(-1)^{2024} = +1$（底数是 $-1$，偶次幂为正）', appearAt: 2.6, dur: 0.40 },
+            { id: 'p32_sp1_t3', math: '③ 乘除同级：$\\frac{3}{2} \\div 9 \\times (-4) = \\frac{3}{2} \\times \\frac{1}{9} \\times (-4)$（绝不先算 $9 \\times (-4)$）', appearAt: 12.8, dur: 0.45 }
+          ],
+          note: '算完乘除后，若遇互为相反数的项（如 $-1$ 与 $+1$），先结合抵消为 $0$ 可大幅简化计算'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p32_r0_p1', tStart: 0.8, tEnd: 6.2, color: 'rose' },
+        { tokenId: 'p32_r1_mid', tStart: 6.6, tEnd: 11.8, color: 'amber' },
+        { tokenId: 'p32_r2_mul', tStart: 13.4, tEnd: 18.8, color: 'teal' },
+        { tokenId: 'p32_r3_val', tStart: 19.3, tEnd: 24.4, color: 'amber' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p32_svg_s1',
+          type: 'arrow',
+          fromToken: 'p32_r0_p1',
+          toToken: 'p32_r1_m1',
+          label: '底数是 $1$，结果为 $-1$',
+          color: '#BE123C',
+          curveOffset: -26,
+          tStart: 1.4,
+          tDrawEnd: 2.2,
+          tFadeStart: 5.6,
+          tEnd: 6.2
+        },
+        {
+          id: 'p32_svg_s3',
+          type: 'arrow',
+          fromToken: 'p32_r1_mid',
+          toToken: 'p32_r2_mul',
+          label: '除以 $9$ 转乘 $\\frac{1}{9}$',
+          color: '#0F766E',
+          curveOffset: 28,
+          tStart: 12.6,
+          tDrawEnd: 13.4,
+          tFadeStart: 18.0,
+          tEnd: 18.6
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 6.5, text: '第一步先算乘方、绝对值与括号内：$-1^{2025} = -1$，$(-3)^{2} = 9$，$|-1| = 1$，$2 - 0.5 = \\frac{3}{2}$。', focusToken: 'p32_r1_mid' },
+        { tStart: 6.5, tEnd: 12.0, text: '第二步回代原式，得到 $-1 + \\frac{3}{2} \\div 9 \\times (-4) + 1$。', focusToken: 'p32_r1_mid' },
+        { tStart: 12.0, tEnd: 19.0, text: '第三步处理乘除同级运算：千万不能先算 $9 \\times (-4)$，要把除以 $9$ 转化为乘以倒数 $\\frac{1}{9}$！', focusToken: 'p32_r2_mul' },
+        { tStart: 19.0, tEnd: 24.5, text: '第四步定符号并约分：$\\frac{3}{2} \\times \\frac{1}{9} \\times (-4) = -\\frac{2}{3}$，原式化为 $-1 - \\frac{2}{3} + 1$。', focusToken: 'p32_r3_val' },
+        { tStart: 24.5, tEnd: 30.0, text: '第五步算加减：$-1$ 与 $+1$ 互为相反数直接抵消为 $0$，得出最终结果 $-\\frac{2}{3}$！', focusToken: 'p32_r4_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：辨析 $-a^{n}$ 与 $(-a)^{n}$ 的符号结果',
+          givenLabel: '给出三组乘方算式：',
+          givenFormula: '① $-2^{4}$；② $(-2)^{4}$；③ $-3^{2} + (-3)^{2}$',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '这三个算式的计算结果依次是？',
+          options: [
+            { key: 'A', text: 'A. ① $-16$；② $16$；③ $0$', isCorrect: true },
+            { key: 'B', text: 'B. ① $16$；② $16$；③ $18$', isCorrect: false },
+            { key: 'C', text: 'C. ① $-8$；② $8$；③ $0$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！准确判断负号是否在括号内是乘方计算的关键：',
+            calcLines: [
+              '① $-2^{4} = -(2 \\times 2 \\times 2 \\times 2) = -16$（底数是 $2$）',
+              '② $(-2)^{4} = +16$（底数是 $-2$，偶次幂为正）',
+              '③ $-3^{2} + (-3)^{2} = -9 + 9 = 0$'
+            ],
+            summary: '无括号时负号不参与乘方，有括号时负号随底数一起参与乘方。'
+          },
+          wrongTitle: '提示：请注意负号在括号内外的区别，以及乘方不是底数乘指数',
+          wrongFeedback: '$-2^{4}$ 表示 $2^{4}$ 的相反数即 $-16$，而 $(-2)^{4} = +16$；同样 $-3^{2} = -9$ 而 $(-3)^{2} = +9$，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：按顺序计算有理数乘方混合运算',
+          givenLabel: '计算算式：',
+          givenFormula: '$-2^{2} + (-3)^{2} \\times 2 - 12 \\div (-3)$',
+          questionText: '先算出第一项 $-2^{2}$ 的值，再按运算顺序算出整个算式的最终结果分别是多少？',
+          input1Prefix: '$-2^{2} =$',
+          input1Placeholder: '如 -4',
+          input2Prefix: '，最终结果 $=$',
+          input2Placeholder: '如 18',
+          input2Suffix: '',
+          expectedX: '-4',
+          expectedMin: '18',
+          allowOrderSwap: false,
+          correctFeedback: '$-2^{2} = -4$，整个算式的最终结果为 $18$。',
+          correctDetail: '原式 $= -4 + 9 \\times 2 - (-4) = -4 + 18 + 4 = 18$。',
+          wrongFeedback: '先算乘方 $-2^{2} = -4$，$(-3)^{2} = 9$；再算乘除 $9 \\times 2 = 18$，$12 \\div (-3) = -4$；最后算 $-4 + 18 - (-4)$。',
+          specificWrongHints: [
+            {
+              checkType: 'firstVal',
+              val: '4',
+              hint: '注意 $-2^{2}$ 没有括号，表示 $2^{2}$ 的相反数，等于 $-4$ 而不是 $4$。'
+            },
+            {
+              checkType: 'secondVal',
+              val: '10',
+              hint: '注意最后一项是 $-12 \\div (-3) = -(-4) = +4$，故 $-4 + 18 + 4 = 18$ 而不是 $10$。'
+            }
+          ]
+        }
+      }
+    },
+
+    // =========================================================================
+    // P33：运用绝对值的性质、非负性求值及比较有理数大小
+    // =========================================================================
+    P33: {
+      procedureId: 'P33',
+      title: '运用绝对值的性质、非负性求值及比较有理数大小',
+      exampleTitle: '比较各组数的大小：(1) $-7$ 和 $2$；(2) $-\\frac{9}{7}$ 和 $-\\frac{6}{5}$；(3) $-|-5.7|$ 和 $|-2.9|$；(4) $-\\frac{1}{2}$、$-\\frac{1}{3}$、$\\frac{1}{4}$',
+      exampleFormula: '先去绝对值化简 $\\to$ 正数 $> 0 >$ 负数 $\\to$ 两负数绝对值大的反而小',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示绝对值去符号法则、两负数通分比大小与非负性模型）',
+      practiceSectionTitle: '绝对值性质与有理数大小比较跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握“两负数绝对值大的反而小”与绝对值非负性求值',
+
+      steps: [
+        {
+          step: 1,
+          name: '第(1)组异号比较：正数大于负数',
+          tStart: 0.0,
+          tEnd: 5.5,
+          explanation: '$-7$ 是负数，$2$ 是正数，由“正数大于 $0$，大于一切负数”，直接得出 $-7 \\lt 2$。'
+        },
+        {
+          step: 2,
+          name: '第(3)组先去绝对值化简，再比较正负',
+          tStart: 5.5,
+          tEnd: 11.5,
+          explanation: '遇到含多重符号和绝对值的数先化简：$-|-5.7| = -5.7$，$|-2.9| = 2.9$。因为 $-5.7 \\lt 2.9$，故 $-|-5.7| \\lt |-2.9|$（结论写原数）。'
+        },
+        {
+          step: 3,
+          name: '第(2)组两负数先分别求绝对值并通分',
+          tStart: 11.5,
+          tEnd: 18.0,
+          explanation: '比较 $-\\frac{9}{7}$ 与 $-\\frac{6}{5}$ 时，先分别取绝对值并通分：$\\left|-\\frac{9}{7}\\right| = \\frac{9}{7} = \\frac{45}{35}$，$\\left|-\\frac{6}{5}\\right| = \\frac{6}{5} = \\frac{42}{35}$。'
+        },
+        {
+          step: 4,
+          name: '第(2)组用“两个负数，绝对值大的反而小”定结论',
+          tStart: 18.0,
+          tEnd: 24.0,
+          explanation: '因为绝对值 $\\frac{45}{35} \\gt \\frac{42}{35}$，两个负数比较大小时绝对值大的反而小，所以 $-\\frac{9}{7} \\lt -\\frac{6}{5}$。'
+        },
+        {
+          step: 5,
+          name: '第(4)组多有理数分组排序',
+          tStart: 24.0,
+          tEnd: 30.0,
+          explanation: '正数 $\\frac{1}{4}$ 最大；两负数 $-\\frac{1}{2}$ 与 $-\\frac{1}{3}$ 比较绝对值 $\\frac{1}{2} \\gt \\frac{1}{3}$，故 $-\\frac{1}{2} \\lt -\\frac{1}{3} \\lt \\frac{1}{4}$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 异号直接判定 $-7 \\lt 2$' },
+        { time: 7.0, step: 2, label: '2.1 化简 $-|-5.7| = -5.7$，$|-2.9| = 2.9$ 得前者小于后者' },
+        { time: 13.5, step: 3, label: '3.1 通分比较绝对值：$\\frac{45}{35} \\gt \\frac{42}{35}$' },
+        { time: 19.5, step: 4, label: '4.1 绝对值大的反而小：$-\\frac{9}{7} \\lt -\\frac{6}{5}$' },
+        { time: 26.0, step: 5, label: '5.1 汇总第(4)组排序：$-\\frac{1}{2} \\lt -\\frac{1}{3} \\lt \\frac{1}{4}$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p33_row_0',
+          stepBadge: '第(1)组 · 异号比较',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p33_r0_1', math: '(1) 负数小于正数 $\\implies -7 \\lt 2$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p33_row_1',
+          stepBadge: '第(3)组 · 先化简再比较',
+          appearAt: 5.8,
+          tokens: [
+            { id: 'p33_r1_sim', math: '(3) $-|-5.7| = -5.7$，$|-2.9| = 2.9$', appearAt: 5.9, dur: 0.45 },
+            { id: 'p33_r1_res', math: '$\\implies -|-5.7| \\lt |-2.9|$', appearAt: 8.2, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p33_row_2',
+          stepBadge: '第(2)组 ① · 通分比绝对值',
+          appearAt: 12.0,
+          tokens: [
+            { id: 'p33_r2_abs', math: '(2) $\\left|-\\frac{9}{7}\\right| = \\frac{45}{35}$， $\\left|-\\frac{6}{5}\\right| = \\frac{42}{35}$', appearAt: 12.1, dur: 0.45 },
+            { id: 'p33_r2_gt', math: '，$\\because \\frac{45}{35} \\gt \\frac{42}{35}$', appearAt: 14.5, dur: 0.40 }
+          ]
+        },
+        {
+          rowId: 'p33_row_3',
+          stepBadge: '第(2)组 ② · 绝对值大的反而小',
+          appearAt: 18.4,
+          tokens: [
+            { id: 'p33_r3_res', math: '$\\therefore -\\frac{9}{7} \\lt -\\frac{6}{5}$', appearAt: 18.5, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p33_row_4',
+          stepBadge: '第(4)组 · 最终排序',
+          appearAt: 24.5,
+          isConclusion: true,
+          tokens: [
+            { id: 'p33_r4_conc', math: '(4) $\\because \\frac{1}{2} \\gt \\frac{1}{3} \\implies -\\frac{1}{2} \\lt -\\frac{1}{3} \\lt \\frac{1}{4}$。', appearAt: 24.6, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p33_sp_1',
+          title: '核心法则 · 绝对值三大高频用法',
+          showStart: 0.8,
+          showEnd: 29.8,
+          tokens: [
+            { id: 'p33_sp1_t1', math: '① 去绝对值：$|a| = a\\ (a \\ge 0)$，$|a| = -a\\ (a \\lt 0)$', appearAt: 1.4, dur: 0.40 },
+            { id: 'p33_sp1_t2', math: '② 非负性：若 $|A| + |B| = 0$，则 $A = 0$ 且 $B = 0$', appearAt: 6.4, dur: 0.40 },
+            { id: 'p33_sp1_t3', math: '③ 比较两负数：先算绝对值通分，绝对值大的反而小', appearAt: 12.6, dur: 0.45 }
+          ],
+          note: '书写规范：化简完 $-|-5.7| = -5.7$ 后，最终不等式结论仍要写回原数 $-|-5.7| \\lt |-2.9|$'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p33_r1_sim', tStart: 5.9, tEnd: 11.4, color: 'amber' },
+        { tokenId: 'p33_r2_abs', tStart: 12.1, tEnd: 17.8, color: 'teal' },
+        { tokenId: 'p33_r3_res', tStart: 18.5, tEnd: 23.8, color: 'rose' },
+        { tokenId: 'p33_r4_conc', tStart: 24.6, tEnd: 29.5, color: 'teal' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p33_svg_s2',
+          type: 'arrow',
+          fromToken: 'p33_r1_sim',
+          toToken: 'p33_r1_res',
+          label: '写回原数下结论',
+          color: '#0F766E',
+          curveOffset: 28,
+          tStart: 7.4,
+          tDrawEnd: 8.2,
+          tFadeStart: 11.0,
+          tEnd: 11.5
+        },
+        {
+          id: 'p33_svg_s4',
+          type: 'arrow',
+          fromToken: 'p33_r2_gt',
+          toToken: 'p33_r3_res',
+          label: '两负数不等号反向',
+          color: '#BE123C',
+          curveOffset: -26,
+          tStart: 18.2,
+          tDrawEnd: 19.0,
+          tFadeStart: 23.2,
+          tEnd: 23.8
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 5.5, text: '看第(1)组：$-7$ 是负数，$2$ 是正数，正数大于一切负数，所以 $-7 \\lt 2$。', focusToken: 'p33_r0_1' },
+        { tStart: 5.5, tEnd: 11.5, text: '看第(3)组：先去绝对值符号，$-|-5.7| = -5.7$，$|-2.9| = 2.9$，负数小于正数，写回原数得 $-|-5.7| \\lt |-2.9|$。', focusToken: 'p33_r1_res' },
+        { tStart: 11.5, tEnd: 18.0, text: '看第(2)组：两个负分数比较，先求绝对值并通分：$\\frac{9}{7} = \\frac{45}{35}$，$\\frac{6}{5} = \\frac{42}{35}$。', focusToken: 'p33_r2_abs' },
+        { tStart: 18.0, tEnd: 24.0, text: '因为 $\\frac{45}{35} \\gt \\frac{42}{35}$，根据“两个负数，绝对值大的反而小”，得出 $-\\frac{9}{7} \\lt -\\frac{6}{5}$！', focusToken: 'p33_r3_res' },
+        { tStart: 24.0, tEnd: 30.0, text: '看第(4)组：正数 $\\frac{1}{4}$ 最大，两个负数由 $\\frac{1}{2} \\gt \\frac{1}{3}$ 得 $-\\frac{1}{2} \\lt -\\frac{1}{3}$，排成 $-\\frac{1}{2} \\lt -\\frac{1}{3} \\lt \\frac{1}{4}$。', focusToken: 'p33_r4_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：两个负有理数与含绝对值数的大小比较',
+          givenLabel: '比较下列各组有理数的大小：',
+          givenFormula: '① $-\\frac{3}{4}$ 与 $-\\frac{2}{3}$；② $-(-3)$ 与 $-|-3|$',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '下列比较结果完全正确的是？',
+          options: [
+            { key: 'A', text: 'A. $-\\frac{3}{4} \\lt -\\frac{2}{3}$，且 $-(-3) \\gt -|-3|$', isCorrect: true },
+            { key: 'B', text: 'B. $-\\frac{3}{4} \\gt -\\frac{2}{3}$，且 $-(-3) \\gt -|-3|$', isCorrect: false },
+            { key: 'C', text: 'C. $-\\frac{3}{4} \\lt -\\frac{2}{3}$，且 $-(-3) = -|-3|$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！先通分比绝对值，多重符号先化简：',
+            calcLines: [
+              '① $\\left|-\\frac{3}{4}\\right| = \\frac{9}{12} \\gt \\left|-\\frac{2}{3}\\right| = \\frac{8}{12} \\implies -\\frac{3}{4} \\lt -\\frac{2}{3}$',
+              '② $-(-3) = +3$，$-|-3| = -3 \\implies -(-3) \\gt -|-3|$'
+            ],
+            summary: '两个负数比较时，绝对值更大的那个数在数轴上更靠左，反而更小。'
+          },
+          wrongTitle: '提示：请先通分比较绝对值，并把 -(-3) 和 -|-3| 化简为具体数字',
+          wrongFeedback: '因为 $\\frac{3}{4} = \\frac{9}{12} \\gt \\frac{8}{12} = \\frac{2}{3}$，所以 $-\\frac{3}{4} \\lt -\\frac{2}{3}$；且 $-(-3) = 3 \\gt -3 = -|-3|$，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：利用绝对值非负性“0 + 0 = 0”求值',
+          givenLabel: '已知非负性等式：',
+          givenFormula: '$|x - 3| + |y + 2| = 0$',
+          questionText: '由绝对值非负性可分别求出 $x$ 的值和 $x + y$ 的值是多少？',
+          input1Prefix: '$x =$',
+          input1Placeholder: '如 3',
+          input2Prefix: '，$x + y =$',
+          input2Placeholder: '如 1',
+          input2Suffix: '',
+          expectedX: '3',
+          expectedMin: '1',
+          allowOrderSwap: false,
+          correctFeedback: '$x = 3$，$x + y = 1$。',
+          correctDetail: '因为 $|x - 3| \\ge 0$ 且 $|y + 2| \\ge 0$，和为 $0$ 则 $x - 3 = 0$ 且 $y + 2 = 0$，解得 $x = 3，y = -2$，故 $x + y = 3 + (-2) = 1$。',
+          wrongFeedback: '分别令 $x - 3 = 0$ 和 $y + 2 = 0$ 求出 $x = 3，y = -2$，再计算 $3 + (-2)$。',
+          specificWrongHints: [
+            {
+              checkType: 'secondVal',
+              val: '5',
+              hint: '注意由 $y + 2 = 0$ 解得 $y = -2$（不是 $+2$），因此 $x + y = 3 + (-2) = 1$。'
+            }
+          ]
+        }
+      }
+    }
   };
 
   window.PROCEDURAL_DYNAMIC_DEMOS = PROCEDURAL_DYNAMIC_DEMOS;

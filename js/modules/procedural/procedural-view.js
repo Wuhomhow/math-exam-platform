@@ -587,42 +587,76 @@
         return;
       }
 
-      listContainer.innerHTML = `
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          ${filteredCols.map(col => {
-            const p = col.procedure;
-            const hasDynDemo = Boolean(window.PROCEDURAL_DYNAMIC_DEMOS && window.PROCEDURAL_DYNAMIC_DEMOS[p.id]);
-            return `
-              <div class="proc-collection-card ui-card p-5 hover:border-[#0F766E] hover:shadow-sm cursor-pointer transition-all duration-150 flex flex-col justify-between group" data-open-proc="${escapeHtml(p.id)}">
-                <div class="space-y-2.5">
-                  <div class="flex items-center justify-between gap-2">
-                    <div class="flex flex-wrap items-center gap-1.5 text-xs">
-                      <span class="px-2 py-0.5 rounded bg-[#0F766E] text-white font-bold tracking-wide">${escapeHtml(p.id)}</span>
-                      <span class="px-2 py-0.5 rounded bg-[#F0FDFA] text-[#115E59] border border-[#CCFBF1] font-medium">${escapeHtml(p.grade)}</span>
-                      <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-600 font-medium">${escapeHtml(p.chapter)}</span>
-                      ${hasDynDemo ? `<span class="px-2 py-0.5 rounded bg-teal-50 text-[#0F766E] border border-[#99F6E4] font-semibold">▶ 动态演示</span>` : ''}
-                    </div>
-                    <div class="flex items-center gap-1.5 shrink-0">
-                      <span class="px-2 py-0.5 rounded-full bg-teal-50 text-[#0F766E] text-[11px] font-semibold">${col.totalQuestions} 题</span>
-                      <svg class="w-4 h-4 text-slate-300 group-hover:text-[#0F766E] group-hover:translate-x-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                      </svg>
-                    </div>
-                  </div>
-
-                  <h3 class="text-base font-bold text-slate-900 group-hover:text-[#0F766E] transition-colors pt-0.5">
-                    ${renderMathText(p.name)}
-                  </h3>
-
-                  <p class="text-xs sm:text-[13px] text-slate-600 leading-relaxed">
-                    ${renderMathText(p.description)}
-                  </p>
+      const renderProcCardHtml = (col) => {
+        const p = col.procedure;
+        const hasDynDemo = Boolean(window.PROCEDURAL_DYNAMIC_DEMOS && window.PROCEDURAL_DYNAMIC_DEMOS[p.id]);
+        return `
+          <div class="proc-collection-card ui-card p-5 hover:border-[#0F766E] hover:shadow-sm cursor-pointer transition-all duration-150 flex flex-col justify-between group" data-open-proc="${escapeHtml(p.id)}">
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex flex-wrap items-center gap-1.5 text-xs">
+                  <span class="px-2 py-0.5 rounded bg-[#0F766E] text-white font-bold tracking-wide">${escapeHtml(p.id)}</span>
+                  <span class="px-2 py-0.5 rounded bg-[#F0FDFA] text-[#115E59] border border-[#CCFBF1] font-medium">${escapeHtml(p.grade)}</span>
+                  <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-600 font-medium">${escapeHtml(p.chapter)}</span>
+                  ${hasDynDemo ? `<span class="px-2 py-0.5 rounded bg-teal-50 text-[#0F766E] border border-[#99F6E4] font-semibold">▶ 动态演示</span>` : ''}
+                </div>
+                <div class="flex items-center gap-1.5 shrink-0">
+                  <span class="px-2 py-0.5 rounded-full bg-teal-50 text-[#0F766E] text-[11px] font-semibold">${col.totalQuestions} 题</span>
+                  <svg class="w-4 h-4 text-slate-300 group-hover:text-[#0F766E] group-hover:translate-x-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
                 </div>
               </div>
-            `;
-          }).join('')}
-        </div>
-      `;
+
+              <h3 class="text-base font-bold text-slate-900 group-hover:text-[#0F766E] transition-colors pt-0.5">
+                ${renderMathText(p.name)}
+              </h3>
+
+              <p class="text-xs sm:text-[13px] text-slate-600 leading-relaxed">
+                ${renderMathText(p.description)}
+              </p>
+            </div>
+          </div>
+        `;
+      };
+
+      const groupedList = new Map();
+      filteredCols.forEach(col => {
+        const g = col.procedure.grade || '其他';
+        const grp = col.procedure.chapterGroup || col.procedure.chapter || '未分组章节';
+        const key = `${g}__${grp}`;
+        if (!groupedList.has(key)) {
+          groupedList.set(key, { grade: g, chapterGroup: grp, items: [] });
+        }
+        groupedList.get(key).items.push(col);
+      });
+
+      if (groupedList.size > 1) {
+        listContainer.innerHTML = `
+          <div class="space-y-6">
+            ${Array.from(groupedList.values()).map(group => `
+              <section class="space-y-3">
+                <div class="flex items-center justify-between gap-2 pb-1.5 border-b border-slate-200/80">
+                  <div class="flex items-center gap-2">
+                    <span class="px-2 py-0.5 rounded bg-[#F0FDFA] text-[#115E59] border border-[#CCFBF1] text-xs font-bold">${escapeHtml(group.grade)}</span>
+                    <h3 class="text-sm sm:text-base font-bold text-slate-800">${escapeHtml(group.chapterGroup)}</h3>
+                  </div>
+                  <span class="text-xs font-semibold text-slate-500">${group.items.length} 项</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  ${group.items.map(renderProcCardHtml).join('')}
+                </div>
+              </section>
+            `).join('')}
+          </div>
+        `;
+      } else {
+        listContainer.innerHTML = `
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            ${filteredCols.map(renderProcCardHtml).join('')}
+          </div>
+        `;
+      }
 
       listContainer.querySelectorAll('[data-open-proc]').forEach(card => {
         card.addEventListener('click', () => {

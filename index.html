@@ -22,94 +22,94 @@
 
   <!-- Top Global Header -->
   <header class="bg-white border-b border-slate-200 sticky top-0 z-40 no-print">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between gap-2 h-14 sm:h-16">
         <!-- Logo & Brand -->
-        <div class="flex items-center space-x-3">
-          <div class="w-10 h-10 rounded-full border-2 border-[#0F766E] bg-[#F0FDFA] flex items-center justify-center text-[#0F766E] shrink-0">
+        <div class="flex items-center space-x-2.5 sm:space-x-3 min-w-0 shrink-0">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full border-2 border-[#0F766E] bg-[#F0FDFA] flex items-center justify-center text-[#0F766E] shrink-0">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
             </svg>
           </div>
-          <div class="flex flex-col justify-center">
-            <div class="flex items-baseline gap-2.5">
-              <span class="text-xl font-bold tracking-tight text-[#0F766E]">题典网</span>
-              <span class="hidden sm:inline-block text-xs font-medium text-[#115E59] tracking-wider border-l border-slate-200 pl-2.5">好题成典，组卷有方</span>
+          <div class="flex flex-col justify-center min-w-0">
+            <div class="flex items-baseline gap-2.5 whitespace-nowrap">
+              <span class="text-lg sm:text-xl font-bold tracking-tight text-[#0F766E] whitespace-nowrap">题典网</span>
+              <span class="hidden lg:inline-block text-xs font-medium text-[#115E59] tracking-wider border-l border-slate-200 pl-2.5 whitespace-nowrap">好题成典，组卷有方</span>
             </div>
-            <span class="sm:hidden text-[11px] font-medium text-[#115E59] tracking-wide leading-tight">好题成典，组卷有方</span>
+            <span class="md:hidden text-[11px] font-medium text-[#115E59] tracking-wide leading-tight whitespace-nowrap">好题成典，组卷有方</span>
           </div>
         </div>
 
-        <!-- Navigation Tabs -->
-        <nav class="flex items-center gap-1 rounded-lg bg-slate-100 border border-slate-200 p-1">
-          <button id="navBankBtn" type="button" onclick="if(typeof switchView==='function')switchView('bank')" class="nav-tab is-active px-3.5 py-1.5 rounded-md text-sm font-semibold transition-all">
+        <!-- Navigation Tabs (Desktop & Tablet >= 768px) -->
+        <nav class="hidden md:flex items-center gap-1 rounded-lg bg-slate-100 border border-slate-200 p-1 shrink-0">
+          <button id="navBankBtn" type="button" onclick="if(typeof switchView==='function')switchView('bank')" class="nav-tab is-active px-2.5 lg:px-3.5 py-1.5 rounded-md text-xs lg:text-sm font-semibold transition-all whitespace-nowrap">
             题库选题
           </button>
-          <button id="navGraphBtn" type="button" onclick="if(typeof switchView==='function')switchView('graph')" class="nav-tab px-3.5 py-1.5 rounded-md text-sm font-semibold transition-all">
+          <button id="navGraphBtn" type="button" onclick="if(typeof switchView==='function')switchView('graph')" class="nav-tab px-2.5 lg:px-3.5 py-1.5 rounded-md text-xs lg:text-sm font-semibold transition-all whitespace-nowrap">
             题目图谱
           </button>
-          <button id="navProceduralBtn" type="button" onclick="if(typeof switchView==='function')switchView('procedural')" class="nav-tab px-3.5 py-1.5 rounded-md text-sm font-semibold transition-all">
+          <button id="navProceduralBtn" type="button" onclick="if(typeof switchView==='function')switchView('procedural')" class="nav-tab px-2.5 lg:px-3.5 py-1.5 rounded-md text-xs lg:text-sm font-semibold transition-all whitespace-nowrap">
             程序性知识
           </button>
-          <button id="navPaperBtn" type="button" onclick="if(typeof switchView==='function')switchView('paper')" class="nav-tab px-3.5 py-1.5 rounded-md text-sm font-medium transition-all">
+          <button id="navPaperBtn" type="button" onclick="if(typeof switchView==='function')switchView('paper')" class="nav-tab px-2.5 lg:px-3.5 py-1.5 rounded-md text-xs lg:text-sm font-medium transition-all whitespace-nowrap">
             试卷排版与预览
           </button>
         </nav>
 
         <!-- Right Quick Actions -->
-        <div class="flex items-center space-x-2 sm:space-x-2.5">
+        <div class="flex items-center space-x-1.5 sm:space-x-2.5 shrink-0">
           <!-- Guide Trigger Button -->
-          <button id="btnOpenGuide" type="button" class="btn-secondary inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition">
-            <svg class="w-4 h-4 text-[#0F766E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <button id="btnOpenGuide" type="button" class="btn-secondary inline-flex items-center space-x-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg text-sm font-medium transition whitespace-nowrap" aria-label="使用指引">
+            <svg class="w-4 h-4 text-[#0F766E] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
             <span class="hidden sm:inline">使用指引</span>
           </button>
 
           <!-- Basket Trigger Button -->
-          <button id="btnOpenBasket" class="btn-primary relative inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-lg text-sm font-medium transition">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <button id="btnOpenBasket" class="btn-primary relative inline-flex items-center space-x-1.5 sm:space-x-2 px-2.5 sm:px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition whitespace-nowrap">
+            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
             </svg>
             <span>试题篮</span>
-            <span id="basketBadge" class="bg-[#CCFBF1] text-[#115E59] text-xs px-2 py-0.5 rounded-full font-bold ml-1">0</span>
+            <span id="basketBadge" class="bg-[#CCFBF1] text-[#115E59] text-xs px-1.5 sm:px-2 py-0.5 rounded-full font-bold">0</span>
           </button>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Mobile Tab Switcher -->
-  <div class="md:hidden px-4 py-2 border-b border-slate-200 bg-white no-print">
+  <!-- Mobile Tab Switcher (< 768px) -->
+  <div class="md:hidden px-3 py-2 border-b border-slate-200 bg-white no-print">
     <div class="flex gap-1 rounded-lg bg-slate-100 border border-slate-200 p-1">
-      <button id="mobileNavBank" type="button" onclick="if(typeof switchView==='function')switchView('bank')" class="nav-tab is-active flex-1 py-1.5 rounded-md text-center text-xs sm:text-sm font-semibold transition-all">题库选题</button>
-      <button id="mobileNavGraph" type="button" onclick="if(typeof switchView==='function')switchView('graph')" class="nav-tab flex-1 py-1.5 rounded-md text-center text-xs sm:text-sm font-semibold transition-all">题目图谱</button>
-      <button id="mobileNavProcedural" type="button" onclick="if(typeof switchView==='function')switchView('procedural')" class="nav-tab flex-1 py-1.5 rounded-md text-center text-xs sm:text-sm font-semibold transition-all">程序性知识</button>
-      <button id="mobileNavPaper" type="button" onclick="if(typeof switchView==='function')switchView('paper')" class="nav-tab flex-1 py-1.5 rounded-md text-center text-xs sm:text-sm font-medium transition-all">试卷排版</button>
+      <button id="mobileNavBank" type="button" onclick="if(typeof switchView==='function')switchView('bank')" class="nav-tab is-active flex-1 py-1.5 px-1 rounded-md text-center text-xs font-semibold transition-all whitespace-nowrap">题库选题</button>
+      <button id="mobileNavGraph" type="button" onclick="if(typeof switchView==='function')switchView('graph')" class="nav-tab flex-1 py-1.5 px-1 rounded-md text-center text-xs font-semibold transition-all whitespace-nowrap">题目图谱</button>
+      <button id="mobileNavProcedural" type="button" onclick="if(typeof switchView==='function')switchView('procedural')" class="nav-tab flex-1 py-1.5 px-1 rounded-md text-center text-xs font-semibold transition-all whitespace-nowrap">程序性知识</button>
+      <button id="mobileNavPaper" type="button" onclick="if(typeof switchView==='function')switchView('paper')" class="nav-tab flex-1 py-1.5 px-1 rounded-md text-center text-xs font-medium transition-all whitespace-nowrap">试卷排版</button>
     </div>
   </div>
 
   <!-- VIEW 1: 题库选题中心 (Question Bank) -->
-  <main id="viewQuestionBank" class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 no-print">
-    <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+  <main id="viewQuestionBank" class="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-6 pb-12 no-print">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 sm:gap-6">
 
       <!-- Left Sidebar: Chapter & Knowledge Point Tree -->
       <aside class="lg:col-span-1 space-y-4 lg:sticky lg:top-20 lg:self-start lg:max-h-[calc(100vh-5.5rem)] lg:overflow-y-auto">
         <!-- Unified grade / semester navigation -->
-        <div class="ui-card p-4">
+        <div class="ui-card p-3.5 sm:p-4">
           <!-- Clickable Header on Mobile for folding -->
-          <div id="catalogHeaderToggle" class="flex items-center justify-between pb-3 border-b border-slate-100 cursor-pointer lg:cursor-default select-none">
-            <h3 class="text-sm font-bold text-slate-800 flex items-center gap-2">
-              <svg class="w-4 h-4 text-[#0F766E]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <div id="catalogHeaderToggle" class="flex items-center justify-between gap-2 pb-2.5 sm:pb-3 border-b border-slate-100 cursor-pointer lg:cursor-default select-none">
+            <h3 class="text-sm font-bold text-slate-800 flex items-center gap-1.5 sm:gap-2 shrink-0 whitespace-nowrap">
+              <svg class="w-4 h-4 text-[#0F766E] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
               </svg>
               <span>题库目录</span>
             </h3>
             <!-- Mobile Toggle Indicator & Active Chapter Badge -->
-            <div class="flex items-center gap-2 lg:hidden">
-              <span id="mobileActiveChapterBadge" class="text-xs text-[#0F766E] bg-[#F0FDFA] border border-[#CCFBF1] px-2 py-0.5 rounded font-medium max-w-[130px] truncate">已选题库</span>
-              <span class="text-xs text-slate-400 font-normal">点击展开/收起</span>
-              <svg id="mobileCatalogChevron" class="w-4 h-4 text-slate-400 transition-transform duration-200 -rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="flex items-center gap-1.5 sm:gap-2 lg:hidden min-w-0">
+              <span id="mobileActiveChapterBadge" class="text-xs text-[#0F766E] bg-[#F0FDFA] border border-[#CCFBF1] px-2 py-0.5 rounded font-medium max-w-[120px] sm:max-w-[180px] truncate">已选题库</span>
+              <span class="text-xs text-slate-400 font-normal whitespace-nowrap shrink-0">展开/收起</span>
+              <svg id="mobileCatalogChevron" class="w-4 h-4 text-slate-400 transition-transform duration-200 -rotate-90 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
               </svg>
             </div>

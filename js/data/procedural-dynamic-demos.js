@@ -9700,6 +9700,258 @@
         }
       }
     }
+    ,
+    // =========================================================================
+    // P41：运用线段垂直平分线的性质与判定进行线段转化、周长计算及尺规作图识别
+    // =========================================================================
+    P41: {
+      procedureId: 'P41',
+      title: '运用线段垂直平分线的性质与判定进行线段转化、周长计算及尺规作图识别',
+      exampleTitle: '如图，在 $\\triangle ABC$ 中，$AB = AC$，$\\angle A = 40^{\\circ}$，$AB$ 的垂直平分线 $MN$ 交 $AC$ 于点 $D$，求 $\\angle DBC$ 的度数',
+      exampleFormula: '$MN$ 垂直平分 $AB \\implies DA = DB \\implies \\angle ABD = \\angle A = 40^{\\circ}$',
+      totalDuration: 30.0,
+      scratchpadIdleHint: '旁白草稿演算区（配合上方动态几何图，同步展示“见中垂线连两端点得等腰”与周长化折为直法则）',
+      practiceSectionTitle: '线段垂直平分线性质与判定跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握垂直平分线“化折为直”算周长与判定定理',
+
+      geometryDiagram: {
+        title: '动态几何图形 · 线段 AB 垂直平分线 MN',
+        caption: '随推演进度绘制中垂线 MN、连接 DB 构造等腰 △DAB（DA=DB），再作差求 ∠DBC=30°',
+        svgHtml: `
+          <svg viewBox="0 0 260 185" class="w-full max-w-[260px] h-auto select-none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Step 2 等腰 △DAB 浅青绿高亮底色 -->
+            <polygon class="proc-geo-anim" data-appear-at="7.0" data-dur="0.6" points="130,22 68,158 164,96" fill="rgba(15, 118, 110, 0.10)" style="opacity:0;" />
+
+            <!-- 基础 △ABC -->
+            <line x1="130" y1="22" x2="68" y2="158" stroke="#334155" stroke-width="2.2" />
+            <line x1="130" y1="22" x2="192" y2="158" stroke="#334155" stroke-width="2.2" />
+            <line x1="68" y1="158" x2="192" y2="158" stroke="#334155" stroke-width="2.2" />
+
+            <!-- Step 1：AB 的垂直平分线 MN (过 AB 中点 (99,90) 与 D(164,96)) -->
+            <line class="proc-geo-anim" data-appear-at="1.2" data-dur="0.6" data-dash-len="140" x1="64" y1="74" x2="188" y2="112" stroke="#D97706" stroke-width="2.2" stroke-dasharray="140" stroke-dashoffset="140" style="opacity:0;" />
+            <g class="proc-geo-anim" data-appear-at="2.0" data-dur="0.5" style="opacity:0;">
+              <circle cx="99" cy="90" r="3" fill="#D97706" />
+              <circle cx="164" cy="96" r="3.5" fill="#D97706" />
+              <text x="54" y="72" fill="#B45309" font-size="11" font-weight="700">M</text>
+              <text x="190" y="116" fill="#B45309" font-size="11" font-weight="700">N</text>
+              <text x="172" y="92" fill="#B45309" font-size="12" font-weight="700">D</text>
+              <text x="121" y="52" fill="#0F766E" font-size="11" font-weight="700">40°</text>
+            </g>
+
+            <!-- Step 2：连接 DB 高亮 DA = DB -->
+            <line class="proc-geo-anim" data-appear-at="6.4" data-dur="0.6" data-dash-len="120" x1="68" y1="158" x2="164" y2="96" stroke="#0F766E" stroke-width="2.8" stroke-dasharray="120" stroke-dashoffset="120" style="opacity:0;" />
+            <line class="proc-geo-anim" data-appear-at="6.8" data-dur="0.4" x1="130" y1="22" x2="164" y2="96" stroke="#0F766E" stroke-width="2.8" style="opacity:0;" />
+
+            <!-- Step 3 & 4：∠ABD=40° 与 ∠DBC=30° 标注 -->
+            <g class="proc-geo-anim" data-appear-at="13.0" data-dur="0.5" style="opacity:0;">
+              <text x="80" y="135" fill="#0F766E" font-size="10" font-weight="700">40°</text>
+            </g>
+            <g class="proc-geo-anim" data-appear-at="20.0" data-dur="0.5" style="opacity:0;">
+              <text x="102" y="152" fill="#BE123C" font-size="11" font-weight="700">30°</text>
+            </g>
+
+            <!-- 顶点 A, B, C -->
+            <circle cx="130" cy="22" r="3" fill="#0F172A" />
+            <circle cx="68" cy="158" r="3" fill="#0F172A" />
+            <circle cx="192" cy="158" r="3" fill="#0F172A" />
+            <text x="125" y="14" fill="#0F172A" font-size="13" font-weight="700">A</text>
+            <text x="52" y="164" fill="#0F172A" font-size="13" font-weight="700">B</text>
+            <text x="198" y="164" fill="#0F172A" font-size="13" font-weight="700">C</text>
+          </svg>
+        `
+      },
+
+      steps: [
+        {
+          step: 1,
+          name: '锁定 $AB$ 的垂直平分线 $MN$ 与交点 $D$',
+          tStart: 0.0,
+          tEnd: 5.8,
+          explanation: '识别直线 $MN$ 是线段 $AB$ 的垂直平分线，且点 $D$ 是 $MN$ 与 $AC$ 的交点（即点 $D$ 在 $AB$ 的垂直平分线上）。'
+        },
+        {
+          step: 2,
+          name: '连接 $DB$，由垂直平分线性质得 $DA = DB$',
+          tStart: 5.8,
+          tEnd: 12.0,
+          explanation: '根据“线段垂直平分线上的点与这条线段两个端点的距离相等”，连接 $DB$ 立即得到 $DA = DB$，构造出等腰 $\\triangle DAB$。'
+        },
+        {
+          step: 3,
+          name: '在等腰 $\\triangle DAB$ 中由等边对等角得 $\\angle ABD = 40^{\\circ}$',
+          tStart: 12.0,
+          tEnd: 18.2,
+          explanation: '在 $\\triangle DAB$ 中，因为 $DA = DB$，由等边对等角得 $\\angle ABD = \\angle A = 40^{\\circ}$。'
+        },
+        {
+          step: 4,
+          name: '在等腰 $\\triangle ABC$ 中算出大底角 $\\angle ABC = 70^{\\circ}$',
+          tStart: 18.2,
+          tEnd: 24.2,
+          explanation: '在 $\\triangle ABC$ 中，因为 $AB = AC$ 且顶角 $\\angle A = 40^{\\circ}$，由等边对等角与内角和得 $\\angle ABC = \\frac{180^{\\circ} - 40^{\\circ}}{2} = 70^{\\circ}$。'
+        },
+        {
+          step: 5,
+          name: '两角相减求出目标角 $\\angle DBC = 30^{\\circ}$',
+          tStart: 24.2,
+          tEnd: 30.0,
+          explanation: '由角的和差关系 $\\angle DBC = \\angle ABC - \\angle ABD = 70^{\\circ} - 40^{\\circ} = 30^{\\circ}$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 锁定 $AB$ 的垂直平分线 $MN$ 及点 $D$' },
+        { time: 7.2, step: 2, label: '2.1 连接 $DB$，由性质定理得 $DA = DB$' },
+        { time: 13.5, step: 3, label: '3.1 等边对等角得 $\\angle ABD = \\angle A = 40^{\\circ}$' },
+        { time: 19.5, step: 4, label: '4.1 由 $AB = AC$ 算大底角 $\\angle ABC = 70^{\\circ}$' },
+        { time: 26.0, step: 5, label: '5.1 相减得 $\\angle DBC = 70^{\\circ} - 40^{\\circ} = 30^{\\circ}$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p41_row_0',
+          stepBadge: '已知条件',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p41_r0_cond', math: '在 $\\triangle ABC$ 中，$AB = AC$，$\\angle A = 40^{\\circ}$，$MN$ 垂直平分 $AB$ 交 $AC$ 于 $D$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p41_row_1',
+          stepBadge: '第 1 & 2 步 · 中垂线性质',
+          appearAt: 6.2,
+          tokens: [
+            { id: 'p41_r1_eq', math: '$\\because MN$ 垂直平分 $AB \\implies DA = DB$', appearAt: 6.3, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p41_row_2',
+          stepBadge: '第 3 步 · 等边对等角',
+          appearAt: 12.4,
+          tokens: [
+            { id: 'p41_r2_ang', math: '$\\implies \\angle ABD = \\angle A = 40^{\\circ}$', appearAt: 12.5, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p41_row_3',
+          stepBadge: '第 4 步 · 求大底角',
+          appearAt: 18.6,
+          tokens: [
+            { id: 'p41_r3_abc', math: '$\\because AB = AC \\implies \\angle ABC = \\frac{180^{\\circ} - 40^{\\circ}}{2} = 70^{\\circ}$', appearAt: 18.7, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p41_row_4',
+          stepBadge: '最终结论',
+          appearAt: 24.6,
+          isConclusion: true,
+          tokens: [
+            { id: 'p41_r4_conc', math: '$\\therefore \\angle DBC = \\angle ABC - \\angle ABD = 70^{\\circ} - 40^{\\circ} = 30^{\\circ}$。', appearAt: 24.7, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p41_sp_1',
+          title: '高频转化 · 垂直平分线“化折为直”算周长',
+          showStart: 5.8,
+          showEnd: 29.8,
+          tokens: [
+            { id: 'p41_sp1_t1', math: '① 单中垂线：$DA = DB \\implies C_{\\triangle BCD} = BC + CD + DA = BC + AC$', appearAt: 6.4, dur: 0.45 },
+            { id: 'p41_sp1_t2', math: '② 判定定理：必须有两点满足 $AC=AD, BC=BD$ 才能定垂直平分线', appearAt: 18.8, dur: 0.45 }
+          ],
+          note: '看到尺规作图“分别以两端点为圆心、大于一半长为半径画弧交于两点连线”，立刻识别为垂直平分线'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p41_r1_eq', tStart: 6.3, tEnd: 12.0, color: 'teal' },
+        { tokenId: 'p41_r2_ang', tStart: 12.5, tEnd: 18.2, color: 'amber' },
+        { tokenId: 'p41_r3_abc', tStart: 18.7, tEnd: 24.2, color: 'teal' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p41_svg_s2',
+          type: 'arrow',
+          fromToken: 'p41_r1_eq',
+          toToken: 'p41_r2_ang',
+          label: '等边对等角',
+          color: '#0F766E',
+          curveOffset: 28,
+          tStart: 12.2,
+          tDrawEnd: 13.0,
+          tFadeStart: 17.6,
+          tEnd: 18.2
+        },
+        {
+          id: 'p41_svg_s5',
+          type: 'arrow',
+          fromToken: 'p41_r3_abc',
+          toToken: 'p41_r4_conc',
+          label: '$70^{\\circ} - 40^{\\circ} = 30^{\\circ}$',
+          color: '#BE123C',
+          curveOffset: -26,
+          tStart: 24.2,
+          tDrawEnd: 25.0,
+          tFadeStart: 28.8,
+          tEnd: 29.5
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 5.8, text: '第一步锁定垂直平分线：直线 $MN$ 垂直平分线段 $AB$，点 $D$ 是 $MN$ 与 $AC$ 的交点。', focusToken: 'p41_r0_cond' },
+        { tStart: 5.8, tEnd: 12.0, text: '第二步连两端点用性质：连接 $DB$，由垂直平分线上的点到两端点距离相等，得 $DA = DB$。', focusToken: 'p41_r1_eq' },
+        { tStart: 12.0, tEnd: 18.2, text: '第三步等边对等角：在等腰 $\\triangle DAB$ 中，由 $DA = DB$ 直接得出 $\\angle ABD = \\angle A = 40^{\\circ}$。', focusToken: 'p41_r2_ang' },
+        { tStart: 18.2, tEnd: 24.2, text: '第四步求大底角：在等腰 $\\triangle ABC$ 中，由 $AB = AC$ 得 $\\angle ABC = (180^{\\circ} - 40^{\\circ}) \\div 2 = 70^{\\circ}$。', focusToken: 'p41_r3_abc' },
+        { tStart: 24.2, tEnd: 30.0, text: '最后两角相减：$\\angle DBC = 70^{\\circ} - 40^{\\circ} = 30^{\\circ}$！', focusToken: 'p41_r4_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：识别到三顶点距离相等的点',
+          givenLabel: '实际选址问题：',
+          givenFormula: '要在 $\\triangle ABC$ 内部修建一座物流中心，使其到 $A, B, C$ 三个城镇的距离相等',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '该物流中心应建在 $\\triangle ABC$ 的什么位置？',
+          options: [
+            { key: 'A', text: 'A. 三条边垂直平分线的交点处', isCorrect: true },
+            { key: 'B', text: 'B. 三个内角平分线的交点处', isCorrect: false },
+            { key: 'C', text: 'C. 三条中线的交点处', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！准确区分“到顶点等距”与“到三边等距”：',
+            calcLines: [
+              '到线段两端点距离相等 $\\implies$ 垂直平分线（外心）',
+              '到角两边距离相等 $\\implies$ 角平分线（内心）'
+            ],
+            summary: '三边垂直平分线的交点到三个顶点的距离相等。'
+          },
+          wrongTitle: '提示：请区分“到三个顶点距离相等”与“到三条边距离相等”',
+          wrongFeedback: '垂直平分线的性质是到两端点（顶点）距离相等，角平分线才是到两边距离相等，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：垂直平分线“化折为直”算周长与反求边长',
+          givenLabel: '已知条件：',
+          givenFormula: '在 $\\triangle ABC$ 中，$BC$ 的垂直平分线交 $AC$ 于点 $D$，交 $BC$ 于点 $E$。若 $AB = 6$，$AC = 8$，$BE = 4$',
+          questionText: '由垂直平分线性质转化后，$\\triangle ABD$ 的周长是多少？整个 $\\triangle ABC$ 的周长是多少？',
+          input1Prefix: '$C_{\\triangle ABD} =$',
+          input1Placeholder: '如 14',
+          input2Prefix: '，$C_{\\triangle ABC} =$',
+          input2Placeholder: '如 22',
+          input2Suffix: '',
+          expectedX: '14',
+          expectedMin: '22',
+          allowOrderSwap: false,
+          correctFeedback: '$C_{\\triangle ABD} = 14$，$C_{\\triangle ABC} = 22$。',
+          correctDetail: '由 $DB = DC$ 得 $C_{\\triangle ABD} = AB + AD + DC = AB + AC = 6 + 8 = 14$；由中点 $E$ 得 $BC = 2BE = 8$，故 $C_{\\triangle ABC} = 14 + 8 = 22$。',
+          wrongFeedback: '先由 $DB = DC$ 将 $\\triangle ABD$ 周长转化为 $AB + AC$，再加上 $BC = 2BE$ 得大三角形周长。',
+          specificWrongHints: []
+        }
+      }
+    }
   };
 
   window.PROCEDURAL_DYNAMIC_DEMOS = PROCEDURAL_DYNAMIC_DEMOS;

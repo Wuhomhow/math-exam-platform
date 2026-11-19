@@ -14968,6 +14968,350 @@
       subType: 'P40_distributive_law',
       operationSummary: '第(3)问：用 $-24$ 正向分配乘遍四项（注意符号变号）得 $-16+20-2+21=23$。',
       status: 'published'
+    },
+    // =========================================================================
+    // P41：运用线段垂直平分线的性质与判定进行线段转化、周长计算及尺规作图识别（31题，31条记录）
+    // =========================================================================
+    {
+      questionId: 'g8_lh_mid_q8',
+      procedureId: 'P41',
+      partId: null,
+      sortOrder: 1,
+      order: 1,
+      role: 'primary',
+      subType: 'P41_circumcenter_concept',
+      operationSummary: '到三角形三个顶点距离相等的点必在三边垂直平分线上，故应放在三边垂直平分线的交点处。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch15_1_2_l1_b_q1',
+      procedureId: 'P41',
+      partId: null,
+      sortOrder: 2,
+      order: 2,
+      role: 'primary',
+      subType: 'P41_circumcenter_concept',
+      operationSummary: '要求到 $A, B, C$ 三城镇距离相等，依据垂直平分线判定定理应建在三边垂直平分线的交点处。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch15_1_2_l1_g_q1',
+      procedureId: 'P41',
+      partId: null,
+      sortOrder: 3,
+      order: 3,
+      role: 'primary',
+      subType: 'P41_circumcenter_concept',
+      operationSummary: '要求音响到 $\\triangle ABC$ 三顶点距离相等，应放在三边垂直平分线的交点处。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch15_1_2_l1_g_q2',
+      procedureId: 'P41',
+      partId: null,
+      sortOrder: 4,
+      order: 4,
+      role: 'primary',
+      subType: 'P41_segment_transfer',
+      operationSummary: '由 $DE$ 垂直平分 $AC$ 得 $CD = AD = 5$，故 $BD = BC - CD = 9 - 5 = 4$。',
+      status: 'published'
+    },
+    {
+      questionId: 'g8_lh_mid_q5',
+      procedureId: 'P41',
+      partId: null,
+      sortOrder: 5,
+      order: 5,
+      role: 'primary',
+      subType: 'P41_perimeter_single',
+      operationSummary: '由 $DE$ 垂直平分 $BC$ 得 $BD = CD$，化折为直得 $C_{\\triangle ABD} = AB + AD + CD = AB + AC = 13$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch15_1_2_l1_b_q2',
+      procedureId: 'P41',
+      partId: null,
+      sortOrder: 6,
+      order: 6,
+      role: 'primary',
+      subType: 'P41_perimeter_single',
+      operationSummary: '由 $AC$ 垂直平分线得 $EA = EC$，化折为直得 $C_{\\triangle BEC} = BC + BE + EA = BC + AB = 17$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch15_1_2_l1_b_q3',
+      procedureId: 'P41',
+      partId: null,
+      sortOrder: 7,
+      order: 7,
+      role: 'primary',
+      subType: 'P41_perimeter_single',
+      operationSummary: '由 $DE$ 垂直平分 $BC$ 得 $BD = CD$，转化得 $C_{\\triangle ABD} = AB + AC = 6 + 8 = 14$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch15_1_2_l1_b_q5',
+      procedureId: 'P41',
+      partId: null,
+      sortOrder: 8,
+      order: 8,
+      role: 'primary',
+      subType: 'P41_perimeter_single',
+      operationSummary: '由 $BC$ 垂直平分线得 $EB = EC$，转化得 $C_{\\triangle ACE} = AC + AE + EB = AC + AB = 15$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch15_1_2_l1_g_q6',
+      procedureId: 'P41',
+      partId: null,
+      sortOrder: 9,
+      order: 9,
+      role: 'primary',
+      subType: 'P41_perimeter_single',
+      operationSummary: '由 $DE$ 垂直平分 $AC$ 得 $AD = CD$，转化得 $C_{\\triangle ABD} = AB + BD + CD = AB + BC = 20$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch15_1_2_l1_b_q7',
+      procedureId: 'P41',
+      partId: null,
+      sortOrder: 10,
+      order: 10,
+      role: 'primary',
+      subType: 'P41_perimeter_single',
+      operationSummary: '由 $AB$ 垂直平分线得 $EA = EB$，结合 $AB = AC$ 得 $C_{\\triangle BCE} = AC + BC = AB + BC = 24$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch15_1_2_l1_b_q10',
+      procedureId: 'P41',
+      partId: null,
+      sortOrder: 11,
+      order: 11,
+      role: 'primary',
+      subType: 'P41_perimeter_single',
+      operationSummary: '由 $DE$ 垂直平分 $AC$ 得 $EA = EC$，结合 $AB = AC = 9$ 得 $C_{\\triangle BCE} = AB + BC = 16$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch15_1_2_l1_g_q7',
+      procedureId: 'P41',
+      partId: null,
+      sortOrder: 12,
+      order: 12,
+      role: 'primary',
+      subType: 'P41_perimeter_single',
+      operationSummary: '由 $AB$ 中垂线得 $FA = FB$，结合 $AB = AC$ 得 $C_{\\triangle BCF} = AC + BC = AB + BC = 6$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch15_1_2_l1_b_q6',
+      procedureId: 'P41',
+      partId: null,
+      sortOrder: 13,
+      order: 13,
+      role: 'primary',
+      subType: 'P41_perimeter_single',
+      operationSummary: '由 $CD$ 垂直平分线得 $DE = CE$，转化四边形周长 $AB + AD + BE + CE = AB + AD + BC = 17$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch15_1_2_l1_b_q8',
+      procedureId: 'P41',
+      partId: null,
+      sortOrder: 14,
+      order: 14,
+      role: 'primary',
+      subType: 'P41_perimeter_diff',
+      operationSummary: '由 $MA = MC$ 得 $C_{\\triangle ABM} = AB + BC = 12$，故 $AC = 17 - 12 = 5$，由中点 $N$ 得 $AN = 2.5$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch15_1_2_l1_b_q11',
+      procedureId: 'P41',
+      partId: null,
+      sortOrder: 15,
+      order: 15,
+      role: 'primary',
+      subType: 'P41_perimeter_diff',
+      operationSummary: '由中点 $E$ 得 $AB = 2AE = 6$，由 $FA = FB$ 得 $C_{\\triangle ACF} = AC + BC = 18 - 6 = 12$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch15_1_2_l1_g_q3',
+      procedureId: 'P41',
+      partId: null,
+      sortOrder: 16,
+      order: 16,
+      role: 'primary',
+      subType: 'P41_perimeter_diff',
+      operationSummary: '由中点 $E$ 得 $BC = 2BE = 8$，由 $DB = DC$ 得 $C_{\\triangle ABD} = AB + AC = 22 - 8 = 14$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch15_1_2_l1_g_q8',
+      procedureId: 'P41',
+      partId: null,
+      sortOrder: 17,
+      order: 17,
+      role: 'primary',
+      subType: 'P41_perimeter_diff',
+      operationSummary: '由 $GA = GB$ 得 $C_{\\triangle AGC} = AC + BC = 30$，加上 $AB = 20$ 得 $C_{\\triangle ABC} = 50$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch15_1_2_l1_b_q4',
+      procedureId: 'P41',
+      partId: null,
+      sortOrder: 18,
+      order: 18,
+      role: 'primary',
+      subType: 'P41_perimeter_double',
+      operationSummary: '由双垂直平分线得 $DA = DB$、$FA = FC$，转化得 $C_{\\triangle ADF} = BC = BD + DC = 10$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch15_1_2_l1_g_q4',
+      procedureId: 'P41',
+      partId: null,
+      sortOrder: 19,
+      order: 19,
+      role: 'primary',
+      subType: 'P41_perimeter_double',
+      operationSummary: '由双垂直平分线得 $EA = EB$、$GA = GC$，化折为直得 $C_{\\triangle AEG} = BC = 10$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch15_1_2_3',
+      procedureId: 'P41',
+      partId: null,
+      sortOrder: 20,
+      order: 20,
+      role: 'primary',
+      subType: 'P41_perimeter_double',
+      operationSummary: '由双垂直平分线得 $PA = PB$、$QA = QC$，结合 $BC = 10$ 与重叠/间隔段 $QP = 2$ 求 $\\triangle AQP$ 周长。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch15_1_2_7',
+      procedureId: 'P41',
+      partId: null,
+      sortOrder: 21,
+      order: 21,
+      role: 'primary',
+      subType: 'P41_perimeter_double',
+      operationSummary: '由双垂直平分线两次转化 $DA = DC$、$FB = FA$，得 $C_{\\triangle BDF} = BD + DA = BD + DC = BC = 10$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch15_1_2_5',
+      procedureId: 'P41',
+      partId: null,
+      sortOrder: 22,
+      order: 22,
+      role: 'primary',
+      subType: 'P41_perimeter_double',
+      operationSummary: '由 $EF$ 垂直平分 $AC$ 得 $AE = EC$、$AC = 12$，由 $AD$ 垂直平分 $BE$ 得 $AB = AE = EC$，故 $C_{\\triangle ABC} = 2CD + AC = 32$。',
+      status: 'published'
+    },
+    {
+      questionId: 'g8_df_mid_q13',
+      procedureId: 'P41',
+      partId: null,
+      sortOrder: 23,
+      order: 23,
+      role: 'primary',
+      subType: 'P41_angle_calc',
+      operationSummary: '由 $AB$ 垂直平分线得 $DA = DB \\implies \\angle ABD = \\angle A = 40^{\\circ}$，结合 $AB = AC$ 得 $\\angle ABC = 70^{\\circ}$，故 $\\angle DBC = 30^{\\circ}$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch15_1_2_4',
+      procedureId: 'P41',
+      partId: null,
+      sortOrder: 24,
+      order: 24,
+      role: 'primary',
+      subType: 'P41_angle_calc',
+      operationSummary: '由 $BC$ 垂直平分线得 $DB = DC$ 且 $DM \\perp BC$，由 $\\angle ADM = 60^{\\circ}$ 推得 $\\angle C = \\angle DBC = 30^{\\circ}$，算出 $\\angle A = 100^{\\circ}$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch15_1_2_l1_b_q9',
+      procedureId: 'P41',
+      partId: null,
+      sortOrder: 25,
+      order: 25,
+      role: 'primary',
+      subType: 'P41_proof_converse',
+      operationSummary: '由点 $O$ 分别在 $AB, AC$ 的垂直平分线上得 $AO = BO$ 与 $AO = CO$，等量代换证得 $AO = BO = CO$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch15_1_2_l1_g_q9',
+      procedureId: 'P41',
+      partId: null,
+      sortOrder: 26,
+      order: 26,
+      role: 'primary',
+      subType: 'P41_proof_converse',
+      operationSummary: '由 $P$ 在 $BC$ 垂直平分线上得 $PB = PC$，结合 $PA = PB$ 得 $PA = PC$，由判定定理证得 $P$ 在 $AC$ 垂直平分线上。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch15_1_2_l1_g_q10',
+      procedureId: 'P41',
+      partId: null,
+      sortOrder: 27,
+      order: 27,
+      role: 'primary',
+      subType: 'P41_proof_converse',
+      operationSummary: '由 $AC = AD$ 且 $BC = BD$ 两点判定直线 $AB$ 垂直平分 $CD$，再由性质定理得 $EC = ED$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch15_1_2_l2_b_q2',
+      procedureId: 'P41',
+      partId: null,
+      sortOrder: 28,
+      order: 28,
+      role: 'primary',
+      subType: 'P41_compass_construction',
+      operationSummary: '识别尺规作图痕迹为 $BC$ 的垂直平分线，得 $BD = CD = AC - AD = 7 - 3 = 4$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch15_1_2_l2_b_q3',
+      procedureId: 'P41',
+      partId: null,
+      sortOrder: 29,
+      order: 29,
+      role: 'primary',
+      subType: 'P41_compass_construction',
+      operationSummary: '识别尺规作图痕迹为 $AB$ 的垂直平分线，得 $DA = DB$，由 $C_{\\triangle BCD} = AC + BC = 10$ 得 $AB = AC = 6$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch15_1_2_l2_b_q5',
+      procedureId: 'P41',
+      partId: null,
+      sortOrder: 30,
+      order: 30,
+      role: 'primary',
+      subType: 'P41_compass_construction',
+      operationSummary: '识别尺规作图痕迹为 $BC$ 的垂直平分线，得 $DB = DC$，化折为直得 $C_{\\triangle ACD} = AC + AB = 14$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch15_1_2_l2_b_q6',
+      procedureId: 'P41',
+      partId: null,
+      sortOrder: 31,
+      order: 31,
+      role: 'primary',
+      subType: 'P41_compass_construction',
+      operationSummary: '识别尺规作图痕迹为 $AC$ 的垂直平分线，得 $AC = 2AE = 4$、$DA = DC$，故 $C_{\\triangle ABD} = 14 - 4 = 10$。',
+      status: 'published'
     }
   ];
 
@@ -14981,10 +15325,40 @@
     return [];
   }
 
+  const GRADE_ORDER_MAP = { '七年级': 1, '八年级': 2, '九年级': 3 };
+
+  function parseSectionNumbers(chapterStr) {
+    const m = String(chapterStr || '').match(/^\s*(\d+(?:\.\d+)*)/);
+    if (!m) return [9999];
+    return m[1].split('.').map(n => parseInt(n, 10));
+  }
+
+  function parseProcedureNumericId(idStr) {
+    const m = String(idStr || '').match(/(\d+)/);
+    return m ? parseInt(m[1], 10) : 9999;
+  }
+
+  function compareProceduresByCurriculum(a, b) {
+    const gA = GRADE_ORDER_MAP[a.grade] || 99;
+    const gB = GRADE_ORDER_MAP[b.grade] || 99;
+    if (gA !== gB) return gA - gB;
+
+    const secA = parseSectionNumbers(a.chapter);
+    const secB = parseSectionNumbers(b.chapter);
+    const maxLen = Math.max(secA.length, secB.length);
+    for (let i = 0; i < maxLen; i++) {
+      const vA = i < secA.length ? secA[i] : -1;
+      const vB = i < secB.length ? secB[i] : -1;
+      if (vA !== vB) return vA - vB;
+    }
+
+    return parseProcedureNumericId(a.id) - parseProcedureNumericId(b.id);
+  }
+
   const ProceduralKnowledgeService = {
     getAllProcedures() {
       const list = Array.isArray(window.PROCEDURAL_KNOWLEDGE) ? window.PROCEDURAL_KNOWLEDGE : [];
-      // Dynamically attach ordered questionIds from QUESTION_PROCEDURES without duplicating question objects
+      // Dynamically attach ordered questionIds from QUESTION_PROCEDURES and sort strictly by textbook curriculum order
       return list.map(proc => {
         const seen = new Set();
         const orderedRecords = QUESTION_PROCEDURES
@@ -15000,7 +15374,7 @@
         });
         proc.questionIds = qIds;
         return proc;
-      });
+      }).sort(compareProceduresByCurriculum);
     },
 
     getProcedureById(procedureId) {

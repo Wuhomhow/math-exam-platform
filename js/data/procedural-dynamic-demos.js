@@ -1793,7 +1793,7 @@
     // =========================================================================
     P05: {
       procedureId: 'P05',
-      title: '根据数量关系列代数式',
+      title: '根据文字与简单数量关系列代数式',
       exampleTitle: '将 $3$ 千克单价 $m$ 元的甲糖与 $n$ 千克单价 $18$ 元的乙糖混合，求混合什锦糖的平均单价',
       exampleFormula: '甲糖：$3\\text{ kg} \\times m\\text{ 元/kg}$；乙糖：$n\\text{ kg} \\times 18\\text{ 元/kg}$',
       totalDuration: 30.0,
@@ -2034,7 +2034,7 @@
     // =========================================================================
     P06: {
       procedureId: 'P06',
-      title: '从数字与图形规律中归纳代数式',
+      title: '归纳等差递增型（固定增量）图形与数字规律',
       exampleTitle: '用棋子按规律摆图案：第 $1$ 个有 $2$ 颗，第 $2$ 个有 $5$ 颗，第 $3$ 个有 $8$ 颗，第 $4$ 个有 $11$ 颗，求第 $n$ 个图案的棋子数',
       exampleFormula: '$a_{1} = 2，a_{2} = 5，a_{3} = 8，a_{4} = 11 \\implies a_{n} = ?$',
       totalDuration: 31.0,
@@ -2329,7 +2329,7 @@
     // =========================================================================
     P07: {
       procedureId: 'P07',
-      title: '判断与表示正、反比例关系',
+      title: '利用反比例关系求定值 $k$ 与未知对应量',
       exampleTitle: '已知 $x$ 与 $y$ 成反比例关系，当 $x = 2.5$ 时 $y = 4$；求当 $y = \\frac{5}{8}$ 时对应 $x = m$ 的值',
       exampleFormula: '$x, y$ 成反比例：$(2.5, 4) \\to (m, \\frac{5}{8})$',
       totalDuration: 30.0,
@@ -2562,7 +2562,7 @@
     // =========================================================================
     P08: {
       procedureId: 'P08',
-      title: '代入字母数值求代数式的值',
+      title: '直接代入字母数值求代数式的值',
       exampleTitle: '已知 $|x - 2| + (y + 3)^{2} = 0$，求代数式 $x^{2} - 2xy + y^{2}$ 的值',
       exampleFormula: '$|x - 2| + (y + 3)^{2} = 0 \\implies x^{2} - 2xy + y^{2} = ?$',
       totalDuration: 30.0,
@@ -6835,96 +6835,105 @@
     // =========================================================================
     P28: {
       procedureId: 'P28',
-      title: '运用去括号与合并同类项法则进行整式加减及无关型求值',
-      exampleTitle: '计算整式加减：$\\left(\\frac{1}{3}x^{2} - 1 + 3x\\right) - 4\\left(x - x^{2} + \\frac{1}{2}\\right)$',
-      exampleFormula: '$a - k(b - c + d) = a - kb + kc - kd$；$mx^{a}y^{b} + nx^{a}y^{b} = (m + n)x^{a}y^{b}$',
+      title: '运用去括号法则与合并同类项进行整式加减与直接代入求值',
+      exampleTitle: '化简整式 $\\left(\\frac{1}{3}x^{2} - 1 + 3x\\right) - 4\\left(x - x^{2} + \\frac{1}{2}\\right)$，并求当 $x = -3$ 时的值',
+      exampleFormula: '$\\left(\\frac{1}{3}x^{2} - 1 + 3x\\right) - 4\\left(x - x^{2} + \\frac{1}{2}\\right)$（先化简，再代入 $x = -3$）',
       totalDuration: 30.0,
-      scratchpadIdleHint: '旁白草稿演算区（同步展示“两相同两无关”同类项准则、负系数去括号法则与“无关型令系数=0”求参技巧）',
-      practiceSectionTitle: '整式加减去括号与无关型求值跟做练习',
-      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握负因数去括号合并与“与字母取值无关”求参数',
+      scratchpadIdleHint: '旁白草稿演算区（同步展示“负因数乘遍括号内每一项变号、同类项系数相加、先化简再代入”核心法则）',
+      practiceSectionTitle: '去括号与合并同类项化简求值跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握负因数去括号变号、多层括号展开与先化简再代入',
 
       steps: [
         {
           step: 1,
-          name: '去掉第一个括号（括号前为正，各项不变号）',
+          name: '识别前正后负两层括号结构',
           tStart: 0.0,
-          tEnd: 5.8,
-          explanation: '第一个括号 $\\left(\\frac{1}{3}x^{2} - 1 + 3x\\right)$ 前面没有负号，直接去掉括号，各项保持原符号不变：$\\frac{1}{3}x^{2} - 1 + 3x$。'
+          tEnd: 5.5,
+          explanation: '观察原式：第一个括号前是正号，去括号各项不变号；第二个括号前是负因数 $-4$，去括号须用 $-4$ 乘遍括号内每一项且全部变号。'
         },
         {
           step: 2,
-          name: '将负系数 -4 乘遍第二个括号内每一项并变号',
-          tStart: 5.8,
-          tEnd: 12.8,
-          explanation: '第二个括号前是 $-4$，用 $-4$ 分别乘以 $x$、$-x^{2}$、$+\\frac{1}{2}$，得 $-4x + 4x^{2} - 2$（注意 $(-4) \\times (-x^{2}) = +4x^{2}$，$(-4) \\times \\frac{1}{2} = -2$）。'
+          name: '按乘法分配律逐项去括号（注意变号）',
+          tStart: 5.5,
+          tEnd: 12.2,
+          explanation: '展开 $-4\\left(x - x^{2} + \\frac{1}{2}\\right) = -4x + 4x^{2} - 2$（注意 $-4\\times(-x^{2}) = +4x^{2}$，$-4\\times\\frac{1}{2} = -2$），原式化为 $\\frac{1}{3}x^{2} - 1 + 3x - 4x + 4x^{2} - 2$。'
         },
         {
           step: 3,
-          name: '按同类项定义将相同次数的项分组',
-          tStart: 12.8,
-          tEnd: 19.0,
-          explanation: '将所含字母相同且指数也相同的项归为一组：二次项 $\\left(\\frac{1}{3}x^{2} + 4x^{2}\\right)$，一次项 $(3x - 4x)$，常数项 $(-1 - 2)$。'
+          name: '定位各组同类项并归类分组',
+          tStart: 12.2,
+          tEnd: 18.0,
+          explanation: '找出三组同类项：二次项 $\\frac{1}{3}x^{2}$ 与 $+4x^{2}$、一次项 $+3x$ 与 $-4x$、常数项 $-1$ 与 $-2$，连同符号分别归组。'
         },
         {
           step: 4,
-          name: '把各组同类项的系数相加，字母和指数不变',
-          tStart: 19.0,
-          tEnd: 24.8,
-          explanation: '二次项系数 $\\frac{1}{3} + 4 = \\frac{13}{3}$，一次项系数 $3 - 4 = -1$，常数项 $-1 - 2 = -3$。'
+          name: '系数相加、字母与指数不变合并化简',
+          tStart: 18.0,
+          tEnd: 24.0,
+          explanation: '分别把各组系数相加：$\\left(\\frac{1}{3}+4\\right)x^{2} + (3-4)x + (-1-2) = \\frac{13}{3}x^{2} - x - 3$，得到最简整式。'
         },
         {
           step: 5,
-          name: '按降幂排列写出最简整式结果',
-          tStart: 24.8,
+          name: '将 $x = -3$ 加括号代入最简整式求值',
+          tStart: 24.0,
           tEnd: 30.0,
-          explanation: '写出最终合并结果：$\\frac{13}{3}x^{2} - x - 3$（系数 $-1$ 中的 $1$ 省略不写）。'
+          explanation: '把 $x = -3$ 加括号代入 $\\frac{13}{3}x^{2} - x - 3$，得 $\\frac{13}{3}\\times(-3)^{2} - (-3) - 3 = 39 + 3 - 3 = 39$。'
         }
       ],
 
       microBeats: [
-        { time: 0.8, step: 1, label: '1.1 去第一括号得 $\\frac{1}{3}x^{2} - 1 + 3x$' },
-        { time: 7.5, step: 2, label: '2.1 将 $-4$ 分配进第二括号得 $-4x + 4x^{2} - 2$' },
-        { time: 14.2, step: 3, label: '3.1 按二次项、一次项、常数项分组同类项' },
-        { time: 20.5, step: 4, label: '4.1 系数相加：$\\frac{1}{3} + 4 = \\frac{13}{3}$，$3 - 4 = -1$，$-1 - 2 = -3$' },
-        { time: 26.5, step: 5, label: '5.1 得出最简结果 $\\frac{13}{3}x^{2} - x - 3$' }
+        { time: 0.8, step: 1, label: '1.1 锁定第二个括号前的负因数 $-4$' },
+        { time: 7.2, step: 2, label: '2.1 展开得 $\\frac{1}{3}x^{2} - 1 + 3x - 4x + 4x^{2} - 2$' },
+        { time: 13.8, step: 3, label: '3.1 按 $x^{2}$、$x$、常数项分组归类' },
+        { time: 19.6, step: 4, label: '4.1 合并系数得最简整式 $\\frac{13}{3}x^{2} - x - 3$' },
+        { time: 25.8, step: 5, label: '5.1 代入 $x = -3$ 算得 $39$' }
       ],
 
       boardRows: [
         {
           rowId: 'p28_row_0',
-          stepBadge: '原算式',
+          stepBadge: '原式',
           appearAt: 0.0,
           tokens: [
             { id: 'p28_r0_p1', math: '$\\left(\\frac{1}{3}x^{2} - 1 + 3x\\right)$', appearAt: 0.0, dur: 0.01 },
-            { id: 'p28_r0_p2', math: '$- 4\\left(x - x^{2} + \\frac{1}{2}\\right)$', appearAt: 0.0, dur: 0.01 }
+            { id: 'p28_r0_m4', math: '$- 4$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p28_r0_p2', math: '$\\left(x - x^{2} + \\frac{1}{2}\\right)$', appearAt: 0.0, dur: 0.01 }
           ]
         },
         {
           rowId: 'p28_row_1',
-          stepBadge: '第 1 & 2 步 · 去括号',
-          appearAt: 1.5,
+          stepBadge: '第 2 步 · 去括号',
+          appearAt: 6.0,
           tokens: [
-            { id: 'p28_r1_p1', math: '$= \\frac{1}{3}x^{2} - 1 + 3x$', appearAt: 1.6, dur: 0.45 },
-            { id: 'p28_r1_p2', math: '$- 4x + 4x^{2} - 2$', appearAt: 6.4, dur: 0.50 }
+            { id: 'p28_r1_1', math: '$= \\frac{1}{3}x^{2} - 1 + 3x$', appearAt: 6.1, dur: 0.40 },
+            { id: 'p28_r1_2', math: '$- 4x + 4x^{2} - 2$', appearAt: 7.4, dur: 0.50 }
           ]
         },
         {
           rowId: 'p28_row_2',
-          stepBadge: '第 3 & 4 步 · 同类项分组',
-          appearAt: 13.4,
+          stepBadge: '第 3 步 · 同类项分组',
+          appearAt: 12.6,
           tokens: [
-            { id: 'p28_r2_g2', math: '$= \\left(\\frac{1}{3} + 4\\right)x^{2}$', appearAt: 13.5, dur: 0.45 },
-            { id: 'p28_r2_g1', math: '$+ (3 - 4)x$', appearAt: 14.4, dur: 0.40 },
-            { id: 'p28_r2_g0', math: '$+ (-1 - 2)$', appearAt: 15.2, dur: 0.40 }
+            { id: 'p28_r2_x2', math: '$= \\left(\\frac{1}{3} + 4\\right)x^{2}$', appearAt: 12.7, dur: 0.45 },
+            { id: 'p28_r2_x', math: '$+ (3 - 4)x$', appearAt: 14.0, dur: 0.40 },
+            { id: 'p28_r2_c', math: '$+ (-1 - 2)$', appearAt: 15.2, dur: 0.40 }
           ]
         },
         {
           rowId: 'p28_row_3',
-          stepBadge: '最终结论',
-          appearAt: 25.0,
+          stepBadge: '第 4 步 · 最简整式',
+          appearAt: 18.4,
+          tokens: [
+            { id: 'p28_r3_sim', math: '$= \\frac{13}{3}x^{2} - x - 3$', appearAt: 18.5, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p28_row_4',
+          stepBadge: '第 5 步 · 代入求值',
+          appearAt: 24.4,
           isConclusion: true,
           tokens: [
-            { id: 'p28_r3_conc', math: '$= \\frac{13}{3}x^{2} - x - 3$。', appearAt: 25.1, dur: 0.60 }
+            { id: 'p28_r4_conc', math: '当 $x = -3$ 时，原式 $= \\frac{13}{3}\\times(-3)^{2} - (-3) - 3 = 39$。', appearAt: 24.5, dur: 0.60 }
           ]
         }
       ],
@@ -6932,106 +6941,106 @@
       scratchpadCards: [
         {
           id: 'p28_sp_1',
-          title: '核心准则 · 同类项“两相同、两无关”与无关型求参',
-          showStart: 0.8,
+          title: '草稿演算 · 负因数 -4 分配去括号防错检查',
+          showStart: 5.6,
           showEnd: 29.8,
           tokens: [
-            { id: 'p28_sp1_t1', math: '① 两相同：所含字母相同，且相同字母的指数也相同', appearAt: 1.4, dur: 0.40 },
-            { id: 'p28_sp1_t2', math: '② 负系数去括号：$-4\\left(x - x^{2} + \\frac{1}{2}\\right) = -4x + 4x^{2} - 2$', appearAt: 6.8, dur: 0.45 },
-            { id: 'p28_sp1_t3', math: '③ 与 $x$ 的取值无关（或不含某项）$\\implies$ 合并后含 $x$ 项系数 $= 0$', appearAt: 19.2, dur: 0.45 }
+            { id: 'p28_sp1_t1', math: '$(-4)\\times x = -4x$', appearAt: 6.2, dur: 0.40 },
+            { id: 'p28_sp1_t2', math: '$(-4)\\times(-x^{2}) = +4x^{2}$（负负得正）', appearAt: 7.2, dur: 0.45 },
+            { id: 'p28_sp1_t3', math: '$(-4)\\times\\left(+\\frac{1}{2}\\right) = -2$（勿漏乘常数项）', appearAt: 8.2, dur: 0.45 }
           ],
-          note: '几个常数项（如 $-1$ 与 $-2$）也是同类项；字母顺序不同但对应指数相同的项（如 $-2x^{2}y$ 与 $2yx^{2}$）也是同类项'
+          note: '去括号完成后，合并同类项只把系数相加，字母和指数保持不变'
         }
       ],
 
       tokenHighlights: [
-        { tokenId: 'p28_r0_p2', tStart: 5.8, tEnd: 12.5, color: 'amber' },
-        { tokenId: 'p28_r1_p2', tStart: 6.4, tEnd: 12.5, color: 'rose' },
-        { tokenId: 'p28_r2_g2', tStart: 13.5, tEnd: 24.4, color: 'teal' },
-        { tokenId: 'p28_r2_g1', tStart: 14.4, tEnd: 24.4, color: 'amber' },
-        { tokenId: 'p28_r3_conc', tStart: 25.1, tEnd: 29.5, color: 'teal' }
+        { tokenId: 'p28_r0_m4', tStart: 0.8, tEnd: 5.4, color: 'rose' },
+        { tokenId: 'p28_r1_2', tStart: 7.4, tEnd: 12.0, color: 'amber' },
+        { tokenId: 'p28_r2_x2', tStart: 12.7, tEnd: 17.8, color: 'teal' },
+        { tokenId: 'p28_r3_sim', tStart: 18.5, tEnd: 23.8, color: 'teal' }
       ],
 
       svgAnnotations: [
         {
           id: 'p28_svg_s2',
           type: 'arrow',
-          fromToken: 'p28_r0_p2',
-          toToken: 'p28_r1_p2',
-          label: '$-4$ 乘遍三项并全变号',
+          fromToken: 'p28_r0_m4',
+          toToken: 'p28_r1_2',
+          label: '$-4$ 遍乘三项且全变号',
           color: '#BE123C',
           curveOffset: 28,
           tStart: 6.2,
-          tDrawEnd: 7.0,
-          tFadeStart: 11.8,
-          tEnd: 12.4
+          tDrawEnd: 7.2,
+          tFadeStart: 11.2,
+          tEnd: 11.8
         },
         {
           id: 'p28_svg_s4',
           type: 'under-brace',
-          startToken: 'p28_r2_g2',
-          endToken: 'p28_r2_g0',
-          label: '系数相加，字母和指数不变',
+          startToken: 'p28_r2_x2',
+          endToken: 'p28_r2_c',
+          label: '系数相加，字母与指数不变',
           color: '#0F766E',
-          tStart: 19.2,
-          tDrawEnd: 20.0,
-          tFadeStart: 24.0,
-          tEnd: 24.6
+          tStart: 16.0,
+          tDrawEnd: 16.8,
+          tFadeStart: 18.0,
+          tEnd: 18.4
         }
       ],
 
       subtitles: [
-        { tStart: 0.0, tEnd: 5.8, text: '第一步去掉第一个括号：括号前是正号，直接去括号得 $\\frac{1}{3}x^{2} - 1 + 3x$。', focusToken: 'p28_r1_p1' },
-        { tStart: 5.8, tEnd: 12.8, text: '第二步去掉带负系数的括号：用 $-4$ 乘遍括号内三项，注意负负得正、正负得负，得 $-4x + 4x^{2} - 2$。', focusToken: 'p28_r1_p2' },
-        { tStart: 12.8, tEnd: 19.0, text: '第三步同类项分组：将二次项、一次项和常数项分别归类，准备把系数相加。', focusToken: 'p28_r2_g2' },
-        { tStart: 19.0, tEnd: 30.0, text: '第四步合并同类项：$\\frac{1}{3} + 4 = \\frac{13}{3}$，$3 - 4 = -1$，$-1 - 2 = -3$，得出最简结果 $\\frac{13}{3}x^{2} - x - 3$！', focusToken: 'p28_r3_conc' }
+        { tStart: 0.0, tEnd: 5.5, text: '第一步观察括号前的符号与系数：第一个括号前是正号直接去括号，第二个括号前是负因数 $-4$，必须乘遍三项并全部变号。', focusToken: 'p28_r0_m4' },
+        { tStart: 5.5, tEnd: 12.2, text: '第二步展开去括号：$-4\\times x = -4x$，$-4\\times(-x^{2}) = +4x^{2}$，$-4\\times\\frac{1}{2} = -2$，一个都不能漏！', focusToken: 'p28_r1_2' },
+        { tStart: 12.2, tEnd: 18.0, text: '第三步同类项分组：把 $x^{2}$ 项、$x$ 项与常数项连同各自符号分别归组。', focusToken: 'p28_r2_x2' },
+        { tStart: 18.0, tEnd: 24.0, text: '第四步合并系数：$\\frac{1}{3}+4=\\frac{13}{3}$，$3-4=-1$，$-1-2=-3$，化简得最简整式 $\\frac{13}{3}x^{2}-x-3$。', focusToken: 'p28_r3_sim' },
+        { tStart: 24.0, tEnd: 30.0, text: '第五步直接代入求值：把 $x=-3$ 加括号代入最简式，算得 $\\frac{13}{3}\\times 9 + 3 - 3 = 39$！', focusToken: 'p28_r4_conc' }
       ],
 
       practices: {
         practice1: {
-          title: '练习一：由同类项定义求指数参数',
-          givenLabel: '已知条件：',
-          givenFormula: '单项式 $3x^{n}y^{3}$ 与 $-\\frac{1}{2}x^{2}y^{m}$ 的和仍是单项式（即二者是同类项）',
-          extractedLabel: '对照同类项“相同字母的指数相同”：',
-          extractedFormula: '$x$ 的指数分别为 $n$ 与 $2$；$y$ 的指数分别为 $3$ 与 $m$',
-          questionText: '由此求出的 $m, n$ 及 $m + n$ 的值是？',
+          title: '练习一：判断多层括号与负因数去括号正误',
+          givenLabel: '已知整式：',
+          givenFormula: '$3x^{2} - [7x - (4x - 3) - 2x^{2}]$',
+          extractedLabel: '先去内层小括号：',
+          extractedFormula: '$3x^{2} - [7x - 4x + 3 - 2x^{2}] = 3x^{2} - [3x + 3 - 2x^{2}]$',
+          questionText: '下一步去掉中括号并合并同类项，正确的结果是？',
           options: [
-            { key: 'A', text: 'A. $n = 2，m = 3$，故 $m + n = 5$', isCorrect: true },
-            { key: 'B', text: 'B. $n = 3，m = -\\frac{1}{2}$，故 $m + n = \\frac{5}{2}$', isCorrect: false },
-            { key: 'C', text: 'C. $n = 3，m = 2$，故 $m + n = 5$', isCorrect: false }
+            { key: 'A', text: 'A. $5x^{2} - 3x - 3$', isCorrect: true },
+            { key: 'B', text: 'B. $x^{2} - 3x + 3$', isCorrect: false },
+            { key: 'C', text: 'C. $5x^{2} - 3x + 3$', isCorrect: false }
           ],
           correctFeedback: {
-            title: '回答正确！两个单项式的和仍是单项式，说明它们必为同类项：',
+            title: '回答正确！中括号前是负号，括号内三项全部变号：',
             calcLines: [
-              '相同字母 $x$ 的指数相等：$n = 2$',
-              '相同字母 $y$ 的指数相等：$m = 3 \\implies m + n = 3 + 2 = 5$'
+              '$3x^{2} - (3x + 3 - 2x^{2}) = 3x^{2} - 3x - 3 + 2x^{2}$',
+              '合并同类项得 $(3+2)x^{2} - 3x - 3 = 5x^{2} - 3x - 3$'
             ],
-            summary: '同类项的判定与前面的数字系数（$3$ 和 $-\\frac{1}{2}$）完全无关。'
+            summary: '多层括号由内向外逐层去括号，且每去一层括号先合并括号内同类项最不易出错。'
           },
-          wrongTitle: '提示：请将相同字母的指数一一对应相等',
-          wrongFeedback: '在 $3x^{n}y^{3}$ 与 $-\\frac{1}{2}x^{2}y^{m}$ 中，$x$ 的指数对应相等得 $n = 2$，$y$ 的指数对应相等得 $m = 3$，请再试一次。'
+          wrongTitle: '提示：请检查中括号前负号对 +3 和 -2x² 的变号',
+          wrongFeedback: '中括号前是“$-$”号，去掉中括号后 $+3$ 变为 $-3$，$-2x^{2}$ 变为 $+2x^{2}$，再与 $3x^{2}$ 合并得 $5x^{2}$，请再试一次。'
         },
         practice2: {
-          title: '练习二：整式加减“与字母 x 的取值无关”求参数',
-          givenLabel: '已知合并同类项后的多项式为：',
-          givenFormula: '$(1 - b)x^{2} + (a + 3)x - 7y + 3 + b$',
-          questionText: '若该多项式的值与字母 $x$ 的取值无关，则含 $x^{2}$ 和 $x$ 项的系数均为 $0$，解出的 $a$ 和 $b$ 分别是多少？',
-          input1Prefix: '$a =$',
-          input1Placeholder: '如 -3',
-          input2Prefix: '，$b =$',
-          input2Placeholder: '如 1',
+          title: '练习二：先化简再直接代入求值',
+          givenLabel: '已知整式：',
+          givenFormula: '$(3x^{2} - 2xy) - 2(x^{2} - xy + 1)$',
+          questionText: '化简为 $ax^{2} - 2$ 的最简形式后，系数 $a$ 是多少？当 $x = -2$ 时该整式的值是多少？',
+          input1Prefix: '系数 $a =$',
+          input1Placeholder: '如 1',
+          input2Prefix: '，当 $x = -2$ 时的值 $=$',
+          input2Placeholder: '如 2',
           input2Suffix: '',
-          expectedX: '-3',
-          expectedMin: '1',
+          expectedX: '1',
+          expectedMin: '2',
           allowOrderSwap: false,
-          correctFeedback: '$a = -3$，$b = 1$。',
-          correctDetail: '因为值与 $x$ 的取值无关，令 $x^{2}$ 的系数 $1 - b = 0$ 得 $b = 1$；令 $x$ 的系数 $a + 3 = 0$ 得 $a = -3$。',
-          wrongFeedback: '直接令 $x$ 的一次项系数 $a + 3 = 0$ 求出 $a$，令 $x^{2}$ 的系数 $1 - b = 0$ 求出 $b$。',
+          correctFeedback: '化简为 $x^{2} - 2$（$a = 1$），当 $x = -2$ 时值为 $2$。',
+          correctDetail: '去括号得 $3x^{2} - 2xy - 2x^{2} + 2xy - 2 = x^{2} - 2$（$a=1$）；代入 $x=-2$ 得 $(-2)^{2} - 2 = 4 - 2 = 2$。',
+          wrongFeedback: '去括号注意 $-2(-xy)=+2xy$（与 $-2xy$ 抵消），$-2\\times 1 = -2$，化简为 $x^{2} - 2$ 再代入 $x=-2$。',
           specificWrongHints: [
             {
-              checkType: 'firstVal',
-              val: '3',
-              hint: '注意一次项系数是 $(a + 3)$，令 $a + 3 = 0$ 解得 $a = -3$ 而不是 $3$。'
+              checkType: 'secondVal',
+              val: '-6',
+              hint: '注意负数代入乘方要加括号：$(-2)^{2} = +4$，故 $4 - 2 = 2$ 而不是 $-4 - 2 = -6$。'
             }
           ]
         }
@@ -8125,104 +8134,102 @@
     // =========================================================================
     P34: {
       procedureId: 'P34',
-      title: '识别单项式与多项式、确定系数次数项数及由次数项数求参数',
-      exampleTitle: '对于多项式 $(n - 1)x^{m+2} - 3x^{2} + 2x$（$m > -2$ 的整数）：(1) 若 $n = 2$ 且为三次三项式，求 $m$；(2) 若为五次三项式，求 $m, n$ 满足的条件',
-      exampleFormula: '几次几项式 $\\iff$ 最高次项指数 $=$ 目标次数，且最高次项系数 $\\neq 0$',
+      title: '识别单项式并确定单项式的系数与次数',
+      exampleTitle: '确定单项式 $\\frac{3\\pi x^{2}y^{3}}{5}$ 与 $-2^{3}ab^{4}$ 的系数和次数',
+      exampleFormula: '$\\frac{3\\pi x^{2}y^{3}}{5}$ 与 $-2^{3}ab^{4}$：系数 $=$ 数字因数（含符号、分母、$\\pi$），次数 $=$ 所有字母指数和',
       totalDuration: 30.0,
-      scratchpadIdleHint: '旁白草稿演算区（同步展示单项式/多项式次数与系数辨析及“次数=目标且系数≠0”双重条件）',
-      practiceSectionTitle: '单项式、多项式概念与次数求参跟做练习',
-      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握含 π 单项式系数次数提取与多项式次数项数求参',
+      scratchpadIdleHint: '旁白草稿演算区（同步警示三大高频陷阱：圆周率 $\\pi$ 是常数、数字指数不计入次数、省略指数为 1）',
+      practiceSectionTitle: '单项式识别与系数次数提取跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握单项式判别以及含 $\\pi$、数字幂次的系数次数提取',
 
       steps: [
         {
           step: 1,
-          name: '拆解多项式各项与已知次数',
+          name: '确认单项式身份，区分常数因数与字母',
           tStart: 0.0,
-          tEnd: 5.8,
-          explanation: '把多项式 $(n - 1)x^{m+2} - 3x^{2} + 2x$ 拆分为三项：$(n - 1)x^{m+2}$、$-3x^{2}$、$+2x$。后两项的次数分别为 $2$ 和 $1$，且项数已有 $2$ 项。'
+          tEnd: 6.0,
+          explanation: '式子 $\\frac{3\\pi x^{2}y^{3}}{5}$ 分母仅为数字 $5$ 且无加减运算，是单项式；关键辨析：$\\pi$ 是圆周率常数（约 $3.14$），不是未知字母！'
         },
         {
           step: 2,
-          name: '第(1)问 ①：代入 $n = 2$ 核对首项系数不为 $0$',
-          tStart: 5.8,
-          tEnd: 11.5,
-          explanation: '当 $n = 2$ 时，首项系数 $n - 1 = 2 - 1 = 1 \\neq 0$，多项式化为 $x^{m+2} - 3x^{2} + 2x$，保证首项存在且不会与后两项重复合并。'
+          name: '提取 $\\frac{3\\pi x^{2}y^{3}}{5}$ 的系数（含分母与 $\\pi$）',
+          tStart: 6.0,
+          tEnd: 12.0,
+          explanation: '把单项式改写为“数字因数 $\\times$ 字母部分”：$\\frac{3\\pi}{5} \\cdot x^{2}y^{3}$，由此直接提取系数为 $\\frac{3\\pi}{5}$。'
         },
         {
           step: 3,
-          name: '第(1)问 ②：由“三次三项式”令首项指数等于 $3$',
-          tStart: 11.5,
-          tEnd: 17.5,
-          explanation: '因为后两项次数最高仅为 $2$，要使整个多项式为三次三项式，首项次数必须等于 $3$：列方程 $m + 2 = 3$，解得 $m = 1$。'
+          name: '仅把所有字母的指数相加得次数',
+          tStart: 12.0,
+          tEnd: 18.0,
+          explanation: '只看字母 $x$ 与 $y$ 的指数：$x$ 的指数是 $2$，$y$ 的指数是 $3$，相加得次数 $2 + 3 = 5$（切勿把 $\\pi$ 算进次数）。'
         },
         {
           step: 4,
-          name: '第(2)问 ①：由“五次三项式”建立双重条件',
-          tStart: 17.5,
-          tEnd: 23.8,
-          explanation: '要使 $(n - 1)x^{m+2} - 3x^{2} + 2x$ 为五次三项式，必须同时满足：① 首项次数等于 $5$（$m + 2 = 5$）；② 首项系数不能为 $0$（$n - 1 \\neq 0$），否则五次项消失变为二次二项式！'
+          name: '进阶辨析：$-2^{3}ab^{4}$ 的系数与数字指数陷阱',
+          tStart: 18.0,
+          tEnd: 24.5,
+          explanation: '在 $-2^{3}ab^{4}$ 中，$-2^{3} = -8$ 整体是数字系数，数字的指数 $3$ 绝不计入单项式次数！'
         },
         {
           step: 5,
-          name: '第(2)问 ②：分别求解并汇总最终结论',
-          tStart: 23.8,
+          name: '补齐字母 $a$ 的隐含指数 $1$，算出次数',
+          tStart: 24.5,
           tEnd: 30.0,
-          explanation: '由 $m + 2 = 5$ 解得 $m = 3$，由 $n - 1 \\neq 0$ 得 $n \\neq 1$；综上：(1) $m = 1$；(2) $m = 3$ 且 $n \\neq 1$。'
+          explanation: '字母 $a$ 隐含指数 $1$，字母 $b$ 指数为 $4$，故 $-2^{3}ab^{4}$ 的系数是 $-8$（或 $-2^{3}$），次数是 $1 + 4 = 5$。'
         }
       ],
 
       microBeats: [
-        { time: 0.8, step: 1, label: '1.1 拆分三项并标出后两项次数 $2, 1$' },
-        { time: 7.2, step: 2, label: '2.1 代入 $n = 2$ 得首项系数 $1 \\neq 0$' },
-        { time: 13.0, step: 3, label: '3.1 令 $m + 2 = 3$ 解得 $m = 1$' },
-        { time: 19.2, step: 4, label: '4.1 建立双重条件 $m + 2 = 5$ 且 $n - 1 \\neq 0$' },
-        { time: 25.8, step: 5, label: '5.1 解得 $m = 3$ 且 $n \\neq 1$' }
+        { time: 0.8, step: 1, label: '1.1 辨析 $\\pi$ 是常数而非字母' },
+        { time: 7.5, step: 2, label: '2.1 拆出数字因数得系数 $\\frac{3\\pi}{5}$' },
+        { time: 13.8, step: 3, label: '3.1 字母指数相加 $2 + 3 = 5$' },
+        { time: 19.6, step: 4, label: '4.1 识别 $-2^{3} = -8$ 为系数，指数 $3$ 不计次数' },
+        { time: 26.0, step: 5, label: '5.1 补齐 $a^{1}$ 算出次数 $1 + 4 = 5$' }
       ],
 
       boardRows: [
         {
           rowId: 'p34_row_0',
-          stepBadge: '原多项式',
+          stepBadge: '例 1 · 含 π 单项式',
           appearAt: 0.0,
           tokens: [
-            { id: 'p34_r0_t1', math: '$(n - 1)x^{m+2}$', appearAt: 0.0, dur: 0.01 },
-            { id: 'p34_r0_t2', math: '$- 3x^{2} + 2x$', appearAt: 0.0, dur: 0.01 },
-            { id: 'p34_r0_note', math: '（后两项次数分别为 $2$、$1$）', appearAt: 1.2, dur: 0.45 }
+            { id: 'p34_r0_num', math: '$\\frac{3\\pi}{5}$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p34_r0_lit', math: '$x^{2}y^{3}$', appearAt: 0.0, dur: 0.01 }
           ]
         },
         {
           rowId: 'p34_row_1',
-          stepBadge: '第(1)问 · 代入 n = 2 核系数',
-          appearAt: 6.2,
+          stepBadge: '第 2 步 · 提取系数',
+          appearAt: 6.4,
           tokens: [
-            { id: 'p34_r1_sub', math: '当 $n = 2$ 时，原式 $= x^{m+2} - 3x^{2} + 2x$', appearAt: 6.3, dur: 0.45 }
+            { id: 'p34_r1_coef', math: '系数 $=$ 数字因数（含 $\\pi$ 与分母）$= \\frac{3\\pi}{5}$', appearAt: 6.5, dur: 0.45 }
           ]
         },
         {
           rowId: 'p34_row_2',
-          stepBadge: '第(1)问 · 三次三项式求 m',
-          appearAt: 12.0,
+          stepBadge: '第 3 步 · 计算次数',
+          appearAt: 12.4,
           tokens: [
-            { id: 'p34_r2_eq', math: '由三次三项式得 $m + 2 = 3$', appearAt: 12.1, dur: 0.45 },
-            { id: 'p34_r2_res', math: '$\\implies m = 1$', appearAt: 13.8, dur: 0.45 }
+            { id: 'p34_r2_deg', math: '次数 $=$ 字母 $x, y$ 指数之和 $= 2 + 3 = 5$', appearAt: 12.5, dur: 0.45 }
           ]
         },
         {
           rowId: 'p34_row_3',
-          stepBadge: '第(2)问 · 五次三项式双重条件',
-          appearAt: 18.0,
+          stepBadge: '例 2 · 含数字幂次',
+          appearAt: 18.4,
           tokens: [
-            { id: 'p34_r3_c1', math: '① 次数条件：$m + 2 = 5$；', appearAt: 18.1, dur: 0.45 },
-            { id: 'p34_r3_c2', math: '② 系数条件：$n - 1 \\neq 0$', appearAt: 20.0, dur: 0.45 }
+            { id: 'p34_r3_orig', math: '$-2^{3}ab^{4} = -8 \\cdot a^{1}b^{4}$', appearAt: 18.5, dur: 0.45 },
+            { id: 'p34_r3_res', math: '$\\implies$ 系数为 $-8$，次数为 $1 + 4 = 5$', appearAt: 24.6, dur: 0.50 }
           ]
         },
         {
           rowId: 'p34_row_4',
           stepBadge: '最终结论',
-          appearAt: 24.4,
+          appearAt: 27.2,
           isConclusion: true,
           tokens: [
-            { id: 'p34_r4_conc', math: '$\\therefore$ (1) $m = 1$；(2) $m = 3$ 且 $n \\neq 1$。', appearAt: 24.5, dur: 0.60 }
+            { id: 'p34_r4_conc', math: '$\\therefore \\frac{3\\pi x^{2}y^{3}}{5}$ 系数 $\\frac{3\\pi}{5}$、次数 $5$；$-2^{3}ab^{4}$ 系数 $-8$、次数 $5$。', appearAt: 27.3, dur: 0.60 }
           ]
         }
       ],
@@ -8230,113 +8237,113 @@
       scratchpadCards: [
         {
           id: 'p34_sp_1',
-          title: '核心准则 · 整式分类与系数次数三大易错点',
+          title: '草稿警示 · 单项式系数与次数三大易错点',
           showStart: 0.8,
           showEnd: 29.8,
           tokens: [
-            { id: 'p34_sp1_t1', math: '① 查分母：分母含字母（如 $\\frac{1}{x}$）不是整式；分母为数字或 $\\pi$ 是整式', appearAt: 1.4, dur: 0.40 },
-            { id: 'p34_sp1_t2', math: '② 看 $\\pi$ 与数字幂：$\\frac{3\\pi x^{2}y^{3}}{5}$ 系数 $\\frac{3\\pi}{5}$、次数 $5$；$2^{3}x^{2}y$ 次数 $3$', appearAt: 6.8, dur: 0.40 },
-            { id: 'p34_sp1_t3', math: '③ 含参求值：最高次项“指数 $=$ 目标次数”且“系数 $\\neq 0$”缺一不可', appearAt: 18.4, dur: 0.45 }
+            { id: 'p34_sp1_t1', math: '① $\\pi$ 是常数：计入系数，绝不计入次数', appearAt: 1.4, dur: 0.40 },
+            { id: 'p34_sp1_t2', math: '② 数字幂次：$-2^{3}$ 的指数 $3$ 不计入次数', appearAt: 18.8, dur: 0.40 },
+            { id: 'p34_sp1_t3', math: '③ 隐含的 $1$：$-a$ 的系数是 $-1$，指数是 $1$', appearAt: 24.8, dur: 0.40 }
           ],
-          note: '若 $n = 1$，则首项 $(1 - 1)x^{5} = 0$，原多项式退化为 $-3x^{2} + 2x$（二次二项式），不再是五次三项式'
+          note: '单独的一个非零常数（如 $5, -\\pi$）也是单项式，其次数规定为 $0$'
         }
       ],
 
       tokenHighlights: [
-        { tokenId: 'p34_r0_t1', tStart: 0.8, tEnd: 5.6, color: 'amber' },
-        { tokenId: 'p34_r2_res', tStart: 13.8, tEnd: 17.4, color: 'teal' },
-        { tokenId: 'p34_r3_c1', tStart: 18.1, tEnd: 24.0, color: 'teal' },
-        { tokenId: 'p34_r3_c2', tStart: 20.0, tEnd: 24.0, color: 'rose' }
+        { tokenId: 'p34_r0_num', tStart: 1.0, tEnd: 11.8, color: 'amber' },
+        { tokenId: 'p34_r0_lit', tStart: 12.2, tEnd: 17.8, color: 'teal' },
+        { tokenId: 'p34_r1_coef', tStart: 6.5, tEnd: 11.8, color: 'amber' },
+        { tokenId: 'p34_r2_deg', tStart: 12.5, tEnd: 17.8, color: 'teal' },
+        { tokenId: 'p34_r3_res', tStart: 24.6, tEnd: 29.5, color: 'teal' }
       ],
 
       svgAnnotations: [
         {
-          id: 'p34_svg_s3',
+          id: 'p34_svg_s2',
           type: 'arrow',
-          fromToken: 'p34_r1_sub',
-          toToken: 'p34_r2_eq',
-          label: '最高次项指数 $= 3$',
-          color: '#0F766E',
-          curveOffset: 28,
-          tStart: 12.0,
-          tDrawEnd: 12.8,
-          tFadeStart: 16.8,
-          tEnd: 17.4
+          fromToken: 'p34_r0_num',
+          toToken: 'p34_r1_coef',
+          label: '$\\pi$ 是常数，一并提入系数',
+          color: '#D97706',
+          curveOffset: -26,
+          tStart: 6.6,
+          tDrawEnd: 7.4,
+          tFadeStart: 11.2,
+          tEnd: 11.8
         },
         {
-          id: 'p34_svg_s4',
+          id: 'p34_svg_s3',
           type: 'arrow',
-          fromToken: 'p34_r0_t1',
-          toToken: 'p34_r3_c2',
-          label: '防五次项消失：$n - 1 \\neq 0$',
-          color: '#BE123C',
-          curveOffset: -28,
-          tStart: 19.6,
-          tDrawEnd: 20.4,
-          tFadeStart: 23.6,
-          tEnd: 24.2
+          fromToken: 'p34_r0_lit',
+          toToken: 'p34_r2_deg',
+          label: '只加字母指数 $2 + 3 = 5$',
+          color: '#0F766E',
+          curveOffset: 28,
+          tStart: 12.6,
+          tDrawEnd: 13.4,
+          tFadeStart: 17.2,
+          tEnd: 17.8
         }
       ],
 
       subtitles: [
-        { tStart: 0.0, tEnd: 5.8, text: '第一步拆解多项式：后两项 $-3x^{2}$ 与 $+2x$ 的次数分别是 $2$ 和 $1$，因此三次或五次都只能由首项 $(n - 1)x^{m+2}$ 来决定。', focusToken: 'p34_r0_t1' },
-        { tStart: 5.8, tEnd: 11.5, text: '看第(1)问：把 $n = 2$ 代入，首项系数 $2 - 1 = 1 \\neq 0$，原式变为 $x^{m+2} - 3x^{2} + 2x$。', focusToken: 'p34_r1_sub' },
-        { tStart: 11.5, tEnd: 17.5, text: '因为是三次三项式，首项指数必须等于 $3$，即 $m + 2 = 3$，解得 $m = 1$。', focusToken: 'p34_r2_res' },
-        { tStart: 17.5, tEnd: 23.8, text: '看第(2)问：要成为五次三项式，除了令首项指数 $m + 2 = 5$，还必须保证首项系数 $n - 1 \\neq 0$，否则五次项就会消失！', focusToken: 'p34_r3_c2' },
-        { tStart: 23.8, tEnd: 30.0, text: '联立解得 $m = 3$ 且 $n \\neq 1$。整式次数与项数求参完成！', focusToken: 'p34_r4_conc' }
+        { tStart: 0.0, tEnd: 6.0, text: '先看例 1 $\\frac{3\\pi x^{2}y^{3}}{5}$：分母是常数 $5$，无加减号，是单项式；切记圆周率 $\\pi$ 是常数不是字母！', focusToken: 'p34_r0_num' },
+        { tStart: 6.0, tEnd: 12.0, text: '第二步提取系数：把分子常数 $3\\pi$ 与分母 $5$ 一并提取，系数为 $\\frac{3\\pi}{5}$。', focusToken: 'p34_r1_coef' },
+        { tStart: 12.0, tEnd: 18.0, text: '第三步算次数：只把字母 $x$ 的指数 $2$ 与字母 $y$ 的指数 $3$ 相加，次数为 $2+3=5$。', focusToken: 'p34_r2_deg' },
+        { tStart: 18.0, tEnd: 24.5, text: '再看例 2 $-2^{3}ab^{4}$：$-2^{3}=-8$ 是数字系数，数字的指数 $3$ 绝不能算进单项式次数！', focusToken: 'p34_r3_orig' },
+        { tStart: 24.5, tEnd: 30.0, text: '字母 $a$ 的隐含指数是 $1$，加上 $b$ 的指数 $4$，所以次数是 $1+4=5$。', focusToken: 'p34_r4_conc' }
       ],
 
       practices: {
         practice1: {
-          title: '练习一：识别整式与确定含 $\\pi$ 单项式的系数和次数',
-          givenLabel: '给出三个判断：',
-          givenFormula: '① $-\\frac{2\\pi x^{2}y^{3}}{3}$ 的系数是 $-\\frac{2\\pi}{3}$，次数是 $5$；② $2^{3}x^{2}y$ 的次数是 $6$；③ $\\frac{1}{x} + 1$ 是多项式',
+          title: '练习一：辨识单项式（排除分式与多项式）',
+          givenLabel: '给出五个代数式：',
+          givenFormula: '① $0$；② $-\\frac{xy}{3}$；③ $\\frac{a + b}{2}$；④ $\\frac{5}{x}$；⑤ $\\pi r^{2}$',
           extractedLabel: '',
           extractedFormula: '',
-          questionText: '以上说法中完全正确的是哪一项？',
+          questionText: '其中属于单项式的共有几个？',
           options: [
-            { key: 'A', text: 'A. 只有 ① 正确', isCorrect: true },
-            { key: 'B', text: 'B. ① 和 ② 正确', isCorrect: false },
-            { key: 'C', text: 'C. ① 和 ③ 正确', isCorrect: false }
+            { key: 'A', text: 'A. $3$ 个（① $0$、② $-\\frac{xy}{3}$、⑤ $\\pi r^{2}$）', isCorrect: true },
+            { key: 'B', text: 'B. $4$ 个（①②③⑤）', isCorrect: false },
+            { key: 'C', text: 'C. $2$ 个（②⑤）', isCorrect: false }
           ],
           correctFeedback: {
-            title: '回答正确！准确把握常数 π、数字指数与分母字母三项规则：',
+            title: '回答正确！按单项式定义逐一核对：',
             calcLines: [
-              '① $\\pi$ 是常数计入系数 $-\\frac{2\\pi}{3}$，字母指数和 $2 + 3 = 5$ ✓',
-              '② $2^{3}x^{2}y$ 只算字母指数和 $2 + 1 = 3$（不算数字的指数 $3$）',
-              '③ $\\frac{1}{x} + 1$ 分母含字母 $x$，不是整式也不是多项式'
+              '① $0$（单独的数是单项式 ✓）、② $-\\frac{xy}{3}$ ✓、⑤ $\\pi r^{2}$ ✓',
+              '③ $\\frac{a+b}{2} = \\frac{1}{2}a + \\frac{1}{2}b$ 是多项式；④ $\\frac{5}{x}$ 分母含字母不是整式'
             ],
-            summary: '记住“$\\pi$ 算系数不算次，数字幂次不算次，分母含字母非整式”。'
+            summary: '单独的一个数（包括 $0$）或一个字母都是单项式。'
           },
-          wrongTitle: '提示：请核对数字指数与分母是否含字母',
-          wrongFeedback: '$2^{3}x^{2}y$ 的次数只计算字母 $x, y$ 的指数和（$2+1=3$），而 $\\frac{1}{x}+1$ 分母含字母不是整式，请再试一次。'
+          wrongTitle: '提示：请检查单独的数字 0 与含加号的式子',
+          wrongFeedback: '$0$ 是单独的数属于单项式，而 $\\frac{a+b}{2}$ 含有加法运算属于多项式，$\\frac{5}{x}$ 分母含字母不是整式，请再试一次。'
         },
         practice2: {
-          title: '练习二：由多项式的项数、次数与常数项提取及求参',
-          givenLabel: '已知多项式：',
-          givenFormula: '$-3x^{2}y^{m-1} + x^{3}y - 3x^{4} - 1$ 是五次四项式',
-          questionText: '该多项式的常数项是多少？由最高次项为五次解出的参数 $m$ 的值是多少？',
-          input1Prefix: '常数项 $=$',
-          input1Placeholder: '如 -1',
-          input2Prefix: '，参数 $m =$',
-          input2Placeholder: '如 4',
+          title: '练习二：提取含负号与数字幂次单项式的系数与次数',
+          givenLabel: '给出单项式：',
+          givenFormula: '$-3^{2}x^{2}yz^{3}$',
+          questionText: '该单项式的系数（写具体整数）与次数分别是多少？',
+          input1Prefix: '系数 $=$',
+          input1Placeholder: '如 -9',
+          input2Prefix: '，次数 $=$',
+          input2Placeholder: '如 6',
           input2Suffix: '',
-          expectedX: '-1',
-          expectedMin: '4',
+          expectedX: '-9',
+          expectedMin: '6',
           allowOrderSwap: false,
-          correctFeedback: '常数项为 $-1$，参数 $m = 4$。',
-          correctDetail: '常数项须连同前面负号写为 $-1$；后三项次数为 $4, 4, 0$，故首项次数为 $5$，列 $2 + (m - 1) = 5$ 解得 $m = 4$。',
-          wrongFeedback: '注意常数项要带前面的负号 $-1$，首项 $-3x^{2}y^{m-1}$ 的次数是 $2 + (m - 1) = 5$。',
+          correctFeedback: '系数为 $-9$（即 $-3^{2}$），次数为 $6$。',
+          correctDetail: '数字因数 $-3^{2}=-9$ 为系数；所有字母指数和为 $2+1+3=6$（不计数字指数 $2$，勿漏 $y$ 的指数 $1$）。',
+          wrongFeedback: '系数为 $-3^{2}=-9$，次数只算字母 $x, y, z$ 的指数和 $2 + 1 + 3$。',
           specificWrongHints: [
             {
-              checkType: 'firstVal',
-              val: '1',
-              hint: '多项式的每一项都要连同它前面的符号，因此常数项是 $-1$ 而不是 $1$。'
+              checkType: 'secondVal',
+              val: '8',
+              hint: '注意数字 $3^{2}$ 的指数 $2$ 不计入单项式次数，只算字母指数和 $2+1+3=6$。'
             },
             {
               checkType: 'secondVal',
-              val: '6',
-              hint: '首项同时含有 $x^{2}$ 与 $y^{m-1}$，总次数是 $2 + (m - 1) = 5$，解得 $m = 4$（别忘了 $x$ 的次数 $2$）。'
+              val: '5',
+              hint: '别忘了字母 $y$ 的隐含指数是 $1$，所以次数是 $2+1+3=6$ 而不是 $2+3=5$。'
             }
           ]
         }
@@ -10401,7 +10408,7 @@
     },
     P45: {
       procedureId: 'P45',
-      title: '列整式作差化简阴影面积并求费用',
+      title: '列整式并运用整式加减解决几何周长面积与实际数量问题',
       exampleTitle: '长方形空地长 $(2a+3)$ 米、宽 $3b$ 米，一角建长 $(a+2)$ 米、宽 $b$ 米的小花园，求剩余面积 $S$ 及 $a=8,b=4$ 时每平方米 $50$ 元的地砖费用',
       totalDuration: 22.0,
       scratchpadIdleHint: '整式应用提示区（演示中将同步强调“列面积差先加括号、先化简再代入”）',
@@ -10429,20 +10436,20 @@
           startTime: 0.0,
           endTime: 6.5,
           scratchpadTitle: '几何量转化：长 × 宽',
-          scratchpadFormula: '$S_{\text{大}} = 3b(2a+3)$，$S_{\text{花}} = b(a+2)$',
+          scratchpadFormula: '$S_{\\text{大}} = 3b(2a+3)$，$S_{\\text{花}} = b(a+2)$',
           scratchpadNote: '先把大长方形空地与角落小花园的面积各自用含 $a,b$ 的整式写出来，作为下一步作差的原料。',
           voiceSubtitle: '第一步，先用整式写出大空地面积 $3b(2a+3)$ 和角落小花园面积 $b(a+2)$。',
           boardLines: [
             {
               appearAt: 0.6,
               badge: '审图',
-              formula: '大空地：长 $(2a+3)$ 米，宽 $3b$ 米 $\Rightarrow S_{\text{大}} = 3b(2a+3)$',
+              formula: '大空地：长 $(2a+3)$ 米，宽 $3b$ 米 $\\Rightarrow S_{\\text{大}} = 3b(2a+3)$',
               highlight: false
             },
             {
               appearAt: 3.8,
               badge: '标注',
-              formula: '小花园：长 $(a+2)$ 米，宽 $b$ 米 $\Rightarrow S_{\text{花}} = b(a+2)$',
+              formula: '小花园：长 $(a+2)$ 米，宽 $b$ 米 $\\Rightarrow S_{\\text{花}} = b(a+2)$',
               highlight: true
             }
           ]
@@ -10462,7 +10469,7 @@
             {
               appearAt: 7.0,
               badge: '列差',
-              formula: '$S = S_{\text{大}} - S_{\text{花}} = 3b(2a+3) - b(a+2)$',
+              formula: '$S = S_{\\text{大}} - S_{\\text{花}} = 3b(2a+3) - b(a+2)$',
               highlight: false
             },
             {
@@ -10487,51 +10494,51 @@
           startTime: 14.0,
           endTime: 22.0,
           scratchpadTitle: '代入求值与实际费用',
-          scratchpadFormula: '$S = 5\times 8\times 4 + 7\times 4 = 188$，$188\times 50 = 9400$',
+          scratchpadFormula: '$S = 5\\times 8\\times 4 + 7\\times 4 = 188$，$188\\times 50 = 9400$',
           scratchpadNote: '将 $a=8,b=4$ 代入最简整式 $5ab+7b$ 比直接代入原式更不易出错，最后乘以单价 $50$ 元/平方米得总费用。',
           voiceSubtitle: '第三步，把 $a=8,b=4$ 代入最简式 $5ab+7b$ 算出剩余面积 $188$ 平方米，再乘单价 $50$ 元得总费用 $9400$ 元。',
           boardLines: [
             {
               appearAt: 14.6,
               badge: '代入',
-              formula: '当 $a=8, b=4$ 时，$S = 5\times 8\times 4 + 7\times 4 = 160 + 28 = 188$（$\text{m}^{2}$）',
+              formula: '当 $a=8, b=4$ 时，$S = 5\\times 8\\times 4 + 7\\times 4 = 160 + 28 = 188$（$\\text{m}^{2}$）',
               highlight: false
             },
             {
               appearAt: 17.0,
               badge: '费用',
-              formula: '购买地砖总费用 $= 188 \times 50 = 9400$（元）',
+              formula: '购买地砖总费用 $= 188 \\times 50 = 9400$（元）',
               highlight: true
             }
           ]
         }
       ],
       practice: {
-        prompt: '完成下面两道同步变式练习，巩固“先列整式化简、再代入或消元”的程序：',
+        prompt: '完成下面两道同步变式练习，巩固“先列整式化简、再代入求值”的程序：',
         q1: {
-          title: '练习一：错算作差与整体代入面积差',
+          title: '练习一：三角形周长与边长和差化简求值',
           givenLabel: '已知：',
-          givenFormula: '晋晋把 $-2(x+3)$ 错算成 $-2x-3$；另有两个长方形面积差化简为 $2(a-b)$ 且 $a-b=3$',
-          questionText: '求错算结果比原来大多少，以及面积差的值：',
-          input1Prefix: '比原来大',
-          input1Placeholder: '如 3',
-          input2Prefix: '，面积差 $=$',
-          input2Placeholder: '如 6',
+          givenFormula: '三角形第一条边长为 $(3a+2b)$，第二条边比第一条边长 $(a-b)$，第三条边长为 $2a$',
+          questionText: '先化简该三角形的周长 $pa+qb$，则系数 $p$ 与 $q$ 分别是多少？',
+          input1Prefix: '系数 $p =$',
+          input1Placeholder: '如 9',
+          input2Prefix: '，系数 $q =$',
+          input2Placeholder: '如 3',
           input2Suffix: '',
-          expectedX: '3',
-          expectedMin: '6',
+          expectedX: '9',
+          expectedMin: '3',
           allowOrderSwap: false,
-          correctFeedback: '比原来大 $3$，面积差为 $6$。',
-          correctDetail: '作差 $(-2x-3)-[-2(x+3)] = -2x-3+2x+6 = 3$；整体代入 $2(a-b) = 2\times 3 = 6$。',
-          wrongFeedback: '第 1 空请用错算式减去原式 $(-2x-3)-(-2x-6)$；第 2 空直接把 $a-b=3$ 整体代入 $2(a-b)$。',
+          correctFeedback: '三角形周长为 $9a+3b$（即 $p=9$，$q=3$）。',
+          correctDetail: '第二条边为 $(3a+2b)+(a-b)=4a+b$，三边相加得 $(3a+2b)+(4a+b)+2a = 9a+3b$。',
+          wrongFeedback: '先算出第二条边 $(3a+2b)+(a-b)=4a+b$，再把三条边相加合并同类项即可。',
           specificWrongHints: [
-            { checkType: 'firstVal', val: '-3', hint: '注意问的是“错算结果比原来大多少”，用错算式减原式：$(-2x-3)-(-2x-6)=+3$。' }
+            { checkType: 'firstVal', val: '6', hint: '注意第二条边是“比第一条边长 $(a-b)$”，即 $(3a+2b)+(a-b)=4a+b$，不要只加 $(a-b)$。' }
           ]
         },
         q2: {
           title: '练习二：实际采购总费用化简与代入',
           givenLabel: '已知：',
-          givenFormula: '大垃圾桶单价 $m$ 元，小垃圾桶单价为 $(\frac{1}{2}m+20)$ 元，买 $5$ 个大桶和 $7$ 个小桶',
+          givenFormula: '大垃圾桶单价 $m$ 元，小垃圾桶单价为 $(\\frac{1}{2}m+20)$ 元，买 $5$ 个大桶和 $7$ 个小桶',
           questionText: '先化简总费用 $km+140$ 求 $k$（小数），再求 $m=120$ 时的总费用：',
           input1Prefix: '$k =$',
           input1Placeholder: '如 8.5',
@@ -10541,12 +10548,1123 @@
           expectedX: '8.5',
           expectedMin: '1160',
           allowOrderSwap: false,
-          correctFeedback: '$k = 8.5$（即 $\frac{17}{2}$），总费用为 $1160$ 元。',
-          correctDetail: '总费用 $= 5m + 7(\frac{1}{2}m+20) = 8.5m + 140$；当 $m=120$ 时，总费用 $= 8.5\times 120 + 140 = 1020 + 140 = 1160$（元）。',
-          wrongFeedback: '展开 $5m+7(\frac{1}{2}m+20)$ 时注意 $7\times \frac{1}{2}=3.5$，合并得 $8.5m+140$，再代入 $m=120$。',
+          correctFeedback: '$k = 8.5$（即 $\\frac{17}{2}$），总费用为 $1160$ 元。',
+          correctDetail: '总费用 $= 5m + 7(\\frac{1}{2}m+20) = 8.5m + 140$；当 $m=120$ 时，总费用 $= 8.5\\times 120 + 140 = 1020 + 140 = 1160$（元）。',
+          wrongFeedback: '展开 $5m+7(\\frac{1}{2}m+20)$ 时注意 $7\\times \\frac{1}{2}=3.5$，合并得 $8.5m+140$，再代入 $m=120$。',
           specificWrongHints: [
-            { checkType: 'secondVal', val: '1020', hint: '别忘了加上常数项 $7\times 20 = 140$ 元，$1020+140=1160$ 元。' }
+            { checkType: 'secondVal', val: '1020', hint: '别忘了加上常数项 $7\\times 20 = 140$ 元，$1020+140=1160$ 元。' }
           ]
+        }
+      }
+    }
+    ,
+    // =========================================================================
+    // P46：判断两个量是否成正、反比例关系
+    // =========================================================================
+    P46: {
+      procedureId: 'P46',
+      title: '判断两个量是否成正、反比例关系',
+      exampleTitle: '判断下列各组两个量成什么比例关系：① 单价一定时的总价与数量；② 三角形面积一定时的底边与高；③ 长方形周长一定时的长与宽；④ 圆的面积与半径',
+      exampleFormula: '正比例：$\\frac{y}{x} = k$（比值一定）；反比例：$x \\cdot y = k$（乘积一定）',
+      totalDuration: 28.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步对照正比例、反比例与不成比例三大核心判别标准）',
+      practiceSectionTitle: '正、反比例关系判定跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握“列式变形验比值或乘积”并避开和一定陷阱',
+
+      steps: [
+        {
+          step: 1,
+          name: '检验 ①：单价一定时的总价与数量',
+          tStart: 0.0,
+          tEnd: 7.0,
+          explanation: '写出关系式 $\\frac{\\text{总价}}{\\text{数量}} = \\text{单价}$（非零定值），满足“比值一定”，故总价与数量成正比例关系。'
+        },
+        {
+          step: 2,
+          name: '检验 ②：三角形面积一定时的底边与高',
+          tStart: 7.0,
+          tEnd: 14.0,
+          explanation: '由 $\\frac{1}{2}ah = S$ 变形得 $a \\cdot h = 2S$（非零定值），满足“乘积一定”，故底边与高成反比例关系。'
+        },
+        {
+          step: 3,
+          name: '检验 ③：长方形周长一定时的长与宽',
+          tStart: 14.0,
+          tEnd: 21.0,
+          explanation: '写出关系式 $a + b = \\frac{C}{2}$（和一定，既不是比值一定也不是乘积一定），故不成正、反比例关系。'
+        },
+        {
+          step: 4,
+          name: '检验 ④：圆的面积 $S$ 与半径 $r$',
+          tStart: 21.0,
+          tEnd: 28.0,
+          explanation: '由 $S = \\pi r^{2}$ 得 $\\frac{S}{r} = \\pi r$（随 $r$ 变化，不是定值），故 $S$ 与 $r$ 不成正比例关系。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 检验比值一定 $\\to$ 正比例' },
+        { time: 8.5, step: 2, label: '2.1 变形 $ah = 2S$ 乘积一定 $\\to$ 反比例' },
+        { time: 15.5, step: 3, label: '3.1 识别 $a + b = \\frac{C}{2}$ 和一定 $\\to$ 不成比例' },
+        { time: 22.5, step: 4, label: '4.1 识别 $\\frac{S}{r} = \\pi r$ 非定值 $\\to$ 不成比例' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p46_row_0',
+          stepBadge: '判别准则',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p46_r0_1', math: '比值 $\\frac{y}{x} = k \\implies$ 正比例；', appearAt: 0.0, dur: 0.01 },
+            { id: 'p46_r0_2', math: '乘积 $xy = k \\implies$ 反比例', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p46_row_1',
+          stepBadge: '① & ② 检验',
+          appearAt: 1.5,
+          tokens: [
+            { id: 'p46_r1_1', math: '① $\\frac{\\text{总价}}{\\text{数量}} = \\text{单价}$（定值）$\\implies$ 正比例；', appearAt: 1.6, dur: 0.45 },
+            { id: 'p46_r1_2', math: '② $a \\cdot h = 2S$（定值）$\\implies$ 反比例', appearAt: 7.5, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p46_row_2',
+          stepBadge: '③ & ④ 排错',
+          appearAt: 14.5,
+          tokens: [
+            { id: 'p46_r2_3', math: '③ $a + b = \\frac{C}{2}$（和一定）$\\implies$ 不成比例；', appearAt: 14.6, dur: 0.45 },
+            { id: 'p46_r2_4', math: '④ $\\frac{S}{r} = \\pi r$（非定值）$\\implies$ 不成比例', appearAt: 21.5, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p46_row_3',
+          stepBadge: '最终结论',
+          appearAt: 25.0,
+          isConclusion: true,
+          tokens: [
+            { id: 'p46_r3_conc', math: '$\\therefore$ ① 成正比例，② 成反比例，③④ 均不成正、反比例关系。', appearAt: 25.1, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p46_sp_1',
+          title: '草稿警示 · 两大常见非比例陷阱',
+          showStart: 14.0,
+          showEnd: 27.8,
+          tokens: [
+            { id: 'p46_sp1_t1', math: '陷阱 1：和一定（如长+宽=半周长、已读+未读=总页数）不成反比例', appearAt: 14.6, dur: 0.45 },
+            { id: 'p46_sp1_t2', math: '陷阱 2：平方关系（如 $S = \\pi r^{2}$、$S = a^{2}$）不成正比例', appearAt: 21.6, dur: 0.45 }
+          ],
+          note: '判断比例关系一定要先列等式再变形，只看“一个变大另一个变小”很容易掉进和一定陷阱'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p46_r1_1', tStart: 1.6, tEnd: 6.8, color: 'teal' },
+        { tokenId: 'p46_r1_2', tStart: 7.5, tEnd: 13.8, color: 'amber' },
+        { tokenId: 'p46_r2_3', tStart: 14.6, tEnd: 20.8, color: 'rose' },
+        { tokenId: 'p46_r2_4', tStart: 21.5, tEnd: 24.8, color: 'rose' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p46_svg_s2',
+          type: 'arrow',
+          fromToken: 'p46_r0_2',
+          toToken: 'p46_r1_2',
+          label: '乘积 $2S$ 恒定',
+          color: '#D97706',
+          curveOffset: 28,
+          tStart: 7.4,
+          tDrawEnd: 8.2,
+          tFadeStart: 13.2,
+          tEnd: 13.8
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 7.0, text: '先看 ①：总价除以数量等于定值单价，满足比值一定，成正比例关系。', focusToken: 'p46_r1_1' },
+        { tStart: 7.0, tEnd: 14.0, text: '再看 ②：三角形面积 $S$ 一定时，底乘高等于 $2S$（非零定值），满足乘积一定，成反比例关系。', focusToken: 'p46_r1_2' },
+        { tStart: 14.0, tEnd: 21.0, text: '看 ③：长方形周长一定时，长加宽等于周长的一半，是“和一定”，既不成正比例也不成反比例！', focusToken: 'p46_r2_3' },
+        { tStart: 21.0, tEnd: 28.0, text: '看 ④：圆的面积 $S = \\pi r^{2}$，比值 $\\frac{S}{r} = \\pi r$ 随 $r$ 变化不是定值，也不成正比例关系。', focusToken: 'p46_r3_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：辨别哪组两个量成反比例关系',
+          givenLabel: '给出三个生活情境：',
+          givenFormula: '① 路程一定，行驶速度与时间；② 书总页数一定，已读页数与未读页数；③ 正方形周长与边长',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '其中成反比例关系的是哪一个？',
+          options: [
+            { key: 'A', text: 'A. ①（速度 $\\times$ 时间 $=$ 路程，乘积一定）', isCorrect: true },
+            { key: 'B', text: 'B. ②（已读 $+$ 未读 $=$ 总页数）', isCorrect: false },
+            { key: 'C', text: 'C. ③（周长 $\\div$ 边长 $= 4$）', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！逐一验证等量关系：',
+            calcLines: [
+              '① $v \\cdot t = s$（乘积一定）$\\implies$ 反比例 ✓',
+              '② 已读 $+$ 未读 $=$ 总页数（和一定，不成比例）；③ $\\frac{C}{a}=4$（比值一定，正比例）'
+            ],
+            summary: '识别反比例牢记“两量乘积为非零定值”。'
+          },
+          wrongTitle: '提示：请写出各情境的等量关系式检验乘积是否一定',
+          wrongFeedback: '只有 ① 满足“速度 $\\times$ 时间 $=$ 路程（定值）”，② 是和一定，③ 是比值一定，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：变形代数等式判定正、反比例',
+          givenLabel: '给出两个等式：',
+          givenFormula: '① $3x = y$；② $2xy = 10$',
+          questionText: '① 中比值 $\\frac{y}{x}$ 等于多少（正比例）？② 中乘积 $xy$ 等于多少（反比例）？',
+          input1Prefix: '① $\\frac{y}{x} =$',
+          input1Placeholder: '如 3',
+          input2Prefix: '，② $xy =$',
+          input2Placeholder: '如 5',
+          input2Suffix: '',
+          expectedX: '3',
+          expectedMin: '5',
+          allowOrderSwap: false,
+          correctFeedback: '① $\\frac{y}{x} = 3$（正比例），② $xy = 5$（反比例）。',
+          correctDetail: '由 $3x = y$ 得 $\\frac{y}{x} = 3$（定值）；由 $2xy = 10$ 两边同除以 $2$ 得 $xy = 5$（定值）。',
+          wrongFeedback: '① 两边同除以 $x$ 得 $\\frac{y}{x} = 3$；② 两边同除以 $2$ 得 $xy = 5$。',
+          specificWrongHints: []
+        }
+      }
+    }
+    ,
+    // =========================================================================
+    // P47：识别多项式与整式并确定项数、次数与常数项
+    // =========================================================================
+    P47: {
+      procedureId: 'P47',
+      title: '识别多项式与整式并确定项数、次数与常数项',
+      exampleTitle: '指出多项式 $-\\frac{1}{3}x^{2}y + 4xy^{3} - 7$ 的各项、项数、次数与常数项',
+      exampleFormula: '$-\\frac{1}{3}x^{2}y + 4xy^{3} - 7$：拆各项（带符号）$\\to$ 算各项次数 $\\to$ 取最大值',
+      totalDuration: 28.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步警示：各项必须连同前面符号、多项式次数取最大而非相加）',
+      practiceSectionTitle: '多项式项数、次数与常数项跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握带符号拆项与“取最高次项次数”准则',
+
+      steps: [
+        {
+          step: 1,
+          name: '核对整式身份并按加减号带符号拆项',
+          tStart: 0.0,
+          tEnd: 6.5,
+          explanation: '分母仅为数字 $3$（不含字母），是多项式（整式）。把每一项连同它前面的符号拆开：第一项 $-\\frac{1}{3}x^{2}y$、第二项 $+4xy^{3}$、第三项 $-7$。'
+        },
+        {
+          step: 2,
+          name: '统计项数并锁定带符号的常数项',
+          tStart: 6.5,
+          tEnd: 12.5,
+          explanation: '拆分后共有 $3$ 个单项式，故项数是 $3$；不含字母的那一项是 $-7$（切勿漏掉负号），故常数项为 $-7$。'
+        },
+        {
+          step: 3,
+          name: '逐一计算每个单项式的次数',
+          tStart: 12.5,
+          tEnd: 19.0,
+          explanation: '分别算三项的次数：$-\\frac{1}{3}x^{2}y$ 的次数为 $2+1=3$；$+4xy^{3}$ 的次数为 $1+3=4$；常数项 $-7$ 的次数为 $0$。'
+        },
+        {
+          step: 4,
+          name: '取各项次数的最大值定多项式次数',
+          tStart: 19.0,
+          tEnd: 28.0,
+          explanation: '比较三项次数 $3, 4, 0$，最大值为 $4$（绝不是 $3+4=7$！），故该多项式次数为 $4$，称为四次三项式。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 带符号拆出三项：$-\\frac{1}{3}x^{2}y,\\ +4xy^{3},\\ -7$' },
+        { time: 7.5, step: 2, label: '2.1 确定项数为 $3$，常数项为 $-7$' },
+        { time: 14.0, step: 3, label: '3.1 逐项算次数：$3$ 次、$4$ 次、$0$ 次' },
+        { time: 21.0, step: 4, label: '4.1 取最大次数 $4$，定为四次三项式' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p47_row_0',
+          stepBadge: '原多项式',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p47_r0_t1', math: '$-\\frac{1}{3}x^{2}y$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p47_r0_t2', math: '$+ 4xy^{3}$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p47_r0_t3', math: '$- 7$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p47_row_1',
+          stepBadge: '第 1 & 2 步 · 拆项与常数项',
+          appearAt: 2.0,
+          tokens: [
+            { id: 'p47_r1_items', math: '各项：$-\\frac{1}{3}x^{2}y，\\ 4xy^{3}，\\ -7$', appearAt: 2.1, dur: 0.45 },
+            { id: 'p47_r1_cnt', math: '$\\implies$ 项数 $= 3$，常数项 $= -7$', appearAt: 7.0, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p47_row_2',
+          stepBadge: '第 3 步 · 逐项算次数',
+          appearAt: 13.0,
+          tokens: [
+            { id: 'p47_r2_d1', math: '$-\\frac{1}{3}x^{2}y \\to 2+1=3$ 次；', appearAt: 13.1, dur: 0.40 },
+            { id: 'p47_r2_d2', math: '$4xy^{3} \\to 1+3=4$ 次；', appearAt: 14.4, dur: 0.40 },
+            { id: 'p47_r2_d3', math: '$-7 \\to 0$ 次', appearAt: 15.6, dur: 0.35 }
+          ]
+        },
+        {
+          rowId: 'p47_row_3',
+          stepBadge: '最终结论',
+          appearAt: 19.6,
+          isConclusion: true,
+          tokens: [
+            { id: 'p47_r3_conc', math: '$\\therefore$ 最高次数为 $4$，该多项式是四次三项式，常数项为 $-7$。', appearAt: 19.7, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p47_sp_1',
+          title: '草稿警示 · 多项式两大高频易错点',
+          showStart: 6.5,
+          showEnd: 27.8,
+          tokens: [
+            { id: 'p47_sp1_t1', math: '① 符号归属：每一项都带它前面的符号（常数项是 $-7$ 而非 $7$）', appearAt: 7.2, dur: 0.45 },
+            { id: 'p47_sp1_t2', math: '② 次数取最大：$\\max\\{3, 4, 0\\} = 4$（绝不能把 $3+4=7$ 相加）', appearAt: 19.4, dur: 0.45 }
+          ],
+          note: '按某字母降幂排列时，移动每一项也必须连同它前面的正负号一起移动'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p47_r0_t3', tStart: 6.6, tEnd: 12.2, color: 'rose' },
+        { tokenId: 'p47_r1_cnt', tStart: 7.0, tEnd: 12.2, color: 'amber' },
+        { tokenId: 'p47_r2_d2', tStart: 14.4, tEnd: 24.0, color: 'teal' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p47_svg_s2',
+          type: 'arrow',
+          fromToken: 'p47_r0_t3',
+          toToken: 'p47_r1_cnt',
+          label: '常数项连同负号 $-7$',
+          color: '#BE123C',
+          curveOffset: 28,
+          tStart: 6.8,
+          tDrawEnd: 7.6,
+          tFadeStart: 11.4,
+          tEnd: 12.0
+        },
+        {
+          id: 'p47_svg_s4',
+          type: 'arrow',
+          fromToken: 'p47_r2_d2',
+          toToken: 'p47_r3_conc',
+          label: '取最大次数 $4$',
+          color: '#0F766E',
+          curveOffset: -26,
+          tStart: 19.2,
+          tDrawEnd: 20.0,
+          tFadeStart: 25.0,
+          tEnd: 26.0
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 6.5, text: '第一步带符号拆项：多项式 $-\\frac{1}{3}x^{2}y + 4xy^{3} - 7$ 由三个单项式组成，每项都要带前面的正负号。', focusToken: 'p47_r1_items' },
+        { tStart: 6.5, tEnd: 12.5, text: '第二步定项数与常数项：共有 $3$ 项，不含字母的常数项是 $-7$（千万别漏掉负号）。', focusToken: 'p47_r1_cnt' },
+        { tStart: 12.5, tEnd: 19.0, text: '第三步逐项算次数：三项的次数依次是 $2+1=3$ 次、$1+3=4$ 次、$0$ 次。', focusToken: 'p47_r2_d2' },
+        { tStart: 19.0, tEnd: 28.0, text: '第四步取最大值：多项式的次数取各项次数的最大值 $4$，所以它是四次三项式！', focusToken: 'p47_r3_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：辨识整式与多项式',
+          givenLabel: '给出四个式子：',
+          givenFormula: '① $\\frac{x + 2y}{3}$；② $\\frac{2}{x} + 1$；③ $a^{2} - 2ab + b^{2}$；④ $-5x^{2}y$',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '其中属于整式的有几个？属于多项式的有哪几个？',
+          options: [
+            { key: 'A', text: 'A. 整式有 $3$ 个（①③④），多项式有 ①③', isCorrect: true },
+            { key: 'B', text: 'B. 整式有 $4$ 个，多项式有 ①②③', isCorrect: false },
+            { key: 'C', text: 'C. 整式有 $2$ 个（③④），多项式只有 ③', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！分母不含字母的就是整式：',
+            calcLines: [
+              '① $\\frac{x+2y}{3} = \\frac{1}{3}x + \\frac{2}{3}y$ 是多项式 ✓；③ 是多项式 ✓；④ 是单项式 ✓',
+              '② $\\frac{2}{x}+1$ 分母含字母 $x$，不是整式'
+            ],
+            summary: '单项式与多项式统称整式，分母含字母的一律排除在整式之外。'
+          },
+          wrongTitle: '提示：请检查分母是否含有字母',
+          wrongFeedback: '① 分母是数字 $3$，属于多项式（整式）；② 分母是字母 $x$，不是整式，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：确定多项式的次数与常数项',
+          givenLabel: '给出多项式：',
+          givenFormula: '$5x^{3}y^{2} - 2xy^{3} + x - 9$',
+          questionText: '该多项式的次数与常数项分别是多少？',
+          input1Prefix: '次数 $=$',
+          input1Placeholder: '如 5',
+          input2Prefix: '，常数项 $=$',
+          input2Placeholder: '如 -9',
+          input2Suffix: '',
+          expectedX: '5',
+          expectedMin: '-9',
+          allowOrderSwap: false,
+          correctFeedback: '次数为 $5$（五次四项式），常数项为 $-9$。',
+          correctDetail: '各项次数依次为 $3+2=5$、$1+3=4$、$1$、$0$，最大值为 $5$；常数项连同负号为 $-9$。',
+          wrongFeedback: '第一项 $5x^{3}y^{2}$ 的次数为 $3+2=5$（最高），常数项不要漏掉负号。',
+          specificWrongHints: [
+            { checkType: 'secondVal', val: '9', hint: '常数项必须连同前面的负号一起写，应为 $-9$ 而不是 $9$。' }
+          ]
+        }
+      }
+    }
+    ,
+    // =========================================================================
+    // P48：由单项式、多项式的次数与项数求参数
+    // =========================================================================
+    P48: {
+      procedureId: 'P48',
+      title: '由单项式、多项式的次数与项数求参数',
+      exampleTitle: '已知关于 $x$ 的多项式 $(n - 1)x^{m + 2} - 3x^{2} + 2x$（$m \\gt -2$ 且为整数）是五次三项式，求 $m, n$ 满足的条件',
+      exampleFormula: '$(n - 1)x^{m + 2} - 3x^{2} + 2x$ 为五次三项式 $\\iff m + 2 = 5$ 且 $n - 1 \\neq 0$',
+      totalDuration: 28.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步强调含参“几次几项式”双重条件：最高次项指数=目标次数 且 系数≠0）',
+      practiceSectionTitle: '由次数与项数求参数跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握“次数方程 + 系数不为 0 舍增根”双重检验',
+
+      steps: [
+        {
+          step: 1,
+          name: '分析各项次数，锁定最高次项',
+          tStart: 0.0,
+          tEnd: 6.5,
+          explanation: '多项式 $(n - 1)x^{m + 2} - 3x^{2} + 2x$ 后两项的次数分别是 $2$ 和 $1$，要成为五次三项式，最高次项必为首项 $(n - 1)x^{m + 2}$。'
+        },
+        {
+          step: 2,
+          name: '建立次数与系数双重约束条件',
+          tStart: 6.5,
+          tEnd: 13.5,
+          explanation: '要使首项成为五次项且保留三项，必须同时满足：① 指数 $m + 2 = 5$；② 首项系数 $n - 1 \\neq 0$（否则首项消失变成二次二项式）。'
+        },
+        {
+          step: 3,
+          name: '分别解出 $m$ 的值与 $n$ 的限制范围',
+          tStart: 13.5,
+          tEnd: 21.0,
+          explanation: '由 $m + 2 = 5$ 解得 $m = 3$；由 $n - 1 \\neq 0$ 解得 $n \\neq 1$。'
+        },
+        {
+          step: 4,
+          name: '回代核验项数与次数得出结论',
+          tStart: 21.0,
+          tEnd: 28.0,
+          explanation: '当 $m = 3$ 且 $n \\neq 1$ 时，多项式为 $(n - 1)x^{5} - 3x^{2} + 2x$，恰为五次三项式。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 锁定最高次项为首项 $(n - 1)x^{m + 2}$' },
+        { time: 7.5, step: 2, label: '2.1 列双重条件：$m + 2 = 5$ 且 $n - 1 \\neq 0$' },
+        { time: 14.8, step: 3, label: '3.1 解得 $m = 3$ 且 $n \\neq 1$' },
+        { time: 22.5, step: 4, label: '4.1 回代核验为五次三项式' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p48_row_0',
+          stepBadge: '已知多项式',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p48_r0_coef', math: '$(n - 1)$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p48_r0_exp', math: '$x^{m + 2}$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p48_r0_rest', math: '$- 3x^{2} + 2x$ 是五次三项式', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p48_row_1',
+          stepBadge: '第 1 步 · 锁定最高次项',
+          appearAt: 1.8,
+          tokens: [
+            { id: 'p48_r1_lock', math: '后两项次数为 $2, 1 \\implies$ 最高次项必为首项 $(n - 1)x^{m + 2}$', appearAt: 1.9, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p48_row_2',
+          stepBadge: '第 2 步 · 列双重条件',
+          appearAt: 7.0,
+          tokens: [
+            { id: 'p48_r2_c1', math: '① 次数条件：$m + 2 = 5$；', appearAt: 7.1, dur: 0.45 },
+            { id: 'p48_r2_c2', math: '② 系数条件：$n - 1 \\neq 0$', appearAt: 9.0, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p48_row_3',
+          stepBadge: '最终结论',
+          appearAt: 14.2,
+          isConclusion: true,
+          tokens: [
+            { id: 'p48_r3_conc', math: '解得 $m = 3$ 且 $n \\neq 1$。', appearAt: 14.3, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p48_sp_1',
+          title: '草稿警示 · 为什么必须检验系数不为 0？',
+          showStart: 6.5,
+          showEnd: 27.8,
+          tokens: [
+            { id: 'p48_sp1_t1', math: '若 $n = 1$，则首项 $(1 - 1)x^{5} = 0$', appearAt: 7.4, dur: 0.40 },
+            { id: 'p48_sp1_t2', math: '原式退化为 $-3x^{2} + 2x$（变成二次二项式，不合题意）', appearAt: 9.2, dur: 0.45 }
+          ],
+          note: '若指数含绝对值如 $(a - 2)x^{|a|} + 3x$ 为二次二项式，由 $|a| = 2$ 得 $a = \\pm 2$，再由 $a - 2 \\neq 0$ 舍去 $a = 2$ 得 $a = -2$'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p48_r0_exp', tStart: 6.6, tEnd: 13.2, color: 'teal' },
+        { tokenId: 'p48_r0_coef', tStart: 8.6, tEnd: 13.2, color: 'rose' },
+        { tokenId: 'p48_r2_c1', tStart: 7.1, tEnd: 13.2, color: 'teal' },
+        { tokenId: 'p48_r2_c2', tStart: 9.0, tEnd: 13.2, color: 'rose' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p48_svg_s2a',
+          type: 'arrow',
+          fromToken: 'p48_r0_exp',
+          toToken: 'p48_r2_c1',
+          label: '令最高次等于 $5$',
+          color: '#0F766E',
+          curveOffset: 28,
+          tStart: 6.8,
+          tDrawEnd: 7.6,
+          tFadeStart: 12.6,
+          tEnd: 13.2
+        },
+        {
+          id: 'p48_svg_s2b',
+          type: 'arrow',
+          fromToken: 'p48_r0_coef',
+          toToken: 'p48_r2_c2',
+          label: '首项系数不为 $0$',
+          color: '#BE123C',
+          curveOffset: -26,
+          tStart: 8.8,
+          tDrawEnd: 9.6,
+          tFadeStart: 12.6,
+          tEnd: 13.2
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 6.5, text: '第一步锁定最高次项：后两项次数是 $2$ 和 $1$，因此五次项只能来自首项 $(n - 1)x^{m + 2}$。', focusToken: 'p48_r1_lock' },
+        { tStart: 6.5, tEnd: 13.5, text: '第二步列双重条件：既要首项指数 $m + 2 = 5$，又要首项系数 $n - 1 \\neq 0$，缺一不可！', focusToken: 'p48_r2_c2' },
+        { tStart: 13.5, tEnd: 28.0, text: '第三步解出结果：$m = 3$ 且 $n \\neq 1$，回代确认恰好为五次三项式。', focusToken: 'p48_r3_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：含绝对值指数的多项式求参（检验舍增根）',
+          givenLabel: '已知条件：',
+          givenFormula: '多项式 $(m - 2)x^{|m|} - 3x + 1$ 是关于 $x$ 的二次三项式',
+          extractedLabel: '列出双重条件：',
+          extractedFormula: '$|m| = 2$ 且 $m - 2 \\neq 0$',
+          questionText: '参数 $m$ 的正确值是？',
+          options: [
+            { key: 'A', text: 'A. $m = -2$（舍去使系数为 $0$ 的 $m = 2$）', isCorrect: true },
+            { key: 'B', text: 'B. $m = 2$ 或 $m = -2$', isCorrect: false },
+            { key: 'C', text: 'C. $m = 2$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！解绝对值方程后必须检验最高次项系数不为 0：',
+            calcLines: [
+              '$|m| = 2 \\implies m = 2$ 或 $m = -2$',
+              '由 $m - 2 \\neq 0$ 得 $m \\neq 2$，故舍去 $2$，定解 $m = -2$'
+            ],
+            summary: '凡是含参“几次几项式”题，最后一步一定核对最高次项系数 $\\neq 0$。'
+          },
+          wrongTitle: '提示：请将 m = 2 代入首项系数检验',
+          wrongFeedback: '当 $m = 2$ 时，首项系数 $m - 2 = 0$，原式变为一次二项式 $-3x + 1$，必须舍去 $2$，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：由单项式次数相等与降次求参数',
+          givenLabel: '已知条件：',
+          givenFormula: '单项式 $-3x^{2}y^{m}$ 的次数为 $6$；多项式 $(a - 3)x^{3} + 2x^{2} - 1$ 是二次二项式',
+          questionText: '求参数 $m$ 和 $a$ 的值分别是多少？',
+          input1Prefix: '$m =$',
+          input1Placeholder: '如 4',
+          input2Prefix: '，$a =$',
+          input2Placeholder: '如 3',
+          input2Suffix: '',
+          expectedX: '4',
+          expectedMin: '3',
+          allowOrderSwap: false,
+          correctFeedback: '$m = 4$，$a = 3$。',
+          correctDetail: '由单项式次数得 $2 + m = 6 \\implies m = 4$；由多项式为二次二项式需消去三次项，令 $a - 3 = 0 \\implies a = 3$。',
+          wrongFeedback: '第一空由 $2 + m = 6$ 求 $m$；第二空要让多项式降为二次二项式，须令三次项系数 $a - 3 = 0$。',
+          specificWrongHints: []
+        }
+      }
+    }
+    ,
+    // =========================================================================
+    // P49：识别同类项与由同类项定义求参数
+    // =========================================================================
+    P49: {
+      procedureId: 'P49',
+      title: '识别同类项与由同类项定义求参数',
+      exampleTitle: '已知单项式 $3x^{n}y^{3}$ 与 $-\\frac{1}{2}x^{2}y^{m}$ 的和是单项式，求 $m + n$ 的值',
+      exampleFormula: '$3x^{n}y^{3}$ 与 $-\\frac{1}{2}x^{2}y^{m}$ 的和是单项式 $\\implies$ 必为同类项 $\\implies n = 2, m = 3$',
+      totalDuration: 26.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示同类项“两相同、两无关”判定法则与指数对齐求参）',
+      practiceSectionTitle: '同类项识别与定义求参跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握同类项“两相同两无关”辨析与指数方程求参',
+
+      steps: [
+        {
+          step: 1,
+          name: '将“和是单项式”等价转化为同类项',
+          tStart: 0.0,
+          tEnd: 6.5,
+          explanation: '两个非零单项式相加的结果仍是一个单项式，说明它们能够合并为一项，因此这两个单项式必然是同类项！'
+        },
+        {
+          step: 2,
+          name: '按“相同字母的指数也相同”分别对齐列式',
+          tStart: 6.5,
+          tEnd: 14.0,
+          explanation: '对照两个单项式中的相同字母：字母 $x$ 的指数分别为 $n$ 和 $2$，故 $n = 2$；字母 $y$ 的指数分别为 $3$ 和 $m$，故 $m = 3$。'
+        },
+        {
+          step: 3,
+          name: '将求出的 $m, n$ 代入目标式算出结果',
+          tStart: 14.0,
+          tEnd: 26.0,
+          explanation: '将 $m = 3，n = 2$ 代入所求代数式，算出 $m + n = 3 + 2 = 5$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 由“和是单项式”判定两项必为同类项' },
+        { time: 7.5, step: 2, label: '2.1 对齐 $x$ 的指数得 $n = 2$，对齐 $y$ 的指数得 $m = 3$' },
+        { time: 15.5, step: 3, label: '3.1 代入算得 $m + n = 5$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p49_row_0',
+          stepBadge: '已知条件',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p49_r0_t1', math: '$3x^{n}y^{3}$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p49_r0_and', math: '与', appearAt: 0.0, dur: 0.01 },
+            { id: 'p49_r0_t2', math: '$-\\frac{1}{2}x^{2}y^{m}$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p49_r0_sum', math: '的和是单项式', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p49_row_1',
+          stepBadge: '第 1 步 · 转化为同类项',
+          appearAt: 1.8,
+          tokens: [
+            { id: 'p49_r1_same', math: '$\\implies 3x^{n}y^{3}$ 与 $-\\frac{1}{2}x^{2}y^{m}$ 必为同类项', appearAt: 1.9, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p49_row_2',
+          stepBadge: '第 2 步 · 相同字母指数相等',
+          appearAt: 7.0,
+          tokens: [
+            { id: 'p49_r2_x', math: '字母 $x$ 的指数：$n = 2$；', appearAt: 7.1, dur: 0.45 },
+            { id: 'p49_r2_y', math: '字母 $y$ 的指数：$m = 3$', appearAt: 9.2, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p49_row_3',
+          stepBadge: '最终结论',
+          appearAt: 15.0,
+          isConclusion: true,
+          tokens: [
+            { id: 'p49_r3_conc', math: '$\\therefore m + n = 3 + 2 = 5$。', appearAt: 15.1, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p49_sp_1',
+          title: '核心口诀 · 同类项“两相同、两无关”',
+          showStart: 0.8,
+          showEnd: 25.8,
+          tokens: [
+            { id: 'p49_sp1_t1', math: '两相同：所含字母相同，且相同字母的指数也相同', appearAt: 1.2, dur: 0.40 },
+            { id: 'p49_sp1_t2', math: '两无关：与系数无关，与字母排列顺序无关（如 $a^{2}b$ 与 $ba^{2}$）', appearAt: 7.2, dur: 0.40 },
+            { id: 'p49_sp1_t3', math: '特例：所有的常数项（如 $-3$ 与 $5$）都是同类项', appearAt: 14.5, dur: 0.40 }
+          ],
+          note: '切勿把字母相同但对应指数不同的项（如 $x^{2}y$ 与 $xy^{2}$）误判为同类项'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p49_r0_sum', tStart: 0.8, tEnd: 6.2, color: 'amber' },
+        { tokenId: 'p49_r2_x', tStart: 7.1, tEnd: 13.8, color: 'teal' },
+        { tokenId: 'p49_r2_y', tStart: 9.2, tEnd: 13.8, color: 'amber' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p49_svg_s2',
+          type: 'arrow',
+          fromToken: 'p49_r0_t1',
+          toToken: 'p49_r2_x',
+          label: '对齐 $x$、$y$ 对应指数',
+          color: '#0F766E',
+          curveOffset: -26,
+          tStart: 6.8,
+          tDrawEnd: 7.6,
+          tFadeStart: 13.0,
+          tEnd: 13.6
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 6.5, text: '第一步转化条件：两个非零单项式的和仍是单项式，说明它们一定可以合并，即必然是同类项！', focusToken: 'p49_r1_same' },
+        { tStart: 6.5, tEnd: 14.0, text: '第二步对齐相同字母的指数：字母 $x$ 的指数相等得 $n = 2$，字母 $y$ 的指数相等得 $m = 3$。', focusToken: 'p49_r2_y' },
+        { tStart: 14.0, tEnd: 26.0, text: '第三步代入计算：$m + n = 3 + 2 = 5$！', focusToken: 'p49_r3_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：辨别哪一组是同类项',
+          givenLabel: '给出三组单项式：',
+          givenFormula: '① $-2a^{2}b$ 与 $5ba^{2}$；② $3x^{2}y$ 与 $3xy^{2}$；③ $2^{3}$ 与 $3^{2}$',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '其中属于同类项的组合是？',
+          options: [
+            { key: 'A', text: 'A. ① 与 ③（字母顺序无关，常数项之间都是同类项）', isCorrect: true },
+            { key: 'B', text: 'B. 只有 ①', isCorrect: false },
+            { key: 'C', text: 'C. ① 与 ②', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！按“两相同、两无关”核对：',
+            calcLines: [
+              '① $-2a^{2}b$ 与 $5ba^{2}$ 字母与对应指数完全一致 ✓',
+              '② $x^{2}y$ 与 $xy^{2}$ 对应字母指数不同 ✗；③ $2^{3}=8$ 与 $3^{2}=9$ 均为常数项 ✓'
+            ],
+            summary: '两个纯数字幂（如 $2^{3}$ 与 $3^{2}$）都是常数项，因此也是同类项。'
+          },
+          wrongTitle: '提示：请回顾常数项与字母顺序的规则',
+          wrongFeedback: '$2^{3}$ 和 $3^{2}$ 都是常数项属于同类项，而 $x^{2}y$ 与 $xy^{2}$ 相同字母指数不同不是同类项，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：由同类项定义列方程求参数',
+          givenLabel: '已知条件：',
+          givenFormula: '单项式 $2x^{a+1}y^{3}$ 与 $-5x^{4}y^{b-1}$ 是同类项',
+          questionText: '令相同字母的指数分别相等，求出 $a$ 和 $b$ 的值分别是多少？',
+          input1Prefix: '$a =$',
+          input1Placeholder: '如 3',
+          input2Prefix: '，$b =$',
+          input2Placeholder: '如 4',
+          input2Suffix: '',
+          expectedX: '3',
+          expectedMin: '4',
+          allowOrderSwap: false,
+          correctFeedback: '$a = 3$，$b = 4$。',
+          correctDetail: '由 $x$ 的指数相等得 $a + 1 = 4 \\implies a = 3$；由 $y$ 的指数相等得 $b - 1 = 3 \\implies b = 4$。',
+          wrongFeedback: '分别列出 $a + 1 = 4$ 与 $b - 1 = 3$ 两个方程求解即可。',
+          specificWrongHints: []
+        }
+      }
+    }
+    ,
+    // =========================================================================
+    // P50：整式加减中“与某字母无关/不含某项”的参数求解
+    // =========================================================================
+    P50: {
+      procedureId: 'P50',
+      title: '整式加减中“与某字母无关/不含某项”的参数求解',
+      exampleTitle: '若 $(2x^{2} + ax - y + 4) + (-2bx^{2} + 3x - 5y + 1)$ 的值与 $x$ 的取值无关，求 $b - 2a$ 的值',
+      exampleFormula: '合并含 $x$ 项系数 $\\to$ 令所有含 $x$ 项的系数 $= 0 \\to$ 解出 $a, b$ 并求 $b - 2a$',
+      totalDuration: 28.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步强调：与 $x$ 无关必须令所有含 $x$ 的各项合并系数同时等于 0）',
+      practiceSectionTitle: '“与某字母无关/不含某项”求参跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握含参合并同类项与令目标项系数为 0 求参',
+
+      steps: [
+        {
+          step: 1,
+          name: '去括号并按 $x^{2}$、$x$ 项归类合并含参系数',
+          tStart: 0.0,
+          tEnd: 7.0,
+          explanation: '去掉两个正号括号，把含 $x^{2}$ 的项合并为 $(2 - 2b)x^{2}$，含 $x$ 的项合并为 $(a + 3)x$，其余项合并为 $-6y + 5$。'
+        },
+        {
+          step: 2,
+          name: '由“与 $x$ 的取值无关”令所有含 $x$ 项系数为 $0$',
+          tStart: 7.0,
+          tEnd: 14.5,
+          explanation: '要使结果不论 $x$ 取何值都保持不变，必须令合并后所有含 $x$ 项的系数同时等于 $0$，即 $2 - 2b = 0$ 且 $a + 3 = 0$。'
+        },
+        {
+          step: 3,
+          name: '解方程分别求出参数 $a, b$ 的值',
+          tStart: 14.5,
+          tEnd: 21.0,
+          explanation: '由 $2 - 2b = 0$ 解得 $b = 1$；由 $a + 3 = 0$ 解得 $a = -3$。'
+        },
+        {
+          step: 4,
+          name: '代入目标代数式算出 $b - 2a$',
+          tStart: 21.0,
+          tEnd: 28.0,
+          explanation: '将 $b = 1，a = -3$ 代入 $b - 2a$（注意负负得正），算得 $1 - 2 \\times (-3) = 1 + 6 = 7$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 合并为 $(2 - 2b)x^{2} + (a + 3)x - 6y + 5$' },
+        { time: 8.5, step: 2, label: '2.1 令 $2 - 2b = 0$ 且 $a + 3 = 0$' },
+        { time: 16.0, step: 3, label: '3.1 解得 $b = 1，a = -3$' },
+        { time: 22.5, step: 4, label: '4.1 代入得 $b - 2a = 1 - 2 \\times (-3) = 7$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p50_row_0',
+          stepBadge: '原整式',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p50_r0_orig', math: '$(2x^{2} + ax - y + 4) + (-2bx^{2} + 3x - 5y + 1)$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p50_row_1',
+          stepBadge: '第 1 步 · 合并含 x 项系数',
+          appearAt: 1.8,
+          tokens: [
+            { id: 'p50_r1_x2', math: '$= (2 - 2b)x^{2}$', appearAt: 1.9, dur: 0.45 },
+            { id: 'p50_r1_x', math: '$+ (a + 3)x$', appearAt: 3.4, dur: 0.45 },
+            { id: 'p50_r1_rest', math: '$- 6y + 5$', appearAt: 4.8, dur: 0.40 }
+          ]
+        },
+        {
+          rowId: 'p50_row_2',
+          stepBadge: '第 2 步 · 令系数均为 0',
+          appearAt: 7.5,
+          tokens: [
+            { id: 'p50_r2_c1', math: '由与 $x$ 无关，得 $2 - 2b = 0$，', appearAt: 7.6, dur: 0.45 },
+            { id: 'p50_r2_c2', math: '$a + 3 = 0$', appearAt: 9.4, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p50_row_3',
+          stepBadge: '第 3 步 · 解出参数',
+          appearAt: 15.0,
+          tokens: [
+            { id: 'p50_r3_ab', math: '解得 $b = 1$，$a = -3$', appearAt: 15.1, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p50_row_4',
+          stepBadge: '最终结论',
+          appearAt: 21.5,
+          isConclusion: true,
+          tokens: [
+            { id: 'p50_r4_conc', math: '$\\therefore b - 2a = 1 - 2 \\times (-3) = 1 + 6 = 7$。', appearAt: 21.6, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p50_sp_1',
+          title: '核心模型 · “不含某项 / 与某字母无关”',
+          showStart: 7.0,
+          showEnd: 27.8,
+          tokens: [
+            { id: 'p50_sp1_t1', math: '① 不含 $x^{2}$ 项 $\\implies$ 合并后 $x^{2}$ 项系数 $= 0$', appearAt: 7.6, dur: 0.40 },
+            { id: 'p50_sp1_t2', math: '② 与 $x$ 无关 $\\implies$ 所有含 $x$ 的项（$x^{2}, x, xy$）系数均为 $0$', appearAt: 9.0, dur: 0.45 }
+          ],
+          note: '若是两多项式相减，务必先给减式加括号变号再合并含参系数'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p50_r1_x2', tStart: 1.9, tEnd: 14.0, color: 'teal' },
+        { tokenId: 'p50_r1_x', tStart: 3.4, tEnd: 14.0, color: 'amber' },
+        { tokenId: 'p50_r3_ab', tStart: 15.1, tEnd: 21.2, color: 'teal' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p50_svg_s2',
+          type: 'under-brace',
+          startToken: 'p50_r1_x2',
+          endToken: 'p50_r1_x',
+          label: '所有含 $x$ 项的系数同时 $= 0$',
+          color: '#D97706',
+          tStart: 7.4,
+          tDrawEnd: 8.4,
+          tFadeStart: 13.8,
+          tEnd: 14.4
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 7.0, text: '第一步去括号合并含参系数：把含 $x^{2}$ 的项合并为 $(2 - 2b)x^{2}$，含 $x$ 的项合并为 $(a + 3)x$。', focusToken: 'p50_r1_x' },
+        { tStart: 7.0, tEnd: 14.5, text: '第二步令系数为 $0$：因为整式的值与 $x$ 的取值无关，所以 $2 - 2b = 0$ 且 $a + 3 = 0$。', focusToken: 'p50_r2_c2' },
+        { tStart: 14.5, tEnd: 21.0, text: '第三步解出参数：$b = 1，a = -3$。', focusToken: 'p50_r3_ab' },
+        { tStart: 21.0, tEnd: 28.0, text: '第四步代入求值：$b - 2a = 1 - 2 \\times (-3) = 7$！', focusToken: 'p50_r4_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：多项式相减不含某项求参数（注意变号）',
+          givenLabel: '已知条件：',
+          givenFormula: '多项式 $(3x^{2} + kxy - y^{2}) - (x^{2} - 2xy + 3y^{2})$ 化简后不含 $xy$ 项',
+          extractedLabel: '去括号合并 $xy$ 项：',
+          extractedFormula: '$kxy - (-2xy) = (k + 2)xy$',
+          questionText: '参数 $k$ 的值是？',
+          options: [
+            { key: 'A', text: 'A. $k = -2$（由 $k + 2 = 0$ 解得）', isCorrect: true },
+            { key: 'B', text: 'B. $k = 2$', isCorrect: false },
+            { key: 'C', text: 'C. $k = 0$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！先变号合并 xy 项系数，再令系数等于 0：',
+            calcLines: [
+              '$-(-2xy) = +2xy \\implies xy$ 项合并系数为 $k + 2$',
+              '由不含 $xy$ 项令 $k + 2 = 0 \\implies k = -2$'
+            ],
+            summary: '相减时千万留意负负得正，避免把 $k + 2$ 错算成 $k - 2$。'
+          },
+          wrongTitle: '提示：请检查减号后 -2xy 去括号的变号',
+          wrongFeedback: '减去 $(-2xy)$ 等于加上 $+2xy$，合并后 $xy$ 项系数为 $k + 2 = 0$，故 $k = -2$，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：值与 x 的取值无关求两个参数',
+          givenLabel: '已知条件：',
+          givenFormula: '整式 $(a - 2)x^{2} + (b + 4)x - 3y + 1$ 的值与 $x$ 的取值无关',
+          questionText: '分别求出参数 $a$ 和 $b$ 的值：',
+          input1Prefix: '$a =$',
+          input1Placeholder: '如 2',
+          input2Prefix: '，$b =$',
+          input2Placeholder: '如 -4',
+          input2Suffix: '',
+          expectedX: '2',
+          expectedMin: '-4',
+          allowOrderSwap: false,
+          correctFeedback: '$a = 2$，$b = -4$。',
+          correctDetail: '令 $a - 2 = 0$ 且 $b + 4 = 0$，解得 $a = 2，b = -4$。',
+          wrongFeedback: '令 $x^{2}$ 项系数 $a - 2 = 0$ 且 $x$ 项系数 $b + 4 = 0$ 即可解出。',
+          specificWrongHints: []
+        }
+      }
+    }
+    ,
+    // =========================================================================
+    // P51：运用合并同类项法则化简整式与直接代入求值
+    // =========================================================================
+    P51: {
+      procedureId: 'P51',
+      title: '运用合并同类项法则化简整式与直接代入求值',
+      exampleTitle: '先合并同类项化简 $-3x^{2} + y^{2} - 3xy + x^{2} - y^{2}$，再求当 $x = -1，y = 2$ 时的值',
+      exampleFormula: '$-3x^{2} + y^{2} - 3xy + x^{2} - y^{2}$（先带符号归组合并，再代入 $x = -1, y = 2$）',
+      totalDuration: 28.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步强调“带符号移项归组、系数相加字母指数不变、相反数抵消”）',
+      practiceSectionTitle: '合并同类项化简与直接代入求值跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握无括号多项式合并同类项与先化简再代入',
+
+      steps: [
+        {
+          step: 1,
+          name: '定位各组同类项并带符号归组',
+          tStart: 0.0,
+          tEnd: 7.0,
+          explanation: '找出多项式中的同类项：$-3x^{2}$ 与 $+x^{2}$ 是同类项，$+y^{2}$ 与 $-y^{2}$ 是同类项，$-3xy$ 无同类项；连同每项前面的正负号归组为 $(-3x^{2} + x^{2}) + (y^{2} - y^{2}) - 3xy$。'
+        },
+        {
+          step: 2,
+          name: '系数相加、相反数抵消合并化简',
+          tStart: 7.0,
+          tEnd: 14.5,
+          explanation: '把每组系数相加，字母与指数不变：$(-3 + 1)x^{2} = -2x^{2}$，$(1 - 1)y^{2} = 0$（相互抵消），$-3xy$ 照抄，化简为最简多项式 $-2x^{2} - 3xy$。'
+        },
+        {
+          step: 3,
+          name: '将 $x = -1，y = 2$ 加括号代入最简式',
+          tStart: 14.5,
+          tEnd: 21.5,
+          explanation: '在最简多项式 $-2x^{2} - 3xy$ 中代入 $x = -1，y = 2$，注意负数 $-1$ 必须加括号：$-2 \\times (-1)^{2} - 3 \\times (-1) \\times 2$。'
+        },
+        {
+          step: 4,
+          name: '按有理数混合运算顺序算出结果',
+          tStart: 21.5,
+          tEnd: 28.0,
+          explanation: '先算乘方 $(-1)^{2} = 1$，再算乘法得 $-2 + 6 = 4$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.8, step: 1, label: '1.1 标记同类项并带符号归组' },
+        { time: 8.5, step: 2, label: '2.1 合并系数得 $-2x^{2} - 3xy$（$y^{2}$ 项抵消）' },
+        { time: 16.0, step: 3, label: '3.1 加括号代入 $x = -1, y = 2$' },
+        { time: 23.0, step: 4, label: '4.1 计算 $-2 + 6 = 4$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p51_row_0',
+          stepBadge: '原多项式',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p51_r0_1', math: '$-3x^{2}$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p51_r0_2', math: '$+ y^{2}$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p51_r0_3', math: '$- 3xy$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p51_r0_4', math: '$+ x^{2}$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p51_r0_5', math: '$- y^{2}$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p51_row_1',
+          stepBadge: '第 1 步 · 带符号归组',
+          appearAt: 1.8,
+          tokens: [
+            { id: 'p51_r1_g1', math: '$= (-3x^{2} + x^{2})$', appearAt: 1.9, dur: 0.45 },
+            { id: 'p51_r1_g2', math: '$+ (y^{2} - y^{2})$', appearAt: 3.4, dur: 0.45 },
+            { id: 'p51_r1_g3', math: '$- 3xy$', appearAt: 4.8, dur: 0.40 }
+          ]
+        },
+        {
+          rowId: 'p51_row_2',
+          stepBadge: '第 2 步 · 合并同类项',
+          appearAt: 7.6,
+          tokens: [
+            { id: 'p51_r2_sim', math: '$= (-3 + 1)x^{2} + 0 - 3xy = -2x^{2} - 3xy$', appearAt: 7.7, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p51_row_3',
+          stepBadge: '第 3 步 · 加括号代入',
+          appearAt: 15.0,
+          tokens: [
+            { id: 'p51_r3_sub', math: '当 $x = -1, y = 2$ 时，原式 $= -2 \\times (-1)^{2} - 3 \\times (-1) \\times 2$', appearAt: 15.1, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p51_row_4',
+          stepBadge: '最终结论',
+          appearAt: 22.0,
+          isConclusion: true,
+          tokens: [
+            { id: 'p51_r4_conc', math: '$= -2 + 6 = 4$。', appearAt: 22.1, dur: 0.60 }
+          ]
+        }
+      ],
+
+      scratchpadCards: [
+        {
+          id: 'p51_sp_1',
+          title: '核心口诀 · 合并同类项“一相加，两不变”',
+          showStart: 0.8,
+          showEnd: 27.8,
+          tokens: [
+            { id: 'p51_sp1_t1', math: '一相加：把同类项的系数相加（$-3 + 1 = -2$）', appearAt: 7.2, dur: 0.40 },
+            { id: 'p51_sp1_t2', math: '两不变：字母不变，字母的指数不变（仍为 $x^{2}$）', appearAt: 9.0, dur: 0.40 },
+            { id: 'p51_sp1_t3', math: '相反数项：$+y^{2} - y^{2} = 0$ 直接抵消，代入更简便', appearAt: 10.6, dur: 0.40 }
+          ],
+          note: '切勿在合并同类项前就直接代入 $x = -1, y = 2$ 硬算五项，先化简可消去 $y^{2}$ 项'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p51_r1_g1', tStart: 1.9, tEnd: 7.2, color: 'teal' },
+        { tokenId: 'p51_r1_g2', tStart: 3.4, tEnd: 7.2, color: 'amber' },
+        { tokenId: 'p51_r2_sim', tStart: 7.7, tEnd: 14.2, color: 'teal' },
+        { tokenId: 'p51_r3_sub', tStart: 15.1, tEnd: 21.2, color: 'amber' }
+      ],
+
+      svgAnnotations: [
+        {
+          id: 'p51_svg_s2',
+          type: 'under-brace',
+          startToken: 'p51_r1_g1',
+          endToken: 'p51_r1_g2',
+          label: '$-3 + 1 = -2$，$1 - 1 = 0$',
+          color: '#0F766E',
+          tStart: 6.4,
+          tDrawEnd: 7.2,
+          tFadeStart: 13.6,
+          tEnd: 14.2
+        }
+      ],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 7.0, text: '第一步带符号归组：把同类项 $-3x^{2}$ 与 $+x^{2}$、$+y^{2}$ 与 $-y^{2}$ 分别归组，$-3xy$ 单独保留。', focusToken: 'p51_r1_g2' },
+        { tStart: 7.0, tEnd: 14.5, text: '第二步合并同类项：系数相加、字母与指数不变，得 $-2x^{2} - 3xy$，互为相反数的 $y^{2}$ 项直接抵消！', focusToken: 'p51_r2_sim' },
+        { tStart: 14.5, tEnd: 21.5, text: '第三步加括号代入：将 $x = -1, y = 2$ 代入最简式 $-2x^{2} - 3xy$，负数 $-1$ 必须加括号。', focusToken: 'p51_r3_sub' },
+        { tStart: 21.5, tEnd: 28.0, text: '第四步计算结果：$-2 \\times 1 + 6 = 4$！', focusToken: 'p51_r4_conc' }
+      ],
+
+      practices: {
+        practice1: {
+          title: '练习一：辨别合并同类项的正误',
+          givenLabel: '给出三个合并结果：',
+          givenFormula: '① $3a + 2b = 5ab$；② $5y^{2} - 2y^{2} = 3$；③ $7x^{2}y - 7yx^{2} = 0$',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '其中计算完全正确的是哪一个？',
+          options: [
+            { key: 'A', text: 'A. ③ $7x^{2}y - 7yx^{2} = 0$', isCorrect: true },
+            { key: 'B', text: 'B. ② $5y^{2} - 2y^{2} = 3$', isCorrect: false },
+            { key: 'C', text: 'C. ① $3a + 2b = 5ab$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '回答正确！按“系数相加、字母和指数不变”核对：',
+            calcLines: [
+              '① $3a$ 与 $2b$ 不是同类项不能合并；② $5y^{2} - 2y^{2} = 3y^{2}$（漏写字母 $y^{2}$）',
+              '③ $7x^{2}y$ 与 $-7yx^{2}$ 是同类项，系数 $7 - 7 = 0$，结果为 $0$ ✓'
+            ],
+            summary: '合并同类项既不能强行合并非同类项，也不能把字母部分丢掉。'
+          },
+          wrongTitle: '提示：请核对字母是否相同以及合并后字母是否保留',
+          wrongFeedback: '① 不是同类项不能合并，② 丢掉了字母 $y^{2}$，只有 ③ 互为相反数的同类项相加得 $0$ 正确，请再试一次。'
+        },
+        practice2: {
+          title: '练习二：先合并同类项再代入求值',
+          givenLabel: '已知多项式：',
+          givenFormula: '$3a^{2} + 4a - a^{2} + 3a - 2a^{2}$',
+          questionText: '合并同类项化简为 $ka$ 后，系数 $k$ 是多少？当 $a = -3$ 时该多项式的值是多少？',
+          input1Prefix: '系数 $k =$',
+          input1Placeholder: '如 7',
+          input2Prefix: '，当 $a = -3$ 时的值 $=$',
+          input2Placeholder: '如 -21',
+          input2Suffix: '',
+          expectedX: '7',
+          expectedMin: '-21',
+          allowOrderSwap: false,
+          correctFeedback: '化简为 $7a$（$k = 7$），当 $a = -3$ 时值为 $-21$。',
+          correctDetail: '二次项 $(3 - 1 - 2)a^{2} = 0$ 抵消，一次项 $(4 + 3)a = 7a$；代入 $a = -3$ 得 $7 \\times (-3) = -21$。',
+          wrongFeedback: '先合并 $a^{2}$ 项得 $0$、合并 $a$ 项得 $7a$，再算 $7 \\times (-3)$。',
+          specificWrongHints: []
         }
       }
     }

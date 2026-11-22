@@ -2077,7 +2077,7 @@
             </div>
           </div>
 
-          <button type="button" id="btnProcGoKnowledgeGraph" class="btn-secondary px-3.5 py-1.5 rounded-lg text-xs font-semibold inline-flex items-center gap-1.5" data-graph-node="${escapeHtml(p.graphNodeId || 'kp_g9_qe_solve')}">
+          <button type="button" id="btnProcGoKnowledgeGraph" class="btn-secondary px-3.5 py-1.5 rounded-lg text-xs font-semibold inline-flex items-center gap-1.5" data-graph-node="${escapeHtml(p.graphNodeId || 'cnm_225')}">
             <span>🕸️</span>
             <span>查看题目图谱</span>
           </button>
@@ -2125,7 +2125,7 @@
 
       container.querySelector('#btnProcGoKnowledgeGraph')?.addEventListener('click', (e) => {
         this.suspendCurrentDetailState();
-        const nodeId = e.currentTarget.getAttribute('data-graph-node') || 'kp_g9_qe_solve';
+        const nodeId = e.currentTarget.getAttribute('data-graph-node') || 'cnm_225';
         if (typeof window.jumpToKnowledgeGraphNode === 'function') {
           window.jumpToKnowledgeGraphNode(nodeId);
         }

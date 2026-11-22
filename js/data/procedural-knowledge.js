@@ -105,7 +105,7 @@
           detail: '由 $2x+3=4$ 或 $2x+3=-4$，分别移项、系数化为 $1$，解得 $x_{1}=\\frac{1}{2},\\ x_{2}=-\\frac{7}{2}$。'
         }
       ],
-      graphNodeId: 'kp_g9_qe_solve',
+      graphNodeId: 'cnm_225',
       status: 'published'
     },
     {
@@ -227,7 +227,7 @@
           detail: '左边逆用完全平方公式化为 $(x-4)^{2}$，右边合并得 $21$，即 $(x-4)^{2}=21$，对照 $(x+a)^{2}=b$ 得 $a=-4,\\ b=21$。'
         }
       ],
-      graphNodeId: 'kp_g9_qe_solve',
+      graphNodeId: 'cnm_225',
       status: 'published'
     },
     {
@@ -337,7 +337,7 @@
           detail: '因为对任意实数 $x$ 都有 $(x-\\frac{3}{4})^{2}\\ge 0$，所以 $8(x-\\frac{3}{4})^{2}+\\frac{1}{2}\\ge \\frac{1}{2}$，当 $x=\\frac{3}{4}$ 时取最小值 $\\frac{1}{2}$。'
         }
       ],
-      graphNodeId: 'kp_g9_qe_solve',
+      graphNodeId: 'cnm_225',
       status: 'published'
     },
     {
@@ -436,7 +436,7 @@
           detail: '③$m-2$米为差的形式且后带单位，应写为 $(m-2)$米，不符合规范；④$\\frac{3x^{3}}{5}$用分数线表示除法，符合规范。故符合要求的有①④（共2个）。'
         }
       ],
-      graphNodeId: 'kp_g7_alg_expr',
+      graphNodeId: 'cnm_027',
       status: 'published'
     },
     {
@@ -536,7 +536,7 @@
           detail: '用分数线代替除号，得到每千克单价为 $\\frac{3m+18n}{n+3}$ 元。'
         }
       ],
-      graphNodeId: 'kp_g7_alg_expr',
+      graphNodeId: 'cnm_027',
       status: 'published'
     },
     {
@@ -611,7 +611,7 @@
         { id: 'P34', name: '识别单项式与多项式、确定系数次数项数及由次数项数求参数', type: 'procedural_knowledge' }
       ],
       prerequisiteProcedureIds: ['P05', 'P28', 'P34'],
-      subsequentProcedureIds: ['P08'],
+      subsequentProcedureIds: ['P08', 'P45'],
       relatedProcedureIds: [],
       pitfalls: [
         '等差规律中直接用“首项 $+$ 公差 $\\times n$”而忘记首项对应的是 $(n-1)$ 个公差（如首项 4、每次加 3，误写成 $4+3n$ 而非 $4+3(n-1)=3n+1$）。',
@@ -635,7 +635,7 @@
           detail: '当 $n=1$ 时 $3\\times 1-1=2$，当 $n=4$ 时 $3\\times 4-1=11$，与题意完全一致。'
         }
       ],
-      graphNodeId: 'kp_syn_num_shape',
+      graphNodeId: 'cnm_p200',
       status: 'published'
     },
     {
@@ -733,7 +733,7 @@
           detail: '将 $x=m,y=\\frac{5}{8}$ 代入 $xy=10$，得 $\\frac{5}{8}m=10$，解得 $m=16$。'
         }
       ],
-      graphNodeId: 'kp_g7_alg_expr',
+      graphNodeId: 'cnm_027',
       status: 'published'
     },
     {
@@ -837,7 +837,7 @@
           detail: '计算 $3-2=1$，得出最终结果为 $1$。'
         }
       ],
-      graphNodeId: 'kp_g7_alg_eval',
+      graphNodeId: 'cnm_029',
       status: 'published'
     },
     {
@@ -946,7 +946,7 @@
           detail: '将 $x-2y=3$ 整体代入 $-2(x-2y)+12$，得 $-2\\times 3+12=6$。'
         }
       ],
-      graphNodeId: 'kp_g7_alg_eval',
+      graphNodeId: 'cnm_029',
       status: 'published'
     },
     {
@@ -1040,7 +1040,7 @@
                 "detail": "由“三线合一”推出底边被平分或顶角被平分、底边夹角为 $90^{\\circ}$，结合角度互余或线段关系算出最终结果。"
             }
         ],
-        "graphNodeId": "kp_g8_iso_tri",
+        "graphNodeId": "cnm_137",
         "status": "published"
     },
     {
@@ -1149,7 +1149,7 @@
           detail: '由比例系数 $(m+\\sqrt{3})(m-\\sqrt{2})\\neq 0$ 知 $m\\neq -\\sqrt{3}$ 且 $m\\neq \\sqrt{2}$，故舍去 $m=\\sqrt{2}$，确定 $m=-\\sqrt{2}$（选 B）。'
         }
       ],
-      graphNodeId: 'kp_g9_inv_func',
+      graphNodeId: 'cnm_238',
       status: 'published'
     },
     {
@@ -1253,7 +1253,7 @@
           detail: '根据同号相除得正，计算 $n=-\\frac{10}{-2}=5$，故选 B。'
         }
       ],
-      graphNodeId: 'kp_g9_inv_func',
+      graphNodeId: 'cnm_238',
       status: 'published'
     },
     {
@@ -1357,7 +1357,7 @@
           detail: '由此直接判定反比例函数 $y=\\frac{10}{x}$ 的图象位于第一、第三象限，对应选项 B。'
         }
       ],
-      graphNodeId: 'kp_g9_inv_func',
+      graphNodeId: 'cnm_238',
       status: 'published'
     },
     {
@@ -1461,7 +1461,7 @@
           detail: '在第四象限内 $y$ 随 $x$ 的增大而增大，因为 $0 \\lt 1 \\lt 5$，所以 $y_{2} \\lt y_{3} \\lt 0$；结合 $y_{1} \\gt 0$，得 $y_{2} \\lt y_{3} \\lt y_{1}$（选 D）。'
         }
       ],
-      graphNodeId: 'kp_g9_inv_func',
+      graphNodeId: 'cnm_238',
       status: 'published'
     },
     {
@@ -1565,7 +1565,7 @@
           detail: '将 $x_{2}=-x_{1},\\ y_{2}=-y_{1}$ 代入得 $2x_{1}y_{2}-5x_{2}y_{1}=2x_{1}(-y_{1})-5(-x_{1})y_{1}=-2x_{1}y_{1}+5x_{1}y_{1}=3x_{1}y_{1}=3\\sqrt{3}$（选 B）。'
         }
       ],
-      graphNodeId: 'kp_g9_inv_func',
+      graphNodeId: 'cnm_238',
       status: 'published'
     }    ,
     {
@@ -1669,7 +1669,7 @@
           detail: '由有两个不相等的实数根得 $36-12k \\gt 0$，解得 $k \\lt 3$；综合 $k\\neq 0$，得出最终取值范围为 $k \\lt 3$ 且 $k\\neq 0$。'
         }
       ],
-      graphNodeId: 'kp_g9_qe_solve',
+      graphNodeId: 'cnm_225',
       status: 'published'
     },
     {
@@ -1778,7 +1778,7 @@
           detail: '代入求根公式得 $x=\\frac{-(-5)\\pm\\sqrt{49}}{2\\times 3}=\\frac{5\\pm 7}{6}$，分别计算得 $x_{1}=2,\\ x_{2}=-\\frac{1}{3}$。'
         }
       ],
-      graphNodeId: 'kp_g9_qe_solve',
+      graphNodeId: 'cnm_225',
       status: 'published'
     },
     {
@@ -1887,7 +1887,7 @@
           detail: '第(1)问由 $x-5=0$ 或 $x+1=0$ 解得 $x_{1}=5,\\ x_{2}=-1$；第(2)问由 $x-2=0$ 或 $5x-3=0$ 解得 $x_{1}=2,\\ x_{2}=\\frac{3}{5}$。'
         }
       ],
-      graphNodeId: 'kp_g9_qe_solve',
+      graphNodeId: 'cnm_225',
       status: 'published'
     }    ,
     {
@@ -1997,7 +1997,7 @@
           detail: '由二次项系数 $m-2\\neq 0$ 得 $m\\neq 2$，故舍去 $m=2$，确定 $m=-2$（选 B）。'
         }
       ],
-      graphNodeId: 'kp_g9_qe_def_root',
+      graphNodeId: 'cnm_219',
       status: 'published'
     },
     {
@@ -2101,7 +2101,7 @@
           detail: '将目标代数式 $2m^{2}-6m-2023$ 前两项提取公因数 $2$ 变形为 $2(m^{2}-3m)-2023$，整体代入 $m^{2}-3m=2$ 得 $2\\times 2-2023=-2019$。'
         }
       ],
-      graphNodeId: 'kp_g9_qe_def_root',
+      graphNodeId: 'cnm_219',
       status: 'published'
     },
     {
@@ -2216,7 +2216,7 @@
           detail: '去括号解得 $k=4$；当 $k=4$ 时原方程为 $x^{2}-8x+3=0$，检验判别式 $\\Delta =(-8)^{2}-4\\times 1\\times 3=52 \\gt 0$ 符合题意，故 $k=4$。'
         }
       ],
-      graphNodeId: 'kp_g9_qe_solve',
+      graphNodeId: 'cnm_225',
       status: 'published'
     }    ,
     {
@@ -2315,7 +2315,7 @@
           detail: '第(3)问两边同除以 $5$ 得 $x=2$；第(4)问两边同除以 $-3$ 得 $x=4$。'
         }
       ],
-      graphNodeId: 'kp_g7_eq_solve',
+      graphNodeId: 'cnm_044',
       status: 'published'
     },
     {
@@ -2419,7 +2419,7 @@
           detail: '合并同类项得 $2a^{2}-6a-1 = 2(a^{2}-3a)-1$，将 $a^{2}-3a=7$ 整体代入得 $2\\times 7-1=13$（选 D）。'
         }
       ],
-      graphNodeId: 'kp_g8_mult_formula',
+      graphNodeId: 'cnm_148',
       status: 'published'
     },
     {
@@ -2519,7 +2519,7 @@
           detail: '检查三个因式 $m,\\ (a-2),\\ (m-1)$ 均已最简且不能再分解，对应选项 C。'
         }
       ],
-      graphNodeId: 'kp_g8_fac_common',
+      graphNodeId: 'cnm_151',
       status: 'published'
     },
     {
@@ -2623,7 +2623,7 @@
           detail: '第(2)问检查发现 $a^{2}+4a+4=(a+2)^{2}$ 且 $a^{2}-4a+4=(a-2)^{2}$，继续分解得最终结果 $(a+2)^{2}(a-2)^{2}$。'
         }
       ],
-      graphNodeId: 'kp_g8_fac_formula',
+      graphNodeId: 'cnm_154',
       status: 'published'
     }
     ,
@@ -2729,7 +2729,7 @@
           detail: '第(1)问对 $(a^{2}-4)(a^{2}+4)$ 再次套用平方差公式得 $(a^{2})^{2}-4^{2}=a^{4}-16$；第(2)问去括号合并得 $25x^{2}-36y^{2}-36x^{2}+25y^{2}=-11x^{2}-11y^{2}$。'
         }
       ],
-      graphNodeId: 'kp_g8_mult_formula',
+      graphNodeId: 'cnm_148',
       status: 'published'
     },
     {
@@ -2829,7 +2829,7 @@
           detail: '第(1)问去括号合并得 $x^{3}+x^{2}-x-2x^{3}+8x^{2}+x-4=-x^{3}+9x^{2}-4$；第(2)问中间四项同类项正负抵消，合并得 $125x^{3}-\\frac{1}{8}y^{3}$。'
         }
       ],
-      graphNodeId: 'kp_g8_poly_mul_div',
+      graphNodeId: 'cnm_146',
       status: 'published'
     },
     {
@@ -2929,7 +2929,7 @@
           detail: '依次写出四道题合并同类项后的最简结果：(1) $-a+4b+9c$；(2) $-2x^{2}+2y^{2}$；(3) $\\frac{13}{3}x^{2}-x-3$；(4) $5x^{2}-3x-3$。'
         }
       ],
-      graphNodeId: 'kp_g7_like_terms',
+      graphNodeId: 'cnm_034',
       status: 'published'
     },
     {
@@ -3034,7 +3034,7 @@
           detail: '第(2)组依次两边同乘 $2$ 得 $x=-12$、两边同除以 $5$ 得 $x=3$、两边同乘 $-\\frac{3}{2}$ 得 $x=-12$；第(3)问在 $2x=2$ 两边同除以 $2$，解得 $x=1$。'
         }
       ],
-      graphNodeId: 'kp_g7_eq_concept_prop',
+      graphNodeId: 'cnm_040',
       status: 'published'
     }
     ,
@@ -3134,7 +3134,7 @@
           detail: '第(1)问合并同类项 $-8a^{6}+3a^{6}=-5a^{6}$；第(2)问代入 $a^{m}=2,\\ a^{n}=3$ 算得 $2^{2}\\times 3=12$。'
         }
       ],
-      graphNodeId: 'kp_g8_power_op',
+      graphNodeId: 'cnm_142',
       status: 'published'
     },
     {
@@ -3233,7 +3233,7 @@
           detail: '因 $x=-1$ 会使分母 $(x+1)(x-3)=0$（分式无意义），必须舍去 $x=-1$，确定最终答案为 $x=1$。'
         }
       ],
-      graphNodeId: 'kp_g8_frac_def_prop',
+      graphNodeId: 'cnm_157',
       status: 'published'
     },
     {
@@ -3337,7 +3337,7 @@
           detail: '原式化为 $-1 - \\frac{2}{3} + 1$，互为相反数的 $-1$ 与 $+1$ 抵消，得出最终结果 $-\\frac{2}{3}$。'
         }
       ],
-      graphNodeId: 'kp_g7_rat_pow_mix',
+      graphNodeId: 'cnm_021',
       status: 'published'
     },
     {
@@ -3431,7 +3431,7 @@
           detail: '第(2)问比较 $-\\frac{9}{7}$ 与 $-\\frac{6}{5}$：因 $\\frac{9}{7}=\\frac{45}{35} \\gt \\frac{42}{35}=\\frac{6}{5}$，故 $-\\frac{9}{7} \\lt -\\frac{6}{5}$；第(4)问因 $\\frac{1}{2} \\gt \\frac{1}{3}$，故 $-\\frac{1}{2} \\lt -\\frac{1}{3} \\lt \\frac{1}{4}$。'
         }
       ],
-      graphNodeId: 'kp_g7_num_line_abs',
+      graphNodeId: 'cnm_007',
       status: 'published'
     }
     ,
@@ -3540,7 +3540,7 @@
           detail: '要使该多项式为五次三项式，须同时满足首项指数 $m+2=5$ 且首项系数 $n-1\\neq 0$，解得 $m=3$ 且 $n\\neq 1$。'
         }
       ],
-      graphNodeId: 'kp_g7_mono_poly',
+      graphNodeId: 'cnm_031',
       status: 'published'
     }
     ,
@@ -3650,7 +3650,7 @@
           detail: '将已知整体 $a^{2}+a=1$ 代入最简结果 $a^{2}+a-2$，算出 $1 - 2 = -1$。'
         }
       ],
-      graphNodeId: 'kp_g8_frac_mul_div',
+      graphNodeId: 'cnm_160',
       status: 'published'
     },
     // =========================================================================
@@ -3765,7 +3765,7 @@
           detail: '由 $x^{2}-2x-3=0$ 得 $x^{2}-2x=3$（根为 $x=3$ 或 $x=-1$，均使原式有意义），整体代入得 $\\frac{1}{3+1} = \\frac{1}{4}$。'
         }
       ],
-      graphNodeId: 'kp_g8_frac_add_mix',
+      graphNodeId: 'cnm_162',
       status: 'published'
     }
     ,
@@ -3872,7 +3872,7 @@
           detail: '由 $\\angle A = \\angle ABD = 36^{\\circ}$ 得 $\\triangle ABD$ 等腰，由 $\\angle BDC = \\angle C = 72^{\\circ}$ 得 $\\triangle BCD$ 等腰，加上原 $\\triangle ABC$ 共 $3$ 个。'
         }
       ],
-      graphNodeId: 'kp_g8_iso_tri',
+      graphNodeId: 'cnm_137',
       status: 'published'
     },
     // =========================================================================
@@ -3979,7 +3979,7 @@
           detail: '由 $D$ 是 $AC$ 中点得 $AC = 2CD = 12$，又因 $AB = AC$，故 $AB = 12$。'
         }
       ],
-      graphNodeId: 'kp_g8_equi_tri_30',
+      graphNodeId: 'cnm_139',
       status: 'published'
     }
     ,
@@ -4086,7 +4086,7 @@
           detail: '将 $\\left(-3\\frac{2}{3}\\right) - \\left(-2\\frac{3}{4}\\right) + 3\\frac{2}{3} - (+5.75)$ 化为 $\\left(-3\\frac{2}{3} + 3\\frac{2}{3}\\right) + (2.75 - 5.75) = 0 - 3 = -3$。'
         }
       ],
-      graphNodeId: 'kp_g7_rat_add_sub',
+      graphNodeId: 'cnm_013',
       status: 'published'
     },
     // =========================================================================
@@ -4193,7 +4193,7 @@
           detail: '算得 $-13 \\times 1 - 0.34 \\times 1 = -13.34$。'
         }
       ],
-      graphNodeId: 'kp_g7_rat_mul_div',
+      graphNodeId: 'cnm_014',
       status: 'published'
     }
     ,
@@ -4300,7 +4300,378 @@
           detail: '由 $\\angle DBC = \\angle ABC - \\angle ABD = 70^{\\circ} - 40^{\\circ} = 30^{\\circ}$。'
         }
       ],
-      graphNodeId: 'kp_g8_perp_bisector',
+      graphNodeId: 'cnm_133',
+      status: 'published'
+    }
+    ,
+    // =========================================================================
+    // P42：运用全等三角形的性质（对应边相等、对应角相等）求线段长与角度
+    // =========================================================================
+    {
+      id: 'P42',
+      name: '运用全等三角形的性质（对应边相等、对应角相等）求线段长与角度',
+      grade: '八年级',
+      subject: '数学',
+      chapterGroup: '第十四章 全等三角形',
+      chapter: '14.2 全等三角形的性质',
+      description: '依据全等符号“$\\cong$”的对应顶点字母顺序（或重合图形位置）准确配对对应边与对应角，运用“全等三角形的对应边相等、对应角相等”将未知边角转化为已知量，再结合线段和差、三角形内角和 $180^{\\circ}$、邻补角或直角互余完成边长、角度及平行/垂直关系求解。',
+      purpose: '掌握全等三角形对应元素配对与性质转化的基本程序，直接为全等三角形判定与应用（P43）、线段垂直平分线（P41）及等腰三角形（P37）提供基础几何推理能力。',
+      applicability: [
+        '已知 $\\triangle ABC \\cong \\triangle DEF$（带图或无图纯符号表达），直接根据对应顶点顺序写出相等的对应边与对应角。',
+        '利用全等三角形对应边相等，结合同一直线上的线段和差（加减公共段）求未知线段长度或证明线段和差关系（如 $BD = DE + CE$）。',
+        '利用全等三角形对应角相等，结合三角形内角和 $180^{\\circ}$、外角定理、邻补角互补或直角互余求目标角度。',
+        '由全等三角形对应角相等进一步导出内错角/同位角相等，判定两直线平行或垂直。'
+      ],
+      conditions: [
+        '题干已直接给出两个三角形全等（如 $\\triangle ABC \\cong \\triangle DEC$）',
+        '需要求未知线段长度、未知角度或证明线段和差/平行关系'
+      ],
+      steps: [
+        {
+          step: 1,
+          title: '按全等符号“$\\cong$”的顶点字母顺序配对对应边与对应角',
+          description: '严格按照全等式中顶点字母的先后位置一一对应（如 $\\triangle ABC \\cong \\triangle DEC$ 中，$A \\leftrightarrow D$、$B \\leftrightarrow E$、$C \\leftrightarrow C$），确定对应边（$AB \\leftrightarrow DE$、$BC \\leftrightarrow EC$、$AC \\leftrightarrow DC$）与对应角（$\\angle A \\leftrightarrow \\angle D$、$\\angle B \\leftrightarrow \\angle E$、$\\angle ACB \\leftrightarrow \\angle DCE$）。',
+          formula: '$\\triangle ABC \\cong \\triangle DEC \\implies AB = DE,\\ BC = EC,\\ AC = DC$',
+          example: '如 $\\triangle ABC \\cong \\triangle DEC$ 且 $AC = 3$，按第 $1, 3$ 位顶点对应立得 $DC = AC = 3$，按第 $2, 3$ 位顶点对应得 $BC = EC$。'
+        },
+        {
+          step: 2,
+          title: '运用全等性质写出等量关系，将未知边角转化为已知三角形中的量',
+          description: '依据“全等三角形的对应边相等、对应角相等”，把目标线段或目标角替换为已知数据所在的对应边或对应角，集中到同一个三角形或同一条直线上。',
+          formula: '对应边相等；对应角相等',
+          example: '如在 $\\triangle ADC \\cong \\triangle AEB$ 中，由 $\\angle C = 20^{\\circ}$ 得 $\\angle B = \\angle C = 20^{\\circ}$。'
+        },
+        {
+          step: 3,
+          title: '结合线段和差、内角和 $180^{\\circ}$、邻补角或平行判定算出最终结果',
+          description: '①求线段：在共线点中利用线段相加或相减（如 $BC = BD - DC$）直接算长度；②求角度：在已知两角的三角形中用 $180^{\\circ}$ 减去两角，或利用平角/直角互余求角；③证位置关系：由对应角相等导出内错角相等得两直线平行。',
+          formula: '线段和差：$BC = BD - DC$；内角和：$\\angle A + \\angle B + \\angle C = 180^{\\circ}$',
+          example: '接上例：$B, C, D$ 共线且 $BD = 10, DC = 3 \\implies CE = BC = 10 - 3 = 7$。'
+        }
+      ],
+      procedure: [
+        {
+          step: 1,
+          action: '按全等式字母顺序锁定对应顶点、对应边与对应角',
+          detail: '依“$\\cong$”前后顶点位置一一对应，不凭主观目测猜对应边角。'
+        },
+        {
+          step: 2,
+          action: '写出相等的对应边与对应角关系式',
+          detail: '运用全等性质将待求边或角转化为含已知数值的对应边或对应角。'
+        },
+        {
+          step: 3,
+          action: '结合线段和差或内角和/互余/平行判定求解',
+          detail: '在共线线段或同一三角形中完成加减运算，得出边长、角度或平行结论。'
+        }
+      ],
+      prerequisites: [
+        { id: 'P22', name: '利用去括号、移项与合并同类项解一元一次方程', type: 'procedural_knowledge' }
+      ],
+      prerequisiteProcedureIds: ['P22'],
+      subsequentProcedureIds: ['P43', 'P37', 'P38', 'P41'],
+      relatedProcedureIds: ['P43'],
+      pitfalls: [
+        '忽略全等符号“$\\cong$”的顶点顺序要求，仅凭图形长相误配对应边或对应角（如在 $\\triangle ABC \\cong \\triangle DEC$ 中误将 $AC$ 对应 $CE$ 而非 $DC$）。',
+        '公共角重叠图形（如 $\\triangle ABC \\cong \\triangle A\'BC\'$）中，忘记减去公共角 $\\angle A\'BC$ 导致 $\\angle CBC\'$ 与 $\\angle ABA\'$ 关系判断失误。',
+        '只求出对应边或对应角后忘记执行最后一步线段减法或内角和减法。'
+      ],
+      exampleQuestionId: 'prop_6',
+      exampleStepMapping: [
+        {
+          step: 1,
+          title: '对应步骤 1 & 2（按 $\\triangle ABC \\cong \\triangle DEC$ 顶点顺序写出对应边相等）',
+          detail: '由 $\\triangle ABC \\cong \\triangle DEC$ 得 $DC = AC = 3$，$CE = BC$。'
+        },
+        {
+          step: 2,
+          title: '对应步骤 3（结合 $B, C, D$ 共线求 $BC$ 的长）',
+          detail: '因为点 $B, C, D$ 在同一直线上且 $BD = 10$，所以 $BC = BD - DC = 10 - 3 = 7$。'
+        },
+        {
+          step: 3,
+          title: '对应步骤 3（等量代换得出 $CE = 7$）',
+          detail: '由 $CE = BC$ 直接得 $CE = 7$，故选 B。'
+        }
+      ],
+      graphNodeId: 'cnm_121',
+      status: 'published'
+    }
+    ,
+    // =========================================================================
+    // P43：选用 SAS、ASA、AAS、SSS 判定三角形全等并导出边角相等
+    // =========================================================================
+    {
+      id: 'P43',
+      name: '选用 SAS、ASA、AAS、SSS 判定三角形全等并导出边角相等',
+      grade: '八年级',
+      subject: '数学',
+      chapterGroup: '第十四章 全等三角形',
+      chapter: '14.3–14.6 全等三角形的判定（SAS / ASA / AAS / SSS）',
+      description: '通过锁定目标全等三角形、提取直接条件并挖掘隐含条件（公共边、公共角、对顶角、平行线内错角/同位角、线段或角的同加同减），依据边角相对位置准确选用 $\\text{SAS}$、$\\text{ASA}$、$\\text{AAS}$ 或 $\\text{SSS}$ 规范证明全等，再调用全等性质（P42）导出边角相等、角度计算或平行垂直结论。',
+      purpose: '建立初中平面几何最核心的“找三组条件 $\\to$ 选判定定理 $\\to$ 证全等 $\\to$ 导边角”推理闭环，全面支撑等腰三角形（P37）、等边三角形（P38）与线段垂直平分线（P41）的几何证明。',
+      applicability: [
+        '已知两个三角形的部分边、角相等，判断能否全等或补全缺少的一个条件（区分 $\\text{SAS}$ 夹角与误区 $\\text{SSA}$）。',
+        '运用 $\\text{SAS}$（两边及其夹角相等，含公共边、角平分线、手拉手共顶点等角加公共角）证明全等并求角度或线段长。',
+        '运用 $\\text{ASA}$（两角及其夹边相等）或 $\\text{AAS}$（两角及一角对边相等，含平行线内错角、对顶角、一线三垂直互余导等角）证明全等。',
+        '运用 $\\text{SSS}$（三边分别相等，含中点、公共边、共线线段同加减公共段）证明全等并导出角相等、平行或垂直。'
+      ],
+      conditions: [
+        '图形中存在一对待证全等的三角形，且已知至少一组边相等（避免 $\\text{AAA}$）',
+        '通过直接条件与图形隐含条件可凑齐 $\\text{SAS}$、$\\text{ASA}$、$\\text{AAS}$ 或 $\\text{SSS}$ 三组对应相等条件'
+      ],
+      steps: [
+        {
+          step: 1,
+          title: '锁定目标三角形，提取直接条件并挖掘图形隐含条件',
+          description: '在图上标出已知相等的边和角，同时排查五大高频隐含条件：①公共边或公共角；②对顶角相等；③平行线导出内错角或同位角相等；④共线线段同加/同减公共段得等边（如 $BE = DF \\implies BF = DE$）；⑤共顶点等角同加/同减公共角或同角的余角相等得等角。',
+          formula: '隐含条件：公共边/角、对顶角、平行线角、线段/角同加减、同角余角相等',
+          example: '如 $AD \\parallel BC$ 得内错角 $\\angle ADE = \\angle CBF$；$BE = DF$ 同加 $EF$ 得 $DE = BF$。'
+        },
+        {
+          step: 2,
+          title: '按边角位置关系匹配判定定理（$\\text{SAS}$ / $\\text{ASA}$ / $\\text{AAS}$ / $\\text{SSS}$）',
+          description: '核对三组条件的相对位置：①三组边 $\\to \\text{SSS}$；②两组边 + 它们的夹角 $\\to \\text{SAS}$（严禁使用非夹角 $\\text{SSA}$）；③两组角 + 它们的夹边 $\\to \\text{ASA}$；④两组角 + 其中一角的对边 $\\to \\text{AAS}$（严禁仅用三角 $\\text{AAA}$）。',
+          formula: '有效判定：$\\text{SSS},\\ \\text{SAS},\\ \\text{ASA},\\ \\text{AAS}$（$\\text{SSA}$、$\\text{AAA}$ 无效）',
+          example: '在 $\\triangle ADE$ 与 $\\triangle CBF$ 中，$AD = CB$、$\\angle ADE = \\angle CBF$、$DE = BF$，角恰好为两边夹角，故选用 $\\text{SAS}$。'
+        },
+        {
+          step: 3,
+          title: '按对应顶点顺序规范书写大括号全等证明',
+          description: '以“在 $\\triangle \\dots$ 和 $\\triangle \\dots$ 中”开头，用大括号逐行对应列出三组相等条件（左侧全属第一个三角形、右侧全属第二个三角形），得出 $\\triangle \\dots \\cong \\triangle \\dots$ 并注明判定简称。',
+          formula: '$\\begin{cases} AD = CB \\\\ \\angle ADE = \\angle CBF \\\\ DE = BF \\end{cases} \\implies \\triangle ADE \\cong \\triangle CBF\\ (\\text{SAS})$',
+          example: '由 $AD = CB$、$\\angle ADE = \\angle CBF$、$DE = BF$，规范写出 $\\triangle ADE \\cong \\triangle CBF\\ (\\text{SAS})$。'
+        },
+        {
+          step: 4,
+          title: '调用全等性质（P42）导出目标边角相等并完成求解',
+          description: '全等得证后，立即由全等三角形对应边相等、对应角相等得出目标线段或目标角，再结合三角形内角和 $180^{\\circ}$、邻补角互补、线段和差或平行/垂直判定完成最终作答。',
+          formula: '全等 $\\implies$ 对应边/角相等 $\\implies$ 求边长、角度或证平行/垂直',
+          example: '由 $\\triangle ADE \\cong \\triangle CBF$ 得 $\\angle AED = \\angle CFB = 50^{\\circ}$，再由邻补角得 $\\angle AEB = 180^{\\circ} - 50^{\\circ} = 130^{\\circ}$。'
+        }
+      ],
+      procedure: [
+        {
+          step: 1,
+          action: '锁定目标三角形，挖掘平行、对顶、公共边角与和差隐含条件',
+          detail: '将已知边角与图形隐含条件全部转化为两个目标三角形内部的边角相等关系。'
+        },
+        {
+          step: 2,
+          action: '对照边角位置选用 SAS、ASA、AAS 或 SSS（规避 SSA/AAA）',
+          detail: '核查两边一角是否为夹角，两角一边是夹边（ASA）还是对边（AAS）。'
+        },
+        {
+          step: 3,
+          action: '规范列举三组对应条件证得三角形全等',
+          detail: '保证大括号左右两侧分别归属对应三角形，顶点字母顺序一致。'
+        },
+        {
+          step: 4,
+          action: '调用全等性质导出目标边角并完成计算或位置证明',
+          detail: '由对应边/角相等结合内角和、邻补角或平行线判定得出最终结论。'
+        }
+      ],
+      prerequisites: [
+        { id: 'P42', name: '运用全等三角形的性质（对应边相等、对应角相等）求线段长与角度', type: 'procedural_knowledge' }
+      ],
+      prerequisiteProcedureIds: ['P42'],
+      subsequentProcedureIds: ['P37', 'P38', 'P41'],
+      relatedProcedureIds: ['P10', 'P42'],
+      pitfalls: [
+        '误把“两边和其中一边的对角相等（$\\text{SSA}$）”当作 $\\text{SAS}$ 判定全等（必须检查该角是否夹在两条已知边之间）。',
+        '写全等证明时漏掉“转化准备步骤”：直接写 $DE = BF$ 或 $\\angle BAC = \\angle DAE$，未先写清由 $BE = DF$ 同加 $EF$ 或由等角同加公共角导出。',
+        '书写全等式时对应顶点字母顺序错位，导致后续调用对应边、对应角相等时找错角或找错边。'
+      ],
+      exampleQuestionId: 'sas_22',
+      exampleStepMapping: [
+        {
+          step: 1,
+          title: '对应步骤 1（挖掘内错角与线段同加公共段 $EF$）',
+          detail: '由 $AD \\parallel BC$ 得 $\\angle ADE = \\angle CBF$；由 $BE = DF$ 两边同加 $EF$（或同减公共段）得 $BF = DE$。'
+        },
+        {
+          step: 2,
+          title: '对应步骤 2 & 3（选用 $\\text{SAS}$ 规范证明 $\\triangle ADE \\cong \\triangle CBF$）',
+          detail: '在 $\\triangle ADE$ 和 $\\triangle CBF$ 中，$AD = CB$、$\\angle ADE = \\angle CBF$、$DE = BF$，由 $\\text{SAS}$ 得 $\\triangle ADE \\cong \\triangle CBF$。'
+        },
+        {
+          step: 3,
+          title: '对应步骤 4（调用全等性质与邻补角求出 $\\angle AEB = 130^{\\circ}$）',
+          detail: '在 $\\triangle CBF$ 中算得 $\\angle CFB = 180^{\\circ} - 35^{\\circ} - 95^{\\circ} = 50^{\\circ}$，由全等得 $\\angle AED = \\angle CFB = 50^{\\circ}$，再由邻补角得 $\\angle AEB = 180^{\\circ} - 50^{\\circ} = 130^{\\circ}$。'
+        }
+      ],
+      graphNodeId: 'cnm_126',
+      status: 'published'
+    }
+    ,
+    // =========================================================================
+    // P44：运用角平分线的性质与判定进行距离转化、面积计算及尺规作图识别
+    // =========================================================================
+    {
+      id: 'P44',
+      name: '运用角平分线的性质与判定进行距离转化、面积计算及尺规作图识别',
+      grade: '八年级',
+      subject: '数学',
+      chapterGroup: '第十四章 全等三角形',
+      chapter: '14.7 角的平分线',
+      description: '依据角平分线的性质定理（角的平分线上的点到角的两边的距离相等），通过“见角平分线向两边作垂线”实现垂线段等量转化，直接求解三角形面积、面积比、垂线段长及内心周长；依据判定定理（角的内部到角两边距离相等的点在角的平分线上）由“双垂线 $+$ 等距”判定角平分线并求角度；同时识别角平分线尺规作图痕迹。',
+      purpose: '掌握“角平分线 $\\iff$ 到角两边距离相等”的双向转化与面积法核心动作，承接全等三角形判定（P43），与线段垂直平分线（P41）形成几何两大对称/等距定位工具。',
+      applicability: [
+        '已知角平分线及点到角一边的垂线段，向另一边作垂线转化出相等的高，直接求三角形面积、高长或两三角形面积比（底边比）。',
+        '已知三角形三条内角平分线的交点（内心）到一边距离，运用 $S_{\\triangle ABC} = \\frac{1}{2} \\times \\text{周长} \\times r$ 求面积或反求周长。',
+        '已知角的内部一点到角两边的垂线段相等（或由面积比等于底边比导出高相等），运用角平分线判定定理得出角平分线并结合内角和、外角求角度。',
+        '识别“以顶点为圆心画弧交两边于两点，再分别以两交点为圆心、大于一半长为半径画弧交于一点作射线”的角平分线尺规作图痕迹。'
+      ],
+      conditions: [
+        '图形中存在角平分线（或角平分线尺规作图痕迹）且涉及点到角两边的距离/三角形面积',
+        '或角的内部存在到角两边垂线段相等的点，需要判定角平分线并求角度'
+      ],
+      steps: [
+        {
+          step: 1,
+          title: '识别角平分线（含尺规作图痕迹），核对或补作到角两边的垂线',
+          description: '先辨认题干中的角平分线条件或双弧尺规作图痕迹；角平分线上的点必须向角的**两边**作垂线（点到直线的距离是垂线段长），若图中仅画出一条垂线（如 $DC \\perp AC$），立即过该点向另一边作垂线 $DE \\perp AB$。',
+          formula: '见角平分线 $\\implies$ 过线上一点向角两边作垂线 $DC \\perp AC,\\ DE \\perp AB$',
+          example: '如在 $\\text{Rt}\\triangle ABC$ 中，$\\angle C = 90^{\\circ}$，$AD$ 平分 $\\angle BAC$，已有 $DC \\perp AC$，过点 $D$ 作 $DE \\perp AB$ 于点 $E$。'
+        },
+        {
+          step: 2,
+          title: '运用性质定理导出距离相等，结合面积公式求面积、高或面积比',
+          description: '由角平分线性质得两垂线段相等（$DE = DC$）：①求单个三角形面积时直接代入 $S = \\frac{1}{2} \\times \\text{底} \\times \\text{高}$；②求公共顶点两三角形面积比时，因高相等直接转化为底边比 $\\frac{S_{1}}{S_{2}} = \\frac{AB}{BC}$；③求内心或分割总面积时，用 $S_{\\text{总}} = \\frac{1}{2}(a + b + c)\\cdot r$（或 $\\frac{1}{2}(AB + BC)\\cdot h$）求高或周长。',
+          formula: '$DE = DC \\implies S_{\\triangle ABD} = \\frac{1}{2} AB \\cdot DE$；$\\frac{S_{\\triangle ABD}}{S_{\\triangle CBD}} = \\frac{AB}{CB}$',
+          example: '接上例：由 $DE = CD = 3$，$AB = 10$，直接算得 $S_{\\triangle ABD} = \\frac{1}{2} \\times 10 \\times 3 = 15$。'
+        },
+        {
+          step: 3,
+          title: '逆用判定定理：由“双垂直 $+$ 等距”判定角平分线并求角度',
+          description: '若角的内部一点 $P$ 满足到角两边的垂线段相等（$PA \\perp ON,\\ PB \\perp OM$ 且 $PA = PB$），直接判定射线 $OP$ 平分 $\\angle MON$（即 $\\angle AOP = \\angle BOP = \\frac{1}{2}\\angle MON$），再结合三角形内角和、直角互余或外角定理算出目标角度。',
+          formula: '$PA \\perp ON,\\ PB \\perp OM,\\ PA = PB \\implies OP$ 平分 $\\angle MON$',
+          example: '如 $PA \\perp ON, PB \\perp OM$ 且 $PA = PB$，$\\angle MON = 50^{\\circ} \\implies \\angle AOP = 25^{\\circ}$，结合 $\\angle OPC = 30^{\\circ}$ 由外角得 $\\angle PCA = 55^{\\circ}$。'
+        }
+      ],
+      procedure: [
+        {
+          step: 1,
+          action: '识别角平分线或尺规痕迹，补全到角两边的双垂线',
+          detail: '确保点到角两边的距离均为垂线段，缺一条垂线时立即过该点向另一边作垂线。'
+        },
+        {
+          step: 2,
+          action: '用性质定理转化等距并套用面积公式或面积比求解',
+          detail: '由两垂线段相等求三角形面积、等高底边比、垂线段长或内心周长。'
+        },
+        {
+          step: 3,
+          action: '用判定定理（双垂直+等距）得角平分线并推算角度',
+          detail: '先验证双垂直与垂线段相等，得出角平分线后再结合内角和或外角求目标角。'
+        }
+      ],
+      prerequisites: [
+        { id: 'P42', name: '运用全等三角形的性质（对应边相等、对应角相等）求线段长与角度', type: 'procedural_knowledge' },
+        { id: 'P43', name: '选用 SAS、ASA、AAS、SSS 判定三角形全等并导出边角相等', type: 'procedural_knowledge' }
+      ],
+      prerequisiteProcedureIds: ['P42', 'P43'],
+      subsequentProcedureIds: ['P37', 'P41'],
+      relatedProcedureIds: ['P41', 'P42', 'P43'],
+      pitfalls: [
+        '忽略“垂直”前提：角平分线性质与判定中的“距离”必须是**垂线段的长度**，不能对非垂直的普通斜线段直接套用相等。',
+        '混淆三角形内心与外心：到三角形**三边**距离相等的点是三条内角平分线的交点（内心），到三角形**三个顶点**距离相等的点是三边垂直平分线的交点（外心，见 P41）。',
+        '求 $S_{\\triangle ABD}$ 时忘记在 $\\triangle ABD$ 中作高，误把直角边 $CD$ 当作底边直接与其他边相乘。'
+      ],
+      exampleQuestionId: 'g8_df_mid_q14',
+      exampleStepMapping: [
+        {
+          step: 1,
+          title: '对应步骤 1（过角平分线上的点 $D$ 向边 $AB$ 作垂线 $DE$）',
+          detail: '已知 $\\angle C = 90^{\\circ}$（即 $DC \\perp AC$）且 $AD$ 平分 $\\angle BAC$，过点 $D$ 作 $DE \\perp AB$ 于点 $E$，补齐到角两边的双垂线。'
+        },
+        {
+          step: 2,
+          title: '对应步骤 2（由角平分线性质得出高 $DE = DC = 3$）',
+          detail: '依据角平分线上的点到角两边的距离相等，直接得出 $DE = CD = 3$。'
+        },
+        {
+          step: 3,
+          title: '对应步骤 2（代入三角形面积公式求出 $S_{\\triangle ABD} = 15$）',
+          detail: '以 $AB = 10$ 为底、$DE = 3$ 为高，算得 $S_{\\triangle ABD} = \\frac{1}{2} \\times AB \\times DE = \\frac{1}{2} \\times 10 \\times 3 = 15$。'
+        }
+      ],
+      graphNodeId: 'cnm_128',
+      status: 'published'
+    },
+    {
+      id: 'P45',
+      name: '列整式并运用整式加减解决几何周长面积、数位表示与实际数量应用问题',
+      grade: '七年级',
+      subject: '数学',
+      chapterGroup: '第四章 整式的加减',
+      chapter: '4.2.3 整式加减的应用',
+      description: '在几何周长面积、实际数量关系、作差比大小、数位整除与定值追踪情境中，先用含字母的整式准确表示各部分量，再列整式加减算式去括号合并同类项化简，最后代入数值、整体代入或结合字母消元得出结论。',
+      purpose: '将去括号与合并同类项法则（P28）落地到真实数量关系与几何图形运算中，形成“先列整式表示 → 再加括号作和差化简 → 最后代入或消元判别”的标准程序，承接后续一元一次方程列式（P29、P22）。',
+      applicability: [
+        '实际数量和差、错算对比、顺逆水路程差及分组/采购总费用等需要先列整式再合并化简并求值的问题。',
+        '三角形周长、长方形空地挖去花园剩余面积、剪拼图形边长与阴影周长/面积差等几何整式应用问题。',
+        '作差法比较两个多项式或几何周长/面积大小，以及拼图或纸牌/车间调动中化简消元得出定值或“与某字母无关”的问题。',
+        '用 $10a+b$ 表示两位数并运用整式加减与提取公因数说明整除性的数位表示问题。'
+      ],
+      conditions: [
+        '题干给出数量关系、几何边长标注或数位关系，要求列出整式并化简求结果',
+        '或需要通过整式作差比较大小、证明定值/整除性，或化简后再代入数值求费用与面积'
+      ],
+      steps: [
+        {
+          step: 1,
+          title: '提取数量或几何边长关系，用整式表示各部分量',
+          description: '读懂题意或图形标注，用含字母的整式分别写出各部分量（如和差倍分、顺逆水路程、长方形长宽与面积、三角形三边、两位数 $10a+b$ 或各步调动后的数量）。',
+          formula: '各部分量 $\implies$ 统一用含已知字母的整式表示'
+        },
+        {
+          step: 2,
+          title: '列整式加减算式，去括号并合并同类项化简',
+          description: '求和、求差（作差比大小、错算对比、阴影面积差或周长差）时，先给每个多项式整体加括号，再按去括号法则展开并合并同类项，化为最简整式（整除说明时提取公因数）。',
+          formula: '先加括号列和差 $\implies$ 去括号 $\implies$ 合并同类项'
+        },
+        {
+          step: 3,
+          title: '代入数值、整体代入或依据消元结果得出结论',
+          description: '将已知字母数值或整体关系（如 $a-b=3$）代入最简整式求值或算费用；若化简后某字母系数为 $0$（完全消去），则直接得出定值或“与该字母取值无关”的结论。',
+          formula: '最简整式 $\implies$ 代入求值 / 消元得定值 / 提取公因数证整除'
+        }
+      ],
+      prerequisites: [
+        { id: 'P05', name: '根据数量关系列代数式', type: 'procedural_knowledge' },
+        { id: 'P28', name: '运用去括号与合并同类项法则进行整式加减及无关型求值', type: 'procedural_knowledge' },
+        { id: 'P34', name: '识别单项式与多项式、确定系数次数项数及由次数项数求参数', type: 'procedural_knowledge' }
+      ],
+      prerequisiteProcedureIds: ['P05', 'P08', 'P28', 'P34'],
+      subsequentProcedureIds: ['P29', 'P22'],
+      relatedProcedureIds: ['P09', 'P28'],
+      pitfalls: [
+        '求两个多项式的差或阴影面积差时忘记给减数多项式加括号，导致减号只作用在第一项而漏变后续项符号。',
+        '几何拼图求周长或面积时未用同一个基准边长表示其余未知边，或在合并同类项前就急于代入数值增加计算失误。',
+        '数位问题中把两位数 $\overline{ab}$ 误写成 $ab$ 而非 $10a+b$，导致无法提取公因数说明整除性。'
+      ],
+      exampleQuestionId: 'ch4_2_3_b_q14',
+      exampleStepMapping: [
+        {
+          step: 1,
+          title: '对应步骤 1（分别用整式表示大空地与小花园的面积）',
+          detail: '大长方形空地面积为 $3b(2a+3)$ 平方米，一角小长方形花园面积为 $b(a+2)$ 平方米。'
+        },
+        {
+          step: 2,
+          title: '对应步骤 2（作差列式并去括号合并同类项化简阴影面积）',
+          detail: '阴影部分面积 $S = 3b(2a+3) - b(a+2) = 6ab + 9b - ab - 2b = 5ab + 7b$（平方米）。'
+        },
+        {
+          step: 3,
+          title: '对应步骤 3（代入 $a=8, b=4$ 求面积并计算地砖总费用）',
+          detail: '将 $a=8, b=4$ 代入最简式得 $S = 5\times 8\times 4 + 7\times 4 = 160 + 28 = 188$（平方米），总费用为 $188\times 50 = 9400$（元）。'
+        }
+      ],
+      graphNodeId: 'cnm_038',
       status: 'published'
     }
   ];

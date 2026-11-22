@@ -9952,6 +9952,604 @@
         }
       }
     }
+    ,
+    P42: {
+      procedureId: 'P42',
+      title: '全等三角形性质求线段长',
+      exampleTitle: '点 $B, C, D$ 共线，$\\triangle ABC \\cong \\triangle DEC$，$AC = 3$，$BD = 10$，求 $CE$',
+      totalDuration: 22.0,
+      scratchpadIdleHint: '对应顶点配对辅助区（演示中将按“$\\cong$”字母顺序展开对应关系）',
+      geometryDiagram: {
+        title: '动态几何图：$\\triangle ABC \\cong \\triangle DEC$',
+        caption: '点击播放或拖动进度条，同步观察对应边 $AC=DC=3$ 与 $BC=CE=7$ 的亮色映射',
+        svgHtml: '<svg viewBox="0 0 260 175" class="w-full max-w-[260px] h-auto" xmlns="http://www.w3.org/2000/svg">'
+          + '<line x1="20" y1="140" x2="240" y2="140" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="4 3" />'
+          + '<polygon points="35,140 165,140 165,85" fill="#F0FDFA" stroke="#0F766E" stroke-width="2" />'
+          + '<polygon points="165,140 220,140 165,20" fill="#FFFBEB" stroke="#D97706" stroke-width="2" />'
+          + '<line class="proc-geo-anim" data-appear-at="4.5" data-dur="0.8" data-dash-len="80" x1="165" y1="140" x2="165" y2="85" stroke="#0F766E" stroke-width="3.2" style="opacity:0;" />'
+          + '<line class="proc-geo-anim" data-appear-at="5.8" data-dur="0.8" data-dash-len="80" x1="165" y1="140" x2="220" y2="140" stroke="#D97706" stroke-width="3.2" style="opacity:0;" />'
+          + '<line class="proc-geo-anim" data-appear-at="11.5" data-dur="0.9" data-dash-len="140" x1="35" y1="140" x2="165" y2="140" stroke="#0F766E" stroke-width="3.4" style="opacity:0;" />'
+          + '<line class="proc-geo-anim" data-appear-at="16.2" data-dur="0.9" data-dash-len="130" x1="165" y1="140" x2="165" y2="20" stroke="#E11D48" stroke-width="3.4" style="opacity:0;" />'
+          + '<text x="171" y="84" font-size="12" font-weight="700" fill="#0F766E">A</text>'
+          + '<text x="26" y="156" font-size="12" font-weight="700" fill="#334155">B</text>'
+          + '<text x="160" y="156" font-size="12" font-weight="700" fill="#334155">C</text>'
+          + '<text x="220" y="156" font-size="12" font-weight="700" fill="#D97706">D</text>'
+          + '<text x="171" y="24" font-size="12" font-weight="700" fill="#E11D48">E</text>'
+          + '<text class="proc-geo-anim" data-appear-at="5.0" data-dur="0.5" x="145" y="116" font-size="11" font-weight="700" fill="#0F766E" style="opacity:0;">3</text>'
+          + '<text class="proc-geo-anim" data-appear-at="6.5" data-dur="0.5" x="188" y="135" font-size="11" font-weight="700" fill="#D97706" style="opacity:0;">3</text>'
+          + '<text class="proc-geo-anim" data-appear-at="12.2" data-dur="0.5" x="92" y="134" font-size="11" font-weight="700" fill="#0F766E" style="opacity:0;">7</text>'
+          + '<text class="proc-geo-anim" data-appear-at="17.0" data-dur="0.5" x="171" y="54" font-size="11" font-weight="700" fill="#E11D48" style="opacity:0;">CE = 7</text>'
+          + '<text x="108" y="168" font-size="10.5" font-weight="600" fill="#64748B">BD = 10</text>'
+          + '</svg>'
+      },
+      steps: [
+        { step: 1, name: '配对对应边', tStart: 0.0, tEnd: 8.5, explanation: '严格按全等符号“$\\cong$”的顶点字母顺序配对：$\\triangle ABC \\cong \\triangle DEC$ 中第 $1, 3$ 位对应得 $DC = AC = 3$，第 $2, 3$ 位对应得 $CE = BC$。' },
+        { step: 2, name: '共线减法求 $BC$', tStart: 8.5, tEnd: 15.0, explanation: '因为点 $B, C, D$ 在同一直线上，总长 $BD = 10$，减去已转化的 $DC = 3$，直接得到 $BC = BD - DC = 7$。' },
+        { step: 3, name: '等量代换得 $CE$', tStart: 15.0, tEnd: 22.0, explanation: '回代步骤 1 得到的对应边关系 $CE = BC$，立刻得出 $CE = 7$。' }
+      ],
+      microBeats: [
+        { time: 0.5, step: 1, label: '读题确认全等式与已知线段' },
+        { time: 5.0, step: 1, label: '按字母位置导出 $DC = AC = 3$' },
+        { time: 11.5, step: 2, label: '共线相减算出 $BC = 7$' },
+        { time: 16.5, step: 3, label: '等量代换得出 $CE = 7$' }
+      ],
+      boardRows: [
+        {
+          rowId: 'p42_r1', stepBadge: '已知条件', appearAt: 0.0,
+          tokens: [
+            { id: 'p42_t1', math: '$\\triangle ABC \\cong \\triangle DEC$,', appearAt: 0.2, dur: 0.6 },
+            { id: 'p42_t2', math: '$AC = 3$,', appearAt: 1.0, dur: 0.5 },
+            { id: 'p42_t3', math: '$BD = 10$（$B, C, D$ 共线）', appearAt: 1.7, dur: 0.6 }
+          ]
+        },
+        {
+          rowId: 'p42_r2', stepBadge: '第 1 步：配对对应边', appearAt: 3.8,
+          tokens: [
+            { id: 'p42_t4', math: '$\\because \\triangle ABC \\cong \\triangle DEC$,', appearAt: 4.0, dur: 0.5 },
+            { id: 'p42_t5', math: '$\\therefore DC = AC = 3$,', appearAt: 4.8, dur: 0.6 },
+            { id: 'p42_t6', math: '$CE = BC$', appearAt: 6.2, dur: 0.6 }
+          ]
+        },
+        {
+          rowId: 'p42_r3', stepBadge: '第 2 步：共线求差', appearAt: 9.2,
+          tokens: [
+            { id: 'p42_t7', math: '$\\because B, C, D$ 在同一直线上,', appearAt: 9.5, dur: 0.5 },
+            { id: 'p42_t8', math: '$\\therefore BC = BD - DC$', appearAt: 10.6, dur: 0.6 },
+            { id: 'p42_t9', math: '$= 10 - 3 = 7$', appearAt: 12.0, dur: 0.6 }
+          ]
+        },
+        {
+          rowId: 'p42_r4', stepBadge: '第 3 步：等量代换', appearAt: 15.5, isConclusion: true,
+          tokens: [
+            { id: 'p42_t10', math: '$\\therefore CE = BC = 7$（选 B）', appearAt: 16.0, dur: 0.7 }
+          ]
+        }
+      ],
+      scratchpadCards: [
+        {
+          id: 'p42_sp1', title: '顶点字母顺序配对', showStart: 3.8, showEnd: 9.0,
+          tokens: [
+            { id: 'p42_sp1_t1', math: '$\\triangle\\mathbf{A}\\mathbf{B}\\mathbf{C} \\cong \\triangle\\mathbf{D}\\mathbf{E}\\mathbf{C}$', appearAt: 4.1, dur: 0.5 },
+            { id: 'p42_sp1_t2', math: '第 1、3 位：$AC = DC = 3$', appearAt: 5.0, dur: 0.5 },
+            { id: 'p42_sp1_t3', math: '第 2、3 位：$BC = EC$', appearAt: 6.4, dur: 0.5 }
+          ],
+          note: '切勿按图形错觉把 $AC$ 配给 $CE$，必须严格对准全等式的字母序号！'
+        }
+      ],
+      tokenHighlights: [
+        { tokenId: 'p42_t1', tStart: 3.8, tEnd: 8.5, color: 'teal' },
+        { tokenId: 'p42_t5', tStart: 4.8, tEnd: 13.0, color: 'amber' },
+        { tokenId: 'p42_t9', tStart: 12.0, tEnd: 17.5, color: 'teal' },
+        { tokenId: 'p42_t10', tStart: 16.0, tEnd: 22.0, color: 'teal' }
+      ],
+      svgAnnotations: [
+        { id: 'p42_ann1', type: 'arrow', fromToken: 'p42_t2', toToken: 'p42_t5', label: '对应边相等', color: '#D97706', curveOffset: 24, tStart: 4.8, tDrawEnd: 5.6, tFadeStart: 8.2, tEnd: 9.0 },
+        { id: 'p42_ann2', type: 'arrow', fromToken: 'p42_t9', toToken: 'p42_t10', label: '代入 $CE = BC$', color: '#0F766E', curveOffset: 26, tStart: 16.0, tDrawEnd: 16.9, tFadeStart: 20.5, tEnd: 22.0 }
+      ],
+      subtitles: [
+        { tStart: 0.0, tEnd: 3.8, text: '先审题：已知 $\\triangle ABC \\cong \\triangle DEC$，$AC = 3$，$BD = 10$，求线段 $CE$ 的长。', focusToken: 'p42_t1' },
+        { tStart: 3.8, tEnd: 8.5, text: '第一步按顶点顺序配对对应边：第 1、3 位得 $DC = AC = 3$，第 2、3 位得 $CE = BC$。', focusToken: 'p42_t5' },
+        { tStart: 8.5, tEnd: 15.0, text: '第二步利用 $B, C, D$ 三点共线做减法：$BC = BD - DC = 10 - 3 = 7$。', focusToken: 'p42_t9' },
+        { tStart: 15.0, tEnd: 22.0, text: '第三步回代 $CE = BC$，立刻得出 $CE = 7$，解题完成！', focusToken: 'p42_t10' }
+      ],
+      practiceSectionTitle: '全等三角形性质跟做练习',
+      practiceSectionSub: '完成以下两道小题，检验对应顶点配对与内角和转化',
+      practices: {
+        practice1: {
+          title: '练习一：按全等式快速锁定对应边',
+          givenLabel: '已知：',
+          givenFormula: '$\\triangle ABC \\cong \\triangle DEF$，且 $AC = 5\\text{ cm}$，$BC = 8\\text{ cm}$',
+          questionText: '下列线段长度一定正确的是（　　）',
+          options: [
+            { key: 'A', text: 'A. $DE = 5\\text{ cm}$', isCorrect: false },
+            { key: 'B', text: 'B. $DF = 5\\text{ cm}$', isCorrect: true },
+            { key: 'C', text: 'C. $EF = 5\\text{ cm}$', isCorrect: false },
+            { key: 'D', text: 'D. $DF = 8\\text{ cm}$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '对应顶点配对准确！',
+            calcLines: [
+              '在 $\\triangle ABC \\cong \\triangle DEF$ 中，$A \\leftrightarrow D,\\ B \\leftrightarrow E,\\ C \\leftrightarrow F$',
+              '故 $DF = AC = 5\\text{ cm}$，$EF = BC = 8\\text{ cm}$'
+            ],
+            summary: '始终按全等符号前后第 1、2、3 位顶点一一配对，就不会找错对应边。'
+          },
+          wrongTitle: '提示：请核对顶点序号',
+          wrongFeedback: '$A$ 对应 $D$，$C$ 对应 $F$，因此 $AC$ 的对应边是 $DF$，而不是 $DE$ 或 $EF$。'
+        },
+        practice2: {
+          title: '练习二：全等对应角结合内角和求角度',
+          givenLabel: '已知：',
+          givenFormula: '$\\triangle ADC \\cong \\triangle AEB$，$\\angle A = 40^{\\circ}$，$\\angle C = 20^{\\circ}$',
+          questionText: '请填出对应角 $\\angle B$ 与目标角 $\\angle AEB$ 的度数：',
+          input1Prefix: '$\\angle B =$',
+          input1Placeholder: '如 20',
+          input2Prefix: '$^{\\circ}$，$\\angle AEB =$',
+          input2Placeholder: '如 120',
+          input2Suffix: '°',
+          expectedX: '20',
+          expectedMin: '120',
+          allowOrderSwap: false,
+          correctFeedback: '$\\angle B = 20^{\\circ}$，$\\angle AEB = 120^{\\circ}$。',
+          correctDetail: '由 $\\triangle ADC \\cong \\triangle AEB$ 得 $\\angle B = \\angle C = 20^{\\circ}$，再在 $\\triangle AEB$ 中算得 $\\angle AEB = 180^{\\circ} - 40^{\\circ} - 20^{\\circ} = 120^{\\circ}$。',
+          wrongFeedback: '先由对应顶点 $C \\leftrightarrow B$ 得 $\\angle B = \\angle C = 20^{\\circ}$，再用 $180^{\\circ} - \\angle A - \\angle B$ 算 $\\angle AEB$。',
+          specificWrongHints: [
+            { checkType: 'firstVal', val: '40', hint: '$\\angle B$ 对应的是 $\\angle C = 20^{\\circ}$，不是 $\\angle A$。' }
+          ]
+        }
+      }
+    },
+    P43: {
+      procedureId: 'P43',
+      title: '全等三角形判定（SAS）与角度求解',
+      exampleTitle: '$AD \\parallel BC$，$AD = BC$，$BE = DF$，证 $\\triangle ADE \\cong \\triangle CBF$ 并求 $\\angle AEB$',
+      totalDuration: 28.0,
+      scratchpadIdleHint: '隐含条件挖掘区（演示中将同步展开内错角与公共段转化过程）',
+      geometryDiagram: {
+        title: '动态几何图：$\\triangle ADE \\cong \\triangle CBF$',
+        caption: '点击播放观察内错角 $\\angle ADE = \\angle CBF$、线段 $DE = BF$ 与全等三角形亮色叠加',
+        svgHtml: '<svg viewBox="0 0 260 175" class="w-full max-w-[260px] h-auto" xmlns="http://www.w3.org/2000/svg">'
+          + '<polygon points="45,35 215,35 205,140 35,140" fill="none" stroke="#CBD5E1" stroke-width="1.2" stroke-dasharray="3 3" />'
+          + '<line x1="45" y1="35" x2="215" y2="35" stroke="#0F766E" stroke-width="2.2" />'
+          + '<line x1="35" y1="140" x2="205" y2="140" stroke="#0F766E" stroke-width="2.2" />'
+          + '<line x1="35" y1="140" x2="215" y2="35" stroke="#334155" stroke-width="1.8" />'
+          + '<line x1="45" y1="35" x2="95" y2="105" stroke="#334155" stroke-width="1.6" />'
+          + '<line x1="205" y1="140" x2="155" y2="70" stroke="#334155" stroke-width="1.6" />'
+          + '<polygon class="proc-geo-anim" data-appear-at="13.5" data-dur="0.8" points="45,35 215,35 95,105" fill="rgba(15,118,110,0.16)" stroke="#0F766E" stroke-width="2.2" style="opacity:0;" />'
+          + '<polygon class="proc-geo-anim" data-appear-at="13.5" data-dur="0.8" points="205,140 35,140 155,70" fill="rgba(217,119,6,0.16)" stroke="#D97706" stroke-width="2.2" style="opacity:0;" />'
+          + '<line class="proc-geo-anim" data-appear-at="7.5" data-dur="0.8" data-dash-len="150" x1="95" y1="105" x2="215" y2="35" stroke="#D97706" stroke-width="3.2" style="opacity:0;" />'
+          + '<line class="proc-geo-anim" data-appear-at="8.3" data-dur="0.8" data-dash-len="150" x1="35" y1="140" x2="155" y2="70" stroke="#D97706" stroke-width="3.2" style="opacity:0;" />'
+          + '<text x="35" y="28" font-size="12" font-weight="700" fill="#0F766E">A</text>'
+          + '<text x="219" y="34" font-size="12" font-weight="700" fill="#0F766E">D</text>'
+          + '<text x="22" y="148" font-size="12" font-weight="700" fill="#334155">B</text>'
+          + '<text x="209" y="148" font-size="12" font-weight="700" fill="#334155">C</text>'
+          + '<text x="84" y="122" font-size="12" font-weight="700" fill="#E11D48">E</text>'
+          + '<text x="157" y="64" font-size="12" font-weight="700" fill="#D97706">F</text>'
+          + '<text class="proc-geo-anim" data-appear-at="4.5" data-dur="0.5" x="178" y="48" font-size="10.5" font-weight="700" fill="#0F766E" style="opacity:0;">35°</text>'
+          + '<text class="proc-geo-anim" data-appear-at="4.5" data-dur="0.5" x="58" y="135" font-size="10.5" font-weight="700" fill="#0F766E" style="opacity:0;">35°</text>'
+          + '<text class="proc-geo-anim" data-appear-at="23.0" data-dur="0.6" x="50" y="97" font-size="10.5" font-weight="700" fill="#E11D48" style="opacity:0;">130°</text>'
+          + '</svg>'
+      },
+      steps: [
+        { step: 1, name: '挖掘隐含条件', tStart: 0.0, tEnd: 10.5, explanation: '先由 $AD \\parallel BC$ 得内错角 $\\angle ADE = \\angle CBF$；再由 $BE = DF$ 两边同加公共段 $EF$，转化出对应边 $BF = DE$。' },
+        { step: 2, name: 'SAS 规范证全等', tStart: 10.5, tEnd: 17.5, explanation: '在 $\\triangle ADE$ 和 $\\triangle CBF$ 中，$AD = CB$、$\\angle ADE = \\angle CBF$、$DE = BF$，夹角恰好位于两已知边之间，由 $\\text{SAS}$ 证得全等。' },
+        { step: 3, name: '全等导角求邻补角', tStart: 17.5, tEnd: 28.0, explanation: '在 $\\triangle CBF$ 中算得 $\\angle CFB = 50^{\\circ}$，由全等对应角相等得 $\\angle AED = 50^{\\circ}$，最后由邻补角互补得 $\\angle AEB = 130^{\\circ}$。' }
+      ],
+      microBeats: [
+        { time: 0.5, step: 1, label: '提取已知条件 $AD \\parallel BC,\\ AD = BC,\\ BE = DF$' },
+        { time: 4.5, step: 1, label: '平行线内错角 $\\angle ADE = \\angle CBF$' },
+        { time: 8.0, step: 1, label: '同加公共段 $EF$ 得 $DE = BF$' },
+        { time: 13.5, step: 2, label: '选用 SAS 证得 $\\triangle ADE \\cong \\triangle CBF$' },
+        { time: 20.0, step: 3, label: '由内角和与全等导出 $\\angle AED = 50^{\\circ}$' },
+        { time: 23.5, step: 3, label: '邻补角算出 $\\angle AEB = 130^{\\circ}$' }
+      ],
+      boardRows: [
+        {
+          rowId: 'p43_r1', stepBadge: '已知条件', appearAt: 0.0,
+          tokens: [
+            { id: 'p43_t1', math: '$AD \\parallel BC,\\ AD = BC,\\ BE = DF$', appearAt: 0.2, dur: 0.6 },
+            { id: 'p43_t2', math: '$\\angle CBD = 35^{\\circ},\\ \\angle BCF = 95^{\\circ}$', appearAt: 1.2, dur: 0.6 }
+          ]
+        },
+        {
+          rowId: 'p43_r2', stepBadge: '第 1 步：挖隐含条件', appearAt: 3.5,
+          tokens: [
+            { id: 'p43_t3', math: '$\\because AD \\parallel BC \\implies \\angle ADE = \\angle CBF$;', appearAt: 3.8, dur: 0.7 },
+            { id: 'p43_t4', math: '$\\because BE = DF \\implies BE + EF = DF + EF \\implies BF = DE$', appearAt: 7.0, dur: 0.8 }
+          ]
+        },
+        {
+          rowId: 'p43_r3', stepBadge: '第 2 步：SAS 证全等', appearAt: 11.0,
+          tokens: [
+            { id: 'p43_t5', math: '$AD = CB,\\ \\angle ADE = \\angle CBF,\\ DE = BF$', appearAt: 11.4, dur: 0.7 },
+            { id: 'p43_t6', math: '$\\implies \\triangle ADE \\cong \\triangle CBF\\ (\\text{SAS})$', appearAt: 13.5, dur: 0.7 }
+          ]
+        },
+        {
+          rowId: 'p43_r4', stepBadge: '第 3 步：内角和与全等', appearAt: 18.0,
+          tokens: [
+            { id: 'p43_t7', math: '$\\angle CFB = 180^{\\circ} - 35^{\\circ} - 95^{\\circ} = 50^{\\circ}$,', appearAt: 18.4, dur: 0.7 },
+            { id: 'p43_t8', math: '$\\angle AED = \\angle CFB = 50^{\\circ}$', appearAt: 20.4, dur: 0.7 }
+          ]
+        },
+        {
+          rowId: 'p43_r5', stepBadge: '第 4 步：邻补角定解', appearAt: 22.8, isConclusion: true,
+          tokens: [
+            { id: 'p43_t9', math: '$\\therefore \\angle AEB = 180^{\\circ} - \\angle AED = 180^{\\circ} - 50^{\\circ} = 130^{\\circ}$', appearAt: 23.2, dur: 0.8 }
+          ]
+        }
+      ],
+      scratchpadCards: [
+        {
+          id: 'p43_sp1', title: 'SAS 夹角核对清单', showStart: 10.5, showEnd: 17.5,
+          tokens: [
+            { id: 'p43_sp1_t1', math: '边 (S)：$AD = CB$', appearAt: 11.0, dur: 0.4 },
+            { id: 'p43_sp1_t2', math: '夹角 (A)：$\\angle ADE = \\angle CBF$', appearAt: 12.0, dur: 0.4 },
+            { id: 'p43_sp1_t3', math: '边 (S)：$DE = BF$', appearAt: 13.0, dur: 0.4 }
+          ],
+          note: '关键核对：$\\angle ADE$ 恰好是边 $AD$ 与边 $DE$ 的夹角，严格满足 $\\text{SAS}$！'
+        }
+      ],
+      tokenHighlights: [
+        { tokenId: 'p43_t3', tStart: 3.8, tEnd: 10.5, color: 'teal' },
+        { tokenId: 'p43_t4', tStart: 7.0, tEnd: 13.5, color: 'amber' },
+        { tokenId: 'p43_t6', tStart: 13.5, tEnd: 18.5, color: 'teal' },
+        { tokenId: 'p43_t8', tStart: 20.4, tEnd: 24.5, color: 'amber' },
+        { tokenId: 'p43_t9', tStart: 23.2, tEnd: 28.0, color: 'teal' }
+      ],
+      svgAnnotations: [
+        { id: 'p43_ann1', type: 'arrow', fromToken: 'p43_t4', toToken: 'p43_t6', label: '凑齐 SAS', color: '#D97706', curveOffset: 24, tStart: 12.8, tDrawEnd: 13.6, tFadeStart: 16.5, tEnd: 17.5 },
+        { id: 'p43_ann2', type: 'arrow', fromToken: 'p43_t8', toToken: 'p43_t9', label: '邻补角互补', color: '#0F766E', curveOffset: 24, tStart: 22.8, tDrawEnd: 23.6, tFadeStart: 26.8, tEnd: 28.0 }
+      ],
+      subtitles: [
+        { tStart: 0.0, tEnd: 3.8, text: '先锁定目标全等三角形 $\\triangle ADE$ 和 $\\triangle CBF$，已知条件中已有一组边 $AD = BC$。', focusToken: 'p43_t1' },
+        { tStart: 3.8, tEnd: 10.5, text: '挖掘两个隐含条件：由平行线得内错角 $\\angle ADE = \\angle CBF$；由 $BE = DF$ 同加 $EF$ 得 $BF = DE$。', focusToken: 'p43_t4' },
+        { tStart: 10.5, tEnd: 17.5, text: '核对位置：$\\angle ADE$ 恰好是 $AD$ 与 $DE$ 的夹角，由 $\\text{SAS}$ 证得 $\\triangle ADE \\cong \\triangle CBF$。', focusToken: 'p43_t6' },
+        { tStart: 17.5, tEnd: 22.8, text: '第(2)问先在 $\\triangle CBF$ 中算得 $\\angle CFB = 50^{\\circ}$，再由全等性质得 $\\angle AED = 50^{\\circ}$。', focusToken: 'p43_t8' },
+        { tStart: 22.8, tEnd: 28.0, text: '最后利用平角邻补角关系，算出 $\\angle AEB = 180^{\\circ} - 50^{\\circ} = 130^{\\circ}$！', focusToken: 'p43_t9' }
+      ],
+      practiceSectionTitle: '全等三角形判定跟做练习',
+      practiceSectionSub: '完成以下两道小题，检验判定定理选择与边角推导',
+      practices: {
+        practice1: {
+          title: '练习一：识别 SAS 所需的夹角条件',
+          givenLabel: '已知：',
+          givenFormula: '在 $\\triangle ABC$ 和 $\\triangle DEF$ 中，$BC = EF$，$AC = DF$',
+          questionText: '若要直接利用“$\\text{SAS}$”判定 $\\triangle ABC \\cong \\triangle DEF$，应补充的条件是（　　）',
+          options: [
+            { key: 'A', text: 'A. $\\angle A = \\angle D$', isCorrect: false },
+            { key: 'B', text: 'B. $\\angle B = \\angle E$', isCorrect: false },
+            { key: 'C', text: 'C. $\\angle C = \\angle F$', isCorrect: true },
+            { key: 'D', text: 'D. $AB = DE$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '准确锁定夹角！',
+            calcLines: [
+              '边 $BC$ 与边 $AC$ 的公共顶点是 $C$，故它们的夹角为 $\\angle C$',
+              '边 $EF$ 与边 $DF$ 的夹角为 $\\angle F$，补充 $\\angle C = \\angle F$ 即满足 $\\text{SAS}$'
+            ],
+            summary: '补充 $\\angle A = \\angle D$ 或 $\\angle B = \\angle E$ 属于无效的 $\\text{SSA}$；补充 $AB = DE$ 则用的是 $\\text{SSS}$。'
+          },
+          wrongTitle: '提示：请寻找两条已知边的“夹角”',
+          wrongFeedback: '$BC$ 与 $AC$ 的夹角是两边的公共顶点处的角 $\\angle C$，切勿误选非夹角（$\\text{SSA}$）。'
+        },
+        practice2: {
+          title: '练习二：全等判定结合内角和计算角度',
+          givenLabel: '已知：',
+          givenFormula: '在 $\\triangle ABC$ 与 $\\triangle DEF$ 中，$AB = DE$，$AC = DF$，$BC = EF$，且 $\\angle A = 70^{\\circ}$，$\\angle B = 40^{\\circ}$',
+          questionText: '由 $\\text{SSS}$ 证得全等后，请填出 $\\angle D$ 与 $\\angle F$ 的度数：',
+          input1Prefix: '$\\angle D =$',
+          input1Placeholder: '如 70',
+          input2Prefix: '$^{\\circ}$，$\\angle F =$',
+          input2Placeholder: '如 70',
+          input2Suffix: '°',
+          expectedX: '70',
+          expectedMin: '70',
+          allowOrderSwap: false,
+          correctFeedback: '$\\angle D = 70^{\\circ}$，$\\angle F = 70^{\\circ}$。',
+          correctDetail: '由 $\\text{SSS}$ 得 $\\triangle ABC \\cong \\triangle DEF$，故 $\\angle D = \\angle A = 70^{\\circ}$，$\\angle F = \\angle C = 180^{\\circ} - 70^{\\circ} - 40^{\\circ} = 70^{\\circ}$。',
+          wrongFeedback: '由全等对应角相等得 $\\angle D = \\angle A$，再用内角和 $180^{\\circ} - 70^{\\circ} - 40^{\\circ}$ 求出 $\\angle C = \\angle F$。',
+          specificWrongHints: [
+            { checkType: 'secondVal', val: '40', hint: '$\\angle F$ 对应的是 $\\angle C$（不是 $\\angle B = 40^{\\circ}$），请用 $180^{\\circ} - 70^{\\circ} - 40^{\\circ}$ 计算。' }
+          ]
+        }
+      }
+    }
+    ,
+    P44: {
+      procedureId: 'P44',
+      title: '角平分线性质作双垂线求面积',
+      exampleTitle: '在 $\\triangle ABC$ 中，$\\angle C = 90^{\\circ}$，$AD$ 平分 $\\angle BAC$，$AB = 10$，$CD = 3$，求 $S_{\\triangle ABD}$',
+      totalDuration: 22.0,
+      scratchpadIdleHint: '双垂线转化提示区（演示中将同步强调“见角平分线向两边作垂线”）',
+      geometryDiagram: {
+        title: '动态几何图：过 $D$ 作 $DE \\perp AB$',
+        caption: '点击播放观察辅助垂线 $DE \\perp AB$ 动态画出、$DE = DC = 3$ 等距映射及 $\\triangle ABD$ 面积高亮',
+        svgHtml: '<svg viewBox="0 0 260 175" class="w-full max-w-[260px] h-auto" xmlns="http://www.w3.org/2000/svg">'
+          + '<polygon points="35,145 225,145 225,35" fill="#F8FAFC" stroke="#334155" stroke-width="2" />'
+          + '<rect x="213" y="133" width="12" height="12" fill="none" stroke="#64748B" stroke-width="1.3" />'
+          + '<line x1="35" y1="145" x2="225" y2="95" stroke="#0F766E" stroke-width="2" />'
+          + '<polygon class="proc-geo-anim" data-appear-at="14.5" data-dur="0.8" points="35,145 225,35 225,95" fill="rgba(15,118,110,0.16)" stroke="#0F766E" stroke-width="1.8" style="opacity:0;" />'
+          + '<line class="proc-geo-anim" data-appear-at="4.2" data-dur="0.9" data-dash-len="80" x1="225" y1="95" x2="195" y2="52" stroke="#D97706" stroke-width="2.6" stroke-dasharray="5 3" style="opacity:0;" />'
+          + '<line class="proc-geo-anim" data-appear-at="8.8" data-dur="0.8" data-dash-len="60" x1="225" y1="145" x2="225" y2="95" stroke="#E11D48" stroke-width="3.2" style="opacity:0;" />'
+          + '<line class="proc-geo-anim" data-appear-at="9.6" data-dur="0.8" data-dash-len="70" x1="225" y1="95" x2="195" y2="52" stroke="#E11D48" stroke-width="3.2" style="opacity:0;" />'
+          + '<text x="20" y="152" font-size="12" font-weight="700" fill="#0F766E">A</text>'
+          + '<text x="229" y="34" font-size="12" font-weight="700" fill="#334155">B</text>'
+          + '<text x="229" y="152" font-size="12" font-weight="700" fill="#334155">C</text>'
+          + '<text x="230" y="99" font-size="12" font-weight="700" fill="#0F766E">D</text>'
+          + '<text class="proc-geo-anim" data-appear-at="4.8" data-dur="0.5" x="180" y="48" font-size="12" font-weight="700" fill="#D97706" style="opacity:0;">E</text>'
+          + '<text x="115" y="78" font-size="11" font-weight="700" fill="#334155">AB = 10</text>'
+          + '<text class="proc-geo-anim" data-appear-at="9.2" data-dur="0.5" x="230" y="124" font-size="11" font-weight="700" fill="#E11D48" style="opacity:0;">3</text>'
+          + '<text class="proc-geo-anim" data-appear-at="10.2" data-dur="0.5" x="198" y="80" font-size="11" font-weight="700" fill="#E11D48" style="opacity:0;">DE = 3</text>'
+          + '<text class="proc-geo-anim" data-appear-at="15.5" data-dur="0.6" x="128" y="106" font-size="11" font-weight="700" fill="#0F766E" style="opacity:0;">S = 15</text>'
+          + '</svg>'
+      },
+      steps: [
+        { step: 1, name: '向另一边作垂线', tStart: 0.0, tEnd: 8.0, explanation: '已知 $AD$ 平分 $\\angle BAC$ 且 $DC \\perp AC$，过点 $D$ 向另一边 $AB$ 作垂线 $DE \\perp AB$ 于点 $E$，补齐到角两边的双垂线。' },
+        { step: 2, name: '性质转化高 $DE = 3$', tStart: 8.0, tEnd: 14.0, explanation: '依据“角平分线上的点到角两边的距离相等”，直接由 $DC = 3$ 导出 $\\triangle ABD$ 中 $AB$ 边上的高 $DE = DC = 3$。' },
+        { step: 3, name: '面积公式定解', tStart: 14.0, tEnd: 22.0, explanation: '以 $AB = 10$ 为底、$DE = 3$ 为高，代入三角形面积公式算得 $S_{\\triangle ABD} = \\frac{1}{2} \\times 10 \\times 3 = 15$。' }
+      ],
+      microBeats: [
+        { time: 0.5, step: 1, label: '审题锁定角平分线 $AD$ 与已知直角边 $CD = 3$' },
+        { time: 4.5, step: 1, label: '过点 $D$ 作辅助垂线 $DE \\perp AB$' },
+        { time: 9.5, step: 2, label: '角平分线性质导出 $DE = CD = 3$' },
+        { time: 15.5, step: 3, label: '代入面积公式算得 $S_{\\triangle ABD} = 15$' }
+      ],
+      boardRows: [
+        {
+          rowId: 'p44_r1', stepBadge: '已知条件', appearAt: 0.0,
+          tokens: [
+            { id: 'p44_t1', math: '$\\angle C = 90^{\\circ}$（即 $DC \\perp AC$），', appearAt: 0.2, dur: 0.6 },
+            { id: 'p44_t2', math: '$AD$ 平分 $\\angle BAC$，', appearAt: 1.0, dur: 0.5 },
+            { id: 'p44_t3', math: '$AB = 10,\\ CD = 3$', appearAt: 1.8, dur: 0.5 }
+          ]
+        },
+        {
+          rowId: 'p44_r2', stepBadge: '第 1 步：作垂线', appearAt: 3.8,
+          tokens: [
+            { id: 'p44_t4', math: '过点 $D$ 作 $DE \\perp AB$ 于点 $E$', appearAt: 4.1, dur: 0.7 }
+          ]
+        },
+        {
+          rowId: 'p44_r3', stepBadge: '第 2 步：等距转化', appearAt: 8.4,
+          tokens: [
+            { id: 'p44_t5', math: '$\\because AD$ 平分 $\\angle BAC$, $DC \\perp AC$, $DE \\perp AB$,', appearAt: 8.7, dur: 0.7 },
+            { id: 'p44_t6', math: '$\\therefore DE = DC = 3$', appearAt: 10.2, dur: 0.7 }
+          ]
+        },
+        {
+          rowId: 'p44_r4', stepBadge: '第 3 步：面积求值', appearAt: 14.5, isConclusion: true,
+          tokens: [
+            { id: 'p44_t7', math: '$S_{\\triangle ABD} = \\frac{1}{2} \\cdot AB \\cdot DE$', appearAt: 14.9, dur: 0.7 },
+            { id: 'p44_t8', math: '$= \\frac{1}{2} \\times 10 \\times 3 = 15$', appearAt: 16.5, dur: 0.8 }
+          ]
+        }
+      ],
+      scratchpadCards: [
+        {
+          id: 'p44_sp1', title: '角平分线双垂线模型', showStart: 3.8, showEnd: 13.5,
+          tokens: [
+            { id: 'p44_sp1_t1', math: '条件 1：$AD$ 平分 $\\angle BAC$', appearAt: 4.2, dur: 0.4 },
+            { id: 'p44_sp1_t2', math: '条件 2：$DC \\perp AC,\\ DE \\perp AB$', appearAt: 5.2, dur: 0.4 },
+            { id: 'p44_sp1_t3', math: '结论：$DE = DC = 3$', appearAt: 9.8, dur: 0.5 }
+          ],
+          note: '口诀：见角平分线 + 一侧垂线，马上向另一边补作垂线！'
+        }
+      ],
+      tokenHighlights: [
+        { tokenId: 'p44_t2', tStart: 3.8, tEnd: 8.0, color: 'teal' },
+        { tokenId: 'p44_t4', tStart: 4.1, tEnd: 9.5, color: 'amber' },
+        { tokenId: 'p44_t6', tStart: 10.2, tEnd: 16.8, color: 'amber' },
+        { tokenId: 'p44_t8', tStart: 16.5, tEnd: 22.0, color: 'teal' }
+      ],
+      svgAnnotations: [
+        { id: 'p44_ann1', type: 'arrow', fromToken: 'p44_t4', toToken: 'p44_t6', label: '性质得等距', color: '#D97706', curveOffset: 22, tStart: 9.8, tDrawEnd: 10.6, tFadeStart: 13.2, tEnd: 14.0 },
+        { id: 'p44_ann2', type: 'arrow', fromToken: 'p44_t6', toToken: 'p44_t8', label: '代入高 $DE = 3$', color: '#0F766E', curveOffset: 24, tStart: 15.8, tDrawEnd: 16.6, tFadeStart: 20.5, tEnd: 22.0 }
+      ],
+      subtitles: [
+        { tStart: 0.0, tEnd: 3.8, text: '先审题：$\\angle C = 90^{\\circ}$ 说明 $DC \\perp AC$，$AD$ 平分 $\\angle BAC$，求 $\\triangle ABD$ 的面积。', focusToken: 'p44_t2' },
+        { tStart: 3.8, tEnd: 8.0, text: '第一步作辅助线：过点 $D$ 向另一边 $AB$ 作垂线 $DE \\perp AB$，构造“双垂线”模型。', focusToken: 'p44_t4' },
+        { tStart: 8.0, tEnd: 14.0, text: '第二步由角平分线性质定理，直接把已知垂线段 $CD = 3$ 转化为高 $DE = 3$。', focusToken: 'p44_t6' },
+        { tStart: 14.0, tEnd: 22.0, text: '第三步代入面积公式：$S_{\\triangle ABD} = \\frac{1}{2} \\times 10 \\times 3 = 15$，一举得出答案！', focusToken: 'p44_t8' }
+      ],
+      practiceSectionTitle: '角平分线性质与判定跟做练习',
+      practiceSectionSub: '完成以下两道小题，检验面积转化与判定定理求角',
+      practices: {
+        practice1: {
+          title: '练习一：利用角平分线性质求面积比',
+          givenLabel: '已知：',
+          givenFormula: '在 $\\triangle ABC$ 中，$\\angle ACB = 90^{\\circ}$，$BE$ 平分 $\\angle ABC$，$ED \\perp AB$ 于点 $D$，$BC = 6$，$AB = 10$',
+          questionText: '则 $S_{\\triangle BCE} : S_{\\triangle BAE}$ 的值是（　　）',
+          options: [
+            { key: 'A', text: 'A. $5 : 3$', isCorrect: false },
+            { key: 'B', text: 'B. $3 : 5$', isCorrect: true },
+            { key: 'C', text: 'C. $3 : 4$', isCorrect: false },
+            { key: 'D', text: 'D. $4 : 5$', isCorrect: false }
+          ],
+          correctFeedback: {
+            title: '等高面积比转化准确！',
+            calcLines: [
+              '由 $BE$ 平分 $\\angle ABC$ 且 $EC \\perp BC,\\ ED \\perp AB$，得 $EC = ED$',
+              '故 $S_{\\triangle BCE} : S_{\\triangle BAE} = BC : AB = 6 : 10 = 3 : 5$'
+            ],
+            summary: '两个三角形高相等时，面积比直接等于对应底边之比。'
+          },
+          wrongTitle: '提示：注意两个三角形的对应底边顺序',
+          wrongFeedback: '$\\triangle BCE$ 的底边是 $BC = 6$，$\\triangle BAE$ 的底边是 $AB = 10$，因高 $EC = ED$，面积比等于 $6 : 10 = 3 : 5$。'
+        },
+        practice2: {
+          title: '练习二：角平分线判定结合外角求角度',
+          givenLabel: '已知：',
+          givenFormula: '$PA \\perp ON$ 于 $A$，$PB \\perp OM$ 于 $B$，且 $PA = PB$，$\\angle MON = 50^{\\circ}$，$\\angle OPC = 30^{\\circ}$',
+          questionText: '先由判定定理求 $\\angle AOP$，再由外角性质求 $\\angle PCA$：',
+          input1Prefix: '$\\angle AOP =$',
+          input1Placeholder: '如 25',
+          input2Prefix: '$^{\\circ}$，$\\angle PCA =$',
+          input2Placeholder: '如 55',
+          input2Suffix: '°',
+          expectedX: '25',
+          expectedMin: '55',
+          allowOrderSwap: false,
+          correctFeedback: '$\\angle AOP = 25^{\\circ}$，$\\angle PCA = 55^{\\circ}$。',
+          correctDetail: '由双垂直且 $PA = PB$ 判定 $OP$ 平分 $\\angle MON$，得 $\\angle AOP = \\frac{1}{2} \\times 50^{\\circ} = 25^{\\circ}$；再由外角性质得 $\\angle PCA = 25^{\\circ} + 30^{\\circ} = 55^{\\circ}$。',
+          wrongFeedback: '先由 $OP$ 平分 $\\angle MON = 50^{\\circ}$ 得 $\\angle AOP = 25^{\\circ}$，再将 $\\angle AOP$ 与 $\\angle OPC = 30^{\\circ}$ 相加求外角 $\\angle PCA$。',
+          specificWrongHints: [
+            { checkType: 'firstVal', val: '50', hint: '$\\angle AOP$ 是 $\\angle MON = 50^{\\circ}$ 的一半，应为 $25^{\\circ}$。' }
+          ]
+        }
+      }
+    },
+    P45: {
+      procedureId: 'P45',
+      title: '列整式作差化简阴影面积并求费用',
+      exampleTitle: '长方形空地长 $(2a+3)$ 米、宽 $3b$ 米，一角建长 $(a+2)$ 米、宽 $b$ 米的小花园，求剩余面积 $S$ 及 $a=8,b=4$ 时每平方米 $50$ 元的地砖费用',
+      totalDuration: 22.0,
+      scratchpadIdleHint: '整式应用提示区（演示中将同步强调“列面积差先加括号、先化简再代入”）',
+      geometryDiagram: {
+        title: '动态几何图：大空地减去角落小花园',
+        caption: '点击播放观察大长方形面积 $3b(2a+3)$、角落小花园 $b(a+2)$ 挖除及阴影面积 $5ab+7b$ 高亮',
+        svgHtml: '<svg viewBox="0 0 260 175" class="w-full max-w-[260px] h-auto" xmlns="http://www.w3.org/2000/svg">'
+          + '<rect x="30" y="34" width="190" height="114" fill="#F8FAFC" stroke="#334155" stroke-width="2" />'
+          + '<polygon class="proc-geo-anim" data-appear-at="8.2" data-dur="0.9" points="30,34 125,34 125,78 220,78 220,148 30,148" fill="rgba(15,118,110,0.16)" stroke="#0F766E" stroke-width="2" style="opacity:0;" />'
+          + '<rect class="proc-geo-anim" data-appear-at="4.2" data-dur="0.8" x="125" y="34" width="95" height="44" fill="rgba(217,119,6,0.14)" stroke="#D97706" stroke-width="2.2" stroke-dasharray="5 3" style="opacity:0;" />'
+          + '<text x="108" y="24" font-size="11" font-weight="700" fill="#334155">2a + 3</text>'
+          + '<text x="8" y="95" font-size="11" font-weight="700" fill="#334155">3b</text>'
+          + '<text class="proc-geo-anim" data-appear-at="4.5" data-dur="0.5" x="155" y="53" font-size="10.5" font-weight="700" fill="#B45309" style="opacity:0;">花园 a + 2</text>'
+          + '<text class="proc-geo-anim" data-appear-at="4.8" data-dur="0.5" x="225" y="60" font-size="11" font-weight="700" fill="#B45309" style="opacity:0;">b</text>'
+          + '<text class="proc-geo-anim" data-appear-at="11.5" data-dur="0.6" x="62" y="118" font-size="11.5" font-weight="700" fill="#0F766E" style="opacity:0;">S = 5ab + 7b</text>'
+          + '<text class="proc-geo-anim" data-appear-at="16.8" data-dur="0.6" x="58" y="136" font-size="10.5" font-weight="700" fill="#E11D48" style="opacity:0;">188 m² → 9400 元</text>'
+          + '</svg>'
+      },
+      steps: [
+        {
+          id: 'p45_s1',
+          stepIndex: 0,
+          label: '步骤 1',
+          title: '用整式分别表示大空地与小花园的面积',
+          startTime: 0.0,
+          endTime: 6.5,
+          scratchpadTitle: '几何量转化：长 × 宽',
+          scratchpadFormula: '$S_{\text{大}} = 3b(2a+3)$，$S_{\text{花}} = b(a+2)$',
+          scratchpadNote: '先把大长方形空地与角落小花园的面积各自用含 $a,b$ 的整式写出来，作为下一步作差的原料。',
+          voiceSubtitle: '第一步，先用整式写出大空地面积 $3b(2a+3)$ 和角落小花园面积 $b(a+2)$。',
+          boardLines: [
+            {
+              appearAt: 0.6,
+              badge: '审图',
+              formula: '大空地：长 $(2a+3)$ 米，宽 $3b$ 米 $\Rightarrow S_{\text{大}} = 3b(2a+3)$',
+              highlight: false
+            },
+            {
+              appearAt: 3.8,
+              badge: '标注',
+              formula: '小花园：长 $(a+2)$ 米，宽 $b$ 米 $\Rightarrow S_{\text{花}} = b(a+2)$',
+              highlight: true
+            }
+          ]
+        },
+        {
+          id: 'p45_s2',
+          stepIndex: 1,
+          label: '步骤 2',
+          title: '列面积差算式，去括号并合并同类项化简',
+          startTime: 6.5,
+          endTime: 14.0,
+          scratchpadTitle: '易错提醒：减数整体变号',
+          scratchpadFormula: '$-b(a+2) = -ab - 2b$（切勿漏变 $-2b$ 的符号）',
+          scratchpadNote: '用大空地面积减去小花园面积时，负号要乘遍括号内每一项，再把同类项 $6ab$ 与 $-ab$、$9b$ 与 $-2b$ 分别合并。',
+          voiceSubtitle: '第二步，列面积差 $3b(2a+3)-b(a+2)$，去括号得 $6ab+9b-ab-2b$，合并同类项化简为 $5ab+7b$。',
+          boardLines: [
+            {
+              appearAt: 7.0,
+              badge: '列差',
+              formula: '$S = S_{\text{大}} - S_{\text{花}} = 3b(2a+3) - b(a+2)$',
+              highlight: false
+            },
+            {
+              appearAt: 9.2,
+              badge: '展开',
+              formula: '$= 6ab + 9b - ab - 2b$',
+              highlight: false
+            },
+            {
+              appearAt: 11.2,
+              badge: '合并',
+              formula: '$= (6-1)ab + (9-2)b = 5ab + 7b$（平方米）',
+              highlight: true
+            }
+          ]
+        },
+        {
+          id: 'p45_s3',
+          stepIndex: 2,
+          label: '步骤 3',
+          title: '先化简再代入 $a=8,b=4$ 求面积并计算地砖费用',
+          startTime: 14.0,
+          endTime: 22.0,
+          scratchpadTitle: '代入求值与实际费用',
+          scratchpadFormula: '$S = 5\times 8\times 4 + 7\times 4 = 188$，$188\times 50 = 9400$',
+          scratchpadNote: '将 $a=8,b=4$ 代入最简整式 $5ab+7b$ 比直接代入原式更不易出错，最后乘以单价 $50$ 元/平方米得总费用。',
+          voiceSubtitle: '第三步，把 $a=8,b=4$ 代入最简式 $5ab+7b$ 算出剩余面积 $188$ 平方米，再乘单价 $50$ 元得总费用 $9400$ 元。',
+          boardLines: [
+            {
+              appearAt: 14.6,
+              badge: '代入',
+              formula: '当 $a=8, b=4$ 时，$S = 5\times 8\times 4 + 7\times 4 = 160 + 28 = 188$（$\text{m}^{2}$）',
+              highlight: false
+            },
+            {
+              appearAt: 17.0,
+              badge: '费用',
+              formula: '购买地砖总费用 $= 188 \times 50 = 9400$（元）',
+              highlight: true
+            }
+          ]
+        }
+      ],
+      practice: {
+        prompt: '完成下面两道同步变式练习，巩固“先列整式化简、再代入或消元”的程序：',
+        q1: {
+          title: '练习一：错算作差与整体代入面积差',
+          givenLabel: '已知：',
+          givenFormula: '晋晋把 $-2(x+3)$ 错算成 $-2x-3$；另有两个长方形面积差化简为 $2(a-b)$ 且 $a-b=3$',
+          questionText: '求错算结果比原来大多少，以及面积差的值：',
+          input1Prefix: '比原来大',
+          input1Placeholder: '如 3',
+          input2Prefix: '，面积差 $=$',
+          input2Placeholder: '如 6',
+          input2Suffix: '',
+          expectedX: '3',
+          expectedMin: '6',
+          allowOrderSwap: false,
+          correctFeedback: '比原来大 $3$，面积差为 $6$。',
+          correctDetail: '作差 $(-2x-3)-[-2(x+3)] = -2x-3+2x+6 = 3$；整体代入 $2(a-b) = 2\times 3 = 6$。',
+          wrongFeedback: '第 1 空请用错算式减去原式 $(-2x-3)-(-2x-6)$；第 2 空直接把 $a-b=3$ 整体代入 $2(a-b)$。',
+          specificWrongHints: [
+            { checkType: 'firstVal', val: '-3', hint: '注意问的是“错算结果比原来大多少”，用错算式减原式：$(-2x-3)-(-2x-6)=+3$。' }
+          ]
+        },
+        q2: {
+          title: '练习二：实际采购总费用化简与代入',
+          givenLabel: '已知：',
+          givenFormula: '大垃圾桶单价 $m$ 元，小垃圾桶单价为 $(\frac{1}{2}m+20)$ 元，买 $5$ 个大桶和 $7$ 个小桶',
+          questionText: '先化简总费用 $km+140$ 求 $k$（小数），再求 $m=120$ 时的总费用：',
+          input1Prefix: '$k =$',
+          input1Placeholder: '如 8.5',
+          input2Prefix: '，总费用 $=$',
+          input2Placeholder: '如 1160',
+          input2Suffix: '元',
+          expectedX: '8.5',
+          expectedMin: '1160',
+          allowOrderSwap: false,
+          correctFeedback: '$k = 8.5$（即 $\frac{17}{2}$），总费用为 $1160$ 元。',
+          correctDetail: '总费用 $= 5m + 7(\frac{1}{2}m+20) = 8.5m + 140$；当 $m=120$ 时，总费用 $= 8.5\times 120 + 140 = 1020 + 140 = 1160$（元）。',
+          wrongFeedback: '展开 $5m+7(\frac{1}{2}m+20)$ 时注意 $7\times \frac{1}{2}=3.5$，合并得 $8.5m+140$，再代入 $m=120$。',
+          specificWrongHints: [
+            { checkType: 'secondVal', val: '1020', hint: '别忘了加上常数项 $7\times 20 = 140$ 元，$1020+140=1160$ 元。' }
+          ]
+        }
+      }
+    }
   };
 
   window.PROCEDURAL_DYNAMIC_DEMOS = PROCEDURAL_DYNAMIC_DEMOS;

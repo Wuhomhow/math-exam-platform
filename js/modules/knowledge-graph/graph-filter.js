@@ -5,7 +5,7 @@
   const GraphState = {
     viewMode: 'tree',         // 'tree' | 'network'
     userRoleMode: 'teacher',  // 'teacher' | 'student'
-    selectedNodeId: 'kp_g9_qf_graph_prop',
+    selectedNodeId: 'cnm_232',
     expandedIds: new Set(['domain_algebra', 'domain_geometry', 'domain_stats', 'domain_synthesis']),
     searchQuery: '',
     gradeFilter: 'all',       // 'all' | '六年级' | '七年级' | '八年级' | '九年级'
@@ -31,8 +31,39 @@
         if (p.viewMode === 'tree' || p.viewMode === 'network') this.viewMode = p.viewMode;
         if (p.userRoleMode === 'teacher' || p.userRoleMode === 'student') this.userRoleMode = p.userRoleMode;
         const migratedNodeMap = {
-          'kp_g9_if_def_graph': 'kp_g9_if_def_expr',
-          'kp_g9_if_linear_app': 'kp_g9_if_linear_comp'
+          'kp_g6_frac_mult_op': 'cnm_p178', 'kp_g6_frac_mult_app': 'cnm_p179',
+          'kp_g6_pos_pair': 'cnm_p136', 'kp_g6_pos_angle_dist': 'cnm_p180',
+          'kp_g6_reciprocal': 'cnm_p246', 'kp_g6_frac_div_op': 'cnm_p183',
+          'kp_g6_frac_div_app': 'cnm_p184', 'kp_g6_ratio': 'cnm_p185',
+          'kp_g6_circle_rec': 'cnm_p188', 'kp_g6_circle_circum': 'cnm_p190',
+          'kp_g6_circle_area': 'cnm_p192', 'kp_g6_circle_combo': 'cnm_p192',
+          'kp_g6_sector': 'cnm_p193', 'kp_g6_percent_conv': 'cnm_p195',
+          'kp_g6_percent_app': 'cnm_p205', 'kp_g6_sector_chart': 'cnm_p199',
+          'kp_g6_neg_basic': 'cnm_p201', 'kp_g7_num_line_abs': 'cnm_007',
+          'kp_g7_rat_add_sub': 'cnm_013', 'kp_g7_rat_mul_div': 'cnm_014',
+          'kp_g7_rat_pow_mix': 'cnm_021', 'kp_g7_sci_approx': 'cnm_022',
+          'kp_g7_alg_expr': 'cnm_027', 'kp_g7_alg_eval': 'cnm_029',
+          'kp_g7_mono_poly': 'cnm_031', 'kp_g7_like_terms': 'cnm_034',
+          'kp_g7_poly_add_app': 'cnm_037', 'kp_g7_eq_concept_prop': 'cnm_040',
+          'kp_g7_eq_solve': 'cnm_044', 'kp_g7_eq_param_app': 'cnm_045',
+          'kp_g8_tri_side_line': 'cnm_111', 'kp_g8_tri_angle': 'cnm_115',
+          'kp_g8_cong_prop': 'cnm_121', 'kp_g8_cong_sas': 'cnm_123',
+          'kp_g8_cong_asa_aas': 'cnm_124', 'kp_g8_cong_sss_hl': 'cnm_122',
+          'kp_g8_angle_bisector': 'cnm_128', 'kp_g8_perp_bisector': 'cnm_133',
+          'kp_g8_iso_tri': 'cnm_137', 'kp_g8_equi_tri_30': 'cnm_139',
+          'kp_g8_shortest_path': 'cnm_141', 'kp_g8_power_op': 'cnm_142',
+          'kp_g8_poly_mul_div': 'cnm_146', 'kp_g8_mult_formula': 'cnm_148',
+          'kp_g8_fac_common': 'cnm_151', 'kp_g8_fac_formula': 'cnm_154',
+          'kp_g8_frac_def_prop': 'cnm_157', 'kp_g8_frac_mul_div': 'cnm_160',
+          'kp_g8_frac_add_mix': 'cnm_162', 'kp_g9_qe_def_root': 'cnm_219',
+          'kp_g9_qe_solve': 'cnm_225', 'kp_g9_qf_def': 'cnm_229',
+          'kp_g9_qf_graph_prop': 'cnm_232', 'kp_g9_qf_eq_ineq': 'cnm_234',
+          'kp_g9_qf_app': 'cnm_236', 'kp_g9_if_def_expr': 'cnm_237',
+          'kp_g9_if_def_graph': 'cnm_237', 'kp_g9_if_graph_quad': 'cnm_238',
+          'kp_g9_if_monotone_cmp': 'cnm_238', 'kp_g9_if_k_geom': 'cnm_239',
+          'kp_g9_if_linear_comp': 'cnm_241', 'kp_g9_if_linear_app': 'cnm_241',
+          'kp_g9_if_real_app': 'cnm_242', 'kp_g9_inv_func': 'cnm_238',
+          'kp_syn_num_shape': 'cnm_p200', 'kp_syn_new_def': 'cnm_030'
         };
         const candidateNodeId = migratedNodeMap[p.selectedNodeId] || p.selectedNodeId;
         if (typeof candidateNodeId === 'string' && window.GraphData?.getNode(candidateNodeId)) {

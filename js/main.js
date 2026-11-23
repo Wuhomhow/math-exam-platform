@@ -3,6 +3,9 @@ function updateMobileCatalogBadge() {
   if (!badge) return;
   if (!state.chapterFilter || state.chapterFilter === 'all') {
     badge.textContent = '已选题库';
+  } else if (state.chapterFilter.startsWith('section:')) {
+    const found = window.CurriculumCatalogService && window.CurriculumCatalogService.getSectionById(state.chapterFilter.slice(8));
+    badge.textContent = found ? found.section.title.slice(0, 10) : '标准小节';
   } else if (state.chapterFilter.startsWith('custom:')) {
     const paper = typeof getCustomPaperById === 'function' ? getCustomPaperById(state.chapterFilter.slice(7)) : null;
     badge.textContent = paper ? paper.title.slice(0, 8) : '成品试卷';
@@ -29,8 +32,14 @@ function syncUiToState() {
   });
 
   // 2. Type filter buttons
-  document.querySelectorAll('.filter-type-btn').forEach(btn => {
+  document.querySelectorAll('#typeFilters .filter-type-btn').forEach(btn => {
     const isAct = btn.getAttribute('data-type') === state.typeFilter;
+    btn.classList.toggle('is-active', isAct);
+  });
+
+  // 2.5 Pedagogy filter buttons
+  document.querySelectorAll('.filter-pedagogy-btn').forEach(btn => {
+    const isAct = btn.getAttribute('data-pedagogy') === (state.pedagogyFilter || 'all');
     btn.classList.toggle('is-active', isAct);
   });
 
@@ -473,11 +482,15 @@ function initEvents() {
   // Chapter filter
   function applyChapterFilter(chapVal) {
     state.chapterFilter = chapVal;
+    state.pedagogyFilter = 'all';
     state.currentPage = 1;
     saveUiPreferences();
     updateMobileCatalogBadge();
     document.querySelectorAll('.chapter-tree-btn').forEach(b => {
       b.classList.toggle('is-active', b.getAttribute('data-chapter') === chapVal);
+    });
+    document.querySelectorAll('.filter-pedagogy-btn').forEach(b => {
+      b.classList.toggle('is-active', b.getAttribute('data-pedagogy') === 'all');
     });
     renderQuestionList();
     const bankSection = document.getElementById('viewQuestionBank');
@@ -500,47 +513,41 @@ function initEvents() {
     btn.addEventListener('click', () => applyChapterFilter(btn.getAttribute('data-chapter')));
   });
 
-  // Select All
+  // Select All (Current Page Only)
   document.getElementById('btnSelectAll').addEventListener('click', () => {
-    let currentPool = [];
-    if (state.chapterFilter.startsWith('custom:')) {
-      const paper = typeof getCustomPaperById === 'function' ? getCustomPaperById(state.chapterFilter.slice(7)) : null;
-      if (paper) {
-        const byId = new Map(QUESTION_BANK.map(q => [q.id, q]));
-        currentPool = paper.questionIds.map(id => byId.get(id)).filter(q => {
-          if (!q) return false;
-          if (state.typeFilter !== 'all' && q.type !== state.typeFilter) return false;
-          if (state.diffFilter !== 'all' && (q.difficulty === '适中' ? '中等' : q.difficulty) !== state.diffFilter) return false;
-          return true;
-        });
-      }
-    } else {
-      currentPool = QUESTION_BANK.filter(q => {
-        if (state.chapterFilter !== 'all') {
-          if (state.chapterFilter === '2.3') {
-            if (!q.chapter.startsWith('2.3')) return false;
-          } else if (q.chapter !== state.chapterFilter) return false;
-        }
-        if (state.typeFilter !== 'all' && q.type !== state.typeFilter) return false;
-        if (state.diffFilter !== 'all' && (q.difficulty === '适中' ? '中等' : q.difficulty) !== state.diffFilter) return false;
-        return true;
-      });
+    const { pageQuestions } = getCurrentPageQuestions();
+    if (!pageQuestions.length) {
+      showToast('当前页没有可加入的题目', 'info');
+      return;
     }
-    currentPool.forEach(q => state.selectedIds.add(q.id));
+    pageQuestions.forEach(q => state.selectedIds.add(q.id));
     updateStats();
     renderQuestionList();
     renderBasketDrawer();
-    showToast(`已将当前筛选的 ${currentPool.length} 道题目全部加入试题篮！`, 'success');
+    showToast(`已将本页 ${pageQuestions.length} 道题目加入试题篮！`, 'success');
   });
 
-  // Filters: Type & Difficulty
-  document.querySelectorAll('.filter-type-btn').forEach(btn => {
+  // Filters: Type, Difficulty & Pedagogy
+  document.querySelectorAll('#typeFilters .filter-type-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter-type-btn').forEach(b => {
+      document.querySelectorAll('#typeFilters .filter-type-btn').forEach(b => {
         b.classList.remove('is-active');
       });
       btn.classList.add('is-active');
       state.typeFilter = btn.getAttribute('data-type');
+      state.currentPage = 1;
+      saveUiPreferences();
+      renderQuestionList();
+    });
+  });
+
+  document.querySelectorAll('.filter-pedagogy-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-pedagogy-btn').forEach(b => {
+        b.classList.remove('is-active');
+      });
+      btn.classList.add('is-active');
+      state.pedagogyFilter = btn.getAttribute('data-pedagogy') || 'all';
       state.currentPage = 1;
       saveUiPreferences();
       renderQuestionList();

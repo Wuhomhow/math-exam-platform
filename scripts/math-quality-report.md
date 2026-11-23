@@ -12,16 +12,15 @@
 | Regression 6: Word 重点命令转换及 \overline <m:bar>、\Delta/\triangle 区分 | **PASS** | `all symbols and <m:bar> verified` |
 | Regression 7: KaTeX CDN 不可用时备用渲染器接管及 \triangle(△) 与 \Delta(Δ) 严格区分 | **PASS** | `CDN fallback HTML verified` |
 
-## 二、六类数据源全量扫描汇总
+## 二、五类数据源全量扫描汇总
 
-| 数据源 | 存储文件 | 公式总数 | 命令种类 | KaTeX 异常 | 备用渲染不足 | Word 转换异常 | 缺失定界符(明确) | 括号/环境错误 | HTML 混排异常 | 疑似未加 `$` (纯文本提示) |
-|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1. 数学题库主数据 | `js/data/questions.js` | 55944 | 69 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| 2. 程序性知识正文 | `js/data/procedural-knowledge.js & question-procedures.js` | 3815 | 42 | 0 | 0 | 0 | 0 | 0 | 0 | 18 |
-| 3. 程序性知识动态演示数据 | `js/data/procedural-dynamic-demos.js` | 5374 | 37 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| 4. 数学知识图谱数据 | `js/data/knowledge-nodes.js & knowledge-relations.js & question-knowledge.js` | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| 5. 各类专项题库 | `js/data/questions-ch5-equation-lesson2.js` | 278 | 7 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| 6. Word 组卷及导出内容 | `js/modules/docx-export.js (window.QUESTION_BANK 导出字段)` | 55404 | 69 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 数据源 | 存储文件 | 公式总数 | 命令种类 | KaTeX 异常 | 备用渲染不足 | Word 转换异常 | 缺失定界符(明确) | 括号/环境错误 | HTML 混排异常 | 字段规范异常 | 疑似未加 `$` (纯文本提示) |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 1. 数学题库主数据 | `js/data/questions.js` | 56997 | 72 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 2. 程序性知识正文 | `js/data/procedural-knowledge.js & question-procedures.js` | 4017 | 42 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 18 |
+| 3. 程序性知识动态演示数据 | `js/data/procedural-dynamic-demos.js` | 5585 | 37 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 4. 数学知识图谱数据 | `js/data/knowledge-nodes.js & knowledge-relations.js & question-knowledge.js` | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 5. Word 组卷及导出内容 | `js/modules/docx-export.js (window.QUESTION_BANK 导出字段)` | 56179 | 72 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 ## 三、错误与疑似项明细定位
 
@@ -47,8 +46,5 @@
 ### 4. 数学知识图谱数据 (`js/data/knowledge-nodes.js & knowledge-relations.js & question-knowledge.js`)
 - **明确错误：0 项**；**疑似项：0 项**。
 
-### 5. 各类专项题库 (`js/data/questions-ch5-equation-lesson2.js`)
-- **明确错误：0 项**；**疑似项：0 项**。
-
-### 6. Word 组卷及导出内容 (`js/modules/docx-export.js (window.QUESTION_BANK 导出字段)`)
+### 5. Word 组卷及导出内容 (`js/modules/docx-export.js (window.QUESTION_BANK 导出字段)`)
 - **明确错误：0 项**；**疑似项：0 项**。

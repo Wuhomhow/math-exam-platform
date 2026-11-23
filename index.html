@@ -10,11 +10,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
-  <!-- Question Card Screenshot Engines (html-to-image primary, html2canvas fallback) -->
-  <script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.11.11/html-to-image.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
-  <script src="https://cdn.bootcdn.net/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <!-- Question Card Screenshot Engines (html-to-image primary, html2canvas fallback; backup CDNs loaded on demand) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js" data-fallback-lib="htmlToImage" data-fallback-src="https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.11.11/html-to-image.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" data-fallback-lib="html2canvas" data-fallback-src="https://cdn.bootcdn.net/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -42,16 +40,16 @@
 
         <!-- Navigation Tabs (Desktop & Tablet >= 768px) -->
         <nav class="hidden md:flex items-center gap-1 rounded-lg bg-slate-100 border border-slate-200 p-1 shrink-0">
-          <button id="navBankBtn" type="button" onclick="if(typeof switchView==='function')switchView('bank')" class="nav-tab is-active px-2.5 lg:px-3.5 py-1.5 rounded-md text-xs lg:text-sm font-semibold transition-all whitespace-nowrap">
+          <button id="navBankBtn" type="button" class="nav-tab is-active px-2.5 lg:px-3.5 py-1.5 rounded-md text-xs lg:text-sm font-semibold transition-all whitespace-nowrap">
             题库选题
           </button>
-          <button id="navGraphBtn" type="button" onclick="if(typeof switchView==='function')switchView('graph')" class="nav-tab px-2.5 lg:px-3.5 py-1.5 rounded-md text-xs lg:text-sm font-semibold transition-all whitespace-nowrap">
+          <button id="navGraphBtn" type="button" class="nav-tab px-2.5 lg:px-3.5 py-1.5 rounded-md text-xs lg:text-sm font-semibold transition-all whitespace-nowrap">
             题目图谱
           </button>
-          <button id="navProceduralBtn" type="button" onclick="if(typeof switchView==='function')switchView('procedural')" class="nav-tab px-2.5 lg:px-3.5 py-1.5 rounded-md text-xs lg:text-sm font-semibold transition-all whitespace-nowrap">
+          <button id="navProceduralBtn" type="button" class="nav-tab px-2.5 lg:px-3.5 py-1.5 rounded-md text-xs lg:text-sm font-semibold transition-all whitespace-nowrap">
             程序性知识
           </button>
-          <button id="navPaperBtn" type="button" onclick="if(typeof switchView==='function')switchView('paper')" class="nav-tab px-2.5 lg:px-3.5 py-1.5 rounded-md text-xs lg:text-sm font-medium transition-all whitespace-nowrap">
+          <button id="navPaperBtn" type="button" class="nav-tab px-2.5 lg:px-3.5 py-1.5 rounded-md text-xs lg:text-sm font-medium transition-all whitespace-nowrap">
             试卷排版与预览
           </button>
         </nav>
@@ -82,10 +80,10 @@
   <!-- Mobile Tab Switcher (< 768px) -->
   <div class="md:hidden px-3 py-2 border-b border-slate-200 bg-white no-print">
     <div class="flex gap-1 rounded-lg bg-slate-100 border border-slate-200 p-1">
-      <button id="mobileNavBank" type="button" onclick="if(typeof switchView==='function')switchView('bank')" class="nav-tab is-active flex-1 py-1.5 px-1 rounded-md text-center text-xs font-semibold transition-all whitespace-nowrap">题库选题</button>
-      <button id="mobileNavGraph" type="button" onclick="if(typeof switchView==='function')switchView('graph')" class="nav-tab flex-1 py-1.5 px-1 rounded-md text-center text-xs font-semibold transition-all whitespace-nowrap">题目图谱</button>
-      <button id="mobileNavProcedural" type="button" onclick="if(typeof switchView==='function')switchView('procedural')" class="nav-tab flex-1 py-1.5 px-1 rounded-md text-center text-xs font-semibold transition-all whitespace-nowrap">程序性知识</button>
-      <button id="mobileNavPaper" type="button" onclick="if(typeof switchView==='function')switchView('paper')" class="nav-tab flex-1 py-1.5 px-1 rounded-md text-center text-xs font-medium transition-all whitespace-nowrap">试卷排版</button>
+      <button id="mobileNavBank" type="button" class="nav-tab is-active flex-1 py-1.5 px-1 rounded-md text-center text-xs font-semibold transition-all whitespace-nowrap">题库选题</button>
+      <button id="mobileNavGraph" type="button" class="nav-tab flex-1 py-1.5 px-1 rounded-md text-center text-xs font-semibold transition-all whitespace-nowrap">题目图谱</button>
+      <button id="mobileNavProcedural" type="button" class="nav-tab flex-1 py-1.5 px-1 rounded-md text-center text-xs font-semibold transition-all whitespace-nowrap">程序性知识</button>
+      <button id="mobileNavPaper" type="button" class="nav-tab flex-1 py-1.5 px-1 rounded-md text-center text-xs font-medium transition-all whitespace-nowrap">试卷排版</button>
     </div>
   </div>
 
@@ -153,6 +151,17 @@
               <button class="filter-diff-btn px-3 py-1 rounded-md" data-diff="较易">较易</button>
               <button class="filter-diff-btn px-3 py-1 rounded-md" data-diff="中等">中等</button>
               <button class="filter-diff-btn px-3 py-1 rounded-md" data-diff="较难">较难</button>
+            </div>
+          </div>
+
+          <!-- Pedagogy Tag Filter (Shown for Pilot Standard Sections) -->
+          <div id="pedagogyFilterRow" class="hidden flex flex-wrap items-center gap-2 text-xs pt-2 border-t border-slate-100">
+            <span class="text-slate-500 font-medium w-16">题目定位：</span>
+            <div class="flex flex-wrap gap-1.5" id="pedagogyFilters">
+              <button class="filter-pedagogy-btn filter-type-btn is-active" data-pedagogy="all">全部</button>
+              <button class="filter-pedagogy-btn filter-type-btn" data-pedagogy="procedural_featured">程序性精选</button>
+              <button class="filter-pedagogy-btn filter-type-btn" data-pedagogy="procedural_bank">程序性扩充</button>
+              <button class="filter-pedagogy-btn filter-type-btn" data-pedagogy="comprehensive">综合拓展</button>
             </div>
           </div>
 
@@ -621,12 +630,13 @@
   <!-- INLINE DATA & APPLICATION LOGIC -->
   <!-- 1. 题库核心数据与知识图谱独立数据层（毫秒级瞬时解析） -->
   <script src="js/data/questions.js"></script>
-  <script src="js/data/questions-ch5-equation-lesson2.js"></script>
   <script src="js/data/knowledge-nodes.js"></script>
   <script src="js/data/knowledge-relations.js"></script>
   <script src="js/data/question-knowledge.js"></script>
   <script src="js/data/procedural-knowledge.js"></script>
   <script src="js/data/question-procedures.js"></script>
+  <script src="js/data/curriculum-catalog.js"></script>
+  <script src="js/data/question-catalog-map.js"></script>
   <script src="js/data/procedural-dynamic-demos.js"></script>
 
   <!-- 2. 状态管理与存储 -->

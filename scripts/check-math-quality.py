@@ -3,13 +3,12 @@
 """
 题典网（math-exam-platform）统一数学公式质量检查工具
 ====================================================
-覆盖范围（六类数据源）：
-1. 数学题库主数据 (js/data/questions.js)
+覆盖范围（五类数据源）：
+1. 数学题库主数据 (js/data/questions.js，已合并原专项题库)
 2. 程序性知识正文 (js/data/procedural-knowledge.js, js/data/question-procedures.js)
 3. 程序性知识动态演示数据 (js/data/procedural-dynamic-demos.js)
 4. 数学知识图谱数据 (js/data/knowledge-nodes.js, js/data/knowledge-relations.js, js/data/question-knowledge.js)
-5. 专项题库 (js/data/questions-ch5-equation-lesson2.js)
-6. Word 组卷及导出涉及的题目内容 (js/modules/docx-export.js 全题库导出转换链路)
+5. Word 组卷及导出涉及的题目内容 (js/modules/docx-export.js 全题库导出转换链路)
 
 检查项目（七项核心检测 + 回归测试）：
 - 定界符检测：检查缺少或不匹配的 $ 定界符（区分明确错误与疑似项）
@@ -75,8 +74,6 @@ var document = {{ querySelectorAll: function() {{ return []; }} }};
 
 load("{ROOT_DIR}/js/data/questions.js");
 var mainQuestions = window.QUESTION_BANK.slice();
-load("{ROOT_DIR}/js/data/questions-ch5-equation-lesson2.js");
-var specialQuestions = CH5_EQUATION_LESSON2_QUESTIONS.slice();
 load("{ROOT_DIR}/js/data/procedural-knowledge.js");
 load("{ROOT_DIR}/js/data/question-procedures.js");
 load("{ROOT_DIR}/js/data/procedural-dynamic-demos.js");
@@ -174,7 +171,8 @@ function scanDataset(sourceName, fileLabel, items, isQuestionArray) {{
       htmlMathMixErrors: [],
       katexErrors: [],
       fallbackErrors: [],
-      wordOmmlErrors: []
+      wordOmmlErrors: [],
+      schemaErrors: []
     }},
     warnings: {{
       suspectedMissingDollar: []
@@ -275,10 +273,22 @@ function scanDataset(sourceName, fileLabel, items, isQuestionArray) {{
     }}
   }}
 
+  var VALID_DIFFICULTIES = {{ '容易': 1, '较易': 1, '中等': 1, '较难': 1 }};
   if (isQuestionArray) {{
     for (var qIdx = 0; qIdx < items.length; qIdx++) {{
       var q = items[qIdx];
       var qid = q.id || ('q_' + qIdx);
+      if (sourceName.indexOf('1.') === 0) {{
+        if (q.knowledge === undefined || q.knowledge === null || String(q.knowledge).trim() === '') {{
+          stats.errors.schemaErrors.push({{ loc: qid + '.knowledge', sample: 'missing or empty knowledge' }});
+        }}
+        if (!VALID_DIFFICULTIES[q.difficulty]) {{
+          stats.errors.schemaErrors.push({{ loc: qid + '.difficulty', sample: 'invalid difficulty: ' + String(q.difficulty) }});
+        }}
+        if (typeof q.chapter !== 'string' || q.chapter !== q.chapter.trim() || q.chapter.trim() === '') {{
+          stats.errors.schemaErrors.push({{ loc: qid + '.chapter', sample: 'invalid or untrimmed chapter: ' + JSON.stringify(q.chapter) }});
+        }}
+      }}
       var keys = Object.keys(q);
       for (var k = 0; k < keys.length; k++) {{
         var key = keys[k];
@@ -442,8 +452,7 @@ var scanResults = [
     relations: window.KNOWLEDGE_RELATIONS,
     questionKnowledge: window.QUESTION_KNOWLEDGE
   }}, false),
-  scanDataset("5. 各类专项题库", "js/data/questions-ch5-equation-lesson2.js", specialQuestions, true),
-  scanDataset("6. Word 组卷及导出内容", "js/modules/docx-export.js (window.QUESTION_BANK 导出字段)", wordExportQuestions, true)
+  scanDataset("5. Word 组卷及导出内容", "js/modules/docx-export.js (window.QUESTION_BANK 导出字段)", wordExportQuestions, true)
 ];
 
 var regressionResults = runRegressionSuite();
@@ -500,9 +509,9 @@ global.print = function(s) { process.stdout.write(String(s) + '\\n'); };
             all_reg_passed = False
         lines.append(f"| {t['name']} | **{status}** | `{t['detail']}` |")
 
-    lines.append("\n## 二、六类数据源全量扫描汇总\n")
-    lines.append("| 数据源 | 存储文件 | 公式总数 | 命令种类 | KaTeX 异常 | 备用渲染不足 | Word 转换异常 | 缺失定界符(明确) | 括号/环境错误 | HTML 混排异常 | 疑似未加 `$` (纯文本提示) |")
-    lines.append("|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|")
+    lines.append("\n## 二、五类数据源全量扫描汇总\n")
+    lines.append("| 数据源 | 存储文件 | 公式总数 | 命令种类 | KaTeX 异常 | 备用渲染不足 | Word 转换异常 | 缺失定界符(明确) | 括号/环境错误 | HTML 混排异常 | 字段规范异常 | 疑似未加 `$` (纯文本提示) |")
+    lines.append("|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|")
 
     total_errors = 0
     for sr in scan_results:
@@ -515,13 +524,14 @@ global.print = function(s) { process.stdout.write(String(s) + '\\n'); };
         miss_def = len(err['missingDollarDefinite']) + len(err['unpairedDollar'])
         brace_env = len(err['braceErrors']) + len(err['envErrors'])
         html_mix = len(err['htmlMathMixErrors'])
+        schema_err = len(err.get('schemaErrors', []))
         susp = len(warn['suspectedMissingDollar'])
-        row_errors = katex_err + fb_err + omml_err + miss_def + brace_env + html_mix
-        if not sr['sourceName'].startswith('6.'):
+        row_errors = katex_err + fb_err + omml_err + miss_def + brace_env + html_mix + schema_err
+        if not sr['sourceName'].startswith('5.'):
             total_errors += row_errors
         lines.append(
             f"| {sr['sourceName']} | `{sr['fileLabel']}` | {sr['totalFormulas']} | {cmd_count} | "
-            f"{katex_err} | {fb_err} | {omml_err} | {miss_def} | {brace_env} | {html_mix} | {susp} |"
+            f"{katex_err} | {fb_err} | {omml_err} | {miss_def} | {brace_env} | {html_mix} | {schema_err} | {susp} |"
         )
 
     lines.append("\n## 三、错误与疑似项明细定位\n")

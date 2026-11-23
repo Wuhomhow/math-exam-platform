@@ -69,6 +69,116 @@
       }
       setTimeout(renderMath, 50);
     }
+    function normalizeDifficulty(diff) {
+      if (diff === '适中') return '中等';
+      if (diff === '困难') return '较难';
+      return diff || '';
+    }
+
+    function normalizeQuestionType(q) {
+      if (!q) return 'calc';
+      if (q.type === 'choice' || q.type === 'blank' || q.type === 'judge' || q.type === 'calc') return q.type;
+      if (q.type === 'answer' || q.type === 'solution') return 'calc';
+      if (q.typeName === '单选题') return 'choice';
+      if (q.typeName === '填空题') return 'blank';
+      if (q.typeName === '判断题') return 'judge';
+      return 'calc';
+    }
+
+    function matchesSearchKeyword(q, keyword) {
+      if (!keyword) return true;
+      const kw = String(keyword).trim().toLowerCase();
+      if (!kw) return true;
+      const matchStem = String(q.stem || '').toLowerCase().includes(kw);
+      const matchKp = String(q.knowledge || '').toLowerCase().includes(kw);
+      const matchAnswer = String(q.answer || '').toLowerCase().includes(kw);
+      const matchChap = String(q.chapter || '').toLowerCase().includes(kw);
+      return matchStem || matchKp || matchAnswer || matchChap;
+    }
+
+    function getCurrentFilteredQuestions() {
+      const isSectionFilter = typeof state.chapterFilter === 'string' && state.chapterFilter.startsWith('section:');
+      if (isSectionFilter && window.CurriculumCatalogService) {
+        const secId = state.chapterFilter.slice(8);
+        const secData = window.CurriculumCatalogService.getSectionItems(secId);
+        const items = secData ? secData.items : [];
+        return items.filter(it => {
+          const q = it && it.question;
+          if (!q) return false;
+          if (state.pedagogyFilter && state.pedagogyFilter !== 'all' && it.pedagogyTag !== state.pedagogyFilter) return false;
+          if (state.typeFilter !== 'all' && normalizeQuestionType(q) !== state.typeFilter) return false;
+          if (state.diffFilter !== 'all' && normalizeDifficulty(q.difficulty) !== state.diffFilter) return false;
+          if (state.searchKeyword && !matchesSearchKeyword(q, state.searchKeyword)) return false;
+          return true;
+        }).map(it => it.question);
+      }
+
+      const isProcFilter = typeof state.chapterFilter === 'string' && state.chapterFilter.startsWith('proc:');
+      const activeProcId = isProcFilter ? state.chapterFilter.slice(5) : null;
+      const activeProcCollection = (activeProcId && window.ProceduralKnowledgeService)
+        ? window.ProceduralKnowledgeService.getQuestionCollectionByProcedure(activeProcId)
+        : null;
+
+      if (isProcFilter) {
+        const orderedList = activeProcCollection ? activeProcCollection.items.map(it => it.question) : [];
+        return orderedList.filter(q => {
+          if (!q) return false;
+          if (state.typeFilter !== 'all' && normalizeQuestionType(q) !== state.typeFilter) return false;
+          if (state.diffFilter !== 'all' && normalizeDifficulty(q.difficulty) !== state.diffFilter) return false;
+          if (state.searchKeyword && !matchesSearchKeyword(q, state.searchKeyword)) return false;
+          return true;
+        });
+      }
+      if (typeof state.chapterFilter === 'string' && state.chapterFilter.startsWith('custom:')) {
+        const paper = typeof getCustomPaperById === 'function' ? getCustomPaperById(state.chapterFilter.slice(7)) : null;
+        if (paper) {
+          const byId = new Map(QUESTION_BANK.map(q => [q.id, q]));
+          return paper.questionIds.map(id => byId.get(id)).filter(q => {
+            if (!q) return false;
+            if (state.typeFilter !== 'all' && normalizeQuestionType(q) !== state.typeFilter) return false;
+            if (state.diffFilter !== 'all' && normalizeDifficulty(q.difficulty) !== state.diffFilter) return false;
+            if (state.searchKeyword && !matchesSearchKeyword(q, state.searchKeyword)) return false;
+            return true;
+          });
+        }
+      }
+      return QUESTION_BANK.filter(q => {
+        if (state.chapterFilter !== 'all') {
+          if (state.chapterFilter === '2.3') {
+            if (!String(q.chapter || '').startsWith('2.3')) return false;
+          } else if (q.chapter !== state.chapterFilter) {
+            return false;
+          }
+        }
+        if (state.typeFilter !== 'all' && normalizeQuestionType(q) !== state.typeFilter) return false;
+        if (state.diffFilter !== 'all' && normalizeDifficulty(q.difficulty) !== state.diffFilter) return false;
+        if (state.searchKeyword && !matchesSearchKeyword(q, state.searchKeyword)) return false;
+        return true;
+      });
+    }
+
+    function getCurrentPageQuestions() {
+      const isProcFilter = typeof state.chapterFilter === 'string' && state.chapterFilter.startsWith('proc:');
+      const filtered = getCurrentFilteredQuestions();
+      const totalCount = filtered.length;
+      const pageSize = isProcFilter ? 20 : (state.pageSize || 15);
+      const totalPages = Math.max(1, Math.ceil(totalCount / pageSize));
+      if (state.currentPage > totalPages) state.currentPage = totalPages;
+      if (state.currentPage < 1) state.currentPage = 1;
+      const startIndex = (state.currentPage - 1) * pageSize;
+      const endIndex = Math.min(startIndex + pageSize, totalCount);
+      return {
+        isProcFilter,
+        filtered,
+        totalCount,
+        pageSize,
+        totalPages,
+        startIndex,
+        endIndex,
+        pageQuestions: filtered.slice(startIndex, endIndex)
+      };
+    }
+
     // Render Question Bank Cards
     function renderQuestionList() {
       const container = document.getElementById('questionList');
@@ -77,39 +187,61 @@
       // Dynamically update type & difficulty filter counts based on selected chapter
       const allQuestionCountEl = document.getElementById('allQuestionCount');
       if (allQuestionCountEl) allQuestionCountEl.textContent = `${QUESTION_BANK.length} 题`;
+      const isSectionFilter = typeof state.chapterFilter === 'string' && state.chapterFilter.startsWith('section:');
+      const activeSectionData = (isSectionFilter && window.CurriculumCatalogService)
+        ? window.CurriculumCatalogService.getSectionItems(state.chapterFilter.slice(8))
+        : null;
+      const pedagogyRowEl = document.getElementById('pedagogyFilterRow');
+      if (pedagogyRowEl) {
+        pedagogyRowEl.classList.toggle('hidden', !isSectionFilter);
+      }
+      if (isSectionFilter && activeSectionData) {
+        const pedLabels = {
+          all: '全部',
+          procedural_featured: '程序性精选',
+          procedural_bank: '程序性扩充',
+          comprehensive: '综合拓展'
+        };
+        document.querySelectorAll('.filter-pedagogy-btn').forEach(b => {
+          const key = b.getAttribute('data-pedagogy');
+          if (pedLabels[key]) {
+            const cnt = activeSectionData.counts[key] !== undefined ? activeSectionData.counts[key] : 0;
+            b.textContent = `${pedLabels[key]} (${cnt})`;
+          }
+          b.classList.toggle('is-active', key === (state.pedagogyFilter || 'all'));
+        });
+      }
+
       const isProcFilter = typeof state.chapterFilter === 'string' && state.chapterFilter.startsWith('proc:');
       const activeProcId = isProcFilter ? state.chapterFilter.slice(5) : null;
       const activeProcCollection = (activeProcId && window.ProceduralKnowledgeService)
         ? window.ProceduralKnowledgeService.getQuestionCollectionByProcedure(activeProcId)
         : null;
 
-      const chapPool = isProcFilter
-        ? (activeProcCollection ? activeProcCollection.items.map(it => it.question) : [])
-        : QUESTION_BANK.filter(q => {
-            if (state.chapterFilter === 'all') return true;
-            if (state.chapterFilter === '2.3') return q.chapter.startsWith('2.3');
-            if (state.chapterFilter.startsWith('custom:')) {
-              const paper = typeof getCustomPaperById === 'function' ? getCustomPaperById(state.chapterFilter.slice(7)) : null;
-              return paper ? paper.questionIds.includes(q.id) : false;
-            }
-            return q.chapter === state.chapterFilter;
-          });
-      const normalizeQuestionType = (q) => {
-        if (!q) return 'calc';
-        if (q.type === 'choice' || q.type === 'blank' || q.type === 'judge' || q.type === 'calc') return q.type;
-        if (q.type === 'answer' || q.type === 'solution') return 'calc';
-        if (q.typeName === '单选题') return 'choice';
-        if (q.typeName === '填空题') return 'blank';
-        if (q.typeName === '判断题') return 'judge';
-        return 'calc';
-      };
+      const chapPool = isSectionFilter
+        ? (activeSectionData
+            ? activeSectionData.items
+                .filter(it => !state.pedagogyFilter || state.pedagogyFilter === 'all' || it.pedagogyTag === state.pedagogyFilter)
+                .map(it => it.question)
+            : [])
+        : isProcFilter
+          ? (activeProcCollection ? activeProcCollection.items.map(it => it.question) : [])
+          : QUESTION_BANK.filter(q => {
+              if (state.chapterFilter === 'all') return true;
+              if (state.chapterFilter === '2.3') return String(q.chapter || '').startsWith('2.3');
+              if (state.chapterFilter.startsWith('custom:')) {
+                const paper = typeof getCustomPaperById === 'function' ? getCustomPaperById(state.chapterFilter.slice(7)) : null;
+                return paper ? paper.questionIds.includes(q.id) : false;
+              }
+              return q.chapter === state.chapterFilter;
+            });
       const typeMap = { all: chapPool.length, choice: 0, blank: 0, judge: 0, calc: 0 };
       const diffMap = { all: chapPool.length, '容易': 0, '较易': 0, '中等': 0, '较难': 0 };
       chapPool.forEach(q => {
         const qt = normalizeQuestionType(q);
         q.type = qt;
         if (typeMap[qt] !== undefined) typeMap[qt]++;
-        const d = q.difficulty === '适中' ? '中等' : q.difficulty;
+        const d = normalizeDifficulty(q.difficulty);
         if (diffMap[d] !== undefined) diffMap[d]++;
       });
       const typeLabels = { all: '全部', choice: '单选题', blank: '填空题', judge: '判断题', calc: '解答题' };
@@ -123,66 +255,7 @@
         if (diffLabels[d]) b.textContent = `${diffLabels[d]} (${diffMap[d] !== undefined ? diffMap[d] : 0})`;
       });
 
-      function getCurrentFilteredQuestions() {
-        if (isProcFilter) {
-          const orderedList = activeProcCollection ? activeProcCollection.items.map(it => it.question) : [];
-          return orderedList.filter(q => {
-            if (!q) return false;
-            if (state.typeFilter !== 'all' && normalizeQuestionType(q) !== state.typeFilter) return false;
-            if (state.diffFilter !== 'all' && (q.difficulty === '适中' ? '中等' : q.difficulty) !== state.diffFilter) return false;
-            if (state.searchKeyword) {
-              const kw = state.searchKeyword.toLowerCase();
-              const matchStem = q.stem.toLowerCase().includes(kw);
-              const matchKp = q.knowledge.toLowerCase().includes(kw);
-              const matchAnswer = q.answer.toLowerCase().includes(kw);
-              const matchChap = q.chapter.toLowerCase().includes(kw);
-              if (!matchStem && !matchKp && !matchAnswer && !matchChap) return false;
-            }
-            return true;
-          });
-        }
-        if (state.chapterFilter.startsWith('custom:')) {
-          const paper = typeof getCustomPaperById === 'function' ? getCustomPaperById(state.chapterFilter.slice(7)) : null;
-          if (paper) {
-            const byId = new Map(QUESTION_BANK.map(q => [q.id, q]));
-            return paper.questionIds.map(id => byId.get(id)).filter(q => {
-              if (!q) return false;
-              if (state.typeFilter !== 'all' && normalizeQuestionType(q) !== state.typeFilter) return false;
-              if (state.diffFilter !== 'all' && (q.difficulty === '适中' ? '中等' : q.difficulty) !== state.diffFilter) return false;
-              if (state.searchKeyword) {
-                const kw = state.searchKeyword.toLowerCase();
-                const matchStem = q.stem.toLowerCase().includes(kw);
-                const matchKp = q.knowledge.toLowerCase().includes(kw);
-                const matchAnswer = q.answer.toLowerCase().includes(kw);
-                const matchChap = q.chapter.toLowerCase().includes(kw);
-                if (!matchStem && !matchKp && !matchAnswer && !matchChap) return false;
-              }
-              return true;
-            });
-          }
-        }
-        return QUESTION_BANK.filter(q => {
-          if (state.chapterFilter !== 'all') {
-            if (state.chapterFilter === '2.3') {
-              if (!q.chapter.startsWith('2.3')) return false;
-            } else if (q.chapter !== state.chapterFilter) {
-              return false;
-            }
-          }
-          if (state.typeFilter !== 'all' && normalizeQuestionType(q) !== state.typeFilter) return false;
-          if (state.diffFilter !== 'all' && (q.difficulty === '适中' ? '中等' : q.difficulty) !== state.diffFilter) return false;
-          if (state.searchKeyword) {
-            const kw = state.searchKeyword.toLowerCase();
-            const matchStem = q.stem.toLowerCase().includes(kw);
-            const matchKp = q.knowledge.toLowerCase().includes(kw);
-            const matchAnswer = q.answer.toLowerCase().includes(kw);
-            const matchChap = q.chapter.toLowerCase().includes(kw);
-            if (!matchStem && !matchKp && !matchAnswer && !matchChap) return false;
-          }
-          return true;
-        });
-      }
-      const filtered = getCurrentFilteredQuestions();
+      const { filtered, totalPages, startIndex, pageQuestions } = getCurrentPageQuestions();
       const pagEl = document.getElementById('questionPagination');
       const procBannerHtml = (isProcFilter && typeof window.renderProceduralCollectionBannerHtml === 'function')
         ? window.renderProceduralCollectionBannerHtml(activeProcId)
@@ -202,16 +275,6 @@
         return;
       }
       emptyState.classList.add('hidden');
-
-      // Pagination calculations
-      const totalCount = filtered.length;
-      const pageSize = isProcFilter ? 20 : (state.pageSize || 15);
-      const totalPages = Math.max(1, Math.ceil(totalCount / pageSize));
-      if (state.currentPage > totalPages) state.currentPage = totalPages;
-      if (state.currentPage < 1) state.currentPage = 1;
-      const startIndex = (state.currentPage - 1) * pageSize;
-      const endIndex = Math.min(startIndex + pageSize, totalCount);
-      const pageQuestions = filtered.slice(startIndex, endIndex);
 
       // Render pagination toolbar
       if (pagEl) {
@@ -313,6 +376,11 @@
           </button>
         `;
 
+        const pedagogyTag = (isSectionFilter && activeSectionData) ? activeSectionData.tagByQuestionId.get(q.id) : null;
+        const pedagogyBadgeHtml = (pedagogyTag && window.CurriculumCatalogService)
+          ? window.CurriculumCatalogService.renderPedagogyBadgeHtml(pedagogyTag)
+          : '';
+
         return `
           <div class="question-card ${isSelected ? 'is-selected' : ''}" data-id="${q.id}">
             <!-- Header Row -->
@@ -320,6 +388,7 @@
               <div class="flex flex-wrap items-center gap-2">
                 <span class="q-meta-num">第 ${qNumber} 题</span>
                 <span class="q-meta-chapter">${getChapterDisplayLabel(q.chapter)}</span>
+                ${pedagogyBadgeHtml}
                 <span class="q-meta-type">${q.typeName}</span>
                 <span class="${diffColor}">${q.difficulty}</span>
               </div>
@@ -833,8 +902,41 @@
       });
     }
 
+    // Load backup screenshot CDN on demand only when primary CDN failed
+    function loadFallbackScriptOnce(globalName, fallbackUrl) {
+      if (!fallbackUrl || window[globalName]) return Promise.resolve();
+      if (window._fallbackScriptPromises && window._fallbackScriptPromises[globalName]) {
+        return window._fallbackScriptPromises[globalName];
+      }
+      window._fallbackScriptPromises = window._fallbackScriptPromises || {};
+      window._fallbackScriptPromises[globalName] = new Promise((resolve) => {
+        const script = document.createElement('script');
+        script.src = fallbackUrl;
+        script.async = true;
+        script.onload = () => resolve();
+        script.onerror = () => resolve();
+        setTimeout(resolve, 6000);
+        document.head.appendChild(script);
+      });
+      return window._fallbackScriptPromises[globalName];
+    }
+
+    async function ensureScreenshotEnginesReady() {
+      const checks = [
+        { name: 'htmlToImage', selector: 'script[data-fallback-lib="htmlToImage"]' },
+        { name: 'html2canvas', selector: 'script[data-fallback-lib="html2canvas"]' }
+      ];
+      await Promise.all(checks.map(item => {
+        if (window[item.name]) return Promise.resolve();
+        const tag = document.querySelector(item.selector);
+        const fallbackUrl = tag ? tag.getAttribute('data-fallback-src') : '';
+        return loadFallbackScriptOnce(item.name, fallbackUrl);
+      }));
+    }
+
     // Generate PNG Blob of Question Card across 3 fallback engines (html-to-image primary)
     async function generateQuestionCardBlob(cardEl) {
+      await ensureScreenshotEnginesReady();
       // Ensure all images in the card are inlined as base64 data URIs and fully decoded before capture
       await inlineCardImagesWithBase64(cardEl);
 

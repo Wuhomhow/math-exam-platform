@@ -1552,7 +1552,9 @@
 
         let latestActiveRow = null;
         rowElsList.forEach(rItem => {
-          const visible = t > 0.02 && t >= rItem.appearAt;
+          const isIdle = t <= 0.02;
+          rItem.el.classList.toggle('hidden', isIdle);
+          const visible = !isIdle && t >= rItem.appearAt;
           rItem.el.style.opacity = visible ? '1' : '0';
           rItem.el.style.pointerEvents = visible ? 'auto' : 'none';
           rItem.el.classList.remove('is-row-active');

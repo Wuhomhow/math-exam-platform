@@ -75,6 +75,7 @@
       .md\:hidden { display: none !important; }
     }
     @media (min-width: 1024px) {
+      .hidden.lg\:block { display: block !important; }
       .hidden.lg\:inline-block { display: inline-block !important; }
       .hidden.lg\:flex { display: flex !important; }
       .lg\:hidden { display: none !important; }
@@ -1138,8 +1139,11 @@ html, body {
   color: #FFFFFF !important;
 }
 
-/* 移动端左侧目录抽屉 */
+/* 移动端左侧目录抽屉（桌面 >= 1024px 常驻显示，移动端默认隐藏、点击展开） */
 @media (max-width: 1023px) {
+  .proc-sidebar-panel {
+    display: none;
+  }
   .proc-sidebar-panel.is-mobile-open {
     display: block !important;
     position: fixed;
@@ -1159,15 +1163,12 @@ html, body {
   }
 }
 
-/* 同小节多知识点横向 Tab */
+/* 同小节多知识点 Tab 与白板步骤标签：自然换行展示完整标题，不再裁切一半 */
 .proc-section-tabs-scroll,
 .proc-step-tabs-scroll {
   display: flex;
-  flex-wrap: nowrap;
-  gap: 0.5rem;
-  overflow-x: auto;
-  padding-bottom: 0.25rem;
-  scrollbar-width: thin;
+  flex-wrap: wrap;
+  gap: 0.45rem;
 }
 .proc-section-tabs-scroll::-webkit-scrollbar,
 .proc-step-tabs-scroll::-webkit-scrollbar {

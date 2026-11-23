@@ -161,17 +161,17 @@
         if (ch.startsWith('5.') || ch.includes('第五章')) return '第五章 一元一次方程';
       } else if (grade === '初二') {
         if (ch.startsWith('13.') || ch.includes('第十三')) return '第13章 三角形';
-        if (ch.startsWith('14.') || ch.includes('第十四')) return '第14章 全等三角形';
+        if (ch.startsWith('14.') || ch.includes('第十四')) return '第十四章 全等三角形';
         if (ch.startsWith('15.') || ch.includes('第十五')) return '第十五章 轴对称';
-        if (ch.startsWith('16.') || ch.includes('第十六')) return '第16章 幂的运算';
-        if (ch.startsWith('17.') || ch.includes('第十七')) return '第17章 因式分解';
-        if (ch.startsWith('18.') || ch.includes('第十八')) return '第18章 分式';
+        if (ch.startsWith('16.') || ch.includes('第十六')) return '第十六章 整式的乘法';
+        if (ch.startsWith('17.') || ch.includes('第十七')) return '第十七章 因式分解';
+        if (ch.startsWith('18.') || ch.includes('第十八')) return '第十八章 分式';
       } else if (grade === '初三') {
-        if (ch.startsWith('25.') || ch.includes('第二十五')) return '第25章 一元二次方程';
+        if (ch.startsWith('25.') || ch.includes('第二十五')) return '第二十五章 一元二次方程';
         if (ch.startsWith('26.') || ch.includes('第二十六')) return '第26章 二次函数';
-        if (ch.startsWith('27.') || ch.includes('第二十七')) return '第27章 反比例函数';
+        if (ch.startsWith('27.') || ch.includes('第二十七')) return '第二十七章 反比例函数';
         if (ch.startsWith('28.') || ch.includes('第二十八')) return '第28章 旋转';
-        if (ch.startsWith('29.') || ch.includes('第二十九')) return '第29章 圆';
+        if (ch.startsWith('29.') || ch.includes('第二十九')) return '第二十九章 圆';
       }
       return null;
     }

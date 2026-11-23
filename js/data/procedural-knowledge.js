@@ -546,10 +546,9 @@
       ],
       prerequisites: [
         { id: 'P05', name: '根据文字与简单数量关系列代数式', type: 'procedural_knowledge' },
-        { id: 'P28', name: '运用去括号与合并同类项法则进行整式加减与直接代入求值', type: 'procedural_knowledge' },
-        { id: 'P34', name: '识别单项式并确定单项式的系数与次数', type: 'procedural_knowledge' }
+        { id: null, name: '乘法分配律与简单字母式加减整理', type: 'operation' }
       ],
-      prerequisiteProcedureIds: ['P05', 'P28', 'P34'],
+      prerequisiteProcedureIds: ['P05'],
       subsequentProcedureIds: ['P08', 'P45'],
       relatedProcedureIds: [],
       pitfalls: [
@@ -744,10 +743,10 @@
       ],
       prerequisites: [
         { id: 'P08', name: '直接代入字母数值求代数式的值', type: 'procedural_knowledge' },
-        { id: 'P28', name: '运用去括号与合并同类项法则进行整式加减与直接代入求值', type: 'procedural_knowledge' },
-        { id: 'P32', name: '运用有理数乘方符号法则与混合运算顺序计算', type: 'procedural_knowledge' }
+        { id: 'P32', name: '运用有理数乘方符号法则与混合运算顺序计算', type: 'procedural_knowledge' },
+        { id: null, name: '乘法分配律的逆用（提公因数）与添括号变号基础', type: 'operation' }
       ],
-      prerequisiteProcedureIds: ['P08', 'P28', 'P32'],
+      prerequisiteProcedureIds: ['P08', 'P32'],
       subsequentProcedureIds: ['P20'],
       relatedProcedureIds: ['P08'],
       pitfalls: [
@@ -2699,7 +2698,7 @@
         { id: 'P32', name: '运用有理数乘方符号法则与混合运算顺序计算', type: 'procedural_knowledge' }
       ],
       prerequisiteProcedureIds: ['P51', 'P08', 'P32'],
-      subsequentProcedureIds: ['P50', 'P45', 'P06', 'P09', 'P15', 'P19', 'P22', 'P24', 'P27', 'P29'],
+      subsequentProcedureIds: ['P50', 'P45', 'P15', 'P19', 'P22', 'P24', 'P27', 'P29'],
       relatedProcedureIds: ['P51', 'P50', 'P45'],
       pitfalls: [
         '括号前是负号或负系数时，只给括号内第一项变号而漏改后面项的符号（如将 $-4(x-x^{2}+\\frac{1}{2})$ 错写成 $-4x-4x^{2}+2$）。',

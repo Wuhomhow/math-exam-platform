@@ -651,6 +651,9 @@ function bootstrapApp() {
   updateStats();
   renderQuestionList();
   renderBasketDrawer();
+  if (typeof location !== 'undefined' && /^#\/procedural(?:\/|$)/.test(location.hash || '')) {
+    state.currentView = 'procedural';
+  }
   switchView(state.currentView);
   setTimeout(renderMath, 80);
 

@@ -1102,9 +1102,14 @@ html, body {
     padding: 1.25rem 1rem !important;
   }
   .proc-wb-row {
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
     padding: 0.45rem 0.55rem;
-    gap: 0.4rem;
+    gap: 0.35rem;
+  }
+  .proc-wb-row-badge {
+    max-width: 100%;
+    text-align: left;
   }
   .proc-wb-subtitle-bar {
     flex-direction: column;
@@ -1113,4 +1118,159 @@ html, body {
     padding: 0.6rem 0.75rem;
   }
 }
+
+/* ==========================================================================
+   程序性知识双栏工作台、前置知识、步骤横滑与原题抽屉样式 (v2)
+   ========================================================================== */
+.proc-grade-pill {
+  background-color: var(--color-card-bg);
+  border-color: var(--color-border);
+  color: var(--color-text-secondary);
+}
+.proc-grade-pill:hover {
+  background-color: var(--color-primary-bg);
+  border-color: var(--color-primary-border);
+  color: var(--color-primary-dark);
+}
+.proc-grade-pill.is-active {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: #FFFFFF !important;
+}
+
+/* 移动端左侧目录抽屉 */
+@media (max-width: 1023px) {
+  .proc-sidebar-panel.is-mobile-open {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: min(86vw, 320px);
+    z-index: 50;
+    padding: 0.75rem;
+    background-color: var(--color-page-bg);
+    overflow-y: auto;
+    box-shadow: 4px 0 24px rgba(15, 23, 42, 0.16);
+  }
+  .proc-sidebar-panel.is-mobile-open > .ui-card {
+    height: 100%;
+    max-height: none;
+  }
+}
+
+/* 同小节多知识点横向 Tab */
+.proc-section-tabs-scroll,
+.proc-step-tabs-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+  scrollbar-width: thin;
+}
+.proc-section-tabs-scroll::-webkit-scrollbar,
+.proc-step-tabs-scroll::-webkit-scrollbar {
+  height: 4px;
+}
+
+/* 前置知识逐行列表 */
+.proc-prereq-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  text-align: left;
+  padding: 0.45rem 0.65rem;
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+.proc-prereq-row.is-clickable {
+  color: var(--color-primary-dark);
+  background-color: var(--color-primary-bg);
+  border-color: var(--color-primary-light);
+  cursor: pointer;
+}
+.proc-prereq-row.is-clickable:hover {
+  background-color: var(--color-primary-light);
+  border-color: var(--color-primary-border);
+}
+.proc-prereq-row.is-disabled {
+  color: #94A3B8;
+  background-color: #F8FAFC;
+  border-color: #F1F5F9;
+  cursor: default;
+}
+
+/* 白板公式行防重叠 */
+.proc-wb-row-expr {
+  min-width: 0;
+  flex: 1 1 auto;
+  overflow-x: auto;
+}
+.proc-wb-row-badge {
+  flex-shrink: 0;
+  max-width: 38%;
+  text-align: right;
+  white-space: normal;
+  line-height: 1.35;
+}
+@media (max-width: 767px) {
+  .proc-wb-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+  .proc-wb-row-badge {
+    max-width: 100%;
+    text-align: left;
+  }
+}
+
+/* 修复参考答案标签在窄容器内被挤折行 */
+.q-analysis-panel .font-bold > span:nth-child(2) {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* 右侧吸顶工作台工具条 */
+.proc-sticky-header {
+  position: sticky;
+  top: 3.5rem;
+  z-index: 25;
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(8px);
+}
+@media (min-width: 640px) {
+  .proc-sticky-header {
+    top: 4rem;
+  }
+}
+
+/* 关联题目题型筛选胶囊 */
+.proc-q-filter-pill {
+  padding: 0.25rem 0.7rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-card-bg);
+  color: var(--color-text-secondary);
+  transition: all var(--transition-fast);
+}
+.proc-q-filter-pill:hover {
+  border-color: var(--color-primary-border);
+  background-color: var(--color-primary-bg);
+  color: var(--color-primary-dark);
+}
+.proc-q-filter-pill.is-active {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #FFFFFF;
+}
+
 

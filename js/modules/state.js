@@ -19,7 +19,7 @@
       if (/^(13|14|15|16|17|18)\./.test(value) || /^第十[三四五六七八]章/.test(value)) {
         return { grade: '初二', semester: '上册', label: value };
       }
-      if (/^(25|26|27|28)\./.test(value) || /^第二十[五六七八]章/.test(value)) {
+      if (/^(25|26|27|28|29)\./.test(value) || /^第二十[五六七八九]章/.test(value)) {
         return { grade: '初三', semester: '上册', label: value };
       }
 
@@ -157,12 +157,12 @@
         if (ch.startsWith('1.') || ch.includes('第一章')) return '第一章 有理数';
         if (ch.startsWith('2.') || ch.includes('第二章')) return '第二章 有理数的运算';
         if (ch.startsWith('3.') || ch.includes('第三章')) return '第三章 代数式';
-        if (ch.startsWith('4.') || ch.includes('第四章')) return '第四章 整式的加减法';
+        if (ch.startsWith('4.') || ch.includes('第四章')) return '第四章 整式的加减';
         if (ch.startsWith('5.') || ch.includes('第五章')) return '第五章 一元一次方程';
       } else if (grade === '初二') {
         if (ch.startsWith('13.') || ch.includes('第十三')) return '第13章 三角形';
         if (ch.startsWith('14.') || ch.includes('第十四')) return '第14章 全等三角形';
-        if (ch.startsWith('15.') || ch.includes('第十五')) return '第15章 等腰三角形';
+        if (ch.startsWith('15.') || ch.includes('第十五')) return '第十五章 轴对称';
         if (ch.startsWith('16.') || ch.includes('第十六')) return '第16章 幂的运算';
         if (ch.startsWith('17.') || ch.includes('第十七')) return '第17章 因式分解';
         if (ch.startsWith('18.') || ch.includes('第十八')) return '第18章 分式';
@@ -170,7 +170,8 @@
         if (ch.startsWith('25.') || ch.includes('第二十五')) return '第25章 一元二次方程';
         if (ch.startsWith('26.') || ch.includes('第二十六')) return '第26章 二次函数';
         if (ch.startsWith('27.') || ch.includes('第二十七')) return '第27章 反比例函数';
-  if (ch.startsWith('28.') || ch.includes('第二十八')) return '第28章 旋转';
+        if (ch.startsWith('28.') || ch.includes('第二十八')) return '第28章 旋转';
+        if (ch.startsWith('29.') || ch.includes('第二十九')) return '第29章 圆';
       }
       return null;
     }
@@ -342,6 +343,34 @@
           const items = [];
 
           for (const [grpTitle, grpInfo] of semEntry.groups) {
+            const pilotSummary = (window.CurriculumCatalogService && typeof window.CurriculumCatalogService.getChapterSummary === 'function')
+              ? window.CurriculumCatalogService.getChapterSummary(grade, grpTitle)
+              : null;
+            if (pilotSummary) {
+              const visibleSections = pilotSummary.sections.filter(sec => sec.count > 0);
+              const html = `
+                <details class="nav-chapter-group-card mb-2">
+                  <summary>
+                    <span>${escapeNavText(pilotSummary.chapter.chapterGroup)}</span>
+                    <span class="nav-chapter-group-badge">${visibleSections.length} 节 · ${pilotSummary.totalUniqueQuestions} 题</span>
+                  </summary>
+                  <div class="nav-chapter-group-content space-y-1">
+                    ${visibleSections.map(sec => `
+                      <button type="button" class="chapter-tree-btn nav-topic-button" data-chapter="section:${escapeNavText(sec.id)}">
+                        <span class="nav-topic-label">${escapeNavText(sec.title)}</span>
+                        <span class="nav-topic-count">${sec.count}</span>
+                      </button>
+                    `).join('')}
+                  </div>
+                </details>
+              `;
+              items.push({
+                sortKey: getChapterSortKey(pilotSummary.chapter.chapterGroup),
+                firstOrder: grpInfo.firstOrder,
+                html: html
+              });
+              continue;
+            }
             const chapList = [...grpInfo.chapters.entries()].sort((a, b) => a[0].localeCompare(b[0], 'zh-CN', { numeric: true }));
             const grpTotal = chapList.reduce((acc, entry) => acc + entry[1].count, 0);
             const html = `
@@ -433,6 +462,7 @@
         const prefs = {
           currentView: state.currentView,
           chapterFilter: state.chapterFilter,
+          pedagogyFilter: state.pedagogyFilter || 'all',
           typeFilter: state.typeFilter,
           diffFilter: state.diffFilter,
           searchKeyword: state.searchKeyword || '',
@@ -457,11 +487,17 @@
         if (!p || typeof p !== 'object') return;
         if (p.currentView === 'bank' || p.currentView === 'paper' || p.currentView === 'graph' || p.currentView === 'procedural') state.currentView = p.currentView;
         if (typeof p.chapterFilter === 'string') {
+          const isValidSection = p.chapterFilter.startsWith('section:') &&
+            Boolean(window.CurriculumCatalogService && window.CurriculumCatalogService.getSectionById(p.chapterFilter.slice(8)));
           const isValidChapter = p.chapterFilter === 'all' ||
             p.chapterFilter === '2.3' ||
             p.chapterFilter.startsWith('custom:') ||
+            isValidSection ||
             (Array.isArray(window.QUESTION_BANK) && window.QUESTION_BANK.some(q => q.chapter === p.chapterFilter));
           state.chapterFilter = isValidChapter ? p.chapterFilter : 'all';
+        }
+        if (typeof p.pedagogyFilter === 'string' && ['all', 'procedural_featured', 'procedural_bank', 'comprehensive'].includes(p.pedagogyFilter)) {
+          state.pedagogyFilter = state.chapterFilter.startsWith('section:') ? p.pedagogyFilter : 'all';
         }
         if (typeof p.typeFilter === 'string') state.typeFilter = p.typeFilter;
         if (typeof p.diffFilter === 'string') state.diffFilter = p.diffFilter;
@@ -533,6 +569,7 @@
       ]),
       answerSpaceHeights: {},
       chapterFilter: 'all',
+      pedagogyFilter: 'all',
       typeFilter: 'all',
       diffFilter: 'all',
       searchKeyword: '',

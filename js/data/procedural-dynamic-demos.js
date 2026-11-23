@@ -11667,6 +11667,320 @@
           specificWrongHints: []
         }
       }
+    },
+    P52: {
+      procedureId: 'P52',
+      title: '识别弦与直径并由“直径是最长的弦”确定弦长范围',
+      exampleTitle: '已知 $\odot O$ 的半径为 $5$，$AB$ 是 $\odot O$ 的弦，求弦 $AB$ 的长度 $a$ 的取值范围',
+      totalDuration: 21.0,
+      scratchpadIdleHint: '弦与直径对比提示区（演示中将同步动态呈现直径 $CD = 2r = 10$ 与非直径弦 $AB$ 的比较）',
+      geometryDiagram: {
+        title: '动态几何图：直径 $CD$ 与任意弦 $AB$',
+        caption: '点击播放观察直径 $CD = 10$、半径 $OA = OB = 5$ 及由 $AB \lt OA + OB$ 导出 $0 \lt a \le 10$',
+        svgHtml: '<svg viewBox="0 0 260 180" class="w-full max-w-[260px] h-auto" xmlns="http://www.w3.org/2000/svg">'
+          + '<circle cx="130" cy="92" r="64" fill="#F8FAFC" stroke="#334155" stroke-width="2" />'
+          + '<circle cx="130" cy="92" r="3" fill="#0F766E" />'
+          + '<text x="125" y="108" font-size="11" font-weight="700" fill="#0F766E">O</text>'
+          + '<line class="proc-geo-anim" data-appear-at="2.2" data-dur="0.8" data-dash-len="130" x1="66" y1="92" x2="194" y2="92" stroke="#0F766E" stroke-width="2.6" style="opacity:0;" />'
+          + '<text class="proc-geo-anim" data-appear-at="2.6" data-dur="0.5" x="52" y="96" font-size="11" font-weight="700" fill="#0F766E" style="opacity:0;">C</text>'
+          + '<text class="proc-geo-anim" data-appear-at="2.6" data-dur="0.5" x="199" y="96" font-size="11" font-weight="700" fill="#0F766E" style="opacity:0;">D</text>'
+          + '<text class="proc-geo-anim" data-appear-at="3.6" data-dur="0.6" x="148" y="86" font-size="10.5" font-weight="700" fill="#0F766E" style="opacity:0;">d = 10</text>'
+          + '<line class="proc-geo-anim" data-appear-at="7.5" data-dur="0.8" data-dash-len="110" x1="86" y1="45" x2="174" y2="45" stroke="#D97706" stroke-width="2.8" style="opacity:0;" />'
+          + '<text class="proc-geo-anim" data-appear-at="7.8" data-dur="0.5" x="74" y="42" font-size="11" font-weight="700" fill="#B45309" style="opacity:0;">A</text>'
+          + '<text class="proc-geo-anim" data-appear-at="7.8" data-dur="0.5" x="178" y="42" font-size="11" font-weight="700" fill="#B45309" style="opacity:0;">B</text>'
+          + '<line class="proc-geo-anim" data-appear-at="9.6" data-dur="0.7" data-dash-len="70" x1="130" y1="92" x2="86" y2="45" stroke="#E11D48" stroke-width="1.8" stroke-dasharray="4 3" style="opacity:0;" />'
+          + '<line class="proc-geo-anim" data-appear-at="10.2" data-dur="0.7" data-dash-len="70" x1="130" y1="92" x2="174" y2="45" stroke="#E11D48" stroke-width="1.8" stroke-dasharray="4 3" style="opacity:0;" />'
+          + '<text class="proc-geo-anim" data-appear-at="10.8" data-dur="0.5" x="96" y="75" font-size="10.5" font-weight="700" fill="#E11D48" style="opacity:0;">5</text>'
+          + '<text class="proc-geo-anim" data-appear-at="10.8" data-dur="0.5" x="157" y="75" font-size="10.5" font-weight="700" fill="#E11D48" style="opacity:0;">5</text>'
+          + '<text class="proc-geo-anim" data-appear-at="14.8" data-dur="0.6" x="80" y="172" font-size="11.5" font-weight="700" fill="#0F766E" style="opacity:0;">0 &lt; a ≤ 10（等号在直径处取得）</text>'
+          + '</svg>'
+      },
+      steps: [
+        {
+          id: 'p52_s1',
+          stepIndex: 0,
+          label: '步骤 1',
+          title: '明确弦与直径的定义，由半径算出直径长',
+          startTime: 0.0,
+          endTime: 6.5,
+          scratchpadTitle: '弦与直径核心关系',
+          scratchpadFormula: '直径 $CD = 2r = 2 \times 5 = 10$（直径也是弦）',
+          scratchpadNote: '两端点都在圆上的线段叫做弦，过圆心的弦叫做直径；半径 $OA$ 一端在圆心，不是弦。',
+          voiceSubtitle: '第一步，明确弦是两端点都在圆上的线段，过圆心的弦是直径；已知半径 $r = 5$，所以直径 $CD = 10$。',
+          boardLines: [
+            {
+              appearAt: 0.6,
+              badge: '审题',
+              formula: '已知 $\odot O$ 半径 $r = 5$，弦 $AB$ 的两端点均在 $\odot O$ 上',
+              highlight: false
+            },
+            {
+              appearAt: 3.2,
+              badge: '直径',
+              formula: '过圆心的弦（直径）长度 $d = 2r = 10$',
+              highlight: true
+            }
+          ]
+        },
+        {
+          id: 'p52_s2',
+          stepIndex: 1,
+          label: '步骤 2',
+          title: '连结半径比较非直径弦与直径的长度',
+          startTime: 6.5,
+          endTime: 13.8,
+          scratchpadTitle: '为何直径是最长的弦？',
+          scratchpadFormula: '在 $\triangle OAB$ 中，$AB \lt OA + OB = 5 + 5 = 10$',
+          scratchpadNote: '任意一条不过圆心的弦 $AB$ 都与两条半径围成三角形，由两边之和大于第三边必有 $AB \lt 2r$。',
+          voiceSubtitle: '第二步，连结半径 $OA$ 和 $OB$，在 $\triangle OAB$ 中由两边之和大于第三边得 $AB \lt 5 + 5 = 10$，所以直径是圆中最长的弦。',
+          boardLines: [
+            {
+              appearAt: 7.4,
+              badge: '构图',
+              formula: '连结半径 $OA = OB = 5$，若 $AB$ 不过圆心则构成 $\triangle OAB$',
+              highlight: false
+            },
+            {
+              appearAt: 10.2,
+              badge: '推证',
+              formula: '由三角形三边关系：$AB \lt OA + OB = 10$；若 $AB$ 为直径则 $AB = 10$',
+              highlight: true
+            }
+          ]
+        },
+        {
+          id: 'p52_s3',
+          stepIndex: 2,
+          label: '步骤 3',
+          title: '补齐下界 $a \gt 0$，写出完整弦长范围',
+          startTime: 13.8,
+          endTime: 21.0,
+          scratchpadTitle: '易错提醒：两端边界不可漏',
+          scratchpadFormula: '下界 $a \gt 0$（线段长必正），上界 $a \le 10$（可取等号）',
+          scratchpadNote: '做选择题判断“弦长不可能的值”时，直接找大于 $2r$ 的选项；做填空写范围时切记写出 $0 \lt a \le 2r$。',
+          voiceSubtitle: '第三步，弦长作为线段长度必须大于 $0$，且最大可取到直径 $10$，因此弦长 $a$ 的取值范围是 $0 \lt a \le 10$。',
+          boardLines: [
+            {
+              appearAt: 14.5,
+              badge: '定界',
+              formula: '弦长满足正数下界 $a \gt 0$ 与直径上界 $a \le 10$',
+              highlight: false
+            },
+            {
+              appearAt: 17.2,
+              badge: '结论',
+              formula: '综上，弦 $AB$ 的长度 $a$ 的取值范围是 $0 \lt a \le 10$',
+              highlight: true
+            }
+          ]
+        }
+      ],
+      practice: {
+        prompt: '完成下面两道与本题库核心题强对应的同步演练，巩固“最长弦 $=$ 直径 $= 2r$”：',
+        q1: {
+          title: '练习一：半径与最长弦长双向互求（对应题库 g_q7 / t_q5）',
+          givenLabel: '已知：',
+          givenFormula: '圆 $1$ 的半径为 $3$；圆 $2$ 中最长的弦长为 $14\text{ cm}$',
+          questionText: '求圆 $1$ 中最长的弦长，以及圆 $2$ 的半径：',
+          input1Prefix: '圆 $1$ 最长弦长 $=$',
+          input1Placeholder: '如 6',
+          input2Prefix: '，圆 $2$ 半径 $=$',
+          input2Placeholder: '如 7',
+          input2Suffix: 'cm',
+          expectedX: '6',
+          expectedMin: '7',
+          allowOrderSwap: false,
+          correctFeedback: '圆 $1$ 最长弦长为 $6$，圆 $2$ 半径为 $7\text{ cm}$。',
+          correctDetail: '直径是圆中最长的弦：圆 $1$ 最长弦长 $= 2 \times 3 = 6$；圆 $2$ 直径为 $14\text{ cm}$，故半径 $= 14 \div 2 = 7\text{ cm}$。',
+          wrongFeedback: '记住“最长弦 $=$ 直径 $= 2r$”：已知半径求最长弦乘 $2$，已知最长弦求半径除以 $2$。',
+          specificWrongHints: [
+            { checkType: 'firstVal', val: '3', hint: '最长弦是直径而非半径，$2 \times 3 = 6$。' },
+            { checkType: 'secondVal', val: '28', hint: '最长弦 $14\text{ cm}$ 已经是直径，求半径要除以 $2$ 得 $7$。' }
+          ]
+        },
+        q2: {
+          title: '练习二：由半径确定弦长上限（对应题库 b_q5 / g_q4）',
+          givenLabel: '已知：',
+          givenFormula: '$\odot O_{1}$ 半径为 $6$，$\odot O_{2}$ 半径为 $3$',
+          questionText: '分别写出两圆中任意弦长的最大可能值（超过此值即不可能）：',
+          input1Prefix: '$\odot O_{1}$ 弦长上限 $=$',
+          input1Placeholder: '如 12',
+          input2Prefix: '，$\odot O_{2}$ 弦长上限 $=$',
+          input2Placeholder: '如 6',
+          input2Suffix: '',
+          expectedX: '12',
+          expectedMin: '6',
+          allowOrderSwap: false,
+          correctFeedback: '$\odot O_{1}$ 弦长上限为 $12$，$\odot O_{2}$ 弦长上限为 $6$。',
+          correctDetail: '任意弦长不超过直径 $2r$：当 $r = 6$ 时上限为 $12$（如 $13$ 不可能）；当 $r = 3$ 时上限为 $6$（如 $7$ 不可能）。',
+          wrongFeedback: '弦长最大只能等于直径 $2r$，分别计算 $2 \times 6$ 和 $2 \times 3$。',
+          specificWrongHints: []
+        }
+      }
+    },
+    P53: {
+      procedureId: 'P53',
+      title: '点到圆上点的最远与最近距离分类求半径',
+      exampleTitle: '若点 $P$ 到 $\odot O$ 上的点的最小距离是 $4$，最大距离是 $6$，求 $\odot O$ 的半径',
+      totalDuration: 23.0,
+      scratchpadIdleHint: '分类讨论提示区（演示中将同步画出点 $P$ 在圆外与点 $P$ 在圆内两种几何位置）',
+      geometryDiagram: {
+        title: '动态几何图：点 $P$ 在圆外 vs 点 $P$ 在圆内',
+        caption: '点击播放观察两种情形：圆外时 $2r = 6 - 4 = 2$（左），圆内时 $2r = 6 + 4 = 10$（右）',
+        svgHtml: '<svg viewBox="0 0 280 175" class="w-full max-w-[280px] h-auto" xmlns="http://www.w3.org/2000/svg">'
+          + '<text x="36" y="20" font-size="10.5" font-weight="700" fill="#0F766E">情形①：P 在圆外</text>'
+          + '<circle class="proc-geo-anim" data-appear-at="2.5" data-dur="0.7" cx="88" cy="88" r="30" fill="#F8FAFC" stroke="#334155" stroke-width="2" style="opacity:0;" />'
+          + '<circle class="proc-geo-anim" data-appear-at="2.5" data-dur="0.5" cx="88" cy="88" r="2.5" fill="#334155" style="opacity:0;" />'
+          + '<circle class="proc-geo-anim" data-appear-at="3.2" data-dur="0.5" cx="20" cy="88" r="3.2" fill="#E11D48" style="opacity:0;" />'
+          + '<text class="proc-geo-anim" data-appear-at="3.4" data-dur="0.4" x="14" y="79" font-size="11" font-weight="700" fill="#E11D48" style="opacity:0;">P</text>'
+          + '<line class="proc-geo-anim" data-appear-at="4.2" data-dur="0.7" data-dash-len="110" x1="20" y1="88" x2="118" y2="88" stroke="#D97706" stroke-width="2" stroke-dasharray="4 3" style="opacity:0;" />'
+          + '<line class="proc-geo-anim" data-appear-at="6.0" data-dur="0.7" data-dash-len="70" x1="58" y1="88" x2="118" y2="88" stroke="#0F766E" stroke-width="3" style="opacity:0;" />'
+          + '<text class="proc-geo-anim" data-appear-at="5.0" data-dur="0.5" x="32" y="83" font-size="10" font-weight="700" fill="#B45309" style="opacity:0;">近4</text>'
+          + '<text class="proc-geo-anim" data-appear-at="6.8" data-dur="0.5" x="72" y="106" font-size="10.5" font-weight="700" fill="#0F766E" style="opacity:0;">2r=6-4=2</text>'
+          + '<text class="proc-geo-anim" data-appear-at="8.2" data-dur="0.5" x="68" y="138" font-size="11.5" font-weight="700" fill="#0F766E" style="opacity:0;">r = 1</text>'
+          + '<line x1="140" y1="16" x2="140" y2="155" stroke="#CBD5E1" stroke-width="1.2" stroke-dasharray="3 3" />'
+          + '<text x="172" y="20" font-size="10.5" font-weight="700" fill="#E11D48">情形②：P 在圆内</text>'
+          + '<circle class="proc-geo-anim" data-appear-at="10.8" data-dur="0.7" cx="212" cy="88" r="46" fill="#F8FAFC" stroke="#334155" stroke-width="2" style="opacity:0;" />'
+          + '<circle class="proc-geo-anim" data-appear-at="10.8" data-dur="0.5" cx="212" cy="88" r="2.5" fill="#334155" style="opacity:0;" />'
+          + '<circle class="proc-geo-anim" data-appear-at="11.4" data-dur="0.5" cx="202" cy="88" r="3.2" fill="#E11D48" style="opacity:0;" />'
+          + '<text class="proc-geo-anim" data-appear-at="11.6" data-dur="0.4" x="197" y="79" font-size="11" font-weight="700" fill="#E11D48" style="opacity:0;">P</text>'
+          + '<line class="proc-geo-anim" data-appear-at="12.6" data-dur="0.8" data-dash-len="100" x1="166" y1="88" x2="258" y2="88" stroke="#E11D48" stroke-width="3" style="opacity:0;" />'
+          + '<text class="proc-geo-anim" data-appear-at="13.5" data-dur="0.5" x="174" y="82" font-size="10" font-weight="700" fill="#B45309" style="opacity:0;">近4</text>'
+          + '<text class="proc-geo-anim" data-appear-at="13.5" data-dur="0.5" x="224" y="82" font-size="10" font-weight="700" fill="#B45309" style="opacity:0;">远6</text>'
+          + '<text class="proc-geo-anim" data-appear-at="15.0" data-dur="0.5" x="178" y="108" font-size="10.5" font-weight="700" fill="#E11D48" style="opacity:0;">2r=6+4=10</text>'
+          + '<text class="proc-geo-anim" data-appear-at="16.5" data-dur="0.5" x="195" y="152" font-size="11.5" font-weight="700" fill="#E11D48" style="opacity:0;">r = 5</text>'
+          + '</svg>'
+      },
+      steps: [
+        {
+          id: 'p53_s1',
+          stepIndex: 0,
+          label: '步骤 1',
+          title: '审题识别未限定点 $P$ 内外，建立分类讨论',
+          startTime: 0.0,
+          endTime: 5.5,
+          scratchpadTitle: '分类讨论触发信号',
+          scratchpadFormula: '题干未说明点 $P$ 在圆内或圆外 $\implies$ 必分两类',
+          scratchpadNote: '过点 $P$ 和圆心 $O$ 作直线交圆于最近点与最远点，这两点恰好构成圆的一条直径。',
+          voiceSubtitle: '第一步，题目只说点 $P$ 到圆上点的最小距离是 $4$、最大距离是 $6$，没有说明点 $P$ 在圆内还是圆外，所以必须分两类讨论。',
+          boardLines: [
+            {
+              appearAt: 0.6,
+              badge: '审题',
+              formula: '已知 $d_{\min} = 4$，$d_{\max} = 6$，且点 $P$ 的内外位置未限定',
+              highlight: false
+            },
+            {
+              appearAt: 3.0,
+              badge: '定位',
+              formula: '直线 $PO$ 与 $\odot O$ 的两个交点即为最近点与最远点（夹出一条直径）',
+              highlight: true
+            }
+          ]
+        },
+        {
+          id: 'p53_s2',
+          stepIndex: 1,
+          label: '步骤 2',
+          title: '情形一：点 $P$ 在圆外，两距离作差求直径与半径',
+          startTime: 5.5,
+          endTime: 11.5,
+          scratchpadTitle: '点在圆外公式',
+          scratchpadFormula: '$2r = d_{\max} - d_{\min} = 6 - 4 = 2 \implies r = 1$',
+          scratchpadNote: '当点 $P$ 在圆外时，最远距离比最近距离多出来的部分正好是一条完整的直径 $2r$。',
+          voiceSubtitle: '第二步，看情形一：当点 $P$ 在圆外时，直径等于最大距离减去最小距离，即 $2r = 6 - 4 = 2$，解得半径 $r = 1$。',
+          boardLines: [
+            {
+              appearAt: 6.0,
+              badge: '圆外',
+              formula: '当点 $P$ 在 $\odot O$ 外时：直径 $2r = d_{\max} - d_{\min} = 6 - 4 = 2$',
+              highlight: false
+            },
+            {
+              appearAt: 8.2,
+              badge: '求 $r$',
+              formula: '解得半径 $r = 2 \div 2 = 1$',
+              highlight: true
+            }
+          ]
+        },
+        {
+          id: 'p53_s3',
+          stepIndex: 2,
+          label: '步骤 3',
+          title: '情形二：点 $P$ 在圆内，两距离作和求直径与半径',
+          startTime: 11.5,
+          endTime: 23.0,
+          scratchpadTitle: '点在圆内公式与双解汇总',
+          scratchpadFormula: '$2r = d_{\max} + d_{\min} = 6 + 4 = 10 \implies r = 5$',
+          scratchpadNote: '当点 $P$ 在圆内时，点 $P$ 把过它的直径分成最近和最远两段，所以两距离之和正好是直径 $2r$。',
+          voiceSubtitle: '第三步，看情形二：当点 $P$ 在圆内时，直径等于最大距离加上最小距离，即 $2r = 6 + 4 = 10$，解得半径 $r = 5$；综上，半径为 $5$ 或 $1$。',
+          boardLines: [
+            {
+              appearAt: 12.2,
+              badge: '圆内',
+              formula: '当点 $P$ 在 $\odot O$ 内时：直径 $2r = d_{\max} + d_{\min} = 6 + 4 = 10$',
+              highlight: false
+            },
+            {
+              appearAt: 15.2,
+              badge: '求 $r$',
+              formula: '解得半径 $r = 10 \div 2 = 5$',
+              highlight: false
+            },
+            {
+              appearAt: 17.8,
+              badge: '结论',
+              formula: '综上，$\odot O$ 的半径为 $5$ 或 $1$',
+              highlight: true
+            }
+          ]
+        }
+      ],
+      practice: {
+        prompt: '完成下面两道与本题库核心题直接对应的同步演练，巩固分类求半径与矩形多点半径范围：',
+        q1: {
+          title: '练习一：最远/最近距离分类求半径（对应题库 t_q11 / g_q11）',
+          givenLabel: '已知：',
+          givenFormula: '平面上一点 $P$ 到 $\odot O$ 的最近距离为 $4\text{ cm}$，最远距离为 $10\text{ cm}$',
+          questionText: '分别求出点 $P$ 在圆内与点 $P$ 在圆外时 $\odot O$ 的半径：',
+          input1Prefix: '圆内时 $r =$',
+          input1Placeholder: '如 7',
+          input2Prefix: '$\text{cm}$，圆外时 $r =$',
+          input2Placeholder: '如 3',
+          input2Suffix: 'cm',
+          expectedX: '7',
+          expectedMin: '3',
+          allowOrderSwap: false,
+          correctFeedback: '点在圆内时 $r = 7\text{ cm}$，点在圆外时 $r = 3\text{ cm}$。',
+          correctDetail: '圆内作和除以 $2$：$r = \frac{10 + 4}{2} = 7\text{ cm}$；圆外作差除以 $2$：$r = \frac{10 - 4}{2} = 3\text{ cm}$。',
+          wrongFeedback: '圆内两距离相加得直径 $14\text{ cm}$、除以 $2$ 得半径 $7\text{ cm}$；圆外两距离相减得直径 $6\text{ cm}$、除以 $2$ 得半径 $3\text{ cm}$。',
+          specificWrongHints: [
+            { checkType: 'firstVal', val: '14', hint: '$10 + 4 = 14$ 是直径，求半径别忘了除以 $2$ 得 $7$。' },
+            { checkType: 'secondVal', val: '6', hint: '$10 - 4 = 6$ 是直径，求半径别忘了除以 $2$ 得 $3$。' }
+          ]
+        },
+        q2: {
+          title: '练习二：矩形多点与圆位置确定半径范围（对应题库 g_q15 / t_q15）',
+          givenLabel: '已知：',
+          givenFormula: '矩形 $ABCD$ 中 $AB = 6$，$AD = 8$，以 $A$ 为圆心作 $\odot A$',
+          questionText: '要使 $B,C,D$ 三点至少一点在圆内、至少一点在圆外，求半径范围 $a \lt r \lt b$ 中的 $a$ 与 $b$：',
+          input1Prefix: '下界 $a =$',
+          input1Placeholder: '如 6',
+          input2Prefix: '，上界 $b =$',
+          input2Placeholder: '如 10',
+          input2Suffix: '',
+          expectedX: '6',
+          expectedMin: '10',
+          allowOrderSwap: false,
+          correctFeedback: '半径范围为 $6 \lt r \lt 10$（下界 $6$，上界 $10$）。',
+          correctDetail: '由勾股定理得对角线 $AC = \sqrt{6^{2} + 8^{2}} = 10$，三点到圆心 $A$ 的距离从小到大为 $6, 8, 10$；要至少一点在内、至少一点在外，须满足 $6 \lt r \lt 10$。',
+          wrongFeedback: '先用勾股定理算出 $AC = 10$，三点到 $A$ 的距离最小是 $AB = 6$、最大是 $AC = 10$，故 $6 \lt r \lt 10$。',
+          specificWrongHints: [
+            { checkType: 'secondVal', val: '8', hint: '最远的点是对角顶点 $C$，$AC = \sqrt{6^{2}+8^{2}} = 10$，不是 $AD = 8$。' }
+          ]
+        }
+      }
     }
   };
 

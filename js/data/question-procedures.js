@@ -9124,6 +9124,7 @@
       role: 'primary',
       subType: 'P38_rt30_property',
       operationSummary: '在多个含 $30^{\\circ}$ 角的直角三角形中连续应用“对边等于斜边的一半”，由 $AC=9$ 逐层推算出 $FG=3$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10271,6 +10272,7 @@
       role: 'primary',
       subType: 'P41_perimeter_single',
       operationSummary: '由 $AC$ 垂直平分线得 $EA = EC$，化折为直得 $C_{\\triangle BEC} = BC + BE + EA = BC + AB = 17$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10282,6 +10284,7 @@
       role: 'primary',
       subType: 'P41_perimeter_single',
       operationSummary: '由 $DE$ 垂直平分 $BC$ 得 $BD = CD$，转化得 $C_{\\triangle ABD} = AB + AC = 6 + 8 = 14$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10293,6 +10296,7 @@
       role: 'primary',
       subType: 'P41_perimeter_single',
       operationSummary: '由 $BC$ 垂直平分线得 $EB = EC$，转化得 $C_{\\triangle ACE} = AC + AE + EB = AC + AB = 15$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10304,6 +10308,7 @@
       role: 'primary',
       subType: 'P41_perimeter_single',
       operationSummary: '由 $DE$ 垂直平分 $AC$ 得 $AD = CD$，转化得 $C_{\\triangle ABD} = AB + BD + CD = AB + BC = 20$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10326,6 +10331,7 @@
       role: 'primary',
       subType: 'P41_perimeter_single',
       operationSummary: '由 $DE$ 垂直平分 $AC$ 得 $EA = EC$，结合 $AB = AC = 9$ 得 $C_{\\triangle BCE} = AB + BC = 16$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10337,6 +10343,7 @@
       role: 'primary',
       subType: 'P41_perimeter_single',
       operationSummary: '由 $AB$ 中垂线得 $FA = FB$，结合 $AB = AC$ 得 $C_{\\triangle BCF} = AC + BC = AB + BC = 6$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10392,6 +10399,7 @@
       role: 'primary',
       subType: 'P41_perimeter_diff',
       operationSummary: '由 $GA = GB$ 得 $C_{\\triangle AGC} = AC + BC = 30$，加上 $AB = 20$ 得 $C_{\\triangle ABC} = 50$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10425,6 +10433,7 @@
       role: 'primary',
       subType: 'P41_perimeter_double',
       operationSummary: '由双垂直平分线得 $PA = PB$、$QA = QC$，结合 $BC = 10$ 与重叠/间隔段 $QP = 2$ 求 $\\triangle AQP$ 周长。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10436,6 +10445,7 @@
       role: 'primary',
       subType: 'P41_perimeter_double',
       operationSummary: '由双垂直平分线两次转化 $DA = DC$、$FB = FA$，得 $C_{\\triangle BDF} = BD + DA = BD + DC = BC = 10$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10535,6 +10545,7 @@
       role: 'primary',
       subType: 'P41_compass_construction',
       operationSummary: '识别尺规作图痕迹为 $BC$ 的垂直平分线，得 $DB = DC$，化折为直得 $C_{\\triangle ACD} = AC + AB = 14$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -13424,6 +13435,7 @@
       role: 'primary',
       subType: 'P34_monomial_id_coeff_degree',
       operationSummary: '忽略常数 $\\pi$，将字母指数相加 $1+3+1=5$ 得单项式次数。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -13435,6 +13447,7 @@
       role: 'primary',
       subType: 'P34_monomial_id_coeff_degree',
       operationSummary: '提取系数 $-\\frac{2\\pi}{3}$，将 $x,y,z$ 指数相加 $2+3+1=6$ 得次数。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -13584,6 +13597,7 @@
       role: 'primary',
       subType: 'P47_polynomial_terms_degree',
       operationSummary: '数出 $4$ 项并取最高次项 $9x^{2}y^{3}$ 的次数 $5$，判定为五次四项式。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -13606,6 +13620,7 @@
       role: 'primary',
       subType: 'P47_polynomial_terms_degree',
       operationSummary: '分别确定两多项式的项数与最高次项次数，写出几次几项式。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -13732,6 +13747,7 @@
       role: 'primary',
       subType: 'P48_param_from_degree_terms',
       operationSummary: '由一次式列双重条件 $|n-1|=1$ 且 $n-2\\neq 0$，舍去 $n=2$ 得 $n=0$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -13743,6 +13759,7 @@
       role: 'primary',
       subType: 'P48_param_from_degree_terms',
       operationSummary: '列二次三项式双重条件 $|k|=2$ 且 $k+2\\neq 0$，舍去 $k=-2$ 得 $k=2$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -13858,6 +13875,7 @@
       role: 'primary',
       subType: 'P49_like_terms_id_and_param',
       operationSummary: '由两单项式的和为 x²y 判定二者均为 x²y 的同类项，列 2m=2, n=2 解得 m=1, n=2，故 m+n=3。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -13913,6 +13931,7 @@
       role: 'primary',
       subType: 'P49_like_terms_id_and_param',
       operationSummary: '由和仍为单项式得 $m=3,n=2n+1\\Rightarrow  n=-1$，算得 $n^{m}=-1$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -13924,6 +13943,7 @@
       role: 'primary',
       subType: 'P49_like_terms_id_and_param',
       operationSummary: '由两单项式和为 $0$ 得 $2m=4,n=2$，解得 $m=2,n=2$，故 $m+n=4$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     // =========================================================================
@@ -14431,6 +14451,7 @@
       role: 'primary',
       subType: 'P50_independent_or_missing_term_param',
       operationSummary: '合并 $x$ 项得 $(m+3)x$，由不含 $x$ 一次项得 $m=-3$，故 $m^{2}=9$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14464,6 +14485,7 @@
       role: 'primary',
       subType: 'P50_independent_or_missing_term_param',
       operationSummary: '去括号合并含 $x$ 项得 $(3m-6)x^{2}+(3+6n)x$，令系数为 $0$ 解得 $m,n$ 求和。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14486,6 +14508,7 @@
       role: 'primary',
       subType: 'P50_independent_or_missing_term_param',
       operationSummary: '去括号合并含 $x$ 项得 $(a-1)x^{3}+(4-b)xy^{2}$，令系数为 $0$ 得 $a=1,b=4$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     // =========================================================================
@@ -14600,6 +14623,358 @@
       subType: 'P45_poly_add_sub_application',
       operationSummary: '用边宽 $a$ 表示装裱后长 $10a+100$ 与宽 $2a+35$，作差合并得 $(65+8a)\\text{ cm}$。',
       status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_b_q2',
+      procedureId: 'P52',
+      partId: null,
+      sortOrder: 1,
+      order: 1,
+      role: 'primary',
+      subType: 'P52_chord_id',
+      operationSummary: '逐条核对线段两端点是否都在圆周上，识别出 $\odot O$ 的弦。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_b_q3',
+      procedureId: 'P52',
+      partId: null,
+      sortOrder: 2,
+      order: 2,
+      role: 'primary',
+      subType: 'P52_chord_count',
+      operationSummary: '排除端点在圆心或圆外的线段，数出图中两端点均在 $\odot O$ 上的弦的条数。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_b_q4',
+      procedureId: 'P52',
+      partId: null,
+      sortOrder: 3,
+      order: 3,
+      role: 'primary',
+      subType: 'P52_chord_count',
+      operationSummary: '连同经过圆心的直径一起统计，数出图中 $\odot O$ 的全部弦。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_g_q3',
+      procedureId: 'P52',
+      partId: null,
+      sortOrder: 4,
+      order: 4,
+      role: 'primary',
+      subType: 'P52_chord_count',
+      operationSummary: '由 $A,B,C,D$ 四点都在圆上，核对图中实际连出的圆上两两点线段条数。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_t_q3',
+      procedureId: 'P52',
+      partId: null,
+      sortOrder: 5,
+      order: 5,
+      role: 'primary',
+      subType: 'P52_chord_count',
+      operationSummary: '排查非圆上端点线段，数出图中所有两端点均在圆上的弦。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_g_q6',
+      procedureId: 'P52',
+      partId: null,
+      sortOrder: 6,
+      order: 6,
+      role: 'primary',
+      subType: 'P52_chord_arc_id',
+      operationSummary: '依次识别图中的弦、过圆心的直径 $BC$，以及以 $A$ 为端点的劣弧与优弧。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_g_q1',
+      procedureId: 'P52',
+      partId: null,
+      sortOrder: 7,
+      order: 7,
+      role: 'primary',
+      subType: 'P52_concept_judge',
+      operationSummary: '逐项核对直径与弦、半圆与弧、等弧必须完全重合等概念，选出错误结论。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_g_q2',
+      procedureId: 'P52',
+      partId: null,
+      sortOrder: 8,
+      order: 8,
+      role: 'primary',
+      subType: 'P52_concept_judge',
+      operationSummary: '辨析圆的弦、直径、优劣弧与等弧定义，找出不正确说法。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_t_q1',
+      procedureId: 'P52',
+      partId: null,
+      sortOrder: 9,
+      order: 9,
+      role: 'primary',
+      subType: 'P52_concept_judge',
+      operationSummary: '依据“直径是最长的弦”“等弧须能完全重合”等概念判断正确选项。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_t_q2',
+      procedureId: 'P52',
+      partId: null,
+      sortOrder: 10,
+      order: 10,
+      role: 'primary',
+      subType: 'P52_concept_judge',
+      operationSummary: '核对弦与直径包含关系及半圆、优弧、劣弧定义，找出错误说法。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_t_q5',
+      procedureId: 'P52',
+      partId: null,
+      sortOrder: 11,
+      order: 11,
+      role: 'primary',
+      subType: 'P52_max_chord',
+      operationSummary: '由直径是最长的弦，已知半径 $r = 3$ 直接算出最长弦长 $2r = 6$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_g_q7',
+      procedureId: 'P52',
+      partId: null,
+      sortOrder: 12,
+      order: 12,
+      role: 'primary',
+      subType: 'P52_max_chord',
+      operationSummary: '最长弦即为直径 $d = 14\text{ cm}$，除以 $2$ 得此圆半径为 $7\text{ cm}$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_b_q7',
+      procedureId: 'P52',
+      partId: null,
+      sortOrder: 13,
+      order: 13,
+      role: 'primary',
+      subType: 'P52_chord_range',
+      operationSummary: '由半径 $r = 5$ 得直径 $2r = 10$，结合弦长为正写出取值范围 $0 \lt a \le 10$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_b_q5',
+      procedureId: 'P52',
+      partId: null,
+      sortOrder: 14,
+      order: 14,
+      role: 'primary',
+      subType: 'P52_chord_range',
+      operationSummary: '由半径 $r = 6$ 得弦长上限为直径 $12$，排除超过 $12$ 的不可能长度。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_g_q4',
+      procedureId: 'P52',
+      partId: null,
+      sortOrder: 15,
+      order: 15,
+      role: 'primary',
+      subType: 'P52_chord_range',
+      operationSummary: '由半径 $r = 3$ 得最大弦长为 $6$，选出大于 $6$ 的不可能长度。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_g_q5',
+      procedureId: 'P52',
+      partId: null,
+      sortOrder: 16,
+      order: 16,
+      role: 'primary',
+      subType: 'P52_chord_range',
+      operationSummary: '由半径 $r = 6\text{ cm}$ 得弦长范围为 $0 \lt AB \le 12\text{ cm}$，筛选符合条件的测量值。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_b_q9',
+      procedureId: 'P53',
+      partId: null,
+      sortOrder: 1,
+      order: 1,
+      role: 'primary',
+      subType: 'P53_compare_dr',
+      operationSummary: '直接比较 $d = 7 \gt r = 6$，判定点 $A$ 在 $\odot O$ 外。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_g_q9',
+      procedureId: 'P53',
+      partId: null,
+      sortOrder: 2,
+      order: 2,
+      role: 'primary',
+      subType: 'P53_compare_dr',
+      operationSummary: '比较 $d = 10\text{ cm} \gt r = 7\text{ cm}$，判定点 $P$ 在 $\odot O$ 外。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_b_q10',
+      procedureId: 'P53',
+      partId: null,
+      sortOrder: 3,
+      order: 3,
+      role: 'primary',
+      subType: 'P53_diameter_to_r',
+      operationSummary: '先由直径 $6\text{ cm}$ 换算半径 $r = 3\text{ cm}$，再比较 $PO = 5\text{ cm} \gt 3\text{ cm}$ 判定点 $P$ 在圆外。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_b_q12',
+      procedureId: 'P53',
+      partId: null,
+      sortOrder: 4,
+      order: 4,
+      role: 'primary',
+      subType: 'P53_diameter_to_r',
+      operationSummary: '由直径 $6$ 得半径 $r = 3$，因 $d = 4 \gt 3$ 判定点 $P$ 在 $\odot O$ 外。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_g_q12',
+      procedureId: 'P53',
+      partId: null,
+      sortOrder: 5,
+      order: 5,
+      role: 'primary',
+      subType: 'P53_range_from_pos',
+      operationSummary: '由点 $P$ 在半径为 $5$ 的 $\odot O$ 外，直接列不等式得 $m \gt 5$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_t_q10',
+      procedureId: 'P53',
+      partId: null,
+      sortOrder: 6,
+      order: 6,
+      role: 'primary',
+      subType: 'P53_range_from_pos',
+      operationSummary: '由点 $P$ 在半径 $8\text{ cm}$ 的 $\odot O$ 内得 $PO \lt 8\text{ cm}$，找出不小于 $8\text{ cm}$ 的不可能选项。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_b_q11',
+      procedureId: 'P53',
+      partId: null,
+      sortOrder: 7,
+      order: 7,
+      role: 'primary',
+      subType: 'P53_multi_point_range',
+      operationSummary: '由图知点 $P$ 在圆外（$r \lt 8$）、点 $Q$ 在圆内（$r \gt 6$），确定 $6 \lt r \lt 8$ 并选出可能半径。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_t_q9',
+      procedureId: 'P53',
+      partId: null,
+      sortOrder: 8,
+      order: 8,
+      role: 'primary',
+      subType: 'P53_pythagorean_dr',
+      operationSummary: '在 $\text{Rt}\triangle ABC$ 中由勾股定理得 $AB = 5$，分别比较 $AB = 5 \gt 4$、$AC = 3 \lt 4$ 判定点 $A$ 位置。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_t_q13',
+      procedureId: 'P53',
+      partId: null,
+      sortOrder: 9,
+      order: 9,
+      role: 'primary',
+      subType: 'P53_pythagorean_range',
+      operationSummary: '由勾股定理得 $AB = 13$，结合 $AC = 12$ 及一点在圆内一点在圆外得 $12 \lt r \lt 13$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_t_q14',
+      procedureId: 'P53',
+      partId: null,
+      sortOrder: 10,
+      order: 10,
+      role: 'primary',
+      subType: 'P53_pythagorean_dr',
+      operationSummary: '分别用 $CA = 4$、$CB = 3$ 及面积法高 $CD = 2.4$ 与不同半径比较，判定 $A,B,D$ 位置关系。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_g_q15',
+      procedureId: 'P53',
+      partId: null,
+      sortOrder: 11,
+      order: 11,
+      role: 'primary',
+      subType: 'P53_rect_multi_point',
+      operationSummary: '算得 $AB = 6, AD = 8, AC = 10$，先与 $r = 8$ 比较位置，再由至少一点在内一点在外得 $6 \lt r \lt 10$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_t_q15',
+      procedureId: 'P53',
+      partId: null,
+      sortOrder: 12,
+      order: 12,
+      role: 'primary',
+      subType: 'P53_rect_multi_point',
+      operationSummary: '由矩形边长与勾股定理得 $AB = 6, AD = 8, AC = 10$，逐点比大小并确定范围 $6 \lt r \lt 10$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_t_q7',
+      procedureId: 'P53',
+      partId: null,
+      sortOrder: 13,
+      order: 13,
+      role: 'primary',
+      subType: 'P53_max_min_outer',
+      operationSummary: '题干限定点 $P$ 在圆外，直接用最远减最近得直径 $2r = 8 - 2 = 6\text{ cm}$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_b_q13',
+      procedureId: 'P53',
+      partId: null,
+      sortOrder: 14,
+      order: 14,
+      role: 'primary',
+      subType: 'P53_max_min_cases',
+      operationSummary: '未限定点 $P$ 内外，分圆外 $r = \frac{6-4}{2} = 1$ 与圆内 $r = \frac{6+4}{2} = 5$ 两类得半径 $5$ 或 $1$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_g_q11',
+      procedureId: 'P53',
+      partId: null,
+      sortOrder: 15,
+      order: 15,
+      role: 'primary',
+      subType: 'P53_max_min_cases',
+      operationSummary: '分类讨论点 $P$ 在圆外得 $r = \frac{6-2}{2} = 2\text{ cm}$，在圆内得 $r = \frac{6+2}{2} = 4\text{ cm}$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_t_q11',
+      procedureId: 'P53',
+      partId: null,
+      sortOrder: 16,
+      order: 16,
+      role: 'primary',
+      subType: 'P53_max_min_cases',
+      operationSummary: '分类讨论点在圆外得 $r = \frac{10-4}{2} = 3\text{ cm}$，在圆内得 $r = \frac{10+4}{2} = 7\text{ cm}$。',
+      status: 'published'
     }
   ];
 
@@ -14684,20 +15059,24 @@
         }));
     },
 
-    getQuestionCollectionByProcedure(procedureId) {
+    getQuestionCollectionByProcedure(procedureId, options = {}) {
       const proc = this.getProcedureById(procedureId);
       if (!proc) return null;
 
+      const includeBankOnly = Boolean(options && options.includeBankOnly);
       const bank = getQuestionBankSource();
       const questionMap = new Map(bank.map(q => [q.id, q]));
 
-      const rawRecords = QUESTION_PROCEDURES.filter(r => r.procedureId === procedureId);
+      const rawRecords = QUESTION_PROCEDURES.filter(r =>
+        r && r.procedureId === procedureId && (includeBankOnly || r.visibility !== 'bank_only')
+      );
 
       const groupedByQuestion = new Map();
       rawRecords.forEach(record => {
         const q = questionMap.get(record.questionId);
         if (!q) return;
         const sortOrd = record.sortOrder ?? record.order ?? 999;
+        const recVis = record.visibility === 'bank_only' ? 'bank_only' : 'featured';
 
         if (!groupedByQuestion.has(record.questionId)) {
           groupedByQuestion.set(record.questionId, {
@@ -14707,6 +15086,7 @@
             order: sortOrd,
             primaryPartId: record.inCollectionOrder ? record.partId : null,
             role: record.role,
+            visibility: recVis,
             status: record.status,
             question: q,
             parts: []
@@ -14714,6 +15094,9 @@
         }
 
         const group = groupedByQuestion.get(record.questionId);
+        if (recVis === 'featured') {
+          group.visibility = 'featured';
+        }
         if (typeof sortOrd === 'number' && sortOrd < group.sortOrder) {
           group.sortOrder = sortOrd;
           group.order = sortOrd;
@@ -14725,6 +15108,7 @@
           partId: record.partId,
           partOrder: record.partOrder || 1,
           role: record.role,
+          visibility: recVis,
           subType: record.subType || null,
           inCollectionOrder: record.inCollectionOrder !== false,
           operationSummary: record.operationSummary || '',

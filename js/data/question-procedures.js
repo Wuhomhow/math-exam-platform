@@ -15264,8 +15264,15 @@
     `;
   };
 
-  window.jumpToProceduralCollection = function (procedureId) {
+  window.jumpToProceduralCollection = async function (procedureId) {
     if (!ProceduralKnowledgeService.getProcedureById(procedureId)) return;
+    if ((!window.ProceduralView || !window._proceduralModulesInitialized) && typeof window.ensureProceduralModulesLoaded === 'function') {
+      try {
+        await window.ensureProceduralModulesLoaded();
+      } catch (_) {
+        return;
+      }
+    }
     if (window.ProceduralView && typeof window.ProceduralView.openDetailFromExternal === 'function') {
       window.ProceduralView.openDetailFromExternal(procedureId);
       return;

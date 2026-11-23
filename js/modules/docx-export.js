@@ -906,38 +906,81 @@
       return null;
     }
 
+    const IMAGE_BASE64_PARTS = [
+      'js/data/images-base64-part1.js',
+      'js/data/images-base64-part2.js',
+      'js/data/images-base64-part3.js',
+      'js/data/images-base64-part4.js'
+    ];
+
     async function ensureImageBase64Loaded() {
-      if (window._imageBase64AllPartsLoaded) {
+      window.IMAGE_BASE64_MAP = window.IMAGE_BASE64_MAP || {};
+      window._imageBase64LoadedParts = window._imageBase64LoadedParts || new Set();
+      window._imageBase64PendingLoads = window._imageBase64PendingLoads || new Map();
+
+      if (window._imageBase64AllPartsLoaded && IMAGE_BASE64_PARTS.every(src => window._imageBase64LoadedParts.has(src))) {
+        window._imageBase64LastResult = { ok: true, failedParts: [] };
         return window.IMAGE_BASE64_MAP;
       }
-      window.IMAGE_BASE64_MAP = window.IMAGE_BASE64_MAP || {};
 
-      function loadScript(src) {
-        return new Promise((resolve) => {
-          let s = document.querySelector(`script[src="${src}"]`);
-          if (s) {
-            if (s.dataset.loaded === 'true') return resolve();
-            s.addEventListener('load', () => { s.dataset.loaded = 'true'; resolve(); }, { once: true });
-            s.addEventListener('error', resolve, { once: true });
-            setTimeout(resolve, 6000);
+      function loadPart(src) {
+        if (window._imageBase64LoadedParts.has(src)) {
+          return Promise.resolve({ src, ok: true });
+        }
+        if (window._imageBase64PendingLoads.has(src)) {
+          return window._imageBase64PendingLoads.get(src);
+        }
+
+        const promise = new Promise((resolve) => {
+          let settled = false;
+          const finish = (ok, scriptEl) => {
+            if (settled) return;
+            settled = true;
+            clearTimeout(timer);
+            window._imageBase64PendingLoads.delete(src);
+            if (ok) {
+              if (scriptEl) scriptEl.dataset.loaded = 'true';
+              window._imageBase64LoadedParts.add(src);
+            } else {
+              console.warn('Failed to load image map chunk:', src);
+              if (scriptEl && scriptEl.parentNode) {
+                scriptEl.parentNode.removeChild(scriptEl);
+              }
+            }
+            resolve({ src, ok });
+          };
+
+          const existing = document.querySelector(`script[src="${src}"]`);
+          if (existing && existing.dataset.loaded === 'true') {
+            window._imageBase64LoadedParts.add(src);
+            window._imageBase64PendingLoads.delete(src);
+            resolve({ src, ok: true });
             return;
           }
-          s = document.createElement('script');
+          if (existing && existing.parentNode) {
+            existing.parentNode.removeChild(existing);
+          }
+
+          const s = document.createElement('script');
           s.src = src;
-          s.onload = () => { s.dataset.loaded = 'true'; resolve(); };
-          s.onerror = () => { console.warn('Failed to load image map chunk:', src); resolve(); };
+          s.async = true;
+          const timer = setTimeout(() => finish(false, s), 15000);
+          s.onload = () => finish(true, s);
+          s.onerror = () => finish(false, s);
           document.body.appendChild(s);
-          setTimeout(resolve, 8000);
         });
+
+        window._imageBase64PendingLoads.set(src, promise);
+        return promise;
       }
 
-      await Promise.all([
-        loadScript('js/data/images-base64-part1.js'),
-        loadScript('js/data/images-base64-part2.js'),
-        loadScript('js/data/images-base64-part3.js'),
-        loadScript('js/data/images-base64-part4.js')
-      ]);
-      window._imageBase64AllPartsLoaded = true;
+      const results = await Promise.all(IMAGE_BASE64_PARTS.map(loadPart));
+      const failedParts = results.filter(r => !r.ok).map(r => r.src);
+      window._imageBase64AllPartsLoaded = failedParts.length === 0 && IMAGE_BASE64_PARTS.every(src => window._imageBase64LoadedParts.has(src));
+      window._imageBase64LastResult = {
+        ok: window._imageBase64AllPartsLoaded,
+        failedParts
+      };
 
       return window.IMAGE_BASE64_MAP;
     }
@@ -950,8 +993,6 @@
         return;
       }
 
-      await ensureImageBase64Loaded();
-
       const isTeacher = state.paperViewMode === 'teacher';
       const isDouble = state.isDoubleColumn;
 
@@ -959,7 +1000,8 @@
       const relsExtra = [];
       let imgCounter = 1;
 
-      // Pre-fetch all images used in selected questions
+      // 1. Collect only images actually needed for the current paper
+      window._wordImageBytesCache = window._wordImageBytesCache || new Map();
       const imageBufferCache = new Map();
       const imageSrcList = new Set();
 
@@ -976,33 +1018,78 @@
         collectSrcs(q.stem);
         if (q.image) imageSrcList.add(q.image);
         if (q.options) q.options.forEach(collectSrcs);
-        collectSrcs(q.answer);
-        collectSrcs(q.analysis);
-        collectSrcs(q.detail);
+        if (isTeacher) {
+          collectSrcs(q.answer);
+          collectSrcs(q.analysis);
+          collectSrcs(q.detail);
+        }
       }
 
-      await Promise.all(Array.from(imageSrcList).map(async (src) => {
-        try {
-          const cleanKey = src.replace(/^\.?\//, '');
-          const mappedDataUri = (window.IMAGE_BASE64_MAP && (window.IMAGE_BASE64_MAP[cleanKey] || window.IMAGE_BASE64_MAP[src]))
-            ? (window.IMAGE_BASE64_MAP[cleanKey] || window.IMAGE_BASE64_MAP[src])
-            : src;
-          if (mappedDataUri.startsWith('data:image/')) {
-            const m = mappedDataUri.match(/data:image\/[^;]+;base64,([A-Za-z0-9+/=]+)/);
-            if (m) {
-              imageBufferCache.set(src, base64ToUint8Array(m[1]));
-            }
-          } else {
-            const res = await fetch(src);
-            if (res.ok) {
-              const buf = await res.arrayBuffer();
-              imageBufferCache.set(src, new Uint8Array(buf));
+      function resolveImageBytesFromDataUriOrMap(src) {
+        const cleanKey = src.replace(/^\.?\//, '');
+        const mapped = window.IMAGE_BASE64_MAP && (window.IMAGE_BASE64_MAP[cleanKey] || window.IMAGE_BASE64_MAP[src]);
+        const dataUri = mapped || (src.startsWith('data:image/') ? src : null);
+        if (dataUri && dataUri.startsWith('data:image/')) {
+          const m = dataUri.match(/data:image\/[^;]+;base64,([A-Za-z0-9+/=]+)/);
+          if (m) return base64ToUint8Array(m[1]);
+        }
+        return null;
+      }
+
+      // 2. Skip all image loading if the paper has no images; otherwise fetch only needed images first
+      if (imageSrcList.size > 0) {
+        const isFileProtocol = typeof location !== 'undefined' && location.protocol === 'file:';
+        const unresolvedSrcs = [];
+
+        await Promise.all(Array.from(imageSrcList).map(async (src) => {
+          if (window._wordImageBytesCache.has(src)) {
+            imageBufferCache.set(src, window._wordImageBytesCache.get(src));
+            return;
+          }
+
+          const fromMap = resolveImageBytesFromDataUriOrMap(src);
+          if (fromMap) {
+            window._wordImageBytesCache.set(src, fromMap);
+            imageBufferCache.set(src, fromMap);
+            return;
+          }
+
+          if (!isFileProtocol) {
+            try {
+              const res = await fetch(src);
+              if (res.ok) {
+                const buf = await res.arrayBuffer();
+                const bytes = new Uint8Array(buf);
+                window._wordImageBytesCache.set(src, bytes);
+                imageBufferCache.set(src, bytes);
+                return;
+              }
+            } catch (err) {
+              console.warn('Word export: direct fetch failed, will try Base64 fallback:', src, err);
             }
           }
-        } catch (err) {
-          console.warn('Word export: unable to load image:', src, err);
+
+          unresolvedSrcs.push(src);
+        }));
+
+        // 3. Fallback to Base64 chunks only when some images could not be fetched directly (e.g. file:// mode)
+        if (unresolvedSrcs.length > 0) {
+          await ensureImageBase64Loaded();
+          let stillMissing = 0;
+          for (const src of unresolvedSrcs) {
+            const fromMap = resolveImageBytesFromDataUriOrMap(src);
+            if (fromMap) {
+              window._wordImageBytesCache.set(src, fromMap);
+              imageBufferCache.set(src, fromMap);
+            } else {
+              stillMissing++;
+            }
+          }
+          if (stillMissing > 0 && window._imageBase64LastResult && !window._imageBase64LastResult.ok) {
+            showToast(`部分图片资源包加载失败（缺失 ${stillMissing} 张图），可稍后重新导出以自动重试`, 'warn');
+          }
         }
-      }));
+      }
 
       const defaultMaxCx = isDouble ? 1500000 : 1800000;
       const defaultMaxCy = isDouble ? 1250000 : 1450000;

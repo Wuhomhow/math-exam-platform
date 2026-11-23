@@ -623,11 +623,22 @@ function initEvents() {
   document.getElementById('btnDrawerOrderByAdded')?.addEventListener('click', () => setPaperOrderMode('added'));
   document.getElementById('btnDrawerOrderByType')?.addEventListener('click', () => setPaperOrderMode('type'));
 
-  // 打印与 Word 导出
+  // 打印与 Word 导出（Word 导出引擎按需加载）
   document.getElementById('btnPrintPaper').addEventListener('click', () => {
     window.print();
   });
-  document.getElementById('btnExportWord').addEventListener('click', exportWordDoc);
+  document.getElementById('btnExportWord').addEventListener('click', async () => {
+    try {
+      if (typeof exportWordDoc !== 'function' && typeof window.ensureDocxExportLoaded === 'function') {
+        await window.ensureDocxExportLoaded();
+      }
+      if (typeof exportWordDoc === 'function') {
+        await exportWordDoc();
+      }
+    } catch (err) {
+      console.error('Failed to run Word export:', err);
+    }
+  });
 
   // 引导按钮
   const guideBtn = document.getElementById('btnOpenGuide') || document.getElementById('openGuideBtn');
@@ -648,10 +659,19 @@ function bootstrapApp() {
   appBootstrapped = true;
 
   purgeOldModals();
-  if (window.GraphData) window.GraphData.init();
-  if (window.GraphFilter) window.GraphFilter.init();
-  if (window.GraphDetail) window.GraphDetail.bindQuestionFilterBar();
-  if (window.ProceduralView) window.ProceduralView.init();
+  if (window.GraphData && !window._graphDataInitialized) {
+    window.GraphData.init();
+    window._graphDataInitialized = true;
+  }
+  if (window.GraphFilter && !window._graphModulesInitialized) {
+    window.GraphFilter.init();
+    if (window.GraphDetail) window.GraphDetail.bindQuestionFilterBar();
+    window._graphModulesInitialized = true;
+  }
+  if (window.ProceduralView && !window._proceduralModulesInitialized) {
+    window.ProceduralView.init();
+    window._proceduralModulesInitialized = true;
+  }
   buildChapterNavigation();
   initEvents();
   syncUiToState();

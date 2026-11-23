@@ -15,6 +15,97 @@
           return 'q-meta-diff';
       }
     }
+    // On-demand lazy module loader with caching (keeps initial page load light)
+    const _lazyScriptCache = new Map();
+    function loadScriptAssetOnce(src) {
+      if (_lazyScriptCache.has(src)) return _lazyScriptCache.get(src);
+      const existing = document.querySelector(`script[src="${src}"]`);
+      if (existing && existing.dataset.loaded === 'true') {
+        const done = Promise.resolve();
+        _lazyScriptCache.set(src, done);
+        return done;
+      }
+      const promise = new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = src;
+        script.async = false;
+        script.onload = () => {
+          script.dataset.loaded = 'true';
+          resolve();
+        };
+        script.onerror = () => {
+          _lazyScriptCache.delete(src);
+          if (script.parentNode) script.parentNode.removeChild(script);
+          reject(new Error(`Failed to load module: ${src}`));
+        };
+        document.body.appendChild(script);
+      });
+      _lazyScriptCache.set(src, promise);
+      return promise;
+    }
+
+    let _graphModulesPromise = null;
+    function ensureGraphModulesLoaded() {
+      if (window.GraphFilter && window._graphModulesInitialized) return Promise.resolve();
+      if (_graphModulesPromise) return _graphModulesPromise;
+      _graphModulesPromise = (async () => {
+        await loadScriptAssetOnce('js/modules/knowledge-graph/graph-filter.js');
+        await loadScriptAssetOnce('js/modules/knowledge-graph/graph-tree.js');
+        await loadScriptAssetOnce('js/modules/knowledge-graph/graph-network.js');
+        if (!window._graphModulesInitialized) {
+          if (window.GraphData && !window._graphDataInitialized) {
+            window.GraphData.init();
+            window._graphDataInitialized = true;
+          }
+          if (window.GraphFilter) window.GraphFilter.init();
+          if (window.GraphDetail) window.GraphDetail.bindQuestionFilterBar();
+          window._graphModulesInitialized = true;
+        }
+      })().catch((err) => {
+        _graphModulesPromise = null;
+        console.error(err);
+        if (typeof showToast === 'function') showToast('知识图谱模块加载失败，请重试', 'warn');
+        throw err;
+      });
+      return _graphModulesPromise;
+    }
+    window.ensureGraphModulesLoaded = ensureGraphModulesLoaded;
+
+    let _proceduralModulesPromise = null;
+    function ensureProceduralModulesLoaded() {
+      if (window.ProceduralView && window._proceduralModulesInitialized) return Promise.resolve();
+      if (_proceduralModulesPromise) return _proceduralModulesPromise;
+      _proceduralModulesPromise = (async () => {
+        await loadScriptAssetOnce('js/data/procedural-dynamic-demos.js');
+        await loadScriptAssetOnce('js/modules/procedural/procedural-view.js');
+        if (!window._proceduralModulesInitialized && window.ProceduralView) {
+          window.ProceduralView.init();
+          window._proceduralModulesInitialized = true;
+        }
+      })().catch((err) => {
+        _proceduralModulesPromise = null;
+        console.error(err);
+        if (typeof showToast === 'function') showToast('程序性知识模块加载失败，请重试', 'warn');
+        throw err;
+      });
+      return _proceduralModulesPromise;
+    }
+    window.ensureProceduralModulesLoaded = ensureProceduralModulesLoaded;
+
+    let _docxExportPromise = null;
+    function ensureDocxExportLoaded() {
+      if (typeof window.exportWordDoc === 'function' || typeof exportWordDoc === 'function') return Promise.resolve();
+      if (_docxExportPromise) return _docxExportPromise;
+      _docxExportPromise = loadScriptAssetOnce('js/modules/docx-export.js').catch((err) => {
+        _docxExportPromise = null;
+        console.error(err);
+        if (typeof showToast === 'function') showToast('Word 导出模块加载失败，请重试', 'warn');
+        throw err;
+      });
+      return _docxExportPromise;
+    }
+    window.ensureDocxExportLoaded = ensureDocxExportLoaded;
+
     // Switch Main Views (题库 / 题目图谱 / 程序性知识 / 试卷预览)
     function switchView(viewName) {
       if (viewName !== 'paper' && viewName !== 'graph' && viewName !== 'procedural') viewName = 'bank';
@@ -53,15 +144,33 @@
 
       saveUiPreferences();
       if (viewName === 'paper') renderPaper();
-      if (viewName === 'graph' && window.GraphFilter) {
-        window.GraphFilter.refreshAllViews({ keepNetworkTransform: true });
+      if (viewName === 'graph') {
+        if (window.GraphFilter && window._graphModulesInitialized) {
+          window.GraphFilter.refreshAllViews({ keepNetworkTransform: true });
+        } else {
+          ensureGraphModulesLoaded().then(() => {
+            if (state.currentView === 'graph' && window.GraphFilter) {
+              window.GraphFilter.refreshAllViews({ keepNetworkTransform: true });
+              setTimeout(renderMath, 50);
+            }
+          }).catch(() => {});
+        }
       }
       let restoredProceduralScroll = false;
-      if (viewName === 'procedural' && window.ProceduralView) {
-        if (typeof window.ProceduralView.hasSuspendedDetailSnapshot === 'function' && window.ProceduralView.hasSuspendedDetailSnapshot()) {
-          restoredProceduralScroll = Boolean(window.ProceduralView.resumeSuspendedDetail());
+      if (viewName === 'procedural') {
+        if (window.ProceduralView && window._proceduralModulesInitialized) {
+          if (typeof window.ProceduralView.hasSuspendedDetailSnapshot === 'function' && window.ProceduralView.hasSuspendedDetailSnapshot()) {
+            restoredProceduralScroll = Boolean(window.ProceduralView.resumeSuspendedDetail());
+          } else {
+            window.ProceduralView.render();
+          }
         } else {
-          window.ProceduralView.render();
+          ensureProceduralModulesLoaded().then(() => {
+            if (state.currentView === 'procedural' && window.ProceduralView) {
+              window.ProceduralView.render();
+              setTimeout(renderMath, 50);
+            }
+          }).catch(() => {});
         }
       }
       if (!restoredProceduralScroll) {
@@ -699,18 +808,27 @@
       });
     })();
 
-    // Inline any local images on the card using window.IMAGE_BASE64_MAP or live canvas/fetch fallback so screenshots never lose images
+    // Inline any local images on the card on demand (direct fetch/canvas first, Base64 chunks only as fallback)
     async function inlineCardImagesWithBase64(rootEl) {
       if (!rootEl) return;
-      if (typeof window.ensureImageBase64Loaded === 'function' && (!window.IMAGE_BASE64_MAP || Object.keys(window.IMAGE_BASE64_MAP).length === 0)) {
-        try { await window.ensureImageBase64Loaded(); } catch (_) {}
-      }
-      const map = window.IMAGE_BASE64_MAP || {};
       const imgs = Array.from(rootEl.querySelectorAll('img'));
+      if (imgs.length === 0) return;
+
+      const isFileProtocol = typeof location !== 'undefined' && location.protocol === 'file:';
+      window.IMAGE_BASE64_MAP = window.IMAGE_BASE64_MAP || {};
+
+      function lookupBase64Map(rawSrc) {
+        const map = window.IMAGE_BASE64_MAP || {};
+        const cleanKey = rawSrc.replace(/^\.?\//, '').split('?')[0].split('#')[0];
+        const baseName = cleanKey.split('/').pop();
+        return map[cleanKey] || map[rawSrc] || (baseName ? map[`assets/images/${baseName}`] : null) || null;
+      }
+
+      const unresolvedImgs = [];
 
       await Promise.all(imgs.map(async (img) => {
         const rawSrc = img.getAttribute('src') || '';
-        if (!rawSrc) return;
+        if (!rawSrc || rawSrc.startsWith('data:')) return;
 
         // 1. Wait for original image element to finish loading if not yet complete
         if (!img.complete) {
@@ -721,23 +839,10 @@
           });
         }
 
-        let dataUrl = rawSrc.startsWith('data:') ? rawSrc : null;
+        let dataUrl = lookupBase64Map(rawSrc);
 
-        // 2. Lookup in prebuilt base64 map (by relative path, raw path, or filename)
-        if (!dataUrl) {
-          const cleanKey = rawSrc.replace(/^\.?\//, '').split('?')[0].split('#')[0];
-          const baseName = cleanKey.split('/').pop();
-          if (map[cleanKey]) {
-            dataUrl = map[cleanKey];
-          } else if (map[rawSrc]) {
-            dataUrl = map[rawSrc];
-          } else if (baseName && map[`assets/images/${baseName}`]) {
-            dataUrl = map[`assets/images/${baseName}`];
-          }
-        }
-
-        // 3. Fallback: fetch local image and convert to data URL (works on http/https or permissive local)
-        if (!dataUrl) {
+        // 2. Direct fetch of this single image first (avoids 95MB Base64 chunks on http/https)
+        if (!dataUrl && !isFileProtocol) {
           try {
             const resp = await fetch(img.src || rawSrc);
             if (resp.ok) {
@@ -748,11 +853,15 @@
                 reader.onerror = () => resolve(null);
                 reader.readAsDataURL(blob);
               });
+              if (dataUrl) {
+                const cleanKey = rawSrc.replace(/^\.?\//, '').split('?')[0].split('#')[0];
+                window.IMAGE_BASE64_MAP[cleanKey] = dataUrl;
+              }
             }
           } catch (_) {}
         }
 
-        // 4. Fallback: draw loaded <img> onto an offscreen canvas to extract data URL
+        // 3. Fallback: draw loaded <img> onto an offscreen canvas to extract data URL
         if (!dataUrl && img.complete && img.naturalWidth > 0) {
           try {
             const c = document.createElement('canvas');
@@ -764,8 +873,12 @@
           } catch (_) {}
         }
 
-        // 5. Apply dataUrl and wait for browser to decode the updated image
-        if (dataUrl && img.getAttribute('src') !== dataUrl) {
+        if (!dataUrl) {
+          unresolvedImgs.push({ img, rawSrc });
+          return;
+        }
+
+        if (img.getAttribute('src') !== dataUrl) {
           await new Promise(res => {
             img.onload = res;
             img.onerror = res;
@@ -777,6 +890,30 @@
           try { await img.decode(); } catch (_) {}
         }
       }));
+
+      // 4. Only load Base64 chunks if some images still could not be inlined (e.g. file:// protocol)
+      if (unresolvedImgs.length > 0) {
+        if (typeof window.ensureImageBase64Loaded !== 'function' && typeof window.ensureDocxExportLoaded === 'function') {
+          try { await window.ensureDocxExportLoaded(); } catch (_) {}
+        }
+        if (typeof window.ensureImageBase64Loaded === 'function') {
+          try { await window.ensureImageBase64Loaded(); } catch (_) {}
+        }
+        await Promise.all(unresolvedImgs.map(async ({ img, rawSrc }) => {
+          const dataUrl = lookupBase64Map(rawSrc);
+          if (dataUrl && img.getAttribute('src') !== dataUrl) {
+            await new Promise(res => {
+              img.onload = res;
+              img.onerror = res;
+              img.setAttribute('src', dataUrl);
+              setTimeout(res, 1500);
+            });
+          }
+          if (typeof img.decode === 'function') {
+            try { await img.decode(); } catch (_) {}
+          }
+        }));
+      }
     }
 
     // Zero-dependency native SVG foreignObject -> Canvas renderer (fallback if CDN libraries fail)

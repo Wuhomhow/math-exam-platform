@@ -678,13 +678,21 @@
   };
 
   // Global helper to jump from any question card to the Knowledge Graph view & focus node
-  window.jumpToKnowledgeGraphNode = function (nodeId) {
-    if (!window.GraphFilter || !window.GraphData) return;
+  window.jumpToKnowledgeGraphNode = async function (nodeId) {
+    if (!window.GraphData) return;
     const node = window.GraphData.getNode(nodeId);
     if (!node) return;
     if (typeof switchView === 'function') {
       switchView('graph');
     }
+    if ((!window.GraphFilter || !window._graphModulesInitialized) && typeof window.ensureGraphModulesLoaded === 'function') {
+      try {
+        await window.ensureGraphModulesLoaded();
+      } catch (_) {
+        return;
+      }
+    }
+    if (!window.GraphFilter) return;
     window.GraphFilter.selectNode(nodeId);
     if (typeof showToast === 'function') {
       showToast(`已定位到知识图谱节点：${node.name}`, 'info');

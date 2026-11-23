@@ -117,7 +117,7 @@
           <div id="catalogBodyContainer" class="mt-3 space-y-3">
             <button id="treeChapterAll" type="button" class="chapter-tree-btn is-active w-full flex items-center justify-between gap-3 px-3 py-2.5 rounded-lg border border-slate-200 text-sm font-semibold" data-chapter="all">
               <span>已选题库</span>
-              <span id="allQuestionCount" class="text-xs font-bold">3426 题</span>
+              <span id="allQuestionCount" class="text-xs font-bold">3491 题</span>
             </button>
             <div id="chapterNavigationTree" class="space-y-3" aria-label="按年级和册次浏览题目"></div>
           </div>
@@ -628,39 +628,33 @@
   </div>
 
   <!-- INLINE DATA & APPLICATION LOGIC -->
-  <!-- 1. 题库核心数据与知识图谱独立数据层（毫秒级瞬时解析） -->
-  <script src="js/data/questions.js"></script>
-  <script src="js/data/knowledge-nodes.js"></script>
-  <script src="js/data/knowledge-relations.js"></script>
-  <script src="js/data/question-knowledge.js"></script>
-  <script src="js/data/procedural-knowledge.js"></script>
-  <script src="js/data/question-procedures.js"></script>
-  <script src="js/data/curriculum-catalog.js"></script>
-  <script src="js/data/question-catalog-map.js"></script>
-  <script src="js/data/procedural-dynamic-demos.js"></script>
+  <!-- 1. 首屏必需的数据与模块（defer 并行下载、按序执行，不阻塞 HTML 解析） -->
+  <script defer src="js/data/questions.js"></script>
+  <script defer src="js/data/knowledge-nodes.js"></script>
+  <script defer src="js/data/knowledge-relations.js"></script>
+  <script defer src="js/data/question-knowledge.js"></script>
+  <script defer src="js/data/procedural-knowledge.js"></script>
+  <script defer src="js/data/question-procedures.js"></script>
+  <script defer src="js/data/curriculum-catalog.js"></script>
+  <script defer src="js/data/question-catalog-map.js"></script>
 
   <!-- 2. 状态管理与存储 -->
-  <script src="js/modules/state.js"></script>
+  <script defer src="js/modules/state.js"></script>
 
   <!-- 3. 通用工具库与数学渲染 -->
-  <script src="js/utils/toast.js"></script>
-  <script src="js/utils/math.js"></script>
-  <script src="js/utils/similarity.js"></script>
+  <script defer src="js/utils/toast.js"></script>
+  <script defer src="js/utils/math.js"></script>
+  <script defer src="js/utils/similarity.js"></script>
 
-  <!-- 4. 知识图谱模块（数据索引、筛选、树状图、SVG网络图、节点详情） -->
-  <script src="js/modules/knowledge-graph/graph-data.js"></script>
-  <script src="js/modules/knowledge-graph/graph-filter.js"></script>
-  <script src="js/modules/knowledge-graph/graph-tree.js"></script>
-  <script src="js/modules/knowledge-graph/graph-network.js"></script>
-  <script src="js/modules/knowledge-graph/graph-detail.js"></script>
+  <!-- 4. 知识图谱核心索引与题卡标签支持（树状图/网络图/筛选视图改为首次进入图谱时按需加载） -->
+  <script defer src="js/modules/knowledge-graph/graph-data.js"></script>
+  <script defer src="js/modules/knowledge-graph/graph-detail.js"></script>
 
-  <!-- 5. 程序性知识独立模块与业务视图渲染、Word 导出引擎 -->
-  <script src="js/modules/procedural/procedural-view.js"></script>
-  <script src="js/modules/render.js"></script>
-  <script src="js/modules/docx-export.js"></script>
+  <!-- 5. 业务视图渲染（程序性知识演示/视图与 Word 导出引擎改为按需加载） -->
+  <script defer src="js/modules/render.js"></script>
 
-  <!-- 6. 事件绑定与主程序启动（首屏瞬时呈现） -->
-  <script src="js/main.js"></script>
+  <!-- 6. 事件绑定与主程序启动 -->
+  <script defer src="js/main.js"></script>
 
 
   <!-- 6. 新手引导卡片专属交互脚本 -->

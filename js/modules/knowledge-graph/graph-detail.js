@@ -463,12 +463,7 @@
         }
 
         const imgHtml = q.image ? `<div class="my-1.5"><img src="${q.image}" class="max-h-40 max-w-xs h-auto rounded object-contain"></div>` : '';
-        const pTagsHtml = typeof window.renderQuestionProceduralTagsHtml === 'function'
-          ? window.renderQuestionProceduralTagsHtml(q.id)
-          : '';
-        const kTagsHtml = (typeof window.renderQuestionKnowledgeTagsHtml === 'function'
-          ? window.renderQuestionKnowledgeTagsHtml(q.id)
-          : '') + pTagsHtml;
+        const kTagsHtml = '';
 
         return `
           <div class="question-card ${isSelected ? 'is-selected' : ''}" data-id="${q.id}">
@@ -482,7 +477,7 @@
                 <span class="${diffColor}">${q.difficulty}</span>
               </div>
               <div class="q-meta-kp">
-                <span>原标注考点：</span><span class="q-meta-kp-text">${escapeHtml(q.knowledge)}</span>
+                <span>考点：</span><span class="q-meta-kp-text">${escapeHtml(window.GraphData ? window.GraphData.getDisplayKnowledgeName(q) : (q.knowledge || ''))}</span>
               </div>
             </div>
 
@@ -495,12 +490,12 @@
             </div>
 
             <!-- Analysis Accordion Drawer -->
-            <div id="graph_analysis_${q.id}" class="hidden q-analysis-panel text-xs space-y-1.5">
+            <div id="graph_analysis_${q.id}" class="hidden q-analysis-panel text-sm space-y-1.5">
               ${typeof window.renderQuestionAnalysisBoxHtml === 'function' ? window.renderQuestionAnalysisBoxHtml(q) : `
               <div class="flex items-center space-x-2 font-bold text-slate-900">
                 <span class="w-1.5 h-1.5 rounded-full bg-[#0F766E]"></span>
                 <span>参考答案：</span>
-                <span class="text-[#0F766E] font-semibold text-base tracking-wide">${formatMathHtml(q.answer)}</span>
+                <span class="text-[#0F766E] font-semibold text-sm tracking-wide">${formatMathHtml(q.answer)}</span>
               </div>
               <div class="text-slate-600"><b class="text-slate-800">【分析】</b>${formatMathHtml(q.analysis)}</div>
               ${q.detail && q.detail !== '略' ? `<div class="text-slate-700 pt-1.5 border-t border-slate-200/70 leading-relaxed"><b class="text-slate-800">【详解】</b>${formatMathHtml(q.detail)}</div>` : ''}

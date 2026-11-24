@@ -472,7 +472,7 @@
         <div class="flex items-center space-x-2 font-bold text-slate-900">
           <span class="w-1.5 h-1.5 rounded-full bg-[#0F766E]"></span>
           <span>参考答案：</span>
-          <span class="text-[#0F766E] font-semibold text-base tracking-wide">${formatMathHtml(q.answer)}</span>
+          <span class="text-[#0F766E] font-semibold text-sm tracking-wide">${formatMathHtml(q.answer)}</span>
         </div>
       `;
 
@@ -485,7 +485,7 @@
       }
 
       if (parts.point) {
-        html += `<div class="text-slate-600 pt-1.5 border-t border-slate-200/60 text-xs leading-relaxed"><b class="text-slate-800">【点睛】</b>${formatMathHtml(parts.point)}</div>`;
+        html += `<div class="text-slate-600 pt-1.5 border-t border-slate-200/60 text-sm leading-relaxed"><b class="text-slate-800">【点睛】</b>${formatMathHtml(parts.point)}</div>`;
       }
 
       return html;

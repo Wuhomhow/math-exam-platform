@@ -186,9 +186,37 @@
       return map.get(nodeId) || [];
     },
 
+    getPrimaryQuestionsForNode(nodeId, includeDescendants = true) {
+      return this.getQuestionsForNode(nodeId, includeDescendants)
+        .filter(entry => entry && entry.role === 'primary' && entry.question)
+        .map(entry => entry.question);
+    },
+
     getKnowledgeForQuestion(questionId) {
       if (!this.initialized) this.init();
       return this.knowledgeByQuestion.get(questionId) || [];
+    },
+
+    getPrimaryKnowledgeNode(questionId) {
+      const entries = this.getKnowledgeForQuestion(questionId);
+      if (!entries.length) return null;
+      const primary = entries.find(e => e.role === 'primary' && e.node);
+      return (primary && primary.node) || (entries[0] && entries[0].node) || null;
+    },
+
+    getDisplayKnowledgeName(q) {
+      if (!q) return '';
+      const entries = q.id ? this.getKnowledgeForQuestion(q.id) : [];
+      if (entries.length > 0) {
+        const primaries = entries.filter(e => e.role === 'primary' && e.node && e.node.name);
+        const target = primaries.length > 0 ? primaries : entries.filter(e => e.node && e.node.name);
+        const names = [];
+        target.forEach(e => {
+          if (!names.includes(e.node.name)) names.push(e.node.name);
+        });
+        if (names.length > 0) return names.join('、');
+      }
+      return String(q.knowledge || '').trim();
     },
 
     getRelationsForNode(nodeId) {

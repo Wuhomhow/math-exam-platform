@@ -281,56 +281,215 @@
     };
   }
 
-  // 获取指定题目的相似题列表（按领域索引高速匹配，默认最多返回 3 道）
+  // ============================================================
+  // 严格 100% 程序性知识匹配索引（优先使用 QUESTION_PROCEDURES 精确程序性知识集合）
+  // ============================================================
+  let procIndexBuilt = false;
+  let qProcKeyMap = new Map();       // questionId -> sorted procedureId signature (e.g. "P33" or "P23|P26")
+  let qSubTypeMap = new Map();       // questionId -> Set<subType>
+  let qProcIdsMap = new Map();       // questionId -> Array<procedureId>
+  let procKeyToQuestions = new Map();// signature -> Array<question>
+  let procMetaById = new Map();      // procedureId -> procedure object
+
+  function ensureProceduralIndex() {
+    if (procIndexBuilt) return;
+    procIndexBuilt = true;
+    qProcKeyMap.clear();
+    qSubTypeMap.clear();
+    qProcIdsMap.clear();
+    procKeyToQuestions.clear();
+    procMetaById.clear();
+
+    const procs = Array.isArray(window.PROCEDURAL_KNOWLEDGE) ? window.PROCEDURAL_KNOWLEDGE : [];
+    procs.forEach(p => {
+      if (p && p.id) procMetaById.set(p.id, p);
+    });
+
+    const qById = new Map((Array.isArray(window.QUESTION_BANK) ? window.QUESTION_BANK : []).map(q => [q.id, q]));
+    const qps = Array.isArray(window.QUESTION_PROCEDURES) ? window.QUESTION_PROCEDURES : [];
+    const tempPids = new Map();
+    const tempSubs = new Map();
+
+    qps.forEach(r => {
+      if (!r || !r.questionId || !r.procedureId) return;
+      if (!tempPids.has(r.questionId)) tempPids.set(r.questionId, new Set());
+      tempPids.get(r.questionId).add(r.procedureId);
+      if (r.subType) {
+        if (!tempSubs.has(r.questionId)) tempSubs.set(r.questionId, new Set());
+        tempSubs.get(r.questionId).add(r.subType);
+      }
+    });
+
+    tempPids.forEach((pidSet, qid) => {
+      const q = qById.get(qid);
+      if (!q) return;
+      const sortedIds = Array.from(pidSet).sort();
+      const key = sortedIds.join('|');
+      qProcIdsMap.set(qid, sortedIds);
+      qProcKeyMap.set(qid, key);
+      qSubTypeMap.set(qid, tempSubs.get(qid) || new Set());
+      if (!procKeyToQuestions.has(key)) procKeyToQuestions.set(key, []);
+      procKeyToQuestions.get(key).push(q);
+    });
+  }
+
+  function getGraphKnowledgeSignature(questionId) {
+    if (!window.GraphData) return null;
+    if (!window.GraphData.initialized) window.GraphData.init();
+    const entries = window.GraphData.getKnowledgeForQuestion(questionId) || [];
+    if (!entries.length) return null;
+    const primary = entries.find(e => e.role === 'primary' && e.node);
+    const primaryId = primary ? primary.node.id : entries[0].node.id;
+    const allIds = entries.map(e => e.node && e.node.id).filter(Boolean).sort().join('|');
+    return { primaryId, allIds, entries };
+  }
+
+  // 获取指定题目的相似题列表（严格 100% 相同程序性知识匹配，默认最多返回 3 道）
   function getSimilarQuestionsFor(questionId, maxCount = 3) {
     if (!questionId || typeof QUESTION_BANK === 'undefined') return [];
     ensureProfilesInitialized();
+    ensureProceduralIndex();
 
     if (similarCache.has(questionId)) {
       return similarCache.get(questionId).slice(0, maxCount);
     }
 
-    const p1 = profileMap.get(questionId);
-    if (!p1) return [];
-
-    const candidatePool = domainMap.get(p1.domain) || [];
-    const targetQ = candidatePool.find(q => q.id === questionId) || QUESTION_BANK.find(q => q.id === questionId);
+    const targetQ = QUESTION_BANK.find(q => q.id === questionId);
     if (!targetQ) return [];
 
     const matches = [];
-    for (const candidate of candidatePool) {
-      if (candidate.id === questionId) continue;
-      // 跳过题干几乎一模一样的意外重复题
-      if (candidate.stem && targetQ.stem && candidate.stem.trim() === targetQ.stem.trim()) continue;
+    const targetProcKey = qProcKeyMap.get(questionId);
 
-      const res = computeCognitiveSimilarity(targetQ, candidate);
-      if (res && res.score >= 0.80) {
-        matches.push(res);
+    // 路径 1：题目已关联程序性知识（Pxx）→ 仅匹配使用完全相同程序性知识集合（100% 一致）的题目
+    if (targetProcKey) {
+      const targetSubTypes = qSubTypeMap.get(questionId) || new Set();
+      const targetPids = qProcIdsMap.get(questionId) || [];
+      const procNames = targetPids
+        .map(pid => (procMetaById.get(pid) && procMetaById.get(pid).name) || pid)
+        .join(' + ');
+      const firstProc = procMetaById.get(targetPids[0]);
+      const procLabel = (firstProc && Array.isArray(firstProc.steps) && firstProc.steps.length)
+        ? firstProc.steps.map(s => s.title).slice(0, 4).join(' → ')
+        : procNames;
+
+      const sameProcPool = procKeyToQuestions.get(targetProcKey) || [];
+      for (const candidate of sameProcPool) {
+        if (candidate.id === questionId) continue;
+        if (candidate.stem && targetQ.stem && candidate.stem.trim() === targetQ.stem.trim()) continue;
+
+        const candSubTypes = qSubTypeMap.get(candidate.id) || new Set();
+        let subTypeOverlap = 0;
+        for (const st of targetSubTypes) {
+          if (candSubTypes.has(st)) subTypeOverlap++;
+        }
+        const exactSubType = targetSubTypes.size > 0 && subTypeOverlap === targetSubTypes.size && candSubTypes.size === targetSubTypes.size;
+
+        matches.push({
+          question: candidate,
+          score: 1.0,
+          similarityPercent: 100,
+          matchType: 'exact_procedural',
+          condLabel: procNames,
+          triggerDesc: `完全相同的程序性知识：${procNames}`,
+          procLabel,
+          exactSubType,
+          subTypeOverlap,
+          sameChapter: String(candidate.chapter || '') === String(targetQ.chapter || ''),
+          sameSectionGroup: String(candidate.chapter || '').slice(0, 4) === String(targetQ.chapter || '').slice(0, 4),
+          sameType: candidate.type === targetQ.type
+        });
       }
+
+      matches.sort((a, b) => {
+        if (a.exactSubType !== b.exactSubType) return b.exactSubType ? 1 : -1;
+        if (a.subTypeOverlap !== b.subTypeOverlap) return b.subTypeOverlap - a.subTypeOverlap;
+        if (a.sameType !== b.sameType) return b.sameType ? 1 : -1;
+        if (a.sameChapter !== b.sameChapter) return b.sameChapter ? 1 : -1;
+        return 0;
+      });
+
+      similarCache.set(questionId, matches);
+      return matches.slice(0, maxCount);
     }
 
-    // 排序优先级：
-    // 1. 认知同构度得分（四舍五入到百分位）
-    // 2. 同大章/单元优先（如 16.2 整式乘法内部互推优先）
-    // 3. 同小节优先
-    // 4. 题型互补与同题型平衡
-    matches.sort((a, b) => {
-      const scoreDiff = Math.round(b.score * 100) - Math.round(a.score * 100);
-      if (scoreDiff !== 0) return scoreDiff;
-      if (a.sameSectionGroup !== b.sameSectionGroup) return b.sameSectionGroup ? 1 : -1;
-      if (a.sameChapter !== b.sameChapter) return b.sameChapter ? 1 : -1;
-      if (a.sameType !== b.sameType) return b.sameType ? 1 : -1;
-      return 0;
-    });
+    // 路径 2：尚未建设 Pxx 的章节 → 要求题目图谱核心知识点集合 100% 一致（且无额外程序性差异）
+    const targetGraphSig = getGraphKnowledgeSignature(questionId);
+    const p1 = profileMap.get(questionId);
+    if (targetGraphSig && window.GraphData) {
+      const primQs = window.GraphData.getPrimaryQuestionsForNode(targetGraphSig.primaryId, true);
+      const primNode = window.GraphData.getNode(targetGraphSig.primaryId);
+      const labelName = primNode ? primNode.name : String(targetQ.knowledge || '');
+      const procChain = (p1 && p1.procList.length) ? p1.procList.join(' → ') : labelName;
+
+      for (const candidate of primQs) {
+        if (candidate.id === questionId) continue;
+        if (candidate.stem && targetQ.stem && candidate.stem.trim() === targetQ.stem.trim()) continue;
+        // 排除已归属 Pxx 的题目，避免跨程序性体系混推
+        if (qProcKeyMap.has(candidate.id)) continue;
+
+        const candSig = getGraphKnowledgeSignature(candidate.id);
+        if (!candSig || candSig.allIds !== targetGraphSig.allIds) continue;
+
+        const p2 = profileMap.get(candidate.id);
+        const condExact = p1 && p2 && (jaccardSimilarity(p1.condIds, p2.condIds) === 1.0 || (p1.condIds.size === 0 && p2.condIds.size === 0));
+        if (!condExact) continue;
+
+        matches.push({
+          question: candidate,
+          score: 1.0,
+          similarityPercent: 100,
+          matchType: 'exact_graph_procedural',
+          condLabel: labelName,
+          triggerDesc: `完全相同的核心知识点与解题程序：${labelName}`,
+          procLabel: procChain,
+          sameChapter: String(candidate.chapter || '') === String(targetQ.chapter || ''),
+          sameSectionGroup: String(candidate.chapter || '').slice(0, 4) === String(targetQ.chapter || '').slice(0, 4),
+          sameType: candidate.type === targetQ.type
+        });
+      }
+
+      matches.sort((a, b) => {
+        if (a.sameType !== b.sameType) return b.sameType ? 1 : -1;
+        if (a.sameChapter !== b.sameChapter) return b.sameChapter ? 1 : -1;
+        return 0;
+      });
+    }
 
     similarCache.set(questionId, matches);
     return matches.slice(0, maxCount);
   }
 
-  // 获取单道题的认知策略画像（用于弹窗顶部展示原题的「条件性知识 + 程序性知识」解析）
+  // 获取单道题的认知策略画像（用于弹窗顶部展示原题的程序性知识）
   function getQuestionCognitiveProfile(questionId) {
     ensureProfilesInitialized();
+    ensureProceduralIndex();
+
+    const pids = qProcIdsMap.get(questionId);
+    if (pids && pids.length > 0) {
+      const names = pids.map(pid => (procMetaById.get(pid) && procMetaById.get(pid).name) || pid);
+      const firstProc = procMetaById.get(pids[0]);
+      const steps = (firstProc && Array.isArray(firstProc.steps) && firstProc.steps.length)
+        ? firstProc.steps.map(s => s.title).join(' → ')
+        : names.join(' + ');
+      return {
+        condTitle: names.join(' + '),
+        condTrigger: `100% 相同程序性知识：${names.join(' + ')}`,
+        procChain: steps
+      };
+    }
+
+    const graphSig = getGraphKnowledgeSignature(questionId);
     const p = profileMap.get(questionId);
+    if (graphSig && window.GraphData) {
+      const primNode = window.GraphData.getNode(graphSig.primaryId);
+      const name = primNode ? primNode.name : '标准法则应用型';
+      return {
+        condTitle: name,
+        condTrigger: `100% 相同核心考点：${name}`,
+        procChain: (p && p.procList.length) ? p.procList.join(' → ') : name
+      };
+    }
+
     if (!p) return null;
     const hasSpecialCond = p.condList.length > 0;
     return {

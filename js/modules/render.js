@@ -8,7 +8,7 @@ function renderFallbackAnalysisBoxHtml(q) {
         <div class="flex items-center space-x-2 font-bold text-slate-900">
             <span class="w-1.5 h-1.5 rounded-full bg-[#0F766E]"></span>
             <span>参考答案：</span>
-            <span class="text-[#0F766E] font-semibold text-base tracking-wide">${formatMathHtml(q.answer)}</span>
+            <span class="text-[#0F766E] font-semibold text-sm tracking-wide">${formatMathHtml(q.answer)}</span>
         </div>
         ${hasAnalysis ? `<div class="text-slate-600"><b class="text-slate-800">【分析】</b>${formatMathHtml(analysis)}</div>` : ''}
         ${hasDetail ? `<div class="text-slate-700 ${hasAnalysis ? 'pt-1.5 border-t border-slate-200/70 ' : ''}leading-relaxed"><b class="text-slate-800">【详解】</b>${formatMathHtml(detail)}</div>` : ''}
@@ -222,18 +222,104 @@ function getDifficultyBadgeClass(diff) {
       return 'calc';
     }
 
+    function getDisplayKnowledgeName(q) {
+      if (!q) return '';
+      if (window.GraphData && typeof window.GraphData.getDisplayKnowledgeName === 'function') {
+        return window.GraphData.getDisplayKnowledgeName(q);
+      }
+      return String(q.knowledge || '').trim();
+    }
+
+    let _pedagogyTagCache = null;
+    function getQuestionPedagogyTag(questionId) {
+      if (!_pedagogyTagCache) {
+        _pedagogyTagCache = new Map();
+        const catalogMap = (window.QUESTION_CATALOG_MAP && typeof window.QUESTION_CATALOG_MAP === 'object')
+          ? window.QUESTION_CATALOG_MAP
+          : {};
+        Object.keys(catalogMap).forEach(qid => {
+          const entry = catalogMap[qid];
+          if (entry && (entry.pedagogyTag === 'procedural_bank' || entry.pedagogyTag === 'comprehensive')) {
+            _pedagogyTagCache.set(qid, entry.pedagogyTag);
+          }
+        });
+        const qps = Array.isArray(window.QUESTION_PROCEDURES) ? window.QUESTION_PROCEDURES : [];
+        qps.forEach(r => {
+          if (!r || !r.questionId) return;
+          if (r.visibility === 'bank_only') {
+            if (_pedagogyTagCache.get(r.questionId) !== 'procedural_featured') {
+              _pedagogyTagCache.set(r.questionId, 'procedural_bank');
+            }
+          } else {
+            _pedagogyTagCache.set(r.questionId, 'procedural_featured');
+          }
+        });
+      }
+      if (_pedagogyTagCache.has(questionId)) {
+        return _pedagogyTagCache.get(questionId);
+      }
+      // 尚未在 QUESTION_PROCEDURES 或 QUESTION_CATALOG_MAP 显式标注的题：
+      // 仅含单个图谱知识点且无综合考查属性 → 程序性扩充；否则 → 综合拓展
+      if (window.GraphData) {
+        const entries = window.GraphData.getKnowledgeForQuestion(questionId) || [];
+        const hasCompRole = entries.some(e => e.role === 'comprehensive');
+        if (entries.length === 1 && !hasCompRole) {
+          const q = window.GraphData.questionById ? window.GraphData.questionById.get(questionId) : null;
+          const rawKp = String((q && q.knowledge) || '').trim();
+          const rawParts = rawKp ? rawKp.split(/[、；;，,]/).map(s => s.trim()).filter(Boolean) : [];
+          const isSynth = /综合|压轴|探究|动点|折叠|割补|存在性|新定义/.test(rawKp);
+          if (!isSynth && rawParts.length <= 1) {
+            _pedagogyTagCache.set(questionId, 'procedural_bank');
+            return 'procedural_bank';
+          }
+        }
+      }
+      _pedagogyTagCache.set(questionId, 'comprehensive');
+      return 'comprehensive';
+    }
+
+    function getKpSectionData(kpId) {
+      if (!window.GraphData) return null;
+      const qs = window.GraphData.getPrimaryQuestionsForNode(kpId, true);
+      const counts = { all: qs.length, procedural_featured: 0, procedural_bank: 0, comprehensive: 0 };
+      const tagByQuestionId = new Map();
+      const items = qs.map(q => {
+        const tag = getQuestionPedagogyTag(q.id);
+        tagByQuestionId.set(q.id, tag);
+        if (counts[tag] !== undefined) counts[tag]++;
+        return { question: q, pedagogyTag: tag };
+      });
+      return { items, counts, tagByQuestionId };
+    }
+
     function matchesSearchKeyword(q, keyword) {
       if (!keyword) return true;
       const kw = String(keyword).trim().toLowerCase();
       if (!kw) return true;
       const matchStem = String(q.stem || '').toLowerCase().includes(kw);
+      const matchGraphKp = getDisplayKnowledgeName(q).toLowerCase().includes(kw);
       const matchKp = String(q.knowledge || '').toLowerCase().includes(kw);
       const matchAnswer = String(q.answer || '').toLowerCase().includes(kw);
       const matchChap = String(q.chapter || '').toLowerCase().includes(kw);
-      return matchStem || matchKp || matchAnswer || matchChap;
+      return matchStem || matchGraphKp || matchKp || matchAnswer || matchChap;
     }
 
     function getCurrentFilteredQuestions() {
+      const isKpFilter = typeof state.chapterFilter === 'string' && state.chapterFilter.startsWith('kp:');
+      if (isKpFilter && window.GraphData) {
+        const kpData = getKpSectionData(state.chapterFilter.slice(3));
+        const items = kpData ? kpData.items : [];
+        return items.filter(it => {
+          const q = it && it.question;
+          if (!q) return false;
+          if (state.pedagogyFilter && state.pedagogyFilter !== 'all' && it.pedagogyTag !== state.pedagogyFilter) return false;
+          if (state.typeFilter !== 'all' && normalizeQuestionType(q) !== state.typeFilter) return false;
+          if (state.diffFilter !== 'all' && normalizeDifficulty(q.difficulty) !== state.diffFilter) return false;
+          if (state.searchKeyword && !matchesSearchKeyword(q, state.searchKeyword)) return false;
+          return true;
+        }).map(it => it.question);
+      }
+
       const isSectionFilter = typeof state.chapterFilter === 'string' && state.chapterFilter.startsWith('section:');
       if (isSectionFilter && window.CurriculumCatalogService) {
         const secId = state.chapterFilter.slice(8);
@@ -324,15 +410,19 @@ function getDifficultyBadgeClass(diff) {
       // Dynamically update type & difficulty filter counts based on selected chapter
       const allQuestionCountEl = document.getElementById('allQuestionCount');
       if (allQuestionCountEl) allQuestionCountEl.textContent = `${QUESTION_BANK.length} 题`;
+      const isKpFilter = typeof state.chapterFilter === 'string' && state.chapterFilter.startsWith('kp:');
       const isSectionFilter = typeof state.chapterFilter === 'string' && state.chapterFilter.startsWith('section:');
-      const activeSectionData = (isSectionFilter && window.CurriculumCatalogService)
-        ? window.CurriculumCatalogService.getSectionItems(state.chapterFilter.slice(8))
-        : null;
+      const hasPedagogyCatalog = isKpFilter || isSectionFilter;
+      const activeSectionData = isKpFilter
+        ? getKpSectionData(state.chapterFilter.slice(3))
+        : ((isSectionFilter && window.CurriculumCatalogService)
+            ? window.CurriculumCatalogService.getSectionItems(state.chapterFilter.slice(8))
+            : null);
       const pedagogyRowEl = document.getElementById('pedagogyFilterRow');
       if (pedagogyRowEl) {
-        pedagogyRowEl.classList.toggle('hidden', !isSectionFilter);
+        pedagogyRowEl.classList.toggle('hidden', !hasPedagogyCatalog);
       }
-      if (isSectionFilter && activeSectionData) {
+      if (hasPedagogyCatalog && activeSectionData) {
         const pedLabels = {
           all: '全部',
           procedural_featured: '程序性精选',
@@ -355,7 +445,7 @@ function getDifficultyBadgeClass(diff) {
         ? window.ProceduralKnowledgeService.getQuestionCollectionByProcedure(activeProcId)
         : null;
 
-      const chapPool = isSectionFilter
+      const chapPool = hasPedagogyCatalog
         ? (activeSectionData
             ? activeSectionData.items
                 .filter(it => !state.pedagogyFilter || state.pedagogyFilter === 'all' || it.pedagogyTag === state.pedagogyFilter)
@@ -513,7 +603,7 @@ function getDifficultyBadgeClass(diff) {
           </button>
         `;
 
-        const pedagogyTag = (isSectionFilter && activeSectionData) ? activeSectionData.tagByQuestionId.get(q.id) : null;
+        const pedagogyTag = (hasPedagogyCatalog && activeSectionData) ? activeSectionData.tagByQuestionId.get(q.id) : null;
         const pedagogyBadgeHtml = (pedagogyTag && window.CurriculumCatalogService)
           ? window.CurriculumCatalogService.renderPedagogyBadgeHtml(pedagogyTag)
           : '';
@@ -530,7 +620,7 @@ function getDifficultyBadgeClass(diff) {
                 <span class="${diffColor}">${q.difficulty}</span>
               </div>
               <div class="q-meta-kp">
-                <span>考点：</span><span class="q-meta-kp-text">${q.knowledge}</span>
+                <span>考点：</span><span class="q-meta-kp-text">${getDisplayKnowledgeName(q)}</span>
               </div>
             </div>
 
@@ -539,12 +629,10 @@ function getDifficultyBadgeClass(diff) {
               <div class="q-stem-content">${formatMathHtml(q.stem)}</div>
               ${imgHtml}
               ${optionsHtml}
-              ${typeof window.renderQuestionProceduralTagsHtml === 'function' ? window.renderQuestionProceduralTagsHtml(q.id) : ''}
-              ${typeof window.renderQuestionKnowledgeTagsHtml === 'function' ? window.renderQuestionKnowledgeTagsHtml(q.id) : ''}
             </div>
 
             <!-- Analysis Accordion Drawer -->
-            <div id="analysis_${q.id}" class="hidden q-analysis-panel text-xs space-y-1.5">
+            <div id="analysis_${q.id}" class="hidden q-analysis-panel text-sm space-y-1.5">
               ${typeof window.renderQuestionAnalysisBoxHtml === 'function' ? window.renderQuestionAnalysisBoxHtml(q) : renderFallbackAnalysisBoxHtml(q)}
             </div>
 
@@ -657,7 +745,10 @@ function getDifficultyBadgeClass(diff) {
       const similarItems = typeof window.getSimilarQuestionsFor === 'function'
         ? window.getSimilarQuestionsFor(questionId, 3)
         : [];
-      if (similarItems.length === 0) return;
+      if (similarItems.length === 0) {
+        if (typeof showToast === 'function') showToast('当前题目暂无使用完全相同程序性知识的变式题', 'info');
+        return;
+      }
 
       const cogProfile = typeof window.getQuestionCognitiveProfile === 'function'
         ? window.getQuestionCognitiveProfile(questionId)
@@ -724,7 +815,7 @@ function getDifficultyBadgeClass(diff) {
                 <span class="${diffColor}">${sq.difficulty}</span>
               </div>
               <div class="q-meta-kp">
-                <span>考点：</span><span class="q-meta-kp-text">${sq.knowledge}</span>
+                <span>考点：</span><span class="q-meta-kp-text">${getDisplayKnowledgeName(sq)}</span>
               </div>
             </div>
 
@@ -736,7 +827,7 @@ function getDifficultyBadgeClass(diff) {
             </div>
 
             <!-- Analysis Accordion -->
-            <div id="sim_analysis_${sq.id}" class="hidden q-analysis-panel text-xs space-y-1.5">
+            <div id="sim_analysis_${sq.id}" class="hidden q-analysis-panel text-sm space-y-1.5">
              ${typeof window.renderQuestionAnalysisBoxHtml === 'function' ? window.renderQuestionAnalysisBoxHtml(sq) : renderFallbackAnalysisBoxHtml(sq)}
             </div>
 

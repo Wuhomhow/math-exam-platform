@@ -331,7 +331,7 @@
           id: 'g7_c1_s2_5',
           code: '1.2.5–1.2.6',
           title: '1.2.5–1.2.6 绝对值与有理数大小比较',
-          procedureIds: ['P33'],
+          procedureIds: ['P54', 'P55', 'P56', 'P33'],
           fallback: false
         },
         {

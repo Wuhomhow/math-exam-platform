@@ -307,7 +307,12 @@
         },
         {
           id: null,
-          name: '代入消元法、提取公因式与不等式的基本性质（乘负数不等号反向）',
+          name: '代入消元法',
+          type: 'operation'
+        },
+        {
+          id: null,
+          name: '不等式的基本性质（两边同乘负数不等号反向）',
           type: 'operation'
         }
       ],
@@ -399,8 +404,10 @@
         }
       ],
       prerequisites: [
-        { id: null, name: '用字母表示数的意义与基本运算符号（加、减、乘、除、乘方）', type: 'concept' },
-        { id: null, name: '带分数与假分数的互化、分数与除法的关系', type: 'operation' }
+        { id: null, name: '用字母表示数的意义', type: 'concept' },
+        { id: null, name: '基本运算符号（加、减、乘、除、乘方）', type: 'concept' },
+        { id: null, name: '带分数与假分数的互化', type: 'operation' },
+        { id: null, name: '分数与除法的关系', type: 'operation' }
       ],
       prerequisiteProcedureIds: [],
       subsequentProcedureIds: ['P05', 'P29'],
@@ -479,7 +486,10 @@
       ],
       prerequisites: [
         { id: 'P04', name: '识别代数式与判断规范书写', type: 'procedural_knowledge' },
-        { id: null, name: '常见基本数量关系（单价总价、行程、打折与增长率、十进制数位计数）', type: 'concept' }
+        { id: null, name: '单价、数量与总价的基本数量关系', type: 'concept' },
+        { id: null, name: '行程问题中路程、速度与时间的关系', type: 'concept' },
+        { id: null, name: '打折与增长率的百分比表示', type: 'concept' },
+        { id: null, name: '十进制多位数按数位表示的方法', type: 'concept' }
       ],
       prerequisiteProcedureIds: ['P04'],
       subsequentProcedureIds: ['P08', 'P45'],
@@ -546,7 +556,8 @@
       ],
       prerequisites: [
         { id: 'P05', name: '根据文字与简单数量关系列代数式', type: 'procedural_knowledge' },
-        { id: null, name: '乘法分配律与简单字母式加减整理', type: 'operation' }
+        { id: null, name: '乘法分配律', type: 'operation' },
+        { id: null, name: '简单字母式的加减整理', type: 'operation' }
       ],
       prerequisiteProcedureIds: ['P05'],
       subsequentProcedureIds: ['P08', 'P45'],
@@ -744,7 +755,8 @@
       prerequisites: [
         { id: 'P08', name: '直接代入字母数值求代数式的值', type: 'procedural_knowledge' },
         { id: 'P32', name: '运用有理数乘方符号法则与混合运算顺序计算', type: 'procedural_knowledge' },
-        { id: null, name: '乘法分配律的逆用（提公因数）与添括号变号基础', type: 'operation' }
+        { id: null, name: '乘法分配律的逆用（提公因数）', type: 'operation' },
+        { id: null, name: '添括号变号法则', type: 'operation' }
       ],
       prerequisiteProcedureIds: ['P08', 'P32'],
       subsequentProcedureIds: ['P20'],
@@ -824,7 +836,12 @@
             { "id": "P37", "name": "运用等腰三角形“等边对等角”与“等角对等边”进行边角转化及判定", "type": "procedural_knowledge" },
             {
                 "id": null,
-                "name": "三角形的高、中线、角平分线定义及直角三角形两锐角互余性质",
+                "name": "三角形的高、中线与角平分线的定义",
+                "type": "concept"
+            },
+            {
+                "id": null,
+                "name": "直角三角形两锐角互余的性质",
                 "type": "concept"
             }
         ],
@@ -932,7 +949,12 @@
         },
         {
           id: null,
-          name: '直接开平方法解简单方程（如 $m^{2}=a$）与绝对值方程求解',
+          name: '直接开平方法解简单平方方程（如 $m^{2}=a$）',
+          type: 'operation'
+        },
+        {
+          id: null,
+          name: '简单绝对值方程的求解',
           type: 'operation'
         }
       ],
@@ -1036,7 +1058,12 @@
         },
         {
           id: null,
-          name: '有理数乘除运算与简单分式方程求解',
+          name: '有理数的乘除运算',
+          type: 'operation'
+        },
+        {
+          id: null,
+          name: '简单分式方程的求解',
           type: 'operation'
         }
       ],
@@ -1135,13 +1162,23 @@
         },
         {
           id: null,
-          name: '平面直角坐标系四个象限的坐标符号特征与函数单调性（增减性）概念',
+          name: '平面直角坐标系四个象限的坐标符号特征',
           type: 'concept'
         },
         {
           id: null,
-          name: '一元一次不等式的解法（系数化为1时乘除负数不等号反向）与偶次方非负性（$k^{2}\\ge 0$）',
+          name: '函数增减性（单调性）的概念',
+          type: 'concept'
+        },
+        {
+          id: null,
+          name: '一元一次不等式的解法（乘除负数不等号反向）',
           type: 'operation'
+        },
+        {
+          id: null,
+          name: '实数偶次方的非负性（$k^{2}\\ge 0$）',
+          type: 'concept'
         }
       ],
       prerequisiteProcedureIds: ['P11'],
@@ -1244,7 +1281,7 @@
         },
         {
           id: 'P33',
-          name: '运用绝对值的性质、非负性求值及比较有理数大小',
+          name: '比较有理数的大小',
           type: 'procedural_knowledge'
         }
       ],
@@ -1452,8 +1489,13 @@
         },
         {
           id: null,
-          name: '一元二次方程的一般形式 $ax^{2}+bx+c=0\\ (a\\neq 0)$ 与一元一次不等式解法',
+          name: '一元二次方程的一般形式 $ax^{2}+bx+c=0\\ (a\\neq 0)$',
           type: 'concept'
+        },
+        {
+          id: null,
+          name: '一元一次不等式的解法',
+          type: 'operation'
         }
       ],
       prerequisiteProcedureIds: ['P02', 'P03'],
@@ -2302,7 +2344,12 @@
         },
         {
           id: null,
-          name: '乘法分配律 $m(a+b+c)=ma+mb+mc$ 的逆用与同底数幂的除法 $a^{m}\\div a^{n}=a^{m-n}$',
+          name: '乘法分配律 $m(a+b+c)=ma+mb+mc$ 的逆用',
+          type: 'operation'
+        },
+        {
+          id: null,
+          name: '同底数幂的除法 $a^{m}\\div a^{n}=a^{m-n}$',
           type: 'operation'
         }
       ],
@@ -3078,8 +3125,13 @@
       ],
       prerequisites: [
         {
+          id: 'P54',
+          name: '求有理数的绝对值与由绝对值反求原数',
+          type: 'procedural_knowledge'
+        },
+        {
           id: 'P33',
-          name: '运用绝对值的性质、非负性求值及比较有理数大小',
+          name: '比较有理数的大小',
           type: 'procedural_knowledge'
         },
         {
@@ -3124,41 +3176,41 @@
     },
     {
       id: 'P33',
-      name: '运用绝对值的性质、非负性求值及比较有理数大小',
+      name: '比较有理数的大小',
       grade: '七年级',
       subject: '数学',
       chapterGroup: '第一章 有理数',
       chapter: '1.2.14 有理数大小的比较',
-      description: '依据绝对值的几何意义（数轴上点到原点的距离）与代数性质（正数的绝对值是它本身、$0$ 的绝对值是 $0$、负数的绝对值是它的相反数），完成绝对值化简、非负性“$0+0=0$”求值，并按“先化简、正数 $\\gt 0 \\gt$ 负数、两负数绝对值大的反而小”准则比较有理数大小。',
-      purpose: '掌握绝对值非负性模型与负数大小比较法则，直接支撑代入求值非负性（P08）、反比例函数值跨象限与负值比较（P14）及有理数混合运算（P32）。',
+      description: '先化简多重符号与绝对值，再按“正数 $\\gt 0 \\gt$ 负数、两个负数绝对值大的反而小”的法则比较有理数大小，或借助数轴“右大左小”排序。',
+      purpose: '掌握有理数大小比较的标准程序（含负分数通分比绝对值与数轴排序），直接支撑反比例函数值跨象限与负值比较（P14）及有理数混合运算（P32）。',
       applicability: [
-        '求一个数的绝对值、由 $|m|=k\\ (k\\gt 0)$ 反推 $m=\\pm k$，或依据 $|a|=a\\ (a\\ge 0)$、$|a|=-a\\ (a\\le 0)$ 判断字母符号范围。',
-        '利用绝对值非负性 $|A|\\ge 0$ 解决“$|x-a|+|y-b|=0$”型方程求解与 $|x-a|+k$ 的最小值问题。',
-        '比较含多重符号、绝对值、负分数的有理数大小，或结合数轴上点的位置比较 $a, -a, b, -b$ 的大小。'
+        '比较两个或多个有理数（含正数、$0$、负整数、负分数、小数）的大小。',
+        '比较含多重符号与绝对值的有理数大小（如 $-|-5.7|$ 与 $|-2.9|$），化简后写回原数下结论。',
+        '结合数轴上点 $a, b$ 的位置，标出相反数 $-a, -b$ 并按数轴“右大左小”排序。'
       ],
       conditions: [
-        '涉及绝对值的定义、代数性质、非负性（$|A|\\ge 0$）求值或最值',
-        '或需要比较两个及多个有理数（含负分数、多重符号、绝对值及数轴上点）的大小'
+        '需要比较两个或多个有理数（含负分数、多重符号、绝对值）的大小',
+        '或已知数轴上字母点的位置，比较原数及其相反数的大小'
       ],
       steps: [
         {
           step: 1,
-          title: '先化简多重符号与绝对值（或由 $|m|=k$ 写出 $\\pm k$）',
-          description: '遇到多重符号与绝对值（如 $-(-0.5)$、$-|-5.7|$、$|-(+5)|$）时，先由内向外化简为最简有理数：①正数和 $0$ 的绝对值是它本身，负数的绝对值是它的相反数；②若已知 $|m|=k\\ (k\\gt 0)$，则 $m=\\pm k$（正负两个解）。',
-          formula: '$|a|=\\begin{cases} a & (a\\gt 0) \\\\ 0 & (a=0) \\\\ -a & (a\\lt 0) \\end{cases}$；$|m|=k\\ (k\\gt 0) \\implies m=\\pm k$',
-          example: '如 $-|-5.7|=-5.7$，$|-2.9|=2.9$；若 $|m|=|-(+5)|=5$，则 $m=\\pm 5$。'
+          title: '先化简多重符号与绝对值',
+          description: '遇到含多重符号与绝对值的数（如 $-(-0.5)$、$-|-5.7|$、$|-2.9|$）时，先由内向外化简为最简有理数，再进行比较（下结论时写回原数）。',
+          formula: '$-|-5.7| = -5.7$，$|-2.9| = 2.9$',
+          example: '如比较 $-|-5.7|$ 与 $|-2.9|$，先化简为 $-5.7$ 和 $2.9$。'
         },
         {
           step: 2,
-          title: '运用绝对值非负性 $|A|\\ge 0$ 求解“$0+0=0$”模型与最值',
-          description: '因为任意实数的绝对值都满足 $|A|\\ge 0$：①若 $|A|+|B|=0$，则必有 $A=0$ 且 $B=0$，联立即可直接解出各字母的值；②形如 $|x-a|+k$ 的最小值为 $k$（当 $x=a$ 时取得）。',
-          formula: '$|A|+|B|=0 \\implies A=0,\\ B=0$；$|x-a|+k\\ge k$',
-          example: '如 $|x-2|+|y-3|+|z-4|=0 \\implies x=2,\\ y=3,\\ z=4$；又如 $|x-2|+|-2|=|x-2|+2\\ge 2$，最小值为 $2$。'
+          title: '异号数直接按“正数 $\\gt 0 \\gt$ 负数”判定',
+          description: '先按符号分组：任意正数大于 $0$，大于一切负数；$0$ 大于一切负数。异号两数无需再算绝对值即可直接定出大小。',
+          formula: '正数 $\\gt 0 \\gt$ 负数',
+          example: '如 $-7 \\lt 2$；又因 $-5.7 \\lt 2.9$，写回原数得 $-|-5.7| \\lt |-2.9|$。'
         },
         {
           step: 3,
-          title: '按符号分级与“两负数绝对值大的反而小”法则比大小',
-          description: '①异号比较：正数 $\\gt 0 \\gt$ 负数，直接定大小；②同为负数比较：先分别求出两个负数的绝对值并通分比较绝对值大小，再遵循“两个负数，绝对值大的反而小”反转不等号方向；③数轴比较：将 $-a, -b$ 按关于原点对称标在数轴上，利用“数轴上右边的数总比左边大”直接排序。',
+          title: '两个负数先通分比绝对值，再按“绝对值大的反而小”反转不等号',
+          description: '①同为负数比较：先分别求出两个负数的绝对值并通分比较正分数大小，再遵循“两个负数，绝对值大的反而小”反转不等号方向；②数轴比较：将 $-a, -b$ 按关于原点对称标在数轴上，利用“数轴上右边的数总比左边大”排序。',
           formula: '若 $a\\lt 0,\\ b\\lt 0$ 且 $|a|\\gt |b|$，则 $a\\lt b$',
           example: '如比较 $-\\frac{9}{7}$ 与 $-\\frac{6}{5}$：先算绝对值 $\\frac{9}{7}=\\frac{45}{35} \\gt \\frac{42}{35}=\\frac{6}{5}$，故 $-\\frac{9}{7} \\lt -\\frac{6}{5}$。'
         }
@@ -3167,50 +3219,65 @@
         {
           step: 1,
           action: '先化简多重符号与绝对值',
-          detail: '按绝对值代数定义化简各数，已知 |m|=k (k>0) 时注意写出 m=±k 两个值。'
+          detail: '把含括号负号或绝对值的数化简为最简形式，最终结论写回原数。'
         },
         {
           step: 2,
-          action: '利用绝对值非负性解 0+0=0 方程或求最值',
-          detail: '由 |A|≥0 导出各绝对值内式子同时为 0，或得出 |x-a|+k 的最小值为 k。'
+          action: '按“正数 > 0 > 负数”先分异号大小',
+          detail: '先通过符号分级直接排定正数、0 与负数的顺序。'
         },
         {
           step: 3,
-          action: '按符号分级与“两负数绝对值大的反而小”排序',
-          detail: '正数>0>负数；两个负数先通分比绝对值，绝对值大的反而小；数轴上右大左小。'
+          action: '两负数通分比绝对值，绝对值大的反而小（或数轴右大左小）',
+          detail: '两个负数先比绝对值，再反转不等号；数轴题标出相反数后从左到右排序。'
         }
       ],
       prerequisites: [
         {
+          id: 'P54',
+          name: '求有理数的绝对值与由绝对值反求原数',
+          type: 'procedural_knowledge'
+        },
+        {
           id: null,
-          name: '数轴的三要素、相反数的几何意义及小学正分数通分比较大小',
+          name: '数轴的三要素',
           type: 'concept'
+        },
+        {
+          id: null,
+          name: '相反数的几何意义',
+          type: 'concept'
+        },
+        {
+          id: null,
+          name: '小学正分数通分比较大小',
+          type: 'operation'
         }
       ],
-      prerequisiteProcedureIds: [],
-      subsequentProcedureIds: ['P08', 'P14', 'P32'],
-      relatedProcedureIds: ['P08', 'P14', 'P32'],
+      prerequisiteProcedureIds: ['P54'],
+      subsequentProcedureIds: ['P14', 'P32'],
+      relatedProcedureIds: ['P54', 'P14', 'P32'],
       pitfalls: [
         '比较两个负数大小时忘记反转不等号：如因为 $\\frac{3}{4} \\gt \\frac{2}{3}$ 而误写成 $-\\frac{3}{4} \\gt -\\frac{2}{3}$（正确应为 $-\\frac{3}{4} \\lt -\\frac{2}{3}$）。',
-        '漏掉 $0$ 的边界情况：认为“绝对值等于它本身的数只有正数”或“绝对值等于它相反数的数只有负数”（正确应分别包含 $0$，即非负数 $a\\ge 0$ 与非正数 $a\\le 0$）。',
-        '由 $|m|=5$ 只写出正数解 $m=5$，漏掉负数解 $m=-5$。'
+        '化简 $-|-5.7| = -5.7$ 后，结论直接写了化简数而未写回原数 $-|-5.7| \\lt |-2.9|$。',
+        '在数轴上比较 $a, -a, b, -b$ 大小时，忘记把 $-a, -b$ 按关于原点对称标在数轴上。'
       ],
-      exampleQuestionId: 'g7_1_2_5_9',
+      exampleQuestionId: 'g7_1_2_5_1',
       exampleStepMapping: [
         {
           step: 1,
-          title: '对应步骤 1（先化简含绝对值与负号的数）',
-          detail: '第(3)问中，先分别化简 $-|-5.7|=-5.7$ 和 $|-2.9|=2.9$，再进行比较。'
+          title: '对应步骤 1（识别两个负数并分别求绝对值）',
+          detail: '$-\\frac{3}{4}$ 与 $-\\frac{2}{3}$ 均为负数，先分别求绝对值：$\\left|-\\frac{3}{4}\\right| = \\frac{3}{4}$，$\\left|-\\frac{2}{3}\\right| = \\frac{2}{3}$。'
         },
         {
           step: 2,
-          title: '对应步骤 2（异号直接按正数大于负数判定）',
-          detail: '第(1)问 $-7 \\lt 2$；第(3)问因 $-5.7 \\lt 0 \\lt 2.9$，故 $-|-5.7| \\lt |-2.9|$；第(4)问正数 $\\frac{1}{4}$ 最大。'
+          title: '对应步骤 2（通分比较两个绝对值的大小）',
+          detail: '将两个正分数通分至公分母 $12$：$\\frac{3}{4} = \\frac{9}{12}$，$\\frac{2}{3} = \\frac{8}{12}$，由此得 $\\frac{9}{12} \\gt \\frac{8}{12}$。'
         },
         {
           step: 3,
-          title: '对应步骤 3（两个负分数先通分比绝对值，绝对值大的反而小）',
-          detail: '第(2)问比较 $-\\frac{9}{7}$ 与 $-\\frac{6}{5}$：因 $\\frac{9}{7}=\\frac{45}{35} \\gt \\frac{42}{35}=\\frac{6}{5}$，故 $-\\frac{9}{7} \\lt -\\frac{6}{5}$；第(4)问因 $\\frac{1}{2} \\gt \\frac{1}{3}$，故 $-\\frac{1}{2} \\lt -\\frac{1}{3} \\lt \\frac{1}{4}$。'
+          title: '对应步骤 3（两个负数，绝对值大的反而小）',
+          detail: '反转不等号方向得 $-\\frac{3}{4} \\lt -\\frac{2}{3}$，因此横线上填“$\\lt$”。'
         }
       ],
       graphNodeId: 'cnm_007',
@@ -3613,7 +3680,9 @@
       prerequisites: [
         { id: 'P43', name: '选用 SAS、ASA、AAS、SSS 判定三角形全等并导出边角相等', type: 'procedural_knowledge' },
         { id: 'P41', name: '运用线段垂直平分线的性质与判定进行线段转化、周长计算及尺规作图识别', type: 'procedural_knowledge' },
-        { id: null, name: '三角形内角和 $180^{\\circ}$、三角形外角定理与平行线性质', type: 'concept' }
+        { id: null, name: '三角形内角和定理（$180^{\\circ}$）', type: 'concept' },
+        { id: null, name: '三角形外角定理', type: 'concept' },
+        { id: null, name: '平行线的性质', type: 'concept' }
       ],
       prerequisiteProcedureIds: ['P43', 'P41'],
       subsequentProcedureIds: ['P10', 'P38'],
@@ -3827,9 +3896,10 @@
         }
       ],
       prerequisites: [
-        { id: 'P33', name: '运用绝对值的性质、非负性求值及比较有理数大小', type: 'procedural_knowledge' }
+        { id: 'P54', name: '求有理数的绝对值与由绝对值反求原数', type: 'procedural_knowledge' },
+        { id: 'P33', name: '比较有理数的大小', type: 'procedural_knowledge' }
       ],
-      prerequisiteProcedureIds: ['P33'],
+      prerequisiteProcedureIds: ['P54', 'P33'],
       subsequentProcedureIds: ['P22', 'P28', 'P32'],
       relatedProcedureIds: ['P22', 'P28', 'P32', 'P33', 'P40'],
       pitfalls: [
@@ -3933,10 +4003,10 @@
         }
       ],
       prerequisites: [
-        { id: 'P33', name: '运用绝对值的性质、非负性求值及比较有理数大小', type: 'procedural_knowledge' },
+        { id: 'P54', name: '求有理数的绝对值与由绝对值反求原数', type: 'procedural_knowledge' },
         { id: 'P39', name: '运用有理数加减法则与运算律进行加减混合运算', type: 'procedural_knowledge' }
       ],
-      prerequisiteProcedureIds: ['P33', 'P39'],
+      prerequisiteProcedureIds: ['P54', 'P39'],
       subsequentProcedureIds: ['P22', 'P27', 'P32'],
       relatedProcedureIds: ['P22', 'P27', 'P32', 'P33', 'P39'],
       pitfalls: [
@@ -4043,7 +4113,9 @@
       prerequisites: [
         { id: 'P43', name: '选用 SAS、ASA、AAS、SSS 判定三角形全等并导出边角相等', type: 'procedural_knowledge' },
         { id: 'P42', name: '运用全等三角形的性质（对应边相等、对应角相等）求线段长与角度', type: 'procedural_knowledge' },
-        { id: null, name: '线段中点、垂线与轴对称图形的基本定义', type: 'concept' }
+        { id: null, name: '线段中点的定义', type: 'concept' },
+        { id: null, name: '垂线的定义', type: 'concept' },
+        { id: null, name: '轴对称图形的基本定义', type: 'concept' }
       ],
       prerequisiteProcedureIds: ['P43', 'P42'],
       subsequentProcedureIds: ['P37', 'P38'],
@@ -4139,7 +4211,9 @@
       ],
       prerequisites: [
         { id: null, name: '全等形与全等三角形的基本定义（能够完全重合的两个三角形）', type: 'concept' },
-        { id: null, name: '三角形内角和 $180^{\\circ}$、邻补角互补与平行线性质', type: 'concept' }
+        { id: null, name: '三角形内角和定理（$180^{\\circ}$）', type: 'concept' },
+        { id: null, name: '邻补角互补的性质', type: 'concept' },
+        { id: null, name: '平行线的性质', type: 'concept' }
       ],
       prerequisiteProcedureIds: [],
       subsequentProcedureIds: ['P43', 'P37', 'P38', 'P41'],
@@ -4513,7 +4587,8 @@
       ],
       prerequisites: [
         { id: 'P05', name: '根据文字与简单数量关系列代数式', type: 'procedural_knowledge' },
-        { id: null, name: '常见几何与生活公式（路程、总价、工作总量、三角形/长方形面积与周长）', type: 'concept' }
+        { id: null, name: '常见生活数量公式（路程、总价、工作总量）', type: 'concept' },
+        { id: null, name: '常见几何公式（三角形与长方形的面积、周长）', type: 'concept' }
       ],
       prerequisiteProcedureIds: ['P05'],
       subsequentProcedureIds: ['P07', 'P11'],
@@ -4685,9 +4760,9 @@
       prerequisites: [
         { id: 'P34', name: '识别单项式并确定单项式的系数与次数', type: 'procedural_knowledge' },
         { id: 'P47', name: '识别多项式与整式并确定项数、次数与常数项', type: 'procedural_knowledge' },
-        { id: 'P33', name: '运用绝对值的性质、非负性求值及比较有理数大小', type: 'procedural_knowledge' }
+        { id: 'P54', name: '求有理数的绝对值与由绝对值反求原数', type: 'procedural_knowledge' }
       ],
-      prerequisiteProcedureIds: ['P34', 'P47', 'P33'],
+      prerequisiteProcedureIds: ['P34', 'P47', 'P54'],
       subsequentProcedureIds: ['P19', 'P28'],
       relatedProcedureIds: ['P34', 'P47', 'P19'],
       pitfalls: [
@@ -5110,6 +5185,199 @@
         }
       ],
       graphNodeId: 'cnm_259',
+      status: 'published'
+    },
+    {
+      id: 'P54',
+      name: '求有理数的绝对值与由绝对值反求原数',
+      grade: '七年级',
+      subject: '数学',
+      chapterGroup: '第一章 有理数',
+      chapter: '1.2.11 绝对值的意义',
+      description: '依据绝对值的几何意义（数轴上点到原点的距离）与代数定义，求具体有理数的绝对值，并由 $|m| = k\\ (k \\gt 0)$ 反求正负两个原数。',
+      purpose: '掌握绝对值的几何意义与双向求值程序，为绝对值性质（P55）、绝对值非负性（P56）及有理数大小比较（P33）打下基础。',
+      applicability: [
+        '直接求具体正数、负数、$0$ 或含多重符号式子的绝对值。',
+        '已知数轴上点的位置，依据点到原点的距离比较绝对值大小或确定原点位置。',
+        '已知 $|m| = k\\ (k \\gt 0)$ 或数轴上点到原点的距离，反求原数 $m = \\pm k$。'
+      ],
+      conditions: [
+        '需要求具体有理数的绝对值或化简含绝对值的符号',
+        '或已知绝对值大小反求原数（含数轴距离几何意义）'
+      ],
+      steps: [
+        {
+          step: 1,
+          title: '先化简绝对值内部的多重符号',
+          description: '遇到 $|-(+5)|$ 等多重符号时，先由内向外化简绝对值内部的符号，再求绝对值。',
+          formula: '$|-(+5)| = |-5|$',
+          example: '如 $|-(+5)| = |-5| = 5$；$-|-3| = -3$。'
+        },
+        {
+          step: 2,
+          title: '依据定义求具体有理数的绝对值',
+          description: '正数的绝对值是它本身，$0$ 的绝对值是 $0$，负数的绝对值是它的相反数（数轴上点到原点的距离）。',
+          formula: '$|a|=\\begin{cases} a & (a\\gt 0) \\\\ 0 & (a=0) \\\\ -a & (a\\lt 0) \\end{cases}$',
+          example: '如 $|-5| = 5$，$|0| = 0$，$|3.2| = 3.2$。'
+        },
+        {
+          step: 3,
+          title: '由 $|m| = k\\ (k \\gt 0)$ 写出正负两个解',
+          description: '数轴上到原点距离等于正数 $k$ 的点在原点左右两侧各有一个，故 $m = \\pm k$；若题干限定正负，再按条件取舍。',
+          formula: '$|m| = k\\ (k \\gt 0) \\implies m = \\pm k$',
+          example: '如 $|m| = 5 \\implies m = 5$ 或 $m = -5$。'
+        }
+      ],
+      procedure: [
+        { step: 1, action: '先化简绝对值内部符号', detail: '由内向外去掉多重符号，化为最简数再取绝对值。' },
+        { step: 2, action: '按定义算出绝对值', detail: '正数和 0 等于本身，负数等于它的相反数。' },
+        { step: 3, action: '由绝对值反求原数写全正负两解', detail: '已知 |m|=k (k>0) 时写出 m=±k，再结合题目正负限制筛选。' }
+      ],
+      prerequisites: [
+        { id: null, name: '数轴的三要素', type: 'concept' },
+        { id: null, name: '相反数的几何意义', type: 'concept' }
+      ],
+      prerequisiteProcedureIds: [],
+      subsequentProcedureIds: ['P55', 'P56', 'P33', 'P32', 'P39', 'P40', 'P48'],
+      relatedProcedureIds: ['P55', 'P56', 'P33'],
+      pitfalls: [
+        '由 $|m| = 5$ 只写出正数解 $m = 5$，漏掉负数解 $m = -5$。',
+        '混淆 $-|-3|$ 与 $|-(-3)|$ 的化简顺序，误把绝对值外面的负号也去掉。'
+      ],
+      exampleQuestionId: 'g7_1_2_4_4',
+      exampleStepMapping: [
+        { step: 1, title: '对应步骤 1（化简绝对值内部符号）', detail: '先化简 $|-(+5)|$ 内部的 $-(+5) = -5$，得 $|-5|$。' },
+        { step: 2, title: '对应步骤 2（求出具体绝对值）', detail: '由负数的绝对值是它的相反数得 $|-5| = 5$，即 $|m| = 5$。' },
+        { step: 3, title: '对应步骤 3（写出正负两解）', detail: '由 $|m| = 5$ 得 $m = \\pm 5$。' }
+      ],
+      graphNodeId: 'cnm_006',
+      status: 'published'
+    },
+    {
+      id: 'P55',
+      name: '运用绝对值的代数性质判断字母符号范围',
+      grade: '七年级',
+      subject: '数学',
+      chapterGroup: '第一章 有理数',
+      chapter: '1.2.12 绝对值的性质',
+      description: '依据绝对值的代数性质（$|a| = a \\iff a \\ge 0$，$|a| = -a \\iff a \\le 0$），由含绝对值的等式判断字母的取值范围，并严格检验 $0$ 的边界情形。',
+      purpose: '突破含字母绝对值化简与符号范围判定中“漏掉 $0$”的高频易错点。',
+      applicability: [
+        '已知 $|a| = a$、$|a| = -a$ 或 $x + |x| = 0$，判断字母 $a$ 或 $x$ 的符号范围。',
+        '辨析“绝对值等于它本身的数”“绝对值等于它相反数的数”等概念题。'
+      ],
+      conditions: [
+        '题目给出含字母绝对值的等式关系（如 $|a| = a$、$|a| = -a$、$x + |x| = 0$）',
+        '需要反推字母的符号范围或写出符合条件的示例值'
+      ],
+      steps: [
+        {
+          step: 1,
+          title: '移项整理为 $|a| = a$ 或 $|a| = -a$ 的标准形式',
+          description: '若等式形如 $x + |x| = 0$，先移项使绝对值单独在一边，得到 $|x| = -x$。',
+          formula: '$x + |x| = 0 \\implies |x| = -x$',
+          example: '如由 $x + |x| = 0$ 移项得 $|x| = -x$。'
+        },
+        {
+          step: 2,
+          title: '对照绝对值代数性质判定正负符号',
+          description: '正数的绝对值是它本身（$|a| = a$），负数的绝对值是它的相反数（$|a| = -a$）。',
+          formula: '$a \\gt 0 \\implies |a| = a$；$a \\lt 0 \\implies |a| = -a$',
+          example: '由 $|x| = -x$ 先确定负数满足条件。'
+        },
+        {
+          step: 3,
+          title: '单独检验边界 $a = 0$ 并写出完整范围',
+          description: '因为 $|0| = 0$ 且 $-0 = 0$，所以 $0$ 既满足 $|a| = a$ 也满足 $|a| = -a$；据此得出完整范围 $a \\ge 0$（非负数）或 $a \\le 0$（非正数）。',
+          formula: '$|a| = a \\iff a \\ge 0$；$|a| = -a \\iff a \\le 0$',
+          example: '接上例：检验 $x = 0$ 成立，故 $x$ 是负数或 $0$（$x \\le 0$）。'
+        }
+      ],
+      procedure: [
+        { step: 1, action: '移项化为 |a|=a 或 |a|=-a', detail: '把绝对值单独留在等式一边，明确它等于本身还是相反数。' },
+        { step: 2, action: '对照代数性质判定正负', detail: '等于本身对应正数，等于相反数对应负数。' },
+        { step: 3, action: '单独检验 0 的边界并定范围', detail: '确认 0 同样满足等式，最终写出非负数或非正数结论。' }
+      ],
+      prerequisites: [
+        { id: 'P54', name: '求有理数的绝对值与由绝对值反求原数', type: 'procedural_knowledge' }
+      ],
+      prerequisiteProcedureIds: ['P54'],
+      subsequentProcedureIds: ['P56', 'P32'],
+      relatedProcedureIds: ['P54', 'P56'],
+      pitfalls: [
+        '漏掉 $0$ 的边界情况：误认为“绝对值等于它本身的数只有正数”或“绝对值等于它相反数的数只有负数”。'
+      ],
+      exampleQuestionId: 'g7_1_2_4_12',
+      exampleStepMapping: [
+        { step: 1, title: '对应步骤 1（移项整理）', detail: '由 $x + |x| = 0$ 移项得 $|x| = -x$。' },
+        { step: 2, title: '对应步骤 2（对照性质判符号）', detail: '绝对值等于相反数，所有负数均满足。' },
+        { step: 3, title: '对应步骤 3（检验 0 得出非正数）', detail: '当 $x = 0$ 时 $0 + |0| = 0$ 成立，故 $x$ 一定是负数或 $0$。' }
+      ],
+      graphNodeId: 'cnm_006',
+      status: 'published'
+    },
+    {
+      id: 'P56',
+      name: '运用绝对值的非负性求值与最值',
+      grade: '七年级',
+      subject: '数学',
+      chapterGroup: '第一章 有理数',
+      chapter: '1.2.12 绝对值的性质',
+      description: '利用任意有理数的绝对值均满足非负性 $|A| \\ge 0$，求解“$|A| + |B| = 0$”型“$0 + 0 = 0$”方程，并确定形如 $|x - a| + k$ 的代数式最小值。',
+      purpose: '掌握初中数学第一个非负性求值模型（$|A| + |B| = 0$），为后续代数式代入求值（P08）与配方法求最值（P03）建立非负性思维。',
+      applicability: [
+        '已知两个或多个绝对值之和等于 $0$（如 $|x - 2| + |y - 3| + |z - 4| = 0$），求各字母的值。',
+        '求形如 $|x - a| + k$ 或 $|x - a| + |-b|$ 的代数式最小值及取得最小值时 $x$ 的值。'
+      ],
+      conditions: [
+        '等式为若干个绝对值之和等于 $0$',
+        '或要求含单个绝对值式子 $|x - a| + k$ 的最小值'
+      ],
+      steps: [
+        {
+          step: 1,
+          title: '确认每一项绝对值均满足非负性 $|A| \\ge 0$',
+          description: '先写出每个绝对值项都大于或等于 $0$（若含常数绝对值如 $|-2|$ 先化简为正数 $2$）。',
+          formula: '$|A| \\ge 0,\\ |B| \\ge 0$',
+          example: '如 $|x - 2| \\ge 0$，$|y - 3| \\ge 0$，$|z - 4| \\ge 0$。'
+        },
+        {
+          step: 2,
+          title: '运用“$0 + 0 = 0$”模型列方程，或由 $|x - a| \\ge 0$ 写最值不等式',
+          description: '①若几个非负数之和为 $0$，则每一项必同时等于 $0$，列出各绝对值内部等于 $0$ 的方程；②求最小值时，由 $|x - a| \\ge 0$ 两边同加 $k$ 得 $|x - a| + k \\ge k$。',
+          formula: '$|A| + |B| = 0 \\implies A = 0$ 且 $B = 0$；$|x - a| + k \\ge k$',
+          example: '由 $|x - 2| + |y - 3| + |z - 4| = 0$ 得 $x - 2 = 0,\\ y - 3 = 0,\\ z - 4 = 0$。'
+        },
+        {
+          step: 3,
+          title: '求解各字母值或写出最小值结论',
+          description: '分别解一次方程求出各字母值（并按要求计算目标代数式），或写出最小值 $k$。',
+          formula: '解得 $x = 2,\\ y = 3,\\ z = 4$',
+          example: '如 $|x - 2| + |-2| = |x - 2| + 2 \\ge 2$，最小值为 $2$。'
+        }
+      ],
+      procedure: [
+        { step: 1, action: '标出各绝对值项的非负性', detail: '确认每个绝对值都 ≥ 0，先化简常数绝对值。' },
+        { step: 2, action: '应用 0+0=0 模型或不等式放缩', detail: '和为 0 则各项内部同时为 0；求最值则由 |x-a|≥0 推导下界。' },
+        { step: 3, action: '解出各字母值或确定最小值', detail: '解简单一次方程得出结果，注意移项变号。' }
+      ],
+      prerequisites: [
+        { id: 'P54', name: '求有理数的绝对值与由绝对值反求原数', type: 'procedural_knowledge' }
+      ],
+      prerequisiteProcedureIds: ['P54'],
+      subsequentProcedureIds: ['P08', 'P32'],
+      relatedProcedureIds: ['P54', 'P55', 'P08'],
+      pitfalls: [
+        '由 $|y + 2| = 0$ 解 $y$ 时忘记移项变号，误解为 $y = 2$（正确应为 $y = -2$）。',
+        '求 $|x - 2| + |-2|$ 的最小值时忽略常数项 $|-2| = 2$，误答最小值为 $0$。'
+      ],
+      exampleQuestionId: 'g7_1_2_4_15',
+      exampleStepMapping: [
+        { step: 1, title: '对应步骤 1（确认三项绝对值非负）', detail: '由绝对值非负性知 $|x - 2| \\ge 0$、$|y - 3| \\ge 0$、$|z - 4| \\ge 0$。' },
+        { step: 2, title: '对应步骤 2（运用 0+0=0 模型列方程）', detail: '三项非负数之和为 $0$，故 $x - 2 = 0$、$y - 3 = 0$、$z - 4 = 0$。' },
+        { step: 3, title: '对应步骤 3（分别解出 x, y, z）', detail: '解得 $x = 2$，$y = 3$，$z = 4$。' }
+      ],
+      graphNodeId: 'cnm_006',
       status: 'published'
     }
   ];

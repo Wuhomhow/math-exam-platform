@@ -3,6 +3,9 @@ function updateMobileCatalogBadge() {
   if (!badge) return;
   if (!state.chapterFilter || state.chapterFilter === 'all') {
     badge.textContent = '已选题库';
+  } else if (state.chapterFilter.startsWith('kp:')) {
+    const node = window.GraphData && window.GraphData.getNode(state.chapterFilter.slice(3));
+    badge.textContent = node ? node.name.slice(0, 10) : '知识点';
   } else if (state.chapterFilter.startsWith('section:')) {
     const found = window.CurriculumCatalogService && window.CurriculumCatalogService.getSectionById(state.chapterFilter.slice(8));
     badge.textContent = found ? found.section.title.slice(0, 10) : '标准小节';

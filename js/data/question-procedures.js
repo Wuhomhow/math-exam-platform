@@ -127,6 +127,7 @@
       role: 'primary',
       subType: 'P01_C1_direct_square_root',
       operationSummary: '第(1)问：2x² - 32 = 0 移项并除以 2 得 x² = 16，直接开平方得 x = ±4。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -139,6 +140,7 @@
       role: 'primary',
       subType: 'P01_C1_direct_square_root',
       operationSummary: '第(2)问：81x² - 1 = 0 移项并除以 81 得 x² = 1/81，直接开平方得 x = ±1/9。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -151,6 +153,7 @@
       role: 'primary',
       subType: 'P01_C1_direct_square_root',
       operationSummary: '第(3)问：4x² - 32 = 0 移项并除以 4 得 x² = 8，直接开平方并化简二次根式得 x = ±2√2。',
+      visibility: 'bank_only',
       status: 'published'
     },
 
@@ -201,6 +204,7 @@
       role: 'primary',
       subType: 'P01_C2_equal_squares_to_linear',
       operationSummary: '第(4)问（平方相等进阶位置）：对 (2x + 3)² = (3x + 2)² 两边开平方，转化为 2x + 3 = 3x + 2 或 2x + 3 = -3x - 2，解得 x₁ = 1, x₂ = -1。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -214,6 +218,7 @@
       role: 'primary',
       subType: 'P01_C1_direct_square_root',
       operationSummary: '第(1)问（基础完全平方式直接开方）：对 (x - 1)² = 49 直接开平方得 x - 1 = ±7，解得 x₁ = 8, x₂ = -6。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -227,6 +232,7 @@
       role: 'primary',
       subType: 'P01_C1_direct_square_root',
       operationSummary: '第(2)问（含系数整体平方式直接开方）：对 (2y - 3)² = 16 直接开平方得 2y - 3 = ±4，解得 y₁ = 7/2, y₂ = -1/2。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -240,6 +246,7 @@
       role: 'secondary',
       subType: 'P01_C1_with_trinomial_square_factoring',
       operationSummary: '第(3)问（先逆用完全平方公式整理再直接开方）：先将左边 x² + 4x + 4 整理为 (x + 2)² = 16，再开平方得 x + 2 = ±4，解得 x₁ = 2, x₂ = -6。',
+      visibility: 'bank_only',
       status: 'published'
     },
 
@@ -276,6 +283,7 @@
       role: 'primary',
       subType: 'P01_C2_equal_squares_to_linear',
       operationSummary: '对带系数的平方相等方程 (3x - 1)² = 4(2x + 3)² 两边开平方得 3x - 1 = ±2(2x + 3)，转化为两个一次方程解得 x₁ = -5/7, x₂ = -7。',
+      visibility: 'bank_only',
       status: 'published'
     },
 
@@ -290,6 +298,7 @@
       role: 'primary',
       subType: 'P01_C1_direct_square_root',
       operationSummary: '第(1)问：3(x + 1)² = 1/3 两边除以 3 得 (x + 1)² = 1/9，开平方得 x + 1 = ±1/3，解得 x₁ = -2/3, x₂ = -4/3。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -302,6 +311,7 @@
       role: 'primary',
       subType: 'P01_C1_direct_square_root',
       operationSummary: '第(2)问：(3x + 2)² = 25 直接开平方得 3x + 2 = ±5，解得 x₁ = 1, x₂ = -7/3。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -314,6 +324,7 @@
       role: 'primary',
       subType: 'P01_C1_direct_square_root',
       operationSummary: '第(3)问：(x + 1)² - 4 = 0 移项得 (x + 1)² = 4，开平方得 x + 1 = ±2，解得 x₁ = 1, x₂ = -3。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -326,6 +337,7 @@
       role: 'primary',
       subType: 'P01_C1_direct_square_root',
       operationSummary: '第(4)问：(2 - x)² - 9 = 0 移项得 (2 - x)² = 9，开平方得 2 - x = ±3，解得 x₁ = -1, x₂ = 5。',
+      visibility: 'bank_only',
       status: 'published'
     },
 
@@ -470,6 +482,7 @@
       role: 'primary',
       subType: 'P03_bivariate_independent_complete_square',
       operationSummary: '将 4x² + 2y² - 4y - 4x + 15 的常数项 15 拆分为 1 + 2 + 12，分组配方为 (2x - 1)² + 2(y - 1)² + 12 ≥ 12，确定最小值为 12。',
+      visibility: 'bank_only',
       status: 'published'
     }
 ,
@@ -526,6 +539,7 @@
         "role": "primary",
         "subType": "P10_isosceles_three_lines_in_one",
         "operationSummary": "在等腰三角形中锁定两腰与底边，运用“三线合一”进行垂直、线段平分与角度互余转化（原题考点：等腰三角形“三线合一”性质与应用）。",
+        "visibility": "bank_only",
         "status": "published"
     },
     {
@@ -537,6 +551,7 @@
         "role": "primary",
         "subType": "P10_isosceles_three_lines_in_one",
         "operationSummary": "在等腰三角形中锁定两腰与底边，运用“三线合一”进行垂直、线段平分与角度互余转化（原题考点：等腰三角形“三线合一”性质与应用）。",
+        "visibility": "bank_only",
         "status": "published"
     },
     {
@@ -595,6 +610,7 @@
         "role": "primary",
         "subType": "P10_isosceles_three_lines_in_one",
         "operationSummary": "第(1)问：在等腰三角形中利用“三线合一”导出底边垂线、底边中点或顶角平分线关系完成求解与证明。",
+        "visibility": "bank_only",
         "status": "published"
     },
     {
@@ -607,6 +623,7 @@
         "role": "primary",
         "subType": "P10_isosceles_three_lines_in_one",
         "operationSummary": "第(2)问：在等腰三角形中利用“三线合一”导出底边垂线、底边中点或顶角平分线关系完成求解与证明。",
+        "visibility": "bank_only",
         "status": "published"
     },
     {
@@ -629,6 +646,7 @@
         "role": "primary",
         "subType": "P10_isosceles_three_lines_in_one",
         "operationSummary": "在等腰三角形中锁定两腰与底边，运用“三线合一”进行垂直、线段平分与角度互余转化（原题考点：三线合一、含30度角的直角三角形）。",
+        "visibility": "bank_only",
         "status": "published"
     },
     {
@@ -655,6 +673,7 @@
       role: 'primary',
       subType: 'P11_identify_standard_form',
       operationSummary: '排除正比例函数 y=x/3、分母为一次多项式 y=3/(2x+1) 及二次式 y=x²/2，识别 y=3/(2x) 符合反比例函数标准形式（k=3/2）。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -666,6 +685,7 @@
       role: 'primary',
       subType: 'P11_identify_standard_form',
       operationSummary: '排除正比例函数 ①y=√3x 与分母为 x² 的 ④y=k/x²，识别出符合 y=k/x 形式的 ②y=π/x 与 ③y=1/x。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -677,6 +697,7 @@
       role: 'primary',
       subType: 'P11_identify_three_forms',
       operationSummary: '对照分式 y=k/x、负指数 y=kx⁻¹ 与乘积 xy=k 三种标准形式，在7个式子中识别出 ②y=3/x、③y=x⁻¹、⑤xy=11 共3个反比例函数。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -688,6 +709,7 @@
       role: 'primary',
       subType: 'P11_identify_three_forms',
       operationSummary: '逐一核对7个函数的结构与自变量次数，选出负指数形式 ②y=2x⁻¹、分式形式 ④y=1/(2x) 与乘积形式 ⑥xy=-1。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -699,6 +721,7 @@
       role: 'primary',
       subType: 'P11_identify_and_explain',
       operationSummary: '按自变量 x 的指数是否为 -1、分母是否为单项式 x 及是否含额外常数加减项，逐一判定6个函数是否为反比例函数并说明理由。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -710,6 +733,7 @@
       role: 'primary',
       subType: 'P11_identify_and_explain',
       operationSummary: '对照 y=k/x 与 y=kx⁻¹ 标准形式，判定（2）y=2x⁻¹、（4）y=-4/x 是反比例函数，其余4个因次数非 -1、分母为 2x-1 或含常数 -5 而排除。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -780,6 +804,7 @@
       role: 'primary',
       subType: 'P12_find_y_from_x',
       operationSummary: '将 x=2 直接代入已知反比例函数 y=3/x，算得对应的函数值 y=3/2。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -802,6 +827,7 @@
       role: 'primary',
       subType: 'P12_find_y_from_x',
       operationSummary: '将点 A(2,m) 代入反比例函数 y=-2/x，算得 m = -2/2 = -1。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -836,6 +862,7 @@
       role: 'primary',
       subType: 'P12_find_x_from_y',
       operationSummary: '利用点 (m,-3) 在 y=6/x 上满足横纵坐标之积等于 6，列 -3m=6 解得 m=-2。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -847,6 +874,7 @@
       role: 'primary',
       subType: 'P12_find_x_from_y',
       operationSummary: '利用点 A(a,-4) 在 y=8/x 上满足横纵坐标之积等于 8，列 -4a=8 解得 a=-2。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -858,6 +886,7 @@
       role: 'primary',
       subType: 'P12_verify_point_on_curve',
       operationSummary: '检验四个选项点的横、纵坐标乘积是否等于 k=10，由 2×5=10 判定图象一定经过点 (2,5)。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -869,6 +898,7 @@
       role: 'primary',
       subType: 'P12_verify_point_on_curve',
       operationSummary: '检验各选项横、纵坐标乘积是否等于比例系数 k=2，由 1×2=2 确定点 A 的坐标可能为 (1,2)。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -880,6 +910,7 @@
       role: 'primary',
       subType: 'P12_find_k_from_point',
       operationSummary: '将图象上点 A(1,3) 的横、纵坐标相乘，直接求出比例系数 k = 1×3 = 3。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -936,6 +967,7 @@
       role: 'primary',
       subType: 'P12_extract_k',
       operationSummary: '第(1)问：将 y=-5/(3x) 化为标准形式 y=(-5/3)/x，读取比例系数 k = -5/3。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -948,6 +980,7 @@
       role: 'primary',
       subType: 'P12_find_y_from_x',
       operationSummary: '第(2)问：将 x=-10 代入 y=-5/(3x)，算得函数值 y = -5/[3×(-10)] = 1/6。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -960,6 +993,7 @@
       role: 'primary',
       subType: 'P12_find_x_from_y',
       operationSummary: '第(3)问：将 y=5/2 代入 y=-5/(3x)，解得自变量 x = -2/3。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -1022,6 +1056,7 @@
       role: 'primary',
       subType: 'P13_direct_quadrant_from_k',
       operationSummary: '由 y=-2/x 中 k=-2<0 判定其图象位于第二、四象限，而 y=2/x (k=2>0) 位于第一、三象限，从而识别图(1)为 y=-2/x。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -1070,6 +1105,7 @@
       role: 'primary',
       subType: 'P13_nonnegative_k_quadrant',
       operationSummary: '由实数平方非负性知比例系数 k²+1≥1>0，直接判定双曲线位于第一、三象限。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -1103,6 +1139,7 @@
       role: 'primary',
       subType: 'P13_direct_monotonicity_from_k',
       operationSummary: '由双曲线 (x<0) 分支位于第三象限判定 k>0，得出在该象限内随着 x 值的增大，y 值减小。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -1114,6 +1151,7 @@
       role: 'primary',
       subType: 'P13_monotonicity_domain_condition',
       operationSummary: '核对“k>0 且限定在同一象限（x<0）”两个条件，排除未限定象限的 A、B 与 k=-1<0 的 C，选出 y=1/x (x<0)。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -1125,6 +1163,7 @@
       role: 'primary',
       subType: 'P13_inverse_param_from_quadrant',
       operationSummary: '由反比例函数图象在第一、三象限推出比例系数 k>0，任取正数 k=1 写出解析式 y=1/x。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -1242,6 +1281,7 @@
       role: 'primary',
       subType: 'P13_inverse_param_from_monotonicity',
       operationSummary: '两点 (-2,m)、(-1,n) 横坐标满足 -2<-1<0（同在 x<0 分支），由 m<n 知 y 随 x 增大而增大，推出 k<0 并选出 k=-2。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -1254,6 +1294,7 @@
       role: 'primary',
       subType: 'P13_direct_quadrant_from_k',
       operationSummary: '第(1)问：将 k=2 代入得比例系数 k-3 = -1 < 0，判定双曲线位于第二、第四象限。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -1266,6 +1307,7 @@
       role: 'primary',
       subType: 'P13_inverse_param_from_monotonicity',
       operationSummary: '第(2)问：由当 x>0 时 y 随 x 增大而增大列出比例系数不等式 k-3<0，解得 k<3。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -1290,6 +1332,7 @@
       role: 'primary',
       subType: 'P13_inverse_param_from_monotonicity',
       operationSummary: '第(1)问：由 y=(3-m)/x 在每个象限内 y 随 x 增大而减小列出 3-m>0，解得 m<3。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -1397,6 +1440,7 @@
       role: 'primary',
       subType: 'P14_same_quadrant_compare',
       operationSummary: '第(2)问：当 a=1 时比例系数 2a+6=8>0，第三象限内 y 随 x 增大而减小，由 -4<-1<0 得出 y₁ > y₂。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -1408,6 +1452,7 @@
       role: 'primary',
       subType: 'P14_parametric_x_compare',
       operationSummary: '在 y=-3/x (k=-3<0) 中，当 m<-1 时 m < m+1 < 0，A(m,y₁)、B(m+1,y₂) 同在第二象限，由第二象限内 y 随 x 增大而增大判定 y₁ < y₂。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -1419,6 +1464,7 @@
       role: 'primary',
       subType: 'P14_parametric_x_compare',
       operationSummary: '在 y=-2/x (k=-2<0) 中，当 -1<m<0 时 m-1 < m < 0 < m+1，A、B 在第二象限得 0<y₁<y₂，C 在第四象限得 y₃<0，故 y₃ < 0 < y₁ < y₂。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -1430,6 +1476,7 @@
       role: 'primary',
       subType: 'P14_parametric_x_compare',
       operationSummary: '在 y=k/x (k<0，每象限内递增) 中，因横坐标 a-2 < a+1 却有 y₁ > y₂，判定两点必跨象限（P 在第二象限、Q 在第四象限），列 a-2<0<a+1 得 -1<a<2。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -1442,6 +1489,7 @@
       role: 'primary',
       subType: 'P14_cross_quadrant_sign_compare',
       operationSummary: '第(3)问：点 (-1,m) 与 (2,n) 横坐标异号分处不同象限，分 k>3（k-3>0 时 m<0<n 即 m<n）与 k<3（k-3<0 时 m>0>n 即 m>n）讨论。',
+      visibility: 'bank_only',
       status: 'published'
     },
 
@@ -1523,6 +1571,7 @@
       role: 'primary',
       subType: 'P15_symmetric_param_solve_k',
       operationSummary: '利用过原点直线与双曲线两交点 A(m,n)、B(m-2,n-8) 关于原点对称，列 m+(m-2)=0、n+(n-8)=0 解得 m=1, n=4，进而算得 k=mn=4。',
+      visibility: 'bank_only',
       status: 'published'
     }    ,
     // =========================================================================
@@ -1537,6 +1586,7 @@
       role: 'primary',
       subType: 'P16_standard_form_and_discriminant',
       operationSummary: '先将 x²=3x-1 移项化为一般式 x²-3x+1=0 确定 a=1, b=-3, c=1，再代入 Δ=(-3)²-4×1×1=5。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -1548,6 +1598,7 @@
       role: 'primary',
       subType: 'P16_numeric_discriminant_classify',
       operationSummary: '提取 3x²-4x-4=0 的系数 a=3, b=-4, c=-4，算得 Δ=(-4)²-4×3×(-4)=64>0，判定有两个不相等的实数根。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -1583,6 +1634,7 @@
       role: 'primary',
       subType: 'P16_numeric_discriminant_classify',
       operationSummary: '提取 x²+3x+1=0 的系数算得 Δ=3²-4×1×1=5>0，判定方程有实数根。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -1619,6 +1671,7 @@
       role: 'primary',
       subType: 'P16_numeric_discriminant_classify',
       operationSummary: '第(1)问：在 -x²-3x+1=0 中算得 Δ=(-3)²-4×(-1)×1=13>0，判定有两个不相等的实数根。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -1631,6 +1684,7 @@
       role: 'primary',
       subType: 'P16_numeric_discriminant_classify',
       operationSummary: '第(2)问：在 2x²-(7/2)x+1/4=0 中算得 Δ=(-7/2)²-4×2×(1/4)=41/4>0，判定有两个不相等的实数根。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -1643,6 +1697,7 @@
       role: 'primary',
       subType: 'P16_numeric_discriminant_classify',
       operationSummary: '第(3)问：将 4x²+5=4√5x 移项化为 4x²-4√5x+5=0，算得 Δ=(-4√5)²-4×4×5=0，判定有两个相等的实数根。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -1655,6 +1710,7 @@
       role: 'primary',
       subType: 'P16_numeric_discriminant_classify',
       operationSummary: '第(4)问：将 -3x²+√3x=2 移项化为 -3x²+√3x-2=0，算得 Δ=(√3)²-4×(-3)×(-2)=-21<0，判定没有实数根。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -1666,6 +1722,7 @@
       role: 'primary',
       subType: 'P16_parametric_discriminant_proof',
       operationSummary: '在 x²+mx-1=0 中算得 Δ=m²-4×1×(-1)=m²+4，由偶次方非负性 m²≥0 知 m²+4>0，判定有两个不相等的实数根。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -1677,6 +1734,7 @@
       role: 'primary',
       subType: 'P16_parametric_discriminant_proof',
       operationSummary: '分别表示四个含参方程的判别式，由 x²+mx-3=0 中 Δ=m²+12>0 恒成立判定其一定有两个不相等的实数根。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -1688,6 +1746,7 @@
       role: 'primary',
       subType: 'P16_parametric_discriminant_proof',
       operationSummary: '计算 Δ=(2m)²-4(2m-1)=4m²-8m+4=4(m-1)²，由平方非负性 4(m-1)²≥0 证明方程总有两个实数根。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -1861,6 +1920,7 @@
       role: 'primary',
       subType: 'P16_inverse_param_general_equation',
       operationSummary: '分 m-2=0（一次方程 -2x+1=0 有实根）与 m-2≠0 且 Δ=4-4(m-2)≥0 两种情况合并，得出 m≤3。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -1923,6 +1983,7 @@
       role: 'primary',
       subType: 'P17_standard_form_extract_abc',
       operationSummary: '将 -4x²+3=5x 移项化为一般形式 -4x²-5x+3=0，连同正负号确定 a=-4, b=-5, c=3。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -1945,6 +2006,7 @@
       role: 'primary',
       subType: 'P17_reverse_match_equation',
       operationSummary: '对照求根公式 x=(-b±√(b²-4ac))/(2a) 从算式中读出 a=2, b=3, c=-1，还原方程为 2x²+3x-1=0。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -1968,6 +2030,7 @@
       role: 'primary',
       subType: 'P17_reverse_match_equation',
       operationSummary: '对照求根公式从分子 1=-(-1)、分母 2×3 及根号内 -4×3×(-5) 读出 a=3, b=-1, c=-5，得 3x²-x-5=0。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -2003,6 +2066,7 @@
       role: 'primary',
       subType: 'P17_reverse_match_equation',
       operationSummary: '对照求根公式读出 a=3, b=-2, c=-1（或成比例），代入计算 a+b-c = 3+(-2)-(-1) = 2。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -2100,6 +2164,7 @@
       role: 'primary',
       subType: 'P18_zero_product_direct',
       operationSummary: '直接利用两因式乘积为 0 的性质，由 x(x-1)=0 转化为 x=0 或 x-1=0，解得 x₁=0, x₂=1。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -2111,6 +2176,7 @@
       role: 'primary',
       subType: 'P18_zero_product_direct',
       operationSummary: '由 x(x-6)=0 直接降次为 x=0 或 x-6=0，解得 x₁=0, x₂=6。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -2122,6 +2188,7 @@
       role: 'primary',
       subType: 'P18_zero_product_direct',
       operationSummary: '由 x(x+2)=0 直接降次为 x=0 或 x+2=0，解得 x₁=0, x₂=-2。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -2393,6 +2460,7 @@
       role: 'primary',
       subType: 'P18_error_analysis_binomial',
       operationSummary: '检查解 5x(3x-2)=2(2-3x) 的步骤：第二步 -2(2-3x) 应化为 +2(3x-2)，第三步提取 (3x-2) 误写为 (5x-2) 出错。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -2417,6 +2485,7 @@
       role: 'primary',
       subType: 'P18_error_analysis_binomial',
       operationSummary: '第(1)问：判定小明（两边同除以 x-1 漏根）与小强（提取 x-1 后去括号未变号）解法均错误（×，×）。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -2429,6 +2498,7 @@
       role: 'primary',
       subType: 'P18_error_analysis_binomial',
       operationSummary: '第(2)问：移项得 2(x-1)-(x-1)²=0，提取 (x-1) 得 (x-1)(2-x+1)=0，解得 x₁=1, x₂=3。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -2440,6 +2510,7 @@
       role: 'primary',
       subType: 'P18_trinomial_factoring',
       operationSummary: '检验四个方程可否因式分解：①x(x-1)=0、②(x-1/2)²=0、④(3x+2+4)(3x+2-4)=0 均可，③Δ<0 不可，共 3 个。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -2463,6 +2534,7 @@
       role: 'primary',
       subType: 'P18_trinomial_factoring',
       operationSummary: '利用完全平方公式将 x²-6x+9=0 分解为 (x-3)²=0，解得 x₁=x₂=3。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -2601,6 +2673,7 @@
       role: 'primary',
       subType: 'P18_extract_monomial_x',
       operationSummary: '第(1)问：对 x²-4x=0 提取公因式 x 得 x(x-4)=0，解得 x₁=0, x₂=4。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -2613,6 +2686,7 @@
       role: 'primary',
       subType: 'P18_trinomial_factoring',
       operationSummary: '第(2)问：用十字相乘法将 x²+6x+5=0 分解为 (x+1)(x+5)=0，解得 x₁=-1, x₂=-5。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -2703,6 +2777,7 @@
       role: 'primary',
       subType: 'P19_identify_quadratic_equation',
       operationSummary: '排除一次方程 x+1=0、二元方程 x+y²=0 与分式方程 1/x+x=1，识别出 x²-2x+1=0 是一元二次方程。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -2774,6 +2849,7 @@
       role: 'primary',
       subType: 'P19_identify_quadratic_equation',
       operationSummary: '逐一检验 6 个方程，排除分式方程(2)、二元方程(3)、三次方程(4)及展开后 6x² 抵消的(5)，确定(1)和(6)是一元二次方程。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -2797,6 +2873,7 @@
       role: 'primary',
       subType: 'P19_identify_quadratic_equation',
       operationSummary: '排除分式方程②、二元方程③、x² 抵消的④及 m 可能为 0 的⑤，由 m²+1≥1≠0 判定 ①⑥ 一定是一元二次方程。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -2808,6 +2885,7 @@
       role: 'primary',
       subType: 'P19_general_form_and_coeffs',
       operationSummary: '将 3x²-2=4x 移项化为一般形式 3x²-4x-2=0，连同负号读取一次项系数为 -4。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -2831,6 +2909,7 @@
       role: 'primary',
       subType: 'P19_general_form_and_coeffs',
       operationSummary: '将 2x²-5=6x 移项化为常数项为 -5 的一般形式 2x²-6x-5=0，读取一次项系数为 -6。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -2879,6 +2958,7 @@
       role: 'primary',
       subType: 'P19_general_form_and_coeffs',
       operationSummary: '第(1)问：将 5x-8=3x² 移项化为一般形式 3x²-5x+8=0，指出二次项系数 3、一次项系数 -5、常数项 8。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -2891,6 +2971,7 @@
       role: 'primary',
       subType: 'P19_general_form_and_coeffs',
       operationSummary: '第(2)问：将 2x(x-1)=3(x+5)+3 去括号移项化为 2x²-5x-18=0，指出二次项系数 2、一次项系数 -5、常数项 -18。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3037,6 +3118,7 @@
       role: 'primary',
       subType: 'P20_coeff_relation_identify_root',
       operationSummary: '将已知等式 9a+3b+c=0 改写为 a·3²+b·3+c=0，对照 ax²+bx+c=0 直接判定方程有一个根为 x=3。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3048,6 +3130,7 @@
       role: 'primary',
       subType: 'P20_coeff_relation_identify_root',
       operationSummary: '将 4a+2b+c=0 改写为 a·2²+b·2+c=0，对照方程 ax²+bx+c=0 直接判定必有一个根为 2。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3059,6 +3142,7 @@
       role: 'primary',
       subType: 'P20_coeff_relation_identify_root',
       operationSummary: '将 4a-2b+c=0 改写为 a·(-2)²+b·(-2)+c=0，对照 ax²+bx+c=0 直接判定方程必有根 x=-2。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3082,6 +3166,7 @@
       role: 'primary',
       subType: 'P20_substitute_root_find_param',
       operationSummary: '将已知根 x=1 代入 x²+mx-3=0 得 1+m-3=0，解得 m=2。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3093,6 +3178,7 @@
       role: 'primary',
       subType: 'P20_substitute_root_find_param',
       operationSummary: '将 x=1 代入 x²+mx+2=0 得 1+m+2=0，移项解得 m=-3。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3104,6 +3190,7 @@
       role: 'primary',
       subType: 'P20_substitute_root_find_param',
       operationSummary: '将根 x=2 代入方程 x²-3x+c=0 得 2²-3×2+c=0，解得 c=2。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3127,6 +3214,7 @@
       role: 'primary',
       subType: 'P20_substitute_root_check_leading',
       operationSummary: '将 x=1 代入一元二次方程 (a-2)x²-2x+1=0 得 a-2-2+1=0，解得 a=3（且满足 a-2≠0）。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3138,6 +3226,7 @@
       role: 'primary',
       subType: 'P20_substitute_root_check_leading',
       operationSummary: '将 x=1/2 代入 (a-1)x²+x+a²-1=0 整理得 4a²+a-3=0，解得 a=-1 或 a=3/4（均满足二次项系数 a-1≠0）。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3149,6 +3238,7 @@
       role: 'primary',
       subType: 'P20_substitute_root_check_leading',
       operationSummary: '将 x=0 代入一元二次方程 (k+2)x²+3x+k²-4=0 得 k²-4=0 即 k=±2，结合二次项系数 k+2≠0 舍去 -2，得 k=2。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3209,6 +3299,7 @@
       role: 'primary',
       subType: 'P21_direct_sum_product',
       operationSummary: '在 x²+5x+3=0 中提取 a=1, b=5，由韦达定理直接写出 x₁+x₂ = -b/a = -5。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3244,6 +3335,7 @@
       role: 'primary',
       subType: 'P21_direct_sum_product',
       operationSummary: '在非首一方程 2x²+4x-1=0 中提取 a=2, b=4，由韦达定理得 x₁+x₂ = -4/2 = -2。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3303,6 +3395,7 @@
       role: 'primary',
       subType: 'P21_one_root_find_other',
       operationSummary: '由 x²+mx-6=0 的两根之积 x₁x₂=-6 及一根为 3，直接算得另一根为 -6÷3 = -2。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3314,6 +3407,7 @@
       role: 'primary',
       subType: 'P21_one_root_find_other',
       operationSummary: '由两根 x₁=-2, x₂=4 结合韦达定理得 -m=-2+4=2（m=-2）、n=(-2)×4=-8，相加得 m+n=-10。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3395,6 +3489,7 @@
       role: 'primary',
       subType: 'P21_one_root_find_other',
       operationSummary: '第(1)问：将根 x=-3 代入 x²+mx-6=0（或利用韦达定理），解得 m=1。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3407,6 +3502,7 @@
       role: 'primary',
       subType: 'P21_linear_comb_eval',
       operationSummary: '第(2)问：由 x²+x-6=0 得 x₁+x₂=-1, x₁x₂=-6，代入 x₁+x₂-2x₁x₂ 算得 -1-2×(-6)=11。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3418,6 +3514,7 @@
       role: 'primary',
       subType: 'P21_reciprocal_sum_eval',
       operationSummary: '由 x²-4x-5=0 得 m+n=4, mn=-5，将 1/m+1/n 通分为 (m+n)/(mn) 代入算得 -4/5。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3429,6 +3526,7 @@
       role: 'primary',
       subType: 'P21_reciprocal_sum_eval',
       operationSummary: '由 x²-4x-1=0 得 a+b=4, ab=-1，将 1/a+1/b 通分为 (a+b)/(ab) 代入算得 -4。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3464,6 +3562,7 @@
       role: 'primary',
       subType: 'P21_reciprocal_sum_eval',
       operationSummary: '由 3x²+2x-1=0 得 x₁+x₂=-2/3, x₁x₂=-1/3，通分 1/x₁+1/x₂=(x₁+x₂)/(x₁x₂) 代入算得 2。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3513,6 +3612,7 @@
       role: 'primary',
       subType: 'P21_product_expand_eval',
       operationSummary: '由 x²-2024x+1=0 得 a+b=2024, ab=1，将 (a+1)(b+1) 展开为 ab+(a+b)+1 代入算得 2026。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3536,6 +3636,7 @@
       role: 'primary',
       subType: 'P21_product_expand_eval',
       operationSummary: '由 3x²+2x-6=0 得 x₁+x₂=-2/3, x₁x₂=-2，展开 (x₁+1)(x₂+1)=x₁x₂+(x₁+x₂)+1 代入算得 -5/3。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3547,6 +3648,7 @@
       role: 'primary',
       subType: 'P21_product_expand_eval',
       operationSummary: '由 2x²-3x-5=0 得 x₁+x₂=3/2, x₁x₂=-5/2，将 (1+1/x₁)(1+1/x₂) 展开通分为 1+(x₁+x₂+1)/(x₁x₂) 代入算得 0。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3585,6 +3687,7 @@
       role: 'primary',
       subType: 'P21_quadratic_symmetric_eval',
       operationSummary: '第(1)问：由 2x²+6x-3=0 得 x₁+x₂=-3, x₁x₂=-3/2，代入 (x₁-x₂)²=(x₁+x₂)²-4x₁x₂ 算得 15。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3597,6 +3700,7 @@
       role: 'primary',
       subType: 'P21_quadratic_symmetric_eval',
       operationSummary: '第(2)问：通分变形 x₂/x₁+x₁/x₂=[(x₁+x₂)²-2x₁x₂]/(x₁x₂)，代入 (-3)²-2×(-3/2) 除以 -3/2 算得 -8。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3678,6 +3782,7 @@
       role: 'primary',
       subType: 'P21_direct_sum_product',
       operationSummary: '第(1)问：将不相等实数 x₁, x₂ 视为方程 x²+3x+5k=0 的两根，由韦达定理得 x₁+x₂=-3。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3690,6 +3795,7 @@
       role: 'primary',
       subType: 'P21_vieta_solve_param',
       operationSummary: '第(2)问：由两数异号得 x₁x₂=5k<0（此时 Δ=9-20k>0 恒成立），解得 k<0。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3702,6 +3808,7 @@
       role: 'secondary',
       subType: 'P21_discriminant_and_vieta',
       operationSummary: '第(1)问：调用 P16 计算 Δ=[-(m+4)]²-4(2m-1)=m²+20>0，证明方程总有两个不相等的实数根。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3714,6 +3821,7 @@
       role: 'primary',
       subType: 'P21_linear_comb_eval',
       operationSummary: '第(2)问：当 m=1 时由韦达定理得 x₁+x₂=m+4=5, x₁x₂=2m-1=1，代入 x₁+x₂+3x₁x₂ 算得 8。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3726,6 +3834,7 @@
       role: 'secondary',
       subType: 'P21_discriminant_and_vieta',
       operationSummary: '第(1)问：由有两个实数根列 Δ=(-2m)²-4(m²-m)=4m≥0，解得 m≥0。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3738,6 +3847,7 @@
       role: 'primary',
       subType: 'P21_vieta_solve_param',
       operationSummary: '第(2)问：由 x₁+x₂=2m, x₁x₂=m²-m 代入 1/x₁+1/x₂=(x₁+x₂)/(x₁x₂)=1，解得 m=3（满足 m≥0 且 m²-m≠0）。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3750,6 +3860,7 @@
       role: 'secondary',
       subType: 'P21_discriminant_and_vieta',
       operationSummary: '第(1)问：由方程有实数根列 Δ=[-(2m-1)]²-4m²=-4m+1≥0，解得 m≤1/4。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3762,6 +3873,7 @@
       role: 'primary',
       subType: 'P21_vieta_solve_param',
       operationSummary: '第(2)问：由 x₁+x₂=2m-1, x₁x₂=m² 代入 x₁+x₂=2-x₁x₂ 解得 m=1 或 m=-3，结合 m≤1/4 舍去 1，定解 m=-3。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3928,6 +4040,7 @@
       role: 'primary',
       subType: 'P22_move_and_combine',
       operationSummary: '第(1)问：将 -6 移项得 0.15x = 126，两边同除以 0.15 解得 x = 840。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3940,6 +4053,7 @@
       role: 'primary',
       subType: 'P22_move_and_combine',
       operationSummary: '第(2)问：合并同类项得 (7/6)x = 42，系数化为 1 解得 x = 36。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -3952,6 +4066,7 @@
       role: 'primary',
       subType: 'P22_move_and_combine',
       operationSummary: '第(3)问：先化简左边 12/2.4 = 5 得 x/3 = 5，两边同乘 3 解得 x = 15。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4057,6 +4172,7 @@
       role: 'primary',
       subType: 'P22_opposite_expr_solve',
       operationSummary: '由两式互为相反数列出 (3m - 1) + (-2m + 3) = 0，移项合并解得 m = -2，再代入 m² - 2m + 1 算得 9。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4079,6 +4195,7 @@
       role: 'primary',
       subType: 'P22_same_solution_param',
       operationSummary: '先将 3(2x - 2) = 2 - 3x 去括号移项解得 x = 8/9，再代入第二个方程 6 - 2k = 2(8/9 + 3) 解得 k = -8/9。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4090,6 +4207,7 @@
       role: 'primary',
       subType: 'P22_same_solution_param',
       operationSummary: '先解 2(2x - 1) = 3x - 1 得 x = 1，由两解互为相反数知另一方程解为 x = -1，代入 2(-1) + m = 7m - 6 解得 m = 2/3。',
+      visibility: 'bank_only',
       status: 'published'
     },
 
@@ -4105,6 +4223,7 @@
       role: 'primary',
       subType: 'P23_identify_perfect_square',
       operationSummary: '对照完全平方式 a²±2ab+b² 的结构特征（首尾平方项同正、中间项为两倍积），识别出 x²-2x+1 = (x-1)² 是完全平方式。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4116,6 +4235,7 @@
       role: 'primary',
       subType: 'P23_perfect_square_param',
       operationSummary: '将 9x²+12x+m 改写为 (3x)² + 2·(3x)·2 + m，由尾平方关系得出常数 m = 2² = 4。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4127,6 +4247,7 @@
       role: 'primary',
       subType: 'P23_perfect_square_param',
       operationSummary: '将 (x+a)² 展开为 x²+2ax+a² 对照 x²+mx+25，由 a²=25 得 a=±5、m=2a=±10，算出 a-m = -5 或 5。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4160,6 +4281,7 @@
       role: 'primary',
       subType: 'P23_grouping_expand',
       operationSummary: '对 (x+2y-1)(x-2y+1) 的后两项添括号变形为 [x+(2y-1)][x-(2y-1)]，构造标准乘法公式结构。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4182,6 +4304,7 @@
       role: 'primary',
       subType: 'P23_grouping_expand',
       operationSummary: '将 (a+2b) 看作整体化为 [(a+2b)-1]²，连续两次运用完全平方公式展开得 a²+4ab+4b²-2a-4b+1。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4206,6 +4329,7 @@
       role: 'primary',
       subType: 'P23_grouping_expand',
       operationSummary: '第(1)问：添括号化为 [(-2)+(3x+2y)][(-2)-(3x+2y)] = 4-(3x+2y)²，再用完全平方公式展开得 4-9x²-12xy-4y²。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4218,6 +4342,7 @@
       role: 'primary',
       subType: 'P23_grouping_expand',
       operationSummary: '第(2)问：将 (a-1) 看作整体分别用平方差与完全平方公式展开，合并同类项得 2ab-2b-2b²。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4313,6 +4438,7 @@
       role: 'primary',
       subType: 'P23_symmetric_identity_eval',
       operationSummary: '对 m+n=4 两边平方展开得 m²+2mn+n²=16，将 m²+n²=4+2mn 代入得 4+4mn=16，解得 mn=3。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4325,6 +4451,7 @@
       role: 'primary',
       subType: 'P23_symmetric_identity_eval',
       operationSummary: '第(1)问：对 x-1/x=1 两边平方展开得 x²-2+1/x²=1，移项求得 x²+1/x² = 3。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4337,6 +4464,7 @@
       role: 'primary',
       subType: 'P23_symmetric_identity_eval',
       operationSummary: '第(2)问：对 x²+1/x²=3 两边再次平方展开得 x⁴+2+1/x⁴=9，移项求得 x⁴+1/x⁴ = 7。',
+      visibility: 'bank_only',
       status: 'published'
     },
 
@@ -4352,6 +4480,7 @@
       role: 'primary',
       subType: 'P24_identify_factorization',
       operationSummary: '依据“把多项式化为几个整式的积”排除整式乘法 A、未化为积的 B 及含分式的 D，选出属于因式分解的 C。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4363,6 +4492,7 @@
       role: 'primary',
       subType: 'P24_determine_common_factor',
       operationSummary: '在 -6a²c²-18a³c² 中，系数取最大公约数并连同首项负号取 -6，相同字母取最低次幂 a²c²，确定公因式为 -6a²c²。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4374,6 +4504,7 @@
       role: 'primary',
       subType: 'P24_determine_common_factor',
       operationSummary: '在 4xⁿ⁺¹-12xⁿ+32xⁿ⁻¹ 中，系数最大公约数为 4，字母 x 的最低次幂为 xⁿ⁻¹，确定提取的公因式为 4xⁿ⁻¹。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4496,6 +4627,7 @@
       role: 'primary',
       subType: 'P24_extract_monomial_factor',
       operationSummary: '第(1)问：对 -20a-15ax 提取带负号的公因式 -5a，括号内变号得 -5a(4+3x)。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4508,6 +4640,7 @@
       role: 'primary',
       subType: 'P24_extract_monomial_factor',
       operationSummary: '第(2)问：对 -4a³b³+6a²b-2ab 提取公因式 -2ab（末项变号并保留 +1）得 -2ab(2a²b²-3a+1)。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4520,6 +4653,7 @@
       role: 'primary',
       subType: 'P24_extract_monomial_factor',
       operationSummary: '第(3)问：对 -10a²bc+15bc²-20ab²c 提取公因式 -5bc 得 -5bc(2a²-3c+4ab)。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4542,6 +4676,7 @@
       role: 'primary',
       subType: 'P24_factor_then_eval',
       operationSummary: '对括号内提取 -b 将 -ab(-ab³-b) 化为 ab²(ab²+1)，整体代入 ab²=-3 算得 (-3)×(-2)=6。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4553,6 +4688,7 @@
       role: 'primary',
       subType: 'P24_power_factor_calc',
       operationSummary: '提取最低次幂 (-5)²⁰²³ 得 (-5)²⁰²³×[1+(-5)] = (-5)²⁰²³×(-4) = 4×5²⁰²³。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4565,6 +4701,7 @@
       role: 'primary',
       subType: 'P24_power_factor_calc',
       operationSummary: '第(1)问：提取公因式 2²⁰²⁴ 得 2²⁰²⁴×(2-1) = 2²⁰²⁴。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4577,6 +4714,7 @@
       role: 'primary',
       subType: 'P24_power_factor_calc',
       operationSummary: '第(2)问：提取公因式 (-2)¹⁰⁰ 得 (-2)¹⁰⁰×(-2+1) = -2¹⁰⁰。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4746,6 +4884,7 @@
       role: 'primary',
       subType: 'P25_identify_diff_of_squares',
       operationSummary: '按“两项平方且异号”排除同号平方和 ①x²+4 与 ④-x²-y²，识别出 ②m²-n²、③-a²+b²、⑤1-4b² 共 3 个可用平方差公式分解。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4757,6 +4896,7 @@
       role: 'primary',
       subType: 'P25_diff_of_squares_direct',
       operationSummary: '由平方差公式 (3x+4y)(3x-4y) = 9x²-16y² 对照 ax²+by² 得 a=9, b=-16，求得 a+b = -7。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4768,6 +4908,7 @@
       role: 'primary',
       subType: 'P25_diff_of_squares_direct',
       operationSummary: '将 y⁴-9x² 用平方差公式分解为 (y²-3x)(y²+3x)，对照 m(-3x+y²) 得出另一个因式 m = 3x+y²。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4779,6 +4920,7 @@
       role: 'primary',
       subType: 'P25_diff_of_squares_direct',
       operationSummary: '将 y²-4x² 提取负号并用平方差公式化为 -(2x+y)(2x-y)，代入 2x+y=1, 2x-y=5 算得 -5。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4790,6 +4932,7 @@
       role: 'primary',
       subType: 'P25_diff_of_squares_repeat',
       operationSummary: '检查 16-b⁴=(4+b²)(4-b²) 的第二个因式，指出 4-b² 还能继续用平方差公式分解为 (2+b)(2-b)，故原结果不正确。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4801,6 +4944,7 @@
       role: 'primary',
       subType: 'P25_diff_of_squares_repeat',
       operationSummary: '对 81x⁴-y⁴ 连续两次套用平方差公式：先化为 (9x²+y²)(9x²-y²)，再将 9x²-y² 分解为 (3x+y)(3x-y)。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4813,6 +4957,7 @@
       role: 'primary',
       subType: 'P25_diff_of_squares_binomial',
       operationSummary: '第(1)问：将 5(a+b) 与 3(a-b) 看作整体套平方差公式，合并同类项并提出公因数得 4(4a+b)(a+4b)。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4825,6 +4970,7 @@
       role: 'primary',
       subType: 'P25_diff_of_squares_repeat',
       operationSummary: '第(2)问：对 x⁴-y⁴ 连续两次运用平方差公式，彻底分解为 (x²+y²)(x-y)(x+y)。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4836,6 +4982,7 @@
       role: 'primary',
       subType: 'P25_diff_of_squares_binomial',
       operationSummary: '将 3(a-b) 与 2(a+b) 看作整体套平方差公式化简为 (5a-b)(a-5b)，再代入 a=1/5, b=-1 算得 52/5。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4847,6 +4994,7 @@
       role: 'primary',
       subType: 'P25_identify_perfect_square_factor',
       operationSummary: '核对三项式首尾平方与中间两倍积，识别出 a²+4a+1 中间项 4a≠2a，不能用完全平方公式分解。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4892,6 +5040,7 @@
       role: 'primary',
       subType: 'P25_perfect_square_direct',
       operationSummary: '先将 (x-3)(x-5)+1 展开合并为 x²-8x+16，再套用完全平方公式分解为 (x-4)²。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4916,6 +5065,7 @@
       role: 'primary',
       subType: 'P25_perfect_square_direct',
       operationSummary: '第(1)问：分别套用完全平方公式分解得 (x-5)²、(3x+1)²、(2x-3)²。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -4928,6 +5078,7 @@
       role: 'primary',
       subType: 'P25_identify_perfect_square_factor',
       operationSummary: '第(2)问：由 ax²+bx+c = (√a·x±√c)² 归纳出系数满足的数量关系 b² = 4ac。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -5023,6 +5174,7 @@
       role: 'primary',
       subType: 'P25_multi_step_formula',
       operationSummary: '先用完全平方公式将 x⁴-2x²y²+y⁴ 化为 (x²-y²)²，再对底数用平方差公式分解得 (x+y)²(x-y)²。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -5034,6 +5186,7 @@
       role: 'primary',
       subType: 'P25_multi_step_formula',
       operationSummary: '将 (x²+y²) 看作整体展开加 16 配成 (x²+y²-4)²，其中 x²+y²-4 不能在实数范围内继续套公式。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -5174,6 +5327,7 @@
       role: 'secondary',
       subType: 'P25_extract_then_formula_eval',
       operationSummary: '第(1)问：调用 P23 完全平方公式变形 a²+b²=(a+b)²-2ab，代入 a+b=2, ab=-15 算得 34。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -5186,6 +5340,7 @@
       role: 'primary',
       subType: 'P25_extract_then_formula_eval',
       operationSummary: '第(2)问：对后两项提取公因式 ab 化为 -3(a²+b²)+ab(a²+b²)=(a²+b²)(ab-3)，代入 34×(-18) 算得 -612。',
+      visibility: 'bank_only',
       status: 'published'
     },
     // =========================================================================
@@ -5215,6 +5370,7 @@
       role: 'primary',
       subType: 'P26_structure_match_fill',
       operationSummary: '第(1)问：由平方差结果 16b²-4a²=(4b)²-(2a)² 及已知因式 (-2a+4b)，配对填出另一因式 4b-2a。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -5227,6 +5383,7 @@
       role: 'primary',
       subType: 'P26_structure_match_fill',
       operationSummary: '第(2)问：由平方差结果 9x⁴-4y⁴=(-3x²)²-(2y²)² 及已知因式 (-3x²+2y²)，配对填出另一因式 -3x²-2y²。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -5260,6 +5417,7 @@
       role: 'primary',
       subType: 'P26_number_shortcut_calc',
       operationSummary: '由 m+99²=101²-1 移项并用平方差公式算得 m=(101+99)(101-99)-1=200×2-1=399。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -5317,6 +5475,7 @@
       role: 'primary',
       subType: 'P26_expand_and_combine',
       operationSummary: '用平方差公式与多项式乘法展开 (2m+1)(2m-1)-(m+1)(4m+1) 合并化简为 -5m-2，代入 m=3 算得 -17。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -5328,6 +5487,7 @@
       role: 'primary',
       subType: 'P27_monomial_mul_monomial',
       operationSummary: '将系数 5 与 -2/5 相乘、同底数幂 x·x³ 与 y³·y² 指数相加，算得 -2x⁴y⁵。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -5339,6 +5499,7 @@
       role: 'primary',
       subType: 'P27_monomial_mul_monomial',
       operationSummary: '同号单项式相乘得正，系数 1×3/2=3/2，同底数幂 a²·a=a³，算得 (3/2)a³。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -5350,6 +5511,7 @@
       role: 'primary',
       subType: 'P27_monomial_mul_monomial',
       operationSummary: '三个单项式连乘：系数 2×(-1/4)×(-2)=1，同底数幂指数相加并保留单独字母 b，得 a²bc⁶。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -5373,6 +5535,7 @@
       role: 'primary',
       subType: 'P27_power_then_monomial_mul',
       operationSummary: '先算奇次幂 (-a²)³=-a⁶，再与 (-2a²b²)·b 相乘，系数 (-2)×(-1)=2、指数相加得 2a⁸b³。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -5384,6 +5547,7 @@
       role: 'primary',
       subType: 'P27_power_then_monomial_mul',
       operationSummary: '先算积的乘方 (-6x)²=36x²，再与 (1/3)xy² 相乘得 12x³y²。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -5395,6 +5559,7 @@
       role: 'primary',
       subType: 'P27_power_then_monomial_mul',
       operationSummary: '先算积的乘方与单项式乘法得 9a⁶b³-5a⁶b³，再合并同类项得 4a⁶b³。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -5406,6 +5571,7 @@
       role: 'primary',
       subType: 'P27_monomial_mul_find_param',
       operationSummary: '先算积的乘方与单项式乘法得 (1/2)x²ᵐ⁺³y²ⁿ⁺⁶，对比右边 (1/2)x⁷y⁸ 列 2m+3=7, 2n+6=8 解得 m=2, n=1。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -5417,6 +5583,7 @@
       role: 'primary',
       subType: 'P27_monomial_mul_overall_eval',
       operationSummary: '单项式相乘得 -6a²b⁶=-6(ab³)²，将 ab³=-3 整体代入算得 -6×(-3)²=-54。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -5428,6 +5595,7 @@
       role: 'primary',
       subType: 'P27_monomial_mul_overall_eval',
       operationSummary: '单项式乘法化简为 (9/4)x⁷y⁵-4x³y³，利用 xy=0.4×(-2.5)=-1 逆用积的乘方代入求得 23/10。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -5473,6 +5641,7 @@
       role: 'primary',
       subType: 'P27_monomial_mul_polynomial',
       operationSummary: '逐项排查单项式乘多项式中的漏乘、符号与同底数幂指数相加错误，选出计算正确项。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -5519,6 +5688,7 @@
       role: 'primary',
       subType: 'P27_monomial_poly_simplify',
       operationSummary: '两边用单项式乘多项式展开得 6x²-10x+4x-6x²=12，消去 6x² 得 -6x=12，解得 x=-2。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -5530,6 +5700,7 @@
       role: 'primary',
       subType: 'P27_monomial_poly_find_param',
       operationSummary: '展开 P·Q+R=2y²-ay-(2y²+3y-2)=-(a+3)y+2，由值与 y 无关令系数 -(a+3)=0 解得 a=-3。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -5602,6 +5773,7 @@
       role: 'primary',
       subType: 'P27_monomial_mul_overall_eval',
       operationSummary: '第(1)问：展开得 2a³b²+2a²b²-2a²b³=2ab²(a²+a-ab)，或直接针对第(1)式变形代入。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -5614,6 +5786,7 @@
       role: 'primary',
       subType: 'P27_monomial_mul_overall_eval',
       operationSummary: '第(2)问：展开得 -4a³b⁶+6a²b⁴-8ab²=-4(ab²)³+6(ab²)²-8(ab²)，将 ab²=3 整体代入算得 -78。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -5707,6 +5880,7 @@
       role: 'primary',
       subType: 'P29_identify_equation',
       operationSummary: '依据“含有未知数的等式叫做方程”，剔除不含未知数的②、代数式③与不等式⑥，识别出方程①④⑤。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -5718,6 +5892,7 @@
       role: 'primary',
       subType: 'P29_identify_linear_equation',
       operationSummary: '依据“整式、只含一个未知数、未知数次数为 1”排除高次方程①、二元方程②与分式方程③，选出一元一次方程④⑤。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -5729,6 +5904,7 @@
       role: 'primary',
       subType: 'P29_identify_linear_equation',
       operationSummary: '排除代数式②、分式方程③、二元方程④与二次方程⑤，识别出一元一次方程①⑥（共 2 个）。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -5740,6 +5916,7 @@
       role: 'primary',
       subType: 'P29_linear_eq_find_param',
       operationSummary: '由 3mx²ⁿ⁺¹-3=0 是关于 x 的一元一次方程，列一次项系数 3m≠0（m≠0）且指数 2n+1=1（n=0）。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -5751,6 +5928,7 @@
       role: 'primary',
       subType: 'P29_linear_eq_find_param',
       operationSummary: '由一元一次方程定义列指数 |m|=1 且系数 m+1≠0，解得 m=1，代入算得 m-1=0。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -5774,6 +5952,7 @@
       role: 'primary',
       subType: 'P29_linear_eq_find_param',
       operationSummary: '先合并同类项化为 (a²-4)x²+(2-a)x-3=0，令二次项系数 a²-4=0 且一次项系数 2-a≠0，解得 a=-2。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -5799,6 +5978,7 @@
       role: 'primary',
       subType: 'P29_verify_solution',
       operationSummary: '第(1)问：分别将 x=-2 与 x=1/2 代入 2x-1=-5x+6 左右两边，由 x=1 时左边=右边（或检验候选值）判定方程的解。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -5811,6 +5991,7 @@
       role: 'primary',
       subType: 'P29_verify_solution',
       operationSummary: '第(2)问：将 x=9 与 x=10 分别代入 3x-2(x-1)=11 左右两边，检验得 x=9 时左边=11=右边，故 x=9 是方程的解。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -5823,6 +6004,7 @@
       role: 'primary',
       subType: 'P29_verify_solution',
       operationSummary: '第(3)问：将 x=-3 与 x=-6 分别代入 2(2x-1)-(3x+1)=-6 左右两边，检验得 x=-3 时左边=-6=右边。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -5835,6 +6017,7 @@
       role: 'primary',
       subType: 'P29_verify_solution',
       operationSummary: '第(4)问：将 x=6 与 x=-1 分别代入 (2x-1)/3=(x+2)/4-1 左右两边，检验得 x=-1 时左边=-1=右边。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6042,6 +6225,7 @@
       role: 'primary',
       subType: 'P29_equality_property_check',
       operationSummary: '第(1)问：指出第一步在 3a-5=2a-5 两边同时加 5 的依据是等式的基本性质 1。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6054,6 +6238,7 @@
       role: 'primary',
       subType: 'P29_equality_property_check',
       operationSummary: '第(2)问：指出小明的变形过程不正确，第二步在 3a=2a 两边同除以 a 时忽略了 a=0 不能作除数。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6101,6 +6286,7 @@
       role: 'primary',
       subType: 'P29_equality_property_check',
       operationSummary: '逐一检验 4 个方程变形：①应为 x=-3/4、②右边 1 漏乘 6，判定仅③④符合等式性质，共 2 个。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6113,6 +6299,7 @@
       role: 'primary',
       subType: 'P29_equality_property_fill',
       operationSummary: '第(1)问：根据等式的性质 1，两边同时减去 2x，得出 5=2x（或 2x）。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6125,6 +6312,7 @@
       role: 'primary',
       subType: 'P29_equality_property_fill',
       operationSummary: '第(2)问：根据等式的性质 2，两边同时除以 -5，得出 x=-3/5。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6137,6 +6325,7 @@
       role: 'primary',
       subType: 'P29_equality_property_fill',
       operationSummary: '第(3)问：根据等式的性质 1，两边同时加上 (4/3)y，得出 1-(4/3)y（或对应项）。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6149,6 +6338,7 @@
       role: 'primary',
       subType: 'P29_equality_property_fill',
       operationSummary: '第(4)问：根据等式的性质 2，两边同时乘以 3，将右边的 1 化为 3。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6272,6 +6462,7 @@
       role: 'primary',
       subType: 'P30_same_base_mul_identify',
       operationSummary: '辨析底数相同（或可化为相同）的幂的乘法，选出可用同底数幂乘法法则计算的选项。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6283,6 +6474,7 @@
       role: 'primary',
       subType: 'P30_same_base_mul_basic',
       operationSummary: '逐项核对同底数幂乘法（底数不变指数相加），选出结果为 2^(3a) 的算式。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6294,6 +6486,7 @@
       role: 'primary',
       subType: 'P30_same_base_mul_basic',
       operationSummary: '将 2⁴+2⁴=2×2⁴=2⁵ 与 3⁵+3⁵+3⁵=3×3⁵=3⁶ 化为同底数幂得 a=5, b=6，算得 a+b=11。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6305,6 +6498,7 @@
       role: 'primary',
       subType: 'P30_same_base_mul_param',
       operationSummary: '由同底数幂乘法得 a^(3n+1)=a⁷，对比指数 3n+1=7 解得 n=2。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6316,6 +6510,7 @@
       role: 'primary',
       subType: 'P30_same_base_mul_param',
       operationSummary: '将 16 化为 2⁴，由 2ˣ·2ˣ·2⁴=2^(2x+4)=2¹² 列 2x+4=12 解得 x=4。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6327,6 +6522,7 @@
       role: 'primary',
       subType: 'P30_same_base_mul_param',
       operationSummary: '将 625 化为 5⁴，由 5^(3m+1)=5⁴ 解得 m=1，再算 (-1)²⁰²³=-1。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6362,6 +6558,7 @@
       role: 'primary',
       subType: 'P30_sign_unify_same_base',
       operationSummary: '由偶次幂 (-3)^(2n)=3^(2n)、奇次幂 (-3)^(2n+1)=-3^(2n+1) 统一底数，合并得 -3^(2n+1)+3^(2n+1)=0。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6396,6 +6593,7 @@
       role: 'primary',
       subType: 'P30_sign_unify_same_base',
       operationSummary: '第(1)问：将 (b+a) 视为 (a+b)，由同底数幂乘法得 (a+b)⁵。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6408,6 +6606,7 @@
       role: 'primary',
       subType: 'P30_sign_unify_same_base',
       operationSummary: '第(2)问：利用偶次幂 (a-b)²=(b-a)² 统一底数，算得 (b-a)⁵。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6420,6 +6619,7 @@
       role: 'primary',
       subType: 'P30_sign_unify_same_base',
       operationSummary: '第(3)问：先定 (-t)²=t²，再算 -t·t²-t³=-t³-t³=-2t³。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6432,6 +6632,7 @@
       role: 'primary',
       subType: 'P30_sign_unify_same_base',
       operationSummary: '第(4)问：定偶次幂 (-a)²=a²，分别按同底数幂乘法得 a^(m+3)+a^(m+3)=2a^(m+3)。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6443,6 +6644,7 @@
       role: 'primary',
       subType: 'P30_power_and_product_power',
       operationSummary: '先合并括号内同类项得 (3a²)³，再用积的乘方与幂的乘方算得 27a⁶。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6454,6 +6656,7 @@
       role: 'primary',
       subType: 'P30_power_and_product_power',
       operationSummary: '逐项运用积的乘方与幂的乘方法则计算，选出结果为 9a⁶ 的算式。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6465,6 +6668,7 @@
       role: 'primary',
       subType: 'P30_power_and_product_power',
       operationSummary: '逐项辨析同底数幂乘法、幂的乘方、积的乘方及合并同类项正误，选出正确选项。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6476,6 +6680,7 @@
       role: 'primary',
       subType: 'P30_sign_unify_same_base',
       operationSummary: '先算 (-x)²=x²、(-x)³=-x³，再与 (-x²) 相乘定号为正、指数相加得 x⁷。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6487,6 +6692,7 @@
       role: 'primary',
       subType: 'P30_power_param_solve',
       operationSummary: '由 (a²)³=a⁶ 与 aᵐ·a=a^(m+1) 相等，列 m+1=6 解得 m=5。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6509,6 +6715,7 @@
       role: 'primary',
       subType: 'P30_power_param_solve',
       operationSummary: '由 (2³)ᵃ=2^(3a)=2^(a+4) 列 3a=a+4 解得 a=2，再算 (2-3)²⁰²⁵=-1。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6557,6 +6764,7 @@
       role: 'primary',
       subType: 'P30_power_mixed_simplify',
       operationSummary: '第(1)问：分别算得 x⁶+x⁶-2x⁶，合并同类项得 0。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6569,6 +6777,7 @@
       role: 'primary',
       subType: 'P30_power_mixed_simplify',
       operationSummary: '第(2)问：分别算得 x¹²-3(x⁶)²=x¹²-3x¹²=-2x¹²。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6581,6 +6790,7 @@
       role: 'primary',
       subType: 'P30_power_mixed_simplify',
       operationSummary: '第(3)问：算积的乘方与幂的乘方得 4a^(2n)b^(6n)+a^(2n)b^(6n)=5a^(2n)b^(6n)。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6593,6 +6803,7 @@
       role: 'primary',
       subType: 'P30_power_mixed_simplify',
       operationSummary: '第(4)问：逐项定号算乘方得 9x⁶-(-x⁶)+4x²-(-x³)=10x⁶+x³+4x²。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6664,6 +6875,7 @@
       role: 'primary',
       subType: 'P31_identify_fraction',
       operationSummary: '按“分母含字母”排除分母为常数 2、5 的前两项，识别出后两项是分式（共 2 个）。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6781,6 +6993,7 @@
       role: 'primary',
       subType: 'P31_basic_property_check',
       operationSummary: '逐项核对分式基本性质（分子分母同乘除同一非零整式）与符号变形，选出正确项。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6816,6 +7029,7 @@
       role: 'primary',
       subType: 'P31_basic_property_check',
       operationSummary: '将分母 a²-4 分解为 (a+2)(a-2)，分子分母同除以 (a+2) 得空缺分母 a-2。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6827,6 +7041,7 @@
       role: 'primary',
       subType: 'P31_basic_property_check',
       operationSummary: '辨析隐含条件：①中左边分式有意义必有 a≠0 故正确，②中未说明 a≠0 故不一定成立，两人说法均错。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6838,6 +7053,7 @@
       role: 'primary',
       subType: 'P31_sign_and_int_coeff',
       operationSummary: '分子分母同乘 -1，将 (1-3x)/(-x+2) 化为最高次项系数均为正的 (3x-1)/(x-2)。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6849,6 +7065,7 @@
       role: 'primary',
       subType: 'P31_sign_and_int_coeff',
       operationSummary: '分子分母同乘 -1，将 (-x+y)/(-2x-y) 化为第一项系数均为正的 (x-y)/(2x+y)。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6912,6 +7129,7 @@
       role: 'primary',
       subType: 'P31_sign_and_int_coeff',
       operationSummary: '第(1)问：分子分母同乘 10 化为整数系数 (10x-2y²)/(5x+10y²)。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6924,6 +7142,7 @@
       role: 'primary',
       subType: 'P31_sign_and_int_coeff',
       operationSummary: '第(2)问：提取分子负号放到分数线前，化为 -(y²-x)/(x³+y²)。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6935,6 +7154,7 @@
       role: 'primary',
       subType: 'P31_scaling_effect',
       operationSummary: '用 10x, 10y 替换原式得 [10(2x-y)]/(300xy)，约去 10 知分式值缩小为原来的 1/10。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6946,6 +7166,7 @@
       role: 'primary',
       subType: 'P31_scaling_effect',
       operationSummary: '由 x,y 同扩大 3 倍分式值扩大 3 倍，判断分子需变为原来 9 倍，故□内应填乘号。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6957,6 +7178,7 @@
       role: 'primary',
       subType: 'P31_scaling_effect',
       operationSummary: '用 3x, 3y 替换得 27x²/[3(x+y)]=3×[3x²/(x+y)]，算出新值为 3×4=12。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -6980,6 +7202,7 @@
       role: 'primary',
       subType: 'P31_simplify_fraction',
       operationSummary: '逐一检查分子分母有无公因式，识别出最简分式 (x+π)/x 与 (a+b)/(b-a) 共 2 个。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -7015,6 +7238,7 @@
       role: 'primary',
       subType: 'P31_simplify_fraction',
       operationSummary: '分子提公因式 a(2a-b)、分母套完全平方 (2a-b)²，约去 (2a-b) 得 a/(2a-b)。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -7053,6 +7277,7 @@
       role: 'primary',
       subType: 'P31_simplify_fraction',
       operationSummary: '第(1)问：分子用平方差、分母用完全平方分解，约去 (a+b) 得 (a-b)/(a+b)。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -7065,6 +7290,7 @@
       role: 'primary',
       subType: 'P31_common_denominator',
       operationSummary: '第(2)问：分母分解为 (x+3)(x-3) 与 2(x+3)，取最简公分母 2(x-3)(x+3) 完成通分。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -7114,6 +7340,7 @@
       role: 'primary',
       subType: 'P31_common_denominator',
       operationSummary: '确定最简公分母 (x-2)(x+3)²，逐项核对通分结果并找出错误结论。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -7137,6 +7364,7 @@
       role: 'primary',
       subType: 'P31_common_denominator',
       operationSummary: '将三项分母分解为 (a-1)²、(a+1)、a(a-1)，确定最简公分母 a(a+1)(a-1)²。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -7186,6 +7414,7 @@
       role: 'primary',
       subType: 'P32_power_sign_distinguish',
       operationSummary: '区分 -1⁶=-(1⁶)，先算 1⁶=1 再取相反数得 -1。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -7197,6 +7426,7 @@
       role: 'primary',
       subType: 'P32_power_basic',
       operationSummary: '分别计算 (3+3+3)²=9²=81 与 3×3×3=27，得出 81 是 27 的 3 倍。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -7220,6 +7450,7 @@
       role: 'primary',
       subType: 'P32_power_basic',
       operationSummary: '按乘方定义辨识 (k³)⁴ 表示 4 个 k³ 相乘。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -7243,6 +7474,7 @@
       role: 'primary',
       subType: 'P32_power_sign_distinguish',
       operationSummary: '先化简内层 -(-2)=2，再算 2²=4，最后添外层负号得 -4。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -7255,6 +7487,7 @@
       role: 'primary',
       subType: 'P32_power_basic',
       operationSummary: '第(1)问：识别 4⁴ 的底数是 4、指数是 4。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -7267,6 +7500,7 @@
       role: 'primary',
       subType: 'P32_power_basic',
       operationSummary: '第(2)问：识别 (-3/4)³ 的底数是 -3/4、指数是 3。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -7279,6 +7513,7 @@
       role: 'primary',
       subType: 'P32_power_sign_distinguish',
       operationSummary: '第(3)问：区分 -6² 不带括号，底数是 6、指数是 2。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -7369,6 +7604,7 @@
       role: 'primary',
       subType: 'P32_power_sign_distinguish',
       operationSummary: '第(1)问：(-3/2)²=9/4。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -7381,6 +7617,7 @@
       role: 'primary',
       subType: 'P32_power_sign_distinguish',
       operationSummary: '第(2)问：-(-3/2)³=-(-27/8)=27/8。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -7393,6 +7630,7 @@
       role: 'primary',
       subType: 'P32_power_sign_distinguish',
       operationSummary: '第(3)问：先将带分数化为假分数 (-3/2)³=-27/8。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -7405,6 +7643,7 @@
       role: 'primary',
       subType: 'P32_power_sign_distinguish',
       operationSummary: '第(4)问：-1.5⁴=-(3/2)⁴=-81/16。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -7417,6 +7656,7 @@
       role: 'primary',
       subType: 'P32_power_sign_distinguish',
       operationSummary: '第(5)问：-3³/2=-27/2。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -7429,6 +7669,7 @@
       role: 'primary',
       subType: 'P32_power_sign_distinguish',
       operationSummary: '第(6)问：(-0.25)⁴=(-1/4)⁴=1/256。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -7462,6 +7703,7 @@
       role: 'primary',
       subType: 'P32_mixed_order_check',
       operationSummary: '逐条核对乘方顺序、分配律拆项与乘除同级顺序，统计计算错误的个数。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -7952,205 +8194,206 @@
     },
     {
       questionId: 'g7_1_2_4_1',
-      procedureId: 'P33',
+      procedureId: 'P54',
       partId: null,
       sortOrder: 1,
       order: 1,
       role: 'primary',
-      subType: 'P33_abs_meaning',
+      subType: 'P54_abs_meaning',
       operationSummary: '由绝对值小于 2.5 知到原点距离小于 2.5，写出整数解（-2, -1, 0, 1, 2 任一）。',
       status: 'published'
     },
     {
       questionId: 'g7_1_2_4_2',
-      procedureId: 'P33',
+      procedureId: 'P54',
       partId: null,
       sortOrder: 2,
       order: 2,
       role: 'primary',
-      subType: 'P33_abs_meaning',
+      subType: 'P54_abs_meaning',
       operationSummary: '根据绝对值的几何意义，找出数轴上离原点最远的点即为绝对值最大的点。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
       questionId: 'g7_1_2_4_3',
-      procedureId: 'P33',
+      procedureId: 'P54',
       partId: null,
       sortOrder: 3,
       order: 3,
       role: 'primary',
-      subType: 'P33_abs_meaning',
+      subType: 'P54_abs_meaning',
       operationSummary: '由到原点距离等于 2 得 ±2，结合负有理数条件定解为 -2。',
       status: 'published',
       visibility: 'bank_only'
     },
     {
       questionId: 'g7_1_2_4_4',
-      procedureId: 'P33',
+      procedureId: 'P54',
       partId: null,
       sortOrder: 4,
       order: 4,
       role: 'primary',
-      subType: 'P33_abs_meaning',
+      subType: 'P54_abs_meaning',
       operationSummary: '先化简 |-(+5)|=5，再由 |m|=5 写出正负两个解 m=±5。',
-      status: 'published',
-      visibility: 'bank_only'
+      status: 'published'
     },
     {
       questionId: 'g7_1_2_4_5',
-      procedureId: 'P33',
+      procedureId: 'P54',
       partId: null,
       sortOrder: 5,
       order: 5,
       role: 'primary',
-      subType: 'P33_abs_meaning',
+      subType: 'P54_abs_meaning',
       operationSummary: '依据绝对值非负性 |m|≥0 辨析关于有理数 m 绝对值的结论。',
       status: 'published',
       visibility: 'bank_only'
     },
     {
       questionId: 'g7_1_2_4_6',
-      procedureId: 'P33',
+      procedureId: 'P54',
       partId: null,
       sortOrder: 6,
       order: 6,
       role: 'primary',
-      subType: 'P33_abs_meaning',
+      subType: 'P54_abs_meaning',
       operationSummary: '找出数轴上距离原点最近的点即为绝对值最小的数。',
       status: 'published',
       visibility: 'bank_only'
     },
     {
       questionId: 'g7_1_2_4_7',
-      procedureId: 'P33',
+      procedureId: 'P54',
       partId: null,
       sortOrder: 7,
       order: 7,
       role: 'primary',
-      subType: 'P33_abs_meaning',
+      subType: 'P54_abs_meaning',
       operationSummary: '由点 A 与点 C 绝对值相等确定原点在 AC 中点，再读出点 B 表示的数。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
       questionId: 'g7_1_2_4_8',
-      procedureId: 'P33',
+      procedureId: 'P54',
       partId: null,
       sortOrder: 8,
       order: 8,
       role: 'primary',
-      subType: 'P33_abs_meaning',
+      subType: 'P54_abs_meaning',
       operationSummary: '先化简 -|-3|=-3，再求 -3 的相反数得 3。',
-      status: 'published',
-      visibility: 'bank_only'
+      status: 'published'
     },
     {
       questionId: 'g7_1_2_4_9',
-      procedureId: 'P33',
+      procedureId: 'P54',
       partId: null,
       sortOrder: 9,
       order: 9,
       role: 'primary',
-      subType: 'P33_abs_meaning',
+      subType: 'P54_abs_meaning',
       operationSummary: '逐组化简绝对值与多重符号，选出互为相反数的一组。',
       status: 'published',
       visibility: 'bank_only'
     },
     {
       questionId: 'g7_1_2_4_10',
-      procedureId: 'P33',
+      procedureId: 'P54',
       partId: null,
       sortOrder: 10,
       order: 10,
       role: 'primary',
-      subType: 'P33_abs_meaning',
+      subType: 'P54_abs_meaning',
       operationSummary: '由 M(a) 与 N(-a) 互为相反数，判定两点到原点的距离（绝对值）相等。',
-      status: 'published',
-      visibility: 'bank_only'
+      visibility: 'bank_only',
+      status: 'published'
     },
     {
       questionId: 'g7_1_2_4_11',
-      procedureId: 'P33',
+      procedureId: 'P54',
       partId: null,
       sortOrder: 11,
       order: 11,
       role: 'primary',
-      subType: 'P33_abs_meaning',
+      subType: 'P54_abs_meaning',
       operationSummary: '由到原点距离为 5 得 a=±5，故其相反数也为 ±5。',
       status: 'published',
       visibility: 'bank_only'
     },
     {
       questionId: 'g7_1_2_4_12',
-      procedureId: 'P33',
+      procedureId: 'P55',
       partId: null,
-      sortOrder: 12,
-      order: 12,
+      sortOrder: 1,
+      order: 1,
       role: 'primary',
-      subType: 'P33_abs_property',
+      subType: 'P55_abs_property',
       operationSummary: '由 x+|x|=0 得 |x|=-x，依据绝对值性质判定 x 为负数或 0（非正数）。',
       status: 'published'
     },
     {
       questionId: 'g7_1_2_4_13',
-      procedureId: 'P33',
+      procedureId: 'P55',
       partId: null,
-      sortOrder: 13,
-      order: 13,
+      sortOrder: 2,
+      order: 2,
       role: 'primary',
-      subType: 'P33_abs_property',
+      subType: 'P55_abs_property',
       operationSummary: '依据 |a|=a (a≥0)，判定绝对值等于它本身的数是正数和 0（非负数）。',
       status: 'published'
     },
     {
       questionId: 'g7_1_2_4_14',
-      procedureId: 'P33',
+      procedureId: 'P55',
       partId: null,
-      sortOrder: 14,
-      order: 14,
+      sortOrder: 3,
+      order: 3,
       role: 'primary',
-      subType: 'P33_abs_property',
+      subType: 'P55_abs_property',
       operationSummary: '依据 |a|=-a (a≤0)，写出 0 或任意负数（如 -1）。',
       status: 'published'
     },
     {
       questionId: 'g7_1_2_4_15',
-      procedureId: 'P33',
+      procedureId: 'P56',
       partId: null,
-      sortOrder: 15,
-      order: 15,
+      sortOrder: 1,
+      order: 1,
       role: 'primary',
-      subType: 'P33_abs_nonnegative',
+      subType: 'P56_abs_nonnegative',
       operationSummary: '由绝对值非负性 |x-2|+|y-3|+|z-4|=0 令三项均为 0，解得 x=2, y=3, z=4。',
       status: 'published'
     },
     {
       questionId: 'g7_1_2_4_16',
-      procedureId: 'P33',
+      procedureId: 'P56',
       partId: null,
-      sortOrder: 16,
-      order: 16,
+      sortOrder: 2,
+      order: 2,
       role: 'primary',
-      subType: 'P33_abs_nonnegative',
+      subType: 'P56_abs_nonnegative',
       operationSummary: '由 |x-3|+|y-2|=0 依据绝对值非负性确定成立条件为 x=3 且 y=2。',
       status: 'published'
     },
     {
       questionId: 'g7_1_2_4_17',
-      procedureId: 'P33',
+      procedureId: 'P56',
       partId: null,
-      sortOrder: 17,
-      order: 17,
+      sortOrder: 3,
+      order: 3,
       role: 'primary',
-      subType: 'P33_abs_nonnegative',
+      subType: 'P56_abs_nonnegative',
       operationSummary: '利用 |x-2|≥0 且 |-2|=2，得出 |x-2|+2≥2，最小值为 2。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
       questionId: 'g7_1_2_5_1',
       procedureId: 'P33',
       partId: null,
-      sortOrder: 18,
-      order: 18,
+      sortOrder: 1,
+      order: 1,
       role: 'primary',
       subType: 'P33_rational_compare',
       operationSummary: '通分比较绝对值 3/4=9/12 > 8/12=2/3，由两负数绝对值大的反而小得 -3/4 < -2/3。',
@@ -8160,8 +8403,8 @@
       questionId: 'g7_1_2_5_2',
       procedureId: 'P33',
       partId: null,
-      sortOrder: 19,
-      order: 19,
+      sortOrder: 2,
+      order: 2,
       role: 'primary',
       subType: 'P33_rational_compare',
       operationSummary: '通分比较绝对值 3/4=15/20 < 16/20=4/5，故 -3/4 > -4/5。',
@@ -8172,8 +8415,8 @@
       questionId: 'g7_1_2_5_3',
       procedureId: 'P33',
       partId: null,
-      sortOrder: 20,
-      order: 20,
+      sortOrder: 3,
+      order: 3,
       role: 'primary',
       subType: 'P33_rational_compare',
       operationSummary: '通分比较绝对值 2/3=8/12 < 9/12=3/4，故 -2/3 > -3/4。',
@@ -8184,8 +8427,8 @@
       questionId: 'g7_1_2_5_4',
       procedureId: 'P33',
       partId: null,
-      sortOrder: 21,
-      order: 21,
+      sortOrder: 4,
+      order: 4,
       role: 'primary',
       subType: 'P33_rational_compare',
       operationSummary: '同分子分数比较绝对值 2/5 > 2/7，故 -2/5 < -2/7。',
@@ -8196,8 +8439,8 @@
       questionId: 'g7_1_2_5_5',
       procedureId: 'P33',
       partId: null,
-      sortOrder: 22,
-      order: 22,
+      sortOrder: 5,
+      order: 5,
       role: 'primary',
       subType: 'P33_rational_compare',
       operationSummary: '比较四个负数的绝对值，绝对值最小的 -1/3 最接近 0。',
@@ -8207,8 +8450,8 @@
       questionId: 'g7_1_2_5_6',
       procedureId: 'P33',
       partId: null,
-      sortOrder: 23,
-      order: 23,
+      sortOrder: 6,
+      order: 6,
       role: 'primary',
       subType: 'P33_rational_compare',
       operationSummary: '正数大于负数，三个负数中 -11 绝对值最大，故 -11 最小。',
@@ -8219,8 +8462,8 @@
       questionId: 'g7_1_2_5_7',
       procedureId: 'P33',
       partId: null,
-      sortOrder: 24,
-      order: 24,
+      sortOrder: 7,
+      order: 7,
       role: 'primary',
       subType: 'P33_rational_compare',
       operationSummary: '负数小于正数，三个负数中 -5 绝对值最大，故 -5 最小。',
@@ -8231,8 +8474,8 @@
       questionId: 'g7_1_2_5_8',
       procedureId: 'P33',
       partId: '(1)',
-      sortOrder: 25,
-      order: 25,
+      sortOrder: 8,
+      order: 8,
       partOrder: 1,
       role: 'primary',
       subType: 'P33_rational_compare',
@@ -8244,8 +8487,8 @@
       questionId: 'g7_1_2_5_8',
       procedureId: 'P33',
       partId: '(2)',
-      sortOrder: 25,
-      order: 25,
+      sortOrder: 9,
+      order: 9,
       partOrder: 2,
       role: 'primary',
       subType: 'P33_rational_compare',
@@ -8257,8 +8500,8 @@
       questionId: 'g7_1_2_5_8',
       procedureId: 'P33',
       partId: '(3)',
-      sortOrder: 25,
-      order: 25,
+      sortOrder: 10,
+      order: 10,
       partOrder: 3,
       role: 'primary',
       subType: 'P33_rational_compare',
@@ -8270,8 +8513,8 @@
       questionId: 'g7_1_2_5_8',
       procedureId: 'P33',
       partId: '(4)',
-      sortOrder: 25,
-      order: 25,
+      sortOrder: 11,
+      order: 11,
       partOrder: 4,
       role: 'primary',
       subType: 'P33_rational_compare',
@@ -8283,8 +8526,8 @@
       questionId: 'g7_1_2_5_9',
       procedureId: 'P33',
       partId: '(1)',
-      sortOrder: 26,
-      order: 26,
+      sortOrder: 12,
+      order: 12,
       partOrder: 1,
       role: 'primary',
       subType: 'P33_rational_compare',
@@ -8295,8 +8538,8 @@
       questionId: 'g7_1_2_5_9',
       procedureId: 'P33',
       partId: '(2)',
-      sortOrder: 26,
-      order: 26,
+      sortOrder: 13,
+      order: 13,
       partOrder: 2,
       role: 'primary',
       subType: 'P33_rational_compare',
@@ -8307,8 +8550,8 @@
       questionId: 'g7_1_2_5_9',
       procedureId: 'P33',
       partId: '(3)',
-      sortOrder: 26,
-      order: 26,
+      sortOrder: 14,
+      order: 14,
       partOrder: 3,
       role: 'primary',
       subType: 'P33_rational_compare',
@@ -8319,8 +8562,8 @@
       questionId: 'g7_1_2_5_9',
       procedureId: 'P33',
       partId: '(4)',
-      sortOrder: 26,
-      order: 26,
+      sortOrder: 15,
+      order: 15,
       partOrder: 4,
       role: 'primary',
       subType: 'P33_rational_compare',
@@ -8331,41 +8574,44 @@
       questionId: 'g7_1_2_5_10',
       procedureId: 'P33',
       partId: null,
-      sortOrder: 27,
-      order: 27,
+      sortOrder: 16,
+      order: 16,
       role: 'primary',
       subType: 'P33_number_line_compare',
       operationSummary: '根据数轴上 a, b 的位置判断正负号与绝对值大小，选出正确结论。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
       questionId: 'g7_1_2_5_11',
       procedureId: 'P33',
       partId: null,
-      sortOrder: 28,
-      order: 28,
+      sortOrder: 17,
+      order: 17,
       role: 'primary',
       subType: 'P33_number_line_compare',
       operationSummary: '由数轴上 a, b 到原点的方向与距离判断大小关系。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
       questionId: 'g7_1_2_5_12',
       procedureId: 'P33',
       partId: null,
-      sortOrder: 29,
-      order: 29,
+      sortOrder: 18,
+      order: 18,
       role: 'primary',
       subType: 'P33_number_line_compare',
       operationSummary: '由数轴上 x, y 的位置标出对应相反数位置，按右大左小排序。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
       questionId: 'g7_1_2_5_13',
       procedureId: 'P33',
       partId: null,
-      sortOrder: 30,
-      order: 30,
+      sortOrder: 19,
+      order: 19,
       role: 'primary',
       subType: 'P33_number_line_compare',
       operationSummary: '在数轴上按关于原点对称标出 -a 与 -b，依从左到右顺序排出 a, -a, b, -b 大小。',
@@ -8389,6 +8635,7 @@
       role: 'primary',
       subType: 'P35_monomial_frac_mul',
       operationSummary: '负负得正，分子分母直接相乘并约去公因式 $4yz$，化简得 $6xy$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -8433,6 +8680,7 @@
       role: 'primary',
       subType: 'P35_mul_div_check',
       operationSummary: '逐项检验单项式分式乘法与连除顺序，判定仅 ①② 计算正确（选 C）。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -8445,6 +8693,7 @@
       role: 'primary',
       subType: 'P35_monomial_frac_mix',
       operationSummary: '第(1)问：先定负号，三个分式连乘并约去 $60x^{2}y^{2}$，结果为 $-1$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -8457,6 +8706,7 @@
       role: 'primary',
       subType: 'P35_monomial_frac_mix',
       operationSummary: '第(2)问：从左到右将两处除法转为乘倒数连乘约分，得 $-\\frac{6x^{3}}{y}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -8503,6 +8753,7 @@
       role: 'primary',
       subType: 'P35_poly_frac_mix',
       operationSummary: '第(1)问：除法转乘 $2(x-y)$ 并分解 $x^{2}-y^{2}=(x+y)(x-y)$，约分得 $2$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -8515,6 +8766,7 @@
       role: 'primary',
       subType: 'P35_poly_frac_mix',
       operationSummary: '第(2)问：分解平方差与完全平方公式，除法转乘倒数约分得 $\\frac{x+2y}{x+y}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -8527,6 +8779,7 @@
       role: 'primary',
       subType: 'P35_poly_frac_mix',
       operationSummary: '第(3)问：连续两步除法转乘倒数，分解分子分母后约分得 $\\frac{2}{(x-1)^{2}}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -8539,6 +8792,7 @@
       role: 'primary',
       subType: 'P35_poly_frac_mix',
       operationSummary: '第(4)问：将三组二次多项式彻底分解，除法转乘倒数约分得 $\\frac{a-2}{a-1}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -8561,6 +8815,7 @@
       role: 'primary',
       subType: 'P35_frac_power',
       operationSummary: '按分式乘方法则分子分母分别立方，由 $(y^{2})^{3}=y^{6}$ 得 $\\frac{y^{6}}{x^{3}}$（选 D）。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -8572,6 +8827,7 @@
       role: 'primary',
       subType: 'P35_frac_power',
       operationSummary: '逐项核对分式乘方时的负号奇偶次幂与数字系数乘方，选出正确选项 C。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -8583,6 +8839,7 @@
       role: 'primary',
       subType: 'P35_frac_power',
       operationSummary: '分子 $(-2c)^{2}=4c^{2}$、分母 $(3a^{2}b^{2})^{2}=9a^{4}b^{4}$，得 $\\frac{4c^{2}}{9a^{4}b^{4}}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -8594,6 +8851,7 @@
       role: 'primary',
       subType: 'P35_frac_power_mix',
       operationSummary: '先乘方再除法转乘法化简左边为 $a^{2}b^{2}=3$，两边平方得 $a^{4}b^{4}=9$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -8605,6 +8863,7 @@
       role: 'primary',
       subType: 'P35_frac_power_mix',
       operationSummary: '先算分式乘方再连乘约去 $(a-b)^{2}$ 与 $(ab)^{2}$，化简得 $\\frac{1}{ab(a-b)}=\\frac{1}{a^{2}b-ab^{2}}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -8656,6 +8915,7 @@
       role: 'primary',
       subType: 'P35_frac_power_mix',
       operationSummary: '第(1)问：先乘方并分解 $(x-4)^{2}$、$(x+1)(x-1)$，转乘法约分得 $\\frac{x+1}{x+2}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -8668,6 +8928,7 @@
       role: 'primary',
       subType: 'P35_frac_power_mix',
       operationSummary: '第(2)问：分解 $(a^{2}-b^{2})^{3}=(a+b)^{3}(a-b)^{3}$，先乘方再转乘法约分得 $\\frac{(a-b)^{2}}{ab^{3}}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     // =========================================================================
@@ -8682,6 +8943,7 @@
       role: 'primary',
       subType: 'P36_same_denom_add_sub',
       operationSummary: '分母 $m-3$ 不变、分子相减得 $\\frac{4m-12}{m-3}$，提公因式 $4$ 约分得 $4$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -8693,6 +8955,7 @@
       role: 'primary',
       subType: 'P36_same_denom_add_sub',
       operationSummary: '分母 $2x-1$ 不变、减式分子加括号得 $\\frac{3x-(x+1)}{2x-1}=\\frac{2x-1}{2x-1}=1$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -8716,6 +8979,7 @@
       role: 'primary',
       subType: 'P36_opposite_denom_add_sub',
       operationSummary: '利用 $1-x=-(x-1)$ 变号统一分母为 $x-1$，分子合并得 $\\frac{x^{2}+1}{x-1}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -8727,6 +8991,7 @@
       role: 'primary',
       subType: 'P36_opposite_denom_add_sub',
       operationSummary: '利用 $9-a^{2}=-(a^{2}-9)$ 变号得 $\\frac{3+a}{a^{2}-9}$，分解分母约去 $(a+3)$ 得 $\\frac{1}{a-3}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -8739,6 +9004,7 @@
       role: 'primary',
       subType: 'P36_same_denom_add_sub',
       operationSummary: '第(1)问：同分母相减给减式分子加括号，合并得 $\\frac{(2m+3)-(m+2)}{m-1}=\\frac{m+1}{m-1}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -8751,6 +9017,7 @@
       role: 'primary',
       subType: 'P36_opposite_denom_add_sub',
       operationSummary: '第(2)问：统一分母为 $2-m$，分子合并得 $\\frac{m^{2}-4}{2-m}=-m-2$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -8762,6 +9029,7 @@
       role: 'primary',
       subType: 'P36_diff_denom_add_sub',
       operationSummary: '分解 $x^{2}-x=x(x-1)$ 并将 $1-x$ 变号，通分合并分子得 $\\frac{x-1}{x(x-1)}=\\frac{1}{x}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -8773,6 +9041,7 @@
       role: 'primary',
       subType: 'P36_diff_denom_add_sub',
       operationSummary: '最简公分母为 $(x+4)(x-4)$，通分相减得 $\\frac{(x+4)-2x}{(x+4)(x-4)}=-\\frac{1}{x+4}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -8785,6 +9054,7 @@
       role: 'primary',
       subType: 'P36_diff_denom_add_sub',
       operationSummary: '第(1)问：最简公分母为 $6x^{2}y^{2}$，通分合并得 $\\frac{4y^{2}-9xy+6x^{2}}{6x^{2}y^{2}}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -8797,6 +9067,7 @@
       role: 'primary',
       subType: 'P36_diff_denom_add_sub',
       operationSummary: '第(2)问：最简公分母为 $2(x+3)(x-3)$，通分合并分子约去 $(x-3)$ 得 $\\frac{1}{2(x+3)}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -8809,6 +9080,7 @@
       role: 'primary',
       subType: 'P36_diff_denom_add_sub',
       operationSummary: '第(3)问：将 $1-x$ 变号并取最简公分母 $(x+1)(x-1)$，通分合并得 $-\\frac{1}{x^{2}-1}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -8821,6 +9093,7 @@
       role: 'primary',
       subType: 'P36_diff_denom_add_sub',
       operationSummary: '第(4)问：先约分第二项为 $\\frac{1}{x-2}$，再以 $(x+2)(x-2)$ 通分相减约分得 $-\\frac{1}{x+2}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -8949,6 +9222,7 @@
       role: 'primary',
       subType: 'P36_mixed_simplify_eval',
       operationSummary: '括号内通分得 $\\frac{a+b}{a-b}$，除法转乘法化简为 $\\frac{(a-b)^{2}}{(a+b)^{2}}$，结合 $a^{2}+b^{2}=3ab$ 整体代入得 $\\frac{1}{5}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -8985,6 +9259,7 @@
       role: 'primary',
       subType: 'P37_sides_to_angles',
       operationSummary: '分别在等腰 $\\triangle BCD$ 与 $\\triangle ABC$ 中用等边对等角及内角和求得 $\\angle A$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -8996,6 +9271,7 @@
       role: 'primary',
       subType: 'P37_sides_to_angles',
       operationSummary: '由中垂线得 $MA=MP, NC=NP$，两次用等边对等角结合 $\\angle APC=114^{\\circ}$ 与内角和求 $\\angle ABC$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9054,6 +9330,7 @@
       role: 'primary',
       subType: 'P37_sides_to_angles',
       operationSummary: '第(1)问：由 $AD=AE$ 用等边对等角结合外角定理 $\\angle ADC=\\angle B+\\angle BAD$ 算出 $\\angle CDE=40^{\\circ}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9066,6 +9343,7 @@
       role: 'primary',
       subType: 'P37_sides_to_angles',
       operationSummary: '第(2)问：由等边对等角与外角关系求得 $\\angle CDE=36^{\\circ}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9078,6 +9356,7 @@
       role: 'primary',
       subType: 'P37_sides_to_angles',
       operationSummary: '第(3)问：设底角为 $\\alpha$ 用等边对等角与外角定理消元，推导出 $2\\angle CDE=\\angle BAD$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9100,6 +9379,7 @@
       role: 'primary',
       subType: 'P37_bisector_parallel_iso',
       operationSummary: '由“角平分线 $+$ 平行线”导出 $\\angle EBD=\\angle EDB$ 与 $\\angle FCD=\\angle FDC$，用等角对等边得 $ED=BE=8, FD=CF=6$，故 $EF=2$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9111,6 +9391,7 @@
       role: 'primary',
       subType: 'P37_bisector_parallel_iso',
       operationSummary: '由内外角平分线与平行线两次用等角对等边得 $OE=OC=OF$，故 $OF=OE=9$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9122,6 +9403,7 @@
       role: 'primary',
       subType: 'P37_bisector_parallel_iso',
       operationSummary: '由两内角平分线与 $EF \\parallel BC$ 用等角对等边得 $EO=BE, FO=CF$，推出 $EF=BE+CF$ 等全部结论。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9133,6 +9415,7 @@
       role: 'primary',
       subType: 'P37_bisector_parallel_iso',
       operationSummary: '由长方形平行边与折叠角相等导出 $\\angle MFE=\\angle MEF$，用等角对等边得 $ME=MF$，转化为周长计算。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9144,6 +9427,7 @@
       role: 'primary',
       subType: 'P37_bisector_parallel_iso',
       operationSummary: '由 $BC$ 平分 $\\angle ABD$ 与 $AB \\parallel CD$ 导出内错角相等，用等角对等边证明等腰三角形。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9156,6 +9440,7 @@
       role: 'primary',
       subType: 'P37_bisector_parallel_iso',
       operationSummary: '第(1)问：由长方形 $DC \\parallel AB$ 与折叠角相等得两底角相等，用等角对等边证明重合部分是等腰三角形。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9168,6 +9453,7 @@
       role: 'primary',
       subType: 'P37_bisector_parallel_iso',
       operationSummary: '第(2)问：应用“角平分线 $+$ 平行线 $\\implies$ 等腰三角形”经验完成线段等量转化。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9193,6 +9479,7 @@
       role: 'primary',
       subType: 'P38_equilateral_angles',
       operationSummary: '由等边 $\\triangle EFG$ 内角均为 $60^{\\circ}$ 结合平行线同旁内角与补角，算出 $\\angle 2$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9204,6 +9491,7 @@
       role: 'primary',
       subType: 'P38_equilateral_angles',
       operationSummary: '由等边 $\\triangle APQ$ 得 $AP=AQ=PQ=PB=QC$ 与 $60^{\\circ}$ 外角，两次用等边对等角算出 $\\angle BAC=120^{\\circ}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9215,6 +9503,7 @@
       role: 'primary',
       subType: 'P38_equilateral_congruence',
       operationSummary: '由等边三角形边长为 $5$ 及 $60^{\\circ}$ 角证周围三小三角形全等，得 $BE=AF=2$ 或对应边 $3$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9226,6 +9515,7 @@
       role: 'primary',
       subType: 'P38_equilateral_congruence',
       operationSummary: '利用等边三角形 $AB=AC$ 与 $\\angle 1=\\angle 2, BE=CD$ 证 $\\triangle ABE \\cong \\triangle ACD$，导出等边得 $\\angle CED=120^{\\circ}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9237,6 +9527,7 @@
       role: 'primary',
       subType: 'P38_equilateral_congruence',
       operationSummary: '利用共顶点双等边三角形“手拉手模型”证 $\\triangle BCD \\cong \\triangle ACE$（SAS），完成边角证明。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9248,6 +9539,7 @@
       role: 'primary',
       subType: 'P38_equilateral_congruence',
       operationSummary: '在等边 $\\triangle ABC$ 中由 $AB=CA, \\angle BAE=\\angle C=60^{\\circ}, AE=CD$ 证全等，得 $AD=BE$ 与夹角 $60^{\\circ}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9260,6 +9552,7 @@
       role: 'primary',
       subType: 'P38_equilateral_angles',
       operationSummary: '第(1)问：由等边三角形外角 $60^{\\circ}$ 与 $CE=CD$ 用等边对等角算出 $\\angle E=30^{\\circ}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9272,6 +9565,7 @@
       role: 'primary',
       subType: 'P38_equilateral_angles',
       operationSummary: '第(2)问：由等边三角形三线合一得 $\\angle DBC=30^{\\circ}=\\angle E$，用等角对等边证得 $BD=DE$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9283,6 +9577,7 @@
       role: 'primary',
       subType: 'P38_equilateral_criteria',
       operationSummary: '对照等边三角形判定定理，确认(1)(2)(4)可判为等边三角形，排除仅能判等腰的(3)，共 3 个。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9294,6 +9589,7 @@
       role: 'primary',
       subType: 'P38_equilateral_criteria',
       operationSummary: '由平行线同位角相等得 $\\triangle DEF$ 两底角均为 $60^{\\circ}$，判定其为等边三角形，三等分边长求周长。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9305,6 +9601,7 @@
       role: 'primary',
       subType: 'P38_equilateral_criteria',
       operationSummary: '由顶角 $120^{\\circ}$ 得底角 $30^{\\circ}$，中垂线导出 $AE=BE, AG=CG$ 与中间等边 $\\triangle AEG$，故 $EG=\\frac{1}{3}BC=10$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9316,6 +9613,7 @@
       role: 'primary',
       subType: 'P38_equilateral_criteria',
       operationSummary: '先由中点与 $DE=DF$ 证全等得 $60^{\\circ}$ 角（或等角），再结合 $AB=AC$ 判定 $\\triangle ABC$ 为等边三角形。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9408,6 +9706,7 @@
       role: 'primary',
       subType: 'P39_addition_sign',
       operationSummary: '按同号与异号加法法则逐项判定符号，选出结果为正数的选项 C。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9419,6 +9718,7 @@
       role: 'primary',
       subType: 'P39_addition_basic',
       operationSummary: '按有理数加减法则分别计算四项并比较大小，选出最小结果 A。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9431,6 +9731,7 @@
       role: 'primary',
       subType: 'P39_addition_basic',
       operationSummary: '第(1)问：异号分数通分相加 $\\frac{4}{12}-\\frac{9}{12}=-\\frac{5}{12}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9443,6 +9744,7 @@
       role: 'primary',
       subType: 'P39_addition_basic',
       operationSummary: '第(2)问：异号带分数相减得 $3\\frac{2}{7}-2\\frac{5}{7}=\\frac{4}{7}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9455,6 +9757,7 @@
       role: 'primary',
       subType: 'P39_addition_basic',
       operationSummary: '第(1)问：同号两负数相加取负号，得 $-(18+20)=-38$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9467,6 +9770,7 @@
       role: 'primary',
       subType: 'P39_addition_basic',
       operationSummary: '第(2)问：异号相加取大绝对值正号，得 $25-12=13$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9479,6 +9783,7 @@
       role: 'primary',
       subType: 'P39_addition_basic',
       operationSummary: '第(3)问：通分异号相加 $-\\frac{8}{12}+\\frac{9}{12}=\\frac{1}{12}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9491,6 +9796,7 @@
       role: 'primary',
       subType: 'P39_addition_basic',
       operationSummary: '第(4)问：$0$ 加任何数仍得原数，得 $-23$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9554,6 +9860,7 @@
       role: 'primary',
       subType: 'P39_subtraction_basic',
       operationSummary: '先去绝对值 $|-5|=5$，再将减法转加相反数 $5+1=6$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9589,6 +9896,7 @@
       role: 'primary',
       subType: 'P39_subtraction_basic',
       operationSummary: '由加减互逆列 $1-(-3)=1+3=4$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9613,6 +9921,7 @@
       role: 'primary',
       subType: 'P39_subtraction_basic',
       operationSummary: '第(1)问：转加法 $(-32)+(-53)=-85$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9625,6 +9934,7 @@
       role: 'primary',
       subType: 'P39_subtraction_basic',
       operationSummary: '第(2)问：转加法 $-2\\frac{1}{4}+3\\frac{1}{2}=1\\frac{1}{4}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9637,6 +9947,7 @@
       role: 'primary',
       subType: 'P39_subtraction_basic',
       operationSummary: '第(3)问：化小数并转加法 $-6.8+1.8=-5$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9649,6 +9960,7 @@
       role: 'primary',
       subType: 'P39_subtraction_basic',
       operationSummary: '第(4)问：先去绝对值得 $1.8-6.2=-4.4$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -9827,6 +10139,7 @@
       role: 'primary',
       subType: 'P39_omit_brackets',
       operationSummary: '逐项化简双重符号，选出等价于 $a-b+c$ 的选项 D。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10032,6 +10345,7 @@
       role: 'primary',
       subType: 'P40_mul_sign_rule',
       operationSummary: '按两数相乘“同号得正、异号得负”逐项判定，选出结果为负数的选项 D。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10043,6 +10357,7 @@
       role: 'primary',
       subType: 'P40_mul_sign_rule',
       operationSummary: '由负数乘括号得正数，根据“同号得正”判定括号内须为负数（选 D）。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10066,6 +10381,7 @@
       role: 'primary',
       subType: 'P40_mul_basic',
       operationSummary: '先由非负性得 $a=-3, b=2$，再异号相乘得 $ab=-6$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10077,6 +10393,7 @@
       role: 'primary',
       subType: 'P40_mul_sign_rule',
       operationSummary: '由 $a=1, ab\\lt 0$ 判定 $b\\lt 0$，结合 $|b|=8$ 得 $b=-8$，故 $a+b=-7$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10089,6 +10406,7 @@
       role: 'primary',
       subType: 'P40_mul_basic',
       operationSummary: '第(1)问：同号得正，$(-3)\\times(-5)=15$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10101,6 +10419,7 @@
       role: 'primary',
       subType: 'P40_mul_basic',
       operationSummary: '第(2)问：带分数化假分数相乘 $\\frac{10}{3}\\times\\frac{11}{5}=\\frac{22}{3}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10113,6 +10432,7 @@
       role: 'primary',
       subType: 'P40_mul_basic',
       operationSummary: '第(3)问：同号得正，$2.5\\times 0.6=1.5$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10125,6 +10445,7 @@
       role: 'primary',
       subType: 'P40_mul_basic',
       operationSummary: '第(4)问：异号得负，化分数约分 $-\\frac{5}{4}\\times\\frac{12}{5}=-3$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10136,6 +10457,7 @@
       role: 'primary',
       subType: 'P40_reciprocal',
       operationSummary: '互为倒数两数乘积为 $1$，直接写出 $\\frac{3}{8}$ 的倒数为 $\\frac{8}{3}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10171,6 +10493,7 @@
       role: 'primary',
       subType: 'P40_reciprocal',
       operationSummary: '带分数 $-1\\frac{2}{3}=-\\frac{5}{3}$ 的倒数为 $-\\frac{3}{5}$；其余依相反数与绝对值定义化简得 $-5$ 与 $4$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10182,6 +10505,7 @@
       role: 'primary',
       subType: 'P40_reciprocal',
       operationSummary: '将整数、带分数与小数化为分数后颠倒分子分母（保持原负号）求倒数。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10193,6 +10517,7 @@
       role: 'primary',
       subType: 'P40_div_basic',
       operationSummary: '由乘除互逆得 $6\\div(-2)=-3$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10204,6 +10529,7 @@
       role: 'primary',
       subType: 'P40_div_basic',
       operationSummary: '逐项核对有理数除法符号与倒数转化，选出正确选项 C。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10239,6 +10565,7 @@
       role: 'primary',
       subType: 'P40_div_basic',
       operationSummary: '化分数并转乘倒数：$\\left(-\\frac{1}{4}\\right)\\times\\frac{8}{5}=-\\frac{2}{5}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10262,6 +10589,7 @@
       role: 'primary',
       subType: 'P40_fraction_sign',
       operationSummary: '按“同号得正、异号得负”化简四个含负号分数，依次得 $-5, -\\frac{1}{9}, \\frac{5}{8}, 20$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10274,6 +10602,7 @@
       role: 'primary',
       subType: 'P40_fraction_sign',
       operationSummary: '第(1)问：异号得负，$-21\\div 7=-3$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10286,6 +10615,7 @@
       role: 'primary',
       subType: 'P40_fraction_sign',
       operationSummary: '第(2)问：异号约分得 $-\\frac{1}{12}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10298,6 +10628,7 @@
       role: 'primary',
       subType: 'P40_fraction_sign',
       operationSummary: '第(3)问：同号得正约分得 $\\frac{27}{4}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10310,6 +10641,7 @@
       role: 'primary',
       subType: 'P40_fraction_sign',
       operationSummary: '第(4)问：同号得正，$6\\div 0.3=20$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10322,6 +10654,7 @@
       role: 'primary',
       subType: 'P40_fraction_sign',
       operationSummary: '第(1)问：异号约分得 $-\\frac{9}{5}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10334,6 +10667,7 @@
       role: 'primary',
       subType: 'P40_fraction_sign',
       operationSummary: '第(2)问：异号相除得 $-3$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10346,6 +10680,7 @@
       role: 'primary',
       subType: 'P40_fraction_sign',
       operationSummary: '第(3)问：先化简分子 $-(-2)=2$，再约分得 $-\\frac{1}{3}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10358,6 +10693,7 @@
       role: 'primary',
       subType: 'P40_fraction_sign',
       operationSummary: '第(4)问：化简分子分母得 $24\\div 8=3$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10369,6 +10705,7 @@
       role: 'primary',
       subType: 'P40_mul_div_order',
       operationSummary: '从左到右转乘法：$3\\times\\frac{1}{2}\\times\\left(-\\frac{1}{2}\\right)=-\\frac{3}{4}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10380,6 +10717,7 @@
       role: 'primary',
       subType: 'P40_mul_div_order',
       operationSummary: '从左到右转乘法并定正号：$(-1)\\times\\left(-\\frac{1}{5}\\right)\\times\\frac{3}{5}=\\frac{3}{25}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10513,6 +10851,7 @@
       role: 'primary',
       subType: 'P41_circumcenter_concept',
       operationSummary: '到三角形三个顶点距离相等的点必在三边垂直平分线上，故应放在三边垂直平分线的交点处。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10524,6 +10863,7 @@
       role: 'primary',
       subType: 'P41_circumcenter_concept',
       operationSummary: '要求到 $A, B, C$ 三城镇距离相等，依据垂直平分线判定定理应建在三边垂直平分线的交点处。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10535,6 +10875,7 @@
       role: 'primary',
       subType: 'P41_circumcenter_concept',
       operationSummary: '要求音响到 $\\triangle ABC$ 三顶点距离相等，应放在三边垂直平分线的交点处。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10651,6 +10992,7 @@
       role: 'primary',
       subType: 'P41_perimeter_single',
       operationSummary: '由 $CD$ 垂直平分线得 $DE = CE$，转化四边形周长 $AB + AD + BE + CE = AB + AD + BC = 17$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10662,6 +11004,7 @@
       role: 'primary',
       subType: 'P41_perimeter_diff',
       operationSummary: '由 $MA = MC$ 得 $C_{\\triangle ABM} = AB + BC = 12$，故 $AC = 17 - 12 = 5$，由中点 $N$ 得 $AN = 2.5$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10673,6 +11016,7 @@
       role: 'primary',
       subType: 'P41_perimeter_diff',
       operationSummary: '由中点 $E$ 得 $AB = 2AE = 6$，由 $FA = FB$ 得 $C_{\\triangle ACF} = AC + BC = 18 - 6 = 12$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10707,6 +11051,7 @@
       role: 'primary',
       subType: 'P41_perimeter_double',
       operationSummary: '由双垂直平分线得 $DA = DB$、$FA = FC$，转化得 $C_{\\triangle ADF} = BC = BD + DC = 10$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10718,6 +11063,7 @@
       role: 'primary',
       subType: 'P41_perimeter_double',
       operationSummary: '由双垂直平分线得 $EA = EB$、$GA = GC$，化折为直得 $C_{\\triangle AEG} = BC = 10$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10753,6 +11099,7 @@
       role: 'primary',
       subType: 'P41_perimeter_double',
       operationSummary: '由 $EF$ 垂直平分 $AC$ 得 $AE = EC$、$AC = 12$，由 $AD$ 垂直平分 $BE$ 得 $AB = AE = EC$，故 $C_{\\triangle ABC} = 2CD + AC = 32$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10786,6 +11133,7 @@
       role: 'primary',
       subType: 'P41_proof_converse',
       operationSummary: '由点 $O$ 分别在 $AB, AC$ 的垂直平分线上得 $AO = BO$ 与 $AO = CO$，等量代换证得 $AO = BO = CO$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10797,6 +11145,7 @@
       role: 'primary',
       subType: 'P41_proof_converse',
       operationSummary: '由 $P$ 在 $BC$ 垂直平分线上得 $PB = PC$，结合 $PA = PB$ 得 $PA = PC$，由判定定理证得 $P$ 在 $AC$ 垂直平分线上。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10808,6 +11157,7 @@
       role: 'primary',
       subType: 'P41_proof_converse',
       operationSummary: '由 $AC = AD$ 且 $BC = BD$ 两点判定直线 $AB$ 垂直平分 $CD$，再由性质定理得 $EC = ED$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10819,6 +11169,7 @@
       role: 'primary',
       subType: 'P41_compass_construction',
       operationSummary: '识别尺规作图痕迹为 $BC$ 的垂直平分线，得 $BD = CD = AC - AD = 7 - 3 = 4$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10830,6 +11181,7 @@
       role: 'primary',
       subType: 'P41_compass_construction',
       operationSummary: '识别尺规作图痕迹为 $AB$ 的垂直平分线，得 $DA = DB$，由 $C_{\\triangle BCD} = AC + BC = 10$ 得 $AB = AC = 6$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10853,6 +11205,7 @@
       role: 'primary',
       subType: 'P41_compass_construction',
       operationSummary: '识别尺规作图痕迹为 $AC$ 的垂直平分线，得 $AC = 2AE = 4$、$DA = DC$，故 $C_{\\triangle ABD} = 14 - 4 = 10$。',
+      visibility: 'bank_only',
       status: 'published'
     }
     ,
@@ -10868,6 +11221,7 @@
       role: 'primary',
       subType: 'P42_corresponding_angle',
       operationSummary: '先由三角形内角和算出第三个内角，再根据全等三角形对应边所对的角相等直接确定 ∠α 的度数。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10934,6 +11288,7 @@
       role: 'primary',
       subType: 'P42_corresponding_angle_collinear',
       operationSummary: '由 △ABD≌△EBC 得 ∠ABD=∠EBC 且 A,B,C 共线，故均为 90°，再由 ∠D=∠C=20° 得 ∠A=70°。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10945,6 +11300,7 @@
       role: 'primary',
       subType: 'P42_corresponding_angle_overlap',
       operationSummary: '由 △ABC≌△A\'BC\' 得 ∠ABC=∠A\'BC\'，减去公共角得 ∠CBC\'=∠ABA\'=55°，再由直角互余得 ∠BCD=35°。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -10956,6 +11312,7 @@
       role: 'primary',
       subType: 'P42_corresponding_angle_sum',
       operationSummary: '由 △ABC≌△DBE 得对应角相等，结合 ∠CAB=∠ABC 与 ∠C=36° 逐步算出底角与目标角 ∠1。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11005,6 +11362,7 @@
       role: 'primary',
       subType: 'P43_condition_selection',
       operationSummary: '逐一比对甲（SAS 夹角不符）、乙（SAS）、丙（AAS）三个三角形的边角位置，甄别不能证明全等的图形。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11071,6 +11429,7 @@
       role: 'primary',
       subType: 'P43_sas_hand_in_hand',
       operationSummary: '由 ∠BAD=∠CAE=50° 同减公共角得 ∠BAC=∠DAE，结合 AB=AD、AC=AE 用 SAS 证全等并求 ∠BCD=50°。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11082,6 +11441,7 @@
       role: 'primary',
       subType: 'P43_sas_perp',
       operationSummary: '由中点 BD=CD、对顶角 ∠BDF=∠CDE 与 DF=DE，用 SAS 证 △BDF≌△CDE 得 ∠FBD=∠C，结合 ∠A=90° 证 BF⊥AB。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11117,6 +11477,7 @@
       role: 'primary',
       subType: 'P43_asa_prove',
       operationSummary: '由反射角相等、AB=CB 及两直角相等，用 ASA 证 △ABE≌△CBF，直接得出高度 AE=CF=1.5 米。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11128,6 +11489,7 @@
       role: 'primary',
       subType: 'P43_asa_side',
       operationSummary: '由 AB∥CF 得内错角相等，结合中点 DE=FE 与对顶角相等，用 ASA 证 △ADE≌△CFE 得 AD=CF=6，算得 BD=7。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11139,6 +11501,7 @@
       role: 'primary',
       subType: 'P43_asa_side',
       operationSummary: '由中点 BD=CD、BE∥CF 内错角相等与对顶角相等，用 ASA 证 △BDE≌△CDF 得 DE=DF=(AE-AF)/2=4。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11175,6 +11538,7 @@
       role: 'primary',
       subType: 'P43_asa_prove',
       operationSummary: '第(1)问：由 CB⊥AD、AE⊥DC 及同角余角相等得 ∠A=∠C，结合 ∠ABF=∠CBD=90° 与 AB=BC 用 ASA 证 △ABF≌△CBD。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11187,6 +11551,7 @@
       role: 'primary',
       subType: 'P43_asa_side',
       operationSummary: '第(2)问：由全等得 BD=BF=2，则 CB=AB=AD-BD=5，从而 CF=CB-BF=3。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11198,6 +11563,7 @@
       role: 'primary',
       subType: 'P43_aas_side',
       operationSummary: '由 ∠1=∠2=∠3 导得 ∠BCA=∠DCE 与 ∠B=∠D，结合 AC=EC 用 AAS 证 △ABC≌△EDC 得出 DE=AB。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11209,6 +11575,7 @@
       role: 'primary',
       subType: 'P43_aas_side',
       operationSummary: '由垂直互余导得 ∠B=∠D，结合两直角与 AB=CD 用 AAS 证 △ABF≌△CDE，得 AF=CE=8、DE=BF=4，算得 AD 长。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11220,6 +11587,7 @@
       role: 'primary',
       subType: 'P43_aas_k_model',
       operationSummary: '由 ∠ACB=90° 与 AE⊥CD、BF⊥CD 导得同角余角相等，结合 CA=CB 用 AAS 证 △ACE≌△CBF 并检验各结论。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11231,6 +11599,7 @@
       role: 'primary',
       subType: 'P43_aas_side',
       operationSummary: '由垂线平行导得内错角相等，结合直角与 CD=AB 用 AAS 证 △CDE≌△ABD 得 DB=DE=2 m。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11242,6 +11611,7 @@
       role: 'primary',
       subType: 'P43_sss_count',
       operationSummary: '结合公共边 AD、AE、ED 与已知三组等边，依次用 SSS 判定 △ABE≌△ACE、△ABD≌△ACD、△EBD≌△ECD 共 3 对。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11253,6 +11623,7 @@
       role: 'primary',
       subType: 'P43_sss_check',
       operationSummary: '由 AD=CF 同加 DC 得 AC=DF，结合 AB=DE、BC=EF 用 SSS 证 △ABC≌△DEF，核对对应角相等与平行结论。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11264,6 +11635,7 @@
       role: 'primary',
       subType: 'P43_sss_angle',
       operationSummary: '由中点 BD=CD、AB=AC 及公共边 AD 用 SSS 证 △ABD≌△ACD，得 ∠B=∠C=70° 与 ∠ADB=90°，求出 ∠BAD=20°。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11275,6 +11647,7 @@
       role: 'primary',
       subType: 'P43_sss_check',
       operationSummary: '由 AB=AC、BD=CD 及公共边 AD 用 SSS 证 △ABD≌△ACD，依次导出底角相等、顶角平分及底边垂直 4 个正确结论。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11298,6 +11671,7 @@
       role: 'primary',
       subType: 'P43_sss_angle',
       operationSummary: '由 AC=BD、AB=ED、BC=BE 直接用 SSS 证 △ABC≌△DEB 得 ∠DBE=∠ACB=50°，在 △BCF 中算得 ∠BFC=80°。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11309,6 +11683,7 @@
       role: 'primary',
       subType: 'P43_sss_prove',
       operationSummary: '由 BE=CF 同加 EF 得 BF=CE，结合 AB=DC、AF=DE 用 SSS 证 △ABF≌△DCE，由对应角相等得 ∠OEF=∠OFE。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11321,6 +11696,7 @@
       role: 'primary',
       subType: 'P43_sss_prove',
       operationSummary: '第(1)问：由 BE=CF 同加 EC 得 BC=EF，结合 AB=DE、AC=DF 用 SSS 证 △ABC≌△DEF，得出 ∠A=∠D。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11333,6 +11709,7 @@
       role: 'primary',
       subType: 'P43_sss_angle',
       operationSummary: '第(2)问：由内角和得 ∠ACB=70°，由全等得 ∠DFE=70°，结合角平分线得 ∠CFG=35°，再由外角性质算出 ∠CGF=35°。',
+      visibility: 'bank_only',
       status: 'published'
     }
     ,
@@ -11348,6 +11725,7 @@
       role: 'primary',
       subType: 'P44_incenter_concept',
       operationSummary: '依据角平分线性质与判定，判定到三角形三条边距离相等的点是三个内角平分线的交点（内心）。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11359,6 +11737,7 @@
       role: 'primary',
       subType: 'P44_construction_angle',
       operationSummary: '识别尺规作图痕迹得出两角平分线，结合外角性质与角平分线定义算出目标角为 25°。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11370,6 +11749,7 @@
       role: 'primary',
       subType: 'P44_construction_property',
       operationSummary: '按标准尺规步骤作出 ∠AOB 的平分线 OM，并在 OM 上取点向两边作垂线验证垂线段相等。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11447,6 +11827,7 @@
       role: 'primary',
       subType: 'P44_construction_and_area',
       operationSummary: '尺规作 ∠BAC 的平分线 AD，再结合角平分线性质与三角形面积和公式求出点 D 到 AB 的距离。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11458,6 +11839,7 @@
       role: 'primary',
       subType: 'P44_converse_angle',
       operationSummary: '由 OM⊥AB、ON⊥BC 且 OM=ON 判定 OB 平分 ∠ABC，结合 ∠ABC=90°-58°=32° 算出 ∠OBC=16°。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11469,6 +11851,7 @@
       role: 'primary',
       subType: 'P44_converse_angle',
       operationSummary: '由 PA⊥ON、PB⊥OM 且 PA=PB 判定 OP 平分 ∠MON 得 ∠AOP=25°，再由外角性质得 ∠PCA=25°+30°=55°。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11480,6 +11863,7 @@
       role: 'primary',
       subType: 'P44_converse_angle',
       operationSummary: '由 DB⊥AE、DC⊥AF 且 DB=DC 判定 AD 平分 ∠BAC 得 ∠CAD=20°，由外角性质得 ∠DGF=130°+20°=150°。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11491,6 +11875,7 @@
       role: 'primary',
       subType: 'P44_converse_area_ratio',
       operationSummary: '由 S_△ABD:S_△ACD=5:4 且 AB:AC=10:8=5:4 推出点 D 到 AB、AC 距离相等，判定 AD 平分 ∠BAC 得 ∠BAD=25°。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11502,6 +11887,7 @@
       role: 'primary',
       subType: 'P44_converse_excenter',
       operationSummary: '由点 P 到三直线 AE、AD、BC 距离相等，连续应用角平分线判定定理确认点 P 为三条角平分线交点。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11513,6 +11899,7 @@
       role: 'primary',
       subType: 'P44_converse_excenter',
       operationSummary: '由两外角平分线交点 D 到三边距离相等，由判定定理得 AD 平分 ∠EAF，从而 ∠EAF=2×38°=76°。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11524,6 +11911,7 @@
       role: 'primary',
       subType: 'P44_converse_area_ratio',
       operationSummary: '由面积比等于对应底边比推出点 D 到 AB、AC 距离相等，判定 AD 平分 ∠BAC，结合内角和算出目标角 95°。',
+      visibility: 'bank_only',
       status: 'published'
     },
     // =========================================================================
@@ -11549,6 +11937,7 @@
       role: 'primary',
       subType: 'P04_identify_algebraic_expr',
       operationSummary: '剔除等式 x+y=2 及不等式 a≠1、x≤3，识别出①0、②a、④x-5、⑤2a 共4个代数式。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11560,6 +11949,7 @@
       role: 'primary',
       subType: 'P04_identify_algebraic_expr',
       operationSummary: '在9个式子中剔除含“=”或“<”的②⑤⑧⑨，统计出①③④⑥⑦共5个代数式。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11571,6 +11961,7 @@
       role: 'primary',
       subType: 'P04_identify_algebraic_expr',
       operationSummary: '排除等式 a=4、s=100t+5 与不等式 2-b>6，统计出其余5个代数式。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11606,6 +11997,7 @@
       role: 'primary',
       subType: 'P04_identify_algebraic_expr',
       operationSummary: '仅③ab=ba 含等号不是代数式，其余7个式子（含单独的数、字母及运算式）均为代数式。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11628,6 +12020,7 @@
       role: 'primary',
       subType: 'P04_identify_algebraic_expr',
       operationSummary: '在8个式子中排除等式③与不等式⑦⑧，得出代数式共有5个。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11650,6 +12043,7 @@
       role: 'primary',
       subType: 'P04_writing_convention',
       operationSummary: '排查除号、数字与字母相乘顺序及带分数系数，选出符合代数式书写格式的选项。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11814,6 +12208,7 @@
       role: 'primary',
       subType: 'P04_identify_algebraic_expr',
       operationSummary: '排除含等号 S=ab 与不等号 a-1>2 的式子，统计出共3个代数式。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11848,6 +12243,7 @@
       role: 'primary',
       subType: 'P04_identify_algebraic_expr',
       operationSummary: '依据是否含关系符号（=、>），逐一判定（1）~（6）是否为代数式。',
+      visibility: 'bank_only',
       status: 'published'
     },
     // =========================================================================
@@ -11897,6 +12293,7 @@
       role: 'primary',
       subType: 'P05_text_to_expr',
       operationSummary: '综合检查两位数表示(10a+b)、差的倒数、奇偶数表示及三个连续整数表示的正确性。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -11981,6 +12378,7 @@
       role: 'primary',
       subType: 'P05_real_word_problem',
       operationSummary: '利用顺水速度 = 静水速度 + 水流速度 = a+3，乘航行时间2小时得距离 (2a + 6) 千米。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -12015,6 +12413,7 @@
       role: 'primary',
       subType: 'P05_real_word_problem',
       operationSummary: '第(1)问：甲乙速度和为 (a+b) 千米/时，乘2小时列出共行路程 (2a + 2b) 千米。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -12027,6 +12426,7 @@
       role: 'primary',
       subType: 'P05_real_word_problem',
       operationSummary: '第(2)问：用总路程 s 减去3小时共行路程 3(a+b)，列出相距路程 (s - 3a - 3b) 千米。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -12039,6 +12439,7 @@
       role: 'primary',
       subType: 'P05_real_word_problem',
       operationSummary: '第(3)问：根据4小时正好相遇，写出路程数量关系式 s = 4a + 4b。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -12144,6 +12545,7 @@
       role: 'primary',
       subType: 'P05_text_to_expr',
       operationSummary: '按数位计数单位（十位×10、百位×100）分别表示两位数 10b+a 与三位数 100c+10b+a。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -12155,6 +12557,7 @@
       role: 'primary',
       subType: 'P05_real_word_problem',
       operationSummary: '提取“3倍少b人”数量关系，列出规范代数式 (3m-b)。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -12226,6 +12629,7 @@
       role: 'primary',
       subType: 'P05_real_word_problem',
       operationSummary: '利用增长率关系“10月=(1+5%)×9月”，正逆向分别列出 1.05a 与 b/1.05。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -12249,6 +12653,7 @@
       role: 'primary',
       subType: 'P05_real_word_problem',
       operationSummary: '依据“A比B的2倍多50”，正逆向分别列出 2x+50 与 (y-50)/2。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -12330,6 +12735,7 @@
       role: 'primary',
       subType: 'P06_arithmetic_pattern',
       operationSummary: '由前3个图形三角形个数 2, 8, 14（公差6）归纳出 2 + 6(n-1)，代入 n=8 算得 44 个。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -12401,6 +12807,7 @@
       role: 'primary',
       subType: 'P06_arithmetic_pattern',
       operationSummary: '统计前3个图形棋子数呈公差为3的等差递增，归纳第 n 个图形通项式。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -12435,6 +12842,7 @@
       role: 'primary',
       subType: 'P06_arithmetic_pattern',
       operationSummary: '统计前几个图形棋子数增量规律，归纳第 n 个图形棋子数的代数式。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -12446,6 +12854,7 @@
       role: 'primary',
       subType: 'P06_arithmetic_pattern',
       operationSummary: '观察三组数列相邻项差值与平方加1结构，写出第6项与第 n 项表达式。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -12504,6 +12913,7 @@
       role: 'primary',
       subType: 'P06_arithmetic_pattern',
       operationSummary: '分别归纳分子正负号(-1)ⁿ⁺¹、指数 aⁿ 及分母奇数列 2n+1，写出通项。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -12515,6 +12925,7 @@
       role: 'primary',
       subType: 'P06_arithmetic_pattern',
       operationSummary: '由蜂巢线段数 6,11,16 每次增5，归纳出 n 个蜂房需 5n+1 条线段。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -12526,6 +12937,7 @@
       role: 'primary',
       subType: 'P06_arithmetic_pattern',
       operationSummary: '统计前3个图案白色六边形砖数量每次增4，归纳第 n 个图案为 4n+2 块。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -12742,6 +13154,7 @@
       role: 'primary',
       subType: 'P46_identify_proportion',
       operationSummary: '检验单价一定、等腰三角形周长一定、三角形面积一定、圆周长与半径四组关系，选出成反比例的③。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -12799,6 +13212,7 @@
       role: 'primary',
       subType: 'P46_identify_proportion',
       operationSummary: '结合相反数、倒数、绝对值性质，并根据面积一定底×高=定值、互为倒数 ab=1（乘积一定）判定成反比例关系。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -13066,6 +13480,7 @@
       role: 'primary',
       subType: 'P46_identify_proportion',
       operationSummary: '从图象读取路程与时间的比值恒定，判定成正比例并求解对应行程问题。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -13099,6 +13514,7 @@
       role: 'primary',
       subType: 'P46_identify_proportion',
       operationSummary: '验证表中每列乘积均为 3600，判定反比例并写出 xy=3600。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -13158,6 +13574,7 @@
       role: 'primary',
       subType: 'P46_identify_proportion',
       operationSummary: '逐条辨析比值定值、乘积定值与和一定情形，筛选出成反比例的条目。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -13193,6 +13610,7 @@
       role: 'primary',
       subType: 'P46_identify_proportion',
       operationSummary: '由 vt=100 写出关系式 v=100/t，并判定 v 与 t 成反比例关系。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -13204,6 +13622,7 @@
       role: 'primary',
       subType: 'P46_identify_proportion',
       operationSummary: '由 s=vt 分别分析 v 一定（比值定值→正比例）与 s 一定（乘积定值→反比例）。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -13252,6 +13671,7 @@
       role: 'primary',
       subType: 'P07_proportion_calc',
       operationSummary: '由 U=IR 知电压 U 恒定时 R 与 I 成反比例；代入 R=100, I=2.2 得 U=220，再代入 I=2.5 求得 R=88。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -13354,6 +13774,7 @@
       role: 'primary',
       subType: 'P07_proportion_equation',
       operationSummary: '建立入库时间与速度关系式 d=1200/v，判定反比例并代入 v=300 求时间。',
+      visibility: 'bank_only',
       status: 'published'
     },
     // =========================================================================
@@ -13404,6 +13825,7 @@
       role: 'primary',
       subType: 'P08_direct_substitution',
       operationSummary: '第(1)问：用 -x 替换 x 检验式子值是相等还是互为相反数，辨识出偶代数式①③与奇代数式②。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -13416,6 +13838,7 @@
       role: 'primary',
       subType: 'P08_direct_substitution',
       operationSummary: '第(2)问：分别将 x=2 与 x=-2 代入 -x³+x，算得整式的值分别为 -6 与 6。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -13428,6 +13851,7 @@
       role: 'primary',
       subType: 'P08_direct_substitution',
       operationSummary: '第(3)问：利用奇代数式在相反数处取值互为相反数相互抵消、偶代数式取值加倍的性质，代入计算9个值之和。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -13461,6 +13885,7 @@
       role: 'primary',
       subType: 'P08_formula_substitute',
       operationSummary: '先将表中 c=0, f=32 代入 f=1.8c+a 求出常数 a=32，再代入 c=100 算得 b = 212。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -13508,6 +13933,7 @@
       role: 'primary',
       subType: 'P08_direct_substitution',
       operationSummary: '将 x=-2,-1,0,1,2 依次加括号代入 -2x+1 与 x²-1 计算填表。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -13519,6 +13945,7 @@
       role: 'primary',
       subType: 'P08_formula_substitute',
       operationSummary: '将 a=2,b=4,h=3 代入梯形面积公式 S=(a+b)h/2，算得 9 cm²。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -13531,6 +13958,7 @@
       role: 'primary',
       subType: 'P08_direct_substitution',
       operationSummary: '第(2)问：将具体商品原价与参数数值代入已列促销代数式比较结果。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -13590,6 +14018,7 @@
       role: 'primary',
       subType: 'P08_direct_substitution',
       operationSummary: '第(2)问：将 a=100 与指定增长率 x 代入第(1)问代数式计算产值。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -13746,6 +14175,7 @@
       role: 'primary',
       subType: 'P34_monomial_id_coeff_degree',
       operationSummary: '逐项判别是否只含数与字母乘积（$0$、$3a$、$\\pi+3$、$1$ 为单项式，注意 $\\pi+3$ 是常数），共 4 个。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -13757,6 +14187,7 @@
       role: 'primary',
       subType: 'P34_monomial_id_coeff_degree',
       operationSummary: '排除分母含字母的 $\\frac{1}{x}$ 及含加减的式子，确认 ② 中 $-\\frac{xy}{2}$ 与 $2^{5}xy^{3}$ 均为单项式。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -13768,6 +14199,7 @@
       role: 'primary',
       subType: 'P34_monomial_id_coeff_degree',
       operationSummary: '筛选仅含数与字母乘积的单项式：① $-\\frac{1}{2}mn$、② $m$、③ $\\frac{1}{2}$，共 3 个。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -13858,6 +14290,7 @@
       role: 'primary',
       subType: 'P34_monomial_id_coeff_degree',
       operationSummary: '按系数 $-\\frac{1}{2}$ 且 $x, y$ 指数和为 $3$ 枚举：$-\\frac{1}{2}x^{3}$、$-\\frac{1}{2}x^{2}y$、$-\\frac{1}{2}xy^{2}$、$-\\frac{1}{2}y^{3}$，共 4 个。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -13908,6 +14341,7 @@
       role: 'primary',
       subType: 'P47_polynomial_terms_degree',
       operationSummary: '排除单项式 ②③ 及分母含字母的 ④⑥，识别多项式 ① $a^{2}b+ab-b^{2}$ 与 ⑤ $\\frac{a+b}{2}$，共 2 个。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -13919,6 +14353,7 @@
       role: 'primary',
       subType: 'P47_polynomial_terms_degree',
       operationSummary: '排除单项式 $\\frac{1}{2}ab$ 及分式 $\\frac{3}{x}+\\frac{2}{y}$，确认其余 4 个（含 $\\frac{3a+2}{5\\pi}$）为多项式。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -13930,6 +14365,7 @@
       role: 'primary',
       subType: 'P47_polynomial_terms_degree',
       operationSummary: '排除分母含字母的 $\\frac{1}{2-x}$，将其余 6 个整式准确分类为 5 个单项式与 1 个多项式。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -13941,6 +14377,7 @@
       role: 'primary',
       subType: 'P47_polynomial_terms_degree',
       operationSummary: '逐项辨析整式与单项式次数（$2^{3}x^{2}y$ 次数为 $3$），确认单独的数字 $0$ 是单项式。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14020,6 +14457,7 @@
       role: 'primary',
       subType: 'P47_polynomial_terms_degree',
       operationSummary: '连同各项符号按 $x$ 的指数从高到低排列为 $-x^{2}+3x+1$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14031,6 +14469,7 @@
       role: 'primary',
       subType: 'P47_polynomial_terms_degree',
       operationSummary: '连同各项符号按 $x$ 的次数降幂排列为 $x^{3}+2x^{2}-x-1$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     // =========================================================================
@@ -14045,6 +14484,7 @@
       role: 'primary',
       subType: 'P48_param_from_degree_terms',
       operationSummary: '由系数 $n-1=2$ 得 $n=3$，再由六次单项式得 $m+n=6$，解得 $m=3$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14056,6 +14496,7 @@
       role: 'primary',
       subType: 'P48_param_from_degree_terms',
       operationSummary: '由系数 $-m=8$ 得 $m=-8$；由 10 次单项式列 $2+|n-1|=10$ 得 $n=9$ 或 $-7$，故 $m+n=1$ 或 $-15$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14067,6 +14508,7 @@
       role: 'primary',
       subType: 'P48_param_from_degree_terms',
       operationSummary: '由七次单项式 $x^{3}y^{a-1}$ 列 $3+(a-1)=7$ 解得 $a=5$，再分别代入求得两代数式值均为 $36$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14124,6 +14566,7 @@
       role: 'primary',
       subType: 'P48_param_from_degree_terms',
       operationSummary: '由五次四项式列 $2+(m-1)=5$ 得 $m=4$，再由单项式次数 $2n+1=5$ 解得 $n=2$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14195,6 +14638,7 @@
       role: 'primary',
       subType: 'P49_like_terms_id_and_param',
       operationSummary: '依据“所含字母相同且相同字母的指数也相同”及常数项也是同类项，识别出③④⑤⑥是同类项。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14207,6 +14651,7 @@
       role: 'primary',
       subType: 'P49_like_terms_id_and_param',
       operationSummary: '依据“所含字母相同且相同字母的指数也相同”配对同类项：$3x^{2}y$ 与 $5x^{2}y$，$-4xy^{2}$ 与 $2xy^{2}$，常数项 $-3$ 与 $5$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14219,6 +14664,7 @@
       role: 'primary',
       subType: 'P49_like_terms_id_and_param',
       operationSummary: '依据同类项定义配对：$-a^{2}b$ 与 $a^{2}b$ 是同类项，$ab^{2}$ 与 $-ab^{2}$ 是同类项。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14230,6 +14676,7 @@
       role: 'primary',
       subType: 'P49_like_terms_id_and_param',
       operationSummary: '保持字母及指数 $ab^{2}$ 不变，写出任意非零系数同类项（如 $ab^{2}$）。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14241,6 +14688,7 @@
       role: 'primary',
       subType: 'P49_like_terms_id_and_param',
       operationSummary: '忽略系数与字母顺序，选出与 $2a^{2}bc$ 字母及指数完全一致的同类项。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14275,6 +14723,7 @@
       role: 'primary',
       subType: 'P49_like_terms_id_and_param',
       operationSummary: '由同类项定义列 2m=6, 3-n=1 解出 m=3, n=2，从而确定 xᵐyⁿ=x³y² 并选出其同类项 -2x³y²。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14380,6 +14829,7 @@
       role: 'primary',
       subType: 'P51_combine_like_terms',
       operationSummary: '定位同类项 $7x^{2}y$ 与 $-4yx^{2}$、$-5xy$ 与 $4xy$，按系数相加合并得 $3x^{2}y - xy$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14392,6 +14842,7 @@
       role: 'primary',
       subType: 'P51_combine_like_terms',
       operationSummary: '定位三组同类项合并系数：$(-4-3)a^{3} + (-3+1)a^{2}b + (5-5)ab^{2} = -7a^{3} - 2a^{2}b$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14403,6 +14854,7 @@
       role: 'primary',
       subType: 'P51_combine_like_terms',
       operationSummary: '三小题分别将同类项系数先凑整相加减，保持字母 $x$ 不变。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14475,6 +14927,7 @@
       role: 'primary',
       subType: 'P28_remove_brackets_and_combine',
       operationSummary: '括号前是负号，去掉括号与负号后括号内各项均变号：$-(x-y) = -x+y$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14487,6 +14940,7 @@
       role: 'primary',
       subType: 'P28_remove_brackets_and_combine',
       operationSummary: '括号前是负号，去括号后各项全变号：$m-(n-p-q) = m-n+p+q$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14499,6 +14953,7 @@
       role: 'primary',
       subType: 'P28_remove_brackets_and_combine',
       operationSummary: '前正后负去括号：$(x-y)-(a+b) = x-y-a-b$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14511,6 +14966,7 @@
       role: 'primary',
       subType: 'P28_remove_brackets_and_combine',
       operationSummary: '用负因数 $-\\frac{1}{2}$ 乘遍括号内每一项并变号：$-\\frac{1}{2}(4a-6b) = -2a+3b$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14523,6 +14979,7 @@
       role: 'primary',
       subType: 'P28_remove_brackets_and_combine',
       operationSummary: '由内向外逐层去括号：$-[(-a+b)-c] = -(-a+b-c) = a-b+c$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14534,6 +14991,7 @@
       role: 'primary',
       subType: 'P28_remove_brackets_and_combine',
       operationSummary: '逐项核对整式加减去括号变号与合并同类项，识别出 (-7a+3b)+(7a+3b)=6b 正确。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14605,6 +15063,7 @@
       role: 'primary',
       subType: 'P28_remove_brackets_and_combine',
       operationSummary: '去括号并合并同类项得 $11y - 9x$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14617,6 +15076,7 @@
       role: 'primary',
       subType: 'P28_remove_brackets_and_combine',
       operationSummary: '去括号后常数项与含其他字母项抵消，合并同类项得 $2a$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14629,6 +15089,7 @@
       role: 'primary',
       subType: 'P28_remove_brackets_and_combine',
       operationSummary: '按去括号法则展开并合并同类项得 $-x - 1$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14641,6 +15102,7 @@
       role: 'primary',
       subType: 'P28_remove_brackets_and_combine',
       operationSummary: '用括号外因数分配展开并合并同类项得 $-32x - 11$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14653,6 +15115,7 @@
       role: 'primary',
       subType: 'P28_remove_brackets_and_combine',
       operationSummary: '逐层去括号并按二次项、一次项、常数项合并同类项得 $-13x^{2} + 10x - 1$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14665,6 +15128,7 @@
       role: 'primary',
       subType: 'P28_remove_brackets_and_combine',
       operationSummary: '逐层去括号并合并同类项得 $a^{2} + 8a + 9$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14677,6 +15141,7 @@
       role: 'primary',
       subType: 'P28_remove_brackets_and_combine',
       operationSummary: '第(1)问：括号前为正号直接去括号得 $a+b-c$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14689,6 +15154,7 @@
       role: 'primary',
       subType: 'P28_remove_brackets_and_combine',
       operationSummary: '第(2)问：括号前为负号去括号各项变号得 $a+b-c$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14701,6 +15167,7 @@
       role: 'primary',
       subType: 'P28_remove_brackets_and_combine',
       operationSummary: '第(3)问：正号去括号得 $a-b+c+d$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14713,6 +15180,7 @@
       role: 'primary',
       subType: 'P28_remove_brackets_and_combine',
       operationSummary: '第(4)问：两个负号括号各项均变号得 $-a-b+c-d$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14768,6 +15236,7 @@
       role: 'primary',
       subType: 'P28_remove_brackets_and_combine',
       operationSummary: '代入 $A,B$ 加括号化简 $C=A-\\frac{2}{3}B$，再代入 $x=-2,y=3$ 求值。',
+      visibility: 'bank_only',
       status: 'published'
     },
     // =========================================================================
@@ -14851,6 +15320,7 @@
       role: 'primary',
       subType: 'P50_independent_or_missing_term_param',
       operationSummary: '合并三次项与一次项后令 $m-2=0,3-n=0$ 得 $m=2,n=3$，代入求值。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14944,6 +15414,7 @@
       role: 'primary',
       subType: 'P45_poly_add_sub_application',
       operationSummary: '分别表示第二边 $a+3b$ 与第三边 $2a+5b$，三边相加合并同类项得周长 $5a+11b$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -14977,6 +15448,7 @@
       role: 'primary',
       subType: 'P45_poly_add_sub_application',
       operationSummary: '依次用含 $x$ 的整式表示四组人数，相加合并同类项得总人数 $(3x+9)$ 人。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -15010,6 +15482,7 @@
       role: 'primary',
       subType: 'P45_poly_add_sub_application',
       operationSummary: '用边宽 $a$ 表示装裱后长 $10a+100$ 与宽 $2a+35$，作差合并得 $(65+8a)\\text{ cm}$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -15021,6 +15494,7 @@
       role: 'primary',
       subType: 'P52_chord_id',
       operationSummary: '逐条核对线段两端点是否都在圆周上，识别出 $\odot O$ 的弦。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -15032,6 +15506,7 @@
       role: 'primary',
       subType: 'P52_chord_count',
       operationSummary: '排除端点在圆心或圆外的线段，数出图中两端点均在 $\odot O$ 上的弦的条数。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -15043,6 +15518,7 @@
       role: 'primary',
       subType: 'P52_chord_count',
       operationSummary: '连同经过圆心的直径一起统计，数出图中 $\odot O$ 的全部弦。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -15054,6 +15530,7 @@
       role: 'primary',
       subType: 'P52_chord_count',
       operationSummary: '由 $A,B,C,D$ 四点都在圆上，核对图中实际连出的圆上两两点线段条数。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -15077,6 +15554,7 @@
       role: 'primary',
       subType: 'P52_chord_arc_id',
       operationSummary: '依次识别图中的弦、过圆心的直径 $BC$，以及以 $A$ 为端点的劣弧与优弧。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -15088,6 +15566,7 @@
       role: 'primary',
       subType: 'P52_concept_judge',
       operationSummary: '逐项核对直径与弦、半圆与弧、等弧必须完全重合等概念，选出错误结论。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -15099,6 +15578,7 @@
       role: 'primary',
       subType: 'P52_concept_judge',
       operationSummary: '辨析圆的弦、直径、优劣弧与等弧定义，找出不正确说法。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -15110,6 +15590,7 @@
       role: 'primary',
       subType: 'P52_concept_judge',
       operationSummary: '依据“直径是最长的弦”“等弧须能完全重合”等概念判断正确选项。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -15200,6 +15681,7 @@
       role: 'primary',
       subType: 'P53_compare_dr',
       operationSummary: '直接比较 $d = 7 \gt r = 6$，判定点 $A$ 在 $\odot O$ 外。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -15211,6 +15693,7 @@
       role: 'primary',
       subType: 'P53_compare_dr',
       operationSummary: '比较 $d = 10\text{ cm} \gt r = 7\text{ cm}$，判定点 $P$ 在 $\odot O$ 外。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -15222,6 +15705,7 @@
       role: 'primary',
       subType: 'P53_diameter_to_r',
       operationSummary: '先由直径 $6\text{ cm}$ 换算半径 $r = 3\text{ cm}$，再比较 $PO = 5\text{ cm} \gt 3\text{ cm}$ 判定点 $P$ 在圆外。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -15233,6 +15717,7 @@
       role: 'primary',
       subType: 'P53_diameter_to_r',
       operationSummary: '由直径 $6$ 得半径 $r = 3$，因 $d = 4 \gt 3$ 判定点 $P$ 在 $\odot O$ 外。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -15244,6 +15729,7 @@
       role: 'primary',
       subType: 'P53_range_from_pos',
       operationSummary: '由点 $P$ 在半径为 $5$ 的 $\odot O$ 外，直接列不等式得 $m \gt 5$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -15255,6 +15741,7 @@
       role: 'primary',
       subType: 'P53_range_from_pos',
       operationSummary: '由点 $P$ 在半径 $8\text{ cm}$ 的 $\odot O$ 内得 $PO \lt 8\text{ cm}$，找出不小于 $8\text{ cm}$ 的不可能选项。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -15266,6 +15753,7 @@
       role: 'primary',
       subType: 'P53_multi_point_range',
       operationSummary: '由图知点 $P$ 在圆外（$r \lt 8$）、点 $Q$ 在圆内（$r \gt 6$），确定 $6 \lt r \lt 8$ 并选出可能半径。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -15277,6 +15765,7 @@
       role: 'primary',
       subType: 'P53_pythagorean_dr',
       operationSummary: '在 $\text{Rt}\triangle ABC$ 中由勾股定理得 $AB = 5$，分别比较 $AB = 5 \gt 4$、$AC = 3 \lt 4$ 判定点 $A$ 位置。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -15288,6 +15777,7 @@
       role: 'primary',
       subType: 'P53_pythagorean_range',
       operationSummary: '由勾股定理得 $AB = 13$，结合 $AC = 12$ 及一点在圆内一点在圆外得 $12 \lt r \lt 13$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -15299,6 +15789,7 @@
       role: 'primary',
       subType: 'P53_pythagorean_dr',
       operationSummary: '分别用 $CA = 4$、$CB = 3$ 及面积法高 $CD = 2.4$ 与不同半径比较，判定 $A,B,D$ 位置关系。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -15310,6 +15801,7 @@
       role: 'primary',
       subType: 'P53_rect_multi_point',
       operationSummary: '算得 $AB = 6, AD = 8, AC = 10$，先与 $r = 8$ 比较位置，再由至少一点在内一点在外得 $6 \lt r \lt 10$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {
@@ -15321,6 +15813,7 @@
       role: 'primary',
       subType: 'P53_rect_multi_point',
       operationSummary: '由矩形边长与勾股定理得 $AB = 6, AD = 8, AC = 10$，逐点比大小并确定范围 $6 \lt r \lt 10$。',
+      visibility: 'bank_only',
       status: 'published'
     },
     {

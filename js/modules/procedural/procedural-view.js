@@ -160,7 +160,7 @@
     const playBtnIcon = document.getElementById('procDynPlayBtnIcon');
     if (playBtnText) {
       if (ProceduralState.currentTime <= 0.05) {
-        playBtnText.textContent = '开始演示';
+        playBtnText.textContent = '开始';
       } else {
         playBtnText.textContent = '继续播放';
       }
@@ -509,7 +509,7 @@
             const btn = detailContainer.querySelector(`.btn-proc-toggle-analysis[data-id="${qid}"]`);
             const txt = btn?.querySelector('.analysis-btn-text');
             if (panel) panel.classList.remove('hidden');
-            if (txt) txt.textContent = '收起标准解答';
+            if (txt) txt.textContent = '收起答案';
           });
         }
 
@@ -533,7 +533,7 @@
           const playBtnText = document.getElementById('procDynPlayBtnText');
           const playBtnIcon = document.getElementById('procDynPlayBtnIcon');
           if (playBtnText) {
-            playBtnText.textContent = ProceduralState.currentTime > 0.05 ? '继续播放' : '开始演示';
+            playBtnText.textContent = ProceduralState.currentTime > 0.05 ? '继续播放' : '开始';
           }
           if (playBtnIcon) {
             playBtnIcon.textContent = '▶';
@@ -639,9 +639,9 @@
           <span class="text-slate-400">编号：${escapeHtml(q.id)}</span>
         </div>
 
-        ${q.knowledge ? `
+        ${(window.GraphData ? window.GraphData.getDisplayKnowledgeName(q) : q.knowledge) ? `
           <div class="text-xs text-slate-500 bg-slate-50 px-3 py-2 rounded-lg border border-slate-100">
-            <span class="font-semibold text-slate-600">考点：</span>${escapeHtml(q.knowledge)}
+            <span class="font-semibold text-slate-600">考点：</span>${escapeHtml(window.GraphData ? window.GraphData.getDisplayKnowledgeName(q) : q.knowledge)}
           </div>
         ` : ''}
 
@@ -651,7 +651,7 @@
           ${optionsHtml}
         </div>
 
-        <div class="q-analysis-panel text-xs space-y-2">
+        <div class="q-analysis-panel text-sm space-y-2">
           ${typeof window.renderQuestionAnalysisBoxHtml === 'function' ? window.renderQuestionAnalysisBoxHtml(q) : `
             <div class="flex items-baseline gap-2 font-bold text-slate-900">
               <span class="w-1.5 h-1.5 rounded-full bg-[#0F766E] shrink-0"></span>
@@ -988,22 +988,12 @@
         <div id="procDynamicDemoModule" class="space-y-3.5">
           <!-- A. 学习进度与可横滑步骤导航区 -->
           <div class="p-4 rounded-xl bg-white border border-[#99F6E4] space-y-3">
-            <div class="flex flex-wrap items-center justify-between gap-2">
-              <div class="flex flex-wrap items-center gap-2">
-                <span class="px-2 py-0.5 rounded bg-[#0F766E] text-white text-xs font-bold">动态演示</span>
-                <span class="text-xs sm:text-sm font-semibold text-slate-700">示例题：${renderMathText(demoData.exampleTitle)}</span>
-              </div>
-              <span id="procDynBeatLabelText" class="text-xs text-slate-500 font-medium">当前焦点：准备开始</span>
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-2 py-0.5 rounded bg-[#0F766E] text-white text-xs font-bold">动态演示</span>
+              <span class="text-xs sm:text-sm font-semibold text-slate-700">示例题：${renderMathText(demoData.exampleTitle)}</span>
             </div>
 
-            <div class="space-y-2 pt-1.5 border-t border-slate-100">
-              <div class="flex flex-wrap items-center justify-between gap-2 text-xs">
-                <span id="procDynStepStatusText" class="font-bold text-[#0F766E]">
-                  ${renderMathText(`当前进度：第 ${curStep} / ${totalSteps} 步 · ${demoData.steps[curStep - 1].name}`)}
-                </span>
-                <span class="text-[11px] text-slate-400">点击步骤标签可单步推演该步</span>
-              </div>
-
+            <div class="pt-1.5 border-t border-slate-100">
               <div class="proc-step-tabs-scroll" id="procStepTabsContainer">
                 ${demoData.steps.map(st => {
                   const isAct = st.step === curStep;
@@ -1038,7 +1028,7 @@
               <div class="flex flex-wrap items-center gap-1.5 sm:gap-2">
                 <button type="button" id="btnProcDynPlayPause" class="btn-primary px-3.5 py-1.5 rounded-lg text-xs font-bold inline-flex items-center gap-1.5">
                   <span id="procDynPlayBtnIcon">▶</span>
-                  <span id="procDynPlayBtnText">开始演示</span>
+                  <span id="procDynPlayBtnText">开始</span>
                 </button>
                 <button type="button" id="btnProcDynPrev" class="proc-dyn-ctrl-btn btn-secondary px-3 py-1.5 rounded-lg text-xs font-semibold" disabled>
                   ← 上一步
@@ -1062,7 +1052,7 @@
 
               <div class="flex flex-wrap items-center gap-2">
                 <div class="inline-flex items-center rounded-lg border border-slate-200 bg-slate-50 p-0.5 text-xs">
-                  ${[0.75, 1.0, 1.5].map(rate => `
+                  ${[0.5, 0.75, 1.0].map(rate => `
                     <button type="button" class="proc-speed-btn px-2 py-1 rounded-md font-semibold transition ${
                       ProceduralState.playbackRate === rate ? 'bg-[#0F766E] text-white' : 'text-slate-600 hover:text-[#0F766E]'
                     }" data-rate="${rate}">${rate}x</button>
@@ -1096,26 +1086,13 @@
             <div class="flex flex-wrap items-center justify-between gap-2 pb-2 border-b border-teal-100/80 relative z-10">
               <div class="flex items-center gap-2 text-xs">
                 <span class="w-2.5 h-2.5 rounded-full bg-[#0F766E]"></span>
-                <span class="font-bold text-slate-800">例题板书推演区：${renderMathText(demoData.exampleTitle)}</span>
-              </div>
-              <div class="flex items-center gap-3 text-[11px] text-slate-500">
-                <span class="inline-flex items-center gap-1">
-                  <span class="w-2 h-2 rounded-full bg-[#0F766E]"></span>
-                  <span>青绿圈点：当前视线焦点</span>
-                </span>
-                <span class="inline-flex items-center gap-1">
-                  <span class="w-2.5 h-2.5 rounded-sm bg-[#FEF3C7] border border-[#FCD34D]"></span>
-                  <span>琥珀高亮：正在变形的数</span>
-                </span>
+                <span class="font-bold text-slate-800">${renderMathText(demoData.exampleTitle)}</span>
               </div>
             </div>
 
             <div class="grid grid-cols-1 xl:grid-cols-12 gap-4 items-start relative z-10 min-h-[240px]">
               <div class="xl:col-span-8 space-y-2.5 relative" id="procWbMainEquations">
-                <div id="procWbIdlePlaceholder" class="py-12 px-4 text-center rounded-xl border border-dashed border-teal-200/80 bg-white/75 text-xs text-slate-500 space-y-1.5">
-                  <div class="font-semibold text-[#0F766E]">点击上方「开始演示」连续播放，或点击「下一步 →」单步推演板书</div>
-                  <div class="text-[11px] text-slate-400">也可以直接拖动时间轴或点击顶部步骤标签跳至指定步骤</div>
-                </div>
+                <div id="procWbIdlePlaceholder" class="min-h-[140px] rounded-xl border border-dashed border-teal-200/80 bg-white/75"></div>
                 ${boardRowsHtml}
               </div>
 
@@ -1136,14 +1113,12 @@
                   </div>
                 ` : ''}
                 ${scratchpadCardsHtml}
-                <div id="procScratchpadIdleHint" class="p-3.5 rounded-xl border border-dashed border-slate-200 bg-white/60 text-xs text-slate-400 text-center">
-                  ${escapeHtml(demoData.scratchpadIdleHint || '旁白草稿演算区（当步骤涉及辅助运算时在此同步展开）')}
-                </div>
+                <div id="procScratchpadIdleHint" class="min-h-[52px] p-3.5 rounded-xl border border-dashed border-slate-200 bg-white/60"></div>
               </div>
             </div>
 
             <div class="proc-wb-subtitle-bar flex items-center gap-3 relative z-10">
-              <span class="px-2 py-0.5 rounded bg-white/20 text-white text-[11px] font-bold shrink-0">讲师讲解</span>
+              <span class="px-2 py-0.5 rounded bg-white/20 text-white text-[11px] font-bold shrink-0">讲解</span>
               <div class="text-xs sm:text-sm font-medium leading-relaxed flex-1">
                 ${subtitlesHtml}
               </div>
@@ -1158,14 +1133,13 @@
             </p>
           </div>
 
-          <!-- 跟着操作（跟做练习模块，默认展示在动态演示下方） -->
+          <!-- 跟着操作（默认展示在动态演示下方） -->
           <section id="procDynPracticeSection" class="scroll-mt-36 p-5 rounded-xl bg-white border border-[#99F6E4] space-y-4">
             <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-100">
               <div class="flex items-center gap-2">
                 <span class="px-2.5 py-0.5 rounded bg-[#0F766E] text-white text-xs font-bold">跟着操作</span>
-                <h4 class="text-sm sm:text-base font-bold text-slate-900">${renderMathText(demoData.practiceSectionTitle || `${demoData.title}关键动作跟做练习`)}</h4>
+                <h4 class="text-sm sm:text-base font-bold text-slate-900">${renderMathText(String(demoData.practiceSectionTitle || demoData.title || '').replace(/(?:关键动作)?跟做练习$/, ''))}</h4>
               </div>
-              <span class="text-xs text-slate-500">${escapeHtml(demoData.practiceSectionSub || '完成以下两道关键操作练习，检验是否掌握核心解题动作')}</span>
             </div>
 
             <div class="grid grid-cols-1 xl:grid-cols-2 gap-4 items-start">
@@ -1177,16 +1151,16 @@
                 </div>
 
                 <div class="p-3 rounded-lg bg-white border border-slate-200 space-y-1.5 text-xs sm:text-sm text-slate-800">
-                  <div>${escapeHtml(prac1.givenLabel || '已知：')}${renderMathText(prac1.givenFormula)}</div>
-                  ${prac1.extractedFormula ? `<div>${escapeHtml(prac1.extractedLabel || '整理变形后：')}${renderMathText(prac1.extractedFormula)}</div>` : ''}
-                  <div class="font-bold text-slate-900 pt-1">${renderMathText(prac1.questionText)}</div>
+                  ${prac1.givenFormula ? `<div>${escapeHtml(prac1.givenLabel !== undefined ? prac1.givenLabel : '已知：')}${renderMathText(prac1.givenFormula)}</div>` : ''}
+                  ${prac1.extractedFormula ? `<div>${escapeHtml(prac1.extractedLabel !== undefined ? prac1.extractedLabel : '整理变形后：')}${renderMathText(prac1.extractedFormula)}</div>` : ''}
+                  ${prac1.questionText ? `<div class="font-bold text-slate-900 pt-1">${renderMathText(prac1.questionText)}</div>` : ''}
                 </div>
 
                 <div class="space-y-2" id="prac1OptionsList">
                   ${prac1.options.map(opt => `
                     <button type="button" class="prac1-opt-btn w-full text-left px-3.5 py-2.5 rounded-lg border border-slate-200 bg-white hover:bg-[#F0FDFA] hover:border-[#99F6E4] text-xs sm:text-sm text-slate-800 transition flex items-center justify-between" data-opt-key="${opt.key}">
                       <span>${renderMathText(opt.text)}</span>
-                      <span class="prac1-opt-indicator text-xs font-bold text-slate-400">选择</span>
+                      <span class="prac1-opt-indicator text-xs font-bold text-slate-400"></span>
                     </button>
                   `).join('')}
                 </div>
@@ -1213,24 +1187,25 @@
                 </div>
 
                 <div class="p-3 rounded-lg bg-white border border-slate-200 space-y-1.5 text-xs sm:text-sm text-slate-800">
-                  <div>${escapeHtml(prac2.givenLabel || '给出条件：')}${renderMathText(prac2.givenFormula)}</div>
-                  <div class="font-bold text-slate-900 pt-1">${renderMathText(prac2.questionText)}</div>
+                  ${prac2.givenFormula ? `<div>${escapeHtml(prac2.givenLabel !== undefined ? prac2.givenLabel : '给出条件：')}${renderMathText(prac2.givenFormula)}</div>` : ''}
+                  ${prac2.questionText ? `<div class="font-bold text-slate-900 pt-1">${renderMathText(prac2.questionText)}</div>` : ''}
                 </div>
 
                 <div class="p-3.5 rounded-lg bg-white border border-slate-200 space-y-3 text-xs sm:text-sm">
                   <div class="flex flex-wrap items-center gap-2">
-                    <span class="text-slate-700 font-medium">${renderMathText(prac2.input1Prefix || '当 $x =$')}</span>
-                    <input type="text" id="prac2InputX" placeholder="${escapeHtml(prac2.input1Placeholder || '如 -2')}" class="w-24 px-2.5 py-1.5 rounded-lg border border-slate-200 text-center font-bold text-sm">
-                    <span class="text-slate-700 font-medium">${renderMathText(prac2.input2Prefix || '时，取得最小值')}</span>
-                    <input type="text" id="prac2InputMin" placeholder="${escapeHtml(prac2.input2Placeholder || '如 -5')}" class="w-24 px-2.5 py-1.5 rounded-lg border border-slate-200 text-center font-bold text-sm">
-                    ${prac2.input2Suffix ? `<span class="text-xs text-slate-400">${escapeHtml(prac2.input2Suffix)}</span>` : ''}
+                    <span class="text-slate-700 font-medium">${renderMathText(prac2.input1Prefix !== undefined ? prac2.input1Prefix : '当 $x =$')}</span>
+                    <input type="text" id="prac2InputX" class="w-24 px-2.5 py-1.5 rounded-lg border border-slate-200 text-center font-bold text-sm">
+                    ${prac2.singleInput
+                      ? (prac2.input1Suffix ? `<span class="text-slate-700 font-medium">${renderMathText(prac2.input1Suffix)}</span>` : '')
+                      : `<span class="text-slate-700 font-medium">${renderMathText(prac2.input2Prefix || '时，取得最小值')}</span>
+                    <input type="text" id="prac2InputMin" class="w-24 px-2.5 py-1.5 rounded-lg border border-slate-200 text-center font-bold text-sm">
+                    ${prac2.input2Suffix ? `<span class="text-xs text-slate-400">${escapeHtml(prac2.input2Suffix)}</span>` : ''}`}
                   </div>
 
                   <div class="flex flex-wrap items-center gap-2 pt-1">
                     <button type="button" id="btnPrac2Submit" class="btn-primary px-4 py-1.5 rounded-lg text-xs font-semibold">
                       提交检验
                     </button>
-                    <span class="text-xs text-slate-400">可输入数值后点击「提交检验」</span>
                   </div>
                 </div>
 
@@ -1281,17 +1256,7 @@
         });
       }
 
-      const beatHtmlCache = new Map();
-      (demoData.microBeats || []).forEach(b => {
-        beatHtmlCache.set(b.label, renderMathText(`当前焦点：${b.label}`));
-      });
-      let lastBeatRendered = '';
 
-      const stepStatusHtmlCache = new Map();
-      (demoData.steps || []).forEach(st => {
-        stepStatusHtmlCache.set(st.step, renderMathText(`当前进度：第 ${st.step} / ${totalSteps} 步 · ${st.name}`));
-      });
-      let lastStepStatusRendered = -1;
 
       const tokenElsMap = new Map();
       container.querySelectorAll('.proc-wb-token').forEach(el => {
@@ -1501,29 +1466,7 @@
           timeCurrentLabel.textContent = formatTimeSec(t);
         }
 
-        const stepObj = demoData.steps[step - 1];
-        const statusText = container.querySelector('#procDynStepStatusText');
-        if (statusText && stepObj && (forceRefreshStepUI || lastStepStatusRendered !== step)) {
-          lastStepStatusRendered = step;
-          statusText.innerHTML = stepStatusHtmlCache.get(step) || renderMathText(`当前进度：第 ${step} / ${totalSteps} 步 · ${stepObj.name}`);
-        }
 
-        const beatLabelText = container.querySelector('#procDynBeatLabelText');
-        if (t <= 0.02) {
-          if (beatLabelText && (forceRefreshStepUI || lastBeatRendered !== '__idle__')) {
-            lastBeatRendered = '__idle__';
-            beatLabelText.textContent = '当前焦点：准备开始';
-          }
-        } else {
-          let currentBeat = demoData.microBeats[0];
-          for (const b of demoData.microBeats) {
-            if (t >= b.time - 0.35) currentBeat = b;
-          }
-          if (beatLabelText && currentBeat && (forceRefreshStepUI || lastBeatRendered !== currentBeat.label)) {
-            lastBeatRendered = currentBeat.label;
-            beatLabelText.innerHTML = beatHtmlCache.get(currentBeat.label) || escapeHtml(`当前焦点：${currentBeat.label}`);
-          }
-        }
 
         container.querySelectorAll('.proc-dyn-step-tab').forEach(tab => {
           const sNum = Number(tab.getAttribute('data-step'));
@@ -1792,7 +1735,7 @@
         ProceduralState.targetStopTime = demoData.steps[0]?.tEnd || 6.5;
         renderTimelineAt(0.0, true);
         const playBtnText = document.getElementById('procDynPlayBtnText');
-        if (playBtnText) playBtnText.textContent = '开始演示';
+        if (playBtnText) playBtnText.textContent = '开始';
       });
 
       // 倍速切换
@@ -1842,7 +1785,7 @@
               }
             } else {
               b.className = 'prac1-opt-btn w-full text-left px-3.5 py-2.5 rounded-lg border border-slate-200 bg-white hover:bg-[#F0FDFA] hover:border-[#99F6E4] text-xs sm:text-sm text-slate-800 transition flex items-center justify-between';
-              if (ind) { ind.textContent = '选择'; ind.className = 'prac1-opt-indicator text-xs font-bold text-slate-400'; }
+              if (ind) { ind.textContent = ''; ind.className = 'prac1-opt-indicator text-xs font-bold text-slate-400'; }
             }
           });
 
@@ -1863,7 +1806,7 @@
         prac1Btns.forEach(b => {
           const ind = b.querySelector('.prac1-opt-indicator');
           b.className = 'prac1-opt-btn w-full text-left px-3.5 py-2.5 rounded-lg border border-slate-200 bg-white hover:bg-[#F0FDFA] hover:border-[#99F6E4] text-xs sm:text-sm text-slate-800 transition flex items-center justify-between';
-          if (ind) { ind.textContent = '选择'; ind.className = 'prac1-opt-indicator text-xs font-bold text-slate-400'; }
+          if (ind) { ind.textContent = ''; ind.className = 'prac1-opt-indicator text-xs font-bold text-slate-400'; }
         });
       });
 
@@ -1874,7 +1817,7 @@
       const prac2WrongEl = container.querySelector('#prac2FeedbackWrong');
       const prac2WrongHintText = container.querySelector('#prac2WrongHintText');
 
-      const normalizeNumStr = (val) => String(val || '').trim().replace(/[−﹣－]/g, '-').replace(/^\+/, '');
+      const normalizeNumStr = (val) => String(val || '').trim().replace(/[−﹣－]/g, '-').replace(/＜/g, '<').replace(/＞/g, '>').replace(/＝/g, '=').replace(/^\+/, '');
 
       inputX?.addEventListener('input', () => { ProceduralState.prac2InputX = inputX.value; });
       inputMin?.addEventListener('input', () => { ProceduralState.prac2InputMin = inputMin.value; });
@@ -1888,8 +1831,10 @@
         const p2Cfg = demoData.practices.practice2;
         const expX = p2Cfg.expectedX;
         const expMin = p2Cfg.expectedMin;
-        const isMatch = (xVal === expX && minVal === expMin) ||
-          (Boolean(p2Cfg.allowOrderSwap) && xVal === expMin && minVal === expX);
+        const isMatch = p2Cfg.singleInput
+          ? (xVal === expX)
+          : ((xVal === expX && minVal === expMin) ||
+            (Boolean(p2Cfg.allowOrderSwap) && xVal === expMin && minVal === expX));
 
         if (isMatch) {
           prac2CorrectEl?.classList.remove('hidden');
@@ -1988,30 +1933,17 @@
         ` : '';
         const imgHtml = q.image ? `<div class="my-1.5"><img src="${q.image}" class="max-h-40 max-w-xs h-auto rounded object-contain"></div>` : '';
 
-        const hasSubparts = item.parts.some(pt => pt.partId !== null);
-        const partsSummaryHtml = hasSubparts
-          ? `<div class="mt-2 px-3 py-2 rounded-lg bg-slate-50 border border-slate-200/80 space-y-1 text-xs text-slate-600">
-              ${item.parts.map(pt => `
-                <div class="flex flex-wrap items-center gap-1.5">
-                  <span class="font-bold text-[#0F766E]">小问 ${escapeHtml(pt.partId || '')}</span>
-                  ${pt.inCollectionOrder && pt.partId ? '<span class="px-1.5 py-0.2 rounded bg-[#F0FDFA] text-[#0F766E] border border-[#CCFBF1] text-[10px] font-semibold">当前进阶排序锚点</span>' : ''}
-                  <span>${escapeHtml(pt.operationSummary)}</span>
-                </div>
-              `).join('')}
-            </div>`
-          : '';
-
         return `
           <div class="question-card ${isSelected ? 'is-selected' : ''}" data-id="${escapeHtml(q.id)}">
             <div class="q-card-header flex flex-wrap items-center justify-between gap-x-4 gap-y-1.5">
               <div class="flex flex-wrap items-center gap-2">
                 <span class="px-2 py-0.5 rounded bg-[#0F766E] text-white text-xs font-bold">#${seqNum}</span>
-                <span class="q-meta-chapter">${escapeHtml(q.chapter)}</span>
+                <span class="q-meta-chapter">${renderMathText(col.procedure.name)}</span>
                 <span class="q-meta-type">${escapeHtml(q.typeName)}</span>
                 <span class="${diffColor}">${escapeHtml(q.difficulty)}</span>
               </div>
               <div class="q-meta-kp">
-                <span>考点：</span><span class="q-meta-kp-text">${escapeHtml(q.knowledge)}</span>
+                <span>考点：</span><span class="q-meta-kp-text">${escapeHtml(window.GraphData ? window.GraphData.getDisplayKnowledgeName(q) : (q.knowledge || ''))}</span>
               </div>
             </div>
 
@@ -2019,10 +1951,9 @@
               <div class="q-stem-content">${renderMathText(q.stem)}</div>
               ${imgHtml}
               ${optionsHtml}
-              ${partsSummaryHtml}
             </div>
 
-            <div id="proc_q_analysis_${escapeHtml(q.id)}" class="${isAnalysisOpen ? '' : 'hidden'} q-analysis-panel text-xs space-y-1.5">
+            <div id="proc_q_analysis_${escapeHtml(q.id)}" class="${isAnalysisOpen ? '' : 'hidden'} q-analysis-panel text-sm space-y-1.5">
               ${typeof window.renderQuestionAnalysisBoxHtml === 'function' ? window.renderQuestionAnalysisBoxHtml(q) : ''}
             </div>
 
@@ -2030,10 +1961,10 @@
               <div class="flex flex-wrap items-center gap-2 text-xs">
                 <button type="button" class="btn-proc-toggle-analysis q-aux-btn" data-id="${escapeHtml(q.id)}">
                   <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                  <span class="analysis-btn-text">${isAnalysisOpen ? '收起标准解答' : '查看标准解答'}</span>
+                  <span class="analysis-btn-text">${isAnalysisOpen ? '收起答案' : '查看答案'}</span>
                 </button>
                 <button type="button" class="btn-proc-preview-drawer q-aux-btn text-[#0F766E] font-semibold" data-preview-q="${escapeHtml(q.id)}">
-                  <span>查看原题与解析 &rarr;</span>
+                  <span>详情</span>
                 </button>
               </div>
 
@@ -2065,9 +1996,8 @@
           <div class="flex flex-wrap items-center justify-between gap-2">
             <div>
               <h3 class="text-sm sm:text-base font-bold text-slate-900">
-                关联题目（共 ${col.totalQuestions} 题）
+                关联题目
               </h3>
-              <p class="text-xs text-slate-500 mt-0.5">按学习进阶顺序排列，点击「查看原题与解析」在右侧抽屉直接预览</p>
             </div>
             <button type="button" id="btnProcAddAllToBasket" class="btn-primary px-3.5 py-1.5 rounded-lg text-xs font-semibold">
               + 全部选入试题篮
@@ -2116,7 +2046,7 @@
           if (!panel) return;
           const isHidden = panel.classList.contains('hidden');
           panel.classList.toggle('hidden', !isHidden);
-          if (txt) txt.textContent = isHidden ? '收起标准解答' : '查看标准解答';
+          if (txt) txt.textContent = isHidden ? '收起答案' : '查看答案';
           if (qid) {
             if (isHidden) {
               if (!ProceduralState.expandedAnalysisIds.includes(qid)) {
@@ -2230,7 +2160,6 @@
             <div class="flex items-center gap-2">
               <span class="w-2 h-2 rounded-full bg-[#0F766E]"></span>
               <h3 class="text-xs sm:text-sm font-bold text-slate-800">前置知识</h3>
-              <span class="text-[11px] text-slate-400">点击高亮项可直达对应动态演示</span>
             </div>
           </div>
           <div class="space-y-1.5">
@@ -2253,12 +2182,6 @@
               <span class="shrink-0 px-2 py-0.5 rounded bg-[#0F766E] text-white text-xs font-bold">${escapeHtml(sectionCode)}</span>
               <span class="shrink-0 px-2 py-0.5 rounded bg-[#F0FDFA] text-[#115E59] border border-[#CCFBF1] text-xs font-semibold">${escapeHtml(p.grade)}</span>
               <h2 class="text-sm sm:text-base font-bold text-slate-900 truncate" title="${escapeHtml(p.name)}">${renderMathText(p.name)}</h2>
-            </div>
-
-            <div class="flex items-center gap-1.5 shrink-0 text-xs">
-              ${demoData ? `<button type="button" class="proc-anchor-btn px-2.5 py-1 rounded-md text-slate-600 hover:text-[#0F766E] hover:bg-[#F0FDFA] font-medium transition" data-anchor="#procDemoAnchor">动态演示</button>` : ''}
-              ${demoData ? `<button type="button" class="proc-anchor-btn px-2.5 py-1 rounded-md text-slate-600 hover:text-[#0F766E] hover:bg-[#F0FDFA] font-medium transition" data-anchor="#procDynPracticeSection">跟着操作</button>` : ''}
-              <button type="button" class="proc-anchor-btn px-2.5 py-1 rounded-md text-slate-600 hover:text-[#0F766E] hover:bg-[#F0FDFA] font-medium transition" data-anchor="#procRelatedQuestionsBlock">关联题目 (${col.totalQuestions})</button>
             </div>
           </div>
 
@@ -2299,14 +2222,6 @@
           if (targetId && targetId !== ProceduralState.selectedProcedureId) {
             this.openDetail(targetId, true, { recordHistory: true });
           }
-        });
-      });
-
-      container.querySelectorAll('.proc-anchor-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const sel = btn.getAttribute('data-anchor');
-          const el = sel ? document.querySelector(sel) : null;
-          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
       });
 

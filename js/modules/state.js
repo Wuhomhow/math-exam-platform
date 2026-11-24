@@ -160,7 +160,7 @@
         if (ch.startsWith('4.') || ch.includes('第四章')) return '第四章 整式的加减';
         if (ch.startsWith('5.') || ch.includes('第五章')) return '第五章 一元一次方程';
       } else if (grade === '初二') {
-        if (ch.startsWith('13.') || ch.includes('第十三')) return '第13章 三角形';
+        if (ch.startsWith('13.') || ch.includes('第十三')) return '第十三章 三角形';
         if (ch.startsWith('14.') || ch.includes('第十四')) return '第十四章 全等三角形';
         if (ch.startsWith('15.') || ch.includes('第十五')) return '第十五章 轴对称';
         if (ch.startsWith('16.') || ch.includes('第十六')) return '第十六章 整式的乘法';
@@ -168,9 +168,9 @@
         if (ch.startsWith('18.') || ch.includes('第十八')) return '第十八章 分式';
       } else if (grade === '初三') {
         if (ch.startsWith('25.') || ch.includes('第二十五')) return '第二十五章 一元二次方程';
-        if (ch.startsWith('26.') || ch.includes('第二十六')) return '第26章 二次函数';
+        if (ch.startsWith('26.') || ch.includes('第二十六')) return '第二十六章 二次函数';
         if (ch.startsWith('27.') || ch.includes('第二十七')) return '第二十七章 反比例函数';
-        if (ch.startsWith('28.') || ch.includes('第二十八')) return '第28章 旋转';
+        if (ch.startsWith('28.') || ch.includes('第二十八')) return '第二十八章 旋转';
         if (ch.startsWith('29.') || ch.includes('第二十九')) return '第二十九章 圆';
       }
       return null;
@@ -186,60 +186,79 @@
 
       const gradeOrder = ['六年级', '初一', '初二', '初三', '高一', '高二', '高三', '其他年级'];
       const semesterOrder = ['上册', '下册', '未分类'];
+      const graphGradeToNav = { '六年级': '六年级', '七年级': '初一', '八年级': '初二', '九年级': '初三' };
       const gradeMap = new Map();
 
+      function ensureGradeEntry(g) {
+        if (!gradeMap.has(g)) {
+          gradeMap.set(g, {
+            finishedPapers: new Map(),
+            semesters: new Map(),
+            uniqueIds: new Set()
+          });
+        }
+        return gradeMap.get(g);
+      }
+
+      // 1. 收集成品试卷
       QUESTION_BANK.forEach((question, order) => {
         const chapter = String(question.chapter || '未命名专题');
         const location = inferAcademicLocation(chapter);
-        if (!gradeMap.has(location.grade)) {
-          gradeMap.set(location.grade, {
-            finishedPapers: new Map(),
-            semesters: new Map()
-          });
-        }
-        const gradeEntry = gradeMap.get(location.grade);
+        const gradeEntry = ensureGradeEntry(location.grade);
         if (isFinishedPaperChapter(chapter)) {
           if (!gradeEntry.finishedPapers.has(chapter)) {
             gradeEntry.finishedPapers.set(chapter, { label: location.label, count: 0, firstOrder: order });
           }
           gradeEntry.finishedPapers.get(chapter).count++;
-        } else {
-          if (!gradeEntry.semesters.has(location.semester)) {
-            gradeEntry.semesters.set(location.semester, {
-              groups: new Map(),
-              standalone: new Map(),
-              children: new Map()
-            });
-          }
-          const semEntry = gradeEntry.semesters.get(location.semester);
-          const parentChapter = getChapterParent(location.grade, chapter);
-          if (parentChapter) {
-            if (!semEntry.children.has(parentChapter)) semEntry.children.set(parentChapter, new Map());
-            const childMap = semEntry.children.get(parentChapter);
-            if (!childMap.has(chapter)) {
-              childMap.set(chapter, { label: location.label, count: 0, firstOrder: order });
-            }
-            childMap.get(chapter).count++;
-          } else {
-            const grp = getChapterGroup(location.grade, chapter);
-            if (grp) {
-              if (!semEntry.groups.has(grp)) {
-                semEntry.groups.set(grp, { chapters: new Map(), firstOrder: order });
-              }
-              const grpInfo = semEntry.groups.get(grp);
-              if (!grpInfo.chapters.has(chapter)) {
-                grpInfo.chapters.set(chapter, { label: location.label, count: 0, firstOrder: order });
-              }
-              grpInfo.chapters.get(chapter).count++;
-            } else {
-              if (!semEntry.standalone.has(chapter)) {
-                semEntry.standalone.set(chapter, { label: location.label, count: 0, firstOrder: order });
-              }
-              semEntry.standalone.get(chapter).count++;
-            }
-          }
+          gradeEntry.uniqueIds.add(question.id);
         }
       });
+
+      // 2. 按照「题目图谱」的二级章节 -> 三级知识点构建精细目录（统一以图谱名称为标准，并标注含程序性知识的节点）
+      const procQuestionIdSet = new Set();
+      (Array.isArray(window.QUESTION_PROCEDURES) ? window.QUESTION_PROCEDURES : []).forEach(r => {
+        if (r && r.questionId) procQuestionIdSet.add(r.questionId);
+      });
+
+      if (window.GraphData) {
+        if (!window.GraphData.initialized) window.GraphData.init();
+        const l2Nodes = (window.GraphData.allNodes || []).filter(n => n.level === 2);
+        l2Nodes.forEach((mod, modIdx) => {
+          const rawGrade = Array.isArray(mod.grade) && mod.grade.length ? mod.grade[0] : '其他年级';
+          const navGrade = graphGradeToNav[rawGrade] || rawGrade;
+          const sem = (Array.isArray(mod.semester) && mod.semester.length ? mod.semester[0] : '上册') || '上册';
+          const kps = window.GraphData.getChildren(mod.id)
+            .map(kp => {
+              const qs = window.GraphData.getPrimaryQuestionsForNode(kp.id, true);
+              const hasProcedural = qs.some(q => procQuestionIdSet.has(q.id));
+              return { node: kp, count: qs.length, questions: qs, hasProcedural };
+            })
+            .filter(item => item.count > 0);
+          if (kps.length === 0) return;
+
+          const gradeEntry = ensureGradeEntry(navGrade);
+          if (!gradeEntry.semesters.has(sem)) {
+            gradeEntry.semesters.set(sem, { chapters: new Map(), uniqueIds: new Set() });
+          }
+          const semEntry = gradeEntry.semesters.get(sem);
+          const baseTitle = String(mod.name || '').replace(/\s*综合与实践$/, '').trim() || mod.name;
+          if (!semEntry.chapters.has(baseTitle)) {
+            semEntry.chapters.set(baseTitle, { title: baseTitle, kps: [], kpIdSet: new Set(), uniqueIds: new Set(), firstOrder: modIdx });
+          }
+          const chEntry = semEntry.chapters.get(baseTitle);
+          kps.forEach(item => {
+            if (!chEntry.kpIdSet.has(item.node.id)) {
+              chEntry.kpIdSet.add(item.node.id);
+              chEntry.kps.push(item);
+            }
+            item.questions.forEach(q => {
+              chEntry.uniqueIds.add(q.id);
+              semEntry.uniqueIds.add(q.id);
+              gradeEntry.uniqueIds.add(q.id);
+            });
+          });
+        });
+      }
 
       const orderedGrades = [...gradeMap.keys()].sort((a, b) => {
         const ai = gradeOrder.indexOf(a) < 0 ? 999 : gradeOrder.indexOf(a);
@@ -247,11 +266,37 @@
         return ai - bi || a.localeCompare(b, 'zh-CN');
       });
 
+      function getChapterSortKey(str) {
+        const s = String(str || '').trim();
+        const numM = s.match(/^(\d+)(?:\.(\d+))?/);
+        if (numM) {
+          return parseInt(numM[1], 10) * 100 + (numM[2] ? parseInt(numM[2], 10) : 0);
+        }
+        const cnNums = { '一': 1, '二': 2, '三': 3, '四': 4, '五': 5, '六': 6, '七': 7, '八': 8, '九': 9, '十': 10 };
+        const cnM = s.match(/^第([一二三四五六七八九十0-9]+)(?:章|单元)/);
+        if (cnM) {
+          const raw = cnM[1];
+          if (/^\d+$/.test(raw)) return parseInt(raw, 10) * 100;
+          if (raw.startsWith('十')) {
+            const unit = cnNums[raw.slice(1)] || 0;
+            return (10 + unit) * 100;
+          }
+          if (raw.includes('十')) {
+            const parts = raw.split('十');
+            const tens = cnNums[parts[0]] || 1;
+            const unit = cnNums[parts[1]] || 0;
+            return (tens * 10 + unit) * 100;
+          }
+          return (cnNums[raw] || 99) * 100;
+        }
+        if (s.startsWith('综合与实践')) return 9500;
+        return 9999;
+      }
+
       container.innerHTML = orderedGrades.map(grade => {
-        const { finishedPapers, semesters } = gradeMap.get(grade);
+        const { finishedPapers, semesters, uniqueIds } = gradeMap.get(grade);
         const finishedList = [...finishedPapers.entries()].sort((a, b) => a[1].firstOrder - b[1].firstOrder);
 
-        // Custom finished papers for this grade
         const gradeCustomPapers = (window.CUSTOM_FINISHED_PAPERS || []).filter(p => p.grade === grade);
         const customPapersList = gradeCustomPapers.map(p => [
           `custom:${p.id}`,
@@ -260,18 +305,7 @@
 
         const allFinishedList = [...customPapersList, ...finishedList];
         const finishedTotal = allFinishedList.reduce((sum, entry) => sum + entry[1].count, 0);
-
-        let regularTotal = 0;
-        for (const [, semEntry] of semesters) {
-          for (const [, grp] of semEntry.groups) {
-            for (const [, c] of grp.chapters) regularTotal += c.count;
-          }
-          for (const [, c] of semEntry.standalone) regularTotal += c.count;
-          for (const [, childMap] of semEntry.children) {
-            for (const [, c] of childMap) regularTotal += c.count;
-          }
-        }
-        const gradeTotal = finishedTotal + regularTotal;
+        const gradeTotal = uniqueIds.size;
 
         const finishedHtml = allFinishedList.length > 0 ? `
           <details class="nav-finished-paper-card mb-2.5">
@@ -302,142 +336,40 @@
           return ai - bi || a.localeCompare(b, 'zh-CN');
         });
 
-        function getChapterSortKey(str) {
-          const s = String(str || '').trim();
-          const numM = s.match(/^(\d+)(?:\.(\d+))?/);
-          if (numM) {
-            return parseInt(numM[1], 10) * 100 + (numM[2] ? parseInt(numM[2], 10) : 0);
-          }
-          const cnNums = { '一': 1, '二': 2, '三': 3, '四': 4, '五': 5, '六': 6, '七': 7, '八': 8, '九': 9, '十': 10 };
-          const cnM = s.match(/^第([一二三四五六七八九十0-9]+)章/);
-          if (cnM) {
-            const raw = cnM[1];
-            if (/^\d+$/.test(raw)) return parseInt(raw, 10) * 100;
-            if (raw.startsWith('十')) {
-              const unit = cnNums[raw.slice(1)] || 0;
-              return (10 + unit) * 100;
-            }
-            if (raw.includes('十')) {
-              const parts = raw.split('十');
-              const tens = cnNums[parts[0]] || 1;
-              const unit = cnNums[parts[1]] || 0;
-              return (tens * 10 + unit) * 100;
-            }
-            return (cnNums[raw] || 99) * 100;
-          }
-          return 9999;
-        }
-
         const semesterHtml = orderedSemesters.map(semester => {
           const semEntry = semesters.get(semester);
+          const semesterTotal = semEntry.uniqueIds.size;
+          const chapterList = [...semEntry.chapters.values()].sort((a, b) => {
+            const ka = getChapterSortKey(a.title);
+            const kb = getChapterSortKey(b.title);
+            if (ka !== kb) return ka - kb;
+            return a.firstOrder - b.firstOrder;
+          });
 
-          let semesterTotal = 0;
-          for (const [, grp] of semEntry.groups) {
-            for (const [, c] of grp.chapters) semesterTotal += c.count;
-          }
-          for (const [, c] of semEntry.standalone) semesterTotal += c.count;
-          for (const [, childMap] of semEntry.children) {
-            for (const [, c] of childMap) semesterTotal += c.count;
-          }
-
-          const items = [];
-
-          for (const [grpTitle, grpInfo] of semEntry.groups) {
-            const pilotSummary = (window.CurriculumCatalogService && typeof window.CurriculumCatalogService.getChapterSummary === 'function')
-              ? window.CurriculumCatalogService.getChapterSummary(grade, grpTitle)
-              : null;
-            if (pilotSummary) {
-              const visibleSections = pilotSummary.sections.filter(sec => sec.count > 0);
-              const html = `
-                <details class="nav-chapter-group-card mb-2">
-                  <summary>
-                    <span>${escapeNavText(pilotSummary.chapter.chapterGroup)}</span>
-                    <span class="nav-chapter-group-badge">${visibleSections.length} 节 · ${pilotSummary.totalUniqueQuestions} 题</span>
-                  </summary>
-                  <div class="nav-chapter-group-content space-y-1">
-                    ${visibleSections.map(sec => `
-                      <button type="button" class="chapter-tree-btn nav-topic-button" data-chapter="section:${escapeNavText(sec.id)}">
-                        <span class="nav-topic-label">${escapeNavText(sec.title)}</span>
-                        <span class="nav-topic-count">${sec.count}</span>
-                      </button>
-                    `).join('')}
-                  </div>
-                </details>
-              `;
-              items.push({
-                sortKey: getChapterSortKey(pilotSummary.chapter.chapterGroup),
-                firstOrder: grpInfo.firstOrder,
-                html: html
-              });
-              continue;
-            }
-            const chapList = [...grpInfo.chapters.entries()].sort((a, b) => a[0].localeCompare(b[0], 'zh-CN', { numeric: true }));
-            const grpTotal = chapList.reduce((acc, entry) => acc + entry[1].count, 0);
-            const html = `
-              <details class="nav-chapter-group-card mb-2">
-                <summary>
-                  <span>${escapeNavText(grpTitle)}</span>
-                  <span class="nav-chapter-group-badge">${chapList.length} 节 · ${grpTotal} 题</span>
-                </summary>
-                <div class="nav-chapter-group-content space-y-1">
-                  ${chapList.map(([chapter, meta]) => `
-                    <button type="button" class="chapter-tree-btn nav-topic-button" data-chapter="${escapeNavText(chapter)}">
-                      <span class="nav-topic-label">${escapeNavText(meta.label)}</span>
-                      <span class="nav-topic-count">${meta.count}</span>
-                    </button>
-                  `).join('')}
-                </div>
-              </details>
-            `;
-            items.push({
-              sortKey: getChapterSortKey(grpTitle),
-              firstOrder: grpInfo.firstOrder,
-              html: html
-            });
-          }
-
-          for (const [chapter, meta] of semEntry.standalone) {
-            const childMap = semEntry.children.get(chapter);
-            const childList = childMap
-              ? [...childMap.entries()].sort((a, b) => a[1].firstOrder - b[1].firstOrder)
-              : [];
-            const childrenHtml = childList.length ? `
-              <div class="nav-topic-children">
-                ${childList.map(([childChapter, childMeta]) => `
-                  <button type="button" class="chapter-tree-btn nav-topic-button nav-topic-child-button" data-chapter="${escapeNavText(childChapter)}">
-                    <span class="nav-topic-label">${escapeNavText(childMeta.label)}</span>
-                    <span class="nav-topic-count">${childMeta.count}</span>
+          const itemsHtml = chapterList.map(ch => `
+            <details class="nav-chapter-group-card mb-2">
+              <summary>
+                <span>${escapeNavText(ch.title)}</span>
+                <span class="nav-chapter-group-badge">${ch.kps.length} 考点 · ${ch.uniqueIds.size} 题</span>
+              </summary>
+              <div class="nav-chapter-group-content space-y-1">
+                ${ch.kps.map(item => `
+                  <button type="button" class="chapter-tree-btn nav-topic-button" data-chapter="kp:${escapeNavText(item.node.id)}" title="${escapeNavText(item.node.name)}${item.hasProcedural ? '（含程序性知识）' : ''}">
+                    <span class="nav-topic-label flex items-center gap-1 min-w-0">
+                      <span class="truncate">${escapeNavText(item.node.name)}</span>
+                      ${item.hasProcedural ? '<span class="shrink-0 px-1 py-0.2 rounded text-[10px] font-semibold bg-[#F0FDFA] text-[#0F766E] border border-[#99F6E4]">程序性</span>' : ''}
+                    </span>
+                    <span class="nav-topic-count">${item.count}</span>
                   </button>
                 `).join('')}
               </div>
-            ` : '';
-            const html = `
-              <div class="nav-topic-parent-block mb-1">
-                <button type="button" class="chapter-tree-btn nav-topic-button" data-chapter="${escapeNavText(chapter)}">
-                  <span class="nav-topic-label">${escapeNavText(meta.label)}</span>
-                  <span class="nav-topic-count">${meta.count}</span>
-                </button>
-                ${childrenHtml}
-              </div>
-            `;
-            items.push({
-              sortKey: getChapterSortKey(meta.label || chapter),
-              firstOrder: meta.firstOrder,
-              html: html
-            });
-          }
-
-          items.sort((a, b) => {
-            if (a.sortKey !== 9999 || b.sortKey !== 9999) {
-              if (a.sortKey !== b.sortKey) return a.sortKey - b.sortKey;
-            }
-            return a.firstOrder - b.firstOrder;
-          });
+            </details>
+          `).join('');
 
           return `
             <div class="mb-2 last:mb-0">
               <div class="nav-semester-label"><span>${escapeNavText(semester)}</span><span>${semesterTotal} 题</span></div>
-              <div class="space-y-1">${items.map(it => it.html).join('')}</div>
+              <div class="space-y-1">${itemsHtml}</div>
             </div>
           `;
         }).join('');
@@ -487,17 +419,21 @@
         if (!p || typeof p !== 'object') return;
         if (p.currentView === 'bank' || p.currentView === 'paper' || p.currentView === 'graph' || p.currentView === 'procedural') state.currentView = p.currentView;
         if (typeof p.chapterFilter === 'string') {
+          const isValidKp = p.chapterFilter.startsWith('kp:') &&
+            Array.isArray(window.KNOWLEDGE_NODES) &&
+            window.KNOWLEDGE_NODES.some(n => n && n.id === p.chapterFilter.slice(3));
           const isValidSection = p.chapterFilter.startsWith('section:') &&
             Boolean(window.CurriculumCatalogService && window.CurriculumCatalogService.getSectionById(p.chapterFilter.slice(8)));
           const isValidChapter = p.chapterFilter === 'all' ||
             p.chapterFilter === '2.3' ||
             p.chapterFilter.startsWith('custom:') ||
+            isValidKp ||
             isValidSection ||
             (Array.isArray(window.QUESTION_BANK) && window.QUESTION_BANK.some(q => q.chapter === p.chapterFilter));
           state.chapterFilter = isValidChapter ? p.chapterFilter : 'all';
         }
         if (typeof p.pedagogyFilter === 'string' && ['all', 'procedural_featured', 'procedural_bank', 'comprehensive'].includes(p.pedagogyFilter)) {
-          state.pedagogyFilter = state.chapterFilter.startsWith('section:') ? p.pedagogyFilter : 'all';
+          state.pedagogyFilter = (state.chapterFilter.startsWith('kp:') || state.chapterFilter.startsWith('section:')) ? p.pedagogyFilter : 'all';
         }
         if (typeof p.typeFilter === 'string') state.typeFilter = p.typeFilter;
         if (typeof p.diffFilter === 'string') state.diffFilter = p.diffFilter;

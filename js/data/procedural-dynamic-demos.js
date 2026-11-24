@@ -302,33 +302,45 @@
 
       practices: {
         practice1: {
-          title: '练习一：判断直接开平方降次操作',
-          givenLabel: '已知方程：',
-          givenFormula: '$3(x - 1)^{2} = 12$',
-          extractedLabel: '两边同除以 3 整理后：',
-          extractedFormula: '$(x - 1)^{2} = 4$',
-          questionText: '下一步对等式两边直接开平方，正确的变形结果是？',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '解方程：$3(x - 1)^{2} = 12$，其解为（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $x - 1 = \\pm 2$', isCorrect: true },
-            { key: 'B', text: 'B. $x - 1 = 2$', isCorrect: false },
-            { key: 'C', text: 'C. $x^{2} - 2x + 1 = 4$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $x_{1} = 3$，$x_{2} = -1$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $x_{1} = 3$，$x_{2} = 1$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $x = 3$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！正数 4 的平方根有两个（互为相反数）：',
+            title: '回答正确！先系数化为 1，再两边直接开平方：',
             calcLines: [
-              '$x - 1 = \\pm\\sqrt{4} = \\pm 2$',
-              '$x - 1 = 2 \\quad\\text{或}\\quad x - 1 = -2$'
+              '$(x - 1)^{2} = 4 \\implies x - 1 = \\pm 2$',
+              '$x_{1} = 3$，$x_{2} = -1$'
             ],
-            summary: '由此可进一步解得 $x_{1} = 3$，$x_{2} = -1$。'
+            summary: '正数有两个互为相反数的平方根，开平方时切勿漏掉负根。'
           },
-          wrongTitle: '提示：请回顾平方根的意义',
-          wrongFeedback: '已有完全平方结构 $(x - 1)^{2} = 4$ 时无需展开括号，且正数 $4$ 的平方根是 $\\pm 2$（不能漏掉 $-2$），请再试一次。'
+          wrongTitle: '提示：先两边同除以 3，再开平方取正负两根',
+          wrongFeedback: '由 $3(x - 1)^{2} = 12$ 得 $(x - 1)^{2} = 4$，开平方得 $x - 1 = \\pm 2$，解得 $x_{1} = 3$，$x_{2} = -1$。'
         },
         practice2: {
-          title: '练习二：用直接开平方法求方程的两根',
-          givenLabel: '给出标准平方形式：',
-          givenFormula: '$(x - 3)^{2} = 16$',
-          questionText: '开平方降次后，这个方程的两个实数根分别是多少？',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '解方程：$(x - 3)^{2} - 16 = 0$，则 $x_{1} =$ ______，$x_{2} =$ ______．',
+          questionText: '',
           input1Prefix: '$x_{1} =$',
           input1Placeholder: '如 7',
           input2Prefix: '，$x_{2} =$',
@@ -337,19 +349,14 @@
           expectedX: '7',
           expectedMin: '-1',
           allowOrderSwap: true,
-          correctFeedback: '方程的两个实数根为 $x_{1} = 7$，$x_{2} = -1$。',
-          correctDetail: '两边开平方得 $x - 3 = \\pm 4$，即 $x - 3 = 4$ 或 $x - 3 = -4$，解得 $x_{1} = 7$，$x_{2} = -1$。',
-          wrongFeedback: '请先写出 $x - 3 = \\pm 4$，再分别计算 $x = 3 + 4$ 与 $x = 3 - 4$ 的值。',
+          correctFeedback: '方程的两根为 $x_{1} = 7$，$x_{2} = -1$。',
+          correctDetail: '移项得 $(x - 3)^{2} = 16$，两边开平方得 $x - 3 = \\pm 4$，解得 $x_{1} = 7$，$x_{2} = -1$。',
+          wrongFeedback: '先移项得 $(x - 3)^{2} = 16$，再开平方得 $x - 3 = \\pm 4$，分别求解即可。',
           specificWrongHints: [
             {
               checkType: 'sameVal',
               val: '7',
-              hint: '你求出了正平方根对应的 $x = 7$，但别忘了 $x - 3 = -4$ 还会得出另一个根，请补充完整。'
-            },
-            {
-              checkType: 'anyVal',
-              val: '1',
-              hint: '注意第二个方程是 $x - 3 = -4$，移项后 $x = -4 + 3 = -1$ 而不是 $1$，请检查符号。'
+              hint: '别忘了 $x - 3 = -4$ 还会得出另一个根 $x = -1$。'
             }
           ]
         }
@@ -618,54 +625,61 @@
 
       practices: {
         practice1: {
-          title: '练习一：判断方程两边的配方操作',
-          givenLabel: '已知方程：',
-          givenFormula: '$x^{2} - 6x - 2 = 0$',
-          extractedLabel: '移常数项后：',
-          extractedFormula: '$x^{2} - 6x = 2$',
-          questionText: '下一步应该在等式两边怎样操作？',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '用配方法解方程 $x^{2} - 6x - 2 = 0$，配方后所得方程为（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. 在等号左边和右边同时加上 $(-3)^{2} = 9$。', isCorrect: true },
-            { key: 'B', text: 'B. 只在等号左边加上 $9$，右边保持 $2$ 不变。', isCorrect: false },
-            { key: 'C', text: 'C. 在等号左边和右边同时加上 $(-6)^{2} = 36$。', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $(x - 3)^{2} = 11$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $(x - 3)^{2} = 2$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $(x - 6)^{2} = 38$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！方程配方必须在等式两边同时加上一次项系数一半的平方：',
+            title: '回答正确！移项后两边同加一次项系数一半的平方：',
             calcLines: [
-              '$(-6 \\div 2)^{2} = (-3)^{2} = 9$',
-              '$x^{2} - 6x + 9 = 2 + 9$'
+              '$x^{2} - 6x = 2 \\implies x^{2} - 6x + 9 = 2 + 9$',
+              '$(x - 3)^{2} = 11$'
             ],
-            summary: '整理后即可得到完全平方形式 $(x - 3)^{2} = 11$。'
+            summary: '移常数项后，等号左右两边必须同时加上 $(-3)^{2} = 9$。'
           },
-          wrongTitle: '提示：请留意等式平衡与一次项系数的一半',
-          wrongFeedback: '一次项系数为 $-6$，一半的平方为 $(-3)^{2} = 9$，且等式左边和右边必须同时加上 $9$，请再试一次。'
+          wrongTitle: '提示：请将常数项移到右边，再两边同加 $(-6 \\div 2)^{2} = 9$',
+          wrongFeedback: '移项得 $x^{2} - 6x = 2$，两边同时加 $9$ 得 $(x - 3)^{2} = 11$。'
         },
         practice2: {
-          title: '练习二：确定配方后的参数 a 与 b',
-          givenLabel: '给出两边同加 9 后的等式：',
-          givenFormula: '$x^{2} - 6x + 9 = 2 + 9$',
-          questionText: '将其化为 $(x + a)^{2} = b$ 的形式，常数 $a$ 和 $b$ 分别是多少？',
-          input1Prefix: '常数 $a =$',
-          input1Placeholder: '如 -3',
-          input2Prefix: '，常数 $b =$',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '将方程 $x^{2} - 4x - 7 = 0$ 配方成 $(x + a)^{2} = b$ 的形式，则 $a =$ ______，$b =$ ______．',
+          questionText: '',
+          input1Prefix: '$a =$',
+          input1Placeholder: '如 -2',
+          input2Prefix: '，$b =$',
           input2Placeholder: '如 11',
           input2Suffix: '',
-          expectedX: '-3',
+          expectedX: '-2',
           expectedMin: '11',
           allowOrderSwap: false,
-          correctFeedback: '当配成 $(x + a)^{2} = b$ 时，$a = -3$，$b = 11$。',
-          correctDetail: '左边 $x^{2} - 6x + 9 = (x - 3)^{2}$，右边 $2 + 9 = 11$，对照 $(x + a)^{2} = b$ 可得 $a = -3$，$b = 11$。',
-          wrongFeedback: '请观察左边 $x^{2} - 6x + 9$ 可写成 $(x - 3)^{2}$，对照 $(x + a)^{2}$ 时注意 $a$ 的正负号，右边合并 $2 + 9$。',
+          correctFeedback: '$a = -2$，$b = 11$。',
+          correctDetail: '移项得 $x^{2} - 4x = 7$，两边同加 $(-2)^{2} = 4$ 得 $(x - 2)^{2} = 11$，对照得 $a = -2$，$b = 11$。',
+          wrongFeedback: '移项得 $x^{2} - 4x = 7$，两边同时加 $4$ 得 $(x - 2)^{2} = 11$，注意 $a$ 带负号。',
           specificWrongHints: [
             {
               checkType: 'firstVal',
-              val: '3',
-              hint: '注意左边是 $(x - 3)^{2} = [x + (-3)]^{2}$，对照 $(x + a)^{2}$ 时 $a$ 应当等于 $-3$ 而不是 $3$。'
-            },
-            {
-              checkType: 'secondVal',
               val: '2',
-              hint: '注意等号右边也加上了 $9$，因此 $b = 2 + 9 = 11$ 而不是 $2$。'
+              hint: '$(x - 2)^{2} = [x + (-2)]^{2}$，所以 $a = -2$ 而不是 $2$。'
             }
           ]
         }
@@ -1067,54 +1081,61 @@
 
       practices: {
         practice1: {
-          title: '练习一：判断配方操作',
-          givenLabel: '已知：',
-          givenFormula: '$y = 2x^{2} + 8x + 3$',
-          extractedLabel: '提取二次项系数后：',
-          extractedFormula: '$y = 2(x^{2} + 4x) + 3$',
-          questionText: '下一步应该怎样操作？',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '二次三项式 $y = 2x^{2} + 8x + 3$ 的最小值是（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. 将 $4$ 除以 $2$，再将结果平方。', isCorrect: true },
-            { key: 'B', text: 'B. 将 $4$ 直接平方。', isCorrect: false },
-            { key: 'C', text: 'C. 将 $2$ 除以 $2$，再将结果平方。', isCorrect: false }
-          ],
-          correctFeedback: {
-            title: '回答正确！配方法应取括号内一次项系数的一半再平方：',
-            calcLines: [
-              '$4 \\div 2 = 2$',
-              '$2^{2} = 4$'
-            ],
-            summary: '因此在括号内同时加上并减去 $4$，即 $y = 2(x^{2} + 4x + 4 - 4) + 3$。'
-          },
-          wrongTitle: '提示：请留意括号内的一次项系数',
-          wrongFeedback: '请留意括号 $(x^{2} + 4x)$ 内部的一次项系数，配方法需要先取括号内一次项系数的一半再平方，请再试一次。'
-        },
-        practice2: {
-          title: '练习二：判断最值',
-          givenLabel: '给出配方结果：',
-          givenFormula: '$y = 2(x + 2)^{2} - 5$',
-          questionText: '这个二次三项式的最小值是多少？在什么情况下取得？',
-          input1Prefix: '当 $x =$',
-          input1Placeholder: '如 -2',
-          input2Prefix: '时，取得最小值',
-          input2Placeholder: '如 -5',
-          input2Suffix: '',
-          expectedX: '-2',
-          expectedMin: '-5',
-          allowOrderSwap: false,
-          correctFeedback: '当 $x = -2$ 时，取得最小值 $-5$。',
-          correctDetail: '因为 $(x + 2)^{2} \\ge 0$ 且系数 $2 \\gt 0$，当 $x + 2 = 0$（即 $x = -2$）时，$(x + 2)^{2} = 0$，此时 $y$ 取得最小值 $-5$。',
-          wrongFeedback: '请观察完全平方式 $(x + 2)^{2}$：当 $x$ 取何值时括号内为 $0$？此时剩余的常数项是多少？请调整后重试。',
-          specificWrongHints: [
             {
-              checkType: 'firstVal',
-              val: '2',
-              hint: '注意括号内是 $(x + 2)^{2}$，要使 $x + 2 = 0$，$x$ 应当等于 $-2$ 而不是 $2$，请修改后再试。'
+              key: 'A',
+              text: 'A. $-5$',
+              isCorrect: true
             },
             {
+              key: 'B',
+              text: 'B. $-1$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $3$',
+              isCorrect: false
+            }
+          ],
+          correctFeedback: {
+            title: '回答正确！先提取二次项系数 2，再配方求最值：',
+            calcLines: [
+              '$y = 2(x^{2} + 4x) + 3 = 2(x^{2} + 4x + 4 - 4) + 3$',
+              '$= 2(x + 2)^{2} - 5 \\ge -5$'
+            ],
+            summary: '移出括号内的 $-4$ 时必须乘以系数 $2$，得 $-8 + 3 = -5$。'
+          },
+          wrongTitle: '提示：先提系数 2，括号内加 4 减 4，移出括号别忘乘 2',
+          wrongFeedback: '$y = 2(x^{2} + 4x + 4 - 4) + 3 = 2(x + 2)^{2} - 8 + 3 = 2(x + 2)^{2} - 5$，最小值为 $-5$。'
+        },
+        practice2: {
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '代数式 $y = 3x^{2} - 6x + 5$ 当 $x =$ ______ 时，取得最小值 ______．',
+          questionText: '',
+          input1Prefix: '当 $x =$',
+          input1Placeholder: '如 1',
+          input2Prefix: '时，最小值为',
+          input2Placeholder: '如 2',
+          input2Suffix: '',
+          expectedX: '1',
+          expectedMin: '2',
+          allowOrderSwap: false,
+          correctFeedback: '当 $x = 1$ 时，取得最小值 $2$。',
+          correctDetail: '$y = 3(x^{2} - 2x) + 5 = 3(x - 1)^{2} - 3 + 5 = 3(x - 1)^{2} + 2$，故当 $x = 1$ 时取得最小值 $2$。',
+          wrongFeedback: '先提取 $3$ 配方为 $3(x - 1)^{2} + 2$，再由完全平方非负性求最值。',
+          specificWrongHints: [
+            {
               checkType: 'secondVal',
-              val: '5',
-              hint: '注意括号外的常数项是 $-5$（带负号），请检查最小值的正负号后再试。'
+              val: '4',
+              hint: '括号内 $-1$ 移出括号时要乘系数 $3$，即 $-3 + 5 = 2$。'
             }
           ]
         }
@@ -1127,7 +1148,7 @@
     P04: {
       procedureId: 'P04',
       title: '识别代数式与判断规范书写',
-      exampleTitle: '辨析并规范书写：① $S = ab$；② $a^{4}$；③ $1\\frac{1}{2}x$；④ $m - 2$ 米；⑤ $a \\div 5$',
+      exampleTitle: '下列式子中，属于代数式且书写规范的是（　　）① $S = ab$；② $a^{4}$；③ $1\\frac{1}{2}x$；④ $m - 2$ 米；⑤ $a \\div 5$',
       exampleFormula: '① $S = ab$；② $a^{4}$；③ $1\\frac{1}{2}x$；④ $m - 2$ 米；⑤ $a \\div 5$',
       totalDuration: 31.0,
       scratchpadIdleHint: '旁白草稿演算区（在此同步展示初中数学代数式书写的五项核心规范准则）',
@@ -1386,52 +1407,57 @@
 
       practices: {
         practice1: {
-          title: '练习一：判断代数式书写规范',
-          givenLabel: '给出四个代数式：',
-          givenFormula: '① $-1ab$；② $2\\frac{1}{3}m$；③ $\\frac{3x^{2}}{4}$；④ $x + 3$ 元',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '下列各式中，符合代数式书写规范的是（　　）',
           extractedLabel: '',
           extractedFormula: '',
-          questionText: '其中完全符合初中数学代数式书写规范的是哪一个？',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. ③ $\\frac{3x^{2}}{4}$', isCorrect: true },
-            { key: 'B', text: 'B. ② $2\\frac{1}{3}m$', isCorrect: false },
-            { key: 'C', text: 'C. ① $-1ab$ 与 ④ $x + 3$ 元', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $\\frac{3x^{2}}{4}$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $2\\frac{1}{3}m$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $x + 3$ 元',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！其余三项的规范改写如下：',
+            title: '回答正确！',
             calcLines: [
-              '① $-1ab \\to -ab$（系数 $-1$ 中的 $1$ 必须省略）',
-              '② $2\\frac{1}{3}m \\to \\frac{7}{3}m$（带分数必须化为假分数）',
-              '④ $x + 3\\text{ 元} \\to (x + 3)\\text{ 元}$（和差带单位必须加括号）'
+              'B 项带分数须化为假分数 $\\frac{7}{3}m$',
+              'C 项和差带单位须加括号 $(x + 3)$ 元'
             ],
-            summary: '只有 ③ $\\frac{3x^{2}}{4}$ 用分数线表示除法且数字系数在前，完全符合规范。'
+            summary: '只有 $\\frac{3x^{2}}{4}$ 用分数线表示除法且系数在前，完全符合规范。'
           },
-          wrongTitle: '提示：请对照五项书写规范逐一排查',
-          wrongFeedback: '注意系数为 $-1$ 时应省去 $1$、带分数系数须化为假分数、和差后带单位须加括号，请再试一次。'
+          wrongTitle: '提示：检查带分数系数和带单位括号规范',
+          wrongFeedback: '带分数系数必须化为假分数，和差后带单位必须整体加括号，只有 $\\frac{3x^{2}}{4}$ 规范。'
         },
         practice2: {
-          title: '练习二：将带分数系数化为规范假分数',
-          givenLabel: '给出不规范代数式：',
-          givenFormula: '$2\\frac{3}{4}x$',
-          questionText: '将其规范改写为假分数系数 $\\frac{p}{q}x$ 的形式，分子 $p$ 与分母 $q$ 分别是多少？',
-          input1Prefix: '分子 $p =$',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '把不规范的代数式 $2\\frac{3}{4}x$ 规范写成假分数系数 $\\frac{p}{q}x$，则 $p =$ ______，$q =$ ______．',
+          questionText: '',
+          input1Prefix: '$p =$',
           input1Placeholder: '如 11',
-          input2Prefix: '，分母 $q =$',
+          input2Prefix: '，$q =$',
           input2Placeholder: '如 4',
           input2Suffix: '',
           expectedX: '11',
           expectedMin: '4',
           allowOrderSwap: false,
-          correctFeedback: '规范写法为 $\\frac{11}{4}x$（分子 $p = 11$，分母 $q = 4$）。',
-          correctDetail: '将带分数化为假分数：$2\\frac{3}{4} = \\frac{2 \\times 4 + 3}{4} = \\frac{11}{4}$，故规范书写为 $\\frac{11}{4}x$。',
-          wrongFeedback: '请按“整数部分 $\\times$ 分母 $+$ 分子”计算假分数的分子：$2 \\times 4 + 3$，分母保持 $4$ 不变。',
-          specificWrongHints: [
-            {
-              checkType: 'firstVal',
-              val: '6',
-              hint: '注意不是 $2 \\times 3 = 6$，而是整数部分 $2$ 乘分母 $4$ 再加分子 $3$：$2 \\times 4 + 3 = 11$。'
-            }
-          ]
+          correctFeedback: '规范写法为 $\\frac{11}{4}x$（$p = 11$，$q = 4$）。',
+          correctDetail: '$2\\frac{3}{4} = \\frac{2 \\times 4 + 3}{4} = \\frac{11}{4}$，故规范书写为 $\\frac{11}{4}x$。',
+          wrongFeedback: '带分数化假分数：分子 $= 2 \\times 4 + 3 = 11$，分母为 $4$。',
+          specificWrongHints: []
         }
       }
     },
@@ -1734,56 +1760,57 @@
 
       practices: {
         practice1: {
-          title: '练习一：判断“三线合一”导出的结论',
-          givenLabel: '已知条件：',
-          givenFormula: '在 $\\triangle ABC$ 中，$AB = AC = 10$，$BC = 12$',
-          extractedLabel: '底边上的一线：',
-          extractedFormula: '$AD$ 平分顶角 $\\angle BAC$ 交 $BC$ 于点 $D$',
-          questionText: '根据等腰三角形“三线合一”性质，下列直接导出的结论哪一项正确？',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '在 $\\triangle ABC$ 中，$AB = AC = 10$，$BC = 12$，$D$ 是 $BC$ 中点，则高 $AD$ 的长为（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $AD \\perp BC$（$\\angle ADB = 90^{\\circ}$），且 $BD = CD = 6$。', isCorrect: true },
-            { key: 'B', text: 'B. $AD \\perp AB$，且 $BD = 10$。', isCorrect: false },
-            { key: 'C', text: 'C. $AD = BC = 12$。', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $8$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $6$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $4$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！顶角平分线、底边上的中线、底边上的高三线重合：',
+            title: '回答正确！由“三线合一”得 $AD \\perp BC$ 且 $BD = 6$：',
             calcLines: [
-              '$AD \\perp BC \\implies \\angle ADB = \\angle ADC = 90^{\\circ}$',
-              '$BD = CD = \\frac{1}{2}BC = \\frac{1}{2} \\times 12 = 6$'
+              '$BD = \\frac{1}{2}BC = 6$，$\\angle ADB = 90^{\\circ}$',
+              '$AD = \\sqrt{10^{2} - 6^{2}} = 8$'
             ],
-            summary: '再在 $\\text{Rt}\\triangle ABD$ 中用勾股定理即可算出高 $AD = \\sqrt{10^{2} - 6^{2}} = 8$。'
+            summary: '底边上的中线同时是底边上的高，可在直角三角形中直接用勾股定理求解。'
           },
-          wrongTitle: '提示：请确认哪条边是底边',
-          wrongFeedback: '因为 $AB = AC$，所以 $BC$ 是底边，顶角平分线 $AD$ 垂直且平分的是底边 $BC$，请再试一次。'
+          wrongTitle: '提示：先由三线合一得 $AD \\perp BC$ 与 $BD = 6$，再用勾股定理',
+          wrongFeedback: '$BD = 6$，在 $\\text{Rt}\\triangle ABD$ 中，$AD = \\sqrt{10^{2} - 6^{2}} = 8$。'
         },
         practice2: {
-          title: '练习二：利用“三线合一”求线段与角度',
-          givenLabel: '给出等腰三角形条件：',
-          givenFormula: '在 $\\triangle ABC$ 中，$AB = AC$，$AD \\perp BC$ 于点 $D$，$BC = 10$，$\\angle B = 55^{\\circ}$',
-          questionText: '由“三线合一”与直角三角形两锐角互余，$BD$ 的长和 $\\angle BAD$ 的度数分别是多少？',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '在 $\\triangle ABC$ 中，$AB = AC$，$D$ 是 $BC$ 中点，$BC = 10$，$\\angle BAC = 70^{\\circ}$，则 $BD =$ ______，$\\angle BAD =$ ______$^{\\circ}$．',
+          questionText: '',
           input1Prefix: '$BD =$',
           input1Placeholder: '如 5',
           input2Prefix: '，$\\angle BAD =$',
           input2Placeholder: '如 35',
-          input2Suffix: '°（只填数字）',
+          input2Suffix: '°',
           expectedX: '5',
           expectedMin: '35',
           allowOrderSwap: false,
           correctFeedback: '$BD = 5$，$\\angle BAD = 35^{\\circ}$。',
-          correctDetail: '由 $AB = AC$ 且 $AD \\perp BC$（三线合一），得 $BD = \\frac{1}{2}BC = 5$；在 $\\text{Rt}\\triangle ABD$ 中，$\\angle BAD = 90^{\\circ} - \\angle B = 90^{\\circ} - 55^{\\circ} = 35^{\\circ}$。',
-          wrongFeedback: '请先由 $AD$ 平分底边 $BC$ 算出 $BD = \\frac{1}{2} \\times 10$，再在 $\\text{Rt}\\triangle ABD$ 中利用 $90^{\\circ} - 55^{\\circ}$ 算出 $\\angle BAD$。',
-          specificWrongHints: [
-            {
-              checkType: 'firstVal',
-              val: '10',
-              hint: '注意 $D$ 是底边 $BC$ 的中点，$BD$ 是 $BC$ 的一半，即 $10 \\div 2 = 5$。'
-            },
-            {
-              checkType: 'secondVal',
-              val: '55',
-              hint: '注意 $\\angle B = 55^{\\circ}$，在 $\\text{Rt}\\triangle ABD$ 中 $\\angle BAD$ 与 $\\angle B$ 互余，应为 $90^{\\circ} - 55^{\\circ} = 35^{\\circ}$。'
-            }
-          ]
+          correctDetail: '由“三线合一”得 $BD = \\frac{1}{2}BC = 5$，$AD$ 平分 $\\angle BAC$，故 $\\angle BAD = \\frac{1}{2} \\times 70^{\\circ} = 35^{\\circ}$。',
+          wrongFeedback: '由三线合一，$BD = \\frac{1}{2}BC = 5$，$\\angle BAD = \\frac{1}{2}\\angle BAC = 35^{\\circ}$。',
+          specificWrongHints: []
         }
       }
     },
@@ -1980,51 +2007,57 @@
 
       practices: {
         practice1: {
-          title: '练习一：辨析“先读先算”与括号位置',
-          givenLabel: '文字叙述：',
-          givenFormula: '“$a$ 与 $b$ 两数差的平方”与“$a, b$ 两数的平方差”',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '将 $2$ 千克单价 $a$ 元的苹果与 $3$ 千克单价 $b$ 元的梨混合，混合水果的平均单价（单位：元/千克）是（　　）',
           extractedLabel: '',
           extractedFormula: '',
-          questionText: '这两个文字叙述对应的正确代数式分别是？',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $(a - b)^{2}$ 与 $a^{2} - b^{2}$', isCorrect: true },
-            { key: 'B', text: 'B. $a^{2} - b^{2}$ 与 $(a - b)^{2}$', isCorrect: false },
-            { key: 'C', text: 'C. $a - b^{2}$ 与 $a^{2} - b^{2}$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $\\frac{2a + 3b}{5}$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $\\frac{a + b}{2}$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $2a + 3b \\div 5$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！按“先读先算”原则断句：',
+            title: '回答正确！平均单价 $=$ 混合总金额 $\\div$ 混合总质量：',
             calcLines: [
-              '“$a$ 与 $b$ 差的平方”：先算差 $(a - b)$，再整体平方 $\\to (a - b)^{2}$',
-              '“$a, b$ 两数的平方差”：先分别算平方 $a^{2}, b^{2}$，再求差 $\\to a^{2} - b^{2}$'
+              '总金额 $= 2a + 3b$，总质量 $= 2 + 3 = 5$',
+              '平均单价 $= \\frac{2a + 3b}{5}$ 元/千克'
             ],
-            summary: '读题时抓住最后一个“的”字前面的运算作为内层整体即可准确判断括号。'
+            summary: '先算总金额再除以总质量，除号规范写成分数线。'
           },
-          wrongTitle: '提示：请按“先读先算”原则断句',
-          wrongFeedback: '“差的平方”是先求差再平方（需加括号），“平方差”是先平方再求差，请再试一次。'
+          wrongTitle: '提示：先求混合总金额与总质量，再相除写成规范分式',
+          wrongFeedback: '总金额为 $(2a + 3b)$ 元，总质量为 $5$ 千克，相除并写成规范分数线形式为 $\\frac{2a + 3b}{5}$。'
         },
         practice2: {
-          title: '练习二：阶梯计费问题列代数式并化简',
-          givenLabel: '实际情境：',
-          givenFormula: '租书前 $3$ 天共收基础费 $5$ 元，超过 $3$ 天的部分每天收 $2$ 元',
-          questionText: '若租书 $x$ 天（$x \\gt 3$），总费用列出 $5 + 2(x - 3)$ 并化简为 $px - q$ 元后，$p$ 和 $q$ 分别是多少？',
-          input1Prefix: '一次项系数 $p =$',
-          input1Placeholder: '如 2',
-          input2Prefix: '，常数项 $q =$',
-          input2Placeholder: '如 1',
-          input2Suffix: '（使化简结果为 px - q）',
-          expectedX: '2',
-          expectedMin: '1',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '将 $4$ 千克单价 $x$ 元的红茶与 $m$ 千克单价 $20$ 元的绿茶混合，平均单价可表示为 $\\frac{px + 20m}{m + q}$ 元/千克，则 $p =$ ______，$q =$ ______．',
+          questionText: '',
+          input1Prefix: '$p =$',
+          input1Placeholder: '如 4',
+          input2Prefix: '，$q =$',
+          input2Placeholder: '如 4',
+          input2Suffix: '',
+          expectedX: '4',
+          expectedMin: '4',
           allowOrderSwap: false,
-          correctFeedback: '化简结果为 $(2x - 1)$ 元（即 $p = 2$，$q = 1$）。',
-          correctDetail: '超过 $3$ 天的天数为 $(x - 3)$ 天，总费用为 $5 + 2(x - 3) = 5 + 2x - 6 = 2x - 1$。',
-          wrongFeedback: '请展开 $5 + 2(x - 3) = 5 + 2x - 6$，合并常数项 $5 - 6 = -1$，对照 $px - q$ 填写。',
-          specificWrongHints: [
-            {
-              checkType: 'secondVal',
-              val: '-1',
-              hint: '式子已写为 $px - q$（带减号），由 $2x - 1$ 对照 $px - q$ 可知 $q = 1$。'
-            }
-          ]
+          correctFeedback: '$p = 4$，$q = 4$，平均单价为 $\\frac{4x + 20m}{m + 4}$ 元/千克。',
+          correctDetail: '混合总金额为 $(4x + 20m)$ 元，总质量为 $(m + 4)$ 千克，故平均单价为 $\\frac{4x + 20m}{m + 4}$。',
+          wrongFeedback: '红茶总价 $4x$、绿茶总价 $20m$，混合总质量 $m + 4$，对照即得 $p = 4$，$q = 4$。',
+          specificWrongHints: []
         }
       }
     },
@@ -2275,34 +2308,46 @@
 
       practices: {
         practice1: {
-          title: '练习一：用火柴棒摆正方形规律归纳',
-          givenLabel: '已知规律：',
-          givenFormula: '摆第 $1$ 个正方形用 $4$ 根，第 $2$ 个用 $7$ 根，第 $3$ 个用 $10$ 根',
-          extractedLabel: '相邻增量：',
-          extractedFormula: '每多摆 $1$ 个正方形，固定增加 $3$ 根火柴棒',
-          questionText: '摆第 $n$ 个图形需要多少根火柴棒？',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '用火柴棒按规律摆图形：第 $1$ 个用 $4$ 根，第 $2$ 个用 $7$ 根，第 $3$ 个用 $10$ 根，则第 $n$ 个图形需要火柴棒（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $4 + 3(n - 1) = 3n + 1$', isCorrect: true },
-            { key: 'B', text: 'B. $4 + 3n$', isCorrect: false },
-            { key: 'C', text: 'C. $4n$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $(3n + 1)$ 根',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $(3n + 4)$ 根',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $4n$ 根',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！首项 4 加上 (n - 1) 个公差 3：',
+            title: '回答正确！',
             calcLines: [
-              '$a_{n} = 4 + 3(n - 1) = 4 + 3n - 3 = 3n + 1$',
-              '验证：当 $n = 1$ 时，$3 \\times 1 + 1 = 4$；当 $n = 2$ 时，$3 \\times 2 + 1 = 7$'
+              '首项 $4$，固定增量 $3 \\implies 4 + 3(n - 1) = 3n + 1$',
+              '代入 $n = 1$ 验证：$3 \\times 1 + 1 = 4$'
             ],
-            summary: '等差型规律通项公式始终满足“公差 $\\times n + ($首项 $-$ 公差$)$”。'
+            summary: '先找相邻增量 $3$，再用“首项 $+ 3(n - 1)$”化简并代入 $n = 1$ 验证。'
           },
-          wrongTitle: '提示：请将 n = 1 代入选项验证',
-          wrongFeedback: '当 $n = 1$ 时结果应等于首项 $4$（若选 $4 + 3n$，当 $n = 1$ 时等于 $7 \\neq 4$），请再试一次。'
+          wrongTitle: '提示：把 $n = 1$ 代入选项验证是否等于 $4$',
+          wrongFeedback: '第 $n$ 个图形为 $4 + 3(n - 1) = 3n + 1$，当 $n = 1$ 时等于 $4$。'
         },
         practice2: {
-          title: '练习二：归纳等差数列通项并求第 10 项',
-          givenLabel: '按规律排列的一列数：',
-          givenFormula: '$5，9，13，17，\\dots$',
-          questionText: '若第 $n$ 个数表示为 $4n + c$，则常数 $c$ 是多少？第 $10$ 个数是多少？',
-          input1Prefix: '常数 $c =$',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '按规律排列的一列数：$5, 9, 13, 17, \\dots$，若第 $n$ 个数为 $4n + c$，则 $c =$ ______，第 $10$ 个数为 ______．',
+          questionText: '',
+          input1Prefix: '$c =$',
           input1Placeholder: '如 1',
           input2Prefix: '，第 $10$ 个数 $=$',
           input2Placeholder: '如 41',
@@ -2310,16 +2355,10 @@
           expectedX: '1',
           expectedMin: '41',
           allowOrderSwap: false,
-          correctFeedback: '通项为 $4n + 1$（$c = 1$），第 $10$ 个数为 $41$。',
-          correctDetail: '首项为 $5$，公差为 $4$，故 $a_{n} = 5 + 4(n - 1) = 4n + 1$（得 $c = 1$）；当 $n = 10$ 时，$4 \\times 10 + 1 = 41$。',
-          wrongFeedback: '将 $n = 1$ 代入 $4n + c = 5$ 即可求出 $c$，再将 $n = 10$ 代入 $4n + c$ 求出第 $10$ 个数。',
-          specificWrongHints: [
-            {
-              checkType: 'firstVal',
-              val: '5',
-              hint: '注意首项是 $5$，当 $n = 1$ 时 $4 \\times 1 + c = 5$，所以 $c = 1$ 而不是 $5$。'
-            }
-          ]
+          correctFeedback: '$c = 1$，第 $10$ 个数为 $41$。',
+          correctDetail: '首项 $5$，公差 $4$，通项为 $5 + 4(n - 1) = 4n + 1$（$c = 1$）；当 $n = 10$ 时得 $41$。',
+          wrongFeedback: '每项递增 $4$，通项 $5 + 4(n - 1) = 4n + 1$，再代入 $n = 10$。',
+          specificWrongHints: []
         }
       }
     },
@@ -2502,55 +2541,60 @@
 
       practices: {
         practice1: {
-          title: '练习一：辨析正比例、反比例与不成比例',
-          givenLabel: '给出三个常见情境：',
-          givenFormula: '① 路程一定时的速度 $v$ 与时间 $t$；② 总页数一定时的已看页数与未看页数；③ 圆的面积 $S$ 与半径 $r$',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '已知 $x$ 与 $y$ 成反比例关系，当 $x = 3$ 时 $y = -4$，则当 $y = 6$ 时，$x$ 的值为（　　）',
           extractedLabel: '',
           extractedFormula: '',
-          questionText: '其中两个变量成反比例关系的是哪一个？',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. 只有 ①（满足 $v \\cdot t = s$ 定值）', isCorrect: true },
-            { key: 'B', text: 'B. ① 和 ②', isCorrect: false },
-            { key: 'C', text: 'C. ③（$S = \\pi r^{2}$）', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $-2$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $2$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $-8$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！必须满足“乘积为定值”才是反比例关系：',
+            title: '回答正确！先求乘积定值 $k$，再求未知对应量：',
             calcLines: [
-              '① $v \\cdot t = s$（乘积一定）$\\implies$ 成反比例关系 ✓',
-              '② 已看 $+$ 未看 $=$ 总页数（和一定）$\\implies$ 不成比例',
-              '③ $\\frac{S}{r} = \\pi r$（随 $r$ 变化，非定值）$\\implies$ $S$ 与 $r$ 不成正/反比例'
+              '$k = xy = 3 \\times (-4) = -12$',
+              '当 $y = 6$ 时，$6x = -12 \\implies x = -2$'
             ],
-            summary: '判断比例关系时，务必先写出等量关系式再看是“乘积一定”还是“比值一定”。'
+            summary: '反比例关系满足 $xy = k$（定值）。'
           },
-          wrongTitle: '提示：请区分“乘积一定”与“和一定”',
-          wrongFeedback: '已看页数与未看页数之和一定（不是乘积一定），圆面积与半径平方成正比但与半径不成比例，请再试一次。'
+          wrongTitle: '提示：先算乘积定值 $k = 3 	imes (-4)$，再解 $6x = k$',
+          wrongFeedback: '由 $k = 3 \\times (-4) = -12$，得 $6x = -12$，解得 $x = -2$。'
         },
         practice2: {
-          title: '练习二：利用反比例定值求未知量',
-          givenLabel: '已知条件：',
-          givenFormula: '变量 $x$ 与 $y$ 成反比例关系，且当 $x = 6$ 时，$y = -4$',
-          questionText: '它们的乘积定值 $k$ 是多少？当 $x = -8$ 时，对应的 $y$ 值是多少？',
-          input1Prefix: '定值 $k =$',
-          input1Placeholder: '如 -24',
-          input2Prefix: '，当 $x = -8$ 时 $y =$',
-          input2Placeholder: '如 3',
-          input2Suffix: '',
-          expectedX: '-24',
-          expectedMin: '3',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '已知 $x$ 与 $y$ 成反比例关系，当 $x = 6$ 时 $y = -4$，则当 $x = -8$ 时，$y =$ ______．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '$y =$',
+          input1Placeholder: '如 3',
+          input1Suffix: '',
+          expectedX: '3',
+          expectedMin: '',
           allowOrderSwap: false,
-          correctFeedback: '定值 $k = -24$，当 $x = -8$ 时 $y = 3$。',
-          correctDetail: '由 $k = xy = 6 \\times (-4) = -24$ 得 $xy = -24$；当 $x = -8$ 时，$-8y = -24 \\implies y = 3$。',
-          wrongFeedback: '先由 $k = 6 \\times (-4)$ 算出定值 $k$（注意负号），再由 $(-8) \\times y = k$ 算出 $y$。',
+          correctFeedback: '$y = 3$。',
+          correctDetail: '由 $k = 6 \\times (-4) = -24$ 得 $xy = -24$；当 $x = -8$ 时，$-8y = -24 \\implies y = 3$。',
+          wrongFeedback: '先算定值 $k = 6 \\times (-4) = -24$，再算 $y = (-24) \\div (-8) = 3$。',
           specificWrongHints: [
             {
               checkType: 'firstVal',
-              val: '24',
-              hint: '注意 $6 \\times (-4)$ 异号相乘得负数，$k$ 应当等于 $-24$。'
-            },
-            {
-              checkType: 'secondVal',
               val: '-3',
-              hint: '注意 $(-24) \\div (-8)$ 同号相除得正数，$y$ 应当等于 $3$。'
+              hint: '$(-24) \\div (-8)$ 同号相除得正数 $3$。'
             }
           ]
         }
@@ -2741,49 +2785,60 @@
 
       practices: {
         practice1: {
-          title: '练习一：判断负数与分数代入的规范写法',
-          givenLabel: '已知条件：',
-          givenFormula: '当 $a = -2，b = \\frac{1}{3}$ 时，代入代数式 $a^{2} - 3b^{2}$',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '已知 $|a - 1| + (b + 2)^{2} = 0$，则代数式 $a^{2} - 2ab + b^{2}$ 的值为（　　）',
           extractedLabel: '',
           extractedFormula: '',
-          questionText: '下列代入后的算式中，书写完全正确的是哪一项？',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $(-2)^{2} - 3 \\times \\left(\\frac{1}{3}\\right)^{2}$', isCorrect: true },
-            { key: 'B', text: 'B. $-2^{2} - 3 \\times \\frac{1}{3}^{2}$', isCorrect: false },
-            { key: 'C', text: 'C. $(-2)^{2} - 3\\frac{1}{3}^{2}$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $9$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $1$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $-3$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！负数与分数参与乘方时都必须加括号，且恢复乘号：',
+            title: '回答正确！先由非负性求 $a, b$，再加括号代入计算：',
             calcLines: [
-              '$(-2)^{2} = 4，\\quad \\left(\\frac{1}{3}\\right)^{2} = \\frac{1}{9}$',
-              '原式 $= 4 - 3 \\times \\frac{1}{9} = 4 - \\frac{1}{3} = \\frac{11}{3}$'
+              '$a - 1 = 0, b + 2 = 0 \\implies a = 1, b = -2$',
+              '$1^{2} - 2 \\times 1 \\times (-2) + (-2)^{2} = 1 + 4 + 4 = 9$'
             ],
-            summary: '牢记“一恢复（乘号）、二添括（负数与分数乘方）”可避免绝大多数代入错误。'
+            summary: '负数代入乘方和乘法时务必加括号。'
           },
-          wrongTitle: '提示：请检查负数、分数乘方的括号与乘号',
-          wrongFeedback: '负数 $-2$ 和分数 $\\frac{1}{3}$ 平方时都必须加括号，且 $3$ 与 $\\left(\\frac{1}{3}\\right)^{2}$ 之间要恢复乘号 $\\times$，请再试一次。'
+          wrongTitle: '提示：先求 $a = 1, b = -2$，负数代入乘方必须加括号',
+          wrongFeedback: '由非负性得 $a = 1, b = -2$，代入得 $1^{2} - 2 \\times 1 \\times (-2) + (-2)^{2} = 1 + 4 + 4 = 9$。'
         },
         practice2: {
-          title: '练习二：由非负性求字母值并代入计算',
-          givenLabel: '给出非负性等式：',
-          givenFormula: '$|a + 1| + (b - 4)^{2} = 0$',
-          questionText: '先求出 $a$ 的值，再代入求代数式 $a^{2} + 2b$ 的值分别是多少？',
-          input1Prefix: '$a =$',
-          input1Placeholder: '如 -1',
-          input2Prefix: '，$a^{2} + 2b =$',
-          input2Placeholder: '如 9',
-          input2Suffix: '',
-          expectedX: '-1',
-          expectedMin: '9',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '已知 $|a + 1| + (b - 4)^{2} = 0$，则 $a^{2} + 2b =$ ______．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '$a^{2} + 2b =$',
+          input1Placeholder: '如 9',
+          input1Suffix: '',
+          expectedX: '9',
+          expectedMin: '',
           allowOrderSwap: false,
-          correctFeedback: '$a = -1$，$a^{2} + 2b = 9$。',
-          correctDetail: '由 $a + 1 = 0，b - 4 = 0$ 得 $a = -1，b = 4$；代入得 $(-1)^{2} + 2 \\times 4 = 1 + 8 = 9$。',
-          wrongFeedback: '先由 $a + 1 = 0$ 解出 $a = -1$，由 $b - 4 = 0$ 解出 $b = 4$，再计算 $(-1)^{2} + 2 \\times 4$。',
+          correctFeedback: '$a^{2} + 2b = 9$。',
+          correctDetail: '由非负性得 $a = -1$，$b = 4$；代入得 $(-1)^{2} + 2 \\times 4 = 1 + 8 = 9$。',
+          wrongFeedback: '先得 $a = -1, b = 4$，再算 $(-1)^{2} + 2 \\times 4 = 9$。',
           specificWrongHints: [
             {
-              checkType: 'secondVal',
+              checkType: 'firstVal',
               val: '7',
-              hint: '注意 $a = -1$ 时，$a^{2} = (-1)^{2} = +1$ 而不是 $-1$，故 $1 + 8 = 9$。'
+              hint: '注意 $(-1)^{2} = +1$ 而不是 $-1$，故 $1 + 8 = 9$。'
             }
           ]
         }
@@ -2959,49 +3014,60 @@
 
       practices: {
         practice1: {
-          title: '练习一：提取公因数构造已知整体',
-          givenLabel: '已知条件：',
-          givenFormula: '$a^{2} + 2a = 1$',
-          extractedLabel: '目标代数式：',
-          extractedFormula: '$3a^{2} + 6a - 5$',
-          questionText: '将目标代数式变形构造出 $(a^{2} + 2a)$ 整体，正确的变形是？',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '已知 $a^{2} + 2a = 1$，则代数式 $3a^{2} + 6a - 5$ 的值为（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $3(a^{2} + 2a) - 5$', isCorrect: true },
-            { key: 'B', text: 'B. $3(a^{2} + 6a) - 5$', isCorrect: false },
-            { key: 'C', text: 'C. $3(a^{2} + 2a - 5)$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $-2$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $2$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $-4$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！前两项提取公因数 3 即可构造已知整体：',
+            title: '回答正确！提取公因数构造已知整体后代入：',
             calcLines: [
               '$3a^{2} + 6a - 5 = 3(a^{2} + 2a) - 5$',
-              '将 $a^{2} + 2a = 1$ 整体代入：$3 \\times 1 - 5 = -2$'
+              '$= 3 \\times 1 - 5 = -2$'
             ],
-            summary: '提取公因数时只对含字母的目标项提取，常数项 $-5$ 留在括号外。'
+            summary: '提取公因数 $3$ 构造 $(a^{2} + 2a)$ 整体即可直接代入。'
           },
-          wrongTitle: '提示：请检查前两项与已知整体的倍数关系',
-          wrongFeedback: '$3a^{2} + 6a$ 提取 $3$ 后括号内应为 $(a^{2} + 2a)$，且常数项 $-5$ 不在括号内，请再试一次。'
+          wrongTitle: '提示：对前两项提取公因数 3，再整体代入',
+          wrongFeedback: '$3a^{2} + 6a - 5 = 3(a^{2} + 2a) - 5 = 3 \\times 1 - 5 = -2$。'
         },
         practice2: {
-          title: '练习二：用整体代入法求值',
-          givenLabel: '已知条件：',
-          givenFormula: '$2m - n = 4$',
-          questionText: '将目标代数式 $10 - 6m + 3n$ 变形为 $10 - k(2m - n)$ 后，系数 $k$ 和最终求得的值分别是多少？',
-          input1Prefix: '提取系数 $k =$',
-          input1Placeholder: '如 3',
-          input2Prefix: '，代数式的值 $=$',
-          input2Placeholder: '如 -2',
-          input2Suffix: '',
-          expectedX: '3',
-          expectedMin: '-2',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '已知 $2m - n = 4$，则 $10 - 6m + 3n =$ ______．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '$10 - 6m + 3n =$',
+          input1Placeholder: '如 -2',
+          input1Suffix: '',
+          expectedX: '-2',
+          expectedMin: '',
           allowOrderSwap: false,
-          correctFeedback: '变形为 $10 - 3(2m - n)$（$k = 3$），代入得 $10 - 3 \\times 4 = -2$。',
-          correctDetail: '因为 $-6m + 3n = -3(2m - n)$，所以 $k = 3$；将 $2m - n = 4$ 代入得 $10 - 3 \\times 4 = 10 - 12 = -2$。',
-          wrongFeedback: '观察 $-6m + 3n = -3(2m - n)$ 可得 $k = 3$，再计算 $10 - 3 \\times 4$。',
+          correctFeedback: '$10 - 6m + 3n = -2$。',
+          correctDetail: '提取 $-3$ 得 $10 - 3(2m - n) = 10 - 3 \\times 4 = -2$。',
+          wrongFeedback: '将 $-6m + 3n$ 变形为 $-3(2m - n)$，代入 $2m - n = 4$ 得 $10 - 12 = -2$。',
           specificWrongHints: [
             {
-              checkType: 'secondVal',
+              checkType: 'firstVal',
               val: '2',
-              hint: '注意是 $10 - 12 = -2$（小减大为负数），请检查结果的负号。'
+              hint: '注意 $10 - 12 = -2$，结果带负号。'
             }
           ]
         }
@@ -3199,49 +3265,60 @@
 
       practices: {
         practice1: {
-          title: '练习一：识别反比例函数与提取比例系数 k',
-          givenLabel: '给出四个函数关系式：',
-          givenFormula: '① $y = -\\frac{5}{3x}$；② $y = \\frac{2}{x + 1}$；③ $y = \\frac{8}{x} - 1$；④ $y = \\frac{x}{3}$',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '若函数 $y = (m - 1)x^{m^{2} - 2}$ 是关于 $x$ 的反比例函数，则 $m$ 的值为（　　）',
           extractedLabel: '',
           extractedFormula: '',
-          questionText: '其中属于 $y$ 关于 $x$ 的反比例函数的是哪一个？其比例系数 $k$ 是多少？',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. ① $y = -\\frac{5}{3x}$，比例系数 $k = -\\frac{5}{3}$', isCorrect: true },
-            { key: 'B', text: 'B. ① $y = -\\frac{5}{3x}$，比例系数 $k = -5$', isCorrect: false },
-            { key: 'C', text: 'C. ② 与 ③ 都是反比例函数', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $-1$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $1$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $\\pm 1$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！注意分母含常数倍数时的比例系数提取：',
+            title: '回答正确！指数等于 $-1$ 且比例系数不为 $0$：',
             calcLines: [
-              '$y = -\\frac{5}{3x} = \\frac{-\\frac{5}{3}}{x} \\implies$ 是反比例函数，且 $k = -\\frac{5}{3}$',
-              '② 分母是 $x + 1$，③ 外层有 $-1$，④ 是正比例函数（$k = \\frac{1}{3}$）'
+              '$m^{2} - 2 = -1 \\implies m = \\pm 1$',
+              '又 $m - 1 \\neq 0 \\implies m \\neq 1$，故 $m = -1$'
             ],
-            summary: '形如 $y = \\frac{a}{bx}$ 的反比例函数，比例系数是 $\\frac{a}{b}$ 而不是 $a$。'
+            summary: '必须同时检验比例系数 $k \neq 0$，舍去使系数为 $0$ 的增根。'
           },
-          wrongTitle: '提示：请将解析式变形为 y = k/x 的标准形式',
-          wrongFeedback: '在 $y = -\\frac{5}{3x}$ 中，分母的 $3$ 属于系数的一部分，即 $y = \\frac{-5/3}{x}$，请再试一次。'
+          wrongTitle: '提示：同时满足指数等于 $-1$ 与系数 $m - 1 \neq 0$',
+          wrongFeedback: '由 $m^{2} - 2 = -1$ 得 $m = \\pm 1$，又 $m - 1 \\neq 0$，故舍去 $1$ 得 $m = -1$。'
         },
         practice2: {
-          title: '练习二：利用反比例函数定义求参数',
-          givenLabel: '已知条件：',
-          givenFormula: '函数 $y = (m + 3)x^{m^{2} - 10}$ 是反比例函数',
-          questionText: '令指数 $m^{2} - 10 = -1$ 时，$m^{2}$ 等于多少？排除使系数为 $0$ 的值后，$m$ 最终等于多少？',
-          input1Prefix: '$m^{2} =$',
-          input1Placeholder: '如 9',
-          input2Prefix: '，最终定解 $m =$',
-          input2Placeholder: '如 3',
-          input2Suffix: '',
-          expectedX: '9',
-          expectedMin: '3',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '若函数 $y = (m + 3)x^{m^{2} - 10}$ 是关于 $x$ 的反比例函数，则 $m =$ ______．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '$m =$',
+          input1Placeholder: '如 3',
+          input1Suffix: '',
+          expectedX: '3',
+          expectedMin: '',
           allowOrderSwap: false,
-          correctFeedback: '$m^{2} = 9$，排除 $m = -3$ 后最终定解 $m = 3$。',
-          correctDetail: '由 $m^{2} - 10 = -1$ 得 $m^{2} = 9 \\implies m = \\pm 3$；又因比例系数 $m + 3 \\neq 0 \\implies m \\neq -3$，故 $m = 3$。',
-          wrongFeedback: '先由 $m^{2} - 10 = -1$ 算出 $m^{2} = 9$（得 $m = \\pm 3$），再由 $m + 3 \\neq 0$ 舍去 $-3$。',
+          correctFeedback: '$m = 3$。',
+          correctDetail: '由 $m^{2} - 10 = -1$ 得 $m = \\pm 3$；又 $m + 3 \\neq 0 \\implies m \\neq -3$，故 $m = 3$。',
+          wrongFeedback: '令 $m^{2} - 10 = -1$ 得 $m = \\pm 3$，再由 $m + 3 \\neq 0$ 舍去 $-3$。',
           specificWrongHints: [
             {
-              checkType: 'secondVal',
+              checkType: 'firstVal',
               val: '-3',
-              hint: '若 $m = -3$，则比例系数 $m + 3 = 0$，函数不再是反比例函数，必须舍去 $-3$ 取 $m = 3$。'
+              hint: '当 $m = -3$ 时系数 $m + 3 = 0$，须舍去，取 $m = 3$。'
             }
           ]
         }
@@ -3423,33 +3500,45 @@
 
       practices: {
         practice1: {
-          title: '练习一：检验哪个点在反比例函数图象上',
-          givenLabel: '已知反比例函数：',
-          givenFormula: '$y = -\\frac{6}{x}$（即图象上点的坐标满足 $xy = -6$）',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '反比例函数图象经过点 $A(2, -3)$，则该图象还经过点 $B(-1, n)$ 中的 $n =$（　　）',
           extractedLabel: '',
           extractedFormula: '',
-          questionText: '下列四个点中，哪一个点在该反比例函数的图象上？',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $(2, -3)$', isCorrect: true },
-            { key: 'B', text: 'B. $(1, 6)$', isCorrect: false },
-            { key: 'C', text: 'C. $(-2, -3)$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $6$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $-6$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $\\frac{3}{2}$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！只需检验横、纵坐标之积是否等于 -6：',
+            title: '回答正确！先求 $k = xy$，再代入点 $B$ 求 $n$：',
             calcLines: [
-              'A. $2 \\times (-3) = -6 = k \\implies$ 在图象上 ✓',
-              'B. $1 \\times 6 = 6 \\neq -6$；C. $(-2) \\times (-3) = 6 \\neq -6$'
+              '$k = 2 \\times (-3) = -6 \\implies y = -\\frac{6}{x}$',
+              '代入 $x = -1$ 得 $n = -\\frac{6}{-1} = 6$'
             ],
-            summary: '利用 $xy = k$ 口算横纵坐标乘积是判点最快且最稳的方法。'
+            summary: '同一双曲线上各点的横纵坐标之积恒等于 $k$。'
           },
-          wrongTitle: '提示：请计算各点横坐标与纵坐标的乘积',
-          wrongFeedback: '只有横、纵坐标相乘等于 $-6$ 的点才在 $y = -\\frac{6}{x}$ 的图象上，注意正负号，请再试一次。'
+          wrongTitle: '提示：先算出 $k = 2 	imes (-3) = -6$，再算 $(-1) 	imes n = -6$',
+          wrongFeedback: '由 $k = 2 \\times (-3) = -6$ 得 $y = -\\frac{6}{x}$，代入 $x = -1$ 得 $n = 6$。'
         },
         practice2: {
-          title: '练习二：由已知点求 k 与未知点坐标',
-          givenLabel: '已知条件：',
-          givenFormula: '反比例函数 $y = \\frac{k}{x}$ 的图象经过点 $(3, -4)$，且经过点 $(-2, m)$',
-          questionText: '比例系数 $k$ 的值是多少？点 $(-2, m)$ 中的纵坐标 $m$ 是多少？',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '反比例函数 $y = \\frac{k}{x}$ 的图象经过点 $(3, -4)$ 和 $(-2, m)$，则 $k =$ ______，$m =$ ______．',
+          questionText: '',
           input1Prefix: '$k =$',
           input1Placeholder: '如 -12',
           input2Prefix: '，$m =$',
@@ -3459,13 +3548,13 @@
           expectedMin: '6',
           allowOrderSwap: false,
           correctFeedback: '$k = -12$，$m = 6$。',
-          correctDetail: '由 $k = 3 \\times (-4) = -12$；又因 $(-2) \\times m = -12$，解得 $m = 6$。',
-          wrongFeedback: '先算 $k = 3 \\times (-4)$，再由 $(-2) \\times m = k$ 解出 $m$。',
+          correctDetail: '$k = 3 \\times (-4) = -12$；代入 $(-2, m)$ 得 $-2m = -12 \\implies m = 6$。',
+          wrongFeedback: '先算 $k = 3 \\times (-4) = -12$，再解 $(-2) \\times m = -12$。',
           specificWrongHints: [
             {
               checkType: 'secondVal',
               val: '-6',
-              hint: '注意 $(-12) \\div (-2)$ 同号相除得正数，所以 $m = 6$ 而不是 $-6$。'
+              hint: '$(-12) \\div (-2) = 6$，同号相除得正。'
             }
           ]
         }
@@ -3684,51 +3773,55 @@
 
       practices: {
         practice1: {
-          title: '练习一：含偶次方比例系数的象限与增减性判定',
-          givenLabel: '已知反比例函数：',
-          givenFormula: '$y = \\frac{m^{2} + 1}{x}$（其中 $m$ 为任意实数）',
-          extractedLabel: '分子非负性分析：',
-          extractedFormula: '因为 $m^{2} \\ge 0$，所以比例系数 $m^{2} + 1 \\ge 1 \\gt 0$',
-          questionText: '关于该函数图象的性质，下列说法正确的是？',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '若反比例函数 $y = \\frac{k - 3}{x}$ 的图象位于第一、三象限，则 $k$ 的取值范围是（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. 位于第一、三象限，且在每个象限内 $y$ 随 $x$ 的增大而减小。', isCorrect: true },
-            { key: 'B', text: 'B. 位于第一、三象限，且在整个定义域上 $y$ 随 $x$ 的增大而减小。', isCorrect: false },
-            { key: 'C', text: 'C. 位于第二、四象限，且在每个象限内 $y$ 随 $x$ 的增大而增大。', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $k \\gt 3$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $k \\lt 3$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $k \\ge 3$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！比例系数恒正，且单调性必须限定在“每个象限内”：',
+            title: '回答正确！第一、三象限对应比例系数大于 0：',
             calcLines: [
-              '$m^{2} + 1 \\gt 0 \\implies$ 图象必在第一、第三象限',
-              '在每一个象限内，$y$ 随 $x$ 的增大而减小'
+              '$k - 3 \\gt 0 \\implies k \\gt 3$'
             ],
-            summary: '反比例函数的两支在原点处断开，绝不能遗漏“在每一个象限内”这一前提。'
+            summary: '比例系数严格大于 $0$（不能等于 $0$）时双曲线位于第一、三象限。'
           },
-          wrongTitle: '提示：请留意比例系数正负与“在每个象限内”的前提',
-          wrongFeedback: '$m^{2} + 1 \\gt 0$ 对应第一、三象限，且必须在“每一个象限内”单调递减（跨象限不满足递减），请再试一次。'
+          wrongTitle: '提示：一、三象限要求比例系数 $k - 3 \\gt 0$',
+          wrongFeedback: '双曲线在第一、三象限，故分子 $k - 3 \\gt 0$，解得 $k \\gt 3$。'
         },
         practice2: {
-          title: '练习二：由增减性逆向求参数范围',
-          givenLabel: '已知条件：',
-          givenFormula: '反比例函数 $y = \\frac{2m - 6}{x}$ 在每一个象限内，$y$ 随 $x$ 的增大而减小',
-          questionText: '由此可知 $2m - 6 \\gt 0$，解得 $m \\gt a$。若从 $\\{1, 2, 3, 5\\}$ 中选一个符合条件的 $m$，则临界值 $a$ 与所选的 $m$ 分别是多少？',
-          input1Prefix: '临界值 $a =$',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '若反比例函数 $y = \\frac{2m - 6}{x}$ 的图象在每个象限内 $y$ 随 $x$ 的增大而减小，则 $m \\gt$ ______．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '$m \\gt$',
           input1Placeholder: '如 3',
-          input2Prefix: '，符合条件的 $m =$',
-          input2Placeholder: '如 5',
-          input2Suffix: '',
+          input1Suffix: '',
           expectedX: '3',
-          expectedMin: '5',
+          expectedMin: '',
           allowOrderSwap: false,
-          correctFeedback: '由 $2m - 6 \\gt 0$ 得 $m \\gt 3$（$a = 3$），在候选集中只有 $m = 5$ 符合条件。',
-          correctDetail: '在每个象限内 $y$ 随 $x$ 增大而减小 $\\implies 2m - 6 \\gt 0 \\implies 2m \\gt 6 \\implies m \\gt 3$，故选 $m = 5$。',
-          wrongFeedback: '解不等式 $2m - 6 \\gt 0$ 得 $m \\gt 3$，因此在 $\\{1, 2, 3, 5\\}$ 中只有大于 $3$ 的数符合要求。',
-          specificWrongHints: [
-            {
-              checkType: 'secondVal',
-              val: '3',
-              hint: '注意当 $m = 3$ 时，$2m - 6 = 0$，必须严格大于 $3$，所以只能选 $5$。'
-            }
-          ]
+          correctFeedback: '$m \\gt 3$。',
+          correctDetail: '在每个象限内 $y$ 随 $x$ 增大而减小，故 $2m - 6 \\gt 0 \\implies m \\gt 3$。',
+          wrongFeedback: '由单调递减得比例系数 $2m - 6 \\gt 0$，解得 $m \\gt 3$。',
+          specificWrongHints: []
         }
       }
     },
@@ -3938,52 +4031,56 @@
 
       practices: {
         practice1: {
-          title: '练习一：抽象不等条件下的跨象限函数值比较',
-          givenLabel: '已知反比例函数：',
-          givenFormula: '$y = \\frac{6}{x}$（其中 $k = 6 \\gt 0$，位于第一、三象限，每象限内递减）',
-          extractedLabel: '图象上三点横坐标关系：',
-          extractedFormula: '$x_{1} \\lt x_{2} \\lt 0 \\lt x_{3}$',
-          questionText: '对应的函数值 $y_{1}, y_{2}, y_{3}$ 的大小关系是？',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '已知点 $A(-2, y_{1})$、$B(-1, y_{2})$、$C(3, y_{3})$ 都在反比例函数 $y = \\frac{6}{x}$ 的图象上，则 $y_{1}, y_{2}, y_{3}$ 的大小关系是（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $y_{2} \\lt y_{1} \\lt 0 \\lt y_{3}$（即 $y_{2} \\lt y_{1} \\lt y_{3}$）', isCorrect: true },
-            { key: 'B', text: 'B. $y_{3} \\lt y_{2} \\lt y_{1}$', isCorrect: false },
-            { key: 'C', text: 'C. $y_{1} \\lt y_{2} \\lt y_{3}$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $y_{2} \\lt y_{1} \\lt y_{3}$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $y_{3} \\lt y_{2} \\lt y_{1}$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $y_{1} \\lt y_{2} \\lt y_{3}$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！先跨象限判正负，再在第三象限内用递减性质（或特殊值法）：',
+            title: '回答正确！先跨象限判正负，再同象限比单调：',
             calcLines: [
-              '$x_{3} \\gt 0 \\implies$ 在第一象限，$y_{3} \\gt 0$（最大）',
-              '$x_{1} \\lt x_{2} \\lt 0 \\implies$ 同在第三象限（递减），故 $y_{2} \\lt y_{1} \\lt 0$',
-              '特殊值验证：令 $x_{1}=-2, x_{2}=-1, x_{3}=1 \\implies y_{1}=-3, y_{2}=-6, y_{3}=6$'
+              '$k = 6 \\gt 0$，$C$ 在第一象限得 $y_{3} \\gt 0$ 最大',
+              '$A, B$ 同在第三象限（递减），由 $-2 \\lt -1$ 得 $y_{2} \\lt y_{1} \\lt 0$'
             ],
-            summary: '遇到 $x_{1} \\lt x_{2} \\lt 0 \\lt x_{3}$ 类抽象题，赋特殊值代入能瞬间得出准确顺序。'
+            summary: '综上 $y_{2} \\lt y_{1} \\lt y_{3}$（代入验算：$-6 \\lt -3 \\lt 2$）。'
           },
-          wrongTitle: '提示：请先以 0 为界区分正负，或赋特殊值 x₁=-2, x₂=-1, x₃=1 代入',
-          wrongFeedback: '$k = 6 \\gt 0$ 时，$x_{3} \\gt 0$ 对应的 $y_{3} \\gt 0$ 最大；而在第三象限内 $y$ 随 $x$ 增大而减小，故 $x_{1} \\lt x_{2} \\lt 0 \\implies y_{2} \\lt y_{1} \\lt 0$，请再试一次。'
+          wrongTitle: '提示：先看象限正负，再在同一象限内用增减性比较',
+          wrongFeedback: '$y_{3} = 2 \\gt 0$ 最大；第三象限内递减，由 $-2 \\lt -1$ 得 $y_{2} = -6 \\lt y_{1} = -3$，故 $y_{2} \\lt y_{1} \\lt y_{3}$。'
         },
         practice2: {
-          title: '练习二：代入计算比较反比例函数值',
-          givenLabel: '已知条件：',
-          givenFormula: '点 $A(-2, y_{1})$ 与点 $B(4, y_{2})$ 在反比例函数 $y = \\frac{8}{x}$ 的图象上',
-          questionText: '请分别算出 $y_{1}$ 和 $y_{2}$ 的具体数值（从而確認 $y_{1} \\lt y_{2}$）：',
-          input1Prefix: '$y_{1} =$',
-          input1Placeholder: '如 -4',
-          input2Prefix: '，$y_{2} =$',
-          input2Placeholder: '如 2',
-          input2Suffix: '',
-          expectedX: '-4',
-          expectedMin: '2',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '已知点 $A(-2, y_{1})$、$B(4, y_{2})$ 在反比例函数 $y = -\\frac{8}{x}$ 的图象上，比较大小：$y_{1}$ ______ $y_{2}$（填“$\\gt$”“$\\lt$”或“$=$”）．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '$y_{1}$',
+          input1Placeholder: '填 >、< 或 =',
+          input1Suffix: '$y_{2}$',
+          expectedX: '>',
+          expectedMin: '',
           allowOrderSwap: false,
-          correctFeedback: '$y_{1} = -4$，$y_{2} = 2$（故 $y_{1} \\lt y_{2}$）。',
-          correctDetail: '将 $x = -2$ 代入得 $y_{1} = \\frac{8}{-2} = -4$；将 $x = 4$ 代入得 $y_{2} = \\frac{8}{4} = 2$。',
-          wrongFeedback: '分别计算 $y_{1} = 8 \\div (-2)$ 与 $y_{2} = 8 \\div 4$。',
-          specificWrongHints: [
-            {
-              checkType: 'firstVal',
-              val: '4',
-              hint: '注意 $x = -2$ 带负号，$8 \\div (-2) = -4$。'
-            }
-          ]
+          correctFeedback: '横线上填“$\\gt$”，即 $y_{1} \\gt y_{2}$。',
+          correctDetail: '$k = -8 \\lt 0$，点 $A$ 在第二象限（$y_{1} = 4 \\gt 0$），点 $B$ 在第四象限（$y_{2} = -2 \\lt 0$），故 $y_{1} \\gt y_{2}$。',
+          wrongFeedback: '先判象限：$k = -8 \\lt 0$ 时，$x = -2$ 在第二象限 $y_{1} \\gt 0$，$x = 4$ 在第四象限 $y_{2} \\lt 0$。',
+          specificWrongHints: []
         }
       }
     },
@@ -4200,48 +4297,60 @@
 
       practices: {
         practice1: {
-          title: '练习一：利用原点中心对称直接求另一交点坐标',
-          givenLabel: '已知条件：',
-          givenFormula: '正比例函数 $y = 2x$ 与反比例函数 $y = \\frac{8}{x}$ 的图象相交于 $A, B$ 两点',
-          extractedLabel: '其中一个交点坐标：',
-          extractedFormula: '点 $A$ 的坐标为 $(2, 4)$',
-          questionText: '不解方程组，直接写出另一个交点 $B$ 的坐标是？',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '正比例函数 $y = kx$ 与反比例函数 $y = \\frac{4}{x}$ 交于 $A(x_{1}, y_{1})$、$B(x_{2}, y_{2})$ 两点，则 $x_{1}y_{2} + 2x_{2}y_{1}$ 的值为（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $(-2, -4)$', isCorrect: true },
-            { key: 'B', text: 'B. $(-2, 4)$', isCorrect: false },
-            { key: 'C', text: 'C. $(-4, -2)$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $-12$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $12$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $-4$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！关于原点对称的两点横、纵坐标均互为相反数：',
+            title: '回答正确！由原点中心对称得 $x_{2} = -x_{1}, y_{2} = -y_{1}$：',
             calcLines: [
-              '$A(x_{1}, y_{1}) = (2, 4) \\implies B(-x_{1}, -y_{1}) = (-2, -4)$'
+              '$x_{1}y_{2} + 2x_{2}y_{1} = -x_{1}y_{1} - 2x_{1}y_{1} = -3x_{1}y_{1}$',
+              '代入 $x_{1}y_{1} = 4$ 得 $-3 \\times 4 = -12$'
             ],
-            summary: '过原点的直线与双曲线的交点一定成对关于原点中心对称。'
+            summary: '将 $x_{2}, y_{2}$ 替换为 $-x_{1}, -y_{1}$ 后合并同类项，再整体代入 $x_{1}y_{1} = k$。'
           },
-          wrongTitle: '提示：请回顾关于原点对称的坐标特征',
-          wrongFeedback: '点 $(x, y)$ 关于原点对称的点是 $(-x, -y)$（横、纵坐标同时变号，且不对调位置），请再试一次。'
+          wrongTitle: '提示：把 $x_{2} = -x_{1}, y_{2} = -y_{1}$ 代入合并后再代入 $x_{1}y_{1} = 4$',
+          wrongFeedback: '原式 $= -x_{1}y_{1} - 2x_{1}y_{1} = -3x_{1}y_{1} = -3 \\times 4 = -12$。'
         },
         practice2: {
-          title: '练习二：求关于原点对称交点的代数式的值',
-          givenLabel: '已知条件：',
-          givenFormula: '正比例函数 $y = kx$ 与反比例函数 $y = \\frac{6}{x}$ 交于 $A(x_{1}, y_{1}), B(x_{2}, y_{2})$ 两点',
-          questionText: '此时同点乘积 $x_{1}y_{1}$ 与交叉乘积代数式 $3x_{1}y_{2} - x_{2}y_{1}$ 的值分别是多少？',
-          input1Prefix: '$x_{1}y_{1} =$',
-          input1Placeholder: '如 6',
-          input2Prefix: '，$3x_{1}y_{2} - x_{2}y_{1} =$',
-          input2Placeholder: '如 -12',
-          input2Suffix: '',
-          expectedX: '6',
-          expectedMin: '-12',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '正比例函数 $y = kx$ 与反比例函数 $y = \\frac{6}{x}$ 交于 $A(x_{1}, y_{1})$、$B(x_{2}, y_{2})$ 两点，则 $3x_{1}y_{2} - x_{2}y_{1} =$ ______．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '$3x_{1}y_{2} - x_{2}y_{1} =$',
+          input1Placeholder: '如 -12',
+          input1Suffix: '',
+          expectedX: '-12',
+          expectedMin: '',
           allowOrderSwap: false,
-          correctFeedback: '$x_{1}y_{1} = 6$，$3x_{1}y_{2} - x_{2}y_{1} = -12$。',
-          correctDetail: '由 $y = \\frac{6}{x}$ 得 $x_{1}y_{1} = 6$；又因 $x_{2} = -x_{1}, y_{2} = -y_{1}$，故 $3x_{1}(-y_{1}) - (-x_{1})y_{1} = -3x_{1}y_{1} + x_{1}y_{1} = -2x_{1}y_{1} = -2 \\times 6 = -12$。',
-          wrongFeedback: '先由 $y = \\frac{6}{x}$ 得 $x_{1}y_{1} = 6$，再将 $x_{1}y_{2} = -6, x_{2}y_{1} = -6$ 代入 $3x_{1}y_{2} - x_{2}y_{1}$ 计算。',
+          correctFeedback: '$3x_{1}y_{2} - x_{2}y_{1} = -12$。',
+          correctDetail: '由 $x_{2} = -x_{1}, y_{2} = -y_{1}$ 得原式 $= -3x_{1}y_{1} + x_{1}y_{1} = -2x_{1}y_{1} = -2 \\times 6 = -12$。',
+          wrongFeedback: '代入 $x_{2} = -x_{1}, y_{2} = -y_{1}$ 化简为 $-2x_{1}y_{1}$，再代入 $x_{1}y_{1} = 6$。',
           specificWrongHints: [
             {
-              checkType: 'secondVal',
+              checkType: 'firstVal',
               val: '12',
-              hint: '注意 $3x_{1}(-y_{1}) - (-x_{1})y_{1} = -3x_{1}y_{1} + x_{1}y_{1} = -2x_{1}y_{1} = -12$（带负号）。'
+              hint: '注意 $-3x_{1}y_{1} + x_{1}y_{1} = -2x_{1}y_{1} = -12$，带负号。'
             }
           ]
         }
@@ -4415,51 +4524,56 @@
 
       practices: {
         practice1: {
-          title: '练习一：先化一般式再算根的判别式',
-          givenLabel: '已知一元二次方程：',
-          givenFormula: '$x^{2} = 3x - 1$',
-          extractedLabel: '移项化为一般形式：',
-          extractedFormula: '$x^{2} - 3x + 1 = 0\\ (a = 1, b = -3, c = 1)$',
-          questionText: '计算该方程根的判别式 $\\Delta = b^{2} - 4ac$，正确的算式与结果是？',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '关于 $x$ 的方程 $mx^{2} - 4x + 2 = 0$ 有两个不相等的实数根，则 $m$ 的取值范围是（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $(-3)^{2} - 4 \\times 1 \\times 1 = 5 \\gt 0$（有两个不相等的实数根）', isCorrect: true },
-            { key: 'B', text: 'B. $(-3)^{2} - 4 \\times 1 \\times (-1) = 13$', isCorrect: false },
-            { key: 'C', text: 'C. $3^{2} + 4 \\times 1 \\times (-1) = 5$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $m \\lt 2$ 且 $m \\neq 0$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $m \\lt 2$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $m \\le 2$ 且 $m \\neq 0$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！必须先移项化为右边为 0 的一般形式再提取 a, b, c：',
+            title: '回答正确！联立 $\\Delta \\gt 0$ 与二次项系数 $m \neq 0$：',
             calcLines: [
-              '$x^{2} - 3x + 1 = 0 \\implies a = 1,\\ b = -3,\\ c = 1$',
-              '$\\Delta = (-3)^{2} - 4 \\times 1 \\times 1 = 9 - 4 = 5 \\gt 0$'
+              '$\\Delta = (-4)^{2} - 4 \\times m \\times 2 = 16 - 8m \\gt 0 \\implies m \\lt 2$',
+              '且 $m \\neq 0 \\implies m \\lt 2$ 且 $m \\neq 0$'
             ],
-            summary: '切勿在未移项时直接把等号右边的 $-1$ 当作 $c$。'
+            summary: '二次项系数含参时，务必联立二次项系数不为 $0$。'
           },
-          wrongTitle: '提示：请先移项将等号右边化为 0',
-          wrongFeedback: '将 $3x - 1$ 移到左边后常数项变为 $+1$（而非 $-1$），故 $\\Delta = (-3)^{2} - 4 \\times 1 \\times 1 = 5$，请再试一次。'
+          wrongTitle: '提示：既要 $\\Delta \\gt 0$，又要二次项系数 $m \neq 0$',
+          wrongFeedback: '由 $\\Delta = 16 - 8m \\gt 0$ 得 $m \\lt 2$，且二次项系数 $m \\neq 0$。'
         },
         practice2: {
-          title: '练习二：由有两个相等的实数根求参数',
-          givenLabel: '已知条件：',
-          givenFormula: '关于 $x$ 的一元二次方程 $(m - 2)x^{2} + 2x + 1 = 0$ 有两个相等的实数根',
-          questionText: '此时判别式 $\\Delta = b^{2} - 4ac$ 等于多少？解出的参数 $m$ 的值是多少？',
-          input1Prefix: '$\\Delta =$',
-          input1Placeholder: '如 0',
-          input2Prefix: '，$m =$',
-          input2Placeholder: '如 3',
-          input2Suffix: '',
-          expectedX: '0',
-          expectedMin: '3',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '关于 $x$ 的一元二次方程 $(m - 2)x^{2} + 2x + 1 = 0$ 有两个相等的实数根，则 $m =$ ______．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '$m =$',
+          input1Placeholder: '如 3',
+          input1Suffix: '',
+          expectedX: '3',
+          expectedMin: '',
           allowOrderSwap: false,
-          correctFeedback: '$\\Delta = 0$，$m = 3$。',
-          correctDetail: '有两个相等的实数根 $\\implies \\Delta = 2^{2} - 4(m - 2)\\times 1 = 0$，解得 $m = 3$（且满足 $m - 2 \\neq 0$）。',
-          wrongFeedback: '有两个相等的实数根时判别式 $\\Delta = 0$，由 $4 - 4(m - 2) = 0$ 即可解出 $m$。',
-          specificWrongHints: [
-            {
-              checkType: 'secondVal',
-              val: '2',
-              hint: '若 $m = 2$，则二次项系数 $m - 2 = 0$，方程不再是一元二次方程；由 $4 - 4(m - 2) = 0$ 得 $m - 2 = 1 \\implies m = 3$。'
-            }
-          ]
+          correctFeedback: '$m = 3$。',
+          correctDetail: '由 $\\Delta = 2^{2} - 4(m - 2) \\times 1 = 0$ 解得 $m = 3$，且满足 $m - 2 \\neq 0$。',
+          wrongFeedback: '令 $\\Delta = 4 - 4(m - 2) = 0$，解得 $m = 3$。',
+          specificWrongHints: []
         }
       }
     },
@@ -4631,52 +4745,57 @@
 
       practices: {
         practice1: {
-          title: '练习一：由代入后的求根公式逆推原一元二次方程',
-          givenLabel: '已知某方程用求根公式计算根的算式为：',
-          givenFormula: '$x = \\frac{-3 \\pm \\sqrt{3^{2} - 4 \\times 2 \\times (-1)}}{2 \\times 2}$',
-          extractedLabel: '对照求根公式结构：',
-          extractedFormula: '$x = \\frac{-b \\pm \\sqrt{b^{2} - 4ac}}{2a}$',
-          questionText: '该算式对应的一元二次方程一般形式是？',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '用公式法解方程 $2x^{2} - 3x = 2$，其解为（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $2x^{2} + 3x - 1 = 0\\ (a = 2, b = 3, c = -1)$', isCorrect: true },
-            { key: 'B', text: 'B. $2x^{2} - 3x - 1 = 0$', isCorrect: false },
-            { key: 'C', text: 'C. $2x^{2} + 3x + 1 = 0$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $x_{1} = 2$，$x_{2} = -\\frac{1}{2}$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $x_{1} = -2$，$x_{2} = \\frac{1}{2}$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $x_{1} = 2$，$x_{2} = \\frac{1}{2}$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！从分母、分子与根号内三处精确核对系数：',
+            title: '回答正确！先移项化一般式，再算 $\\Delta$ 并代入求根公式：',
             calcLines: [
-              '分母 $2a = 2 \\times 2 \\implies a = 2$',
-              '分子 $-b = -3 \\implies b = 3$（注意 $-b$ 是 $-3$，故 $b = +3$）',
-              '根号内 $-4ac = -4 \\times 2 \\times (-1) \\implies c = -1$'
+              '$2x^{2} - 3x - 2 = 0 \\implies \\Delta = (-3)^{2} - 4 \\times 2 \\times (-2) = 25$',
+              '$x = \\frac{3 \\pm 5}{4} \\implies x_{1} = 2$，$x_{2} = -\\frac{1}{2}$'
             ],
-            summary: '还原一般形式即为 $2x^{2} + 3x - 1 = 0$。'
+            summary: '移项后 $c = -2$，分子 $-b = 3$，分母 $2a = 4$。'
           },
-          wrongTitle: '提示：请注意求根公式分子第一项是 -b',
-          wrongFeedback: '当分子第一项为 $-3$ 时，对照 $-b = -3$ 可知 $b = +3$（而非 $-3$），且根号内最后一项为 $-1$ 即 $c = -1$，请再试一次。'
+          wrongTitle: '提示：先移项得 $2x^{2} - 3x - 2 = 0$，再代入求根公式',
+          wrongFeedback: '$\\Delta = 9 + 16 = 25$，$x = \\frac{3 \\pm 5}{4}$，解得 $x_{1} = 2$，$x_{2} = -\\frac{1}{2}$。'
         },
         practice2: {
-          title: '练习二：移项化一般式并提取系数 a, b, c 与 Δ',
-          givenLabel: '已知一元二次方程：',
-          givenFormula: '$2x^{2} - 4 = 3x$',
-          questionText: '将其化为 $2x^{2} + bx + c = 0$（其中 $a = 2$）后，一次项系数 $b$ 和判别式 $\\Delta = b^{2} - 4ac$ 的值分别是多少？',
-          input1Prefix: '$b =$',
-          input1Placeholder: '如 -3',
-          input2Prefix: '，$\\Delta =$',
-          input2Placeholder: '如 41',
-          input2Suffix: '',
-          expectedX: '-3',
-          expectedMin: '41',
-          allowOrderSwap: false,
-          correctFeedback: '$b = -3$，$\\Delta = 41$。',
-          correctDetail: '移项得 $2x^{2} - 3x - 4 = 0$，故 $a = 2, b = -3, c = -4$；判别式 $\\Delta = (-3)^{2} - 4 \\times 2 \\times (-4) = 9 + 32 = 41$。',
-          wrongFeedback: '将 $3x$ 移到左边变号得 $b = -3$（常数项 $c = -4$），再计算 $(-3)^{2} - 4 \\times 2 \\times (-4)$。',
-          specificWrongHints: [
-            {
-              checkType: 'firstVal',
-              val: '3',
-              hint: '注意 $3x$ 在等号右边，移到等号左边后要变号为 $-3x$，因此 $b = -3$。'
-            }
-          ]
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '用公式法解方程 $x^{2} - 2x = 3$，则 $x_{1} =$ ______，$x_{2} =$ ______．',
+          questionText: '',
+          input1Prefix: '$x_{1} =$',
+          input1Placeholder: '如 3',
+          input2Prefix: '，$x_{2} =$',
+          input2Placeholder: '如 -1',
+          input2Suffix: '（两根顺序可互换）',
+          expectedX: '3',
+          expectedMin: '-1',
+          allowOrderSwap: true,
+          correctFeedback: '$x_{1} = 3$，$x_{2} = -1$。',
+          correctDetail: '移项得 $x^{2} - 2x - 3 = 0$，$\\Delta = (-2)^{2} - 4 \\times 1 \\times (-3) = 16$，$x = \\frac{2 \\pm 4}{2}$，解得 $x_{1} = 3$，$x_{2} = -1$。',
+          wrongFeedback: '移项得 $x^{2} - 2x - 3 = 0$，$\\Delta = 16$，代入 $x = \\frac{2 \\pm 4}{2}$ 求解。',
+          specificWrongHints: []
         }
       }
     },
@@ -4851,51 +4970,57 @@
 
       practices: {
         practice1: {
-          title: '练习一：提取括号公因式并注意去括号变号',
-          givenLabel: '已知方程：',
-          givenFormula: '$2(x - 1) = (x - 1)^{2}$',
-          extractedLabel: '第一步移项使右边为 0：',
-          extractedFormula: '$2(x - 1) - (x - 1)^{2} = 0$',
-          questionText: '下一步提取公因式 $(x - 1)$ 后，正确的因式分解结果与方程的根是？',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '方程 $2(x - 1) = (x - 1)^{2}$ 的解是（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $(x - 1)(2 - x + 1) = 0$，解得 $x_{1} = 1，x_{2} = 3$', isCorrect: true },
-            { key: 'B', text: 'B. $(x - 1)(2 - x - 1) = 0$，解得 $x_{1} = x_{2} = 1$', isCorrect: false },
-            { key: 'C', text: 'C. 两边同除以 $(x - 1)$ 得 $x - 1 = 2$，解得 $x = 3$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $x_{1} = 1$，$x_{2} = 3$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $x = 3$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $x_{1} = 1$，$x_{2} = -1$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！提取 (x - 1) 后，括号内减去 (x - 1) 必须变号：',
+            title: '回答正确！先移项使右边为 0，再提整体公因式 $(x - 1)$：',
             calcLines: [
-              '$(x - 1)[2 - (x - 1)] = (x - 1)(2 - x + 1) = (x - 1)(3 - x) = 0$',
-              '$x - 1 = 0\\text{ 或 }3 - x = 0 \\implies x_{1} = 1,\\ x_{2} = 3$'
+              '$2(x - 1) - (x - 1)^{2} = 0 \\implies (x - 1)(3 - x) = 0$',
+              '$x_{1} = 1$，$x_{2} = 3$'
             ],
-            summary: '提取公因式后，被减项 $(x - 1)$ 前面有负号，去小括号时 $-1$ 必须变号为 $+1$。'
+            summary: '严禁两边同除以 $(x - 1)$，否则会漏掉 $x = 1$。'
           },
-          wrongTitle: '提示：请检查提取 (x - 1) 后剩余项的去括号符号',
-          wrongFeedback: '提取 $(x - 1)$ 后第二个括号内是 $2 - (x - 1) = 2 - x + 1$（而非 $2 - x - 1$），且不可两边同除以 $(x - 1)$，请再试一次。'
+          wrongTitle: '提示：先整体移项使右边为 0，再提取公因式 $(x - 1)$',
+          wrongFeedback: '移项提公因式得 $(x - 1)[2 - (x - 1)] = (x - 1)(3 - x) = 0$，解得 $x_{1} = 1$，$x_{2} = 3$。'
         },
         practice2: {
-          title: '练习二：用十字相乘法分解因式解方程',
-          givenLabel: '给出二次三项式方程：',
-          givenFormula: '$x^{2} - 4x - 5 = 0$',
-          questionText: '因式分解为 $(x - 5)(x + 1) = 0$ 后，这个方程的两个实数根分别是多少？',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '方程 $x(x - 4) = 2(x - 4)$ 的解为 $x_{1} =$ ______，$x_{2} =$ ______．',
+          questionText: '',
           input1Prefix: '$x_{1} =$',
-          input1Placeholder: '如 5',
+          input1Placeholder: '如 4',
           input2Prefix: '，$x_{2} =$',
-          input2Placeholder: '如 -1',
+          input2Placeholder: '如 2',
           input2Suffix: '（两根顺序可互换）',
-          expectedX: '5',
-          expectedMin: '-1',
+          expectedX: '4',
+          expectedMin: '2',
           allowOrderSwap: true,
-          correctFeedback: '方程的两个实数根为 $x_{1} = 5$，$x_{2} = -1$。',
-          correctDetail: '由 $(x - 5)(x + 1) = 0$ 得 $x - 5 = 0$ 或 $x + 1 = 0$，解得 $x_{1} = 5，x_{2} = -1$。',
-          wrongFeedback: '令每个一次因式分别为 $0$：由 $x - 5 = 0$ 与 $x + 1 = 0$ 分别求出 $x$ 的值。',
-          specificWrongHints: [
-            {
-              checkType: 'anyVal',
-              val: '-5',
-              hint: '注意因式是 $(x - 5)$，令 $x - 5 = 0$ 解得 $x = 5$（而非 $-5$），不要把因式中的常数符号直接当作根的符号。'
-            }
-          ]
+          correctFeedback: '$x_{1} = 4$，$x_{2} = 2$。',
+          correctDetail: '移项得 $x(x - 4) - 2(x - 4) = 0$，提取公因式得 $(x - 4)(x - 2) = 0$，解得 $x_{1} = 4$，$x_{2} = 2$。',
+          wrongFeedback: '先移项提取公因式 $(x - 4)$ 得 $(x - 4)(x - 2) = 0$，再分别令两因式为 $0$。',
+          specificWrongHints: []
         }
       }
     }    ,
@@ -5079,49 +5204,60 @@
 
       practices: {
         practice1: {
-          title: '练习一：化为一元二次方程一般形式并提取系数',
-          givenLabel: '已知一元二次方程：',
-          givenFormula: '$x(x - 6) = 6x + 25$',
-          extractedLabel: '去括号展开：',
-          extractedFormula: '$x^{2} - 6x = 6x + 25$',
-          questionText: '将其移项合并化为一般形式 $ax^{2} + bx + c = 0\\ (a = 1)$ 后，一次项系数 $b$ 和常数项 $c$ 分别是？',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '关于 $x$ 的方程 $(m + 1)x^{m^{2} + 1} - 2x + 3 = 0$ 是一元二次方程，则 $m$ 的值为（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. 一般式为 $x^{2} - 12x - 25 = 0$，其中 $b = -12，c = -25$', isCorrect: true },
-            { key: 'B', text: 'B. 一般式为 $x^{2} - 25 = 0$，其中 $b = 0，c = -25$', isCorrect: false },
-            { key: 'C', text: 'C. 一般式为 $x^{2} - 12x + 25 = 0$，其中 $b = -12，c = 25$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $1$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $-1$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $\\pm 1$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！移项必须变号，且连同各项前面的正负号提取系数：',
+            title: '回答正确！最高次指数为 2 且二次项系数不为 0：',
             calcLines: [
-              '$x^{2} - 6x - 6x - 25 = 0 \\implies x^{2} - 12x - 25 = 0$',
-              '$a = 1，\\ b = -12，\\ c = -25$'
+              '$m^{2} + 1 = 2 \\implies m = \\pm 1$',
+              '又 $m + 1 \\neq 0 \\implies m \\neq -1$，故 $m = 1$'
             ],
-            summary: '右边的 $+6x$ 移到左边变为 $-6x$，与原有的 $-6x$ 合并为 $-12x$（切勿误以为抵消）。'
+            summary: '必须检验二次项系数 $a \neq 0$，排除增根。'
           },
-          wrongTitle: '提示：请注意移项变号后同类项的合并',
-          wrongFeedback: '把右边的 $6x + 25$ 移到左边要变号为 $-6x - 25$，合并得 $x^{2} - 12x - 25 = 0$，请再试一次。'
+          wrongTitle: '提示：同时满足指数等于 2 且二次项系数 $m + 1 \neq 0$',
+          wrongFeedback: '由 $m^{2} + 1 = 2$ 得 $m = \\pm 1$，再由 $m + 1 \\neq 0$ 舍去 $-1$ 得 $m = 1$。'
         },
         practice2: {
-          title: '练习二：利用一元二次方程定义求参数',
-          givenLabel: '已知条件：',
-          givenFormula: '关于 $x$ 的方程 $(a - 3)x^{|a| - 1} - x = 5$ 是一元二次方程',
-          questionText: '由最高次项指数 $|a| - 1 = 2$ 可得 $|a|$ 等于多少？排除使二次项系数为 $0$ 的值后，$a$ 最终等于多少？',
-          input1Prefix: '$|a| =$',
-          input1Placeholder: '如 3',
-          input2Prefix: '，最终定解 $a =$',
-          input2Placeholder: '如 -3',
-          input2Suffix: '',
-          expectedX: '3',
-          expectedMin: '-3',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '关于 $x$ 的方程 $(a - 3)x^{|a| - 1} - x = 5$ 是一元二次方程，则 $a =$ ______．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '$a =$',
+          input1Placeholder: '如 -3',
+          input1Suffix: '',
+          expectedX: '-3',
+          expectedMin: '',
           allowOrderSwap: false,
-          correctFeedback: '$|a| = 3$，最终定解 $a = -3$。',
-          correctDetail: '由 $|a| - 1 = 2$ 得 $|a| = 3 \\implies a = \\pm 3$；又因二次项系数 $a - 3 \\neq 0 \\implies a \\neq 3$，故 $a = -3$。',
-          wrongFeedback: '先由 $|a| - 1 = 2$ 得 $|a| = 3$，再由 $a - 3 \\neq 0$ 舍去 $a = 3$。',
+          correctFeedback: '$a = -3$。',
+          correctDetail: '由 $|a| - 1 = 2$ 得 $a = \\pm 3$，又 $a - 3 \\neq 0 \\implies a \\neq 3$，故 $a = -3$。',
+          wrongFeedback: '令 $|a| - 1 = 2$ 得 $a = \\pm 3$，再由 $a - 3 \\neq 0$ 舍去 $3$。',
           specificWrongHints: [
             {
-              checkType: 'secondVal',
+              checkType: 'firstVal',
               val: '3',
-              hint: '当 $a = 3$ 时，二次项系数 $a - 3 = 0$，方程不再是一元二次方程，必须舍去 $3$ 取 $a = -3$。'
+              hint: '当 $a = 3$ 时二次项系数 $a - 3 = 0$，须舍去，取 $a = -3$。'
             }
           ]
         }
@@ -5294,51 +5430,56 @@
 
       practices: {
         practice1: {
-          title: '练习一：已知一元二次方程有一个根为 0 求参数（含二次项系数检验）',
-          givenLabel: '已知条件：',
-          givenFormula: '关于 $x$ 的一元二次方程 $(k + 2)x^{2} + 3x + k^{2} - 4 = 0$ 的一个根为 $0$',
-          extractedLabel: '将 $x = 0$ 代入方程：',
-          extractedFormula: '$k^{2} - 4 = 0 \\implies k = 2\\text{ 或 }k = -2$',
-          questionText: '结合“关于 $x$ 的一元二次方程”这一前提，参数 $k$ 的正确值是？',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '已知 $m$ 是方程 $x^{2} - 2x - 5 = 0$ 的一个根，则代数式 $2m^{2} - 4m + 3$ 的值为（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $k = 2$（因为 $k + 2 \\neq 0$，必须舍去 $k = -2$）', isCorrect: true },
-            { key: 'B', text: 'B. $k = 2$ 或 $k = -2$', isCorrect: false },
-            { key: 'C', text: 'C. $k = -2$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $13$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $-7$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $8$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！代入求参后必须检验二次项系数不为 0：',
+            title: '回答正确！见根代入提炼整体，再提取公因数代换：',
             calcLines: [
-              '将 $x = 0$ 代入得常数项 $k^{2} - 4 = 0 \\implies k = \\pm 2$',
-              '又因二次项系数 $k + 2 \\neq 0 \\implies k \\neq -2$，故 $k = 2$'
+              '$m^{2} - 2m - 5 = 0 \\implies m^{2} - 2m = 5$',
+              '$2(m^{2} - 2m) + 3 = 2 \\times 5 + 3 = 13$'
             ],
-            summary: '凡题干指明“一元二次方程”且二次项含参，最后一步务必核对二次项系数 $\\neq 0$。'
+            summary: '整体代入无需解出无理数根 $m$。'
           },
-          wrongTitle: '提示：请检查当 k = -2 时二次项系数的值',
-          wrongFeedback: '当 $k = -2$ 时，二次项系数 $k + 2 = 0$，原方程不再是一元二次方程，故须舍去 $-2$，请再试一次。'
+          wrongTitle: '提示：先代入得 $m^{2} - 2m = 5$，再提取公因数 2 整体代换',
+          wrongFeedback: '由 $m^{2} - 2m = 5$，得 $2(m^{2} - 2m) + 3 = 2 \\times 5 + 3 = 13$。'
         },
         practice2: {
-          title: '练习二：由系数关系式逆推特解与整体降次求值',
-          givenLabel: '已知条件：',
-          givenFormula: '① 方程 $ax^{2} + bx + c = 0$ 满足 $4a - 2b + c = 0$；② $m$ 是 $x^{2} - 4x + 1 = 0$ 的根',
-          questionText: '由 ① 可知方程 $ax^{2} + bx + c = 0$ 必有一个根 $x_{0}$ 是多少？由 ② 可知代数式 $3m^{2} - 12m + 10$ 的值是多少？',
-          input1Prefix: '必有根 $x_{0} =$',
-          input1Placeholder: '如 -2',
-          input2Prefix: '，$3m^{2} - 12m + 10 =$',
-          input2Placeholder: '如 7',
-          input2Suffix: '',
-          expectedX: '-2',
-          expectedMin: '7',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '已知 $m$ 是方程 $x^{2} - 4x + 1 = 0$ 的一个根，则 $3m^{2} - 12m + 10 =$ ______．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '$3m^{2} - 12m + 10 =$',
+          input1Placeholder: '如 7',
+          input1Suffix: '',
+          expectedX: '7',
+          expectedMin: '',
           allowOrderSwap: false,
-          correctFeedback: '必有根 $x_{0} = -2$，代数式 $3m^{2} - 12m + 10 = 7$。',
-          correctDetail: '① $4a - 2b + c = a(-2)^{2} + b(-2) + c = 0$，故必有根 $x_{0} = -2$；② 由 $m^{2} - 4m + 1 = 0$ 得 $m^{2} - 4m = -1$，故 $3(m^{2} - 4m) + 10 = 3 \\times (-1) + 10 = 7$。',
-          wrongFeedback: '① 注意 $-2b = b \\cdot (-2)$，故 $x_{0} = -2$；② 由 $m^{2} - 4m = -1$ 代入 $3(m^{2} - 4m) + 10$ 计算。',
-          specificWrongHints: [
-            {
-              checkType: 'firstVal',
-              val: '2',
-              hint: '注意已知等式中间是 $-2b$，当 $x = -2$ 时才是 $4a - 2b + c = 0$，所以必有根是 $-2$ 而不是 $2$。'
-            }
-          ]
+          correctFeedback: '$3m^{2} - 12m + 10 = 7$。',
+          correctDetail: '代入得 $m^{2} - 4m = -1$，故 $3(m^{2} - 4m) + 10 = 3 \\times (-1) + 10 = 7$。',
+          wrongFeedback: '先由 $m^{2} - 4m + 1 = 0$ 得 $m^{2} - 4m = -1$，再代入 $3(m^{2} - 4m) + 10$。',
+          specificWrongHints: []
         }
       }
     },
@@ -5510,55 +5651,56 @@
 
       practices: {
         practice1: {
-          title: '练习一：利用韦达定理求倒数和对称式的值',
-          givenLabel: '已知条件：',
-          givenFormula: '设 $x_{1}, x_{2}$ 是方程 $2x^{2} + 4x - 3 = 0$ 的两个实数根',
-          extractedLabel: '由韦达定理写出两根之和与两根之积：',
-          extractedFormula: '$x_{1} + x_{2} = -\\frac{4}{2} = -2，\\quad x_{1}x_{2} = -\\frac{3}{2}$',
-          questionText: '将 $\\frac{1}{x_{1}} + \\frac{1}{x_{2}}$ 通分变形并代入求值，正确的结果是？',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '已知 $x_{1}, x_{2}$ 是方程 $x^{2} - 4x + k = 0$ 的两个实数根，且 $x_{1} + x_{2} - x_{1}x_{2} = 1$，则 $k$ 的值为（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $\\frac{x_{1} + x_{2}}{x_{1}x_{2}} = \\frac{-2}{-\\frac{3}{2}} = \\frac{4}{3}$', isCorrect: true },
-            { key: 'B', text: 'B. $\\frac{x_{1} + x_{2}}{x_{1}x_{2}} = -\\frac{4}{3}$', isCorrect: false },
-            { key: 'C', text: 'C. $\\frac{1}{x_{1} + x_{2}} = -\\frac{1}{2}$', isCorrect: false }
-          ],
-          correctFeedback: {
-            title: '回答正确！异分母分式相加先通分，再整体代入：',
-            calcLines: [
-              '$\\frac{1}{x_{1}} + \\frac{1}{x_{2}} = \\frac{x_{2} + x_{1}}{x_{1}x_{2}} = \\frac{-2}{-\\frac{3}{2}} = (-2) \\times \\left(-\\frac{2}{3}\\right) = \\frac{4}{3}$'
-            ],
-            summary: '注意二次项系数 $a = 2 \\neq 1$，算两根之和与积时切勿忘记除以 $2$。'
-          },
-          wrongTitle: '提示：请先通分为 (x₁ + x₂)/(x₁x₂) 并注意同号相除得正',
-          wrongFeedback: '通分得 $\\frac{x_{1} + x_{2}}{x_{1}x_{2}}$，将 $-2$ 与 $-\\frac{3}{2}$ 代入相除（同号得正）得 $\\frac{4}{3}$，请再试一次。'
-        },
-        practice2: {
-          title: '练习二：利用韦达定理与完全平方变形求值',
-          givenLabel: '已知条件：',
-          givenFormula: '$x_{1}, x_{2}$ 是一元二次方程 $x^{2} - 3x - 1 = 0$ 的两个实数根',
-          questionText: '由韦达定理可知两根之和 $x_{1} + x_{2}$ 是多少？平方和 $x_{1}^{2} + x_{2}^{2} = (x_{1} + x_{2})^{2} - 2x_{1}x_{2}$ 的值是多少？',
-          input1Prefix: '$x_{1} + x_{2} =$',
-          input1Placeholder: '如 3',
-          input2Prefix: '，$x_{1}^{2} + x_{2}^{2} =$',
-          input2Placeholder: '如 11',
-          input2Suffix: '',
-          expectedX: '3',
-          expectedMin: '11',
-          allowOrderSwap: false,
-          correctFeedback: '$x_{1} + x_{2} = 3$，$x_{1}^{2} + x_{2}^{2} = 11$。',
-          correctDetail: '由 $x^{2} - 3x - 1 = 0$ 得 $x_{1} + x_{2} = 3$，$x_{1}x_{2} = -1$；故 $x_{1}^{2} + x_{2}^{2} = (x_{1} + x_{2})^{2} - 2x_{1}x_{2} = 3^{2} - 2 \\times (-1) = 9 + 2 = 11$。',
-          wrongFeedback: '先由 $x_{1} + x_{2} = -\\frac{-3}{1} = 3$、$x_{1}x_{2} = -1$，再代入 $3^{2} - 2 \\times (-1)$ 计算。',
-          specificWrongHints: [
             {
-              checkType: 'firstVal',
-              val: '-3',
-              hint: '注意韦达定理公式是 $x_{1} + x_{2} = -\\frac{b}{a}$，因为 $b = -3$，所以 $-\\frac{-3}{1} = +3$。'
+              key: 'A',
+              text: 'A. $3$',
+              isCorrect: true
             },
             {
-              checkType: 'secondVal',
-              val: '7',
-              hint: '注意 $x_{1}x_{2} = -1$（带负号），所以 $-2x_{1}x_{2} = -2 \\times (-1) = +2$，$9 + 2 = 11$ 而不是 $9 - 2 = 7$。'
+              key: 'B',
+              text: 'B. $-5$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $5$',
+              isCorrect: false
             }
-          ]
+          ],
+          correctFeedback: {
+            title: '回答正确！由韦达定理代入关系式并检验 $\\Delta \\ge 0$：',
+            calcLines: [
+              '$x_{1} + x_{2} = 4$，$x_{1}x_{2} = k \\implies 4 - k = 1 \\implies k = 3$',
+              '检验：$\\Delta = (-4)^{2} - 4 \\times 3 = 4 \\gt 0$ 成立'
+            ],
+            summary: '解出参数后别忘了回代检验判别式 $\\Delta \\ge 0$。'
+          },
+          wrongTitle: '提示：先由韦达定理写出 $x_{1} + x_{2} = 4$ 与 $x_{1}x_{2} = k$',
+          wrongFeedback: '代入 $x_{1} + x_{2} - x_{1}x_{2} = 1$ 得 $4 - k = 1$，解得 $k = 3$（此时 $\\Delta = 4 \\gt 0$）。'
+        },
+        practice2: {
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '已知 $x_{1}, x_{2}$ 是方程 $x^{2} - 2kx + k - 2 = 0$ 的两个不相等的实数根，且 $x_{1} + x_{2} + x_{1}x_{2} = 7$，则 $k =$ ______．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '$k =$',
+          input1Placeholder: '如 3',
+          input1Suffix: '',
+          expectedX: '3',
+          expectedMin: '',
+          allowOrderSwap: false,
+          correctFeedback: '$k = 3$。',
+          correctDetail: '$x_{1} + x_{2} = 2k$，$x_{1}x_{2} = k - 2$，代入得 $2k + k - 2 = 7 \\implies k = 3$（此时 $\\Delta = 36 - 4 = 32 \\gt 0$）。',
+          wrongFeedback: '先写 $x_{1} + x_{2} = 2k$，$x_{1}x_{2} = k - 2$，代入 $2k + (k - 2) = 7$ 解出 $k$。',
+          specificWrongHints: []
         }
       }
     }    ,
@@ -5731,51 +5873,56 @@
 
       practices: {
         practice1: {
-          title: '练习一：辨析移项与系数化为 1 的正确变形',
-          givenLabel: '给出四个方程的变形过程：',
-          givenFormula: '① $3x + 6 = 0 \\to x = 2$；② $x + 7 = 5 - 3x \\to 4x = -2$；③ $4x = -2 \\to x = -2$',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '方程 $5 - 3(x - 1) = x$ 的解是（　　）',
           extractedLabel: '',
           extractedFormula: '',
-          questionText: '其中变形完全正确的是哪一个？若继续解 $4x = -2$，正确的解是？',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. ② 正确；由 $4x = -2$ 两边同除以 $4$ 得 $x = -\\frac{1}{2}$', isCorrect: true },
-            { key: 'B', text: 'B. ② 和 ③ 都正确，解为 $x = -2$', isCorrect: false },
-            { key: 'C', text: 'C. ① 正确，解为 $x = 2$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $x = 2$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $x = 1$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $x = -2$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！移项要变号，系数化为 1 时必须除以未知数的系数：',
+            title: '回答正确！去括号、移项、合并、系数化为 1：',
             calcLines: [
-              '② $x + 7 = 5 - 3x \\implies x + 3x = 5 - 7 \\implies 4x = -2$ ✓',
-              '系数化为 $1$：$x = \\frac{-2}{4} = -\\frac{1}{2}$（切勿用 $4 \\div (-2)$ 得 $-2$）'
+              '$5 - 3x + 3 = x \\implies -3x - x = -5 - 3$',
+              '$-4x = -8 \\implies x = 2$'
             ],
-            summary: '在 $ax = b$ 中，永远是用等号右边的 $b$ 除以未知数系数 $a$。'
+            summary: '括号前是负因数 $-3$，去括号时两项都要乘且变号。'
           },
-          wrongTitle: '提示：请检查移项符号与除法中的除数',
-          wrongFeedback: '① 移项应为 $3x = -6 \\implies x = -2$；③ 在 $4x = -2$ 两边应同除以 $4$ 得 $x = -\\frac{1}{2}$，请再试一次。'
+          wrongTitle: '提示：注意 $-3(x - 1) = -3x + 3$',
+          wrongFeedback: '去括号得 $5 - 3x + 3 = x$，移项合并得 $-4x = -8$，解得 $x = 2$。'
         },
         practice2: {
-          title: '练习二：去括号解一元一次方程',
-          givenLabel: '已知一元一次方程：',
-          givenFormula: '$3(x - 2) = 4 - 2x$',
-          questionText: '去括号、移项并合并为 $ax = 10$ 时，系数 $a$ 是多少？最终解出的 $x$ 是多少？',
-          input1Prefix: '合并后系数 $a =$',
-          input1Placeholder: '如 5',
-          input2Prefix: '，方程的解 $x =$',
-          input2Placeholder: '如 2',
-          input2Suffix: '',
-          expectedX: '5',
-          expectedMin: '2',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '解方程：$3(x - 2) = 4 - 2x$，则 $x =$ ______．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '$x =$',
+          input1Placeholder: '如 2',
+          input1Suffix: '',
+          expectedX: '2',
+          expectedMin: '',
           allowOrderSwap: false,
-          correctFeedback: '合并为 $5x = 10$（$a = 5$），解得 $x = 2$。',
-          correctDetail: '去括号得 $3x - 6 = 4 - 2x$，移项得 $3x + 2x = 4 + 6$，合并得 $5x = 10$（故 $a = 5$），解得 $x = 2$。',
-          wrongFeedback: '去括号得 $3x - 6 = 4 - 2x$，将 $-2x$ 移到左边变为 $+2x$，将 $-6$ 移到右边变为 $+6$。',
-          specificWrongHints: [
-            {
-              checkType: 'firstVal',
-              val: '1',
-              hint: '注意右边的 $-2x$ 移到左边要变号为 $+2x$，所以左边是 $3x + 2x = 5x$ 而不是 $3x - 2x = 1x$。'
-            }
-          ]
+          correctFeedback: '$x = 2$。',
+          correctDetail: '去括号得 $3x - 6 = 4 - 2x$，移项合并得 $5x = 10$，解得 $x = 2$。',
+          wrongFeedback: '去括号得 $3x - 6 = 4 - 2x$，移项得 $5x = 10$，解得 $x = 2$。',
+          specificWrongHints: []
         }
       }
     },
@@ -5947,51 +6094,56 @@
 
       practices: {
         practice1: {
-          title: '练习一：由完全平方式结构特征求未知常数',
-          givenLabel: '已知二次三项式：',
-          givenFormula: '$9x^{2} + 12x + m$ 是一个完全平方式',
-          extractedLabel: '拆解首项平方与中间两倍乘积：',
-          extractedFormula: '$(3x)^{2} + 2 \\cdot (3x) \\cdot 2 + m$',
-          questionText: '对照完全平方公式 $A^{2} + 2AB + B^{2}$，常数 $m$ 的值是？',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '已知 $a^{2} - 2a - 3 = 0$，则代数式 $(a - 1)^{2} + a(a - 2) + 4$ 的值为（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $m = 2^{2} = 4$', isCorrect: true },
-            { key: 'B', text: 'B. $m = 2$', isCorrect: false },
-            { key: 'C', text: 'C. $m = 6^{2} = 36$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $11$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $8$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $10$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！先由首平方确定 A = 3x，再由中间项 2AB = 12x 确定 B = 2：',
+            title: '回答正确！先展开合并，再提取公因数整体代入：',
             calcLines: [
-              '$A = 3x，\\quad 2 \\cdot (3x) \\cdot B = 12x \\implies B = 2$',
-              '$m = B^{2} = 2^{2} = 4 \\implies 9x^{2} + 12x + 4 = (3x + 2)^{2}$'
+              '由已知得 $a^{2} - 2a = 3$',
+              '原式 $= (a^{2} - 2a + 1) + (a^{2} - 2a) + 4 = 2(a^{2} - 2a) + 5 = 11$'
             ],
-            summary: '当二次项系数不为 $1$ 时，不能直接取一次项系数 $12$ 的一半平方，而要先除以首项底数 $3$。'
+            summary: '完全平方展开切勿漏掉中间项 $-2a$。'
           },
-          wrongTitle: '提示：请注意首项是 (3x)² 而不是 x²',
-          wrongFeedback: '首项 $9x^{2} = (3x)^{2}$，中间项 $12x = 2 \\cdot (3x) \\cdot 2$，故尾项 $B = 2$，$m = 2^{2} = 4$，请再试一次。'
+          wrongTitle: '提示：先展开 $(a - 1)^{2} = a^{2} - 2a + 1$，合并后代入 $a^{2} - 2a = 3$',
+          wrongFeedback: '展开合并得 $2a^{2} - 4a + 5 = 2(a^{2} - 2a) + 5 = 2 \\times 3 + 5 = 11$。'
         },
         practice2: {
-          title: '练习二：利用完全平方公式求倒数平方和',
-          givenLabel: '已知条件：',
-          givenFormula: '$x - \\frac{1}{x} = 1$',
-          questionText: '将等式两边同时平方得 $\\left(x - \\frac{1}{x}\\right)^{2} = x^{2} - 2 + \\frac{1}{x^{2}} = 1$，由此可求出 $x^{2} + \\frac{1}{x^{2}}$ 与 $x^{4} + \\frac{1}{x^{4}}$ 的值分别是多少？',
-          input1Prefix: '$x^{2} + \\frac{1}{x^{2}} =$',
-          input1Placeholder: '如 3',
-          input2Prefix: '，$x^{4} + \\frac{1}{x^{4}} =$',
-          input2Placeholder: '如 7',
-          input2Suffix: '',
-          expectedX: '3',
-          expectedMin: '7',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '已知 $x^{2} + 4x - 2 = 0$，则 $(x + 2)^{2} + x(x + 4) =$ ______．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '原式 $=$',
+          input1Placeholder: '如 8',
+          input1Suffix: '',
+          expectedX: '8',
+          expectedMin: '',
           allowOrderSwap: false,
-          correctFeedback: '$x^{2} + \\frac{1}{x^{2}} = 3$，$x^{4} + \\frac{1}{x^{4}} = 7$。',
-          correctDetail: '① 由 $x^{2} - 2 + \\frac{1}{x^{2}} = 1$ 移项得 $x^{2} + \\frac{1}{x^{2}} = 1 + 2 = 3$；② 再两边平方得 $x^{4} + 2 + \\frac{1}{x^{4}} = 3^{2} = 9 \\implies x^{4} + \\frac{1}{x^{4}} = 9 - 2 = 7$。',
-          wrongFeedback: '注意第一次平方中间项是 $-2$（移项 $+2$ 得 $3$），第二次对 $x^{2} + \\frac{1}{x^{2}} = 3$ 平方中间项是 $+2$（移项 $-2$ 得 $9 - 2 = 7$）。',
-          specificWrongHints: [
-            {
-              checkType: 'secondVal',
-              val: '9',
-              hint: '注意 $\\left(x^{2} + \\frac{1}{x^{2}}\\right)^{2} = x^{4} + 2 + \\frac{1}{x^{4}} = 9$，还需要减去中间的常数 $2$，所以 $x^{4} + \\frac{1}{x^{4}} = 7$。'
-            }
-          ]
+          correctFeedback: '原式 $= 8$。',
+          correctDetail: '由已知得 $x^{2} + 4x = 2$；展开得 $(x^{2} + 4x + 4) + (x^{2} + 4x) = 2(x^{2} + 4x) + 4 = 8$。',
+          wrongFeedback: '展开合并为 $2(x^{2} + 4x) + 4$，将 $x^{2} + 4x = 2$ 代入得 $8$。',
+          specificWrongHints: []
         }
       }
     },
@@ -6152,51 +6304,55 @@
 
       practices: {
         practice1: {
-          title: '练习一：首项为负且末项等于公因式的提公因式分解',
-          givenLabel: '已知多项式：',
-          givenFormula: '$-4a^{3}b^{3} + 6a^{2}b - 2ab$',
-          extractedLabel: '确定带负号的最大公因式：',
-          extractedFormula: '系数取 $-2$，相同字母取最低次幂 $ab \\implies$ 公因式为 $-2ab$',
-          questionText: '提取公因式 $-2ab$ 后，正确的因式分解结果是？',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '把多项式 $x^{2}(a - 1) + x(1 - a)$ 分解因式，结果是（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $-2ab(2a^{2}b^{2} - 3a + 1)$', isCorrect: true },
-            { key: 'B', text: 'B. $-2ab(2a^{2}b^{2} - 3a)$', isCorrect: false },
-            { key: 'C', text: 'C. $-2ab(2a^{2}b^{2} + 3a - 1)$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $x(a - 1)(x - 1)$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $x(a - 1)(x + 1)$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $x^{2}(a - 1)$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！提负号括号内全变号，且末项除以自身商为 +1：',
+            title: '回答正确！先统一相反数底数，再提最大公因式：',
             calcLines: [
-              '$(-4a^{3}b^{3}) \\div (-2ab) = 2a^{2}b^{2}$',
-              '$(+6a^{2}b) \\div (-2ab) = -3a$，$(-2ab) \\div (-2ab) = +1$'
+              '$x^{2}(a - 1) - x(a - 1) = x(a - 1)(x - 1)$'
             ],
-            summary: '原多项式有 $3$ 项，提取单项式公因式后括号内也必须有 $3$ 项，绝不能漏掉末尾的 $+1$。'
+            summary: '第二项整项提走后须保留 $-1$。'
           },
-          wrongTitle: '提示：请检查括号内的项数与变号情况',
-          wrongFeedback: '提出 $-2ab$ 后，括号内三项符号由“负、正、负”变为“正、负、正”，且末项 $-2ab \\div (-2ab) = +1$ 不能漏写，请再试一次。'
+          wrongTitle: '提示：先将 $(1 - a)$ 化为 $-(a - 1)$，再提公因式 $x(a - 1)$',
+          wrongFeedback: '原式 $= x^{2}(a - 1) - x(a - 1) = x(a - 1)(x - 1)$。'
         },
         practice2: {
-          title: '练习二：提取公因式后整体代入求值',
-          givenLabel: '已知条件：',
-          givenFormula: '$mn = 5，\\quad m - n = -3$',
-          questionText: '求代数式 $m^{2}n - mn^{2} + 5$ 的值：先将前两项因式分解为 $mn(m - n)$，则前两项的值与整个代数式的值分别是多少？',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '已知 $mn = 5$，$m - n = -3$，则 $m^{2}n - mn^{2} =$ ______．',
+          questionText: '',
+          singleInput: true,
           input1Prefix: '$m^{2}n - mn^{2} =$',
           input1Placeholder: '如 -15',
-          input2Prefix: '，$m^{2}n - mn^{2} + 5 =$',
-          input2Placeholder: '如 -10',
-          input2Suffix: '',
+          input1Suffix: '',
           expectedX: '-15',
-          expectedMin: '-10',
+          expectedMin: '',
           allowOrderSwap: false,
-          correctFeedback: '$m^{2}n - mn^{2} = -15$，$m^{2}n - mn^{2} + 5 = -10$。',
-          correctDetail: '前两项提取公因式 $mn$ 得 $m^{2}n - mn^{2} = mn(m - n) = 5 \\times (-3) = -15$；加上 $5$ 得 $-15 + 5 = -10$。',
-          wrongFeedback: '先算 $mn(m - n) = 5 \\times (-3) = -15$，再算 $-15 + 5$。',
-          specificWrongHints: [
-            {
-              checkType: 'secondVal',
-              val: '-20',
-              hint: '注意是 $-15 + 5 = -10$ 而不是 $-15 - 5 = -20$。'
-            }
-          ]
+          correctFeedback: '$m^{2}n - mn^{2} = -15$。',
+          correctDetail: '提取公因式 $mn$ 得 $mn(m - n) = 5 \\times (-3) = -15$。',
+          wrongFeedback: '先提公因式化为 $mn(m - n)$，再代入 $5 \\times (-3) = -15$。',
+          specificWrongHints: []
         }
       }
     },
@@ -6207,93 +6363,76 @@
     P25: {
       procedureId: 'P25',
       title: '用公式法（平方差公式与完全平方公式）及先提后套分解因式',
-      exampleTitle: '把下列各式彻底分解因式：(1) $2x^{2} - 12x + 18$；(2) $(a^{2} + 4)^{2} - 16a^{2}$',
-      exampleFormula: '一提（公因式） $\\to$ 二套（平方差/完全平方） $\\to$ 三检查（分解到底）',
-      totalDuration: 30.0,
-      scratchpadIdleHint: '旁白草稿演算区（同步展示“一提、二套、三检查”因式分解黄金三步法与常见高次连环分解结构）',
-      practiceSectionTitle: '公式法与先提后套因式分解跟做练习',
-      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握“先提公因式再套公式”与“连续多次分解到底”',
+      exampleTitle: '因式分解：$2x^{2} - 12x + 18 =$ ______',
+      exampleFormula: '先提公因式 $2$ $\\to$ 再套完全平方公式 $\\to$ 检查分解彻底',
+      totalDuration: 24.0,
+      scratchpadIdleHint: '',
+      practiceSectionTitle: '公式法与先提后套因式分解',
+      practiceSectionSub: '',
 
       steps: [
         {
           step: 1,
-          name: '第(1)题“一提”：提取各项公因式 2',
+          name: '提取各项公因式 2',
           tStart: 0.0,
-          tEnd: 6.0,
-          explanation: '观察 $2x^{2} - 12x + 18$，三项系数 $2, -12, 18$ 有最大公约数 $2$，先调用 P24 提取公因式 $2$，得 $2(x^{2} - 6x + 9)$。'
+          tEnd: 8.0,
+          explanation: '观察 $2x^{2} - 12x + 18$，三项系数 $2, -12, 18$ 有最大公约数 $2$，先提取公因式 $2$，得 $2(x^{2} - 6x + 9)$。'
         },
         {
           step: 2,
-          name: '第(1)题“二套”：括号内三项套完全平方公式',
-          tStart: 6.0,
-          tEnd: 12.0,
-          explanation: '括号内 $x^{2} - 6x + 9 = x^{2} - 2 \\cdot x \\cdot 3 + 3^{2}$ 符合完全平方式，套用完全平方公式分解为 $2(x - 3)^{2}$。'
+          name: '识别括号内为完全平方式',
+          tStart: 8.0,
+          tEnd: 16.0,
+          explanation: '括号内 $x^{2} - 6x + 9 = x^{2} - 2 \\cdot x \\cdot 3 + 3^{2}$，符合完全平方公式 $a^{2} - 2ab + b^{2}$ 的结构。'
         },
         {
           step: 3,
-          name: '第(2)题外层“套平方差公式”',
-          tStart: 12.0,
-          tEnd: 18.2,
-          explanation: '观察 $(a^{2} + 4)^{2} - 16a^{2}$，将 $16a^{2}$ 写为 $(4a)^{2}$，构成两项平方差 $A^{2} - B^{2}$，先分解为 $(a^{2} + 4 + 4a)(a^{2} + 4 - 4a)$。'
-        },
-        {
-          step: 4,
-          name: '第(2)题“三检查”：识别两个括号仍为完全平方式',
-          tStart: 18.2,
-          tEnd: 24.5,
-          explanation: '按降幂排列两个括号为 $(a^{2} + 4a + 4)(a^{2} - 4a + 4)$，检查发现它们分别是 $(a + 2)^{2}$ 和 $(a - 2)^{2}$，还能继续分解！'
-        },
-        {
-          step: 5,
-          name: '继续套用完全平方公式分解到底',
-          tStart: 24.5,
-          tEnd: 30.0,
-          explanation: '将两个因式继续用完全平方公式分解，得到彻底分解结果 $(a + 2)^{2}(a - 2)^{2}$。'
+          name: '套用完全平方公式彻底分解',
+          tStart: 16.0,
+          tEnd: 24.0,
+          explanation: '将括号内套用完全平方公式化为 $(x - 3)^{2}$，检查各因式不能再分解，得出最终结果 $2(x - 3)^{2}$。'
         }
       ],
 
       microBeats: [
-        { time: 0.8, step: 1, label: '1.1 (1) 先提公因式 $2$ 得 $2(x^{2} - 6x + 9)$' },
-        { time: 7.5, step: 2, label: '2.1 (1) 套完全平方公式得 $2(x - 3)^{2}$' },
-        { time: 14.0, step: 3, label: '3.1 (2) 先套平方差得 $(a^{2} + 4 + 4a)(a^{2} + 4 - 4a)$' },
-        { time: 20.0, step: 4, label: '4.1 (2) 检查两个三项式均为完全平方式' },
-        { time: 26.0, step: 5, label: '5.1 (2) 继续分解到底得 $(a + 2)^{2}(a - 2)^{2}$' }
+        { time: 1.0, step: 1, label: '1.1 观察三项系数均有公约数 $2$' },
+        { time: 4.5, step: 1, label: '1.2 提取公因式 $2$ 得 $2(x^{2} - 6x + 9)$' },
+        { time: 10.5, step: 2, label: '2.1 核对 $x^{2} - 2 \\cdot x \\cdot 3 + 3^{2}$ 完全平方式结构' },
+        { time: 18.5, step: 3, label: '3.1 套用完全平方公式得 $2(x - 3)^{2}$' }
       ],
 
       boardRows: [
         {
           rowId: 'p25_row_0',
-          stepBadge: '例题 (1) · 一提公因式',
+          stepBadge: '原式',
           appearAt: 0.0,
           tokens: [
-            { id: 'p25_r0_orig', math: '(1) $2x^{2} - 12x + 18$', appearAt: 0.0, dur: 0.01 },
-            { id: 'p25_r0_ext', math: '$= 2(x^{2} - 6x + 9)$', appearAt: 1.6, dur: 0.45 }
+            { id: 'p25_r0_orig', math: '$2x^{2} - 12x + 18$', appearAt: 0.0, dur: 0.01 }
           ]
         },
         {
           rowId: 'p25_row_1',
-          stepBadge: '例题 (1) · 二套完全平方',
-          appearAt: 6.4,
+          stepBadge: '第 1 步 · 提公因式',
+          appearAt: 2.5,
           tokens: [
-            { id: 'p25_r1_res', math: '$= 2(x - 3)^{2}$', appearAt: 6.5, dur: 0.45 }
+            { id: 'p25_r1_ext', math: '$= 2(x^{2} - 6x + 9)$', appearAt: 2.6, dur: 0.45 }
           ]
         },
         {
           rowId: 'p25_row_2',
-          stepBadge: '例题 (2) · 先套平方差',
-          appearAt: 12.4,
+          stepBadge: '第 2 步 · 识别公式结构',
+          appearAt: 9.0,
           tokens: [
-            { id: 'p25_r2_orig', math: '(2) $(a^{2} + 4)^{2} - 16a^{2} = (a^{2} + 4)^{2} - (4a)^{2}$', appearAt: 12.5, dur: 0.45 },
-            { id: 'p25_r2_diff', math: '$= (a^{2} + 4a + 4)(a^{2} - 4a + 4)$', appearAt: 14.2, dur: 0.45 }
+            { id: 'p25_r2_fmt', math: '$= 2(x^{2} - 2 \\cdot x \\cdot 3 + 3^{2})$', appearAt: 9.1, dur: 0.45 }
           ]
         },
         {
           rowId: 'p25_row_3',
-          stepBadge: '例题 (2) · 三检查分解到底',
-          appearAt: 24.4,
+          stepBadge: '第 3 步 · 彻底分解',
+          appearAt: 17.0,
           isConclusion: true,
           tokens: [
-            { id: 'p25_r3_conc', math: '$= (a + 2)^{2}(a - 2)^{2}$。', appearAt: 24.5, dur: 0.60 }
+            { id: 'p25_r3_conc', math: '$= 2(x - 3)^{2}$。', appearAt: 17.1, dur: 0.60 }
           ]
         }
       ],
@@ -6303,106 +6442,108 @@
           id: 'p25_sp_1',
           title: '核心口诀 · 因式分解“一提、二套、三检查”',
           showStart: 0.8,
-          showEnd: 29.8,
+          showEnd: 23.8,
           tokens: [
-            { id: 'p25_sp1_t1', math: '① 一提：有公因式先提公因式，首项为负先提负号', appearAt: 1.4, dur: 0.40 },
-            { id: 'p25_sp1_t2', math: '② 二套：两项异号平方套平方差，三项套完全平方', appearAt: 6.8, dur: 0.40 },
-            { id: 'p25_sp1_t3', math: '③ 三检查：高次因式（如 $x^{4}-y^{4}$）必须连续分解到底', appearAt: 18.6, dur: 0.45 }
+            { id: 'p25_sp1_t1', math: '① 一提：有公因式先提公因式 $2$', appearAt: 2.0, dur: 0.40 },
+            { id: 'p25_sp1_t2', math: '② 二套：三项 $x^{2}-6x+9$ 套完全平方公式', appearAt: 9.2, dur: 0.40 },
+            { id: 'p25_sp1_t3', math: '③ 三检查：因式 $2$ 与 $(x - 3)$ 均不能再分解', appearAt: 17.2, dur: 0.45 }
           ],
-          note: '切记：在实数范围内，两项同号的平方和（如 $x^{2} + 4$、$a^{2} + b^{2}$）不能再分解'
+          note: '若直接观察不提公因式，往往无法看出完全平方结构，务必养成“先提后套”的习惯'
         }
       ],
 
       tokenHighlights: [
-        { tokenId: 'p25_r0_ext', tStart: 1.6, tEnd: 5.8, color: 'teal' },
-        { tokenId: 'p25_r1_res', tStart: 6.5, tEnd: 11.8, color: 'amber' },
-        { tokenId: 'p25_r2_diff', tStart: 14.2, tEnd: 24.0, color: 'amber' },
-        { tokenId: 'p25_r3_conc', tStart: 24.5, tEnd: 29.5, color: 'teal' }
+        { tokenId: 'p25_r1_ext', tStart: 2.6, tEnd: 7.8, color: 'teal' },
+        { tokenId: 'p25_r2_fmt', tStart: 9.1, tEnd: 15.8, color: 'amber' },
+        { tokenId: 'p25_r3_conc', tStart: 17.1, tEnd: 23.5, color: 'teal' }
       ],
 
       svgAnnotations: [
         {
-          id: 'p25_svg_s2',
+          id: 'p25_svg_s1',
           type: 'arrow',
-          fromToken: 'p25_r0_ext',
-          toToken: 'p25_r1_res',
-          label: '$x^{2} - 6x + 9 = (x - 3)^{2}$',
+          fromToken: 'p25_r0_orig',
+          toToken: 'p25_r1_ext',
+          label: '先提公因式 2',
           color: '#0F766E',
-          curveOffset: 28,
-          tStart: 6.2,
-          tDrawEnd: 7.0,
-          tFadeStart: 11.2,
-          tEnd: 11.8
+          curveOffset: 26,
+          tStart: 2.2,
+          tDrawEnd: 3.0,
+          tFadeStart: 7.2,
+          tEnd: 7.8
         },
         {
-          id: 'p25_svg_s5',
+          id: 'p25_svg_s3',
           type: 'arrow',
-          fromToken: 'p25_r2_diff',
+          fromToken: 'p25_r2_fmt',
           toToken: 'p25_r3_conc',
-          label: '两个三项式继续用完全平方分解',
+          label: '套完全平方公式',
           color: '#D97706',
           curveOffset: -26,
-          tStart: 24.0,
-          tDrawEnd: 24.8,
-          tFadeStart: 28.8,
-          tEnd: 29.5
+          tStart: 16.6,
+          tDrawEnd: 17.4,
+          tFadeStart: 22.8,
+          tEnd: 23.5
         }
       ],
 
       subtitles: [
-        { tStart: 0.0, tEnd: 6.0, text: '先看第(1)题 $2x^{2} - 12x + 18$：牢记“一提二套”，先提取各项公因式 $2$，得 $2(x^{2} - 6x + 9)$。', focusToken: 'p25_r0_ext' },
-        { tStart: 6.0, tEnd: 12.0, text: '括号内是三项式 $x^{2} - 6x + 9$，套用完全平方公式化为 $2(x - 3)^{2}$。', focusToken: 'p25_r1_res' },
-        { tStart: 12.0, tEnd: 18.2, text: '再看第(2)题 $(a^{2} + 4)^{2} - 16a^{2}$：把 $16a^{2}$ 看作 $(4a)^{2}$，先用平方差公式分解为 $(a^{2} + 4a + 4)(a^{2} - 4a + 4)$。', focusToken: 'p25_r2_diff' },
-        { tStart: 18.2, tEnd: 24.5, text: '关键第三步“检查彻底性”：观察发现两个括号里的二次三项式都符合完全平方式！', focusToken: 'p25_r2_diff' },
-        { tStart: 24.5, tEnd: 30.0, text: '继续套用完全平方公式分解到底，得出最终结果 $(a + 2)^{2}(a - 2)^{2}$！', focusToken: 'p25_r3_conc' }
+        { tStart: 0.0, tEnd: 8.0, text: '第一步“一提”：观察 $2x^{2} - 12x + 18$ 各项都有公因式 $2$，先提取公因式 $2$，得 $2(x^{2} - 6x + 9)$。', focusToken: 'p25_r1_ext' },
+        { tStart: 8.0, tEnd: 16.0, text: '第二步“二套”：括号内 $x^{2} - 6x + 9$ 恰好是 $x^{2} - 2 \\cdot x \\cdot 3 + 3^{2}$，符合完全平方公式结构。', focusToken: 'p25_r2_fmt' },
+        { tStart: 16.0, tEnd: 24.0, text: '第三步写结果并检查：套公式分解为 $2(x - 3)^{2}$，检查各因式已分解彻底，横线上填 $2(x - 3)^{2}$！', focusToken: 'p25_r3_conc' }
       ],
 
       practices: {
         practice1: {
-          title: '练习一：先提公因式再用平方差公式彻底分解',
-          givenLabel: '已知多项式：',
-          givenFormula: '$2(a - 1)^{2} - 8$',
-          extractedLabel: '第一步提取公因式 2：',
-          extractedFormula: '$2[(a - 1)^{2} - 4] = 2[(a - 1)^{2} - 2^{2}]$',
-          questionText: '下一步对中括号内套用平方差公式并化简，最终彻底分解的结果是？',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '把多项式 $3x^{2} - 12x + 12$ 彻底分解因式，结果是（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $2(a + 1)(a - 3)$', isCorrect: true },
-            { key: 'B', text: 'B. $2[(a - 1)^{2} - 4]$', isCorrect: false },
-            { key: 'C', text: 'C. $(2a + 2)(a - 3)$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $3(x - 2)^{2}$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $3(x^{2} - 4x + 4)$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $3(x + 2)^{2}$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！一提公因式 2，二套平方差公式，三合并括号内常数：',
+            title: '回答正确！先提公因式 3，再套完全平方公式：',
             calcLines: [
-              '$2[(a - 1) + 2][(a - 1) - 2] = 2(a + 1)(a - 3)$'
+              '$3x^{2} - 12x + 12 = 3(x^{2} - 4x + 4) = 3(x - 2)^{2}$'
             ],
-            summary: 'B 项未继续用平方差公式分解，C 项未把系数公因数 $2$ 单独提到括号外。'
+            summary: '遵循“一提公因式、二套公式、三检查彻底”。'
           },
-          wrongTitle: '提示：请对 [(a - 1)² - 2²] 继续用平方差公式并保留前面的系数 2',
-          wrongFeedback: '由 $(a - 1)^{2} - 2^{2} = (a - 1 + 2)(a - 1 - 2) = (a + 1)(a - 3)$，前面乘公因式 $2$ 得 $2(a + 1)(a - 3)$，请再试一次。'
+          wrongTitle: '提示：先提公因式 3，再对括号内套完全平方公式',
+          wrongFeedback: '$3x^{2} - 12x + 12 = 3(x^{2} - 4x + 4) = 3(x - 2)^{2}$。'
         },
         practice2: {
-          title: '练习二：高次多项式连续两次套用平方差公式',
-          givenLabel: '已知四次多项式：',
-          givenFormula: '$16 - b^{4}$',
-          questionText: '第一次用平方差公式得 $(4 + b^{2})(4 - b^{2})$，其中 $4 - b^{2}$ 还能继续分解为 $(p + b)(p - b)$；若当 $b = 1$ 时该多项式的值是多少？请分别填写正数 $p$ 与当 $b = 1$ 时的值：',
-          input1Prefix: '正数 $p =$',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '若 $2x^{2} + 8x + 8 = 2(x + p)^{2}$，则 $p =$ ______．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '$p =$',
           input1Placeholder: '如 2',
-          input2Prefix: '，当 $b = 1$ 时原式 $=$',
-          input2Placeholder: '如 15',
-          input2Suffix: '',
+          input1Suffix: '',
           expectedX: '2',
-          expectedMin: '15',
+          expectedMin: '',
           allowOrderSwap: false,
-          correctFeedback: '彻底分解为 $(4 + b^{2})(2 + b)(2 - b)$（$p = 2$），当 $b = 1$ 时原式值为 $15$。',
-          correctDetail: '因为 $4 - b^{2} = 2^{2} - b^{2} = (2 + b)(2 - b)$，所以 $p = 2$；当 $b = 1$ 时，$16 - 1^{4} = 15$。',
-          wrongFeedback: '注意 $4 = 2^{2}$，故 $4 - b^{2} = (2 + b)(2 - b)$，得 $p = 2$；再算 $16 - 1^{4} = 15$。',
-          specificWrongHints: [
-            {
-              checkType: 'firstVal',
-              val: '4',
-              hint: '注意 $4 - b^{2} = 2^{2} - b^{2}$，开平方后常数是 $2$ 而不是 $4$。'
-            }
-          ]
+          correctFeedback: '$p = 2$。',
+          correctDetail: '先提公因式 $2$ 得 $2(x^{2} + 4x + 4)$，再套完全平方公式得 $2(x + 2)^{2}$，故 $p = 2$。',
+          wrongFeedback: '先提公因式 $2$ 得 $2(x^{2} + 4x + 4) = 2(x + 2)^{2}$。',
+          specificWrongHints: []
         }
       }
     }
@@ -6412,95 +6553,79 @@
     // =========================================================================
     P26: {
       procedureId: 'P26',
-      title: '运用平方差公式展开整式与简便运算',
-      exampleTitle: '利用平方差公式计算：(1) $(a + 2)(a - 2)(a^{2} + 4)$；(2) $(5x + 6y)(5x - 6y) - (6x + 5y)(6x - 5y)$',
-      exampleFormula: '$(a + b)(a - b) = a^{2} - b^{2}$（相同项平方 $-$ 相反项平方）',
-      totalDuration: 30.0,
-      scratchpadIdleHint: '旁白草稿演算区（同步展示“相同项 a 与相反项 b 识别”、“含系数项整体平方”与“减号后乘积加括号”三大准则）',
-      practiceSectionTitle: '平方差公式展开与巧算跟做练习',
-      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握负项打头的平方差识别与大数平方差简便计算',
+      title: '运用平方差公式进行整式乘法与简便计算',
+      exampleTitle: '计算：$(a + 2)(a - 2)(a^{2} + 4) =$ ______',
+      exampleFormula: '连续套用平方差公式 $(A + B)(A - B) = A^{2} - B^{2}$',
+      totalDuration: 24.0,
+      scratchpadIdleHint: '',
+      practiceSectionTitle: '平方差公式整式乘法',
+      practiceSectionSub: '',
 
       steps: [
         {
           step: 1,
-          name: '第(1)题：定位前两因式的相同项与相反项',
+          name: '前两个因式套用平方差公式',
           tStart: 0.0,
-          tEnd: 6.0,
-          explanation: '观察 $(a + 2)(a - 2)(a^{2} + 4)$ 的前两个因式 $(a + 2)(a - 2)$，其中相同项为 $a$、相反项为 $2$，套用平方差公式得 $(a^{2} - 4)$。'
+          tEnd: 8.0,
+          explanation: '观察 $(a + 2)(a - 2)$，相同项为 $a$，相反项为 $+2$ 与 $-2$，套用平方差公式得 $a^{2} - 2^{2} = a^{2} - 4$。'
         },
         {
           step: 2,
-          name: '第(1)题：连续第二次套用平方差公式',
-          tStart: 6.0,
-          tEnd: 12.0,
-          explanation: '前两因式的积 $(a^{2} - 4)$ 与第三个因式 $(a^{2} + 4)$ 再次构成平方差结构（相同项为 $a^{2}$，相反项为 $4$），套用公式得 $(a^{2})^{2} - 4^{2} = a^{4} - 16$。'
+          name: '识别新的平方差结构 $(a^{2} - 4)(a^{2} + 4)$',
+          tStart: 8.0,
+          tEnd: 16.0,
+          explanation: '原式化为 $(a^{2} - 4)(a^{2} + 4)$，此时相同项为 $a^{2}$，相反项为 $-4$ 与 $+4$，再次构成平方差公式结构。'
         },
         {
           step: 3,
-          name: '第(2)题：两组平方差分别加括号展开',
-          tStart: 12.0,
-          tEnd: 18.5,
-          explanation: '对 $(5x + 6y)(5x - 6y)$ 和 $(6x + 5y)(6x - 5y)$ 分别套用平方差公式（系数与字母同时平方），并在减号后保留括号：$(25x^{2} - 36y^{2}) - (36x^{2} - 25y^{2})$。'
-        },
-        {
-          step: 4,
-          name: '第(2)题：去括号变号',
-          tStart: 18.5,
-          tEnd: 24.5,
-          explanation: '去掉第二个括号，括号前是负号，括号内两项均变号，得 $25x^{2} - 36y^{2} - 36x^{2} + 25y^{2}$。'
-        },
-        {
-          step: 5,
-          name: '第(2)题：合并同类项得出最简结果',
-          tStart: 24.5,
-          tEnd: 30.0,
-          explanation: '将同类项分别合并：$(25 - 36)x^{2} + (-36 + 25)y^{2} = -11x^{2} - 11y^{2}$。'
+          name: '再次套用平方差公式化简得结果',
+          tStart: 16.0,
+          tEnd: 24.0,
+          explanation: '套用公式得 $(a^{2})^{2} - 4^{2} = a^{4} - 16$。'
         }
       ],
 
       microBeats: [
-        { time: 0.8, step: 1, label: '1.1 (1) 先算 $(a + 2)(a - 2) = a^{2} - 4$' },
-        { time: 7.5, step: 2, label: '2.1 (1) 连续套平方差得 $(a^{2} - 4)(a^{2} + 4) = a^{4} - 16$' },
-        { time: 14.0, step: 3, label: '3.1 (2) 两组加括号展开得 $(25x^{2} - 36y^{2}) - (36x^{2} - 25y^{2})$' },
-        { time: 20.0, step: 4, label: '4.1 (2) 去括号变号得 $25x^{2} - 36y^{2} - 36x^{2} + 25y^{2}$' },
-        { time: 26.0, step: 5, label: '5.1 (2) 合并同类项得 $-11x^{2} - 11y^{2}$' }
+        { time: 1.0, step: 1, label: '1.1 锁定前两项 $(a + 2)(a - 2)$' },
+        { time: 4.5, step: 1, label: '1.2 第一次套平方差得 $(a^{2} - 4)$' },
+        { time: 10.5, step: 2, label: '2.1 观察 $(a^{2} - 4)(a^{2} + 4)$ 再次构成平方差' },
+        { time: 18.5, step: 3, label: '3.1 算出 $(a^{2})^{2} - 4^{2} = a^{4} - 16$' }
       ],
 
       boardRows: [
         {
           rowId: 'p26_row_0',
-          stepBadge: '例题 (1) · 第一次平方差',
+          stepBadge: '原式',
           appearAt: 0.0,
           tokens: [
-            { id: 'p26_r0_orig', math: '(1) $(a + 2)(a - 2)(a^{2} + 4)$', appearAt: 0.0, dur: 0.01 },
-            { id: 'p26_r0_step1', math: '$= (a^{2} - 4)(a^{2} + 4)$', appearAt: 1.6, dur: 0.45 }
+            { id: 'p26_r0_1', math: '$(a + 2)(a - 2)$', appearAt: 0.0, dur: 0.01 },
+            { id: 'p26_r0_2', math: '$(a^{2} + 4)$', appearAt: 0.0, dur: 0.01 }
           ]
         },
         {
           rowId: 'p26_row_1',
-          stepBadge: '例题 (1) · 第二次平方差',
-          appearAt: 6.4,
+          stepBadge: '第 1 步 · 首次套公式',
+          appearAt: 2.5,
           tokens: [
-            { id: 'p26_r1_res', math: '$= (a^{2})^{2} - 4^{2} = a^{4} - 16$', appearAt: 6.5, dur: 0.45 }
+            { id: 'p26_r1_sq1', math: '$= (a^{2} - 4)$', appearAt: 2.6, dur: 0.45 },
+            { id: 'p26_r1_rest', math: '$(a^{2} + 4)$', appearAt: 4.2, dur: 0.40 }
           ]
         },
         {
           rowId: 'p26_row_2',
-          stepBadge: '例题 (2) · 加括号展开',
-          appearAt: 12.4,
+          stepBadge: '第 2 步 · 再次套公式',
+          appearAt: 10.0,
           tokens: [
-            { id: 'p26_r2_orig', math: '(2) 原式 $= [(5x)^{2} - (6y)^{2}] - [(6x)^{2} - (5y)^{2}]$', appearAt: 12.5, dur: 0.45 },
-            { id: 'p26_r2_exp', math: '$= (25x^{2} - 36y^{2}) - (36x^{2} - 25y^{2})$', appearAt: 14.2, dur: 0.45 }
+            { id: 'p26_r2_sq2', math: '$= (a^{2})^{2} - 4^{2}$', appearAt: 10.1, dur: 0.45 }
           ]
         },
         {
           rowId: 'p26_row_3',
-          stepBadge: '例题 (2) · 去括号与合并',
-          appearAt: 19.0,
+          stepBadge: '最终结果',
+          appearAt: 17.0,
           isConclusion: true,
           tokens: [
-            { id: 'p26_r3_rem', math: '$= 25x^{2} - 36y^{2} - 36x^{2} + 25y^{2}$', appearAt: 19.1, dur: 0.45 },
-            { id: 'p26_r3_conc', math: '$= -11x^{2} - 11y^{2}$。', appearAt: 25.0, dur: 0.55 }
+            { id: 'p26_r3_conc', math: '$= a^{4} - 16$。', appearAt: 17.1, dur: 0.60 }
           ]
         }
       ],
@@ -6508,108 +6633,115 @@
       scratchpadCards: [
         {
           id: 'p26_sp_1',
-          title: '核心口诀 · 平方差公式三大防错铁律',
+          title: '核心法则 · 平方差公式识别口诀',
           showStart: 0.8,
-          showEnd: 29.8,
+          showEnd: 23.8,
           tokens: [
-            { id: 'p26_sp1_t1', math: '① 认准符号：相同项的平方 $-$ 相反项的平方', appearAt: 1.4, dur: 0.40 },
-            { id: 'p26_sp1_t2', math: '② 系数同平方：$(5x)^{2} = 25x^{2}$（切勿漏平方写成 $5x^{2}$）', appearAt: 12.8, dur: 0.40 },
-            { id: 'p26_sp1_t3', math: '③ 减号加括号：$-(36x^{2} - 25y^{2}) = -36x^{2} + 25y^{2}$', appearAt: 18.8, dur: 0.45 }
+            { id: 'p26_sp1_t1', math: '公式：$(A + B)(A - B) = A^{2} - B^{2}$', appearAt: 1.5, dur: 0.40 },
+            { id: 'p26_sp1_t2', math: '口诀：相同项的平方 $-$ 相反项的平方', appearAt: 4.0, dur: 0.40 },
+            { id: 'p26_sp1_t3', math: '注意：$(a^{2})^{2} = a^{2 \\times 2} = a^{4}$，$4^{2} = 16$', appearAt: 16.5, dur: 0.45 }
           ],
-          note: '面对形如 $(-a + 2)(-a - 2)$ 的式子，相同项是 $-a$，相反项是 $2$，结果为 $(-a)^{2} - 2^{2} = a^{2} - 4$'
+          note: '切勿逐项硬乘展开，优先组合“一加一减”的平方差因式可实现连环化简'
         }
       ],
 
       tokenHighlights: [
-        { tokenId: 'p26_r0_step1', tStart: 1.6, tEnd: 5.8, color: 'teal' },
-        { tokenId: 'p26_r1_res', tStart: 6.5, tEnd: 11.8, color: 'amber' },
-        { tokenId: 'p26_r2_exp', tStart: 14.2, tEnd: 18.4, color: 'amber' },
-        { tokenId: 'p26_r3_rem', tStart: 19.1, tEnd: 24.4, color: 'rose' },
-        { tokenId: 'p26_r3_conc', tStart: 25.0, tEnd: 29.5, color: 'teal' }
+        { tokenId: 'p26_r0_1', tStart: 0.8, tEnd: 7.8, color: 'teal' },
+        { tokenId: 'p26_r1_sq1', tStart: 2.6, tEnd: 15.8, color: 'amber' },
+        { tokenId: 'p26_r2_sq2', tStart: 10.1, tEnd: 16.8, color: 'teal' },
+        { tokenId: 'p26_r3_conc', tStart: 17.1, tEnd: 23.5, color: 'teal' }
       ],
 
       svgAnnotations: [
         {
-          id: 'p26_svg_s2',
+          id: 'p26_svg_s1',
           type: 'arrow',
-          fromToken: 'p26_r0_step1',
-          toToken: 'p26_r1_res',
-          label: '再次触发平方差公式',
+          fromToken: 'p26_r0_1',
+          toToken: 'p26_r1_sq1',
+          label: '平方差公式',
           color: '#0F766E',
-          curveOffset: 28,
-          tStart: 6.2,
-          tDrawEnd: 7.0,
-          tFadeStart: 11.2,
-          tEnd: 11.8
+          curveOffset: 26,
+          tStart: 2.2,
+          tDrawEnd: 3.0,
+          tFadeStart: 7.2,
+          tEnd: 7.8
         },
         {
-          id: 'p26_svg_s4',
+          id: 'p26_svg_s2',
           type: 'arrow',
-          fromToken: 'p26_r2_exp',
-          toToken: 'p26_r3_rem',
-          label: '减号去括号：$-25y^{2} \\to +25y^{2}$',
-          color: '#BE123C',
+          fromToken: 'p26_r1_sq1',
+          toToken: 'p26_r2_sq2',
+          label: '连环再套平方差',
+          color: '#D97706',
           curveOffset: -26,
-          tStart: 18.8,
-          tDrawEnd: 19.6,
-          tFadeStart: 23.8,
-          tEnd: 24.4
+          tStart: 9.6,
+          tDrawEnd: 10.4,
+          tFadeStart: 15.8,
+          tEnd: 16.4
         }
       ],
 
       subtitles: [
-        { tStart: 0.0, tEnd: 6.0, text: '先看第(1)题：前两个因式 $(a + 2)(a - 2)$ 构成平方差，相同项为 $a$、相反项为 $2$，相乘得 $(a^{2} - 4)$。', focusToken: 'p26_r0_step1' },
-        { tStart: 6.0, tEnd: 12.0, text: '接着 $(a^{2} - 4)$ 与 $(a^{2} + 4)$ 再次构成平方差，连续套用公式得 $(a^{2})^{2} - 4^{2} = a^{4} - 16$。', focusToken: 'p26_r1_res' },
-        { tStart: 12.0, tEnd: 18.5, text: '再看第(2)题：两组乘积分别套用平方差公式，注意把系数 $5$ 和 $6$ 一并平方，且减号后面的结果必须先加括号！', focusToken: 'p26_r2_exp' },
-        { tStart: 18.5, tEnd: 24.5, text: '去括号时，括号前是减号，所以 $-25y^{2}$ 变号为 $+25y^{2}$，得 $25x^{2} - 36y^{2} - 36x^{2} + 25y^{2}$。', focusToken: 'p26_r3_rem' },
-        { tStart: 24.5, tEnd: 30.0, text: '最后合并同类项，得出最简结果 $-11x^{2} - 11y^{2}$！', focusToken: 'p26_r3_conc' }
+        { tStart: 0.0, tEnd: 8.0, text: '第一步处理前两项：$(a + 2)(a - 2)$ 中 $a$ 是相同项、$2$ 与 $-2$ 是相反项，套用平方差公式得 $a^{2} - 4$。', focusToken: 'p26_r1_sq1' },
+        { tStart: 8.0, tEnd: 16.0, text: '第二步识别连环结构：$(a^{2} - 4)(a^{2} + 4)$ 中 $a^{2}$ 是相同项、$-4$ 与 $+4$ 是相反项，再次套用平方差公式得 $(a^{2})^{2} - 4^{2}$。', focusToken: 'p26_r2_sq2' },
+        { tStart: 16.0, tEnd: 24.0, text: '第三步算出幂的乘方：$(a^{2})^{2} = a^{4}$，$4^{2} = 16$，最终结果为 $a^{4} - 16$！', focusToken: 'p26_r3_conc' }
       ],
 
       practices: {
         practice1: {
-          title: '练习一：识别含负号项的平方差公式展开',
-          givenLabel: '已知整式乘法算式：',
-          givenFormula: '$(-a + 2)(-a - 2)$',
-          extractedLabel: '对比两括号内各项的符号：',
-          extractedFormula: '第一项均为 $-a$（符号相同），第二项为 $+2$ 与 $-2$（符号相反）',
-          questionText: '运用平方差公式“相同项的平方 $-$ 相反项的平方”展开，正确的结果是？',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '计算 $(x + 1)(x - 1)(x^{2} + 1)$ 的结果是（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $(-a)^{2} - 2^{2} = a^{2} - 4$', isCorrect: true },
-            { key: 'B', text: 'B. $2^{2} - a^{2} = 4 - a^{2}$', isCorrect: false },
-            { key: 'C', text: 'C. $-a^{2} - 4$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $x^{4} - 1$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $x^{4} + 1$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $x^{2} - 1$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！判断谁减谁只看符号，不看正负号本身：',
+            title: '回答正确！连续两次套用平方差公式：',
             calcLines: [
-              '相同项 $A = -a \\implies A^{2} = (-a)^{2} = a^{2}$',
-              '相反项 $B = 2 \\implies B^{2} = 2^{2} = 4 \\implies A^{2} - B^{2} = a^{2} - 4$'
+              '$(x + 1)(x - 1)(x^{2} + 1) = (x^{2} - 1)(x^{2} + 1) = x^{4} - 1$'
             ],
-            summary: '无论相同项前面带正号还是负号，平方之后都是正的被减项。'
+            summary: '前两项先套平方差，结果恰好与第三项再次构成平方差。'
           },
-          wrongTitle: '提示：请找出两个括号里符号完全相同的那一项',
-          wrongFeedback: '两个括号里 $-a$ 的符号相同（都是负号），所以相同项是 $-a$，它的平方 $(-a)^{2} = a^{2}$ 是被减数，请再试一次。'
+          wrongTitle: '提示：先算 $(x + 1)(x - 1) = x^{2} - 1$，再与 $(x^{2} + 1)$ 套平方差',
+          wrongFeedback: '$(x + 1)(x - 1)(x^{2} + 1) = (x^{2} - 1)(x^{2} + 1) = x^{4} - 1$。'
         },
         practice2: {
-          title: '练习二：利用平方差公式进行大数简便运算与整体求值',
-          givenLabel: '给出两个算式：',
-          givenFormula: '① $1186^{2} - 1185 \\times 1187$；② 已知 $3m + n = 6，3m - n = 4$，求 $9m^{2} - n^{2}$',
-          questionText: '在 ① 中将 $1185 \\times 1187$ 化为 $(1186 - 1)(1186 + 1)$ 后算得的结果是多少？在 ② 中 $9m^{2} - n^{2}$ 的值是多少？',
-          input1Prefix: '① 的结果 $=$',
-          input1Placeholder: '如 1',
-          input2Prefix: '，② $9m^{2} - n^{2} =$',
-          input2Placeholder: '如 24',
-          input2Suffix: '',
-          expectedX: '1',
-          expectedMin: '24',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '若 $(m + 3)(m - 3)(m^{2} + 9) = m^{4} - c$，则 $c =$ ______．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '$c =$',
+          input1Placeholder: '如 81',
+          input1Suffix: '',
+          expectedX: '81',
+          expectedMin: '',
           allowOrderSwap: false,
-          correctFeedback: '① 的结果为 $1$，② $9m^{2} - n^{2} = 24$。',
-          correctDetail: '① $1186^{2} - (1186^{2} - 1^{2}) = 1186^{2} - 1186^{2} + 1 = 1$；② $9m^{2} - n^{2} = (3m + n)(3m - n) = 6 \\times 4 = 24$。',
-          wrongFeedback: '① 注意去括号 $1186^{2} - (1186^{2} - 1) = +1$；② 利用 $9m^{2} - n^{2} = (3m + n)(3m - n)$ 将 $6$ 和 $4$ 相乘。',
+          correctFeedback: '$c = 81$。',
+          correctDetail: '$(m^{2} - 9)(m^{2} + 9) = m^{4} - 9^{2} = m^{4} - 81$，故 $c = 81$。',
+          wrongFeedback: '先得 $(m^{2} - 9)(m^{2} + 9)$，再套平方差得 $m^{4} - 9^{2} = m^{4} - 81$。',
           specificWrongHints: [
             {
               checkType: 'firstVal',
-              val: '-1',
-              hint: '注意是 $1186^{2} - (1186^{2} - 1)$，去括号后 $-(-1) = +1$ 而不是 $-1$。'
+              val: '9',
+              hint: '第二次套平方差时常数项为 $9^{2} = 81$ 而不是 $9$。'
             }
           ]
         }
@@ -6775,57 +6907,57 @@
 
       practices: {
         practice1: {
-          title: '练习一：负单项式乘以多项式的符号与指数法则',
-          givenLabel: '已知整式乘法算式：',
-          givenFormula: '$(-3x) \\cdot (2x^{2} - 5x - 1)$',
-          extractedLabel: '按乘法分配律拆解：',
-          extractedFormula: '$(-3x) \\cdot 2x^{2} + (-3x) \\cdot (-5x) + (-3x) \\cdot (-1)$',
-          questionText: '逐项计算系数相乘与同底数幂指数相加，正确的展开结果是？',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '计算 $x(x + 2) - (x - 1)(x + 3)$ 的结果是（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $-6x^{3} + 15x^{2} + 3x$', isCorrect: true },
-            { key: 'B', text: 'B. $-6x^{3} - 15x^{2} - 3x$', isCorrect: false },
-            { key: 'C', text: 'C. $-6x^{2} + 15x^{2} - 1$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $3$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $-3$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $4x + 3$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！负单项式乘进括号时，括号内每一项符号都要改变：',
+            title: '回答正确！后半部分先展开在括号内，再去括号合并：',
             calcLines: [
-              '$(-3x) \\cdot 2x^{2} = -6x^{1+2} = -6x^{3}$',
-              '$(-3x) \\cdot (-5x) = +15x^{1+1} = +15x^{2}$',
-              '$(-3x) \\cdot (-1) = +3x$（切勿漏乘末项 $-1$）'
+              '原式 $= (x^{2} + 2x) - (x^{2} + 2x - 3)$',
+              '$= x^{2} + 2x - x^{2} - 2x + 3 = 3$'
             ],
-            summary: '单项式乘三项式，展开后必定也是三项。'
+            summary: '减号后面的多项式乘法结果必须先用括号括起来。'
           },
-          wrongTitle: '提示：请检查负负得正与末项是否漏乘',
-          wrongFeedback: '$(-3x)$ 乘以 $-5x$ 和 $-1$ 时同号相乘得正（$+15x^{2}$ 和 $+3x$），且 $x \\cdot x^{2} = x^{3}$，请再试一次。'
+          wrongTitle: '提示：先算 $(x - 1)(x + 3) = x^{2} + 2x - 3$ 并保留括号，再去括号变号',
+          wrongFeedback: '$(x^{2} + 2x) - (x^{2} + 2x - 3) = 3$。'
         },
         practice2: {
-          title: '练习二：多项式乘多项式展开合并',
-          givenLabel: '已知二项式乘二项式：',
-          givenFormula: '$(2x - y)(x - 2y)$',
-          questionText: '将其展开并合并中间同类项，化为 $2x^{2} + kxy + my^{2}$ 的形式，系数 $k$ 和 $m$ 分别是多少？',
-          input1Prefix: '$xy$ 项系数 $k =$',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '若 $(2x - y)(x - 2y) = 2x^{2} + kxy + my^{2}$，则 $k =$ ______，$m =$ ______．',
+          questionText: '',
+          input1Prefix: '$k =$',
           input1Placeholder: '如 -5',
-          input2Prefix: '，$y^{2}$ 项系数 $m =$',
+          input2Prefix: '，$m =$',
           input2Placeholder: '如 2',
           input2Suffix: '',
           expectedX: '-5',
           expectedMin: '2',
           allowOrderSwap: false,
-          correctFeedback: '展开合并结果为 $2x^{2} - 5xy + 2y^{2}$（$k = -5$，$m = 2$）。',
-          correctDetail: '$(2x - y)(x - 2y) = 2x^{2} - 4xy - xy + 2y^{2} = 2x^{2} - 5xy + 2y^{2}$，故 $k = -5，m = 2$。',
-          wrongFeedback: '逐项相乘得 $2x^{2} - 4xy - xy + 2y^{2}$，合并中间两项 $(-4 - 1)xy = -5xy$，末项 $(-y) \\cdot (-2y) = +2y^{2}$。',
-          specificWrongHints: [
-            {
-              checkType: 'firstVal',
-              val: '-3',
-              hint: '注意中间两项是 $-4xy$ 和 $-xy$（同为负号），相加应为 $(-4) + (-1) = -5$ 而不是 $-3$。'
-            },
-            {
-              checkType: 'secondVal',
-              val: '-2',
-              hint: '注意末项是 $(-y) \\times (-2y)$，同号相乘得正，系数 $m = 2$ 而不是 $-2$。'
-            }
-          ]
+          correctFeedback: '$k = -5$，$m = 2$。',
+          correctDetail: '$(2x - y)(x - 2y) = 2x^{2} - 4xy - xy + 2y^{2} = 2x^{2} - 5xy + 2y^{2}$，故 $k = -5$，$m = 2$。',
+          wrongFeedback: '逐项相乘展开得 $2x^{2} - 4xy - xy + 2y^{2}$，合并同类项即可。',
+          specificWrongHints: []
         }
       }
     },
@@ -6998,51 +7130,56 @@
 
       practices: {
         practice1: {
-          title: '练习一：判断多层括号与负因数去括号正误',
-          givenLabel: '已知整式：',
-          givenFormula: '$3x^{2} - [7x - (4x - 3) - 2x^{2}]$',
-          extractedLabel: '先去内层小括号：',
-          extractedFormula: '$3x^{2} - [7x - 4x + 3 - 2x^{2}] = 3x^{2} - [3x + 3 - 2x^{2}]$',
-          questionText: '下一步去掉中括号并合并同类项，正确的结果是？',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '化简 $(2x^{2} - 3x + 1) - 2(x^{2} - x + 2)$，当 $x = -2$ 时的值为（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $5x^{2} - 3x - 3$', isCorrect: true },
-            { key: 'B', text: 'B. $x^{2} - 3x + 3$', isCorrect: false },
-            { key: 'C', text: 'C. $5x^{2} - 3x + 3$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $-1$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $-5$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $5$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！中括号前是负号，括号内三项全部变号：',
+            title: '回答正确！先去括号合并化简，再代入 $x = -2$：',
             calcLines: [
-              '$3x^{2} - (3x + 3 - 2x^{2}) = 3x^{2} - 3x - 3 + 2x^{2}$',
-              '合并同类项得 $(3+2)x^{2} - 3x - 3 = 5x^{2} - 3x - 3$'
+              '原式 $= 2x^{2} - 3x + 1 - 2x^{2} + 2x - 4 = -x - 3$',
+              '当 $x = -2$ 时，$-(-2) - 3 = 2 - 3 = -1$'
             ],
-            summary: '多层括号由内向外逐层去括号，且每去一层括号先合并括号内同类项最不易出错。'
+            summary: '先化简再代入可大幅减少计算量。'
           },
-          wrongTitle: '提示：请检查中括号前负号对 +3 和 -2x² 的变号',
-          wrongFeedback: '中括号前是“$-$”号，去掉中括号后 $+3$ 变为 $-3$，$-2x^{2}$ 变为 $+2x^{2}$，再与 $3x^{2}$ 合并得 $5x^{2}$，请再试一次。'
+          wrongTitle: '提示：先去括号化简为 $-x - 3$，再代入 $x = -2$',
+          wrongFeedback: '去括号合并得 $-x - 3$，代入 $x = -2$ 得 $-(-2) - 3 = -1$。'
         },
         practice2: {
-          title: '练习二：先化简再直接代入求值',
-          givenLabel: '已知整式：',
-          givenFormula: '$(3x^{2} - 2xy) - 2(x^{2} - xy + 1)$',
-          questionText: '化简为 $ax^{2} - 2$ 的最简形式后，系数 $a$ 是多少？当 $x = -2$ 时该整式的值是多少？',
-          input1Prefix: '系数 $a =$',
-          input1Placeholder: '如 1',
-          input2Prefix: '，当 $x = -2$ 时的值 $=$',
-          input2Placeholder: '如 2',
-          input2Suffix: '',
-          expectedX: '1',
-          expectedMin: '2',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '当 $x = -2$ 时，整式 $(3x^{2} - 2xy) - 2(x^{2} - xy + 1)$ 的值为 ______．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '原式 $=$',
+          input1Placeholder: '如 2',
+          input1Suffix: '',
+          expectedX: '2',
+          expectedMin: '',
           allowOrderSwap: false,
-          correctFeedback: '化简为 $x^{2} - 2$（$a = 1$），当 $x = -2$ 时值为 $2$。',
-          correctDetail: '去括号得 $3x^{2} - 2xy - 2x^{2} + 2xy - 2 = x^{2} - 2$（$a=1$）；代入 $x=-2$ 得 $(-2)^{2} - 2 = 4 - 2 = 2$。',
-          wrongFeedback: '去括号注意 $-2(-xy)=+2xy$（与 $-2xy$ 抵消），$-2\\times 1 = -2$，化简为 $x^{2} - 2$ 再代入 $x=-2$。',
-          specificWrongHints: [
-            {
-              checkType: 'secondVal',
-              val: '-6',
-              hint: '注意负数代入乘方要加括号：$(-2)^{2} = +4$，故 $4 - 2 = 2$ 而不是 $-4 - 2 = -6$。'
-            }
-          ]
+          correctFeedback: '原式 $= 2$。',
+          correctDetail: '先化简：$3x^{2} - 2xy - 2x^{2} + 2xy - 2 = x^{2} - 2$；当 $x = -2$ 时，$(-2)^{2} - 2 = 2$。',
+          wrongFeedback: '先去括号合并得 $x^{2} - 2$，再代入 $x = -2$ 得 $(-2)^{2} - 2 = 2$。',
+          specificWrongHints: []
         }
       }
     },
@@ -7207,52 +7344,56 @@
 
       practices: {
         practice1: {
-          title: '练习一：辨析等式的性质 2 中“除数不为 0”的前提',
-          givenLabel: '给出四个等式变形命题：',
-          givenFormula: '① 若 $a = b$，则 $\\frac{a}{c} = \\frac{b}{c}$；② 若 $a^{2} = 2a$，则 $a = 2$；③ 若 $x = y$，则 $\\frac{x}{a^{2} + 1} = \\frac{y}{a^{2} + 1}$',
-          extractedLabel: '核对除数是否可能为 0：',
-          extractedFormula: '① 中 $c$ 可能为 $0$；② 中 $a$ 可能为 $0$；③ 中 $a^{2} + 1 \\ge 1 \\neq 0$',
-          questionText: '其中一定成立的等式变形是哪一个？',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '用等式的性质解方程 $4x - 5 = 2x + 3$，第一步两边同时减 $2x$ 并加 $5$ 得（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. 只有 ③（因为对任意实数 $a$，分母 $a^{2} + 1 \\ge 1 \\neq 0$ 恒成立）', isCorrect: true },
-            { key: 'B', text: 'B. ①、②、③ 都一定成立', isCorrect: false },
-            { key: 'C', text: 'C. ② 和 ③ 一定成立', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $2x = 8$，解得 $x = 4$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $6x = 8$，解得 $x = \\frac{4}{3}$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $2x = -2$，解得 $x = -1$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！在等式两边同除以一个式子前，必须确认它绝不为 0：',
+            title: '回答正确！',
             calcLines: [
-              '① 未说明 $c \\neq 0$，当 $c = 0$ 时无意义',
-              '② 当 $a = 0$ 时 $a^{2} = 2a$ 也成立，不能直接两边同除以 $a$',
-              '③ 因为 $a^{2} \\ge 0 \\implies a^{2} + 1 \\ge 1 \\gt 0$，除数恒不为 $0$ ✓'
+              '两边同减 $2x$ 并加 $5$：$4x - 2x = 3 + 5 \\implies 2x = 8$',
+              '两边同除以 $2$：$x = 4$'
             ],
-            summary: '凡是两边同除以单独的字母或一次式，未注明不为 $0$ 的一律判定为错误。'
+            summary: '等式两边同时加减同一个数或式子、同除以同一个不为 $0$ 的数，等式仍成立。'
           },
-          wrongTitle: '提示：请检查每个变形中的除数有没有可能等于 0',
-          wrongFeedback: '在 ① 和 ② 中，除数 $c$ 和 $a$ 都有可能等于 $0$；只有 ③ 的除数 $a^{2} + 1 \\ge 1$ 永远不为 $0$，请再试一次。'
+          wrongTitle: '提示：两边同时减 $2x$ 再加 $5$',
+          wrongFeedback: '$4x - 2x = 2x$，$3 + 5 = 8$，故 $2x = 8$，两边同除以 $2$ 得 $x = 4$。'
         },
         practice2: {
-          title: '练习二：由一元一次方程的定义求参数',
-          givenLabel: '已知条件：',
-          givenFormula: '关于 $x$ 的方程 $(m + 1)x^{|m|} + 3 = 0$ 是一元一次方程',
-          questionText: '由未知数次数 $|m| = 1$ 且一次项系数 $m + 1 \\neq 0$，解出的参数 $m$ 的值以及 $m - 1$ 的值分别是多少？',
-          input1Prefix: '$m =$',
-          input1Placeholder: '如 1',
-          input2Prefix: '，$m - 1 =$',
-          input2Placeholder: '如 0',
-          input2Suffix: '',
-          expectedX: '1',
-          expectedMin: '0',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '利用等式的性质解方程：$7x - 9 = 4x + 3$，则 $x =$ ______．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '$x =$',
+          input1Placeholder: '如 4',
+          input1Suffix: '',
+          expectedX: '4',
+          expectedMin: '',
           allowOrderSwap: false,
-          correctFeedback: '$m = 1$，$m - 1 = 0$。',
-          correctDetail: '由 $|m| = 1$ 得 $m = \\pm 1$；又因一次项系数 $m + 1 \\neq 0 \\implies m \\neq -1$，故 $m = 1$，从而 $m - 1 = 0$。',
-          wrongFeedback: '由 $|m| = 1$ 得 $m = 1$ 或 $-1$，结合一次项系数 $m + 1 \\neq 0$ 舍去 $m = -1$。',
-          specificWrongHints: [
-            {
-              checkType: 'firstVal',
-              val: '-1',
-              hint: '若 $m = -1$，则一次项系数 $m + 1 = 0$，未知数 $x$ 消失，不再是一元一次方程，必须舍去 $-1$ 取 $m = 1$。'
-            }
-          ]
+          correctFeedback: '$x = 4$。',
+          correctDetail: '两边同减 $4x$ 再加 $9$ 得 $3x = 12$，两边同除以 $3$ 得 $x = 4$。',
+          wrongFeedback: '先由等式性质 1 化为 $3x = 12$，再由等式性质 2 两边同除以 $3$。',
+          specificWrongHints: []
         }
       }
     }
@@ -7262,95 +7403,76 @@
     // =========================================================================
     P30: {
       procedureId: 'P30',
-      title: '运用同底数幂乘法、幂的乘方与积的乘方法则运算',
-      exampleTitle: '计算：(1) $(-2a^{2})^{3} + 3a^{3} \\cdot a^{3}$；(2) 已知 $a^{m} = 2$，$a^{n} = 3$，求 $a^{2m+n}$ 的值',
-      exampleFormula: '正向：$(ab)^{n} = a^{n}b^{n}$，$a^{m}\\cdot a^{n} = a^{m+n}$；逆向：$a^{2m+n} = (a^{m})^{2}\\cdot a^{n}$',
-      totalDuration: 30.0,
-      scratchpadIdleHint: '旁白草稿演算区（同步展示幂的三大运算法则正逆向对照与“数字系数同步乘方”易错提醒）',
-      practiceSectionTitle: '幂的运算正逆向法则跟做练习',
-      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握同底数幂乘法、积的乘方与逆用幂法则求值',
+      title: '综合运用幂的运算法则进行计算与逆向求值',
+      exampleTitle: '已知 $a^{m} = 2$，$a^{n} = 3$，则 $a^{2m+n} =$ ______',
+      exampleFormula: '逆用同底数幂乘法 $a^{x+y} = a^{x} \\cdot a^{y}$ 与幂的乘方 $a^{2m} = (a^{m})^{2}$',
+      totalDuration: 24.0,
+      scratchpadIdleHint: '',
+      practiceSectionTitle: '幂的运算法则逆向求值',
+      practiceSectionSub: '',
 
       steps: [
         {
           step: 1,
-          name: '第(1)题先算积的乘方与幂的乘方',
+          name: '逆用同底数幂乘法拆分指数和',
           tStart: 0.0,
-          tEnd: 6.2,
-          explanation: '对 $(-2a^{2})^{3}$ 运用积的乘方，把数字系数 $-2$ 与字母幂 $a^{2}$ 分别立方：$(-2)^{3} \\cdot (a^{2})^{3} = -8a^{6}$（指数相乘 $2 \\times 3 = 6$）。'
+          tEnd: 8.0,
+          explanation: '根据同底数幂乘法法则的逆用 $a^{x+y} = a^{x} \\cdot a^{y}$，将 $a^{2m+n}$ 拆分为 $a^{2m} \\cdot a^{n}$。'
         },
         {
           step: 2,
-          name: '第(1)题再算同底数幂乘法并合并同类项',
-          tStart: 6.2,
-          tEnd: 12.5,
-          explanation: '对 $3a^{3} \\cdot a^{3}$ 运用同底数幂乘法，底数不变指数相加得 $3a^{3+3} = 3a^{6}$；最后合并同类项 $-8a^{6} + 3a^{6} = -5a^{6}$（只合并系数，指数不变）。'
+          name: '逆用幂的乘方构造已知整体 $a^{m}$',
+          tStart: 8.0,
+          tEnd: 16.0,
+          explanation: '根据幂的乘方法则逆用 $a^{2m} = (a^{m})^{2}$，将算式改写为 $(a^{m})^{2} \\cdot a^{n}$。'
         },
         {
           step: 3,
-          name: '第(2)题逆用同底数幂乘法拆解指数加法',
-          tStart: 12.5,
-          tEnd: 18.5,
-          explanation: '观察目标 $a^{2m+n}$ 的指数含有加法 $2m + n$，逆用同底数幂乘法法则 $a^{p+q} = a^{p} \\cdot a^{q}$，拆分为 $a^{2m} \\cdot a^{n}$。'
-        },
-        {
-          step: 4,
-          name: '第(2)题逆用幂的乘方构造已知底数 $a^{m}$',
-          tStart: 18.5,
-          tEnd: 24.5,
-          explanation: '对 $a^{2m}$ 逆用幂的乘方法则 $a^{km} = (a^{m})^{k}$，改写为 $(a^{m})^{2}$，于是 $a^{2m+n} = (a^{m})^{2} \\cdot a^{n}$。'
-        },
-        {
-          step: 5,
-          name: '整体代入 $a^{m} = 2$，$a^{n} = 3$ 算出结果',
-          tStart: 24.5,
-          tEnd: 30.0,
-          explanation: '将已知 $a^{m} = 2$，$a^{n} = 3$ 整体代入得 $2^{2} \\times 3 = 4 \\times 3 = 12$。'
+          name: '整体代入 $a^{m} = 2$、$a^{n} = 3$ 计算结果',
+          tStart: 16.0,
+          tEnd: 24.0,
+          explanation: '代入已知值计算：$2^{2} \\times 3 = 4 \\times 3 = 12$。'
         }
       ],
 
       microBeats: [
-        { time: 0.8, step: 1, label: '1.1 算 $(-2a^{2})^{3} = (-2)^{3} \\cdot (a^{2})^{3} = -8a^{6}$' },
-        { time: 7.5, step: 2, label: '2.1 算 $3a^{3} \\cdot a^{3} = 3a^{6}$ 并合并得 $-5a^{6}$' },
-        { time: 14.0, step: 3, label: '3.1 逆用同底数幂乘法拆为 $a^{2m} \\cdot a^{n}$' },
-        { time: 20.0, step: 4, label: '4.1 逆用幂的乘方化为 $(a^{m})^{2} \\cdot a^{n}$' },
-        { time: 26.0, step: 5, label: '5.1 代入 $2^{2} \\times 3 = 12$' }
+        { time: 1.0, step: 1, label: '1.1 逆用同底数幂乘法拆为 $a^{2m} \\cdot a^{n}$' },
+        { time: 9.5, step: 2, label: '2.1 逆用幂的乘方化为 $(a^{m})^{2} \\cdot a^{n}$' },
+        { time: 17.5, step: 3, label: '3.1 代入算得 $2^{2} \\times 3 = 12$' }
       ],
 
       boardRows: [
         {
           rowId: 'p30_row_0',
-          stepBadge: '第(1)题 · 积的乘方与幂的乘方',
+          stepBadge: '已知与目标',
           appearAt: 0.0,
           tokens: [
-            { id: 'p30_r0_orig', math: '(1) $(-2a^{2})^{3} + 3a^{3} \\cdot a^{3}$', appearAt: 0.0, dur: 0.01 },
-            { id: 'p30_r0_s1', math: '$= (-2)^{3}(a^{2})^{3} + 3a^{3+3}$', appearAt: 1.6, dur: 0.45 }
+            { id: 'p30_r0_cond', math: '已知 $a^{m} = 2$，$a^{n} = 3$，求 $a^{2m+n}$', appearAt: 0.0, dur: 0.01 }
           ]
         },
         {
           rowId: 'p30_row_1',
-          stepBadge: '第(1)题 · 合并同类项',
-          appearAt: 6.4,
+          stepBadge: '第 1 步 · 拆指数和',
+          appearAt: 2.5,
           tokens: [
-            { id: 'p30_r1_s2', math: '$= -8a^{6} + 3a^{6}$', appearAt: 6.5, dur: 0.45 },
-            { id: 'p30_r1_res', math: '$= -5a^{6}$', appearAt: 8.5, dur: 0.45 }
+            { id: 'p30_r1_split', math: '$a^{2m+n} = a^{2m} \\cdot a^{n}$', appearAt: 2.6, dur: 0.45 }
           ]
         },
         {
           rowId: 'p30_row_2',
-          stepBadge: '第(2)题 · 逆用幂法则拆解',
-          appearAt: 12.8,
+          stepBadge: '第 2 步 · 拆指数积',
+          appearAt: 9.5,
           tokens: [
-            { id: 'p30_r2_split', math: '(2) $a^{2m+n} = a^{2m} \\cdot a^{n}$', appearAt: 12.9, dur: 0.45 },
-            { id: 'p30_r2_pow', math: '$= (a^{m})^{2} \\cdot a^{n}$', appearAt: 18.8, dur: 0.45 }
+            { id: 'p30_r2_pow', math: '$= (a^{m})^{2} \\cdot a^{n}$', appearAt: 9.6, dur: 0.45 }
           ]
         },
         {
           rowId: 'p30_row_3',
-          stepBadge: '最终结论',
-          appearAt: 24.8,
+          stepBadge: '第 3 步 · 代入求值',
+          appearAt: 17.0,
           isConclusion: true,
           tokens: [
-            { id: 'p30_r3_conc', math: '$= 2^{2} \\times 3 = 4 \\times 3 = 12$。', appearAt: 24.9, dur: 0.60 }
+            { id: 'p30_r3_conc', math: '$= 2^{2} \\times 3 = 4 \\times 3 = 12$。', appearAt: 17.1, dur: 0.60 }
           ]
         }
       ],
@@ -7358,116 +7480,111 @@
       scratchpadCards: [
         {
           id: 'p30_sp_1',
-          title: '核心对照 · 幂的三大法则正逆向与同类项区分',
+          title: '核心法则 · 幂运算逆用口诀',
           showStart: 0.8,
-          showEnd: 29.8,
+          showEnd: 23.8,
           tokens: [
-            { id: 'p30_sp1_t1', math: '① 同底数幂乘法：$a^{m} \\cdot a^{n} = a^{m+n}$（指数相加）', appearAt: 1.4, dur: 0.40 },
-            { id: 'p30_sp1_t2', math: '② 幂的乘方：$(a^{m})^{n} = a^{mn}$（指数相乘）', appearAt: 2.6, dur: 0.40 },
-            { id: 'p30_sp1_t3', math: '③ 积的乘方：$(ab)^{n} = a^{n}b^{n}$（每个因式都乘方）', appearAt: 3.8, dur: 0.40 },
-            { id: 'p30_sp1_t4', math: '④ 合并同类项：$-8a^{6} + 3a^{6} = -5a^{6}$（指数绝不变）', appearAt: 7.4, dur: 0.40 }
+            { id: 'p30_sp1_t1', math: '① 指数相加 $\\to$ 拆成同底数幂相乘：$a^{x+y} = a^{x} \\cdot a^{y}$', appearAt: 2.0, dur: 0.40 },
+            { id: 'p30_sp1_t2', math: '② 指数相乘 $\\to$ 拆成幂的乘方：$a^{km} = (a^{m})^{k}$', appearAt: 9.2, dur: 0.40 },
+            { id: 'p30_sp1_t3', math: '③ 整体代入：$2^{2} \\times 3 = 12$（不是 $2 \\times 2 + 3$）', appearAt: 17.0, dur: 0.45 }
           ],
-          note: '高频易错：计算 $(-2a^{2})^{3}$ 时，数字系数 $-2$ 也要立方得 $-8$，切勿写成 $-2a^{6}$ 或 $-6a^{6}$'
+          note: '切记指数相加对应的是底数相乘，不是把 $a^{m}$ 与 $a^{n}$ 相加'
         }
       ],
 
       tokenHighlights: [
-        { tokenId: 'p30_r0_s1', tStart: 1.6, tEnd: 6.0, color: 'amber' },
-        { tokenId: 'p30_r1_res', tStart: 8.5, tEnd: 12.4, color: 'teal' },
-        { tokenId: 'p30_r2_split', tStart: 12.9, tEnd: 18.4, color: 'teal' },
-        { tokenId: 'p30_r2_pow', tStart: 18.8, tEnd: 24.4, color: 'amber' }
+        { tokenId: 'p30_r1_split', tStart: 2.6, tEnd: 7.8, color: 'teal' },
+        { tokenId: 'p30_r2_pow', tStart: 9.6, tEnd: 15.8, color: 'amber' },
+        { tokenId: 'p30_r3_conc', tStart: 17.1, tEnd: 23.5, color: 'teal' }
       ],
 
       svgAnnotations: [
         {
           id: 'p30_svg_s1',
           type: 'arrow',
-          fromToken: 'p30_r0_orig',
-          toToken: 'p30_r0_s1',
-          label: '$-2$ 与 $a^{2}$ 分别立方',
-          color: '#D97706',
-          curveOffset: 28,
-          tStart: 1.8,
-          tDrawEnd: 2.6,
-          tFadeStart: 5.4,
-          tEnd: 6.0
+          fromToken: 'p30_r1_split',
+          toToken: 'p30_r2_pow',
+          label: '$a^{2m} = (a^{m})^{2}$',
+          color: '#0F766E',
+          curveOffset: 26,
+          tStart: 9.0,
+          tDrawEnd: 9.8,
+          tFadeStart: 15.2,
+          tEnd: 15.8
         },
         {
-          id: 'p30_svg_s4',
+          id: 'p30_svg_s3',
           type: 'arrow',
-          fromToken: 'p30_r2_split',
-          toToken: 'p30_r2_pow',
-          label: '逆用幂的乘方 $a^{2m} = (a^{m})^{2}$',
-          color: '#0F766E',
+          fromToken: 'p30_r2_pow',
+          toToken: 'p30_r3_conc',
+          label: '代入 $a^{m}=2, a^{n}=3$',
+          color: '#D97706',
           curveOffset: -26,
-          tStart: 18.6,
-          tDrawEnd: 19.4,
-          tFadeStart: 23.8,
-          tEnd: 24.4
+          tStart: 16.6,
+          tDrawEnd: 17.4,
+          tFadeStart: 22.8,
+          tEnd: 23.5
         }
       ],
 
       subtitles: [
-        { tStart: 0.0, tEnd: 6.2, text: '看第(1)题第一步：先算 $(-2a^{2})^{3}$，数字系数 $-2$ 立方得 $-8$，字母幂 $(a^{2})^{3}$ 指数相乘得 $a^{6}$，结果为 $-8a^{6}$。', focusToken: 'p30_r0_s1' },
-        { tStart: 6.2, tEnd: 12.5, text: '第二步算同底数幂乘法 $3a^{3} \\cdot a^{3} = 3a^{6}$，再合并同类项 $-8a^{6} + 3a^{6} = -5a^{6}$（合并同类项时指数不变）。', focusToken: 'p30_r1_res' },
-        { tStart: 12.5, tEnd: 18.5, text: '看第(2)题第一步：指数 $2m + n$ 是加法，逆用同底数幂乘法拆分为 $a^{2m} \\cdot a^{n}$。', focusToken: 'p30_r2_split' },
-        { tStart: 18.5, tEnd: 24.5, text: '第二步对 $a^{2m}$ 逆用幂的乘方，写成 $(a^{m})^{2}$，得到 $(a^{m})^{2} \\cdot a^{n}$。', focusToken: 'p30_r2_pow' },
-        { tStart: 24.5, tEnd: 30.0, text: '最后把 $a^{m} = 2$，$a^{n} = 3$ 整体代入，算出 $2^{2} \\times 3 = 12$！', focusToken: 'p30_r3_conc' }
+        { tStart: 0.0, tEnd: 8.0, text: '第一步拆指数和：逆用同底数幂乘法法则，把 $a^{2m+n}$ 拆成 $a^{2m} \\cdot a^{n}$。', focusToken: 'p30_r1_split' },
+        { tStart: 8.0, tEnd: 16.0, text: '第二步拆指数积：逆用幂的乘方法则，把 $a^{2m}$ 改写成 $(a^{m})^{2}$，得到 $(a^{m})^{2} \\cdot a^{n}$。', focusToken: 'p30_r2_pow' },
+        { tStart: 16.0, tEnd: 24.0, text: '第三步代入求值：将 $a^{m} = 2$、$a^{n} = 3$ 代入得 $2^{2} \\times 3 = 12$！', focusToken: 'p30_r3_conc' }
       ],
 
       practices: {
         practice1: {
-          title: '练习一：辨析幂的运算与合并同类项',
-          givenLabel: '给出三个幂的运算式：',
-          givenFormula: '① $a^{2} \\cdot a^{3} = a^{6}$；② $(-3x^{2})^{2} = 9x^{4}$；③ $a^{3} + a^{3} = a^{6}$',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '已知 $x^{a} = 3$，$x^{b} = 2$，则 $x^{2a+b}$ 的值为（　　）',
           extractedLabel: '',
           extractedFormula: '',
-          questionText: '其中运算完全正确的是哪一个？',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. ② $(-3x^{2})^{2} = (-3)^{2} \\cdot (x^{2})^{2} = 9x^{4}$', isCorrect: true },
-            { key: 'B', text: 'B. ① $a^{2} \\cdot a^{3} = a^{6}$', isCorrect: false },
-            { key: 'C', text: 'C. ③ $a^{3} + a^{3} = a^{6}$', isCorrect: false }
-          ],
-          correctFeedback: {
-            title: '回答正确！准确区分“指数相加、指数相乘、指数不变”：',
-            calcLines: [
-              '① 同底数幂乘法指数相加：$a^{2} \\cdot a^{3} = a^{2+3} = a^{5}$',
-              '② 积的乘方：$(-3)^{2}(x^{2})^{2} = 9x^{4}$ ✓',
-              '③ 合并同类项指数不变：$a^{3} + a^{3} = 2a^{3}$'
-            ],
-            summary: '记住口诀：“同底乘，指相加；幂乘方，指相乘；同类加，指不变”。'
-          },
-          wrongTitle: '提示：请区分同底数幂乘法、幂的乘方与合并同类项的指数规则',
-          wrongFeedback: '同底数幂乘法是指数相加（$a^{2} \\cdot a^{3} = a^{5}$），合并同类项是指数不变（$a^{3} + a^{3} = 2a^{3}$），请再试一次。'
-        },
-        practice2: {
-          title: '练习二：逆用幂的运算法则求值',
-          givenLabel: '已知条件：',
-          givenFormula: '$x^{a} = 3，\\quad x^{b} = 2$',
-          questionText: '逆用幂的运算法则，分别求出 $x^{a+b}$ 和 $x^{2a+b}$ 的值是多少？',
-          input1Prefix: '$x^{a+b} =$',
-          input1Placeholder: '如 6',
-          input2Prefix: '，$x^{2a+b} =$',
-          input2Placeholder: '如 18',
-          input2Suffix: '',
-          expectedX: '6',
-          expectedMin: '18',
-          allowOrderSwap: false,
-          correctFeedback: '$x^{a+b} = 6$，$x^{2a+b} = 18$。',
-          correctDetail: '由 $x^{a+b} = x^{a} \\cdot x^{b} = 3 \\times 2 = 6$；$x^{2a+b} = (x^{a})^{2} \\cdot x^{b} = 3^{2} \\times 2 = 9 \\times 2 = 18$。',
-          wrongFeedback: '注意 $x^{a+b} = x^{a} \\cdot x^{b}$（相乘而非相加），$x^{2a+b} = (x^{a})^{2} \\cdot x^{b}$。',
-          specificWrongHints: [
             {
-              checkType: 'firstVal',
-              val: '5',
-              hint: '指数相加对应同底数幂相乘，因此 $x^{a+b} = 3 \\times 2 = 6$（不是 $3 + 2 = 5$）。'
+              key: 'A',
+              text: 'A. $18$',
+              isCorrect: true
             },
             {
-              checkType: 'secondVal',
-              val: '12',
-              hint: '注意 $x^{2a} = (x^{a})^{2} = 3^{2} = 9$（不是 $2 \\times 3 = 6$），故 $9 \\times 2 = 18$。'
+              key: 'B',
+              text: 'B. $12$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $11$',
+              isCorrect: false
             }
-          ]
+          ],
+          correctFeedback: {
+            title: '回答正确！逆用同底数幂乘法与幂的乘方：',
+            calcLines: [
+              '$x^{2a+b} = x^{2a} \\cdot x^{b} = (x^{a})^{2} \\cdot x^{b}$',
+              '$= 3^{2} \\times 2 = 18$'
+            ],
+            summary: '指数相加拆成相乘，指数相乘拆成幂的乘方。'
+          },
+          wrongTitle: '提示：先拆成 $(x^{a})^{2} \\cdot x^{b}$，再代入 $3^{2} 	imes 2$',
+          wrongFeedback: '$x^{2a+b} = (x^{a})^{2} \\cdot x^{b} = 3^{2} \\times 2 = 18$。'
+        },
+        practice2: {
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '已知 $a^{m} = 3$，$a^{n} = 5$，则 $a^{2m+n} =$ ______．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '$a^{2m+n} =$',
+          input1Placeholder: '如 45',
+          input1Suffix: '',
+          expectedX: '45',
+          expectedMin: '',
+          allowOrderSwap: false,
+          correctFeedback: '$a^{2m+n} = 45$。',
+          correctDetail: '$a^{2m+n} = (a^{m})^{2} \\cdot a^{n} = 3^{2} \\times 5 = 45$。',
+          wrongFeedback: '逆用幂运算拆为 $(a^{m})^{2} \\cdot a^{n}$，代入得 $9 \\times 5 = 45$。',
+          specificWrongHints: []
         }
       }
     },
@@ -7477,104 +7594,76 @@
     // =========================================================================
     P31: {
       procedureId: 'P31',
-      title: '判定分式有意义/值为0条件及运用分式基本性质约分通分',
-      exampleTitle: '已知关于 $x$ 的分式 $\\frac{x^{2}-1}{(x+1)(x-3)}$：(1) 何时无意义；(2) 何时有意义；(3) 何时值为 $0$',
-      exampleFormula: '有意义 $\\iff B \\neq 0$；值为 $0 \\iff A = 0$ 且 $B \\neq 0$（必先看原分母！）',
-      totalDuration: 30.0,
-      scratchpadIdleHint: '旁白草稿演算区（同步展示“有意义/无意义/值为0”判定准则与约分前保留原分母约束）',
-      practiceSectionTitle: '分式意义条件与约分通分跟做练习',
-      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握分式值为 0 的双重检验与因式分解约分',
+      title: '识别分式、判断分式有意义/值为0的条件与运用基本性质约分',
+      exampleTitle: '若分式 $\\frac{x^{2}-1}{(x+1)(x-3)}$ 的值为 $0$，则 $x =$ ______',
+      exampleFormula: '分式值为 $0$ $\\iff$ 分子 $= 0$ 且 分母 $\\neq 0$',
+      totalDuration: 24.0,
+      scratchpadIdleHint: '',
+      practiceSectionTitle: '分式值为 0 的条件',
+      practiceSectionSub: '',
 
       steps: [
         {
           step: 1,
-          name: '锁定原分式的分子 $A$ 与分母 $B$（切勿先约分）',
+          name: '令分子等于 0 求出候选值',
           tStart: 0.0,
-          tEnd: 5.8,
-          explanation: '识别原分式分子 $A = x^{2} - 1$，分母 $B = (x + 1)(x - 3)$。判定分式有/无意义或值为 $0$ 时，必须直接对原分母检验，绝不能先约去 $(x + 1)$！'
+          tEnd: 8.0,
+          explanation: '分式的值为 $0$，首先必须分子为 $0$：令 $x^{2} - 1 = 0$，解得候选值 $x = 1$ 或 $x = -1$。'
         },
         {
           step: 2,
-          name: '第(1)问：令原分母 $B = 0$ 求无意义条件',
-          tStart: 5.8,
-          tEnd: 11.8,
-          explanation: '分式无意义当且仅当分母等于 $0$：令 $(x + 1)(x - 3) = 0$，得 $x + 1 = 0$ 或 $x - 3 = 0$，即 $x = -1$ 或 $x = 3$。'
+          name: '列出分母不等于 0 的限制条件',
+          tStart: 8.0,
+          tEnd: 16.0,
+          explanation: '分式有意义的前提是分母不为 $0$：令 $(x + 1)(x - 3) \\neq 0$，得 $x \\neq -1$ 且 $x \\neq 3$。'
         },
         {
           step: 3,
-          name: '第(2)问：令原分母 $B \\neq 0$ 求有意义条件',
-          tStart: 11.8,
-          tEnd: 17.5,
-          explanation: '分式有意义当且仅当分母不为 $0$：$(x + 1)(x - 3) \\neq 0$，两个因式均不能为 $0$，即 $x \\neq -1$ 且 $x \\neq 3$（注意用“且”连接）。'
-        },
-        {
-          step: 4,
-          name: '第(3)问 ①：令分子 $A = 0$ 解出候选值',
-          tStart: 17.5,
-          tEnd: 23.5,
-          explanation: '要使分式值为 $0$，先令分子 $x^{2} - 1 = 0$，分解为 $(x + 1)(x - 1) = 0$，解得两个候选值 $x = 1$ 或 $x = -1$。'
-        },
-        {
-          step: 5,
-          name: '第(3)问 ②：联立分母 $B \\neq 0$ 舍去增根定解',
-          tStart: 23.5,
-          tEnd: 30.0,
-          explanation: '将候选值代入原分母检验：当 $x = -1$ 时分母为 $0$（分式无意义），必须舍去！当 $x = 1$ 时分母 $2 \\times (-2) = -4 \\neq 0$，故 $x = 1$。'
+          name: '排除使分母为 0 的增根定结论',
+          tStart: 16.0,
+          tEnd: 24.0,
+          explanation: '因为 $x = -1$ 会使分母 $(x + 1)(x - 3) = 0$，必须舍去；保留唯一解 $x = 1$。'
         }
       ],
 
       microBeats: [
-        { time: 0.8, step: 1, label: '1.1 锁定原分子 $x^{2} - 1$ 与原分母 $(x + 1)(x - 3)$' },
-        { time: 7.2, step: 2, label: '2.1 令分母 $= 0$ 得无意义条件 $x = -1$ 或 $x = 3$' },
-        { time: 13.2, step: 3, label: '3.1 令分母 $\\neq 0$ 得有意义条件 $x \\neq -1$ 且 $x \\neq 3$' },
-        { time: 19.0, step: 4, label: '4.1 令分子 $x^{2} - 1 = 0$ 得候选值 $x = \\pm 1$' },
-        { time: 25.5, step: 5, label: '5.1 结合 $x \\neq -1$ 舍去 $-1$，定解 $x = 1$' }
+        { time: 1.0, step: 1, label: '1.1 令分子 $x^{2} - 1 = 0$ 得 $x = \\pm 1$' },
+        { time: 9.5, step: 2, label: '2.1 令分母 $(x+1)(x-3) \\neq 0$ 得 $x \\neq -1$ 且 $x \\neq 3$' },
+        { time: 17.5, step: 3, label: '3.1 舍去 $x = -1$，定解 $x = 1$' }
       ],
 
       boardRows: [
         {
           rowId: 'p31_row_0',
-          stepBadge: '原分式',
+          stepBadge: '原题',
           appearAt: 0.0,
           tokens: [
-            { id: 'p31_r0_frac', math: '分式 $\\frac{x^{2} - 1}{(x + 1)(x - 3)}$：', appearAt: 0.0, dur: 0.01 },
-            { id: 'p31_r0_ab', math: '分子 $A = x^{2} - 1$，分母 $B = (x + 1)(x - 3)$', appearAt: 1.2, dur: 0.45 }
+            { id: 'p31_r0_1', math: '分式 $\\frac{x^{2}-1}{(x+1)(x-3)} = 0$', appearAt: 0.0, dur: 0.01 }
           ]
         },
         {
           rowId: 'p31_row_1',
-          stepBadge: '第(1)问 · 无意义条件',
-          appearAt: 6.2,
+          stepBadge: '第 1 步 · 分子等于 0',
+          appearAt: 2.5,
           tokens: [
-            { id: 'p31_r1_zero', math: '令 $(x + 1)(x - 3) = 0$', appearAt: 6.3, dur: 0.45 },
-            { id: 'p31_r1_res', math: '$\\implies x = -1$ 或 $x = 3$ 时无意义', appearAt: 7.8, dur: 0.45 }
+            { id: 'p31_r1_num', math: '由分子 $x^{2} - 1 = 0 \\implies x = 1$ 或 $x = -1$', appearAt: 2.6, dur: 0.45 }
           ]
         },
         {
           rowId: 'p31_row_2',
-          stepBadge: '第(2)问 · 有意义条件',
-          appearAt: 12.2,
+          stepBadge: '第 2 步 · 分母不为 0',
+          appearAt: 9.5,
           tokens: [
-            { id: 'p31_r2_neq', math: '令 $(x + 1)(x - 3) \\neq 0$', appearAt: 12.3, dur: 0.45 },
-            { id: 'p31_r2_res', math: '$\\implies x \\neq -1$ 且 $x \\neq 3$ 时有意义', appearAt: 13.8, dur: 0.45 }
+            { id: 'p31_r2_den', math: '且分母 $(x + 1)(x - 3) \\neq 0 \\implies x \\neq -1$ 且 $x \\neq 3$', appearAt: 9.6, dur: 0.45 }
           ]
         },
         {
           rowId: 'p31_row_3',
-          stepBadge: '第(3)问 · 分子为 0 且分母不为 0',
-          appearAt: 18.0,
-          tokens: [
-            { id: 'p31_r3_num', math: '由 $x^{2} - 1 = 0$ 得 $x = 1$ 或 $x = -1$；', appearAt: 18.1, dur: 0.45 },
-            { id: 'p31_r3_drop', math: '又 $x \\neq -1$ 且 $x \\neq 3 \\implies$ 舍去 $x = -1$', appearAt: 23.8, dur: 0.45 }
-          ]
-        },
-        {
-          rowId: 'p31_row_4',
-          stepBadge: '最终结论',
-          appearAt: 26.2,
+          stepBadge: '第 3 步 · 舍增根定解',
+          appearAt: 17.0,
           isConclusion: true,
           tokens: [
-            { id: 'p31_r4_conc', math: '$\\therefore$ 当 $x = 1$ 时，分式的值等于 $0$。', appearAt: 26.3, dur: 0.60 }
+            { id: 'p31_r3_conc', math: '舍去 $x = -1$，$\\therefore x = 1$。', appearAt: 17.1, dur: 0.60 }
           ]
         }
       ],
@@ -7582,107 +7671,115 @@
       scratchpadCards: [
         {
           id: 'p31_sp_1',
-          title: '核心法则 · 分式意义判定与约分基本性质',
+          title: '核心法则 · 分式值为 0 双重条件',
           showStart: 0.8,
-          showEnd: 29.8,
+          showEnd: 23.8,
           tokens: [
-            { id: 'p31_sp1_t1', math: '① 无意义：$B = 0$（连接词用“或”）', appearAt: 6.4, dur: 0.40 },
-            { id: 'p31_sp1_t2', math: '② 有意义：$B \\neq 0$（连接词用“且”）', appearAt: 12.6, dur: 0.40 },
-            { id: 'p31_sp1_t3', math: '③ 值为 $0$：$A = 0$ 且 $B \\neq 0$（必检原分母！）', appearAt: 18.4, dur: 0.40 },
-            { id: 'p31_sp1_t4', math: '④ 约分化简：$\\frac{(x+1)(x-1)}{(x+1)(x-3)} = \\frac{x-1}{x-3}$（先分解再约公因式）', appearAt: 24.4, dur: 0.45 }
+            { id: 'p31_sp1_t1', math: '① 分子 $= 0$：$x^{2} - 1 = 0 \\implies x = \\pm 1$', appearAt: 2.0, dur: 0.40 },
+            { id: 'p31_sp1_t2', math: '② 分母 $\\neq 0$：$(x+1)(x-3) \\neq 0 \\implies x \\neq -1, 3$', appearAt: 9.2, dur: 0.40 },
+            { id: 'p31_sp1_t3', math: '③ 必须同时满足两者，切勿忘记检验分母！', appearAt: 17.0, dur: 0.45 }
           ],
-          note: '切记：在有意义前提下才能约去公因式 $(x + 1)$，判定定义域和值为 0 时必须看未约分的原分母'
+          note: '若只看分子等于 0，很容易漏掉舍去 $x = -1$ 这一步'
         }
       ],
 
       tokenHighlights: [
-        { tokenId: 'p31_r0_ab', tStart: 1.2, tEnd: 5.6, color: 'teal' },
-        { tokenId: 'p31_r1_res', tStart: 7.8, tEnd: 11.6, color: 'amber' },
-        { tokenId: 'p31_r2_res', tStart: 13.8, tEnd: 17.4, color: 'teal' },
-        { tokenId: 'p31_r3_drop', tStart: 23.8, tEnd: 26.2, color: 'rose' }
+        { tokenId: 'p31_r1_num', tStart: 2.6, tEnd: 7.8, color: 'teal' },
+        { tokenId: 'p31_r2_den', tStart: 9.6, tEnd: 15.8, color: 'amber' },
+        { tokenId: 'p31_r3_conc', tStart: 17.1, tEnd: 23.5, color: 'rose' }
       ],
 
       svgAnnotations: [
         {
           id: 'p31_svg_s2',
           type: 'arrow',
-          fromToken: 'p31_r0_ab',
-          toToken: 'p31_r1_zero',
-          label: '直接看原分母，不先约分',
+          fromToken: 'p31_r1_num',
+          toToken: 'p31_r2_den',
+          label: '检验分母不为 0',
           color: '#D97706',
-          curveOffset: 28,
-          tStart: 6.0,
-          tDrawEnd: 6.8,
-          tFadeStart: 11.0,
-          tEnd: 11.6
+          curveOffset: 26,
+          tStart: 9.0,
+          tDrawEnd: 9.8,
+          tFadeStart: 15.2,
+          tEnd: 15.8
         },
         {
-          id: 'p31_svg_s5',
+          id: 'p31_svg_s3',
           type: 'arrow',
-          fromToken: 'p31_r2_res',
-          toToken: 'p31_r3_drop',
-          label: '分母不为 $0$ 排除 $x = -1$',
+          fromToken: 'p31_r2_den',
+          toToken: 'p31_r3_conc',
+          label: '排除增根 $x=-1$',
           color: '#BE123C',
-          curveOffset: 30,
-          tStart: 23.6,
-          tDrawEnd: 24.4,
-          tFadeStart: 28.4,
-          tEnd: 29.0
+          curveOffset: -26,
+          tStart: 16.6,
+          tDrawEnd: 17.4,
+          tFadeStart: 22.8,
+          tEnd: 23.5
         }
       ],
 
       subtitles: [
-        { tStart: 0.0, tEnd: 5.8, text: '第一步锁定原分子 $x^{2} - 1$ 和原分母 $(x + 1)(x - 3)$，切记判定分式有无意义之前绝对不能先约分！', focusToken: 'p31_r0_ab' },
-        { tStart: 5.8, tEnd: 11.8, text: '看第(1)问：令原分母 $(x + 1)(x - 3) = 0$，解得 $x = -1$ 或 $x = 3$ 时分式无意义。', focusToken: 'p31_r1_res' },
-        { tStart: 11.8, tEnd: 17.5, text: '看第(2)问：分式有意义要求两个分母因式都不能为 $0$，即 $x \\neq -1$ 且 $x \\neq 3$（注意连接词是“且”）。', focusToken: 'p31_r2_res' },
-        { tStart: 17.5, tEnd: 23.5, text: '看第(3)问：先令分子 $x^{2} - 1 = 0$，得到两个候选值 $x = 1$ 或 $x = -1$。', focusToken: 'p31_r3_num' },
-        { tStart: 23.5, tEnd: 30.0, text: '再联立原分母不为 $0$ 的条件，排除使分母为 $0$ 的 $x = -1$，最终定解当 $x = 1$ 时分式的值等于 $0$！', focusToken: 'p31_r4_conc' }
+        { tStart: 0.0, tEnd: 8.0, text: '第一步令分子为 $0$：由 $x^{2} - 1 = 0$，解得 $x = 1$ 或 $x = -1$。', focusToken: 'p31_r1_num' },
+        { tStart: 8.0, tEnd: 16.0, text: '第二步检验分母不为 $0$：由 $(x + 1)(x - 3) \\neq 0$，可知 $x \\neq -1$ 且 $x \\neq 3$。', focusToken: 'p31_r2_den' },
+        { tStart: 16.0, tEnd: 24.0, text: '第三步排除增根定解：舍去使分母为 $0$ 的 $x = -1$，最终答案为 $x = 1$！', focusToken: 'p31_r3_conc' }
       ],
 
       practices: {
         practice1: {
-          title: '练习一：运用分式基本性质因式分解约分',
-          givenLabel: '已知分式：',
-          givenFormula: '$\\frac{x^{2} - 4}{x^{2} - 4x + 4}$',
-          extractedLabel: '分子、分母分别因式分解：',
-          extractedFormula: '分子 $(x + 2)(x - 2)$，分母 $(x - 2)^{2}$',
-          questionText: '约去分子与分母的公因式 $(x - 2)$ 后，最简分式结果是？',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '若分式 $\\frac{x^{2} - 4}{x - 2}$ 的值为 $0$，则 $x$ 的值为（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $\\frac{x + 2}{x - 2}$', isCorrect: true },
-            { key: 'B', text: 'B. $\\frac{1}{x - 2}$', isCorrect: false },
-            { key: 'C', text: 'C. $\\frac{-4}{-4x + 4}$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $-2$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $2$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $\\pm 2$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！多项式分式约分必须“先因式分解，再约去公因式”：',
+            title: '回答正确！分子为 0 且分母不为 0：',
             calcLines: [
-              '$\\frac{x^{2} - 4}{x^{2} - 4x + 4} = \\frac{(x + 2)(x - 2)}{(x - 2)^{2}} = \\frac{x + 2}{x - 2}$'
+              '分子 $x^{2} - 4 = 0 \\implies x = \\pm 2$',
+              '分母 $x - 2 \\neq 0 \\implies x \\neq 2$，故 $x = -2$'
             ],
-            summary: '切勿直接划掉分子分母中的单独项 $x^{2}$，只能约去乘积形式的公因式。'
+            summary: '务必检验分母不为 $0$，舍去使分母为 $0$ 的值。'
           },
-          wrongTitle: '提示：只能约去因式分解后的公因式',
-          wrongFeedback: '分子分解为 $(x + 2)(x - 2)$、分母分解为 $(x - 2)^{2}$，约去一个公因式 $(x - 2)$ 得 $\\frac{x + 2}{x - 2}$，请再试一次。'
+          wrongTitle: '提示：同时满足分子为 0 且分母 $x - 2 \neq 0$',
+          wrongFeedback: '分子为 $0$ 得 $x = \\pm 2$，因分母 $x - 2 \\neq 0$ 舍去 $2$，故 $x = -2$。'
         },
         practice2: {
-          title: '练习二：判定分式值为 0 的条件',
-          givenLabel: '已知分式：',
-          givenFormula: '$\\frac{|x| - 2}{x + 2}$',
-          questionText: '当分式无意义时，$x$ 等于多少？当分式的值等于 $0$ 时，$x$ 等于多少？',
-          input1Prefix: '无意义时 $x =$',
-          input1Placeholder: '如 -2',
-          input2Prefix: '，值为 $0$ 时 $x =$',
-          input2Placeholder: '如 2',
-          input2Suffix: '',
-          expectedX: '-2',
-          expectedMin: '2',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '若分式 $\\frac{|x| - 2}{x + 2}$ 的值为 $0$，则 $x =$ ______．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '$x =$',
+          input1Placeholder: '如 2',
+          input1Suffix: '',
+          expectedX: '2',
+          expectedMin: '',
           allowOrderSwap: false,
-          correctFeedback: '分式无意义时 $x = -2$，值为 $0$ 时 $x = 2$。',
-          correctDetail: '令分母 $x + 2 = 0$ 得 $x = -2$ 时无意义；令分子 $|x| - 2 = 0$ 得 $x = \\pm 2$，结合 $x \\neq -2$ 舍去 $-2$，故 $x = 2$。',
-          wrongFeedback: '令分母 $x + 2 = 0$ 求无意义条件；令 $|x| - 2 = 0$ 得 $\\pm 2$ 后，记得排除使分母为 $0$ 的值。',
+          correctFeedback: '$x = 2$。',
+          correctDetail: '由 $|x| - 2 = 0$ 得 $x = \\pm 2$，又分母 $x + 2 \\neq 0 \\implies x \\neq -2$，故 $x = 2$。',
+          wrongFeedback: '令分子 $|x| - 2 = 0$ 得 $x = \\pm 2$，再由分母 $x + 2 \\neq 0$ 舍去 $-2$。',
           specificWrongHints: [
             {
-              checkType: 'secondVal',
+              checkType: 'firstVal',
               val: '-2',
-              hint: '当 $x = -2$ 时分母 $x + 2 = 0$，分式无意义，故值为 $0$ 时只能取 $x = 2$。'
+              hint: '当 $x = -2$ 时分母为 $0$，分式无意义，应舍去，取 $x = 2$。'
             }
           ]
         }
@@ -7859,162 +7956,139 @@
 
       practices: {
         practice1: {
-          title: '练习一：辨析 $-a^{n}$ 与 $(-a)^{n}$ 的符号结果',
-          givenLabel: '给出三组乘方算式：',
-          givenFormula: '① $-2^{4}$；② $(-2)^{4}$；③ $-3^{2} + (-3)^{2}$',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '计算 $-1^{4} + (3 - 1) \\div (-2)^{2} \\times (-4) + |-3|$ 的结果是（　　）',
           extractedLabel: '',
           extractedFormula: '',
-          questionText: '这三个算式的计算结果依次是？',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. ① $-16$；② $16$；③ $0$', isCorrect: true },
-            { key: 'B', text: 'B. ① $16$；② $16$；③ $18$', isCorrect: false },
-            { key: 'C', text: 'C. ① $-8$；② $8$；③ $0$', isCorrect: false }
-          ],
-          correctFeedback: {
-            title: '回答正确！准确判断负号是否在括号内是乘方计算的关键：',
-            calcLines: [
-              '① $-2^{4} = -(2 \\times 2 \\times 2 \\times 2) = -16$（底数是 $2$）',
-              '② $(-2)^{4} = +16$（底数是 $-2$，偶次幂为正）',
-              '③ $-3^{2} + (-3)^{2} = -9 + 9 = 0$'
-            ],
-            summary: '无括号时负号不参与乘方，有括号时负号随底数一起参与乘方。'
-          },
-          wrongTitle: '提示：请注意负号在括号内外的区别，以及乘方不是底数乘指数',
-          wrongFeedback: '$-2^{4}$ 表示 $2^{4}$ 的相反数即 $-16$，而 $(-2)^{4} = +16$；同样 $-3^{2} = -9$ 而 $(-3)^{2} = +9$，请再试一次。'
-        },
-        practice2: {
-          title: '练习二：按顺序计算有理数乘方混合运算',
-          givenLabel: '计算算式：',
-          givenFormula: '$-2^{2} + (-3)^{2} \\times 2 - 12 \\div (-3)$',
-          questionText: '先算出第一项 $-2^{2}$ 的值，再按运算顺序算出整个算式的最终结果分别是多少？',
-          input1Prefix: '$-2^{2} =$',
-          input1Placeholder: '如 -4',
-          input2Prefix: '，最终结果 $=$',
-          input2Placeholder: '如 18',
-          input2Suffix: '',
-          expectedX: '-4',
-          expectedMin: '18',
-          allowOrderSwap: false,
-          correctFeedback: '$-2^{2} = -4$，整个算式的最终结果为 $18$。',
-          correctDetail: '原式 $= -4 + 9 \\times 2 - (-4) = -4 + 18 + 4 = 18$。',
-          wrongFeedback: '先算乘方 $-2^{2} = -4$，$(-3)^{2} = 9$；再算乘除 $9 \\times 2 = 18$，$12 \\div (-3) = -4$；最后算 $-4 + 18 - (-4)$。',
-          specificWrongHints: [
             {
-              checkType: 'firstVal',
-              val: '4',
-              hint: '注意 $-2^{2}$ 没有括号，表示 $2^{2}$ 的相反数，等于 $-4$ 而不是 $4$。'
+              key: 'A',
+              text: 'A. $0$',
+              isCorrect: true
             },
             {
-              checkType: 'secondVal',
-              val: '10',
-              hint: '注意最后一项是 $-12 \\div (-3) = -(-4) = +4$，故 $-4 + 18 + 4 = 18$ 而不是 $10$。'
+              key: 'B',
+              text: 'B. $2$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $4$',
+              isCorrect: false
             }
-          ]
+          ],
+          correctFeedback: {
+            title: '回答正确！先算乘方、括号和绝对值，再从左到右算乘除，最后算加减：',
+            calcLines: [
+              '原式 $= -1 + 2 \\div 4 \\times (-4) + 3$',
+              '$= -1 - 2 + 3 = 0$'
+            ],
+            summary: '注意 $-1^{4} = -1$，且 $2 \\div 4 \\times (-4)$ 要从左到右依次运算。'
+          },
+          wrongTitle: '提示：注意 $-1^{4} = -1$，$(-2)^{2} = 4$，乘除从左到右计算',
+          wrongFeedback: '$-1 + 2 \\div 4 \\times (-4) + 3 = -1 - 2 + 3 = 0$。'
+        },
+        practice2: {
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '计算：$-2^{2} + (-3)^{2} \\times 2 - 12 \\div (-3) =$ ______．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '原式 $=$',
+          input1Placeholder: '如 18',
+          input1Suffix: '',
+          expectedX: '18',
+          expectedMin: '',
+          allowOrderSwap: false,
+          correctFeedback: '原式 $= 18$。',
+          correctDetail: '$-2^{2} = -4$，$(-3)^{2} \\times 2 = 18$，$-12 \\div (-3) = +4$，合并得 $-4 + 18 + 4 = 18$。',
+          wrongFeedback: '先算乘方 $-4$ 和 $9$，再算乘除 $18$ 和 $+4$，最后相加得 $18$。',
+          specificWrongHints: []
         }
       }
     },
 
     // =========================================================================
-    // P33：运用绝对值的性质、非负性求值及比较有理数大小
+    // P33：比较有理数的大小
     // =========================================================================
     P33: {
       procedureId: 'P33',
-      title: '运用绝对值的性质、非负性求值及比较有理数大小',
-      exampleTitle: '比较各组数的大小：(1) $-7$ 和 $2$；(2) $-\\frac{9}{7}$ 和 $-\\frac{6}{5}$；(3) $-|-5.7|$ 和 $|-2.9|$；(4) $-\\frac{1}{2}$、$-\\frac{1}{3}$、$\\frac{1}{4}$',
-      exampleFormula: '先去绝对值化简 $\\to$ 正数 $> 0 >$ 负数 $\\to$ 两负数绝对值大的反而小',
-      totalDuration: 30.0,
-      scratchpadIdleHint: '旁白草稿演算区（同步展示绝对值去符号法则、两负数通分比大小与非负性模型）',
-      practiceSectionTitle: '绝对值性质与有理数大小比较跟做练习',
-      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握“两负数绝对值大的反而小”与绝对值非负性求值',
+      title: '比较有理数的大小',
+      exampleTitle: '比较大小：$-\\frac{3}{4}$ ______ $-\\frac{2}{3}$（填“$\\gt$”“$\\lt$”或“$=$”）',
+      exampleFormula: '两负数比大小：先求绝对值通分，再按“绝对值大的反而小”反转不等号',
+      totalDuration: 24.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示两个负分数求绝对值、通分比较与反转不等号过程）',
+      practiceSectionTitle: '有理数大小比较跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握负分数通分比绝对值与含绝对值数的大小比较',
 
       steps: [
         {
           step: 1,
-          name: '第(1)组异号比较：正数大于负数',
+          name: '识别两负数并分别求绝对值',
           tStart: 0.0,
-          tEnd: 5.5,
-          explanation: '$-7$ 是负数，$2$ 是正数，由“正数大于 $0$，大于一切负数”，直接得出 $-7 \\lt 2$。'
+          tEnd: 7.5,
+          explanation: '$-\\frac{3}{4}$ 与 $-\\frac{2}{3}$ 都是负数。先分别求它们的绝对值：$\\left|-\\frac{3}{4}\\right| = \\frac{3}{4}$，$\\left|-\\frac{2}{3}\\right| = \\frac{2}{3}$。'
         },
         {
           step: 2,
-          name: '第(3)组先去绝对值化简，再比较正负',
-          tStart: 5.5,
-          tEnd: 11.5,
-          explanation: '遇到含多重符号和绝对值的数先化简：$-|-5.7| = -5.7$，$|-2.9| = 2.9$。因为 $-5.7 \\lt 2.9$，故 $-|-5.7| \\lt |-2.9|$（结论写原数）。'
+          name: '通分比较两个绝对值的大小',
+          tStart: 7.5,
+          tEnd: 16.0,
+          explanation: '分母 $4$ 和 $3$ 的最小公倍数是 $12$，通分得 $\\frac{3}{4} = \\frac{9}{12}$，$\\frac{2}{3} = \\frac{8}{12}$，所以 $\\frac{9}{12} \\gt \\frac{8}{12}$，即 $\\left|-\\frac{3}{4}\\right| \\gt \\left|-\\frac{2}{3}\\right|$。'
         },
         {
           step: 3,
-          name: '第(2)组两负数先分别求绝对值并通分',
-          tStart: 11.5,
-          tEnd: 18.0,
-          explanation: '比较 $-\\frac{9}{7}$ 与 $-\\frac{6}{5}$ 时，先分别取绝对值并通分：$\\left|-\\frac{9}{7}\\right| = \\frac{9}{7} = \\frac{45}{35}$，$\\left|-\\frac{6}{5}\\right| = \\frac{6}{5} = \\frac{42}{35}$。'
-        },
-        {
-          step: 4,
-          name: '第(2)组用“两个负数，绝对值大的反而小”定结论',
-          tStart: 18.0,
+          name: '按“绝对值大的反而小”反转不等号定结论',
+          tStart: 16.0,
           tEnd: 24.0,
-          explanation: '因为绝对值 $\\frac{45}{35} \\gt \\frac{42}{35}$，两个负数比较大小时绝对值大的反而小，所以 $-\\frac{9}{7} \\lt -\\frac{6}{5}$。'
-        },
-        {
-          step: 5,
-          name: '第(4)组多有理数分组排序',
-          tStart: 24.0,
-          tEnd: 30.0,
-          explanation: '正数 $\\frac{1}{4}$ 最大；两负数 $-\\frac{1}{2}$ 与 $-\\frac{1}{3}$ 比较绝对值 $\\frac{1}{2} \\gt \\frac{1}{3}$，故 $-\\frac{1}{2} \\lt -\\frac{1}{3} \\lt \\frac{1}{4}$。'
+          explanation: '依据“两个负数比较大小，绝对值大的反而小”，将绝对值的大于号反转为小于号，得出 $-\\frac{3}{4} \\lt -\\frac{2}{3}$，故横线上填“$\\lt$”。'
         }
       ],
 
       microBeats: [
-        { time: 0.8, step: 1, label: '1.1 异号直接判定 $-7 \\lt 2$' },
-        { time: 7.0, step: 2, label: '2.1 化简 $-|-5.7| = -5.7$，$|-2.9| = 2.9$ 得前者小于后者' },
-        { time: 13.5, step: 3, label: '3.1 通分比较绝对值：$\\frac{45}{35} \\gt \\frac{42}{35}$' },
-        { time: 19.5, step: 4, label: '4.1 绝对值大的反而小：$-\\frac{9}{7} \\lt -\\frac{6}{5}$' },
-        { time: 26.0, step: 5, label: '5.1 汇总第(4)组排序：$-\\frac{1}{2} \\lt -\\frac{1}{3} \\lt \\frac{1}{4}$' }
+        { time: 1.0, step: 1, label: '1.1 识别 $-\\frac{3}{4}$ 与 $-\\frac{2}{3}$ 均为负数' },
+        { time: 4.0, step: 1, label: '1.2 分别求绝对值：$\\frac{3}{4}$ 与 $\\frac{2}{3}$' },
+        { time: 9.0, step: 2, label: '2.1 通分至公分母 $12$：$\\frac{9}{12}$ 与 $\\frac{8}{12}$' },
+        { time: 13.0, step: 2, label: '2.2 比较绝对值：$\\frac{9}{12} \\gt \\frac{8}{12}$' },
+        { time: 18.0, step: 3, label: '3.1 两个负数绝对值大的反而小：$-\\frac{3}{4} \\lt -\\frac{2}{3}$' }
       ],
 
       boardRows: [
         {
           rowId: 'p33_row_0',
-          stepBadge: '第(1)组 · 异号比较',
+          stepBadge: '原题',
           appearAt: 0.0,
           tokens: [
-            { id: 'p33_r0_1', math: '(1) 负数小于正数 $\\implies -7 \\lt 2$', appearAt: 0.0, dur: 0.01 }
+            { id: 'p33_r0_1', math: '比较大小：$-\\frac{3}{4}$ 与 $-\\frac{2}{3}$（均为负数）', appearAt: 0.0, dur: 0.01 }
           ]
         },
         {
           rowId: 'p33_row_1',
-          stepBadge: '第(3)组 · 先化简再比较',
-          appearAt: 5.8,
+          stepBadge: '第 1 步 · 分别求绝对值',
+          appearAt: 2.2,
           tokens: [
-            { id: 'p33_r1_sim', math: '(3) $-|-5.7| = -5.7$，$|-2.9| = 2.9$', appearAt: 5.9, dur: 0.45 },
-            { id: 'p33_r1_res', math: '$\\implies -|-5.7| \\lt |-2.9|$', appearAt: 8.2, dur: 0.45 }
+            { id: 'p33_r1_abs1', math: '$\\left|-\\frac{3}{4}\\right| = \\frac{3}{4}$，', appearAt: 2.3, dur: 0.45 },
+            { id: 'p33_r1_abs2', math: '$\\left|-\\frac{2}{3}\\right| = \\frac{2}{3}$', appearAt: 4.2, dur: 0.45 }
           ]
         },
         {
           rowId: 'p33_row_2',
-          stepBadge: '第(2)组 ① · 通分比绝对值',
-          appearAt: 12.0,
+          stepBadge: '第 2 步 · 通分比较绝对值',
+          appearAt: 8.2,
           tokens: [
-            { id: 'p33_r2_abs', math: '(2) $\\left|-\\frac{9}{7}\\right| = \\frac{45}{35}$， $\\left|-\\frac{6}{5}\\right| = \\frac{42}{35}$', appearAt: 12.1, dur: 0.45 },
-            { id: 'p33_r2_gt', math: '，$\\because \\frac{45}{35} \\gt \\frac{42}{35}$', appearAt: 14.5, dur: 0.40 }
+            { id: 'p33_r2_com', math: '$\\frac{3}{4} = \\frac{9}{12}$，$\\frac{2}{3} = \\frac{8}{12}$', appearAt: 8.3, dur: 0.45 },
+            { id: 'p33_r2_gt', math: '，$\\because \\frac{9}{12} \\gt \\frac{8}{12}$', appearAt: 11.8, dur: 0.45 }
           ]
         },
         {
           rowId: 'p33_row_3',
-          stepBadge: '第(2)组 ② · 绝对值大的反而小',
-          appearAt: 18.4,
-          tokens: [
-            { id: 'p33_r3_res', math: '$\\therefore -\\frac{9}{7} \\lt -\\frac{6}{5}$', appearAt: 18.5, dur: 0.45 }
-          ]
-        },
-        {
-          rowId: 'p33_row_4',
-          stepBadge: '第(4)组 · 最终排序',
-          appearAt: 24.5,
+          stepBadge: '第 3 步 · 反转不等号定结论',
+          appearAt: 17.0,
           isConclusion: true,
           tokens: [
-            { id: 'p33_r4_conc', math: '(4) $\\because \\frac{1}{2} \\gt \\frac{1}{3} \\implies -\\frac{1}{2} \\lt -\\frac{1}{3} \\lt \\frac{1}{4}$。', appearAt: 24.6, dur: 0.60 }
+            { id: 'p33_r3_res', math: '$\\therefore -\\frac{3}{4} \\lt -\\frac{2}{3}$（横线上填“$\\lt$”）。', appearAt: 17.1, dur: 0.60 }
           ]
         }
       ],
@@ -8022,107 +8096,117 @@
       scratchpadCards: [
         {
           id: 'p33_sp_1',
-          title: '核心法则 · 绝对值三大高频用法',
+          title: '核心法则 · 两个负数比大小三步法',
           showStart: 0.8,
-          showEnd: 29.8,
+          showEnd: 23.8,
           tokens: [
-            { id: 'p33_sp1_t1', math: '① 去绝对值：$|a| = a\\ (a \\ge 0)$，$|a| = -a\\ (a \\lt 0)$', appearAt: 1.4, dur: 0.40 },
-            { id: 'p33_sp1_t2', math: '② 非负性：若 $|A| + |B| = 0$，则 $A = 0$ 且 $B = 0$', appearAt: 6.4, dur: 0.40 },
-            { id: 'p33_sp1_t3', math: '③ 比较两负数：先算绝对值通分，绝对值大的反而小', appearAt: 12.6, dur: 0.45 }
+            { id: 'p33_sp1_t1', math: '① 求绝对值：$\\left|-\\frac{3}{4}\\right| = \\frac{3}{4}$，$\\left|-\\frac{2}{3}\\right| = \\frac{2}{3}$', appearAt: 2.5, dur: 0.40 },
+            { id: 'p33_sp1_t2', math: '② 通分比正数：$\\frac{3 \\times 3}{4 \\times 3} = \\frac{9}{12} \\gt \\frac{8}{12} = \\frac{2 \\times 4}{3 \\times 4}$', appearAt: 8.8, dur: 0.45 },
+            { id: 'p33_sp1_t3', math: '③ 反转不等号：绝对值大的反而小 $\\implies -\\frac{3}{4} \\lt -\\frac{2}{3}$', appearAt: 17.2, dur: 0.45 }
           ],
-          note: '书写规范：化简完 $-|-5.7| = -5.7$ 后，最终不等式结论仍要写回原数 $-|-5.7| \\lt |-2.9|$'
+          note: '若遇到异号两数，直接用“正数 $\\gt 0 \\gt$ 负数”判定；若含绝对值或多重符号，先化简再比较'
         }
       ],
 
       tokenHighlights: [
-        { tokenId: 'p33_r1_sim', tStart: 5.9, tEnd: 11.4, color: 'amber' },
-        { tokenId: 'p33_r2_abs', tStart: 12.1, tEnd: 17.8, color: 'teal' },
-        { tokenId: 'p33_r3_res', tStart: 18.5, tEnd: 23.8, color: 'rose' },
-        { tokenId: 'p33_r4_conc', tStart: 24.6, tEnd: 29.5, color: 'teal' }
+        { tokenId: 'p33_r1_abs1', tStart: 2.3, tEnd: 7.4, color: 'teal' },
+        { tokenId: 'p33_r1_abs2', tStart: 4.2, tEnd: 7.4, color: 'amber' },
+        { tokenId: 'p33_r2_com', tStart: 8.3, tEnd: 15.8, color: 'teal' },
+        { tokenId: 'p33_r2_gt', tStart: 11.8, tEnd: 15.8, color: 'amber' },
+        { tokenId: 'p33_r3_res', tStart: 17.1, tEnd: 23.5, color: 'rose' }
       ],
 
       svgAnnotations: [
         {
           id: 'p33_svg_s2',
           type: 'arrow',
-          fromToken: 'p33_r1_sim',
-          toToken: 'p33_r1_res',
-          label: '写回原数下结论',
+          fromToken: 'p33_r1_abs1',
+          toToken: 'p33_r2_com',
+          label: '公分母 12 通分',
           color: '#0F766E',
           curveOffset: 28,
-          tStart: 7.4,
-          tDrawEnd: 8.2,
-          tFadeStart: 11.0,
-          tEnd: 11.5
+          tStart: 8.0,
+          tDrawEnd: 8.8,
+          tFadeStart: 15.2,
+          tEnd: 15.8
         },
         {
-          id: 'p33_svg_s4',
+          id: 'p33_svg_s3',
           type: 'arrow',
           fromToken: 'p33_r2_gt',
           toToken: 'p33_r3_res',
           label: '两负数不等号反向',
           color: '#BE123C',
           curveOffset: -26,
-          tStart: 18.2,
-          tDrawEnd: 19.0,
-          tFadeStart: 23.2,
-          tEnd: 23.8
+          tStart: 16.6,
+          tDrawEnd: 17.4,
+          tFadeStart: 22.8,
+          tEnd: 23.5
         }
       ],
 
       subtitles: [
-        { tStart: 0.0, tEnd: 5.5, text: '看第(1)组：$-7$ 是负数，$2$ 是正数，正数大于一切负数，所以 $-7 \\lt 2$。', focusToken: 'p33_r0_1' },
-        { tStart: 5.5, tEnd: 11.5, text: '看第(3)组：先去绝对值符号，$-|-5.7| = -5.7$，$|-2.9| = 2.9$，负数小于正数，写回原数得 $-|-5.7| \\lt |-2.9|$。', focusToken: 'p33_r1_res' },
-        { tStart: 11.5, tEnd: 18.0, text: '看第(2)组：两个负分数比较，先求绝对值并通分：$\\frac{9}{7} = \\frac{45}{35}$，$\\frac{6}{5} = \\frac{42}{35}$。', focusToken: 'p33_r2_abs' },
-        { tStart: 18.0, tEnd: 24.0, text: '因为 $\\frac{45}{35} \\gt \\frac{42}{35}$，根据“两个负数，绝对值大的反而小”，得出 $-\\frac{9}{7} \\lt -\\frac{6}{5}$！', focusToken: 'p33_r3_res' },
-        { tStart: 24.0, tEnd: 30.0, text: '看第(4)组：正数 $\\frac{1}{4}$ 最大，两个负数由 $\\frac{1}{2} \\gt \\frac{1}{3}$ 得 $-\\frac{1}{2} \\lt -\\frac{1}{3}$，排成 $-\\frac{1}{2} \\lt -\\frac{1}{3} \\lt \\frac{1}{4}$。', focusToken: 'p33_r4_conc' }
+        { tStart: 0.0, tEnd: 7.5, text: '第一步识别两个负数并求绝对值：$-\\frac{3}{4}$ 和 $-\\frac{2}{3}$ 都是负数，先求出它们的绝对值分别是 $\\frac{3}{4}$ 和 $\\frac{2}{3}$。', focusToken: 'p33_r1_abs1' },
+        { tStart: 7.5, tEnd: 16.0, text: '第二步通分比较绝对值：把 $\\frac{3}{4}$ 和 $\\frac{2}{3}$ 通分成公分母 $12$，得 $\\frac{9}{12} \\gt \\frac{8}{12}$。', focusToken: 'p33_r2_gt' },
+        { tStart: 16.0, tEnd: 24.0, text: '第三步反转不等号定结论：因为“两个负数，绝对值大的反而小”，所以 $-\\frac{3}{4} \\lt -\\frac{2}{3}$，横线上填“$\\lt$”！', focusToken: 'p33_r3_res' }
       ],
 
       practices: {
         practice1: {
-          title: '练习一：两个负有理数与含绝对值数的大小比较',
-          givenLabel: '比较下列各组有理数的大小：',
-          givenFormula: '① $-\\frac{3}{4}$ 与 $-\\frac{2}{3}$；② $-(-3)$ 与 $-|-3|$',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '比较 $-\\frac{4}{5}$ 与 $-\\frac{3}{4}$ 的大小，下列结果正确的是（　　）',
           extractedLabel: '',
           extractedFormula: '',
-          questionText: '下列比较结果完全正确的是？',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $-\\frac{3}{4} \\lt -\\frac{2}{3}$，且 $-(-3) \\gt -|-3|$', isCorrect: true },
-            { key: 'B', text: 'B. $-\\frac{3}{4} \\gt -\\frac{2}{3}$，且 $-(-3) \\gt -|-3|$', isCorrect: false },
-            { key: 'C', text: 'C. $-\\frac{3}{4} \\lt -\\frac{2}{3}$，且 $-(-3) = -|-3|$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $-\\frac{4}{5} \\lt -\\frac{3}{4}$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $-\\frac{4}{5} \\gt -\\frac{3}{4}$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $-\\frac{4}{5} = -\\frac{3}{4}$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！先通分比绝对值，多重符号先化简：',
+            title: '回答正确！先求绝对值并通分比较，再反转不等号：',
             calcLines: [
-              '① $\\left|-\\frac{3}{4}\\right| = \\frac{9}{12} \\gt \\left|-\\frac{2}{3}\\right| = \\frac{8}{12} \\implies -\\frac{3}{4} \\lt -\\frac{2}{3}$',
-              '② $-(-3) = +3$，$-|-3| = -3 \\implies -(-3) \\gt -|-3|$'
+              '$\\left|-\\frac{4}{5}\\right| = \\frac{4}{5} = \\frac{16}{20}$，$\\left|-\\frac{3}{4}\\right| = \\frac{3}{4} = \\frac{15}{20}$',
+              '$\\because \\frac{16}{20} \\gt \\frac{15}{20} \\implies -\\frac{4}{5} \\lt -\\frac{3}{4}$'
             ],
-            summary: '两个负数比较时，绝对值更大的那个数在数轴上更靠左，反而更小。'
+            summary: '两个负数比较大小，绝对值大的反而小。'
           },
-          wrongTitle: '提示：请先通分比较绝对值，并把 -(-3) 和 -|-3| 化简为具体数字',
-          wrongFeedback: '因为 $\\frac{3}{4} = \\frac{9}{12} \\gt \\frac{8}{12} = \\frac{2}{3}$，所以 $-\\frac{3}{4} \\lt -\\frac{2}{3}$；且 $-(-3) = 3 \\gt -3 = -|-3|$，请再试一次。'
+          wrongTitle: '提示：请先分别求绝对值并通分比较',
+          wrongFeedback: '因为 $\\left|-\\frac{4}{5}\\right| = \\frac{16}{20} \\gt \\frac{15}{20} = \\left|-\\frac{3}{4}\\right|$，两个负数绝对值大的反而小，所以 $-\\frac{4}{5} \\lt -\\frac{3}{4}$。'
         },
         practice2: {
-          title: '练习二：利用绝对值非负性“0 + 0 = 0”求值',
-          givenLabel: '已知非负性等式：',
-          givenFormula: '$|x - 3| + |y + 2| = 0$',
-          questionText: '由绝对值非负性可分别求出 $x$ 的值和 $x + y$ 的值是多少？',
-          input1Prefix: '$x =$',
-          input1Placeholder: '如 3',
-          input2Prefix: '，$x + y =$',
-          input2Placeholder: '如 1',
-          input2Suffix: '',
-          expectedX: '3',
-          expectedMin: '1',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '比较大小：$-\\frac{9}{7}$ ______ $-\\frac{6}{5}$（填“$\\gt$”“$\\lt$”或“$=$”）．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '$-\\frac{9}{7}$',
+          input1Placeholder: '填 >、< 或 =',
+          input1Suffix: '$-\\frac{6}{5}$',
+          expectedX: '<',
+          expectedMin: '',
           allowOrderSwap: false,
-          correctFeedback: '$x = 3$，$x + y = 1$。',
-          correctDetail: '因为 $|x - 3| \\ge 0$ 且 $|y + 2| \\ge 0$，和为 $0$ 则 $x - 3 = 0$ 且 $y + 2 = 0$，解得 $x = 3，y = -2$，故 $x + y = 3 + (-2) = 1$。',
-          wrongFeedback: '分别令 $x - 3 = 0$ 和 $y + 2 = 0$ 求出 $x = 3，y = -2$，再计算 $3 + (-2)$。',
+          correctFeedback: '横线上应填“$\\lt$”，即 $-\\frac{9}{7} \\lt -\\frac{6}{5}$。',
+          correctDetail: '先求绝对值并通分：$\\left|-\\frac{9}{7}\\right| = \\frac{45}{35}$，$\\left|-\\frac{6}{5}\\right| = \\frac{42}{35}$；因为 $\\frac{45}{35} \\gt \\frac{42}{35}$，由“两个负数，绝对值大的反而小”得 $-\\frac{9}{7} \\lt -\\frac{6}{5}$。',
+          wrongFeedback: '请先求两个负数的绝对值并通分至公分母 $35$，再按“两个负数，绝对值大的反而小”反转不等号。',
           specificWrongHints: [
             {
-              checkType: 'secondVal',
-              val: '5',
-              hint: '注意由 $y + 2 = 0$ 解得 $y = -2$（不是 $+2$），因此 $x + y = 3 + (-2) = 1$。'
+              checkType: 'firstVal',
+              val: '>',
+              hint: '注意 $\\frac{45}{35} \\gt \\frac{42}{35}$ 是绝对值的大小关系，两个负数比较时不等号要反转，应填“$\\lt$”。'
             }
           ]
         }
@@ -8296,33 +8380,44 @@
 
       practices: {
         practice1: {
-          title: '练习一：辨识单项式（排除分式与多项式）',
-          givenLabel: '给出五个代数式：',
-          givenFormula: '① $0$；② $-\\frac{xy}{3}$；③ $\\frac{a + b}{2}$；④ $\\frac{5}{x}$；⑤ $\\pi r^{2}$',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '单项式 $-\\frac{2\\pi x^{3}y^{2}}{3}$ 的系数和次数分别是（　　）',
           extractedLabel: '',
           extractedFormula: '',
-          questionText: '其中属于单项式的共有几个？',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $3$ 个（① $0$、② $-\\frac{xy}{3}$、⑤ $\\pi r^{2}$）', isCorrect: true },
-            { key: 'B', text: 'B. $4$ 个（①②③⑤）', isCorrect: false },
-            { key: 'C', text: 'C. $2$ 个（②⑤）', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $-\\frac{2\\pi}{3}$，$5$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $-\\frac{2}{3}$，$6$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $-\\frac{2\\pi}{3}$，$6$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！按单项式定义逐一核对：',
+            title: '回答正确！$\\pi$ 是常数归入系数，次数只加字母指数：',
             calcLines: [
-              '① $0$（单独的数是单项式 ✓）、② $-\\frac{xy}{3}$ ✓、⑤ $\\pi r^{2}$ ✓',
-              '③ $\\frac{a+b}{2} = \\frac{1}{2}a + \\frac{1}{2}b$ 是多项式；④ $\\frac{5}{x}$ 分母含字母不是整式'
+              '系数 $= -\\frac{2\\pi}{3}$，次数 $= 3 + 2 = 5$'
             ],
-            summary: '单独的一个数（包括 $0$）或一个字母都是单项式。'
+            summary: '圆周率 $\\pi$ 是数字常数，不计入字母次数。'
           },
-          wrongTitle: '提示：请检查单独的数字 0 与含加号的式子',
-          wrongFeedback: '$0$ 是单独的数属于单项式，而 $\\frac{a+b}{2}$ 含有加法运算属于多项式，$\\frac{5}{x}$ 分母含字母不是整式，请再试一次。'
+          wrongTitle: '提示：$\\pi$ 属于系数而不是字母，次数只算 $x, y$ 的指数和',
+          wrongFeedback: '系数连同负号、分母和 $\\pi$ 为 $-\\frac{2\\pi}{3}$，次数为 $3 + 2 = 5$。'
         },
         practice2: {
-          title: '练习二：提取含负号与数字幂次单项式的系数与次数',
-          givenLabel: '给出单项式：',
-          givenFormula: '$-3^{2}x^{2}yz^{3}$',
-          questionText: '该单项式的系数（写具体整数）与次数分别是多少？',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '单项式 $-3^{2}x^{2}yz^{3}$ 的系数是 ______，次数是 ______．',
+          questionText: '',
           input1Prefix: '系数 $=$',
           input1Placeholder: '如 -9',
           input2Prefix: '，次数 $=$',
@@ -8331,19 +8426,14 @@
           expectedX: '-9',
           expectedMin: '6',
           allowOrderSwap: false,
-          correctFeedback: '系数为 $-9$（即 $-3^{2}$），次数为 $6$。',
-          correctDetail: '数字因数 $-3^{2}=-9$ 为系数；所有字母指数和为 $2+1+3=6$（不计数字指数 $2$，勿漏 $y$ 的指数 $1$）。',
-          wrongFeedback: '系数为 $-3^{2}=-9$，次数只算字母 $x, y, z$ 的指数和 $2 + 1 + 3$。',
+          correctFeedback: '系数为 $-9$，次数为 $6$。',
+          correctDetail: '数字因数 $-3^{2} = -9$ 为系数；字母指数和 $2 + 1 + 3 = 6$ 为次数（数字的指数 $2$ 不计入次数）。',
+          wrongFeedback: '系数为 $-3^{2} = -9$，次数为 $2 + 1 + 3 = 6$（注意 $y$ 的指数是 $1$）。',
           specificWrongHints: [
             {
               checkType: 'secondVal',
               val: '8',
-              hint: '注意数字 $3^{2}$ 的指数 $2$ 不计入单项式次数，只算字母指数和 $2+1+3=6$。'
-            },
-            {
-              checkType: 'secondVal',
-              val: '5',
-              hint: '别忘了字母 $y$ 的隐含指数是 $1$，所以次数是 $2+1+3=6$ 而不是 $2+3=5$。'
+              hint: '数字 $-3^{2}$ 上的指数 $2$ 不计入单项式次数，次数为 $2 + 1 + 3 = 6$。'
             }
           ]
         }
@@ -8516,51 +8606,56 @@
 
       practices: {
         practice1: {
-          title: '练习一：辨析分式乘方与乘除同级运算顺序',
-          givenLabel: '计算下列两式：',
-          givenFormula: '① $\\left(-\\frac{2c}{3a^{2}b}\\right)^{2}$；② $\\frac{x-y}{x+y} \\div (y-x) \\cdot \\frac{1}{x-y}$',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '先化简 $\\frac{a^{2} - 1}{a + 2} \\cdot \\frac{a^{2} + 4a + 4}{a - 1} \\div (a + 1)$，当 $a = 3$ 时的值为（　　）',
           extractedLabel: '',
           extractedFormula: '',
-          questionText: '关于这两个算式的正确化简结果是？',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. ① $\\frac{4c^{2}}{9a^{4}b^{2}}$；② $-\\frac{1}{x^{2}-y^{2}}$（即 $\\frac{1}{y^{2}-x^{2}}$）', isCorrect: true },
-            { key: 'B', text: 'B. ① $-\\frac{4c^{2}}{9a^{4}b^{2}}$；② $\\frac{1}{x+y}$', isCorrect: false },
-            { key: 'C', text: 'C. ① $\\frac{2c^{2}}{3a^{4}b^{2}}$；② $-\\frac{1}{x^{2}-y^{2}}$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $5$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $3$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $1$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！乘方时系数与负号同步平方，乘除混合须从左到右转乘法：',
+            title: '回答正确！先因式分解、除法转乘法再约分，最后代入：',
             calcLines: [
-              '① $(-2)^{2}=4$，$3^{2}=9$，故得 $\\frac{4c^{2}}{9a^{4}b^{2}}$',
-              '② $\\frac{x-y}{x+y} \\cdot \\frac{1}{-(x-y)} \\cdot \\frac{1}{x-y} = -\\frac{1}{(x+y)(x-y)} = \\frac{1}{y^{2}-x^{2}}$'
+              '原式 $= \\frac{(a+1)(a-1)}{a+2} \\cdot \\frac{(a+2)^{2}}{a-1} \\cdot \\frac{1}{a+1} = a + 2$',
+              '当 $a = 3$ 时，$3 + 2 = 5$'
             ],
-            summary: '切勿把 ② 中后两项 $(y-x) \\cdot \\frac{1}{x-y}$ 先相乘。'
+            summary: '分式乘除先分解因式再约分，最后代入求值。'
           },
-          wrongTitle: '提示：请检查负号平方符号及乘除从左到右顺序',
-          wrongFeedback: '① 负数的平方为正且系数 $2, 3$ 均须平方；② 应依次转为连乘 $\\frac{x-y}{x+y} \\cdot \\frac{1}{y-x} \\cdot \\frac{1}{x-y}$，请再试一次。'
+          wrongTitle: '提示：先分解分子分母再约分化简为 $a + 2$',
+          wrongFeedback: '约分后得 $a + 2$，代入 $a = 3$ 得 $5$。'
         },
         practice2: {
-          title: '练习二：分式乘方化简并整体求值',
-          givenLabel: '已知等式：',
-          givenFormula: '$\\left(\\frac{a^{2}}{b}\\right)^{2} \\div \\left(\\frac{a}{b^{2}}\\right)^{2} = 3$',
-          questionText: '先将左边乘方并除法转乘法化简为 $a^{p}b^{q} = 3$，由此可得 $a^{2}b^{2}$ 与 $a^{4}b^{4}$ 的值分别是多少？',
-          input1Prefix: '$a^{2}b^{2} =$',
-          input1Placeholder: '如 3',
-          input2Prefix: '，$a^{4}b^{4} =$',
-          input2Placeholder: '如 9',
-          input2Suffix: '',
-          expectedX: '3',
-          expectedMin: '9',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '化简求值：$\\frac{x^{2} - 9}{x + 1} \\div \\frac{x - 3}{x^{2} + 2x + 1}$，其中 $x = 2$，则原式的值为 ______．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '原式 $=$',
+          input1Placeholder: '如 15',
+          input1Suffix: '',
+          expectedX: '15',
+          expectedMin: '',
           allowOrderSwap: false,
-          correctFeedback: '$a^{2}b^{2} = 3$，$a^{4}b^{4} = 9$。',
-          correctDetail: '左边 $= \\frac{a^{4}}{b^{2}} \\cdot \\frac{b^{4}}{a^{2}} = a^{2}b^{2} = 3$；两边平方得 $a^{4}b^{4} = (a^{2}b^{2})^{2} = 3^{2} = 9$。',
-          wrongFeedback: '先算 $\\frac{a^{4}}{b^{2}} \\div \\frac{a^{2}}{b^{4}} = \\frac{a^{4}}{b^{2}} \\cdot \\frac{b^{4}}{a^{2}} = a^{2}b^{2} = 3$，再将 $a^{2}b^{2}$ 平方。',
-          specificWrongHints: [
-            {
-              checkType: 'secondVal',
-              val: '6',
-              hint: '注意 $a^{4}b^{4} = (a^{2}b^{2})^{2} = 3^{2} = 9$，不是 $3 \\times 2 = 6$。'
-            }
-          ]
+          correctFeedback: '原式 $= 15$。',
+          correctDetail: '原式 $= \\frac{(x+3)(x-3)}{x+1} \\cdot \\frac{(x+1)^{2}}{x-3} = (x+3)(x+1)$；当 $x = 2$ 时，$5 \\times 3 = 15$。',
+          wrongFeedback: '先因式分解并除法转乘法约分得 $(x+3)(x+1)$，再代入 $x = 2$。',
+          specificWrongHints: []
         }
       }
     },
@@ -8730,55 +8825,57 @@
 
       practices: {
         practice1: {
-          title: '练习一：同分母/相反数分母分式减法（注意加括号与变号）',
-          givenLabel: '计算分式减法：',
-          givenFormula: '$\\frac{3}{a^{2}-9} - \\frac{a}{9-a^{2}}$',
-          extractedLabel: '利用 $9 - a^{2} = -(a^{2} - 9)$ 统一分母：',
-          extractedFormula: '$\\frac{3}{a^{2}-9} + \\frac{a}{a^{2}-9} = \\frac{a+3}{(a+3)(a-3)}$',
-          questionText: '约分化简后的最简结果是？',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '化简 $\\left(\\frac{a}{a - 1} - 1\\right) \\div \\frac{1}{a^{2} - 1}$，当 $a = 2$ 时的值为（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $\\frac{1}{a - 3}$', isCorrect: true },
-            { key: 'B', text: 'B. $\\frac{1}{a + 3}$', isCorrect: false },
-            { key: 'C', text: 'C. $\\frac{3 - a}{a^{2} - 9} = -\\frac{1}{a + 3}$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $3$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $1$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $-3$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！互为相反数分母先变号转为同分母，合并后再约分：',
+            title: '回答正确！先算括号内通分减法，再除法转乘法约分：',
             calcLines: [
-              '$\\frac{3}{a^{2}-9} - \\frac{a}{-(a^{2}-9)} = \\frac{3 + a}{(a+3)(a-3)} = \\frac{1}{a-3}$'
+              '原式 $= \\frac{a - (a - 1)}{a - 1} \\cdot (a + 1)(a - 1) = a + 1$',
+              '当 $a = 2$ 时，$2 + 1 = 3$'
             ],
-            summary: '减号遇分母提取负号变为加号，切勿漏变中间的运算符号。'
+            summary: '括号内先通分，再除法变乘倒数约分。'
           },
-          wrongTitle: '提示：请注意把 9 - a² 改写为 -(a² - 9) 后中间减号变为加号',
-          wrongFeedback: '$- \\frac{a}{9-a^{2}} = + \\frac{a}{a^{2}-9}$，合并得 $\\frac{a+3}{(a+3)(a-3)} = \\frac{1}{a-3}$，请再试一次。'
+          wrongTitle: '提示：先算括号内 $rac{a - (a - 1)}{a - 1} = rac{1}{a - 1}$，再乘 $(a+1)(a-1)$',
+          wrongFeedback: '化简结果为 $a + 1$，代入 $a = 2$ 得 $3$。'
         },
         practice2: {
-          title: '练习二：分式混合化简并按有意义条件选值代入',
-          givenLabel: '已知原式与化简结果：',
-          givenFormula: '原式 $\\left(1 - \\frac{1}{a+1}\\right) \\div \\frac{a^{3}}{a^{2}+2a+1}$ 化简得 $\\frac{a+1}{a^{2}}$',
-          questionText: '若从 $\\{-1, 0, 1\\}$ 中选一个使原式有意义的整数 $a$ 代入求值，唯一可以取的 $a$ 是多少？代入后的值是多少？',
-          input1Prefix: '唯一可取的 $a =$',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '化简 $\\left(1 - \\frac{1}{a + 1}\\right) \\div \\frac{a^{3}}{a^{2} + 2a + 1}$，并从 $\\{-1, 0, 1\\}$ 中选一个合适的整数 $a$ 代入求值，则 $a =$ ______，原式的值为 ______．',
+          questionText: '',
+          input1Prefix: '$a =$',
           input1Placeholder: '如 1',
-          input2Prefix: '，代入后的值 $=$',
+          input2Prefix: '，原式 $=$',
           input2Placeholder: '如 2',
           input2Suffix: '',
           expectedX: '1',
           expectedMin: '2',
           allowOrderSwap: false,
-          correctFeedback: '唯一可取的 $a = 1$，代入得 $\\frac{1+1}{1^{2}} = 2$。',
-          correctDetail: '原式要求 $a+1 \\neq 0$（$a \\neq -1$）且除式分子 $a^{3} \\neq 0$（$a \\neq 0$），故只能取 $a = 1$，代入 $\\frac{a+1}{a^{2}}$ 得 $2$。',
-          wrongFeedback: '先排除使原分母 $a+1=0$ 的 $-1$ 与使除式 $a^{3}=0$ 的 $0$，再将唯一合法值 $a=1$ 代入 $\\frac{a+1}{a^{2}}$。',
-          specificWrongHints: [
-            {
-              checkType: 'firstVal',
-              val: '-1',
-              hint: '当 $a = -1$ 时，原分母 $a+1=0$ 且 $a^{2}+2a+1=0$，分式无意义，不能取 $-1$。'
-            },
-            {
-              checkType: 'firstVal',
-              val: '0',
-              hint: '当 $a = 0$ 时，除式分子 $a^{3}=0$（除数为 $0$），原式无意义，不能取 $0$。'
-            }
-          ]
+          correctFeedback: '$a = 1$，原式 $= 2$。',
+          correctDetail: '化简得 $\\frac{a + 1}{a^{2}}$；因原式分母与除式不能为 $0$，故 $a \\neq -1$ 且 $a \\neq 0$，只能取 $a = 1$，代入得 $2$。',
+          wrongFeedback: '先化简为 $\\frac{a+1}{a^{2}}$，排除使分母为 $0$ 的 $-1$ 和 $0$，取 $a = 1$ 代入。',
+          specificWrongHints: []
         }
       }
     }
@@ -8996,44 +9093,55 @@
 
       practices: {
         practice1: {
-          title: '练习一：“角平分线 + 平行线 ⇒ 等腰三角形”线段转化',
-          givenLabel: '已知条件：',
-          givenFormula: '在 $\\triangle ABC$ 中，$\\angle ABC$ 与 $\\angle ACB$ 的平分线交于点 $O$，过 $O$ 作 $EF \\parallel BC$ 交 $AB, AC$ 于 $E, F$',
-          extractedLabel: '由“角平分线 + 平行线”导出：',
-          extractedFormula: '$\\angle EBO = \\angle EOB \\implies EO = BE$；$\\angle FCO = \\angle FOC \\implies FO = CF$',
-          questionText: '若 $BE = 5$，$CF = 3$，则线段 $EF$ 的长等于多少？',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '在 $\\triangle ABC$ 中，$AB = AC$，$\\angle A = 36^{\\circ}$，$BD$ 平分 $\\angle ABC$ 交 $AC$ 于点 $D$，则 $\\angle BDC$ 的度数为（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $EF = EO + FO = BE + CF = 8$', isCorrect: true },
-            { key: 'B', text: 'B. $EF = BE - CF = 2$', isCorrect: false },
-            { key: 'C', text: 'C. $EF = 4$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $72^{\\circ}$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $36^{\\circ}$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $108^{\\circ}$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！两次运用“等角对等边”将折线转化为直线段之和：',
+            title: '回答正确！由等边对等角与角平分线逐一推角：',
             calcLines: [
-              '$EO = BE = 5，\\quad FO = CF = 3$',
-              '$EF = EO + FO = 5 + 3 = 8$'
+              '$\\angle ABC = \\angle C = \\frac{180^{\\circ} - 36^{\\circ}}{2} = 72^{\\circ}$',
+              '$\\angle ABD = 36^{\\circ} \\implies \\angle BDC = \\angle A + \\angle ABD = 72^{\\circ}$'
             ],
-            summary: '记住“角平分线 + 平行线”必出等腰三角形，即可快速完成线段等量代换。'
+            summary: '由此还可由等角对等边判定 $	riangle ABD$ 和 $	riangle BCD$ 均为等腰三角形。'
           },
-          wrongTitle: '提示：请用等角对等边把 EO 和 FO 分别代换为 BE 和 CF',
-          wrongFeedback: '点 $O$ 在线段 $EF$ 上，因此 $EF = EO + FO = BE + CF = 5 + 3 = 8$，请再试一次。'
+          wrongTitle: '提示：先求底角 $ngle ABC = 72^{\\circ}$，再求 $ngle ABD = 36^{\\circ}$ 及外角 $ngle BDC$',
+          wrongFeedback: '$\\angle ABC = 72^{\\circ}$，$\\angle ABD = 36^{\\circ}$，故 $\\angle BDC = 36^{\\circ} + 36^{\\circ} = 72^{\\circ}$。'
         },
         practice2: {
-          title: '练习二：利用“等边对等角”求等腰三角形内角',
-          givenLabel: '已知条件：',
-          givenFormula: '在等腰 $\\triangle ABC$ 中，$AB = AC$',
-          questionText: '若顶角 $\\angle A = 50^{\\circ}$，则底角 $\\angle B$ 是多少度？若另一等腰三角形底角为 $40^{\\circ}$，则其顶角是多少度？',
-          input1Prefix: '底角 $\\angle B =$',
-          input1Placeholder: '如 65',
-          input2Prefix: '°，另一顶角 $=$',
-          input2Placeholder: '如 100',
-          input2Suffix: '°（只填数字）',
-          expectedX: '65',
-          expectedMin: '100',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '在 $\\triangle ABC$ 中，$AB = AC$，$\\angle A = 40^{\\circ}$，则底角 $\\angle B =$ ______$^{\\circ}$．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '$\\angle B =$',
+          input1Placeholder: '如 70',
+          input1Suffix: '°',
+          expectedX: '70',
+          expectedMin: '',
           allowOrderSwap: false,
-          correctFeedback: '底角 $\\angle B = 65^{\\circ}$，另一等腰三角形顶角为 $100^{\\circ}$。',
-          correctDetail: '① $\\angle B = \\frac{180^{\\circ} - 50^{\\circ}}{2} = 65^{\\circ}$；② 顶角 $= 180^{\\circ} - 2 \\times 40^{\\circ} = 100^{\\circ}$。',
-          wrongFeedback: '按“底角 $= (180^{\\circ} - \\text{顶角}) \\div 2$”与“顶角 $= 180^{\\circ} - 2 \\times \\text{底角}$”计算。',
+          correctFeedback: '$\\angle B = 70^{\\circ}$。',
+          correctDetail: '由等边对等角得 $\\angle B = \\angle C = \\frac{180^{\\circ} - 40^{\\circ}}{2} = 70^{\\circ}$。',
+          wrongFeedback: '利用等腰三角形底角相等：$\\angle B = (180^{\\circ} - 40^{\\circ}) \\div 2 = 70^{\\circ}$。',
           specificWrongHints: []
         }
       }
@@ -9251,45 +9359,55 @@
 
       practices: {
         practice1: {
-          title: '练习一：辨析等边三角形的判定条件',
-          givenLabel: '给出四个三角形条件：',
-          givenFormula: '① 有两个角为 $60^{\\circ}$；② 三个外角都相等；③ 一边上的高也是这边上的中线；④ 有一个角为 $60^{\\circ}$ 的等腰三角形',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '在等边 $\\triangle ABC$ 中，$D$ 是 $AC$ 中点，$DE \\perp BC$ 于点 $E$，若 $CE = 2$，则 $AB$ 的长为（　　）',
           extractedLabel: '',
           extractedFormula: '',
-          questionText: '其中一定能判定为等边三角形的条件共有几个？',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $3$ 个（①②④ 均能判定，③ 只能判定为等腰三角形）', isCorrect: true },
-            { key: 'B', text: 'B. $4$ 个（全部都能判定）', isCorrect: false },
-            { key: 'C', text: 'C. $2$ 个（只有 ①④）', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $8$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $4$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $6$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！准确区分等腰与等边三角形的判定条件：',
+            title: '回答正确！先在 $	ext{Rt}	riangle CDE$ 中用含 $30^{\\circ}$ 直角三角形性质，再由中点求边长：',
             calcLines: [
-              '① 两角 $60^{\\circ} \\implies$ 第三角 $60^{\\circ}$ ✓；② 三外角相等 $\\implies$ 三内角相等 ✓',
-              '③ 一边高与中线重合仅能推出两腰相等（等腰三角形），不能推出等边',
-              '④ 含 $60^{\\circ}$ 角的等腰三角形必为等边三角形 ✓'
+              '$\\angle C = 60^{\\circ} \\implies \\angle CDE = 30^{\\circ} \\implies CD = 2CE = 4$',
+              '$AB = AC = 2CD = 8$'
             ],
-            summary: '无论 $60^{\\circ}$ 是等腰三角形的顶角还是底角，都能唯一推出它是等边三角形。'
+            summary: '等边三角形内角 $60^{\\circ}$ 遇垂线即出 $30^{\\circ}$ 直角三角形。'
           },
-          wrongTitle: '提示：请检查条件 ② 与 ③ 的推导结论',
-          wrongFeedback: '三个外角都相等则三个内角都为 $60^{\\circ}$（等边）；但一边上的高也是中线只能证出该三角形是等腰三角形，请再试一次。'
+          wrongTitle: '提示：在 $	ext{Rt}	riangle CDE$ 中 $ngle CDE = 30^{\\circ}$，故 $CD = 2CE$',
+          wrongFeedback: '由 $CD = 2CE = 4$ 且 $D$ 为 $AC$ 中点，得 $AB = AC = 2CD = 8$。'
         },
         practice2: {
-          title: '练习二：含 30° 角直角三角形倍半计算',
-          givenLabel: '已知条件：',
-          givenFormula: '在 $\\text{Rt}\\triangle ABC$ 中，$\\angle C = 90^{\\circ}$，$\\angle B = 30^{\\circ}$，$AC = 5$',
-          questionText: '则另一锐角 $\\angle A$ 是多少度？斜边 $AB$ 的长是多少？',
-          input1Prefix: '$\\angle A =$',
-          input1Placeholder: '如 60',
-          input2Prefix: '°，斜边 $AB =$',
-          input2Placeholder: '如 10',
-          input2Suffix: '',
-          expectedX: '60',
-          expectedMin: '10',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '在等边 $\\triangle ABC$ 中，$D$ 是 $AC$ 中点，$DE \\perp BC$ 于点 $E$，若 $AB = 10$，则 $CE =$ ______．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '$CE =$',
+          input1Placeholder: '如 2.5',
+          input1Suffix: '',
+          expectedX: '2.5',
+          expectedMin: '',
           allowOrderSwap: false,
-          correctFeedback: '$\\angle A = 60^{\\circ}$，斜边 $AB = 10$。',
-          correctDetail: '由直角三角形两锐角互余得 $\\angle A = 90^{\\circ} - 30^{\\circ} = 60^{\\circ}$；由 $30^{\\circ}$ 对边 $AC = 5$ 得斜边 $AB = 2AC = 10$。',
-          wrongFeedback: '由 $\\angle A = 90^{\\circ} - 30^{\\circ}$ 求角度，由斜边 $= 2 \\times 30^{\\circ}$ 所对直角边 $AC$ 求 $AB$。',
+          correctFeedback: '$CE = 2.5$。',
+          correctDetail: '$CD = \\frac{1}{2}AC = 5$；在 $\\text{Rt}\\triangle CDE$ 中 $\\angle CDE = 30^{\\circ}$，故 $CE = \\frac{1}{2}CD = 2.5$。',
+          wrongFeedback: '先由中点得 $CD = 5$，再由含 $30^{\\circ}$ 直角三角形性质得 $CE = \\frac{1}{2}CD = 2.5$。',
           specificWrongHints: []
         }
       }
@@ -9300,101 +9418,76 @@
     // =========================================================================
     P39: {
       procedureId: 'P39',
-      title: '运用有理数加减法则与运算律进行加减混合运算',
-      exampleTitle: '计算：(1) $14 - (-12) + (-25) - 17$；(2) $\\left(-3\\frac{2}{3}\\right) - \\left(-2\\frac{3}{4}\\right) + 3\\frac{2}{3} - (+5.75)$',
-      exampleFormula: '减法转加相反数 $\\to$ 省略括号和加号 $\\to$ 同号/相反数/凑整分组',
-      totalDuration: 30.0,
-      scratchpadIdleHint: '旁白草稿演算区（同步展示双重符号化简口诀与四大分组结合巧算策略）',
-      practiceSectionTitle: '有理数加减混合运算跟做练习',
-      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握省略括号变形与交换律带符号分组巧算',
+      title: '有理数的加减混合运算与运算律简便计算',
+      exampleTitle: '计算：$14 - (-12) + (-25) - 17 =$ ______',
+      exampleFormula: '去括号化代数和 $\\to$ 同号结合分组相加 $\\to$ 异号相加定符号',
+      totalDuration: 24.0,
+      scratchpadIdleHint: '',
+      practiceSectionTitle: '有理数加减混合运算',
+      practiceSectionSub: '',
 
       steps: [
         {
           step: 1,
-          name: '第(1)题化简双重符号，写成省略括号的代数和',
+          name: '统一写成省略括号和加号的形式',
           tStart: 0.0,
-          tEnd: 5.8,
-          explanation: '按“同号得正、异号得负”化简：$-(-12) = +12$，$+(-25) = -25$，将原式改写为 $14 + 12 - 25 - 17$。'
+          tEnd: 8.0,
+          explanation: '依据“同号得正、异号得负”化简符号：$-(-12) = +12$，$+(-25) = -25$，原式写成 $14 + 12 - 25 - 17$。'
         },
         {
           step: 2,
-          name: '第(1)题正负同号分组结合，先定符号再算绝对值',
-          tStart: 5.8,
-          tEnd: 12.2,
-          explanation: '将正数与负数分别同号结合：$(14 + 12) + (-25 - 17) = 26 - 42$；异号相加取较大绝对值的负号，$-(42 - 26) = -16$。'
+          name: '正数与负数分别结合分组相加',
+          tStart: 8.0,
+          tEnd: 16.0,
+          explanation: '利用加法交换律与结合律，正数相加 $14 + 12 = 26$，负数结合 $(-25 - 17) = -42$，化为 $26 - 42$。'
         },
         {
           step: 3,
-          name: '第(2)题化简符号并把带分数 $2\\frac{3}{4}$ 化为小数 $2.75$',
-          tStart: 12.2,
-          tEnd: 18.2,
-          explanation: '先去双重符号并统一小数：$-(-2\\frac{3}{4}) = +2.75$，$-(+5.75) = -5.75$，原式化为 $-3\\frac{2}{3} + 2.75 + 3\\frac{2}{3} - 5.75$。'
-        },
-        {
-          step: 4,
-          name: '第(2)题带符号交换位置，相反数与小数凑整分组',
-          tStart: 18.2,
-          tEnd: 24.5,
-          explanation: '运用加法交换律与结合律（连同前面符号一起移动）：$\\left(-3\\frac{2}{3} + 3\\frac{2}{3}\\right) + (2.75 - 5.75)$。'
-        },
-        {
-          step: 5,
-          name: '相反数抵消为 $0$，算出最终结果 $-3$',
-          tStart: 24.5,
-          tEnd: 30.0,
-          explanation: '第一组互为相反数相加得 $0$，第二组 $2.75 - 5.75 = -3$，最终结果为 $-3$。'
+          name: '异号两数相加定符号求结果',
+          tStart: 16.0,
+          tEnd: 24.0,
+          explanation: '绝对值较大的数 $-42$ 为负，取负号并用较大绝对值减去较小绝对值：$-(42 - 26) = -16$。'
         }
       ],
 
       microBeats: [
-        { time: 0.8, step: 1, label: '1.1 (1) 省略括号化为 $14 + 12 - 25 - 17$' },
-        { time: 7.5, step: 2, label: '2.1 (1) 同号结合得 $26 - 42 = -16$' },
-        { time: 14.0, step: 3, label: '3.1 (2) 化简符号并化小数得 $-3\\frac{2}{3} + 2.75 + 3\\frac{2}{3} - 5.75$' },
-        { time: 20.0, step: 4, label: '4.1 (2) 相反数与凑整分组结合' },
-        { time: 26.0, step: 5, label: '5.1 (2) 算出 $0 - 3 = -3$' }
+        { time: 1.0, step: 1, label: '1.1 化简符号得 $14 + 12 - 25 - 17$' },
+        { time: 9.5, step: 2, label: '2.1 同号结合得 $26 - 42$' },
+        { time: 17.5, step: 3, label: '3.1 异号相加得 $-16$' }
       ],
 
       boardRows: [
         {
           rowId: 'p39_row_0',
-          stepBadge: '第(1)题 · 省略括号',
+          stepBadge: '原式',
           appearAt: 0.0,
           tokens: [
-            { id: 'p39_r0_1', math: '(1) $14 - (-12) + (-25) - 17$', appearAt: 0.0, dur: 0.01 },
-            { id: 'p39_r0_2', math: '$= 14 + 12 - 25 - 17$', appearAt: 1.6, dur: 0.45 }
+            { id: 'p39_r0_1', math: '$14 - (-12) + (-25) - 17$', appearAt: 0.0, dur: 0.01 }
           ]
         },
         {
           rowId: 'p39_row_1',
-          stepBadge: '第(1)题 · 同号结合',
-          appearAt: 6.2,
+          stepBadge: '第 1 步 · 省略括号',
+          appearAt: 2.5,
           tokens: [
-            { id: 'p39_r1_grp', math: '$= (14 + 12) + (-25 - 17) = 26 - 42 = -16$', appearAt: 6.3, dur: 0.50 }
+            { id: 'p39_r1_sim', math: '$= 14 + 12 - 25 - 17$', appearAt: 2.6, dur: 0.45 }
           ]
         },
         {
           rowId: 'p39_row_2',
-          stepBadge: '第(2)题 · 去符号化小数',
-          appearAt: 12.6,
+          stepBadge: '第 2 步 · 同号结合',
+          appearAt: 9.5,
           tokens: [
-            { id: 'p39_r2_1', math: '(2) $= -3\\frac{2}{3} + 2.75 + 3\\frac{2}{3} - 5.75$', appearAt: 12.7, dur: 0.50 }
+            { id: 'p39_r2_grp', math: '$= (14 + 12) + (-25 - 17) = 26 - 42$', appearAt: 9.6, dur: 0.45 }
           ]
         },
         {
           rowId: 'p39_row_3',
-          stepBadge: '第(2)题 · 分组结合',
-          appearAt: 18.6,
-          tokens: [
-            { id: 'p39_r3_grp', math: '$= \\left(-3\\frac{2}{3} + 3\\frac{2}{3}\\right) + (2.75 - 5.75)$', appearAt: 18.7, dur: 0.50 }
-          ]
-        },
-        {
-          rowId: 'p39_row_4',
-          stepBadge: '最终结论',
-          appearAt: 24.8,
+          stepBadge: '最终结果',
+          appearAt: 17.0,
           isConclusion: true,
           tokens: [
-            { id: 'p39_r4_conc', math: '$= 0 + (-3) = -3$。', appearAt: 24.9, dur: 0.60 }
+            { id: 'p39_r3_conc', math: '$= -16$。', appearAt: 17.1, dur: 0.60 }
           ]
         }
       ],
@@ -9402,22 +9495,22 @@
       scratchpadCards: [
         {
           id: 'p39_sp_1',
-          title: '核心口诀 · 减法转加法与四大分组巧算策略',
+          title: '核心法则 · 有理数加减三步法',
           showStart: 0.8,
-          showEnd: 29.8,
+          showEnd: 23.8,
           tokens: [
-            { id: 'p39_sp1_t1', math: '① 双重符号：同号得正 $-(-a)=+a$，异号得负 $+(-a)=-a$', appearAt: 1.4, dur: 0.40 },
-            { id: 'p39_sp1_t2', math: '② 优先分组：相反数抵消 $\\to$ 小数凑整 $\\to$ 同分母 $\\to$ 同号结合', appearAt: 18.8, dur: 0.45 }
+            { id: 'p39_sp1_t1', math: '① 去括号：$-(-12) = +12$，$+(-25) = -25$', appearAt: 2.0, dur: 0.40 },
+            { id: 'p39_sp1_t2', math: '② 同号分组：$14 + 12 = 26$，$-25 - 17 = -42$', appearAt: 9.2, dur: 0.40 },
+            { id: 'p39_sp1_t3', math: '③ 异号定符：$26 - 42 = -(42 - 26) = -16$', appearAt: 17.0, dur: 0.45 }
           ],
-          note: '切记：交换加数位置时，每个数必须连同它前面的正负号一起搬家'
+          note: '交换加数位置时必须连同它前面的符号一起移动'
         }
       ],
 
       tokenHighlights: [
-        { tokenId: 'p39_r0_2', tStart: 1.6, tEnd: 5.6, color: 'amber' },
-        { tokenId: 'p39_r1_grp', tStart: 6.3, tEnd: 12.0, color: 'teal' },
-        { tokenId: 'p39_r2_1', tStart: 12.7, tEnd: 18.0, color: 'amber' },
-        { tokenId: 'p39_r3_grp', tStart: 18.7, tEnd: 24.4, color: 'teal' }
+        { tokenId: 'p39_r1_sim', tStart: 2.6, tEnd: 7.8, color: 'teal' },
+        { tokenId: 'p39_r2_grp', tStart: 9.6, tEnd: 15.8, color: 'amber' },
+        { tokenId: 'p39_r3_conc', tStart: 17.1, tEnd: 23.5, color: 'rose' }
       ],
 
       svgAnnotations: [
@@ -9425,78 +9518,87 @@
           id: 'p39_svg_s1',
           type: 'arrow',
           fromToken: 'p39_r0_1',
-          toToken: 'p39_r0_2',
-          label: '$-(-12)=+12$，省略括号',
-          color: '#D97706',
-          curveOffset: 28,
-          tStart: 1.4,
-          tDrawEnd: 2.2,
-          tFadeStart: 5.2,
-          tEnd: 5.8
+          toToken: 'p39_r1_sim',
+          label: '负负得正、正负得负',
+          color: '#0F766E',
+          curveOffset: 26,
+          tStart: 2.2,
+          tDrawEnd: 3.0,
+          tFadeStart: 7.2,
+          tEnd: 7.8
         },
         {
-          id: 'p39_svg_s4',
+          id: 'p39_svg_s2',
           type: 'arrow',
-          fromToken: 'p39_r2_1',
-          toToken: 'p39_r3_grp',
-          label: '相反数抵消 $+$ 小数凑整',
-          color: '#0F766E',
+          fromToken: 'p39_r1_sim',
+          toToken: 'p39_r2_grp',
+          label: '正负分组相加',
+          color: '#D97706',
           curveOffset: -26,
-          tStart: 18.4,
-          tDrawEnd: 19.2,
-          tFadeStart: 23.8,
-          tEnd: 24.4
+          tStart: 9.0,
+          tDrawEnd: 9.8,
+          tFadeStart: 15.2,
+          tEnd: 15.8
         }
       ],
 
       subtitles: [
-        { tStart: 0.0, tEnd: 5.8, text: '看第(1)题第一步：把 $-(-12)$ 化为 $+12$，把 $+(-25)$ 化为 $-25$，省略括号得 $14 + 12 - 25 - 17$。', focusToken: 'p39_r0_2' },
-        { tStart: 5.8, tEnd: 12.2, text: '第二步同号结合：正数 $14+12=26$，负数 $-25-17=-42$，异号相加取负号得 $-16$。', focusToken: 'p39_r1_grp' },
-        { tStart: 12.2, tEnd: 18.2, text: '看第(2)题：先化简双重符号，并把 $2\\frac{3}{4}$ 化为小数 $2.75$，得到 $-3\\frac{2}{3} + 2.75 + 3\\frac{2}{3} - 5.75$。', focusToken: 'p39_r2_1' },
-        { tStart: 18.2, tEnd: 24.5, text: '把互为相反数的 $-3\\frac{2}{3}$ 与 $+3\\frac{2}{3}$ 结合，把同小数尾数的 $2.75$ 与 $-5.75$ 结合。', focusToken: 'p39_r3_grp' },
-        { tStart: 24.5, tEnd: 30.0, text: '相反数抵消得 $0$，$2.75 - 5.75 = -3$，得出最终结果 $-3$！', focusToken: 'p39_r4_conc' }
+        { tStart: 0.0, tEnd: 8.0, text: '第一步省略括号和加号：$-(-12)$ 变 $+12$，$+(-25)$ 变 $-25$，原式化为 $14 + 12 - 25 - 17$。', focusToken: 'p39_r1_sim' },
+        { tStart: 8.0, tEnd: 16.0, text: '第二步同号结合：正数相加 $14 + 12 = 26$，负数结合 $-25 - 17 = -42$，化为 $26 - 42$。', focusToken: 'p39_r2_grp' },
+        { tStart: 16.0, tEnd: 24.0, text: '第三步异号相加定符号：$-(42 - 26) = -16$，最终结果为 $-16$！', focusToken: 'p39_r3_conc' }
       ],
 
       practices: {
         practice1: {
-          title: '练习一：把有理数加减算式写成省略括号和加号的形式',
-          givenLabel: '已知算式：',
-          givenFormula: '$-3 + (-5) - (-9) + (-6)$',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '计算 $-3 + (-5) - (-9) - 6$ 的结果是（　　）',
           extractedLabel: '',
           extractedFormula: '',
-          questionText: '将其规范改写为省略括号和加号的和的形式，正确的是？',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $-3 - 5 + 9 - 6$', isCorrect: true },
-            { key: 'B', text: 'B. $-3 + 5 - 9 - 6$', isCorrect: false },
-            { key: 'C', text: 'C. $-3 - 5 - 9 - 6$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $-5$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $5$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $-23$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！按“同号得正、异号得负”逐项化简双重符号：',
+            title: '回答正确！先省略括号和加号，再同号结合分组相加：',
             calcLines: [
-              '$+(-5) = -5$，$-(-9) = +9$，$+(-6) = -6$',
-              '原式 $= -3 - 5 + 9 - 6 = (-3 - 5 - 6) + 9 = -14 + 9 = -5$'
+              '原式 $= -3 - 5 + 9 - 6$',
+              '$= (-3 - 5 - 6) + 9 = -14 + 9 = -5$'
             ],
-            summary: '减去一个负数等于加上它的相反数（负负得正）。'
+            summary: '化为代数和后正负分组相加不易出错。'
           },
-          wrongTitle: '提示：请核对 -(-9) 化简后的符号',
-          wrongFeedback: '$-(-9)$ 是两个负号相逢（同号得正），化简为 $+9$，请再试一次。'
+          wrongTitle: '提示：先去括号得 $-3 - 5 + 9 - 6$，再同号结合',
+          wrongFeedback: '原式 $= -3 - 5 + 9 - 6 = -14 + 9 = -5$。'
         },
         practice2: {
-          title: '练习二：运用运算律分组计算有理数加减',
-          givenLabel: '计算算式：',
-          givenFormula: '$(-13) + (+12) + (-7) + (+18)$',
-          questionText: '若按同号结合为 $[(-13)+(-7)] + (12+18)$，则负数组之和与整个算式的最终结果分别是多少？',
-          input1Prefix: '负数组之和 $=$',
-          input1Placeholder: '如 -20',
-          input2Prefix: '，最终结果 $=$',
-          input2Placeholder: '如 10',
-          input2Suffix: '',
-          expectedX: '-20',
-          expectedMin: '10',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '计算：$(-13) - (-12) + (-7) + 18 =$ ______．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '原式 $=$',
+          input1Placeholder: '如 10',
+          input1Suffix: '',
+          expectedX: '10',
+          expectedMin: '',
           allowOrderSwap: false,
-          correctFeedback: '负数组之和为 $-20$，最终结果为 $10$。',
-          correctDetail: '$(-13) + (-7) = -20$，$12 + 18 = 30$，最终 $-20 + 30 = 10$。',
-          wrongFeedback: '同号两负数 $(-13)+(-7) = -20$，正数 $12+18 = 30$，再算 $-20 + 30$。',
+          correctFeedback: '原式 $= 10$。',
+          correctDetail: '去括号得 $-13 + 12 - 7 + 18 = (-13 - 7) + (12 + 18) = -20 + 30 = 10$。',
+          wrongFeedback: '先去括号写成 $-13 + 12 - 7 + 18$，正负分组相加得 $-20 + 30 = 10$。',
           specificWrongHints: []
         }
       }
@@ -9506,101 +9608,76 @@
     // =========================================================================
     P40: {
       procedureId: 'P40',
-      title: '运用有理数乘除法法则、倒数及乘法运算律计算',
-      exampleTitle: '计算：(1) $\\left(\\frac{1}{8} - \\frac{1}{3} + \\frac{1}{6}\\right) \\times 24$；(2) $(-13) \\times \\frac{2}{3} - 0.34 \\times \\frac{5}{7} + \\frac{1}{3} \\times (-13) - \\frac{2}{7} \\times 0.34$',
-      exampleFormula: '正向分配律去分母：$a(b+c)=ab+ac$；逆向分配律凑整：$ab+ac=a(b+c)$',
-      totalDuration: 30.0,
-      scratchpadIdleHint: '旁白草稿演算区（同步展示乘法正逆向分配律与“除法转乘倒数、奇负偶正”法则）',
-      practiceSectionTitle: '有理数乘除与分配律巧算跟做练习',
-      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握同级乘除顺序与带负号乘法分配律',
+      title: '有理数的乘除运算与乘法分配律简便计算',
+      exampleTitle: '计算：$\\left(\\frac{1}{8} - \\frac{1}{3} + \\frac{1}{6}\\right) \\times 24 =$ ______',
+      exampleFormula: '正向运用乘法分配律逐项相乘 $\\to$ 分别约分 $\\to$ 合并求和',
+      totalDuration: 24.0,
+      scratchpadIdleHint: '',
+      practiceSectionTitle: '乘法分配律简便计算',
+      practiceSectionSub: '',
 
       steps: [
         {
           step: 1,
-          name: '第(1)题识别公倍数，正向应用乘法分配律',
+          name: '用 24 分别乘括号内每一项',
           tStart: 0.0,
-          tEnd: 5.8,
-          explanation: '观察括号内分母 $8, 3, 6$ 都是 $24$ 的约数，不必通分，直接用 $24$ 乘遍括号内每一项：$\\frac{1}{8}\\times 24 - \\frac{1}{3}\\times 24 + \\frac{1}{6}\\times 24$。'
+          tEnd: 8.0,
+          explanation: '观察括号外因数 $24$ 是分母 $8, 3, 6$ 的公倍数，正向运用乘法分配律拆为 $\\frac{1}{8} \\times 24 - \\frac{1}{3} \\times 24 + \\frac{1}{6} \\times 24$。'
         },
         {
           step: 2,
-          name: '第(1)题分别约分并合并加减得 $-1$',
-          tStart: 5.8,
-          tEnd: 11.8,
-          explanation: '各项约分得整数 $3 - 8 + 4$，按加减合并得 $7 - 8 = -1$。'
+          name: '分别约分算出各项整数值',
+          tStart: 8.0,
+          tEnd: 16.0,
+          explanation: '逐项约分计算：$\\frac{1}{8} \\times 24 = 3$，$-\\frac{1}{3} \\times 24 = -8$，$+\\frac{1}{6} \\times 24 = +4$，得到 $3 - 8 + 4$。'
         },
         {
           step: 3,
-          name: '第(2)题锁定两组公共因数 $-13$ 与 $-0.34$',
-          tStart: 11.8,
-          tEnd: 18.2,
-          explanation: '观察四项乘积：第 $1, 3$ 项都含公共因数 $(-13)$，第 $2, 4$ 项都含公共因数 $(-0.34)$，先带符号分组排列。'
-        },
-        {
-          step: 4,
-          name: '第(2)题逆向应用乘法分配律提取公因数',
-          tStart: 18.2,
-          tEnd: 24.5,
-          explanation: '逆用分配律得 $(-13)\\times\\left(\\frac{2}{3} + \\frac{1}{3}\\right) - 0.34\\times\\left(\\frac{5}{7} + \\frac{2}{7}\\right)$（注意提出 $-0.34$ 后括号内两项均为正）。'
-        },
-        {
-          step: 5,
-          name: '括号内凑整为 $1$，口算得出最终结果 $-13.34$',
-          tStart: 24.5,
-          tEnd: 30.0,
-          explanation: '两括号内分别为 $\\frac{3}{3} = 1$ 与 $\\frac{7}{7} = 1$，化为 $-13 \\times 1 - 0.34 \\times 1 = -13.34$。'
+          name: '合并整数加减得出结果',
+          tStart: 16.0,
+          tEnd: 24.0,
+          explanation: '先将正数相加 $3 + 4 = 7$，再算 $7 - 8 = -1$。'
         }
       ],
 
       microBeats: [
-        { time: 0.8, step: 1, label: '1.1 (1) 用 $24$ 正向分配乘遍三项' },
-        { time: 7.2, step: 2, label: '2.1 (1) 约分得 $3 - 8 + 4 = -1$' },
-        { time: 13.5, step: 3, label: '3.1 (2) 识别公共因数 $-13$ 与 $-0.34$' },
-        { time: 19.8, step: 4, label: '4.1 (2) 逆向提取公因数凑整 $1$' },
-        { time: 26.0, step: 5, label: '5.1 (2) 合并得 $-13 - 0.34 = -13.34$' }
+        { time: 1.0, step: 1, label: '1.1 分配律逐项乘 $24$' },
+        { time: 9.5, step: 2, label: '2.1 约分得 $3 - 8 + 4$' },
+        { time: 17.5, step: 3, label: '3.1 合并得 $-1$' }
       ],
 
       boardRows: [
         {
           rowId: 'p40_row_0',
-          stepBadge: '第(1)题 · 正向分配律',
+          stepBadge: '原式',
           appearAt: 0.0,
           tokens: [
-            { id: 'p40_r0_1', math: '(1) $\\left(\\frac{1}{8} - \\frac{1}{3} + \\frac{1}{6}\\right) \\times 24$', appearAt: 0.0, dur: 0.01 },
-            { id: 'p40_r0_2', math: '$= \\frac{1}{8}\\times 24 - \\frac{1}{3}\\times 24 + \\frac{1}{6}\\times 24$', appearAt: 1.6, dur: 0.45 }
+            { id: 'p40_r0_1', math: '$\\left(\\frac{1}{8} - \\frac{1}{3} + \\frac{1}{6}\\right) \\times 24$', appearAt: 0.0, dur: 0.01 }
           ]
         },
         {
           rowId: 'p40_row_1',
-          stepBadge: '第(1)题 · 约分合并',
-          appearAt: 6.2,
+          stepBadge: '第 1 步 · 乘法分配律',
+          appearAt: 2.5,
           tokens: [
-            { id: 'p40_r1_res', math: '$= 3 - 8 + 4 = -1$', appearAt: 6.3, dur: 0.45 }
+            { id: 'p40_r1_dist', math: '$= \\frac{1}{8} \\times 24 - \\frac{1}{3} \\times 24 + \\frac{1}{6} \\times 24$', appearAt: 2.6, dur: 0.45 }
           ]
         },
         {
           rowId: 'p40_row_2',
-          stepBadge: '第(2)题 · 分组找公因数',
-          appearAt: 12.2,
+          stepBadge: '第 2 步 · 逐项约分',
+          appearAt: 9.5,
           tokens: [
-            { id: 'p40_r2_grp', math: '(2) $= \\left[(-13)\\times\\frac{2}{3} + \\frac{1}{3}\\times(-13)\\right] + \\left(-0.34\\times\\frac{5}{7} - \\frac{2}{7}\\times 0.34\\right)$', appearAt: 12.3, dur: 0.50 }
+            { id: 'p40_r2_val', math: '$= 3 - 8 + 4$', appearAt: 9.6, dur: 0.45 }
           ]
         },
         {
           rowId: 'p40_row_3',
-          stepBadge: '第(2)题 · 逆向分配律',
-          appearAt: 18.6,
-          tokens: [
-            { id: 'p40_r3_fac', math: '$= (-13)\\times\\left(\\frac{2}{3} + \\frac{1}{3}\\right) - 0.34\\times\\left(\\frac{5}{7} + \\frac{2}{7}\\right)$', appearAt: 18.7, dur: 0.50 }
-          ]
-        },
-        {
-          rowId: 'p40_row_4',
-          stepBadge: '最终结论',
-          appearAt: 24.8,
+          stepBadge: '最终结果',
+          appearAt: 17.0,
           isConclusion: true,
           tokens: [
-            { id: 'p40_r4_conc', math: '$= -13 \\times 1 - 0.34 \\times 1 = -13.34$。', appearAt: 24.9, dur: 0.60 }
+            { id: 'p40_r3_conc', math: '$= -1$。', appearAt: 17.1, dur: 0.60 }
           ]
         }
       ],
@@ -9608,23 +9685,22 @@
       scratchpadCards: [
         {
           id: 'p40_sp_1',
-          title: '草稿警示 · 有理数乘除三大铁律',
+          title: '核心法则 · 乘法分配律防漏乘与定符号',
           showStart: 0.8,
-          showEnd: 29.8,
+          showEnd: 23.8,
           tokens: [
-            { id: 'p40_sp1_t1', math: '① 除法转乘倒数：$3 \\div 2 \\times \\left(-\\frac{1}{2}\\right) = 3 \\times \\frac{1}{2} \\times \\left(-\\frac{1}{2}\\right) = -\\frac{3}{4}$', appearAt: 1.4, dur: 0.40 },
-            { id: 'p40_sp1_t2', math: '② 奇负偶正：先数负因数个数定符号，再约分算绝对值', appearAt: 6.8, dur: 0.40 },
-            { id: 'p40_sp1_t3', math: '③ 负因数提公因式：$-0.34\\times\\frac{5}{7} - \\frac{2}{7}\\times 0.34 = -0.34\\times\\left(\\frac{5}{7}+\\frac{2}{7}\\right)$', appearAt: 18.8, dur: 0.45 }
+            { id: 'p40_sp1_t1', math: '① 括号内有 $3$ 项，分配后必须有 $3$ 个乘积项', appearAt: 2.0, dur: 0.40 },
+            { id: 'p40_sp1_t2', math: '② 连同各项符号一起乘：$-\\frac{1}{3} \\times 24 = -8$', appearAt: 9.2, dur: 0.40 },
+            { id: 'p40_sp1_t3', math: '③ 合并：$3 + 4 - 8 = 7 - 8 = -1$', appearAt: 17.0, dur: 0.45 }
           ],
-          note: '特别提醒：乘法有分配律，但除法没有左分配律（如 $12 \\div (\\frac{1}{2} - \\frac{1}{3})$ 必须先算括号内）'
+          note: '当括号外因数恰好是括号内各分母的公倍数时，用分配律直接约分比通分快得多'
         }
       ],
 
       tokenHighlights: [
-        { tokenId: 'p40_r0_2', tStart: 1.6, tEnd: 5.6, color: 'amber' },
-        { tokenId: 'p40_r1_res', tStart: 6.3, tEnd: 11.6, color: 'teal' },
-        { tokenId: 'p40_r2_grp', tStart: 12.3, tEnd: 18.0, color: 'amber' },
-        { tokenId: 'p40_r3_fac', tStart: 18.7, tEnd: 24.4, color: 'teal' }
+        { tokenId: 'p40_r1_dist', tStart: 2.6, tEnd: 7.8, color: 'teal' },
+        { tokenId: 'p40_r2_val', tStart: 9.6, tEnd: 15.8, color: 'amber' },
+        { tokenId: 'p40_r3_conc', tStart: 17.1, tEnd: 23.5, color: 'teal' }
       ],
 
       svgAnnotations: [
@@ -9632,77 +9708,87 @@
           id: 'p40_svg_s1',
           type: 'arrow',
           fromToken: 'p40_r0_1',
-          toToken: 'p40_r0_2',
-          label: '正向分配约去分母',
-          color: '#D97706',
-          curveOffset: 28,
-          tStart: 1.4,
-          tDrawEnd: 2.2,
-          tFadeStart: 5.2,
-          tEnd: 5.8
+          toToken: 'p40_r1_dist',
+          label: '乘遍括号内三项',
+          color: '#0F766E',
+          curveOffset: 26,
+          tStart: 2.2,
+          tDrawEnd: 3.0,
+          tFadeStart: 7.2,
+          tEnd: 7.8
         },
         {
-          id: 'p40_svg_s4',
+          id: 'p40_svg_s2',
           type: 'arrow',
-          fromToken: 'p40_r2_grp',
-          toToken: 'p40_r3_fac',
-          label: '逆向提公因数凑整 $1$',
-          color: '#0F766E',
+          fromToken: 'p40_r1_dist',
+          toToken: 'p40_r2_val',
+          label: '分别约分',
+          color: '#D97706',
           curveOffset: -26,
-          tStart: 18.4,
-          tDrawEnd: 19.2,
-          tFadeStart: 23.8,
-          tEnd: 24.4
+          tStart: 9.0,
+          tDrawEnd: 9.8,
+          tFadeStart: 15.2,
+          tEnd: 15.8
         }
       ],
 
       subtitles: [
-        { tStart: 0.0, tEnd: 5.8, text: '看第(1)题：括号外是 $24$，正好是 $8, 3, 6$ 的公倍数，直接正向应用乘法分配律把 $24$ 乘遍三项。', focusToken: 'p40_r0_2' },
-        { tStart: 5.8, tEnd: 11.8, text: '分别约分得 $3 - 8 + 4$，口算得出 $-1$！', focusToken: 'p40_r1_res' },
-        { tStart: 11.8, tEnd: 18.2, text: '看第(2)题：前、后四项分别含有公共因数 $-13$ 和 $-0.34$，先带符号重新分组。', focusToken: 'p40_r2_grp' },
-        { tStart: 18.2, tEnd: 24.5, text: '逆向应用乘法分配律提取 $-13$ 和 $-0.34$，注意提取负号后第二组括号内为 $\\frac{5}{7} + \\frac{2}{7}$。', focusToken: 'p40_r3_fac' },
-        { tStart: 24.5, tEnd: 30.0, text: '两个括号都恰好凑整等于 $1$，算出最终结果 $-13 - 0.34 = -13.34$！', focusToken: 'p40_r4_conc' }
+        { tStart: 0.0, tEnd: 8.0, text: '第一步用乘法分配律：$24$ 是分母 $8, 3, 6$ 的公倍数，用 $24$ 分别乘括号里的每一项。', focusToken: 'p40_r1_dist' },
+        { tStart: 8.0, tEnd: 16.0, text: '第二步分别约分：$\\frac{1}{8} \\times 24 = 3$，$-\\frac{1}{3} \\times 24 = -8$，$\\frac{1}{6} \\times 24 = 4$，得到 $3 - 8 + 4$。', focusToken: 'p40_r2_val' },
+        { tStart: 16.0, tEnd: 24.0, text: '第三步合并整数：$3 + 4 - 8 = -1$，横线上填 $-1$！', focusToken: 'p40_r3_conc' }
       ],
 
       practices: {
         practice1: {
-          title: '练习一：乘除同级运算顺序与倒数转化',
-          givenLabel: '计算算式：',
-          givenFormula: '$3 \\div 2 \\times \\left(-\\frac{1}{2}\\right)$',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '计算 $\\left(\\frac{1}{4} - \\frac{1}{6} + \\frac{1}{3}\\right) \\times (-12)$ 的结果是（　　）',
           extractedLabel: '',
           extractedFormula: '',
-          questionText: '按从左到右顺序将除法转为乘倒数计算，正确结果是？',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $3 \\times \\frac{1}{2} \\times \\left(-\\frac{1}{2}\\right) = -\\frac{3}{4}$', isCorrect: true },
-            { key: 'B', text: 'B. $3 \\div (-1) = -3$', isCorrect: false },
-            { key: 'C', text: 'C. $\\frac{3}{4}$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $-5$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $5$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $-9$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！乘除同级运算必须从左到右先转连乘再定符号：',
+            title: '回答正确！用 $-12$ 乘遍括号内三项并约分：',
             calcLines: [
-              '$3 \\div 2 \\times \\left(-\\frac{1}{2}\\right) = 3 \\times \\frac{1}{2} \\times \\left(-\\frac{1}{2}\\right) = -\\frac{3}{4}$'
+              '原式 $= \\frac{1}{4} \\times (-12) - \\frac{1}{6} \\times (-12) + \\frac{1}{3} \\times (-12)$',
+              '$= -3 + 2 - 4 = -5$'
             ],
-            summary: '切勿跳步先算后面的 $2 \\times \\left(-\\frac{1}{2}\\right)$。'
+            summary: '注意第二项负负得正：$-rac{1}{6} 	imes (-12) = +2$。'
           },
-          wrongTitle: '提示：请从左到右把 ÷ 2 改为 × 1/2 再相乘',
-          wrongFeedback: '乘除同级运算不能先算后面的乘法，应先化为 $3 \\times \\frac{1}{2} \\times \\left(-\\frac{1}{2}\\right) = -\\frac{3}{4}$，请再试一次。'
+          wrongTitle: '提示：用 $-12$ 乘遍括号内每一项，注意正负号',
+          wrongFeedback: '分配律展开得 $-3 + 2 - 4 = -5$。'
         },
         practice2: {
-          title: '练习二：带负号正向应用乘法分配律',
-          givenLabel: '计算算式：',
-          givenFormula: '$\\left(\\frac{2}{3} - \\frac{5}{6} + \\frac{1}{12} - \\frac{7}{8}\\right) \\times (-24)$',
-          questionText: '用 $-24$ 乘遍括号内四项，第一项 $\\frac{2}{3} \\times (-24)$ 等于多少？四项合并后的最终结果是多少？',
-          input1Prefix: '第一项 $=$',
-          input1Placeholder: '如 -16',
-          input2Prefix: '，最终结果 $=$',
-          input2Placeholder: '如 23',
-          input2Suffix: '',
-          expectedX: '-16',
-          expectedMin: '23',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '计算：$\\left(\\frac{2}{3} - \\frac{5}{6} + \\frac{1}{12} - \\frac{7}{8}\\right) \\times (-24) =$ ______．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '原式 $=$',
+          input1Placeholder: '如 23',
+          input1Suffix: '',
+          expectedX: '23',
+          expectedMin: '',
           allowOrderSwap: false,
-          correctFeedback: '第一项为 $-16$，四项合并得 $-16 + 20 - 2 + 21 = 23$。',
-          correctDetail: '原式 $= \\frac{2}{3}\\times(-24) - \\frac{5}{6}\\times(-24) + \\frac{1}{12}\\times(-24) - \\frac{7}{8}\\times(-24) = -16 + 20 - 2 + 21 = 23$。',
-          wrongFeedback: '注意乘以负数 $-24$ 后每一项都要变号：$-16 + 20 - 2 + 21$。',
+          correctFeedback: '原式 $= 23$。',
+          correctDetail: '用 $-24$ 乘遍四项得 $-16 + 20 - 2 + 21 = 23$。',
+          wrongFeedback: '分配律逐项约分得 $-16 + 20 - 2 + 21 = 23$。',
           specificWrongHints: []
         }
       }
@@ -9917,44 +10003,55 @@
 
       practices: {
         practice1: {
-          title: '练习一：识别到三顶点距离相等的点',
-          givenLabel: '实际选址问题：',
-          givenFormula: '要在 $\\triangle ABC$ 内部修建一座物流中心，使其到 $A, B, C$ 三个城镇的距离相等',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '在 $\\triangle ABC$ 中，$AB = AC$，$\\angle A = 30^{\\circ}$，$AB$ 的垂直平分线交 $AC$ 于点 $D$，则 $\\angle DBC$ 的度数为（　　）',
           extractedLabel: '',
           extractedFormula: '',
-          questionText: '该物流中心应建在 $\\triangle ABC$ 的什么位置？',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. 三条边垂直平分线的交点处', isCorrect: true },
-            { key: 'B', text: 'B. 三个内角平分线的交点处', isCorrect: false },
-            { key: 'C', text: 'C. 三条中线的交点处', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $45^{\\circ}$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $30^{\\circ}$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $75^{\\circ}$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！准确区分“到顶点等距”与“到三边等距”：',
+            title: '回答正确！由垂直平分线性质得 $DA = DB$，再用底角相减：',
             calcLines: [
-              '到线段两端点距离相等 $\\implies$ 垂直平分线（外心）',
-              '到角两边距离相等 $\\implies$ 角平分线（内心）'
+              '$\\angle ABC = \\frac{180^{\\circ} - 30^{\\circ}}{2} = 75^{\\circ}$',
+              '$DA = DB \\implies \\angle ABD = \\angle A = 30^{\\circ} \\implies \\angle DBC = 75^{\\circ} - 30^{\\circ} = 45^{\\circ}$'
             ],
-            summary: '三边垂直平分线的交点到三个顶点的距离相等。'
+            summary: '垂直平分线上的点到线段两端点距离相等，由此直接转化出等腰三角形。'
           },
-          wrongTitle: '提示：请区分“到三个顶点距离相等”与“到三条边距离相等”',
-          wrongFeedback: '垂直平分线的性质是到两端点（顶点）距离相等，角平分线才是到两边距离相等，请再试一次。'
+          wrongTitle: '提示：先求 $ngle ABC = 75^{\\circ}$，再由 $DA = DB$ 得 $ngle ABD = 30^{\\circ}$',
+          wrongFeedback: '$\\angle ABC = 75^{\\circ}$，$\\angle ABD = \\angle A = 30^{\\circ}$，故 $\\angle DBC = 75^{\\circ} - 30^{\\circ} = 45^{\\circ}$。'
         },
         practice2: {
-          title: '练习二：垂直平分线“化折为直”算周长与反求边长',
-          givenLabel: '已知条件：',
-          givenFormula: '在 $\\triangle ABC$ 中，$BC$ 的垂直平分线交 $AC$ 于点 $D$，交 $BC$ 于点 $E$。若 $AB = 6$，$AC = 8$，$BE = 4$',
-          questionText: '由垂直平分线性质转化后，$\\triangle ABD$ 的周长是多少？整个 $\\triangle ABC$ 的周长是多少？',
-          input1Prefix: '$C_{\\triangle ABD} =$',
-          input1Placeholder: '如 14',
-          input2Prefix: '，$C_{\\triangle ABC} =$',
-          input2Placeholder: '如 22',
-          input2Suffix: '',
-          expectedX: '14',
-          expectedMin: '22',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '在 $\\triangle ABC$ 中，$AB = AC$，$\\angle A = 50^{\\circ}$，$AB$ 的垂直平分线交 $AC$ 于点 $D$，则 $\\angle DBC =$ ______$^{\\circ}$．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '$\\angle DBC =$',
+          input1Placeholder: '如 15',
+          input1Suffix: '°',
+          expectedX: '15',
+          expectedMin: '',
           allowOrderSwap: false,
-          correctFeedback: '$C_{\\triangle ABD} = 14$，$C_{\\triangle ABC} = 22$。',
-          correctDetail: '由 $DB = DC$ 得 $C_{\\triangle ABD} = AB + AD + DC = AB + AC = 6 + 8 = 14$；由中点 $E$ 得 $BC = 2BE = 8$，故 $C_{\\triangle ABC} = 14 + 8 = 22$。',
-          wrongFeedback: '先由 $DB = DC$ 将 $\\triangle ABD$ 周长转化为 $AB + AC$，再加上 $BC = 2BE$ 得大三角形周长。',
+          correctFeedback: '$\\angle DBC = 15^{\\circ}$。',
+          correctDetail: '$\\angle ABC = \\frac{180^{\\circ} - 50^{\\circ}}{2} = 65^{\\circ}$，由 $DA = DB$ 得 $\\angle ABD = 50^{\\circ}$，故 $\\angle DBC = 65^{\\circ} - 50^{\\circ} = 15^{\\circ}$。',
+          wrongFeedback: '先算 $\\angle ABC = 65^{\\circ}$，再减去 $\\angle ABD = \\angle A = 50^{\\circ}$。',
           specificWrongHints: []
         }
       }
@@ -10063,46 +10160,56 @@
       practiceSectionSub: '完成以下两道小题，检验对应顶点配对与内角和转化',
       practices: {
         practice1: {
-          title: '练习一：按全等式快速锁定对应边',
-          givenLabel: '已知：',
-          givenFormula: '$\\triangle ABC \\cong \\triangle DEF$，且 $AC = 5\\text{ cm}$，$BC = 8\\text{ cm}$',
-          questionText: '下列线段长度一定正确的是（　　）',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '点 $B, C, D$ 共线，$\\triangle ABC \\cong \\triangle DEC$，$AC = 4$，$BD = 12$，则 $CE$ 的长为（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $DE = 5\\text{ cm}$', isCorrect: false },
-            { key: 'B', text: 'B. $DF = 5\\text{ cm}$', isCorrect: true },
-            { key: 'C', text: 'C. $EF = 5\\text{ cm}$', isCorrect: false },
-            { key: 'D', text: 'D. $DF = 8\\text{ cm}$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $8$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $4$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $16$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '对应顶点配对准确！',
+            title: '回答正确！按字母顺序对应边转化线段：',
             calcLines: [
-              '在 $\\triangle ABC \\cong \\triangle DEF$ 中，$A \\leftrightarrow D,\\ B \\leftrightarrow E,\\ C \\leftrightarrow F$',
-              '故 $DF = AC = 5\\text{ cm}$，$EF = BC = 8\\text{ cm}$'
+              '由 $\\triangle ABC \\cong \\triangle DEC$ 得 $CD = CA = 4$，$CE = CB$',
+              '$CE = BC = BD - CD = 12 - 4 = 8$'
             ],
-            summary: '始终按全等符号前后第 1、2、3 位顶点一一配对，就不会找错对应边。'
+            summary: '严格按全等符号中对应顶点顺序找对应边。'
           },
-          wrongTitle: '提示：请核对顶点序号',
-          wrongFeedback: '$A$ 对应 $D$，$C$ 对应 $F$，因此 $AC$ 的对应边是 $DF$，而不是 $DE$ 或 $EF$。'
+          wrongTitle: '提示：由全等得 $CD = AC = 4$ 且 $CE = BC = BD - CD$',
+          wrongFeedback: '$CD = AC = 4$，$CE = BC = 12 - 4 = 8$。'
         },
         practice2: {
-          title: '练习二：全等对应角结合内角和求角度',
-          givenLabel: '已知：',
-          givenFormula: '$\\triangle ADC \\cong \\triangle AEB$，$\\angle A = 40^{\\circ}$，$\\angle C = 20^{\\circ}$',
-          questionText: '请填出对应角 $\\angle B$ 与目标角 $\\angle AEB$ 的度数：',
-          input1Prefix: '$\\angle B =$',
-          input1Placeholder: '如 20',
-          input2Prefix: '$^{\\circ}$，$\\angle AEB =$',
-          input2Placeholder: '如 120',
-          input2Suffix: '°',
-          expectedX: '20',
-          expectedMin: '120',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '点 $B, C, D$ 共线，$\\triangle ABC \\cong \\triangle DEC$，$AC = 5$，$BD = 14$，则 $CE =$ ______．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '$CE =$',
+          input1Placeholder: '如 9',
+          input1Suffix: '',
+          expectedX: '9',
+          expectedMin: '',
           allowOrderSwap: false,
-          correctFeedback: '$\\angle B = 20^{\\circ}$，$\\angle AEB = 120^{\\circ}$。',
-          correctDetail: '由 $\\triangle ADC \\cong \\triangle AEB$ 得 $\\angle B = \\angle C = 20^{\\circ}$，再在 $\\triangle AEB$ 中算得 $\\angle AEB = 180^{\\circ} - 40^{\\circ} - 20^{\\circ} = 120^{\\circ}$。',
-          wrongFeedback: '先由对应顶点 $C \\leftrightarrow B$ 得 $\\angle B = \\angle C = 20^{\\circ}$，再用 $180^{\\circ} - \\angle A - \\angle B$ 算 $\\angle AEB$。',
-          specificWrongHints: [
-            { checkType: 'firstVal', val: '40', hint: '$\\angle B$ 对应的是 $\\angle C = 20^{\\circ}$，不是 $\\angle A$。' }
-          ]
+          correctFeedback: '$CE = 9$。',
+          correctDetail: '由全等得 $CD = AC = 5$，$CE = BC = BD - CD = 14 - 5 = 9$。',
+          wrongFeedback: '先由对应边得 $CD = 5$，再算 $CE = BC = 14 - 5 = 9$。',
+          specificWrongHints: []
         }
       }
     },
@@ -10219,46 +10326,55 @@
       practiceSectionSub: '完成以下两道小题，检验判定定理选择与边角推导',
       practices: {
         practice1: {
-          title: '练习一：识别 SAS 所需的夹角条件',
-          givenLabel: '已知：',
-          givenFormula: '在 $\\triangle ABC$ 和 $\\triangle DEF$ 中，$BC = EF$，$AC = DF$',
-          questionText: '若要直接利用“$\\text{SAS}$”判定 $\\triangle ABC \\cong \\triangle DEF$，应补充的条件是（　　）',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '在 $\\triangle ABC$ 和 $\\triangle DEF$ 中，$BC = EF$，$AC = DF$，要直接利用“$\\text{SAS}$”判定 $\\triangle ABC \\cong \\triangle DEF$，应补充的条件是（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $\\angle A = \\angle D$', isCorrect: false },
-            { key: 'B', text: 'B. $\\angle B = \\angle E$', isCorrect: false },
-            { key: 'C', text: 'C. $\\angle C = \\angle F$', isCorrect: true },
-            { key: 'D', text: 'D. $AB = DE$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $\\angle C = \\angle F$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $\\angle A = \\angle D$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $\\angle B = \\angle E$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '准确锁定夹角！',
+            title: '回答正确！$	ext{SAS}$ 要求必须是已知两边的夹角相等：',
             calcLines: [
-              '边 $BC$ 与边 $AC$ 的公共顶点是 $C$，故它们的夹角为 $\\angle C$',
-              '边 $EF$ 与边 $DF$ 的夹角为 $\\angle F$，补充 $\\angle C = \\angle F$ 即满足 $\\text{SAS}$'
+              '$BC$ 与 $AC$ 的夹角是 $\\angle C$，$EF$ 与 $DF$ 的夹角是 $\\angle F$'
             ],
-            summary: '补充 $\\angle A = \\angle D$ 或 $\\angle B = \\angle E$ 属于无效的 $\\text{SSA}$；补充 $AB = DE$ 则用的是 $\\text{SSS}$。'
+            summary: '“$	ext{SSA}$”不能判定两个三角形全等。'
           },
-          wrongTitle: '提示：请寻找两条已知边的“夹角”',
-          wrongFeedback: '$BC$ 与 $AC$ 的夹角是两边的公共顶点处的角 $\\angle C$，切勿误选非夹角（$\\text{SSA}$）。'
+          wrongTitle: '提示：找出 $BC$ 与 $AC$ 的夹角',
+          wrongFeedback: '$BC$ 与 $AC$ 的夹角为 $\\angle C$，故应补充 $\\angle C = \\angle F$。'
         },
         practice2: {
-          title: '练习二：全等判定结合内角和计算角度',
-          givenLabel: '已知：',
-          givenFormula: '在 $\\triangle ABC$ 与 $\\triangle DEF$ 中，$AB = DE$，$AC = DF$，$BC = EF$，且 $\\angle A = 70^{\\circ}$，$\\angle B = 40^{\\circ}$',
-          questionText: '由 $\\text{SSS}$ 证得全等后，请填出 $\\angle D$ 与 $\\angle F$ 的度数：',
-          input1Prefix: '$\\angle D =$',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '在 $\\triangle ABC$ 与 $\\triangle DEF$ 中，$AB = DE$，$AC = DF$，$BC = EF$，且 $\\angle A = 70^{\\circ}$，$\\angle B = 40^{\\circ}$，则 $\\angle F =$ ______$^{\\circ}$．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '$\\angle F =$',
           input1Placeholder: '如 70',
-          input2Prefix: '$^{\\circ}$，$\\angle F =$',
-          input2Placeholder: '如 70',
-          input2Suffix: '°',
+          input1Suffix: '°',
           expectedX: '70',
-          expectedMin: '70',
+          expectedMin: '',
           allowOrderSwap: false,
-          correctFeedback: '$\\angle D = 70^{\\circ}$，$\\angle F = 70^{\\circ}$。',
-          correctDetail: '由 $\\text{SSS}$ 得 $\\triangle ABC \\cong \\triangle DEF$，故 $\\angle D = \\angle A = 70^{\\circ}$，$\\angle F = \\angle C = 180^{\\circ} - 70^{\\circ} - 40^{\\circ} = 70^{\\circ}$。',
-          wrongFeedback: '由全等对应角相等得 $\\angle D = \\angle A$，再用内角和 $180^{\\circ} - 70^{\\circ} - 40^{\\circ}$ 求出 $\\angle C = \\angle F$。',
-          specificWrongHints: [
-            { checkType: 'secondVal', val: '40', hint: '$\\angle F$ 对应的是 $\\angle C$（不是 $\\angle B = 40^{\\circ}$），请用 $180^{\\circ} - 70^{\\circ} - 40^{\\circ}$ 计算。' }
-          ]
+          correctFeedback: '$\\angle F = 70^{\\circ}$。',
+          correctDetail: '由 $\\text{SSS}$ 得 $\\triangle ABC \\cong \\triangle DEF$，故 $\\angle F = \\angle C = 180^{\\circ} - 70^{\\circ} - 40^{\\circ} = 70^{\\circ}$。',
+          wrongFeedback: '先证全等得 $\\angle F = \\angle C$，再用三角形内角和算 $\\angle C = 180^{\\circ} - 70^{\\circ} - 40^{\\circ}$。',
+          specificWrongHints: []
         }
       }
     }
@@ -10363,46 +10479,55 @@
       practiceSectionSub: '完成以下两道小题，检验面积转化与判定定理求角',
       practices: {
         practice1: {
-          title: '练习一：利用角平分线性质求面积比',
-          givenLabel: '已知：',
-          givenFormula: '在 $\\triangle ABC$ 中，$\\angle ACB = 90^{\\circ}$，$BE$ 平分 $\\angle ABC$，$ED \\perp AB$ 于点 $D$，$BC = 6$，$AB = 10$',
-          questionText: '则 $S_{\\triangle BCE} : S_{\\triangle BAE}$ 的值是（　　）',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '在 $\\triangle ABC$ 中，$\\angle C = 90^{\\circ}$，$AD$ 平分 $\\angle BAC$，$AB = 12$，$CD = 4$，则 $S_{\\triangle ABD}$ 的值为（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $5 : 3$', isCorrect: false },
-            { key: 'B', text: 'B. $3 : 5$', isCorrect: true },
-            { key: 'C', text: 'C. $3 : 4$', isCorrect: false },
-            { key: 'D', text: 'D. $4 : 5$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $24$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $48$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $12$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '等高面积比转化准确！',
+            title: '回答正确！过点 $D$ 作 $DE \\perp AB$，由角平分线性质得 $DE = CD = 4$：',
             calcLines: [
-              '由 $BE$ 平分 $\\angle ABC$ 且 $EC \\perp BC,\\ ED \\perp AB$，得 $EC = ED$',
-              '故 $S_{\\triangle BCE} : S_{\\triangle BAE} = BC : AB = 6 : 10 = 3 : 5$'
+              '$S_{\\triangle ABD} = \\frac{1}{2} \\cdot AB \\cdot DE = \\frac{1}{2} \\times 12 \\times 4 = 24$'
             ],
-            summary: '两个三角形高相等时，面积比直接等于对应底边之比。'
+            summary: '见角平分线与一边垂线，作另一边垂线即可直接得等高求面积。'
           },
-          wrongTitle: '提示：注意两个三角形的对应底边顺序',
-          wrongFeedback: '$\\triangle BCE$ 的底边是 $BC = 6$，$\\triangle BAE$ 的底边是 $AB = 10$，因高 $EC = ED$，面积比等于 $6 : 10 = 3 : 5$。'
+          wrongTitle: '提示：作 $DE \\perp AB$ 得 $DE = CD = 4$，再算 $rac{1}{2} 	imes AB 	imes DE$',
+          wrongFeedback: '由角平分线性质得高 $DE = CD = 4$，故 $S_{\\triangle ABD} = \\frac{1}{2} \\times 12 \\times 4 = 24$。'
         },
         practice2: {
-          title: '练习二：角平分线判定结合外角求角度',
-          givenLabel: '已知：',
-          givenFormula: '$PA \\perp ON$ 于 $A$，$PB \\perp OM$ 于 $B$，且 $PA = PB$，$\\angle MON = 50^{\\circ}$，$\\angle OPC = 30^{\\circ}$',
-          questionText: '先由判定定理求 $\\angle AOP$，再由外角性质求 $\\angle PCA$：',
-          input1Prefix: '$\\angle AOP =$',
-          input1Placeholder: '如 25',
-          input2Prefix: '$^{\\circ}$，$\\angle PCA =$',
-          input2Placeholder: '如 55',
-          input2Suffix: '°',
-          expectedX: '25',
-          expectedMin: '55',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '在 $\\triangle ABC$ 中，$\\angle C = 90^{\\circ}$，$AD$ 平分 $\\angle BAC$，$AB = 8$，$CD = 3$，则 $S_{\\triangle ABD} =$ ______．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '$S_{\\triangle ABD} =$',
+          input1Placeholder: '如 12',
+          input1Suffix: '',
+          expectedX: '12',
+          expectedMin: '',
           allowOrderSwap: false,
-          correctFeedback: '$\\angle AOP = 25^{\\circ}$，$\\angle PCA = 55^{\\circ}$。',
-          correctDetail: '由双垂直且 $PA = PB$ 判定 $OP$ 平分 $\\angle MON$，得 $\\angle AOP = \\frac{1}{2} \\times 50^{\\circ} = 25^{\\circ}$；再由外角性质得 $\\angle PCA = 25^{\\circ} + 30^{\\circ} = 55^{\\circ}$。',
-          wrongFeedback: '先由 $OP$ 平分 $\\angle MON = 50^{\\circ}$ 得 $\\angle AOP = 25^{\\circ}$，再将 $\\angle AOP$ 与 $\\angle OPC = 30^{\\circ}$ 相加求外角 $\\angle PCA$。',
-          specificWrongHints: [
-            { checkType: 'firstVal', val: '50', hint: '$\\angle AOP$ 是 $\\angle MON = 50^{\\circ}$ 的一半，应为 $25^{\\circ}$。' }
-          ]
+          correctFeedback: '$S_{\\triangle ABD} = 12$。',
+          correctDetail: '作 $DE \\perp AB$，由角平分线性质得 $DE = CD = 3$，故 $S_{\\triangle ABD} = \\frac{1}{2} \\times 8 \\times 3 = 12$。',
+          wrongFeedback: '先由角平分线性质得高 $DE = 3$，再算 $\\frac{1}{2} \\times 8 \\times 3 = 12$。',
+          specificWrongHints: []
         }
       }
     },
@@ -10555,6 +10680,60 @@
             { checkType: 'secondVal', val: '1020', hint: '别忘了加上常数项 $7\\times 20 = 140$ 元，$1020+140=1160$ 元。' }
           ]
         }
+      },
+
+      practices: {
+        practice1: {
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '长方形空地长 $(3a + 2)$ 米、宽 $2b$ 米，一角建长 $(a + 1)$ 米、宽 $b$ 米的花坛，则剩余面积为（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
+          options: [
+            {
+              key: 'A',
+              text: 'A. $(5ab + 3b)$ 平方米',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $(5ab + 5b)$ 平方米',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $(7ab + 3b)$ 平方米',
+              isCorrect: false
+            }
+          ],
+          correctFeedback: {
+            title: '回答正确！大长方形面积减去小花坛面积：',
+            calcLines: [
+              '$S = 2b(3a + 2) - b(a + 1) = 6ab + 4b - ab - b = 5ab + 3b$'
+            ],
+            summary: '减法去括号时注意后一项也要变号。'
+          },
+          wrongTitle: '提示：用大面积 $2b(3a + 2)$ 减去小面积 $b(a + 1)$',
+          wrongFeedback: '$2b(3a + 2) - b(a + 1) = 6ab + 4b - ab - b = 5ab + 3b$。'
+        },
+        practice2: {
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '长方形空地长 $(2a + 4)$ 米、宽 $3b$ 米，一角建长 $(a + 2)$ 米、宽 $b$ 米的花坛，当 $a = 4, b = 2$ 时，剩余面积 $S =$ ______ 平方米．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '$S =$',
+          input1Placeholder: '如 60',
+          input1Suffix: '',
+          expectedX: '60',
+          expectedMin: '',
+          allowOrderSwap: false,
+          correctFeedback: '$S = 60$ 平方米。',
+          correctDetail: '$S = 3b(2a + 4) - b(a + 2) = 5ab + 10b$；当 $a = 4, b = 2$ 时，$5 \\times 4 \\times 2 + 10 \\times 2 = 60$。',
+          wrongFeedback: '先列式化简得 $S = 5ab + 10b$，再代入 $a = 4, b = 2$ 得 $60$。',
+          specificWrongHints: []
+        }
       }
     }
     ,
@@ -10564,7 +10743,7 @@
     P46: {
       procedureId: 'P46',
       title: '判断两个量是否成正、反比例关系',
-      exampleTitle: '判断下列各组两个量成什么比例关系：① 单价一定时的总价与数量；② 三角形面积一定时的底边与高；③ 长方形周长一定时的长与宽；④ 圆的面积与半径',
+      exampleTitle: '下列各组两个量中，成反比例关系的是（　　）① 单价一定时的总价与数量；② 三角形面积一定时的底边与高；③ 长方形周长一定时的长与宽；④ 圆的面积与半径',
       exampleFormula: '正比例：$\\frac{y}{x} = k$（比值一定）；反比例：$x \\cdot y = k$（乘积一定）',
       totalDuration: 28.0,
       scratchpadIdleHint: '旁白草稿演算区（同步对照正比例、反比例与不成比例三大核心判别标准）',
@@ -10694,44 +10873,54 @@
 
       practices: {
         practice1: {
-          title: '练习一：辨别哪组两个量成反比例关系',
-          givenLabel: '给出三个生活情境：',
-          givenFormula: '① 路程一定，行驶速度与时间；② 书总页数一定，已读页数与未读页数；③ 正方形周长与边长',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '下列各组两个量中，成反比例关系的是（　　）',
           extractedLabel: '',
           extractedFormula: '',
-          questionText: '其中成反比例关系的是哪一个？',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. ①（速度 $\\times$ 时间 $=$ 路程，乘积一定）', isCorrect: true },
-            { key: 'B', text: 'B. ②（已读 $+$ 未读 $=$ 总页数）', isCorrect: false },
-            { key: 'C', text: 'C. ③（周长 $\\div$ 边长 $= 4$）', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. 路程一定，行驶速度与时间',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. 书总页数一定，已读页数与未读页数',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. 正方形的周长与边长',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！逐一验证等量关系：',
+            title: '回答正确！乘积一定成反比例：',
             calcLines: [
-              '① $v \\cdot t = s$（乘积一定）$\\implies$ 反比例 ✓',
-              '② 已读 $+$ 未读 $=$ 总页数（和一定，不成比例）；③ $\\frac{C}{a}=4$（比值一定，正比例）'
+              '速度 $\\times$ 时间 $=$ 路程（乘积一定）$\\implies$ 反比例关系'
             ],
-            summary: '识别反比例牢记“两量乘积为非零定值”。'
+            summary: '比值一定成正比例，乘积一定成反比例，和差一定不成比例。'
           },
-          wrongTitle: '提示：请写出各情境的等量关系式检验乘积是否一定',
-          wrongFeedback: '只有 ① 满足“速度 $\\times$ 时间 $=$ 路程（定值）”，② 是和一定，③ 是比值一定，请再试一次。'
+          wrongTitle: '提示：判断两个量的乘积是否为定值',
+          wrongFeedback: '路程一定时“速度 × 时间 = 路程”为乘积一定，成反比例关系。'
         },
         practice2: {
-          title: '练习二：变形代数等式判定正、反比例',
-          givenLabel: '给出两个等式：',
-          givenFormula: '① $3x = y$；② $2xy = 10$',
-          questionText: '① 中比值 $\\frac{y}{x}$ 等于多少（正比例）？② 中乘积 $xy$ 等于多少（反比例）？',
-          input1Prefix: '① $\\frac{y}{x} =$',
-          input1Placeholder: '如 3',
-          input2Prefix: '，② $xy =$',
-          input2Placeholder: '如 5',
-          input2Suffix: '',
-          expectedX: '3',
-          expectedMin: '5',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '若等式 $2xy = 10$ 表示 $x, y$ 成反比例关系，则它们的乘积定值 $xy =$ ______．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '$xy =$',
+          input1Placeholder: '如 5',
+          input1Suffix: '',
+          expectedX: '5',
+          expectedMin: '',
           allowOrderSwap: false,
-          correctFeedback: '① $\\frac{y}{x} = 3$（正比例），② $xy = 5$（反比例）。',
-          correctDetail: '由 $3x = y$ 得 $\\frac{y}{x} = 3$（定值）；由 $2xy = 10$ 两边同除以 $2$ 得 $xy = 5$（定值）。',
-          wrongFeedback: '① 两边同除以 $x$ 得 $\\frac{y}{x} = 3$；② 两边同除以 $2$ 得 $xy = 5$。',
+          correctFeedback: '$xy = 5$。',
+          correctDetail: '由 $2xy = 10$ 两边同除以 $2$ 得 $xy = 5$（乘积一定）。',
+          wrongFeedback: '将 $2xy = 10$ 两边同除以 $2$ 即得 $xy = 5$。',
           specificWrongHints: []
         }
       }
@@ -10887,33 +11076,45 @@
 
       practices: {
         practice1: {
-          title: '练习一：辨识整式与多项式',
-          givenLabel: '给出四个式子：',
-          givenFormula: '① $\\frac{x + 2y}{3}$；② $\\frac{2}{x} + 1$；③ $a^{2} - 2ab + b^{2}$；④ $-5x^{2}y$',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '多项式 $3x^{2}y - 5xy^{3} + 4$ 的项数、次数和常数项分别是（　　）',
           extractedLabel: '',
           extractedFormula: '',
-          questionText: '其中属于整式的有几个？属于多项式的有哪几个？',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. 整式有 $3$ 个（①③④），多项式有 ①③', isCorrect: true },
-            { key: 'B', text: 'B. 整式有 $4$ 个，多项式有 ①②③', isCorrect: false },
-            { key: 'C', text: 'C. 整式有 $2$ 个（③④），多项式只有 ③', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $3$，$4$，$4$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $3$，$3$，$4$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $3$，$7$，$4$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！分母不含字母的就是整式：',
+            title: '回答正确！逐项算次数取最大值：',
             calcLines: [
-              '① $\\frac{x+2y}{3} = \\frac{1}{3}x + \\frac{2}{3}y$ 是多项式 ✓；③ 是多项式 ✓；④ 是单项式 ✓',
-              '② $\\frac{2}{x}+1$ 分母含字母 $x$，不是整式'
+              '三项分别为 $3x^{2}y$（$3$ 次）、$-5xy^{3}$（$4$ 次）、$4$（常数项）',
+              '项数为 $3$，最高次数为 $4$，常数项为 $4$'
             ],
-            summary: '单项式与多项式统称整式，分母含字母的一律排除在整式之外。'
+            summary: '多项式的次数是所有项中次数最高的那个单项式的次数。'
           },
-          wrongTitle: '提示：请检查分母是否含有字母',
-          wrongFeedback: '① 分母是数字 $3$，属于多项式（整式）；② 分母是字母 $x$，不是整式，请再试一次。'
+          wrongTitle: '提示：比较各项次数 $3$ 和 $4$，取最高次数',
+          wrongFeedback: '$-5xy^{3}$ 的次数为 $1 + 3 = 4$ 最高，共 $3$ 项，常数项为 $4$。'
         },
         practice2: {
-          title: '练习二：确定多项式的次数与常数项',
-          givenLabel: '给出多项式：',
-          givenFormula: '$5x^{3}y^{2} - 2xy^{3} + x - 9$',
-          questionText: '该多项式的次数与常数项分别是多少？',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '多项式 $5x^{3}y^{2} - 2xy^{3} + x - 9$ 的次数是 ______，常数项是 ______．',
+          questionText: '',
           input1Prefix: '次数 $=$',
           input1Placeholder: '如 5',
           input2Prefix: '，常数项 $=$',
@@ -10922,11 +11123,15 @@
           expectedX: '5',
           expectedMin: '-9',
           allowOrderSwap: false,
-          correctFeedback: '次数为 $5$（五次四项式），常数项为 $-9$。',
-          correctDetail: '各项次数依次为 $3+2=5$、$1+3=4$、$1$、$0$，最大值为 $5$；常数项连同负号为 $-9$。',
-          wrongFeedback: '第一项 $5x^{3}y^{2}$ 的次数为 $3+2=5$（最高），常数项不要漏掉负号。',
+          correctFeedback: '次数为 $5$，常数项为 $-9$。',
+          correctDetail: '最高次项 $5x^{3}y^{2}$ 的次数为 $3 + 2 = 5$；常数项连同符号为 $-9$。',
+          wrongFeedback: '最高次项为 $5x^{3}y^{2}$（$5$ 次），常数项带负号为 $-9$。',
           specificWrongHints: [
-            { checkType: 'secondVal', val: '9', hint: '常数项必须连同前面的负号一起写，应为 $-9$ 而不是 $9$。' }
+            {
+              checkType: 'secondVal',
+              val: '9',
+              hint: '常数项要连同前面的负号一起写，应为 $-9$。'
+            }
           ]
         }
       }
@@ -11080,44 +11285,56 @@
 
       practices: {
         practice1: {
-          title: '练习一：含绝对值指数的多项式求参（检验舍增根）',
-          givenLabel: '已知条件：',
-          givenFormula: '多项式 $(m - 2)x^{|m|} - 3x + 1$ 是关于 $x$ 的二次三项式',
-          extractedLabel: '列出双重条件：',
-          extractedFormula: '$|m| = 2$ 且 $m - 2 \\neq 0$',
-          questionText: '参数 $m$ 的正确值是？',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '若关于 $x$ 的多项式 $(m - 2)x^{|m|} - 3x + 1$ 是二次三项式，则 $m$ 的值为（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $m = -2$（舍去使系数为 $0$ 的 $m = 2$）', isCorrect: true },
-            { key: 'B', text: 'B. $m = 2$ 或 $m = -2$', isCorrect: false },
-            { key: 'C', text: 'C. $m = 2$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $-2$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $2$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $\\pm 2$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！解绝对值方程后必须检验最高次项系数不为 0：',
+            title: '回答正确！最高次指数为 2 且最高次项系数不为 0：',
             calcLines: [
-              '$|m| = 2 \\implies m = 2$ 或 $m = -2$',
-              '由 $m - 2 \\neq 0$ 得 $m \\neq 2$，故舍去 $2$，定解 $m = -2$'
+              '$|m| = 2 \\implies m = \\pm 2$',
+              '又 $m - 2 \\neq 0 \\implies m = -2$'
             ],
-            summary: '凡是含参“几次几项式”题，最后一步一定核对最高次项系数 $\\neq 0$。'
+            summary: '最高次项系数不能为 $0$，否则多项式会降次。'
           },
-          wrongTitle: '提示：请将 m = 2 代入首项系数检验',
-          wrongFeedback: '当 $m = 2$ 时，首项系数 $m - 2 = 0$，原式变为一次二项式 $-3x + 1$，必须舍去 $2$，请再试一次。'
+          wrongTitle: '提示：同时满足 $|m| = 2$ 且 $m - 2 \neq 0$',
+          wrongFeedback: '由 $|m| = 2$ 得 $m = \\pm 2$，又 $m - 2 \\neq 0$，故 $m = -2$。'
         },
         practice2: {
-          title: '练习二：由单项式次数相等与降次求参数',
-          givenLabel: '已知条件：',
-          givenFormula: '单项式 $-3x^{2}y^{m}$ 的次数为 $6$；多项式 $(a - 3)x^{3} + 2x^{2} - 1$ 是二次二项式',
-          questionText: '求参数 $m$ 和 $a$ 的值分别是多少？',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '若关于 $x$ 的多项式 $(n + 1)x^{m + 1} - 2x^{2} + 5x$ 是四次三项式，则 $m =$ ______，$n \\neq$ ______．',
+          questionText: '',
           input1Prefix: '$m =$',
-          input1Placeholder: '如 4',
-          input2Prefix: '，$a =$',
-          input2Placeholder: '如 3',
+          input1Placeholder: '如 3',
+          input2Prefix: '，$n \\neq$',
+          input2Placeholder: '如 -1',
           input2Suffix: '',
-          expectedX: '4',
-          expectedMin: '3',
+          expectedX: '3',
+          expectedMin: '-1',
           allowOrderSwap: false,
-          correctFeedback: '$m = 4$，$a = 3$。',
-          correctDetail: '由单项式次数得 $2 + m = 6 \\implies m = 4$；由多项式为二次二项式需消去三次项，令 $a - 3 = 0 \\implies a = 3$。',
-          wrongFeedback: '第一空由 $2 + m = 6$ 求 $m$；第二空要让多项式降为二次二项式，须令三次项系数 $a - 3 = 0$。',
+          correctFeedback: '$m = 3$，$n \\neq -1$。',
+          correctDetail: '由最高次数 $m + 1 = 4$ 得 $m = 3$；由最高次项系数 $n + 1 \\neq 0$ 得 $n \\neq -1$。',
+          wrongFeedback: '令 $m + 1 = 4$ 得 $m = 3$，令系数 $n + 1 \\neq 0$ 得 $n \\neq -1$。',
           specificWrongHints: []
         }
       }
@@ -11251,33 +11468,45 @@
 
       practices: {
         practice1: {
-          title: '练习一：辨别哪一组是同类项',
-          givenLabel: '给出三组单项式：',
-          givenFormula: '① $-2a^{2}b$ 与 $5ba^{2}$；② $3x^{2}y$ 与 $3xy^{2}$；③ $2^{3}$ 与 $3^{2}$',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '若单项式 $2x^{m}y^{4}$ 与 $-3x^{3}y^{n}$ 的和是单项式，则 $m + n$ 的值为（　　）',
           extractedLabel: '',
           extractedFormula: '',
-          questionText: '其中属于同类项的组合是？',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. ① 与 ③（字母顺序无关，常数项之间都是同类项）', isCorrect: true },
-            { key: 'B', text: 'B. 只有 ①', isCorrect: false },
-            { key: 'C', text: 'C. ① 与 ②', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $7$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $6$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $1$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！按“两相同、两无关”核对：',
+            title: '回答正确！和是单项式即两者是同类项：',
             calcLines: [
-              '① $-2a^{2}b$ 与 $5ba^{2}$ 字母与对应指数完全一致 ✓',
-              '② $x^{2}y$ 与 $xy^{2}$ 对应字母指数不同 ✗；③ $2^{3}=8$ 与 $3^{2}=9$ 均为常数项 ✓'
+              '相同字母指数分别相等：$m = 3$，$n = 4$',
+              '$m + n = 3 + 4 = 7$'
             ],
-            summary: '两个纯数字幂（如 $2^{3}$ 与 $3^{2}$）都是常数项，因此也是同类项。'
+            summary: '两个单项式的和仍为单项式，说明它们必是同类项。'
           },
-          wrongTitle: '提示：请回顾常数项与字母顺序的规则',
-          wrongFeedback: '$2^{3}$ 和 $3^{2}$ 都是常数项属于同类项，而 $x^{2}y$ 与 $xy^{2}$ 相同字母指数不同不是同类项，请再试一次。'
+          wrongTitle: '提示：由同类项定义得 $m = 3$，$n = 4$',
+          wrongFeedback: '相同字母的指数分别相等，得 $m = 3, n = 4$，故 $m + n = 7$。'
         },
         practice2: {
-          title: '练习二：由同类项定义列方程求参数',
-          givenLabel: '已知条件：',
-          givenFormula: '单项式 $2x^{a+1}y^{3}$ 与 $-5x^{4}y^{b-1}$ 是同类项',
-          questionText: '令相同字母的指数分别相等，求出 $a$ 和 $b$ 的值分别是多少？',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '若单项式 $2x^{a+1}y^{3}$ 与 $-5x^{4}y^{b-1}$ 是同类项，则 $a =$ ______，$b =$ ______．',
+          questionText: '',
           input1Prefix: '$a =$',
           input1Placeholder: '如 3',
           input2Prefix: '，$b =$',
@@ -11287,8 +11516,8 @@
           expectedMin: '4',
           allowOrderSwap: false,
           correctFeedback: '$a = 3$，$b = 4$。',
-          correctDetail: '由 $x$ 的指数相等得 $a + 1 = 4 \\implies a = 3$；由 $y$ 的指数相等得 $b - 1 = 3 \\implies b = 4$。',
-          wrongFeedback: '分别列出 $a + 1 = 4$ 与 $b - 1 = 3$ 两个方程求解即可。',
+          correctDetail: '由 $a + 1 = 4$ 得 $a = 3$；由 $b - 1 = 3$ 得 $b = 4$。',
+          wrongFeedback: '令 $x$ 和 $y$ 的指数分别相等：$a + 1 = 4$，$b - 1 = 3$。',
           specificWrongHints: []
         }
       }
@@ -11436,33 +11665,44 @@
 
       practices: {
         practice1: {
-          title: '练习一：多项式相减不含某项求参数（注意变号）',
-          givenLabel: '已知条件：',
-          givenFormula: '多项式 $(3x^{2} + kxy - y^{2}) - (x^{2} - 2xy + 3y^{2})$ 化简后不含 $xy$ 项',
-          extractedLabel: '去括号合并 $xy$ 项：',
-          extractedFormula: '$kxy - (-2xy) = (k + 2)xy$',
-          questionText: '参数 $k$ 的值是？',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '若多项式 $(3x^{2} + kxy - y^{2}) - (x^{2} - 2xy + 3y^{2})$ 化简后不含 $xy$ 项，则 $k$ 的值为（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. $k = -2$（由 $k + 2 = 0$ 解得）', isCorrect: true },
-            { key: 'B', text: 'B. $k = 2$', isCorrect: false },
-            { key: 'C', text: 'C. $k = 0$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $-2$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $2$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $0$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！先变号合并 xy 项系数，再令系数等于 0：',
+            title: '回答正确！去括号合并 $xy$ 项系数并令其为 0：',
             calcLines: [
-              '$-(-2xy) = +2xy \\implies xy$ 项合并系数为 $k + 2$',
-              '由不含 $xy$ 项令 $k + 2 = 0 \\implies k = -2$'
+              '$xy$ 项系数为 $k - (-2) = k + 2 = 0 \\implies k = -2$'
             ],
-            summary: '相减时千万留意负负得正，避免把 $k + 2$ 错算成 $k - 2$。'
+            summary: '减法去括号变号后再合并目标项系数令其等于 $0$。'
           },
-          wrongTitle: '提示：请检查减号后 -2xy 去括号的变号',
-          wrongFeedback: '减去 $(-2xy)$ 等于加上 $+2xy$，合并后 $xy$ 项系数为 $k + 2 = 0$，故 $k = -2$，请再试一次。'
+          wrongTitle: '提示：去括号后 $xy$ 项为 $kxy + 2xy = (k + 2)xy$',
+          wrongFeedback: '令 $k + 2 = 0$，解得 $k = -2$。'
         },
         practice2: {
-          title: '练习二：值与 x 的取值无关求两个参数',
-          givenLabel: '已知条件：',
-          givenFormula: '整式 $(a - 2)x^{2} + (b + 4)x - 3y + 1$ 的值与 $x$ 的取值无关',
-          questionText: '分别求出参数 $a$ 和 $b$ 的值：',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '若整式 $(a - 2)x^{2} + (b + 4)x - 3y + 1$ 的值与 $x$ 的取值无关，则 $a =$ ______，$b =$ ______．',
+          questionText: '',
           input1Prefix: '$a =$',
           input1Placeholder: '如 2',
           input2Prefix: '，$b =$',
@@ -11472,8 +11712,8 @@
           expectedMin: '-4',
           allowOrderSwap: false,
           correctFeedback: '$a = 2$，$b = -4$。',
-          correctDetail: '令 $a - 2 = 0$ 且 $b + 4 = 0$，解得 $a = 2，b = -4$。',
-          wrongFeedback: '令 $x^{2}$ 项系数 $a - 2 = 0$ 且 $x$ 项系数 $b + 4 = 0$ 即可解出。',
+          correctDetail: '与 $x$ 无关即所有含 $x$ 项的系数为 $0$：$a - 2 = 0 \\implies a = 2$，$b + 4 = 0 \\implies b = -4$。',
+          wrongFeedback: '分别令 $a - 2 = 0$ 与 $b + 4 = 0$ 求解。',
           specificWrongHints: []
         }
       }
@@ -11626,44 +11866,55 @@
 
       practices: {
         practice1: {
-          title: '练习一：辨别合并同类项的正误',
-          givenLabel: '给出三个合并结果：',
-          givenFormula: '① $3a + 2b = 5ab$；② $5y^{2} - 2y^{2} = 3$；③ $7x^{2}y - 7yx^{2} = 0$',
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '化简 $2x^{2} - 3xy + y^{2} - x^{2} - y^{2}$，当 $x = -2$，$y = 1$ 时的值为（　　）',
           extractedLabel: '',
           extractedFormula: '',
-          questionText: '其中计算完全正确的是哪一个？',
+          questionText: '',
           options: [
-            { key: 'A', text: 'A. ③ $7x^{2}y - 7yx^{2} = 0$', isCorrect: true },
-            { key: 'B', text: 'B. ② $5y^{2} - 2y^{2} = 3$', isCorrect: false },
-            { key: 'C', text: 'C. ① $3a + 2b = 5ab$', isCorrect: false }
+            {
+              key: 'A',
+              text: 'A. $10$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $-2$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $2$',
+              isCorrect: false
+            }
           ],
           correctFeedback: {
-            title: '回答正确！按“系数相加、字母和指数不变”核对：',
+            title: '回答正确！先合并同类项化简，再代入求值：',
             calcLines: [
-              '① $3a$ 与 $2b$ 不是同类项不能合并；② $5y^{2} - 2y^{2} = 3y^{2}$（漏写字母 $y^{2}$）',
-              '③ $7x^{2}y$ 与 $-7yx^{2}$ 是同类项，系数 $7 - 7 = 0$，结果为 $0$ ✓'
+              '原式 $= (2 - 1)x^{2} - 3xy + (1 - 1)y^{2} = x^{2} - 3xy$',
+              '当 $x = -2, y = 1$ 时，$(-2)^{2} - 3 \\times (-2) \\times 1 = 4 + 6 = 10$'
             ],
-            summary: '合并同类项既不能强行合并非同类项，也不能把字母部分丢掉。'
+            summary: '合并同类项时只把系数相加减，字母与指数保持不变。'
           },
-          wrongTitle: '提示：请核对字母是否相同以及合并后字母是否保留',
-          wrongFeedback: '① 不是同类项不能合并，② 丢掉了字母 $y^{2}$，只有 ③ 互为相反数的同类项相加得 $0$ 正确，请再试一次。'
+          wrongTitle: '提示：先合并同类项得 $x^{2} - 3xy$，再代入 $x = -2, y = 1$',
+          wrongFeedback: '化简得 $x^{2} - 3xy$，代入得 $(-2)^{2} - 3 \\times (-2) \\times 1 = 10$。'
         },
         practice2: {
-          title: '练习二：先合并同类项再代入求值',
-          givenLabel: '已知多项式：',
-          givenFormula: '$3a^{2} + 4a - a^{2} + 3a - 2a^{2}$',
-          questionText: '合并同类项化简为 $ka$ 后，系数 $k$ 是多少？当 $a = -3$ 时该多项式的值是多少？',
-          input1Prefix: '系数 $k =$',
-          input1Placeholder: '如 7',
-          input2Prefix: '，当 $a = -3$ 时的值 $=$',
-          input2Placeholder: '如 -21',
-          input2Suffix: '',
-          expectedX: '7',
-          expectedMin: '-21',
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '当 $a = -3$ 时，多项式 $3a^{2} + 4a - a^{2} + 3a - 2a^{2}$ 的值为 ______．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '原式 $=$',
+          input1Placeholder: '如 -21',
+          input1Suffix: '',
+          expectedX: '-21',
+          expectedMin: '',
           allowOrderSwap: false,
-          correctFeedback: '化简为 $7a$（$k = 7$），当 $a = -3$ 时值为 $-21$。',
-          correctDetail: '二次项 $(3 - 1 - 2)a^{2} = 0$ 抵消，一次项 $(4 + 3)a = 7a$；代入 $a = -3$ 得 $7 \\times (-3) = -21$。',
-          wrongFeedback: '先合并 $a^{2}$ 项得 $0$、合并 $a$ 项得 $7a$，再算 $7 \\times (-3)$。',
+          correctFeedback: '原式 $= -21$。',
+          correctDetail: '合并同类项得 $(3 - 1 - 2)a^{2} + (4 + 3)a = 7a$；当 $a = -3$ 时，$7 \\times (-3) = -21$。',
+          wrongFeedback: '先合并同类项得 $7a$，再代入 $a = -3$ 得 $-21$。',
           specificWrongHints: []
         }
       }
@@ -11671,7 +11922,7 @@
     P52: {
       procedureId: 'P52',
       title: '识别弦与直径并由“直径是最长的弦”确定弦长范围',
-      exampleTitle: '已知 $\odot O$ 的半径为 $5$，$AB$ 是 $\odot O$ 的弦，求弦 $AB$ 的长度 $a$ 的取值范围',
+      exampleTitle: '已知 $\\odot O$ 的半径为 $5$，$AB$ 是 $\\odot O$ 的弦，求弦 $AB$ 的长度 $a$ 的取值范围',
       totalDuration: 21.0,
       scratchpadIdleHint: '弦与直径对比提示区（演示中将同步动态呈现直径 $CD = 2r = 10$ 与非直径弦 $AB$ 的比较）',
       geometryDiagram: {
@@ -11711,7 +11962,7 @@
             {
               appearAt: 0.6,
               badge: '审题',
-              formula: '已知 $\odot O$ 半径 $r = 5$，弦 $AB$ 的两端点均在 $\odot O$ 上',
+              formula: '已知 $\\odot O$ 半径 $r = 5$，弦 $AB$ 的两端点均在 $\\odot O$ 上',
               highlight: false
             },
             {
@@ -11801,19 +12052,73 @@
         q2: {
           title: '练习二：由半径确定弦长上限（对应题库 b_q5 / g_q4）',
           givenLabel: '已知：',
-          givenFormula: '$\odot O_{1}$ 半径为 $6$，$\odot O_{2}$ 半径为 $3$',
+          givenFormula: '$\\odot O_{1}$ 半径为 $6$，$\\odot O_{2}$ 半径为 $3$',
           questionText: '分别写出两圆中任意弦长的最大可能值（超过此值即不可能）：',
-          input1Prefix: '$\odot O_{1}$ 弦长上限 $=$',
+          input1Prefix: '$\\odot O_{1}$ 弦长上限 $=$',
           input1Placeholder: '如 12',
-          input2Prefix: '，$\odot O_{2}$ 弦长上限 $=$',
+          input2Prefix: '，$\\odot O_{2}$ 弦长上限 $=$',
           input2Placeholder: '如 6',
           input2Suffix: '',
           expectedX: '12',
           expectedMin: '6',
           allowOrderSwap: false,
-          correctFeedback: '$\odot O_{1}$ 弦长上限为 $12$，$\odot O_{2}$ 弦长上限为 $6$。',
+          correctFeedback: '$\\odot O_{1}$ 弦长上限为 $12$，$\\odot O_{2}$ 弦长上限为 $6$。',
           correctDetail: '任意弦长不超过直径 $2r$：当 $r = 6$ 时上限为 $12$（如 $13$ 不可能）；当 $r = 3$ 时上限为 $6$（如 $7$ 不可能）。',
           wrongFeedback: '弦长最大只能等于直径 $2r$，分别计算 $2 \times 6$ 和 $2 \times 3$。',
+          specificWrongHints: []
+        }
+      },
+
+      practices: {
+        practice1: {
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '已知 $\\odot O$ 的半径为 $6$，$AB$ 是 $\\odot O$ 的弦，则弦 $AB$ 的长度 $a$ 的取值范围是（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
+          options: [
+            {
+              key: 'A',
+              text: 'A. $0 \\lt a \\le 12$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $0 \\lt a \\lt 12$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $0 \\lt a \\le 6$',
+              isCorrect: false
+            }
+          ],
+          correctFeedback: {
+            title: '回答正确！直径是圆中最长的弦：',
+            calcLines: [
+              '直径 $d = 2r = 12$，故 $0 \\lt a \\le 12$'
+            ],
+            summary: '弦长大于 $0$ 且小于或等于直径（可以取等号）。'
+          },
+          wrongTitle: '提示：直径是最长的弦，$d = 2r = 12$ 且可以取等号',
+          wrongFeedback: '半径为 $6$ 则直径为 $12$，弦长满足 $0 \\lt a \\le 12$。'
+        },
+        practice2: {
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '已知 $\\odot O$ 的半径为 $4$，则 $\\odot O$ 中最长弦的长度为 ______．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '最长弦长 $=$',
+          input1Placeholder: '如 8',
+          input1Suffix: '',
+          expectedX: '8',
+          expectedMin: '',
+          allowOrderSwap: false,
+          correctFeedback: '最长弦长为 $8$。',
+          correctDetail: '圆中最长的弦是直径，长度为 $2r = 2 \\times 4 = 8$。',
+          wrongFeedback: '圆中最长的弦是直径，等于半径的 $2$ 倍。',
           specificWrongHints: []
         }
       }
@@ -11821,7 +12126,7 @@
     P53: {
       procedureId: 'P53',
       title: '点到圆上点的最远与最近距离分类求半径',
-      exampleTitle: '若点 $P$ 到 $\odot O$ 上的点的最小距离是 $4$，最大距离是 $6$，求 $\odot O$ 的半径',
+      exampleTitle: '若点 $P$ 到 $\\odot O$ 上的点的最小距离是 $4$，最大距离是 $6$，求 $\\odot O$ 的半径',
       totalDuration: 23.0,
       scratchpadIdleHint: '分类讨论提示区（演示中将同步画出点 $P$ 在圆外与点 $P$ 在圆内两种几何位置）',
       geometryDiagram: {
@@ -11873,7 +12178,7 @@
             {
               appearAt: 3.0,
               badge: '定位',
-              formula: '直线 $PO$ 与 $\odot O$ 的两个交点即为最近点与最远点（夹出一条直径）',
+              formula: '直线 $PO$ 与 $\\odot O$ 的两个交点即为最近点与最远点（夹出一条直径）',
               highlight: true
             }
           ]
@@ -11893,7 +12198,7 @@
             {
               appearAt: 6.0,
               badge: '圆外',
-              formula: '当点 $P$ 在 $\odot O$ 外时：直径 $2r = d_{\max} - d_{\min} = 6 - 4 = 2$',
+              formula: '当点 $P$ 在 $\\odot O$ 外时：直径 $2r = d_{\max} - d_{\min} = 6 - 4 = 2$',
               highlight: false
             },
             {
@@ -11919,7 +12224,7 @@
             {
               appearAt: 12.2,
               badge: '圆内',
-              formula: '当点 $P$ 在 $\odot O$ 内时：直径 $2r = d_{\max} + d_{\min} = 6 + 4 = 10$',
+              formula: '当点 $P$ 在 $\\odot O$ 内时：直径 $2r = d_{\max} + d_{\min} = 6 + 4 = 10$',
               highlight: false
             },
             {
@@ -11931,7 +12236,7 @@
             {
               appearAt: 17.8,
               badge: '结论',
-              formula: '综上，$\odot O$ 的半径为 $5$ 或 $1$',
+              formula: '综上，$\\odot O$ 的半径为 $5$ 或 $1$',
               highlight: true
             }
           ]
@@ -11942,8 +12247,8 @@
         q1: {
           title: '练习一：最远/最近距离分类求半径（对应题库 t_q11 / g_q11）',
           givenLabel: '已知：',
-          givenFormula: '平面上一点 $P$ 到 $\odot O$ 的最近距离为 $4\text{ cm}$，最远距离为 $10\text{ cm}$',
-          questionText: '分别求出点 $P$ 在圆内与点 $P$ 在圆外时 $\odot O$ 的半径：',
+          givenFormula: '平面上一点 $P$ 到 $\\odot O$ 的最近距离为 $4\text{ cm}$，最远距离为 $10\text{ cm}$',
+          questionText: '分别求出点 $P$ 在圆内与点 $P$ 在圆外时 $\\odot O$ 的半径：',
           input1Prefix: '圆内时 $r =$',
           input1Placeholder: '如 7',
           input2Prefix: '$\text{cm}$，圆外时 $r =$',
@@ -11963,7 +12268,7 @@
         q2: {
           title: '练习二：矩形多点与圆位置确定半径范围（对应题库 g_q15 / t_q15）',
           givenLabel: '已知：',
-          givenFormula: '矩形 $ABCD$ 中 $AB = 6$，$AD = 8$，以 $A$ 为圆心作 $\odot A$',
+          givenFormula: '矩形 $ABCD$ 中 $AB = 6$，$AD = 8$，以 $A$ 为圆心作 $\\odot A$',
           questionText: '要使 $B,C,D$ 三点至少一点在圆内、至少一点在圆外，求半径范围 $a \lt r \lt b$ 中的 $a$ 与 $b$：',
           input1Prefix: '下界 $a =$',
           input1Placeholder: '如 6',
@@ -11978,6 +12283,584 @@
           wrongFeedback: '先用勾股定理算出 $AC = 10$，三点到 $A$ 的距离最小是 $AB = 6$、最大是 $AC = 10$，故 $6 \lt r \lt 10$。',
           specificWrongHints: [
             { checkType: 'secondVal', val: '8', hint: '最远的点是对角顶点 $C$，$AC = \sqrt{6^{2}+8^{2}} = 10$，不是 $AD = 8$。' }
+          ]
+        }
+      },
+
+      practices: {
+        practice1: {
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '点 $P$ 到 $\\odot O$ 上的点的最小距离是 $3$，最大距离是 $9$，则 $\\odot O$ 的半径为（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
+          options: [
+            {
+              key: 'A',
+              text: 'A. $6$ 或 $3$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $6$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $3$',
+              isCorrect: false
+            }
+          ],
+          correctFeedback: {
+            title: '回答正确！分点 $P$ 在圆内和圆外两种情况讨论：',
+            calcLines: [
+              '点 $P$ 在圆内：$2r = 9 + 3 = 12 \\implies r = 6$',
+              '点 $P$ 在圆外：$2r = 9 - 3 = 6 \\implies r = 3$'
+            ],
+            summary: '未指明点 $P$ 位置时，必须分圆内、圆外两类讨论。'
+          },
+          wrongTitle: '提示：分点 $P$ 在圆内（直径 $=$ 和）与圆外（直径 $=$ 差）两种情况',
+          wrongFeedback: '圆内时 $r = \\frac{9 + 3}{2} = 6$，圆外时 $r = \\frac{9 - 3}{2} = 3$。'
+        },
+        practice2: {
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '点 $P$ 到 $\\odot O$ 上的点的最小距离是 $2$，最大距离是 $8$，则 $\\odot O$ 的半径为 ______ 或 ______．',
+          questionText: '',
+          input1Prefix: '$r_{1} =$',
+          input1Placeholder: '如 5',
+          input2Prefix: '，$r_{2} =$',
+          input2Placeholder: '如 3',
+          input2Suffix: '（顺序可互换）',
+          expectedX: '5',
+          expectedMin: '3',
+          allowOrderSwap: true,
+          correctFeedback: '$\\odot O$ 的半径为 $5$ 或 $3$。',
+          correctDetail: '点 $P$ 在圆内时 $r = \\frac{8 + 2}{2} = 5$；点 $P$ 在圆外时 $r = \\frac{8 - 2}{2} = 3$。',
+          wrongFeedback: '分别计算 $\\frac{8 + 2}{2} = 5$ 与 $\\frac{8 - 2}{2} = 3$。',
+          specificWrongHints: []
+        }
+      }
+    },
+
+    // =========================================================================
+    // P54：求有理数的绝对值与由绝对值反求原数
+    // =========================================================================
+    P54: {
+      procedureId: 'P54',
+      title: '求有理数的绝对值与由绝对值反求原数',
+      exampleTitle: '若 $m$ 的绝对值为 $|-(+5)|$，求 $m$ 的值',
+      exampleFormula: '先由内向外化简 $|-(+5)| = 5$ $\\implies$ 由 $|m| = 5$ 得 $m = \\pm 5$',
+      totalDuration: 24.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示绝对值的几何意义与双向求值法则）',
+      practiceSectionTitle: '绝对值的意义与求值跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握绝对值化简与由 $|m| = k$ 反求正负两解',
+      steps: [
+        {
+          step: 1,
+          name: '先化简绝对值内部的多重符号',
+          tStart: 0.0,
+          tEnd: 7.5,
+          explanation: '遇到含多重符号的绝对值 $|-(+5)|$ 时，先化简内部符号得 $-(+5) = -5$，原式化为 $|-5|$。'
+        },
+        {
+          step: 2,
+          name: '依据绝对值的意义算出具体距离',
+          tStart: 7.5,
+          tEnd: 15.5,
+          explanation: '负数的绝对值是它的相反数（数轴上 $-5$ 到原点的距离是 $5$），故 $|-5| = 5$，即 $|m| = 5$。'
+        },
+        {
+          step: 3,
+          name: '由 $|m| = k\\ (k \\gt 0)$ 反求正负两个解',
+          tStart: 15.5,
+          tEnd: 24.0,
+          explanation: '数轴上到原点距离等于 $5$ 的点在原点左右两侧各有一个，分别为 $+5$ 和 $-5$，故 $m = \\pm 5$。'
+        }
+      ],
+      microBeats: [
+        { time: 1.0, step: 1, label: '1.1 化简内部符号 $-(+5) = -5$' },
+        { time: 9.0, step: 2, label: '2.1 求绝对值 $|-5| = 5$ 得 $|m| = 5$' },
+        { time: 17.5, step: 3, label: '3.1 写出正负两解 $m = \\pm 5$' }
+      ],
+      boardRows: [
+        {
+          rowId: 'p54_row_0',
+          stepBadge: '已知条件',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p54_r0_1', math: '已知 $|m| = |-(+5)|$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p54_row_1',
+          stepBadge: '第 1 步 · 化简内部符号',
+          appearAt: 1.8,
+          tokens: [
+            { id: 'p54_r1_1', math: '先化简内部：$-(+5) = -5$', appearAt: 1.9, dur: 0.45 },
+            { id: 'p54_r1_2', math: '$\\implies |-(+5)| = |-5|$', appearAt: 4.2, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p54_row_2',
+          stepBadge: '第 2 步 · 求绝对值',
+          appearAt: 8.2,
+          tokens: [
+            { id: 'p54_r2_1', math: '$|-5| = 5$', appearAt: 8.3, dur: 0.45 },
+            { id: 'p54_r2_2', math: '$\\implies |m| = 5$', appearAt: 11.2, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p54_row_3',
+          stepBadge: '第 3 步 · 反求原数',
+          appearAt: 16.5,
+          isConclusion: true,
+          tokens: [
+            { id: 'p54_r3_conc', math: '$\\therefore m = 5$ 或 $m = -5$（即 $m = \\pm 5$）。', appearAt: 16.6, dur: 0.55 }
+          ]
+        }
+      ],
+      scratchpadCards: [
+        {
+          id: 'p54_sp_1',
+          title: '核心法则 · 绝对值的几何意义',
+          showStart: 0.8,
+          showEnd: 23.8,
+          tokens: [
+            { id: 'p54_sp1_t1', math: '① $|a|$ 表示数轴上数 $a$ 对应的点到原点的距离', appearAt: 1.2, dur: 0.40 },
+            { id: 'p54_sp1_t2', math: '② $|m| = k\\ (k \\gt 0) \\implies m = \\pm k$（左右各一点）', appearAt: 16.0, dur: 0.45 }
+          ],
+          note: '易错提醒：由 $|m| = 5$ 反求 $m$ 时，千万不要漏掉负数解 $-5$'
+        }
+      ],
+      tokenHighlights: [
+        { tokenId: 'p54_r1_1', tStart: 1.9, tEnd: 7.2, color: 'amber' },
+        { tokenId: 'p54_r2_2', tStart: 11.2, tEnd: 15.2, color: 'teal' },
+        { tokenId: 'p54_r3_conc', tStart: 16.6, tEnd: 23.5, color: 'teal' }
+      ],
+      svgAnnotations: [
+        {
+          id: 'p54_svg_1',
+          type: 'arrow',
+          fromToken: 'p54_r2_2',
+          toToken: 'p54_r3_conc',
+          label: '正负两个解',
+          color: '#0F766E',
+          curveOffset: 26,
+          tStart: 16.0,
+          tDrawEnd: 16.8,
+          tFadeStart: 22.8,
+          tEnd: 23.5
+        }
+      ],
+      subtitles: [
+        { tStart: 0.0, tEnd: 7.5, text: '第一步先化简绝对值内部的多重符号：$-(+5) = -5$，所以 $|-(+5)| = |-5|$。', focusToken: 'p54_r1_2' },
+        { tStart: 7.5, tEnd: 15.5, text: '第二步求绝对值：$-5$ 到原点的距离是 $5$，所以 $|-5| = 5$，原条件转化为 $|m| = 5$。', focusToken: 'p54_r2_2' },
+        { tStart: 15.5, tEnd: 24.0, text: '第三步由绝对值反求原数：数轴上到原点距离为 $5$ 的数有 $+5$ 和 $-5$ 两个，故 $m = \\pm 5$。', focusToken: 'p54_r3_conc' }
+      ],
+      practices: {
+        practice1: {
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '若 $m$ 的绝对值为 $|-(-3)|$，则 $m$ 的值为（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
+          options: [
+            {
+              key: 'A',
+              text: 'A. $\\pm 3$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $3$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $-3$',
+              isCorrect: false
+            }
+          ],
+          correctFeedback: {
+            title: '回答正确！先化简绝对值，再由 $|m| = 3$ 反求两解：',
+            calcLines: [
+              '$|-(-3)| = |3| = 3 \\implies |m| = 3 \\implies m = \\pm 3$'
+            ],
+            summary: '已知绝对值为正数反求原数时，一定有正、负两个互为相反数的解。'
+          },
+          wrongTitle: '提示：先算 $|-(-3)| = 3$，再由 $|m| = 3$ 得两个相反数',
+          wrongFeedback: '先化简得 $|m| = 3$，解得 $m = 3$ 或 $m = -3$（即 $\\pm 3$）。'
+        },
+        practice2: {
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '若 $|a| = |-(+7)|$，则 $a =$ ______ 或 ______．',
+          questionText: '',
+          input1Prefix: '$a_{1} =$',
+          input1Placeholder: '如 7',
+          input2Prefix: '，$a_{2} =$',
+          input2Placeholder: '如 -7',
+          input2Suffix: '（顺序可互换）',
+          expectedX: '7',
+          expectedMin: '-7',
+          allowOrderSwap: true,
+          correctFeedback: '$a = 7$ 或 $a = -7$。',
+          correctDetail: '先化简 $|-(+7)| = |-7| = 7$，故 $|a| = 7 \\implies a = 7$ 或 $-7$。',
+          wrongFeedback: '先化简右边得 $7$，再由 $|a| = 7$ 写出正负两解 $7$ 和 $-7$。',
+          specificWrongHints: []
+        }
+      }
+    },
+
+    // =========================================================================
+    // P55：运用绝对值的代数性质判断字母符号范围
+    // =========================================================================
+    P55: {
+      procedureId: 'P55',
+      title: '运用绝对值的代数性质判断字母符号范围',
+      exampleTitle: '若 $x + |x| = 0$，判断 $x$ 的取值范围',
+      exampleFormula: '$x + |x| = 0 \\implies |x| = -x \\implies x \\le 0$',
+      totalDuration: 24.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示绝对值代数性质与 $0$ 的边界检验）',
+      practiceSectionTitle: '绝对值代数性质跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握 $|a|=a$ 与 $|a|=-a$ 的符号范围判定及 $0$ 的边界',
+      steps: [
+        {
+          step: 1,
+          name: '移项整理为 $|x|$ 单独在一边',
+          tStart: 0.0,
+          tEnd: 7.5,
+          explanation: '将已知等式 $x + |x| = 0$ 中的 $x$ 移到等号右边，整理为 $|x| = -x$。'
+        },
+        {
+          step: 2,
+          name: '对照绝对值代数性质判定符号',
+          tStart: 7.5,
+          tEnd: 15.5,
+          explanation: '由 $|x| = -x$ 可知 $x$ 的绝对值等于它的相反数，满足这一性质的数首先是所有负数（$x \\lt 0$）。'
+        },
+        {
+          step: 3,
+          name: '单独检验边界 $x = 0$ 并定结论',
+          tStart: 15.5,
+          tEnd: 24.0,
+          explanation: '代入 $x = 0$ 检验：$|0| = 0$ 且 $-0 = 0$，等式同样成立！因此 $x$ 是负数或 $0$（即非正数 $x \\le 0$）。'
+        }
+      ],
+      microBeats: [
+        { time: 1.0, step: 1, label: '1.1 移项化为 $|x| = -x$' },
+        { time: 9.0, step: 2, label: '2.1 判定负数满足 $|x| = -x$' },
+        { time: 17.5, step: 3, label: '3.1 检验 $x = 0$ 成立，得出 $x \\le 0$' }
+      ],
+      boardRows: [
+        {
+          rowId: 'p55_row_0',
+          stepBadge: '已知条件',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p55_r0_1', math: '已知 $x + |x| = 0$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p55_row_1',
+          stepBadge: '第 1 步 · 移项变形',
+          appearAt: 1.8,
+          tokens: [
+            { id: 'p55_r1_1', math: '移项得：$|x| = -x$', appearAt: 1.9, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p55_row_2',
+          stepBadge: '第 2 步 · 检验符号与 0',
+          appearAt: 8.5,
+          tokens: [
+            { id: 'p55_r2_1', math: '负数满足 $|x| = -x$，', appearAt: 8.6, dur: 0.45 },
+            { id: 'p55_r2_2', math: '且当 $x = 0$ 时 $|0| = -0 = 0$ 也成立', appearAt: 16.0, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p55_row_3',
+          stepBadge: '最终结论',
+          appearAt: 19.5,
+          isConclusion: true,
+          tokens: [
+            { id: 'p55_r3_conc', math: '$\\therefore x \\le 0$（$x$ 一定是负数或 $0$）。', appearAt: 19.6, dur: 0.55 }
+          ]
+        }
+      ],
+      scratchpadCards: [
+        {
+          id: 'p55_sp_1',
+          title: '核心法则 · 绝对值代数性质与 0 的边界',
+          showStart: 0.8,
+          showEnd: 23.8,
+          tokens: [
+            { id: 'p55_sp1_t1', math: '① $|a| = a \\iff a \\ge 0$（正数和 $0$）', appearAt: 1.4, dur: 0.40 },
+            { id: 'p55_sp1_t2', math: '② $|a| = -a \\iff a \\le 0$（负数和 $0$）', appearAt: 8.8, dur: 0.45 }
+          ],
+          note: '高频易错点：$0$ 的绝对值既等于它本身，也等于它的相反数，切勿漏掉 $0$'
+        }
+      ],
+      tokenHighlights: [
+        { tokenId: 'p55_r1_1', tStart: 1.9, tEnd: 7.2, color: 'amber' },
+        { tokenId: 'p55_r2_2', tStart: 16.0, tEnd: 19.4, color: 'rose' },
+        { tokenId: 'p55_r3_conc', tStart: 19.6, tEnd: 23.5, color: 'teal' }
+      ],
+      svgAnnotations: [
+        {
+          id: 'p55_svg_1',
+          type: 'arrow',
+          fromToken: 'p55_r1_1',
+          toToken: 'p55_r2_2',
+          label: '别漏掉 $x = 0$',
+          color: '#BE123C',
+          curveOffset: 24,
+          tStart: 15.8,
+          tDrawEnd: 16.6,
+          tFadeStart: 22.8,
+          tEnd: 23.5
+        }
+      ],
+      subtitles: [
+        { tStart: 0.0, tEnd: 7.5, text: '第一步先移项：由 $x + |x| = 0$ 得 $|x| = -x$，即 $x$ 的绝对值等于它的相反数。', focusToken: 'p55_r1_1' },
+        { tStart: 7.5, tEnd: 15.5, text: '第二步根据绝对值的代数性质，负数的绝对值等于它的相反数，所以 $x \\lt 0$ 满足条件。', focusToken: 'p55_r2_1' },
+        { tStart: 15.5, tEnd: 24.0, text: '第三步别忘了检验边界 $x = 0$：$|0| = -0 = 0$ 同样成立！所以 $x$ 是负数或 $0$（$x \\le 0$）。', focusToken: 'p55_r3_conc' }
+      ],
+      practices: {
+        practice1: {
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '若 $a - |a| = 0$，则 $a$ 的取值范围是（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
+          options: [
+            {
+              key: 'A',
+              text: 'A. $a \\ge 0$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $a \\gt 0$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $a \\le 0$',
+              isCorrect: false
+            }
+          ],
+          correctFeedback: {
+            title: '回答正确！先移项得 $|a| = a$，别漏掉 $0$：',
+            calcLines: [
+              '$a - |a| = 0 \\implies |a| = a \\implies a \\ge 0$'
+            ],
+            summary: '正数和 $0$ 的绝对值都等于它本身，切勿漏掉 $0$。'
+          },
+          wrongTitle: '提示：移项得 $|a| = a$，检查 $a = 0$ 是否成立',
+          wrongFeedback: '移项得 $|a| = a$，当 $a = 0$ 时也成立，故 $a \\ge 0$。'
+        },
+        practice2: {
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '若 $a + |a| = 0$ 且 $|a| = 4$，则 $a =$ ______．',
+          questionText: '',
+          singleInput: true,
+          input1Prefix: '$a =$',
+          input1Placeholder: '如 -4',
+          input1Suffix: '',
+          expectedX: '-4',
+          expectedMin: '',
+          allowOrderSwap: false,
+          correctFeedback: '$a = -4$。',
+          correctDetail: '由 $a + |a| = 0$ 得 $|a| = -a \\implies a \\le 0$；结合 $|a| = 4$ 得 $a = -4$。',
+          wrongFeedback: '先由 $a + |a| = 0$ 判定 $a \\le 0$，再结合 $|a| = 4$ 得 $a = -4$。',
+          specificWrongHints: [
+            {
+              checkType: 'firstVal',
+              val: '4',
+              hint: '若 $a = 4$，则 $a + |a| = 8 \\neq 0$，应取 $a = -4$。'
+            }
+          ]
+        }
+      }
+    },
+
+    // =========================================================================
+    // P56：运用绝对值的非负性求值与最值
+    // =========================================================================
+    P56: {
+      procedureId: 'P56',
+      title: '运用绝对值的非负性求值与最值',
+      exampleTitle: '已知 $|x - 2| + |y - 3| + |z - 4| = 0$，求 $x, y, z$ 的值',
+      exampleFormula: '$|A| \\ge 0$ 且 $|A| + |B| + |C| = 0 \\implies A = 0,\\ B = 0,\\ C = 0$',
+      totalDuration: 24.0,
+      scratchpadIdleHint: '旁白草稿演算区（同步展示“0 + 0 = 0”非负性模型与 $|x - a| + k$ 最小值模型）',
+      practiceSectionTitle: '绝对值非负性求值与最值跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握“0+0=0”方程求值与绝对值最值模型',
+      steps: [
+        {
+          step: 1,
+          name: '确认每一项绝对值均非负（$\\ge 0$）',
+          tStart: 0.0,
+          tEnd: 7.5,
+          explanation: '依据绝对值的非负性，恒有 $|x - 2| \\ge 0$、$|y - 3| \\ge 0$、$|z - 4| \\ge 0$。'
+        },
+        {
+          step: 2,
+          name: '运用“$0 + 0 = 0$”模型令各项内部为 $0$',
+          tStart: 7.5,
+          tEnd: 15.5,
+          explanation: '几个非负数的和等于 $0$，则每一个非负数必同时等于 $0$，即 $x - 2 = 0$、$y - 3 = 0$、$z - 4 = 0$。'
+        },
+        {
+          step: 3,
+          name: '分别解出各字母的值',
+          tStart: 15.5,
+          tEnd: 24.0,
+          explanation: '分别移项解得 $x = 2$，$y = 3$，$z = 4$。'
+        }
+      ],
+      microBeats: [
+        { time: 1.0, step: 1, label: '1.1 标出三项绝对值均 $\\ge 0$' },
+        { time: 9.0, step: 2, label: '2.1 令 $x - 2 = 0,\\ y - 3 = 0,\\ z - 4 = 0$' },
+        { time: 17.5, step: 3, label: '3.1 解得 $x = 2,\\ y = 3,\\ z = 4$' }
+      ],
+      boardRows: [
+        {
+          rowId: 'p56_row_0',
+          stepBadge: '已知条件',
+          appearAt: 0.0,
+          tokens: [
+            { id: 'p56_r0_1', math: '已知 $|x - 2| + |y - 3| + |z - 4| = 0$', appearAt: 0.0, dur: 0.01 }
+          ]
+        },
+        {
+          rowId: 'p56_row_1',
+          stepBadge: '第 1 步 · 写非负性',
+          appearAt: 1.8,
+          tokens: [
+            { id: 'p56_r1_1', math: '$\\because |x - 2| \\ge 0$，$|y - 3| \\ge 0$，$|z - 4| \\ge 0$', appearAt: 1.9, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p56_row_2',
+          stepBadge: '第 2 步 · 0+0=0 模型',
+          appearAt: 8.5,
+          tokens: [
+            { id: 'p56_r2_1', math: '$\\therefore x - 2 = 0$，$y - 3 = 0$，$z - 4 = 0$', appearAt: 8.6, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p56_row_3',
+          stepBadge: '最终结论',
+          appearAt: 16.5,
+          isConclusion: true,
+          tokens: [
+            { id: 'p56_r3_conc', math: '解得 $x = 2$，$y = 3$，$z = 4$。', appearAt: 16.6, dur: 0.55 }
+          ]
+        }
+      ],
+      scratchpadCards: [
+        {
+          id: 'p56_sp_1',
+          title: '核心模型 · 绝对值非负性两大应用',
+          showStart: 0.8,
+          showEnd: 23.8,
+          tokens: [
+            { id: 'p56_sp1_t1', math: '① 方程求值：$|A| + |B| = 0 \\implies A = 0$ 且 $B = 0$', appearAt: 1.4, dur: 0.40 },
+            { id: 'p56_sp1_t2', math: '② 求最小值：$|x - a| + k \\ge k$（当 $x = a$ 时最小值为 $k$）', appearAt: 10.0, dur: 0.45 }
+          ],
+          note: '关键原理：非负数相加不可能正负抵消，和为 $0$ 只能每一项都为 $0$'
+        }
+      ],
+      tokenHighlights: [
+        { tokenId: 'p56_r1_1', tStart: 1.9, tEnd: 7.2, color: 'amber' },
+        { tokenId: 'p56_r2_1', tStart: 8.6, tEnd: 15.2, color: 'teal' },
+        { tokenId: 'p56_r3_conc', tStart: 16.6, tEnd: 23.5, color: 'teal' }
+      ],
+      svgAnnotations: [
+        {
+          id: 'p56_svg_1',
+          type: 'arrow',
+          fromToken: 'p56_r1_1',
+          toToken: 'p56_r2_1',
+          label: '非负数和为 $0 \\implies$ 各项均为 $0$',
+          color: '#0F766E',
+          curveOffset: 24,
+          tStart: 8.2,
+          tDrawEnd: 9.0,
+          tFadeStart: 15.0,
+          tEnd: 15.6
+        }
+      ],
+      subtitles: [
+        { tStart: 0.0, tEnd: 7.5, text: '第一步写出非负性：任意数的绝对值都大于或等于 $0$，所以三个绝对值项均非负。', focusToken: 'p56_r1_1' },
+        { tStart: 7.5, tEnd: 15.5, text: '第二步运用“$0 + 0 = 0$”模型：三个非负数相加等于 $0$，只能每一项都等于 $0$，即 $x-2=0,\\ y-3=0,\\ z-4=0$。', focusToken: 'p56_r2_1' },
+        { tStart: 15.5, tEnd: 24.0, text: '第三步分别解一次方程，得出 $x = 2，y = 3，z = 4$。', focusToken: 'p56_r3_conc' }
+      ],
+      practices: {
+        practice1: {
+          title: '练习一',
+          givenLabel: '',
+          givenFormula: '已知 $|x - 1| + |y + 4| = 0$，则 $x + y$ 的值为（　　）',
+          extractedLabel: '',
+          extractedFormula: '',
+          questionText: '',
+          options: [
+            {
+              key: 'A',
+              text: 'A. $-3$',
+              isCorrect: true
+            },
+            {
+              key: 'B',
+              text: 'B. $5$',
+              isCorrect: false
+            },
+            {
+              key: 'C',
+              text: 'C. $3$',
+              isCorrect: false
+            }
+          ],
+          correctFeedback: {
+            title: '回答正确！由绝对值非负性“$0 + 0 = 0$”分别令每项为 0：',
+            calcLines: [
+              '$x - 1 = 0, y + 4 = 0 \\implies x = 1, y = -4$',
+              '$x + y = 1 + (-4) = -3$'
+            ],
+            summary: '几个非负数的和为 $0$，则每一个非负数必为 $0$。'
+          },
+          wrongTitle: '提示：令 $x - 1 = 0$ 且 $y + 4 = 0$，再求 $x + y$',
+          wrongFeedback: '解得 $x = 1, y = -4$，故 $x + y = -3$。'
+        },
+        practice2: {
+          title: '练习二',
+          givenLabel: '',
+          givenFormula: '已知 $|x - 3| + |y + 2| = 0$，则 $x =$ ______，$y =$ ______．',
+          questionText: '',
+          input1Prefix: '$x =$',
+          input1Placeholder: '如 3',
+          input2Prefix: '，$y =$',
+          input2Placeholder: '如 -2',
+          input2Suffix: '',
+          expectedX: '3',
+          expectedMin: '-2',
+          allowOrderSwap: false,
+          correctFeedback: '$x = 3$，$y = -2$。',
+          correctDetail: '由 $|x - 3| \\ge 0$、$|y + 2| \\ge 0$ 且和为 $0$，得 $x - 3 = 0, y + 2 = 0$，解得 $x = 3, y = -2$。',
+          wrongFeedback: '分别令 $x - 3 = 0$ 与 $y + 2 = 0$ 求解，注意 $y = -2$ 带负号。',
+          specificWrongHints: [
+            {
+              checkType: 'secondVal',
+              val: '2',
+              hint: '由 $y + 2 = 0$ 移项得 $y = -2$ 而不是 $2$。'
+            }
           ]
         }
       }

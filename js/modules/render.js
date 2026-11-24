@@ -1,4 +1,32 @@
-    function getDifficultyBadgeClass(diff) {
+function renderFallbackAnalysisBoxHtml(q) {
+    const analysis = (q.analysis || '').trim();
+    const detail = (q.detail || '').trim();
+    const hasAnalysis = Boolean(analysis && analysis !== '略');
+    const hasDetail = Boolean(detail && detail !== '略');
+
+    return `
+        <div class="flex items-center space-x-2 font-bold text-slate-900">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#0F766E]"></span>
+            <span>参考答案：</span>
+            <span class="text-[#0F766E] font-semibold text-base tracking-wide">${formatMathHtml(q.answer)}</span>
+        </div>
+        ${hasAnalysis ? `<div class="text-slate-600"><b class="text-slate-800">【分析】</b>${formatMathHtml(analysis)}</div>` : ''}
+        ${hasDetail ? `<div class="text-slate-700 ${hasAnalysis ? 'pt-1.5 border-t border-slate-200/70 ' : ''}leading-relaxed"><b class="text-slate-800">【详解】</b>${formatMathHtml(detail)}</div>` : ''}
+    `;
+}
+function getPreviewExplanation(q) {
+    const detail = (q.detail || '').trim();
+    if (detail && detail !== '略') return detail;
+    const analysis = (q.analysis || '').trim();
+    if (analysis && analysis !== '略') return analysis;
+    return '';
+}
+
+function renderPreviewExplanationLine(q) {
+    const exp = getPreviewExplanation(q);
+    return exp ? `<div><b>【解析】</b>${formatMathHtml(exp)}</div>` : '';
+}
+function getDifficultyBadgeClass(diff) {
       switch (diff) {
         case '容易':
           return 'q-meta-diff is-easy';
@@ -517,15 +545,7 @@
 
             <!-- Analysis Accordion Drawer -->
             <div id="analysis_${q.id}" class="hidden q-analysis-panel text-xs space-y-1.5">
-              ${typeof window.renderQuestionAnalysisBoxHtml === 'function' ? window.renderQuestionAnalysisBoxHtml(q) : `
-              <div class="flex items-center space-x-2 font-bold text-slate-900">
-                <span class="w-1.5 h-1.5 rounded-full bg-[#0F766E]"></span>
-                <span>参考答案：</span>
-                <span class="text-[#0F766E] font-semibold text-base tracking-wide">${formatMathHtml(q.answer)}</span>
-              </div>
-              <div class="text-slate-600"><b class="text-slate-800">【分析】</b>${formatMathHtml(q.analysis)}</div>
-              ${q.detail && q.detail !== '略' ? `<div class="text-slate-700 pt-1.5 border-t border-slate-200/70 leading-relaxed"><b class="text-slate-800">【详解】</b>${formatMathHtml(q.detail)}</div>` : ''}
-              `}
+              ${typeof window.renderQuestionAnalysisBoxHtml === 'function' ? window.renderQuestionAnalysisBoxHtml(q) : renderFallbackAnalysisBoxHtml(q)}
             </div>
 
             <!-- Bottom Actions -->
@@ -717,15 +737,7 @@
 
             <!-- Analysis Accordion -->
             <div id="sim_analysis_${sq.id}" class="hidden q-analysis-panel text-xs space-y-1.5">
-              ${typeof window.renderQuestionAnalysisBoxHtml === 'function' ? window.renderQuestionAnalysisBoxHtml(sq) : `
-              <div class="flex items-center space-x-2 font-bold text-slate-900">
-                <span class="w-1.5 h-1.5 rounded-full bg-[#0F766E]"></span>
-                <span>参考答案：</span>
-                <span class="text-[#0F766E] font-semibold text-base tracking-wide">${formatMathHtml(sq.answer)}</span>
-              </div>
-              <div class="text-slate-600"><b class="text-slate-800">【分析】</b>${formatMathHtml(sq.analysis)}</div>
-              ${sq.detail && sq.detail !== '略' ? `<div class="text-slate-700 pt-1.5 border-t border-slate-200/70 leading-relaxed"><b class="text-slate-800">【详解】</b>${formatMathHtml(sq.detail)}</div>` : ''}
-              `}
+             ${typeof window.renderQuestionAnalysisBoxHtml === 'function' ? window.renderQuestionAnalysisBoxHtml(sq) : renderFallbackAnalysisBoxHtml(sq)}
             </div>
 
             <!-- Card Footer Actions -->
@@ -1509,7 +1521,7 @@
                   bottomHtml = isTeacher ? `
                     <div class="mt-3 p-3 bg-slate-50 border border-slate-200 rounded text-xs text-slate-700 font-sans space-y-1.5">
                       <div><b>【参考答案与解析】</b></div>
-                      <div class="leading-relaxed pl-2 border-l-2 border-[#0F766E]">${formatMathHtml(q.detail)}</div>
+                      <div class="leading-relaxed pl-2 border-l-2 border-[#0F766E]">${formatMathHtml(getPreviewExplanation(q) || q.answer || '')}</div>
                     </div>
                   ` : `
                     <!-- Student Answer Blank Box -->
@@ -1521,7 +1533,7 @@
                   bottomHtml = `
                     <div class="mt-2 p-2.5 bg-slate-50 border border-slate-200 rounded text-xs text-slate-700 font-sans space-y-1">
                       <div><b>【答案】</b><span class="text-[#0F766E] font-bold">${formatMathHtml(q.answer)}</span></div>
-                      <div><b>【解析】</b>${formatMathHtml(q.detail)}</div>
+                      ${renderPreviewExplanationLine(q)}
                     </div>
                   `;
                 }
@@ -1572,7 +1584,7 @@
                 const teacherHtml = isTeacher ? `
                   <div class="mt-2 p-2.5 bg-slate-50 border border-slate-200 rounded text-xs text-slate-700 font-sans space-y-1">
                     <div><b>【答案】</b><span class="text-[#0F766E] font-bold">${formatMathHtml(q.answer)}</span></div>
-                    <div><b>【解析】</b>${formatMathHtml(q.detail)}</div>
+                    ${renderPreviewExplanationLine(q)}
                   </div>
                 ` : '';
 
@@ -1606,7 +1618,7 @@
                 const teacherHtml = isTeacher ? `
                   <div class="mt-2 p-2.5 bg-slate-50 border border-slate-200 rounded text-xs text-slate-700 font-sans space-y-1">
                     <div><b>【答案】</b><span class="text-[#0F766E] font-bold">${formatMathHtml(q.answer)}</span></div>
-                    <div><b>【解析】</b>${formatMathHtml(q.detail)}</div>
+                    ${renderPreviewExplanationLine(q)}
                   </div>
                 ` : '';
 
@@ -1638,7 +1650,7 @@
                 const teacherHtml = isTeacher ? `
                   <div class="mt-2 p-2.5 bg-slate-50 border border-slate-200 rounded text-xs text-slate-700 font-sans space-y-1">
                     <div><b>【答案】</b><span class="text-[#0F766E] font-bold">${formatMathHtml(q.answer)}</span></div>
-                    <div><b>【解析】</b>${formatMathHtml(q.detail)}</div>
+                    ${renderPreviewExplanationLine(q)}
                   </div>
                 ` : '';
 
@@ -1670,7 +1682,7 @@ if (calcs.length > 0) {
                 const teacherHtml = isTeacher ? `
                   <div class="mt-3 p-3 bg-slate-50 border border-slate-200 rounded text-xs text-slate-700 font-sans space-y-1.5">
                     <div><b>【参考答案与解析】</b></div>
-                    <div class="leading-relaxed pl-2 border-l-2 border-[#0F766E]">${formatMathHtml(q.detail)}</div>
+                    <div class="leading-relaxed pl-2 border-l-2 border-[#0F766E]">${formatMathHtml(getPreviewExplanation(q) || q.answer || '')}</div>
                   </div>
                 ` : `
                   <!-- Student Answer Blank Box -->

@@ -2572,7 +2572,7 @@
             ],
             summary: '反比例关系满足 $xy = k$（定值）。'
           },
-          wrongTitle: '提示：先算乘积定值 $k = 3 	imes (-4)$，再解 $6x = k$',
+          wrongTitle: '提示：先算乘积定值 $k = 3 \\times (-4)$，再解 $6x = k$',
           wrongFeedback: '由 $k = 3 \\times (-4) = -12$，得 $6x = -12$，解得 $x = -2$。'
         },
         practice2: {
@@ -3294,9 +3294,9 @@
               '$m^{2} - 2 = -1 \\implies m = \\pm 1$',
               '又 $m - 1 \\neq 0 \\implies m \\neq 1$，故 $m = -1$'
             ],
-            summary: '必须同时检验比例系数 $k \neq 0$，舍去使系数为 $0$ 的增根。'
+            summary: '必须同时检验比例系数 $k \\neq 0$，舍去使系数为 $0$ 的增根。'
           },
-          wrongTitle: '提示：同时满足指数等于 $-1$ 与系数 $m - 1 \neq 0$',
+          wrongTitle: '提示：同时满足指数等于 $-1$ 与系数 $m - 1 \\neq 0$',
           wrongFeedback: '由 $m^{2} - 2 = -1$ 得 $m = \\pm 1$，又 $m - 1 \\neq 0$，故舍去 $1$ 得 $m = -1$。'
         },
         practice2: {
@@ -3531,7 +3531,7 @@
             ],
             summary: '同一双曲线上各点的横纵坐标之积恒等于 $k$。'
           },
-          wrongTitle: '提示：先算出 $k = 2 	imes (-3) = -6$，再算 $(-1) 	imes n = -6$',
+          wrongTitle: '提示：先算出 $k = 2 \\times (-3) = -6$，再算 $(-1) \\times n = -6$',
           wrongFeedback: '由 $k = 2 \\times (-3) = -6$ 得 $y = -\\frac{6}{x}$，代入 $x = -1$ 得 $n = 6$。'
         },
         practice2: {
@@ -4548,14 +4548,14 @@
             }
           ],
           correctFeedback: {
-            title: '回答正确！联立 $\\Delta \\gt 0$ 与二次项系数 $m \neq 0$：',
+            title: '回答正确！联立 $\\Delta \\gt 0$ 与二次项系数 $m \\neq 0$：',
             calcLines: [
               '$\\Delta = (-4)^{2} - 4 \\times m \\times 2 = 16 - 8m \\gt 0 \\implies m \\lt 2$',
               '且 $m \\neq 0 \\implies m \\lt 2$ 且 $m \\neq 0$'
             ],
             summary: '二次项系数含参时，务必联立二次项系数不为 $0$。'
           },
-          wrongTitle: '提示：既要 $\\Delta \\gt 0$，又要二次项系数 $m \neq 0$',
+          wrongTitle: '提示：既要 $\\Delta \\gt 0$，又要二次项系数 $m \\neq 0$',
           wrongFeedback: '由 $\\Delta = 16 - 8m \\gt 0$ 得 $m \\lt 2$，且二次项系数 $m \\neq 0$。'
         },
         practice2: {
@@ -5233,9 +5233,9 @@
               '$m^{2} + 1 = 2 \\implies m = \\pm 1$',
               '又 $m + 1 \\neq 0 \\implies m \\neq -1$，故 $m = 1$'
             ],
-            summary: '必须检验二次项系数 $a \neq 0$，排除增根。'
+            summary: '必须检验二次项系数 $a \\neq 0$，排除增根。'
           },
-          wrongTitle: '提示：同时满足指数等于 2 且二次项系数 $m + 1 \neq 0$',
+          wrongTitle: '提示：同时满足指数等于 2 且二次项系数 $m + 1 \\neq 0$',
           wrongFeedback: '由 $m^{2} + 1 = 2$ 得 $m = \\pm 1$，再由 $m + 1 \\neq 0$ 舍去 $-1$ 得 $m = 1$。'
         },
         practice2: {
@@ -7566,7 +7566,7 @@
             ],
             summary: '指数相加拆成相乘，指数相乘拆成幂的乘方。'
           },
-          wrongTitle: '提示：先拆成 $(x^{a})^{2} \\cdot x^{b}$，再代入 $3^{2} 	imes 2$',
+          wrongTitle: '提示：先拆成 $(x^{a})^{2} \\cdot x^{b}$，再代入 $3^{2} \\times 2$',
           wrongFeedback: '$x^{2a+b} = (x^{a})^{2} \\cdot x^{b} = 3^{2} \\times 2 = 18$。'
         },
         practice2: {
@@ -7757,7 +7757,7 @@
             ],
             summary: '务必检验分母不为 $0$，舍去使分母为 $0$ 的值。'
           },
-          wrongTitle: '提示：同时满足分子为 0 且分母 $x - 2 \neq 0$',
+          wrongTitle: '提示：同时满足分子为 0 且分母 $x - 2 \\neq 0$',
           wrongFeedback: '分子为 $0$ 得 $x = \\pm 2$，因分母 $x - 2 \\neq 0$ 舍去 $2$，故 $x = -2$。'
         },
         practice2: {
@@ -8856,7 +8856,7 @@
             ],
             summary: '括号内先通分，再除法变乘倒数约分。'
           },
-          wrongTitle: '提示：先算括号内 $rac{a - (a - 1)}{a - 1} = rac{1}{a - 1}$，再乘 $(a+1)(a-1)$',
+          wrongTitle: '提示：先算括号内 $\\frac{a - (a - 1)}{a - 1} = \\frac{1}{a - 1}$，再乘 $(a+1)(a-1)$',
           wrongFeedback: '化简结果为 $a + 1$，代入 $a = 2$ 得 $3$。'
         },
         practice2: {
@@ -9122,7 +9122,7 @@
               '$\\angle ABC = \\angle C = \\frac{180^{\\circ} - 36^{\\circ}}{2} = 72^{\\circ}$',
               '$\\angle ABD = 36^{\\circ} \\implies \\angle BDC = \\angle A + \\angle ABD = 72^{\\circ}$'
             ],
-            summary: '由此还可由等角对等边判定 $	riangle ABD$ 和 $	riangle BCD$ 均为等腰三角形。'
+            summary: '由此还可由等角对等边判定 $\\triangle ABD$ 和 $\\triangle BCD$ 均为等腰三角形。'
           },
           wrongTitle: '提示：先求底角 $ngle ABC = 72^{\\circ}$，再求 $ngle ABD = 36^{\\circ}$ 及外角 $ngle BDC$',
           wrongFeedback: '$\\angle ABC = 72^{\\circ}$，$\\angle ABD = 36^{\\circ}$，故 $\\angle BDC = 36^{\\circ} + 36^{\\circ} = 72^{\\circ}$。'
@@ -9383,14 +9383,14 @@
             }
           ],
           correctFeedback: {
-            title: '回答正确！先在 $	ext{Rt}	riangle CDE$ 中用含 $30^{\\circ}$ 直角三角形性质，再由中点求边长：',
+            title: '回答正确！先在 $\\text{Rt}\\triangle CDE$ 中用含 $30^{\\circ}$ 直角三角形性质，再由中点求边长：',
             calcLines: [
               '$\\angle C = 60^{\\circ} \\implies \\angle CDE = 30^{\\circ} \\implies CD = 2CE = 4$',
               '$AB = AC = 2CD = 8$'
             ],
             summary: '等边三角形内角 $60^{\\circ}$ 遇垂线即出 $30^{\\circ}$ 直角三角形。'
           },
-          wrongTitle: '提示：在 $	ext{Rt}	riangle CDE$ 中 $ngle CDE = 30^{\\circ}$，故 $CD = 2CE$',
+          wrongTitle: '提示：在 $\\text{Rt}\\triangle CDE$ 中 $ngle CDE = 30^{\\circ}$，故 $CD = 2CE$',
           wrongFeedback: '由 $CD = 2CE = 4$ 且 $D$ 为 $AC$ 中点，得 $AB = AC = 2CD = 8$。'
         },
         practice2: {
@@ -9769,7 +9769,7 @@
               '原式 $= \\frac{1}{4} \\times (-12) - \\frac{1}{6} \\times (-12) + \\frac{1}{3} \\times (-12)$',
               '$= -3 + 2 - 4 = -5$'
             ],
-            summary: '注意第二项负负得正：$-rac{1}{6} 	imes (-12) = +2$。'
+            summary: '注意第二项负负得正：$-\\frac{1}{6} \\times (-12) = +2$。'
           },
           wrongTitle: '提示：用 $-12$ 乘遍括号内每一项，注意正负号',
           wrongFeedback: '分配律展开得 $-3 + 2 - 4 = -5$。'
@@ -10350,11 +10350,11 @@
             }
           ],
           correctFeedback: {
-            title: '回答正确！$	ext{SAS}$ 要求必须是已知两边的夹角相等：',
+            title: '回答正确！$\\text{SAS}$ 要求必须是已知两边的夹角相等：',
             calcLines: [
               '$BC$ 与 $AC$ 的夹角是 $\\angle C$，$EF$ 与 $DF$ 的夹角是 $\\angle F$'
             ],
-            summary: '“$	ext{SSA}$”不能判定两个三角形全等。'
+            summary: '“$\\text{SSA}$”不能判定两个三角形全等。'
           },
           wrongTitle: '提示：找出 $BC$ 与 $AC$ 的夹角',
           wrongFeedback: '$BC$ 与 $AC$ 的夹角为 $\\angle C$，故应补充 $\\angle C = \\angle F$。'
@@ -10509,7 +10509,7 @@
             ],
             summary: '见角平分线与一边垂线，作另一边垂线即可直接得等高求面积。'
           },
-          wrongTitle: '提示：作 $DE \\perp AB$ 得 $DE = CD = 4$，再算 $rac{1}{2} 	imes AB 	imes DE$',
+          wrongTitle: '提示：作 $DE \\perp AB$ 得 $DE = CD = 4$，再算 $\\frac{1}{2} \\times AB \\times DE$',
           wrongFeedback: '由角平分线性质得高 $DE = CD = 4$，故 $S_{\\triangle ABD} = \\frac{1}{2} \\times 12 \\times 4 = 24$。'
         },
         practice2: {
@@ -10552,136 +10552,150 @@
           + '<text class="proc-geo-anim" data-appear-at="16.8" data-dur="0.6" x="58" y="136" font-size="10.5" font-weight="700" fill="#E11D48" style="opacity:0;">188 m² → 9400 元</text>'
           + '</svg>'
       },
+      exampleFormula: '大空地：$(2a+3)$ 米 $\\times$ $3b$ 米；小花园：$(a+2)$ 米 $\\times$ $b$ 米',
+      practiceSectionTitle: '整式加减几何应用跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握列整式化简与代入求值',
+
       steps: [
         {
-          id: 'p45_s1',
-          stepIndex: 0,
-          label: '步骤 1',
-          title: '用整式分别表示大空地与小花园的面积',
-          startTime: 0.0,
-          endTime: 6.5,
-          scratchpadTitle: '几何量转化：长 × 宽',
-          scratchpadFormula: '$S_{\\text{大}} = 3b(2a+3)$，$S_{\\text{花}} = b(a+2)$',
-          scratchpadNote: '先把大长方形空地与角落小花园的面积各自用含 $a,b$ 的整式写出来，作为下一步作差的原料。',
-          voiceSubtitle: '第一步，先用整式写出大空地面积 $3b(2a+3)$ 和角落小花园面积 $b(a+2)$。',
-          boardLines: [
-            {
-              appearAt: 0.6,
-              badge: '审图',
-              formula: '大空地：长 $(2a+3)$ 米，宽 $3b$ 米 $\\Rightarrow S_{\\text{大}} = 3b(2a+3)$',
-              highlight: false
-            },
-            {
-              appearAt: 3.8,
-              badge: '标注',
-              formula: '小花园：长 $(a+2)$ 米，宽 $b$ 米 $\\Rightarrow S_{\\text{花}} = b(a+2)$',
-              highlight: true
-            }
+          step: 1,
+          name: '用整式分别表示大空地与小花园的面积',
+          tStart: 0.0,
+          tEnd: 6.5,
+          explanation: '先把大长方形空地面积 $S_{\\text{大}} = 3b(2a+3)$ 与角落小花园面积 $S_{\\text{花}} = b(a+2)$ 各自用含 $a, b$ 的整式写出来，作为下一步作差的原料。'
+        },
+        {
+          step: 2,
+          name: '列面积差算式，去括号并合并同类项化简',
+          tStart: 6.5,
+          tEnd: 14.0,
+          explanation: '列面积差 $S = 3b(2a+3) - b(a+2)$，注意负号要乘遍括号内每一项得 $6ab + 9b - ab - 2b$，再把同类项 $6ab$ 与 $-ab$、$9b$ 与 $-2b$ 分别合并为 $5ab + 7b$。'
+        },
+        {
+          step: 3,
+          name: '先化简再代入 $a=8, b=4$ 求面积与地砖费用',
+          tStart: 14.0,
+          tEnd: 22.0,
+          explanation: '将 $a=8, b=4$ 代入最简整式 $5ab+7b$ 得 $188$ 平方米，再乘单价 $50$ 元/平方米得总费用 $9400$ 元。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.6, step: 1, label: '1.1 表示大空地面积 $3b(2a+3)$' },
+        { time: 3.8, step: 1, label: '1.2 表示小花园面积 $b(a+2)$' },
+        { time: 7.0, step: 2, label: '2.1 列面积差 $3b(2a+3) - b(a+2)$' },
+        { time: 9.2, step: 2, label: '2.2 去括号展开得 $6ab + 9b - ab - 2b$' },
+        { time: 11.2, step: 2, label: '2.3 合并同类项化简为 $5ab + 7b$' },
+        { time: 14.6, step: 3, label: '3.1 代入 $a=8, b=4$ 算得 $S = 188$' },
+        { time: 17.0, step: 3, label: '3.2 计算地砖总费用 $9400$ 元' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p45_row_0',
+          stepBadge: '审图',
+          appearAt: 0.6,
+          tokens: [
+            { id: 'p45_r0_1', math: '大空地：长 $(2a+3)$ 米，宽 $3b$ 米 $\\Rightarrow S_{\\text{大}} = 3b(2a+3)$', appearAt: 0.6, dur: 0.45 }
           ]
         },
         {
-          id: 'p45_s2',
-          stepIndex: 1,
-          label: '步骤 2',
-          title: '列面积差算式，去括号并合并同类项化简',
-          startTime: 6.5,
-          endTime: 14.0,
-          scratchpadTitle: '易错提醒：减数整体变号',
-          scratchpadFormula: '$-b(a+2) = -ab - 2b$（切勿漏变 $-2b$ 的符号）',
-          scratchpadNote: '用大空地面积减去小花园面积时，负号要乘遍括号内每一项，再把同类项 $6ab$ 与 $-ab$、$9b$ 与 $-2b$ 分别合并。',
-          voiceSubtitle: '第二步，列面积差 $3b(2a+3)-b(a+2)$，去括号得 $6ab+9b-ab-2b$，合并同类项化简为 $5ab+7b$。',
-          boardLines: [
-            {
-              appearAt: 7.0,
-              badge: '列差',
-              formula: '$S = S_{\\text{大}} - S_{\\text{花}} = 3b(2a+3) - b(a+2)$',
-              highlight: false
-            },
-            {
-              appearAt: 9.2,
-              badge: '展开',
-              formula: '$= 6ab + 9b - ab - 2b$',
-              highlight: false
-            },
-            {
-              appearAt: 11.2,
-              badge: '合并',
-              formula: '$= (6-1)ab + (9-2)b = 5ab + 7b$（平方米）',
-              highlight: true
-            }
+          rowId: 'p45_row_1',
+          stepBadge: '标注',
+          appearAt: 3.8,
+          tokens: [
+            { id: 'p45_r1_1', math: '小花园：长 $(a+2)$ 米，宽 $b$ 米 $\\Rightarrow S_{\\text{花}} = b(a+2)$', appearAt: 3.8, dur: 0.45 }
           ]
         },
         {
-          id: 'p45_s3',
-          stepIndex: 2,
-          label: '步骤 3',
-          title: '先化简再代入 $a=8,b=4$ 求面积并计算地砖费用',
-          startTime: 14.0,
-          endTime: 22.0,
-          scratchpadTitle: '代入求值与实际费用',
-          scratchpadFormula: '$S = 5\\times 8\\times 4 + 7\\times 4 = 188$，$188\\times 50 = 9400$',
-          scratchpadNote: '将 $a=8,b=4$ 代入最简整式 $5ab+7b$ 比直接代入原式更不易出错，最后乘以单价 $50$ 元/平方米得总费用。',
-          voiceSubtitle: '第三步，把 $a=8,b=4$ 代入最简式 $5ab+7b$ 算出剩余面积 $188$ 平方米，再乘单价 $50$ 元得总费用 $9400$ 元。',
-          boardLines: [
-            {
-              appearAt: 14.6,
-              badge: '代入',
-              formula: '当 $a=8, b=4$ 时，$S = 5\\times 8\\times 4 + 7\\times 4 = 160 + 28 = 188$（$\\text{m}^{2}$）',
-              highlight: false
-            },
-            {
-              appearAt: 17.0,
-              badge: '费用',
-              formula: '购买地砖总费用 $= 188 \\times 50 = 9400$（元）',
-              highlight: true
-            }
+          rowId: 'p45_row_2',
+          stepBadge: '第 2 步 ① · 列差',
+          appearAt: 7.0,
+          tokens: [
+            { id: 'p45_r2_1', math: '$S = S_{\\text{大}} - S_{\\text{花}} = 3b(2a+3) - b(a+2)$', appearAt: 7.0, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p45_row_3',
+          stepBadge: '第 2 步 ② · 展开',
+          appearAt: 9.2,
+          tokens: [
+            { id: 'p45_r3_1', math: '$= 6ab + 9b - ab - 2b$', appearAt: 9.2, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p45_row_4',
+          stepBadge: '第 2 步 ③ · 合并',
+          appearAt: 11.2,
+          tokens: [
+            { id: 'p45_r4_1', math: '$= (6-1)ab + (9-2)b = 5ab + 7b$（平方米）', appearAt: 11.2, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p45_row_5',
+          stepBadge: '第 3 步 ① · 代入',
+          appearAt: 14.6,
+          tokens: [
+            { id: 'p45_r5_1', math: '当 $a=8, b=4$ 时，$S = 5\\times 8\\times 4 + 7\\times 4 = 160 + 28 = 188$（$\\text{m}^{2}$）', appearAt: 14.6, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p45_row_6',
+          stepBadge: '最终结论',
+          appearAt: 17.0,
+          isConclusion: true,
+          tokens: [
+            { id: 'p45_r6_1', math: '购买地砖总费用 $= 188 \\times 50 = 9400$（元）。', appearAt: 17.0, dur: 0.55 }
           ]
         }
       ],
-      practice: {
-        prompt: '完成下面两道同步变式练习，巩固“先列整式化简、再代入求值”的程序：',
-        q1: {
-          title: '练习一：三角形周长与边长和差化简求值',
-          givenLabel: '已知：',
-          givenFormula: '三角形第一条边长为 $(3a+2b)$，第二条边比第一条边长 $(a-b)$，第三条边长为 $2a$',
-          questionText: '先化简该三角形的周长 $pa+qb$，则系数 $p$ 与 $q$ 分别是多少？',
-          input1Prefix: '系数 $p =$',
-          input1Placeholder: '如 9',
-          input2Prefix: '，系数 $q =$',
-          input2Placeholder: '如 3',
-          input2Suffix: '',
-          expectedX: '9',
-          expectedMin: '3',
-          allowOrderSwap: false,
-          correctFeedback: '三角形周长为 $9a+3b$（即 $p=9$，$q=3$）。',
-          correctDetail: '第二条边为 $(3a+2b)+(a-b)=4a+b$，三边相加得 $(3a+2b)+(4a+b)+2a = 9a+3b$。',
-          wrongFeedback: '先算出第二条边 $(3a+2b)+(a-b)=4a+b$，再把三条边相加合并同类项即可。',
-          specificWrongHints: [
-            { checkType: 'firstVal', val: '6', hint: '注意第二条边是“比第一条边长 $(a-b)$”，即 $(3a+2b)+(a-b)=4a+b$，不要只加 $(a-b)$。' }
-          ]
-        },
-        q2: {
-          title: '练习二：实际采购总费用化简与代入',
-          givenLabel: '已知：',
-          givenFormula: '大垃圾桶单价 $m$ 元，小垃圾桶单价为 $(\\frac{1}{2}m+20)$ 元，买 $5$ 个大桶和 $7$ 个小桶',
-          questionText: '先化简总费用 $km+140$ 求 $k$（小数），再求 $m=120$ 时的总费用：',
-          input1Prefix: '$k =$',
-          input1Placeholder: '如 8.5',
-          input2Prefix: '，总费用 $=$',
-          input2Placeholder: '如 1160',
-          input2Suffix: '元',
-          expectedX: '8.5',
-          expectedMin: '1160',
-          allowOrderSwap: false,
-          correctFeedback: '$k = 8.5$（即 $\\frac{17}{2}$），总费用为 $1160$ 元。',
-          correctDetail: '总费用 $= 5m + 7(\\frac{1}{2}m+20) = 8.5m + 140$；当 $m=120$ 时，总费用 $= 8.5\\times 120 + 140 = 1020 + 140 = 1160$（元）。',
-          wrongFeedback: '展开 $5m+7(\\frac{1}{2}m+20)$ 时注意 $7\\times \\frac{1}{2}=3.5$，合并得 $8.5m+140$，再代入 $m=120$。',
-          specificWrongHints: [
-            { checkType: 'secondVal', val: '1020', hint: '别忘了加上常数项 $7\\times 20 = 140$ 元，$1020+140=1160$ 元。' }
-          ]
-        }
-      },
 
+      scratchpadCards: [
+        {
+          id: 'p45_sp_1',
+          title: '几何量转化：长 × 宽',
+          showStart: 0.4,
+          showEnd: 6.4,
+          tokens: [
+            { id: 'p45_sp1_t1', math: '$S_{\\text{大}} = 3b(2a+3)$，$S_{\\text{花}} = b(a+2)$', appearAt: 0.8, dur: 0.45 }
+          ],
+          note: '先把大长方形空地与角落小花园的面积各自用含 $a, b$ 的整式写出来，作为下一步作差的原料。'
+        },
+        {
+          id: 'p45_sp_2',
+          title: '易错提醒：减数整体变号',
+          showStart: 6.6,
+          showEnd: 13.9,
+          tokens: [
+            { id: 'p45_sp2_t1', math: '$-b(a+2) = -ab - 2b$（切勿漏变 $-2b$ 的符号）', appearAt: 7.2, dur: 0.45 }
+          ],
+          note: '用大空地面积减去小花园面积时，负号要乘遍括号内每一项，再把同类项 $6ab$ 与 $-ab$、$9b$ 与 $-2b$ 分别合并。'
+        },
+        {
+          id: 'p45_sp_3',
+          title: '代入求值与实际费用',
+          showStart: 14.1,
+          showEnd: 22.0,
+          tokens: [
+            { id: 'p45_sp3_t1', math: '$S = 5\\times 8\\times 4 + 7\\times 4 = 188$，$188\\times 50 = 9400$', appearAt: 14.8, dur: 0.45 }
+          ],
+          note: '将 $a=8, b=4$ 代入最简整式 $5ab+7b$ 比直接代入原式更不易出错，最后乘以单价 $50$ 元/平方米得总费用。'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p45_r1_1', tStart: 3.8, tEnd: 6.4, color: 'amber' },
+        { tokenId: 'p45_r4_1', tStart: 11.2, tEnd: 13.9, color: 'teal' },
+        { tokenId: 'p45_r6_1', tStart: 17.0, tEnd: 22.0, color: 'teal' }
+      ],
+
+      svgAnnotations: [],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 6.5, text: '第一步，先用整式写出大空地面积 $3b(2a+3)$ 和角落小花园面积 $b(a+2)$。', focusToken: 'p45_r1_1' },
+        { tStart: 6.5, tEnd: 14.0, text: '第二步，列面积差 $3b(2a+3)-b(a+2)$，去括号得 $6ab+9b-ab-2b$，合并同类项化简为 $5ab+7b$。', focusToken: 'p45_r4_1' },
+        { tStart: 14.0, tEnd: 22.0, text: '第三步，把 $a=8, b=4$ 代入最简式 $5ab+7b$ 算出剩余面积 $188$ 平方米，再乘单价 $50$ 元得总费用 $9400$ 元。', focusToken: 'p45_r6_1' }
+      ],
       practices: {
         practice1: {
           title: '练习一',
@@ -11316,7 +11330,7 @@
             ],
             summary: '最高次项系数不能为 $0$，否则多项式会降次。'
           },
-          wrongTitle: '提示：同时满足 $|m| = 2$ 且 $m - 2 \neq 0$',
+          wrongTitle: '提示：同时满足 $|m| = 2$ 且 $m - 2 \\neq 0$',
           wrongFeedback: '由 $|m| = 2$ 得 $m = \\pm 2$，又 $m - 2 \\neq 0$，故 $m = -2$。'
         },
         practice2: {
@@ -11927,7 +11941,7 @@
       scratchpadIdleHint: '弦与直径对比提示区（演示中将同步动态呈现直径 $CD = 2r = 10$ 与非直径弦 $AB$ 的比较）',
       geometryDiagram: {
         title: '动态几何图：直径 $CD$ 与任意弦 $AB$',
-        caption: '点击播放观察直径 $CD = 10$、半径 $OA = OB = 5$ 及由 $AB \lt OA + OB$ 导出 $0 \lt a \le 10$',
+        caption: '点击播放观察直径 $CD = 10$、半径 $OA = OB = 5$ 及由 $AB \\lt OA + OB$ 导出 $0 \\lt a \\le 10$',
         svgHtml: '<svg viewBox="0 0 260 180" class="w-full max-w-[260px] h-auto" xmlns="http://www.w3.org/2000/svg">'
           + '<circle cx="130" cy="92" r="64" fill="#F8FAFC" stroke="#334155" stroke-width="2" />'
           + '<circle cx="130" cy="92" r="3" fill="#0F766E" />'
@@ -11946,129 +11960,141 @@
           + '<text class="proc-geo-anim" data-appear-at="14.8" data-dur="0.6" x="80" y="172" font-size="11.5" font-weight="700" fill="#0F766E" style="opacity:0;">0 &lt; a ≤ 10（等号在直径处取得）</text>'
           + '</svg>'
       },
+      exampleFormula: '$\\odot O$ 半径 $r = 5$，弦 $AB$ 长 $a \\implies 0 \\lt a \\le 2r$',
+      practiceSectionTitle: '圆的有关概念与弦长范围跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握“直径是最长的弦”与弦长取值范围',
+
       steps: [
         {
-          id: 'p52_s1',
-          stepIndex: 0,
-          label: '步骤 1',
-          title: '明确弦与直径的定义，由半径算出直径长',
-          startTime: 0.0,
-          endTime: 6.5,
-          scratchpadTitle: '弦与直径核心关系',
-          scratchpadFormula: '直径 $CD = 2r = 2 \times 5 = 10$（直径也是弦）',
-          scratchpadNote: '两端点都在圆上的线段叫做弦，过圆心的弦叫做直径；半径 $OA$ 一端在圆心，不是弦。',
-          voiceSubtitle: '第一步，明确弦是两端点都在圆上的线段，过圆心的弦是直径；已知半径 $r = 5$，所以直径 $CD = 10$。',
-          boardLines: [
-            {
-              appearAt: 0.6,
-              badge: '审题',
-              formula: '已知 $\\odot O$ 半径 $r = 5$，弦 $AB$ 的两端点均在 $\\odot O$ 上',
-              highlight: false
-            },
-            {
-              appearAt: 3.2,
-              badge: '直径',
-              formula: '过圆心的弦（直径）长度 $d = 2r = 10$',
-              highlight: true
-            }
+          step: 1,
+          name: '明确弦与直径的定义，由半径算出直径长',
+          tStart: 0.0,
+          tEnd: 6.5,
+          explanation: '两端点都在圆上的线段叫做弦，过圆心的弦叫做直径；已知半径 $r = 5$，故直径 $CD = 2r = 10$（注意半径 $OA$ 一端在圆心，不是弦）。'
+        },
+        {
+          step: 2,
+          name: '连结半径比较非直径弦与直径的长度',
+          tStart: 6.5,
+          tEnd: 13.8,
+          explanation: '连结半径 $OA = OB = 5$，任意不过圆心的弦 $AB$ 与两半径构成 $\\triangle OAB$，由三角形两边之和大于第三边得 $AB \\lt OA + OB = 10$，而直径恰好等于 $10$，故直径是最长的弦。'
+        },
+        {
+          step: 3,
+          name: '补齐下界 $a \\gt 0$，写出完整弦长范围',
+          tStart: 13.8,
+          tEnd: 21.0,
+          explanation: '弦长作为线段长度必有正数下界 $a \\gt 0$，且最大可取到直径 $10$（可取等号），因此弦 $AB$ 的长度 $a$ 的取值范围是 $0 \\lt a \\le 10$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.6, step: 1, label: '1.1 明确弦的定义与半径 $r = 5$' },
+        { time: 3.2, step: 1, label: '1.2 计算直径 $d = 2r = 10$' },
+        { time: 7.4, step: 2, label: '2.1 连结半径 $OA = OB = 5$ 构造 $\\triangle OAB$' },
+        { time: 10.2, step: 2, label: '2.2 由三边关系证得 $AB \\lt 10$' },
+        { time: 14.5, step: 3, label: '3.1 补齐下界 $a \\gt 0$ 与上界 $a \\le 10$' },
+        { time: 17.2, step: 3, label: '3.2 写出完整范围 $0 \\lt a \\le 10$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p52_row_0',
+          stepBadge: '第 1 步 ① · 审题',
+          appearAt: 0.6,
+          tokens: [
+            { id: 'p52_r0_1', math: '已知 $\\odot O$ 半径 $r = 5$，弦 $AB$ 的两端点均在 $\\odot O$ 上', appearAt: 0.6, dur: 0.45 }
           ]
         },
         {
-          id: 'p52_s2',
-          stepIndex: 1,
-          label: '步骤 2',
-          title: '连结半径比较非直径弦与直径的长度',
-          startTime: 6.5,
-          endTime: 13.8,
-          scratchpadTitle: '为何直径是最长的弦？',
-          scratchpadFormula: '在 $\triangle OAB$ 中，$AB \lt OA + OB = 5 + 5 = 10$',
-          scratchpadNote: '任意一条不过圆心的弦 $AB$ 都与两条半径围成三角形，由两边之和大于第三边必有 $AB \lt 2r$。',
-          voiceSubtitle: '第二步，连结半径 $OA$ 和 $OB$，在 $\triangle OAB$ 中由两边之和大于第三边得 $AB \lt 5 + 5 = 10$，所以直径是圆中最长的弦。',
-          boardLines: [
-            {
-              appearAt: 7.4,
-              badge: '构图',
-              formula: '连结半径 $OA = OB = 5$，若 $AB$ 不过圆心则构成 $\triangle OAB$',
-              highlight: false
-            },
-            {
-              appearAt: 10.2,
-              badge: '推证',
-              formula: '由三角形三边关系：$AB \lt OA + OB = 10$；若 $AB$ 为直径则 $AB = 10$',
-              highlight: true
-            }
+          rowId: 'p52_row_1',
+          stepBadge: '第 1 步 ② · 直径',
+          appearAt: 3.2,
+          tokens: [
+            { id: 'p52_r1_1', math: '过圆心的弦（直径）长度 $d = 2r = 10$', appearAt: 3.2, dur: 0.45 }
           ]
         },
         {
-          id: 'p52_s3',
-          stepIndex: 2,
-          label: '步骤 3',
-          title: '补齐下界 $a \gt 0$，写出完整弦长范围',
-          startTime: 13.8,
-          endTime: 21.0,
-          scratchpadTitle: '易错提醒：两端边界不可漏',
-          scratchpadFormula: '下界 $a \gt 0$（线段长必正），上界 $a \le 10$（可取等号）',
-          scratchpadNote: '做选择题判断“弦长不可能的值”时，直接找大于 $2r$ 的选项；做填空写范围时切记写出 $0 \lt a \le 2r$。',
-          voiceSubtitle: '第三步，弦长作为线段长度必须大于 $0$，且最大可取到直径 $10$，因此弦长 $a$ 的取值范围是 $0 \lt a \le 10$。',
-          boardLines: [
-            {
-              appearAt: 14.5,
-              badge: '定界',
-              formula: '弦长满足正数下界 $a \gt 0$ 与直径上界 $a \le 10$',
-              highlight: false
-            },
-            {
-              appearAt: 17.2,
-              badge: '结论',
-              formula: '综上，弦 $AB$ 的长度 $a$ 的取值范围是 $0 \lt a \le 10$',
-              highlight: true
-            }
+          rowId: 'p52_row_2',
+          stepBadge: '第 2 步 ① · 构图',
+          appearAt: 7.4,
+          tokens: [
+            { id: 'p52_r2_1', math: '连结半径 $OA = OB = 5$，若 $AB$ 不过圆心则构成 $\\triangle OAB$', appearAt: 7.4, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p52_row_3',
+          stepBadge: '第 2 步 ② · 推证',
+          appearAt: 10.2,
+          tokens: [
+            { id: 'p52_r3_1', math: '由三角形三边关系：$AB \\lt OA + OB = 10$；若 $AB$ 为直径则 $AB = 10$', appearAt: 10.2, dur: 0.50 }
+          ]
+        },
+        {
+          rowId: 'p52_row_4',
+          stepBadge: '第 3 步 ① · 定界',
+          appearAt: 14.5,
+          tokens: [
+            { id: 'p52_r4_1', math: '弦长满足正数下界 $a \\gt 0$ 与直径上界 $a \\le 10$', appearAt: 14.5, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p52_row_5',
+          stepBadge: '最终结论',
+          appearAt: 17.2,
+          isConclusion: true,
+          tokens: [
+            { id: 'p52_r5_1', math: '综上，弦 $AB$ 的长度 $a$ 的取值范围是 $0 \\lt a \\le 10$。', appearAt: 17.2, dur: 0.55 }
           ]
         }
       ],
-      practice: {
-        prompt: '完成下面两道与本题库核心题强对应的同步演练，巩固“最长弦 $=$ 直径 $= 2r$”：',
-        q1: {
-          title: '练习一：半径与最长弦长双向互求（对应题库 g_q7 / t_q5）',
-          givenLabel: '已知：',
-          givenFormula: '圆 $1$ 的半径为 $3$；圆 $2$ 中最长的弦长为 $14\text{ cm}$',
-          questionText: '求圆 $1$ 中最长的弦长，以及圆 $2$ 的半径：',
-          input1Prefix: '圆 $1$ 最长弦长 $=$',
-          input1Placeholder: '如 6',
-          input2Prefix: '，圆 $2$ 半径 $=$',
-          input2Placeholder: '如 7',
-          input2Suffix: 'cm',
-          expectedX: '6',
-          expectedMin: '7',
-          allowOrderSwap: false,
-          correctFeedback: '圆 $1$ 最长弦长为 $6$，圆 $2$ 半径为 $7\text{ cm}$。',
-          correctDetail: '直径是圆中最长的弦：圆 $1$ 最长弦长 $= 2 \times 3 = 6$；圆 $2$ 直径为 $14\text{ cm}$，故半径 $= 14 \div 2 = 7\text{ cm}$。',
-          wrongFeedback: '记住“最长弦 $=$ 直径 $= 2r$”：已知半径求最长弦乘 $2$，已知最长弦求半径除以 $2$。',
-          specificWrongHints: [
-            { checkType: 'firstVal', val: '3', hint: '最长弦是直径而非半径，$2 \times 3 = 6$。' },
-            { checkType: 'secondVal', val: '28', hint: '最长弦 $14\text{ cm}$ 已经是直径，求半径要除以 $2$ 得 $7$。' }
-          ]
-        },
-        q2: {
-          title: '练习二：由半径确定弦长上限（对应题库 b_q5 / g_q4）',
-          givenLabel: '已知：',
-          givenFormula: '$\\odot O_{1}$ 半径为 $6$，$\\odot O_{2}$ 半径为 $3$',
-          questionText: '分别写出两圆中任意弦长的最大可能值（超过此值即不可能）：',
-          input1Prefix: '$\\odot O_{1}$ 弦长上限 $=$',
-          input1Placeholder: '如 12',
-          input2Prefix: '，$\\odot O_{2}$ 弦长上限 $=$',
-          input2Placeholder: '如 6',
-          input2Suffix: '',
-          expectedX: '12',
-          expectedMin: '6',
-          allowOrderSwap: false,
-          correctFeedback: '$\\odot O_{1}$ 弦长上限为 $12$，$\\odot O_{2}$ 弦长上限为 $6$。',
-          correctDetail: '任意弦长不超过直径 $2r$：当 $r = 6$ 时上限为 $12$（如 $13$ 不可能）；当 $r = 3$ 时上限为 $6$（如 $7$ 不可能）。',
-          wrongFeedback: '弦长最大只能等于直径 $2r$，分别计算 $2 \times 6$ 和 $2 \times 3$。',
-          specificWrongHints: []
-        }
-      },
 
+      scratchpadCards: [
+        {
+          id: 'p52_sp_1',
+          title: '弦与直径核心关系',
+          showStart: 0.4,
+          showEnd: 6.4,
+          tokens: [
+            { id: 'p52_sp1_t1', math: '直径 $CD = 2r = 2 \\times 5 = 10$（直径也是弦）', appearAt: 0.8, dur: 0.45 }
+          ],
+          note: '两端点都在圆上的线段叫做弦，过圆心的弦叫做直径；半径 $OA$ 一端在圆心，不是弦。'
+        },
+        {
+          id: 'p52_sp_2',
+          title: '为何直径是最长的弦？',
+          showStart: 6.6,
+          showEnd: 13.7,
+          tokens: [
+            { id: 'p52_sp2_t1', math: '在 $\\triangle OAB$ 中，$AB \\lt OA + OB = 5 + 5 = 10$', appearAt: 7.2, dur: 0.45 }
+          ],
+          note: '任意一条不过圆心的弦 $AB$ 都与两条半径围成三角形，由两边之和大于第三边必有 $AB \\lt 2r$。'
+        },
+        {
+          id: 'p52_sp_3',
+          title: '易错提醒：两端边界不可漏',
+          showStart: 13.9,
+          showEnd: 21.0,
+          tokens: [
+            { id: 'p52_sp3_t1', math: '下界 $a \\gt 0$（线段长必正），上界 $a \\le 10$（可取等号）', appearAt: 14.4, dur: 0.45 }
+          ],
+          note: '做选择题判断“弦长不可能的值”时，直接找大于 $2r$ 的选项；做填空写范围时切记写出 $0 \\lt a \\le 2r$。'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p52_r1_1', tStart: 3.2, tEnd: 6.4, color: 'teal' },
+        { tokenId: 'p52_r3_1', tStart: 10.2, tEnd: 13.7, color: 'amber' },
+        { tokenId: 'p52_r5_1', tStart: 17.2, tEnd: 21.0, color: 'teal' }
+      ],
+
+      svgAnnotations: [],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 6.5, text: '第一步，明确弦是两端点都在圆上的线段，过圆心的弦是直径；已知半径 $r = 5$，所以直径 $CD = 10$。', focusToken: 'p52_r1_1' },
+        { tStart: 6.5, tEnd: 13.8, text: '第二步，连结半径 $OA$ 和 $OB$，在 $\\triangle OAB$ 中由两边之和大于第三边得 $AB \\lt 5 + 5 = 10$，所以直径是圆中最长的弦。', focusToken: 'p52_r3_1' },
+        { tStart: 13.8, tEnd: 21.0, text: '第三步，弦长作为线段长度必须大于 $0$，且最大可取到直径 $10$，因此弦长 $a$ 的取值范围是 $0 \\lt a \\le 10$。', focusToken: 'p52_r5_1' }
+      ],
       practices: {
         practice1: {
           title: '练习一',
@@ -12156,137 +12182,150 @@
           + '<text class="proc-geo-anim" data-appear-at="16.5" data-dur="0.5" x="195" y="152" font-size="11.5" font-weight="700" fill="#E11D48" style="opacity:0;">r = 5</text>'
           + '</svg>'
       },
+      exampleFormula: '$d_{\\min} = 4$，$d_{\\max} = 6 \\implies$ 分点 $P$ 在圆外、圆内两类求 $r$',
+      practiceSectionTitle: '点与圆位置关系及最远最近距离跟做练习',
+      practiceSectionSub: '完成以下两道关键操作练习，检验是否掌握点在圆外/圆内双解分类讨论',
+
       steps: [
         {
-          id: 'p53_s1',
-          stepIndex: 0,
-          label: '步骤 1',
-          title: '审题识别未限定点 $P$ 内外，建立分类讨论',
-          startTime: 0.0,
-          endTime: 5.5,
-          scratchpadTitle: '分类讨论触发信号',
-          scratchpadFormula: '题干未说明点 $P$ 在圆内或圆外 $\implies$ 必分两类',
-          scratchpadNote: '过点 $P$ 和圆心 $O$ 作直线交圆于最近点与最远点，这两点恰好构成圆的一条直径。',
-          voiceSubtitle: '第一步，题目只说点 $P$ 到圆上点的最小距离是 $4$、最大距离是 $6$，没有说明点 $P$ 在圆内还是圆外，所以必须分两类讨论。',
-          boardLines: [
-            {
-              appearAt: 0.6,
-              badge: '审题',
-              formula: '已知 $d_{\min} = 4$，$d_{\max} = 6$，且点 $P$ 的内外位置未限定',
-              highlight: false
-            },
-            {
-              appearAt: 3.0,
-              badge: '定位',
-              formula: '直线 $PO$ 与 $\\odot O$ 的两个交点即为最近点与最远点（夹出一条直径）',
-              highlight: true
-            }
+          step: 1,
+          name: '审题识别未限定点 $P$ 内外，建立分类讨论',
+          tStart: 0.0,
+          tEnd: 5.5,
+          explanation: '题干未说明点 $P$ 在圆内还是圆外，必须分两类讨论；过点 $P$ 与圆心 $O$ 作直线交圆于最近点与最远点，这两点恰好构成圆的一条直径。'
+        },
+        {
+          step: 2,
+          name: '情形一：点 $P$ 在圆外，两距离作差求半径',
+          tStart: 5.5,
+          tEnd: 11.5,
+          explanation: '当点 $P$ 在 $\\odot O$ 外时，最远距离比最近距离多出的部分恰好是一条完整直径，即 $2r = d_{\\max} - d_{\\min} = 6 - 4 = 2$，解得 $r = 1$。'
+        },
+        {
+          step: 3,
+          name: '情形二：点 $P$ 在圆内，两距离作和求半径',
+          tStart: 11.5,
+          tEnd: 23.0,
+          explanation: '当点 $P$ 在 $\\odot O$ 内时，点 $P$ 将过它的直径分成最近和最远两段，即 $2r = d_{\\max} + d_{\\min} = 6 + 4 = 10$，解得 $r = 5$；综上半径为 $5$ 或 $1$。'
+        }
+      ],
+
+      microBeats: [
+        { time: 0.6, step: 1, label: '1.1 审题识别点 $P$ 位置未限定' },
+        { time: 3.0, step: 1, label: '1.2 直线 $PO$ 交圆于最近点与最远点' },
+        { time: 6.0, step: 2, label: '2.1 圆外情形：$2r = 6 - 4 = 2$' },
+        { time: 8.2, step: 2, label: '2.2 解得圆外半径 $r = 1$' },
+        { time: 12.2, step: 3, label: '3.1 圆内情形：$2r = 6 + 4 = 10$' },
+        { time: 15.2, step: 3, label: '3.2 解得圆内半径 $r = 5$' },
+        { time: 17.8, step: 3, label: '3.3 汇总双解：$r = 5$ 或 $1$' }
+      ],
+
+      boardRows: [
+        {
+          rowId: 'p53_row_0',
+          stepBadge: '第 1 步 ① · 审题',
+          appearAt: 0.6,
+          tokens: [
+            { id: 'p53_r0_1', math: '已知 $d_{\\min} = 4$，$d_{\\max} = 6$，且点 $P$ 的内外位置未限定', appearAt: 0.6, dur: 0.45 }
           ]
         },
         {
-          id: 'p53_s2',
-          stepIndex: 1,
-          label: '步骤 2',
-          title: '情形一：点 $P$ 在圆外，两距离作差求直径与半径',
-          startTime: 5.5,
-          endTime: 11.5,
-          scratchpadTitle: '点在圆外公式',
-          scratchpadFormula: '$2r = d_{\max} - d_{\min} = 6 - 4 = 2 \implies r = 1$',
-          scratchpadNote: '当点 $P$ 在圆外时，最远距离比最近距离多出来的部分正好是一条完整的直径 $2r$。',
-          voiceSubtitle: '第二步，看情形一：当点 $P$ 在圆外时，直径等于最大距离减去最小距离，即 $2r = 6 - 4 = 2$，解得半径 $r = 1$。',
-          boardLines: [
-            {
-              appearAt: 6.0,
-              badge: '圆外',
-              formula: '当点 $P$ 在 $\\odot O$ 外时：直径 $2r = d_{\max} - d_{\min} = 6 - 4 = 2$',
-              highlight: false
-            },
-            {
-              appearAt: 8.2,
-              badge: '求 $r$',
-              formula: '解得半径 $r = 2 \div 2 = 1$',
-              highlight: true
-            }
+          rowId: 'p53_row_1',
+          stepBadge: '第 1 步 ② · 定位',
+          appearAt: 3.0,
+          tokens: [
+            { id: 'p53_r1_1', math: '直线 $PO$ 与 $\\odot O$ 的两个交点即为最近点与最远点（夹出一条直径）', appearAt: 3.0, dur: 0.45 }
           ]
         },
         {
-          id: 'p53_s3',
-          stepIndex: 2,
-          label: '步骤 3',
-          title: '情形二：点 $P$ 在圆内，两距离作和求直径与半径',
-          startTime: 11.5,
-          endTime: 23.0,
-          scratchpadTitle: '点在圆内公式与双解汇总',
-          scratchpadFormula: '$2r = d_{\max} + d_{\min} = 6 + 4 = 10 \implies r = 5$',
-          scratchpadNote: '当点 $P$ 在圆内时，点 $P$ 把过它的直径分成最近和最远两段，所以两距离之和正好是直径 $2r$。',
-          voiceSubtitle: '第三步，看情形二：当点 $P$ 在圆内时，直径等于最大距离加上最小距离，即 $2r = 6 + 4 = 10$，解得半径 $r = 5$；综上，半径为 $5$ 或 $1$。',
-          boardLines: [
-            {
-              appearAt: 12.2,
-              badge: '圆内',
-              formula: '当点 $P$ 在 $\\odot O$ 内时：直径 $2r = d_{\max} + d_{\min} = 6 + 4 = 10$',
-              highlight: false
-            },
-            {
-              appearAt: 15.2,
-              badge: '求 $r$',
-              formula: '解得半径 $r = 10 \div 2 = 5$',
-              highlight: false
-            },
-            {
-              appearAt: 17.8,
-              badge: '结论',
-              formula: '综上，$\\odot O$ 的半径为 $5$ 或 $1$',
-              highlight: true
-            }
+          rowId: 'p53_row_2',
+          stepBadge: '第 2 步 ① · 圆外',
+          appearAt: 6.0,
+          tokens: [
+            { id: 'p53_r2_1', math: '当点 $P$ 在 $\\odot O$ 外时：直径 $2r = d_{\\max} - d_{\\min} = 6 - 4 = 2$', appearAt: 6.0, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p53_row_3',
+          stepBadge: '第 2 步 ② · 求 r',
+          appearAt: 8.2,
+          tokens: [
+            { id: 'p53_r3_1', math: '解得半径 $r = 2 \\div 2 = 1$', appearAt: 8.2, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p53_row_4',
+          stepBadge: '第 3 步 ① · 圆内',
+          appearAt: 12.2,
+          tokens: [
+            { id: 'p53_r4_1', math: '当点 $P$ 在 $\\odot O$ 内时：直径 $2r = d_{\\max} + d_{\\min} = 6 + 4 = 10$', appearAt: 12.2, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p53_row_5',
+          stepBadge: '第 3 步 ② · 求 r',
+          appearAt: 15.2,
+          tokens: [
+            { id: 'p53_r5_1', math: '解得半径 $r = 10 \\div 2 = 5$', appearAt: 15.2, dur: 0.45 }
+          ]
+        },
+        {
+          rowId: 'p53_row_6',
+          stepBadge: '最终结论',
+          appearAt: 17.8,
+          isConclusion: true,
+          tokens: [
+            { id: 'p53_r6_1', math: '综上，$\\odot O$ 的半径为 $5$ 或 $1$。', appearAt: 17.8, dur: 0.55 }
           ]
         }
       ],
-      practice: {
-        prompt: '完成下面两道与本题库核心题直接对应的同步演练，巩固分类求半径与矩形多点半径范围：',
-        q1: {
-          title: '练习一：最远/最近距离分类求半径（对应题库 t_q11 / g_q11）',
-          givenLabel: '已知：',
-          givenFormula: '平面上一点 $P$ 到 $\\odot O$ 的最近距离为 $4\text{ cm}$，最远距离为 $10\text{ cm}$',
-          questionText: '分别求出点 $P$ 在圆内与点 $P$ 在圆外时 $\\odot O$ 的半径：',
-          input1Prefix: '圆内时 $r =$',
-          input1Placeholder: '如 7',
-          input2Prefix: '$\text{cm}$，圆外时 $r =$',
-          input2Placeholder: '如 3',
-          input2Suffix: 'cm',
-          expectedX: '7',
-          expectedMin: '3',
-          allowOrderSwap: false,
-          correctFeedback: '点在圆内时 $r = 7\text{ cm}$，点在圆外时 $r = 3\text{ cm}$。',
-          correctDetail: '圆内作和除以 $2$：$r = \frac{10 + 4}{2} = 7\text{ cm}$；圆外作差除以 $2$：$r = \frac{10 - 4}{2} = 3\text{ cm}$。',
-          wrongFeedback: '圆内两距离相加得直径 $14\text{ cm}$、除以 $2$ 得半径 $7\text{ cm}$；圆外两距离相减得直径 $6\text{ cm}$、除以 $2$ 得半径 $3\text{ cm}$。',
-          specificWrongHints: [
-            { checkType: 'firstVal', val: '14', hint: '$10 + 4 = 14$ 是直径，求半径别忘了除以 $2$ 得 $7$。' },
-            { checkType: 'secondVal', val: '6', hint: '$10 - 4 = 6$ 是直径，求半径别忘了除以 $2$ 得 $3$。' }
-          ]
-        },
-        q2: {
-          title: '练习二：矩形多点与圆位置确定半径范围（对应题库 g_q15 / t_q15）',
-          givenLabel: '已知：',
-          givenFormula: '矩形 $ABCD$ 中 $AB = 6$，$AD = 8$，以 $A$ 为圆心作 $\\odot A$',
-          questionText: '要使 $B,C,D$ 三点至少一点在圆内、至少一点在圆外，求半径范围 $a \lt r \lt b$ 中的 $a$ 与 $b$：',
-          input1Prefix: '下界 $a =$',
-          input1Placeholder: '如 6',
-          input2Prefix: '，上界 $b =$',
-          input2Placeholder: '如 10',
-          input2Suffix: '',
-          expectedX: '6',
-          expectedMin: '10',
-          allowOrderSwap: false,
-          correctFeedback: '半径范围为 $6 \lt r \lt 10$（下界 $6$，上界 $10$）。',
-          correctDetail: '由勾股定理得对角线 $AC = \sqrt{6^{2} + 8^{2}} = 10$，三点到圆心 $A$ 的距离从小到大为 $6, 8, 10$；要至少一点在内、至少一点在外，须满足 $6 \lt r \lt 10$。',
-          wrongFeedback: '先用勾股定理算出 $AC = 10$，三点到 $A$ 的距离最小是 $AB = 6$、最大是 $AC = 10$，故 $6 \lt r \lt 10$。',
-          specificWrongHints: [
-            { checkType: 'secondVal', val: '8', hint: '最远的点是对角顶点 $C$，$AC = \sqrt{6^{2}+8^{2}} = 10$，不是 $AD = 8$。' }
-          ]
-        }
-      },
 
+      scratchpadCards: [
+        {
+          id: 'p53_sp_1',
+          title: '分类讨论触发信号',
+          showStart: 0.4,
+          showEnd: 5.4,
+          tokens: [
+            { id: 'p53_sp1_t1', math: '题干未说明点 $P$ 在圆内或圆外 $\\implies$ 必分两类', appearAt: 0.8, dur: 0.45 }
+          ],
+          note: '过点 $P$ 和圆心 $O$ 作直线交圆于最近点与最远点，这两点恰好构成圆的一条直径。'
+        },
+        {
+          id: 'p53_sp_2',
+          title: '点在圆外公式',
+          showStart: 5.6,
+          showEnd: 11.4,
+          tokens: [
+            { id: 'p53_sp2_t1', math: '$2r = d_{\\max} - d_{\\min} = 6 - 4 = 2 \\implies r = 1$', appearAt: 6.2, dur: 0.45 }
+          ],
+          note: '当点 $P$ 在圆外时，最远距离比最近距离多出来的部分正好是一条完整的直径 $2r$。'
+        },
+        {
+          id: 'p53_sp_3',
+          title: '点在圆内公式与双解汇总',
+          showStart: 11.6,
+          showEnd: 23.0,
+          tokens: [
+            { id: 'p53_sp3_t1', math: '$2r = d_{\\max} + d_{\\min} = 6 + 4 = 10 \\implies r = 5$', appearAt: 12.2, dur: 0.45 }
+          ],
+          note: '当点 $P$ 在圆内时，点 $P$ 把过它的直径分成最近和最远两段，所以两距离之和正好是直径 $2r$。'
+        }
+      ],
+
+      tokenHighlights: [
+        { tokenId: 'p53_r1_1', tStart: 3.0, tEnd: 5.4, color: 'teal' },
+        { tokenId: 'p53_r3_1', tStart: 8.2, tEnd: 11.4, color: 'amber' },
+        { tokenId: 'p53_r6_1', tStart: 17.8, tEnd: 23.0, color: 'teal' }
+      ],
+
+      svgAnnotations: [],
+
+      subtitles: [
+        { tStart: 0.0, tEnd: 5.5, text: '第一步，题目只说点 $P$ 到圆上点的最小距离是 $4$、最大距离是 $6$，没有说明点 $P$ 在圆内还是圆外，所以必须分两类讨论。', focusToken: 'p53_r1_1' },
+        { tStart: 5.5, tEnd: 11.5, text: '第二步，看情形一：当点 $P$ 在圆外时，直径等于最大距离减去最小距离，即 $2r = 6 - 4 = 2$，解得半径 $r = 1$。', focusToken: 'p53_r3_1' },
+        { tStart: 11.5, tEnd: 23.0, text: '第三步，看情形二：当点 $P$ 在圆内时，直径等于最大距离加上最小距离，即 $2r = 6 + 4 = 10$，解得半径 $r = 5$；综上，半径为 $5$ 或 $1$。', focusToken: 'p53_r6_1' }
+      ],
       practices: {
         practice1: {
           title: '练习一',

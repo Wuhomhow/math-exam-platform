@@ -24,6 +24,70 @@
     return m ? m[1] : raw;
   }
 
+  // 56 个程序性知识与「题目图谱」三级核心考点的精准对齐映射表
+  const PROC_TO_GRAPH_NODE_ID = {
+    // 七年级
+    P54: 'cnm_007', P55: 'cnm_008', P56: 'cnm_008', P33: 'cnm_009',
+    P39: 'cnm_013', P40: 'cnm_018', P32: 'cnm_021',
+    P04: 'cnm_026', P05: 'cnm_027', P06: 'cnm_030', P46: 'cnm_028', P07: 'cnm_028', P08: 'cnm_029', P09: 'cnm_029',
+    P34: 'cnm_031', P47: 'cnm_032', P48: 'cnm_032', P49: 'cnm_033', P51: 'cnm_034', P28: 'cnm_035', P50: 'cnm_036', P45: 'cnm_038',
+    P29: 'cnm_040', P22: 'cnm_043',
+    // 八年级
+    P42: 'cnm_121', P43: 'cnm_126', P44: 'cnm_128',
+    P41: 'cnm_133', P37: 'cnm_137', P10: 'cnm_137', P38: 'cnm_139',
+    P30: 'cnm_143', P27: 'cnm_145', P26: 'cnm_147', P23: 'cnm_148',
+    P24: 'cnm_151', P25: 'cnm_154',
+    P31: 'cnm_157', P35: 'cnm_160', P36: 'cnm_162',
+    // 九年级
+    P19: 'cnm_219', P20: 'cnm_219', P01: 'cnm_220', P02: 'cnm_221', P03: 'cnm_221', P16: 'cnm_223', P17: 'cnm_222', P18: 'cnm_224', P21: 'cnm_226',
+    P11: 'cnm_237', P12: 'cnm_240', P13: 'cnm_238', P14: 'cnm_238', P15: 'cnm_241',
+    P52: 'cnm_250', P53: 'cnm_259'
+  };
+
+  let _graphNodeOrderCache = null;
+  function getGraphNodeOrderIndex(nodeId) {
+    if (!_graphNodeOrderCache) {
+      _graphNodeOrderCache = new Map();
+      const rawNodes = Array.isArray(window.KNOWLEDGE_NODES) ? window.KNOWLEDGE_NODES : [];
+      rawNodes.forEach((n, idx) => {
+        if (n && n.id) _graphNodeOrderCache.set(n.id, idx);
+      });
+    }
+    return _graphNodeOrderCache.has(nodeId) ? _graphNodeOrderCache.get(nodeId) : 99999;
+  }
+
+  function getGraphAlignment(proc) {
+    if (!proc) return { nodeId: '', nodeName: '', chapterId: '', chapterName: '', chapterOrder: 99999, nodeOrder: 99999 };
+    if (window.GraphData && !window.GraphData.initialized) {
+      window.GraphData.init();
+    }
+    let nodeId = PROC_TO_GRAPH_NODE_ID[proc.id] || '';
+    if (!nodeId && window.GraphData && proc.exampleQuestionId) {
+      const primaryNode = window.GraphData.getPrimaryKnowledgeNode(proc.exampleQuestionId);
+      if (primaryNode) nodeId = primaryNode.id;
+    }
+    const kpNode = (nodeId && window.GraphData) ? window.GraphData.getNode(nodeId) : null;
+    const parentMod = (kpNode && window.GraphData) ? window.GraphData.getParent(kpNode.id) : null;
+    if (kpNode) {
+      return {
+        nodeId: kpNode.id,
+        nodeName: kpNode.name,
+        chapterId: parentMod ? parentMod.id : (proc.chapterGroup || ''),
+        chapterName: parentMod ? parentMod.name : (proc.chapterGroup || proc.chapter || '未分组章节'),
+        chapterOrder: parentMod ? getGraphNodeOrderIndex(parentMod.id) : 99999,
+        nodeOrder: getGraphNodeOrderIndex(kpNode.id)
+      };
+    }
+    return {
+      nodeId: proc.chapter || proc.id,
+      nodeName: proc.chapter || proc.name,
+      chapterId: proc.chapterGroup || '',
+      chapterName: proc.chapterGroup || proc.chapter || '未分组章节',
+      chapterOrder: 99999,
+      nodeOrder: 99999
+    };
+  }
+
   function normalizeQuestionType(q) {
     if (!q) return 'calc';
     if (q.type === 'choice' || q.type === 'blank' || q.type === 'judge' || q.type === 'calc') return q.type;
@@ -748,7 +812,9 @@
         if (ProceduralState.subjectFilter !== 'all' && p.subject !== ProceduralState.subjectFilter) return false;
         if (ProceduralState.searchKeyword) {
           const kw = ProceduralState.searchKeyword.toLowerCase();
+          const align = getGraphAlignment(p);
           const nameMatch = (p.name || '').toLowerCase().includes(kw);
+          const graphMatch = (align.nodeName || '').toLowerCase().includes(kw) || (align.chapterName || '').toLowerCase().includes(kw);
           const descMatch = (p.description || '').toLowerCase().includes(kw);
           const chapMatch = (p.chapter || '').toLowerCase().includes(kw) || (p.chapterGroup || '').toLowerCase().includes(kw);
           const secCodeMatch = extractSectionCode(p.chapter).toLowerCase().includes(kw);
@@ -756,7 +822,7 @@
             (st.title || '').toLowerCase().includes(kw) ||
             (st.description || '').toLowerCase().includes(kw)
           );
-          if (!nameMatch && !descMatch && !chapMatch && !secCodeMatch && !stepMatch) return false;
+          if (!nameMatch && !graphMatch && !descMatch && !chapMatch && !secCodeMatch && !stepMatch) return false;
         }
         return true;
       });
@@ -783,7 +849,7 @@
     },
 
     // =========================================================================
-    // 左侧章节目录（仅到小节层级，点击小节直达动态演示）
+    // 左侧章节目录（与「题目图谱」二级章节 -> 三级核心考点完全对齐）
     // =========================================================================
     renderSidebar() {
       const chapterNavEl = document.getElementById('procChapterSidebar');
@@ -792,9 +858,10 @@
       if (!chapterNavEl) return;
 
       const currentProc = getPublishedProcedureById(ProceduralState.selectedProcedureId);
-      const currentChapter = currentProc ? currentProc.chapter : '';
-      if (mobileBadgeEl && currentProc) {
-        mobileBadgeEl.textContent = currentProc.chapter || extractSectionCode(currentProc.chapter);
+      const currentAlign = currentProc ? getGraphAlignment(currentProc) : null;
+      const currentNodeId = currentAlign ? currentAlign.nodeId : '';
+      if (mobileBadgeEl && currentAlign) {
+        mobileBadgeEl.textContent = currentAlign.nodeName || currentProc.name;
       }
 
       const filteredCols = this.getFilteredCollections();
@@ -836,40 +903,43 @@
         .map(g => {
           const gCols = byGrade.get(g);
           const gMeta = gradeDisplayMap[g] || { title: g, semester: '全册' };
-          const byGroup = new Map();
+          const byChapter = new Map();
           gCols.forEach(c => {
-            const grp = c.procedure.chapterGroup || c.procedure.chapter || '未分组章节';
-            if (!byGroup.has(grp)) byGroup.set(grp, []);
-            byGroup.get(grp).push(c);
+            const align = getGraphAlignment(c.procedure);
+            const chKey = align.chapterName;
+            if (!byChapter.has(chKey)) {
+              byChapter.set(chKey, { name: chKey, order: align.chapterOrder, nodes: new Map() });
+            }
+            const chObj = byChapter.get(chKey);
+            if (!chObj.nodes.has(align.nodeId)) {
+              chObj.nodes.set(align.nodeId, { id: align.nodeId, name: align.nodeName, order: align.nodeOrder, procs: [] });
+            }
+            chObj.nodes.get(align.nodeId).procs.push(c.procedure);
           });
 
-          const gradeHasActive = gCols.some(c => c.procedure.chapter === currentChapter);
+          const orderedChapters = Array.from(byChapter.values()).sort((a, b) => a.order - b.order);
+          const gradeHasActive = gCols.some(c => getGraphAlignment(c.procedure).nodeId === currentNodeId);
           const shouldOpenGrade = isSearching || ProceduralState.gradeFilter !== 'all' || gradeHasActive || g === '七年级';
 
-          const groupCardsHtml = Array.from(byGroup.entries()).map(([grpName, grpCols]) => {
-            const secItemsMap = new Map();
-            grpCols.forEach(c => {
-              const ch = c.procedure.chapter;
-              if (!secItemsMap.has(ch)) secItemsMap.set(ch, []);
-              secItemsMap.get(ch).push(c.procedure);
-            });
-            const groupHasActive = Array.from(secItemsMap.keys()).includes(currentChapter);
+          const groupCardsHtml = orderedChapters.map(chObj => {
+            const orderedNodes = Array.from(chObj.nodes.values()).sort((a, b) => a.order - b.order);
+            const groupHasActive = orderedNodes.some(nd => nd.id === currentNodeId);
             const shouldOpenGroup = isSearching || groupHasActive || ProceduralState.gradeFilter !== 'all';
 
             return `
               <details class="nav-chapter-group-card mb-2" ${shouldOpenGroup ? 'open' : ''}>
                 <summary>
-                  <span>${escapeHtml(grpName)}</span>
-                  <span class="nav-chapter-group-badge">${secItemsMap.size} 节</span>
+                  <span>${escapeHtml(chObj.name)}</span>
+                  <span class="nav-chapter-group-badge">${orderedNodes.length} 考点</span>
                 </summary>
                 <div class="nav-chapter-group-content space-y-1">
-                  ${Array.from(secItemsMap.entries()).map(([chapName, procs]) => {
-                    const active = chapName === currentChapter;
-                    const firstPid = procs[0]?.id || '';
+                  ${orderedNodes.map(nd => {
+                    const active = nd.id === currentNodeId;
+                    const firstPid = nd.procs[0]?.id || '';
                     return `
-                      <button type="button" class="proc-sec-btn chapter-tree-btn nav-topic-button ${active ? 'is-active' : ''}" data-proc-section="${escapeHtml(chapName)}" data-first-pid="${escapeHtml(firstPid)}">
-                        <span class="nav-topic-label">${escapeHtml(chapName)}</span>
-                        ${procs.length > 1 ? `<span class="nav-topic-count" title="该小节包含 ${procs.length} 个程序性知识">${procs.length}</span>` : ''}
+                      <button type="button" class="proc-sec-btn chapter-tree-btn nav-topic-button ${active ? 'is-active' : ''}" data-proc-section="${escapeHtml(nd.id)}" data-first-pid="${escapeHtml(firstPid)}" title="${escapeHtml(nd.name)}">
+                        <span class="nav-topic-label">${escapeHtml(nd.name)}</span>
+                        ${nd.procs.length > 1 ? `<span class="nav-topic-count" title="该考点包含 ${nd.procs.length} 个程序性知识">${nd.procs.length}</span>` : ''}
                       </button>
                     `;
                   }).join('')}
@@ -2088,13 +2158,13 @@
       }
 
       const p = col.procedure;
-      const sectionCode = extractSectionCode(p.chapter);
+      const curAlign = getGraphAlignment(p);
       const demoData = window.PROCEDURAL_DYNAMIC_DEMOS ? window.PROCEDURAL_DYNAMIC_DEMOS[p.id] : null;
 
-      // 查找同一小节下的全部已发布程序性知识（若 >= 2 个则顶部渲染 Tab 切换）
+      // 查找同一图谱考点下的全部已发布程序性知识（若 >= 2 个则顶部渲染 Tab 切换）
       const sameSectionProcs = getPublishedCollections()
         .map(c => c.procedure)
-        .filter(item => item.chapter === p.chapter);
+        .filter(item => getGraphAlignment(item).nodeId === curAlign.nodeId);
 
       const sectionTabsHtml = sameSectionProcs.length > 1 ? `
         <div class="pt-2.5 border-t border-slate-100">
@@ -2118,18 +2188,19 @@
         </div>
       ` : '';
 
-      // 历史返回按钮（隐藏 P 编号，改展示小节号 + 名称）
+      // 历史返回按钮（展示图谱考点名称）
       const prevHistorySnap = Array.isArray(ProceduralState.detailHistoryStack) && ProceduralState.detailHistoryStack.length > 0
         ? ProceduralState.detailHistoryStack[ProceduralState.detailHistoryStack.length - 1]
         : null;
       const prevProcObj = prevHistorySnap ? getPublishedProcedureById(prevHistorySnap.procedureId) : null;
+      const prevAlign = prevProcObj ? getGraphAlignment(prevProcObj) : null;
 
       // 前置知识区块（位于动态演示之上，按知识点逐行排列：已做可跳转，未做保留灰色）
       const prereqs = Array.isArray(p.prerequisites) ? p.prerequisites : [];
       const prereqRowsHtml = prereqs.map(pr => {
         const linkedProc = pr.id ? getPublishedProcedureById(pr.id) : null;
         if (linkedProc) {
-          const targetCode = extractSectionCode(linkedProc.chapter);
+          const targetNodeName = getGraphAlignment(linkedProc).nodeName;
           return `
             <button type="button" class="proc-prereq-row is-clickable" data-nav-proc="${escapeHtml(linkedProc.id)}" title="点击直达该前置知识的动态演示">
               <span class="flex items-center gap-2 min-w-0">
@@ -2137,7 +2208,7 @@
                 <span class="font-medium truncate">${renderMathText(pr.name || linkedProc.name)}</span>
               </span>
               <span class="inline-flex items-center gap-1.5 shrink-0 text-xs font-semibold text-[#0F766E]">
-                <span class="px-1.5 py-0.5 rounded bg-white/90 border border-[#99F6E4] text-[11px]">${escapeHtml(targetCode)}</span>
+                <span class="px-1.5 py-0.5 rounded bg-white/90 border border-[#99F6E4] text-[11px]">${escapeHtml(targetNodeName)}</span>
                 <span>&rarr;</span>
               </span>
             </button>
@@ -2169,17 +2240,17 @@
       ` : '';
 
       container.innerHTML = `
-        <!-- 右侧吸顶工具条（含返回上一知识点、小节号标识、快速锚点与同小节 Tab） -->
+        <!-- 右侧吸顶工具条（含返回上一知识点、图谱考点标识与同考点 Tab） -->
         <div class="proc-sticky-header ui-card px-4 py-3 space-y-2.5 shadow-sm">
           <div class="flex flex-wrap items-center justify-between gap-2">
             <div class="flex items-center gap-2 min-w-0 flex-1">
               ${prevProcObj ? `
                 <button type="button" id="btnProcBackPrevKnowledge" class="shrink-0 px-2.5 py-1 rounded-lg bg-[#F0FDFA] text-[#0F766E] border border-[#99F6E4] text-xs font-semibold hover:bg-[#CCFBF1]/60 transition inline-flex items-center gap-1" title="返回上一个浏览的知识点：${escapeHtml(prevProcObj.name)}">
                   <span>← 返回</span>
-                  <span class="hidden sm:inline">${escapeHtml(extractSectionCode(prevProcObj.chapter))}</span>
+                  <span class="hidden sm:inline">${escapeHtml(prevAlign ? prevAlign.nodeName : prevProcObj.name)}</span>
                 </button>
               ` : ''}
-              <span class="shrink-0 px-2 py-0.5 rounded bg-[#0F766E] text-white text-xs font-bold">${escapeHtml(sectionCode)}</span>
+              <span class="shrink-0 px-2 py-0.5 rounded bg-[#0F766E] text-white text-xs font-bold">${escapeHtml(curAlign.nodeName)}</span>
               <span class="shrink-0 px-2 py-0.5 rounded bg-[#F0FDFA] text-[#115E59] border border-[#CCFBF1] text-xs font-semibold">${escapeHtml(p.grade)}</span>
               <h2 class="text-sm sm:text-base font-bold text-slate-900 truncate" title="${escapeHtml(p.name)}">${renderMathText(p.name)}</h2>
             </div>

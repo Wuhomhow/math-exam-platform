@@ -67,7 +67,7 @@ def build_js_harness():
     ]
 
     js_code = f"""
-var window = this;
+var window = (typeof globalThis !== 'undefined') ? globalThis : this;
 var document = {{ querySelectorAll: function() {{ return []; }} }};
 {omml_funcs}
 {math_code}

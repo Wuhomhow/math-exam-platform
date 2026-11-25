@@ -984,7 +984,7 @@
           detail: '由比例系数 $(m+\\sqrt{3})(m-\\sqrt{2})\\neq 0$ 知 $m\\neq -\\sqrt{3}$ 且 $m\\neq \\sqrt{2}$，故舍去 $m=\\sqrt{2}$，确定 $m=-\\sqrt{2}$（选 B）。'
         }
       ],
-      graphNodeId: 'cnm_238',
+      graphNodeId: 'cnm_237',
       status: 'published'
     },
     {
@@ -1093,7 +1093,7 @@
           detail: '根据同号相除得正，计算 $n=-\\frac{10}{-2}=5$，故选 B。'
         }
       ],
-      graphNodeId: 'cnm_238',
+      graphNodeId: 'cnm_240',
       status: 'published'
     },
     {
@@ -1415,7 +1415,7 @@
           detail: '将 $x_{2}=-x_{1},\\ y_{2}=-y_{1}$ 代入得 $2x_{1}y_{2}-5x_{2}y_{1}=2x_{1}(-y_{1})-5(-x_{1})y_{1}=-2x_{1}y_{1}+5x_{1}y_{1}=3x_{1}y_{1}=3\\sqrt{3}$（选 B）。'
         }
       ],
-      graphNodeId: 'cnm_238',
+      graphNodeId: 'cnm_241',
       status: 'published'
     }    ,
     {
@@ -5379,6 +5379,2154 @@
       ],
       graphNodeId: 'cnm_006',
       status: 'published'
+    }    ,
+    {
+      id: 'P57',
+      name: '绘制反比例函数图象',
+      grade: '九年级',
+      subject: '数学',
+      chapterGroup: '第二十七章 反比例函数',
+      chapter: '27.2.1 反比例函数的图象和性质',
+      description: '按照“确认解析式与 $k$ 值 → 明确定义域 $x \\neq 0$ → 列表取值 → 坐标描点 → 由 $k$ 的正负定象限 → 分别平滑连线”的标准流程，规范绘制反比例函数 $y=\\frac{k}{x}\ (k\\neq 0)$ 的双曲线图象，避免连跨两支、过原点或与坐标轴相交等典型错误。',
+      purpose: '规范完成反比例函数双曲线图象的列表、描点与平滑连线操作，建立解析式符号与双曲线几何形态的准确对应。',
+      applicability: [
+        '已知反比例函数解析式 $y=\\frac{k}{x}\ (k\\neq 0)$ 或对应数值表，要求在平面直角坐标系中通过列表、描点、连线画出双曲线图象。',
+        '辨析给定曲线是否为合法的反比例函数图象（检验双分支、不经过原点、以两坐标轴为渐近线及所在象限是否正确）。',
+        '迁移反比例函数列表—描点—连线作图流程，绘制 $y=\\frac{k}{|x|}$、$y=\\frac{k}{x}+b$ 等反比例函数衍生图象。'
+      ],
+      conditions: [
+        '函数可化为反比例函数标准形式 $y=\\frac{k}{x}\ (k\\neq 0)$ 或其作图探究变式',
+        '需要在平面直角坐标系中完成列表取值、描点连线或辨识双曲线作图规范'
+      ],
+      steps: [
+        {
+          step: 1,
+          title: '确认函数形式为 $y=\\frac{k}{x}$，并确定比例系数 $k$ 的值',
+          description: '核对函数解析式是否为反比例函数标准形式 $y=\\frac{k}{x}\ (k\\neq 0)$，连同正负号准确提取比例系数 $k$；若先给出对应数值表，则先由 $k=xy$ 确定 $k$ 的值。',
+          formula: '$y=\\frac{k}{x}\ (k\\neq 0) \\implies \\text{确定 } k=xy$',
+          example: '如表格中 $x=3$ 时 $y=-2$，得 $k=3\\times(-2)=-6$，解析式为 $y=-\\frac{6}{x}$。'
+        },
+        {
+          step: 2,
+          title: '确认定义域 $x \\neq 0$',
+          description: '明确自变量 $x$ 不能取 $0$，且函数值 $y \\neq 0$，因此双曲线绝不经过原点 $(0,0)$，也绝不与 $x$ 轴、$y$ 轴相交。',
+          formula: '$x \\neq 0,\\ y \\neq 0 \\implies \\text{图象不过原点，两坐标轴为渐近线}$',
+          example: '列表时必须在正负自变量之间留出断点，不可填入 $x=0$。'
+        },
+        {
+          step: 3,
+          title: '选择适当的 $x$ 值，列表计算对应的 $y$ 值',
+          description: '在 $x \\lt 0$ 与 $x \\gt 0$ 两侧对称选取若干便于整除 $k$ 的代表性数值（如 $k=-6$ 时取 $x=-6,-3,-2,-1,1,2,3,6$），逐一代入算出对应 $y$ 值，确保两支均有足够描点。',
+          formula: '$x_i \\mapsto y_i = \\frac{k}{x_i}$（正负对称取值）',
+          example: '对 $y=-\\frac{6}{x}$，列出 $(-3,2),(-2,3),(-1,6),(1,-6),(2,-3),(3,-2)$ 等对称点。'
+        },
+        {
+          step: 4,
+          title: '根据坐标在平面直角坐标系中描点',
+          description: '建立标有原点、正方向和单位长度的平面直角坐标系，将表格中各组 $(x,y)$ 逐一准确描在坐标系中，核对正负号与象限位置无误。',
+          formula: '$(x_i, y_i) \\text{ 逐点落位坐标系}$',
+          example: '点 $(-3,2),(-2,3),(-1,6)$ 落在第二象限，点 $(1,-6),(2,-3),(3,-2)$ 落在第四象限。'
+        },
+        {
+          step: 5,
+          title: '根据 $k$ 的正负判断图象所在象限',
+          description: '利用比例系数 $k$ 的符号复核双曲线的两个分支所在象限：$k \\gt 0$ 时位于第一、第三象限；$k \\lt 0$ 时位于第二、第四象限。',
+          formula: '$k \\gt 0 \\iff \\text{第一、三象限}$；$k \\lt 0 \\iff \\text{第二、四象限}$',
+          example: '因 $k=-6 \\lt 0$，故两支曲线分别位于第二、第四象限。'
+        },
+        {
+          step: 6,
+          title: '将各象限内的点分别连接成平滑的双曲线分支',
+          description: '在两个象限内各自按自变量从小到大的顺序，用平滑的曲线依次连接各点，并向坐标轴方向自然延伸靠近但不相交；严禁将两支曲线连在一起。',
+          formula: '分两支平滑连线，无限接近 $x$ 轴与 $y$ 轴但永不相交',
+          example: '分别平滑连接第二象限各点与第四象限各点，得到关于原点对称的双曲线。'
+        }
+      ],
+      procedure: [
+        { step: 1, action: '确认形式 $y=k/x$ 并定 $k$', detail: '提取或由 $k=xy$ 求出比例系数 $k$。' },
+        { step: 2, action: '确认定义域 $x \\neq 0$', detail: '明确图象不过原点、不与坐标轴相交。' },
+        { step: 3, action: '对称列表计算对应值', detail: '在 $x<0$ 与 $x>0$ 两侧对称取易算值并求 $y$。' },
+        { step: 4, action: '坐标系中逐一描点', detail: '将各对 $(x,y)$ 准确描在平面直角坐标系内。' },
+        { step: 5, action: '由 $k$ 的正负核对所在象限', detail: '$k>0$ 在一、三象限，$k<0$ 在二、四象限。' },
+        { step: 6, action: '分两支平滑连线成型', detail: '两支分别平滑连接，以两坐标轴为渐近线，切勿连跨两支。' }
+      ],
+      prerequisites: [
+        { id: 'P11', name: '识别反比例函数与由定义求参数', type: 'procedural_knowledge' },
+        { id: null, name: '平面直角坐标系中点的坐标与描点', type: 'operation' },
+        { id: null, name: '平面直角坐标系四个象限的符号特征', type: 'concept' }
+      ],
+      prerequisiteProcedureIds: ['P11'],
+      subsequentProcedureIds: ['P13', 'P14'],
+      relatedProcedureIds: ['P12', 'P13'],
+      pitfalls: [
+        '图象有两个分支，切勿只取 $x \\gt 0$ 而漏画另一象限的分支。',
+        '图象不经过原点 $(0,0)$，因为 $x \\neq 0$ 且 $y \\neq 0$。',
+        '两个坐标轴是图象的渐近线，双曲线无限接近 $x$ 轴和 $y$ 轴但永不相交，连线末端切勿与坐标轴相交或向回弯曲。',
+        '不能把分别位于不同象限的两支图象用直线或折线连在一起，也不能用折线段代替平滑曲线。',
+        '$k$ 的正负决定图象所在象限（$k \\gt 0$ 在第一、三象限，$k \\lt 0$ 在第二、四象限），描点连线前务必先核对符号。'
+      ],
+      exampleQuestionId: 'ch27_2_2_hw_q15',
+      exampleStepMapping: [
+        { step: 1, title: '对应步骤 1（确认 $y=\\frac{k}{x}$ 并确定 $k$）', detail: '由表格中 $(3,-2)$ 得 $k=3\\times(-2)=-6$，确定函数为 $y=-\\frac{6}{x}$。' },
+        { step: 2, title: '对应步骤 2–3（确认 $x\\neq 0$ 并补全列表）', detail: '确认 $x\\neq 0$，补全 $x=-2$ 时 $m=3$、$x=1$ 时 $n=-6$，得到正负对称的 6 组坐标。' },
+        { step: 3, title: '对应步骤 4–5（坐标描点并核对象限）', detail: '因 $k=-6\\lt 0$，将 $(-3,2),(-2,3),(-1,6)$ 描在第二象限，$(1,-6),(2,-3),(3,-2)$ 描在第四象限。' },
+        { step: 4, title: '对应步骤 6（分两支平滑连线）', detail: '在第二、第四象限内分别用平滑曲线顺次连接各点，不跨象限连线、不与坐标轴相交。' }
+      ],
+      graphNodeId: 'cnm_238',
+      status: 'published'
+    }    ,
+    {
+      id: 'P58',
+      name: '根据实际情境与数据识别反比例关系并建立函数模型',
+      grade: '九年级',
+      subject: '数学',
+      chapterGroup: '第二十七章 反比例函数',
+      chapter: '27.1 反比例函数的概念',
+      description: '从实际情境描述或实验数据表中检验两个变量的乘积是否为定值，从而建立反比例函数模型并确定自变量的实际取值范围。',
+      purpose: '将生活、物理或几何总量恒定情境转化为规范的反比例函数解析式。',
+      applicability: [
+        '已知面积、体积、路程、总价或电功等总量恒定的实际情境，要求写出两变量之间的反比例函数关系式。',
+        '给出实验或统计数据表格，判断变量乘积是否为定值并建立反比例函数模型。'
+      ],
+      conditions: [
+        '题目给出两个具有实际意义的变量及乘积恒定关系或对应数据表',
+        '需要识别反比例关系并写出解析式与自变量取值范围'
+      ],
+      steps: [
+        {
+          step: 1,
+          title: '明确两个变量及其数量意义',
+          description: '在题干或表格中识别自变量 $x$ 与因变量 $y$ 及其物理/几何意义与单位。',
+          formula: '明确自变量 $x$、因变量 $y$ 及其单位',
+          example: '如视力表问题中，字母宽度 $a$（mm）为自变量，视力值 $V$ 为因变量。'
+        },
+        {
+          step: 2,
+          title: '判断两个变量的乘积是否为定值',
+          description: '依据公式（如 $S=xy$、$s=vt$）或逐组计算表格中 $x \\cdot y$，确认乘积恒为非零常数 $k$。',
+          formula: '$x_1 y_1 = x_2 y_2 = \\cdots = k \\ (k \\neq 0)$',
+          example: '由表算得 $0.1 \\times 70 = 0.25 \\times 28 = 0.5 \\times 14 = 7$，乘积恒为 $7$。'
+        },
+        {
+          step: 3,
+          title: '根据反比例关系设立函数表达式',
+          description: '设因变量关于自变量的反比例函数解析式为 $y=\\frac{k}{x}\ (k \\neq 0)$。',
+          formula: '设 $y = \\frac{k}{x}\ (k \\neq 0)$',
+          example: '设视力值与宽度的关系为 $V = \\frac{k}{a}$。'
+        },
+        {
+          step: 4,
+          title: '利用已知数据求出比例系数',
+          description: '将总量定值或已知的一组 $(x_0, y_0)$ 代入求得 $k = x_0 y_0$。',
+          formula: '$k = x_0 y_0$',
+          example: '代入 $(70, 0.1)$ 得 $k = 7$。'
+        },
+        {
+          step: 5,
+          title: '写出完整解析式并确定变量范围',
+          description: '回代 $k$ 写出解析式，并结合长度、时间、墙长等实际约束标注自变量范围（通常 $x \\gt 0$）。',
+          formula: '$y = \\frac{k}{x}\ (x \\gt 0 \\text{ 或满足实际约束})$',
+          example: '得 $V = \\frac{7}{a}\ (a \\gt 0)$；靠墙围鸡场题中由 $y \\le 15$ 得 $x \\ge 4$。'
+        }
+      ],
+      procedure: [
+        { step: 1, action: '明确变量与意义', detail: '识别自变量与因变量及其实际单位。' },
+        { step: 2, action: '检验乘积是否为定值', detail: '由公式或表格逐组计算乘积 $xy=k$。' },
+        { step: 3, action: '设立反比例解析式', detail: '写出 $y=k/x$ 的标准模型。' },
+        { step: 4, action: '求出比例系数 $k$', detail: '由总量定值或已知数据组求 $k$。' },
+        { step: 5, action: '写出解析式并定范围', detail: '回代 $k$ 并结合实际意义写出自变量取值范围。' }
+      ],
+      prerequisites: [
+        { id: 'P11', name: '识别反比例函数与由定义求参数', type: 'procedural_knowledge' }
+      ],
+      prerequisiteProcedureIds: ['P11'],
+      subsequentProcedureIds: ['P66'],
+      relatedProcedureIds: ['P11', 'P12', 'P66'],
+      pitfalls: [
+        '未检验表格多组乘积是否相等就直接套用反比例函数。',
+        '漏写自变量的实际取值范围（如 $x \\gt 0$ 或受墙长、容量限制的边界）。'
+      ],
+      exampleQuestionId: 'ch27_1_q14',
+      exampleStepMapping: [
+        { step: 1, title: '明确变量与表格数据', detail: '自变量为字母宽度 $a$，因变量为视力值 $V$。' },
+        { step: 2, title: '检验乘积定值', detail: '$0.1\\times 70 = 0.25\\times 28 = 0.5\\times 14 = 2.0\\times 3.5 = 7$。' },
+        { step: 3, title: '写出函数表达式', detail: '得出 $V = \\frac{7}{a}\ (a \\gt 0)$。' }
+      ],
+      graphNodeId: 'cnm_237',
+      status: 'published'
+    },
+    {
+      id: 'P59',
+      name: '利用反比例函数性质求自变量或函数值的取值范围',
+      grade: '九年级',
+      subject: '数学',
+      chapterGroup: '第二十七章 反比例函数',
+      chapter: '27.2.1 反比例函数的图象和性质',
+      description: '依据比例系数 $k$ 的正负与分段单调性，在给定自变量区间求函数值范围（或最值），或根据函数值不等式反向求自变量取值范围。',
+      purpose: '准确完成反比例函数区间值域、最值求解及由 $y$ 范围反推 $x$ 范围（特别处理跨象限与 $x \\neq 0$ 分段）。',
+      applicability: [
+        '已知 $x$ 的范围（如 $-3 \\lt x \\lt -1$ 或 $0 \\lt m \\lt 3$），求 $y$ 的取值范围或最值。',
+        '已知 $y$ 的不等式（如 $y \\lt 4$ 或 $-2 \\lt y \\le 2$），反向求自变量 $x$ 的取值范围。',
+        '根据图象边界点估计比例系数 $k$ 的取值范围。'
+      ],
+      conditions: [
+        '已知反比例函数解析式或可由已知点先求出 $k$',
+        '需要在指定区间上求值域、最值或反求自变量范围'
+      ],
+      steps: [
+        {
+          step: 1,
+          title: '判断比例系数 $k$ 的符号',
+          description: '从解析式或已知点坐标确定比例系数 $k$ 的值及正负号。',
+          formula: '$k = xy \\implies \\text{判 } k \\gt 0 \\text{ 或 } k \\lt 0$',
+          example: '对 $y=\\frac{12}{x}$，比例系数 $k=12 \\gt 0$。'
+        },
+        {
+          step: 2,
+          title: '确定所在象限及增减性',
+          description: '由 $k$ 的正负确定双曲线所在象限及每个象限内 $y$ 随 $x$ 的单调方向。',
+          formula: '$k \\gt 0$: 一、三象限内递减；$k \\lt 0$: 二、四象限内递增',
+          example: '$k=12 \\gt 0$，在第一、三象限内 $y$ 随 $x$ 的增大而减小。'
+        },
+        {
+          step: 3,
+          title: '根据自变量或函数值范围按象限分段',
+          description: '检查给定范围是否跨越 $x=0$（或 $y=0$）；若跨越，拆分为 $x \\lt 0$ 与 $x \\gt 0$ 两段分别讨论。',
+          formula: '跨零点必分段：$x \\lt 0$ 与 $x \\gt 0$ 各自独立分析',
+          example: '求 $y \\lt 4$ 时，分第三象限（$y \\lt 0$ 恒成立，即 $x \\lt 0$）与第一象限（$0 \\lt y \\lt 4$）。'
+        },
+        {
+          step: 4,
+          title: '代入边界端点计算对应临界值',
+          description: '将区间端点代入 $y=\\frac{k}{x}$ 求出对应的临界函数值或临界自变量。',
+          formula: '$x_{\\text{端}} \\leftrightarrow y_{\\text{端}} = \\frac{k}{x_{\\text{端}}}$',
+          example: '当 $y=4$ 时，$x=\\frac{12}{4}=3$。'
+        },
+        {
+          step: 5,
+          title: '利用单调性写出目标范围并核对端点与 $x \\neq 0$',
+          description: '结合单调方向确定不等号方向，检查开闭区间及是否漏掉另一象限或排除 $x=0$。',
+          formula: '合并各分支区间并排除 $x=0$',
+          example: '由 $y \\lt 4$ 得第一象限 $x \\gt 3$，合并第三象限 $x \\lt 0$，故 $x \\gt 3$ 或 $x \\lt 0$。'
+        }
+      ],
+      procedure: [
+        { step: 1, action: '判比例系数 $k$ 的符号', detail: '提取或求出 $k$ 并判断正负。' },
+        { step: 2, action: '定象限与增减性', detail: '明确每个象限内的单调性。' },
+        { step: 3, action: '按象限分段', detail: '跨零点拆分为正、负两支独立处理。' },
+        { step: 4, action: '算临界端点值', detail: '代入区间端点求对应临界值。' },
+        { step: 5, action: '写范围并核对定义域', detail: '结合单调性合并解集，核对等号与 $x\\neq 0$。' }
+      ],
+      prerequisites: [
+        { id: 'P13', name: '由比例系数 $k$ 判断反比例函数象限与增减性', type: 'procedural_knowledge' }
+      ],
+      prerequisiteProcedureIds: ['P13'],
+      subsequentProcedureIds: ['P66'],
+      relatedProcedureIds: ['P13', 'P14', 'P66'],
+      pitfalls: [
+        '求 $y \\lt 4$ 对应 $x$ 范围时，漏掉第三象限 $x \\lt 0$ 这一整支。',
+        '单调递减区间内忘记反转不等号方向，或误将 $x=0$ 纳入解集。'
+      ],
+      exampleQuestionId: 'ch27_2_1_q15',
+      exampleStepMapping: [
+        { step: 1, title: '判符号定单调', detail: '$k=12 \\gt 0$，在第一、三象限内 $y$ 随 $x$ 增大而减小。' },
+        { step: 2, title: '求临界值并分段', detail: '令 $y=4$ 得 $x=3$；第三象限 $y \\lt 0 \\lt 4$ 恒成立。' },
+        { step: 3, title: '写出完整范围', detail: '合并两支得 $x \\gt 3$ 或 $x \\lt 0$。' }
+      ],
+      graphNodeId: 'cnm_238',
+      status: 'published'
+    },
+    {
+      id: 'P60',
+      name: '研究含绝对值、平移的反比例型函数图象与性质',
+      grade: '九年级',
+      subject: '数学',
+      chapterGroup: '第二十七章 反比例函数',
+      chapter: '27.2.1 反比例函数的图象和性质',
+      description: '针对 $y=\\frac{k}{|x|}$、$y=\\frac{k}{x-h}+b$ 等非标准反比例型函数，通过求定义域、拆绝对值或化为平移标准式，列表描点画图并归纳对称性与单调性。',
+      purpose: '区分标准反比例函数与含绝对值、平移的衍生反比例型函数，规范完成图象绘制与性质探究。',
+      applicability: [
+        '探究含绝对值的反比例型函数（如 $y=\\frac{2}{|x|}$、$y=-\\frac{2}{|x|}$）的图象绘制、对称轴与增减性。',
+        '探究平移后的反比例型函数（如 $y=\\frac{2}{x-1}$、$y=\\frac{2-x}{x}=\\frac{2}{x}-1$、$y=\\frac{a}{x-a}+1$）的渐近线、对称中心与图象识别。'
+      ],
+      conditions: [
+        '函数为含绝对值或平移变形的反比例型函数，非标准 $y=k/x$',
+        '要求列表画图、辨析图象、确定对称性或增减性'
+      ],
+      steps: [
+        {
+          step: 1,
+          title: '识别函数变形类型并确定定义域',
+          description: '区分是含绝对值型（如 $\\frac{k}{|x|}$）还是平移型（如 $\\frac{k}{x-h}+b$，先分离常数），令分母不为 $0$ 确定定义域与竖直渐近线。',
+          formula: '分母 $\\neq 0$；如 $y=\\frac{2-x}{x}=\\frac{2}{x}-1\ (x\\neq 0)$',
+          example: '对 $y=\\frac{2}{x-1}$，定义域为 $x \\neq 1$，可由 $y=\\frac{2}{x}$ 向右平移 $1$ 个单位得到。'
+        },
+        {
+          step: 2,
+          title: '围绕断点对称取值并列表计算',
+          description: '在定义域断点两侧对称选取若干易算 $x$ 值，逐一算出对应 $y$ 值（或求表中未知量 $m$）。',
+          formula: '在断点 $x=h$ 两侧对称列表算 $y$',
+          example: '对 $y=-\\frac{2}{|x|}$，代入 $x=\\frac{1}{2}$ 得 $m=-4$。'
+        },
+        {
+          step: 3,
+          title: '描点并分两支平滑连线绘制图象',
+          description: '在坐标系中描出各点，在断点左右两支分别用平滑曲线顺次连接，切勿跨断点连线。',
+          formula: '左右两支各自平滑连线，渐近于新渐近线',
+          example: '$y=-\\frac{2}{|x|}$ 两支分别位于第三、第四象限，关于 $y$ 轴对称。'
+        },
+        {
+          step: 4,
+          title: '观察图象归纳对称性与各支增减性',
+          description: '含绝对值型归纳轴对称（如关于 $y$ 轴对称）及两侧单调性；平移型归纳对称中心 $(h,b)$ 及平移方向与单调性。',
+          formula: '$\\frac{k}{|x|}$ 关于 $y$ 轴对称；$\\frac{k}{x-h}+b$ 关于 $(h,b)$ 中心对称',
+          example: '$y=\\frac{2-x}{x}$ 是 $y=\\frac{2}{x}$ 向下平移 $1$ 个单位，关于 $(0,-1)$ 中心对称。'
+        }
+      ],
+      procedure: [
+        { step: 1, action: '辨类型定定义域', detail: '分离常数或去绝对值，确定分母不为 0 的断点。' },
+        { step: 2, action: '断点两侧对称列表', detail: '选取对称 $x$ 值计算 $y$。' },
+        { step: 3, action: '描点分两支平滑连线', detail: '左右两支分别连成平滑曲线。' },
+        { step: 4, action: '归纳对称性与单调性', detail: '写出轴对称/新对称中心与各支增减性。' }
+      ],
+      prerequisites: [
+        { id: 'P57', name: '绘制反比例函数图象', type: 'procedural_knowledge' },
+        { id: 'P13', name: '由比例系数 $k$ 判断反比例函数象限与增减性', type: 'procedural_knowledge' }
+      ],
+      prerequisiteProcedureIds: ['P57', 'P13'],
+      subsequentProcedureIds: [],
+      relatedProcedureIds: ['P57', 'P13', 'P59'],
+      pitfalls: [
+        '对含绝对值函数 $y=\\frac{2}{|x|}$ 错误套用“关于原点对称”的标准反比例函数结论（实际关于 $y$ 轴对称）。',
+        '平移后忘记对称中心同步平移（如 $y=\\frac{2}{x-1}$ 的对称中心是 $(1,0)$ 而非原点）。'
+      ],
+      exampleQuestionId: 'ch27_test_q20',
+      exampleStepMapping: [
+        { step: 1, title: '分离常数定平移关系', detail: '$y=\\frac{2-x}{x}=\\frac{2}{x}-1$，由 $y=\\frac{2}{x}$ 向下平移 $1$ 个单位。' },
+        { step: 2, title: '列表描点分两支连线', detail: '在 $x \\lt 0$ 与 $x \\gt 0$ 两侧描点并分别平滑连线。' },
+        { step: 3, title: '归纳性质与对称中心', detail: '$x \\gt 0$ 时 $y$ 随 $x$ 增大而减小，关于 $(0,-1)$ 中心对称。' }
+      ],
+      graphNodeId: 'cnm_238',
+      status: 'published'
+    },
+    {
+      id: 'P61',
+      name: '利用 $k$ 的几何意义求面积与参数',
+      grade: '九年级',
+      subject: '数学',
+      chapterGroup: '第二十七章 反比例函数',
+      chapter: '27.2 反比例函数中 k 的几何意义',
+      description: '识别双曲线上一点向坐标轴作垂线所围成的矩形或直角三角形，直接运用 $S_{\\text{矩形}}=|k|$、$S_{\\triangle}=\\frac{|k|}{2}$ 并结合象限符号求面积或比例系数 $k$。',
+      purpose: '掌握反比例函数比例系数 $|k|$ 与基本垂线矩形、直角三角形面积之间的直接互求操作。',
+      applicability: [
+        '已知反比例函数解析式 $y=\\frac{k}{x}$，求双曲线上一点向坐标轴作垂线围成的矩形或直角三角形面积。',
+        '已知上述矩形、正方形或直角三角形（或简单等底等高/中线倍半三角形）的面积，结合图象所在象限求 $k$ 或解析式。'
+      ],
+      conditions: [
+        '图形核心为双曲线上点与坐标轴垂线围成的矩形或直角三角形',
+        '可直接由 $|k|=|xy|$ 建立面积与 $|k|$ 的等式'
+      ],
+      steps: [
+        {
+          step: 1,
+          title: '识别双曲线上点与坐标轴构成的矩形或直角三角形',
+          description: '找出双曲线上的点 $P(x,y)$ 及其向 $x$ 轴、$y$ 轴所作的垂线段，确认与原点 $O$ 围成的基本矩形或直角三角形。',
+          formula: '垂足构成矩形 $OAPB$ 或直角三角形 $OAP$',
+          example: '过双曲线上点 $A$ 作 $AB \\perp x$ 轴于 $B$，连接 $OA$ 得 $\\text{Rt}\\triangle AOB$。'
+        },
+        {
+          step: 2,
+          title: '建立面积与 $|k|$ 的数量关系',
+          description: '运用 $|k|=|xy|$，对矩形列 $S_{\\text{矩形}}=|k|$，对直角三角形列 $S_{\\triangle}=\\frac{|k|}{2}$（若涉及中点或对称轴平分，先做倍半换算）。',
+          formula: '$S_{\\text{矩形}} = |k|$，$S_{\\triangle} = \\frac{|k|}{2}$',
+          example: '由 $S_{\\triangle AOB} = \\frac{|k|}{2} = \\frac{3}{2}$，得 $|k| = 3$。'
+        },
+        {
+          step: 3,
+          title: '结合图象所在象限确定 $k$ 的正负号',
+          description: '求面积时直接取正值；反求 $k$ 时务必观察双曲线所在象限：一、三象限取 $k \\gt 0$，二、四象限取 $k \\lt 0$。',
+          formula: '一、三象限 $\\implies k = |k|$；二、四象限 $\\implies k = -|k|$',
+          example: '图象位于第二象限，故 $k \\lt 0$，得 $k = -3$。'
+        },
+        {
+          step: 4,
+          title: '求出目标面积、参数 $k$ 或函数解析式',
+          description: '写出最终结果并回代检验是否与题干条件及图形位置一致。',
+          formula: '输出面积值、$k$ 值或 $y=\\frac{k}{x}$',
+          example: '求得 $k=-3$（或解析式 $y=-\\frac{3}{x}$）。'
+        }
+      ],
+      procedure: [
+        { step: 1, action: '识别基本垂线图形', detail: '定位双曲线上点与坐标轴围成的矩形或直角三角形。' },
+        { step: 2, action: '列面积与 $|k|$ 的关系', detail: '应用 $S_{\\text{矩形}}=|k|$ 或 $S_{\\triangle}=|k|/2$。' },
+        { step: 3, action: '由象限确定 $k$ 的符号', detail: '一、三象限取正，二、四象限取负。' },
+        { step: 4, action: '计算并写出结论', detail: '求出面积、$k$ 值或解析式。' }
+      ],
+      prerequisites: [
+        { id: 'P13', name: '由比例系数 $k$ 判断反比例函数象限与增减性', type: 'procedural_knowledge' }
+      ],
+      prerequisiteProcedureIds: ['P13'],
+      subsequentProcedureIds: ['P62'],
+      relatedProcedureIds: ['P13', 'P62'],
+      pitfalls: [
+        '反求 $k$ 时忽略双曲线在第二、四象限，漏掉负号。',
+        '混淆矩形面积 $|k|$ 与直角三角形面积 $\\frac{|k|}{2}$ 的系数 $2$。'
+      ],
+      exampleQuestionId: 'ch27_k_geom_q15',
+      exampleStepMapping: [
+        { step: 1, title: '识别直角三角形', detail: '$AB \\perp x$ 轴于 $B$，构成 $\\text{Rt}\\triangle AOB$。' },
+        { step: 2, title: '建立 $|k|$ 方程', detail: '$S_{\\triangle AOB} = \\frac{1}{2}|k| = \\frac{3}{2} \\implies |k| = 3$。' },
+        { step: 3, title: '由象限判正负定解', detail: '图象在第二象限故 $k \\lt 0$，得 $k = -3$。' }
+      ],
+      graphNodeId: 'cnm_239',
+      status: 'published'
+    },
+    {
+      id: 'P62',
+      name: '利用复合几何关系求 $k$ 及相关坐标',
+      grade: '九年级',
+      subject: '数学',
+      chapterGroup: '第二十七章 反比例函数',
+      chapter: '27.2 反比例函数中 k 的几何意义',
+      description: '面对平行四边形、菱形、旋转、中点、全等割补或网格平移等复合几何条件，先通过辅助线与几何性质转化坐标或面积关系，再利用双曲线上点的 $xy=k$ 求解参数或坐标。',
+      purpose: '解决无法用单一垂线矩形/三角形直接出解的复合几何反比例函数问题。',
+      applicability: [
+        '平行四边形、菱形、矩形与一条或两条双曲线结合的面积求 $k$ 问题。',
+        '含中点、全等割补、旋转、勾股定理或网格格点关系的坐标设元求 $k$ 问题。'
+      ],
+      conditions: [
+        '题目含复合几何图形或变换（平行四边形、菱形、旋转、中点、全等/相似等）',
+        '必须先进行几何转化或坐标设元，再联立 $xy=k$ 求解'
+      ],
+      steps: [
+        {
+          step: 1,
+          title: '作辅助线并转化几何面积或线段关系',
+          description: '过双曲线上的关键顶点向坐标轴作垂线，利用平行四边形对边平行相等、全等割补、菱形四边相等或旋转全等，将未知图形转化为规则面积和差或坐标关系。',
+          formula: '构造垂线/全等，将面积拆为 $\\frac{|k_1|}{2} \\pm \\frac{|k_2|}{2}$ 或表示线段长',
+          example: '连接 $OA$ 将平行四边形 $OBAD$ 分为两个等积三角形，$S_{\\triangle AOB} = S_{\\triangle COB} + S_{\\triangle COA}$。'
+        },
+        {
+          step: 2,
+          title: '用参数设出双曲线上关键点的坐标',
+          description: '设关键点坐标为 $(m, \\frac{k}{m})$ 或 $(m, n)$，依据中点公式、平行关系或长度条件写出关联点坐标。',
+          formula: '设 $A(m, \\frac{k}{m})$，表示关联点坐标',
+          example: '设 $B(m, n)$，由面积得 $OA=\\frac{12}{n}$，再由中点公式得 $C(\\frac{mn-12}{2n}, \\frac{n}{2})$。'
+        },
+        {
+          step: 3,
+          title: '利用双曲线上点横纵坐标乘积相等列方程',
+          description: '利用同支双曲线上各点满足 $x_1 y_1 = x_2 y_2 = k$，或面积之和等于已知面积，列出关于 $k$（或参数）的方程。',
+          formula: '$x_1 y_1 = x_2 y_2 = k$ 或 $\\sum S_i = S_{\\text{已知}}$',
+          example: '由点 $C$ 也在双曲线上得 $\\frac{mn-12}{2n}\\cdot\\frac{n}{2}=mn$，消去 $n$ 解得 $mn=-4$。'
+        },
+        {
+          step: 4,
+          title: '求解参数并结合象限与几何条件验证',
+          description: '解出 $k$ 或目标坐标，核对点所在象限正负号及线段长度非负性，舍去不合题意的解。',
+          formula: '检验象限符号与几何约束',
+          example: '由第二象限得 $k=-4$，符合图形位置。'
+        }
+      ],
+      procedure: [
+        { step: 1, action: '作垂线转化几何关系', detail: '用全等、割补、平行或旋转转化面积与线段。' },
+        { step: 2, action: '坐标设元表示关联点', detail: '设点 $(m, k/m)$ 并推出其余顶点坐标。' },
+        { step: 3, action: '由 $xy=k$ 或面积和列方程', detail: '消去辅助参数建立关于 $k$ 的方程。' },
+        { step: 4, action: '求解并验证象限与约束', detail: '求出 $k$ 或坐标并核对符号。' }
+      ],
+      prerequisites: [
+        { id: 'P61', name: '利用 $k$ 的几何意义求面积与参数', type: 'procedural_knowledge' },
+        { id: 'P12', name: '用待定系数法求反比例函数解析式', type: 'procedural_knowledge' }
+      ],
+      prerequisiteProcedureIds: ['P61', 'P12'],
+      subsequentProcedureIds: ['P65'],
+      relatedProcedureIds: ['P61', 'P12', 'P65'],
+      pitfalls: [
+        '在第二、第四象限用坐标表示线段长时忘记加负号（如 $x \\lt 0$ 时水平距离为 $-x$）。',
+        '双双曲线面积叠加时未区分两支所在象限导致 $k_1, k_2$ 符号相加出错。'
+      ],
+      exampleQuestionId: 'ch27_k_geom_q8',
+      exampleStepMapping: [
+        { step: 1, title: '作对角线拆解面积', detail: '连接 $OA$ 得 $S_{\\triangle AOB}=\\frac{1}{2}S_{\\text{▱}OBAD}=\\frac{5}{2}$。' },
+        { step: 2, title: '分象限表示两三角形面积', detail: '$S_{\\triangle COB}=\\frac{3}{2}$，$A$ 在第二象限故 $S_{\\triangle COA}=-\\frac{k}{2}$。' },
+        { step: 3, title: '列方程求解 $k$', detail: '$\\frac{3}{2}-\\frac{k}{2}=\\frac{5}{2} \\implies k=-2$。' }
+      ],
+      graphNodeId: 'cnm_239',
+      status: 'published'
+    },
+    {
+      id: 'P63',
+      name: '求反比例函数与一般一次函数的交点坐标及参数',
+      grade: '九年级',
+      subject: '数学',
+      chapterGroup: '第二十七章 反比例函数',
+      chapter: '27.2.2 反比例函数与一次函数的综合',
+      description: '通过代入公共交点坐标或联立 $y=ax+b$ 与 $y=\\frac{k}{x}$ 转化为一元二次方程 $ax^2+bx-k=0$，求解两函数解析式参数、全部交点坐标或由判别式判断交点个数。',
+      purpose: '掌握反比例函数与一般一次函数之间“由交点求解析式”和“由解析式联立求交点/判交点个数”的标准代数流程。',
+      applicability: [
+        '已知一次函数与反比例函数的一个或两个交点（含待求坐标分量），求两函数解析式及另一交点坐标。',
+        '已知两函数解析式，联立方程求交点坐标，或利用判别式 $\\Delta$ 判断交点存在性与参数范围。'
+      ],
+      conditions: [
+        '同时涉及反比例函数 $y=k/x$ 与一般一次函数 $y=ax+b$',
+        '需要求解析式参数、交点坐标或判断交点个数'
+      ],
+      steps: [
+        {
+          step: 1,
+          title: '写出两个函数解析式并代入已知交点信息',
+          description: '若解析式含待定参数，先将已知完整交点坐标（或已知横/纵坐标）代入已知解析式补全交点坐标，再代入另一解析式求参数。',
+          formula: '公共交点 $(x_0, y_0)$ 同时满足 $y_0 = ax_0 + b$ 与 $x_0 y_0 = k$',
+          example: '由 $A(2,3)$ 得 $k=6$，代 $B(-3,n)$ 得 $n=-2$，再联立求直线 $y=x+1$。'
+        },
+        {
+          step: 2,
+          title: '令两个函数值相等建立分式方程',
+          description: '求未知交点或判断交点个数时，联立解析式令 $\\frac{k}{x} = ax + b$（注意 $x \\neq 0$）。',
+          formula: '$\\frac{k}{x} = ax + b\ (x \\neq 0)$',
+          example: '联立 $y=x+3$ 与 $y=\\frac{10}{x}$，得 $\\frac{10}{x} = x+3$。'
+        },
+        {
+          step: 3,
+          title: '去分母转化为一元二次方程并求解（或判别式分析）',
+          description: '两边同乘 $x$ 整理为 $ax^2 + bx - k = 0$，解出交点横坐标 $x_1, x_2$（检验 $x \\neq 0$）；若判交点存在性则计算 $\\Delta = b^2 + 4ak$。',
+          formula: '$ax^2 + bx - k = 0\ (x \\neq 0)$，$\\Delta = b^2 + 4ak$',
+          example: '整理得 $x^2+3x-10=0$，解得 $x_1=2, x_2=-5$。'
+        },
+        {
+          step: 4,
+          title: '回代求交点纵坐标并写出结论',
+          description: '将求得的横坐标回代较简便的解析式求出纵坐标，写出交点坐标或参数结论。',
+          formula: '$y_i = ax_i + b = \\frac{k}{x_i}$',
+          example: '回代得交点 $A(2,5)$、$B(-5,-2)$。'
+        }
+      ],
+      procedure: [
+        { step: 1, action: '代入已知交点定参数', detail: '用公共交点补全坐标并求解析式。' },
+        { step: 2, action: '联立两解析式', detail: '令 $k/x = ax+b$（注明 $x \\neq 0$）。' },
+        { step: 3, action: '化一元二次方程求解', detail: '解 $ax^2+bx-k=0$ 或用 $\\Delta$ 判交点个数。' },
+        { step: 4, action: '回代求纵坐标定解', detail: '算出交点纵坐标并检验 $x \\neq 0$。' }
+      ],
+      prerequisites: [
+        { id: 'P12', name: '用待定系数法求反比例函数解析式', type: 'procedural_knowledge' },
+        { id: 'P13', name: '由比例系数 $k$ 判断反比例函数象限与增减性', type: 'procedural_knowledge' }
+      ],
+      prerequisiteProcedureIds: ['P12', 'P13'],
+      subsequentProcedureIds: ['P64', 'P65'],
+      relatedProcedureIds: ['P12', 'P15', 'P64', 'P65'],
+      pitfalls: [
+        '去分母转化为 $ax^2+bx-k=0$ 时漏记条件 $x \\neq 0$。',
+        '把两个交点坐标代入一次函数解方程组时发生符号错误。'
+      ],
+      exampleQuestionId: 'ch27_inv_lin_q21',
+      exampleStepMapping: [
+        { step: 1, title: '由交点求两函数解析式', detail: '由 $A(4,1)$ 得 $y=\\frac{4}{x}$，求得 $B(-1,-4)$，解得直线 $y=x-3$。' },
+        { step: 2, title: '平移后联立求交点', detail: '平移得 $y=x$，联立 $x=\\frac{4}{x}$ 得 $x^2=4$，解得 $x=\\pm 2$。' },
+        { step: 3, title: '回代写出交点坐标', detail: '交点为 $(-2,-2)$ 和 $(2,2)$。' }
+      ],
+      graphNodeId: 'cnm_241',
+      status: 'published'
+    },
+    {
+      id: 'P64',
+      name: '利用函数图象与交点求不等式解集',
+      grade: '九年级',
+      subject: '数学',
+      chapterGroup: '第二十七章 反比例函数',
+      chapter: '27.2.2 反比例函数与一次函数的综合',
+      description: '以两函数交点横坐标和 $y$ 轴（$x=0$）为分界线将数轴分区，通过观察图象上下位置直接写出 $ax+b \\gt \\frac{k}{x}$（或 $\\lt$）的解集。',
+      purpose: '掌握数形结合法，由一次函数与反比例函数图象的上下位置快速、无遗漏地写出不等式解集。',
+      applicability: [
+        '已知或已求出一次函数与反比例函数的两交点横坐标，直接写出 $k_1 x+b \\gt \\frac{k_2}{x}$ 或 $k_1 x+b \\lt \\frac{k_2}{x}$ 的解集。',
+        '求连不等式如 $\\frac{k}{x} \\lt ax+b \\lt 0$ 的解集。'
+      ],
+      conditions: [
+        '已有一、反比例函数图象及两交点横坐标',
+        '目标为求两函数大小比较对应的自变量 $x$ 取值范围'
+      ],
+      steps: [
+        {
+          step: 1,
+          title: '确定两个函数的交点横坐标',
+          description: '直接读取或先按 P63 求出直线与双曲线的两个交点横坐标 $x_1, x_2$（设 $x_1 \\lt x_2$）。',
+          formula: '标出分界点：$x = x_1$、$x = 0$、$x = x_2$',
+          example: '交点 $A(-3,-2)$、$B(2,3)$ 的横坐标分别为 $-3$ 和 $2$。'
+        },
+        {
+          step: 2,
+          title: '用交点垂线与 $y$ 轴将坐标平面划分为四个区间',
+          description: '过两交点作垂直于 $x$ 轴的虚线，连同 $y$ 轴（$x=0$）将自变量 $x$ 分为四段区间。',
+          formula: '四段区间：$(-\\infty, x_1)$、$(x_1, 0)$、$(0, x_2)$、$(x_2, +\\infty)$',
+          example: '分为 $x \\lt -3$、$-3 \\lt x \\lt 0$、$0 \\lt x \\lt 2$、$x \\gt 2$ 四段。'
+        },
+        {
+          step: 3,
+          title: '根据图象上下位置筛选符合不等号的区间',
+          description: '若求 $y_{\\text{直}} \\gt y_{\\text{双}}$，选取直线位于双曲线上方的区间；若求 $y_{\\text{直}} \\lt y_{\\text{双}}$，选取直线在双曲线下方的区间（若有额外条件如 $\\lt 0$，同步限制在 $x$ 轴下方）。',
+          formula: '上方 $\\iff$ 函数值更大；下方 $\\iff$ 函数值更小',
+          example: '在 $-3 \\lt x \\lt 0$ 与 $x \\gt 2$ 两段中直线在双曲线上方。'
+        },
+        {
+          step: 4,
+          title: '检查定义域 $x \\neq 0$ 与等号，写出最终解集',
+          description: '确保 $x=0$ 不包含在解集中，严格区分“$>$”与“$\\ge$”，用“或”连接各分段区间。',
+          formula: '解集为各满足区间之并集（不含 $x=0$）',
+          example: '不等式 $y_1 \\gt y_2$ 的解集为 $-3 \\lt x \\lt 0$ 或 $x \\gt 2$。'
+        }
+      ],
+      procedure: [
+        { step: 1, action: '标出交点横坐标与 $x=0$', detail: '找出全部分界线 $x=x_1, 0, x_2$。' },
+        { step: 2, action: '划分四段自变量区间', detail: '用三条竖线将数轴分四段。' },
+        { step: 3, action: '按图象上下筛选区间', detail: '上大下小选出符合不等号的区间。' },
+        { step: 4, action: '核对 $x \\neq 0$ 写解集', detail: '用“或”连接各分段，排除 $x=0$。' }
+      ],
+      prerequisites: [
+        { id: 'P63', name: '求反比例函数与一般一次函数的交点坐标及参数', type: 'procedural_knowledge' }
+      ],
+      prerequisiteProcedureIds: ['P63'],
+      subsequentProcedureIds: [],
+      relatedProcedureIds: ['P63', 'P59'],
+      pitfalls: [
+        '忘记 $y$ 轴（$x=0$）是断点，错误地将 $-3 \\lt x \\lt 0$ 写成 $x \\gt -3$。',
+        '漏写连不等式 $\\frac{4}{x} \\lt kx+b \\lt 0$ 中直线与 $x$ 轴交点的限制。'
+      ],
+      exampleQuestionId: 'ch27_2_2_ex_q19',
+      exampleStepMapping: [
+        { step: 1, title: '标出分界点', detail: '交点横坐标为 $-3$ 和 $2$，加上断点 $x=0$。' },
+        { step: 2, title: '看图选直线在双曲线上方的区间', detail: '在 $-3 \\lt x \\lt 0$ 与 $x \\gt 2$ 时 $y_1 \\gt y_2$。' },
+        { step: 3, title: '写出解集', detail: '$-3 \\lt x \\lt 0$ 或 $x \\gt 2$，选 C。' }
+      ],
+      graphNodeId: 'cnm_241',
+      status: 'published'
+    },
+    {
+      id: 'P65',
+      name: '利用反比例函数与一次函数的交点解决几何综合问题',
+      grade: '九年级',
+      subject: '数学',
+      chapterGroup: '第二十七章 反比例函数',
+      chapter: '27.2.2 反比例函数与一次函数的综合',
+      description: '在求出直线与双曲线交点坐标的基础上，利用直线与坐标轴交点进行面积割补（求 $\\triangle AOB$ 面积）、由面积比或线段比（相似/平行线分线段成比例）求动点坐标、参数或面积最值。',
+      purpose: '系统解决一次函数与反比例函数交点衍生的三角形面积、线段比例、对称最短路径及动点最值等几何综合问题。',
+      applicability: [
+        '已知直线与双曲线两交点 $A, B$，求 $\\triangle AOB$ 或 $\\triangle AOC$ 的面积，或由面积反求坐标轴上动点坐标。',
+        '结合直线与坐标轴交点，利用线段比例（相似三角形）求参数 $k$ 或分点坐标。',
+        '结合对称点求线段和最小值（将军饮马）或建立二次函数求三角形面积最大值。'
+      ],
+      conditions: [
+        '题目同时包含一次函数与反比例函数交点及几何量（面积、线段比、对称或最值）',
+        '需先求交点/截距坐标，再转化为坐标方程求解'
+      ],
+      steps: [
+        {
+          step: 1,
+          title: '求出函数交点及直线与坐标轴的截距点坐标',
+          description: '利用 P63 求出交点 $A, B$ 坐标，并令 $x=0$ 或 $y=0$ 求出直线与 $y$ 轴、$x$ 轴的交点 $C$ 或 $D$。',
+          formula: '交点 $A(x_A, y_A)$、$B(x_B, y_B)$，截距点 $C(0, b)$ 或 $D(-\\frac{b}{a}, 0)$',
+          example: '对 $y=x+1$，令 $x=0$ 得 $C(0,1)$，作为分割 $\\triangle AOB$ 的公共底边端点。'
+        },
+        {
+          step: 2,
+          title: '建立面积割补或相似比例的几何关系',
+          description: '求 $\\triangle AOB$ 面积时以 $OC$（或 $OD$）为底，用 $S_{\\triangle AOB}=\\frac{1}{2}OC\\cdot(|x_A|+|x_B|)$（同侧相减、异侧相加）；含线段比时向坐标轴作垂线构造相似三角形。',
+          formula: '$S_{\\triangle AOB} = \\frac{1}{2}OC \\cdot |x_A - x_B|$（或 $\\frac{1}{2}OD \\cdot |y_A - y_B|$）',
+          example: '$A(2,3)$、$B(-3,-2)$ 在 $y$ 轴两侧，$S_{\\triangle AOB}=\\frac{1}{2}\\times 1\\times(2+3)=\\frac{5}{2}$。'
+        },
+        {
+          step: 3,
+          title: '转化为坐标方程或目标函数并求解',
+          description: '将面积条件、比例关系或动点设元代入坐标表达式，解方程求动点坐标/参数，或配方求面积最值。',
+          formula: '将几何等量关系转化为关于动点坐标的代数方程',
+          example: '由 $S_{\\triangle AOP}:S_{\\triangle BOP}=1:2$ 转化为 $AP:PB=1:2$ 求分点 $P$ 坐标。'
+        },
+        {
+          step: 4,
+          title: '结合图形位置分类讨论并检验结论',
+          description: '检查动点是否在坐标轴正负两半轴有双解，核对象限限制与题目范围要求。',
+          formula: '检查分类讨论与象限约束',
+          example: '如 $y$ 轴上满足 $S_{\\triangle ACM}=12$ 的点 $M$ 有 $(0,4)$ 和 $(0,-4)$ 两解。'
+        }
+      ],
+      procedure: [
+        { step: 1, action: '求交点与坐标轴截距', detail: '算出交点 $A, B$ 及直线与坐标轴交点。' },
+        { step: 2, action: '建面积割补或相似关系', detail: '用公共底边割补求面积，或作垂线构造相似。' },
+        { step: 3, action: '转化为坐标方程求解', detail: '代入坐标求解面积、参数、动点或最值。' },
+        { step: 4, action: '分类检验并定解', detail: '核对多解情况与象限限制。' }
+      ],
+      prerequisites: [
+        { id: 'P63', name: '求反比例函数与一般一次函数的交点坐标及参数', type: 'procedural_knowledge' },
+        { id: 'P62', name: '利用复合几何关系求 $k$ 及相关坐标', type: 'procedural_knowledge' }
+      ],
+      prerequisiteProcedureIds: ['P63', 'P62'],
+      subsequentProcedureIds: [],
+      relatedProcedureIds: ['P63', 'P62', 'P64'],
+      pitfalls: [
+        '求 $\\triangle AOB$ 面积时，未判断 $A, B$ 在坐标轴同侧还是异侧导致加减号用反。',
+        '求坐标轴上满足定面积的动点时漏掉负半轴的对称解。'
+      ],
+      exampleQuestionId: 'ch27_2_2_q5',
+      exampleStepMapping: [
+        { step: 1, title: '求交点与 $y$ 轴截距', detail: '由（1）得 $A(2,3)$、$B(-3,-2)$，直线 $y=x+1$ 交 $y$ 轴于 $C(0,1)$。' },
+        { step: 2, title: '以 $OC$ 为底割补求面积', detail: '$S_{\\triangle AOB}=S_{\\triangle AOC}+S_{\\triangle BOC}=\\frac{1}{2}\\times 1\\times(2+3)=\\frac{5}{2}$。' }
+      ],
+      graphNodeId: 'cnm_241',
+      status: 'published'
+    },
+    {
+      id: 'P66',
+      name: '利用反比例函数模型解决实际问题中的变量计算与范围约束',
+      grade: '九年级',
+      subject: '数学',
+      chapterGroup: '第二十七章 反比例函数',
+      chapter: '27.3 实际问题与反比例函数',
+      description: '在已建立或给定反比例函数模型（如压强、欧姆定律、杠杆平衡、区间测速、工程进度等）的基础上，执行特定值代入计算、列实际不等式求最值/取值范围，并将数学解还原为实际问题的结论。',
+      purpose: '运用反比例函数解析式与单调性完成实际问题中的定量计算、临界值求解与范围约束决策。',
+      applicability: [
+        '在物理（压强 $P=F/S$、电学 $I=U/R$、杠杆 $Fl=k$、光学焦距）或生活（测速、工程、销售、发芽率）反比例模型中，已知一量求另一量。',
+        '结合“不超过”“至少”“不低于”“在某区间内”等实际约束，求另一变量的最大值、最小值或取值范围。'
+      ],
+      conditions: [
+        '实际问题已给出或可先按 P58/P12 建立反比例函数模型',
+        '核心任务是代入求特定值、比较方案或求满足实际限制的范围/最值'
+      ],
+      steps: [
+        {
+          step: 1,
+          title: '明确反比例模型及各实际变量含义',
+          description: '读取已给解析式，或先由已知数据/图象点求出 $y=\\frac{k}{x}\ (x \\gt 0)$，核对单位是否统一（如分钟化小时、厘米化米）。',
+          formula: '确认 $y = \\frac{k}{x}\ (x \\gt 0)$ 并统一单位',
+          example: '区间测速中由 $(0.4, 90)$ 得 $v=\\frac{36}{t}$，20 分钟先化为 $\\frac{1}{3}$ 小时。'
+        },
+        {
+          step: 2,
+          title: '代入已知条件求目标变量值',
+          description: '求具体数值时，直接将给定自变量或因变量代入 $y=\\frac{k}{x}$ 解出对应量（若求变化量则两值相减）。',
+          formula: '$x=x_0 \\implies y=\\frac{k}{x_0}$；$y=y_0 \\implies x=\\frac{k}{y_0}$',
+          example: '代入 $t=\\frac{1}{3}$ 得 $v=\\frac{36}{1/3}=108\ (\\text{km/h})$。'
+        },
+        {
+          step: 3,
+          title: '根据实际限制列不等式并结合单调性求范围',
+          description: '将“不超过”“至少”“不低于”翻译为不等式，求出临界值，并利用第一象限内 $k \\gt 0$ 时 $y$ 随 $x$ 增大而减小的性质确定范围。',
+          formula: '$y_{\\min} \\le \\frac{k}{x} \\le y_{\\max} \\implies \\frac{k}{y_{\\max}} \\le x \\le \\frac{k}{y_{\\min}}$',
+          example: '由 $80 \\le v \\le 120$ 算得临界时间 $0.3$ 与 $0.45$，故 $0.3 \\le t \\le 0.45$。'
+        },
+        {
+          step: 4,
+          title: '将数学解还原为实际问题的答案',
+          description: '核对正数约束、整除/取整要求与物理意义，用规范单位写出实际结论或可行性判断。',
+          formula: '核对单位与实际意义并作答',
+          example: '答：通过该限速区间的时间范围为 $0.3 \\le t \\le 0.45$ 小时。'
+        }
+      ],
+      procedure: [
+        { step: 1, action: '确认模型并统一单位', detail: '写出或求出 $y=k/x$，核对时间、长度等单位换算。' },
+        { step: 2, action: '代入求解目标变量', detail: '将已知量代入解析式求对应值或差值。' },
+        { step: 3, action: '列不等式并由单调性定范围', detail: '算出临界值，结合第一象限递减性确定最值或区间。' },
+        { step: 4, action: '还原为实际问题结论', detail: '结合实际意义与单位规范作答。' }
+      ],
+      prerequisites: [
+        { id: 'P58', name: '根据实际情境与数据识别反比例关系并建立函数模型', type: 'procedural_knowledge' },
+        { id: 'P12', name: '用待定系数法求反比例函数解析式', type: 'procedural_knowledge' },
+        { id: 'P59', name: '利用反比例函数性质求自变量或函数值的取值范围', type: 'procedural_knowledge' }
+      ],
+      prerequisiteProcedureIds: ['P58', 'P12', 'P59'],
+      subsequentProcedureIds: [],
+      relatedProcedureIds: ['P58', 'P12', 'P59'],
+      pitfalls: [
+        '忽略单位换算（如把 20 分钟直接当作 20 小时，或把 $\\text{cm}^2$ 与 $\\text{m}^2$ 混用）。',
+        '由单调递减反求范围时把最大/最小值对应的临界端点写反。'
+      ],
+      exampleQuestionId: 'ch27_test_q24',
+      exampleStepMapping: [
+        { step: 1, title: '建立模型并统一单位', detail: '由 $(0.4, 90)$ 得 $v=\\frac{36}{t}$；将 20 分钟化为 $\\frac{1}{3}$ 小时。' },
+        { step: 2, title: '代入求平均速度', detail: '$v=\\frac{36}{1/3}=108\text{ km/h}$。' },
+        { step: 3, title: '由限速求时间范围', detail: '$v=120 \\Rightarrow t=0.3$，$v=80 \\Rightarrow t=0.45$，故 $0.3 \\le t \\le 0.45$。' }
+      ],
+      graphNodeId: 'cnm_242',
+      status: 'published'
+    },
+    {
+      "id": "P67",
+      "name": "识别二次函数与由定义求参数",
+      "grade": "九年级",
+      "subject": "数学",
+      "chapterGroup": "第二十六章 二次函数",
+      "chapter": "26.1 二次函数的定义",
+      "description": "将函数解析式化简整理为一般形式 $y=ax^2+bx+c$，核对自变量最高次数为 $2$、右边为整式且二次项系数 $a \\neq 0$，完成二次函数识别或列方程与不等式求参数。",
+      "purpose": "准确辨识二次函数并由最高次数为 2 且二次项系数非零求参数值。",
+      "applicability": [
+        "将函数解析式化简整理为一般形式 $y=ax^2+bx+c$，核对自变量最高次数为 $2$、右边为整式且二次项系数 $a \\neq 0$，完成二次函数识别或列方程与不等式求参数。"
+      ],
+      "conditions": [
+        "准确辨识二次函数并由最高次数为 2 且二次项系数非零求参数值。"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "化简整理为一般形式",
+          "description": "去括号、合并同类项，看清是否消去 $x^2$ 项及分母是否含未知数。",
+          "formula": "$y = ax^2 + bx + c\\ (a \\neq 0)$",
+          "example": ""
+        },
+        {
+          "step": 2,
+          "title": "列自变量最高次数等于 $2$ 的方程",
+          "description": "令含参指数等于 $2$，求出参数的候选值。",
+          "formula": "$m^2 - m = 2 \\implies m = 2 \\text{ 或 } m = -1$",
+          "example": ""
+        },
+        {
+          "step": 3,
+          "title": "检验二次项系数 $a \\neq 0$ 并舍去增根",
+          "description": "将候选值代入二次项系数检验，舍去使 $a=0$ 的值定解。",
+          "formula": "$m - 2 \\neq 0 \\implies m = -1$",
+          "example": ""
+        }
+      ],
+      "procedure": [
+        {
+          "step": 1,
+          "action": "化简整理为一般形式",
+          "detail": "去括号、合并同类项，看清是否消去 $x^2$ 项及分母是否含未知数。"
+        },
+        {
+          "step": 2,
+          "action": "列自变量最高次数等于 $2$ 的方程",
+          "detail": "令含参指数等于 $2$，求出参数的候选值。"
+        },
+        {
+          "step": 3,
+          "action": "检验二次项系数 $a \\neq 0$ 并舍去增根",
+          "detail": "将候选值代入二次项系数检验，舍去使 $a=0$ 的值定解。"
+        }
+      ],
+      "prerequisites": [],
+      "prerequisiteProcedureIds": [],
+      "subsequentProcedureIds": [
+        "P68"
+      ],
+      "relatedProcedureIds": [
+        "P19",
+        "P68"
+      ],
+      "pitfalls": [
+        "未先化简导致误判（如 $(x-1)^2-x^2+1=-2x+2$ 实际是一次函数）。",
+        "解出指数方程后忘记检验二次项系数 $a \\neq 0$。"
+      ],
+      "exampleQuestionId": "ch26_1_6",
+      "exampleStepMapping": [
+        {
+          "step": 1,
+          "title": "对应步骤 1（化简整理为一般形式）",
+          "detail": "去括号、合并同类项，看清是否消去 $x^2$ 项及分母是否含未知数。"
+        },
+        {
+          "step": 2,
+          "title": "对应步骤 2（列自变量最高次数等于 $2$ 的方程）",
+          "detail": "令含参指数等于 $2$，求出参数的候选值。"
+        },
+        {
+          "step": 3,
+          "title": "对应步骤 3（检验二次项系数 $a \\neq 0$ 并舍去增根）",
+          "detail": "将候选值代入二次项系数检验，舍去使 $a=0$ 的值定解。"
+        }
+      ],
+      "graphNodeId": "cnm_229",
+      "status": "published"
+    },
+    {
+      "id": "P68",
+      "name": "由 $y=ax^2$ 系数 $a$ 判断开口、对称轴与增减性",
+      "grade": "九年级",
+      "subject": "数学",
+      "chapterGroup": "第二十六章 二次函数",
+      "chapter": "26.2.1 二次函数y=ax²的图象和性质",
+      "description": "根据最简二次函数 $y=ax^2\\ (a\\neq 0)$ 的二次项系数 $a$ 的正负判断开口方向与 $y$ 轴两侧增减性，根据 $|a|$ 大小判断开口宽窄。",
+      "purpose": "掌握 $y=ax^2$ 开口方向、开口宽窄及以 $y$ 轴为对称轴的增减性互推。",
+      "applicability": [
+        "根据最简二次函数 $y=ax^2\\ (a\\neq 0)$ 的二次项系数 $a$ 的正负判断开口方向与 $y$ 轴两侧增减性，根据 $|a|$ 大小判断开口宽窄。"
+      ],
+      "conditions": [
+        "掌握 $y=ax^2$ 开口方向、开口宽窄及以 $y$ 轴为对称轴的增减性互推。"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "提取二次项系数 $a$",
+          "description": "对准 $y=ax^2$ 提取系数 $a$（含参数或先由定义定指数）。",
+          "formula": "$y = ax^2\\ (a \\neq 0)$",
+          "example": ""
+        },
+        {
+          "step": 2,
+          "title": "由 $a$ 的正负定开口与增减性",
+          "description": "$a\\gt 0$ 开口向上（$x\\lt 0$ 递减、$x\\gt 0$ 递增，有最低点）；$a\\lt 0$ 开口向下（$x\\lt 0$ 递增、$x\\gt 0$ 递减，有最高点）。",
+          "formula": "$a \\gt 0 \\iff \\text{开口向上}$；$a \\lt 0 \\iff \\text{开口向下}$",
+          "example": ""
+        },
+        {
+          "step": 3,
+          "title": "由 $|a|$ 大小比较开口宽窄并定解",
+          "description": "$|a|$ 越大开口越窄，$|a|$ 越小开口越宽；列不等式求出参数。",
+          "formula": "$|a_1| \\gt |a_2| \\iff \\text{开口更窄}$",
+          "example": ""
+        }
+      ],
+      "procedure": [
+        {
+          "step": 1,
+          "action": "提取二次项系数 $a$",
+          "detail": "对准 $y=ax^2$ 提取系数 $a$（含参数或先由定义定指数）。"
+        },
+        {
+          "step": 2,
+          "action": "由 $a$ 的正负定开口与增减性",
+          "detail": "$a\\gt 0$ 开口向上（$x\\lt 0$ 递减、$x\\gt 0$ 递增，有最低点）；$a\\lt 0$ 开口向下（$x\\lt 0$ 递增、$x\\gt 0$ 递减，有最高点）。"
+        },
+        {
+          "step": 3,
+          "action": "由 $|a|$ 大小比较开口宽窄并定解",
+          "detail": "$|a|$ 越大开口越窄，$|a|$ 越小开口越宽；列不等式求出参数。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P67",
+          "name": "识别二次函数与由定义求参数",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P67"
+      ],
+      "subsequentProcedureIds": [
+        "P69"
+      ],
+      "relatedProcedureIds": [
+        "P67",
+        "P69"
+      ],
+      "pitfalls": [
+        "混淆 $|a|$ 与开口宽窄的关系（误以为 $|a|$ 越大开口越宽）。",
+        "忘记以对称轴 $x=0$ 分左右两支讨论增减性。"
+      ],
+      "exampleQuestionId": "ch26_2_1_4",
+      "exampleStepMapping": [
+        {
+          "step": 1,
+          "title": "对应步骤 1（提取二次项系数 $a$）",
+          "detail": "对准 $y=ax^2$ 提取系数 $a$（含参数或先由定义定指数）。"
+        },
+        {
+          "step": 2,
+          "title": "对应步骤 2（由 $a$ 的正负定开口与增减性）",
+          "detail": "$a\\gt 0$ 开口向上（$x\\lt 0$ 递减、$x\\gt 0$ 递增，有最低点）；$a\\lt 0$ 开口向下（$x\\lt 0$ 递增、$x\\gt 0$ 递减，有最高点）。"
+        },
+        {
+          "step": 3,
+          "title": "对应步骤 3（由 $|a|$ 大小比较开口宽窄并定解）",
+          "detail": "$|a|$ 越大开口越窄，$|a|$ 越小开口越宽；列不等式求出参数。"
+        }
+      ],
+      "graphNodeId": "cnm_230",
+      "status": "published"
+    },
+    {
+      "id": "P69",
+      "name": "由顶点式 $y=a(x-h)^2+k$ 读顶点、对称轴与增减性",
+      "grade": "九年级",
+      "subject": "数学",
+      "chapterGroup": "第二十六章 二次函数",
+      "chapter": "26.2.2 y=ax²+k的图象和性质",
+      "description": "直接从顶点式 $y=a(x-h)^2+k$ 提取开口方向 $a$、对称轴 $x=h$、顶点坐标 $(h,k)$，并利用“到对称轴距离越远/越近”比较函数值大小。",
+      "purpose": "熟练读取顶点式全部核心几何特征并比较抛物线上点的函数值大小。",
+      "applicability": [
+        "直接从顶点式 $y=a(x-h)^2+k$ 提取开口方向 $a$、对称轴 $x=h$、顶点坐标 $(h,k)$，并利用“到对称轴距离越远/越近”比较函数值大小。"
+      ],
+      "conditions": [
+        "熟练读取顶点式全部核心几何特征并比较抛物线上点的函数值大小。"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "对照标准顶点式提取 $a, h, k$",
+          "description": "将解析式对准 $y=a(x-h)^2+k$，注意括号内“减 $h$”的符号反转。",
+          "formula": "顶点 $(h, k)$，对称轴 $x = h$",
+          "example": ""
+        },
+        {
+          "step": 2,
+          "title": "由 $a$ 与 $h$ 确定单调区间与最值",
+          "description": "$a\\gt 0$ 时在 $x=h$ 处取最小值 $k$（左减右增）；$a\\lt 0$ 时取最大值 $k$（左增右减）。",
+          "formula": "对称轴两侧单调性相反",
+          "example": ""
+        },
+        {
+          "step": 3,
+          "title": "用“距对称轴距离 $|x-h|$”比较函数值大小",
+          "description": "$a\\gt 0$ 离对称轴越远 $y$ 越大；$a\\lt 0$ 离对称轴越远 $y$ 越小。",
+          "formula": "比较 $|x_1-h|$ 与 $|x_2-h|$",
+          "example": ""
+        }
+      ],
+      "procedure": [
+        {
+          "step": 1,
+          "action": "对照标准顶点式提取 $a, h, k$",
+          "detail": "将解析式对准 $y=a(x-h)^2+k$，注意括号内“减 $h$”的符号反转。"
+        },
+        {
+          "step": 2,
+          "action": "由 $a$ 与 $h$ 确定单调区间与最值",
+          "detail": "$a\\gt 0$ 时在 $x=h$ 处取最小值 $k$（左减右增）；$a\\lt 0$ 时取最大值 $k$（左增右减）。"
+        },
+        {
+          "step": 3,
+          "action": "用“距对称轴距离 $|x-h|$”比较函数值大小",
+          "detail": "$a\\gt 0$ 离对称轴越远 $y$ 越大；$a\\lt 0$ 离对称轴越远 $y$ 越小。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P68",
+          "name": "由 $y=ax^2$ 系数 $a$ 判断开口、对称轴与增减性",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P68"
+      ],
+      "subsequentProcedureIds": [
+        "P70",
+        "P71"
+      ],
+      "relatedProcedureIds": [
+        "P68",
+        "P70",
+        "P71"
+      ],
+      "pitfalls": [
+        "把 $y=-(x+3)^2+5$ 的对称轴误读为 $x=3$（正确为 $x=-3$）。",
+        "比较不同侧两点函数值时忘记转化为到对称轴的距离。"
+      ],
+      "exampleQuestionId": "g9_gzpy_mid_q8",
+      "exampleStepMapping": [
+        {
+          "step": 1,
+          "title": "对应步骤 1（对照标准顶点式提取 $a, h, k$）",
+          "detail": "将解析式对准 $y=a(x-h)^2+k$，注意括号内“减 $h$”的符号反转。"
+        },
+        {
+          "step": 2,
+          "title": "对应步骤 2（由 $a$ 与 $h$ 确定单调区间与最值）",
+          "detail": "$a\\gt 0$ 时在 $x=h$ 处取最小值 $k$（左减右增）；$a\\lt 0$ 时取最大值 $k$（左增右减）。"
+        },
+        {
+          "step": 3,
+          "title": "对应步骤 3（用“距对称轴距离 $|x-h|$”比较函数值大小）",
+          "detail": "$a\\gt 0$ 离对称轴越远 $y$ 越大；$a\\lt 0$ 离对称轴越远 $y$ 越小。"
+        }
+      ],
+      "graphNodeId": "cnm_231",
+      "status": "published"
+    },
+    {
+      "id": "P70",
+      "name": "利用抛物线平移规律求解析式（左加右减、上加下减）",
+      "grade": "九年级",
+      "subject": "数学",
+      "chapterGroup": "第二十六章 二次函数",
+      "chapter": "26.2.2 y=ax²+k的图象和性质",
+      "description": "先将抛物线化为顶点式并保持二次项系数 $a$ 不变，按“自变量 $x$ 左加右减、常数项 $k$ 上加下减”（或直接平移顶点坐标）写出平移后的新解析式。",
+      "purpose": "准确完成抛物线平移与对称变换后的解析式求解及反向推平移路径。",
+      "applicability": [
+        "先将抛物线化为顶点式并保持二次项系数 $a$ 不变，按“自变量 $x$ 左加右减、常数项 $k$ 上加下减”（或直接平移顶点坐标）写出平移后的新解析式。"
+      ],
+      "conditions": [
+        "准确完成抛物线平移与对称变换后的解析式求解及反向推平移路径。"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "化为顶点式并锁定 $a$ 与原顶点 $(h,k)$",
+          "description": "平移不改变抛物线形状与开口方向，故 $a$ 保持不变。",
+          "formula": "原顶点 $(h, k)$，$a$ 不变",
+          "example": ""
+        },
+        {
+          "step": 2,
+          "title": "按平移方向变换顶点或自变量",
+          "description": "左移 $m$：$h-m$（$x$ 变 $x+m$）；右移 $m$：$h+m$（$x$ 变 $x-m$）；上移 $n$：$k+n$；下移 $n$：$k-n$。",
+          "formula": "左加右减、上加下减",
+          "example": ""
+        },
+        {
+          "step": 3,
+          "title": "写出新抛物线解析式并按要求整理",
+          "description": "代入新顶点坐标写出顶点式，必要时展开为一般式。",
+          "formula": "$y = a(x - h')^2 + k'$",
+          "example": ""
+        }
+      ],
+      "procedure": [
+        {
+          "step": 1,
+          "action": "化为顶点式并锁定 $a$ 与原顶点 $(h,k)$",
+          "detail": "平移不改变抛物线形状与开口方向，故 $a$ 保持不变。"
+        },
+        {
+          "step": 2,
+          "action": "按平移方向变换顶点或自变量",
+          "detail": "左移 $m$：$h-m$（$x$ 变 $x+m$）；右移 $m$：$h+m$（$x$ 变 $x-m$）；上移 $n$：$k+n$；下移 $n$：$k-n$。"
+        },
+        {
+          "step": 3,
+          "action": "写出新抛物线解析式并按要求整理",
+          "detail": "代入新顶点坐标写出顶点式，必要时展开为一般式。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P69",
+          "name": "由顶点式 $y=a(x-h)^2+k$ 读顶点、对称轴与增减性",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P69"
+      ],
+      "subsequentProcedureIds": [],
+      "relatedProcedureIds": [
+        "P69",
+        "P71"
+      ],
+      "pitfalls": [
+        "把水平平移“左加右减”记反成“左减右加”。",
+        "对一般式平移时未先化顶点式，忘记对所有 $x$ 同步替换。"
+      ],
+      "exampleQuestionId": "g9_jz_mid_q5",
+      "exampleStepMapping": [
+        {
+          "step": 1,
+          "title": "对应步骤 1（化为顶点式并锁定 $a$ 与原顶点 $(h,k)$）",
+          "detail": "平移不改变抛物线形状与开口方向，故 $a$ 保持不变。"
+        },
+        {
+          "step": 2,
+          "title": "对应步骤 2（按平移方向变换顶点或自变量）",
+          "detail": "左移 $m$：$h-m$（$x$ 变 $x+m$）；右移 $m$：$h+m$（$x$ 变 $x-m$）；上移 $n$：$k+n$；下移 $n$：$k-n$。"
+        },
+        {
+          "step": 3,
+          "title": "对应步骤 3（写出新抛物线解析式并按要求整理）",
+          "detail": "代入新顶点坐标写出顶点式，必要时展开为一般式。"
+        }
+      ],
+      "graphNodeId": "cnm_231",
+      "status": "published"
+    },
+    {
+      "id": "P71",
+      "name": "用配方法或公式法化一般式为顶点式求顶点与对称轴",
+      "grade": "九年级",
+      "subject": "数学",
+      "chapterGroup": "第二十六章 二次函数",
+      "chapter": "26.2.3 二次函数y=ax²+bx+c的图象和性质",
+      "description": "将一般式 $y=ax^2+bx+c$ 通过提取二次项系数配方，或直接套用顶点公式 $(-\\frac{b}{2a}, \\frac{4ac-b^2}{4a})$ 求出对称轴、顶点坐标与单调性。",
+      "purpose": "打通一般式与顶点式的互化，为后续最值、画图与交点分析奠基。",
+      "applicability": [
+        "将一般式 $y=ax^2+bx+c$ 通过提取二次项系数配方，或直接套用顶点公式 $(-\\frac{b}{2a}, \\frac{4ac-b^2}{4a})$ 求出对称轴、顶点坐标与单调性。"
+      ],
+      "conditions": [
+        "打通一般式与顶点式的互化，为后续最值、画图与交点分析奠基。"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "提取前两项的二次项系数 $a$",
+          "description": "将 $ax^2+bx$ 提出公因式 $a$，常数项 $c$ 留在括号外。",
+          "formula": "$y = a\\left(x^2 + \\frac{b}{a}x\\right) + c$",
+          "example": ""
+        },
+        {
+          "step": 2,
+          "title": "括号内加减一次项系数一半的平方",
+          "description": "配成完全平方式，将多余常数项乘以 $a$ 移出括号并与 $c$ 合并。",
+          "formula": "$y = a\\left(x + \\frac{b}{2a}\\right)^2 + \\frac{4ac - b^2}{4a}$",
+          "example": ""
+        },
+        {
+          "step": 3,
+          "title": "读出对称轴、顶点坐标及与 $y$ 轴交点",
+          "description": "对称轴 $x=-\\frac{b}{2a}$，顶点 $(-\\frac{b}{2a}, \\frac{4ac-b^2}{4a})$，与 $y$ 轴交点 $(0,c)$。",
+          "formula": "对称轴 $x = -\\frac{b}{2a}$",
+          "example": ""
+        }
+      ],
+      "procedure": [
+        {
+          "step": 1,
+          "action": "提取前两项的二次项系数 $a$",
+          "detail": "将 $ax^2+bx$ 提出公因式 $a$，常数项 $c$ 留在括号外。"
+        },
+        {
+          "step": 2,
+          "action": "括号内加减一次项系数一半的平方",
+          "detail": "配成完全平方式，将多余常数项乘以 $a$ 移出括号并与 $c$ 合并。"
+        },
+        {
+          "step": 3,
+          "action": "读出对称轴、顶点坐标及与 $y$ 轴交点",
+          "detail": "对称轴 $x=-\\frac{b}{2a}$，顶点 $(-\\frac{b}{2a}, \\frac{4ac-b^2}{4a})$，与 $y$ 轴交点 $(0,c)$。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P69",
+          "name": "由顶点式 $y=a(x-h)^2+k$ 读顶点、对称轴与增减性",
+          "type": "procedural_knowledge"
+        },
+        {
+          "id": "P02",
+          "name": "用配方法解一元二次方程",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P69",
+        "P02"
+      ],
+      "subsequentProcedureIds": [
+        "P72",
+        "P73",
+        "P74",
+        "P75"
+      ],
+      "relatedProcedureIds": [
+        "P02",
+        "P69",
+        "P73"
+      ],
+      "pitfalls": [
+        "将多余常数项移出括号时忘记乘以括号外的系数 $a$。",
+        "套用对称轴公式 $x=-\\frac{b}{2a}$ 时漏掉负号。"
+      ],
+      "exampleQuestionId": "ch26_2_3_1",
+      "exampleStepMapping": [
+        {
+          "step": 1,
+          "title": "对应步骤 1（提取前两项的二次项系数 $a$）",
+          "detail": "将 $ax^2+bx$ 提出公因式 $a$，常数项 $c$ 留在括号外。"
+        },
+        {
+          "step": 2,
+          "title": "对应步骤 2（括号内加减一次项系数一半的平方）",
+          "detail": "配成完全平方式，将多余常数项乘以 $a$ 移出括号并与 $c$ 合并。"
+        },
+        {
+          "step": 3,
+          "title": "对应步骤 3（读出对称轴、顶点坐标及与 $y$ 轴交点）",
+          "detail": "对称轴 $x=-\\frac{b}{2a}$，顶点 $(-\\frac{b}{2a}, \\frac{4ac-b^2}{4a})$，与 $y$ 轴交点 $(0,c)$。"
+        }
+      ],
+      "graphNodeId": "cnm_232",
+      "status": "published"
+    },
+    {
+      "id": "P72",
+      "name": "由抛物线图象判断系数 $a,b,c$ 及相关代数式符号",
+      "grade": "九年级",
+      "subject": "数学",
+      "chapterGroup": "第二十六章 二次函数",
+      "chapter": "26.2.3 二次函数y=ax²+bx+c的图象和性质",
+      "description": "根据开口方向定 $a$、对称轴位置“左同右异”定 $b$、$y$ 轴截距定 $c$、与 $x$ 轴交点数定 $\\Delta$，并通过代入特殊点 $x=\\pm 1, \\pm 2$ 判定 $a\\pm b+c$、$2a\\pm b$ 等组合式符号。",
+      "purpose": "掌握数形结合法，由抛物线草图快速判断系数及衍生代数式正负。",
+      "applicability": [
+        "根据开口方向定 $a$、对称轴位置“左同右异”定 $b$、$y$ 轴截距定 $c$、与 $x$ 轴交点数定 $\\Delta$，并通过代入特殊点 $x=\\pm 1, \\pm 2$ 判定 $a\\pm b+c$、$2a\\pm b$ 等组合式符号。"
+      ],
+      "conditions": [
+        "掌握数形结合法，由抛物线草图快速判断系数及衍生代数式正负。"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "定基本三系数 $a, b, c$ 符号",
+          "description": "开口向上 $a\\gt 0$、向下 $a\\lt 0$；对称轴在 $y$ 轴左侧 $a,b$ 同号、右侧异号；$y$ 轴正半轴交点 $c\\gt 0$。",
+          "formula": "开口定 $a$、左同右异定 $b$、截距定 $c$",
+          "example": ""
+        },
+        {
+          "step": 2,
+          "title": "由对称轴位置判断 $2a \\pm b$ 符号",
+          "description": "利用 $-\\frac{b}{2a}$ 与 $1$ 或 $-1$ 比较，去分母（注意 $a$ 的正负）得 $2a\\pm b$ 符号。",
+          "formula": "$-\\frac{b}{2a}=1 \\iff 2a+b=0$",
+          "example": ""
+        },
+        {
+          "step": 3,
+          "title": "代入特殊自变量判 $a\\pm b+c$ 等组合式",
+          "description": "看 $x=1$ 处纵坐标定 $a+b+c$，$x=-1$ 处定 $a-b+c$，$x=2$ 处定 $4a+2b+c$。",
+          "formula": "$y(1)=a+b+c$，$y(-1)=a-b+c$",
+          "example": ""
+        }
+      ],
+      "procedure": [
+        {
+          "step": 1,
+          "action": "定基本三系数 $a, b, c$ 符号",
+          "detail": "开口向上 $a\\gt 0$、向下 $a\\lt 0$；对称轴在 $y$ 轴左侧 $a,b$ 同号、右侧异号；$y$ 轴正半轴交点 $c\\gt 0$。"
+        },
+        {
+          "step": 2,
+          "action": "由对称轴位置判断 $2a \\pm b$ 符号",
+          "detail": "利用 $-\\frac{b}{2a}$ 与 $1$ 或 $-1$ 比较，去分母（注意 $a$ 的正负）得 $2a\\pm b$ 符号。"
+        },
+        {
+          "step": 3,
+          "action": "代入特殊自变量判 $a\\pm b+c$ 等组合式",
+          "detail": "看 $x=1$ 处纵坐标定 $a+b+c$，$x=-1$ 处定 $a-b+c$，$x=2$ 处定 $4a+2b+c$。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P71",
+          "name": "用配方法或公式法化一般式为顶点式求顶点与对称轴",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P71"
+      ],
+      "subsequentProcedureIds": [],
+      "relatedProcedureIds": [
+        "P71",
+        "P75"
+      ],
+      "pitfalls": [
+        "由 $-\\frac{b}{2a} \\lt 1$ 两边同乘 $2a$ 时，若 $a \\lt 0$ 忘记改变不等号方向。",
+        "用对称性消元求 $3a+c$ 时漏掉 $b=-2a$ 的代换。"
+      ],
+      "exampleQuestionId": "ch26_2_3_4",
+      "exampleStepMapping": [
+        {
+          "step": 1,
+          "title": "对应步骤 1（定基本三系数 $a, b, c$ 符号）",
+          "detail": "开口向上 $a\\gt 0$、向下 $a\\lt 0$；对称轴在 $y$ 轴左侧 $a,b$ 同号、右侧异号；$y$ 轴正半轴交点 $c\\gt 0$。"
+        },
+        {
+          "step": 2,
+          "title": "对应步骤 2（由对称轴位置判断 $2a \\pm b$ 符号）",
+          "detail": "利用 $-\\frac{b}{2a}$ 与 $1$ 或 $-1$ 比较，去分母（注意 $a$ 的正负）得 $2a\\pm b$ 符号。"
+        },
+        {
+          "step": 3,
+          "title": "对应步骤 3（代入特殊自变量判 $a\\pm b+c$ 等组合式）",
+          "detail": "看 $x=1$ 处纵坐标定 $a+b+c$，$x=-1$ 处定 $a-b+c$，$x=2$ 处定 $4a+2b+c$。"
+        }
+      ],
+      "graphNodeId": "cnm_232",
+      "status": "published"
+    },
+    {
+      "id": "P73",
+      "name": "求二次函数在全体实数或给定闭区间上的最值",
+      "grade": "九年级",
+      "subject": "数学",
+      "chapterGroup": "第二十六章 二次函数",
+      "chapter": "26.2.3 二次函数y=ax²+bx+c的图象和性质",
+      "description": "先化一般式为顶点式确定开口方向与对称轴 $x=h$，再判断 $h$ 是否落在给定区间 $[m,n]$ 内：在区间内则顶点取一端最值、较远端点取另一端；不在区间内则由单调性在两端点分别取最值。",
+      "purpose": "规范解决二次函数闭区间值域与最值问题，为实际应用最值优化打下基础。",
+      "applicability": [
+        "先化一般式为顶点式确定开口方向与对称轴 $x=h$，再判断 $h$ 是否落在给定区间 $[m,n]$ 内：在区间内则顶点取一端最值、较远端点取另一端；不在区间内则由单调性在两端点分别取最值。"
+      ],
+      "conditions": [
+        "规范解决二次函数闭区间值域与最值问题，为实际应用最值优化打下基础。"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "化顶点式定开口与对称轴 $x=h$",
+          "description": "配方或公式法求出对称轴 $x=h$ 与顶点纵坐标 $k$。",
+          "formula": "$y = a(x-h)^2 + k$",
+          "example": ""
+        },
+        {
+          "step": 2,
+          "title": "判断对称轴 $x=h$ 是否在给定区间内",
+          "description": "比较 $h$ 与区间 $[m,n]$ 的位置关系（区间内 vs 区间外）。",
+          "formula": "检验 $m \\le h \\le n$ 是否成立",
+          "example": ""
+        },
+        {
+          "step": 3,
+          "title": "结合开口与距离对称轴远近算最值",
+          "description": "若 $h\\in[m,n]$，顶点取其一，离 $h$ 更远的端点取另一最值；若 $h\\notin[m,n]$，单调取两端点。",
+          "formula": "比较 $|m-h|$ 与 $|n-h|$ 写值域",
+          "example": ""
+        }
+      ],
+      "procedure": [
+        {
+          "step": 1,
+          "action": "化顶点式定开口与对称轴 $x=h$",
+          "detail": "配方或公式法求出对称轴 $x=h$ 与顶点纵坐标 $k$。"
+        },
+        {
+          "step": 2,
+          "action": "判断对称轴 $x=h$ 是否在给定区间内",
+          "detail": "比较 $h$ 与区间 $[m,n]$ 的位置关系（区间内 vs 区间外）。"
+        },
+        {
+          "step": 3,
+          "action": "结合开口与距离对称轴远近算最值",
+          "detail": "若 $h\\in[m,n]$，顶点取其一，离 $h$ 更远的端点取另一最值；若 $h\\notin[m,n]$，单调取两端点。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P71",
+          "name": "用配方法或公式法化一般式为顶点式求顶点与对称轴",
+          "type": "procedural_knowledge"
+        },
+        {
+          "id": "P03",
+          "name": "用配方法求二次三项式的最值与定号",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P71",
+        "P03"
+      ],
+      "subsequentProcedureIds": [
+        "P78",
+        "P79"
+      ],
+      "relatedProcedureIds": [
+        "P03",
+        "P71",
+        "P78",
+        "P79"
+      ],
+      "pitfalls": [
+        "忽略给定自变量区间限制，直接把顶点纵坐标当作区间最值。",
+        "取最大/最小值时只算了区间端点，忘记比较顶点是否落在区间内。"
+      ],
+      "exampleQuestionId": "ch26_2_3_11",
+      "exampleStepMapping": [
+        {
+          "step": 1,
+          "title": "对应步骤 1（化顶点式定开口与对称轴 $x=h$）",
+          "detail": "配方或公式法求出对称轴 $x=h$ 与顶点纵坐标 $k$。"
+        },
+        {
+          "step": 2,
+          "title": "对应步骤 2（判断对称轴 $x=h$ 是否在给定区间内）",
+          "detail": "比较 $h$ 与区间 $[m,n]$ 的位置关系（区间内 vs 区间外）。"
+        },
+        {
+          "step": 3,
+          "title": "对应步骤 3（结合开口与距离对称轴远近算最值）",
+          "detail": "若 $h\\in[m,n]$，顶点取其一，离 $h$ 更远的端点取另一最值；若 $h\\notin[m,n]$，单调取两端点。"
+        }
+      ],
+      "graphNodeId": "cnm_235",
+      "status": "published"
+    },
+    {
+      "id": "P74",
+      "name": "用待定系数法求二次函数解析式（一般式/顶点式/交点式）",
+      "grade": "九年级",
+      "subject": "数学",
+      "chapterGroup": "第二十六章 二次函数",
+      "chapter": "26.2.4 待定系数法求二次函数解析式",
+      "description": "根据题干给定条件灵活选择最简解析式：已知三点设一般式、已知顶点或对称轴与最值设顶点式、已知 $x$ 轴两交点设交点式，代入剩余点解出待定系数。",
+      "purpose": "根据条件特征优选三类标准解析式，高效准确求出二次函数表达式。",
+      "applicability": [
+        "根据题干给定条件灵活选择最简解析式：已知三点设一般式、已知顶点或对称轴与最值设顶点式、已知 $x$ 轴两交点设交点式，代入剩余点解出待定系数。"
+      ],
+      "conditions": [
+        "根据条件特征优选三类标准解析式，高效准确求出二次函数表达式。"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "根据已知条件优选设式",
+          "description": "三点设 $y=ax^2+bx+c$；顶点 $(h,k)$ 设 $y=a(x-h)^2+k$；$x$ 轴交点 $(x_1,0),(x_2,0)$ 设 $y=a(x-x_1)(x-x_2)$。",
+          "formula": "优选：顶点式 / 交点式 / 一般式",
+          "example": ""
+        },
+        {
+          "step": 2,
+          "title": "代入已知点坐标列方程（组）",
+          "description": "把其余点坐标代入所设解析式，解出系数 $a$（或 $a,b,c$）。",
+          "formula": "解一元一次或三元一次方程组",
+          "example": ""
+        },
+        {
+          "step": 3,
+          "title": "回代写出完整解析式并按要求化简",
+          "description": "将求得的系数回代，必要时展开为一般式并验证已知点。",
+          "formula": "回代定式并检验",
+          "example": ""
+        }
+      ],
+      "procedure": [
+        {
+          "step": 1,
+          "action": "根据已知条件优选设式",
+          "detail": "三点设 $y=ax^2+bx+c$；顶点 $(h,k)$ 设 $y=a(x-h)^2+k$；$x$ 轴交点 $(x_1,0),(x_2,0)$ 设 $y=a(x-x_1)(x-x_2)$。"
+        },
+        {
+          "step": 2,
+          "action": "代入已知点坐标列方程（组）",
+          "detail": "把其余点坐标代入所设解析式，解出系数 $a$（或 $a,b,c$）。"
+        },
+        {
+          "step": 3,
+          "action": "回代写出完整解析式并按要求化简",
+          "detail": "将求得的系数回代，必要时展开为一般式并验证已知点。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P71",
+          "name": "用配方法或公式法化一般式为顶点式求顶点与对称轴",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P71"
+      ],
+      "subsequentProcedureIds": [
+        "P77",
+        "P80"
+      ],
+      "relatedProcedureIds": [
+        "P71",
+        "P77",
+        "P80"
+      ],
+      "pitfalls": [
+        "已知顶点或 $x$ 轴交点时仍硬设一般式，导致计算冗长易错。",
+        "设交点式 $y=a(x-x_1)(x-x_2)$ 时忘记写系数 $a$。"
+      ],
+      "exampleQuestionId": "ch26_test_q22",
+      "exampleStepMapping": [
+        {
+          "step": 1,
+          "title": "对应步骤 1（根据已知条件优选设式）",
+          "detail": "三点设 $y=ax^2+bx+c$；顶点 $(h,k)$ 设 $y=a(x-h)^2+k$；$x$ 轴交点 $(x_1,0),(x_2,0)$ 设 $y=a(x-x_1)(x-x_2)$。"
+        },
+        {
+          "step": 2,
+          "title": "对应步骤 2（代入已知点坐标列方程（组））",
+          "detail": "把其余点坐标代入所设解析式，解出系数 $a$（或 $a,b,c$）。"
+        },
+        {
+          "step": 3,
+          "title": "对应步骤 3（回代写出完整解析式并按要求化简）",
+          "detail": "将求得的系数回代，必要时展开为一般式并验证已知点。"
+        }
+      ],
+      "graphNodeId": "cnm_233",
+      "status": "published"
+    },
+    {
+      "id": "P75",
+      "name": "利用判别式 $\\Delta$ 判断抛物线与 $x$ 轴交点个数及求交点",
+      "grade": "九年级",
+      "subject": "数学",
+      "chapterGroup": "第二十六章 二次函数",
+      "chapter": "26.3 二次函数与一元二次方程（第1课时）",
+      "description": "令 $y=0$ 将抛物线与 $x$ 轴交点问题转化为一元二次方程 $ax^2+bx+c=0$，用判别式 $\\Delta=b^2-4ac$ 判断交点个数（或求参数），解方程或利用对称轴求交点坐标与两交点间距。",
+      "purpose": "建立二次函数与一元二次方程根的对应关系，解决交点个数、交点坐标与弦长计算。",
+      "applicability": [
+        "令 $y=0$ 将抛物线与 $x$ 轴交点问题转化为一元二次方程 $ax^2+bx+c=0$，用判别式 $\\Delta=b^2-4ac$ 判断交点个数（或求参数），解方程或利用对称轴求交点坐标与两交点间距。"
+      ],
+      "conditions": [
+        "建立二次函数与一元二次方程根的对应关系，解决交点个数、交点坐标与弦长计算。"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "令 $y=0$ 转化为一元二次方程",
+          "description": "将抛物线与 $x$ 轴交点横坐标转化为方程 $ax^2+bx+c=0$ 的实数根。",
+          "formula": "$y=0 \\iff ax^2+bx+c=0$",
+          "example": ""
+        },
+        {
+          "step": 2,
+          "title": "计算判别式 $\\Delta$ 判交点个数（或求参）",
+          "description": "$\\Delta\\gt 0$ 两交点、$\\Delta=0$ 一交点、$\\Delta\\lt 0$ 无交点（注意若含参需分类讨论 $a=0$ 的一次函数情形）。",
+          "formula": "$\\Delta = b^2 - 4ac$",
+          "example": ""
+        },
+        {
+          "step": 3,
+          "title": "解方程或利用对称轴求交点坐标与间距",
+          "description": "解方程得 $x_1, x_2$，交点为 $(x_1,0),(x_2,0)$，间距 $AB = |x_2 - x_1|$。",
+          "formula": "$AB = |x_2 - x_1|$",
+          "example": ""
+        }
+      ],
+      "procedure": [
+        {
+          "step": 1,
+          "action": "令 $y=0$ 转化为一元二次方程",
+          "detail": "将抛物线与 $x$ 轴交点横坐标转化为方程 $ax^2+bx+c=0$ 的实数根。"
+        },
+        {
+          "step": 2,
+          "action": "计算判别式 $\\Delta$ 判交点个数（或求参）",
+          "detail": "$\\Delta\\gt 0$ 两交点、$\\Delta=0$ 一交点、$\\Delta\\lt 0$ 无交点（注意若含参需分类讨论 $a=0$ 的一次函数情形）。"
+        },
+        {
+          "step": 3,
+          "action": "解方程或利用对称轴求交点坐标与间距",
+          "detail": "解方程得 $x_1, x_2$，交点为 $(x_1,0),(x_2,0)$，间距 $AB = |x_2 - x_1|$。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P71",
+          "name": "用配方法或公式法化一般式为顶点式求顶点与对称轴",
+          "type": "procedural_knowledge"
+        },
+        {
+          "id": "P16",
+          "name": "用一元二次方程根的判别式判断根的情况与求参数",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P71",
+        "P16"
+      ],
+      "subsequentProcedureIds": [
+        "P76",
+        "P77",
+        "P80"
+      ],
+      "relatedProcedureIds": [
+        "P16",
+        "P76",
+        "P77"
+      ],
+      "pitfalls": [
+        "题目说“函数 $y=(a+2)x^2+4x-4$ 与 $x$ 轴只有一个交点”时，漏掉 $a+2=0$（一次函数）这一情形。",
+        "证明恒有交点时忘记把 $\\Delta$ 配方成完全平方加非负数。"
+      ],
+      "exampleQuestionId": "ch26_3_1_11",
+      "exampleStepMapping": [
+        {
+          "step": 1,
+          "title": "对应步骤 1（令 $y=0$ 转化为一元二次方程）",
+          "detail": "将抛物线与 $x$ 轴交点横坐标转化为方程 $ax^2+bx+c=0$ 的实数根。"
+        },
+        {
+          "step": 2,
+          "title": "对应步骤 2（计算判别式 $\\Delta$ 判交点个数（或求参））",
+          "detail": "$\\Delta\\gt 0$ 两交点、$\\Delta=0$ 一交点、$\\Delta\\lt 0$ 无交点（注意若含参需分类讨论 $a=0$ 的一次函数情形）。"
+        },
+        {
+          "step": 3,
+          "title": "对应步骤 3（解方程或利用对称轴求交点坐标与间距）",
+          "detail": "解方程得 $x_1, x_2$，交点为 $(x_1,0),(x_2,0)$，间距 $AB = |x_2 - x_1|$。"
+        }
+      ],
+      "graphNodeId": "cnm_234",
+      "status": "published"
+    },
+    {
+      "id": "P76",
+      "name": "利用抛物线图象与表格求方程近似根及不等式解集",
+      "grade": "九年级",
+      "subject": "数学",
+      "chapterGroup": "第二十六章 二次函数",
+      "chapter": "26.3 二次函数与一元二次方程（第2课时）",
+      "description": "在对应数值表中寻找相邻异号的函数值确定方程近似根区间；在图象中以交点横坐标为分界，按“上方大于、下方小于”直接写出二次不等式或两函数比较不等式的解集。",
+      "purpose": "掌握表格异号定近似根与数形结合解二次不等式两项核心操作。",
+      "applicability": [
+        "在对应数值表中寻找相邻异号的函数值确定方程近似根区间；在图象中以交点横坐标为分界，按“上方大于、下方小于”直接写出二次不等式或两函数比较不等式的解集。"
+      ],
+      "conditions": [
+        "掌握表格异号定近似根与数形结合解二次不等式两项核心操作。"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "表格估根：寻找相邻函数值异号区间",
+          "description": "扫描表格中 $y$ 由负变正（或由正变负）的相邻两列，根必在两 $x$ 之间，更靠近 $|y|$ 更小的一侧。",
+          "formula": "$y(x_1) \\cdot y(x_2) \\lt 0 \\implies x_1 \\lt x_0 \\lt x_2$",
+          "example": ""
+        },
+        {
+          "step": 2,
+          "title": "图象解不等式：标出交点横坐标",
+          "description": "找出抛物线与 $x$ 轴（或直线 $y=mx+n$）的两个交点横坐标 $x_1, x_2$。",
+          "formula": "交点横坐标划分三个区间",
+          "example": ""
+        },
+        {
+          "step": 3,
+          "title": "按上下位置写出解集",
+          "description": "求 $y_2 \\gt y_1$ 取抛物线在直线上方的区间；求 $y_2 \\lt y_1$ 取在下方区间，核对等号。",
+          "formula": "上大下小，直接写解集",
+          "example": ""
+        }
+      ],
+      "procedure": [
+        {
+          "step": 1,
+          "action": "表格估根：寻找相邻函数值异号区间",
+          "detail": "扫描表格中 $y$ 由负变正（或由正变负）的相邻两列，根必在两 $x$ 之间，更靠近 $|y|$ 更小的一侧。"
+        },
+        {
+          "step": 2,
+          "action": "图象解不等式：标出交点横坐标",
+          "detail": "找出抛物线与 $x$ 轴（或直线 $y=mx+n$）的两个交点横坐标 $x_1, x_2$。"
+        },
+        {
+          "step": 3,
+          "action": "按上下位置写出解集",
+          "detail": "求 $y_2 \\gt y_1$ 取抛物线在直线上方的区间；求 $y_2 \\lt y_1$ 取在下方区间，核对等号。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P75",
+          "name": "利用判别式 $\\Delta$ 判断抛物线与 $x$ 轴交点个数及求交点",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P75"
+      ],
+      "subsequentProcedureIds": [],
+      "relatedProcedureIds": [
+        "P75",
+        "P77"
+      ],
+      "pitfalls": [
+        "表格估根时只看 $y$ 的绝对值大小而忽略是否真正跨过 $0$（异号）。",
+        "不等式变形 $ax^2+(b-m)x+c-n \\ge 0$ 时移项符号出错。"
+      ],
+      "exampleQuestionId": "ch26_3_2_5",
+      "exampleStepMapping": [
+        {
+          "step": 1,
+          "title": "对应步骤 1（表格估根：寻找相邻函数值异号区间）",
+          "detail": "扫描表格中 $y$ 由负变正（或由正变负）的相邻两列，根必在两 $x$ 之间，更靠近 $|y|$ 更小的一侧。"
+        },
+        {
+          "step": 2,
+          "title": "对应步骤 2（图象解不等式：标出交点横坐标）",
+          "detail": "找出抛物线与 $x$ 轴（或直线 $y=mx+n$）的两个交点横坐标 $x_1, x_2$。"
+        },
+        {
+          "step": 3,
+          "title": "对应步骤 3（按上下位置写出解集）",
+          "detail": "求 $y_2 \\gt y_1$ 取抛物线在直线上方的区间；求 $y_2 \\lt y_1$ 取在下方区间，核对等号。"
+        }
+      ],
+      "graphNodeId": "cnm_234",
+      "status": "published"
+    },
+    {
+      "id": "P77",
+      "name": "二次函数与一次函数/几何综合（交点、面积与存在性）",
+      "grade": "九年级",
+      "subject": "数学",
+      "chapterGroup": "第二十六章 二次函数",
+      "chapter": "26.3 二次函数与一元二次方程（第2课时）",
+      "description": "联立抛物线与直线求交点坐标，运用铅垂高水平宽法 $S=\\frac{1}{2}\\cdot\\text{水平宽}\\cdot\\text{铅垂高}$ 求三角形面积或面积最值，结合对称轴解决周长最小（将军饮马）与特殊图形存在性问题。",
+      "purpose": "掌握二次函数压轴几何综合中的交点联立、铅垂割补面积与对称最值通法。",
+      "applicability": [
+        "联立抛物线与直线求交点坐标，运用铅垂高水平宽法 $S=\\frac{1}{2}\\cdot\\text{水平宽}\\cdot\\text{铅垂高}$ 求三角形面积或面积最值，结合对称轴解决周长最小（将军饮马）与特殊图形存在性问题。"
+      ],
+      "conditions": [
+        "掌握二次函数压轴几何综合中的交点联立、铅垂割补面积与对称最值通法。"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "求抛物线与直线解析式并联立求交点",
+          "description": "先定两函数解析式，联立 $ax^2+bx+c=kx+m$ 解出交点 $M,N$ 坐标。",
+          "formula": "联立方程定交点坐标",
+          "example": ""
+        },
+        {
+          "step": 2,
+          "title": "作铅垂线表示三角形面积（或作对称点求最值）",
+          "description": "过动点作 $y$ 轴平行线交直线于 $Q$，用 $S=\\frac{1}{2}|x_B-x_A|\\cdot PQ$ 建立面积关于 $t$ 的二次函数；周长最值则在对称轴上连接对称点。",
+          "formula": "$S = \\frac{1}{2} \\times \\text{水平宽} \\times \\text{铅垂高}$",
+          "example": ""
+        },
+        {
+          "step": 3,
+          "title": "解方程或配方求最值并检验范围",
+          "description": "求出动点坐标或最大面积，检验动点是否落在题目限定区间内。",
+          "formula": "检验 $t$ 在限定区间内",
+          "example": ""
+        }
+      ],
+      "procedure": [
+        {
+          "step": 1,
+          "action": "求抛物线与直线解析式并联立求交点",
+          "detail": "先定两函数解析式，联立 $ax^2+bx+c=kx+m$ 解出交点 $M,N$ 坐标。"
+        },
+        {
+          "step": 2,
+          "action": "作铅垂线表示三角形面积（或作对称点求最值）",
+          "detail": "过动点作 $y$ 轴平行线交直线于 $Q$，用 $S=\\frac{1}{2}|x_B-x_A|\\cdot PQ$ 建立面积关于 $t$ 的二次函数；周长最值则在对称轴上连接对称点。"
+        },
+        {
+          "step": 3,
+          "action": "解方程或配方求最值并检验范围",
+          "detail": "求出动点坐标或最大面积，检验动点是否落在题目限定区间内。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P74",
+          "name": "用待定系数法求二次函数解析式（一般式/顶点式/交点式）",
+          "type": "procedural_knowledge"
+        },
+        {
+          "id": "P75",
+          "name": "利用判别式 $\\Delta$ 判断抛物线与 $x$ 轴交点个数及求交点",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P74",
+        "P75"
+      ],
+      "subsequentProcedureIds": [],
+      "relatedProcedureIds": [
+        "P74",
+        "P75",
+        "P76"
+      ],
+      "pitfalls": [
+        "用铅垂高表示线段 $PQ$ 时，未区分抛物线在直线上方还是下方导致相减顺序写反。",
+        "存在性问题漏掉多解分类讨论。"
+      ],
+      "exampleQuestionId": "g9_wy_mid_22",
+      "exampleStepMapping": [
+        {
+          "step": 1,
+          "title": "对应步骤 1（求抛物线与直线解析式并联立求交点）",
+          "detail": "先定两函数解析式，联立 $ax^2+bx+c=kx+m$ 解出交点 $M,N$ 坐标。"
+        },
+        {
+          "step": 2,
+          "title": "对应步骤 2（作铅垂线表示三角形面积（或作对称点求最值））",
+          "detail": "过动点作 $y$ 轴平行线交直线于 $Q$，用 $S=\\frac{1}{2}|x_B-x_A|\\cdot PQ$ 建立面积关于 $t$ 的二次函数；周长最值则在对称轴上连接对称点。"
+        },
+        {
+          "step": 3,
+          "title": "对应步骤 3（解方程或配方求最值并检验范围）",
+          "detail": "求出动点坐标或最大面积，检验动点是否落在题目限定区间内。"
+        }
+      ],
+      "graphNodeId": "cnm_234",
+      "status": "published"
+    },
+    {
+      "id": "P78",
+      "name": "建立二次函数模型求解几何图形面积最值问题",
+      "grade": "九年级",
+      "subject": "数学",
+      "chapterGroup": "第二十六章 二次函数",
+      "chapter": "26.4 实际问题与二次函数（第1课时）",
+      "description": "在围墙矩形、窗框、道路绿地或动点三角形面积问题中，设关键边长或运动时间为自变量 $x$，用含 $x$ 的代数式表示另一边并建立面积二次函数，结合自变量范围求最大（小）面积。",
+      "purpose": "掌握几何图形周长定值/动点面积类问题的二次函数建模与区间最值求解。",
+      "applicability": [
+        "在围墙矩形、窗框、道路绿地或动点三角形面积问题中，设关键边长或运动时间为自变量 $x$，用含 $x$ 的代数式表示另一边并建立面积二次函数，结合自变量范围求最大（小）面积。"
+      ],
+      "conditions": [
+        "掌握几何图形周长定值/动点面积类问题的二次函数建模与区间最值求解。"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "设关键边长或时间为 $x$，表示关联边长",
+          "description": "根据周长、总料长或动点速度公式，用 $x$ 表示矩形长宽或三角形底高，并写出 $x$ 的实际范围。",
+          "formula": "如窗框 4 条宽为 $x$，则长为 $\\frac{72-4x}{2}=36-2x$",
+          "example": ""
+        },
+        {
+          "step": 2,
+          "title": "列出面积二次函数表达式",
+          "description": "代入面积公式并整理为一般式 $S=ax^2+bx+c$。",
+          "formula": "$S = x(36 - 2x) = -2x^2 + 36x$",
+          "example": ""
+        },
+        {
+          "step": 3,
+          "title": "配方求最值并核对自变量范围",
+          "description": "化顶点式求最值，检验顶点横坐标是否落在自变量允许范围内再作答。",
+          "formula": "$S = -2(x-9)^2 + 162$（$9\\in(0,18)$）",
+          "example": ""
+        }
+      ],
+      "procedure": [
+        {
+          "step": 1,
+          "action": "设关键边长或时间为 $x$，表示关联边长",
+          "detail": "根据周长、总料长或动点速度公式，用 $x$ 表示矩形长宽或三角形底高，并写出 $x$ 的实际范围。"
+        },
+        {
+          "step": 2,
+          "action": "列出面积二次函数表达式",
+          "detail": "代入面积公式并整理为一般式 $S=ax^2+bx+c$。"
+        },
+        {
+          "step": 3,
+          "action": "配方求最值并核对自变量范围",
+          "detail": "化顶点式求最值，检验顶点横坐标是否落在自变量允许范围内再作答。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P73",
+          "name": "求二次函数在全体实数或给定闭区间上的最值",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P73"
+      ],
+      "subsequentProcedureIds": [],
+      "relatedProcedureIds": [
+        "P73",
+        "P79"
+      ],
+      "pitfalls": [
+        "数窗框或围墙栅栏条数时漏数中间横档或误算靠墙边。",
+        "忽略墙长限制导致顶点横坐标超出自变量范围却直接取顶点。"
+      ],
+      "exampleQuestionId": "ch26_4_1_10",
+      "exampleStepMapping": [
+        {
+          "step": 1,
+          "title": "对应步骤 1（设关键边长或时间为 $x$，表示关联边长）",
+          "detail": "根据周长、总料长或动点速度公式，用 $x$ 表示矩形长宽或三角形底高，并写出 $x$ 的实际范围。"
+        },
+        {
+          "step": 2,
+          "title": "对应步骤 2（列出面积二次函数表达式）",
+          "detail": "代入面积公式并整理为一般式 $S=ax^2+bx+c$。"
+        },
+        {
+          "step": 3,
+          "title": "对应步骤 3（配方求最值并核对自变量范围）",
+          "detail": "化顶点式求最值，检验顶点横坐标是否落在自变量允许范围内再作答。"
+        }
+      ],
+      "graphNodeId": "cnm_236",
+      "status": "published"
+    },
+    {
+      "id": "P79",
+      "name": "建立二次函数模型求解销售利润最值问题",
+      "grade": "九年级",
+      "subject": "数学",
+      "chapterGroup": "第二十六章 二次函数",
+      "chapter": "26.4 实际问题与二次函数（第2课时）",
+      "description": "依据“总利润 $=$ 单件利润 $\\times$ 销售量”建立二次函数，根据涨价/降价幅度或利润上下限列出自变量取值范围，再用顶点式或单调性求最大利润与最优定价。",
+      "purpose": "熟练完成单件利润、销量线性变化与限价约束下的利润最大化求解。",
+      "applicability": [
+        "依据“总利润 $=$ 单件利润 $\\times$ 销售量”建立二次函数，根据涨价/降价幅度或利润上下限列出自变量取值范围，再用顶点式或单调性求最大利润与最优定价。"
+      ],
+      "conditions": [
+        "熟练完成单件利润、销量线性变化与限价约束下的利润最大化求解。"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "表示单件利润与销售量",
+          "description": "设调价 $x$ 元（或售价 $x$ 元），写出单件利润（售价 $-$ 进价）与对应销售量（原销量 $\\pm$ 变化量）。",
+          "formula": "总利润 $w = (\\text{单件利润}) \\times (\\text{销量})$",
+          "example": ""
+        },
+        {
+          "step": 2,
+          "title": "整理为二次函数并确定自变量范围",
+          "description": "展开为 $w=ax^2+bx+c$，结合“不亏本”“限价”“让利”“销量非负”写出 $x$ 区间。",
+          "formula": "结合限价条件解出 $x$ 范围",
+          "example": ""
+        },
+        {
+          "step": 3,
+          "title": "配方求最大利润并还原定价",
+          "description": "判断对称轴是否在允许范围内（或取最近整数），算出最大利润并换算为最终售价。",
+          "formula": "注意问的是“降价多少”还是“售价多少”",
+          "example": ""
+        }
+      ],
+      "procedure": [
+        {
+          "step": 1,
+          "action": "表示单件利润与销售量",
+          "detail": "设调价 $x$ 元（或售价 $x$ 元），写出单件利润（售价 $-$ 进价）与对应销售量（原销量 $\\pm$ 变化量）。"
+        },
+        {
+          "step": 2,
+          "action": "整理为二次函数并确定自变量范围",
+          "detail": "展开为 $w=ax^2+bx+c$，结合“不亏本”“限价”“让利”“销量非负”写出 $x$ 区间。"
+        },
+        {
+          "step": 3,
+          "action": "配方求最大利润并还原定价",
+          "detail": "判断对称轴是否在允许范围内（或取最近整数），算出最大利润并换算为最终售价。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P73",
+          "name": "求二次函数在全体实数或给定闭区间上的最值",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P73"
+      ],
+      "subsequentProcedureIds": [],
+      "relatedProcedureIds": [
+        "P73",
+        "P78"
+      ],
+      "pitfalls": [
+        "求出调价幅度 $x$ 后直接当作最终售价作答。",
+        "忽略“售价不高于某值”或“单件利润不低于某值”的区间约束。"
+      ],
+      "exampleQuestionId": "ch26_4_2_15",
+      "exampleStepMapping": [
+        {
+          "step": 1,
+          "title": "对应步骤 1（表示单件利润与销售量）",
+          "detail": "设调价 $x$ 元（或售价 $x$ 元），写出单件利润（售价 $-$ 进价）与对应销售量（原销量 $\\pm$ 变化量）。"
+        },
+        {
+          "step": 2,
+          "title": "对应步骤 2（整理为二次函数并确定自变量范围）",
+          "detail": "展开为 $w=ax^2+bx+c$，结合“不亏本”“限价”“让利”“销量非负”写出 $x$ 区间。"
+        },
+        {
+          "step": 3,
+          "title": "对应步骤 3（配方求最大利润并还原定价）",
+          "detail": "判断对称轴是否在允许范围内（或取最近整数），算出最大利润并换算为最终售价。"
+        }
+      ],
+      "graphNodeId": "cnm_236",
+      "status": "published"
+    },
+    {
+      "id": "P80",
+      "name": "建立平面直角坐标系求解抛物线形实际问题",
+      "grade": "九年级",
+      "subject": "数学",
+      "chapterGroup": "第二十六章 二次函数",
+      "chapter": "26.4 实际问题与二次函数（第3课时）",
+      "description": "针对拱桥、隧道、喷泉、投篮、跳绳等抛物线形实物，选择对称轴或顶点为坐标原点建立坐标系，写出关键点坐标求出抛物线解析式，再代入 $x$ 求高度或代入 $y$ 求跨度并判断通过性。",
+      "purpose": "掌握实物抛物线的合理建系、解析式求解与高度/跨度/通过性决策全流程。",
+      "applicability": [
+        "针对拱桥、隧道、喷泉、投篮、跳绳等抛物线形实物，选择对称轴或顶点为坐标原点建立坐标系，写出关键点坐标求出抛物线解析式，再代入 $x$ 求高度或代入 $y$ 求跨度并判断通过性。"
+      ],
+      "conditions": [
+        "掌握实物抛物线的合理建系、解析式求解与高度/跨度/通过性决策全流程。"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "合理建系并写出关键点坐标",
+          "description": "常以顶点或底边中点（或起跳/出水点）为原点建系，将跨度、拱高转化为顶点或端点坐标。",
+          "formula": "如底边中点为原点：顶点 $(0,h)$，端点 $(\\pm \\frac{L}{2}, 0)$",
+          "example": ""
+        },
+        {
+          "step": 2,
+          "title": "优选设式求抛物线解析式",
+          "description": "优先设顶点式 $y=a(x-h)^2+k$ 或 $y=ax^2+c$，代入已知点求 $a$。",
+          "formula": "代入已知端点求系数 $a$",
+          "example": ""
+        },
+        {
+          "step": 3,
+          "title": "代入目标坐标计算高度/跨度并作决策",
+          "description": "求高度代入 $x$ 算 $y$；求宽度代入 $y$ 解 $x$；判断能否通过则与限高/安全空隙比较。",
+          "formula": "比较计算高度与实际限制",
+          "example": ""
+        }
+      ],
+      "procedure": [
+        {
+          "step": 1,
+          "action": "合理建系并写出关键点坐标",
+          "detail": "常以顶点或底边中点（或起跳/出水点）为原点建系，将跨度、拱高转化为顶点或端点坐标。"
+        },
+        {
+          "step": 2,
+          "action": "优选设式求抛物线解析式",
+          "detail": "优先设顶点式 $y=a(x-h)^2+k$ 或 $y=ax^2+c$，代入已知点求 $a$。"
+        },
+        {
+          "step": 3,
+          "action": "代入目标坐标计算高度/跨度并作决策",
+          "detail": "求高度代入 $x$ 算 $y$；求宽度代入 $y$ 解 $x$；判断能否通过则与限高/安全空隙比较。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P74",
+          "name": "用待定系数法求二次函数解析式（一般式/顶点式/交点式）",
+          "type": "procedural_knowledge"
+        },
+        {
+          "id": "P75",
+          "name": "利用判别式 $\\Delta$ 判断抛物线与 $x$ 轴交点个数及求交点",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P74",
+        "P75"
+      ],
+      "subsequentProcedureIds": [],
+      "relatedProcedureIds": [
+        "P74",
+        "P75",
+        "P78"
+      ],
+      "pitfalls": [
+        "将“跨度 $L$”直接当作横坐标代入（对称建系时横坐标应为 $\\frac{L}{2}$）。",
+        "代入纵坐标求得 $x$ 后忘记乘 $2$ 得全宽，或忘记减去安全空隙。"
+      ],
+      "exampleQuestionId": "ch26_4_3_12",
+      "exampleStepMapping": [
+        {
+          "step": 1,
+          "title": "对应步骤 1（合理建系并写出关键点坐标）",
+          "detail": "常以顶点或底边中点（或起跳/出水点）为原点建系，将跨度、拱高转化为顶点或端点坐标。"
+        },
+        {
+          "step": 2,
+          "title": "对应步骤 2（优选设式求抛物线解析式）",
+          "detail": "优先设顶点式 $y=a(x-h)^2+k$ 或 $y=ax^2+c$，代入已知点求 $a$。"
+        },
+        {
+          "step": 3,
+          "title": "对应步骤 3（代入目标坐标计算高度/跨度并作决策）",
+          "detail": "求高度代入 $x$ 算 $y$；求宽度代入 $y$ 解 $x$；判断能否通过则与限高/安全空隙比较。"
+        }
+      ],
+      "graphNodeId": "cnm_236",
+      "status": "published"
     }
   ];
 

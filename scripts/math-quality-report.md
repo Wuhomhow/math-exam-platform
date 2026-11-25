@@ -16,11 +16,11 @@
 
 | 数据源 | 存储文件 | 公式总数 | 命令种类 | KaTeX 异常 | 备用渲染不足 | Word 转换异常 | 缺失定界符(明确) | 括号/环境错误 | HTML 混排异常 | 字段规范异常 | 疑似未加 `$` (纯文本提示) |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1. 数学题库主数据 | `js/data/questions.js` | 66481 | 72 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| 2. 程序性知识正文 | `js/data/procedural-knowledge.js & question-procedures.js` | 4123 | 43 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 18 |
-| 3. 程序性知识动态演示数据 | `js/data/procedural-dynamic-demos.js` | 5237 | 39 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 1. 数学题库主数据 | `js/data/questions.js` | 68501 | 72 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 2. 程序性知识正文 | `js/data/procedural-knowledge.js & question-procedures.js` | 5248 | 48 | 1 | 1 | 1 | 0 | 0 | 0 | 0 | 18 |
+| 3. 程序性知识动态演示数据 | `js/data/procedural-dynamic-demos.js` | 6837 | 41 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | 4. 数学知识图谱数据 | `js/data/knowledge-nodes.js & knowledge-relations.js & question-knowledge.js` | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| 5. Word 组卷及导出内容 | `js/modules/docx-export.js (window.QUESTION_BANK 导出字段)` | 65663 | 72 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 5. Word 组卷及导出内容 | `js/modules/docx-export.js (window.QUESTION_BANK 导出字段)` | 67683 | 72 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 ## 三、错误与疑似项明细定位
 
@@ -28,6 +28,12 @@
 - **明确错误：0 项**；**疑似项：0 项**。
 
 ### 2. 程序性知识正文 (`js/data/procedural-knowledge.js & question-procedures.js`)
+- **[明确错误 - katexErrors]** 共 1 项：
+  - `2. 程序性知识正文.proceduralKnowledge[56].steps[2].formula`: `x_i \mapsto y_i = \frac{k}{x_i}`
+- **[明确错误 - fallbackErrors]** 共 1 项：
+  - `2. 程序性知识正文.proceduralKnowledge[56].steps[2].formula`: `x_i \mapsto y_i = \frac{k}{x_i}`
+- **[明确错误 - wordOmmlErrors]** 共 1 项：
+  - `2. 程序性知识正文.proceduralKnowledge[56].steps[2].formula`: `x_i \mapsto y_i = \frac{k}{x_i}`
 - **[疑似项（纯文本说明，用于区分非渲染区如 title 属性）]** 共 18 项：
   - `2. 程序性知识正文.questionProcedures[528].operationSummary`: `逐项核对同底数幂乘法（底数不变指数相加），选出结果为 2^(3a) 的算式。`
   - `2. 程序性知识正文.questionProcedures[530].operationSummary`: `由同底数幂乘法得 a^(3n+1)=a⁷，对比指数 3n+1=7 解得 n=2。`

@@ -24,7 +24,7 @@
     return m ? m[1] : raw;
   }
 
-  // 56 个程序性知识与「题目图谱」三级核心考点的精准对齐映射表
+  // 80 个程序性知识与「题目图谱」三级核心考点的精准对齐映射表
   const PROC_TO_GRAPH_NODE_ID = {
     // 七年级
     P54: 'cnm_007', P55: 'cnm_008', P56: 'cnm_008', P33: 'cnm_009',
@@ -40,7 +40,15 @@
     P31: 'cnm_157', P35: 'cnm_160', P36: 'cnm_162',
     // 九年级
     P19: 'cnm_219', P20: 'cnm_219', P01: 'cnm_220', P02: 'cnm_221', P03: 'cnm_221', P16: 'cnm_223', P17: 'cnm_222', P18: 'cnm_224', P21: 'cnm_226',
-    P11: 'cnm_237', P12: 'cnm_240', P13: 'cnm_238', P14: 'cnm_238', P15: 'cnm_241',
+    P67: 'cnm_229', P68: 'cnm_230', P69: 'cnm_231', P70: 'cnm_231',
+    P71: 'cnm_232', P72: 'cnm_232', P73: 'cnm_235', P74: 'cnm_233',
+    P75: 'cnm_234', P76: 'cnm_234', P77: 'cnm_234',
+    P78: 'cnm_236', P79: 'cnm_236', P80: 'cnm_236',
+    P11: 'cnm_237', P58: 'cnm_237', P12: 'cnm_240',
+    P57: 'cnm_238', P13: 'cnm_238', P14: 'cnm_238', P59: 'cnm_238', P60: 'cnm_238',
+    P61: 'cnm_239', P62: 'cnm_239',
+    P15: 'cnm_241', P63: 'cnm_241', P64: 'cnm_241', P65: 'cnm_241',
+    P66: 'cnm_242',
     P52: 'cnm_250', P53: 'cnm_259'
   };
 
@@ -2266,8 +2274,36 @@
         <!-- 区块 2 & 3：默认展开的动态演示白板 + 跟着操作 -->
         <section id="procDemoAnchor" class="scroll-mt-36">
           ${demoData ? this.buildDynamicTeachingModuleHtml(demoData) : `
-            <div class="ui-card p-6 text-center text-xs text-slate-400">
-              当前知识点暂未配置动态演示白板，可直接浏览下方关联题目。
+            <div class="ui-card p-5 space-y-4">
+              <div class="flex items-center justify-between gap-2 pb-2.5 border-b border-slate-100">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded bg-[#0F766E] text-white text-xs font-bold">核心操作步骤</span>
+                  <h3 class="text-sm font-bold text-slate-900">${renderMathText(p.name)}</h3>
+                </div>
+                <span class="text-[11px] text-slate-400">标准程序性操作指引</span>
+              </div>
+              ${Array.isArray(p.steps) && p.steps.length > 0 ? `
+                <ol class="space-y-2.5">
+                  ${p.steps.map(st => `
+                    <li class="p-3 rounded-xl bg-slate-50/80 border border-slate-200/80 space-y-1">
+                      <div class="flex items-center gap-2">
+                        <span class="w-5 h-5 rounded-full bg-[#0F766E] text-white text-[11px] font-bold flex items-center justify-center shrink-0">${escapeHtml(st.step)}</span>
+                        <span class="text-xs sm:text-sm font-bold text-slate-900">${renderMathText(st.title)}</span>
+                      </div>
+                      ${st.description ? `<p class="text-xs text-slate-600 leading-relaxed pl-7">${renderMathText(st.description)}</p>` : ''}
+                      ${st.formula ? `<div class="text-xs text-[#0F766E] font-medium pl-7">${renderMathText(st.formula)}</div>` : ''}
+                    </li>
+                  `).join('')}
+                </ol>
+              ` : ''}
+              ${Array.isArray(p.pitfalls) && p.pitfalls.length > 0 ? `
+                <div class="p-3.5 rounded-xl bg-amber-50/80 border border-amber-200 space-y-1.5">
+                  <div class="text-xs font-bold text-amber-900">教学强调与易错提醒</div>
+                  <ul class="list-disc pl-5 space-y-1 text-xs text-amber-900/90 leading-relaxed">
+                    ${p.pitfalls.map(pf => `<li>${renderMathText(pf)}</li>`).join('')}
+                  </ul>
+                </div>
+              ` : ''}
             </div>
           `}
         </section>

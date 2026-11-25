@@ -12903,6 +12903,6091 @@
           ]
         }
       }
+    },
+    P57: {
+      "procedureId": "P57",
+      "title": "绘制反比例函数图象",
+      "exampleTitle": "由数值表确定反比例函数 $y = \\frac{k}{x}$ 的解析式并规范绘制双曲线图象（以 $k = -6$ 为例）",
+      "exampleFormula": "$y = -\\frac{6}{x}\\ (x \\neq 0)$：二、四象限分两支平滑连线",
+      "totalDuration": 32,
+      "scratchpadIdleHint": "旁白草稿演算区（配合右侧坐标系动态描点连线，强化不过原点、不交坐标轴、不连跨两支）",
+      "practiceSectionTitle": "反比例函数图象绘制规范跟做练习",
+      "practiceSectionSub": "完成以下两道作图规范与列表求值练习",
+      "geometryDiagram": {
+        "title": "动态作图演示 · 列表描点与分两支连线",
+        "caption": "先对称描出二、四象限各点，再分两支平滑连接，两坐标轴为渐近线",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <line x1=\"20\" y1=\"88\" x2=\"240\" y2=\"88\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <line x1=\"130\" y1=\"12\" x2=\"130\" y2=\"164\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <polygon points=\"240,88 233,84 233,92\" fill=\"#64748B\" />\n            <polygon points=\"130,12 126,19 134,19\" fill=\"#64748B\" />\n            <text x=\"234\" y=\"102\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">x</text>\n            <text x=\"137\" y=\"20\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">y</text>\n            <text x=\"118\" y=\"101\" fill=\"#64748B\" font-size=\"10\">O</text>\n            <text x=\"200\" y=\"26\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">一</text>\n            <text x=\"48\" y=\"26\" fill=\"#0F766E\" font-size=\"10\" font-weight=\"600\">二</text>\n            <text x=\"48\" y=\"158\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">三</text>\n            <text x=\"200\" y=\"158\" fill=\"#0F766E\" font-size=\"10\" font-weight=\"600\">四</text>\n            \n            <g class=\"proc-geo-anim\" data-appear-at=\"16.2\" data-dur=\"0.6\" style=\"opacity:0;\">\n              <circle cx=\"85\" cy=\"68\" r=\"3\" fill=\"#D97706\" />\n              <circle cx=\"100\" cy=\"58\" r=\"3\" fill=\"#D97706\" />\n              <circle cx=\"115\" cy=\"36\" r=\"3\" fill=\"#D97706\" />\n              <circle cx=\"145\" cy=\"140\" r=\"3\" fill=\"#D97706\" />\n              <circle cx=\"160\" cy=\"118\" r=\"3\" fill=\"#D97706\" />\n              <circle cx=\"175\" cy=\"108\" r=\"3\" fill=\"#D97706\" />\n            </g>\n            <path class=\"proc-geo-anim\" data-appear-at=\"23.0\" data-dur=\"0.9\" data-dash-len=\"160\"\n                  d=\"M 38 77 Q 98 73 120 18\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2.6\" stroke-linecap=\"round\"\n                  stroke-dasharray=\"160\" stroke-dashoffset=\"160\" style=\"opacity:0;\" />\n            <path class=\"proc-geo-anim\" data-appear-at=\"24.2\" data-dur=\"0.9\" data-dash-len=\"160\"\n                  d=\"M 140 158 Q 162 103 222 99\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2.6\" stroke-linecap=\"round\"\n                  stroke-dasharray=\"160\" stroke-dashoffset=\"160\" style=\"opacity:0;\" />\n            \n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "确认形式并定 $k$",
+          "tStart": 0,
+          "tEnd": 5.5,
+          "explanation": "核对函数为 $y=\\frac{k}{x}\\ (k\\neq 0)$，由已知点 $(3,-2)$ 求得 $k=3\\times(-2)=-6$。"
+        },
+        {
+          "step": 2,
+          "name": "确认定义域 $x \\neq 0$",
+          "tStart": 5.5,
+          "tEnd": 10.5,
+          "explanation": "明确 $x\\neq 0$ 且 $y\\neq 0$，双曲线不经过原点，且两坐标轴是它的渐近线。"
+        },
+        {
+          "step": 3,
+          "name": "对称列表算 $y$ 值",
+          "tStart": 10.5,
+          "tEnd": 16.0,
+          "explanation": "在 $x\\lt 0$ 与 $x\\gt 0$ 两侧对称选取易整除 $-6$ 的自变量并补全表格坐标。"
+        },
+        {
+          "step": 4,
+          "name": "坐标描点",
+          "tStart": 16.0,
+          "tEnd": 21.5,
+          "explanation": "将各组 $(x,y)$ 逐一描在平面直角坐标系内，核对符号无误。"
+        },
+        {
+          "step": 5,
+          "name": "由 $k$ 定象限并分两支平滑连线",
+          "tStart": 21.5,
+          "tEnd": 32.0,
+          "explanation": "因 $k=-6\\lt 0$，在第二、第四象限内分别用平滑曲线连线，严禁把两支连在一起。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.5,
+          "step": 1,
+          "label": "1.1 求得 $k = -6$"
+        },
+        {
+          "time": 6.5,
+          "step": 2,
+          "label": "2.1 明确 $x \\neq 0$ 不过原点"
+        },
+        {
+          "time": 12.0,
+          "step": 3,
+          "label": "3.1 正负对称列表"
+        },
+        {
+          "time": 17.5,
+          "step": 4,
+          "label": "4.1 坐标系逐点描点"
+        },
+        {
+          "time": 24.5,
+          "step": 5,
+          "label": "5.1 二、四象限分两支平滑连线"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p57_r0",
+          "stepBadge": "已知条件",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p57_r0_t1",
+              "math": "反比例函数 $y=\\frac{k}{x}$ 经过 $(3,-2)$，列表并画出图象",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p57_r1",
+          "stepBadge": "第 1 步 · 定 $k$",
+          "appearAt": 1.2,
+          "tokens": [
+            {
+              "id": "p57_r1_t1",
+              "math": "$k = 3 \\times (-2) = -6 \\implies y = -\\frac{6}{x}$",
+              "appearAt": 1.3,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p57_r2",
+          "stepBadge": "第 2 步 · 定义域",
+          "appearAt": 6.0,
+          "tokens": [
+            {
+              "id": "p57_r2_t1",
+              "math": "定义域 $x \\neq 0$，故 $y \\neq 0$（不过原点，不与坐标轴相交）",
+              "appearAt": 6.1,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p57_r3",
+          "stepBadge": "第 3 步 · 对称列表",
+          "appearAt": 11.2,
+          "tokens": [
+            {
+              "id": "p57_r3_t1",
+              "math": "第二象限：$(-3,2), (-2,3), (-1,6)$；第四象限：$(1,-6), (2,-3), (3,-2)$",
+              "appearAt": 11.3,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "rowId": "p57_r4",
+          "stepBadge": "第 4 步 · 描点",
+          "appearAt": 16.4,
+          "tokens": [
+            {
+              "id": "p57_r4_t1",
+              "math": "在平面直角坐标系中逐一描出以上 $6$ 个对称点",
+              "appearAt": 16.5,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p57_r5",
+          "stepBadge": "第 5 步 · 分两支连线",
+          "appearAt": 22.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p57_r5_t1",
+              "math": "$k=-6 \\lt 0 \\implies$ 在二、四象限分别用平滑曲线连线（切勿跨象限相连）",
+              "appearAt": 22.6,
+              "dur": 0.55
+            }
+          ]
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p57_sp1",
+          "title": "作图三大禁区提醒",
+          "showStart": 6.0,
+          "showEnd": 31.8,
+          "tokens": [
+            {
+              "id": "p57_sp1_t1",
+              "math": "1. 不可经过原点 $(0,0)$ 或与 $x,y$ 轴相交",
+              "appearAt": 6.4,
+              "dur": 0.4
+            },
+            {
+              "id": "p57_sp1_t2",
+              "math": "2. 不可把二、四象限的两支连在一起",
+              "appearAt": 23.0,
+              "dur": 0.4
+            },
+            {
+              "id": "p57_sp1_t3",
+              "math": "3. 须用平滑曲线，不可用折线连接",
+              "appearAt": 24.5,
+              "dur": 0.4
+            }
+          ],
+          "note": "两个坐标轴是双曲线的渐近线，末端无限接近但不相交"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p57_r1_t1",
+          "tStart": 1.3,
+          "tEnd": 5.4,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p57_r2_t1",
+          "tStart": 6.1,
+          "tEnd": 10.4,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p57_r5_t1",
+          "tStart": 22.6,
+          "tEnd": 31.5,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p57_svg1",
+          "type": "arrow",
+          "fromToken": "p57_r1_t1",
+          "toToken": "p57_r5_t1",
+          "label": "$k \\lt 0$ 定二、四象限",
+          "color": "#0F766E",
+          "curveOffset": 26,
+          "tStart": 22.8,
+          "tDrawEnd": 23.6,
+          "tFadeStart": 29.0,
+          "tEnd": 30.0
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0,
+          "tEnd": 5.5,
+          "text": "第一步确认解析式形式，由表中 $(3,-2)$ 求得 $k = -6$。",
+          "focusToken": "p57_r1_t1"
+        },
+        {
+          "tStart": 5.5,
+          "tEnd": 10.5,
+          "text": "第二步明确定义域 $x \\neq 0$，因此双曲线绝不经过原点。",
+          "focusToken": "p57_r2_t1"
+        },
+        {
+          "tStart": 10.5,
+          "tEnd": 16.0,
+          "text": "第三步在 $x \\lt 0$ 与 $x \\gt 0$ 两侧对称取值，算出全部对应点。",
+          "focusToken": "p57_r3_t1"
+        },
+        {
+          "tStart": 16.0,
+          "tEnd": 21.5,
+          "text": "第四步在右侧坐标系中准确描出全部 $6$ 个坐标点。",
+          "focusToken": "p57_r4_t1"
+        },
+        {
+          "tStart": 21.5,
+          "tEnd": 32.0,
+          "text": "第五步根据 $k=-6 \\lt 0$ 在二、四象限分别平滑连线，形成双曲线两支。",
+          "focusToken": "p57_r5_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "绘制反比例函数 $y = \\frac{4}{x}$ 的图象时，下列说法正确的是（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. 图象经过原点 $(0,0)$",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. 图象的两个分支位于第一、三象限且与坐标轴不相交",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. 描点后应把两支曲线用线段连起来",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "$k = 4 \\gt 0 \\implies$ 两支位于第一、三象限",
+              "$x \\neq 0, y \\neq 0 \\implies$ 不过原点、不交坐标轴"
+            ],
+            "summary": "两支必须各自用平滑曲线连接，不可连跨两支。"
+          },
+          "wrongTitle": "提示：牢记 $x \\neq 0$ 且两支独立平滑连接",
+          "wrongFeedback": "反比例函数不过原点，两坐标轴是渐近线，且 $k=4\\gt 0$ 时位于第一、三象限。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "已知反比例函数 $y = -\\frac{6}{x}$ 的对称列表中，当 $x = -2$ 时，$y =$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$y =$",
+          "input1Placeholder": "如 3",
+          "input1Suffix": "",
+          "expectedX": "3",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "$y = 3$。",
+          "correctDetail": "代入 $x = -2$ 得 $y = -\\frac{6}{-2} = 3$，对应第二象限点 $(-2, 3)$。",
+          "wrongFeedback": "注意负负得正：$y = -\\frac{6}{-2} = 3$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "-3",
+              "hint": "注意 $x=-2$ 为负，负负得正，$y=3$。"
+            }
+          ]
+        }
+      }
+    },
+    P58: {
+      "procedureId": "P58",
+      "title": "根据实际情境与数据识别反比例关系并建立函数模型",
+      "exampleTitle": "根据视力表上视力值 $V$ 与字母 $E$ 宽度 $a\\ (\\text{mm})$ 的数据表建立函数模型",
+      "exampleFormula": "$V \\cdot a = 7$（定值）$\\implies V = \\frac{7}{a}\\ (a \\gt 0)$",
+      "totalDuration": 28,
+      "scratchpadIdleHint": "旁白草稿演算区（逐组检验乘积是否相等，再定解析式与自变量实际范围）",
+      "practiceSectionTitle": "实际情境识别与反比例建模跟做练习",
+      "practiceSectionSub": "完成以下两道建模练习，检验乘积定值判断与自变量范围确定",
+      "geometryDiagram": {
+        "title": "数据乘积定值检验与第一象限模型",
+        "caption": "各组数据乘积恒为 7，且实际宽度 a > 0，图象仅在第一象限",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <line x1=\"20\" y1=\"88\" x2=\"240\" y2=\"88\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <line x1=\"130\" y1=\"12\" x2=\"130\" y2=\"164\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <polygon points=\"240,88 233,84 233,92\" fill=\"#64748B\" />\n            <polygon points=\"130,12 126,19 134,19\" fill=\"#64748B\" />\n            <text x=\"234\" y=\"102\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">x</text>\n            <text x=\"137\" y=\"20\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">y</text>\n            <text x=\"118\" y=\"101\" fill=\"#64748B\" font-size=\"10\">O</text>\n            <text x=\"200\" y=\"26\" fill=\"#0F766E\" font-size=\"10\" font-weight=\"600\">一</text>\n            <text x=\"48\" y=\"26\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">二</text>\n            <text x=\"48\" y=\"158\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">三</text>\n            <text x=\"200\" y=\"158\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">四</text>\n            \n            <path class=\"proc-geo-anim\" data-appear-at=\"12.5\" data-dur=\"0.8\" data-dash-len=\"150\"\n                  d=\"M 142 18 Q 160 72 225 78\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2.6\" stroke-linecap=\"round\"\n                  stroke-dasharray=\"150\" stroke-dashoffset=\"150\" style=\"opacity:0;\" />\n            <g class=\"proc-geo-anim\" data-appear-at=\"13.5\" data-dur=\"0.5\" style=\"opacity:0;\">\n              <circle cx=\"152\" cy=\"40\" r=\"3\" fill=\"#D97706\" />\n              <circle cx=\"175\" cy=\"64\" r=\"3\" fill=\"#D97706\" />\n              <circle cx=\"205\" cy=\"74\" r=\"3\" fill=\"#D97706\" />\n            </g>\n            \n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "明确两变量及意义",
+          "tStart": 0,
+          "tEnd": 5.0,
+          "explanation": "确定自变量为字母宽度 $a\\ (\\text{mm})$，因变量为视力值 $V$。"
+        },
+        {
+          "step": 2,
+          "name": "检验乘积是否为定值",
+          "tStart": 5.0,
+          "tEnd": 11.5,
+          "explanation": "计算表中每组 $V \\cdot a$，发现乘积恒为 $7$，判定二者成反比例关系。"
+        },
+        {
+          "step": 3,
+          "name": "设立反比例函数式",
+          "tStart": 11.5,
+          "tEnd": 17.0,
+          "explanation": "设 $V$ 关于 $a$ 的函数表达式为 $V = \\frac{k}{a}\\ (k \\neq 0)$。"
+        },
+        {
+          "step": 4,
+          "name": "代入数据求出 $k$",
+          "tStart": 17.0,
+          "tEnd": 22.0,
+          "explanation": "代入 $(70, 0.1)$ 求得比例系数 $k = 7$。"
+        },
+        {
+          "step": 5,
+          "name": "写出解析式并定范围",
+          "tStart": 22.0,
+          "tEnd": 28.0,
+          "explanation": "写出 $V = \\frac{7}{a}$，并结合宽度为正数的实际意义标明 $a \\gt 0$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 明确变量 $a$ 与 $V$"
+        },
+        {
+          "time": 6.5,
+          "step": 2,
+          "label": "2.1 逐组检验 $Va = 7$"
+        },
+        {
+          "time": 12.8,
+          "step": 3,
+          "label": "3.1 设立 $V = k/a$"
+        },
+        {
+          "time": 18.0,
+          "step": 4,
+          "label": "4.1 求得 $k = 7$"
+        },
+        {
+          "time": 23.5,
+          "step": 5,
+          "label": "5.1 写出 $V = 7/a\\ (a \\gt 0)$"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p58_r0",
+          "stepBadge": "已知数据",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p58_r0_t1",
+              "math": "表：$(70,0.1),\\ (28,0.25),\\ (14,0.5),\\ (3.5,2.0)$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p58_r1",
+          "stepBadge": "第 1 步 · 明确变量",
+          "appearAt": 1.2,
+          "tokens": [
+            {
+              "id": "p58_r1_t1",
+              "math": "自变量：字母宽度 $a\\ (\\text{mm})$；因变量：视力值 $V$",
+              "appearAt": 1.3,
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "rowId": "p58_r2",
+          "stepBadge": "第 2 步 · 乘积定值",
+          "appearAt": 5.6,
+          "tokens": [
+            {
+              "id": "p58_r2_t1",
+              "math": "$70\\times 0.1 = 28\\times 0.25 = 14\\times 0.5 = 3.5\\times 2.0 = 7$",
+              "appearAt": 5.7,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "rowId": "p58_r3",
+          "stepBadge": "第 3–4 步 · 建模求 $k$",
+          "appearAt": 12.2,
+          "tokens": [
+            {
+              "id": "p58_r3_t1",
+              "math": "设 $V = \\frac{k}{a}$，代入得 $k = 7$",
+              "appearAt": 12.3,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p58_r4",
+          "stepBadge": "第 5 步 · 定范围",
+          "appearAt": 22.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p58_r4_t1",
+              "math": "$\\therefore V = \\frac{7}{a}\\ (a \\gt 0)$",
+              "appearAt": 22.6,
+              "dur": 0.5
+            }
+          ]
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p58_sp1",
+          "title": "建模关键点",
+          "showStart": 5.5,
+          "showEnd": 27.8,
+          "tokens": [
+            {
+              "id": "p58_sp1_t1",
+              "math": "乘积相等 $\\iff$ 反比例关系",
+              "appearAt": 6.0,
+              "dur": 0.4
+            },
+            {
+              "id": "p58_sp1_t2",
+              "math": "实际长度/数量需注明 $x \\gt 0$",
+              "appearAt": 22.8,
+              "dur": 0.4
+            }
+          ],
+          "note": "先验定值再设式，最后别忘自变量的实际范围"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p58_r2_t1",
+          "tStart": 5.7,
+          "tEnd": 11.4,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p58_r4_t1",
+          "tStart": 22.6,
+          "tEnd": 27.5,
+          "color": "amber"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p58_svg1",
+          "type": "arrow",
+          "fromToken": "p58_r2_t1",
+          "toToken": "p58_r3_t1",
+          "label": "乘积恒定 $\\implies$ 反比例",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 12.5,
+          "tDrawEnd": 13.3,
+          "tFadeStart": 16.5,
+          "tEnd": 17.0
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0,
+          "tEnd": 5.0,
+          "text": "第一步明确两个变量的实际意义：宽度 $a$ 与视力值 $V$。",
+          "focusToken": "p58_r1_t1"
+        },
+        {
+          "tStart": 5.0,
+          "tEnd": 11.5,
+          "text": "第二步逐组计算 $a \\cdot V$，乘积恒等于 $7$。",
+          "focusToken": "p58_r2_t1"
+        },
+        {
+          "tStart": 11.5,
+          "tEnd": 22.0,
+          "text": "第三、四步设反比例模型 $V=\\frac{k}{a}$ 并求得 $k=7$。",
+          "focusToken": "p58_r3_t1"
+        },
+        {
+          "tStart": 22.0,
+          "tEnd": 28.0,
+          "text": "第五步写出完整解析式 $V=\\frac{7}{a}$ 并注明 $a \\gt 0$。",
+          "focusToken": "p58_r4_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "已知某矩形面积为 $60\\text{ m}^2$，相邻两边长分别为 $x\\text{ m}$ 和 $y\\text{ m}$，则 $y$ 关于 $x$ 的函数表达式为（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $y = 60x$",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. $y = \\frac{60}{x}\\ (x \\gt 0)$",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. $y = \\frac{x}{60}$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "$xy = 60 \\implies y = \\frac{60}{x}\\ (x \\gt 0)$"
+            ],
+            "summary": "面积恒定，两边长乘积为定值，且边长必须大于 $0$。"
+          },
+          "wrongTitle": "提示：矩形面积 $=$ 长 $\\times$ 宽",
+          "wrongFeedback": "由 $xy = 60$ 变形得 $y = \\frac{60}{x}$，边长 $x \\gt 0$。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "某工程总量为 $k$，若每天完成 $50$ 件需 $6$ 天，则每天完成量 $y$ 与天数 $x$ 的关系式 $y = \\frac{k}{x}$ 中，$k =$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$k =$",
+          "input1Placeholder": "如 300",
+          "input1Suffix": "",
+          "expectedX": "300",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "$k = 300$。",
+          "correctDetail": "工程总量 $k = 50 \\times 6 = 300$，故 $y = \\frac{300}{x}\\ (x \\gt 0)$。",
+          "wrongFeedback": "总量 $=$ 每天完成量 $\\times$ 天数 $= 50 \\times 6$。",
+          "specificWrongHints": []
+        }
+      }
+    },
+    P59: {
+      "procedureId": "P59",
+      "title": "利用反比例函数性质求自变量或函数值的取值范围",
+      "exampleTitle": "已知反比例函数 $y = \\frac{12}{x}$，求当 $y \\lt 4$ 时自变量 $x$ 的取值范围",
+      "exampleFormula": "$y = \\frac{12}{x}$，$y \\lt 4 \\implies x \\lt 0$ 或 $x \\gt 3$",
+      "totalDuration": 30,
+      "scratchpadIdleHint": "旁白草稿演算区（跨零点必按象限分段，切勿漏掉第三象限整支）",
+      "practiceSectionTitle": "反比例函数区间与取值范围跟做练习",
+      "practiceSectionSub": "完成以下两道正反区间求解练习",
+      "geometryDiagram": {
+        "title": "分段单调性与临界线 $y = 4$",
+        "caption": "第三象限恒满足 y < 0 < 4；第一象限在 x = 3 右侧满足 0 < y < 4",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <line x1=\"20\" y1=\"88\" x2=\"240\" y2=\"88\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <line x1=\"130\" y1=\"12\" x2=\"130\" y2=\"164\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <polygon points=\"240,88 233,84 233,92\" fill=\"#64748B\" />\n            <polygon points=\"130,12 126,19 134,19\" fill=\"#64748B\" />\n            <text x=\"234\" y=\"102\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">x</text>\n            <text x=\"137\" y=\"20\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">y</text>\n            <text x=\"118\" y=\"101\" fill=\"#64748B\" font-size=\"10\">O</text>\n            <text x=\"200\" y=\"26\" fill=\"#0F766E\" font-size=\"10\" font-weight=\"600\">一</text>\n            <text x=\"48\" y=\"26\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">二</text>\n            <text x=\"48\" y=\"158\" fill=\"#0F766E\" font-size=\"10\" font-weight=\"600\">三</text>\n            <text x=\"200\" y=\"158\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">四</text>\n            \n            <path class=\"proc-geo-anim\" data-appear-at=\"6.0\" data-dur=\"0.7\" data-dash-len=\"140\"\n                  d=\"M 142 18 Q 160 66 225 76\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2.5\"\n                  stroke-dasharray=\"140\" stroke-dashoffset=\"140\" style=\"opacity:0;\" />\n            <path class=\"proc-geo-anim\" data-appear-at=\"6.5\" data-dur=\"0.7\" data-dash-len=\"140\"\n                  d=\"M 35 100 Q 100 110 118 158\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2.5\"\n                  stroke-dasharray=\"140\" stroke-dashoffset=\"140\" style=\"opacity:0;\" />\n            <g class=\"proc-geo-anim\" data-appear-at=\"13.5\" data-dur=\"0.5\" style=\"opacity:0;\">\n              <line x1=\"25\" y1=\"62\" x2=\"235\" y2=\"62\" stroke=\"#D97706\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\" />\n              <text x=\"195\" y=\"57\" fill=\"#D97706\" font-size=\"10\" font-weight=\"700\">y=4</text>\n              <line x1=\"170\" y1=\"62\" x2=\"170\" y2=\"88\" stroke=\"#D97706\" stroke-width=\"1.3\" stroke-dasharray=\"3 3\" />\n              <circle cx=\"170\" cy=\"62\" r=\"3\" fill=\"#D97706\" />\n              <text x=\"166\" y=\"99\" fill=\"#D97706\" font-size=\"10\" font-weight=\"700\">3</text>\n            </g>\n            \n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "判 $k$ 符号定单调性",
+          "tStart": 0,
+          "tEnd": 6.0,
+          "explanation": "提取 $k=12 \\gt 0$，双曲线位于第一、三象限，每象限内 $y$ 随 $x$ 增大而减小。"
+        },
+        {
+          "step": 2,
+          "name": "按象限分段讨论",
+          "tStart": 6.0,
+          "tEnd": 12.5,
+          "explanation": "$y \\lt 4$ 包含 $y \\lt 0$（第三象限整支 $x \\lt 0$）和 $0 \\lt y \\lt 4$（第一象限部分）。"
+        },
+        {
+          "step": 3,
+          "name": "求临界端点值",
+          "tStart": 12.5,
+          "tEnd": 18.5,
+          "explanation": "令 $y=4$ 代入 $y=\\frac{12}{x}$，算得临界自变量 $x=3$。"
+        },
+        {
+          "step": 4,
+          "name": "由单调性写出第一象限区间",
+          "tStart": 18.5,
+          "tEnd": 24.0,
+          "explanation": "第一象限内 $y$ 随 $x$ 增大而减小，故 $0 \\lt y \\lt 4$ 对应 $x \\gt 3$。"
+        },
+        {
+          "step": 5,
+          "name": "合并分段并核对 $x \\neq 0$",
+          "tStart": 24.0,
+          "tEnd": 30.0,
+          "explanation": "合并第三象限 $x \\lt 0$ 与第一象限 $x \\gt 3$，得最终范围 $x \\lt 0$ 或 $x \\gt 3$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.2,
+          "step": 1,
+          "label": "1.1 判 $k=12\\gt 0$"
+        },
+        {
+          "time": 7.5,
+          "step": 2,
+          "label": "2.1 分第三、第一象限两段"
+        },
+        {
+          "time": 14.0,
+          "step": 3,
+          "label": "3.1 求临界点 $(3,4)$"
+        },
+        {
+          "time": 20.0,
+          "step": 4,
+          "label": "4.1 第一象限得 $x \\gt 3$"
+        },
+        {
+          "time": 25.5,
+          "step": 5,
+          "label": "5.1 合并得 $x \\lt 0$ 或 $x \\gt 3$"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p59_r0",
+          "stepBadge": "已知条件",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p59_r0_t1",
+              "math": "已知 $y = \\frac{12}{x}$，求当 $y \\lt 4$ 时 $x$ 的取值范围",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p59_r1",
+          "stepBadge": "第 1 步 · 定性质",
+          "appearAt": 1.2,
+          "tokens": [
+            {
+              "id": "p59_r1_t1",
+              "math": "$k = 12 \\gt 0 \\implies$ 一、三象限，每象限内 $y$ 随 $x$ 增大而减小",
+              "appearAt": 1.3,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p59_r2",
+          "stepBadge": "第 2 步 · 分段",
+          "appearAt": 6.5,
+          "tokens": [
+            {
+              "id": "p59_r2_t1",
+              "math": "① 第三象限（$x \\lt 0$）：$y \\lt 0 \\lt 4$ 恒成立",
+              "appearAt": 6.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p59_r3",
+          "stepBadge": "第 3–4 步 · 临界与单调",
+          "appearAt": 13.0,
+          "tokens": [
+            {
+              "id": "p59_r3_t1",
+              "math": "② 第一象限：令 $y=4 \\implies x=3$；递减得 $x \\gt 3$",
+              "appearAt": 13.1,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "rowId": "p59_r4",
+          "stepBadge": "第 5 步 · 合并结论",
+          "appearAt": 24.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p59_r4_t1",
+              "math": "$\\therefore x \\lt 0$ 或 $x \\gt 3$",
+              "appearAt": 24.6,
+              "dur": 0.5
+            }
+          ]
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p59_sp1",
+          "title": "反比例函数求范围铁律",
+          "showStart": 6.0,
+          "showEnd": 29.8,
+          "tokens": [
+            {
+              "id": "p59_sp1_t1",
+              "math": "跨 $x=0$ 或 $y=0$ 时，必须分两支讨论",
+              "appearAt": 6.8,
+              "dur": 0.4
+            },
+            {
+              "id": "p59_sp1_t2",
+              "math": "不可直接写成 $x \\gt 3$ 而漏掉 $x \\lt 0$",
+              "appearAt": 24.8,
+              "dur": 0.4
+            }
+          ],
+          "note": "画草图+水平线 $y=4$ 一眼看清两段解集"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p59_r2_t1",
+          "tStart": 6.6,
+          "tEnd": 12.2,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p59_r3_t1",
+          "tStart": 13.1,
+          "tEnd": 23.5,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p59_r4_t1",
+          "tStart": 24.6,
+          "tEnd": 29.5,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p59_svg1",
+          "type": "arrow",
+          "fromToken": "p59_r2_t1",
+          "toToken": "p59_r4_t1",
+          "label": "别漏第三象限",
+          "color": "#D97706",
+          "curveOffset": 25,
+          "tStart": 24.8,
+          "tDrawEnd": 25.6,
+          "tFadeStart": 28.5,
+          "tEnd": 29.5
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0,
+          "tEnd": 6.0,
+          "text": "第一步确认 $k=12\\gt 0$，双曲线在一、三象限内各自递减。",
+          "focusToken": "p59_r1_t1"
+        },
+        {
+          "tStart": 6.0,
+          "tEnd": 12.5,
+          "text": "第二步分段：第三象限 $x \\lt 0$ 时 $y$ 恒为负，天然满足 $y \\lt 4$。",
+          "focusToken": "p59_r2_t1"
+        },
+        {
+          "tStart": 12.5,
+          "tEnd": 24.0,
+          "text": "第三、四步在第一象限令 $y=4$ 得 $x=3$，由递减性得 $x \\gt 3$。",
+          "focusToken": "p59_r3_t1"
+        },
+        {
+          "tStart": 24.0,
+          "tEnd": 30.0,
+          "text": "第五步合并两段区间，最终解集为 $x \\lt 0$ 或 $x \\gt 3$。",
+          "focusToken": "p59_r4_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "对于反比例函数 $y = \\frac{6}{x}$，当 $-3 \\lt x \\lt -1$ 时，$y$ 的取值范围是（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $-6 \\lt y \\lt -2$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $2 \\lt y \\lt 6$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $y \\lt -6$ 或 $y \\gt -2$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "$x=-3 \\implies y=-2$，$x=-1 \\implies y=-6$",
+              "第三象限内单调递减，故 $-6 \\lt y \\lt -2$"
+            ],
+            "summary": "同一象限内直接用端点代入与单调性即可确定闭/开区间。"
+          },
+          "wrongTitle": "提示：代入区间端点 $-3$ 和 $-1$",
+          "wrongFeedback": "$x=-3$ 时 $y=-2$，$x=-1$ 时 $y=-6$，同在第三象限，故 $-6 \\lt y \\lt -2$。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "已知反比例函数 $y = \\frac{12}{x}$，若 $y \\ge 2$，则自变量 $x$ 的取值范围为 $0 \\lt x \\le$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$0 \\lt x \\le$",
+          "input1Placeholder": "如 6",
+          "input1Suffix": "",
+          "expectedX": "6",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "$0 \\lt x \\le 6$。",
+          "correctDetail": "$y \\ge 2 \\gt 0$ 只在第一象限，$y=2$ 时 $x=6$，由递减性得 $0 \\lt x \\le 6$。",
+          "wrongFeedback": "令 $y = 2$ 得 $x = 6$，结合 $x \\gt 0$ 且单调递减得 $0 \\lt x \\le 6$。",
+          "specificWrongHints": []
+        }
+      }
+    },
+    P60: {
+      "procedureId": "P60",
+      "title": "研究含绝对值、平移的反比例型函数图象与性质",
+      "exampleTitle": "将 $y = \\frac{2 - x}{x}$ 化为平移标准式，探究其图象平移、单调性与对称中心",
+      "exampleFormula": "$y = \\frac{2 - x}{x} = \\frac{2}{x} - 1$（由 $y = \\frac{2}{x}$ 向下平移 $1$ 个单位）",
+      "totalDuration": 28,
+      "scratchpadIdleHint": "旁白草稿演算区（区分标准双曲线与平移/含绝对值变形函数的对称中心与单调性）",
+      "practiceSectionTitle": "反比例型变形函数图象与性质跟做练习",
+      "practiceSectionSub": "完成以下两道变形函数对称性与平移方向练习",
+      "geometryDiagram": {
+        "title": "平移型双曲线 · $y = \\frac{2}{x} - 1$",
+        "caption": "水平渐近线由 y=0 下移至 y=-1，对称中心同步下移至 (0, -1)",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <line x1=\"20\" y1=\"88\" x2=\"240\" y2=\"88\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <line x1=\"130\" y1=\"12\" x2=\"130\" y2=\"164\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <polygon points=\"240,88 233,84 233,92\" fill=\"#64748B\" />\n            <polygon points=\"130,12 126,19 134,19\" fill=\"#64748B\" />\n            <text x=\"234\" y=\"102\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">x</text>\n            <text x=\"137\" y=\"20\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">y</text>\n            <text x=\"118\" y=\"101\" fill=\"#64748B\" font-size=\"10\">O</text>\n            <text x=\"200\" y=\"26\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">一</text>\n            <text x=\"48\" y=\"26\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">二</text>\n            <text x=\"48\" y=\"158\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">三</text>\n            <text x=\"200\" y=\"158\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">四</text>\n            \n            <line class=\"proc-geo-anim\" data-appear-at=\"6.0\" data-dur=\"0.5\" x1=\"25\" y1=\"108\" x2=\"235\" y2=\"108\" stroke=\"#D97706\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\" style=\"opacity:0;\" />\n            <path class=\"proc-geo-anim\" data-appear-at=\"12.0\" data-dur=\"0.8\" data-dash-len=\"150\"\n                  d=\"M 140 18 Q 160 88 225 100\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2.5\"\n                  stroke-dasharray=\"150\" stroke-dashoffset=\"150\" style=\"opacity:0;\" />\n            <path class=\"proc-geo-anim\" data-appear-at=\"13.0\" data-dur=\"0.8\" data-dash-len=\"150\"\n                  d=\"M 35 116 Q 100 124 120 164\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2.5\"\n                  stroke-dasharray=\"150\" stroke-dashoffset=\"150\" style=\"opacity:0;\" />\n            <g class=\"proc-geo-anim\" data-appear-at=\"19.5\" data-dur=\"0.5\" style=\"opacity:0;\">\n              <circle cx=\"130\" cy=\"108\" r=\"3.5\" fill=\"#D97706\" />\n              <text x=\"136\" y=\"121\" fill=\"#D97706\" font-size=\"10\" font-weight=\"700\">(0,-1)</text>\n            </g>\n            \n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "分离常数定变形与定义域",
+          "tStart": 0,
+          "tEnd": 6.5,
+          "explanation": "将 $y=\\frac{2-x}{x}$ 拆分为 $\\frac{2}{x}-1$，确定定义域 $x \\neq 0$。"
+        },
+        {
+          "step": 2,
+          "name": "确定平移方向与渐近线",
+          "tStart": 6.5,
+          "tEnd": 12.5,
+          "explanation": "识别图象由标准双曲线 $y=\\frac{2}{x}$ 向下平移 $1$ 个单位得到，渐近线变为 $y=-1$。"
+        },
+        {
+          "step": 3,
+          "name": "分两支描点连线",
+          "tStart": 12.5,
+          "tEnd": 19.0,
+          "explanation": "在 $x\\lt 0$ 与 $x\\gt 0$ 两侧列表描点，沿新渐近线分两支平滑连线。"
+        },
+        {
+          "step": 4,
+          "name": "归纳单调性与新对称中心",
+          "tStart": 19.0,
+          "tEnd": 28.0,
+          "explanation": "在 $x\\gt 0$ 时 $y$ 随 $x$ 增大而减小，且对称中心由 $(0,0)$ 下移至 $(0,-1)$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.2,
+          "step": 1,
+          "label": "1.1 分离常数得 $2/x - 1$"
+        },
+        {
+          "time": 7.5,
+          "step": 2,
+          "label": "2.1 确定向下平移 1 单位"
+        },
+        {
+          "time": 14.0,
+          "step": 3,
+          "label": "3.1 描点分两支连线"
+        },
+        {
+          "time": 20.5,
+          "step": 4,
+          "label": "4.1 确定对称中心 $(0,-1)$"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p60_r0",
+          "stepBadge": "已知函数",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p60_r0_t1",
+              "math": "探究函数 $y = \\frac{2-x}{x}$ 的图象与性质",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p60_r1",
+          "stepBadge": "第 1 步 · 分离常数",
+          "appearAt": 1.2,
+          "tokens": [
+            {
+              "id": "p60_r1_t1",
+              "math": "$y = \\frac{2}{x} - \\frac{x}{x} = \\frac{2}{x} - 1\\ (x \\neq 0)$",
+              "appearAt": 1.3,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p60_r2",
+          "stepBadge": "第 2 步 · 平移规律",
+          "appearAt": 6.8,
+          "tokens": [
+            {
+              "id": "p60_r2_t1",
+              "math": "由 $y = \\frac{2}{x}$ 的图象向下平移 $1$ 个单位长度得到",
+              "appearAt": 6.9,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p60_r3",
+          "stepBadge": "第 3–4 步 · 性质归纳",
+          "appearAt": 19.2,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p60_r3_t1",
+              "math": "$x \\gt 0$ 时 $y$ 随 $x$ 增大而减小；关于点 $(0,-1)$ 中心对称",
+              "appearAt": 19.3,
+              "dur": 0.55
+            }
+          ]
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p60_sp1",
+          "title": "两类非标准反比例型对照",
+          "showStart": 6.5,
+          "showEnd": 27.8,
+          "tokens": [
+            {
+              "id": "p60_sp1_t1",
+              "math": "绝对值型 $y=\\frac{k}{|x|}$：关于 $y$ 轴轴对称",
+              "appearAt": 7.0,
+              "dur": 0.4
+            },
+            {
+              "id": "p60_sp1_t2",
+              "math": "平移型 $y=\\frac{k}{x-h}+b$：关于 $(h,b)$ 中心对称",
+              "appearAt": 19.6,
+              "dur": 0.4
+            }
+          ],
+          "note": "切勿直接套用标准反比例函数“关于原点对称”的结论"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p60_r1_t1",
+          "tStart": 1.3,
+          "tEnd": 6.2,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p60_r3_t1",
+          "tStart": 19.3,
+          "tEnd": 27.5,
+          "color": "amber"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p60_svg1",
+          "type": "arrow",
+          "fromToken": "p60_r1_t1",
+          "toToken": "p60_r2_t1",
+          "label": "$-1$ 表示下移 1 单位",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 7.0,
+          "tDrawEnd": 7.8,
+          "tFadeStart": 11.5,
+          "tEnd": 12.2
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0,
+          "tEnd": 6.5,
+          "text": "第一步通过分离常数，将分式化为 $y = \\frac{2}{x} - 1$，明确 $x \\neq 0$。",
+          "focusToken": "p60_r1_t1"
+        },
+        {
+          "tStart": 6.5,
+          "tEnd": 12.5,
+          "text": "第二步依据“上加下减”确定图象由 $y = \\frac{2}{x}$ 向下平移 $1$ 个单位。",
+          "focusToken": "p60_r2_t1"
+        },
+        {
+          "tStart": 12.5,
+          "tEnd": 19.0,
+          "text": "第三步围绕渐近线 $x=0$ 与 $y=-1$ 分两支描点平滑连线。",
+          "focusToken": "p60_r2_t1"
+        },
+        {
+          "tStart": 19.0,
+          "tEnd": 28.0,
+          "text": "第四步读出各支递减性与平移后的对称中心 $(0,-1)$。",
+          "focusToken": "p60_r3_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "函数 $y = -\\frac{2}{|x|}$ 的图象具有下列哪项对称性？（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. 关于原点中心对称",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. 关于 $y$ 轴轴对称",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. 关于 $x$ 轴轴对称",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "$f(-x) = -\\frac{2}{|-x|} = -\\frac{2}{|x|} = f(x)$"
+            ],
+            "summary": "把 $x$ 换成 $-x$ 函数值不变，故图象关于 $y$ 轴对称（位于三、四象限）。"
+          },
+          "wrongTitle": "提示：注意分母加了绝对值 $|x|$",
+          "wrongFeedback": "当 $x$ 取相反数时 $|x|$ 不变，故纵坐标相同，关于 $y$ 轴对称。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "函数 $y = \\frac{2}{x - 1}$ 是由 $y = \\frac{2}{x}$ 向右平移 $1$ 个单位得到的，其对称中心横坐标 $h =$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$h =$",
+          "input1Placeholder": "如 1",
+          "input1Suffix": "",
+          "expectedX": "1",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "对称中心为 $(1, 0)$，$h = 1$。",
+          "correctDetail": "“左加右减”向右平移 $1$ 个单位，对称中心由 $(0,0)$ 移至 $(1,0)$。",
+          "wrongFeedback": "令分母 $x - 1 = 0$ 得竖直渐近线 $x = 1$，故 $h = 1$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "-1",
+              "hint": "注意 $x-1=0$ 解得 $x=1$（右移为正）。"
+            }
+          ]
+        }
+      }
+    },
+    P61: {
+      "procedureId": "P61",
+      "title": "利用 $k$ 的几何意义求面积与参数",
+      "exampleTitle": "过第二象限双曲线 $y = \\frac{k}{x}$ 上点 $A$ 作 $AB \\perp x$ 轴于 $B$，已知 $S_{\\triangle AOB} = \\frac{3}{2}$，求 $k$",
+      "exampleFormula": "$S_{\\triangle AOB} = \\frac{|k|}{2} = \\frac{3}{2}$，结合第二象限得 $k = -3$",
+      "totalDuration": 26,
+      "scratchpadIdleHint": "旁白草稿演算区（先由面积求 $|k|$，再结合象限符号定 $k$ 正负）",
+      "practiceSectionTitle": "$k$ 的几何意义基本图形跟做练习",
+      "practiceSectionSub": "完成以下两道基本面积与 $k$ 互求练习",
+      "geometryDiagram": {
+        "title": "几何意义 · $S_{\\triangle AOB} = \\frac{|k|}{2}$",
+        "caption": "先由三角形面积得出 |k|=3，再看双曲线在第二象限确定 k < 0",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <line x1=\"20\" y1=\"88\" x2=\"240\" y2=\"88\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <line x1=\"130\" y1=\"12\" x2=\"130\" y2=\"164\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <polygon points=\"240,88 233,84 233,92\" fill=\"#64748B\" />\n            <polygon points=\"130,12 126,19 134,19\" fill=\"#64748B\" />\n            <text x=\"234\" y=\"102\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">x</text>\n            <text x=\"137\" y=\"20\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">y</text>\n            <text x=\"118\" y=\"101\" fill=\"#64748B\" font-size=\"10\">O</text>\n            <text x=\"200\" y=\"26\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">一</text>\n            <text x=\"48\" y=\"26\" fill=\"#0F766E\" font-size=\"10\" font-weight=\"600\">二</text>\n            <text x=\"48\" y=\"158\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">三</text>\n            <text x=\"200\" y=\"158\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">四</text>\n            \n            <path class=\"proc-geo-anim\" data-appear-at=\"1.2\" data-dur=\"0.7\" data-dash-len=\"140\"\n                  d=\"M 35 76 Q 95 70 118 18\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2.5\"\n                  stroke-dasharray=\"140\" stroke-dashoffset=\"140\" style=\"opacity:0;\" />\n            <g class=\"proc-geo-anim\" data-appear-at=\"5.0\" data-dur=\"0.6\" style=\"opacity:0;\">\n              <polygon points=\"130,88 85,88 85,48\" fill=\"#0F766E\" fill-opacity=\"0.18\" stroke=\"#0F766E\" stroke-width=\"1.6\" />\n              <circle cx=\"85\" cy=\"48\" r=\"3\" fill=\"#D97706\" />\n              <text x=\"72\" y=\"44\" fill=\"#D97706\" font-size=\"10\" font-weight=\"700\">A</text>\n              <text x=\"80\" y=\"100\" fill=\"#0F766E\" font-size=\"10\" font-weight=\"700\">B</text>\n            </g>\n            \n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "识别垂线矩形或直角三角形",
+          "tStart": 0,
+          "tEnd": 6.0,
+          "explanation": "识别 $AB \\perp x$ 轴与原点 $O$ 围成 $\\text{Rt}\\triangle AOB$。"
+        },
+        {
+          "step": 2,
+          "name": "建立面积与 $|k|$ 关系",
+          "tStart": 6.0,
+          "tEnd": 13.0,
+          "explanation": "应用 $S_{\\triangle AOB}=\\frac{|k|}{2}=\\frac{3}{2}$，解得 $|k|=3$。"
+        },
+        {
+          "step": 3,
+          "name": "结合象限确定 $k$ 符号",
+          "tStart": 13.0,
+          "tEnd": 20.0,
+          "explanation": "双曲线位于第二象限，故 $k \\lt 0$。"
+        },
+        {
+          "step": 4,
+          "name": "求出最终 $k$ 值",
+          "tStart": 20.0,
+          "tEnd": 26.0,
+          "explanation": "得出 $k = -3$ 并核对与第二象限一致。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.2,
+          "step": 1,
+          "label": "1.1 识别 $\\text{Rt}\\triangle AOB$"
+        },
+        {
+          "time": 7.5,
+          "step": 2,
+          "label": "2.1 由面积求得 $|k|=3$"
+        },
+        {
+          "time": 14.5,
+          "step": 3,
+          "label": "3.1 第二象限判 $k \\lt 0$"
+        },
+        {
+          "time": 21.0,
+          "step": 4,
+          "label": "4.1 定解 $k = -3$"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p61_r0",
+          "stepBadge": "已知图形",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p61_r0_t1",
+              "math": "$AB \\perp x$ 轴，$S_{\\triangle AOB} = \\frac{3}{2}$，图象在第二象限",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p61_r1",
+          "stepBadge": "第 1–2 步 · 面积关系",
+          "appearAt": 6.2,
+          "tokens": [
+            {
+              "id": "p61_r1_t1",
+              "math": "$S_{\\triangle AOB} = \\frac{1}{2}|k| = \\frac{3}{2} \\implies |k| = 3$",
+              "appearAt": 6.3,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "rowId": "p61_r2",
+          "stepBadge": "第 3 步 · 象限定号",
+          "appearAt": 13.5,
+          "tokens": [
+            {
+              "id": "p61_r2_t1",
+              "math": "$\\because$ 图象在第二象限，$\\therefore k \\lt 0$",
+              "appearAt": 13.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p61_r3",
+          "stepBadge": "第 4 步 · 结论",
+          "appearAt": 20.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p61_r3_t1",
+              "math": "$\\therefore k = -3$",
+              "appearAt": 20.6,
+              "dur": 0.5
+            }
+          ]
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p61_sp1",
+          "title": "面积公式速记",
+          "showStart": 6.0,
+          "showEnd": 25.8,
+          "tokens": [
+            {
+              "id": "p61_sp1_t1",
+              "math": "矩形面积 $S_{\\text{矩}} = |k|$",
+              "appearAt": 6.5,
+              "dur": 0.4
+            },
+            {
+              "id": "p61_sp1_t2",
+              "math": "直角三角形 $S_{\\triangle} = \\frac{|k|}{2}$",
+              "appearAt": 7.5,
+              "dur": 0.4
+            }
+          ],
+          "note": "求 k 值一定要结合象限决定正负号！"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p61_r1_t1",
+          "tStart": 6.3,
+          "tEnd": 12.8,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p61_r2_t1",
+          "tStart": 13.6,
+          "tEnd": 19.8,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p61_r3_t1",
+          "tStart": 20.6,
+          "tEnd": 25.5,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p61_svg1",
+          "type": "arrow",
+          "fromToken": "p61_r1_t1",
+          "toToken": "p61_r3_t1",
+          "label": "带负号取 $k=-3$",
+          "color": "#D97706",
+          "curveOffset": 25,
+          "tStart": 20.8,
+          "tDrawEnd": 21.5,
+          "tFadeStart": 24.5,
+          "tEnd": 25.5
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0,
+          "tEnd": 6.0,
+          "text": "第一步确认直角三角形 $OAB$ 是由双曲线上点向坐标轴作垂线构成的。",
+          "focusToken": "p61_r0_t1"
+        },
+        {
+          "tStart": 6.0,
+          "tEnd": 13.0,
+          "text": "第二步由 $S_{\\triangle AOB} = \\frac{|k|}{2} = \\frac{3}{2}$ 解得 $|k| = 3$。",
+          "focusToken": "p61_r1_t1"
+        },
+        {
+          "tStart": 13.0,
+          "tEnd": 20.0,
+          "text": "第三步看图可知双曲线在第二象限，因此 $k \\lt 0$。",
+          "focusToken": "p61_r2_t1"
+        },
+        {
+          "tStart": 20.0,
+          "tEnd": 26.0,
+          "text": "第四步定解 $k = -3$。",
+          "focusToken": "p61_r3_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "点 $P$ 在反比例函数 $y = \\frac{k}{x}$ 图象上，过 $P$ 作坐标轴垂线围成的矩形面积为 $4$，且图象位于二、四象限，则 $k =$（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $4$",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. $-4$",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. $-2$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "$|k| = S_{\\text{矩形}} = 4$",
+              "二、四象限 $\\implies k = -4$"
+            ],
+            "summary": "矩形面积直接等于 $|k|$，二、四象限取负。"
+          },
+          "wrongTitle": "提示：矩形面积直接等于 $|k|$ 且注意象限符号",
+          "wrongFeedback": "矩形面积等于 $|k|=4$，二、四象限 $k \\lt 0$，故 $k=-4$。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "已知点 $P$ 在第一象限双曲线 $y = \\frac{8}{x}$ 上，$PQ \\perp x$ 轴于 $Q$，则 $\\triangle OPQ$ 的面积为 ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$S_{\\triangle OPQ} =$",
+          "input1Placeholder": "如 4",
+          "input1Suffix": "",
+          "expectedX": "4",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "$S_{\\triangle OPQ} = 4$。",
+          "correctDetail": "直角三角形面积为 $\\frac{|k|}{2} = \\frac{8}{2} = 4$。",
+          "wrongFeedback": "三角形面积是 $|k|$ 的一半：$\\frac{8}{2} = 4$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "8",
+              "hint": "$8$ 是矩形面积，直角三角形要除以 $2$。"
+            }
+          ]
+        }
+      }
+    },
+    P62: {
+      "procedureId": "P62",
+      "title": "利用复合几何关系求 $k$ 及相关坐标",
+      "exampleTitle": "平行四边形 $OBAD$ 面积为 $5$，顶点 $B$ 在 $y=\\frac{3}{x}$ 上、$A$ 在 $y=\\frac{k}{x}$ 上、$D$ 在 $x$ 轴负半轴，求 $k$",
+      "exampleFormula": "$S_{\\triangle AOB} = S_{\\triangle COB} + S_{\\triangle COA} = \\frac{3}{2} - \\frac{k}{2} = \\frac{5}{2} \\implies k = -2$",
+      "totalDuration": 28,
+      "scratchpadIdleHint": "旁白草稿演算区（先转化复合几何图形为规则面积或坐标，再联立 $xy=k$ 求解）",
+      "practiceSectionTitle": "复合几何与 $k$ 综合求解跟做练习",
+      "practiceSectionSub": "完成以下两道平行四边形与双曲线复合问题练习",
+      "geometryDiagram": {
+        "title": "复合几何拆分 · 平行四边形对角线",
+        "caption": "连接 OA 将平行四边形面积平分，再按 y 轴拆为两双曲线基本三角形",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <line x1=\"20\" y1=\"88\" x2=\"240\" y2=\"88\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <line x1=\"130\" y1=\"12\" x2=\"130\" y2=\"164\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <polygon points=\"240,88 233,84 233,92\" fill=\"#64748B\" />\n            <polygon points=\"130,12 126,19 134,19\" fill=\"#64748B\" />\n            <text x=\"234\" y=\"102\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">x</text>\n            <text x=\"137\" y=\"20\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">y</text>\n            <text x=\"118\" y=\"101\" fill=\"#64748B\" font-size=\"10\">O</text>\n            <text x=\"200\" y=\"26\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">一</text>\n            <text x=\"48\" y=\"26\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">二</text>\n            <text x=\"48\" y=\"158\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">三</text>\n            <text x=\"200\" y=\"158\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">四</text>\n            \n            <path class=\"proc-geo-anim\" data-appear-at=\"1.0\" data-dur=\"0.6\" data-dash-len=\"120\"\n                  d=\"M 142 18 Q 160 64 225 76\" fill=\"none\" stroke=\"#64748B\" stroke-width=\"1.8\"\n                  stroke-dasharray=\"120\" stroke-dashoffset=\"120\" style=\"opacity:0;\" />\n            <path class=\"proc-geo-anim\" data-appear-at=\"1.4\" data-dur=\"0.6\" data-dash-len=\"120\"\n                  d=\"M 35 76 Q 98 68 118 22\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2.2\"\n                  stroke-dasharray=\"120\" stroke-dashoffset=\"120\" style=\"opacity:0;\" />\n            <g class=\"proc-geo-anim\" data-appear-at=\"5.8\" data-dur=\"0.6\" style=\"opacity:0;\">\n              <polygon points=\"130,88 70,88 100,45 160,45\" fill=\"#0F766E\" fill-opacity=\"0.14\" stroke=\"#0F766E\" stroke-width=\"1.6\" />\n              <line x1=\"130\" y1=\"88\" x2=\"100\" y2=\"45\" stroke=\"#D97706\" stroke-width=\"1.8\" stroke-dasharray=\"4 2\" />\n              <text x=\"96\" y=\"40\" fill=\"#0F766E\" font-size=\"10\" font-weight=\"700\">A</text>\n              <text x=\"163\" y=\"43\" fill=\"#475569\" font-size=\"10\" font-weight=\"700\">B</text>\n              <text x=\"64\" y=\"100\" fill=\"#475569\" font-size=\"10\" font-weight=\"700\">D</text>\n              <text x=\"133\" y=\"42\" fill=\"#D97706\" font-size=\"10\" font-weight=\"700\">C</text>\n            </g>\n            \n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "作辅助线转化几何图形",
+          "tStart": 0,
+          "tEnd": 7.0,
+          "explanation": "连接 $OA$，由平行四边形性质得 $S_{\\triangle AOB}=\\frac{1}{2}S_{\\text{▱}OBAD}=\\frac{5}{2}$，且 $AB \\perp y$ 轴于 $C$。"
+        },
+        {
+          "step": 2,
+          "name": "按象限表示拆分面积",
+          "tStart": 7.0,
+          "tEnd": 14.5,
+          "explanation": "$B$ 在第一象限得 $S_{\\triangle COB}=\\frac{3}{2}$；$A$ 在第二象限得 $S_{\\triangle COA}=-\\frac{k}{2}$。"
+        },
+        {
+          "step": 3,
+          "name": "列方程并消元求解",
+          "tStart": 14.5,
+          "tEnd": 22.0,
+          "explanation": "列方程 $\\frac{3}{2}-\\frac{k}{2}=\\frac{5}{2}$，解得 $k=-2$。"
+        },
+        {
+          "step": 4,
+          "name": "结合象限验证结论",
+          "tStart": 22.0,
+          "tEnd": 28.0,
+          "explanation": "核对 $k=-2\\lt 0$ 符合第二象限位置要求。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.2,
+          "step": 1,
+          "label": "1.1 连接 $OA$ 平分平行四边形"
+        },
+        {
+          "time": 8.2,
+          "step": 2,
+          "label": "2.1 分两侧写三角形面积"
+        },
+        {
+          "time": 16.0,
+          "step": 3,
+          "label": "3.1 列面积和方程求 $k$"
+        },
+        {
+          "time": 23.0,
+          "step": 4,
+          "label": "4.1 检验得 $k=-2$"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p62_r0",
+          "stepBadge": "已知条件",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p62_r0_t1",
+              "math": "$S_{\\text{▱}OBAD}=5$，$B$ 在 $y=\\frac{3}{x}$，$A$ 在 $y=\\frac{k}{x}$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p62_r1",
+          "stepBadge": "第 1 步 · 对角线平分",
+          "appearAt": 1.5,
+          "tokens": [
+            {
+              "id": "p62_r1_t1",
+              "math": "连接 $OA$，得 $S_{\\triangle AOB} = \\frac{1}{2}S_{\\text{▱}OBAD} = \\frac{5}{2}$",
+              "appearAt": 1.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p62_r2",
+          "stepBadge": "第 2 步 · 几何意义拆面积",
+          "appearAt": 7.5,
+          "tokens": [
+            {
+              "id": "p62_r2_t1",
+              "math": "$S_{\\triangle COB}=\\frac{3}{2}$，第二象限 $S_{\\triangle COA}=-\\frac{k}{2}$",
+              "appearAt": 7.6,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "rowId": "p62_r3",
+          "stepBadge": "第 3–4 步 · 解方程验证",
+          "appearAt": 15.0,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p62_r3_t1",
+              "math": "$\\frac{3}{2} - \\frac{k}{2} = \\frac{5}{2} \\implies k = -2$（符合第二象限）",
+              "appearAt": 15.1,
+              "dur": 0.55
+            }
+          ]
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p62_sp1",
+          "title": "复合几何常见转化三招",
+          "showStart": 7.0,
+          "showEnd": 27.8,
+          "tokens": [
+            {
+              "id": "p62_sp1_t1",
+              "math": "1. 平行四边形：对角线平分面积",
+              "appearAt": 7.4,
+              "dur": 0.4
+            },
+            {
+              "id": "p62_sp1_t2",
+              "math": "2. 第二/四象限面积要用 $-\\frac{k}{2}$ 表示正值",
+              "appearAt": 15.4,
+              "dur": 0.4
+            }
+          ],
+          "note": "也可通过设点坐标 $(m, k/m)$ 并结合全等割补建立方程"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p62_r1_t1",
+          "tStart": 1.6,
+          "tEnd": 6.8,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p62_r2_t1",
+          "tStart": 7.6,
+          "tEnd": 14.2,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p62_r3_t1",
+          "tStart": 15.1,
+          "tEnd": 27.5,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p62_svg1",
+          "type": "arrow",
+          "fromToken": "p62_r2_t1",
+          "toToken": "p62_r3_t1",
+          "label": "面积相加 $=\\frac{5}{2}$",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 15.2,
+          "tDrawEnd": 16.0,
+          "tFadeStart": 21.0,
+          "tEnd": 22.0
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0,
+          "tEnd": 7.0,
+          "text": "第一步连接 $OA$，把平行四边形面积平分为 $\\triangle AOB$ 的面积 $\\frac{5}{2}$。",
+          "focusToken": "p62_r1_t1"
+        },
+        {
+          "tStart": 7.0,
+          "tEnd": 14.5,
+          "text": "第二步用 $k$ 的几何意义分别写出 $y$ 轴两侧两个直角三角形面积，注意 $A$ 在第二象限取 $-\\frac{k}{2}$。",
+          "focusToken": "p62_r2_t1"
+        },
+        {
+          "tStart": 14.5,
+          "tEnd": 28.0,
+          "text": "第三、四步列方程 $\\frac{3}{2}-\\frac{k}{2}=\\frac{5}{2}$，解得 $k=-2$。",
+          "focusToken": "p62_r3_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "如图，平行四边形 $OABC$ 面积为 $7$，点 $B$ 在第一象限 $y=\\frac{3}{x}$ 上，点 $A$ 在第四象限 $y=\\frac{k}{x}$ 上（$AB \\parallel y$ 轴），则 $k =$（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $4$",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. $-4$",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. $-10$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "$S_{\\text{▱}OABC} = |k| + 3 = 7 \\implies |k| = 4$",
+              "第四象限 $k \\lt 0 \\implies k = -4$"
+            ],
+            "summary": "注意平行四边形面积等于双曲线两支对应 $|k|$ 之和。"
+          },
+          "wrongTitle": "提示：$|k| + 3 = 7$ 且 $A$ 在第四象限",
+          "wrongFeedback": "连接 $OB$ 得 $2(\\frac{3}{2}+\\frac{|k|}{2})=7$，即 $|k|=4$，第四象限取负。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "已知平行四边形 $ABCO$ 边 $OC$ 在 $x$ 轴上，顶点 $B(-1,3)$，面积为 $3$，点 $A$ 在第二象限双曲线 $y=\\frac{k}{x}$ 上，则 $k =$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$k =$",
+          "input1Placeholder": "如 -6",
+          "input1Suffix": "",
+          "expectedX": "-6",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "$k = -6$。",
+          "correctDetail": "由高为 $3$、面积为 $3$ 得底 $AB = 1$，故 $A(-2, 3)$，$k = -2 \\times 3 = -6$。",
+          "wrongFeedback": "先由面积 $3$ 和纵坐标 $3$ 得水平边长 $AB=1$，推得 $A(-2,3)$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "6",
+              "hint": "$A$ 在第二象限，$k$ 为负数 $-6$。"
+            }
+          ]
+        }
+      }
+    },
+    P63: {
+      "procedureId": "P63",
+      "title": "求反比例函数与一般一次函数的交点坐标及参数",
+      "exampleTitle": "由交点 $A(4,1)$、$B(m,-4)$ 求两函数解析式，并将直线向上平移 $3$ 单位后联立求新交点",
+      "exampleFormula": "$\\frac{4}{x} = x \\implies x^2 = 4 \\implies (-2,-2),(2,2)$",
+      "totalDuration": 30,
+      "scratchpadIdleHint": "旁白草稿演算区（联立分式方程化为一元二次方程，务必检验 $x \\neq 0$）",
+      "practiceSectionTitle": "一次函数与反比例函数交点联立跟做练习",
+      "practiceSectionSub": "完成以下两道交点坐标与参数联立练习",
+      "geometryDiagram": {
+        "title": "直线与双曲线联立求交点",
+        "caption": "令 y_1 = y_2 化为一元二次方程，解得交点横坐标再回代",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <line x1=\"20\" y1=\"88\" x2=\"240\" y2=\"88\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <line x1=\"130\" y1=\"12\" x2=\"130\" y2=\"164\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <polygon points=\"240,88 233,84 233,92\" fill=\"#64748B\" />\n            <polygon points=\"130,12 126,19 134,19\" fill=\"#64748B\" />\n            <text x=\"234\" y=\"102\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">x</text>\n            <text x=\"137\" y=\"20\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">y</text>\n            <text x=\"118\" y=\"101\" fill=\"#64748B\" font-size=\"10\">O</text>\n            <text x=\"200\" y=\"26\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">一</text>\n            <text x=\"48\" y=\"26\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">二</text>\n            <text x=\"48\" y=\"158\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">三</text>\n            <text x=\"200\" y=\"158\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">四</text>\n            \n            <path class=\"proc-geo-anim\" data-appear-at=\"1.2\" data-dur=\"0.7\" data-dash-len=\"130\"\n                  d=\"M 142 18 Q 160 66 225 76\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2.4\"\n                  stroke-dasharray=\"130\" stroke-dashoffset=\"130\" style=\"opacity:0;\" />\n            <path class=\"proc-geo-anim\" data-appear-at=\"1.5\" data-dur=\"0.7\" data-dash-len=\"130\"\n                  d=\"M 35 100 Q 100 110 118 158\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2.4\"\n                  stroke-dasharray=\"130\" stroke-dashoffset=\"130\" style=\"opacity:0;\" />\n            <line class=\"proc-geo-anim\" data-appear-at=\"12.5\" data-dur=\"0.6\" x1=\"65\" y1=\"153\" x2=\"195\" y2=\"23\" stroke=\"#D97706\" stroke-width=\"2\" style=\"opacity:0;\" />\n            <g class=\"proc-geo-anim\" data-appear-at=\"20.0\" data-dur=\"0.5\" style=\"opacity:0;\">\n              <circle cx=\"164\" cy=\"54\" r=\"3.2\" fill=\"#D97706\" />\n              <circle cx=\"96\" cy=\"122\" r=\"3.2\" fill=\"#D97706\" />\n              <text x=\"170\" y=\"52\" fill=\"#D97706\" font-size=\"10\" font-weight=\"700\">(2,2)</text>\n              <text x=\"56\" y=\"134\" fill=\"#D97706\" font-size=\"10\" font-weight=\"700\">(-2,-2)</text>\n            </g>\n            \n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "代入交点定参数",
+          "tStart": 0,
+          "tEnd": 7.5,
+          "explanation": "把 $A(4,1)$ 代入 $y=\\frac{c}{x}$ 得 $c=4$，求 $B(-1,-4)$，再待定系数求直线 $y=x-3$。"
+        },
+        {
+          "step": 2,
+          "name": "写出平移后直线并联立",
+          "tStart": 7.5,
+          "tEnd": 14.5,
+          "explanation": "向上平移 $3$ 个单位得 $y=x$，令两函数值相等得 $\\frac{4}{x}=x\\ (x\\neq 0)$。"
+        },
+        {
+          "step": 3,
+          "name": "化为一元二次方程求解",
+          "tStart": 14.5,
+          "tEnd": 22.5,
+          "explanation": "去分母得 $x^2=4$，解得 $x_1=-2, x_2=2$（均满足 $x\\neq 0$）。"
+        },
+        {
+          "step": 4,
+          "name": "回代纵坐标写出交点",
+          "tStart": 22.5,
+          "tEnd": 30.0,
+          "explanation": "回代 $y=x$ 得交点坐标 $(-2,-2)$ 和 $(2,2)$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.5,
+          "step": 1,
+          "label": "1.1 求得 $y=4/x$ 与 $y=x-3$"
+        },
+        {
+          "time": 9.0,
+          "step": 2,
+          "label": "2.1 平移得 $y=x$ 并联立"
+        },
+        {
+          "time": 16.0,
+          "step": 3,
+          "label": "3.1 解 $x^2=4$ 得 $x=\\pm 2$"
+        },
+        {
+          "time": 24.0,
+          "step": 4,
+          "label": "4.1 回代得 $(-2,-2),(2,2)$"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p63_r0",
+          "stepBadge": "已知条件",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p63_r0_t1",
+              "math": "$y=ax+b$ 与 $y=\\frac{c}{x}$ 交于 $A(4,1)$、$B(m,-4)$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p63_r1",
+          "stepBadge": "第 1 步 · 定解析式",
+          "appearAt": 1.4,
+          "tokens": [
+            {
+              "id": "p63_r1_t1",
+              "math": "$c=4\\implies B(-1,-4)$，解得直线 $y=x-3$",
+              "appearAt": 1.5,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "rowId": "p63_r2",
+          "stepBadge": "第 2 步 · 联立方程",
+          "appearAt": 8.2,
+          "tokens": [
+            {
+              "id": "p63_r2_t1",
+              "math": "上移 $3$ 单位得 $y=x$，联立 $\\frac{4}{x} = x\\ (x\\neq 0)$",
+              "appearAt": 8.3,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "rowId": "p63_r3",
+          "stepBadge": "第 3–4 步 · 求解回代",
+          "appearAt": 15.2,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p63_r3_t1",
+              "math": "$x^2 = 4 \\implies x=\\pm 2$，交点为 $(-2,-2)$ 和 $(2,2)$",
+              "appearAt": 15.3,
+              "dur": 0.55
+            }
+          ]
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p63_sp1",
+          "title": "联立一般流程",
+          "showStart": 7.5,
+          "showEnd": 29.8,
+          "tokens": [
+            {
+              "id": "p63_sp1_t1",
+              "math": "$\\frac{k}{x}=ax+b \\implies ax^2+bx-k=0$",
+              "appearAt": 8.5,
+              "dur": 0.45
+            },
+            {
+              "id": "p63_sp1_t2",
+              "math": "判别式 $\\Delta = b^2+4ak$ 决定交点个数",
+              "appearAt": 16.0,
+              "dur": 0.45
+            }
+          ],
+          "note": "求得横坐标后务必检验 $x \\neq 0$ 再回代算纵坐标"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p63_r1_t1",
+          "tStart": 1.5,
+          "tEnd": 7.2,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p63_r2_t1",
+          "tStart": 8.3,
+          "tEnd": 14.2,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p63_r3_t1",
+          "tStart": 15.3,
+          "tEnd": 29.5,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p63_svg1",
+          "type": "arrow",
+          "fromToken": "p63_r2_t1",
+          "toToken": "p63_r3_t1",
+          "label": "两边乘 $x$ 化二次方程",
+          "color": "#D97706",
+          "curveOffset": 24,
+          "tStart": 15.4,
+          "tDrawEnd": 16.2,
+          "tFadeStart": 21.0,
+          "tEnd": 22.0
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0,
+          "tEnd": 7.5,
+          "text": "第一步用已知交点 $A(4,1)$ 先定反比例，再补全 $B$ 点坐标求一次函数。",
+          "focusToken": "p63_r1_t1"
+        },
+        {
+          "tStart": 7.5,
+          "tEnd": 14.5,
+          "text": "第二步写出平移后直线 $y=x$，并与 $y=\\frac{4}{x}$ 联立。",
+          "focusToken": "p63_r2_t1"
+        },
+        {
+          "tStart": 14.5,
+          "tEnd": 30.0,
+          "text": "第三、四步去分母得 $x^2=4$，解出 $x=\\pm 2$ 并回代写出两交点。",
+          "focusToken": "p63_r3_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "直线 $y = x + 3$ 与双曲线 $y = \\frac{10}{x}$ 的交点横坐标满足方程（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $x^2 + 3x - 10 = 0$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $x^2 + 3x + 10 = 0$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $x^2 - 3x - 10 = 0$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "$\\frac{10}{x} = x + 3 \\implies x^2 + 3x = 10 \\implies x^2 + 3x - 10 = 0$"
+            ],
+            "summary": "解得交点横坐标 $x_1=2, x_2=-5$。"
+          },
+          "wrongTitle": "提示：令 $\\frac{10}{x} = x+3$ 两边同乘 $x$ 后移项",
+          "wrongFeedback": "$x(x+3)=10$ 移项后为 $x^2+3x-10=0$。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "直线 $y = x + 1$ 与双曲线 $y = \\frac{2}{x}$ 在第一象限的交点横坐标 $x =$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$x =$",
+          "input1Placeholder": "如 1",
+          "input1Suffix": "",
+          "expectedX": "1",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "$x = 1$（交点为 $(1,2)$）。",
+          "correctDetail": "$x^2 + x - 2 = 0 \\implies (x-1)(x+2)=0$，第一象限取 $x=1$。",
+          "wrongFeedback": "联立 $x+1=\\frac{2}{x}$ 得 $x^2+x-2=0$，取正根 $x=1$。",
+          "specificWrongHints": []
+        }
+      }
+    },
+    P64: {
+      "procedureId": "P64",
+      "title": "利用函数图象与交点求不等式解集",
+      "exampleTitle": "一次函数 $y_1=kx+b$ 与反比例函数 $y_2=\\frac{c}{x}$ 交于 $A(-3,-2)$、$B(2,3)$，求 $y_1 \\gt y_2$ 的解集",
+      "exampleFormula": "三条分界线 $x=-3, x=0, x=2$ 分四段，选直线在上方的 $-3 \\lt x \\lt 0$ 或 $x \\gt 2$",
+      "totalDuration": 26,
+      "scratchpadIdleHint": "旁白草稿演算区（“两交点 + y 轴”三条竖线切四段，上大下小选区间）",
+      "practiceSectionTitle": "函数图象法解不等式跟做练习",
+      "practiceSectionSub": "完成以下两道数形结合解不等式练习",
+      "geometryDiagram": {
+        "title": "三线四区法 · $y_1 \\gt y_2$",
+        "caption": "虚线 x=-3、y 轴 x=0、x=2 将横轴分为四段，选取直线在双曲线上方的两段",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <line x1=\"20\" y1=\"88\" x2=\"240\" y2=\"88\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <line x1=\"130\" y1=\"12\" x2=\"130\" y2=\"164\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <polygon points=\"240,88 233,84 233,92\" fill=\"#64748B\" />\n            <polygon points=\"130,12 126,19 134,19\" fill=\"#64748B\" />\n            <text x=\"234\" y=\"102\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">x</text>\n            <text x=\"137\" y=\"20\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">y</text>\n            <text x=\"118\" y=\"101\" fill=\"#64748B\" font-size=\"10\">O</text>\n            <text x=\"200\" y=\"26\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">一</text>\n            <text x=\"48\" y=\"26\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">二</text>\n            <text x=\"48\" y=\"158\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">三</text>\n            <text x=\"200\" y=\"158\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">四</text>\n            \n            <path class=\"proc-geo-anim\" data-appear-at=\"1.0\" data-dur=\"0.6\" data-dash-len=\"120\"\n                  d=\"M 142 18 Q 160 66 225 76\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2.2\"\n                  stroke-dasharray=\"120\" stroke-dashoffset=\"120\" style=\"opacity:0;\" />\n            <path class=\"proc-geo-anim\" data-appear-at=\"1.3\" data-dur=\"0.6\" data-dash-len=\"120\"\n                  d=\"M 35 100 Q 100 110 118 158\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2.2\"\n                  stroke-dasharray=\"120\" stroke-dashoffset=\"120\" style=\"opacity:0;\" />\n            <line class=\"proc-geo-anim\" data-appear-at=\"1.8\" data-dur=\"0.5\" x1=\"55\" y1=\"145\" x2=\"205\" y2=\"25\" stroke=\"#D97706\" stroke-width=\"2\" style=\"opacity:0;\" />\n            <g class=\"proc-geo-anim\" data-appear-at=\"6.5\" data-dur=\"0.5\" style=\"opacity:0;\">\n              <line x1=\"88\" y1=\"14\" x2=\"88\" y2=\"162\" stroke=\"#64748B\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\" />\n              <line x1=\"168\" y1=\"14\" x2=\"168\" y2=\"162\" stroke=\"#64748B\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\" />\n              <circle cx=\"88\" cy=\"118\" r=\"3\" fill=\"#D97706\" />\n              <circle cx=\"168\" cy=\"54\" r=\"3\" fill=\"#D97706\" />\n              <text x=\"74\" y=\"132\" fill=\"#D97706\" font-size=\"9\" font-weight=\"700\">-3</text>\n              <text x=\"171\" y=\"50\" fill=\"#D97706\" font-size=\"9\" font-weight=\"700\">2</text>\n            </g>\n            \n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "标出交点横坐标与 $y$ 轴",
+          "tStart": 0,
+          "tEnd": 6.0,
+          "explanation": "读取两交点横坐标 $-3$ 和 $2$，加上断点 $x=0$。"
+        },
+        {
+          "step": 2,
+          "name": "划分四个自变量区间",
+          "tStart": 6.0,
+          "tEnd": 12.5,
+          "explanation": "三条竖线把 $x$ 轴分为 $x\\lt -3$、$-3\\lt x\\lt 0$、$0\\lt x\\lt 2$、$x\\gt 2$ 四段。"
+        },
+        {
+          "step": 3,
+          "name": "按图象上下位置筛选区间",
+          "tStart": 12.5,
+          "tEnd": 20.0,
+          "explanation": "$y_1 \\gt y_2$ 即一次函数直线在反比例曲线上方，锁定 $-3\\lt x\\lt 0$ 与 $x\\gt 2$。"
+        },
+        {
+          "step": 4,
+          "name": "检验 $x\\neq 0$ 并写出解集",
+          "tStart": 20.0,
+          "tEnd": 26.0,
+          "explanation": "用“或”连接两区间，写为 $-3\\lt x\\lt 0$ 或 $x\\gt 2$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.2,
+          "step": 1,
+          "label": "1.1 标出 $-3, 0, 2$"
+        },
+        {
+          "time": 7.5,
+          "step": 2,
+          "label": "2.1 切分四段区间"
+        },
+        {
+          "time": 14.0,
+          "step": 3,
+          "label": "3.1 选直线在曲线上方的区间"
+        },
+        {
+          "time": 21.0,
+          "step": 4,
+          "label": "4.1 写出 $-3\\lt x\\lt 0$ 或 $x\\gt 2$"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p64_r0",
+          "stepBadge": "已知条件",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p64_r0_t1",
+              "math": "交点 $A(-3,-2)$、$B(2,3)$，求 $y_1 \\gt y_2$ 的解集",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p64_r1",
+          "stepBadge": "第 1–2 步 · 分界四区",
+          "appearAt": 6.2,
+          "tokens": [
+            {
+              "id": "p64_r1_t1",
+              "math": "分界线 $x=-3,\\ x=0,\\ x=2$ 划分出四段区间",
+              "appearAt": 6.3,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p64_r2",
+          "stepBadge": "第 3 步 · 看图上下",
+          "appearAt": 13.0,
+          "tokens": [
+            {
+              "id": "p64_r2_t1",
+              "math": "直线在双曲线上方：$-3 \\lt x \\lt 0$ 与 $x \\gt 2$",
+              "appearAt": 13.1,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "rowId": "p64_r3",
+          "stepBadge": "第 4 步 · 解集",
+          "appearAt": 20.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p64_r3_t1",
+              "math": "$\\therefore -3 \\lt x \\lt 0$ 或 $x \\gt 2$",
+              "appearAt": 20.6,
+              "dur": 0.5
+            }
+          ]
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p64_sp1",
+          "title": "看图解不等式口诀",
+          "showStart": 6.0,
+          "showEnd": 25.8,
+          "tokens": [
+            {
+              "id": "p64_sp1_t1",
+              "math": "“两交点 + $y$ 轴”画三条竖线分四区",
+              "appearAt": 6.5,
+              "dur": 0.4
+            },
+            {
+              "id": "p64_sp1_t2",
+              "math": "谁大选谁在上方，隔开 $y$ 轴用“或”连",
+              "appearAt": 13.5,
+              "dur": 0.4
+            }
+          ],
+          "note": "永远不要跨过 $x=0$ 合并区间"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p64_r1_t1",
+          "tStart": 6.3,
+          "tEnd": 12.2,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p64_r2_t1",
+          "tStart": 13.1,
+          "tEnd": 19.8,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p64_r3_t1",
+          "tStart": 20.6,
+          "tEnd": 25.5,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p64_svg1",
+          "type": "arrow",
+          "fromToken": "p64_r1_t1",
+          "toToken": "p64_r2_t1",
+          "label": "看上方两段",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 13.3,
+          "tDrawEnd": 14.0,
+          "tFadeStart": 19.0,
+          "tEnd": 19.8
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0,
+          "tEnd": 6.0,
+          "text": "第一步找出两交点横坐标 $-3$ 和 $2$，以及 $y$ 轴 $x=0$。",
+          "focusToken": "p64_r0_t1"
+        },
+        {
+          "tStart": 6.0,
+          "tEnd": 12.5,
+          "text": "第二步三条竖线把平面划出四段自变量区间。",
+          "focusToken": "p64_r1_t1"
+        },
+        {
+          "tStart": 12.5,
+          "tEnd": 20.0,
+          "text": "第三步逐区比较，直线在双曲线上方的是 $-3\\lt x\\lt 0$ 和 $x\\gt 2$。",
+          "focusToken": "p64_r2_t1"
+        },
+        {
+          "tStart": 20.0,
+          "tEnd": 26.0,
+          "text": "第四步用“或”连接两段区间，写出最终解集。",
+          "focusToken": "p64_r3_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "直线 $y=kx+b$ 与双曲线 $y=\\frac{m}{x}$ 交于 $(-1,4)$、$(4,-1)$，则 $kx+b \\gt \\frac{m}{x}$ 的解集为（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $x \\lt -1$ 或 $0 \\lt x \\lt 4$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $-1 \\lt x \\lt 0$ 或 $x \\gt 4$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $x \\lt 4$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "第二象限 $(-1,4)$ 左侧直线在双曲线上方：$x \\lt -1$",
+              "第四象限 $y$ 轴至 $(4,-1)$ 间直线在上方：$0 \\lt x \\lt 4$"
+            ],
+            "summary": "注意 $k_1 \\lt 0$ 时直线从左往右下降。"
+          },
+          "wrongTitle": "提示：先在脑中画出过 $(-1,4)$ 与 $(4,-1)$ 的下降直线",
+          "wrongFeedback": "直线下降穿过二、一、四象限，在 $x \\lt -1$ 与 $0 \\lt x \\lt 4$ 位于双曲线上方。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "直线 $y=k_1 x+b$ 与双曲线 $y=\\frac{k_2}{x}$ 均过第一象限，交点横坐标为 $1$ 和 $3$，且 $1\\lt x\\lt 3$ 时直线在双曲线下方，则 $k_1 x+b \\lt \\frac{k_2}{x}$ 在 $x \\gt 0$ 时的左端点为 $x =$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$x =$",
+          "input1Placeholder": "如 1",
+          "input1Suffix": "",
+          "expectedX": "1",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "在 $x \\gt 0$ 部分解集为 $1 \\lt x \\lt 3$，左端点为 $1$。",
+          "correctDetail": "完整解集为 $x \\lt 0$ 或 $1 \\lt x \\lt 3$。",
+          "wrongFeedback": "直接读取第一象限两交点中较小的横坐标 $1$。",
+          "specificWrongHints": []
+        }
+      }
+    },
+    P65: {
+      "procedureId": "P65",
+      "title": "利用反比例函数与一次函数的交点解决几何综合问题",
+      "exampleTitle": "一次函数 $y=x+1$ 与反比例函数 $y=\\frac{6}{x}$ 交于 $A(2,3)$、$B(-3,-2)$，求 $\\triangle AOB$ 的面积",
+      "exampleFormula": "截距 $C(0,1)$ 割补：$S_{\\triangle AOB} = \\frac{1}{2} OC \\cdot (|x_A| + |x_B|) = \\frac{5}{2}$",
+      "totalDuration": 28,
+      "scratchpadIdleHint": "旁白草稿演算区（以直线与坐标轴截距为公共底边割补求面积）",
+      "practiceSectionTitle": "函数交点几何综合跟做练习",
+      "practiceSectionSub": "完成以下两道交点三角形面积与比例坐标练习",
+      "geometryDiagram": {
+        "title": "公共截距割补法 · $S_{\\triangle AOB}$",
+        "caption": "以 y 轴截距 OC=1 为公共底，A、B 在 y 轴异侧高之和为 2+3=5",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <line x1=\"20\" y1=\"88\" x2=\"240\" y2=\"88\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <line x1=\"130\" y1=\"12\" x2=\"130\" y2=\"164\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <polygon points=\"240,88 233,84 233,92\" fill=\"#64748B\" />\n            <polygon points=\"130,12 126,19 134,19\" fill=\"#64748B\" />\n            <text x=\"234\" y=\"102\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">x</text>\n            <text x=\"137\" y=\"20\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">y</text>\n            <text x=\"118\" y=\"101\" fill=\"#64748B\" font-size=\"10\">O</text>\n            <text x=\"200\" y=\"26\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">一</text>\n            <text x=\"48\" y=\"26\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">二</text>\n            <text x=\"48\" y=\"158\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">三</text>\n            <text x=\"200\" y=\"158\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">四</text>\n            \n            <path class=\"proc-geo-anim\" data-appear-at=\"1.0\" data-dur=\"0.6\" data-dash-len=\"120\"\n                  d=\"M 142 18 Q 160 64 225 76\" fill=\"none\" stroke=\"#94A3B8\" stroke-width=\"1.8\"\n                  stroke-dasharray=\"120\" stroke-dashoffset=\"120\" style=\"opacity:0;\" />\n            <path class=\"proc-geo-anim\" data-appear-at=\"1.3\" data-dur=\"0.6\" data-dash-len=\"120\"\n                  d=\"M 35 100 Q 100 110 118 158\" fill=\"none\" stroke=\"#94A3B8\" stroke-width=\"1.8\"\n                  stroke-dasharray=\"120\" stroke-dashoffset=\"120\" style=\"opacity:0;\" />\n            <g class=\"proc-geo-anim\" data-appear-at=\"6.0\" data-dur=\"0.6\" style=\"opacity:0;\">\n              <polygon points=\"130,88 166,46 82,116\" fill=\"#0F766E\" fill-opacity=\"0.18\" stroke=\"#0F766E\" stroke-width=\"1.8\" />\n              <circle cx=\"130\" cy=\"76\" r=\"3\" fill=\"#D97706\" />\n              <text x=\"168\" y=\"44\" fill=\"#0F766E\" font-size=\"10\" font-weight=\"700\">A(2,3)</text>\n              <text x=\"48\" y=\"128\" fill=\"#0F766E\" font-size=\"10\" font-weight=\"700\">B(-3,-2)</text>\n              <text x=\"135\" y=\"74\" fill=\"#D97706\" font-size=\"10\" font-weight=\"700\">C(0,1)</text>\n            </g>\n            \n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "求直线与坐标轴截距",
+          "tStart": 0,
+          "tEnd": 7.0,
+          "explanation": "在 $y=x+1$ 中令 $x=0$ 得 $y=1$，求出与 $y$ 轴交点 $C(0,1)$，即 $OC=1$。"
+        },
+        {
+          "step": 2,
+          "name": "以 $OC$ 为底割补 $\\triangle AOB$",
+          "tStart": 7.0,
+          "tEnd": 14.5,
+          "explanation": "将 $\\triangle AOB$ 沿 $y$ 轴拆为 $\\triangle AOC$ 与 $\\triangle BOC$ 之和。"
+        },
+        {
+          "step": 3,
+          "name": "代入坐标高计算面积",
+          "tStart": 14.5,
+          "tEnd": 22.0,
+          "explanation": "$S_{\\triangle AOB} = \\frac{1}{2}OC\\cdot |x_A| + \\frac{1}{2}OC\\cdot |x_B| = \\frac{1}{2}\\times 1\\times(2+3)=\\frac{5}{2}$。"
+        },
+        {
+          "step": 4,
+          "name": "检查异侧相加/同侧相减",
+          "tStart": 22.0,
+          "tEnd": 28.0,
+          "explanation": "确认 $A, B$ 分居 $y$ 轴两侧故高相加，输出最终面积 $\\frac{5}{2}$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.2,
+          "step": 1,
+          "label": "1.1 求截距 $C(0,1)$"
+        },
+        {
+          "time": 8.5,
+          "step": 2,
+          "label": "2.1 拆为 $\\triangle AOC + \\triangle BOC$"
+        },
+        {
+          "time": 16.0,
+          "step": 3,
+          "label": "3.1 代入 $OC=1, |x_A|=2, |x_B|=3$"
+        },
+        {
+          "time": 23.0,
+          "step": 4,
+          "label": "4.1 得 $S_{\\triangle AOB}=\\frac{5}{2}$"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p65_r0",
+          "stepBadge": "已知条件",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p65_r0_t1",
+              "math": "直线 $y=x+1$ 过 $A(2,3)$、$B(-3,-2)$，求 $S_{\\triangle AOB}$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p65_r1",
+          "stepBadge": "第 1 步 · 求截距",
+          "appearAt": 1.4,
+          "tokens": [
+            {
+              "id": "p65_r1_t1",
+              "math": "令 $x=0$ 得 $C(0,1)$，故公共底边 $OC = 1$",
+              "appearAt": 1.5,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p65_r2",
+          "stepBadge": "第 2–3 步 · 割补计算",
+          "appearAt": 7.5,
+          "tokens": [
+            {
+              "id": "p65_r2_t1",
+              "math": "$S_{\\triangle AOB} = \\frac{1}{2}\\times 1\\times |2| + \\frac{1}{2}\\times 1\\times |-3|$",
+              "appearAt": 7.6,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "rowId": "p65_r3",
+          "stepBadge": "第 4 步 · 结论",
+          "appearAt": 22.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p65_r3_t1",
+              "math": "$\\therefore S_{\\triangle AOB} = \\frac{5}{2}$",
+              "appearAt": 22.6,
+              "dur": 0.5
+            }
+          ]
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p65_sp1",
+          "title": "坐标割补万能公式",
+          "showStart": 7.0,
+          "showEnd": 27.8,
+          "tokens": [
+            {
+              "id": "p65_sp1_t1",
+              "math": "$S_{\\triangle AOB} = \\frac{1}{2} OC \\cdot |x_A - x_B|$",
+              "appearAt": 7.8,
+              "dur": 0.45
+            },
+            {
+              "id": "p65_sp1_t2",
+              "math": "或用 $x$ 轴截距 $OD$：$S = \\frac{1}{2} OD \\cdot |y_A - y_B|$",
+              "appearAt": 15.0,
+              "dur": 0.45
+            }
+          ],
+          "note": "用 $|x_A - x_B|$ 自动兼容同侧相减与异侧相加"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p65_r1_t1",
+          "tStart": 1.5,
+          "tEnd": 6.8,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p65_r2_t1",
+          "tStart": 7.6,
+          "tEnd": 21.8,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p65_r3_t1",
+          "tStart": 22.6,
+          "tEnd": 27.5,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p65_svg1",
+          "type": "arrow",
+          "fromToken": "p65_r1_t1",
+          "toToken": "p65_r2_t1",
+          "label": "以 $OC$ 为底",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 7.8,
+          "tDrawEnd": 8.6,
+          "tFadeStart": 14.0,
+          "tEnd": 14.8
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0,
+          "tEnd": 7.0,
+          "text": "第一步先求直线 $y=x+1$ 与 $y$ 轴的交点 $C(0,1)$，得到公共底边 $OC=1$。",
+          "focusToken": "p65_r1_t1"
+        },
+        {
+          "tStart": 7.0,
+          "tEnd": 22.0,
+          "text": "第二步以 $OC$ 为底把 $\\triangle AOB$ 拆为左右两块，用横坐标绝对值作高相加。",
+          "focusToken": "p65_r2_t1"
+        },
+        {
+          "tStart": 22.0,
+          "tEnd": 28.0,
+          "text": "第四步算得 $S_{\\triangle AOB} = \\frac{5}{2}$。",
+          "focusToken": "p65_r3_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "直线 $y = x + 1$ 交 $x$ 轴于 $C(-1,0)$，且与 $y=\\frac{2}{x}$ 交于 $A(1,2)$、$B(-2,-1)$，则 $S_{\\triangle AOB} =$（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $\\frac{3}{2}$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $3$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $2$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "$OC = 1$，$S_{\\triangle AOB} = \\frac{1}{2}\\times 1\\times |2 - (-1)| = \\frac{3}{2}$"
+            ],
+            "summary": "以 $x$ 轴截距 $OC$ 为底时，高取两交点纵坐标之差 $|y_A - y_B|$。"
+          },
+          "wrongTitle": "提示：使用 $S = \\frac{1}{2} OC \\cdot |y_A - y_B|$",
+          "wrongFeedback": "$OC=1$，$|y_A - y_B| = |2 - (-1)| = 3$，乘积一半为 $\\frac{3}{2}$。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "已知 $C(0,1)$ 在 $y$ 轴上，一次函数与双曲线交于 $A(2,2)$，则 $\\triangle AOC$ 的面积为 ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$S_{\\triangle AOC} =$",
+          "input1Placeholder": "如 1",
+          "input1Suffix": "",
+          "expectedX": "1",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "$S_{\\triangle AOC} = 1$。",
+          "correctDetail": "以 $OC=1$ 为底，点 $A$ 横坐标 $2$ 为高，$S = \\frac{1}{2}\\times 1\\times 2 = 1$。",
+          "wrongFeedback": "底 $OC=1$，高为 $A$ 到 $y$ 轴距离 $2$，$\\frac{1}{2}\\times 1\\times 2=1$。",
+          "specificWrongHints": []
+        }
+      }
+    },
+    P66: {
+      "procedureId": "P66",
+      "title": "利用反比例函数模型解决实际问题中的变量计算与范围约束",
+      "exampleTitle": "区间测速中汽车平均速度 $v\\ (\\text{km/h})$ 与时间 $t\\ (\\text{h})$ 满足反比例且过 $(0.4,90)$，求 $t=20$ 分钟时的速度及限速 $80\\le v\\le 120$ 的时间范围",
+      "exampleFormula": "$v = \\frac{36}{t}$；$t=\\frac{1}{3}\\text{h} \\implies v=108$；$80 \\le v \\le 120 \\implies 0.3 \\le t \\le 0.45$",
+      "totalDuration": 30,
+      "scratchpadIdleHint": "旁白草稿演算区（统一单位后代入计算或求临界值定实际区间）",
+      "practiceSectionTitle": "实际问题定量计算与范围约束跟做练习",
+      "practiceSectionSub": "完成以下两道实际应用求值与最值约束练习",
+      "geometryDiagram": {
+        "title": "实际模型区间 · $v = \\frac{36}{t}$",
+        "caption": "在第一象限内 v 随 t 增大而减小，由 v=120 与 v=80 界定 t 的允许范围",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <line x1=\"20\" y1=\"88\" x2=\"240\" y2=\"88\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <line x1=\"130\" y1=\"12\" x2=\"130\" y2=\"164\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <polygon points=\"240,88 233,84 233,92\" fill=\"#64748B\" />\n            <polygon points=\"130,12 126,19 134,19\" fill=\"#64748B\" />\n            <text x=\"234\" y=\"102\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">x</text>\n            <text x=\"137\" y=\"20\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">y</text>\n            <text x=\"118\" y=\"101\" fill=\"#64748B\" font-size=\"10\">O</text>\n            <text x=\"200\" y=\"26\" fill=\"#0F766E\" font-size=\"10\" font-weight=\"600\">一</text>\n            <text x=\"48\" y=\"26\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">二</text>\n            <text x=\"48\" y=\"158\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">三</text>\n            <text x=\"200\" y=\"158\" fill=\"#94A3B8\" font-size=\"10\" font-weight=\"600\">四</text>\n            \n            <path class=\"proc-geo-anim\" data-appear-at=\"1.2\" data-dur=\"0.7\" data-dash-len=\"140\"\n                  d=\"M 142 18 Q 160 66 225 76\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2.5\"\n                  stroke-dasharray=\"140\" stroke-dashoffset=\"140\" style=\"opacity:0;\" />\n            <g class=\"proc-geo-anim\" data-appear-at=\"14.5\" data-dur=\"0.6\" style=\"opacity:0;\">\n              <line x1=\"130\" y1=\"42\" x2=\"180\" y2=\"42\" stroke=\"#D97706\" stroke-width=\"1.3\" stroke-dasharray=\"3 3\" />\n              <line x1=\"130\" y1=\"64\" x2=\"205\" y2=\"64\" stroke=\"#D97706\" stroke-width=\"1.3\" stroke-dasharray=\"3 3\" />\n              <circle cx=\"164\" cy=\"42\" r=\"2.8\" fill=\"#D97706\" />\n              <circle cx=\"192\" cy=\"64\" r=\"2.8\" fill=\"#D97706\" />\n              <text x=\"134\" y=\"39\" fill=\"#D97706\" font-size=\"9\" font-weight=\"700\">120</text>\n              <text x=\"134\" y=\"61\" fill=\"#D97706\" font-size=\"9\" font-weight=\"700\">80</text>\n            </g>\n            \n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "确认模型并统一单位",
+          "tStart": 0,
+          "tEnd": 7.0,
+          "explanation": "由 $(0.4, 90)$ 得 $v = \\frac{36}{t}$；将 $20$ 分钟换算为 $\\frac{1}{3}$ 小时。"
+        },
+        {
+          "step": 2,
+          "name": "代入条件求目标变量",
+          "tStart": 7.0,
+          "tEnd": 14.0,
+          "explanation": "将 $t = \\frac{1}{3}$ 代入 $v = \\frac{36}{t}$，求得平均速度 $v = 108\\text{ km/h}$。"
+        },
+        {
+          "step": 3,
+          "name": "由实际限制求临界并定范围",
+          "tStart": 14.0,
+          "tEnd": 23.0,
+          "explanation": "令 $v=120$ 得 $t=0.3$，令 $v=80$ 得 $t=0.45$；由第一象限递减性得 $0.3 \\le t \\le 0.45$。"
+        },
+        {
+          "step": 4,
+          "name": "还原为实际问题答案",
+          "tStart": 23.0,
+          "tEnd": 30.0,
+          "explanation": "核对单位与实际含义，规范作答速度 $108\\text{ km/h}$ 与时间范围 $0.3\\le t\\le 0.45\\text{ h}$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.5,
+          "step": 1,
+          "label": "1.1 求得 $v=36/t$，20min=$1/3$h"
+        },
+        {
+          "time": 8.5,
+          "step": 2,
+          "label": "2.1 代入求得 $v=108\\text{ km/h}$"
+        },
+        {
+          "time": 16.0,
+          "step": 3,
+          "label": "3.1 算得临界 $0.3$ 与 $0.45$"
+        },
+        {
+          "time": 24.0,
+          "step": 4,
+          "label": "4.1 写出实际范围 $0.3\\le t\\le 0.45$"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p66_r0",
+          "stepBadge": "已知条件",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p66_r0_t1",
+              "math": "过 $(0.4,90)$，求 $t=20\\text{min}$ 时 $v$ 及 $80\\le v\\le 120$ 时 $t$ 范围",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p66_r1",
+          "stepBadge": "第 1 步 · 模型与单位",
+          "appearAt": 1.4,
+          "tokens": [
+            {
+              "id": "p66_r1_t1",
+              "math": "$k=0.4\\times 90=36 \\implies v=\\frac{36}{t}$；$20\\text{min}=\\frac{1}{3}\\text{h}$",
+              "appearAt": 1.5,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "rowId": "p66_r2",
+          "stepBadge": "第 2 步 · 代入求值",
+          "appearAt": 7.5,
+          "tokens": [
+            {
+              "id": "p66_r2_t1",
+              "math": "当 $t=\\frac{1}{3}$ 时，$v = \\frac{36}{1/3} = 108\\ (\\text{km/h})$",
+              "appearAt": 7.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p66_r3",
+          "stepBadge": "第 3–4 步 · 范围约束",
+          "appearAt": 14.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p66_r3_t1",
+              "math": "$v=120\\Rightarrow t=0.3$，$v=80\\Rightarrow t=0.45 \\implies 0.3 \\le t \\le 0.45\\ (\\text{h})$",
+              "appearAt": 14.6,
+              "dur": 0.55
+            }
+          ]
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p66_sp1",
+          "title": "实际应用易错双提醒",
+          "showStart": 1.5,
+          "showEnd": 29.8,
+          "tokens": [
+            {
+              "id": "p66_sp1_t1",
+              "math": "1. 分钟、厘米等单位必须先统一再代入",
+              "appearAt": 2.0,
+              "dur": 0.4
+            },
+            {
+              "id": "p66_sp1_t2",
+              "math": "2. 速度越大，用时越短（端点交叉对应）",
+              "appearAt": 15.0,
+              "dur": 0.4
+            }
+          ],
+          "note": "第一象限单调递减，$v$ 的上限对应 $t$ 的下限"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p66_r1_t1",
+          "tStart": 1.5,
+          "tEnd": 6.8,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p66_r2_t1",
+          "tStart": 7.6,
+          "tEnd": 13.8,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p66_r3_t1",
+          "tStart": 14.6,
+          "tEnd": 29.5,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p66_svg1",
+          "type": "arrow",
+          "fromToken": "p66_r1_t1",
+          "toToken": "p66_r2_t1",
+          "label": "先化单位再代入",
+          "color": "#D97706",
+          "curveOffset": 24,
+          "tStart": 7.8,
+          "tDrawEnd": 8.6,
+          "tFadeStart": 12.8,
+          "tEnd": 13.6
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0,
+          "tEnd": 7.0,
+          "text": "第一步建立 $v=\\frac{36}{t}$，同时把 20 分钟换算成 $\\frac{1}{3}$ 小时。",
+          "focusToken": "p66_r1_t1"
+        },
+        {
+          "tStart": 7.0,
+          "tEnd": 14.0,
+          "text": "第二步代入 $t=\\frac{1}{3}$ 算得平均速度为 $108\\text{ km/h}$。",
+          "focusToken": "p66_r2_t1"
+        },
+        {
+          "tStart": 14.0,
+          "tEnd": 30.0,
+          "text": "第三、四步分别代入最高、最低限速求出临界时间 $0.3$ 与 $0.45$，得出安全时间范围。",
+          "focusToken": "p66_r3_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "液体压强 $P=\\frac{60000}{S}\\ (S \\gt 0)$，当底面积调节范围为 $25 \\le S \\le 50$ 时，压强 $P$ 的取值范围是（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $1200 \\le P \\le 2400$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $2400 \\le P \\le 1200$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $P \\ge 1200$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "$S=25 \\implies P=2400$，$S=50 \\implies P=1200$",
+              "第一象限内 $P$ 随 $S$ 增大而减小，故 $1200 \\le P \\le 2400$"
+            ],
+            "summary": "端点大小顺序要写对，小值在左、大值在右。"
+          },
+          "wrongTitle": "提示：代入 $S=25$ 与 $S=50$ 算两个端点值",
+          "wrongFeedback": "$60000\\div 50=1200$，$60000\\div 25=2400$，范围是 $1200\\le P\\le 2400$。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "拖拉机牵引力 $F = \\frac{60}{v}\\ (v \\gt 0)$，为保证耕地效果，要求 $F \\ge 40$，则拖拉机速度 $v$ 的最大值为 ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$v_{\\max} =$",
+          "input1Placeholder": "如 1.5",
+          "input1Suffix": "$\\text{m/s}$",
+          "expectedX": "1.5",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "最大速度为 $1.5\\text{ m/s}$。",
+          "correctDetail": "由 $\\frac{60}{v} \\ge 40$ 且 $v \\gt 0$，解得 $0 \\lt v \\le 1.5$。",
+          "wrongFeedback": "令 $F = 40$ 得临界速度 $v = \\frac{60}{40} = 1.5$。",
+          "specificWrongHints": []
+        }
+      }
+    },
+    P67: {
+      "procedureId": "P67",
+      "title": "识别二次函数与由定义求参数",
+      "exampleTitle": "若函数 $y = (m - 2)x^{m^2 - m} + x - 1$ 是关于 $x$ 的二次函数，求常数 $m$ 的值",
+      "exampleFormula": "$m^2 - m = 2$ 且 $m - 2 \\neq 0 \\implies m = -1$",
+      "totalDuration": 22,
+      "scratchpadIdleHint": "旁白草稿演算区（准确辨识二次函数并由最高次数为 2 且二次项系数非零求参数值。）",
+      "practiceSectionTitle": "识别二次函数与由定义求参数跟做练习",
+      "practiceSectionSub": "完成以下两道关键操作练习",
+      "geometryDiagram": {
+        "title": "二次函数定义双条件校验",
+        "caption": "最高次等于 2 与二次项系数非零必须同时满足",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <line x1=\"20\" y1=\"115\" x2=\"240\" y2=\"115\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <line x1=\"130\" y1=\"12\" x2=\"130\" y2=\"164\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <polygon points=\"240,115 233,111 233,119\" fill=\"#64748B\" />\n            <polygon points=\"130,12 126,19 134,19\" fill=\"#64748B\" />\n            <text x=\"234\" y=\"129\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">x</text>\n            <text x=\"137\" y=\"20\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">y</text>\n            <text x=\"118\" y=\"128\" fill=\"#64748B\" font-size=\"10\">O</text>\n            <path class=\"proc-geo-anim\" data-appear-at=\"8.0\" data-dur=\"0.8\" data-dash-len=\"180\" d=\"M 60 155 Q 130 15 200 155\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2.5\" stroke-dasharray=\"180\" stroke-dashoffset=\"180\" style=\"opacity:0;\" />\n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "化简整理为一般形式",
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "explanation": "去括号、合并同类项，看清是否消去 $x^2$ 项及分母是否含未知数。"
+        },
+        {
+          "step": 2,
+          "name": "列自变量最高次数等于 $2$ 的方程",
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "explanation": "令含参指数等于 $2$，求出参数的候选值。"
+        },
+        {
+          "step": 3,
+          "name": "检验二次项系数 $a \\neq 0$ 并舍去增根",
+          "tStart": 14.6,
+          "tEnd": 22,
+          "explanation": "将候选值代入二次项系数检验，舍去使 $a=0$ 的值定解。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 化简整理为一般形式"
+        },
+        {
+          "time": 8.3,
+          "step": 2,
+          "label": "2.1 列自变量最高次数等于 $2$ 的方程"
+        },
+        {
+          "time": 15.6,
+          "step": 3,
+          "label": "3.1 检验二次项系数 $a \\neq 0$ 并舍去增根"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p67_r0",
+          "stepBadge": "已知条件",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p67_r0_t1",
+              "math": "函数 $y = (m - 2)x^{m^2 - m} + x - 1$ 是二次函数",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p67_r1",
+          "stepBadge": "第 1 步 · 最高次为 2",
+          "appearAt": 1.5,
+          "tokens": [
+            {
+              "id": "p67_r1_t1",
+              "math": "列指数方程：$m^2 - m = 2 \\implies (m-2)(m+1)=0$",
+              "appearAt": 1.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p67_r2",
+          "stepBadge": "第 2 步 · 候选解",
+          "appearAt": 8.0,
+          "tokens": [
+            {
+              "id": "p67_r2_t1",
+              "math": "解得 $m_1 = 2$，$m_2 = -1$",
+              "appearAt": 8.1,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p67_r3",
+          "stepBadge": "第 3 步 · 系数非零定解",
+          "appearAt": 15.0,
+          "tokens": [
+            {
+              "id": "p67_r3_t1",
+              "math": "$\\because m - 2 \\neq 0 \\implies m \\neq 2$，$\\therefore m = -1$",
+              "appearAt": 15.1,
+              "dur": 0.45
+            }
+          ],
+          "isConclusion": true
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p67_sp1",
+          "title": "核心要点速记",
+          "showStart": 1.5,
+          "showEnd": 21.8,
+          "tokens": [
+            {
+              "id": "p67_sp1_t1",
+              "math": "1. $y = ax^2 + bx + c\\ (a \\neq 0)$",
+              "appearAt": 1.8,
+              "dur": 0.4
+            },
+            {
+              "id": "p67_sp1_t2",
+              "math": "2. $m^2 - m = 2 \\implies m = 2 \\text{ 或 } m = -1$",
+              "appearAt": 6.3,
+              "dur": 0.4
+            },
+            {
+              "id": "p67_sp1_t3",
+              "math": "3. $m - 2 \\neq 0 \\implies m = -1$",
+              "appearAt": 10.8,
+              "dur": 0.4
+            }
+          ],
+          "note": "未先化简导致误判（如 $(x-1)^2-x^2+1=-2x+2$ 实际是一次函数）。"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p67_r1_t1",
+          "tStart": 1.6,
+          "tEnd": 7.0,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p67_r2_t1",
+          "tStart": 8.1,
+          "tEnd": 13.5,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p67_r3_t1",
+          "tStart": 15.1,
+          "tEnd": 20.5,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p67_svg1",
+          "type": "arrow",
+          "fromToken": "p67_r1_t1",
+          "toToken": "p67_r3_t1",
+          "label": "关键转化定解",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 15.2,
+          "tDrawEnd": 15.9,
+          "tFadeStart": 20.5,
+          "tEnd": 21.7
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "text": "第1步：化简整理为一般形式——去括号、合并同类项，看清是否消去 $x^2$ 项及分母是否含未知数。",
+          "focusToken": "p67_r1_t1"
+        },
+        {
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "text": "第2步：列自变量最高次数等于 $2$ 的方程——令含参指数等于 $2$，求出参数的候选值。",
+          "focusToken": "p67_r2_t1"
+        },
+        {
+          "tStart": 14.6,
+          "tEnd": 22,
+          "text": "第3步：检验二次项系数 $a \\neq 0$ 并舍去增根——将候选值代入二次项系数检验，舍去使 $a=0$ 的值定解。",
+          "focusToken": "p67_r3_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "若 $y = (m-3)x^{|m|-1} + 2x - 1$ 是二次函数，则 $m$ 的值为（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $3$",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. $-3$",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. $\\pm 3$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "$|m|-1=2 \\implies m=\\pm 3$，又 $m-3\\neq 0$，故 $m=-3$。"
+            ],
+            "summary": "准确辨识二次函数并由最高次数为 2 且二次项系数非零求参数值。"
+          },
+          "wrongTitle": "提示：请结合本节核心操作再核对一次",
+          "wrongFeedback": "$|m|-1=2 \\implies m=\\pm 3$，又 $m-3\\neq 0$，故 $m=-3$。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "若 $y = (k-3)x^{k^2-3k+2}+kx+1$ 是二次函数，则 $k =$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$k =$",
+          "input1Placeholder": "如 0",
+          "input1Suffix": "",
+          "expectedX": "0",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 0。",
+          "correctDetail": "$k^2-3k+2=2 \\implies k=0$ 或 $3$，由 $k-3\\neq 0$ 得 $k=0$。",
+          "wrongFeedback": "$k^2-3k+2=2 \\implies k=0$ 或 $3$，由 $k-3\\neq 0$ 得 $k=0$。",
+          "specificWrongHints": []
+        }
+      }
+    },
+    P68: {
+      "procedureId": "P68",
+      "title": "由 $y=ax^2$ 系数 $a$ 判断开口、对称轴与增减性",
+      "exampleTitle": "若二次函数 $y = mx^{m^2+1}$ 当 $x \\lt 0$ 时 $y$ 随 $x$ 增大而增大，求 $m$ 的值",
+      "exampleFormula": "$m^2+1=2$ 且 $m \\lt 0 \\implies m = -1$",
+      "totalDuration": 22,
+      "scratchpadIdleHint": "旁白草稿演算区（掌握 $y=ax^2$ 开口方向、开口宽窄及以 $y$ 轴为对称轴的增减性互推。）",
+      "practiceSectionTitle": "由 $y=ax^2$ 系数 $a$ 判断开口、对称轴与增减性跟做练习",
+      "practiceSectionSub": "完成以下两道关键操作练习",
+      "geometryDiagram": {
+        "title": "$y=ax^2$ 开口方向与宽窄对比",
+        "caption": "a < 0 开口向下，在 y 轴左侧 y 随 x 增大而增大",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <line x1=\"20\" y1=\"115\" x2=\"240\" y2=\"115\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <line x1=\"130\" y1=\"12\" x2=\"130\" y2=\"164\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <polygon points=\"240,115 233,111 233,119\" fill=\"#64748B\" />\n            <polygon points=\"130,12 126,19 134,19\" fill=\"#64748B\" />\n            <text x=\"234\" y=\"129\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">x</text>\n            <text x=\"137\" y=\"20\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">y</text>\n            <text x=\"118\" y=\"128\" fill=\"#64748B\" font-size=\"10\">O</text>\n            <path class=\"proc-geo-anim\" data-appear-at=\"8.0\" data-dur=\"0.8\" data-dash-len=\"180\" d=\"M 65 160 Q 130 25 195 160\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2.5\" stroke-dasharray=\"180\" stroke-dashoffset=\"180\" style=\"opacity:0;\" /><text class=\"proc-geo-anim\" data-appear-at=\"12.0\" data-dur=\"0.5\" x=\"45\" y=\"75\" fill=\"#D97706\" font-size=\"10\" font-weight=\"700\" style=\"opacity:0;\">x&lt;0 递增 ↗</text>\n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "提取二次项系数 $a$",
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "explanation": "对准 $y=ax^2$ 提取系数 $a$（含参数或先由定义定指数）。"
+        },
+        {
+          "step": 2,
+          "name": "由 $a$ 的正负定开口与增减性",
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "explanation": "$a\\gt 0$ 开口向上（$x\\lt 0$ 递减、$x\\gt 0$ 递增，有最低点）；$a\\lt 0$ 开口向下（$x\\lt 0$ 递增、$x\\gt 0$ 递减，有最高点）。"
+        },
+        {
+          "step": 3,
+          "name": "由 $|a|$ 大小比较开口宽窄并定解",
+          "tStart": 14.6,
+          "tEnd": 22,
+          "explanation": "$|a|$ 越大开口越窄，$|a|$ 越小开口越宽；列不等式求出参数。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 提取二次项系数 $a$"
+        },
+        {
+          "time": 8.3,
+          "step": 2,
+          "label": "2.1 由 $a$ 的正负定开口与增减性"
+        },
+        {
+          "time": 15.6,
+          "step": 3,
+          "label": "3.1 由 $|a|$ 大小比较开口宽窄并定解"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p68_r0",
+          "stepBadge": "已知条件",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p68_r0_t1",
+              "math": "二次函数 $y = mx^{m^2+1}$ 在 $x\\lt 0$ 时 $y$ 随 $x$ 增大而增大",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p68_r1",
+          "stepBadge": "第 1 步 · 定指数",
+          "appearAt": 1.5,
+          "tokens": [
+            {
+              "id": "p68_r1_t1",
+              "math": "由二次函数定义：$m^2 + 1 = 2 \\implies m = \\pm 1$",
+              "appearAt": 1.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p68_r2",
+          "stepBadge": "第 2 步 · 判开口方向",
+          "appearAt": 8.0,
+          "tokens": [
+            {
+              "id": "p68_r2_t1",
+              "math": "$x\\lt 0$ 时递增 $\\implies$ 开口向下 $\\implies m \\lt 0$",
+              "appearAt": 8.1,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p68_r3",
+          "stepBadge": "第 3 步 · 得出结论",
+          "appearAt": 15.0,
+          "tokens": [
+            {
+              "id": "p68_r3_t1",
+              "math": "$\\therefore m = -1$",
+              "appearAt": 15.1,
+              "dur": 0.45
+            }
+          ],
+          "isConclusion": true
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p68_sp1",
+          "title": "核心要点速记",
+          "showStart": 1.5,
+          "showEnd": 21.8,
+          "tokens": [
+            {
+              "id": "p68_sp1_t1",
+              "math": "1. $y = ax^2\\ (a \\neq 0)$",
+              "appearAt": 1.8,
+              "dur": 0.4
+            },
+            {
+              "id": "p68_sp1_t2",
+              "math": "2. $a \\gt 0 \\iff \\text{开口向上}$；$a \\lt 0 \\iff \\text{开口向下}$",
+              "appearAt": 6.3,
+              "dur": 0.4
+            },
+            {
+              "id": "p68_sp1_t3",
+              "math": "3. $|a_1| \\gt |a_2| \\iff \\text{开口更窄}$",
+              "appearAt": 10.8,
+              "dur": 0.4
+            }
+          ],
+          "note": "混淆 $|a|$ 与开口宽窄的关系（误以为 $|a|$ 越大开口越宽）。"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p68_r1_t1",
+          "tStart": 1.6,
+          "tEnd": 7.0,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p68_r2_t1",
+          "tStart": 8.1,
+          "tEnd": 13.5,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p68_r3_t1",
+          "tStart": 15.1,
+          "tEnd": 20.5,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p68_svg1",
+          "type": "arrow",
+          "fromToken": "p68_r1_t1",
+          "toToken": "p68_r3_t1",
+          "label": "关键转化定解",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 15.2,
+          "tDrawEnd": 15.9,
+          "tFadeStart": 20.5,
+          "tEnd": 21.7
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "text": "第1步：提取二次项系数 $a$——对准 $y=ax^2$ 提取系数 $a$（含参数或先由定义定指数）。",
+          "focusToken": "p68_r1_t1"
+        },
+        {
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "text": "第2步：由 $a$ 的正负定开口与增减性——$a\\gt 0$ 开口向上（$x\\lt 0$ 递减、$x\\gt 0$ 递增，有最低点）；$a\\lt 0$ 开口向下（$x\\lt 0$ 递增、$x\\gt 0$ 递减，有最高点）。",
+          "focusToken": "p68_r2_t1"
+        },
+        {
+          "tStart": 14.6,
+          "tEnd": 22,
+          "text": "第3步：由 $|a|$ 大小比较开口宽窄并定解——$|a|$ 越大开口越窄，$|a|$ 越小开口越宽；列不等式求出参数。",
+          "focusToken": "p68_r3_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "抛物线 $y=\\frac{1}{3}x^2$、$y=-2x^2$、$y=\\frac{3}{2}x^2$ 中开口最宽的是（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $y=\\frac{1}{3}x^2$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $y=-2x^2$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $y=\\frac{3}{2}x^2$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "$|\\frac{1}{3}|$ 最小，故开口最宽。"
+            ],
+            "summary": "掌握 $y=ax^2$ 开口方向、开口宽窄及以 $y$ 轴为对称轴的增减性互推。"
+          },
+          "wrongTitle": "提示：请结合本节核心操作再核对一次",
+          "wrongFeedback": "$|\\frac{1}{3}|$ 最小，故开口最宽。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "若 $y=(m-2)x^2$ 当 $x\\lt 0$ 时 $y$ 随 $x$ 增大而增大，则 $m \\lt$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$m \\lt$",
+          "input1Placeholder": "如 2",
+          "input1Suffix": "",
+          "expectedX": "2",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 2。",
+          "correctDetail": "开口向下故 $m-2 \\lt 0 \\implies m \\lt 2$。",
+          "wrongFeedback": "开口向下故 $m-2 \\lt 0 \\implies m \\lt 2$。",
+          "specificWrongHints": []
+        }
+      }
+    },
+    P69: {
+      "procedureId": "P69",
+      "title": "由顶点式 $y=a(x-h)^2+k$ 读顶点、对称轴与增减性",
+      "exampleTitle": "判断抛物线 $y = -2(x - 2)^2 + 1$ 的顶点、对称轴、最值与增减性",
+      "exampleFormula": "开口向下，对称轴 $x=2$，顶点 $(2,1)$，最大值 $1$",
+      "totalDuration": 22,
+      "scratchpadIdleHint": "旁白草稿演算区（熟练读取顶点式全部核心几何特征并比较抛物线上点的函数值大小。）",
+      "practiceSectionTitle": "由顶点式 $y=a(x-h)^2+k$ 读顶点、对称轴与增减性跟做练习",
+      "practiceSectionSub": "完成以下两道关键操作练习",
+      "geometryDiagram": {
+        "title": "顶点式 $y=-2(x-2)^2+1$",
+        "caption": "对称轴 x=2，顶点 (2,1) 为最高点，左侧递增、右侧递减",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <line x1=\"20\" y1=\"115\" x2=\"240\" y2=\"115\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <line x1=\"130\" y1=\"12\" x2=\"130\" y2=\"164\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <polygon points=\"240,115 233,111 233,119\" fill=\"#64748B\" />\n            <polygon points=\"130,12 126,19 134,19\" fill=\"#64748B\" />\n            <text x=\"234\" y=\"129\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">x</text>\n            <text x=\"137\" y=\"20\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">y</text>\n            <text x=\"118\" y=\"128\" fill=\"#64748B\" font-size=\"10\">O</text>\n            <line class=\"proc-geo-anim\" data-appear-at=\"2.0\" data-dur=\"0.5\" x1=\"162\" y1=\"18\" x2=\"162\" y2=\"160\" stroke=\"#D97706\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\" style=\"opacity:0;\" /><path class=\"proc-geo-anim\" data-appear-at=\"6.0\" data-dur=\"0.8\" data-dash-len=\"180\" d=\"M 102 155 Q 162 25 222 155\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2.5\" stroke-dasharray=\"180\" stroke-dashoffset=\"180\" style=\"opacity:0;\" /><circle class=\"proc-geo-anim\" data-appear-at=\"7.0\" data-dur=\"0.4\" cx=\"162\" cy=\"90\" r=\"3.2\" fill=\"#D97706\" style=\"opacity:0;\" />\n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "对照标准顶点式提取 $a, h, k$",
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "explanation": "将解析式对准 $y=a(x-h)^2+k$，注意括号内“减 $h$”的符号反转。"
+        },
+        {
+          "step": 2,
+          "name": "由 $a$ 与 $h$ 确定单调区间与最值",
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "explanation": "$a\\gt 0$ 时在 $x=h$ 处取最小值 $k$（左减右增）；$a\\lt 0$ 时取最大值 $k$（左增右减）。"
+        },
+        {
+          "step": 3,
+          "name": "用“距对称轴距离 $|x-h|$”比较函数值大小",
+          "tStart": 14.6,
+          "tEnd": 22,
+          "explanation": "$a\\gt 0$ 离对称轴越远 $y$ 越大；$a\\lt 0$ 离对称轴越远 $y$ 越小。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 对照标准顶点式提取 $a, h, k$"
+        },
+        {
+          "time": 8.3,
+          "step": 2,
+          "label": "2.1 由 $a$ 与 $h$ 确定单调区间与最值"
+        },
+        {
+          "time": 15.6,
+          "step": 3,
+          "label": "3.1 用“距对称轴距离 $|x-h|$”比较函数值大小"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p69_r0",
+          "stepBadge": "已知顶点式",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p69_r0_t1",
+              "math": "$y = -2(x - 2)^2 + 1$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p69_r1",
+          "stepBadge": "第 1 步 · 提取 $a,h,k$",
+          "appearAt": 1.5,
+          "tokens": [
+            {
+              "id": "p69_r1_t1",
+              "math": "$a = -2 \\lt 0$，$h = 2$，$k = 1$",
+              "appearAt": 1.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p69_r2",
+          "stepBadge": "第 2 步 · 顶点与对称轴",
+          "appearAt": 8.0,
+          "tokens": [
+            {
+              "id": "p69_r2_t1",
+              "math": "对称轴 $x = 2$，顶点 $(2, 1)$，最大值 $1$",
+              "appearAt": 8.1,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p69_r3",
+          "stepBadge": "第 3 步 · 增减性",
+          "appearAt": 15.0,
+          "tokens": [
+            {
+              "id": "p69_r3_t1",
+              "math": "$x \\lt 2$ 时 $y$ 随 $x$ 增大而增大；$x \\gt 2$ 时减小",
+              "appearAt": 15.1,
+              "dur": 0.45
+            }
+          ],
+          "isConclusion": true
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p69_sp1",
+          "title": "核心要点速记",
+          "showStart": 1.5,
+          "showEnd": 21.8,
+          "tokens": [
+            {
+              "id": "p69_sp1_t1",
+              "math": "1. 顶点 $(h, k)$，对称轴 $x = h$",
+              "appearAt": 1.8,
+              "dur": 0.4
+            },
+            {
+              "id": "p69_sp1_t2",
+              "math": "2. 对称轴两侧单调性相反",
+              "appearAt": 6.3,
+              "dur": 0.4
+            },
+            {
+              "id": "p69_sp1_t3",
+              "math": "3. 比较 $|x_1-h|$ 与 $|x_2-h|$",
+              "appearAt": 10.8,
+              "dur": 0.4
+            }
+          ],
+          "note": "把 $y=-(x+3)^2+5$ 的对称轴误读为 $x=3$（正确为 $x=-3$）。"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p69_r1_t1",
+          "tStart": 1.6,
+          "tEnd": 7.0,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p69_r2_t1",
+          "tStart": 8.1,
+          "tEnd": 13.5,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p69_r3_t1",
+          "tStart": 15.1,
+          "tEnd": 20.5,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p69_svg1",
+          "type": "arrow",
+          "fromToken": "p69_r1_t1",
+          "toToken": "p69_r3_t1",
+          "label": "关键转化定解",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 15.2,
+          "tDrawEnd": 15.9,
+          "tFadeStart": 20.5,
+          "tEnd": 21.7
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "text": "第1步：对照标准顶点式提取 $a, h, k$——将解析式对准 $y=a(x-h)^2+k$，注意括号内“减 $h$”的符号反转。",
+          "focusToken": "p69_r1_t1"
+        },
+        {
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "text": "第2步：由 $a$ 与 $h$ 确定单调区间与最值——$a\\gt 0$ 时在 $x=h$ 处取最小值 $k$（左减右增）；$a\\lt 0$ 时取最大值 $k$（左增右减）。",
+          "focusToken": "p69_r2_t1"
+        },
+        {
+          "tStart": 14.6,
+          "tEnd": 22,
+          "text": "第3步：用“距对称轴距离 $|x-h|$”比较函数值大小——$a\\gt 0$ 离对称轴越远 $y$ 越大；$a\\lt 0$ 离对称轴越远 $y$ 越小。",
+          "focusToken": "p69_r3_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "抛物线 $y = (x - 3)^2 - 5$ 的顶点坐标是（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $(3, -5)$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $(-3, -5)$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $(3, 5)$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "对照 $y=a(x-h)^2+k$ 得 $h=3, k=-5$。"
+            ],
+            "summary": "熟练读取顶点式全部核心几何特征并比较抛物线上点的函数值大小。"
+          },
+          "wrongTitle": "提示：请结合本节核心操作再核对一次",
+          "wrongFeedback": "对照 $y=a(x-h)^2+k$ 得 $h=3, k=-5$。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "抛物线 $y = -2(x + 3)^2 + 5$ 的对称轴是直线 $x =$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$x =$",
+          "input1Placeholder": "如 -3",
+          "input1Suffix": "",
+          "expectedX": "-3",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 -3。",
+          "correctDetail": "$x+3=x-(-3)$，故 $h=-3$。",
+          "wrongFeedback": "$x+3=x-(-3)$，故 $h=-3$。",
+          "specificWrongHints": []
+        }
+      }
+    },
+    P70: {
+      "procedureId": "P70",
+      "title": "利用抛物线平移规律求解析式（左加右减、上加下减）",
+      "exampleTitle": "将抛物线 $y = -x^2$ 向右平移 $1$ 个单位，再向上平移 $2$ 个单位，求新解析式",
+      "exampleFormula": "顶点 $(0,0) \\to (1,2) \\implies y = -(x-1)^2 + 2$",
+      "totalDuration": 22,
+      "scratchpadIdleHint": "旁白草稿演算区（准确完成抛物线平移与对称变换后的解析式求解及反向推平移路径。）",
+      "practiceSectionTitle": "利用抛物线平移规律求解析式（左加右减、上加下减）跟做练习",
+      "practiceSectionSub": "完成以下两道关键操作练习",
+      "geometryDiagram": {
+        "title": "抛物线平移 · 顶点 $(0,0) \\to (1,2)$",
+        "caption": "开口方向与宽窄不变，仅顶点位置按平移向量移动",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <line x1=\"20\" y1=\"115\" x2=\"240\" y2=\"115\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <line x1=\"130\" y1=\"12\" x2=\"130\" y2=\"164\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <polygon points=\"240,115 233,111 233,119\" fill=\"#64748B\" />\n            <polygon points=\"130,12 126,19 134,19\" fill=\"#64748B\" />\n            <text x=\"234\" y=\"129\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">x</text>\n            <text x=\"137\" y=\"20\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">y</text>\n            <text x=\"118\" y=\"128\" fill=\"#64748B\" font-size=\"10\">O</text>\n            <path class=\"proc-geo-anim\" data-appear-at=\"1.5\" data-dur=\"0.6\" data-dash-len=\"150\" d=\"M 85 160 Q 130 70 175 160\" fill=\"none\" stroke=\"#94A3B8\" stroke-width=\"1.8\" stroke-dasharray=\"4 3\" style=\"opacity:0;\" /><path class=\"proc-geo-anim\" data-appear-at=\"9.0\" data-dur=\"0.8\" data-dash-len=\"160\" d=\"M 105 135 Q 150 45 195 135\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2.5\" stroke-dasharray=\"160\" stroke-dashoffset=\"160\" style=\"opacity:0;\" />\n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "化为顶点式并锁定 $a$ 与原顶点 $(h,k)$",
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "explanation": "平移不改变抛物线形状与开口方向，故 $a$ 保持不变。"
+        },
+        {
+          "step": 2,
+          "name": "按平移方向变换顶点或自变量",
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "explanation": "左移 $m$：$h-m$（$x$ 变 $x+m$）；右移 $m$：$h+m$（$x$ 变 $x-m$）；上移 $n$：$k+n$；下移 $n$：$k-n$。"
+        },
+        {
+          "step": 3,
+          "name": "写出新抛物线解析式并按要求整理",
+          "tStart": 14.6,
+          "tEnd": 22,
+          "explanation": "代入新顶点坐标写出顶点式，必要时展开为一般式。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 化为顶点式并锁定 $a$ 与原顶点 $(h,k)$"
+        },
+        {
+          "time": 8.3,
+          "step": 2,
+          "label": "2.1 按平移方向变换顶点或自变量"
+        },
+        {
+          "time": 15.6,
+          "step": 3,
+          "label": "3.1 写出新抛物线解析式并按要求整理"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p70_r0",
+          "stepBadge": "原抛物线",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p70_r0_t1",
+              "math": "$y = -x^2$，顶点 $(0,0)$，$a=-1$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p70_r1",
+          "stepBadge": "第 1 步 · 向右平移 1 单位",
+          "appearAt": 2.0,
+          "tokens": [
+            {
+              "id": "p70_r1_t1",
+              "math": "自变量右减 $1$：$y = -(x - 1)^2$",
+              "appearAt": 2.1,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p70_r2",
+          "stepBadge": "第 2 步 · 向上平移 2 单位",
+          "appearAt": 9.0,
+          "tokens": [
+            {
+              "id": "p70_r2_t1",
+              "math": "整体上加 $2$：$y = -(x - 1)^2 + 2$",
+              "appearAt": 9.1,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p70_r3",
+          "stepBadge": "第 3 步 · 结论",
+          "appearAt": 15.0,
+          "tokens": [
+            {
+              "id": "p70_r3_t1",
+              "math": "$\\therefore$ 新解析式为 $y = -(x - 1)^2 + 2$",
+              "appearAt": 15.1,
+              "dur": 0.45
+            }
+          ],
+          "isConclusion": true
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p70_sp1",
+          "title": "核心要点速记",
+          "showStart": 1.5,
+          "showEnd": 21.8,
+          "tokens": [
+            {
+              "id": "p70_sp1_t1",
+              "math": "1. 原顶点 $(h, k)$，$a$ 不变",
+              "appearAt": 1.8,
+              "dur": 0.4
+            },
+            {
+              "id": "p70_sp1_t2",
+              "math": "2. 左加右减、上加下减",
+              "appearAt": 6.3,
+              "dur": 0.4
+            },
+            {
+              "id": "p70_sp1_t3",
+              "math": "3. $y = a(x - h')^2 + k'$",
+              "appearAt": 10.8,
+              "dur": 0.4
+            }
+          ],
+          "note": "把水平平移“左加右减”记反成“左减右加”。"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p70_r1_t1",
+          "tStart": 2.1,
+          "tEnd": 7.5,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p70_r2_t1",
+          "tStart": 9.1,
+          "tEnd": 14.5,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p70_r3_t1",
+          "tStart": 15.1,
+          "tEnd": 20.5,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p70_svg1",
+          "type": "arrow",
+          "fromToken": "p70_r1_t1",
+          "toToken": "p70_r3_t1",
+          "label": "关键转化定解",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 15.2,
+          "tDrawEnd": 15.9,
+          "tFadeStart": 20.5,
+          "tEnd": 21.7
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "text": "第1步：化为顶点式并锁定 $a$ 与原顶点 $(h,k)$——平移不改变抛物线形状与开口方向，故 $a$ 保持不变。",
+          "focusToken": "p70_r1_t1"
+        },
+        {
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "text": "第2步：按平移方向变换顶点或自变量——左移 $m$：$h-m$（$x$ 变 $x+m$）；右移 $m$：$h+m$（$x$ 变 $x-m$）；上移 $n$：$k+n$；下移 $n$：$k-n$。",
+          "focusToken": "p70_r2_t1"
+        },
+        {
+          "tStart": 14.6,
+          "tEnd": 22,
+          "text": "第3步：写出新抛物线解析式并按要求整理——代入新顶点坐标写出顶点式，必要时展开为一般式。",
+          "focusToken": "p70_r3_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "将 $y = -x^2$ 向右平移 $2$ 个单位、向上平移 $1$ 个单位得（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $y=-(x+2)^2+1$",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. $y=-(x-2)^2+1$",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. $y=-(x-2)^2-1$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "右减 $2$、上加 $1$，得 $y=-(x-2)^2+1$。"
+            ],
+            "summary": "准确完成抛物线平移与对称变换后的解析式求解及反向推平移路径。"
+          },
+          "wrongTitle": "提示：请结合本节核心操作再核对一次",
+          "wrongFeedback": "右减 $2$、上加 $1$，得 $y=-(x-2)^2+1$。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "将 $y = x^2$ 向左平移 $3$ 个单位后顶点横坐标为 ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$h =$",
+          "input1Placeholder": "如 -3",
+          "input1Suffix": "",
+          "expectedX": "-3",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 -3。",
+          "correctDetail": "向左平移 $3$ 个单位，顶点由 $(0,0)$ 移至 $(-3,0)$。",
+          "wrongFeedback": "向左平移 $3$ 个单位，顶点由 $(0,0)$ 移至 $(-3,0)$。",
+          "specificWrongHints": []
+        }
+      }
+    },
+    P71: {
+      "procedureId": "P71",
+      "title": "用配方法或公式法化一般式为顶点式求顶点与对称轴",
+      "exampleTitle": "将一般式 $y = x^2 - 6x + 4$ 化为顶点式，并写出对称轴与顶点坐标",
+      "exampleFormula": "$y = (x - 3)^2 - 5$，对称轴 $x = 3$，顶点 $(3, -5)$",
+      "totalDuration": 22,
+      "scratchpadIdleHint": "旁白草稿演算区（打通一般式与顶点式的互化，为后续最值、画图与交点分析奠基。）",
+      "practiceSectionTitle": "用配方法或公式法化一般式为顶点式求顶点与对称轴跟做练习",
+      "practiceSectionSub": "完成以下两道关键操作练习",
+      "geometryDiagram": {
+        "title": "一般式配方化顶点式",
+        "caption": "通过加减 9 配成完全平方，直接读出顶点 (3, -5)",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <line x1=\"20\" y1=\"115\" x2=\"240\" y2=\"115\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <line x1=\"130\" y1=\"12\" x2=\"130\" y2=\"164\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <polygon points=\"240,115 233,111 233,119\" fill=\"#64748B\" />\n            <polygon points=\"130,12 126,19 134,19\" fill=\"#64748B\" />\n            <text x=\"234\" y=\"129\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">x</text>\n            <text x=\"137\" y=\"20\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">y</text>\n            <text x=\"118\" y=\"128\" fill=\"#64748B\" font-size=\"10\">O</text>\n            <path class=\"proc-geo-anim\" data-appear-at=\"8.0\" data-dur=\"0.8\" data-dash-len=\"180\" d=\"M 108 25 Q 168 185 228 25\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2.5\" stroke-dasharray=\"180\" stroke-dashoffset=\"180\" style=\"opacity:0;\" /><circle class=\"proc-geo-anim\" data-appear-at=\"13.5\" data-dur=\"0.4\" cx=\"168\" cy=\"105\" r=\"3.2\" fill=\"#D97706\" style=\"opacity:0;\" />\n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "提取前两项的二次项系数 $a$",
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "explanation": "将 $ax^2+bx$ 提出公因式 $a$，常数项 $c$ 留在括号外。"
+        },
+        {
+          "step": 2,
+          "name": "括号内加减一次项系数一半的平方",
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "explanation": "配成完全平方式，将多余常数项乘以 $a$ 移出括号并与 $c$ 合并。"
+        },
+        {
+          "step": 3,
+          "name": "读出对称轴、顶点坐标及与 $y$ 轴交点",
+          "tStart": 14.6,
+          "tEnd": 22,
+          "explanation": "对称轴 $x=-\\frac{b}{2a}$，顶点 $(-\\frac{b}{2a}, \\frac{4ac-b^2}{4a})$，与 $y$ 轴交点 $(0,c)$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 提取前两项的二次项系数 $a$"
+        },
+        {
+          "time": 8.3,
+          "step": 2,
+          "label": "2.1 括号内加减一次项系数一半的平方"
+        },
+        {
+          "time": 15.6,
+          "step": 3,
+          "label": "3.1 读出对称轴、顶点坐标及与 $y$ 轴交点"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p71_r0",
+          "stepBadge": "一般式",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p71_r0_t1",
+              "math": "$y = x^2 - 6x + 4$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p71_r1",
+          "stepBadge": "第 1 步 · 加减一半平方",
+          "appearAt": 2.0,
+          "tokens": [
+            {
+              "id": "p71_r1_t1",
+              "math": "$y = (x^2 - 6x + 9) - 9 + 4$",
+              "appearAt": 2.1,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p71_r2",
+          "stepBadge": "第 2 步 · 写顶点式",
+          "appearAt": 8.5,
+          "tokens": [
+            {
+              "id": "p71_r2_t1",
+              "math": "$y = (x - 3)^2 - 5$",
+              "appearAt": 8.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p71_r3",
+          "stepBadge": "第 3 步 · 读顶点与对称轴",
+          "appearAt": 14.5,
+          "tokens": [
+            {
+              "id": "p71_r3_t1",
+              "math": "对称轴 $x = 3$，顶点 $(3, -5)$",
+              "appearAt": 14.6,
+              "dur": 0.45
+            }
+          ],
+          "isConclusion": true
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p71_sp1",
+          "title": "核心要点速记",
+          "showStart": 1.5,
+          "showEnd": 21.8,
+          "tokens": [
+            {
+              "id": "p71_sp1_t1",
+              "math": "1. $y = a\\left(x^2 + \\frac{b}{a}x\\right) + c$",
+              "appearAt": 1.8,
+              "dur": 0.4
+            },
+            {
+              "id": "p71_sp1_t2",
+              "math": "2. $y = a\\left(x + \\frac{b}{2a}\\right)^2 + \\frac{4ac - b^2}{4a}$",
+              "appearAt": 6.3,
+              "dur": 0.4
+            },
+            {
+              "id": "p71_sp1_t3",
+              "math": "3. 对称轴 $x = -\\frac{b}{2a}$",
+              "appearAt": 10.8,
+              "dur": 0.4
+            }
+          ],
+          "note": "将多余常数项移出括号时忘记乘以括号外的系数 $a$。"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p71_r1_t1",
+          "tStart": 2.1,
+          "tEnd": 7.5,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p71_r2_t1",
+          "tStart": 8.6,
+          "tEnd": 14.0,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p71_r3_t1",
+          "tStart": 14.6,
+          "tEnd": 20.0,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p71_svg1",
+          "type": "arrow",
+          "fromToken": "p71_r1_t1",
+          "toToken": "p71_r3_t1",
+          "label": "关键转化定解",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 14.7,
+          "tDrawEnd": 15.4,
+          "tFadeStart": 20.5,
+          "tEnd": 21.7
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "text": "第1步：提取前两项的二次项系数 $a$——将 $ax^2+bx$ 提出公因式 $a$，常数项 $c$ 留在括号外。",
+          "focusToken": "p71_r1_t1"
+        },
+        {
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "text": "第2步：括号内加减一次项系数一半的平方——配成完全平方式，将多余常数项乘以 $a$ 移出括号并与 $c$ 合并。",
+          "focusToken": "p71_r2_t1"
+        },
+        {
+          "tStart": 14.6,
+          "tEnd": 22,
+          "text": "第3步：读出对称轴、顶点坐标及与 $y$ 轴交点——对称轴 $x=-\\frac{b}{2a}$，顶点 $(-\\frac{b}{2a}, \\frac{4ac-b^2}{4a})$，与 $y$ 轴交点 $(0,c)$。",
+          "focusToken": "p71_r3_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "将 $y = x^2 + 2x - 3$ 化为顶点式的结果是（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $y=(x+1)^2-4$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $y=(x+1)^2-2$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $y=(x-1)^2-4$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "$x^2+2x+1-1-3=(x+1)^2-4$。"
+            ],
+            "summary": "打通一般式与顶点式的互化，为后续最值、画图与交点分析奠基。"
+          },
+          "wrongTitle": "提示：请结合本节核心操作再核对一次",
+          "wrongFeedback": "$x^2+2x+1-1-3=(x+1)^2-4$。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "抛物线 $y = x^2 - 4x + 3$ 的对称轴是直线 $x =$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$x =$",
+          "input1Placeholder": "如 2",
+          "input1Suffix": "",
+          "expectedX": "2",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 2。",
+          "correctDetail": "$x = -\\frac{-4}{2\\times 1} = 2$。",
+          "wrongFeedback": "$x = -\\frac{-4}{2\\times 1} = 2$。",
+          "specificWrongHints": []
+        }
+      }
+    },
+    P72: {
+      "procedureId": "P72",
+      "title": "由抛物线图象判断系数 $a,b,c$ 及相关代数式符号",
+      "exampleTitle": "抛物线 $y=ax^2+bx+c$ 开口向下、对称轴在 $y$ 轴左侧、交 $y$ 轴正半轴，判点 $(b,c)$ 所在象限",
+      "exampleFormula": "$a \\lt 0$，左同得 $b \\lt 0$，$c \\gt 0 \\implies (b,c)$ 在第二象限",
+      "totalDuration": 22,
+      "scratchpadIdleHint": "旁白草稿演算区（掌握数形结合法，由抛物线草图快速判断系数及衍生代数式正负。）",
+      "practiceSectionTitle": "由抛物线图象判断系数 $a,b,c$ 及相关代数式符号跟做练习",
+      "practiceSectionSub": "完成以下两道关键操作练习",
+      "geometryDiagram": {
+        "title": "系数符号“开口—左同右异—截距”",
+        "caption": "开口向下 a<0，对称轴在左 b<0，交 y 轴正半轴 c>0",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <line x1=\"20\" y1=\"115\" x2=\"240\" y2=\"115\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <line x1=\"130\" y1=\"12\" x2=\"130\" y2=\"164\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <polygon points=\"240,115 233,111 233,119\" fill=\"#64748B\" />\n            <polygon points=\"130,12 126,19 134,19\" fill=\"#64748B\" />\n            <text x=\"234\" y=\"129\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">x</text>\n            <text x=\"137\" y=\"20\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">y</text>\n            <text x=\"118\" y=\"128\" fill=\"#64748B\" font-size=\"10\">O</text>\n            <path class=\"proc-geo-anim\" data-appear-at=\"1.5\" data-dur=\"0.8\" data-dash-len=\"180\" d=\"M 38 158 Q 98 20 158 158\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2.5\" stroke-dasharray=\"180\" stroke-dashoffset=\"180\" style=\"opacity:0;\" /><line class=\"proc-geo-anim\" data-appear-at=\"6.5\" data-dur=\"0.5\" x1=\"98\" y1=\"20\" x2=\"98\" y2=\"160\" stroke=\"#D97706\" stroke-width=\"1.3\" stroke-dasharray=\"3 3\" style=\"opacity:0;\" /><circle class=\"proc-geo-anim\" data-appear-at=\"11.5\" data-dur=\"0.4\" cx=\"130\" cy=\"94\" r=\"3.2\" fill=\"#D97706\" style=\"opacity:0;\" />\n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "定基本三系数 $a, b, c$ 符号",
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "explanation": "开口向上 $a\\gt 0$、向下 $a\\lt 0$；对称轴在 $y$ 轴左侧 $a,b$ 同号、右侧异号；$y$ 轴正半轴交点 $c\\gt 0$。"
+        },
+        {
+          "step": 2,
+          "name": "由对称轴位置判断 $2a \\pm b$ 符号",
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "explanation": "利用 $-\\frac{b}{2a}$ 与 $1$ 或 $-1$ 比较，去分母（注意 $a$ 的正负）得 $2a\\pm b$ 符号。"
+        },
+        {
+          "step": 3,
+          "name": "代入特殊自变量判 $a\\pm b+c$ 等组合式",
+          "tStart": 14.6,
+          "tEnd": 22,
+          "explanation": "看 $x=1$ 处纵坐标定 $a+b+c$，$x=-1$ 处定 $a-b+c$，$x=2$ 处定 $4a+2b+c$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 定基本三系数 $a, b, c$ 符号"
+        },
+        {
+          "time": 8.3,
+          "step": 2,
+          "label": "2.1 由对称轴位置判断 $2a \\pm b$ 符号"
+        },
+        {
+          "time": 15.6,
+          "step": 3,
+          "label": "3.1 代入特殊自变量判 $a\\pm b+c$ 等组合式"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p72_r0",
+          "stepBadge": "第 1 步 · 开口定 $a$",
+          "appearAt": 1.5,
+          "tokens": [
+            {
+              "id": "p72_r0_t1",
+              "math": "开口向下 $\\implies a \\lt 0$",
+              "appearAt": 1.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p72_r1",
+          "stepBadge": "第 2 步 · 左同右异定 $b$",
+          "appearAt": 7.0,
+          "tokens": [
+            {
+              "id": "p72_r1_t1",
+              "math": "对称轴在 $y$ 轴左侧 $\\implies a,b$ 同号 $\\implies b \\lt 0$",
+              "appearAt": 7.1,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p72_r2",
+          "stepBadge": "第 3 步 · 截距定 $c$",
+          "appearAt": 12.5,
+          "tokens": [
+            {
+              "id": "p72_r2_t1",
+              "math": "与 $y$ 轴交于正半轴 $\\implies c \\gt 0$",
+              "appearAt": 12.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p72_r3",
+          "stepBadge": "结论",
+          "appearAt": 17.5,
+          "tokens": [
+            {
+              "id": "p72_r3_t1",
+              "math": "点 $(b,c)$ 横负纵正，位于第二象限",
+              "appearAt": 17.6,
+              "dur": 0.45
+            }
+          ],
+          "isConclusion": true
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p72_sp1",
+          "title": "核心要点速记",
+          "showStart": 1.5,
+          "showEnd": 21.8,
+          "tokens": [
+            {
+              "id": "p72_sp1_t1",
+              "math": "1. 开口定 $a$、左同右异定 $b$、截距定 $c$",
+              "appearAt": 1.8,
+              "dur": 0.4
+            },
+            {
+              "id": "p72_sp1_t2",
+              "math": "2. $-\\frac{b}{2a}=1 \\iff 2a+b=0$",
+              "appearAt": 6.3,
+              "dur": 0.4
+            },
+            {
+              "id": "p72_sp1_t3",
+              "math": "3. $y(1)=a+b+c$，$y(-1)=a-b+c$",
+              "appearAt": 10.8,
+              "dur": 0.4
+            }
+          ],
+          "note": "由 $-\\frac{b}{2a} \\lt 1$ 两边同乘 $2a$ 时，若 $a \\lt 0$ 忘记改变不等号方向。"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p72_r1_t1",
+          "tStart": 7.1,
+          "tEnd": 12.5,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p72_r2_t1",
+          "tStart": 12.6,
+          "tEnd": 18.0,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p72_r3_t1",
+          "tStart": 17.6,
+          "tEnd": 21.7,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p72_svg1",
+          "type": "arrow",
+          "fromToken": "p72_r1_t1",
+          "toToken": "p72_r3_t1",
+          "label": "关键转化定解",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 17.7,
+          "tDrawEnd": 18.4,
+          "tFadeStart": 20.5,
+          "tEnd": 21.7
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "text": "第1步：定基本三系数 $a, b, c$ 符号——开口向上 $a\\gt 0$、向下 $a\\lt 0$；对称轴在 $y$ 轴左侧 $a,b$ 同号、右侧异号；$y$ 轴正半轴交点 $c\\gt 0$。",
+          "focusToken": "p72_r1_t1"
+        },
+        {
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "text": "第2步：由对称轴位置判断 $2a \\pm b$ 符号——利用 $-\\frac{b}{2a}$ 与 $1$ 或 $-1$ 比较，去分母（注意 $a$ 的正负）得 $2a\\pm b$ 符号。",
+          "focusToken": "p72_r2_t1"
+        },
+        {
+          "tStart": 14.6,
+          "tEnd": 22,
+          "text": "第3步：代入特殊自变量判 $a\\pm b+c$ 等组合式——看 $x=1$ 处纵坐标定 $a+b+c$，$x=-1$ 处定 $a-b+c$，$x=2$ 处定 $4a+2b+c$。",
+          "focusToken": "p72_r3_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "抛物线 $y=ax^2+bx+c$ 开口向上，对称轴为 $x=1$，则 $2a+b$ 的值为（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $0$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. 正数",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. 负数",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "$-\\frac{b}{2a}=1 \\implies b=-2a \\implies 2a+b=0$。"
+            ],
+            "summary": "掌握数形结合法，由抛物线草图快速判断系数及衍生代数式正负。"
+          },
+          "wrongTitle": "提示：请结合本节核心操作再核对一次",
+          "wrongFeedback": "$-\\frac{b}{2a}=1 \\implies b=-2a \\implies 2a+b=0$。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "若抛物线 $y=ax^2+bx+c$ 经过 $(1,0)$，则 $a+b+c =$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$a+b+c =$",
+          "input1Placeholder": "如 0",
+          "input1Suffix": "",
+          "expectedX": "0",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 0。",
+          "correctDetail": "代入 $x=1$ 得 $y=a+b+c=0$。",
+          "wrongFeedback": "代入 $x=1$ 得 $y=a+b+c=0$。",
+          "specificWrongHints": []
+        }
+      }
+    },
+    P73: {
+      "procedureId": "P73",
+      "title": "求二次函数在全体实数或给定闭区间上的最值",
+      "exampleTitle": "已知二次函数 $y = x^2 + 4x + 5$，求当 $-3 \\le x \\le 0$ 时 $y$ 的取值范围",
+      "exampleFormula": "$y=(x+2)^2+1$，$x=-2\\in[-3,0]$ 得 $y_{\\min}=1$，$x=0$ 得 $y_{\\max}=5$",
+      "totalDuration": 22,
+      "scratchpadIdleHint": "旁白草稿演算区（规范解决二次函数闭区间值域与最值问题，为实际应用最值优化打下基础。）",
+      "practiceSectionTitle": "求二次函数在全体实数或给定闭区间上的最值跟做练习",
+      "practiceSectionSub": "完成以下两道关键操作练习",
+      "geometryDiagram": {
+        "title": "闭区间 $[-3,0]$ 上的最值判定",
+        "caption": "对称轴 x=-2 在区间内取最小值 1；端点 x=0 距对称轴更远取最大值 5",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <line x1=\"20\" y1=\"115\" x2=\"240\" y2=\"115\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <line x1=\"130\" y1=\"12\" x2=\"130\" y2=\"164\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <polygon points=\"240,115 233,111 233,119\" fill=\"#64748B\" />\n            <polygon points=\"130,12 126,19 134,19\" fill=\"#64748B\" />\n            <text x=\"234\" y=\"129\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">x</text>\n            <text x=\"137\" y=\"20\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">y</text>\n            <text x=\"118\" y=\"128\" fill=\"#64748B\" font-size=\"10\">O</text>\n            <path class=\"proc-geo-anim\" data-appear-at=\"2.0\" data-dur=\"0.7\" data-dash-len=\"160\" d=\"M 48 30 Q 98 150 148 30\" fill=\"none\" stroke=\"#94A3B8\" stroke-width=\"1.6\" stroke-dasharray=\"4 3\" style=\"opacity:0;\" /><path class=\"proc-geo-anim\" data-appear-at=\"8.0\" data-dur=\"0.8\" data-dash-len=\"140\" d=\"M 78 72 Q 98 110 130 45\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2.8\" stroke-dasharray=\"140\" stroke-dashoffset=\"140\" style=\"opacity:0;\" /><circle class=\"proc-geo-anim\" data-appear-at=\"13.0\" data-dur=\"0.4\" cx=\"98\" cy=\"91\" r=\"3.2\" fill=\"#D97706\" style=\"opacity:0;\" />\n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "化顶点式定开口与对称轴 $x=h$",
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "explanation": "配方或公式法求出对称轴 $x=h$ 与顶点纵坐标 $k$。"
+        },
+        {
+          "step": 2,
+          "name": "判断对称轴 $x=h$ 是否在给定区间内",
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "explanation": "比较 $h$ 与区间 $[m,n]$ 的位置关系（区间内 vs 区间外）。"
+        },
+        {
+          "step": 3,
+          "name": "结合开口与距离对称轴远近算最值",
+          "tStart": 14.6,
+          "tEnd": 22,
+          "explanation": "若 $h\\in[m,n]$，顶点取其一，离 $h$ 更远的端点取另一最值；若 $h\\notin[m,n]$，单调取两端点。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 化顶点式定开口与对称轴 $x=h$"
+        },
+        {
+          "time": 8.3,
+          "step": 2,
+          "label": "2.1 判断对称轴 $x=h$ 是否在给定区间内"
+        },
+        {
+          "time": 15.6,
+          "step": 3,
+          "label": "3.1 结合开口与距离对称轴远近算最值"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p73_r0",
+          "stepBadge": "已知区间",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p73_r0_t1",
+              "math": "$y = x^2 + 4x + 5$，$-3 \\le x \\le 0$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p73_r1",
+          "stepBadge": "第 1 步 · 配方定对称轴",
+          "appearAt": 1.5,
+          "tokens": [
+            {
+              "id": "p73_r1_t1",
+              "math": "$y = (x + 2)^2 + 1$，开口向上，对称轴 $x = -2$",
+              "appearAt": 1.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p73_r2",
+          "stepBadge": "第 2 步 · 判位置算最小值",
+          "appearAt": 8.0,
+          "tokens": [
+            {
+              "id": "p73_r2_t1",
+              "math": "$-2 \\in [-3, 0] \\implies x=-2$ 时 $y_{\\min} = 1$",
+              "appearAt": 8.1,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p73_r3",
+          "stepBadge": "第 3 步 · 比较端点算最大值",
+          "appearAt": 14.5,
+          "tokens": [
+            {
+              "id": "p73_r3_t1",
+              "math": "$|0-(-2)|=2 \\gt |-3-(-2)|=1 \\implies x=0$ 时 $y_{\\max}=5$，故 $1 \\le y \\le 5$",
+              "appearAt": 14.6,
+              "dur": 0.45
+            }
+          ],
+          "isConclusion": true
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p73_sp1",
+          "title": "核心要点速记",
+          "showStart": 1.5,
+          "showEnd": 21.8,
+          "tokens": [
+            {
+              "id": "p73_sp1_t1",
+              "math": "1. $y = a(x-h)^2 + k$",
+              "appearAt": 1.8,
+              "dur": 0.4
+            },
+            {
+              "id": "p73_sp1_t2",
+              "math": "2. 检验 $m \\le h \\le n$ 是否成立",
+              "appearAt": 6.3,
+              "dur": 0.4
+            },
+            {
+              "id": "p73_sp1_t3",
+              "math": "3. 比较 $|m-h|$ 与 $|n-h|$ 写值域",
+              "appearAt": 10.8,
+              "dur": 0.4
+            }
+          ],
+          "note": "忽略给定自变量区间限制，直接把顶点纵坐标当作区间最值。"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p73_r1_t1",
+          "tStart": 1.6,
+          "tEnd": 7.0,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p73_r2_t1",
+          "tStart": 8.1,
+          "tEnd": 13.5,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p73_r3_t1",
+          "tStart": 14.6,
+          "tEnd": 20.0,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p73_svg1",
+          "type": "arrow",
+          "fromToken": "p73_r1_t1",
+          "toToken": "p73_r3_t1",
+          "label": "关键转化定解",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 14.7,
+          "tDrawEnd": 15.4,
+          "tFadeStart": 20.5,
+          "tEnd": 21.7
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "text": "第1步：化顶点式定开口与对称轴 $x=h$——配方或公式法求出对称轴 $x=h$ 与顶点纵坐标 $k$。",
+          "focusToken": "p73_r1_t1"
+        },
+        {
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "text": "第2步：判断对称轴 $x=h$ 是否在给定区间内——比较 $h$ 与区间 $[m,n]$ 的位置关系（区间内 vs 区间外）。",
+          "focusToken": "p73_r2_t1"
+        },
+        {
+          "tStart": 14.6,
+          "tEnd": 22,
+          "text": "第3步：结合开口与距离对称轴远近算最值——若 $h\\in[m,n]$，顶点取其一，离 $h$ 更远的端点取另一最值；若 $h\\notin[m,n]$，单调取两端点。",
+          "focusToken": "p73_r3_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "已知 $y = 3x^2 - 2$，当 $-1 \\le x \\le 4$ 时，$y$ 的最小值为（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $1$",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. $-2$",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. $46$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "对称轴 $x=0 \\in [-1,4]$ 且开口向上，故 $x=0$ 时取最小值 $-2$。"
+            ],
+            "summary": "规范解决二次函数闭区间值域与最值问题，为实际应用最值优化打下基础。"
+          },
+          "wrongTitle": "提示：请结合本节核心操作再核对一次",
+          "wrongFeedback": "对称轴 $x=0 \\in [-1,4]$ 且开口向上，故 $x=0$ 时取最小值 $-2$。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "二次函数 $y = -x^2 + 2x + 3$ 在 $0 \\le x \\le 3$ 上的最大值为 ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$y_{\\max} =$",
+          "input1Placeholder": "如 4",
+          "input1Suffix": "",
+          "expectedX": "4",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 4。",
+          "correctDetail": "$y=-(x-1)^2+4$，$x=1\\in[0,3]$，故最大值为 $4$。",
+          "wrongFeedback": "$y=-(x-1)^2+4$，$x=1\\in[0,3]$，故最大值为 $4$。",
+          "specificWrongHints": []
+        }
+      }
+    },
+    P74: {
+      "procedureId": "P74",
+      "title": "用待定系数法求二次函数解析式（一般式/顶点式/交点式）",
+      "exampleTitle": "抛物线与 $x$ 轴交于 $M(-1,0)$、$N(2,0)$，且经过点 $(1,2)$，求其一般式",
+      "exampleFormula": "设 $y=a(x+1)(x-2)$，代 $(1,2)$ 得 $a=-1 \\implies y=-x^2+x+2$",
+      "totalDuration": 22,
+      "scratchpadIdleHint": "旁白草稿演算区（根据条件特征优选三类标准解析式，高效准确求出二次函数表达式。）",
+      "practiceSectionTitle": "用待定系数法求二次函数解析式（一般式/顶点式/交点式）跟做练习",
+      "practiceSectionSub": "完成以下两道关键操作练习",
+      "geometryDiagram": {
+        "title": "交点式快速定解析式",
+        "caption": "由两 x 轴交点直接设 y=a(x+1)(x-2)，仅需解一个未知数 a",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <line x1=\"20\" y1=\"115\" x2=\"240\" y2=\"115\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <line x1=\"130\" y1=\"12\" x2=\"130\" y2=\"164\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <polygon points=\"240,115 233,111 233,119\" fill=\"#64748B\" />\n            <polygon points=\"130,12 126,19 134,19\" fill=\"#64748B\" />\n            <text x=\"234\" y=\"129\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">x</text>\n            <text x=\"137\" y=\"20\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">y</text>\n            <text x=\"118\" y=\"128\" fill=\"#64748B\" font-size=\"10\">O</text>\n            <path class=\"proc-geo-anim\" data-appear-at=\"8.0\" data-dur=\"0.8\" data-dash-len=\"180\" d=\"M 80 155 Q 145 25 210 155\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2.5\" stroke-dasharray=\"180\" stroke-dashoffset=\"180\" style=\"opacity:0;\" /><g class=\"proc-geo-anim\" data-appear-at=\"2.0\" data-dur=\"0.5\" style=\"opacity:0;\"><circle cx=\"105\" cy=\"115\" r=\"3\" fill=\"#D97706\" /><circle cx=\"185\" cy=\"115\" r=\"3\" fill=\"#D97706\" /><circle cx=\"160\" cy=\"70\" r=\"3\" fill=\"#0F766E\" /></g>\n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "根据已知条件优选设式",
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "explanation": "三点设 $y=ax^2+bx+c$；顶点 $(h,k)$ 设 $y=a(x-h)^2+k$；$x$ 轴交点 $(x_1,0),(x_2,0)$ 设 $y=a(x-x_1)(x-x_2)$。"
+        },
+        {
+          "step": 2,
+          "name": "代入已知点坐标列方程（组）",
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "explanation": "把其余点坐标代入所设解析式，解出系数 $a$（或 $a,b,c$）。"
+        },
+        {
+          "step": 3,
+          "name": "回代写出完整解析式并按要求化简",
+          "tStart": 14.6,
+          "tEnd": 22,
+          "explanation": "将求得的系数回代，必要时展开为一般式并验证已知点。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 根据已知条件优选设式"
+        },
+        {
+          "time": 8.3,
+          "step": 2,
+          "label": "2.1 代入已知点坐标列方程（组）"
+        },
+        {
+          "time": 15.6,
+          "step": 3,
+          "label": "3.1 回代写出完整解析式并按要求化简"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p74_r0",
+          "stepBadge": "已知条件",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p74_r0_t1",
+              "math": "与 $x$ 轴交于 $(-1,0),(2,0)$，且过 $(1,2)$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p74_r1",
+          "stepBadge": "第 1 步 · 优选交点式",
+          "appearAt": 1.5,
+          "tokens": [
+            {
+              "id": "p74_r1_t1",
+              "math": "设 $y = a(x + 1)(x - 2)\\ (a \\neq 0)$",
+              "appearAt": 1.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p74_r2",
+          "stepBadge": "第 2 步 · 代入求 $a$",
+          "appearAt": 8.0,
+          "tokens": [
+            {
+              "id": "p74_r2_t1",
+              "math": "代 $(1,2)$：$2 = a(2)(-1) = -2a \\implies a = -1$",
+              "appearAt": 8.1,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p74_r3",
+          "stepBadge": "第 3 步 · 展开写一般式",
+          "appearAt": 14.5,
+          "tokens": [
+            {
+              "id": "p74_r3_t1",
+              "math": "$y = -(x+1)(x-2) = -x^2 + x + 2$",
+              "appearAt": 14.6,
+              "dur": 0.45
+            }
+          ],
+          "isConclusion": true
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p74_sp1",
+          "title": "核心要点速记",
+          "showStart": 1.5,
+          "showEnd": 21.8,
+          "tokens": [
+            {
+              "id": "p74_sp1_t1",
+              "math": "1. 优选：顶点式 / 交点式 / 一般式",
+              "appearAt": 1.8,
+              "dur": 0.4
+            },
+            {
+              "id": "p74_sp1_t2",
+              "math": "2. 解一元一次或三元一次方程组",
+              "appearAt": 6.3,
+              "dur": 0.4
+            },
+            {
+              "id": "p74_sp1_t3",
+              "math": "3. 回代定式并检验",
+              "appearAt": 10.8,
+              "dur": 0.4
+            }
+          ],
+          "note": "已知顶点或 $x$ 轴交点时仍硬设一般式，导致计算冗长易错。"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p74_r1_t1",
+          "tStart": 1.6,
+          "tEnd": 7.0,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p74_r2_t1",
+          "tStart": 8.1,
+          "tEnd": 13.5,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p74_r3_t1",
+          "tStart": 14.6,
+          "tEnd": 20.0,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p74_svg1",
+          "type": "arrow",
+          "fromToken": "p74_r1_t1",
+          "toToken": "p74_r3_t1",
+          "label": "关键转化定解",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 14.7,
+          "tDrawEnd": 15.4,
+          "tFadeStart": 20.5,
+          "tEnd": 21.7
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "text": "第1步：根据已知条件优选设式——三点设 $y=ax^2+bx+c$；顶点 $(h,k)$ 设 $y=a(x-h)^2+k$；$x$ 轴交点 $(x_1,0),(x_2,0)$ 设 $y=a(x-x_1)(x-x_2)$。",
+          "focusToken": "p74_r1_t1"
+        },
+        {
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "text": "第2步：代入已知点坐标列方程（组）——把其余点坐标代入所设解析式，解出系数 $a$（或 $a,b,c$）。",
+          "focusToken": "p74_r2_t1"
+        },
+        {
+          "tStart": 14.6,
+          "tEnd": 22,
+          "text": "第3步：回代写出完整解析式并按要求化简——将求得的系数回代，必要时展开为一般式并验证已知点。",
+          "focusToken": "p74_r3_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "抛物线顶点为 $(3,-1)$ 且过 $(0,-4)$，最简便的设式为（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $y=a(x-3)^2-1$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $y=ax^2+bx+c$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $y=a(x+3)^2-1$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "已知顶点 $(3,-1)$ 直接设顶点式 $y=a(x-3)^2-1$。"
+            ],
+            "summary": "根据条件特征优选三类标准解析式，高效准确求出二次函数表达式。"
+          },
+          "wrongTitle": "提示：请结合本节核心操作再核对一次",
+          "wrongFeedback": "已知顶点 $(3,-1)$ 直接设顶点式 $y=a(x-3)^2-1$。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "抛物线 $y=a(x-3)^2-1$ 过 $(0,-4)$，解得 $a = -\\frac{1}{n}$，则 $n =$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$n =$",
+          "input1Placeholder": "如 3",
+          "input1Suffix": "",
+          "expectedX": "3",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 3。",
+          "correctDetail": "$-4 = 9a - 1 \\implies a = -\\frac{1}{3}$，故 $n=3$。",
+          "wrongFeedback": "$-4 = 9a - 1 \\implies a = -\\frac{1}{3}$，故 $n=3$。",
+          "specificWrongHints": []
+        }
+      }
+    },
+    P75: {
+      "procedureId": "P75",
+      "title": "利用判别式 $\\Delta$ 判断抛物线与 $x$ 轴交点个数及求交点",
+      "exampleTitle": "求抛物线 $y = x^2 - x - 6$ 与 $x$ 轴的交点坐标及线段 $AB$ 的长",
+      "exampleFormula": "$x^2-x-6=0 \\implies x_1=-2, x_2=3 \\implies AB=5$",
+      "totalDuration": 22,
+      "scratchpadIdleHint": "旁白草稿演算区（建立二次函数与一元二次方程根的对应关系，解决交点个数、交点坐标与弦长计算。）",
+      "practiceSectionTitle": "利用判别式 $\\Delta$ 判断抛物线与 $x$ 轴交点个数及求交点跟做练习",
+      "practiceSectionSub": "完成以下两道关键操作练习",
+      "geometryDiagram": {
+        "title": "抛物线与 $x$ 轴两交点及间距",
+        "caption": "令 y=0 解方程得交点 (-2,0) 与 (3,0)，间距 AB = 3 - (-2) = 5",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <line x1=\"20\" y1=\"115\" x2=\"240\" y2=\"115\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <line x1=\"130\" y1=\"12\" x2=\"130\" y2=\"164\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <polygon points=\"240,115 233,111 233,119\" fill=\"#64748B\" />\n            <polygon points=\"130,12 126,19 134,19\" fill=\"#64748B\" />\n            <text x=\"234\" y=\"129\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">x</text>\n            <text x=\"137\" y=\"20\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">y</text>\n            <text x=\"118\" y=\"128\" fill=\"#64748B\" font-size=\"10\">O</text>\n            <path class=\"proc-geo-anim\" data-appear-at=\"2.0\" data-dur=\"0.8\" data-dash-len=\"180\" d=\"M 70 30 Q 140 200 210 30\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2.4\" stroke-dasharray=\"180\" stroke-dashoffset=\"180\" style=\"opacity:0;\" /><g class=\"proc-geo-anim\" data-appear-at=\"9.0\" data-dur=\"0.5\" style=\"opacity:0;\"><circle cx=\"104\" cy=\"115\" r=\"3.2\" fill=\"#D97706\" /><circle cx=\"176\" cy=\"115\" r=\"3.2\" fill=\"#D97706\" /><line x1=\"104\" y1=\"115\" x2=\"176\" y2=\"115\" stroke=\"#D97706\" stroke-width=\"2.4\" /></g>\n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "令 $y=0$ 转化为一元二次方程",
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "explanation": "将抛物线与 $x$ 轴交点横坐标转化为方程 $ax^2+bx+c=0$ 的实数根。"
+        },
+        {
+          "step": 2,
+          "name": "计算判别式 $\\Delta$ 判交点个数（或求参）",
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "explanation": "$\\Delta\\gt 0$ 两交点、$\\Delta=0$ 一交点、$\\Delta\\lt 0$ 无交点（注意若含参需分类讨论 $a=0$ 的一次函数情形）。"
+        },
+        {
+          "step": 3,
+          "name": "解方程或利用对称轴求交点坐标与间距",
+          "tStart": 14.6,
+          "tEnd": 22,
+          "explanation": "解方程得 $x_1, x_2$，交点为 $(x_1,0),(x_2,0)$，间距 $AB = |x_2 - x_1|$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 令 $y=0$ 转化为一元二次方程"
+        },
+        {
+          "time": 8.3,
+          "step": 2,
+          "label": "2.1 计算判别式 $\\Delta$ 判交点个数（或求参）"
+        },
+        {
+          "time": 15.6,
+          "step": 3,
+          "label": "3.1 解方程或利用对称轴求交点坐标与间距"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p75_r0",
+          "stepBadge": "抛物线",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p75_r0_t1",
+              "math": "$y = x^2 - x - 6$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p75_r1",
+          "stepBadge": "第 1 步 · 令 $y=0$",
+          "appearAt": 1.5,
+          "tokens": [
+            {
+              "id": "p75_r1_t1",
+              "math": "$x^2 - x - 6 = 0$",
+              "appearAt": 1.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p75_r2",
+          "stepBadge": "第 2 步 · 因式分解求解",
+          "appearAt": 8.0,
+          "tokens": [
+            {
+              "id": "p75_r2_t1",
+              "math": "$(x - 3)(x + 2) = 0 \\implies x_1 = -2,\\ x_2 = 3$",
+              "appearAt": 8.1,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p75_r3",
+          "stepBadge": "第 3 步 · 求交点与间距",
+          "appearAt": 14.5,
+          "tokens": [
+            {
+              "id": "p75_r3_t1",
+              "math": "交点 $(-2,0),(3,0)$，$AB = 3 - (-2) = 5$",
+              "appearAt": 14.6,
+              "dur": 0.45
+            }
+          ],
+          "isConclusion": true
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p75_sp1",
+          "title": "核心要点速记",
+          "showStart": 1.5,
+          "showEnd": 21.8,
+          "tokens": [
+            {
+              "id": "p75_sp1_t1",
+              "math": "1. $y=0 \\iff ax^2+bx+c=0$",
+              "appearAt": 1.8,
+              "dur": 0.4
+            },
+            {
+              "id": "p75_sp1_t2",
+              "math": "2. $\\Delta = b^2 - 4ac$",
+              "appearAt": 6.3,
+              "dur": 0.4
+            },
+            {
+              "id": "p75_sp1_t3",
+              "math": "3. $AB = |x_2 - x_1|$",
+              "appearAt": 10.8,
+              "dur": 0.4
+            }
+          ],
+          "note": "题目说“函数 $y=(a+2)x^2+4x-4$ 与 $x$ 轴只有一个交点”时，漏掉 $a+2=0$（一次函数）这一情形。"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p75_r1_t1",
+          "tStart": 1.6,
+          "tEnd": 7.0,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p75_r2_t1",
+          "tStart": 8.1,
+          "tEnd": 13.5,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p75_r3_t1",
+          "tStart": 14.6,
+          "tEnd": 20.0,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p75_svg1",
+          "type": "arrow",
+          "fromToken": "p75_r1_t1",
+          "toToken": "p75_r3_t1",
+          "label": "关键转化定解",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 14.7,
+          "tDrawEnd": 15.4,
+          "tFadeStart": 20.5,
+          "tEnd": 21.7
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "text": "第1步：令 $y=0$ 转化为一元二次方程——将抛物线与 $x$ 轴交点横坐标转化为方程 $ax^2+bx+c=0$ 的实数根。",
+          "focusToken": "p75_r1_t1"
+        },
+        {
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "text": "第2步：计算判别式 $\\Delta$ 判交点个数（或求参）——$\\Delta\\gt 0$ 两交点、$\\Delta=0$ 一交点、$\\Delta\\lt 0$ 无交点（注意若含参需分类讨论 $a=0$ 的一次函数情形）。",
+          "focusToken": "p75_r2_t1"
+        },
+        {
+          "tStart": 14.6,
+          "tEnd": 22,
+          "text": "第3步：解方程或利用对称轴求交点坐标与间距——解方程得 $x_1, x_2$，交点为 $(x_1,0),(x_2,0)$，间距 $AB = |x_2 - x_1|$。",
+          "focusToken": "p75_r3_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "若函数 $y=(a+2)x^2+4x-4$ 的图象与 $x$ 轴只有一个交点，则 $a$ 的值为（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $-3$",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. $-2$ 或 $-3$",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. $-2$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "分一次函数 $a=-2$ 与二次函数 $\\Delta=0$ 得 $a=-3$ 两类。"
+            ],
+            "summary": "建立二次函数与一元二次方程根的对应关系，解决交点个数、交点坐标与弦长计算。"
+          },
+          "wrongTitle": "提示：请结合本节核心操作再核对一次",
+          "wrongFeedback": "分一次函数 $a=-2$ 与二次函数 $\\Delta=0$ 得 $a=-3$ 两类。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "抛物线 $y=-x^2+2x+3$ 与 $x$ 轴两交点之间的距离 $AB =$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$AB =$",
+          "input1Placeholder": "如 4",
+          "input1Suffix": "",
+          "expectedX": "4",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 4。",
+          "correctDetail": "解 $-x^2+2x+3=0$ 得 $x_1=-1, x_2=3$，故 $AB=4$。",
+          "wrongFeedback": "解 $-x^2+2x+3=0$ 得 $x_1=-1, x_2=3$，故 $AB=4$。",
+          "specificWrongHints": []
+        }
+      }
+    },
+    P76: {
+      "procedureId": "P76",
+      "title": "利用抛物线图象与表格求方程近似根及不等式解集",
+      "exampleTitle": "一次函数 $y_1=mx+n$ 与二次函数 $y_2=ax^2+bx+c$ 交于 $D(-4,6)$、$B(2,0)$，求 $y_1 \\lt y_2$ 解集",
+      "exampleFormula": "两交点横坐标 $-4$、$2$ 之间抛物线在直线上方 $\\implies -4 \\lt x \\lt 2$",
+      "totalDuration": 22,
+      "scratchpadIdleHint": "旁白草稿演算区（掌握表格异号定近似根与数形结合解二次不等式两项核心操作。）",
+      "practiceSectionTitle": "利用抛物线图象与表格求方程近似根及不等式解集跟做练习",
+      "practiceSectionSub": "完成以下两道关键操作练习",
+      "geometryDiagram": {
+        "title": "看图解 $y_1 \\lt y_2$",
+        "caption": "在交点横坐标 -4 与 2 之间，抛物线位于直线上方",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <line x1=\"20\" y1=\"115\" x2=\"240\" y2=\"115\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <line x1=\"130\" y1=\"12\" x2=\"130\" y2=\"164\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <polygon points=\"240,115 233,111 233,119\" fill=\"#64748B\" />\n            <polygon points=\"130,12 126,19 134,19\" fill=\"#64748B\" />\n            <text x=\"234\" y=\"129\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">x</text>\n            <text x=\"137\" y=\"20\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">y</text>\n            <text x=\"118\" y=\"128\" fill=\"#64748B\" font-size=\"10\">O</text>\n            <path class=\"proc-geo-anim\" data-appear-at=\"1.5\" data-dur=\"0.7\" data-dash-len=\"170\" d=\"M 55 155 Q 130 10 205 155\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2.4\" stroke-dasharray=\"170\" stroke-dashoffset=\"170\" style=\"opacity:0;\" /><line class=\"proc-geo-anim\" data-appear-at=\"2.0\" data-dur=\"0.5\" x1=\"50\" y1=\"60\" x2=\"215\" y2=\"128\" stroke=\"#D97706\" stroke-width=\"2\" style=\"opacity:0;\" /><g class=\"proc-geo-anim\" data-appear-at=\"8.0\" data-dur=\"0.5\" style=\"opacity:0;\"><circle cx=\"88\" cy=\"76\" r=\"3\" fill=\"#D97706\" /><circle cx=\"182\" cy=\"115\" r=\"3\" fill=\"#D97706\" /></g>\n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "表格估根：寻找相邻函数值异号区间",
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "explanation": "扫描表格中 $y$ 由负变正（或由正变负）的相邻两列，根必在两 $x$ 之间，更靠近 $|y|$ 更小的一侧。"
+        },
+        {
+          "step": 2,
+          "name": "图象解不等式：标出交点横坐标",
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "explanation": "找出抛物线与 $x$ 轴（或直线 $y=mx+n$）的两个交点横坐标 $x_1, x_2$。"
+        },
+        {
+          "step": 3,
+          "name": "按上下位置写出解集",
+          "tStart": 14.6,
+          "tEnd": 22,
+          "explanation": "求 $y_2 \\gt y_1$ 取抛物线在直线上方的区间；求 $y_2 \\lt y_1$ 取在下方区间，核对等号。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 表格估根：寻找相邻函数值异号区间"
+        },
+        {
+          "time": 8.3,
+          "step": 2,
+          "label": "2.1 图象解不等式：标出交点横坐标"
+        },
+        {
+          "time": 15.6,
+          "step": 3,
+          "label": "3.1 按上下位置写出解集"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p76_r0",
+          "stepBadge": "已知交点",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p76_r0_t1",
+              "math": "直线 $y_1$ 与抛物线 $y_2$ 交于 $D(-4,6)$、$B(2,0)$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p76_r1",
+          "stepBadge": "第 1 步 · 标分界点",
+          "appearAt": 2.0,
+          "tokens": [
+            {
+              "id": "p76_r1_t1",
+              "math": "以交点横坐标 $x=-4$、$x=2$ 将数轴分三段",
+              "appearAt": 2.1,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p76_r2",
+          "stepBadge": "第 2 步 · 看上下位置",
+          "appearAt": 8.5,
+          "tokens": [
+            {
+              "id": "p76_r2_t1",
+              "math": "$-4 \\lt x \\lt 2$ 时抛物线 $y_2$ 在直线 $y_1$ 上方",
+              "appearAt": 8.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p76_r3",
+          "stepBadge": "第 3 步 · 写解集",
+          "appearAt": 14.5,
+          "tokens": [
+            {
+              "id": "p76_r3_t1",
+              "math": "$\\therefore y_1 \\lt y_2$ 的解集为 $-4 \\lt x \\lt 2$",
+              "appearAt": 14.6,
+              "dur": 0.45
+            }
+          ],
+          "isConclusion": true
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p76_sp1",
+          "title": "核心要点速记",
+          "showStart": 1.5,
+          "showEnd": 21.8,
+          "tokens": [
+            {
+              "id": "p76_sp1_t1",
+              "math": "1. $y(x_1) \\cdot y(x_2) \\lt 0 \\implies x_1 \\lt x_0 \\lt x_2$",
+              "appearAt": 1.8,
+              "dur": 0.4
+            },
+            {
+              "id": "p76_sp1_t2",
+              "math": "2. 交点横坐标划分三个区间",
+              "appearAt": 6.3,
+              "dur": 0.4
+            },
+            {
+              "id": "p76_sp1_t3",
+              "math": "3. 上大下小，直接写解集",
+              "appearAt": 10.8,
+              "dur": 0.4
+            }
+          ],
+          "note": "表格估根时只看 $y$ 的绝对值大小而忽略是否真正跨过 $0$（异号）。"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p76_r1_t1",
+          "tStart": 2.1,
+          "tEnd": 7.5,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p76_r2_t1",
+          "tStart": 8.6,
+          "tEnd": 14.0,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p76_r3_t1",
+          "tStart": 14.6,
+          "tEnd": 20.0,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p76_svg1",
+          "type": "arrow",
+          "fromToken": "p76_r1_t1",
+          "toToken": "p76_r3_t1",
+          "label": "关键转化定解",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 14.7,
+          "tDrawEnd": 15.4,
+          "tFadeStart": 20.5,
+          "tEnd": 21.7
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "text": "第1步：表格估根：寻找相邻函数值异号区间——扫描表格中 $y$ 由负变正（或由正变负）的相邻两列，根必在两 $x$ 之间，更靠近 $|y|$ 更小的一侧。",
+          "focusToken": "p76_r1_t1"
+        },
+        {
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "text": "第2步：图象解不等式：标出交点横坐标——找出抛物线与 $x$ 轴（或直线 $y=mx+n$）的两个交点横坐标 $x_1, x_2$。",
+          "focusToken": "p76_r2_t1"
+        },
+        {
+          "tStart": 14.6,
+          "tEnd": 22,
+          "text": "第3步：按上下位置写出解集——求 $y_2 \\gt y_1$ 取抛物线在直线上方的区间；求 $y_2 \\lt y_1$ 取在下方区间，核对等号。",
+          "focusToken": "p76_r3_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "表格中 $x=0.5$ 时 $y=-0.25$，$x=0.6$ 时 $y=0.16$，则方程 $ax^2+bx+c=0$ 一根所在范围是（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $0.4 \\lt x \\lt 0.5$",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. $0.5 \\lt x \\lt 0.6$",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. $0.6 \\lt x \\lt 0.7$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "$y$ 在 $0.5$ 与 $0.6$ 间由负变正，故根在 $0.5 \\lt x \\lt 0.6$。"
+            ],
+            "summary": "掌握表格异号定近似根与数形结合解二次不等式两项核心操作。"
+          },
+          "wrongTitle": "提示：请结合本节核心操作再核对一次",
+          "wrongFeedback": "$y$ 在 $0.5$ 与 $0.6$ 间由负变正，故根在 $0.5 \\lt x \\lt 0.6$。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "抛物线 $y=(x+1)^2-4$ 交 $x$ 轴于 $(-3,0)$ 与 $(1,0)$，使 $y \\lt 0$ 的最大整数 $x =$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$x =$",
+          "input1Placeholder": "如 0",
+          "input1Suffix": "",
+          "expectedX": "0",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 0。",
+          "correctDetail": "$-3 \\lt x \\lt 1$ 中最大整数为 $0$。",
+          "wrongFeedback": "$-3 \\lt x \\lt 1$ 中最大整数为 $0$。",
+          "specificWrongHints": []
+        }
+      }
+    },
+    P77: {
+      "procedureId": "P77",
+      "title": "二次函数与一次函数/几何综合（交点、面积与存在性）",
+      "exampleTitle": "抛物线 $y=x^2-6x+7$ 过 $P(0,7)$，与直线 $y=-2x+12$ 交于 $M,N$，求 $S_{\\triangle PMN}$",
+      "exampleFormula": "联立得 $M(-1,14), N(5,2)$，以 $y$ 轴截距 $C(0,12)$ 得 $PC=5$，$S=\\frac{1}{2}\\times 5\\times 6=15$",
+      "totalDuration": 22,
+      "scratchpadIdleHint": "旁白草稿演算区（掌握二次函数压轴几何综合中的交点联立、铅垂割补面积与对称最值通法。）",
+      "practiceSectionTitle": "二次函数与一次函数/几何综合（交点、面积与存在性）跟做练习",
+      "practiceSectionSub": "完成以下两道关键操作练习",
+      "geometryDiagram": {
+        "title": "交点割补求 $\\triangle PMN$ 面积",
+        "caption": "先联立求 M(-1,14)、N(5,2)，再以 y 轴线段 PC=5 为底、水平宽 6 为高",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <line x1=\"20\" y1=\"115\" x2=\"240\" y2=\"115\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <line x1=\"130\" y1=\"12\" x2=\"130\" y2=\"164\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <polygon points=\"240,115 233,111 233,119\" fill=\"#64748B\" />\n            <polygon points=\"130,12 126,19 134,19\" fill=\"#64748B\" />\n            <text x=\"234\" y=\"129\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">x</text>\n            <text x=\"137\" y=\"20\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">y</text>\n            <text x=\"118\" y=\"128\" fill=\"#64748B\" font-size=\"10\">O</text>\n            <path class=\"proc-geo-anim\" data-appear-at=\"1.5\" data-dur=\"0.7\" data-dash-len=\"170\" d=\"M 75 20 Q 150 185 225 20\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2.2\" stroke-dasharray=\"170\" stroke-dashoffset=\"170\" style=\"opacity:0;\" /><line class=\"proc-geo-anim\" data-appear-at=\"2.0\" data-dur=\"0.5\" x1=\"70\" y1=\"35\" x2=\"215\" y2=\"115\" stroke=\"#D97706\" stroke-width=\"1.8\" style=\"opacity:0;\" /><polygon class=\"proc-geo-anim\" data-appear-at=\"9.0\" data-dur=\"0.6\" points=\"130,85 95,48 190,101\" fill=\"#0F766E\" fill-opacity=\"0.18\" stroke=\"#0F766E\" stroke-width=\"1.6\" style=\"opacity:0;\" />\n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "求抛物线与直线解析式并联立求交点",
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "explanation": "先定两函数解析式，联立 $ax^2+bx+c=kx+m$ 解出交点 $M,N$ 坐标。"
+        },
+        {
+          "step": 2,
+          "name": "作铅垂线表示三角形面积（或作对称点求最值）",
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "explanation": "过动点作 $y$ 轴平行线交直线于 $Q$，用 $S=\\frac{1}{2}|x_B-x_A|\\cdot PQ$ 建立面积关于 $t$ 的二次函数；周长最值则在对称轴上连接对称点。"
+        },
+        {
+          "step": 3,
+          "name": "解方程或配方求最值并检验范围",
+          "tStart": 14.6,
+          "tEnd": 22,
+          "explanation": "求出动点坐标或最大面积，检验动点是否落在题目限定区间内。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 求抛物线与直线解析式并联立求交点"
+        },
+        {
+          "time": 8.3,
+          "step": 2,
+          "label": "2.1 作铅垂线表示三角形面积（或作对称点求最值）"
+        },
+        {
+          "time": 15.6,
+          "step": 3,
+          "label": "3.1 解方程或配方求最值并检验范围"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p77_r0",
+          "stepBadge": "已知函数",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p77_r0_t1",
+              "math": "$y=x^2-6x+7$，$P(0,7)$，直线 $y=-2x+12$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p77_r1",
+          "stepBadge": "第 1 步 · 联立求交点",
+          "appearAt": 2.0,
+          "tokens": [
+            {
+              "id": "p77_r1_t1",
+              "math": "$x^2-6x+7=-2x+12 \\implies x_1=-1, x_2=5$",
+              "appearAt": 2.1,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p77_r2",
+          "stepBadge": "第 2 步 · 找公共底边",
+          "appearAt": 8.5,
+          "tokens": [
+            {
+              "id": "p77_r2_t1",
+              "math": "直线交 $y$ 轴于 $C(0,12)$，故 $PC = 12 - 7 = 5$",
+              "appearAt": 8.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p77_r3",
+          "stepBadge": "第 3 步 · 水平宽算面积",
+          "appearAt": 14.5,
+          "tokens": [
+            {
+              "id": "p77_r3_t1",
+              "math": "$S_{\\triangle PMN} = \\frac{1}{2} \\times 5 \\times |5 - (-1)| = 15$",
+              "appearAt": 14.6,
+              "dur": 0.45
+            }
+          ],
+          "isConclusion": true
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p77_sp1",
+          "title": "核心要点速记",
+          "showStart": 1.5,
+          "showEnd": 21.8,
+          "tokens": [
+            {
+              "id": "p77_sp1_t1",
+              "math": "1. 联立方程定交点坐标",
+              "appearAt": 1.8,
+              "dur": 0.4
+            },
+            {
+              "id": "p77_sp1_t2",
+              "math": "2. $S = \\frac{1}{2} \\times \\text{水平宽} \\times \\text{铅垂高}$",
+              "appearAt": 6.3,
+              "dur": 0.4
+            },
+            {
+              "id": "p77_sp1_t3",
+              "math": "3. 检验 $t$ 在限定区间内",
+              "appearAt": 10.8,
+              "dur": 0.4
+            }
+          ],
+          "note": "用铅垂高表示线段 $PQ$ 时，未区分抛物线在直线上方还是下方导致相减顺序写反。"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p77_r1_t1",
+          "tStart": 2.1,
+          "tEnd": 7.5,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p77_r2_t1",
+          "tStart": 8.6,
+          "tEnd": 14.0,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p77_r3_t1",
+          "tStart": 14.6,
+          "tEnd": 20.0,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p77_svg1",
+          "type": "arrow",
+          "fromToken": "p77_r1_t1",
+          "toToken": "p77_r3_t1",
+          "label": "关键转化定解",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 14.7,
+          "tDrawEnd": 15.4,
+          "tFadeStart": 20.5,
+          "tEnd": 21.7
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "text": "第1步：求抛物线与直线解析式并联立求交点——先定两函数解析式，联立 $ax^2+bx+c=kx+m$ 解出交点 $M,N$ 坐标。",
+          "focusToken": "p77_r1_t1"
+        },
+        {
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "text": "第2步：作铅垂线表示三角形面积（或作对称点求最值）——过动点作 $y$ 轴平行线交直线于 $Q$，用 $S=\\frac{1}{2}|x_B-x_A|\\cdot PQ$ 建立面积关于 $t$ 的二次函数；周长最值则在对称轴上连接对称点。",
+          "focusToken": "p77_r2_t1"
+        },
+        {
+          "tStart": 14.6,
+          "tEnd": 22,
+          "text": "第3步：解方程或配方求最值并检验范围——求出动点坐标或最大面积，检验动点是否落在题目限定区间内。",
+          "focusToken": "p77_r3_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "在对称轴上找一点 $Q$ 使 $\\triangle ACQ$ 周长最小（$A,B$ 关于对称轴对称），$Q$ 应为（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $BC$ 与对称轴的交点",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $AC$ 中点",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. 抛物线顶点",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "由对称性 $QA=QB$，$QA+QC=QB+QC\\ge BC$，交点即为所求。"
+            ],
+            "summary": "掌握二次函数压轴几何综合中的交点联立、铅垂割补面积与对称最值通法。"
+          },
+          "wrongTitle": "提示：请结合本节核心操作再核对一次",
+          "wrongFeedback": "由对称性 $QA=QB$，$QA+QC=QB+QC\\ge BC$，交点即为所求。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "若直线与抛物线两交点横坐标分别为 $-1$ 和 $3$，铅垂高最大值为 $4$，则三角形最大面积为 ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$S_{\\max} =$",
+          "input1Placeholder": "如 8",
+          "input1Suffix": "",
+          "expectedX": "8",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 8。",
+          "correctDetail": "水平宽 $3-(-1)=4$，$S_{\\max}=\\frac{1}{2}\\times 4\\times 4=8$。",
+          "wrongFeedback": "水平宽 $3-(-1)=4$，$S_{\\max}=\\frac{1}{2}\\times 4\\times 4=8$。",
+          "specificWrongHints": []
+        }
+      }
+    },
+    P78: {
+      "procedureId": "P78",
+      "title": "建立二次函数模型求解几何图形面积最值问题",
+      "exampleTitle": "用 $72\\text{ m}$ 木料制作“目”形长方形窗框（含两根横档），求最大面积及宽 $AB$",
+      "exampleFormula": "$S = x(36 - 2x) = -2(x - 9)^2 + 162$，$AB=9\\text{m}$ 时最大面积 $162\\text{m}^2$",
+      "totalDuration": 22,
+      "scratchpadIdleHint": "旁白草稿演算区（掌握几何图形周长定值/动点面积类问题的二次函数建模与区间最值求解。）",
+      "practiceSectionTitle": "建立二次函数模型求解几何图形面积最值问题跟做练习",
+      "practiceSectionSub": "完成以下两道关键操作练习",
+      "geometryDiagram": {
+        "title": "“目”形窗框面积二次函数",
+        "caption": "4 条宽均为 x，2 条高共 72-4x，面积在 x=9 处达最大值 162",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <line x1=\"20\" y1=\"115\" x2=\"240\" y2=\"115\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <line x1=\"130\" y1=\"12\" x2=\"130\" y2=\"164\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <polygon points=\"240,115 233,111 233,119\" fill=\"#64748B\" />\n            <polygon points=\"130,12 126,19 134,19\" fill=\"#64748B\" />\n            <text x=\"234\" y=\"129\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">x</text>\n            <text x=\"137\" y=\"20\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">y</text>\n            <text x=\"118\" y=\"128\" fill=\"#64748B\" font-size=\"10\">O</text>\n            <path class=\"proc-geo-anim\" data-appear-at=\"8.0\" data-dur=\"0.8\" data-dash-len=\"170\" d=\"M 130 115 Q 175 15 220 115\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2.5\" stroke-dasharray=\"170\" stroke-dashoffset=\"170\" style=\"opacity:0;\" /><circle class=\"proc-geo-anim\" data-appear-at=\"13.5\" data-dur=\"0.4\" cx=\"175\" cy=\"65\" r=\"3.2\" fill=\"#D97706\" style=\"opacity:0;\" />\n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "设关键边长或时间为 $x$，表示关联边长",
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "explanation": "根据周长、总料长或动点速度公式，用 $x$ 表示矩形长宽或三角形底高，并写出 $x$ 的实际范围。"
+        },
+        {
+          "step": 2,
+          "name": "列出面积二次函数表达式",
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "explanation": "代入面积公式并整理为一般式 $S=ax^2+bx+c$。"
+        },
+        {
+          "step": 3,
+          "name": "配方求最值并核对自变量范围",
+          "tStart": 14.6,
+          "tEnd": 22,
+          "explanation": "化顶点式求最值，检验顶点横坐标是否落在自变量允许范围内再作答。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 设关键边长或时间为 $x$，表示关联边长"
+        },
+        {
+          "time": 8.3,
+          "step": 2,
+          "label": "2.1 列出面积二次函数表达式"
+        },
+        {
+          "time": 15.6,
+          "step": 3,
+          "label": "3.1 配方求最值并核对自变量范围"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p78_r0",
+          "stepBadge": "第 1 步 · 设元表示边长",
+          "appearAt": 1.5,
+          "tokens": [
+            {
+              "id": "p78_r0_t1",
+              "math": "设 $AB=x\\text{m}$（$4$ 条），则 $AD = \\frac{72-4x}{2} = 36-2x$（$0\\lt x\\lt 18$）",
+              "appearAt": 1.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p78_r1",
+          "stepBadge": "第 2 步 · 建面积函数",
+          "appearAt": 8.0,
+          "tokens": [
+            {
+              "id": "p78_r1_t1",
+              "math": "$S = x(36 - 2x) = -2x^2 + 36x$",
+              "appearAt": 8.1,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p78_r2",
+          "stepBadge": "第 3 步 · 配方检验定最值",
+          "appearAt": 14.5,
+          "tokens": [
+            {
+              "id": "p78_r2_t1",
+              "math": "$S = -2(x-9)^2 + 162$，$9\\in(0,18)$，最大面积 $162\\text{m}^2$",
+              "appearAt": 14.6,
+              "dur": 0.45
+            }
+          ],
+          "isConclusion": true
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p78_sp1",
+          "title": "核心要点速记",
+          "showStart": 1.5,
+          "showEnd": 21.8,
+          "tokens": [
+            {
+              "id": "p78_sp1_t1",
+              "math": "1. 如窗框 4 条宽为 $x$，则长为 $\\frac{72-4x}{2}=36-2x$",
+              "appearAt": 1.8,
+              "dur": 0.4
+            },
+            {
+              "id": "p78_sp1_t2",
+              "math": "2. $S = x(36 - 2x) = -2x^2 + 36x$",
+              "appearAt": 6.3,
+              "dur": 0.4
+            },
+            {
+              "id": "p78_sp1_t3",
+              "math": "3. $S = -2(x-9)^2 + 162$（$9\\in(0,18)$）",
+              "appearAt": 10.8,
+              "dur": 0.4
+            }
+          ],
+          "note": "数窗框或围墙栅栏条数时漏数中间横档或误算靠墙边。"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p78_r1_t1",
+          "tStart": 8.1,
+          "tEnd": 13.5,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p78_r2_t1",
+          "tStart": 14.6,
+          "tEnd": 20.0,
+          "color": "amber"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p78_svg1",
+          "type": "arrow",
+          "fromToken": "p78_r1_t1",
+          "toToken": "p78_r2_t1",
+          "label": "关键转化定解",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 14.7,
+          "tDrawEnd": 15.4,
+          "tFadeStart": 20.5,
+          "tEnd": 21.7
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "text": "第1步：设关键边长或时间为 $x$，表示关联边长——根据周长、总料长或动点速度公式，用 $x$ 表示矩形长宽或三角形底高，并写出 $x$ 的实际范围。",
+          "focusToken": "p78_r1_t1"
+        },
+        {
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "text": "第2步：列出面积二次函数表达式——代入面积公式并整理为一般式 $S=ax^2+bx+c$。",
+          "focusToken": "p78_r2_t1"
+        },
+        {
+          "tStart": 14.6,
+          "tEnd": 22,
+          "text": "第3步：配方求最值并核对自变量范围——化顶点式求最值，检验顶点横坐标是否落在自变量允许范围内再作答。",
+          "focusToken": "p78_r2_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "矩形绿地原长 $8\\text{m}$、宽 $8\\text{m}$，宽减 $x$、长增 $2x$，面积 $y=(8-x)(8+2x)$ 取得最大值时 $x =$（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $1$",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. $2$",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. $4$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "$y=-2x^2+8x+64=-2(x-2)^2+72$，故 $x=2$。"
+            ],
+            "summary": "掌握几何图形周长定值/动点面积类问题的二次函数建模与区间最值求解。"
+          },
+          "wrongTitle": "提示：请结合本节核心操作再核对一次",
+          "wrongFeedback": "$y=-2x^2+8x+64=-2(x-2)^2+72$，故 $x=2$。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "直角三角形动点面积 $S = -t^2 + 6t\\ (0\\lt t\\lt 6)$ 的最大值为 ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$S_{\\max} =$",
+          "input1Placeholder": "如 9",
+          "input1Suffix": "",
+          "expectedX": "9",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 9。",
+          "correctDetail": "$S=-(t-3)^2+9$，$t=3\\in(0,6)$，最大值为 $9$。",
+          "wrongFeedback": "$S=-(t-3)^2+9$，$t=3\\in(0,6)$，最大值为 $9$。",
+          "specificWrongHints": []
+        }
+      }
+    },
+    P79: {
+      "procedureId": "P79",
+      "title": "建立二次函数模型求解销售利润最值问题",
+      "exampleTitle": "小说进价 $10$ 元，定价 $18$ 元日销 $40$ 本，每涨价 $1$ 元少卖 $2$ 本，求最大日利润及定价",
+      "exampleFormula": "$y=(x+8)(40-2x)=-2(x-6)^2+392$，定价 $24$ 元时最大利润 $392$ 元",
+      "totalDuration": 22,
+      "scratchpadIdleHint": "旁白草稿演算区（熟练完成单件利润、销量线性变化与限价约束下的利润最大化求解。）",
+      "practiceSectionTitle": "建立二次函数模型求解销售利润最值问题跟做练习",
+      "practiceSectionSub": "完成以下两道关键操作练习",
+      "geometryDiagram": {
+        "title": "销售利润抛物线 · $y=-2(x-6)^2+392$",
+        "caption": "涨价 x=6 元（即定价 24 元）时，日利润达到最高点 392 元",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <line x1=\"20\" y1=\"115\" x2=\"240\" y2=\"115\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <line x1=\"130\" y1=\"12\" x2=\"130\" y2=\"164\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <polygon points=\"240,115 233,111 233,119\" fill=\"#64748B\" />\n            <polygon points=\"130,12 126,19 134,19\" fill=\"#64748B\" />\n            <text x=\"234\" y=\"129\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">x</text>\n            <text x=\"137\" y=\"20\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">y</text>\n            <text x=\"118\" y=\"128\" fill=\"#64748B\" font-size=\"10\">O</text>\n            <path class=\"proc-geo-anim\" data-appear-at=\"8.0\" data-dur=\"0.8\" data-dash-len=\"170\" d=\"M 130 95 Q 175 15 220 115\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2.5\" stroke-dasharray=\"170\" stroke-dashoffset=\"170\" style=\"opacity:0;\" /><circle class=\"proc-geo-anim\" data-appear-at=\"13.5\" data-dur=\"0.4\" cx=\"172\" cy=\"55\" r=\"3.2\" fill=\"#D97706\" style=\"opacity:0;\" />\n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "表示单件利润与销售量",
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "explanation": "设调价 $x$ 元（或售价 $x$ 元），写出单件利润（售价 $-$ 进价）与对应销售量（原销量 $\\pm$ 变化量）。"
+        },
+        {
+          "step": 2,
+          "name": "整理为二次函数并确定自变量范围",
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "explanation": "展开为 $w=ax^2+bx+c$，结合“不亏本”“限价”“让利”“销量非负”写出 $x$ 区间。"
+        },
+        {
+          "step": 3,
+          "name": "配方求最大利润并还原定价",
+          "tStart": 14.6,
+          "tEnd": 22,
+          "explanation": "判断对称轴是否在允许范围内（或取最近整数），算出最大利润并换算为最终售价。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 表示单件利润与销售量"
+        },
+        {
+          "time": 8.3,
+          "step": 2,
+          "label": "2.1 整理为二次函数并确定自变量范围"
+        },
+        {
+          "time": 15.6,
+          "step": 3,
+          "label": "3.1 配方求最大利润并还原定价"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p79_r0",
+          "stepBadge": "第 1 步 · 写单利与销量",
+          "appearAt": 1.5,
+          "tokens": [
+            {
+              "id": "p79_r0_t1",
+              "math": "设涨价 $x$ 元：单件利润 $8+x$，销量 $40-2x$（$0\\le x\\le 20$）",
+              "appearAt": 1.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p79_r1",
+          "stepBadge": "第 2 步 · 建利润函数",
+          "appearAt": 8.0,
+          "tokens": [
+            {
+              "id": "p79_r1_t1",
+              "math": "$y = (x + 8)(40 - 2x) = -2x^2 + 24x + 320$",
+              "appearAt": 8.1,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p79_r2",
+          "stepBadge": "第 3 步 · 配方还原定价",
+          "appearAt": 14.5,
+          "tokens": [
+            {
+              "id": "p79_r2_t1",
+              "math": "$y = -2(x-6)^2 + 392$，$x=6$ 即售价 $24$ 元时最大利润 $392$ 元",
+              "appearAt": 14.6,
+              "dur": 0.45
+            }
+          ],
+          "isConclusion": true
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p79_sp1",
+          "title": "核心要点速记",
+          "showStart": 1.5,
+          "showEnd": 21.8,
+          "tokens": [
+            {
+              "id": "p79_sp1_t1",
+              "math": "1. 总利润 $w = (\\text{单件利润}) \\times (\\text{销量})$",
+              "appearAt": 1.8,
+              "dur": 0.4
+            },
+            {
+              "id": "p79_sp1_t2",
+              "math": "2. 结合限价条件解出 $x$ 范围",
+              "appearAt": 6.3,
+              "dur": 0.4
+            },
+            {
+              "id": "p79_sp1_t3",
+              "math": "3. 注意问的是“降价多少”还是“售价多少”",
+              "appearAt": 10.8,
+              "dur": 0.4
+            }
+          ],
+          "note": "求出调价幅度 $x$ 后直接当作最终售价作答。"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p79_r1_t1",
+          "tStart": 8.1,
+          "tEnd": 13.5,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p79_r2_t1",
+          "tStart": 14.6,
+          "tEnd": 20.0,
+          "color": "amber"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p79_svg1",
+          "type": "arrow",
+          "fromToken": "p79_r1_t1",
+          "toToken": "p79_r2_t1",
+          "label": "关键转化定解",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 14.7,
+          "tDrawEnd": 15.4,
+          "tFadeStart": 20.5,
+          "tEnd": 21.7
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "text": "第1步：表示单件利润与销售量——设调价 $x$ 元（或售价 $x$ 元），写出单件利润（售价 $-$ 进价）与对应销售量（原销量 $\\pm$ 变化量）。",
+          "focusToken": "p79_r1_t1"
+        },
+        {
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "text": "第2步：整理为二次函数并确定自变量范围——展开为 $w=ax^2+bx+c$，结合“不亏本”“限价”“让利”“销量非负”写出 $x$ 区间。",
+          "focusToken": "p79_r2_t1"
+        },
+        {
+          "tStart": 14.6,
+          "tEnd": 22,
+          "text": "第3步：配方求最大利润并还原定价——判断对称轴是否在允许范围内（或取最近整数），算出最大利润并换算为最终售价。",
+          "focusToken": "p79_r2_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "商品进价 $100$ 元，售价 $a$ 元时可卖 $(200-a)$ 件，利润最大时的定价为（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $120$ 元",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. $150$ 元",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. $160$ 元",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "$w=(a-100)(200-a)=-(a-150)^2+2500$，故 $a=150$。"
+            ],
+            "summary": "熟练完成单件利润、销量线性变化与限价约束下的利润最大化求解。"
+          },
+          "wrongTitle": "提示：请结合本节核心操作再核对一次",
+          "wrongFeedback": "$w=(a-100)(200-a)=-(a-150)^2+2500$，故 $a=150$。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "某商品利润 $w = -2(x - 35)^2 + 450$（售价 $30\\le x\\le 40$），最大利润为 ______ 元．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$w_{\\max} =$",
+          "input1Placeholder": "如 450",
+          "input1Suffix": "",
+          "expectedX": "450",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 450。",
+          "correctDetail": "$35\\in[30,40]$，直接取顶点最大值 $450$。",
+          "wrongFeedback": "$35\\in[30,40]$，直接取顶点最大值 $450$。",
+          "specificWrongHints": []
+        }
+      }
+    },
+    P80: {
+      "procedureId": "P80",
+      "title": "建立平面直角坐标系求解抛物线形实际问题",
+      "exampleTitle": "抛物线型彩虹桥跨度 $AB=30\\text{ m}$、拱高 $9\\text{ m}$，求解析式及距对称轴 $10\\text{ m}$ 处桥墩高度",
+      "exampleFormula": "以中点为原点得 $y=-0.04x^2+9$，代入 $x=10$ 得桥墩高 $5\\text{ m}$",
+      "totalDuration": 22,
+      "scratchpadIdleHint": "旁白草稿演算区（掌握实物抛物线的合理建系、解析式求解与高度/跨度/通过性决策全流程。）",
+      "practiceSectionTitle": "建立平面直角坐标系求解抛物线形实际问题跟做练习",
+      "practiceSectionSub": "完成以下两道关键操作练习",
+      "geometryDiagram": {
+        "title": "抛物线拱桥建系 · $y=-0.04x^2+9$",
+        "caption": "以路面中点为原点，顶点 (0,9)，端点 (15,0)，x=10 处高 5m",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <line x1=\"20\" y1=\"115\" x2=\"240\" y2=\"115\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <line x1=\"130\" y1=\"12\" x2=\"130\" y2=\"164\" stroke=\"#64748B\" stroke-width=\"1.5\" />\n            <polygon points=\"240,115 233,111 233,119\" fill=\"#64748B\" />\n            <polygon points=\"130,12 126,19 134,19\" fill=\"#64748B\" />\n            <text x=\"234\" y=\"129\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">x</text>\n            <text x=\"137\" y=\"20\" fill=\"#475569\" font-size=\"11\" font-weight=\"700\">y</text>\n            <text x=\"118\" y=\"128\" fill=\"#64748B\" font-size=\"10\">O</text>\n            <path class=\"proc-geo-anim\" data-appear-at=\"2.0\" data-dur=\"0.8\" data-dash-len=\"180\" d=\"M 45 115 Q 130 10 215 115\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2.5\" stroke-dasharray=\"180\" stroke-dashoffset=\"180\" style=\"opacity:0;\" /><g class=\"proc-geo-anim\" data-appear-at=\"13.0\" data-dur=\"0.5\" style=\"opacity:0;\"><line x1=\"80\" y1=\"80\" x2=\"80\" y2=\"115\" stroke=\"#D97706\" stroke-width=\"2.2\" /><line x1=\"180\" y1=\"80\" x2=\"180\" y2=\"115\" stroke=\"#D97706\" stroke-width=\"2.2\" /></g>\n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "合理建系并写出关键点坐标",
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "explanation": "常以顶点或底边中点（或起跳/出水点）为原点建系，将跨度、拱高转化为顶点或端点坐标。"
+        },
+        {
+          "step": 2,
+          "name": "优选设式求抛物线解析式",
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "explanation": "优先设顶点式 $y=a(x-h)^2+k$ 或 $y=ax^2+c$，代入已知点求 $a$。"
+        },
+        {
+          "step": 3,
+          "name": "代入目标坐标计算高度/跨度并作决策",
+          "tStart": 14.6,
+          "tEnd": 22,
+          "explanation": "求高度代入 $x$ 算 $y$；求宽度代入 $y$ 解 $x$；判断能否通过则与限高/安全空隙比较。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 合理建系并写出关键点坐标"
+        },
+        {
+          "time": 8.3,
+          "step": 2,
+          "label": "2.1 优选设式求抛物线解析式"
+        },
+        {
+          "time": 15.6,
+          "step": 3,
+          "label": "3.1 代入目标坐标计算高度/跨度并作决策"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p80_r0",
+          "stepBadge": "第 1 步 · 建系定坐标",
+          "appearAt": 1.5,
+          "tokens": [
+            {
+              "id": "p80_r0_t1",
+              "math": "以 $AB$ 中点为原点：顶点 $(0,9)$，右端点 $B(15,0)$",
+              "appearAt": 1.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p80_r1",
+          "stepBadge": "第 2 步 · 设式求解析式",
+          "appearAt": 8.0,
+          "tokens": [
+            {
+              "id": "p80_r1_t1",
+              "math": "设 $y=ax^2+9$，代 $(15,0)$ 得 $a=-0.04 \\implies y=-0.04x^2+9$",
+              "appearAt": 8.1,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p80_r2",
+          "stepBadge": "第 3 步 · 代入算桥墩高",
+          "appearAt": 14.5,
+          "tokens": [
+            {
+              "id": "p80_r2_t1",
+              "math": "当 $x=10$ 时，$y = -0.04 \\times 100 + 9 = 5\\ (\\text{m})$",
+              "appearAt": 14.6,
+              "dur": 0.45
+            }
+          ],
+          "isConclusion": true
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p80_sp1",
+          "title": "核心要点速记",
+          "showStart": 1.5,
+          "showEnd": 21.8,
+          "tokens": [
+            {
+              "id": "p80_sp1_t1",
+              "math": "1. 如底边中点为原点：顶点 $(0,h)$，端点 $(\\pm \\frac{L}{2}, 0)$",
+              "appearAt": 1.8,
+              "dur": 0.4
+            },
+            {
+              "id": "p80_sp1_t2",
+              "math": "2. 代入已知端点求系数 $a$",
+              "appearAt": 6.3,
+              "dur": 0.4
+            },
+            {
+              "id": "p80_sp1_t3",
+              "math": "3. 比较计算高度与实际限制",
+              "appearAt": 10.8,
+              "dur": 0.4
+            }
+          ],
+          "note": "将“跨度 $L$”直接当作横坐标代入（对称建系时横坐标应为 $\\frac{L}{2}$）。"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p80_r1_t1",
+          "tStart": 8.1,
+          "tEnd": 13.5,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p80_r2_t1",
+          "tStart": 14.6,
+          "tEnd": 20.0,
+          "color": "amber"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p80_svg1",
+          "type": "arrow",
+          "fromToken": "p80_r1_t1",
+          "toToken": "p80_r2_t1",
+          "label": "关键转化定解",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 14.7,
+          "tDrawEnd": 15.4,
+          "tFadeStart": 20.5,
+          "tEnd": 21.7
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "text": "第1步：合理建系并写出关键点坐标——常以顶点或底边中点（或起跳/出水点）为原点建系，将跨度、拱高转化为顶点或端点坐标。",
+          "focusToken": "p80_r1_t1"
+        },
+        {
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "text": "第2步：优选设式求抛物线解析式——优先设顶点式 $y=a(x-h)^2+k$ 或 $y=ax^2+c$，代入已知点求 $a$。",
+          "focusToken": "p80_r2_t1"
+        },
+        {
+          "tStart": 14.6,
+          "tEnd": 22,
+          "text": "第3步：代入目标坐标计算高度/跨度并作决策——求高度代入 $x$ 算 $y$；求宽度代入 $y$ 解 $x$；判断能否通过则与限高/安全空隙比较。",
+          "focusToken": "p80_r2_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "拱桥跨度 $10\\text{m}$、以底边中点为原点建系，则右端点的横坐标为（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $5$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $10$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $-10$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "对称建系时，跨度 $10\\text{m}$ 的左右端点分别为 $(-5,0)$ 和 $(5,0)$。"
+            ],
+            "summary": "掌握实物抛物线的合理建系、解析式求解与高度/跨度/通过性决策全流程。"
+          },
+          "wrongTitle": "提示：请结合本节核心操作再核对一次",
+          "wrongFeedback": "对称建系时，跨度 $10\\text{m}$ 的左右端点分别为 $(-5,0)$ 和 $(5,0)$。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "抛物线面碗 $y=\\frac{1}{20}x^2$，当汤面高度 $y=5\\text{cm}$ 时，汤面水平宽度为 ______ $\\text{cm}$．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "宽度 $=$",
+          "input1Placeholder": "如 20",
+          "input1Suffix": "",
+          "expectedX": "20",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 20。",
+          "correctDetail": "$\\frac{1}{20}x^2=5 \\implies x=\\pm 10$，故全宽为 $20\\text{cm}$。",
+          "wrongFeedback": "$\\frac{1}{20}x^2=5 \\implies x=\\pm 10$，故全宽为 $20\\text{cm}$。",
+          "specificWrongHints": []
+        }
+      }
     }
   };
 

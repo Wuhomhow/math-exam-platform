@@ -555,6 +555,73 @@
       ]
     },
     {
+      id: 'g9_c26',
+      grade: '初三',
+      procGrade: '九年级',
+      semester: '上册',
+      chapterGroup: '第二十六章 二次函数',
+      aliases: ['第26章 二次函数', '第二十六章 二次函数'],
+      includeFinishedPapers: [],
+      sections: [
+        {
+          id: 'g9_c26_s1',
+          code: '26.1',
+          title: '26.1 二次函数的概念',
+          procedureIds: ['P67'],
+          fallback: false
+        },
+        {
+          id: 'g9_c26_s2_1',
+          code: '26.2.1',
+          title: '26.2.1 y=ax² 的图象和性质',
+          procedureIds: ['P68'],
+          fallback: false
+        },
+        {
+          id: 'g9_c26_s2_2',
+          code: '26.2.2',
+          title: '26.2.2 y=a(x-h)²+k 的图象与平移',
+          procedureIds: ['P69', 'P70'],
+          fallback: false
+        },
+        {
+          id: 'g9_c26_s2_3',
+          code: '26.2.3',
+          title: '26.2.3 y=ax²+bx+c 的图象、性质与最值',
+          procedureIds: ['P71', 'P72', 'P73'],
+          fallback: false
+        },
+        {
+          id: 'g9_c26_s2_4',
+          code: '26.2.4',
+          title: '26.2.4 待定系数法求二次函数解析式',
+          procedureIds: ['P74'],
+          fallback: false
+        },
+        {
+          id: 'g9_c26_s3',
+          code: '26.3',
+          title: '26.3 二次函数与一元二次方程',
+          procedureIds: ['P75', 'P76', 'P77'],
+          fallback: false
+        },
+        {
+          id: 'g9_c26_s4',
+          code: '26.4',
+          title: '26.4 实际问题与二次函数',
+          procedureIds: ['P78', 'P79', 'P80'],
+          fallback: false
+        },
+        {
+          id: 'g9_c26_fallback',
+          code: '26.综合',
+          title: '第二十六章 综合与待细化',
+          procedureIds: [],
+          fallback: true
+        }
+      ]
+    },
+    {
       id: 'g9_c27',
       grade: '初三',
       procGrade: '九年级',
@@ -567,28 +634,35 @@
           id: 'g9_c27_s1',
           code: '27.1',
           title: '27.1 反比例函数的概念与待定系数法',
-          procedureIds: ['P11', 'P12'],
+          procedureIds: ['P11', 'P58', 'P12'],
           fallback: false
         },
         {
           id: 'g9_c27_s2_1',
           code: '27.2.1',
           title: '27.2.1 反比例函数的图象和性质',
-          procedureIds: ['P13', 'P14'],
+          procedureIds: ['P57', 'P13', 'P14', 'P59', 'P60'],
+          fallback: false
+        },
+        {
+          id: 'g9_c27_s2_k',
+          code: '27.2.k',
+          title: '27.2 反比例函数中 k 的几何意义',
+          procedureIds: ['P61', 'P62'],
           fallback: false
         },
         {
           id: 'g9_c27_s2_2',
           code: '27.2.2',
           title: '27.2.2 反比例函数与一次函数的综合',
-          procedureIds: ['P15'],
+          procedureIds: ['P15', 'P63', 'P64', 'P65'],
           fallback: false
         },
         {
           id: 'g9_c27_s3',
           code: '27.3',
           title: '27.3 实际问题与反比例函数',
-          procedureIds: [],
+          procedureIds: ['P66'],
           fallback: false
         },
         {
@@ -620,6 +694,34 @@
           id: 'g9_c29_s1_2',
           code: '29.1.2',
           title: '29.1.2 过三点的圆',
+          procedureIds: [],
+          fallback: false
+        },
+        {
+          id: 'g9_c29_s2_1',
+          code: '29.2.1',
+          title: '29.2.1 垂直于弦的直径',
+          procedureIds: [],
+          fallback: false
+        },
+        {
+          id: 'g9_c29_s2_2',
+          code: '29.2.2',
+          title: '29.2.2 圆心角',
+          procedureIds: [],
+          fallback: false
+        },
+        {
+          id: 'g9_c29_s2_3',
+          code: '29.2.3',
+          title: '29.2.3 圆周角',
+          procedureIds: [],
+          fallback: false
+        },
+        {
+          id: 'g9_c29_s3',
+          code: '29.3',
+          title: '29.3 弧长和扇形面积',
           procedureIds: [],
           fallback: false
         },
@@ -692,7 +794,9 @@
 
     const allAssignedIds = new Set();
 
-    // Step A: 先注入各小节绑定的 Pxx 题目（包含 featured 和 bank_only）
+    const validSectionIds = new Set(pilotChapter.sections.map(s => s.id));
+
+    // Step A: 先注入各小节绑定的 Pxx 题目（包含 featured 和 bank_only）；若题目已在 QUESTION_CATALOG_MAP 显式归属本章其他小节，则不跨小节重复/前置注入
     pilotChapter.sections.forEach(sec => {
       const itemMap = sectionItemMaps.get(sec.id);
       (sec.procedureIds || []).forEach(pid => {
@@ -702,6 +806,10 @@
         col.items.forEach(it => {
           const q = it.question || bankById.get(it.questionId);
           if (!q) return;
+          const explicitMap = mapObj[q.id];
+          if (explicitMap && validSectionIds.has(explicitMap.sectionId) && explicitMap.sectionId !== sec.id) {
+            return;
+          }
           const tag = it.visibility === 'bank_only' ? 'procedural_bank' : 'procedural_featured';
           const existing = itemMap.get(q.id);
           if (!existing) {
@@ -717,7 +825,6 @@
     });
 
     // Step B: 注入 QUESTION_CATALOG_MAP 中显式映射到该章各小节的未关联题目
-    const validSectionIds = new Set(pilotChapter.sections.map(s => s.id));
     Object.keys(mapObj).forEach(qid => {
       const entry = mapObj[qid];
       if (!entry || !validSectionIds.has(entry.sectionId)) return;

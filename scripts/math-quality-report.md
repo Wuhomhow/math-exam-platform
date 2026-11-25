@@ -16,11 +16,11 @@
 
 | 数据源 | 存储文件 | 公式总数 | 命令种类 | KaTeX 异常 | 备用渲染不足 | Word 转换异常 | 缺失定界符(明确) | 括号/环境错误 | HTML 混排异常 | 字段规范异常 | 疑似未加 `$` (纯文本提示) |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1. 数学题库主数据 | `js/data/questions.js` | 68501 | 72 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| 2. 程序性知识正文 | `js/data/procedural-knowledge.js & question-procedures.js` | 5248 | 48 | 1 | 1 | 1 | 0 | 0 | 0 | 0 | 18 |
-| 3. 程序性知识动态演示数据 | `js/data/procedural-dynamic-demos.js` | 6837 | 41 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 1. 数学题库主数据 | `js/data/questions.js` | 78028 | 72 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 2. 程序性知识正文 | `js/data/procedural-knowledge.js & question-procedures.js` | 5593 | 50 | 1 | 1 | 1 | 0 | 0 | 0 | 0 | 18 |
+| 3. 程序性知识动态演示数据 | `js/data/procedural-dynamic-demos.js` | 7429 | 44 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | 4. 数学知识图谱数据 | `js/data/knowledge-nodes.js & knowledge-relations.js & question-knowledge.js` | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| 5. Word 组卷及导出内容 | `js/modules/docx-export.js (window.QUESTION_BANK 导出字段)` | 67683 | 72 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 5. Word 组卷及导出内容 | `js/modules/docx-export.js (window.QUESTION_BANK 导出字段)` | 77210 | 72 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 ## 三、错误与疑似项明细定位
 

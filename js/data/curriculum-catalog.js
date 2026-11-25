@@ -694,41 +694,88 @@
           id: 'g9_c29_s1_2',
           code: '29.1.2',
           title: '29.1.2 过三点的圆',
-          procedureIds: [],
+          procedureIds: ['P81', 'P82'],
           fallback: false
         },
         {
           id: 'g9_c29_s2_1',
           code: '29.2.1',
           title: '29.2.1 垂直于弦的直径',
-          procedureIds: [],
+          procedureIds: ['P83', 'P84'],
           fallback: false
         },
         {
           id: 'g9_c29_s2_2',
           code: '29.2.2',
           title: '29.2.2 圆心角',
-          procedureIds: [],
+          procedureIds: ['P85'],
           fallback: false
         },
         {
           id: 'g9_c29_s2_3',
           code: '29.2.3',
           title: '29.2.3 圆周角',
-          procedureIds: [],
+          procedureIds: ['P86', 'P87', 'P88'],
           fallback: false
         },
         {
           id: 'g9_c29_s3',
           code: '29.3',
           title: '29.3 弧长和扇形面积',
-          procedureIds: [],
+          procedureIds: ['P89', 'P90', 'P91'],
           fallback: false
         },
         {
           id: 'g9_c29_fallback',
           code: '29.综合',
           title: '第二十九章 综合与待细化',
+          procedureIds: [],
+          fallback: true
+        }
+      ]
+    }
+,
+    {
+      id: 'g9_c30',
+      grade: '初三',
+      procGrade: '九年级',
+      semester: '上册',
+      chapterGroup: '第三十章 直线与圆的位置关系',
+      aliases: ['第30章 直线与圆的位置关系', '第三十章 直线与圆的位置关系'],
+      includeFinishedPapers: [],
+      sections: [
+        {
+          id: 'g9_c30_s1_1',
+          code: '30.1.1',
+          title: '30.1.1 直线与圆相离、相切、相交',
+          procedureIds: [],
+          fallback: false
+        },
+        {
+          id: 'g9_c30_s1_2',
+          code: '30.1.2',
+          title: '30.1.2 圆的切线',
+          procedureIds: [],
+          fallback: false
+        },
+        {
+          id: 'g9_c30_s2',
+          code: '30.2',
+          title: '30.2 三角形的内切圆',
+          procedureIds: [],
+          fallback: false
+        },
+        {
+          id: 'g9_c30_s3',
+          code: '30.3',
+          title: '30.3 正多边形与圆',
+          procedureIds: [],
+          fallback: false
+        },
+        {
+          id: 'g9_c30_fallback',
+          code: '30.综合',
+          title: '第三十章 综合与待细化',
           procedureIds: [],
           fallback: true
         }

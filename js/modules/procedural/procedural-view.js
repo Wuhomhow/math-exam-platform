@@ -18,6 +18,40 @@
     return escapeHtml(str);
   }
 
+  // AI 逐字流式演示速度参数：板书慢写（约 4–5 字/秒），底部讲解快出（约 12 字/秒，不干等）
+  const STREAM_BASE_FLOW_SCALE = 0.65;
+  const STREAM_CHARS_PER_SEC = 4.5;
+  const SUBTITLE_CHARS_PER_SEC = 18;
+
+  // 将含 $...$ 公式的文本安全拆分为「单字 + 完整公式原子」流式单元（KaTeX 一次性预渲染，播放期零重排）
+  function renderStreamUnitsHtml(str, mode = 'board') {
+    const raw = String(str || '');
+    if (!raw) return '';
+    const parts = raw.split(/(\$[^$]+\$)/g);
+    const isSub = mode === 'subtitle';
+    const initStyle = isSub ? 'display:none; opacity:0;' : 'opacity:0;';
+    const out = [];
+    for (const seg of parts) {
+      if (!seg) continue;
+      if (seg.length >= 2 && seg.startsWith('$') && seg.endsWith('$')) {
+        out.push(`<span class="proc-stream-unit is-math-unit" data-w="2.4" style="${initStyle}">${renderMathText(seg)}</span>`);
+      } else {
+        for (const ch of Array.from(seg)) {
+          if (ch === '\n') {
+            out.push('<br>');
+          } else {
+            const w = /\s/.test(ch) ? '0.3' : '1';
+            out.push(`<span class="proc-stream-unit" data-w="${w}" style="${initStyle}">${escapeHtml(ch)}</span>`);
+          }
+        }
+      }
+    }
+    if (isSub) {
+      out.push('<span class="proc-stream-cursor hidden" aria-hidden="true"></span>');
+    }
+    return out.join('');
+  }
+
   function extractSectionCode(chapterStr) {
     const raw = String(chapterStr || '').trim();
     const m = raw.match(/^([0-9]+(?:\.[0-9]+)*(?:[–—-][0-9]+(?:\.[0-9]+)*)?)/);
@@ -44,6 +78,11 @@
     P71: 'cnm_232', P72: 'cnm_232', P73: 'cnm_235', P74: 'cnm_233',
     P75: 'cnm_234', P76: 'cnm_234', P77: 'cnm_234',
     P78: 'cnm_236', P79: 'cnm_236', P80: 'cnm_236',
+    P81: 'cnm_265', P82: 'cnm_265',
+    P83: 'cnm_251', P84: 'cnm_251',
+    P85: 'cnm_252',
+    P86: 'cnm_253', P87: 'cnm_254', P88: 'cnm_255',
+    P89: 'cnm_256', P90: 'cnm_257', P91: 'cnm_258',
     P11: 'cnm_237', P58: 'cnm_237', P12: 'cnm_240',
     P57: 'cnm_238', P13: 'cnm_238', P14: 'cnm_238', P59: 'cnm_238', P60: 'cnm_238',
     P61: 'cnm_239', P62: 'cnm_239',
@@ -1005,12 +1044,28 @@
       const prac1 = demoData.practices.practice1;
       const prac2 = demoData.practices.practice2;
 
-      const boardRowsHtml = (demoData.boardRows || []).map(row => {
-        const tokensHtml = row.tokens.map(tk => `
-          <span class="proc-wb-token" id="proc_tk_${escapeHtml(tk.id)}" data-token-id="${escapeHtml(tk.id)}" data-appear-at="${tk.appearAt}" data-dur="${tk.dur || 0.4}" style="opacity:0; transform:translateY(8px) scale(0.94);">
-            ${renderMathText(tk.math)}
-          </span>
-        `).join('');
+      const totalDur = demoData.totalDuration || 30.0;
+      const allRows = demoData.boardRows || [];
+      const findStepEndAfter = (tVal) => {
+        const st = (demoData.steps || []).find(s => tVal >= s.tStart - 0.05 && tVal < s.tEnd - 0.05);
+        return st ? st.tEnd : totalDur;
+      };
+
+      const boardRowsHtml = allRows.map((row, rIdx) => {
+        const nextRowAppear = rIdx + 1 < allRows.length ? allRows[rIdx + 1].appearAt : totalDur;
+        const tokensHtml = (row.tokens || []).map((tk, tIdx) => {
+          const nextTk = row.tokens[tIdx + 1];
+          const stepEnd = findStepEndAfter(tk.appearAt);
+          const boundEnd = nextTk
+            ? nextTk.appearAt
+            : Math.min(nextRowAppear > tk.appearAt + 0.2 ? nextRowAppear : totalDur, stepEnd);
+          const maxWin = Math.max(tk.dur || 0.4, boundEnd - tk.appearAt - 0.35);
+          return `
+            <span class="proc-wb-token" id="proc_tk_${escapeHtml(tk.id)}" data-token-id="${escapeHtml(tk.id)}" data-appear-at="${tk.appearAt}" data-dur="${tk.dur || 0.4}" data-stream-window="${maxWin.toFixed(2)}">
+              ${renderStreamUnitsHtml(tk.math, 'board')}
+            </span>
+          `;
+        }).join('');
 
         return `
           <div class="proc-wb-row ${row.isConclusion ? 'is-row-conclusion' : ''}" id="proc_${escapeHtml(row.rowId)}" data-row-appear="${row.appearAt}" style="opacity:0; pointer-events:none;">
@@ -1025,11 +1080,17 @@
       }).join('');
 
       const scratchpadCardsHtml = (demoData.scratchpadCards || []).map(sp => {
-        const spTokensHtml = sp.tokens.map(tk => `
-          <div class="proc-wb-token block py-0.5 text-sm sm:text-base font-bold text-slate-900" id="proc_tk_${escapeHtml(tk.id)}" data-token-id="${escapeHtml(tk.id)}" data-appear-at="${tk.appearAt}" data-dur="${tk.dur || 0.4}" style="opacity:0; transform:translateY(6px);">
-            ${renderMathText(tk.math)}
-          </div>
-        `).join('');
+        const spTokens = sp.tokens || [];
+        const spTokensHtml = spTokens.map((tk, tIdx) => {
+          const nextTk = spTokens[tIdx + 1];
+          const boundEnd = nextTk ? nextTk.appearAt : (sp.showEnd || totalDur);
+          const maxWin = Math.max(tk.dur || 0.4, boundEnd - tk.appearAt - 0.35);
+          return `
+            <div class="proc-wb-token block py-0.5 text-sm sm:text-base font-bold text-slate-900" id="proc_tk_${escapeHtml(tk.id)}" data-token-id="${escapeHtml(tk.id)}" data-appear-at="${tk.appearAt}" data-dur="${tk.dur || 0.4}" data-stream-window="${maxWin.toFixed(2)}">
+              ${renderStreamUnitsHtml(tk.math, 'board')}
+            </div>
+          `;
+        }).join('');
 
         return `
           <div class="proc-wb-scratchpad-card hidden space-y-2" id="proc_${escapeHtml(sp.id)}" data-show-start="${sp.showStart}" data-show-end="${sp.showEnd}">
@@ -1052,7 +1113,7 @@
 
       const subtitlesHtml = (demoData.subtitles || []).map((sub, idx) => `
         <span class="proc-wb-sub-item ${idx === 0 ? 'inline' : 'hidden'}" data-sub-idx="${idx}" data-t-start="${sub.tStart}" data-t-end="${sub.tEnd}" data-focus-token="${escapeHtml(sub.focusToken || '')}">
-          ${renderMathText(sub.text)}
+          ${renderStreamUnitsHtml(sub.text, 'subtitle')}
         </span>
       `).join('');
 
@@ -1212,7 +1273,7 @@
           </div>
 
           <!-- 跟着操作（默认展示在动态演示下方） -->
-          <section id="procDynPracticeSection" class="scroll-mt-36 p-5 rounded-xl bg-white border border-[#99F6E4] space-y-4">
+          <section id="procDynPracticeSection" class="scroll-mt-20 p-5 rounded-xl bg-white border border-[#99F6E4] space-y-4">
             <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-100">
               <div class="flex items-center gap-2">
                 <span class="px-2.5 py-0.5 rounded bg-[#0F766E] text-white text-xs font-bold">跟着操作</span>
@@ -1336,14 +1397,36 @@
 
 
 
+      const buildUnitSchedule = (rootEl) => {
+        const units = [];
+        let acc = 0;
+        rootEl.querySelectorAll('.proc-stream-unit').forEach(uEl => {
+          const w = parseFloat(uEl.getAttribute('data-w') || '1') || 1;
+          units.push({ el: uEl, startW: acc, endW: acc + w });
+          acc += w;
+        });
+        return { units, totalWeight: Math.max(1, acc) };
+      };
+
       const tokenElsMap = new Map();
       container.querySelectorAll('.proc-wb-token').forEach(el => {
         const tid = el.getAttribute('data-token-id');
         if (tid) {
+          const appearAt = parseFloat(el.getAttribute('data-appear-at') || '0');
+          const rawDur = parseFloat(el.getAttribute('data-dur') || '0.4');
+          const maxWin = parseFloat(el.getAttribute('data-stream-window') || String(rawDur));
+          const { units, totalWeight } = buildUnitSchedule(el);
+          const idealDur = units.length > 1
+            ? Math.max(rawDur, totalWeight / STREAM_CHARS_PER_SEC)
+            : Math.max(rawDur, 0.55);
+          const streamDur = Math.min(idealDur, Math.max(rawDur, maxWin));
           tokenElsMap.set(tid, {
             el,
-            appearAt: parseFloat(el.getAttribute('data-appear-at') || '0'),
-            dur: parseFloat(el.getAttribute('data-dur') || '0.4')
+            appearAt,
+            dur: rawDur,
+            streamDur,
+            units,
+            totalWeight
           });
         }
       });
@@ -1360,12 +1443,24 @@
       }));
       const scratchpadIdleHint = container.querySelector('#procScratchpadIdleHint');
 
-      const subtitleList = Array.from(container.querySelectorAll('.proc-wb-sub-item')).map(el => ({
-        el,
-        tStart: parseFloat(el.getAttribute('data-t-start') || '0'),
-        tEnd: parseFloat(el.getAttribute('data-t-end') || '0'),
-        focusToken: el.getAttribute('data-focus-token') || ''
-      }));
+      const subtitleList = Array.from(container.querySelectorAll('.proc-wb-sub-item')).map(el => {
+        const tStart = parseFloat(el.getAttribute('data-t-start') || '0');
+        const tEnd = parseFloat(el.getAttribute('data-t-end') || '0');
+        const { units, totalWeight } = buildUnitSchedule(el);
+        const win = Math.max(0.6, tEnd - tStart);
+        const idealDur = totalWeight / SUBTITLE_CHARS_PER_SEC;
+        const typeDur = Math.min(Math.max(0.45, idealDur), Math.min(win * 0.52, 3.6));
+        return {
+          el,
+          tStart,
+          tEnd,
+          typeDur,
+          units,
+          totalWeight,
+          cursorEl: el.querySelector('.proc-stream-cursor'),
+          focusToken: el.getAttribute('data-focus-token') || ''
+        };
+      });
 
       const geoAnimList = Array.from(container.querySelectorAll('.proc-geo-anim')).map(el => ({
         el,
@@ -1603,21 +1698,41 @@
         });
 
         let writingTokenId = null;
+        let activeWritingUnitEl = null;
         tokenElsMap.forEach((tkItem, tid) => {
-          const p = t <= 0.02 ? 0 : easeOutCubic((t - tkItem.appearAt) / Math.max(0.08, tkItem.dur));
-          tkItem.el.style.opacity = p.toFixed(3);
-          const ty = (1 - p) * 7;
-          const sc = 0.94 + 0.06 * p;
-          tkItem.el.style.transform = `translateY(${ty.toFixed(2)}px) scale(${sc.toFixed(3)})`;
+          const dur = Math.max(0.12, tkItem.streamDur || tkItem.dur || 0.4);
+          const progress = t <= 0.02 ? 0 : clamp01((t - tkItem.appearAt) / dur);
+          const isStarted = t > 0.02 && t >= tkItem.appearAt;
+          const curW = progress * tkItem.totalWeight;
+          let lastVisibleUnit = null;
 
-          if (t > 0.02 && t >= tkItem.appearAt && t <= tkItem.appearAt + tkItem.dur + 0.15) {
+          if (tkItem.units && tkItem.units.length > 0) {
+            for (let i = 0; i < tkItem.units.length; i++) {
+              const u = tkItem.units[i];
+              if (!isStarted || curW <= u.startW) {
+                u.el.style.opacity = '0';
+              } else if (curW >= u.endW || progress >= 0.999) {
+                u.el.style.opacity = '1';
+                lastVisibleUnit = u.el;
+              } else {
+                const up = easeOutCubic((curW - u.startW) / Math.max(0.05, u.endW - u.startW));
+                u.el.style.opacity = up.toFixed(3);
+                lastVisibleUnit = u.el;
+              }
+            }
+          } else {
+            tkItem.el.style.opacity = easeOutCubic(progress).toFixed(3);
+          }
+
+          if (isStarted && t <= tkItem.appearAt + dur + 0.15) {
             writingTokenId = tid;
+            if (lastVisibleUnit) activeWritingUnitEl = lastVisibleUnit;
           }
 
           const hlColor = activeHlMap.get(tid);
-          tkItem.el.classList.toggle('is-hl-teal', t > 0.02 && hlColor === 'teal');
-          tkItem.el.classList.toggle('is-hl-amber', t > 0.02 && hlColor === 'amber');
-          tkItem.el.classList.toggle('is-hl-rose', t > 0.02 && hlColor === 'rose');
+          tkItem.el.classList.toggle('is-hl-teal', isStarted && hlColor === 'teal');
+          tkItem.el.classList.toggle('is-hl-amber', isStarted && hlColor === 'amber');
+          tkItem.el.classList.toggle('is-hl-rose', isStarted && hlColor === 'rose');
         });
 
         let activeFocusToken = writingTokenId;
@@ -1625,17 +1740,57 @@
           const isCur = (t >= subItem.tStart && t < subItem.tEnd) || (idx === subtitleList.length - 1 && t >= subItem.tStart);
           subItem.el.classList.toggle('inline', isCur);
           subItem.el.classList.toggle('hidden', !isCur);
-          if (isCur && !activeFocusToken && subItem.focusToken) {
-            activeFocusToken = subItem.focusToken;
+          if (isCur) {
+            const subProgress = t <= 0.02 ? 1 : clamp01((t - subItem.tStart) / Math.max(0.2, subItem.typeDur));
+            const subW = subProgress * subItem.totalWeight;
+            let lastShownSubEl = null;
+            for (let i = 0; i < subItem.units.length; i++) {
+              const u = subItem.units[i];
+              if (t <= 0.02 || subProgress >= 0.999 || subW >= u.endW) {
+                u.el.style.display = u.el.classList.contains('is-math-unit') ? 'inline-block' : 'inline';
+                u.el.style.opacity = '1';
+                lastShownSubEl = u.el;
+              } else if (subW > u.startW) {
+                const up = easeOutCubic((subW - u.startW) / Math.max(0.05, u.endW - u.startW));
+                u.el.style.display = u.el.classList.contains('is-math-unit') ? 'inline-block' : 'inline';
+                u.el.style.opacity = up.toFixed(3);
+                lastShownSubEl = u.el;
+              } else {
+                u.el.style.display = 'none';
+                u.el.style.opacity = '0';
+              }
+            }
+            if (subItem.cursorEl) {
+              const showCursor = t > 0.02 && subProgress > 0 && subProgress < 0.995 && ProceduralState.isPlaying;
+              subItem.cursorEl.classList.toggle('hidden', !showCursor);
+              if (showCursor && lastShownSubEl && lastShownSubEl.nextSibling !== subItem.cursorEl) {
+                lastShownSubEl.insertAdjacentElement('afterend', subItem.cursorEl);
+              }
+            }
+            if (!activeFocusToken && subItem.focusToken) {
+              activeFocusToken = subItem.focusToken;
+            }
+          } else if (subItem.cursorEl) {
+            subItem.cursorEl.classList.add('hidden');
           }
         });
 
-        if (teacherPen && t > 0.02 && activeFocusToken) {
-          const rect = getTokenRectInStage(activeFocusToken);
-          if (rect) {
+        if (teacherPen && t > 0.02) {
+          let penRect = null;
+          if (activeWritingUnitEl && wbStage) {
+            const stRect = wbStage.getBoundingClientRect();
+            const uRect = activeWritingUnitEl.getBoundingClientRect();
+            if (uRect.width > 0 || uRect.height > 0) {
+              penRect = { right: uRect.right - stRect.left, bottom: uRect.bottom - stRect.top };
+            }
+          }
+          if (!penRect && activeFocusToken) {
+            penRect = getTokenRectInStage(activeFocusToken);
+          }
+          if (penRect) {
             teacherPen.style.opacity = '1';
-            teacherPen.style.left = `${(rect.right - 2).toFixed(1)}px`;
-            teacherPen.style.top = `${(rect.bottom - 2).toFixed(1)}px`;
+            teacherPen.style.left = `${(penRect.right - 1).toFixed(1)}px`;
+            teacherPen.style.top = `${(penRect.bottom - 2).toFixed(1)}px`;
           } else {
             teacherPen.style.opacity = '0';
           }
@@ -1698,7 +1853,7 @@
           if (!ProceduralState.isPlaying) return;
           const dt = Math.min(0.06, Math.max(0, (now - ProceduralState.lastFrameTs) / 1000));
           ProceduralState.lastFrameTs = now;
-          const nextT = ProceduralState.currentTime + dt * (ProceduralState.playbackRate || 1.0);
+          const nextT = ProceduralState.currentTime + dt * (ProceduralState.playbackRate || 1.0) * STREAM_BASE_FLOW_SCALE;
 
           if (nextT >= ProceduralState.targetStopTime) {
             renderTimelineAt(ProceduralState.targetStopTime, true);

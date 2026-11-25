@@ -18988,6 +18988,2704 @@
           "specificWrongHints": []
         }
       }
+    },
+    P81: {
+      "procedureId": "P81",
+      "title": "运用“不在同一直线上的三点确定一个圆”作三角形外接圆并求外心与半径",
+      "exampleTitle": "在 $Rt\\triangle ABC$ 中，$\\angle C=90^\\circ$，$AC=8$，$BC=6$，作外接圆 $\\odot O$ 并求半径 $R$",
+      "exampleFormula": "外心 $O$ 为斜边 $AB$ 中点，$AB=\\sqrt{8^2+6^2}=10 \\implies R=5$",
+      "totalDuration": 22,
+      "scratchpadIdleHint": "旁白草稿演算区（掌握确定圆的条件、尺规/网格定位外心以及求三角形外接圆半径的标准流程。）",
+      "practiceSectionTitle": "运用“不在同一直线上的三点确定一个圆”作三角形外接圆并求外心与半径跟做练习",
+      "practiceSectionSub": "完成以下两道关键操作练习",
+      "geometryDiagram": {
+        "title": "直角三角形的外接圆与外心",
+        "caption": "作两边垂直平分线交于斜边中点 O，半径 R = AB / 2 = 5",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <rect x=\"4\" y=\"4\" width=\"252\" height=\"167\" rx=\"10\" fill=\"#F8FAFC\" stroke=\"#E2E8F0\" stroke-width=\"1\" />\n            <circle class=\"proc-geo-anim\" data-appear-at=\"8.0\" data-dur=\"0.8\" data-dash-len=\"350\" cx=\"130\" cy=\"88\" r=\"56\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2.2\" stroke-dasharray=\"350\" stroke-dashoffset=\"350\" style=\"opacity:0;\" /><polygon points=\"74,88 186,88 156,39\" fill=\"#0F766E\" fill-opacity=\"0.10\" stroke=\"#334155\" stroke-width=\"1.8\" /><circle class=\"proc-geo-anim\" data-appear-at=\"2.0\" data-dur=\"0.5\" cx=\"130\" cy=\"88\" r=\"3.4\" fill=\"#D97706\" style=\"opacity:0;\" /><text x=\"62\" y=\"92\" fill=\"#334155\" font-size=\"11\" font-weight=\"700\">A</text><text x=\"190\" y=\"92\" fill=\"#334155\" font-size=\"11\" font-weight=\"700\">B</text><text x=\"155\" y=\"33\" fill=\"#334155\" font-size=\"11\" font-weight=\"700\">C(90°)</text><text x=\"125\" y=\"103\" fill=\"#D97706\" font-size=\"11\" font-weight=\"700\">O</text>\n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "核验三点不共线并确定外心位置",
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "explanation": "任意作两条弦的垂直平分线，其交点即为圆心（外心）$O$；直角三角形外心直接取斜边中点。"
+        },
+        {
+          "step": 2,
+          "name": "连接外心与顶点构造直角三角形",
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "explanation": "连接 $OA, OB$（或作弦垂线），结合等腰三线合一或直角三角形斜边中线性质表示各线段。"
+        },
+        {
+          "step": 3,
+          "name": "列勾股方程求解外接圆半径 $R$",
+          "tStart": 14.6,
+          "tEnd": 22,
+          "explanation": "直角三角形直接得 $R=\\frac{c}{2}$；等腰三角形设半径 $R$，在直角三角形中列方程解出 $R$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 核验三点不共线并确定外心位置"
+        },
+        {
+          "time": 8.3,
+          "step": 2,
+          "label": "2.1 连接外心与顶点构造直角三角形"
+        },
+        {
+          "time": 15.6,
+          "step": 3,
+          "label": "3.1 列勾股方程求解外接圆半径 $R$"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p81_r0",
+          "stepBadge": "已知条件",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p81_r0_t1",
+              "math": "$Rt\\triangle ABC$ 中 $\\angle C=90^\\circ$，$AC=8$，$BC=6$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p81_r1",
+          "stepBadge": "第 1 步 · 定外心",
+          "appearAt": 1.5,
+          "tokens": [
+            {
+              "id": "p81_r1_t1",
+              "math": "作 $AC, BC$ 垂直平分线，交点 $O$ 恰为斜边 $AB$ 中点",
+              "appearAt": 1.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p81_r2",
+          "stepBadge": "第 2 步 · 算斜边",
+          "appearAt": 8.0,
+          "tokens": [
+            {
+              "id": "p81_r2_t1",
+              "math": "由勾股定理：$AB = \\sqrt{8^2 + 6^2} = 10$",
+              "appearAt": 8.1,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p81_r3",
+          "stepBadge": "第 3 步 · 求半径",
+          "appearAt": 14.5,
+          "tokens": [
+            {
+              "id": "p81_r3_t1",
+              "math": "$\\therefore$ 外接圆半径 $R = \\frac{1}{2}AB = 5$",
+              "appearAt": 14.6,
+              "dur": 0.45
+            }
+          ],
+          "isConclusion": true
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p81_sp1",
+          "title": "核心要点速记",
+          "showStart": 1.5,
+          "showEnd": 21.8,
+          "tokens": [
+            {
+              "id": "p81_sp1_t1",
+              "math": "1. 外心 $=$ 三边垂直平分线的交点",
+              "appearAt": 1.8,
+              "dur": 0.4
+            },
+            {
+              "id": "p81_sp1_t2",
+              "math": "2. $OA = OB = OC = R$",
+              "appearAt": 6.3,
+              "dur": 0.4
+            },
+            {
+              "id": "p81_sp1_t3",
+              "math": "3. $R^2 = d^2 + \\left(\\frac{a}{2}\\right)^2$",
+              "appearAt": 10.8,
+              "dur": 0.4
+            }
+          ],
+          "note": "忽略“不在同一直线上”的前提，误认为任意三点都能确定一个圆。"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p81_r1_t1",
+          "tStart": 1.6,
+          "tEnd": 7.0,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p81_r2_t1",
+          "tStart": 8.1,
+          "tEnd": 13.5,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p81_r3_t1",
+          "tStart": 14.6,
+          "tEnd": 20.0,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p81_svg1",
+          "type": "arrow",
+          "fromToken": "p81_r1_t1",
+          "toToken": "p81_r3_t1",
+          "label": "关键转化定解",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 14.7,
+          "tDrawEnd": 15.4,
+          "tFadeStart": 20.5,
+          "tEnd": 21.7
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "text": "第1步：核验三点不共线并确定外心位置——任意作两条弦的垂直平分线，其交点即为圆心（外心）$O$；直角三角形外心直接取斜边中点。",
+          "focusToken": "p81_r1_t1"
+        },
+        {
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "text": "第2步：连接外心与顶点构造直角三角形——连接 $OA, OB$（或作弦垂线），结合等腰三线合一或直角三角形斜边中线性质表示各线段。",
+          "focusToken": "p81_r2_t1"
+        },
+        {
+          "tStart": 14.6,
+          "tEnd": 22,
+          "text": "第3步：列勾股方程求解外接圆半径 $R$——直角三角形直接得 $R=\\frac{c}{2}$；等腰三角形设半径 $R$，在直角三角形中列方程解出 $R$。",
+          "focusToken": "p81_r3_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "若点 $A(1,2)$、$B(3,2)$、$C(5,a)$ 不能确定一个圆，则 $a$ 的值为（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $2$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $0$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $4$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "三点共线时不能确定圆，直线 $AB$ 为 $y=2$，故 $a=2$。"
+            ],
+            "summary": "掌握确定圆的条件、尺规/网格定位外心以及求三角形外接圆半径的标准流程。"
+          },
+          "wrongTitle": "提示：请结合本节核心操作再核对一次",
+          "wrongFeedback": "三点共线时不能确定圆，直线 $AB$ 为 $y=2$，故 $a=2$。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "三边长分别为 $5, 5, 8$ 的等腰三角形外接圆半径为 $\\frac{25}{n}$，则 $n =$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$n =$",
+          "input1Placeholder": "如 6",
+          "input1Suffix": "",
+          "expectedX": "6",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 6。",
+          "correctDetail": "底边高 $3$，设半径 $r$，则 $(r-3)^2+4^2=r^2 \\implies r=\\frac{25}{6}$。",
+          "wrongFeedback": "底边高 $3$，设半径 $r$，则 $(r-3)^2+4^2=r^2 \\implies r=\\frac{25}{6}$。",
+          "specificWrongHints": []
+        }
+      }
+    },
+    P82: {
+      "procedureId": "P82",
+      "title": "运用反证法（反设→归谬→存真）证明命题与举反例辨识假命题",
+      "exampleTitle": "用反证法证明：在一个三角形中，至少有一个内角小于或等于 $60^\\circ$",
+      "exampleFormula": "反设三内角均大于 $60^\\circ \\implies$ 内角和大于 $180^\\circ$（矛盾）$\\implies$ 原结论成立",
+      "totalDuration": 22,
+      "scratchpadIdleHint": "旁白草稿演算区（规范写出常见量词结论的否定形式，掌握反证法三步流程与假命题反例构造。）",
+      "practiceSectionTitle": "运用反证法（反设→归谬→存真）证明命题与举反例辨识假命题跟做练习",
+      "practiceSectionSub": "完成以下两道关键操作练习",
+      "geometryDiagram": {
+        "title": "反证法“反设 → 归谬 → 存真”三步链",
+        "caption": "先准确否定结论，再推出与三角形内角和 180° 矛盾",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <rect x=\"4\" y=\"4\" width=\"252\" height=\"167\" rx=\"10\" fill=\"#F8FAFC\" stroke=\"#E2E8F0\" stroke-width=\"1\" />\n            <rect class=\"proc-geo-anim\" data-appear-at=\"1.5\" data-dur=\"0.5\" x=\"18\" y=\"26\" width=\"224\" height=\"34\" rx=\"8\" fill=\"#FEF3C7\" stroke=\"#D97706\" stroke-width=\"1.5\" style=\"opacity:0;\" /><text class=\"proc-geo-anim\" data-appear-at=\"1.6\" data-dur=\"0.5\" x=\"130\" y=\"47\" text-anchor=\"middle\" fill=\"#92400E\" font-size=\"11\" font-weight=\"700\" style=\"opacity:0;\">1. 反设：∠A&gt;60°, ∠B&gt;60°, ∠C&gt;60°</text><rect class=\"proc-geo-anim\" data-appear-at=\"8.0\" data-dur=\"0.5\" x=\"18\" y=\"74\" width=\"224\" height=\"34\" rx=\"8\" fill=\"#FEE2E2\" stroke=\"#DC2626\" stroke-width=\"1.5\" style=\"opacity:0;\" /><text class=\"proc-geo-anim\" data-appear-at=\"8.1\" data-dur=\"0.5\" x=\"130\" y=\"95\" text-anchor=\"middle\" fill=\"#991B1B\" font-size=\"11\" font-weight=\"700\" style=\"opacity:0;\">2. 归谬：∠A+∠B+∠C &gt; 180°（矛盾）</text><rect class=\"proc-geo-anim\" data-appear-at=\"14.5\" data-dur=\"0.5\" x=\"18\" y=\"122\" width=\"224\" height=\"34\" rx=\"8\" fill=\"#CCFBF1\" stroke=\"#0F766E\" stroke-width=\"1.5\" style=\"opacity:0;\" /><text class=\"proc-geo-anim\" data-appear-at=\"14.6\" data-dur=\"0.5\" x=\"130\" y=\"143\" text-anchor=\"middle\" fill=\"#115E59\" font-size=\"11\" font-weight=\"700\" style=\"opacity:0;\">3. 存真：至少有一个内角 ≤ 60°</text>\n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "反设：精准写出原命题结论的反面",
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "explanation": "只否定结论不否定条件；“至少有一个”的否定是“一个也没有”，“$\\lt$”的否定是“$\\ge$”，“最多一个”的否定是“至少两个”。"
+        },
+        {
+          "step": 2,
+          "name": "归谬：从假设出发严密推导矛盾",
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "explanation": "将假设当作临时条件，结合已知、公理或定理（如三角形内角和 $180^\\circ$、平行公理）推出明显矛盾。"
+        },
+        {
+          "step": 3,
+          "name": "存真（或举反例辨假）",
+          "tStart": 14.6,
+          "tEnd": 22,
+          "explanation": "指出假设不成立从而原结论成立；若是假命题，则找出一组“满足条件但不满足结论”的反例。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 反设：精准写出原命题结论的反面"
+        },
+        {
+          "time": 8.3,
+          "step": 2,
+          "label": "2.1 归谬：从假设出发严密推导矛盾"
+        },
+        {
+          "time": 15.6,
+          "step": 3,
+          "label": "3.1 存真（或举反例辨假）"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p82_r0",
+          "stepBadge": "待证命题",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p82_r0_t1",
+              "math": "在 $\\triangle ABC$ 中，至少有一个内角 $\\le 60^\\circ$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p82_r1",
+          "stepBadge": "第 1 步 · 反设",
+          "appearAt": 1.5,
+          "tokens": [
+            {
+              "id": "p82_r1_t1",
+              "math": "假设三内角均大于 $60^\\circ$，即 $\\angle A\\gt 60^\\circ, \\angle B\\gt 60^\\circ, \\angle C\\gt 60^\\circ$",
+              "appearAt": 1.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p82_r2",
+          "stepBadge": "第 2 步 · 归谬",
+          "appearAt": 8.0,
+          "tokens": [
+            {
+              "id": "p82_r2_t1",
+              "math": "三式相加得 $\\angle A+\\angle B+\\angle C \\gt 180^\\circ$，与内角和定理矛盾",
+              "appearAt": 8.1,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p82_r3",
+          "stepBadge": "第 3 步 · 存真",
+          "appearAt": 14.5,
+          "tokens": [
+            {
+              "id": "p82_r3_t1",
+              "math": "$\\therefore$ 假设不成立，至少有一个内角小于或等于 $60^\\circ$",
+              "appearAt": 14.6,
+              "dur": 0.45
+            }
+          ],
+          "isConclusion": true
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p82_sp1",
+          "title": "核心要点速记",
+          "showStart": 1.5,
+          "showEnd": 21.8,
+          "tokens": [
+            {
+              "id": "p82_sp1_t1",
+              "math": "1. 反设：假设原结论不成立",
+              "appearAt": 1.8,
+              "dur": 0.4
+            },
+            {
+              "id": "p82_sp1_t2",
+              "math": "2. 推出与已知/定理/公理相矛盾",
+              "appearAt": 6.3,
+              "dur": 0.4
+            },
+            {
+              "id": "p82_sp1_t3",
+              "math": "3. 故假设不成立 $\\implies$ 原命题成立",
+              "appearAt": 10.8,
+              "dur": 0.4
+            }
+          ],
+          "note": "写反设时错误地否定了命题条件，或漏掉等号（如把 $a\\lt 0$ 的反面写成 $a\\gt 0$ 而漏掉 $a=0$）。"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p82_r1_t1",
+          "tStart": 1.6,
+          "tEnd": 7.0,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p82_r2_t1",
+          "tStart": 8.1,
+          "tEnd": 13.5,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p82_r3_t1",
+          "tStart": 14.6,
+          "tEnd": 20.0,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p82_svg1",
+          "type": "arrow",
+          "fromToken": "p82_r1_t1",
+          "toToken": "p82_r3_t1",
+          "label": "关键转化定解",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 14.7,
+          "tDrawEnd": 15.4,
+          "tFadeStart": 20.5,
+          "tEnd": 21.7
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "text": "第1步：反设：精准写出原命题结论的反面——只否定结论不否定条件；“至少有一个”的否定是“一个也没有”，“$\\lt$”的否定是“$\\ge$”，“最多一个”的否定是“至少两个”。",
+          "focusToken": "p82_r1_t1"
+        },
+        {
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "text": "第2步：归谬：从假设出发严密推导矛盾——将假设当作临时条件，结合已知、公理或定理（如三角形内角和 $180^\\circ$、平行公理）推出明显矛盾。",
+          "focusToken": "p82_r2_t1"
+        },
+        {
+          "tStart": 14.6,
+          "tEnd": 22,
+          "text": "第3步：存真（或举反例辨假）——指出假设不成立从而原结论成立；若是假命题，则找出一组“满足条件但不满足结论”的反例。",
+          "focusToken": "p82_r3_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "用反证法证明“四边形中至少有一个内角大于或等于 $90^\\circ$”时，第一步应假设（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. 四个内角都小于 $90^\\circ$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. 四个内角都大于 $90^\\circ$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. 至少有一个内角小于 $90^\\circ$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "“至少有一个 $\\ge 90^\\circ$”的否定是“每一个都 $\\lt 90^\\circ$”。"
+            ],
+            "summary": "规范写出常见量词结论的否定形式，掌握反证法三步流程与假命题反例构造。"
+          },
+          "wrongTitle": "提示：请结合本节核心操作再核对一次",
+          "wrongFeedback": "“至少有一个 $\\ge 90^\\circ$”的否定是“每一个都 $\\lt 90^\\circ$”。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "说明“若 $|m|\\gt 0$ 则 $m\\gt 0$”是假命题，可取负整数反例 $m =$ ______（填 $-1$）．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$m =$",
+          "input1Placeholder": "如 -1",
+          "input1Suffix": "",
+          "expectedX": "-1",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 -1。",
+          "correctDetail": "$m=-1$ 满足 $|-1|=1\\gt 0$，但 $m\\lt 0$。",
+          "wrongFeedback": "$m=-1$ 满足 $|-1|=1\\gt 0$，但 $m\\lt 0$。",
+          "specificWrongHints": []
+        }
+      }
+    },
+    P83: {
+      "procedureId": "P83",
+      "title": "运用垂径定理及勾股定理构造直角三角形求半径、弦长与弦心距（含双弦分类）",
+      "exampleTitle": "$AB$ 是 $\\odot O$ 的直径，弦 $CD\\perp AB$ 于 $E$，若 $AE=2$，$CD=8$，求 $\\odot O$ 的半径 $r$",
+      "exampleFormula": "$DE=4, OE=r-2 \\implies r^2=(r-2)^2+4^2 \\implies r=5$",
+      "totalDuration": 22,
+      "scratchpadIdleHint": "旁白草稿演算区（熟练掌握垂径定理“连半径、作垂线、构直角、用勾股”的万能几何模型及平行双弦分类。）",
+      "practiceSectionTitle": "运用垂径定理及勾股定理构造直角三角形求半径、弦长与弦心距（含双弦分类）跟做练习",
+      "practiceSectionSub": "完成以下两道关键操作练习",
+      "geometryDiagram": {
+        "title": "垂径定理特征直角三角形",
+        "caption": "连接半径 OD，在 Rt△ODE 中利用 r² = (r-2)² + 4² 解出 r = 5",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <rect x=\"4\" y=\"4\" width=\"252\" height=\"167\" rx=\"10\" fill=\"#F8FAFC\" stroke=\"#E2E8F0\" stroke-width=\"1\" />\n            <circle cx=\"130\" cy=\"88\" r=\"58\" fill=\"none\" stroke=\"#334155\" stroke-width=\"1.8\" /><line x1=\"130\" y1=\"30\" x2=\"130\" y2=\"146\" stroke=\"#64748B\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\" /><line x1=\"84\" y1=\"53\" x2=\"176\" y2=\"53\" stroke=\"#0F766E\" stroke-width=\"2.2\" /><polygon class=\"proc-geo-anim\" data-appear-at=\"2.0\" data-dur=\"0.6\" points=\"130,88 130,53 176,53\" fill=\"#0F766E\" fill-opacity=\"0.16\" stroke=\"#D97706\" stroke-width=\"2\" style=\"opacity:0;\" /><circle cx=\"130\" cy=\"88\" r=\"2.8\" fill=\"#334155\" /><text x=\"116\" y=\"94\" fill=\"#334155\" font-size=\"11\" font-weight=\"700\">O</text><text x=\"134\" y=\"48\" fill=\"#0F766E\" font-size=\"10\" font-weight=\"700\">E</text><text x=\"180\" y=\"56\" fill=\"#0F766E\" font-size=\"11\" font-weight=\"700\">D</text><text x=\"152\" y=\"80\" fill=\"#D97706\" font-size=\"10\" font-weight=\"700\">r</text>\n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "连半径、作弦心距，写出半弦长",
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "explanation": "由垂径定理得垂直于弦的直径平分弦：半弦 $=\\frac{a}{2}$。"
+        },
+        {
+          "step": 2,
+          "name": "在 $Rt\\triangle$ 中列勾股方程求解",
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "explanation": "设未知半径 $r$（或弦心距 $d$），将三边代入 $r^2 = d^2 + (\\frac{a}{2})^2$ 解出未知量。"
+        },
+        {
+          "step": 3,
+          "name": "双弦平行需分同侧/异侧两种情况",
+          "tStart": 14.6,
+          "tEnd": 22,
+          "explanation": "同侧距离为 $|d_1 - d_2|$，异侧距离为 $d_1 + d_2$，检查解的合理性。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 连半径、作弦心距，写出半弦长"
+        },
+        {
+          "time": 8.3,
+          "step": 2,
+          "label": "2.1 在 $Rt\\triangle$ 中列勾股方程求解"
+        },
+        {
+          "time": 15.6,
+          "step": 3,
+          "label": "3.1 双弦平行需分同侧/异侧两种情况"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p83_r0",
+          "stepBadge": "已知条件",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p83_r0_t1",
+              "math": "直径 $AB\\perp CD$ 于 $E$，$AE=2$，$CD=8$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p83_r1",
+          "stepBadge": "第 1 步 · 垂径得半弦",
+          "appearAt": 1.5,
+          "tokens": [
+            {
+              "id": "p83_r1_t1",
+              "math": "由垂径定理：$DE = \\frac{1}{2}CD = 4$",
+              "appearAt": 1.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p83_r2",
+          "stepBadge": "第 2 步 · 设半径列方程",
+          "appearAt": 8.0,
+          "tokens": [
+            {
+              "id": "p83_r2_t1",
+              "math": "设半径为 $r$，则 $OE=r-2$，由勾股得 $r^2=(r-2)^2+4^2$",
+              "appearAt": 8.1,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p83_r3",
+          "stepBadge": "第 3 步 · 解方程",
+          "appearAt": 14.5,
+          "tokens": [
+            {
+              "id": "p83_r3_t1",
+              "math": "展开 $r^2=r^2-4r+20 \\implies 4r=20 \\implies r=5$",
+              "appearAt": 14.6,
+              "dur": 0.45
+            }
+          ],
+          "isConclusion": true
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p83_sp1",
+          "title": "核心要点速记",
+          "showStart": 1.5,
+          "showEnd": 21.8,
+          "tokens": [
+            {
+              "id": "p83_sp1_t1",
+              "math": "1. $AE = BE = \\frac{1}{2}AB$",
+              "appearAt": 1.8,
+              "dur": 0.4
+            },
+            {
+              "id": "p83_sp1_t2",
+              "math": "2. $r^2 = d^2 + \\left(\\frac{a}{2}\\right)^2$",
+              "appearAt": 6.3,
+              "dur": 0.4
+            },
+            {
+              "id": "p83_sp1_t3",
+              "math": "3. $D = |d_1 - d_2|$ 或 $d_1 + d_2$",
+              "appearAt": 10.8,
+              "dur": 0.4
+            }
+          ],
+          "note": "在勾股定理中误把整条弦长 $a$ 当作直角边代入，忘记除以 $2$。"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p83_r1_t1",
+          "tStart": 1.6,
+          "tEnd": 7.0,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p83_r2_t1",
+          "tStart": 8.1,
+          "tEnd": 13.5,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p83_r3_t1",
+          "tStart": 14.6,
+          "tEnd": 20.0,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p83_svg1",
+          "type": "arrow",
+          "fromToken": "p83_r1_t1",
+          "toToken": "p83_r3_t1",
+          "label": "关键转化定解",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 14.7,
+          "tDrawEnd": 15.4,
+          "tFadeStart": 20.5,
+          "tEnd": 21.7
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "text": "第1步：连半径、作弦心距，写出半弦长——由垂径定理得垂直于弦的直径平分弦：半弦 $=\\frac{a}{2}$。",
+          "focusToken": "p83_r1_t1"
+        },
+        {
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "text": "第2步：在 $Rt\\triangle$ 中列勾股方程求解——设未知半径 $r$（或弦心距 $d$），将三边代入 $r^2 = d^2 + (\\frac{a}{2})^2$ 解出未知量。",
+          "focusToken": "p83_r2_t1"
+        },
+        {
+          "tStart": 14.6,
+          "tEnd": 22,
+          "text": "第3步：双弦平行需分同侧/异侧两种情况——同侧距离为 $|d_1 - d_2|$，异侧距离为 $d_1 + d_2$，检查解的合理性。",
+          "focusToken": "p83_r3_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "$\\odot O$ 直径为 $10\\text{cm}$，平行弦 $AB=8\\text{cm}$、$CD=6\\text{cm}$，则两弦间距离为（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $7\\text{cm}$ 或 $1\\text{cm}$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $7\\text{cm}$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $1\\text{cm}$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "两弦心距分别为 $3\\text{cm}$ 和 $4\\text{cm}$，同侧 $4-3=1$，异侧 $4+3=7$。"
+            ],
+            "summary": "熟练掌握垂径定理“连半径、作垂线、构直角、用勾股”的万能几何模型及平行双弦分类。"
+          },
+          "wrongTitle": "提示：请结合本节核心操作再核对一次",
+          "wrongFeedback": "两弦心距分别为 $3\\text{cm}$ 和 $4\\text{cm}$，同侧 $4-3=1$，异侧 $4+3=7$。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "在半径为 $5$ 的 $\\odot O$ 中，圆心到弦 $AB$ 的距离为 $3$，则弦长 $AB =$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$AB =$",
+          "input1Placeholder": "如 8",
+          "input1Suffix": "",
+          "expectedX": "8",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 8。",
+          "correctDetail": "半弦 $=\\sqrt{5^2-3^2}=4$，故 $AB=8$。",
+          "wrongFeedback": "半弦 $=\\sqrt{5^2-3^2}=4$，故 $AB=8$。",
+          "specificWrongHints": []
+        }
+      }
+    },
+    P84: {
+      "procedureId": "P84",
+      "title": "运用垂径定理建立圆弧模型求解实际问题（拱桥、水面、管道与测直径）",
+      "exampleTitle": "赵州桥主桥拱跨度 $AB=30\\text{m}$，拱高 $CD=5\\text{m}$，求主桥拱所在圆的半径 $r$",
+      "exampleFormula": "$BD=15, OD=r-5 \\implies r^2=(r-5)^2+15^2 \\implies r=25\\text{m}$",
+      "totalDuration": 22,
+      "scratchpadIdleHint": "旁白草稿演算区（掌握实际圆弧工程问题向垂径定理直角三角形模型的抽象与方程求解。）",
+      "practiceSectionTitle": "运用垂径定理建立圆弧模型求解实际问题（拱桥、水面、管道与测直径）跟做练习",
+      "practiceSectionSub": "完成以下两道关键操作练习",
+      "geometryDiagram": {
+        "title": "赵州桥圆弧拱高建模",
+        "caption": "半跨度 BD=15m，弦心距 OD=r-5，勾股方程解得半径 r=25m",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <rect x=\"4\" y=\"4\" width=\"252\" height=\"167\" rx=\"10\" fill=\"#F8FAFC\" stroke=\"#E2E8F0\" stroke-width=\"1\" />\n            <path d=\"M 48 92 A 95 95 0 0 1 212 92\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2.6\" /><line x1=\"48\" y1=\"92\" x2=\"212\" y2=\"92\" stroke=\"#334155\" stroke-width=\"1.8\" /><line x1=\"130\" y1=\"53\" x2=\"130\" y2=\"148\" stroke=\"#64748B\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\" /><polygon class=\"proc-geo-anim\" data-appear-at=\"8.0\" data-dur=\"0.6\" points=\"130,148 130,92 212,92\" fill=\"#D97706\" fill-opacity=\"0.14\" stroke=\"#D97706\" stroke-width=\"1.8\" style=\"opacity:0;\" /><text x=\"134\" y=\"76\" fill=\"#0F766E\" font-size=\"10\" font-weight=\"700\">h=5</text><text x=\"166\" y=\"87\" fill=\"#334155\" font-size=\"10\" font-weight=\"700\">15</text><text x=\"176\" y=\"128\" fill=\"#D97706\" font-size=\"10\" font-weight=\"700\">r</text><text x=\"116\" y=\"152\" fill=\"#334155\" font-size=\"11\" font-weight=\"700\">O</text>\n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "抽象实物为圆弧模型并标出跨度与拱高",
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "explanation": "跨度/水面宽对应弦长 $AB=a$（半弦 $\\frac{a}{2}$），拱高/最大深度对应弓高 $CD=h$。"
+        },
+        {
+          "step": 2,
+          "name": "判断圆心位置并用 $r, h$ 表示弦心距",
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "explanation": "优弧（液面过半）时 $OD=h-r$，劣弧（常见拱桥/筒车）时 $OD=r-h$，统一记 $OD=|r-h|$。"
+        },
+        {
+          "step": 3,
+          "name": "列方程求解半径并核对所求（半径或直径）",
+          "tStart": 14.6,
+          "tEnd": 22,
+          "explanation": "代入 $r^2 = (r-h)^2 + (\\frac{a}{2})^2$ 求出 $r$，注意题目最终问半径还是直径 $2r$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 抽象实物为圆弧模型并标出跨度与拱高"
+        },
+        {
+          "time": 8.3,
+          "step": 2,
+          "label": "2.1 判断圆心位置并用 $r, h$ 表示弦心距"
+        },
+        {
+          "time": 15.6,
+          "step": 3,
+          "label": "3.1 列方程求解半径并核对所求（半径或直径）"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p84_r0",
+          "stepBadge": "模型抽象",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p84_r0_t1",
+              "math": "跨度 $AB=30\\text{m}$，拱高 $CD=5\\text{m}$，$OC\\perp AB$ 于 $D$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p84_r1",
+          "stepBadge": "第 1 步 · 求半跨度",
+          "appearAt": 1.5,
+          "tokens": [
+            {
+              "id": "p84_r1_t1",
+              "math": "由垂径定理：$BD = \\frac{1}{2}AB = 15\\text{m}$",
+              "appearAt": 1.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p84_r2",
+          "stepBadge": "第 2 步 · 列勾股方程",
+          "appearAt": 8.0,
+          "tokens": [
+            {
+              "id": "p84_r2_t1",
+              "math": "设半径为 $r$，则 $OD=r-5$，$r^2=(r-5)^2+15^2$",
+              "appearAt": 8.1,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p84_r3",
+          "stepBadge": "第 3 步 · 求解作答",
+          "appearAt": 14.5,
+          "tokens": [
+            {
+              "id": "p84_r3_t1",
+              "math": "$10r = 250 \\implies r = 25\\text{m}$",
+              "appearAt": 14.6,
+              "dur": 0.45
+            }
+          ],
+          "isConclusion": true
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p84_sp1",
+          "title": "核心要点速记",
+          "showStart": 1.5,
+          "showEnd": 21.8,
+          "tokens": [
+            {
+              "id": "p84_sp1_t1",
+              "math": "1. 跨度 $\\to$ 弦长 $a$；拱高/深 $\\to h$",
+              "appearAt": 1.8,
+              "dur": 0.4
+            },
+            {
+              "id": "p84_sp1_t2",
+              "math": "2. $OD = |r - h|$",
+              "appearAt": 6.3,
+              "dur": 0.4
+            },
+            {
+              "id": "p84_sp1_t3",
+              "math": "3. $r = \\frac{h^2 + (a/2)^2}{2h}$",
+              "appearAt": 10.8,
+              "dur": 0.4
+            }
+          ],
+          "note": "题目求“直径”（如圆材埋壁、筒车直径）却直接填了半径 $r$。"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p84_r1_t1",
+          "tStart": 1.6,
+          "tEnd": 7.0,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p84_r2_t1",
+          "tStart": 8.1,
+          "tEnd": 13.5,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p84_r3_t1",
+          "tStart": 14.6,
+          "tEnd": 20.0,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p84_svg1",
+          "type": "arrow",
+          "fromToken": "p84_r1_t1",
+          "toToken": "p84_r3_t1",
+          "label": "关键转化定解",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 14.7,
+          "tDrawEnd": 15.4,
+          "tFadeStart": 20.5,
+          "tEnd": 21.7
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "text": "第1步：抽象实物为圆弧模型并标出跨度与拱高——跨度/水面宽对应弦长 $AB=a$（半弦 $\\frac{a}{2}$），拱高/最大深度对应弓高 $CD=h$。",
+          "focusToken": "p84_r1_t1"
+        },
+        {
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "text": "第2步：判断圆心位置并用 $r, h$ 表示弦心距——优弧（液面过半）时 $OD=h-r$，劣弧（常见拱桥/筒车）时 $OD=r-h$，统一记 $OD=|r-h|$。",
+          "focusToken": "p84_r2_t1"
+        },
+        {
+          "tStart": 14.6,
+          "tEnd": 22,
+          "text": "第3步：列方程求解半径并核对所求（半径或直径）——代入 $r^2 = (r-h)^2 + (\\frac{a}{2})^2$ 求出 $r$，注意题目最终问半径还是直径 $2r$。",
+          "focusToken": "p84_r3_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "《九章算术》圆材埋壁：锯深 $1$ 寸，锯道长 $10$ 寸，则木材直径为（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $13$ 寸",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. $26$ 寸",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. $24$ 寸",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "$r^2=(r-1)^2+5^2 \\implies r=13$，故直径为 $26$ 寸。"
+            ],
+            "summary": "掌握实际圆弧工程问题向垂径定理直角三角形模型的抽象与方程求解。"
+          },
+          "wrongTitle": "提示：请结合本节核心操作再核对一次",
+          "wrongFeedback": "$r^2=(r-1)^2+5^2 \\implies r=13$，故直径为 $26$ 寸。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "筒车被水面截得弦长 $6\\text{m}$，水下最大深度 $1\\text{m}$，则筒车半径为 ______ $\\text{m}$．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$r =$",
+          "input1Placeholder": "如 5",
+          "input1Suffix": "",
+          "expectedX": "5",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 5。",
+          "correctDetail": "$r^2=(r-1)^2+3^2 \\implies 2r=10 \\implies r=5$。",
+          "wrongFeedback": "$r^2=(r-1)^2+3^2 \\implies 2r=10 \\implies r=5$。",
+          "specificWrongHints": []
+        }
+      }
+    },
+    P85: {
+      "procedureId": "P85",
+      "title": "运用同圆或等圆中弧、弦、圆心角的等量关系进行转化、求角与证明",
+      "exampleTitle": "如图，在 $\\odot O$ 中，弦 $AD=BC$，求证：$AB=CD$",
+      "exampleFormula": "$AD=BC \\implies \\overset{\\frown}{AD}=\\overset{\\frown}{BC} \\implies \\overset{\\frown}{AB}=\\overset{\\frown}{CD} \\implies AB=CD$",
+      "totalDuration": 22,
+      "scratchpadIdleHint": "旁白草稿演算区（掌握同圆或等圆中弧、弦、圆心角互化定理及公共弧加减证明套路。）",
+      "practiceSectionTitle": "运用同圆或等圆中弧、弦、圆心角的等量关系进行转化、求角与证明跟做练习",
+      "practiceSectionSub": "完成以下两道关键操作练习",
+      "geometryDiagram": {
+        "title": "弧、弦、圆心角等量转化",
+        "caption": "由等弦得等弧，两弧同时减去公共弧 AC，再由等弧得等弦 AB=CD",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <rect x=\"4\" y=\"4\" width=\"252\" height=\"167\" rx=\"10\" fill=\"#F8FAFC\" stroke=\"#E2E8F0\" stroke-width=\"1\" />\n            <circle cx=\"130\" cy=\"88\" r=\"56\" fill=\"none\" stroke=\"#334155\" stroke-width=\"1.8\" /><line x1=\"82\" y1=\"58\" x2=\"178\" y2=\"118\" stroke=\"#64748B\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\" /><line x1=\"178\" y1=\"58\" x2=\"82\" y2=\"118\" stroke=\"#64748B\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\" /><line class=\"proc-geo-anim\" data-appear-at=\"14.0\" data-dur=\"0.6\" x1=\"82\" y1=\"58\" x2=\"82\" y2=\"118\" stroke=\"#0F766E\" stroke-width=\"2.4\" style=\"opacity:0;\" /><line class=\"proc-geo-anim\" data-appear-at=\"14.0\" data-dur=\"0.6\" x1=\"178\" y1=\"58\" x2=\"178\" y2=\"118\" stroke=\"#0F766E\" stroke-width=\"2.4\" style=\"opacity:0;\" /><text x=\"68\" y=\"58\" fill=\"#334155\" font-size=\"11\" font-weight=\"700\">A</text><text x=\"68\" y=\"124\" fill=\"#334155\" font-size=\"11\" font-weight=\"700\">B</text><text x=\"184\" y=\"124\" fill=\"#334155\" font-size=\"11\" font-weight=\"700\">C</text><text x=\"184\" y=\"58\" fill=\"#334155\" font-size=\"11\" font-weight=\"700\">D</text>\n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "确认“同圆或等圆”前提并锁定等量",
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "explanation": "找出已知相等的圆心角、弧或弦，必要时连接半径构造等腰三角形 $OA=OB$。"
+        },
+        {
+          "step": 2,
+          "name": "利用公共弧加减或等分关系转化",
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "explanation": "对重叠弧同时加/减公共弧（如 $\\overset{\\frown}{AD}=\\overset{\\frown}{BC}$ 同减 $\\overset{\\frown}{AC}$ 得 $\\overset{\\frown}{AB}=\\overset{\\frown}{CD}$）。"
+        },
+        {
+          "step": 3,
+          "name": "回代转化为目标弦或圆心角求解",
+          "tStart": 14.6,
+          "tEnd": 22,
+          "explanation": "由等弧推出目标弦相等或圆心角相等，结合平角/三角形内角和算角度。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 确认“同圆或等圆”前提并锁定等量"
+        },
+        {
+          "time": 8.3,
+          "step": 2,
+          "label": "2.1 利用公共弧加减或等分关系转化"
+        },
+        {
+          "time": 15.6,
+          "step": 3,
+          "label": "3.1 回代转化为目标弦或圆心角求解"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p85_r0",
+          "stepBadge": "已知条件",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p85_r0_t1",
+              "math": "在 $\\odot O$ 中，弦 $AD = BC$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p85_r1",
+          "stepBadge": "第 1 步 · 等弦化等弧",
+          "appearAt": 1.5,
+          "tokens": [
+            {
+              "id": "p85_r1_t1",
+              "math": "$\\because AD = BC$，$\\therefore \\overset{\\frown}{ABD} = \\overset{\\frown}{BAC}$",
+              "appearAt": 1.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p85_r2",
+          "stepBadge": "第 2 步 · 减去公共弧",
+          "appearAt": 8.0,
+          "tokens": [
+            {
+              "id": "p85_r2_t1",
+              "math": "两边同减公共弧 $\\overset{\\frown}{AB}$（或 $\\overset{\\frown}{CD}$）得 $\\overset{\\frown}{AB} = \\overset{\\frown}{CD}$",
+              "appearAt": 8.1,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p85_r3",
+          "stepBadge": "第 3 步 · 等弧化等弦",
+          "appearAt": 14.5,
+          "tokens": [
+            {
+              "id": "p85_r3_t1",
+              "math": "$\\therefore AB = CD$（同圆中等弧所对的弦相等）",
+              "appearAt": 14.6,
+              "dur": 0.45
+            }
+          ],
+          "isConclusion": true
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p85_sp1",
+          "title": "核心要点速记",
+          "showStart": 1.5,
+          "showEnd": 21.8,
+          "tokens": [
+            {
+              "id": "p85_sp1_t1",
+              "math": "1. 同圆/等圆：等角 $\\iff$ 等弧 $\\iff$ 等弦",
+              "appearAt": 1.8,
+              "dur": 0.4
+            },
+            {
+              "id": "p85_sp1_t2",
+              "math": "2. 同加/同减公共弧 $\\to$ 新等弧",
+              "appearAt": 6.3,
+              "dur": 0.4
+            },
+            {
+              "id": "p85_sp1_t3",
+              "math": "3. 弧度数 $=$ 所对圆心角度数",
+              "appearAt": 10.8,
+              "dur": 0.4
+            }
+          ],
+          "note": "脱离“同圆或等圆”前提误认为“相等圆心角所对弦一定相等”。"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p85_r1_t1",
+          "tStart": 1.6,
+          "tEnd": 7.0,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p85_r2_t1",
+          "tStart": 8.1,
+          "tEnd": 13.5,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p85_r3_t1",
+          "tStart": 14.6,
+          "tEnd": 20.0,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p85_svg1",
+          "type": "arrow",
+          "fromToken": "p85_r1_t1",
+          "toToken": "p85_r3_t1",
+          "label": "关键转化定解",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 14.7,
+          "tDrawEnd": 15.4,
+          "tFadeStart": 20.5,
+          "tEnd": 21.7
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "text": "第1步：确认“同圆或等圆”前提并锁定等量——找出已知相等的圆心角、弧或弦，必要时连接半径构造等腰三角形 $OA=OB$。",
+          "focusToken": "p85_r1_t1"
+        },
+        {
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "text": "第2步：利用公共弧加减或等分关系转化——对重叠弧同时加/减公共弧（如 $\\overset{\\frown}{AD}=\\overset{\\frown}{BC}$ 同减 $\\overset{\\frown}{AC}$ 得 $\\overset{\\frown}{AB}=\\overset{\\frown}{CD}$）。",
+          "focusToken": "p85_r2_t1"
+        },
+        {
+          "tStart": 14.6,
+          "tEnd": 22,
+          "text": "第3步：回代转化为目标弦或圆心角求解——由等弧推出目标弦相等或圆心角相等，结合平角/三角形内角和算角度。",
+          "focusToken": "p85_r3_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "在半径为 $3$ 的 $\\odot O$ 中，弦 $AB=3$，则弦 $AB$ 所对的圆心角为（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $60^\\circ$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $30^\\circ$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $90^\\circ$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "$OA=OB=AB=3$，$\\triangle OAB$ 为等边三角形，故 $\\angle AOB=60^\\circ$。"
+            ],
+            "summary": "掌握同圆或等圆中弧、弦、圆心角互化定理及公共弧加减证明套路。"
+          },
+          "wrongTitle": "提示：请结合本节核心操作再核对一次",
+          "wrongFeedback": "$OA=OB=AB=3$，$\\triangle OAB$ 为等边三角形，故 $\\angle AOB=60^\\circ$。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "在 $\\odot O$ 中，$AB$ 为直径，$\\overset{\\frown}{AC}=\\overset{\\frown}{CD}=\\overset{\\frown}{DE}$ 且 $\\angle BOE=75^\\circ$，则 $\\angle AOC =$ ______$^{\\circ}$．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$\\angle AOC =$",
+          "input1Placeholder": "如 35",
+          "input1Suffix": "",
+          "expectedX": "35",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 35。",
+          "correctDetail": "$\\angle AOE=180^\\circ-75^\\circ=105^\\circ$，三等分得 $35^\\circ$。",
+          "wrongFeedback": "$\\angle AOE=180^\\circ-75^\\circ=105^\\circ$，三等分得 $35^\\circ$。",
+          "specificWrongHints": []
+        }
+      }
+    },
+    P86: {
+      "procedureId": "P86",
+      "title": "运用圆周角定理及同弧/等弧所对圆周角相等求角与推理证明",
+      "exampleTitle": "在 $\\odot O$ 中，弦 $AB, CD$ 交于 $E$，$\\angle A=50^\\circ$，$\\angle AED=100^\\circ$，求 $\\angle B$ 的度数",
+      "exampleFormula": "同弧 $\\overset{\\frown}{BD}$ 得 $\\angle C=\\angle A=50^\\circ$，结合 $\\angle CEB=100^\\circ \\implies \\angle B=30^\\circ$",
+      "totalDuration": 22,
+      "scratchpadIdleHint": "旁白草稿演算区（掌握圆周角定理及其推论，熟练实现圆内角度的跨位置转化。）",
+      "practiceSectionTitle": "运用圆周角定理及同弧/等弧所对圆周角相等求角与推理证明跟做练习",
+      "practiceSectionSub": "完成以下两道关键操作练习",
+      "geometryDiagram": {
+        "title": "同弧所对圆周角相等转化",
+        "caption": "∠A 与 ∠C 同对弧 BD 故 ∠C = ∠A = 50°，再在 △CEB 中求 ∠B",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <rect x=\"4\" y=\"4\" width=\"252\" height=\"167\" rx=\"10\" fill=\"#F8FAFC\" stroke=\"#E2E8F0\" stroke-width=\"1\" />\n            <circle cx=\"130\" cy=\"88\" r=\"56\" fill=\"none\" stroke=\"#334155\" stroke-width=\"1.8\" /><line x1=\"84\" y1=\"56\" x2=\"176\" y2=\"120\" stroke=\"#0F766E\" stroke-width=\"1.8\" /><line x1=\"84\" y1=\"120\" x2=\"176\" y2=\"56\" stroke=\"#0F766E\" stroke-width=\"1.8\" /><line x1=\"84\" y1=\"56\" x2=\"84\" y2=\"120\" stroke=\"#D97706\" stroke-width=\"1.8\" /><line x1=\"176\" y1=\"56\" x2=\"176\" y2=\"120\" stroke=\"#D97706\" stroke-width=\"1.8\" /><text x=\"70\" y=\"56\" fill=\"#334155\" font-size=\"11\" font-weight=\"700\">A</text><text x=\"70\" y=\"126\" fill=\"#334155\" font-size=\"11\" font-weight=\"700\">D</text><text x=\"182\" y=\"56\" fill=\"#334155\" font-size=\"11\" font-weight=\"700\">C</text><text x=\"182\" y=\"126\" fill=\"#334155\" font-size=\"11\" font-weight=\"700\">B</text><text x=\"126\" y=\"76\" fill=\"#D97706\" font-size=\"10\" font-weight=\"700\">E</text>\n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "辨识圆周角并锁定所对的弧",
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "explanation": "确认角的顶点在圆上、两边为弦，描出该圆周角所对的具体弧（区分优弧与劣弧）。"
+        },
+        {
+          "step": 2,
+          "name": "应用圆周角定理互化圆心角与圆周角",
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "explanation": "同弧所对圆周角 $=\\frac{1}{2}$ 圆心角；同弧或等弧所对的不同圆周角相等。"
+        },
+        {
+          "step": 3,
+          "name": "结合等腰/平行/外角性质完成求角或证明",
+          "tStart": 14.6,
+          "tEnd": 22,
+          "explanation": "联用半径等腰、平行线同位/内错角或垂径定理推论算出目标角。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 辨识圆周角并锁定所对的弧"
+        },
+        {
+          "time": 8.3,
+          "step": 2,
+          "label": "2.1 应用圆周角定理互化圆心角与圆周角"
+        },
+        {
+          "time": 15.6,
+          "step": 3,
+          "label": "3.1 结合等腰/平行/外角性质完成求角或证明"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p86_r0",
+          "stepBadge": "已知条件",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p86_r0_t1",
+              "math": "弦 $AB, CD$ 交于 $E$，$\\angle A=50^\\circ$，$\\angle AED=100^\\circ$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p86_r1",
+          "stepBadge": "第 1 步 · 同弧等角",
+          "appearAt": 1.5,
+          "tokens": [
+            {
+              "id": "p86_r1_t1",
+              "math": "同弧 $\\overset{\\frown}{BD}$ 所对圆周角相等 $\\implies \\angle C = \\angle A = 50^\\circ$",
+              "appearAt": 1.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p86_r2",
+          "stepBadge": "第 2 步 · 对顶角",
+          "appearAt": 8.0,
+          "tokens": [
+            {
+              "id": "p86_r2_t1",
+              "math": "$\\angle CEB = \\angle AED = 100^\\circ$",
+              "appearAt": 8.1,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p86_r3",
+          "stepBadge": "第 3 步 · 三角形内角和",
+          "appearAt": 14.5,
+          "tokens": [
+            {
+              "id": "p86_r3_t1",
+              "math": "$\\angle B = 180^\\circ - 100^\\circ - 50^\\circ = 30^\\circ$",
+              "appearAt": 14.6,
+              "dur": 0.45
+            }
+          ],
+          "isConclusion": true
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p86_sp1",
+          "title": "核心要点速记",
+          "showStart": 1.5,
+          "showEnd": 21.8,
+          "tokens": [
+            {
+              "id": "p86_sp1_t1",
+              "math": "1. 找准圆周角 $\\leftrightarrow$ 所对的弧",
+              "appearAt": 1.8,
+              "dur": 0.4
+            },
+            {
+              "id": "p86_sp1_t2",
+              "math": "2. $\\angle ACB = \\frac{1}{2}\\angle AOB$",
+              "appearAt": 6.3,
+              "dur": 0.4
+            },
+            {
+              "id": "p86_sp1_t3",
+              "math": "3. 同弧等角代换 $\\to$ 解出目标角",
+              "appearAt": 10.8,
+              "dur": 0.4
+            }
+          ],
+          "note": "忽略顶点在劣弧上时所对的是优弧（此时圆周角等于 $\\frac{1}{2}(360^\\circ-\\angle AOB)$，而非 $\\frac{1}{2}\\angle AOB$）。"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p86_r1_t1",
+          "tStart": 1.6,
+          "tEnd": 7.0,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p86_r2_t1",
+          "tStart": 8.1,
+          "tEnd": 13.5,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p86_r3_t1",
+          "tStart": 14.6,
+          "tEnd": 20.0,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p86_svg1",
+          "type": "arrow",
+          "fromToken": "p86_r1_t1",
+          "toToken": "p86_r3_t1",
+          "label": "关键转化定解",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 14.7,
+          "tDrawEnd": 15.4,
+          "tFadeStart": 20.5,
+          "tEnd": 21.7
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "text": "第1步：辨识圆周角并锁定所对的弧——确认角的顶点在圆上、两边为弦，描出该圆周角所对的具体弧（区分优弧与劣弧）。",
+          "focusToken": "p86_r1_t1"
+        },
+        {
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "text": "第2步：应用圆周角定理互化圆心角与圆周角——同弧所对圆周角 $=\\frac{1}{2}$ 圆心角；同弧或等弧所对的不同圆周角相等。",
+          "focusToken": "p86_r2_t1"
+        },
+        {
+          "tStart": 14.6,
+          "tEnd": 22,
+          "text": "第3步：结合等腰/平行/外角性质完成求角或证明——联用半径等腰、平行线同位/内错角或垂径定理推论算出目标角。",
+          "focusToken": "p86_r3_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "在 $\\odot O$ 中，$\\angle AOB=90^\\circ$，点 $C$ 在劣弧 $\\overset{\\frown}{AB}$ 上，则 $\\angle ACB$ 的度数为（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $45^\\circ$",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. $135^\\circ$",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. $90^\\circ$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "$C$ 在劣弧上，所对优弧度数为 $270^\\circ$，故 $\\angle ACB=135^\\circ$。"
+            ],
+            "summary": "掌握圆周角定理及其推论，熟练实现圆内角度的跨位置转化。"
+          },
+          "wrongTitle": "提示：请结合本节核心操作再核对一次",
+          "wrongFeedback": "$C$ 在劣弧上，所对优弧度数为 $270^\\circ$，故 $\\angle ACB=135^\\circ$。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "在 $\\odot O$ 中，若圆周角 $\\angle ACB=40^\\circ$，则同弧所对圆心角 $\\angle AOB =$ ______$^{\\circ}$．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$\\angle AOB =$",
+          "input1Placeholder": "如 80",
+          "input1Suffix": "",
+          "expectedX": "80",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 80。",
+          "correctDetail": "同弧圆心角等于圆周角的 $2$ 倍，得 $80^\\circ$。",
+          "wrongFeedback": "同弧圆心角等于圆周角的 $2$ 倍，得 $80^\\circ$。",
+          "specificWrongHints": []
+        }
+      }
+    },
+    P87: {
+      "procedureId": "P87",
+      "title": "运用“直径所对的圆周角是直角”构造直角三角形求解与证明",
+      "exampleTitle": "用直角尺测破损圆形镜面，直角顶点 $B$ 在圆上，$AB=8\\text{cm}$，$BC=6\\text{cm}$，求镜面半径",
+      "exampleFormula": "$\\angle ABC=90^\\circ \\implies AC$ 为直径 $=\\sqrt{8^2+6^2}=10 \\implies R=5\\text{cm}$",
+      "totalDuration": 22,
+      "scratchpadIdleHint": "旁白草稿演算区（形成“见直径构直角、见直角找直径”的条件反射式几何解题策略。）",
+      "practiceSectionTitle": "运用“直径所对的圆周角是直角”构造直角三角形求解与证明跟做练习",
+      "practiceSectionSub": "完成以下两道关键操作练习",
+      "geometryDiagram": {
+        "title": "90° 圆周角所对的弦是直径",
+        "caption": "连接 AC，由 ∠ABC = 90° 逆推 AC 为直径，勾股算得 AC=10，半径 R=5",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <rect x=\"4\" y=\"4\" width=\"252\" height=\"167\" rx=\"10\" fill=\"#F8FAFC\" stroke=\"#E2E8F0\" stroke-width=\"1\" />\n            <circle cx=\"130\" cy=\"88\" r=\"56\" fill=\"none\" stroke=\"#334155\" stroke-width=\"1.8\" /><line class=\"proc-geo-anim\" data-appear-at=\"2.0\" data-dur=\"0.6\" x1=\"74\" y1=\"88\" x2=\"186\" y2=\"88\" stroke=\"#D97706\" stroke-width=\"2.2\" style=\"opacity:0;\" /><polyline points=\"74,88 152,37 186,88\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2.2\" /><text x=\"60\" y=\"92\" fill=\"#334155\" font-size=\"11\" font-weight=\"700\">A</text><text x=\"150\" y=\"31\" fill=\"#0F766E\" font-size=\"11\" font-weight=\"700\">B(90°)</text><text x=\"190\" y=\"92\" fill=\"#334155\" font-size=\"11\" font-weight=\"700\">C</text>\n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "见直径连弦构 $90^\\circ$（或见 $90^\\circ$ 找直径）",
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "explanation": "若 $AB$ 为直径且 $C$ 在圆上，连 $AC, BC$ 得 $\\angle ACB=90^\\circ$；反之 $\\angle ACB=90^\\circ \\implies AB$ 为直径。"
+        },
+        {
+          "step": 2,
+          "name": "识别共斜边双直角隐圆（如有）",
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "explanation": "若 $\\angle BAD=\\angle BCD=90^\\circ$，则 $A,B,C,D$ 在以 $BD$ 为直径的圆上，可用同弧圆周角倒角。"
+        },
+        {
+          "step": 3,
+          "name": "在直角三角形中用勾股或互余求解",
+          "tStart": 14.6,
+          "tEnd": 22,
+          "explanation": "用两锐角互余求角，或用勾股定理、$30^\\circ$ 性质、中位线求出边长与半径。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 见直径连弦构 $90^\\circ$（或见 $90^\\circ$ 找直径）"
+        },
+        {
+          "time": 8.3,
+          "step": 2,
+          "label": "2.1 识别共斜边双直角隐圆（如有）"
+        },
+        {
+          "time": 15.6,
+          "step": 3,
+          "label": "3.1 在直角三角形中用勾股或互余求解"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p87_r0",
+          "stepBadge": "已知条件",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p87_r0_t1",
+              "math": "$A,B,C$ 在圆上，$\\angle ABC=90^\\circ$，$AB=8$，$BC=6$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p87_r1",
+          "stepBadge": "第 1 步 · 逆推直径",
+          "appearAt": 1.5,
+          "tokens": [
+            {
+              "id": "p87_r1_t1",
+              "math": "连接 $AC$，由 $90^\\circ$ 圆周角所对弦是直径，知 $AC$ 为直径",
+              "appearAt": 1.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p87_r2",
+          "stepBadge": "第 2 步 · 勾股求直径",
+          "appearAt": 8.0,
+          "tokens": [
+            {
+              "id": "p87_r2_t1",
+              "math": "在 $Rt\\triangle ABC$ 中：$AC = \\sqrt{8^2 + 6^2} = 10\\text{cm}$",
+              "appearAt": 8.1,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p87_r3",
+          "stepBadge": "第 3 步 · 求半径",
+          "appearAt": 14.5,
+          "tokens": [
+            {
+              "id": "p87_r3_t1",
+              "math": "$\\therefore$ 镜面半径 $R = \\frac{1}{2}AC = 5\\text{cm}$",
+              "appearAt": 14.6,
+              "dur": 0.45
+            }
+          ],
+          "isConclusion": true
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p87_sp1",
+          "title": "核心要点速记",
+          "showStart": 1.5,
+          "showEnd": 21.8,
+          "tokens": [
+            {
+              "id": "p87_sp1_t1",
+              "math": "1. $AB$ 为直径 $\\iff \\angle ACB = 90^\\circ$",
+              "appearAt": 1.8,
+              "dur": 0.4
+            },
+            {
+              "id": "p87_sp1_t2",
+              "math": "2. 共斜边双直角 $\\implies$ 四点共圆",
+              "appearAt": 6.3,
+              "dur": 0.4
+            },
+            {
+              "id": "p87_sp1_t3",
+              "math": "3. $a^2 + b^2 = (2R)^2$",
+              "appearAt": 10.8,
+              "dur": 0.4
+            }
+          ],
+          "note": "有直径但未连接关键弦，错失现成的 $90^\\circ$ 条件。"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p87_r1_t1",
+          "tStart": 1.6,
+          "tEnd": 7.0,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p87_r2_t1",
+          "tStart": 8.1,
+          "tEnd": 13.5,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p87_r3_t1",
+          "tStart": 14.6,
+          "tEnd": 20.0,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p87_svg1",
+          "type": "arrow",
+          "fromToken": "p87_r1_t1",
+          "toToken": "p87_r3_t1",
+          "label": "关键转化定解",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 14.7,
+          "tDrawEnd": 15.4,
+          "tFadeStart": 20.5,
+          "tEnd": 21.7
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "text": "第1步：见直径连弦构 $90^\\circ$（或见 $90^\\circ$ 找直径）——若 $AB$ 为直径且 $C$ 在圆上，连 $AC, BC$ 得 $\\angle ACB=90^\\circ$；反之 $\\angle ACB=90^\\circ \\implies AB$ 为直径。",
+          "focusToken": "p87_r1_t1"
+        },
+        {
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "text": "第2步：识别共斜边双直角隐圆（如有）——若 $\\angle BAD=\\angle BCD=90^\\circ$，则 $A,B,C,D$ 在以 $BD$ 为直径的圆上，可用同弧圆周角倒角。",
+          "focusToken": "p87_r2_t1"
+        },
+        {
+          "tStart": 14.6,
+          "tEnd": 22,
+          "text": "第3步：在直角三角形中用勾股或互余求解——用两锐角互余求角，或用勾股定理、$30^\\circ$ 性质、中位线求出边长与半径。",
+          "focusToken": "p87_r3_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "$AB$ 是 $\\odot O$ 直径，$\\angle A=54^\\circ$，则 $\\angle B$ 的度数为（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $36^\\circ$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $54^\\circ$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $27^\\circ$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "直径所对 $\\angle C=90^\\circ$，故 $\\angle B=90^\\circ-54^\\circ=36^\\circ$。"
+            ],
+            "summary": "形成“见直径构直角、见直角找直径”的条件反射式几何解题策略。"
+          },
+          "wrongTitle": "提示：请结合本节核心操作再核对一次",
+          "wrongFeedback": "直径所对 $\\angle C=90^\\circ$，故 $\\angle B=90^\\circ-54^\\circ=36^\\circ$。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "四边形 $ABCD$ 中 $\\angle BAD=\\angle BCD=90^\\circ$，$\\angle BAC=40^\\circ$，则 $\\angle CBD =$ ______$^{\\circ}$．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$\\angle CBD =$",
+          "input1Placeholder": "如 50",
+          "input1Suffix": "",
+          "expectedX": "50",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 50。",
+          "correctDetail": "四点共圆，$\\angle BDC=\\angle BAC=40^\\circ$，故 $\\angle CBD=90^\\circ-40^\\circ=50^\\circ$。",
+          "wrongFeedback": "四点共圆，$\\angle BDC=\\angle BAC=40^\\circ$，故 $\\angle CBD=90^\\circ-40^\\circ=50^\\circ$。",
+          "specificWrongHints": []
+        }
+      }
+    },
+    P88: {
+      "procedureId": "P88",
+      "title": "运用圆内接四边形对角互补及外角性质求角与综合推理",
+      "exampleTitle": "四边形 $ABCD$ 内接于 $\\odot O$，$\\angle BAD=105^\\circ$，$\\angle DBC=75^\\circ$，求证 $BD=CD$",
+      "exampleFormula": "$\\angle C = 180^\\circ - 105^\\circ = 75^\\circ = \\angle DBC \\implies BD = CD$",
+      "totalDuration": 22,
+      "scratchpadIdleHint": "旁白草稿演算区（掌握圆内接四边形对角互补、外角等于内对角及辅助补构圆内接四边形的倒角通法。）",
+      "practiceSectionTitle": "运用圆内接四边形对角互补及外角性质求角与综合推理跟做练习",
+      "practiceSectionSub": "完成以下两道关键操作练习",
+      "geometryDiagram": {
+        "title": "圆内接四边形对角互补",
+        "caption": "∠BAD + ∠C = 180° 推出 ∠C = 75° = ∠DBC，等角对等边得 BD = CD",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <rect x=\"4\" y=\"4\" width=\"252\" height=\"167\" rx=\"10\" fill=\"#F8FAFC\" stroke=\"#E2E8F0\" stroke-width=\"1\" />\n            <circle cx=\"130\" cy=\"88\" r=\"56\" fill=\"none\" stroke=\"#334155\" stroke-width=\"1.8\" /><polygon points=\"94,45 178,58 166,132 82,118\" fill=\"#0F766E\" fill-opacity=\"0.10\" stroke=\"#0F766E\" stroke-width=\"2\" /><line class=\"proc-geo-anim\" data-appear-at=\"8.0\" data-dur=\"0.6\" x1=\"178\" y1=\"58\" x2=\"82\" y2=\"118\" stroke=\"#D97706\" stroke-width=\"2\" style=\"opacity:0;\" /><text x=\"82\" y=\"42\" fill=\"#334155\" font-size=\"11\" font-weight=\"700\">A(105°)</text><text x=\"182\" y=\"58\" fill=\"#334155\" font-size=\"11\" font-weight=\"700\">B</text><text x=\"168\" y=\"144\" fill=\"#D97706\" font-size=\"11\" font-weight=\"700\">C(75°)</text><text x=\"68\" y=\"124\" fill=\"#334155\" font-size=\"11\" font-weight=\"700\">D</text>\n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "确认四点共圆（或取点补构内接四边形）",
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "explanation": "核对四边形四个顶点是否都在圆上；若只有圆上三点（如劣弧上圆周角），可在优弧上任取一点补构圆内接四边形。"
+        },
+        {
+          "step": 2,
+          "name": "列对角互补或外角等于内对角关系",
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "explanation": "写 $\\angle A + \\angle C = 180^\\circ$、$\\angle B + \\angle D = 180^\\circ$ 或外角 $\\angle DCE = \\angle A$。"
+        },
+        {
+          "step": 3,
+          "name": "联用圆周角/等腰/平行线完成求角或证明",
+          "tStart": 14.6,
+          "tEnd": 22,
+          "explanation": "将所得角度代入圆周角定理或等角对等边推出目标角或线段相等。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 确认四点共圆（或取点补构内接四边形）"
+        },
+        {
+          "time": 8.3,
+          "step": 2,
+          "label": "2.1 列对角互补或外角等于内对角关系"
+        },
+        {
+          "time": 15.6,
+          "step": 3,
+          "label": "3.1 联用圆周角/等腰/平行线完成求角或证明"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p88_r0",
+          "stepBadge": "已知条件",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p88_r0_t1",
+              "math": "圆内接四边形 $ABCD$，$\\angle BAD=105^\\circ$，$\\angle DBC=75^\\circ$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p88_r1",
+          "stepBadge": "第 1 步 · 对角互补",
+          "appearAt": 1.5,
+          "tokens": [
+            {
+              "id": "p88_r1_t1",
+              "math": "$\\because$ 四边形 $ABCD$ 内接于 $\\odot O$，$\\therefore \\angle BAD + \\angle C = 180^\\circ$",
+              "appearAt": 1.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p88_r2",
+          "stepBadge": "第 2 步 · 算对角",
+          "appearAt": 8.0,
+          "tokens": [
+            {
+              "id": "p88_r2_t1",
+              "math": "$\\angle C = 180^\\circ - 105^\\circ = 75^\\circ$",
+              "appearAt": 8.1,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p88_r3",
+          "stepBadge": "第 3 步 · 等角对等边",
+          "appearAt": 14.5,
+          "tokens": [
+            {
+              "id": "p88_r3_t1",
+              "math": "$\\because \\angle C = \\angle DBC = 75^\\circ$，$\\therefore BD = CD$",
+              "appearAt": 14.6,
+              "dur": 0.45
+            }
+          ],
+          "isConclusion": true
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p88_sp1",
+          "title": "核心要点速记",
+          "showStart": 1.5,
+          "showEnd": 21.8,
+          "tokens": [
+            {
+              "id": "p88_sp1_t1",
+              "math": "1. 四点均在 $\\odot O$ 上",
+              "appearAt": 1.8,
+              "dur": 0.4
+            },
+            {
+              "id": "p88_sp1_t2",
+              "math": "2. 对角互补；外角 $=$ 内对角",
+              "appearAt": 6.3,
+              "dur": 0.4
+            },
+            {
+              "id": "p88_sp1_t3",
+              "math": "3. 联用圆周角定理与等腰性质",
+              "appearAt": 10.8,
+              "dur": 0.4
+            }
+          ],
+          "note": "误把圆心 $O$ 当作圆上顶点（如对四边形 $OABC$ 错误使用对角互补）。"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p88_r1_t1",
+          "tStart": 1.6,
+          "tEnd": 7.0,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p88_r2_t1",
+          "tStart": 8.1,
+          "tEnd": 13.5,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p88_r3_t1",
+          "tStart": 14.6,
+          "tEnd": 20.0,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p88_svg1",
+          "type": "arrow",
+          "fromToken": "p88_r1_t1",
+          "toToken": "p88_r3_t1",
+          "label": "关键转化定解",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 14.7,
+          "tDrawEnd": 15.4,
+          "tFadeStart": 20.5,
+          "tEnd": 21.7
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "text": "第1步：确认四点共圆（或取点补构内接四边形）——核对四边形四个顶点是否都在圆上；若只有圆上三点（如劣弧上圆周角），可在优弧上任取一点补构圆内接四边形。",
+          "focusToken": "p88_r1_t1"
+        },
+        {
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "text": "第2步：列对角互补或外角等于内对角关系——写 $\\angle A + \\angle C = 180^\\circ$、$\\angle B + \\angle D = 180^\\circ$ 或外角 $\\angle DCE = \\angle A$。",
+          "focusToken": "p88_r2_t1"
+        },
+        {
+          "tStart": 14.6,
+          "tEnd": 22,
+          "text": "第3步：联用圆周角/等腰/平行线完成求角或证明——将所得角度代入圆周角定理或等角对等边推出目标角或线段相等。",
+          "focusToken": "p88_r3_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "圆内接四边形 $ABCD$ 中，$\\angle ADC=122^\\circ$，则圆心角 $\\angle AOC$ 的度数为（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $58^\\circ$",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. $116^\\circ$",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. $122^\\circ$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "$\\angle B=180^\\circ-122^\\circ=58^\\circ$，故 $\\angle AOC=2\\angle B=116^\\circ$。"
+            ],
+            "summary": "掌握圆内接四边形对角互补、外角等于内对角及辅助补构圆内接四边形的倒角通法。"
+          },
+          "wrongTitle": "提示：请结合本节核心操作再核对一次",
+          "wrongFeedback": "$\\angle B=180^\\circ-122^\\circ=58^\\circ$，故 $\\angle AOC=2\\angle B=116^\\circ$。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "以 $AB$ 为直径的半圆上有点 $C,D$，若 $\\angle CAB=20^\\circ$，则 $\\angle D =$ ______$^{\\circ}$．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$\\angle D =$",
+          "input1Placeholder": "如 110",
+          "input1Suffix": "",
+          "expectedX": "110",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 110。",
+          "correctDetail": "$\\angle ACB=90^\\circ \\implies \\angle B=70^\\circ$，对角互补得 $\\angle D=110^\\circ$。",
+          "wrongFeedback": "$\\angle ACB=90^\\circ \\implies \\angle B=70^\\circ$，对角互补得 $\\angle D=110^\\circ$。",
+          "specificWrongHints": []
+        }
+      }
+    },
+    P89: {
+      "procedureId": "P89",
+      "title": "运用弧长公式 $l=\\frac{n\\pi R}{180}$ 求弧长、圆心角、半径与旋转路径长",
+      "exampleTitle": "半径为 $6\\text{cm}$ 的定滑轮无滑动旋转 $150^\\circ$，求重物上升的高度",
+      "exampleFormula": "上升高度 $=$ 旋转弧长 $= \\frac{150 \\times \\pi \\times 6}{180} = 5\\pi\\text{cm}$",
+      "totalDuration": 22,
+      "scratchpadIdleHint": "旁白草稿演算区（熟练运用弧长公式知二求一，并能准确拆解图形旋转与无滑动翻滚的弧长路径。）",
+      "practiceSectionTitle": "运用弧长公式 $l=\\frac{n\\pi R}{180}$ 求弧长、圆心角、半径与旋转路径长跟做练习",
+      "practiceSectionSub": "完成以下两道关键操作练习",
+      "geometryDiagram": {
+        "title": "定滑轮旋转弧长公式",
+        "caption": "半径 R=6cm，旋转角 n=150°，代入 l = nπR / 180 得 5π cm",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <rect x=\"4\" y=\"4\" width=\"252\" height=\"167\" rx=\"10\" fill=\"#F8FAFC\" stroke=\"#E2E8F0\" stroke-width=\"1\" />\n            <circle cx=\"130\" cy=\"88\" r=\"52\" fill=\"none\" stroke=\"#CBD5E1\" stroke-width=\"1.6\" stroke-dasharray=\"4 3\" /><path class=\"proc-geo-anim\" data-appear-at=\"2.0\" data-dur=\"0.8\" data-dash-len=\"180\" d=\"M 182 88 A 52 52 0 0 0 85 62\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"3\" stroke-dasharray=\"180\" stroke-dashoffset=\"180\" style=\"opacity:0;\" /><line x1=\"130\" y1=\"88\" x2=\"182\" y2=\"88\" stroke=\"#334155\" stroke-width=\"1.6\" /><line x1=\"130\" y1=\"88\" x2=\"85\" y2=\"62\" stroke=\"#D97706\" stroke-width=\"1.6\" /><text x=\"150\" y=\"102\" fill=\"#334155\" font-size=\"10\" font-weight=\"700\">R=6</text><text x=\"122\" y=\"72\" fill=\"#D97706\" font-size=\"10\" font-weight=\"700\">150°</text>\n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "锁定圆心、半径 $R$ 与圆心角度数 $n$",
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "explanation": "旋转路径题先找旋转中心与动点到中心距离 $R$，再用网格勾股或圆周角定理求出 $R$ 与 $n$。"
+        },
+        {
+          "step": 2,
+          "name": "代入弧长公式列式计算",
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "explanation": "直接代入 $l = \\frac{n\\pi R}{180}$ 求 $l$，或由已知 $l$ 反解 $n$ 或 $R$。"
+        },
+        {
+          "step": 3,
+          "name": "多段路径逐段累加并按要求保留 $\\pi$",
+          "tStart": 14.6,
+          "tEnd": 22,
+          "explanation": "翻滚或平移+旋转问题拆成各段弧长/线段长分别计算后求和。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 锁定圆心、半径 $R$ 与圆心角度数 $n$"
+        },
+        {
+          "time": 8.3,
+          "step": 2,
+          "label": "2.1 代入弧长公式列式计算"
+        },
+        {
+          "time": 15.6,
+          "step": 3,
+          "label": "3.1 多段路径逐段累加并按要求保留 $\\pi$"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p89_r0",
+          "stepBadge": "问题转化",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p89_r0_t1",
+              "math": "绳索无滑动 $\\implies$ 重物上升高度等于滑轮转过的弧长",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p89_r1",
+          "stepBadge": "第 1 步 · 提取 $R, n$",
+          "appearAt": 1.5,
+          "tokens": [
+            {
+              "id": "p89_r1_t1",
+              "math": "半径 $R = 6\\text{cm}$，圆心角 $n = 150$",
+              "appearAt": 1.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p89_r2",
+          "stepBadge": "第 2 步 · 代弧长公式",
+          "appearAt": 8.0,
+          "tokens": [
+            {
+              "id": "p89_r2_t1",
+              "math": "$l = \\frac{150 \\times \\pi \\times 6}{180}$",
+              "appearAt": 8.1,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p89_r3",
+          "stepBadge": "第 3 步 · 约分得解",
+          "appearAt": 14.5,
+          "tokens": [
+            {
+              "id": "p89_r3_t1",
+              "math": "$l = 5\\pi\\ (\\text{cm})$",
+              "appearAt": 14.6,
+              "dur": 0.45
+            }
+          ],
+          "isConclusion": true
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p89_sp1",
+          "title": "核心要点速记",
+          "showStart": 1.5,
+          "showEnd": 21.8,
+          "tokens": [
+            {
+              "id": "p89_sp1_t1",
+              "math": "1. 确定 $R$ 与圆心角 $n$（不带度号）",
+              "appearAt": 1.8,
+              "dur": 0.4
+            },
+            {
+              "id": "p89_sp1_t2",
+              "math": "2. $l = \\frac{n\\pi R}{180}$",
+              "appearAt": 6.3,
+              "dur": 0.4
+            },
+            {
+              "id": "p89_sp1_t3",
+              "math": "3. $L_{\\text{总}} = l_1 + l_2 + \\cdots$",
+              "appearAt": 10.8,
+              "dur": 0.4
+            }
+          ],
+          "note": "代入 $n$ 时误写单位导致出错，或把圆周角直接当作圆心角 $n$ 代入。"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p89_r1_t1",
+          "tStart": 1.6,
+          "tEnd": 7.0,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p89_r2_t1",
+          "tStart": 8.1,
+          "tEnd": 13.5,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p89_r3_t1",
+          "tStart": 14.6,
+          "tEnd": 20.0,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p89_svg1",
+          "type": "arrow",
+          "fromToken": "p89_r1_t1",
+          "toToken": "p89_r3_t1",
+          "label": "关键转化定解",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 14.7,
+          "tDrawEnd": 15.4,
+          "tFadeStart": 20.5,
+          "tEnd": 21.7
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "text": "第1步：锁定圆心、半径 $R$ 与圆心角度数 $n$——旋转路径题先找旋转中心与动点到中心距离 $R$，再用网格勾股或圆周角定理求出 $R$ 与 $n$。",
+          "focusToken": "p89_r1_t1"
+        },
+        {
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "text": "第2步：代入弧长公式列式计算——直接代入 $l = \\frac{n\\pi R}{180}$ 求 $l$，或由已知 $l$ 反解 $n$ 或 $R$。",
+          "focusToken": "p89_r2_t1"
+        },
+        {
+          "tStart": 14.6,
+          "tEnd": 22,
+          "text": "第3步：多段路径逐段累加并按要求保留 $\\pi$——翻滚或平移+旋转问题拆成各段弧长/线段长分别计算后求和。",
+          "focusToken": "p89_r3_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "圆弧所对圆心角为 $120^\\circ$，弧长为 $12\\pi\\text{cm}$，则所在圆的半径为（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $18\\text{cm}$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $9\\text{cm}$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $36\\text{cm}$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "$\\frac{120\\pi R}{180}=12\\pi \\implies R=18\\text{cm}$。"
+            ],
+            "summary": "熟练运用弧长公式知二求一，并能准确拆解图形旋转与无滑动翻滚的弧长路径。"
+          },
+          "wrongTitle": "提示：请结合本节核心操作再核对一次",
+          "wrongFeedback": "$\\frac{120\\pi R}{180}=12\\pi \\implies R=18\\text{cm}$。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "在半径为 $6$ 的圆中，$60^\\circ$ 圆心角所对的弧长为 $k\\pi$，则 $k =$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$k =$",
+          "input1Placeholder": "如 2",
+          "input1Suffix": "",
+          "expectedX": "2",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 2。",
+          "correctDetail": "$l = \\frac{60\\pi \\times 6}{180} = 2\\pi$，故 $k=2$。",
+          "wrongFeedback": "$l = \\frac{60\\pi \\times 6}{180} = 2\\pi$，故 $k=2$。",
+          "specificWrongHints": []
+        }
+      }
+    },
+    P90: {
+      "procedureId": "P90",
+      "title": "运用扇形面积公式与割补法（和差/等积转化）求阴影部分面积",
+      "exampleTitle": "$\\odot O$ 半径为 $2$，$\\angle AOB=90^\\circ$，求弓形阴影部分的面积",
+      "exampleFormula": "$S_{\\text{阴影}} = S_{\\text{扇形}OAB} - S_{\\triangle OAB} = \\frac{90\\pi\\cdot 2^2}{360} - \\frac{1}{2}\\times 2\\times 2 = \\pi - 2$",
+      "totalDuration": 22,
+      "scratchpadIdleHint": "旁白草稿演算区（掌握扇形双公式及不规则阴影面积的“和差法”与“旋转等积割补法”。）",
+      "practiceSectionTitle": "运用扇形面积公式与割补法（和差/等积转化）求阴影部分面积跟做练习",
+      "practiceSectionSub": "完成以下两道关键操作练习",
+      "geometryDiagram": {
+        "title": "弓形阴影面积和差法",
+        "caption": "阴影面积 = 扇形 OAB 面积 - 直角三角形 OAB 面积 = π - 2",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <rect x=\"4\" y=\"4\" width=\"252\" height=\"167\" rx=\"10\" fill=\"#F8FAFC\" stroke=\"#E2E8F0\" stroke-width=\"1\" />\n            <path class=\"proc-geo-anim\" data-appear-at=\"8.0\" data-dur=\"0.6\" d=\"M 130 42 A 56 56 0 0 1 186 98 L 130 42 Z\" fill=\"#0F766E\" fill-opacity=\"0.28\" stroke=\"#0F766E\" stroke-width=\"2\" style=\"opacity:0;\" /><polygon points=\"130,98 130,42 186,98\" fill=\"#FEF3C7\" fill-opacity=\"0.6\" stroke=\"#334155\" stroke-width=\"1.8\" /><text x=\"116\" y=\"108\" fill=\"#334155\" font-size=\"11\" font-weight=\"700\">O</text><text x=\"122\" y=\"36\" fill=\"#334155\" font-size=\"11\" font-weight=\"700\">A</text><text x=\"190\" y=\"102\" fill=\"#334155\" font-size=\"11\" font-weight=\"700\">B</text><text x=\"136\" y=\"88\" fill=\"#D97706\" font-size=\"10\" font-weight=\"700\">90°</text>\n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "分解阴影区域为规则图形的和差或等积拼补",
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "explanation": "弓形用 $S_{\\text{扇形}}-S_{\\triangle}$；扇环用 $S_{\\text{大扇}}-S_{\\text{小扇}}$；旋转扫过图形利用全等图形面积抵消。"
+        },
+        {
+          "step": 2,
+          "name": "确定各部分扇形半径 $R$、圆心角 $n$ 与三角形底高",
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "explanation": "结合圆周角定理、勾股定理或等边/直角三角形求出所需 $R, n$ 与边长。"
+        },
+        {
+          "step": 3,
+          "name": "分别计算并合并化简（保留 $\\pi$ 与最简根式）",
+          "tStart": 14.6,
+          "tEnd": 22,
+          "explanation": "代入数据准确计算扇形与多边形面积并作差/求和。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 分解阴影区域为规则图形的和差或等积拼补"
+        },
+        {
+          "time": 8.3,
+          "step": 2,
+          "label": "2.1 确定各部分扇形半径 $R$、圆心角 $n$ 与三角形底高"
+        },
+        {
+          "time": 15.6,
+          "step": 3,
+          "label": "3.1 分别计算并合并化简（保留 $\\pi$ 与最简根式）"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p90_r0",
+          "stepBadge": "和差拆解",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p90_r0_t1",
+              "math": "$S_{\\text{阴影}} = S_{\\text{扇形}OAB} - S_{\\triangle OAB}$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p90_r1",
+          "stepBadge": "第 1 步 · 算扇形面积",
+          "appearAt": 1.5,
+          "tokens": [
+            {
+              "id": "p90_r1_t1",
+              "math": "$S_{\\text{扇形}OAB} = \\frac{90 \\times \\pi \\times 2^2}{360} = \\pi$",
+              "appearAt": 1.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p90_r2",
+          "stepBadge": "第 2 步 · 算三角形面积",
+          "appearAt": 8.0,
+          "tokens": [
+            {
+              "id": "p90_r2_t1",
+              "math": "$S_{\\triangle OAB} = \\frac{1}{2} \\times 2 \\times 2 = 2$",
+              "appearAt": 8.1,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p90_r3",
+          "stepBadge": "第 3 步 · 作差得阴影",
+          "appearAt": 14.5,
+          "tokens": [
+            {
+              "id": "p90_r3_t1",
+              "math": "$S_{\\text{阴影}} = \\pi - 2$",
+              "appearAt": 14.6,
+              "dur": 0.45
+            }
+          ],
+          "isConclusion": true
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p90_sp1",
+          "title": "核心要点速记",
+          "showStart": 1.5,
+          "showEnd": 21.8,
+          "tokens": [
+            {
+              "id": "p90_sp1_t1",
+              "math": "1. $S_{\\text{阴影}} = S_{\\text{规则1}} \\pm S_{\\text{规则2}}$",
+              "appearAt": 1.8,
+              "dur": 0.4
+            },
+            {
+              "id": "p90_sp1_t2",
+              "math": "2. $S_{\\text{扇}} = \\frac{n\\pi R^2}{360} = \\frac{1}{2}lR$",
+              "appearAt": 6.3,
+              "dur": 0.4
+            },
+            {
+              "id": "p90_sp1_t3",
+              "math": "3. 结果保留 $\\pi$ 与最简根式",
+              "appearAt": 10.8,
+              "dur": 0.4
+            }
+          ],
+          "note": "混淆弧长分母 $180$ 与扇形面积分母 $360$，或忘记半径平方 $R^2$。"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p90_r1_t1",
+          "tStart": 1.6,
+          "tEnd": 7.0,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p90_r2_t1",
+          "tStart": 8.1,
+          "tEnd": 13.5,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p90_r3_t1",
+          "tStart": 14.6,
+          "tEnd": 20.0,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p90_svg1",
+          "type": "arrow",
+          "fromToken": "p90_r1_t1",
+          "toToken": "p90_r3_t1",
+          "label": "关键转化定解",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 14.7,
+          "tDrawEnd": 15.4,
+          "tFadeStart": 20.5,
+          "tEnd": 21.7
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "text": "第1步：分解阴影区域为规则图形的和差或等积拼补——弓形用 $S_{\\text{扇形}}-S_{\\triangle}$；扇环用 $S_{\\text{大扇}}-S_{\\text{小扇}}$；旋转扫过图形利用全等图形面积抵消。",
+          "focusToken": "p90_r1_t1"
+        },
+        {
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "text": "第2步：确定各部分扇形半径 $R$、圆心角 $n$ 与三角形底高——结合圆周角定理、勾股定理或等边/直角三角形求出所需 $R, n$ 与边长。",
+          "focusToken": "p90_r2_t1"
+        },
+        {
+          "tStart": 14.6,
+          "tEnd": 22,
+          "text": "第3步：分别计算并合并化简（保留 $\\pi$ 与最简根式）——代入数据准确计算扇形与多边形面积并作差/求和。",
+          "focusToken": "p90_r3_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "扇形弧长为 $10\\pi$，面积为 $300\\pi$，则扇形的半径为（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $60$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $30$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $15$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "由 $S=\\frac{1}{2}lR$ 得 $300\\pi=\\frac{1}{2}\\times 10\\pi\\cdot R \\implies R=60$。"
+            ],
+            "summary": "掌握扇形双公式及不规则阴影面积的“和差法”与“旋转等积割补法”。"
+          },
+          "wrongTitle": "提示：请结合本节核心操作再核对一次",
+          "wrongFeedback": "由 $S=\\frac{1}{2}lR$ 得 $300\\pi=\\frac{1}{2}\\times 10\\pi\\cdot R \\implies R=60$。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "折扇圆心角 $120^\\circ$，大半径 $30\\text{cm}$、小半径 $12\\text{cm}$，扇面面积为 $k\\pi\\text{cm}^2$，则 $k =$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$k =$",
+          "input1Placeholder": "如 252",
+          "input1Suffix": "",
+          "expectedX": "252",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 252。",
+          "correctDetail": "$\\frac{120}{360}\\pi(30^2-12^2)=\\frac{1}{3}\\pi(756)=252\\pi$。",
+          "wrongFeedback": "$\\frac{120}{360}\\pi(30^2-12^2)=\\frac{1}{3}\\pi(756)=252\\pi$。",
+          "specificWrongHints": []
+        }
+      }
+    },
+    P91: {
+      "procedureId": "P91",
+      "title": "运用圆锥底面周长与侧面展开扇形弧长关系求侧面积、全面积及最短路径",
+      "exampleTitle": "$Rt\\triangle ABC$ 中 $\\angle C=90^\\circ, \\angle A=30^\\circ, AB=12\\text{cm}$，绕 $AC$ 旋转一周得圆锥，求侧面积、全面积及展开圆心角",
+      "exampleFormula": "$r=6, l=12 \\implies S_{\\text{侧}}=72\\pi, S_{\\text{全}}=108\\pi, n=180^\\circ$",
+      "totalDuration": 22,
+      "scratchpadIdleHint": "旁白草稿演算区（打通圆锥立体量 $(r,h,l)$ 与展开扇形量 $(n,l)$ 的互换，掌握面积计算与侧面最短路径通法。）",
+      "practiceSectionTitle": "运用圆锥底面周长与侧面展开扇形弧长关系求侧面积、全面积及最短路径跟做练习",
+      "practiceSectionSub": "完成以下两道关键操作练习",
+      "geometryDiagram": {
+        "title": "圆锥与侧面展开扇形对应关系",
+        "caption": "底面半径 r=6、母线 l=12，由 2πr = nπl/180 得展开圆心角 n=180°",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <rect x=\"4\" y=\"4\" width=\"252\" height=\"167\" rx=\"10\" fill=\"#F8FAFC\" stroke=\"#E2E8F0\" stroke-width=\"1\" />\n            <polygon points=\"78,34 44,126 112,126\" fill=\"#0F766E\" fill-opacity=\"0.12\" stroke=\"#0F766E\" stroke-width=\"1.8\" /><ellipse cx=\"78\" cy=\"126\" rx=\"34\" ry=\"10\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"1.8\" /><line x1=\"78\" y1=\"34\" x2=\"78\" y2=\"126\" stroke=\"#64748B\" stroke-width=\"1.3\" stroke-dasharray=\"3 3\" /><path class=\"proc-geo-anim\" data-appear-at=\"8.0\" data-dur=\"0.7\" d=\"M 142 126 A 48 48 0 0 1 238 126 Z\" fill=\"#FEF3C7\" fill-opacity=\"0.55\" stroke=\"#D97706\" stroke-width=\"2\" style=\"opacity:0;\" /><text x=\"98\" y=\"82\" fill=\"#0F766E\" font-size=\"10\" font-weight=\"700\">l=12</text><text x=\"86\" y=\"138\" fill=\"#334155\" font-size=\"10\" font-weight=\"700\">r=6</text><text x=\"176\" y=\"114\" fill=\"#D97706\" font-size=\"10\" font-weight=\"700\">n=180°</text>\n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "用勾股定理打通底面半径 $r$、高 $h$ 与母线 $l$",
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "explanation": "圆锥轴截面半三角形中 $r^2 + h^2 = l^2$，知二求一。"
+        },
+        {
+          "step": 2,
+          "name": "用“底面周长 $=$ 展开扇形弧长”互求 $r, l, n$",
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "explanation": "核心桥接公式：$2\\pi r = \\frac{n\\pi l}{180} \\iff n = \\frac{360r}{l}$。"
+        },
+        {
+          "step": 3,
+          "name": "算侧/全面积或展开扇形求最短路径",
+          "tStart": 14.6,
+          "tEnd": 22,
+          "explanation": "侧面积 $S_{\\text{侧}}=\\pi rl$，全面积加底面积 $\\pi r^2$；最短路径则按圆心角 $n$ 展开侧面，连接起止两点成直线段求解。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 用勾股定理打通底面半径 $r$、高 $h$ 与母线 $l$"
+        },
+        {
+          "time": 8.3,
+          "step": 2,
+          "label": "2.1 用“底面周长 $=$ 展开扇形弧长”互求 $r, l, n$"
+        },
+        {
+          "time": 15.6,
+          "step": 3,
+          "label": "3.1 算侧/全面积或展开扇形求最短路径"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p91_r0",
+          "stepBadge": "第 1 步 · 定 $r, h, l$",
+          "appearAt": 1.5,
+          "tokens": [
+            {
+              "id": "p91_r0_t1",
+              "math": "绕 $AC$ 旋转：$l=AB=12$，$r=BC=6$，$h=AC=6\\sqrt{3}$",
+              "appearAt": 1.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p91_r1",
+          "stepBadge": "第 2 步 · 算侧与全面积",
+          "appearAt": 8.0,
+          "tokens": [
+            {
+              "id": "p91_r1_t1",
+              "math": "$S_{\\text{侧}}=\\pi\\cdot 6\\cdot 12=72\\pi$，$S_{\\text{全}}=72\\pi+36\\pi=108\\pi$",
+              "appearAt": 8.1,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p91_r2",
+          "stepBadge": "第 3 步 · 求展开圆心角",
+          "appearAt": 14.5,
+          "tokens": [
+            {
+              "id": "p91_r2_t1",
+              "math": "由 $2\\pi\\cdot 6 = \\frac{n\\pi\\cdot 12}{180}$ 解得 $n = 180^\\circ$",
+              "appearAt": 14.6,
+              "dur": 0.45
+            }
+          ],
+          "isConclusion": true
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p91_sp1",
+          "title": "核心要点速记",
+          "showStart": 1.5,
+          "showEnd": 21.8,
+          "tokens": [
+            {
+              "id": "p91_sp1_t1",
+              "math": "1. $r^2 + h^2 = l^2$",
+              "appearAt": 1.8,
+              "dur": 0.4
+            },
+            {
+              "id": "p91_sp1_t2",
+              "math": "2. $2\\pi r = \\frac{n\\pi l}{180}$",
+              "appearAt": 6.3,
+              "dur": 0.4
+            },
+            {
+              "id": "p91_sp1_t3",
+              "math": "3. $S_{\\text{侧}}=\\pi rl$；展开化曲为直",
+              "appearAt": 10.8,
+              "dur": 0.4
+            }
+          ],
+          "note": "混淆圆锥底面半径 $r$ 与侧面展开扇形半径（母线长 $l$）。"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p91_r1_t1",
+          "tStart": 8.1,
+          "tEnd": 13.5,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p91_r2_t1",
+          "tStart": 14.6,
+          "tEnd": 20.0,
+          "color": "amber"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p91_svg1",
+          "type": "arrow",
+          "fromToken": "p91_r1_t1",
+          "toToken": "p91_r2_t1",
+          "label": "关键转化定解",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 14.7,
+          "tDrawEnd": 15.4,
+          "tFadeStart": 20.5,
+          "tEnd": 21.7
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "text": "第1步：用勾股定理打通底面半径 $r$、高 $h$ 与母线 $l$——圆锥轴截面半三角形中 $r^2 + h^2 = l^2$，知二求一。",
+          "focusToken": "p91_r1_t1"
+        },
+        {
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "text": "第2步：用“底面周长 $=$ 展开扇形弧长”互求 $r, l, n$——核心桥接公式：$2\\pi r = \\frac{n\\pi l}{180} \\iff n = \\frac{360r}{l}$。",
+          "focusToken": "p91_r2_t1"
+        },
+        {
+          "tStart": 14.6,
+          "tEnd": 22,
+          "text": "第3步：算侧/全面积或展开扇形求最短路径——侧面积 $S_{\\text{侧}}=\\pi rl$，全面积加底面积 $\\pi r^2$；最短路径则按圆心角 $n$ 展开侧面，连接起止两点成直线段求解。",
+          "focusToken": "p91_r2_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "圆锥底面半径为 $3\\text{cm}$、高为 $4\\text{cm}$，则其全面积为（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $15\\pi\\text{cm}^2$",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. $24\\pi\\text{cm}^2$",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. $21\\pi\\text{cm}^2$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "母线 $l=5$，$S_{\\text{全}}=\\pi\\cdot 3\\cdot 5 + \\pi\\cdot 3^2=24\\pi$。"
+            ],
+            "summary": "打通圆锥立体量 $(r,h,l)$ 与展开扇形量 $(n,l)$ 的互换，掌握面积计算与侧面最短路径通法。"
+          },
+          "wrongTitle": "提示：请结合本节核心操作再核对一次",
+          "wrongFeedback": "母线 $l=5$，$S_{\\text{全}}=\\pi\\cdot 3\\cdot 5 + \\pi\\cdot 3^2=24\\pi$。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "圆锥底面半径为 $2$、母线长为 $6$，其侧面展开图圆心角为 ______$^{\\circ}$．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$n =$",
+          "input1Placeholder": "如 120",
+          "input1Suffix": "",
+          "expectedX": "120",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 120。",
+          "correctDetail": "$n = \\frac{360 \\times 2}{6} = 120^\\circ$。",
+          "wrongFeedback": "$n = \\frac{360 \\times 2}{6} = 120^\\circ$。",
+          "specificWrongHints": []
+        }
+      }
     }
   };
 

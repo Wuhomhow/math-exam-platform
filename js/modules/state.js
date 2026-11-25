@@ -19,7 +19,7 @@
       if (/^(13|14|15|16|17|18)\./.test(value) || /^第十[三四五六七八]章/.test(value)) {
         return { grade: '初二', semester: '上册', label: value };
       }
-      if (/^(25|26|27|28|29)\./.test(value) || /^第二十[五六七八九]章/.test(value)) {
+      if (/^(25|26|27|28|29|30)\./.test(value) || /^(第二十[五六七八九]章|第三十章)/.test(value)) {
         return { grade: '初三', semester: '上册', label: value };
       }
 
@@ -172,6 +172,7 @@
         if (ch.startsWith('27.') || ch.includes('第二十七')) return '第二十七章 反比例函数';
         if (ch.startsWith('28.') || ch.includes('第二十八')) return '第二十八章 旋转';
         if (ch.startsWith('29.') || ch.includes('第二十九')) return '第二十九章 圆';
+        if (ch.startsWith('30.') || ch.includes('第三十')) return '第三十章 直线与圆的位置关系';
       }
       return null;
     }

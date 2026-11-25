@@ -7527,6 +7527,1075 @@
       ],
       "graphNodeId": "cnm_236",
       "status": "published"
+    },
+    {
+      "id": "P81",
+      "name": "运用“不在同一直线上的三点确定一个圆”作三角形外接圆并求外心与半径",
+      "grade": "九年级",
+      "subject": "数学",
+      "chapterGroup": "第二十九章 圆",
+      "chapter": "29.1.2 过三点的圆",
+      "description": "先判断三点是否共线；作任意两边（弦）的垂直平分线交点即为外心 $O$；利用直角三角形外心在斜边中点（$R=\\frac{c}{2}$）或等腰/等边三角形三线合一与勾股定理求出外接圆半径。",
+      "purpose": "掌握确定圆的条件、尺规/网格定位外心以及求三角形外接圆半径的标准流程。",
+      "applicability": [
+        "先判断三点是否共线；作任意两边（弦）的垂直平分线交点即为外心 $O$；利用直角三角形外心在斜边中点（$R=\\frac{c}{2}$）或等腰/等边三角形三线合一与勾股定理求出外接圆半径。"
+      ],
+      "conditions": [
+        "掌握确定圆的条件、尺规/网格定位外心以及求三角形外接圆半径的标准流程。"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "核验三点不共线并确定外心位置",
+          "description": "任意作两条弦的垂直平分线，其交点即为圆心（外心）$O$；直角三角形外心直接取斜边中点。",
+          "formula": "外心 $=$ 三边垂直平分线的交点",
+          "example": ""
+        },
+        {
+          "step": 2,
+          "title": "连接外心与顶点构造直角三角形",
+          "description": "连接 $OA, OB$（或作弦垂线），结合等腰三线合一或直角三角形斜边中线性质表示各线段。",
+          "formula": "$OA = OB = OC = R$",
+          "example": ""
+        },
+        {
+          "step": 3,
+          "title": "列勾股方程求解外接圆半径 $R$",
+          "description": "直角三角形直接得 $R=\\frac{c}{2}$；等腰三角形设半径 $R$，在直角三角形中列方程解出 $R$。",
+          "formula": "$R^2 = d^2 + \\left(\\frac{a}{2}\\right)^2$",
+          "example": ""
+        }
+      ],
+      "procedure": [
+        {
+          "step": 1,
+          "action": "核验三点不共线并确定外心位置",
+          "detail": "任意作两条弦的垂直平分线，其交点即为圆心（外心）$O$；直角三角形外心直接取斜边中点。"
+        },
+        {
+          "step": 2,
+          "action": "连接外心与顶点构造直角三角形",
+          "detail": "连接 $OA, OB$（或作弦垂线），结合等腰三线合一或直角三角形斜边中线性质表示各线段。"
+        },
+        {
+          "step": 3,
+          "action": "列勾股方程求解外接圆半径 $R$",
+          "detail": "直角三角形直接得 $R=\\frac{c}{2}$；等腰三角形设半径 $R$，在直角三角形中列方程解出 $R$。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P53",
+          "name": "比较点到圆心的距离 $d$ 与半径 $r$，判定点与圆的位置关系及求半径范围",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P53"
+      ],
+      "subsequentProcedureIds": [
+        "P82"
+      ],
+      "relatedProcedureIds": [
+        "P53",
+        "P82",
+        "P83"
+      ],
+      "pitfalls": [
+        "忽略“不在同一直线上”的前提，误认为任意三点都能确定一个圆。",
+        "把三角形外心（垂直平分线交点）与内心（角平分线交点）混淆。"
+      ],
+      "exampleQuestionId": "ch29_1_2_t_q14",
+      "exampleStepMapping": [
+        {
+          "step": 1,
+          "title": "对应步骤 1（核验三点不共线并确定外心位置）",
+          "detail": "任意作两条弦的垂直平分线，其交点即为圆心（外心）$O$；直角三角形外心直接取斜边中点。"
+        },
+        {
+          "step": 2,
+          "title": "对应步骤 2（连接外心与顶点构造直角三角形）",
+          "detail": "连接 $OA, OB$（或作弦垂线），结合等腰三线合一或直角三角形斜边中线性质表示各线段。"
+        },
+        {
+          "step": 3,
+          "title": "对应步骤 3（列勾股方程求解外接圆半径 $R$）",
+          "detail": "直角三角形直接得 $R=\\frac{c}{2}$；等腰三角形设半径 $R$，在直角三角形中列方程解出 $R$。"
+        }
+      ],
+      "graphNodeId": "cnm_265",
+      "status": "published"
+    },
+    {
+      "id": "P82",
+      "name": "运用反证法（反设→归谬→存真）证明命题与举反例辨识假命题",
+      "grade": "九年级",
+      "subject": "数学",
+      "chapterGroup": "第二十九章 圆",
+      "chapter": "29.1.2 过三点的圆（第2课时）",
+      "description": "证明真命题时按“反设（否定结论）→归谬（结合已知与定理推出矛盾）→存真（否定假设、肯定原结论）”三步推理；判定假命题时构造满足题设条件但违背结论的具体数值或图形反例。",
+      "purpose": "规范写出常见量词结论的否定形式，掌握反证法三步流程与假命题反例构造。",
+      "applicability": [
+        "证明真命题时按“反设（否定结论）→归谬（结合已知与定理推出矛盾）→存真（否定假设、肯定原结论）”三步推理；判定假命题时构造满足题设条件但违背结论的具体数值或图形反例。"
+      ],
+      "conditions": [
+        "规范写出常见量词结论的否定形式，掌握反证法三步流程与假命题反例构造。"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "反设：精准写出原命题结论的反面",
+          "description": "只否定结论不否定条件；“至少有一个”的否定是“一个也没有”，“$\\lt$”的否定是“$\\ge$”，“最多一个”的否定是“至少两个”。",
+          "formula": "反设：假设原结论不成立",
+          "example": ""
+        },
+        {
+          "step": 2,
+          "title": "归谬：从假设出发严密推导矛盾",
+          "description": "将假设当作临时条件，结合已知、公理或定理（如三角形内角和 $180^\\circ$、平行公理）推出明显矛盾。",
+          "formula": "推出与已知/定理/公理相矛盾",
+          "example": ""
+        },
+        {
+          "step": 3,
+          "title": "存真（或举反例辨假）",
+          "description": "指出假设不成立从而原结论成立；若是假命题，则找出一组“满足条件但不满足结论”的反例。",
+          "formula": "故假设不成立 $\\implies$ 原命题成立",
+          "example": ""
+        }
+      ],
+      "procedure": [
+        {
+          "step": 1,
+          "action": "反设：精准写出原命题结论的反面",
+          "detail": "只否定结论不否定条件；“至少有一个”的否定是“一个也没有”，“$\\lt$”的否定是“$\\ge$”，“最多一个”的否定是“至少两个”。"
+        },
+        {
+          "step": 2,
+          "action": "归谬：从假设出发严密推导矛盾",
+          "detail": "将假设当作临时条件，结合已知、公理或定理（如三角形内角和 $180^\\circ$、平行公理）推出明显矛盾。"
+        },
+        {
+          "step": 3,
+          "action": "存真（或举反例辨假）",
+          "detail": "指出假设不成立从而原结论成立；若是假命题，则找出一组“满足条件但不满足结论”的反例。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P81",
+          "name": "运用“不在同一直线上的三点确定一个圆”作三角形外接圆并求外心与半径",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P81"
+      ],
+      "subsequentProcedureIds": [],
+      "relatedProcedureIds": [
+        "P81"
+      ],
+      "pitfalls": [
+        "写反设时错误地否定了命题条件，或漏掉等号（如把 $a\\lt 0$ 的反面写成 $a\\gt 0$ 而漏掉 $a=0$）。",
+        "举反例时选出的数值连题设前提都不满足。"
+      ],
+      "exampleQuestionId": "ch29_1_2_l2_b_q11",
+      "exampleStepMapping": [
+        {
+          "step": 1,
+          "title": "对应步骤 1（反设：精准写出原命题结论的反面）",
+          "detail": "只否定结论不否定条件；“至少有一个”的否定是“一个也没有”，“$\\lt$”的否定是“$\\ge$”，“最多一个”的否定是“至少两个”。"
+        },
+        {
+          "step": 2,
+          "title": "对应步骤 2（归谬：从假设出发严密推导矛盾）",
+          "detail": "将假设当作临时条件，结合已知、公理或定理（如三角形内角和 $180^\\circ$、平行公理）推出明显矛盾。"
+        },
+        {
+          "step": 3,
+          "title": "对应步骤 3（存真（或举反例辨假））",
+          "detail": "指出假设不成立从而原结论成立；若是假命题，则找出一组“满足条件但不满足结论”的反例。"
+        }
+      ],
+      "graphNodeId": "cnm_265",
+      "status": "published"
+    },
+    {
+      "id": "P83",
+      "name": "运用垂径定理及勾股定理构造直角三角形求半径、弦长与弦心距（含双弦分类）",
+      "grade": "九年级",
+      "subject": "数学",
+      "chapterGroup": "第二十九章 圆",
+      "chapter": "29.2.1 垂直于弦的直径",
+      "description": "过圆心作弦的垂线（或连半径）构造由“半径 $r$、半弦 $\\frac{a}{2}$、弦心距 $d$”组成的直角三角形，运用 $r^2=d^2+(\\frac{a}{2})^2$ 列方程求解；遇两条平行弦求距离时分圆心同侧（$|d_1-d_2|$）与异侧（$d_1+d_2$）讨论。",
+      "purpose": "熟练掌握垂径定理“连半径、作垂线、构直角、用勾股”的万能几何模型及平行双弦分类。",
+      "applicability": [
+        "过圆心作弦的垂线（或连半径）构造由“半径 $r$、半弦 $\\frac{a}{2}$、弦心距 $d$”组成的直角三角形，运用 $r^2=d^2+(\\frac{a}{2})^2$ 列方程求解；遇两条平行弦求距离时分圆心同侧（$|d_1-d_2|$）与异侧（$d_1+d_2$）讨论。"
+      ],
+      "conditions": [
+        "熟练掌握垂径定理“连半径、作垂线、构直角、用勾股”的万能几何模型及平行双弦分类。"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "连半径、作弦心距，写出半弦长",
+          "description": "由垂径定理得垂直于弦的直径平分弦：半弦 $=\\frac{a}{2}$。",
+          "formula": "$AE = BE = \\frac{1}{2}AB$",
+          "example": ""
+        },
+        {
+          "step": 2,
+          "title": "在 $Rt\\triangle$ 中列勾股方程求解",
+          "description": "设未知半径 $r$（或弦心距 $d$），将三边代入 $r^2 = d^2 + (\\frac{a}{2})^2$ 解出未知量。",
+          "formula": "$r^2 = d^2 + \\left(\\frac{a}{2}\\right)^2$",
+          "example": ""
+        },
+        {
+          "step": 3,
+          "title": "双弦平行需分同侧/异侧两种情况",
+          "description": "同侧距离为 $|d_1 - d_2|$，异侧距离为 $d_1 + d_2$，检查解的合理性。",
+          "formula": "$D = |d_1 - d_2|$ 或 $d_1 + d_2$",
+          "example": ""
+        }
+      ],
+      "procedure": [
+        {
+          "step": 1,
+          "action": "连半径、作弦心距，写出半弦长",
+          "detail": "由垂径定理得垂直于弦的直径平分弦：半弦 $=\\frac{a}{2}$。"
+        },
+        {
+          "step": 2,
+          "action": "在 $Rt\\triangle$ 中列勾股方程求解",
+          "detail": "设未知半径 $r$（或弦心距 $d$），将三边代入 $r^2 = d^2 + (\\frac{a}{2})^2$ 解出未知量。"
+        },
+        {
+          "step": 3,
+          "action": "双弦平行需分同侧/异侧两种情况",
+          "detail": "同侧距离为 $|d_1 - d_2|$，异侧距离为 $d_1 + d_2$，检查解的合理性。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P52",
+          "name": "识别圆的弦、直径、优弧与劣弧，并依据“直径是最长的弦”确定弦长范围",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P52"
+      ],
+      "subsequentProcedureIds": [
+        "P84"
+      ],
+      "relatedProcedureIds": [
+        "P52",
+        "P84",
+        "P85"
+      ],
+      "pitfalls": [
+        "在勾股定理中误把整条弦长 $a$ 当作直角边代入，忘记除以 $2$。",
+        "求圆中两条平行弦距离时漏掉“圆心同侧”或“圆心异侧”之一。"
+      ],
+      "exampleQuestionId": "ch29_2_1_b_q8",
+      "exampleStepMapping": [
+        {
+          "step": 1,
+          "title": "对应步骤 1（连半径、作弦心距，写出半弦长）",
+          "detail": "由垂径定理得垂直于弦的直径平分弦：半弦 $=\\frac{a}{2}$。"
+        },
+        {
+          "step": 2,
+          "title": "对应步骤 2（在 $Rt\\triangle$ 中列勾股方程求解）",
+          "detail": "设未知半径 $r$（或弦心距 $d$），将三边代入 $r^2 = d^2 + (\\frac{a}{2})^2$ 解出未知量。"
+        },
+        {
+          "step": 3,
+          "title": "对应步骤 3（双弦平行需分同侧/异侧两种情况）",
+          "detail": "同侧距离为 $|d_1 - d_2|$，异侧距离为 $d_1 + d_2$，检查解的合理性。"
+        }
+      ],
+      "graphNodeId": "cnm_251",
+      "status": "published"
+    },
+    {
+      "id": "P84",
+      "name": "运用垂径定理建立圆弧模型求解实际问题（拱桥、水面、管道与测直径）",
+      "grade": "九年级",
+      "subject": "数学",
+      "chapterGroup": "第二十九章 圆",
+      "chapter": "29.2.1 垂直于弦的直径",
+      "description": "将石拱桥、隧道、筒车水面、圆材埋壁或水杯测量抽象为圆弧与弦的模型，把跨度转化为弦长 $a$、拱高/水深/锯深转化为弓高 $h$，设半径 $r$ 并用 $|r-h|$ 表示弦心距列勾股方程求解。",
+      "purpose": "掌握实际圆弧工程问题向垂径定理直角三角形模型的抽象与方程求解。",
+      "applicability": [
+        "将石拱桥、隧道、筒车水面、圆材埋壁或水杯测量抽象为圆弧与弦的模型，把跨度转化为弦长 $a$、拱高/水深/锯深转化为弓高 $h$，设半径 $r$ 并用 $|r-h|$ 表示弦心距列勾股方程求解。"
+      ],
+      "conditions": [
+        "掌握实际圆弧工程问题向垂径定理直角三角形模型的抽象与方程求解。"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "抽象实物为圆弧模型并标出跨度与拱高",
+          "description": "跨度/水面宽对应弦长 $AB=a$（半弦 $\\frac{a}{2}$），拱高/最大深度对应弓高 $CD=h$。",
+          "formula": "跨度 $\\to$ 弦长 $a$；拱高/深 $\\to h$",
+          "example": ""
+        },
+        {
+          "step": 2,
+          "title": "判断圆心位置并用 $r, h$ 表示弦心距",
+          "description": "优弧（液面过半）时 $OD=h-r$，劣弧（常见拱桥/筒车）时 $OD=r-h$，统一记 $OD=|r-h|$。",
+          "formula": "$OD = |r - h|$",
+          "example": ""
+        },
+        {
+          "step": 3,
+          "title": "列方程求解半径并核对所求（半径或直径）",
+          "description": "代入 $r^2 = (r-h)^2 + (\\frac{a}{2})^2$ 求出 $r$，注意题目最终问半径还是直径 $2r$。",
+          "formula": "$r = \\frac{h^2 + (a/2)^2}{2h}$",
+          "example": ""
+        }
+      ],
+      "procedure": [
+        {
+          "step": 1,
+          "action": "抽象实物为圆弧模型并标出跨度与拱高",
+          "detail": "跨度/水面宽对应弦长 $AB=a$（半弦 $\\frac{a}{2}$），拱高/最大深度对应弓高 $CD=h$。"
+        },
+        {
+          "step": 2,
+          "action": "判断圆心位置并用 $r, h$ 表示弦心距",
+          "detail": "优弧（液面过半）时 $OD=h-r$，劣弧（常见拱桥/筒车）时 $OD=r-h$，统一记 $OD=|r-h|$。"
+        },
+        {
+          "step": 3,
+          "action": "列方程求解半径并核对所求（半径或直径）",
+          "detail": "代入 $r^2 = (r-h)^2 + (\\frac{a}{2})^2$ 求出 $r$，注意题目最终问半径还是直径 $2r$。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P83",
+          "name": "运用垂径定理及勾股定理构造直角三角形求半径、弦长与弦心距（含双弦分类）",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P83"
+      ],
+      "subsequentProcedureIds": [],
+      "relatedProcedureIds": [
+        "P83"
+      ],
+      "pitfalls": [
+        "题目求“直径”（如圆材埋壁、筒车直径）却直接填了半径 $r$。",
+        "未注意“水深过半”或单位换算（如 $1$ 尺 $=10$ 寸）。"
+      ],
+      "exampleQuestionId": "ch29_2_1_t_q15",
+      "exampleStepMapping": [
+        {
+          "step": 1,
+          "title": "对应步骤 1（抽象实物为圆弧模型并标出跨度与拱高）",
+          "detail": "跨度/水面宽对应弦长 $AB=a$（半弦 $\\frac{a}{2}$），拱高/最大深度对应弓高 $CD=h$。"
+        },
+        {
+          "step": 2,
+          "title": "对应步骤 2（判断圆心位置并用 $r, h$ 表示弦心距）",
+          "detail": "优弧（液面过半）时 $OD=h-r$，劣弧（常见拱桥/筒车）时 $OD=r-h$，统一记 $OD=|r-h|$。"
+        },
+        {
+          "step": 3,
+          "title": "对应步骤 3（列方程求解半径并核对所求（半径或直径））",
+          "detail": "代入 $r^2 = (r-h)^2 + (\\frac{a}{2})^2$ 求出 $r$，注意题目最终问半径还是直径 $2r$。"
+        }
+      ],
+      "graphNodeId": "cnm_251",
+      "status": "published"
+    },
+    {
+      "id": "P85",
+      "name": "运用同圆或等圆中弧、弦、圆心角的等量关系进行转化、求角与证明",
+      "grade": "九年级",
+      "subject": "数学",
+      "chapterGroup": "第二十九章 圆",
+      "chapter": "29.2.2 圆心角",
+      "description": "在同圆或等圆中，依据“圆心角相等 $\\iff$ 所对弧相等 $\\iff$ 所对弦相等”实现知一推三；结合弧的加减公共弧、连半径构等腰/等边三角形及弧的度数等于圆心角度数完成求角与证明。",
+      "purpose": "掌握同圆或等圆中弧、弦、圆心角互化定理及公共弧加减证明套路。",
+      "applicability": [
+        "在同圆或等圆中，依据“圆心角相等 $\\iff$ 所对弧相等 $\\iff$ 所对弦相等”实现知一推三；结合弧的加减公共弧、连半径构等腰/等边三角形及弧的度数等于圆心角度数完成求角与证明。"
+      ],
+      "conditions": [
+        "掌握同圆或等圆中弧、弦、圆心角互化定理及公共弧加减证明套路。"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "确认“同圆或等圆”前提并锁定等量",
+          "description": "找出已知相等的圆心角、弧或弦，必要时连接半径构造等腰三角形 $OA=OB$。",
+          "formula": "同圆/等圆：等角 $\\iff$ 等弧 $\\iff$ 等弦",
+          "example": ""
+        },
+        {
+          "step": 2,
+          "title": "利用公共弧加减或等分关系转化",
+          "description": "对重叠弧同时加/减公共弧（如 $\\overset{\\frown}{AD}=\\overset{\\frown}{BC}$ 同减 $\\overset{\\frown}{AC}$ 得 $\\overset{\\frown}{AB}=\\overset{\\frown}{CD}$）。",
+          "formula": "同加/同减公共弧 $\\to$ 新等弧",
+          "example": ""
+        },
+        {
+          "step": 3,
+          "title": "回代转化为目标弦或圆心角求解",
+          "description": "由等弧推出目标弦相等或圆心角相等，结合平角/三角形内角和算角度。",
+          "formula": "弧度数 $=$ 所对圆心角度数",
+          "example": ""
+        }
+      ],
+      "procedure": [
+        {
+          "step": 1,
+          "action": "确认“同圆或等圆”前提并锁定等量",
+          "detail": "找出已知相等的圆心角、弧或弦，必要时连接半径构造等腰三角形 $OA=OB$。"
+        },
+        {
+          "step": 2,
+          "action": "利用公共弧加减或等分关系转化",
+          "detail": "对重叠弧同时加/减公共弧（如 $\\overset{\\frown}{AD}=\\overset{\\frown}{BC}$ 同减 $\\overset{\\frown}{AC}$ 得 $\\overset{\\frown}{AB}=\\overset{\\frown}{CD}$）。"
+        },
+        {
+          "step": 3,
+          "action": "回代转化为目标弦或圆心角求解",
+          "detail": "由等弧推出目标弦相等或圆心角相等，结合平角/三角形内角和算角度。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P52",
+          "name": "识别圆的弦、直径、优弧与劣弧，并依据“直径是最长的弦”确定弦长范围",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P52"
+      ],
+      "subsequentProcedureIds": [
+        "P86",
+        "P89"
+      ],
+      "relatedProcedureIds": [
+        "P52",
+        "P83",
+        "P86"
+      ],
+      "pitfalls": [
+        "脱离“同圆或等圆”前提误认为“相等圆心角所对弦一定相等”。",
+        "混淆倍弧与倍弦关系（$\\overset{\\frown}{AB}=2\\overset{\\frown}{CD}$ 时弦长满足 $AB \\lt 2CD$，而非 $AB=2CD$）。"
+      ],
+      "exampleQuestionId": "ch29_2_2_b_q15",
+      "exampleStepMapping": [
+        {
+          "step": 1,
+          "title": "对应步骤 1（确认“同圆或等圆”前提并锁定等量）",
+          "detail": "找出已知相等的圆心角、弧或弦，必要时连接半径构造等腰三角形 $OA=OB$。"
+        },
+        {
+          "step": 2,
+          "title": "对应步骤 2（利用公共弧加减或等分关系转化）",
+          "detail": "对重叠弧同时加/减公共弧（如 $\\overset{\\frown}{AD}=\\overset{\\frown}{BC}$ 同减 $\\overset{\\frown}{AC}$ 得 $\\overset{\\frown}{AB}=\\overset{\\frown}{CD}$）。"
+        },
+        {
+          "step": 3,
+          "title": "对应步骤 3（回代转化为目标弦或圆心角求解）",
+          "detail": "由等弧推出目标弦相等或圆心角相等，结合平角/三角形内角和算角度。"
+        }
+      ],
+      "graphNodeId": "cnm_252",
+      "status": "published"
+    },
+    {
+      "id": "P86",
+      "name": "运用圆周角定理及同弧/等弧所对圆周角相等求角与推理证明",
+      "grade": "九年级",
+      "subject": "数学",
+      "chapterGroup": "第二十九章 圆",
+      "chapter": "29.2.3 圆周角",
+      "description": "先锁定角所对的弧，利用“同弧或等弧所对的圆周角等于它所对圆心角的一半”及“同弧或等弧所对的圆周角相等”完成圆心角与圆周角互化、等角代换及三角形外角/内角和推理。",
+      "purpose": "掌握圆周角定理及其推论，熟练实现圆内角度的跨位置转化。",
+      "applicability": [
+        "先锁定角所对的弧，利用“同弧或等弧所对的圆周角等于它所对圆心角的一半”及“同弧或等弧所对的圆周角相等”完成圆心角与圆周角互化、等角代换及三角形外角/内角和推理。"
+      ],
+      "conditions": [
+        "掌握圆周角定理及其推论，熟练实现圆内角度的跨位置转化。"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "辨识圆周角并锁定所对的弧",
+          "description": "确认角的顶点在圆上、两边为弦，描出该圆周角所对的具体弧（区分优弧与劣弧）。",
+          "formula": "找准圆周角 $\\leftrightarrow$ 所对的弧",
+          "example": ""
+        },
+        {
+          "step": 2,
+          "title": "应用圆周角定理互化圆心角与圆周角",
+          "description": "同弧所对圆周角 $=\\frac{1}{2}$ 圆心角；同弧或等弧所对的不同圆周角相等。",
+          "formula": "$\\angle ACB = \\frac{1}{2}\\angle AOB$",
+          "example": ""
+        },
+        {
+          "step": 3,
+          "title": "结合等腰/平行/外角性质完成求角或证明",
+          "description": "联用半径等腰、平行线同位/内错角或垂径定理推论算出目标角。",
+          "formula": "同弧等角代换 $\\to$ 解出目标角",
+          "example": ""
+        }
+      ],
+      "procedure": [
+        {
+          "step": 1,
+          "action": "辨识圆周角并锁定所对的弧",
+          "detail": "确认角的顶点在圆上、两边为弦，描出该圆周角所对的具体弧（区分优弧与劣弧）。"
+        },
+        {
+          "step": 2,
+          "action": "应用圆周角定理互化圆心角与圆周角",
+          "detail": "同弧所对圆周角 $=\\frac{1}{2}$ 圆心角；同弧或等弧所对的不同圆周角相等。"
+        },
+        {
+          "step": 3,
+          "action": "结合等腰/平行/外角性质完成求角或证明",
+          "detail": "联用半径等腰、平行线同位/内错角或垂径定理推论算出目标角。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P85",
+          "name": "运用同圆或等圆中弧、弦、圆心角的等量关系进行转化、求角与证明",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P85"
+      ],
+      "subsequentProcedureIds": [
+        "P87",
+        "P88"
+      ],
+      "relatedProcedureIds": [
+        "P85",
+        "P87",
+        "P88"
+      ],
+      "pitfalls": [
+        "忽略顶点在劣弧上时所对的是优弧（此时圆周角等于 $\\frac{1}{2}(360^\\circ-\\angle AOB)$，而非 $\\frac{1}{2}\\angle AOB$）。",
+        "误把顶点在圆内的角当作圆周角使用定理。"
+      ],
+      "exampleQuestionId": "ch29_2_3_l1_g_q4",
+      "exampleStepMapping": [
+        {
+          "step": 1,
+          "title": "对应步骤 1（辨识圆周角并锁定所对的弧）",
+          "detail": "确认角的顶点在圆上、两边为弦，描出该圆周角所对的具体弧（区分优弧与劣弧）。"
+        },
+        {
+          "step": 2,
+          "title": "对应步骤 2（应用圆周角定理互化圆心角与圆周角）",
+          "detail": "同弧所对圆周角 $=\\frac{1}{2}$ 圆心角；同弧或等弧所对的不同圆周角相等。"
+        },
+        {
+          "step": 3,
+          "title": "对应步骤 3（结合等腰/平行/外角性质完成求角或证明）",
+          "detail": "联用半径等腰、平行线同位/内错角或垂径定理推论算出目标角。"
+        }
+      ],
+      "graphNodeId": "cnm_253",
+      "status": "published"
+    },
+    {
+      "id": "P87",
+      "name": "运用“直径所对的圆周角是直角”构造直角三角形求解与证明",
+      "grade": "九年级",
+      "subject": "数学",
+      "chapterGroup": "第二十九章 圆",
+      "chapter": "29.2.3 圆周角",
+      "description": "见直径主动连弦构造 $90^\\circ$ 圆周角；遇 $90^\\circ$ 圆周角逆推所对弦为直径（或判定共斜边双直角四点共圆与隐圆轨迹），结合勾股定理、锐角互余或中位线快速求边长与角度。",
+      "purpose": "形成“见直径构直角、见直角找直径”的条件反射式几何解题策略。",
+      "applicability": [
+        "见直径主动连弦构造 $90^\\circ$ 圆周角；遇 $90^\\circ$ 圆周角逆推所对弦为直径（或判定共斜边双直角四点共圆与隐圆轨迹），结合勾股定理、锐角互余或中位线快速求边长与角度。"
+      ],
+      "conditions": [
+        "形成“见直径构直角、见直角找直径”的条件反射式几何解题策略。"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "见直径连弦构 $90^\\circ$（或见 $90^\\circ$ 找直径）",
+          "description": "若 $AB$ 为直径且 $C$ 在圆上，连 $AC, BC$ 得 $\\angle ACB=90^\\circ$；反之 $\\angle ACB=90^\\circ \\implies AB$ 为直径。",
+          "formula": "$AB$ 为直径 $\\iff \\angle ACB = 90^\\circ$",
+          "example": ""
+        },
+        {
+          "step": 2,
+          "title": "识别共斜边双直角隐圆（如有）",
+          "description": "若 $\\angle BAD=\\angle BCD=90^\\circ$，则 $A,B,C,D$ 在以 $BD$ 为直径的圆上，可用同弧圆周角倒角。",
+          "formula": "共斜边双直角 $\\implies$ 四点共圆",
+          "example": ""
+        },
+        {
+          "step": 3,
+          "title": "在直角三角形中用勾股或互余求解",
+          "description": "用两锐角互余求角，或用勾股定理、$30^\\circ$ 性质、中位线求出边长与半径。",
+          "formula": "$a^2 + b^2 = (2R)^2$",
+          "example": ""
+        }
+      ],
+      "procedure": [
+        {
+          "step": 1,
+          "action": "见直径连弦构 $90^\\circ$（或见 $90^\\circ$ 找直径）",
+          "detail": "若 $AB$ 为直径且 $C$ 在圆上，连 $AC, BC$ 得 $\\angle ACB=90^\\circ$；反之 $\\angle ACB=90^\\circ \\implies AB$ 为直径。"
+        },
+        {
+          "step": 2,
+          "action": "识别共斜边双直角隐圆（如有）",
+          "detail": "若 $\\angle BAD=\\angle BCD=90^\\circ$，则 $A,B,C,D$ 在以 $BD$ 为直径的圆上，可用同弧圆周角倒角。"
+        },
+        {
+          "step": 3,
+          "action": "在直角三角形中用勾股或互余求解",
+          "detail": "用两锐角互余求角，或用勾股定理、$30^\\circ$ 性质、中位线求出边长与半径。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P86",
+          "name": "运用圆周角定理及同弧/等弧所对圆周角相等求角与推理证明",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P86"
+      ],
+      "subsequentProcedureIds": [],
+      "relatedProcedureIds": [
+        "P86",
+        "P88"
+      ],
+      "pitfalls": [
+        "有直径但未连接关键弦，错失现成的 $90^\\circ$ 条件。",
+        "用直角尺测出直径后忘记除以 $2$ 求半径。"
+      ],
+      "exampleQuestionId": "ch29_2_3_l1_b_q11",
+      "exampleStepMapping": [
+        {
+          "step": 1,
+          "title": "对应步骤 1（见直径连弦构 $90^\\circ$（或见 $90^\\circ$ 找直径））",
+          "detail": "若 $AB$ 为直径且 $C$ 在圆上，连 $AC, BC$ 得 $\\angle ACB=90^\\circ$；反之 $\\angle ACB=90^\\circ \\implies AB$ 为直径。"
+        },
+        {
+          "step": 2,
+          "title": "对应步骤 2（识别共斜边双直角隐圆（如有））",
+          "detail": "若 $\\angle BAD=\\angle BCD=90^\\circ$，则 $A,B,C,D$ 在以 $BD$ 为直径的圆上，可用同弧圆周角倒角。"
+        },
+        {
+          "step": 3,
+          "title": "对应步骤 3（在直角三角形中用勾股或互余求解）",
+          "detail": "用两锐角互余求角，或用勾股定理、$30^\\circ$ 性质、中位线求出边长与半径。"
+        }
+      ],
+      "graphNodeId": "cnm_254",
+      "status": "published"
+    },
+    {
+      "id": "P88",
+      "name": "运用圆内接四边形对角互补及外角性质求角与综合推理",
+      "grade": "九年级",
+      "subject": "数学",
+      "chapterGroup": "第二十九章 圆",
+      "chapter": "29.2.3 圆周角（第2课时）",
+      "description": "识别四个顶点均在圆上的四边形（或在优弧/劣弧上取辅助点补构圆内接四边形），运用“对角互补（$\\angle A+\\angle C=180^\\circ$）”与“任意外角等于它的内对角”建立角度方程求解与证明。",
+      "purpose": "掌握圆内接四边形对角互补、外角等于内对角及辅助补构圆内接四边形的倒角通法。",
+      "applicability": [
+        "识别四个顶点均在圆上的四边形（或在优弧/劣弧上取辅助点补构圆内接四边形），运用“对角互补（$\\angle A+\\angle C=180^\\circ$）”与“任意外角等于它的内对角”建立角度方程求解与证明。"
+      ],
+      "conditions": [
+        "掌握圆内接四边形对角互补、外角等于内对角及辅助补构圆内接四边形的倒角通法。"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "确认四点共圆（或取点补构内接四边形）",
+          "description": "核对四边形四个顶点是否都在圆上；若只有圆上三点（如劣弧上圆周角），可在优弧上任取一点补构圆内接四边形。",
+          "formula": "四点均在 $\\odot O$ 上",
+          "example": ""
+        },
+        {
+          "step": 2,
+          "title": "列对角互补或外角等于内对角关系",
+          "description": "写 $\\angle A + \\angle C = 180^\\circ$、$\\angle B + \\angle D = 180^\\circ$ 或外角 $\\angle DCE = \\angle A$。",
+          "formula": "对角互补；外角 $=$ 内对角",
+          "example": ""
+        },
+        {
+          "step": 3,
+          "title": "联用圆周角/等腰/平行线完成求角或证明",
+          "description": "将所得角度代入圆周角定理或等角对等边推出目标角或线段相等。",
+          "formula": "联用圆周角定理与等腰性质",
+          "example": ""
+        }
+      ],
+      "procedure": [
+        {
+          "step": 1,
+          "action": "确认四点共圆（或取点补构内接四边形）",
+          "detail": "核对四边形四个顶点是否都在圆上；若只有圆上三点（如劣弧上圆周角），可在优弧上任取一点补构圆内接四边形。"
+        },
+        {
+          "step": 2,
+          "action": "列对角互补或外角等于内对角关系",
+          "detail": "写 $\\angle A + \\angle C = 180^\\circ$、$\\angle B + \\angle D = 180^\\circ$ 或外角 $\\angle DCE = \\angle A$。"
+        },
+        {
+          "step": 3,
+          "action": "联用圆周角/等腰/平行线完成求角或证明",
+          "detail": "将所得角度代入圆周角定理或等角对等边推出目标角或线段相等。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P86",
+          "name": "运用圆周角定理及同弧/等弧所对圆周角相等求角与推理证明",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P86"
+      ],
+      "subsequentProcedureIds": [],
+      "relatedProcedureIds": [
+        "P86",
+        "P87"
+      ],
+      "pitfalls": [
+        "误把圆心 $O$ 当作圆上顶点（如对四边形 $OABC$ 错误使用对角互补）。",
+        "混淆“外角等于内对角”与“外角等于相邻内角”。"
+      ],
+      "exampleQuestionId": "ch29_2_3_l2_g_q15",
+      "exampleStepMapping": [
+        {
+          "step": 1,
+          "title": "对应步骤 1（确认四点共圆（或取点补构内接四边形））",
+          "detail": "核对四边形四个顶点是否都在圆上；若只有圆上三点（如劣弧上圆周角），可在优弧上任取一点补构圆内接四边形。"
+        },
+        {
+          "step": 2,
+          "title": "对应步骤 2（列对角互补或外角等于内对角关系）",
+          "detail": "写 $\\angle A + \\angle C = 180^\\circ$、$\\angle B + \\angle D = 180^\\circ$ 或外角 $\\angle DCE = \\angle A$。"
+        },
+        {
+          "step": 3,
+          "title": "对应步骤 3（联用圆周角/等腰/平行线完成求角或证明）",
+          "detail": "将所得角度代入圆周角定理或等角对等边推出目标角或线段相等。"
+        }
+      ],
+      "graphNodeId": "cnm_255",
+      "status": "published"
+    },
+    {
+      "id": "P89",
+      "name": "运用弧长公式 $l=\\frac{n\\pi R}{180}$ 求弧长、圆心角、半径与旋转路径长",
+      "grade": "九年级",
+      "subject": "数学",
+      "chapterGroup": "第二十九章 圆",
+      "chapter": "29.3 弧长和扇形面积",
+      "description": "先通过勾股定理、网格坐标、圆周角定理或旋转中心确定旋转半径 $R$ 与圆心角度数 $n$，再代入弧长公式 $l=\\frac{n\\pi R}{180}$ 完成知二求一及分段翻滚路径求和。",
+      "purpose": "熟练运用弧长公式知二求一，并能准确拆解图形旋转与无滑动翻滚的弧长路径。",
+      "applicability": [
+        "先通过勾股定理、网格坐标、圆周角定理或旋转中心确定旋转半径 $R$ 与圆心角度数 $n$，再代入弧长公式 $l=\\frac{n\\pi R}{180}$ 完成知二求一及分段翻滚路径求和。"
+      ],
+      "conditions": [
+        "熟练运用弧长公式知二求一，并能准确拆解图形旋转与无滑动翻滚的弧长路径。"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "锁定圆心、半径 $R$ 与圆心角度数 $n$",
+          "description": "旋转路径题先找旋转中心与动点到中心距离 $R$，再用网格勾股或圆周角定理求出 $R$ 与 $n$。",
+          "formula": "确定 $R$ 与圆心角 $n$（不带度号）",
+          "example": ""
+        },
+        {
+          "step": 2,
+          "title": "代入弧长公式列式计算",
+          "description": "直接代入 $l = \\frac{n\\pi R}{180}$ 求 $l$，或由已知 $l$ 反解 $n$ 或 $R$。",
+          "formula": "$l = \\frac{n\\pi R}{180}$",
+          "example": ""
+        },
+        {
+          "step": 3,
+          "title": "多段路径逐段累加并按要求保留 $\\pi$",
+          "description": "翻滚或平移+旋转问题拆成各段弧长/线段长分别计算后求和。",
+          "formula": "$L_{\\text{总}} = l_1 + l_2 + \\cdots$",
+          "example": ""
+        }
+      ],
+      "procedure": [
+        {
+          "step": 1,
+          "action": "锁定圆心、半径 $R$ 与圆心角度数 $n$",
+          "detail": "旋转路径题先找旋转中心与动点到中心距离 $R$，再用网格勾股或圆周角定理求出 $R$ 与 $n$。"
+        },
+        {
+          "step": 2,
+          "action": "代入弧长公式列式计算",
+          "detail": "直接代入 $l = \\frac{n\\pi R}{180}$ 求 $l$，或由已知 $l$ 反解 $n$ 或 $R$。"
+        },
+        {
+          "step": 3,
+          "action": "多段路径逐段累加并按要求保留 $\\pi$",
+          "detail": "翻滚或平移+旋转问题拆成各段弧长/线段长分别计算后求和。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P85",
+          "name": "运用同圆或等圆中弧、弦、圆心角的等量关系进行转化、求角与证明",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P85"
+      ],
+      "subsequentProcedureIds": [
+        "P90",
+        "P91"
+      ],
+      "relatedProcedureIds": [
+        "P85",
+        "P90",
+        "P91"
+      ],
+      "pitfalls": [
+        "代入 $n$ 时误写单位导致出错，或把圆周角直接当作圆心角 $n$ 代入。",
+        "无滑动翻滚时未重新定位每次翻滚的新旋转中心与新半径。"
+      ],
+      "exampleQuestionId": "ch29_3_l1_b_q6",
+      "exampleStepMapping": [
+        {
+          "step": 1,
+          "title": "对应步骤 1（锁定圆心、半径 $R$ 与圆心角度数 $n$）",
+          "detail": "旋转路径题先找旋转中心与动点到中心距离 $R$，再用网格勾股或圆周角定理求出 $R$ 与 $n$。"
+        },
+        {
+          "step": 2,
+          "title": "对应步骤 2（代入弧长公式列式计算）",
+          "detail": "直接代入 $l = \\frac{n\\pi R}{180}$ 求 $l$，或由已知 $l$ 反解 $n$ 或 $R$。"
+        },
+        {
+          "step": 3,
+          "title": "对应步骤 3（多段路径逐段累加并按要求保留 $\\pi$）",
+          "detail": "翻滚或平移+旋转问题拆成各段弧长/线段长分别计算后求和。"
+        }
+      ],
+      "graphNodeId": "cnm_256",
+      "status": "published"
+    },
+    {
+      "id": "P90",
+      "name": "运用扇形面积公式与割补法（和差/等积转化）求阴影部分面积",
+      "grade": "九年级",
+      "subject": "数学",
+      "chapterGroup": "第二十九章 圆",
+      "chapter": "29.3 弧长和扇形面积",
+      "description": "根据已知条件优选扇形面积公式 $S=\\frac{n\\pi R^2}{360}$ 或 $S=\\frac{1}{2}lR$；对弓形、扇环、旋转扫过区域等不规则阴影，通过和差法（$S_{\\text{扇}}-S_{\\triangle}$）或旋转/平移等积割补转化为规则图形求解。",
+      "purpose": "掌握扇形双公式及不规则阴影面积的“和差法”与“旋转等积割补法”。",
+      "applicability": [
+        "根据已知条件优选扇形面积公式 $S=\\frac{n\\pi R^2}{360}$ 或 $S=\\frac{1}{2}lR$；对弓形、扇环、旋转扫过区域等不规则阴影，通过和差法（$S_{\\text{扇}}-S_{\\triangle}$）或旋转/平移等积割补转化为规则图形求解。"
+      ],
+      "conditions": [
+        "掌握扇形双公式及不规则阴影面积的“和差法”与“旋转等积割补法”。"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "分解阴影区域为规则图形的和差或等积拼补",
+          "description": "弓形用 $S_{\\text{扇形}}-S_{\\triangle}$；扇环用 $S_{\\text{大扇}}-S_{\\text{小扇}}$；旋转扫过图形利用全等图形面积抵消。",
+          "formula": "$S_{\\text{阴影}} = S_{\\text{规则1}} \\pm S_{\\text{规则2}}$",
+          "example": ""
+        },
+        {
+          "step": 2,
+          "title": "确定各部分扇形半径 $R$、圆心角 $n$ 与三角形底高",
+          "description": "结合圆周角定理、勾股定理或等边/直角三角形求出所需 $R, n$ 与边长。",
+          "formula": "$S_{\\text{扇}} = \\frac{n\\pi R^2}{360} = \\frac{1}{2}lR$",
+          "example": ""
+        },
+        {
+          "step": 3,
+          "title": "分别计算并合并化简（保留 $\\pi$ 与最简根式）",
+          "description": "代入数据准确计算扇形与多边形面积并作差/求和。",
+          "formula": "结果保留 $\\pi$ 与最简根式",
+          "example": ""
+        }
+      ],
+      "procedure": [
+        {
+          "step": 1,
+          "action": "分解阴影区域为规则图形的和差或等积拼补",
+          "detail": "弓形用 $S_{\\text{扇形}}-S_{\\triangle}$；扇环用 $S_{\\text{大扇}}-S_{\\text{小扇}}$；旋转扫过图形利用全等图形面积抵消。"
+        },
+        {
+          "step": 2,
+          "action": "确定各部分扇形半径 $R$、圆心角 $n$ 与三角形底高",
+          "detail": "结合圆周角定理、勾股定理或等边/直角三角形求出所需 $R, n$ 与边长。"
+        },
+        {
+          "step": 3,
+          "action": "分别计算并合并化简（保留 $\\pi$ 与最简根式）",
+          "detail": "代入数据准确计算扇形与多边形面积并作差/求和。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P89",
+          "name": "运用弧长公式 $l=\\frac{n\\pi R}{180}$ 求弧长、圆心角、半径与旋转路径长",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P89"
+      ],
+      "subsequentProcedureIds": [
+        "P91"
+      ],
+      "relatedProcedureIds": [
+        "P89",
+        "P91"
+      ],
+      "pitfalls": [
+        "混淆弧长分母 $180$ 与扇形面积分母 $360$，或忘记半径平方 $R^2$。",
+        "求旋转线段扫过面积时误直接算成单个扇形而漏减内部空白扇形。"
+      ],
+      "exampleQuestionId": "ch29_3_l1_b_q10",
+      "exampleStepMapping": [
+        {
+          "step": 1,
+          "title": "对应步骤 1（分解阴影区域为规则图形的和差或等积拼补）",
+          "detail": "弓形用 $S_{\\text{扇形}}-S_{\\triangle}$；扇环用 $S_{\\text{大扇}}-S_{\\text{小扇}}$；旋转扫过图形利用全等图形面积抵消。"
+        },
+        {
+          "step": 2,
+          "title": "对应步骤 2（确定各部分扇形半径 $R$、圆心角 $n$ 与三角形底高）",
+          "detail": "结合圆周角定理、勾股定理或等边/直角三角形求出所需 $R, n$ 与边长。"
+        },
+        {
+          "step": 3,
+          "title": "对应步骤 3（分别计算并合并化简（保留 $\\pi$ 与最简根式））",
+          "detail": "代入数据准确计算扇形与多边形面积并作差/求和。"
+        }
+      ],
+      "graphNodeId": "cnm_257",
+      "status": "published"
+    },
+    {
+      "id": "P91",
+      "name": "运用圆锥底面周长与侧面展开扇形弧长关系求侧面积、全面积及最短路径",
+      "grade": "九年级",
+      "subject": "数学",
+      "chapterGroup": "第二十九章 圆",
+      "chapter": "29.3 弧长和扇形面积（第2课时）",
+      "description": "紧扣圆锥“三量直角三角形 $r^2+h^2=l^2$”与“展开等式 $2\\pi r = \\frac{n\\pi l}{180}$（即 $\\frac{r}{l}=\\frac{n}{360}$）”，计算侧面积 $S_{\\text{侧}}=\\pi rl$、全面积 $S_{\\text{全}}=\\pi rl+\\pi r^2$；求侧面最短路径时先算展开圆心角 $n$，再在扇形中连线段用勾股定理求解。",
+      "purpose": "打通圆锥立体量 $(r,h,l)$ 与展开扇形量 $(n,l)$ 的互换，掌握面积计算与侧面最短路径通法。",
+      "applicability": [
+        "紧扣圆锥“三量直角三角形 $r^2+h^2=l^2$”与“展开等式 $2\\pi r = \\frac{n\\pi l}{180}$（即 $\\frac{r}{l}=\\frac{n}{360}$）”，计算侧面积 $S_{\\text{侧}}=\\pi rl$、全面积 $S_{\\text{全}}=\\pi rl+\\pi r^2$；求侧面最短路径时先算展开圆心角 $n$，再在扇形中连线段用勾股定理求解。"
+      ],
+      "conditions": [
+        "打通圆锥立体量 $(r,h,l)$ 与展开扇形量 $(n,l)$ 的互换，掌握面积计算与侧面最短路径通法。"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "用勾股定理打通底面半径 $r$、高 $h$ 与母线 $l$",
+          "description": "圆锥轴截面半三角形中 $r^2 + h^2 = l^2$，知二求一。",
+          "formula": "$r^2 + h^2 = l^2$",
+          "example": ""
+        },
+        {
+          "step": 2,
+          "title": "用“底面周长 $=$ 展开扇形弧长”互求 $r, l, n$",
+          "description": "核心桥接公式：$2\\pi r = \\frac{n\\pi l}{180} \\iff n = \\frac{360r}{l}$。",
+          "formula": "$2\\pi r = \\frac{n\\pi l}{180}$",
+          "example": ""
+        },
+        {
+          "step": 3,
+          "title": "算侧/全面积或展开扇形求最短路径",
+          "description": "侧面积 $S_{\\text{侧}}=\\pi rl$，全面积加底面积 $\\pi r^2$；最短路径则按圆心角 $n$ 展开侧面，连接起止两点成直线段求解。",
+          "formula": "$S_{\\text{侧}}=\\pi rl$；展开化曲为直",
+          "example": ""
+        }
+      ],
+      "procedure": [
+        {
+          "step": 1,
+          "action": "用勾股定理打通底面半径 $r$、高 $h$ 与母线 $l$",
+          "detail": "圆锥轴截面半三角形中 $r^2 + h^2 = l^2$，知二求一。"
+        },
+        {
+          "step": 2,
+          "action": "用“底面周长 $=$ 展开扇形弧长”互求 $r, l, n$",
+          "detail": "核心桥接公式：$2\\pi r = \\frac{n\\pi l}{180} \\iff n = \\frac{360r}{l}$。"
+        },
+        {
+          "step": 3,
+          "action": "算侧/全面积或展开扇形求最短路径",
+          "detail": "侧面积 $S_{\\text{侧}}=\\pi rl$，全面积加底面积 $\\pi r^2$；最短路径则按圆心角 $n$ 展开侧面，连接起止两点成直线段求解。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P89",
+          "name": "运用弧长公式 $l=\\frac{n\\pi R}{180}$ 求弧长、圆心角、半径与旋转路径长",
+          "type": "procedural_knowledge"
+        },
+        {
+          "id": "P90",
+          "name": "运用扇形面积公式与割补法（和差/等积转化）求阴影部分面积",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P89",
+        "P90"
+      ],
+      "subsequentProcedureIds": [],
+      "relatedProcedureIds": [
+        "P89",
+        "P90"
+      ],
+      "pitfalls": [
+        "混淆圆锥底面半径 $r$ 与侧面展开扇形半径（母线长 $l$）。",
+        "求圆锥侧面最短路径时未先算展开图圆心角，或把“绕侧面一周”与“爬到对侧母线中点”的圆心角（$n$ 与 $\\frac{n}{2}$）弄混。"
+      ],
+      "exampleQuestionId": "ch29_3_l2_g_q14",
+      "exampleStepMapping": [
+        {
+          "step": 1,
+          "title": "对应步骤 1（用勾股定理打通底面半径 $r$、高 $h$ 与母线 $l$）",
+          "detail": "圆锥轴截面半三角形中 $r^2 + h^2 = l^2$，知二求一。"
+        },
+        {
+          "step": 2,
+          "title": "对应步骤 2（用“底面周长 $=$ 展开扇形弧长”互求 $r, l, n$）",
+          "detail": "核心桥接公式：$2\\pi r = \\frac{n\\pi l}{180} \\iff n = \\frac{360r}{l}$。"
+        },
+        {
+          "step": 3,
+          "title": "对应步骤 3（算侧/全面积或展开扇形求最短路径）",
+          "detail": "侧面积 $S_{\\text{侧}}=\\pi rl$，全面积加底面积 $\\pi r^2$；最短路径则按圆心角 $n$ 展开侧面，连接起止两点成直线段求解。"
+        }
+      ],
+      "graphNodeId": "cnm_258",
+      "status": "published"
     }
   ];
 

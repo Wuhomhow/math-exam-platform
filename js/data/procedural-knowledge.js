@@ -7699,7 +7699,7 @@
         "写反设时错误地否定了命题条件，或漏掉等号（如把 $a\\lt 0$ 的反面写成 $a\\gt 0$ 而漏掉 $a=0$）。",
         "举反例时选出的数值连题设前提都不满足。"
       ],
-      "exampleQuestionId": "ch29_1_2_l2_b_q11",
+      "exampleQuestionId": "ch29_1_2_l2_b_q5",
       "exampleStepMapping": [
         {
           "step": 1,
@@ -8576,7 +8576,7 @@
         "混淆圆锥底面半径 $r$ 与侧面展开扇形半径（母线长 $l$）。",
         "求圆锥侧面最短路径时未先算展开图圆心角，或把“绕侧面一周”与“爬到对侧母线中点”的圆心角（$n$ 与 $\\frac{n}{2}$）弄混。"
       ],
-      "exampleQuestionId": "ch29_3_l2_g_q14",
+      "exampleQuestionId": "ch29_3_l2_g_q11",
       "exampleStepMapping": [
         {
           "step": 1,

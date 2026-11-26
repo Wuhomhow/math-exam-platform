@@ -66140,7 +66140,7 @@ window.QUESTION_BANK = [
     ],
     "answer": "C",
     "analysis": "连接 $OA$、$OB$，由 $OA$ 和 $OB$ 是 $\\odot O$ 的半径，得 $OA=OB$，利用垂径定理的推论可得 $AC=3$，$OC\\perp AB$，再利用勾股定理即可求解．",
-    "detail": "解：连接 $OA$、$OB$，如图所示：<br><img src=\"assets/images/ch29_2_1_b_q3_img2.png\" class=\"my-2 max-w-xs h-auto rounded\" alt=\"题目配图\"><br>$\\because OA$ 和 $OB$ 是 $\\odot O$ 的半径，$\\therefore OA=OB$．<br>又 $\\because C$ 为 $AB$ 的中点，且 $AB=6$，<br>$\\therefore AC=\\frac{1}{2}AB=3$，$OC\\perp AB$，$\\therefore \\angle OCA=90^{}circ$．<br>在 $Rt\\triangle AOC$ 中，$\\angle OCA=90^{}circ$，$OC=4$，<br>$\\therefore OA=\\sqrt{AC^{2}+OC^{2}}=\\sqrt{3^{2}+4^{2}}=5$，<br>$\\therefore \\odot O$ 的半径为 $5$．<br>故选：C．"
+    "detail": "解：连接 $OA$、$OB$，如图所示：<br><img src=\"assets/images/ch29_2_1_b_q3_img2.png\" class=\"my-2 max-w-xs h-auto rounded\" alt=\"题目配图\"><br>$\\because OA$ 和 $OB$ 是 $\\odot O$ 的半径，$\\therefore OA=OB$．<br>又 $\\because C$ 为 $AB$ 的中点，且 $AB=6$，<br>$\\therefore AC=\\frac{1}{2}AB=3$，$OC\\perp AB$，$\\therefore \\angle OCA=90^{\\circ}$．<br>在 $Rt\\triangle AOC$ 中，$\\angle OCA=90^{\\circ}$，$OC=4$，<br>$\\therefore OA=\\sqrt{AC^{2}+OC^{2}}=\\sqrt{3^{2}+4^{2}}=5$，<br>$\\therefore \\odot O$ 的半径为 $5$．<br>故选：C．"
   },
   {
     "id": "ch29_2_1_b_q4",
@@ -66157,7 +66157,7 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "$8$",
     "analysis": "本题考查了垂径定理、勾股定理，连接 $OC$，根据勾股定理求出 $CE$，再根据垂径定理计算即可．",
-    "detail": "解：连接 $OC$，如图所示：<br><img src=\"assets/images/ch29_2_1_b_q4_img2.png\" class=\"my-2 max-w-xs h-auto rounded\" alt=\"题目配图\"><br>$\\because AB$ 是 $\\odot O$ 的直径，弦 $CD\\perp AB$ 于点 $E$，<br>$\\therefore CD=2CE$，$\\angle OEC=90^{}circ$．<br>$\\because AB=10$，$BE=2$，<br>$\\therefore OC=OB=\\frac{1}{2}AB=5$，$\\therefore OE=OB-BE=3$．<br>在 $Rt\\triangle COE$ 中，$CE=\\sqrt{OC^{2}-OE^{2}}=\\sqrt{5^{2}-3^{2}}=4$，<br>$\\therefore CD=2CE=8$．<br>故答案为：$8$．"
+    "detail": "解：连接 $OC$，如图所示：<br><img src=\"assets/images/ch29_2_1_b_q4_img2.png\" class=\"my-2 max-w-xs h-auto rounded\" alt=\"题目配图\"><br>$\\because AB$ 是 $\\odot O$ 的直径，弦 $CD\\perp AB$ 于点 $E$，<br>$\\therefore CD=2CE$，$\\angle OEC=90^{\\circ}$．<br>$\\because AB=10$，$BE=2$，<br>$\\therefore OC=OB=\\frac{1}{2}AB=5$，$\\therefore OE=OB-BE=3$．<br>在 $Rt\\triangle COE$ 中，$CE=\\sqrt{OC^{2}-OE^{2}}=\\sqrt{5^{2}-3^{2}}=4$，<br>$\\therefore CD=2CE=8$．<br>故答案为：$8$．"
   },
   {
     "id": "ch29_2_1_b_q5",
@@ -66189,9 +66189,9 @@ window.QUESTION_BANK = [
     "chapter": "29.2.1 垂直于弦的直径",
     "stem": "如图，在 $\\odot O$ 中，弦 $AB$ 的长为 $4$，圆心 $O$ 到弦 $AB$ 的距离为 $2$，则 $\\angle AOC$ 的度数为 _______．<br><img src=\"assets/images/ch29_2_1_b_q6_img1.png\" class=\"my-2 max-w-xs h-auto rounded\" alt=\"题目配图\">",
     "options": [],
-    "answer": "$45^{}circ$",
+    "answer": "$45^{\\circ}$",
     "analysis": "先根据垂径定理可得 $AC=\\frac{1}{2}AB=2$，再根据等腰直角三角形的判定与性质即可求解．",
-    "detail": "解：由题意得 $OC\\perp AB$，$AB=4$，<br>$\\therefore AC=\\frac{1}{2}AB=2$．<br>$\\because OC=2$，$\\therefore AC=OC$，<br>$\\therefore Rt\\triangle AOC$ 是等腰直角三角形，<br>$\\therefore \\angle AOC=45^{}circ$．<br>故答案为：$45^{}circ$．"
+    "detail": "解：由题意得 $OC\\perp AB$，$AB=4$，<br>$\\therefore AC=\\frac{1}{2}AB=2$．<br>$\\because OC=2$，$\\therefore AC=OC$，<br>$\\therefore Rt\\triangle AOC$ 是等腰直角三角形，<br>$\\therefore \\angle AOC=45^{\\circ}$．<br>故答案为：$45^{\\circ}$．"
   },
   {
     "id": "ch29_2_1_b_q7",

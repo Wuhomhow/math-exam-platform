@@ -10,9 +10,6 @@
   }
 
   const QUESTION_PROCEDURES = [
-    // =========================================================================
-    // P01：利用直接开平方法解一元二次方程（共 18 道样本题，严格按学习顺序 sortOrder 1~18 排列）
-    // =========================================================================
     {
       questionId: 'quad25_3_7',
       procedureId: 'P01',
@@ -115,8 +112,6 @@
       operationSummary: '先移项得 (1/4)(2x + 3)² = 4，系数化为 1 得 (2x + 3)² = 16，开平方得 2x + 3 = ±4，解得 x₁ = 1/2, x₂ = -7/2。',
       status: 'published'
     },
-
-    // quad25_3_5（多小问题目：共 3 个小问）
     {
       questionId: 'quad25_3_5',
       procedureId: 'P01',
@@ -156,7 +151,6 @@
       visibility: 'bank_only',
       status: 'published'
     },
-
     {
       questionId: 'quad25_3_6',
       procedureId: 'P01',
@@ -191,8 +185,6 @@
       status: 'published',
       visibility: 'bank_only'
     },
-
-    // quad25_3_14（多小问题目：仅第(4)问进入 sortOrder=14 的“平方相等转化为一次方程”进阶位置）
     {
       questionId: 'quad25_3_14',
       procedureId: 'P01',
@@ -249,7 +241,6 @@
       visibility: 'bank_only',
       status: 'published'
     },
-
     {
       questionId: 'quad25_3_16',
       procedureId: 'P01',
@@ -286,8 +277,6 @@
       visibility: 'bank_only',
       status: 'published'
     },
-
-    // quad25_3_15（多小问题目：四个小问归入 P01，位于 P01 集合末尾 sortOrder=18）
     {
       questionId: 'quad25_3_15',
       procedureId: 'P01',
@@ -340,10 +329,6 @@
       visibility: 'bank_only',
       status: 'published'
     },
-
-    // =========================================================================
-    // P02：利用配方法解一元二次方程（共 6 道样本题，严格按 sortOrder 1~6 排列）
-    // =========================================================================
     {
       questionId: 'quad25_4_1',
       procedureId: 'P02',
@@ -399,8 +384,6 @@
       operationSummary: '将一般式 x² - 4x + 3 = 0 移项并两边同加 4 配方转化为 (x - 2)² = 1，从而确定 a = -2, b = 1。',
       status: 'published'
     },
-
-    // quad25_4_5（多小问题目：共 2 个小问）
     {
       questionId: 'quad25_4_5',
       procedureId: 'P02',
@@ -425,10 +408,6 @@
       operationSummary: '第(2)问：先将 (t + 3)(t - 1) = 12 左边展开并移项整理得 t² + 2t = 15，两边加 1 配成 (t + 1)² = 16，再开平方得 t₁ = 3, t₂ = -5。',
       status: 'published'
     },
-
-    // =========================================================================
-    // P03：利用配方法求代数式的最值（共 5 道样本题，严格按 sortOrder 1~5 排列）
-    // =========================================================================
     {
       questionId: 'quad25_4_7',
       procedureId: 'P03',
@@ -484,30 +463,7 @@
       operationSummary: '将 4x² + 2y² - 4y - 4x + 15 的常数项 15 拆分为 1 + 2 + 12，分组配方为 (2x - 1)² + 2(y - 1)² + 12 ≥ 12，确定最小值为 12。',
       visibility: 'bank_only',
       status: 'published'
-    }
-,
-
-    // =========================================================================
-    // =========================================================================
-
-    // =========================================================================
-    // =========================================================================
-
-    // =========================================================================
-    // =========================================================================
-
-    // =========================================================================
-    // =========================================================================
-
-    // =========================================================================
-    // =========================================================================
-
-    // =========================================================================
-    // =========================================================================
-
-    // =========================================================================
-    // P10：利用等腰三角形“三线合一”求解与构造辅助线（共 11 道关联题）
-    // =========================================================================
+    },
     {
         "questionId": "ch15_9_1",
         "procedureId": "P10",
@@ -660,10 +616,6 @@
         "operationSummary": "在等腰三角形中锁定两腰与底边，运用“三线合一”进行垂直、线段平分与角度互余转化（原题考点：三线合一、三角形内角和定理的应用、含30度角的直角三角形）。",
         "status": "published"
     },
-
-    // =========================================================================
-    // P11：识别反比例函数与由定义求参数（共 11 道关联题，严格按学习顺序 sortOrder 1~11 排列）
-    // =========================================================================
     {
       questionId: 'ch27_1_hw_q2',
       procedureId: 'P11',
@@ -791,10 +743,6 @@
       operationSummary: '由 y=(m+√3)(m-√2)xᵐ²⁻³ 是反比例函数，令指数 m²-3=-1 得 m=±√2，结合系数 (m+√3)(m-√2)≠0 舍去 √2，定解为 m=-√2。',
       status: 'published'
     },
-
-    // =========================================================================
-    // P12：用待定系数法求反比例函数解析式（共 16 道关联题，严格按学习顺序 sortOrder 1~16 排列）
-    // =========================================================================
     {
       questionId: 'ch27_1_hw_q12',
       procedureId: 'P12',
@@ -1020,10 +968,6 @@
       operationSummary: '第(2)问：将 x=1 代入 y=-6/x 得 y=-6≠6（或检验 1×6≠-6），判定点 (1,6) 不在图象上。',
       status: 'published'
     },
-
-    // =========================================================================
-    // P13：由比例系数 k 判断反比例函数象限与增减性（共 25 道关联题，严格按学习顺序 sortOrder 1~25 排列）
-    // =========================================================================
     {
       questionId: 'ch27_2_1_ex_q7',
       procedureId: 'P13',
@@ -1348,10 +1292,6 @@
       status: 'published',
       visibility: 'bank_only'
     },
-
-    // =========================================================================
-    // P14：利用反比例函数增减性与象限分布比较函数值大小（共 12 道关联题，严格按学习顺序 sortOrder 1~12 排列）
-    // =========================================================================
     {
       questionId: 'ch27_2_2_ex_q11',
       procedureId: 'P14',
@@ -1492,10 +1432,6 @@
       visibility: 'bank_only',
       status: 'published'
     },
-
-    // =========================================================================
-    // P15：利用反比例函数中心对称性求正比例交点坐标与对称式的值（共 7 道关联题，严格按 sortOrder 1~7 排列）
-    // =========================================================================
     {
       questionId: 'ch27_2_2_ex_q13',
       procedureId: 'P15',
@@ -1573,10 +1509,7 @@
       operationSummary: '利用过原点直线与双曲线两交点 A(m,n)、B(m-2,n-8) 关于原点对称，列 m+(m-2)=0、n+(n-8)=0 解得 m=1, n=4，进而算得 k=mn=4。',
       visibility: 'bank_only',
       status: 'published'
-    }    ,
-    // =========================================================================
-    // P16：利用根的判别式判断一元二次方程根的情况与求参数（共 27 道关联题，严格按学习顺序 sortOrder 1~27 排列）
-    // =========================================================================
+    },
     {
       questionId: 'quad25_5_11',
       procedureId: 'P16',
@@ -1958,11 +1891,7 @@
       subType: 'P16_inverse_param_with_leading_coeff',
       operationSummary: '第(3)问：由无实数根列 Δ=20m+4<0（此时 m≠0 自动满足），解得 m<-1/5。',
       status: 'published'
-    }
-    ,
-    // =========================================================================
-    // P17：利用公式法解一元二次方程（共 14 道关联题，严格按学习顺序 sortOrder 1~14 排列）
-    // =========================================================================
+    },
     {
       questionId: 'quad25_6_1',
       procedureId: 'P17',
@@ -2150,11 +2079,7 @@
       subType: 'P17_error_analysis_and_solve',
       operationSummary: '第(2)问：化为 3x²-5x-2=0 (a=3,b=-5,c=-2)，算得 Δ=49>0，代入 x=(5±7)/6 解得 x₁=2, x₂=-1/3。',
       status: 'published'
-    }
-    ,
-    // =========================================================================
-    // P18：利用因式分解法解一元二次方程（共 41 道关联题，严格按学习顺序 sortOrder 1~41 排列）
-    // =========================================================================
+    },
     {
       questionId: 'quad25_7_9',
       procedureId: 'P18',
@@ -2764,10 +2689,7 @@
       operationSummary: '第(2)问：将 2(x+3)²=x(x+3) 移项提取 (x+3) 得 (x+3)(x+6)=0，解得 x₁=-3, x₂=-6。',
       status: 'published',
       visibility: 'bank_only'
-    }    ,
-    // =========================================================================
-    // P19：识别一元二次方程、化一般形式与由定义求参数（共 25 道关联题，严格按学习顺序 sortOrder 1~25 排列）
-    // =========================================================================
+    },
     {
       questionId: 'quad25_1_1',
       procedureId: 'P19',
@@ -3105,10 +3027,6 @@
       status: 'published',
       visibility: 'bank_only'
     },
-
-    // =========================================================================
-    // P20：利用一元二次方程的根的定义代入求参数与整体降次求值（共 15 道关联题，严格按学习顺序 sortOrder 1~15 排列）
-    // =========================================================================
     {
       questionId: 'quad25_2_1',
       procedureId: 'P20',
@@ -3286,10 +3204,6 @@
       operationSummary: '将根 m, n 分别代入 x²+2026x-2027=0 提炼出 m²+2026m=2027 与 n²+2026n=2027，整体代入两个括号算得 1×2028=2028。',
       status: 'published'
     },
-
-    // =========================================================================
-    // P21：利用一元二次方程根与系数的关系（韦达定理）求对称式的值与参数（共 43 道关联题，严格按学习顺序 sortOrder 1~43 排列）
-    // =========================================================================
     {
       questionId: 'quad25_8_8',
       procedureId: 'P21',
@@ -3979,10 +3893,7 @@
       operationSummary: '第(3)问：由 x₁+x₂=2m+1, x₁x₂=m²+1 代入 x₁+x₂=x₁x₂-3 解得 m=3 或 m=-1，结合 Δ=4m-3≥0 舍去 -1，定解 m=3。',
       status: 'published',
       visibility: 'bank_only'
-    }    ,
-    // =========================================================================
-    // P22：利用去括号、移项与合并同类项解一元一次方程（共 11 道关联题，严格按学习顺序 sortOrder 1~11 排列）
-    // =========================================================================
+    },
     {
       questionId: 'ch5_2_1_q4',
       procedureId: 'P22',
@@ -4210,10 +4121,6 @@
       visibility: 'bank_only',
       status: 'published'
     },
-
-    // =========================================================================
-    // P23：运用完全平方公式展开整式与恒等变形求值（共 17 道关联题，严格按学习顺序 sortOrder 1~17 排列）
-    // =========================================================================
     {
       questionId: 'ch16_3_2_q1',
       procedureId: 'P23',
@@ -4467,10 +4374,6 @@
       visibility: 'bank_only',
       status: 'published'
     },
-
-    // =========================================================================
-    // P24：用提公因式法分解因式（含提取多项式整体公因式）（共 24 道关联题，严格按学习顺序 sortOrder 1~24 排列）
-    // =========================================================================
     {
       questionId: 'ch17_1_1_q1',
       procedureId: 'P24',
@@ -4871,10 +4774,6 @@
       operationSummary: '第(4)问：利用偶次幂 (-x-y)²=(x+y)²，提取公因式 2(x+y)² 并合并得 2(x+y)²(3x+3y-1)。',
       status: 'published'
     },
-
-    // =========================================================================
-    // P25：用公式法（平方差公式与完全平方公式）及先提后套分解因式（共 27 道关联题，严格按学习顺序 sortOrder 1~27 排列）
-    // =========================================================================
     {
       questionId: 'ch17_2_1_q1',
       procedureId: 'P25',
@@ -5343,12 +5242,6 @@
       visibility: 'bank_only',
       status: 'published'
     },
-    // =========================================================================
-    // =========================================================================
-    ,
-    // =========================================================================
-    // P26–P29：第二批前置程序性知识关联（共 83 道题，131 条记录）
-    // =========================================================================
     {
       questionId: 'ch16_3_1_q1',
       procedureId: 'P26',
@@ -6448,11 +6341,7 @@
       subType: 'P29_solve_by_equality_prop',
       operationSummary: '第(6)问：先用等式性质 1 两边同加 2x-2 得 5x=-10，再用等式性质 2 两边同除以 5 得 x=-2。',
       status: 'published'
-    }
-    ,
-    // =========================================================================
-    // P30–P33：第三批前置程序性知识关联（共 116 道题，178 条记录）
-    // =========================================================================
+    },
     {
       questionId: 'ch16_1_1_3',
       procedureId: 'P30',
@@ -8617,15 +8506,7 @@
       operationSummary: '在数轴上按关于原点对称标出 -a 与 -b，依从左到右顺序排出 a, -a, b, -b 大小。',
       status: 'published',
       visibility: 'bank_only'
-    }
-,
-    // =========================================================================
-    // =========================================================================
-    // =========================================================================
-    // =========================================================================
-    // =========================================================================
-    // P35：运用分式乘除与乘方法则化简求值（18题，25条记录）
-    // =========================================================================
+    },
     {
       questionId: 'ch18_2_1_q1',
       procedureId: 'P35',
@@ -8931,9 +8812,6 @@
       visibility: 'bank_only',
       status: 'published'
     },
-    // =========================================================================
-    // P36：运用分式加减与混合运算法则化简求值（19题，25条记录）
-    // =========================================================================
     {
       questionId: 'ch18_3_1_q1',
       procedureId: 'P36',
@@ -9236,9 +9114,6 @@
       operationSummary: '括号内通分合并为 $\\frac{2x-3}{x(x-1)^{2}}$，转乘约分得 $\\frac{1}{x^{2}-2x+1}$，检验有意义后整体代入 $x^{2}-2x=3$ 得 $\\frac{1}{4}$。',
       status: 'published'
     },
-    // =========================================================================
-    // P37：运用等腰三角形“等边对等角”与“等角对等边”进行边角转化及判定（15题，19条记录）
-    // =========================================================================
     {
       questionId: 'iso_1',
       procedureId: 'P37',
@@ -9467,9 +9342,6 @@
       operationSummary: '由 $\\angle B=\\angle C$ 用等角对等边判定 $\\triangle ABC$ 等腰，结合 $DE \\parallel AB$ 导出等角证明等腰三角形。',
       status: 'published'
     },
-    // =========================================================================
-    // P38：运用等边三角形性质判定及含 30° 角直角三角形性质求解（18题，19条记录）
-    // =========================================================================
     {
       questionId: 'ch15_3_3_1',
       procedureId: 'P38',
@@ -9694,9 +9566,6 @@
       operationSummary: '在含 $30^{\\circ}$ 角直角三角形与内接等边 $\\triangle DEF$ 中，多次应用 $30^{\\circ}$ 对边为斜边一半求出 $AB=14$。',
       status: 'published'
     },
-    // =========================================================================
-    // P39：运用有理数加减法则与运算律进行加减混合运算（26题，51条记录）
-    // =========================================================================
     {
       questionId: 'add_7',
       procedureId: 'P39',
@@ -10333,9 +10202,6 @@
       operationSummary: '第(4)问：去绝对值并分组凑整计算得 $4.5$。',
       status: 'published'
     },
-    // =========================================================================
-    // P40：运用有理数乘除法法则、倒数及乘法运算律计算（30题，41条记录）
-    // =========================================================================
     {
       questionId: 'mul1_1',
       procedureId: 'P40',
@@ -10839,9 +10705,6 @@
       status: 'published',
       visibility: 'bank_only'
     },
-    // =========================================================================
-    // P41：运用线段垂直平分线的性质与判定进行线段转化、周长计算及尺规作图识别（31题，31条记录）
-    // =========================================================================
     {
       questionId: 'g8_lh_mid_q8',
       procedureId: 'P41',
@@ -11207,11 +11070,7 @@
       operationSummary: '识别尺规作图痕迹为 $AC$ 的垂直平分线，得 $AC = 2AE = 4$、$DA = DC$，故 $C_{\\triangle ABD} = 14 - 4 = 10$。',
       visibility: 'bank_only',
       status: 'published'
-    }
-    ,
-    // =========================================================================
-    // P42：运用全等三角形的性质（对应边相等、对应角相等）求线段长与角度（共 10 题，11 条记录）
-    // =========================================================================
+    },
     {
       questionId: 'prop_5',
       procedureId: 'P42',
@@ -11339,9 +11198,6 @@
       operationSummary: '第(2)问：由 △BAD≌△ACE 得 ∠ADB=∠E，当 ∠ADB=90° 时邻补角 ∠BDE=90°=∠E，由内错角相等得 BD∥CE。',
       status: 'published'
     },
-    // =========================================================================
-    // P43：选用 SAS、ASA、AAS、SSS 判定三角形全等并导出边角相等（共 28 题，31 条记录）
-    // =========================================================================
     {
       questionId: 'sas_4',
       procedureId: 'P43',
@@ -11711,11 +11567,7 @@
       operationSummary: '第(2)问：由内角和得 ∠ACB=70°，由全等得 ∠DFE=70°，结合角平分线得 ∠CFG=35°，再由外角性质算出 ∠CGF=35°。',
       visibility: 'bank_only',
       status: 'published'
-    }
-    ,
-    // =========================================================================
-    // P44：运用角平分线的性质与判定进行距离转化、面积计算及尺规作图识别（共 17 题，17 条记录）
-    // =========================================================================
+    },
     {
       questionId: 'g8_df_mid_q7',
       procedureId: 'P44',
@@ -11914,9 +11766,6 @@
       visibility: 'bank_only',
       status: 'published'
     },
-    // =========================================================================
-    // P04（第3章优化纯净题池 — 28 题）
-    // =========================================================================
     {
       questionId: 'ch3_1_1_1',
       procedureId: 'P04',
@@ -12246,9 +12095,6 @@
       visibility: 'bank_only',
       status: 'published'
     },
-    // =========================================================================
-    // P05（第3章优化纯净题池 — 31 题）
-    // =========================================================================
     {
       questionId: 'alg_oct30_2',
       procedureId: 'P05',
@@ -12667,9 +12513,6 @@
       operationSummary: '先表示“m与3的差”为 m-3，再乘2加括号写为 2(m-3)。',
       status: 'published'
     },
-    // =========================================================================
-    // P06（第3章优化纯净题池 — 38 题）
-    // =========================================================================
     {
       questionId: 'ch3_1_2_8',
       procedureId: 'P06',
@@ -13131,9 +12974,6 @@
       operationSummary: '由小棒数 6,10,14 归纳通项 4n+2，并依次求解第5个与指定小棒数对应图号。',
       status: 'published'
     },
-    // =========================================================================
-    // P46（第3章优化纯净题池 — 37 题）
-    // =========================================================================
     {
       questionId: 'ch3_1_3_1',
       procedureId: 'P46',
@@ -13637,9 +13477,6 @@
       status: 'published',
       visibility: 'bank_only'
     },
-    // =========================================================================
-    // P07（第3章优化纯净题池 — 12 题）
-    // =========================================================================
     {
       questionId: 'ch3_1_3_7',
       procedureId: 'P07',
@@ -13777,9 +13614,6 @@
       visibility: 'bank_only',
       status: 'published'
     },
-    // =========================================================================
-    // P08（第3章优化纯净题池 — 18 题）
-    // =========================================================================
     {
       questionId: 'g7_2_19',
       procedureId: 'P08',
@@ -14032,9 +13866,6 @@
       operationSummary: '核对代入负数与分数时加括号与乘方运算错误，重新代入 x=3/2, y=-6 正确求值。',
       status: 'published'
     },
-    // =========================================================================
-    // P09（第3章优化纯净题池 — 8 题）
-    // =========================================================================
     {
       questionId: 'g7_2_21',
       procedureId: 'P09',
@@ -14149,23 +13980,6 @@
       operationSummary: '由 x²-3x-10=0 得 x²-3x=10，变形 2(x²-3x)+5 整体代入得 25。',
       status: 'published'
     },
-    // =========================================================================
-    // =========================================================================
-    // =========================================================================
-    // =========================================================================
-    // =========================================================================
-    // =========================================================================
-    // =========================================================================
-    // =========================================================================
-    // =========================================================================
-    // =========================================================================
-    // =========================================================================
-    // =========================================================================
-    // =========================================================================
-    // =========================================================================
-    // =========================================================================
-    // P34（4.1.1 单项式：识别单项式并确定系数与次数 — 12 题 / 14 条记录）
-    // =========================================================================
     {
       questionId: 'g7_2_41',
       procedureId: 'P34',
@@ -14329,9 +14143,6 @@
       operationSummary: '第(3)问：由系数 $-\\frac{9}{2}$、$y$ 指数 $2$ 及总次数 $3$ 得 $x$ 指数为 $1$，写出 $-\\frac{9}{2}xy^{2}$。',
       status: 'published'
     },
-    // =========================================================================
-    // P47（4.1.2 多项式：识别多项式与整式并确定项数、次数与常数项 — 12 题 / 12 条记录）
-    // =========================================================================
     {
       questionId: 'g7_2_56',
       procedureId: 'P47',
@@ -14472,9 +14283,6 @@
       visibility: 'bank_only',
       status: 'published'
     },
-    // =========================================================================
-    // P48（4.1.2 多项式：由单项式、多项式的次数与项数求参数 — 12 题 / 13 条记录）
-    // =========================================================================
     {
       questionId: 'g7_2_45',
       procedureId: 'P48',
@@ -14626,9 +14434,6 @@
       operationSummary: '由次数为 $3$ 得 $m+2=3\\Rightarrow  m=1$，由项数为 $2$ 得 $n+3=0\\Rightarrow  n=-3$，算得 $\\frac{m}{n}=-\\frac{1}{3}$。',
       status: 'published'
     },
-    // =========================================================================
-    // P49（4.2.1 合并同类项：识别同类项与由同类项定义求参数 — 12 题 / 13 条记录）
-    // =========================================================================
     {
       questionId: 'g7_2_74',
       procedureId: 'P49',
@@ -14783,9 +14588,6 @@
       visibility: 'bank_only',
       status: 'published'
     },
-    // =========================================================================
-    // P51（4.2.1 合并同类项：运用合并同类项法则化简整式与直接代入求值 — 8 题 / 10 条记录）
-    // =========================================================================
     {
       questionId: 'ch4_test_2',
       procedureId: 'P51',
@@ -14903,9 +14705,6 @@
       operationSummary: '合并同类项得 $x-1$（$x^{2}$ 项抵消），再代入 $x=1$ 得 $0$。',
       status: 'published'
     },
-    // =========================================================================
-    // P28（4.2.2 去括号：运用去括号法则与合并同类项进行整式加减与直接代入求值 — 12 题 / 25 条记录）
-    // =========================================================================
     {
       questionId: 'g7_2_75',
       procedureId: 'P28',
@@ -15239,9 +15038,6 @@
       visibility: 'bank_only',
       status: 'published'
     },
-    // =========================================================================
-    // P50（4.2.2 去括号：整式加减中“与某字母无关/不含某项”的参数求解 — 10 题 / 11 条记录）
-    // =========================================================================
     {
       questionId: 'ch4_2_1_13',
       procedureId: 'P50',
@@ -15369,9 +15165,6 @@
       visibility: 'bank_only',
       status: 'published'
     },
-    // =========================================================================
-    // P45（4.2.3 整式加减的应用：几何周长面积与实际数量整式化简求值 — 10 题 / 10 条记录）
-    // =========================================================================
     {
       questionId: 'ch4_2_3_b_q1',
       procedureId: 'P45',
@@ -15492,33 +15285,30 @@
       sortOrder: 1,
       order: 1,
       role: 'primary',
-      subType: 'P52_chord_id',
-      operationSummary: '逐条核对线段两端点是否都在圆周上，识别出 $\odot O$ 的弦。',
-      visibility: 'bank_only',
+      subType: 'P52_G1_chord_and_arc_id',
+      operationSummary: '核对各线段两端点是否均在圆周上，判定两端点均在圆上的线段 AB 为圆 O 的弦。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_g_q6',
+      procedureId: 'P52',
+      partId: null,
+      sortOrder: 2,
+      order: 2,
+      role: 'primary',
+      subType: 'P52_G1_chord_and_arc_id',
+      operationSummary: '核对端点在圆周上的线段写出弦与直径，并以半圆为界写出以 A 为端点的劣弧与优弧。',
       status: 'published'
     },
     {
       questionId: 'ch29_1_1_b_q3',
       procedureId: 'P52',
       partId: null,
-      sortOrder: 2,
-      order: 2,
-      role: 'primary',
-      subType: 'P52_chord_count',
-      operationSummary: '排除端点在圆心或圆外的线段，数出图中两端点均在 $\odot O$ 上的弦的条数。',
-      visibility: 'bank_only',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_1_1_b_q4',
-      procedureId: 'P52',
-      partId: null,
       sortOrder: 3,
       order: 3,
       role: 'primary',
-      subType: 'P52_chord_count',
-      operationSummary: '连同经过圆心的直径一起统计，数出图中 $\odot O$ 的全部弦。',
-      visibility: 'bank_only',
+      subType: 'P52_G2_chord_count',
+      operationSummary: '依据弦的定义筛选两端点均在圆 O 上的线段（AB、DB、CB、CD），汇总得共 4 条弦。',
       status: 'published'
     },
     {
@@ -15528,9 +15318,8 @@
       sortOrder: 4,
       order: 4,
       role: 'primary',
-      subType: 'P52_chord_count',
-      operationSummary: '由 $A,B,C,D$ 四点都在圆上，核对图中实际连出的圆上两两点线段条数。',
-      visibility: 'bank_only',
+      subType: 'P52_G2_chord_count',
+      operationSummary: '确认 A、B、C、D 在圆上，找出图中连出的圆上两点线段 AB、CD、BD，统计共 3 条弦。',
       status: 'published'
     },
     {
@@ -15540,135 +15329,143 @@
       sortOrder: 5,
       order: 5,
       role: 'primary',
-      subType: 'P52_chord_count',
-      operationSummary: '排查非圆上端点线段，数出图中所有两端点均在圆上的弦。',
-      status: 'published',
-      visibility: 'bank_only'
-    },
-    {
-      questionId: 'ch29_1_1_g_q6',
-      procedureId: 'P52',
-      partId: null,
-      sortOrder: 6,
-      order: 6,
-      role: 'primary',
-      subType: 'P52_chord_arc_id',
-      operationSummary: '依次识别图中的弦、过圆心的直径 $BC$，以及以 $A$ 为端点的劣弧与优弧。',
-      visibility: 'bank_only',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_1_1_g_q1',
-      procedureId: 'P52',
-      partId: null,
-      sortOrder: 7,
-      order: 7,
-      role: 'primary',
-      subType: 'P52_concept_judge',
-      operationSummary: '逐项核对直径与弦、半圆与弧、等弧必须完全重合等概念，选出错误结论。',
-      visibility: 'bank_only',
+      subType: 'P52_G2_chord_count',
+      operationSummary: '排查图中两端点均在圆周上的线段（含经过圆心的直径 BC），统计得弦共 3 条。',
       status: 'published'
     },
     {
       questionId: 'ch29_1_1_g_q2',
       procedureId: 'P52',
       partId: null,
-      sortOrder: 8,
-      order: 8,
+      sortOrder: 6,
+      order: 6,
       role: 'primary',
-      subType: 'P52_concept_judge',
-      operationSummary: '辨析圆的弦、直径、优劣弧与等弧定义，找出不正确说法。',
-      visibility: 'bank_only',
+      subType: 'P52_G3_concept_judge',
+      operationSummary: '核对直径、等圆、等弧定义，辨析非直径弦所对两弧一优一劣不一定是等弧，判定错误选项。',
       status: 'published'
     },
     {
       questionId: 'ch29_1_1_t_q1',
       procedureId: 'P52',
       partId: null,
-      sortOrder: 9,
-      order: 9,
+      sortOrder: 7,
+      order: 7,
       role: 'primary',
-      subType: 'P52_concept_judge',
-      operationSummary: '依据“直径是最长的弦”“等弧须能完全重合”等概念判断正确选项。',
-      visibility: 'bank_only',
+      subType: 'P52_G3_concept_judge',
+      operationSummary: '辨析直径与弦的包含关系、等弦所对弧的优劣与同圆前提，确认同圆中直径是半径的 2 倍。',
       status: 'published'
     },
     {
       questionId: 'ch29_1_1_t_q2',
       procedureId: 'P52',
       partId: null,
-      sortOrder: 10,
-      order: 10,
+      sortOrder: 8,
+      order: 8,
       role: 'primary',
-      subType: 'P52_concept_judge',
-      operationSummary: '核对弦与直径包含关系及半圆、优弧、劣弧定义，找出错误说法。',
-      status: 'published',
-      visibility: 'bank_only'
+      subType: 'P52_G3_concept_judge',
+      operationSummary: '核对直径是最长弦、半圆是弧及半径相等性质，依据等弧须完全重合判定错误选项。',
+      status: 'published'
     },
     {
       questionId: 'ch29_1_1_t_q5',
       procedureId: 'P52',
       partId: null,
-      sortOrder: 11,
-      order: 11,
+      sortOrder: 9,
+      order: 9,
       role: 'primary',
-      subType: 'P52_max_chord',
-      operationSummary: '由直径是最长的弦，已知半径 $r = 3$ 直接算出最长弦长 $2r = 6$。',
+      subType: 'P52_G4_max_chord_calc',
+      operationSummary: '依据“直径是圆中最长的弦”，由半径 r=3 计算直径 2r=6 得最长弦长。',
       status: 'published'
     },
     {
       questionId: 'ch29_1_1_g_q7',
       procedureId: 'P52',
       partId: null,
-      sortOrder: 12,
-      order: 12,
+      sortOrder: 10,
+      order: 10,
       role: 'primary',
-      subType: 'P52_max_chord',
-      operationSummary: '最长弦即为直径 $d = 14\text{ cm}$，除以 $2$ 得此圆半径为 $7\text{ cm}$。',
+      subType: 'P52_G4_max_chord_calc',
+      operationSummary: '依据“直径是圆中最长的弦”，将最长弦 14 厘米确定为直径，除以 2 求得半径 7 厘米。',
       status: 'published'
     },
     {
       questionId: 'ch29_1_1_b_q7',
       procedureId: 'P52',
       partId: null,
-      sortOrder: 13,
-      order: 13,
+      sortOrder: 11,
+      order: 11,
       role: 'primary',
-      subType: 'P52_chord_range',
-      operationSummary: '由半径 $r = 5$ 得直径 $2r = 10$，结合弦长为正写出取值范围 $0 \lt a \le 10$。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_1_1_b_q5',
-      procedureId: 'P52',
-      partId: null,
-      sortOrder: 14,
-      order: 14,
-      role: 'primary',
-      subType: 'P52_chord_range',
-      operationSummary: '由半径 $r = 6$ 得弦长上限为直径 $12$，排除超过 $12$ 的不可能长度。',
+      subType: 'P52_G5_chord_range',
+      operationSummary: '由半径 r=5 求得直径（最长弦）为 10，结合弦长大于 0 且可取等号写出范围 0 < a ≤ 10。',
       status: 'published'
     },
     {
       questionId: 'ch29_1_1_g_q4',
       procedureId: 'P52',
       partId: null,
-      sortOrder: 15,
-      order: 15,
+      sortOrder: 12,
+      order: 12,
       role: 'primary',
-      subType: 'P52_chord_range',
-      operationSummary: '由半径 $r = 3$ 得最大弦长为 $6$，选出大于 $6$ 的不可能长度。',
+      subType: 'P52_G5_chord_range',
+      operationSummary: '由半径 r=3 确定弦长取值范围 0 < AB ≤ 6，对照选项排除大于 6 的不可能值 7。',
       status: 'published'
     },
     {
       questionId: 'ch29_1_1_g_q5',
       procedureId: 'P52',
       partId: null,
+      sortOrder: 13,
+      order: 13,
+      role: 'primary',
+      subType: 'P52_G5_chord_range',
+      operationSummary: '由半径 6 cm 得直径 12 cm，确定弦长范围 0 < AB ≤ 12，识别边界值 12 cm 可取等号。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_1_1_b_q4',
+      procedureId: 'P52',
+      partId: null,
+      sortOrder: 14,
+      order: 14,
+      role: 'primary',
+      subType: 'P52_G2_chord_count',
+      operationSummary: '连同经过圆心的直径一起统计，数出图中 $\odot O$ 的全部弦。',
+      status: 'published',
+      visibility: 'bank_only'
+    },
+    {
+      questionId: 'ch29_1_1_g_q1',
+      procedureId: 'P52',
+      partId: null,
+      sortOrder: 15,
+      order: 15,
+      role: 'primary',
+      subType: 'P52_G3_concept_judge',
+      operationSummary: '逐项核对直径与弦、半圆与弧、等弧必须完全重合等概念，选出错误结论。',
+      status: 'published',
+      visibility: 'bank_only'
+    },
+    {
+      questionId: 'ch29_1_1_b_q5',
+      procedureId: 'P52',
+      partId: null,
       sortOrder: 16,
       order: 16,
       role: 'primary',
-      subType: 'P52_chord_range',
-      operationSummary: '由半径 $r = 6\text{ cm}$ 得弦长范围为 $0 \lt AB \le 12\text{ cm}$，筛选符合条件的测量值。',
+      subType: 'P52_G5_chord_range',
+      operationSummary: '由半径 $r = 6$ 得弦长上限为直径 $12$，排除超过 $12$ 的不可能长度。',
+      status: 'published',
+      visibility: 'bank_only'
+    },
+    {
+      questionId: 'ch29_1_1_t_q4',
+      procedureId: 'P52',
+      partId: null,
+      sortOrder: 17,
+      order: 17,
+      role: 'primary',
+      subType: 'P52_G5_chord_range',
+      operationSummary: '由直径是最长的弦知 AP≤4，排除不可能值。',
       status: 'published',
       visibility: 'bank_only'
     },
@@ -15859,7 +15656,7 @@
       subType: 'P53_max_min_cases',
       operationSummary: '分类讨论点在圆外得 $r = \frac{10-4}{2} = 3\text{ cm}$，在圆内得 $r = \frac{10+4}{2} = 7\text{ cm}$。',
       status: 'published'
-    }    ,
+    },
     {
       questionId: 'ch27_2_2_hw_q15',
       procedureId: 'P57',
@@ -21482,39 +21279,6 @@
       status: 'published'
     },
     {
-      questionId: 'ch29_1_1_b_q1',
-      procedureId: 'P52',
-      partId: null,
-      sortOrder: 17,
-      order: 17,
-      role: 'primary',
-      subType: 'P52_standard',
-      operationSummary: '对照弦、弧、弓形与扇形定义辨识图形。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_1_1_b_q6',
-      procedureId: 'P52',
-      partId: null,
-      sortOrder: 18,
-      order: 18,
-      role: 'primary',
-      subType: 'P52_standard',
-      operationSummary: '连半径构等腰三角形结合外角性质求 ∠A=25°。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_1_1_b_q8',
-      procedureId: 'P52',
-      partId: null,
-      sortOrder: 19,
-      order: 19,
-      role: 'primary',
-      subType: 'P52_standard',
-      operationSummary: '依据圆的集合定义用阴影表示到定点距离 ≤2cm 的点集。',
-      status: 'published'
-    },
-    {
       questionId: 'ch29_1_1_b_q14',
       procedureId: 'P81',
       partId: '(1)',
@@ -21523,17 +21287,6 @@
       role: 'secondary',
       subType: 'P81_standard',
       operationSummary: '尺规作斜边中垂线定外心作出外接圆。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_1_1_b_q14',
-      procedureId: 'P52',
-      partId: '(2)',
-      sortOrder: 20,
-      order: 20,
-      role: 'primary',
-      subType: 'P52_standard',
-      operationSummary: '写出圆中的劣弧 AC、BC。',
       status: 'published'
     },
     {
@@ -21581,17 +21334,6 @@
       status: 'published'
     },
     {
-      questionId: 'ch29_1_1_g_q8',
-      procedureId: 'P52',
-      partId: null,
-      sortOrder: 21,
-      order: 21,
-      role: 'primary',
-      subType: 'P52_standard',
-      operationSummary: '连半径 OC、OD 用三角形三边关系证明直径是最长的弦。',
-      status: 'published'
-    },
-    {
       questionId: 'ch29_1_1_g_q10',
       procedureId: 'P53',
       partId: null,
@@ -21633,39 +21375,6 @@
       role: 'primary',
       subType: 'P53_standard',
       operationSummary: '算 MD 与半径并比较判定点 D 在圆内。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_1_1_t_q4',
-      procedureId: 'P52',
-      partId: null,
-      sortOrder: 22,
-      order: 22,
-      role: 'primary',
-      subType: 'P52_standard',
-      operationSummary: '由直径是最长的弦知 AP≤4，排除不可能值。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_1_1_t_q6',
-      procedureId: 'P52',
-      partId: null,
-      sortOrder: 23,
-      order: 23,
-      role: 'primary',
-      subType: 'P52_standard',
-      operationSummary: '结合圆心到圆周各点距离相等解释车轮平稳原理②③。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_1_1_t_q8',
-      procedureId: 'P52',
-      partId: null,
-      sortOrder: 24,
-      order: 24,
-      role: 'primary',
-      subType: 'P52_standard',
-      operationSummary: '系统梳理圆、弦、直径、弧与等弧基本概念。',
       status: 'published'
     },
     {
@@ -22857,300 +22566,309 @@
       status: 'published'
     },
     {
-      questionId: 'ch29_2_1_b_q1',
+      questionId: 'ch29_2_1_b_q3',
       procedureId: 'P83',
       partId: null,
       sortOrder: 1,
       order: 1,
       role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '构造垂径直角三角形用勾股定理求半径、弦长或弦心距。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_1_b_q2',
-      procedureId: 'P83',
-      partId: null,
-      sortOrder: 2,
-      order: 2,
-      role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '构造垂径直角三角形用勾股定理求半径、弦长或弦心距。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_1_b_q3',
-      procedureId: 'P83',
-      partId: null,
-      sortOrder: 3,
-      order: 3,
-      role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '构造垂径直角三角形用勾股定理求半径、弦长或弦心距。',
+      subType: 'P83_G1_direct_pythagoras',
+      operationSummary: '连接半径 OA、OB，由 C 为弦 AB 中点及垂径定理推论得 AC=3、OC⊥AB，在 Rt△AOC 中用勾股定理算得 OA=5。',
       status: 'published'
     },
     {
       questionId: 'ch29_2_1_b_q4',
       procedureId: 'P83',
       partId: null,
-      sortOrder: 4,
-      order: 4,
+      sortOrder: 2,
+      order: 2,
       role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '构造垂径直角三角形用勾股定理求半径、弦长或弦心距。',
+      subType: 'P83_G1_direct_pythagoras',
+      operationSummary: '连接半径 OC，由直径 AB=10 得半径 5 及弦心距 OE=3，在 Rt△COE 中用勾股定理求半弦 CE=4，得弦长 CD=8。',
       status: 'published'
     },
     {
-      questionId: 'ch29_2_1_b_q5',
+      questionId: 'ch29_2_1_b_q1',
       procedureId: 'P83',
       partId: null,
-      sortOrder: 5,
-      order: 5,
+      sortOrder: 3,
+      order: 3,
       role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '构造垂径直角三角形用勾股定理求半径、弦长或弦心距。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_1_b_q6',
-      procedureId: 'P83',
-      partId: null,
-      sortOrder: 6,
-      order: 6,
-      role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '构造垂径直角三角形用勾股定理求半径、弦长或弦心距。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_1_b_q7',
-      procedureId: 'P83',
-      partId: null,
-      sortOrder: 7,
-      order: 7,
-      role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '构造垂径直角三角形用勾股定理求半径、弦长或弦心距。',
+      subType: 'P83_G1_direct_pythagoras',
+      operationSummary: '由直径 AB=4 得半径 2，由 CD 垂直平分 OA 得 OE=1，在 Rt△OEC 中用勾股定理求半弦 CE=√3，得 CD=2√3。',
       status: 'published'
     },
     {
       questionId: 'ch29_2_1_b_q8',
       procedureId: 'P83',
       partId: null,
-      sortOrder: 8,
-      order: 8,
-      role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '构造垂径直角三角形用勾股定理求半径、弦长或弦心距。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_1_b_q9',
-      procedureId: 'P83',
-      partId: null,
-      sortOrder: 9,
-      order: 9,
-      role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '构造垂径直角三角形用勾股定理求半径、弦长或弦心距。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_1_b_q10',
-      procedureId: 'P84',
-      partId: null,
-      sortOrder: 1,
-      order: 1,
-      role: 'primary',
-      subType: 'P84_standard',
-      operationSummary: '抽象实际圆弧模型，设半径列垂径勾股方程求解。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_1_b_q11',
-      procedureId: 'P84',
-      partId: null,
-      sortOrder: 2,
-      order: 2,
-      role: 'primary',
-      subType: 'P84_standard',
-      operationSummary: '抽象实际圆弧模型，设半径列垂径勾股方程求解。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_1_b_q12',
-      procedureId: 'P84',
-      partId: null,
-      sortOrder: 3,
-      order: 3,
-      role: 'primary',
-      subType: 'P84_standard',
-      operationSummary: '抽象实际圆弧模型，设半径列垂径勾股方程求解。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_1_b_q13',
-      procedureId: 'P84',
-      partId: null,
       sortOrder: 4,
       order: 4,
       role: 'primary',
-      subType: 'P84_standard',
-      operationSummary: '抽象实际圆弧模型，设半径列垂径勾股方程求解。',
+      subType: 'P83_G2_equation_pythagoras',
+      operationSummary: '连接半径 OD 并设半径为 r，由垂径定理得半弦 DE=4、弦心距 OE=r-2，在 Rt△ODE 中列勾股方程 (r-2)²+4²=r² 解得 r=5。',
       status: 'published'
     },
     {
-      questionId: 'ch29_2_1_b_q14',
-      procedureId: 'P84',
+      questionId: 'ch29_2_1_t_q3',
+      procedureId: 'P83',
       partId: null,
       sortOrder: 5,
       order: 5,
       role: 'primary',
-      subType: 'P84_standard',
-      operationSummary: '抽象实际圆弧模型，设半径列垂径勾股方程求解。',
+      subType: 'P83_G2_equation_pythagoras',
+      operationSummary: '连接 OA 并设半径为 r，由 D 为 AB 中点得 AD=4、OD=6-r，在 Rt△AOD 中列方程 r²=(6-r)²+4² 解得 r=13/3，求得 OD=5/3 cm。',
       status: 'published'
     },
     {
-      questionId: 'ch29_2_1_b_q15',
-      procedureId: 'P84',
-      partId: null,
+      questionId: 'ch29_2_1_g_q8',
+      procedureId: 'P83',
+      partId: '(1)',
       sortOrder: 6,
       order: 6,
       role: 'primary',
-      subType: 'P84_standard',
-      operationSummary: '抽象实际圆弧模型，设半径列垂径勾股方程求解。',
+      subType: 'P83_G2_equation_pythagoras',
+      operationSummary: '连接半径 CO，由垂径定理得 CE=3、E 为 OA 中点得 OE=r/2，在 Rt△OEC 中列勾股方程 (r/2)²+3²=r² 解得半径 r=2√3。',
       status: 'published'
     },
     {
-      questionId: 'ch29_2_1_g_q1',
+      questionId: 'ch29_2_1_b_q2',
       procedureId: 'P83',
       partId: null,
-      sortOrder: 10,
-      order: 10,
+      sortOrder: 7,
+      order: 7,
       role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '构造垂径直角三角形用勾股定理求半径、弦长或弦心距。',
+      subType: 'P83_G3_parallel_chords',
+      operationSummary: '过 O 作平行弦垂线并连半径，由半径 5 cm 及半弦 4 cm、3 cm 算得弦心距 3 cm 与 4 cm，分圆心在两弦之间与不在之间两类得 7 cm 或 1 cm。',
       status: 'published'
     },
     {
-      questionId: 'ch29_2_1_g_q2',
+      questionId: 'ch29_2_1_b_q5',
       procedureId: 'P83',
       partId: null,
-      sortOrder: 11,
-      order: 11,
+      sortOrder: 8,
+      order: 8,
       role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '构造垂径直角三角形用勾股定理求半径、弦长或弦心距。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_1_g_q3',
-      procedureId: 'P83',
-      partId: null,
-      sortOrder: 12,
-      order: 12,
-      role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '构造垂径直角三角形用勾股定理求半径、弦长或弦心距。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_1_g_q4',
-      procedureId: 'P83',
-      partId: null,
-      sortOrder: 13,
-      order: 13,
-      role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '构造垂径直角三角形用勾股定理求半径、弦长或弦心距。',
+      subType: 'P83_G3_parallel_chords',
+      operationSummary: '过 O 作两平行弦垂线并连半径，由半弦 12、5 用勾股定理算得弦心距 12 与 5，分同侧与异侧两类求得距离 7 或 17。',
       status: 'published'
     },
     {
       questionId: 'ch29_2_1_g_q5',
       procedureId: 'P83',
       partId: null,
-      sortOrder: 14,
-      order: 14,
+      sortOrder: 9,
+      order: 9,
       role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '构造垂径直角三角形用勾股定理求半径、弦长或弦心距。',
+      subType: 'P83_G3_parallel_chords',
+      operationSummary: '分别过 O 作两平行弦垂线，由半弦 3√2、3√3 用勾股定理算得弦心距 3√2 cm 与 3 cm，分同侧与异侧两类得 (3√2-3) cm 或 (3√2+3) cm。',
       status: 'published'
     },
     {
       questionId: 'ch29_2_1_g_q6',
       procedureId: 'P83',
       partId: null,
-      sortOrder: 15,
-      order: 15,
+      sortOrder: 10,
+      order: 10,
       role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '构造垂径直角三角形用勾股定理求半径、弦长或弦心距。',
+      subType: 'P83_G4_concentric_circles',
+      operationSummary: '作公共垂线 OE⊥AB 并连 OA、OC，在大圆直角三角形中算得公共弦心距 OE=6，在小圆直角三角形中求得 CE=√13，得 CD=2√13。',
       status: 'published'
     },
     {
-      questionId: 'ch29_2_1_g_q7',
+      questionId: 'ch29_2_1_t_q6',
+      procedureId: 'P83',
+      partId: null,
+      sortOrder: 11,
+      order: 11,
+      role: 'primary',
+      subType: 'P83_G4_concentric_circles',
+      operationSummary: '作公共垂线 OH⊥AB 并设 OC=r、OA=2r，由半弦 CH=2、AH=6 利用公共弦心距 OH² 列双勾股方程 r²-2²=4r²-6² 解得 r=4√6/3。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_2_1_t_q9',
+      procedureId: 'P83',
+      partId: '(2)',
+      sortOrder: 12,
+      order: 12,
+      role: 'primary',
+      subType: 'P83_G4_concentric_circles',
+      operationSummary: '连接 AO、CO，结合垂径垂线 OE=3 分别在大小圆直角三角形中用勾股定理求得 AE=√91、CE=3√3，作差得 AC=√91-3√3。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_2_1_g_q3',
+      procedureId: 'P83',
+      partId: null,
+      sortOrder: 13,
+      order: 13,
+      role: 'primary',
+      subType: 'P83_G1_direct_pythagoras',
+      operationSummary: '构造垂径直角三角形用勾股定理求半径、弦长或弦心距。',
+      status: 'published',
+      visibility: 'bank_only'
+    },
+    {
+      questionId: 'ch29_2_1_g_q4',
+      procedureId: 'P83',
+      partId: null,
+      sortOrder: 14,
+      order: 14,
+      role: 'primary',
+      subType: 'P83_G1_direct_pythagoras',
+      operationSummary: '构造垂径直角三角形用勾股定理求半径、弦长或弦心距。',
+      status: 'published',
+      visibility: 'bank_only'
+    },
+    {
+      questionId: 'ch29_2_1_t_q1',
+      procedureId: 'P83',
+      partId: null,
+      sortOrder: 15,
+      order: 15,
+      role: 'primary',
+      subType: 'P83_G1_direct_pythagoras',
+      operationSummary: '构造垂径直角三角形用勾股定理求半径、弦长或弦心距。',
+      status: 'published',
+      visibility: 'bank_only'
+    },
+    {
+      questionId: 'ch29_2_1_b_q9',
       procedureId: 'P83',
       partId: null,
       sortOrder: 16,
       order: 16,
       role: 'primary',
-      subType: 'P83_standard',
+      subType: 'P83_G2_equation_pythagoras',
       operationSummary: '构造垂径直角三角形用勾股定理求半径、弦长或弦心距。',
-      status: 'published'
+      status: 'published',
+      visibility: 'bank_only'
     },
     {
-      questionId: 'ch29_2_1_g_q8',
+      questionId: 'ch29_2_1_g_q2',
       procedureId: 'P83',
-      partId: '(1)',
+      partId: null,
       sortOrder: 17,
       order: 17,
       role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '由垂径定理与中点列勾股方程求半径 2√3。',
-      status: 'published'
+      subType: 'P83_G2_equation_pythagoras',
+      operationSummary: '构造垂径直角三角形用勾股定理求半径、弦长或弦心距。',
+      status: 'published',
+      visibility: 'bank_only'
     },
     {
-      questionId: 'ch29_2_1_g_q8',
+      questionId: 'ch29_2_1_t_q2',
       procedureId: 'P83',
-      partId: '(2)',
+      partId: null,
       sortOrder: 18,
       order: 18,
       role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '结合 30° 直角三角形求得 AF=√3。',
-      status: 'published'
+      subType: 'P83_G2_equation_pythagoras',
+      operationSummary: '构造垂径直角三角形用勾股定理求半径、弦长或弦心距。',
+      status: 'published',
+      visibility: 'bank_only'
+    },
+    {
+      questionId: 'ch29_2_1_t_q5',
+      procedureId: 'P83',
+      partId: null,
+      sortOrder: 19,
+      order: 19,
+      role: 'primary',
+      subType: 'P83_G2_equation_pythagoras',
+      operationSummary: '构造垂径直角三角形用勾股定理求半径、弦长或弦心距。',
+      status: 'published',
+      visibility: 'bank_only'
     },
     {
       questionId: 'ch29_2_1_g_q9',
       procedureId: 'P83',
       partId: '(1)',
-      sortOrder: 19,
-      order: 19,
+      sortOrder: 20,
+      order: 20,
       role: 'primary',
-      subType: 'P83_standard',
+      subType: 'P83_G1_direct_pythagoras',
       operationSummary: '作弦心距由垂径定理求得 BD=1。',
-      status: 'published'
+      status: 'published',
+      visibility: 'bank_only'
     },
     {
       questionId: 'ch29_2_1_g_q9',
       procedureId: 'P83',
       partId: '(2)',
-      sortOrder: 20,
-      order: 20,
-      role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '双勾股求得小圆半径 3√2。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_1_g_q10',
-      procedureId: 'P83',
-      partId: null,
       sortOrder: 21,
       order: 21,
       role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '构造垂径直角三角形用勾股定理求半径、弦长或弦心距。',
+      subType: 'P83_G2_equation_pythagoras',
+      operationSummary: '双勾股求得小圆半径 3√2。',
+      status: 'published',
+      visibility: 'bank_only'
+    },
+    {
+      questionId: 'ch29_2_1_b_q11',
+      procedureId: 'P84',
+      partId: null,
+      sortOrder: 1,
+      order: 1,
+      role: 'primary',
+      subType: 'P84_G1_minor_arc_radius',
+      operationSummary: '抽象石拱门为劣弧模型，由半弦 3 m、拱高 2 m 得弦心距 r-2，在 Rt△OAD 中列方程 r²=3²+(r-2)² 解得半径 13/4 米。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_2_1_g_q13',
+      procedureId: 'P84',
+      partId: null,
+      sortOrder: 2,
+      order: 2,
+      role: 'primary',
+      subType: 'P84_G1_minor_arc_radius',
+      operationSummary: '抽象筒车水下部分为劣弧模型，由水面半弦 3 m、最大深度 1 m 得弦心距 r-1，列方程 r²=(r-1)²+3² 解得半径 5 米。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_2_1_t_q15',
+      procedureId: 'P84',
+      partId: null,
+      sortOrder: 3,
+      order: 3,
+      role: 'primary',
+      subType: 'P84_G1_minor_arc_radius',
+      operationSummary: '抽象赵州桥主桥拱为劣弧模型，由半弦 15 m、拱高 5 m 得弦心距 r-5，列方程 r²-(r-5)²=15² 解得主桥拱半径 25 m。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_2_1_b_q10',
+      procedureId: 'P84',
+      partId: null,
+      sortOrder: 4,
+      order: 4,
+      role: 'primary',
+      subType: 'P84_G2_major_arc_radius',
+      operationSummary: '抽象隧道截面为优弧模型，由半弦 1 m、总高 3 m 得弦心距 3-r，在 Rt△ACO 中列方程 1²+(3-r)²=r² 解得半径 5/3 m。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_2_1_b_q13',
+      procedureId: 'P84',
+      partId: null,
+      sortOrder: 5,
+      order: 5,
+      role: 'primary',
+      subType: 'P84_G2_major_arc_radius',
+      operationSummary: '抽象月洞门为优弧模型，由半弦 1.5 m、拱高 2.5 m 得弦心距 2.5-r，列方程 r²=(2.5-r)²+1.5² 解得半径 1.7 m。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_2_1_b_q14',
+      procedureId: 'P84',
+      partId: null,
+      sortOrder: 6,
+      order: 6,
+      role: 'primary',
+      subType: 'P84_G2_major_arc_radius',
+      operationSummary: '抽象公路隧道截面为优弧模型，由半弦 5 m、最大高度 8 m 得弦心距 8-x，列方程 x²=(8-x)²+5² 解得半径 89/16 m。',
       status: 'published'
     },
     {
@@ -23160,207 +22878,65 @@
       sortOrder: 7,
       order: 7,
       role: 'primary',
-      subType: 'P84_standard',
-      operationSummary: '抽象实际圆弧模型，设半径列垂径勾股方程求解。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_1_g_q12',
-      procedureId: 'P84',
-      partId: null,
-      sortOrder: 8,
-      order: 8,
-      role: 'primary',
-      subType: 'P84_standard',
-      operationSummary: '抽象实际圆弧模型，设半径列垂径勾股方程求解。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_1_g_q13',
-      procedureId: 'P84',
-      partId: null,
-      sortOrder: 9,
-      order: 9,
-      role: 'primary',
-      subType: 'P84_standard',
-      operationSummary: '抽象实际圆弧模型，设半径列垂径勾股方程求解。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_1_g_q14',
-      procedureId: 'P84',
-      partId: null,
-      sortOrder: 10,
-      order: 10,
-      role: 'primary',
-      subType: 'P84_standard',
-      operationSummary: '抽象实际圆弧模型，设半径列垂径勾股方程求解。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_1_g_q15',
-      procedureId: 'P84',
-      partId: null,
-      sortOrder: 11,
-      order: 11,
-      role: 'primary',
-      subType: 'P84_standard',
-      operationSummary: '抽象实际圆弧模型，设半径列垂径勾股方程求解。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_1_t_q1',
-      procedureId: 'P83',
-      partId: null,
-      sortOrder: 22,
-      order: 22,
-      role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '构造垂径直角三角形用勾股定理求半径、弦长或弦心距。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_1_t_q2',
-      procedureId: 'P83',
-      partId: null,
-      sortOrder: 23,
-      order: 23,
-      role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '构造垂径直角三角形用勾股定理求半径、弦长或弦心距。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_1_t_q3',
-      procedureId: 'P83',
-      partId: null,
-      sortOrder: 24,
-      order: 24,
-      role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '构造垂径直角三角形用勾股定理求半径、弦长或弦心距。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_1_t_q4',
-      procedureId: 'P83',
-      partId: null,
-      sortOrder: 25,
-      order: 25,
-      role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '构造垂径直角三角形用勾股定理求半径、弦长或弦心距。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_1_t_q5',
-      procedureId: 'P83',
-      partId: null,
-      sortOrder: 26,
-      order: 26,
-      role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '构造垂径直角三角形用勾股定理求半径、弦长或弦心距。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_1_t_q6',
-      procedureId: 'P83',
-      partId: null,
-      sortOrder: 27,
-      order: 27,
-      role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '构造垂径直角三角形用勾股定理求半径、弦长或弦心距。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_1_t_q7',
-      procedureId: 'P83',
-      partId: null,
-      sortOrder: 28,
-      order: 28,
-      role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '构造垂径直角三角形用勾股定理求半径、弦长或弦心距。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_1_t_q8',
-      procedureId: 'P83',
-      partId: '(1)',
-      sortOrder: 29,
-      order: 29,
-      role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '作双垂线构造矩形与直角三角形求 CD=√41+1。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_1_t_q8',
-      procedureId: 'P83',
-      partId: '(2)',
-      sortOrder: 30,
-      order: 30,
-      role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '结合垂径与勾股求 AC+CD 最大值 18。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_1_t_q9',
-      procedureId: 'P83',
-      partId: '(1)',
-      sortOrder: 31,
-      order: 31,
-      role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '作公共弦垂线用垂径定理证 AC=BD。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_1_t_q9',
-      procedureId: 'P83',
-      partId: '(2)',
-      sortOrder: 32,
-      order: 32,
-      role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '双勾股算得 AC=√91-3√3。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_1_t_q10',
-      procedureId: 'P83',
-      partId: '(1)',
-      sortOrder: 33,
-      order: 33,
-      role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '由 OD⊥BC 及垂径定理证点 D 为弧 BC 中点。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_1_t_q10',
-      procedureId: 'P83',
-      partId: '(2)',
-      sortOrder: 34,
-      order: 34,
-      role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '结合中位线与半径差求 DE=2。',
+      subType: 'P84_G3_minor_arc_diameter',
+      operationSummary: '抽象筒车截面为劣弧模型，由半弦 4 m、水下深度 2 m 列方程 (r-2)²+4²=r² 解得 r=5，核对所求为直径得 2r=10 m。',
       status: 'published'
     },
     {
       questionId: 'ch29_2_1_t_q11',
       procedureId: 'P84',
       partId: null,
+      sortOrder: 8,
+      order: 8,
+      role: 'primary',
+      subType: 'P84_G3_minor_arc_diameter',
+      operationSummary: '抽象“圆材埋壁”为劣弧模型，由半弦 4 寸、锯口深 2 寸列方程 r²=4²+(r-2)² 解得 r=5，核对所求为直径得 2r=10 寸。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_2_1_t_q14',
+      procedureId: 'P84',
+      partId: null,
+      sortOrder: 9,
+      order: 9,
+      role: 'primary',
+      subType: 'P84_G3_minor_arc_diameter',
+      operationSummary: '抽象“圆材埋壁”为劣弧模型并统一单位（1 尺=10 寸），由半弦 5 寸、锯口深 1 寸列方程解得 r=13，求得直径 2r=26 寸。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_2_1_b_q12',
+      procedureId: 'P84',
+      partId: null,
+      sortOrder: 10,
+      order: 10,
+      role: 'primary',
+      subType: 'P84_G4_arc_direct_calc',
+      operationSummary: '抽象球形烧瓶液面过半为优弧模型，由半径 5 cm、最大深度 8 cm 得弦心距 3 cm，用勾股定理求半弦 4 cm，得液面宽 AB=8 cm。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_2_1_b_q15',
+      procedureId: 'P84',
+      partId: null,
+      sortOrder: 11,
+      order: 11,
+      role: 'primary',
+      subType: 'P84_G4_arc_direct_calc',
+      operationSummary: '抽象管道水面截面，由水面宽 6 得半弦 AD=3、弦心距 OD=3，在 Rt△AOD 中由勾股定理直接求得半径 AO=3√2。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch29_2_1_g_q15',
+      procedureId: 'P84',
+      partId: null,
       sortOrder: 12,
       order: 12,
       role: 'primary',
-      subType: 'P84_standard',
+      subType: 'P84_G1_minor_arc_radius',
       operationSummary: '抽象实际圆弧模型，设半径列垂径勾股方程求解。',
-      status: 'published'
+      status: 'published',
+      visibility: 'bank_only'
     },
     {
       questionId: 'ch29_2_1_t_q12',
@@ -23369,9 +22945,10 @@
       sortOrder: 13,
       order: 13,
       role: 'primary',
-      subType: 'P84_standard',
+      subType: 'P84_G1_minor_arc_radius',
       operationSummary: '抽象实际圆弧模型，设半径列垂径勾股方程求解。',
-      status: 'published'
+      status: 'published',
+      visibility: 'bank_only'
     },
     {
       questionId: 'ch29_2_1_t_q13',
@@ -23380,31 +22957,10 @@
       sortOrder: 14,
       order: 14,
       role: 'primary',
-      subType: 'P84_standard',
+      subType: 'P84_G2_major_arc_radius',
       operationSummary: '抽象实际圆弧模型，设半径列垂径勾股方程求解。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_1_t_q14',
-      procedureId: 'P84',
-      partId: null,
-      sortOrder: 15,
-      order: 15,
-      role: 'primary',
-      subType: 'P84_standard',
-      operationSummary: '抽象实际圆弧模型，设半径列垂径勾股方程求解。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_1_t_q15',
-      procedureId: 'P84',
-      partId: null,
-      sortOrder: 16,
-      order: 16,
-      role: 'primary',
-      subType: 'P84_standard',
-      operationSummary: '抽象实际圆弧模型，设半径列垂径勾股方程求解。',
-      status: 'published'
+      status: 'published',
+      visibility: 'bank_only'
     },
     {
       questionId: 'ch29_2_2_b_q1',
@@ -23870,17 +23426,6 @@
     },
     {
       questionId: 'ch29_2_2_t_q8',
-      procedureId: 'P83',
-      partId: null,
-      sortOrder: 35,
-      order: 35,
-      role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '由直径与等弦 AC=AD 用垂径推论及勾股求 CD。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_2_t_q8',
       procedureId: 'P85',
       partId: null,
       sortOrder: 43,
@@ -23910,17 +23455,6 @@
       role: 'primary',
       subType: 'P85_standard',
       operationSummary: '由二倍弧转化为等弧等弦关系。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_2_t_q10',
-      procedureId: 'P83',
-      partId: null,
-      sortOrder: 36,
-      order: 36,
-      role: 'secondary',
-      subType: 'P83_standard',
-      operationSummary: '作垂径双勾股求得观景台半径 25/6。',
       status: 'published'
     },
     {
@@ -23965,17 +23499,6 @@
       role: 'primary',
       subType: 'P85_standard',
       operationSummary: '由平行弦与圆心角相等证明弧 AC 等于弧 BD。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_2_t_q14',
-      procedureId: 'P83',
-      partId: '(2)',
-      sortOrder: 37,
-      order: 37,
-      role: 'primary',
-      subType: 'P83_standard',
-      operationSummary: '设半径用垂径定理与勾股方程求半径 10mm。',
       status: 'published'
     },
     {
@@ -24383,17 +23906,6 @@
       role: 'primary',
       subType: 'P86_standard',
       operationSummary: '用同弧圆周角相等与外角性质求 ∠B=26°。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_2_3_l1_g_q13',
-      procedureId: 'P83',
-      partId: '(2)',
-      sortOrder: 38,
-      order: 38,
-      role: 'secondary',
-      subType: 'P83_standard',
-      operationSummary: '作弦心距结合中位线求得 AD=8。',
       status: 'published'
     },
     {
@@ -25362,17 +24874,6 @@
       role: 'primary',
       subType: 'P90_standard',
       operationSummary: '求旋转半径 OA=√5 并算 90° 扇形面积 5π/4。',
-      status: 'published'
-    },
-    {
-      questionId: 'ch29_3_l1_t_q15',
-      procedureId: 'P83',
-      partId: '(1)',
-      sortOrder: 39,
-      order: 39,
-      role: 'secondary',
-      subType: 'P83_standard',
-      operationSummary: '由垂径定理推论证 OA⊥CD。',
       status: 'published'
     },
     {

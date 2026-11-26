@@ -21686,6 +21686,3619 @@
           "specificWrongHints": []
         }
       }
+    },
+    P92: {
+      "procedureId": "P92",
+      "title": "利用矩形边长关系与平移拼合列一元二次方程解面积问题",
+      "exampleTitle": "长 $12\\text{m}$、宽 $8\\text{m}$ 的长方形草坪规划两横两纵等宽石板小径，小径面积占总面积的 $\\frac{3}{8}$，求小径宽度 $x$",
+      "exampleFormula": "$(12-2x)(8-2x)=12\\times 8\\times\\left(1-\\frac{3}{8}\\right) \\implies x=1\\text{m}$",
+      "totalDuration": 22,
+      "scratchpadIdleHint": "旁白草稿演算区（平移拼合消除交叉重叠，按有效长×宽列方程并检验舍去越界根。）",
+      "practiceSectionTitle": "利用矩形边长关系与平移拼合列一元二次方程解面积问题跟做练习",
+      "practiceSectionSub": "完成以下两道关键操作练习",
+      "geometryDiagram": {
+        "title": "两横两纵小径平移拼合示意图",
+        "caption": "将两横两纵等宽小径平移至边界，有效草坪拼合成长 (12-2x)m、宽 (8-2x)m 的矩形",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <rect x=\"4\" y=\"4\" width=\"252\" height=\"167\" rx=\"10\" fill=\"#F8FAFC\" stroke=\"#E2E8F0\" stroke-width=\"1\" />\n            <rect x=\"22\" y=\"34\" width=\"94\" height=\"68\" fill=\"#CCFBF1\" stroke=\"#0F766E\" stroke-width=\"1.8\" />\n            <rect x=\"22\" y=\"52\" width=\"94\" height=\"8\" fill=\"#CBD5E1\" stroke=\"#64748B\" stroke-width=\"0.8\" />\n            <rect x=\"22\" y=\"76\" width=\"94\" height=\"8\" fill=\"#CBD5E1\" stroke=\"#64748B\" stroke-width=\"0.8\" />\n            <rect x=\"48\" y=\"34\" width=\"8\" height=\"68\" fill=\"#CBD5E1\" stroke=\"#64748B\" stroke-width=\"0.8\" />\n            <rect x=\"82\" y=\"34\" width=\"8\" height=\"68\" fill=\"#CBD5E1\" stroke=\"#64748B\" stroke-width=\"0.8\" />\n            <text x=\"56\" y=\"26\" fill=\"#0F766E\" font-size=\"10\" font-weight=\"700\">12m</text>\n            <text x=\"6\" y=\"72\" fill=\"#0F766E\" font-size=\"10\" font-weight=\"700\">8m</text>\n            <text x=\"122\" y=\"72\" fill=\"#D97706\" font-size=\"13\" font-weight=\"700\">→</text>\n            <g class=\"proc-geo-anim\" data-appear-at=\"1.8\" data-dur=\"0.8\" style=\"opacity:0;\">\n              <rect x=\"144\" y=\"34\" width=\"94\" height=\"68\" fill=\"#CBD5E1\" stroke=\"#64748B\" stroke-width=\"1.4\" />\n              <rect x=\"144\" y=\"34\" width=\"76\" height=\"50\" fill=\"#FEF3C7\" stroke=\"#D97706\" stroke-width=\"1.8\" />\n              <text x=\"156\" y=\"63\" fill=\"#B45309\" font-size=\"10\" font-weight=\"700\">有效面积 60</text>\n              <text x=\"158\" y=\"26\" fill=\"#B45309\" font-size=\"10\" font-weight=\"700\">12-2x</text>\n              <text x=\"148\" y=\"118\" fill=\"#475569\" font-size=\"9\" font-weight=\"700\">宽: 8-2x，边带各 2x</text>\n            </g>\n            <text x=\"24\" y=\"146\" fill=\"#334155\" font-size=\"10\" font-weight=\"700\">(12-2x)(8-2x) = 60  ⇒  x = 1（舍 9）</text>\n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "设元并用平移拼合表示有效长与宽",
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "explanation": "设小径宽为 $x\\text{m}$，将两横两纵小径平移至边界，有效草坪长为 $(12-2x)\\text{m}$、宽为 $(8-2x)\\text{m}$。"
+        },
+        {
+          "step": 2,
+          "name": "按“长×宽=目标面积”列方程并化简",
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "explanation": "有效草坪面积占 $1-\\frac{3}{8}=\\frac{5}{8}$，列 $(12-2x)(8-2x)=60$ 并化为 $x^{2}-10x+9=0$。"
+        },
+        {
+          "step": 3,
+          "name": "求解方程并结合实际尺寸检验舍根",
+          "tStart": 14.6,
+          "tEnd": 22,
+          "explanation": "因式分解得 $x_{1}=1, x_{2}=9$，由 $8-2x \\gt 0$ 得 $x \\lt 4$，舍去越界根 $9$，定解 $x=1\\text{m}$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 平移拼合表示有效长 $(12-2x)$ 与宽 $(8-2x)$"
+        },
+        {
+          "time": 8.3,
+          "step": 2,
+          "label": "2.1 列面积方程并整理为一般式 $x^{2}-10x+9=0$"
+        },
+        {
+          "time": 15.6,
+          "step": 3,
+          "label": "3.1 因式分解求解并按 $0 \\lt x \\lt 4$ 舍去越界根"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p92_r0",
+          "stepBadge": "第 1 步 · 平移拼合定长宽",
+          "appearAt": 1.5,
+          "tokens": [
+            {
+              "id": "p92_r0_t1",
+              "math": "设小径宽为 $x\\text{m}$，有效长 $= 12-2x$，有效宽 $= 8-2x$",
+              "appearAt": 1.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p92_r1",
+          "stepBadge": "第 2 步 · 列方程化一般式",
+          "appearAt": 8.0,
+          "tokens": [
+            {
+              "id": "p92_r1_t1",
+              "math": "$(12-2x)(8-2x)=12\\times 8\\times\\left(1-\\frac{3}{8}\\right)=60 \\implies x^{2}-10x+9=0$",
+              "appearAt": 8.1,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p92_r2",
+          "stepBadge": "第 3 步 · 求解并检验舍根",
+          "appearAt": 14.5,
+          "tokens": [
+            {
+              "id": "p92_r2_t1",
+              "math": "$(x-1)(x-9)=0 \\implies x_{1}=1, x_{2}=9$；因 $0 \\lt x \\lt 4$，舍去 $9$ 得 $x=1\\text{m}$",
+              "appearAt": 14.6,
+              "dur": 0.45
+            }
+          ],
+          "isConclusion": true
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p92_sp1",
+          "title": "核心要点速记",
+          "showStart": 1.5,
+          "showEnd": 21.8,
+          "tokens": [
+            {
+              "id": "p92_sp1_t1",
+              "math": "1. 平移拼合：$L_{\\text{新}}=a-mx$，$W_{\\text{新}}=b-nx$",
+              "appearAt": 1.8,
+              "dur": 0.4
+            },
+            {
+              "id": "p92_sp1_t2",
+              "math": "2. 有效面积：$L_{\\text{新}}\\cdot W_{\\text{新}}=S_{\\text{目标}}$",
+              "appearAt": 8.3,
+              "dur": 0.4
+            },
+            {
+              "id": "p92_sp1_t3",
+              "math": "3. 尺寸检验：$0 \\lt x \\lt \\min\\left(\\frac{a}{m},\\frac{b}{n}\\right)$",
+              "appearAt": 14.8,
+              "dur": 0.4
+            }
+          ],
+          "note": "切勿直接把横纵道路面积相加而忘减交叉重叠面积；解出两正根后务必检验是否超过原矩形宽。"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p92_r1_t1",
+          "tStart": 8.1,
+          "tEnd": 13.5,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p92_r2_t1",
+          "tStart": 14.6,
+          "tEnd": 20.0,
+          "color": "amber"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p92_svg1",
+          "type": "arrow",
+          "fromToken": "p92_r1_t1",
+          "toToken": "p92_r2_t1",
+          "label": "求解并舍越界根",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 14.7,
+          "tDrawEnd": 15.4,
+          "tFadeStart": 20.5,
+          "tEnd": 21.7
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "text": "第1步：将两横两纵等宽小径平移至草坪边缘，拼合成一个完整有效矩形，长为 $(12-2x)\\text{m}$、宽为 $(8-2x)\\text{m}$。",
+          "focusToken": "p92_r0_t1"
+        },
+        {
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "text": "第2步：有效草坪占总面积的 $1-\\frac{3}{8}=\\frac{5}{8}$，即 $60\\text{m}^{2}$，列方程 $(12-2x)(8-2x)=60$ 并化简为 $x^{2}-10x+9=0$。",
+          "focusToken": "p92_r1_t1"
+        },
+        {
+          "tStart": 14.6,
+          "tEnd": 22,
+          "text": "第3步：因式分解得 $x_{1}=1, x_{2}=9$，由有效宽 $8-2x \\gt 0$ 得 $x \\lt 4$，舍去越界根 $9$，故石板小径宽为 $1\\text{m}$。",
+          "focusToken": "p92_r2_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "长 $32\\text{m}$、宽 $20\\text{m}$ 的矩形农场内修筑一横一纵等宽道路，余下试验田面积为 $540\\text{m}^{2}$，设道路宽为 $x\\text{m}$，可列方程（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $(32-x)(20-x)=540$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $(32-2x)(20-x)=540$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $32\\times 20 - 32x - 20x = 540$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "一横一纵道路平移至边缘后，有效矩形长为 $(32-x)\\text{m}$、宽为 $(20-x)\\text{m}$，故 $(32-x)(20-x)=540$。"
+            ],
+            "summary": "平移拼合法自动扣除交叉重叠区域，直接用有效长乘有效宽列方程。"
+          },
+          "wrongTitle": "提示：请用平移拼合法检查横纵道路条数与重叠区",
+          "wrongFeedback": "一横一纵各一条道路，平移拼合后有效长为 $(32-x)$、有效宽为 $(20-x)$，应选 A。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "长 $100\\text{m}$、宽 $50\\text{m}$ 的矩形空地上修两横两纵等宽小路，余下花圃面积为 $3600\\text{m}^{2}$，则小路的宽 $x=$ ______ $\\text{m}$．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$x =$",
+          "input1Placeholder": "如 5",
+          "input1Suffix": "",
+          "expectedX": "5",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 5。",
+          "correctDetail": "列 $(100-2x)(50-2x)=3600$ 化简得 $x^{2}-75x+350=0$，解得 $x_{1}=5, x_{2}=70$，因 $50-2x \\gt 0$ 得 $x \\lt 25$，舍去 $70$ 得 $x=5$。",
+          "wrongFeedback": "由 $(100-2x)(50-2x)=3600$ 解得 $x=5$ 或 $70$，舍去越界根 $70$，答案为 5。",
+          "specificWrongHints": []
+        }
+      }
+    },
+    P93: {
+      "procedureId": "P93",
+      "title": "利用直角三角形/矩形双动点线段表示列一元二次方程解动态面积问题",
+      "exampleTitle": "$Rt\\triangle ABC$ 中 $\\angle B=90^{\\circ}, AB=6\\text{cm}, BC=8\\text{cm}$，$P$ 从 $A\\to B$（$1\\text{cm/s}$），$Q$ 从 $B\\to C$（$2\\text{cm/s}$），先到即停，求 $S_{\\triangle PBQ}=8\\text{cm}^{2}$ 时的时间 $t$",
+      "exampleFormula": "$BP=6-t, BQ=2t, 0\\le t\\le 4 \\implies \\frac{1}{2}(6-t)\\cdot 2t=8 \\implies t=2\\text{ 或 }4$",
+      "totalDuration": 22,
+      "scratchpadIdleHint": "旁白草稿演算区（先定“先到即停”时间区间，再表示动态边长列面积方程并核对区间舍根。）",
+      "practiceSectionTitle": "利用直角三角形/矩形双动点线段表示列一元二次方程解动态面积问题跟做练习",
+      "practiceSectionSub": "完成以下两道关键操作练习",
+      "geometryDiagram": {
+        "title": "直角三角形双动点面积变化示意图",
+        "caption": "P 沿 AB 向 B（1cm/s）、Q 沿 BC 向 C（2cm/s），先到即停得 0≤t≤4，动态面积 ½(6-t)·2t",
+        "svgHtml": "\n          <svg viewBox=\"0 0 260 175\" class=\"w-full max-w-[260px] h-auto select-none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <rect x=\"4\" y=\"4\" width=\"252\" height=\"167\" rx=\"10\" fill=\"#F8FAFC\" stroke=\"#E2E8F0\" stroke-width=\"1\" />\n            <polygon points=\"48,28 48,136 212,136\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"2\" />\n            <polyline points=\"48,124 60,124 60,136\" fill=\"none\" stroke=\"#0F766E\" stroke-width=\"1.4\" />\n            <polygon class=\"proc-geo-anim\" data-appear-at=\"1.8\" data-dur=\"0.8\" points=\"48,74 48,136 138,136\" fill=\"#FEF3C7\" fill-opacity=\"0.65\" stroke=\"#D97706\" stroke-width=\"2\" style=\"opacity:0;\" />\n            <circle cx=\"48\" cy=\"74\" r=\"3.5\" fill=\"#D97706\" />\n            <circle cx=\"138\" cy=\"136\" r=\"3.5\" fill=\"#D97706\" />\n            <text x=\"36\" y=\"26\" fill=\"#0F766E\" font-size=\"10\" font-weight=\"700\">A</text>\n            <text x=\"36\" y=\"146\" fill=\"#0F766E\" font-size=\"10\" font-weight=\"700\">B</text>\n            <text x=\"216\" y=\"146\" fill=\"#0F766E\" font-size=\"10\" font-weight=\"700\">C</text>\n            <text x=\"10\" y=\"56\" fill=\"#64748B\" font-size=\"9\" font-weight=\"700\">AP=t</text>\n            <text x=\"8\" y=\"108\" fill=\"#B45309\" font-size=\"9.5\" font-weight=\"700\">BP=6-t</text>\n            <text x=\"84\" y=\"152\" fill=\"#B45309\" font-size=\"9.5\" font-weight=\"700\">BQ=2t</text>\n            <text x=\"55\" y=\"76\" fill=\"#D97706\" font-size=\"10\" font-weight=\"700\">P↓</text>\n            <text x=\"134\" y=\"128\" fill=\"#D97706\" font-size=\"10\" font-weight=\"700\">Q→</text>\n            <text x=\"122\" y=\"52\" fill=\"#334155\" font-size=\"9.5\" font-weight=\"700\">0 ≤ t ≤ 4</text>\n          </svg>\n        "
+      },
+      "steps": [
+        {
+          "step": 1,
+          "name": "设运动时间 $t$，定取值范围并表示动态线段",
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "explanation": "$P$ 需 $6\\div 1=6\\text{s}$，$Q$ 需 $8\\div 2=4\\text{s}$，由“先到即停”得 $0\\le t\\le 4$，且 $BP=(6-t)\\text{cm}, BQ=2t\\text{cm}$。"
+        },
+        {
+          "step": 2,
+          "name": "代入面积公式列方程并化简",
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "explanation": "由 $S_{\\triangle PBQ}=\\frac{1}{2}BP\\cdot BQ=8$，列 $\\frac{1}{2}(6-t)\\cdot 2t=8$，整理得 $t^{2}-6t+8=0$。"
+        },
+        {
+          "step": 3,
+          "name": "求解方程并对照时间区间检验舍根",
+          "tStart": 14.6,
+          "tEnd": 22,
+          "explanation": "因式分解得 $(t-2)(t-4)=0$，解得 $t_{1}=2, t_{2}=4$，均满足 $0\\le t\\le 4$，故两解均保留。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 定区间 $0\\le t\\le 4$，表示 $BP=6-t$ 与 $BQ=2t$"
+        },
+        {
+          "time": 8.3,
+          "step": 2,
+          "label": "2.1 列面积方程 $\\frac{1}{2}(6-t)\\cdot 2t=8$ 并化简"
+        },
+        {
+          "time": 15.6,
+          "step": 3,
+          "label": "3.1 解得 $t=2$ 或 $4$ 并对照 $0\\le t\\le 4$ 检验"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p93_r0",
+          "stepBadge": "第 1 步 · 定区间与动态边长",
+          "appearAt": 1.5,
+          "tokens": [
+            {
+              "id": "p93_r0_t1",
+              "math": "$t_{\\max}=\\min(6/1, 8/2)=4\\text{s}$，$BP=6-t$，$BQ=2t$",
+              "appearAt": 1.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p93_r1",
+          "stepBadge": "第 2 步 · 列面积方程并化简",
+          "appearAt": 8.0,
+          "tokens": [
+            {
+              "id": "p93_r1_t1",
+              "math": "$\\frac{1}{2}(6-t)\\cdot 2t = 8 \\implies t^{2}-6t+8=0$",
+              "appearAt": 8.1,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p93_r2",
+          "stepBadge": "第 3 步 · 求解并检验时间范围",
+          "appearAt": 14.5,
+          "tokens": [
+            {
+              "id": "p93_r2_t1",
+              "math": "$(t-2)(t-4)=0 \\implies t_{1}=2, t_{2}=4$（均满足 $0\\le t\\le 4$）",
+              "appearAt": 14.6,
+              "dur": 0.45
+            }
+          ],
+          "isConclusion": true
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p93_sp1",
+          "title": "核心要点速记",
+          "showStart": 1.5,
+          "showEnd": 21.8,
+          "tokens": [
+            {
+              "id": "p93_sp1_t1",
+              "math": "1. 先到即停：$t_{\\max}=\\min\\left(\\frac{L_{1}}{v_{1}},\\frac{L_{2}}{v_{2}}\\right)$",
+              "appearAt": 1.8,
+              "dur": 0.4
+            },
+            {
+              "id": "p93_sp1_t2",
+              "math": "2. 面积建模：$S=\\frac{1}{2}ab$ 或 $S_{\\text{矩}}-\\sum S_{\\text{角}}$",
+              "appearAt": 8.3,
+              "dur": 0.4
+            },
+            {
+              "id": "p93_sp1_t3",
+              "math": "3. 越界舍根 / $\\Delta$ 判存在性",
+              "appearAt": 14.8,
+              "dur": 0.4
+            }
+          ],
+          "note": "务必先求较先到达终点的停止时间 $t_{\\max}$；分清已走路程 $vt$ 与剩余线段 $L-vt$。"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p93_r1_t1",
+          "tStart": 8.1,
+          "tEnd": 13.5,
+          "color": "teal"
+        },
+        {
+          "tokenId": "p93_r2_t1",
+          "tStart": 14.6,
+          "tEnd": 20.0,
+          "color": "amber"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p93_svg1",
+          "type": "arrow",
+          "fromToken": "p93_r1_t1",
+          "toToken": "p93_r2_t1",
+          "label": "求解并核对区间",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 14.7,
+          "tDrawEnd": 15.4,
+          "tFadeStart": 20.5,
+          "tEnd": 21.7
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.3,
+          "text": "第1步：先由“先到即停”确定 $0\\le t\\le 4$，再用含 $t$ 的代数式表示两直角边 $BP=6-t$、$BQ=2t$。",
+          "focusToken": "p93_r0_t1"
+        },
+        {
+          "tStart": 7.3,
+          "tEnd": 14.6,
+          "text": "第2步：代入直角三角形面积公式 $\\frac{1}{2}(6-t)\\cdot 2t=8$，展开整理得一般式 $t^{2}-6t+8=0$。",
+          "focusToken": "p93_r1_t1"
+        },
+        {
+          "tStart": 14.6,
+          "tEnd": 22,
+          "text": "第3步：因式分解解得 $t_{1}=2, t_{2}=4$，核对均在 $0\\le t\\le 4$ 内，故两解均符合题意。",
+          "focusToken": "p93_r2_t1"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "$Rt\\triangle ABC$ 中 $\\angle C=90^{\\circ}, AC=8, BC=6$，$P$ 从 $B\\to C$（$1$ 单位/秒），$Q$ 从 $C\\to A$（$2$ 单位/秒），先到即停，当 $S_{\\triangle CPQ}=5$ 时，$t$ 的值为（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $1$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $5$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $1$ 或 $5$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "由 $Q$ 先到终点得 $0\\le t\\le 4$，列 $\\frac{1}{2}(6-t)\\cdot 2t=5$ 解得 $t=1$ 或 $5$，舍去越界根 $5$ 得 $t=1$。"
+            ],
+            "summary": "求出两根后必须对照“先到即停”的时间上限 $t_{\\max}$ 检验舍根。"
+          },
+          "wrongTitle": "提示：别忘了检验 $t$ 是否超出停止时间 $t_{\\max}=4$",
+          "wrongFeedback": "$Q$ 走完 $AC=8$ 仅需 $4$ 秒，故 $0\\le t\\le 4$，必须舍去 $t=5$，应选 A。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "$Rt\\triangle ABC$ 中 $\\angle B=90^{\\circ}, AB=8\\text{cm}, BC=6\\text{cm}$，$P$ 从 $A\\to B$（$1\\text{cm/s}$），$Q$ 从 $B\\to C$（$2\\text{cm/s}$），$Q$ 到 $C$ 即停，当 $S_{\\triangle PBQ}=15\\text{cm}^{2}$ 时，运动时间 $t=$ ______ $\\text{s}$．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "$t =$",
+          "input1Placeholder": "如 3",
+          "input1Suffix": "",
+          "expectedX": "3",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 3。",
+          "correctDetail": "$0\\le t\\le 3$，列 $\\frac{1}{2}(8-t)\\cdot 2t=15$ 得 $t^{2}-8t+15=0$，解得 $t_{1}=3, t_{2}=5$，舍去 $5$ 得 $t=3$。",
+          "wrongFeedback": "由 $t_{\\max}=6\\div 2=3$，解 $t^{2}-8t+15=0$ 得 $t=3$ 或 $5$，舍去越界根 $5$，答案为 3。",
+          "specificWrongHints": []
+        }
+      }
+    },
+    "P94": {
+      "procedureId": "P94",
+      "title": "用正负数表示相反意义的量与基准偏差",
+      "exampleTitle": "警戒水位 $37\\text{ m}$（高于记正、低于记负）：① $41\\text{ m}$、$32\\text{ m}$ 怎么记？② $-1.8\\text{ m}$ 实际水位是多少？",
+      "exampleFormula": "$41 \\to +4\\text{ m},\\quad 32 \\to -5\\text{ m},\\quad -1.8\\text{ m} \\to 35.2\\text{ m}$",
+      "totalDuration": 24.0,
+      "scratchpadIdleHint": "旁白草稿演算区（同步展示基准零点与正负偏差的双向换算）",
+      "practiceSectionTitle": "正负数表示相反意义的量跟做练习",
+      "practiceSectionSub": "完成以下两道关键操作练习，检验是否掌握相反方向记数与基准偏差还原",
+      "steps": [
+        {
+          "step": 1,
+          "name": "锁定基准量与正负方向约定",
+          "tStart": 0.0,
+          "tEnd": 7.5,
+          "explanation": "警戒水位 $37\\text{ m}$ 为基准 $0$：高于 $37\\text{ m}$ 记为“$+$”，低于 $37\\text{ m}$ 记为“$-$”。"
+        },
+        {
+          "step": 2,
+          "name": "正向记数：算差值配正负号",
+          "tStart": 7.5,
+          "tEnd": 15.5,
+          "explanation": "$41\\text{ m}$ 比基准高 $41 - 37 = 4\\text{ m}$，记为 $+4\\text{ m}$；$32\\text{ m}$ 比基准低 $37 - 32 = 5\\text{ m}$，记为 $-5\\text{ m}$。"
+        },
+        {
+          "step": 3,
+          "name": "反向还原：基准 $\\pm$ 数值",
+          "tStart": 15.5,
+          "tEnd": 24.0,
+          "explanation": "$-1.8\\text{ m}$ 表示低于警戒水位 $1.8\\text{ m}$，实际水位为 $37 - 1.8 = 35.2\\text{ m}$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 锁定基准 37 m 与正负规定"
+        },
+        {
+          "time": 9.0,
+          "step": 2,
+          "label": "2.1 算与基准差值，写出 +4 m 与 -5 m"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 由 -1.8 m 还原实际水位 35.2 m"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p94_row_0",
+          "stepBadge": "基准约定",
+          "appearAt": 0.0,
+          "tokens": [
+            {
+              "id": "p94_r0_1",
+              "math": "基准：警戒水位 $37\\text{ m} \\leftrightarrow 0$，高于为正、低于为负",
+              "appearAt": 0.0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p94_row_1",
+          "stepBadge": "第 1–2 步 · 正向记偏差",
+          "appearAt": 7.8,
+          "tokens": [
+            {
+              "id": "p94_r1_1",
+              "math": "$41 - 37 = 4 \\implies +4\\text{ m}$；",
+              "appearAt": 8.0,
+              "dur": 0.45
+            },
+            {
+              "id": "p94_r1_2",
+              "math": "$37 - 32 = 5 \\implies -5\\text{ m}$",
+              "appearAt": 11.5,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p94_row_2",
+          "stepBadge": "第 3 步 · 反向还原实际量",
+          "appearAt": 16.0,
+          "tokens": [
+            {
+              "id": "p94_r2_1",
+              "math": "$-1.8\\text{ m}$ 表示低于基准 $1.8\\text{ m}$",
+              "appearAt": 16.2,
+              "dur": 0.45
+            },
+            {
+              "id": "p94_r2_2",
+              "math": "$\\implies 37 - 1.8 = 35.2\\text{ m}$",
+              "appearAt": 18.8,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "rowId": "p94_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 20.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p94_r3_conc",
+              "math": "答：分别记为 $+4\\text{ m}$、$-5\\text{ m}$；实际水位为 $35.2\\text{ m}$。",
+              "appearAt": 20.6,
+              "dur": 0.55
+            }
+          ]
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p94_sp_1",
+          "title": "核心口诀 · 双向换算不丢基准",
+          "showStart": 0.8,
+          "showEnd": 23.8,
+          "tokens": [
+            {
+              "id": "p94_sp1_t1",
+              "math": "正向：先比基准高/低多少 $\\to$ 配 $+ / -$ 与单位",
+              "appearAt": 1.4,
+              "dur": 0.4
+            },
+            {
+              "id": "p94_sp1_t2",
+              "math": "反向：基准 $+$ 正偏差；基准 $-$ 负偏差数值",
+              "appearAt": 16.4,
+              "dur": 0.45
+            }
+          ],
+          "note": "易错提醒：切勿把 41 m 直接记成 +41 m，也勿把 -60 元读成“支出 -60 元”"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p94_r0_1",
+          "tStart": 0.5,
+          "tEnd": 7.2,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p94_r1_1",
+          "tStart": 8.0,
+          "tEnd": 15.0,
+          "color": "blue"
+        },
+        {
+          "tokenId": "p94_r2_2",
+          "tStart": 18.8,
+          "tEnd": 23.5,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p94_svg_1",
+          "type": "arrow",
+          "fromToken": "p94_r0_1",
+          "toToken": "p94_r1_1",
+          "label": "相对基准求差",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 8.2,
+          "tDrawEnd": 9.0,
+          "tFadeStart": 22.8,
+          "tEnd": 23.5
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.5,
+          "text": "第一步锁定基准：警戒水位 $37\\text{ m}$ 对应零点，高于它记正，低于它记负。",
+          "focusToken": "p94_r0_1"
+        },
+        {
+          "tStart": 7.5,
+          "tEnd": 15.5,
+          "text": "第二步正向记数：$41$ 比 $37$ 高 $4$ 记作 $+4\\text{ m}$；$32$ 比 $37$ 低 $5$ 记作 $-5\\text{ m}$。",
+          "focusToken": "p94_r1_1"
+        },
+        {
+          "tStart": 15.5,
+          "tEnd": 24.0,
+          "text": "第三步反向还原：$-1.8\\text{ m}$ 表示低于基准 $1.8\\text{ m}$，实际水位 $= 37 - 1.8 = 35.2\\text{ m}$。",
+          "focusToken": "p94_r2_2"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "如果收入 $100$ 元记作 $+100$ 元，那么 $-60$ 元表示（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. 支出 $60$ 元",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. 支出 $-60$ 元",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. 收入 $60$ 元",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！正表收入、负表支出，解读时不再重复写负号：",
+            "calcLines": [
+              "$-60$ 元 $\\implies$ 支出 $60$ 元"
+            ],
+            "summary": "用文字表达相反意义时，负号已转化为“支出”，切勿写成“支出 $-60$ 元”。"
+          },
+          "wrongTitle": "提示：负号对应“支出”，文字描述中不能再带负号",
+          "wrongFeedback": "收入为正，则负号表示支出，故 $-60$ 元表示支出 $60$ 元，应选 A。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "乒乓球标准质量为 $2.5$ 克，$2.53$ 克记作 $+0.03$ 克，那么 $2.48$ 克应记作 ______ 克．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "记作",
+          "input1Placeholder": "如 -0.02",
+          "input1Suffix": "克",
+          "expectedX": "-0.02",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $-0.02$。",
+          "correctDetail": "$2.48$ 克比标准质量 $2.5$ 克少 $0.02$ 克，故记作 $-0.02$ 克。",
+          "wrongFeedback": "先算与基准 $2.5$ 克的差：$2.5 - 2.48 = 0.02$，低于基准配负号得 $-0.02$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "0.02",
+              "hint": "$2.48$ 克低于标准质量 $2.5$ 克，应带负号写为 $-0.02$。"
+            }
+          ]
+        }
+      }
+    },
+    "P95": {
+      "procedureId": "P95",
+      "title": "辨别有理数并按标准分类（含 0 与“非”字集合）",
+      "exampleTitle": "在 $-3, \\frac{1}{2}, \\pi, -1.777, 0, 13\\%$ 中，分出正有理数、整数与非负整数",
+      "exampleFormula": "排除 $\\pi$；整数含 $0$；非负整数 $= \\{0, \\cdots\\}$",
+      "totalDuration": 24.0,
+      "scratchpadIdleHint": "旁白草稿演算区（同步展示有理数筛查、0 的归属与“非”字集合转译）",
+      "practiceSectionTitle": "有理数识别与分类跟做练习",
+      "practiceSectionSub": "完成以下两道练习，检验是否避开 $\\pi$ 与 $0$ 的高频分类陷阱",
+      "steps": [
+        {
+          "step": 1,
+          "name": "筛除无理数（$\\pi$ 与无限不循环小数）",
+          "tStart": 0.0,
+          "tEnd": 7.5,
+          "explanation": "含 $\\pi$ 的数与无限不循环小数不是有理数；有限小数 $-1.777$、百分数 $13\\%$ 均可化为分数，都是有理数。"
+        },
+        {
+          "step": 2,
+          "name": "按符号与形态双重定性并核对 $0$",
+          "tStart": 7.5,
+          "tEnd": 15.5,
+          "explanation": "$\\pi$ 是正数但不是正有理数，故正有理数为 $\\frac{1}{2}, 13\\%$；整数集合为 $-3, 0$（牢记 $0$ 是整数且不正不负）。"
+        },
+        {
+          "step": 3,
+          "name": "转译带“非”字集合边界并填入",
+          "tStart": 15.5,
+          "tEnd": 24.0,
+          "explanation": "非负整数 $=$ 正整数和 $0$，因此本题中非负整数为 $0$，切勿漏掉 $0$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 筛除 π，确认小数和百分数是分数"
+        },
+        {
+          "time": 9.0,
+          "step": 2,
+          "label": "2.1 区分正数与正有理数，核对 0"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 转译非负整数 = 正整数和 0"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p95_row_0",
+          "stepBadge": "待分类数集",
+          "appearAt": 0.0,
+          "tokens": [
+            {
+              "id": "p95_r0_1",
+              "math": "$-3,\\quad \\frac{1}{2},\\quad \\pi,\\quad -1.777,\\quad 0,\\quad 13\\%$",
+              "appearAt": 0.0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p95_row_1",
+          "stepBadge": "第 1 步 · 筛除无理数",
+          "appearAt": 2.0,
+          "tokens": [
+            {
+              "id": "p95_r1_1",
+              "math": "$\\pi$ 是无理数（属正数，不属有理数与分数）",
+              "appearAt": 2.2,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p95_row_2",
+          "stepBadge": "第 2 步 · 正有理数与整数",
+          "appearAt": 8.5,
+          "tokens": [
+            {
+              "id": "p95_r2_1",
+              "math": "正有理数：$\\{\\frac{1}{2},\\ 13\\%\\}$；",
+              "appearAt": 8.6,
+              "dur": 0.45
+            },
+            {
+              "id": "p95_r2_2",
+              "math": "整数：$\\{-3,\\ 0\\}$",
+              "appearAt": 11.8,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p95_row_3",
+          "stepBadge": "第 3 步 · 非字集合结论",
+          "appearAt": 16.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p95_r3_conc",
+              "math": "非负整数（正整数和 $0$）：$\\{0\\}$",
+              "appearAt": 16.8,
+              "dur": 0.55
+            }
+          ]
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p95_sp_1",
+          "title": "高频边界 · “非”字集合速译表",
+          "showStart": 0.8,
+          "showEnd": 23.8,
+          "tokens": [
+            {
+              "id": "p95_sp1_t1",
+              "math": "非负数 $=$ 正数和 $0$；非正数 $=$ 负数和 $0$",
+              "appearAt": 1.5,
+              "dur": 0.4
+            },
+            {
+              "id": "p95_sp1_t2",
+              "math": "非负整数 $=$ 正整数和 $0$（自然数）",
+              "appearAt": 16.0,
+              "dur": 0.45
+            }
+          ],
+          "note": "易错提醒：含 π 的数不是有理数；带“非”字的集合一定包含 0"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p95_r1_1",
+          "tStart": 2.2,
+          "tEnd": 7.5,
+          "color": "rose"
+        },
+        {
+          "tokenId": "p95_r2_1",
+          "tStart": 8.6,
+          "tEnd": 15.0,
+          "color": "blue"
+        },
+        {
+          "tokenId": "p95_r3_conc",
+          "tStart": 16.8,
+          "tEnd": 23.5,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p95_svg_1",
+          "type": "arrow",
+          "fromToken": "p95_r1_1",
+          "toToken": "p95_r2_1",
+          "label": "剔除 π",
+          "color": "#BE123C",
+          "curveOffset": 22,
+          "tStart": 8.4,
+          "tDrawEnd": 9.2,
+          "tFadeStart": 22.8,
+          "tEnd": 23.5
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.5,
+          "text": "第一步先筛除无理数：$\\pi$ 不是有理数，而有限小数 $-1.777$ 和百分数 $13\\%$ 都可以化成分数，属于有理数。",
+          "focusToken": "p95_r1_1"
+        },
+        {
+          "tStart": 7.5,
+          "tEnd": 15.5,
+          "text": "第二步按符号和形态定性：正有理数要剔除 $\\pi$，得 $\\frac{1}{2}$ 和 $13\\%$；整数包含 $-3$ 和 $0$。",
+          "focusToken": "p95_r2_1"
+        },
+        {
+          "tStart": 15.5,
+          "tEnd": 24.0,
+          "text": "第三步转译“非负整数”即正整数和 $0$，本组中只有 $0$ 符合条件，切勿漏掉 $0$。",
+          "focusToken": "p95_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "在 $\\frac{22}{7},\\ 0,\\ \\frac{\\pi}{2},\\ 0.\\dot{6},\\ -1.414$ 中，有理数有（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $4$ 个",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $3$ 个",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $5$ 个",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！仅 $\\frac{\\pi}{2}$ 是无理数，其余 $4$ 个都是有理数：",
+            "calcLines": [
+              "有理数：$\\frac{22}{7},\\ 0,\\ 0.\\dot{6},\\ -1.414$（共 $4$ 个）"
+            ],
+            "summary": "无限循环小数 $0.\\dot{6}$ 和有限小数 $-1.414$ 都能化为分数，属于有理数。"
+          },
+          "wrongTitle": "提示：$\\frac{\\pi}{2}$ 含 $\\pi$ 不是有理数，但 $0.\\dot{6}$ 是循环小数属于有理数",
+          "wrongFeedback": "排除 $\\frac{\\pi}{2}$ 后剩余 $4$ 个都是有理数，应选 A。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "在 $-\\frac{1}{5},\\ 0,\\ -1.8,\\ -3,\\ \\frac{3}{2},\\ 4.2$ 中，非负数的个数为 ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "共",
+          "input1Placeholder": "如 3",
+          "input1Suffix": "个",
+          "expectedX": "3",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $3$。",
+          "correctDetail": "非负数 $=$ 正数和 $0$，包括 $0,\\ \\frac{3}{2},\\ 4.2$，共 $3$ 个。",
+          "wrongFeedback": "非负数包含正数和 $0$，数一数 $0, \\frac{3}{2}, 4.2$ 共 $3$ 个。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "2",
+              "hint": "别漏掉 $0$！非负数是指正数和 $0$，共 $3$ 个。"
+            }
+          ]
+        }
+      }
+    },
+    "P96": {
+      "procedureId": "P96",
+      "title": "识别规范数轴并在数轴上读写有理数",
+      "exampleTitle": "核验数轴三要素，并读取位于 $-2$ 与 $-1$ 之间靠近 $-2$ 的点 $A$ 表示的数",
+      "exampleFormula": "三要素（原点、正方向、单位长度）$\\implies$ 读点 $A \\approx -1.8$",
+      "totalDuration": 24.0,
+      "scratchpadIdleHint": "旁白草稿演算区（同步展示数轴三要素核查与负数区间读点法）",
+      "practiceSectionTitle": "数轴规范与读写有理数跟做练习",
+      "practiceSectionSub": "完成以下两道练习，检验数轴三要素辨析与数轴读点技巧",
+      "steps": [
+        {
+          "step": 1,
+          "name": "核验数轴三要素与左小右大顺序",
+          "tStart": 0.0,
+          "tEnd": 7.5,
+          "explanation": "规范数轴必须是一条直线，且同时具备原点 $0$、向右正方向箭头与统一均匀的单位长度，左侧刻度从右往左为 $-1, -2, -3$。"
+        },
+        {
+          "step": 2,
+          "name": "先看原点左右定正负，再锁定整数区间",
+          "tStart": 7.5,
+          "tEnd": 15.5,
+          "explanation": "点 $A$ 在原点 $0$ 的左侧，必为负数；且位于 $-2$ 与 $-1$ 之间，故介于 $-2$ 和 $-1$ 之间。"
+        },
+        {
+          "step": 3,
+          "name": "依偏近端点位置定数值（或按等分刻度描点）",
+          "tStart": 15.5,
+          "tEnd": 24.0,
+          "explanation": "点 $A$ 明显更靠近 $-2$（离 $-1$ 更远），因此数值更接近 $-2$，估算为 $-1.8$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 四查：直线、原点、正方向、统一单位长度"
+        },
+        {
+          "time": 9.0,
+          "step": 2,
+          "label": "2.1 点在原点左侧定负，锁定区间 (-2, -1)"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 靠近 -2 得估算值 -1.8"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p96_row_0",
+          "stepBadge": "第 1 步 · 核验三要素",
+          "appearAt": 0.0,
+          "tokens": [
+            {
+              "id": "p96_r0_1",
+              "math": "直线 $+$ 原点($0$) $+$ 正方向($\\rightarrow$) $+$ 统一单位长度",
+              "appearAt": 0.0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p96_row_1",
+          "stepBadge": "第 2 步 · 定正负与区间",
+          "appearAt": 7.8,
+          "tokens": [
+            {
+              "id": "p96_r1_1",
+              "math": "点 $A$ 在原点左侧 $\\implies$ 负数；",
+              "appearAt": 8.0,
+              "dur": 0.45
+            },
+            {
+              "id": "p96_r1_2",
+              "math": "位于 $-2$ 与 $-1$ 之间",
+              "appearAt": 11.2,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p96_row_2",
+          "stepBadge": "第 3 步 · 看偏近位置读数",
+          "appearAt": 16.0,
+          "tokens": [
+            {
+              "id": "p96_r2_1",
+              "math": "比中点 $-1.5$ 更靠近 $-2$",
+              "appearAt": 16.2,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p96_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 19.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p96_r3_conc",
+              "math": "$\\therefore$ 点 $A$ 表示的数可能是 $-1.8$。",
+              "appearAt": 19.6,
+              "dur": 0.55
+            }
+          ]
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p96_sp_1",
+          "title": "避坑提示 · 负数区间读数方向",
+          "showStart": 0.8,
+          "showEnd": 23.8,
+          "tokens": [
+            {
+              "id": "p96_sp1_t1",
+              "math": "$-2 \\leftarrow (-1.8) \\leftarrow (-1.5) \\leftarrow (-1.2) \\leftarrow -1$",
+              "appearAt": 8.2,
+              "dur": 0.45
+            },
+            {
+              "id": "p96_sp1_t2",
+              "math": "画数轴切记：单位长度可按需选取，不必固定 $1\\text{ cm}$",
+              "appearAt": 16.2,
+              "dur": 0.45
+            }
+          ],
+          "note": "负数区间从右往左数值越来越负，靠近 -2 是 -1.8，靠近 -1 是 -1.2"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p96_r0_1",
+          "tStart": 0.5,
+          "tEnd": 7.2,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p96_r1_2",
+          "tStart": 11.2,
+          "tEnd": 15.2,
+          "color": "blue"
+        },
+        {
+          "tokenId": "p96_r3_conc",
+          "tStart": 19.6,
+          "tEnd": 23.5,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p96_svg_1",
+          "type": "arrow",
+          "fromToken": "p96_r1_2",
+          "toToken": "p96_r2_1",
+          "label": "负数从右往左读",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 15.8,
+          "tDrawEnd": 16.6,
+          "tFadeStart": 22.8,
+          "tEnd": 23.5
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.5,
+          "text": "第一步先查数轴三要素：必须是直线，标有原点 $0$、向右正方向箭头和均匀统一的单位长度。",
+          "focusToken": "p96_r0_1"
+        },
+        {
+          "tStart": 7.5,
+          "tEnd": 15.5,
+          "text": "第二步读点定数：点 $A$ 在原点左侧说明是负数，落在 $-2$ 和 $-1$ 之间。",
+          "focusToken": "p96_r1_2"
+        },
+        {
+          "tStart": 15.5,
+          "tEnd": 24.0,
+          "text": "第三步观察偏近端点：点 $A$ 在中点 $-1.5$ 左侧、靠近 $-2$，因此表示的数可能是 $-1.8$。",
+          "focusToken": "p96_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "关于数轴的画法，下列说法中错误的是（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. 原点位置可以是数轴上任意一点",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. 数轴的单位长度可根据实际需要任意选取",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. 数轴上每两个刻度之间的长度都必须等于 $1\\text{ cm}$",
+              "isCorrect": true
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！单位长度只需在同一条数轴上保持均匀一致：",
+            "calcLines": [
+              "单位长度可根据数据大小灵活选取，不必固定为 $1\\text{ cm}$。"
+            ],
+            "summary": "同一条数轴内单位长度统一即可，不同题目可按需缩放。"
+          },
+          "wrongTitle": "提示：数轴单位长度是否必须固定为 1 cm？",
+          "wrongFeedback": "数轴单位长度可根据实际需要选取，不必等于 $1\\text{ cm}$，故 C 说法错误。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "数轴上位于 $-2.4$ 与 $1.3$ 之间的整数共有 ______ 个．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "共",
+          "input1Placeholder": "如 4",
+          "input1Suffix": "个",
+          "expectedX": "4",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $4$。",
+          "correctDetail": "位于 $-2.4$ 与 $1.3$ 之间的整数有 $-2, -1, 0, 1$，共 $4$ 个。",
+          "wrongFeedback": "从左到右逐一列出：$-2, -1, 0, 1$，别漏掉原点 $0$，共 $4$ 个。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "3",
+              "hint": "别漏掉原点 $0$！$-2, -1, 0, 1$ 一共 $4$ 个整数。"
+            }
+          ]
+        }
+      }
+    },
+    "P97": {
+      "procedureId": "P97",
+      "title": "由数轴上点到原点的距离与点的平移求点表示的数",
+      "exampleTitle": "表示数 $-2$ 的点 $A$，沿数轴移动 $6$ 个单位后到达点 $B$，求点 $B$ 表示的数",
+      "exampleFormula": "$-2 + 6 = 4$ 或 $-2 - 6 = -8$",
+      "totalDuration": 24.0,
+      "scratchpadIdleHint": "旁白草稿演算区（同步展示数轴双向平移分类讨论）",
+      "practiceSectionTitle": "数轴距离与平移分类讨论跟做练习",
+      "practiceSectionSub": "完成以下两道练习，检验未指明方向时的双侧分类讨论能力",
+      "steps": [
+        {
+          "step": 1,
+          "name": "明确起点 $a$ 与移动步长 $d$",
+          "tStart": 0.0,
+          "tEnd": 7.5,
+          "explanation": "锁定起点 $A$ 表示的数为 $-2$，沿数轴移动的步长为 $d = 6$ 个单位长度。"
+        },
+        {
+          "step": 2,
+          "name": "未限定方向，分“向右”“向左”两类讨论",
+          "tStart": 7.5,
+          "tEnd": 15.5,
+          "explanation": "题干只说“沿数轴移动 $6$ 个单位”，未指明向左还是向右，必须分向右移动和向左移动两种情况。"
+        },
+        {
+          "step": 3,
+          "name": "分别算两解并合并写出结论",
+          "tStart": 15.5,
+          "tEnd": 24.0,
+          "explanation": "向右移 $6$ 格：$-2 + 6 = 4$；向左移 $6$ 格：$-2 - 6 = -8$。故点 $B$ 表示 $4$ 或 $-8$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 锁定起点 a = -2，步长 d = 6"
+        },
+        {
+          "time": 9.0,
+          "step": 2,
+          "label": "2.1 未指明方向，分向右、向左两类"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 分别算出 4 与 -8，合并作答"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p97_row_0",
+          "stepBadge": "第 1 步 · 锁定起点与步长",
+          "appearAt": 0.0,
+          "tokens": [
+            {
+              "id": "p97_r0_1",
+              "math": "起点 $A$ 表示 $-2$，沿数轴移动 $6$ 个单位",
+              "appearAt": 0.0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p97_row_1",
+          "stepBadge": "第 2 步 · 情况① 向右移",
+          "appearAt": 8.0,
+          "tokens": [
+            {
+              "id": "p97_r1_1",
+              "math": "向右移动 $6$ 个单位：$-2 + 6 = 4$",
+              "appearAt": 8.2,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p97_row_2",
+          "stepBadge": "第 2 步 · 情况② 向左移",
+          "appearAt": 13.0,
+          "tokens": [
+            {
+              "id": "p97_r2_1",
+              "math": "向左移动 $6$ 个单位：$-2 - 6 = -8$",
+              "appearAt": 13.2,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p97_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 18.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p97_r3_conc",
+              "math": "$\\therefore$ 点 $B$ 表示的数为 $4$ 或 $-8$。",
+              "appearAt": 18.6,
+              "dur": 0.55
+            }
+          ]
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p97_sp_1",
+          "title": "防漏解法则 · 无方向必双解",
+          "showStart": 0.8,
+          "showEnd": 23.8,
+          "tokens": [
+            {
+              "id": "p97_sp1_t1",
+              "math": "距原点 $d$ 个单位 $\\implies +d$ 或 $-d$（两解）",
+              "appearAt": 1.4,
+              "dur": 0.4
+            },
+            {
+              "id": "p97_sp1_t2",
+              "math": "从 $a$ 移动 $d$ 个单位 $\\implies a + d$（右）或 $a - d$（左）",
+              "appearAt": 8.4,
+              "dur": 0.45
+            }
+          ],
+          "note": "高频易错点：审题务必盯紧有没有“向右/向左”四字，没有就必须写两解"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p97_r1_1",
+          "tStart": 8.2,
+          "tEnd": 12.8,
+          "color": "blue"
+        },
+        {
+          "tokenId": "p97_r2_1",
+          "tStart": 13.2,
+          "tEnd": 18.2,
+          "color": "rose"
+        },
+        {
+          "tokenId": "p97_r3_conc",
+          "tStart": 18.6,
+          "tEnd": 23.5,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p97_svg_1",
+          "type": "arrow",
+          "fromToken": "p97_r0_1",
+          "toToken": "p97_r2_1",
+          "label": "别漏向左移",
+          "color": "#BE123C",
+          "curveOffset": 26,
+          "tStart": 13.0,
+          "tDrawEnd": 13.8,
+          "tFadeStart": 22.8,
+          "tEnd": 23.5
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.5,
+          "text": "第一步锁定起点与步长：点 $A$ 在 $-2$ 处，移动距离为 $6$ 个单位长度。",
+          "focusToken": "p97_r0_1"
+        },
+        {
+          "tStart": 7.5,
+          "tEnd": 15.5,
+          "text": "第二步未指明方向必须分类：向右移 $6$ 格得 $-2+6=4$，向左移 $6$ 格得 $-2-6=-8$。",
+          "focusToken": "p97_r2_1"
+        },
+        {
+          "tStart": 15.5,
+          "tEnd": 24.0,
+          "text": "第三步合并两解：点 $B$ 表示的数为 $4$ 或 $-8$，确保不漏掉任何一侧。",
+          "focusToken": "p97_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "将数轴上表示数 $2$ 的点沿数轴移动 $3$ 个单位，得到的点表示的数为（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $-1$ 或 $5$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $5$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $-1$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！未指明方向必须分向右、向左两类：",
+            "calcLines": [
+              "向右：$2 + 3 = 5$；向左：$2 - 3 = -1$"
+            ],
+            "summary": "两解均须保留，故为 $-1$ 或 $5$。"
+          },
+          "wrongTitle": "提示：未说明移动方向，向右和向左各有一个结果",
+          "wrongFeedback": "从 $2$ 向右移 $3$ 得 $5$，向左移 $3$ 得 $-1$，应选 A。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "数轴上表示 $-4$ 的点到原点的距离是 ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "距离 =",
+          "input1Placeholder": "如 4",
+          "input1Suffix": "",
+          "expectedX": "4",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $4$。",
+          "correctDetail": "距离是非负数，$-4$ 在原点左侧 $4$ 个单位处，到原点距离为 $4$。",
+          "wrongFeedback": "点到原点的距离不带负号，$-4$ 到原点的距离是 $4$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "-4",
+              "hint": "距离不能为负数，$-4$ 到原点的距离是 $4$。"
+            }
+          ]
+        }
+      }
+    },
+    "P98": {
+      "procedureId": "P98",
+      "title": "求有理数的相反数与判定互为相反数",
+      "exampleTitle": "判断 $+(-8)$ 和 $-(-8)$ 是否互为相反数，并辨析 $+5$ 和 $-(-5)$",
+      "exampleFormula": "$+(-8) = -8,\\quad -(-8) = 8 \\implies$ 互为相反数",
+      "totalDuration": 24.0,
+      "scratchpadIdleHint": "旁白草稿演算区（同步展示先化简再判相反数与 0 的特殊性）",
+      "practiceSectionTitle": "相反数概念与判定跟做练习",
+      "practiceSectionSub": "完成以下两道练习，检验是否掌握“只变符号、勿混倒数、先化简再判定”",
+      "steps": [
+        {
+          "step": 1,
+          "name": "先化简多重符号（或读出数轴上的数）",
+          "tStart": 0.0,
+          "tEnd": 7.5,
+          "explanation": "切勿直接看表面符号！先化简：$+(-8) = -8$，$-(-8) = 8$；另一组 $-(-5) = 5$。"
+        },
+        {
+          "step": 2,
+          "name": "对照“只变符号不变数值”求相反数（牢记 $0$）",
+          "tStart": 7.5,
+          "tEnd": 15.5,
+          "explanation": "求相反数只需改变正负号，数值保持不变（切勿求成倒数）；$0$ 的相反数是 $0$ 本身。"
+        },
+        {
+          "step": 3,
+          "name": "比对化简结果判定是否互为相反数",
+          "tStart": 15.5,
+          "tEnd": 24.0,
+          "explanation": "$-8$ 与 $8$ 只有符号不同（位于原点两侧且到原点距离相等），故互为相反数；而 $+5$ 与 $5$ 相等，不是相反数。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 先化简 +(-8)=-8 与 -(-8)=8"
+        },
+        {
+          "time": 9.0,
+          "step": 2,
+          "label": "2.1 牢记相反数只变符号不变数值"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 比对化简结果：-8 与 8 互为相反数"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p98_row_0",
+          "stepBadge": "待判定数对",
+          "appearAt": 0.0,
+          "tokens": [
+            {
+              "id": "p98_r0_1",
+              "math": "① $+(-8)$ 与 $-(-8)$；　② $+5$ 与 $-(-5)$",
+              "appearAt": 0.0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p98_row_1",
+          "stepBadge": "第 1 步 · 先化简符号",
+          "appearAt": 2.0,
+          "tokens": [
+            {
+              "id": "p98_r1_1",
+              "math": "$+(-8) = -8$，$-(-8) = 8$；",
+              "appearAt": 2.2,
+              "dur": 0.45
+            },
+            {
+              "id": "p98_r1_2",
+              "math": "$-(-5) = 5$",
+              "appearAt": 5.2,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p98_row_2",
+          "stepBadge": "第 2–3 步 · 逐组比对",
+          "appearAt": 10.0,
+          "tokens": [
+            {
+              "id": "p98_r2_1",
+              "math": "① $-8$ 与 $8$ 只有符号不同 $\\implies$ 互为相反数；",
+              "appearAt": 10.2,
+              "dur": 0.45
+            },
+            {
+              "id": "p98_r2_2",
+              "math": "② $5$ 与 $5$ 相等 $\\implies$ 不是相反数",
+              "appearAt": 15.2,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p98_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 19.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p98_r3_conc",
+              "math": "$\\therefore$ $+(-8)$ 和 $-(-8)$ 互为相反数。",
+              "appearAt": 19.6,
+              "dur": 0.55
+            }
+          ]
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p98_sp_1",
+          "title": "概念区分 · 相反数 vs 倒数",
+          "showStart": 0.8,
+          "showEnd": 23.8,
+          "tokens": [
+            {
+              "id": "p98_sp1_t1",
+              "math": "$a$ 的相反数是 $-a$（$0$ 的相反数是 $0$）",
+              "appearAt": 1.4,
+              "dur": 0.4
+            },
+            {
+              "id": "p98_sp1_t2",
+              "math": "数轴上：互为相反数的两点关于原点对称",
+              "appearAt": 10.5,
+              "dur": 0.45
+            }
+          ],
+          "note": "易错提醒：2025 的相反数是 -2025，切勿错选成倒数 1/2025"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p98_r1_1",
+          "tStart": 2.2,
+          "tEnd": 9.5,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p98_r2_1",
+          "tStart": 10.2,
+          "tEnd": 19.0,
+          "color": "blue"
+        },
+        {
+          "tokenId": "p98_r3_conc",
+          "tStart": 19.6,
+          "tEnd": 23.5,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p98_svg_1",
+          "type": "arrow",
+          "fromToken": "p98_r1_1",
+          "toToken": "p98_r2_1",
+          "label": "化简后再判定",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 9.8,
+          "tDrawEnd": 10.6,
+          "tFadeStart": 22.8,
+          "tEnd": 23.5
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.5,
+          "text": "第一步先化简多重符号：$+(-8)=-8$，$-(-8)=8$，$-(-5)=5$。",
+          "focusToken": "p98_r1_1"
+        },
+        {
+          "tStart": 7.5,
+          "tEnd": 15.5,
+          "text": "第二步牢记相反数只变符号不变数值，且 $0$ 的相反数是 $0$ 本身。",
+          "focusToken": "p98_r2_1"
+        },
+        {
+          "tStart": 15.5,
+          "tEnd": 24.0,
+          "text": "第三步比对化简结果：$-8$ 与 $8$ 只有符号不同，互为相反数；而 $+5$ 与 $5$ 相等，不互为相反数。",
+          "focusToken": "p98_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "下列各数中，与 $2025$ 互为相反数的是（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $-2025$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $\\frac{1}{2025}$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $-\\frac{1}{2025}$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！相反数只变符号、不变数值：",
+            "calcLines": [
+              "$2025$ 的相反数是 $-2025$"
+            ],
+            "summary": "切勿与倒数 $\\frac{1}{2025}$ 或负倒数 $-\\frac{1}{2025}$ 混淆。"
+          },
+          "wrongTitle": "提示：相反数是只改变符号、不改变数值的数",
+          "wrongFeedback": "只变符号不变数值，$2025$ 的相反数是 $-2025$，应选 A。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "相反数是它本身的数是 ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "这个数是",
+          "input1Placeholder": "如 0",
+          "input1Suffix": "",
+          "expectedX": "0",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $0$。",
+          "correctDetail": "正数的相反数是负数，负数的相反数是正数，只有 $0$ 的相反数是 $0$ 本身。",
+          "wrongFeedback": "只有 $0$ 满足 $-0 = 0$，即相反数是它本身的数是 $0$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "1",
+              "hint": "$1$ 的相反数是 $-1$，不等于它本身；应填 $0$。"
+            }
+          ]
+        }
+      }
+    },
+    "P99": {
+      "procedureId": "P99",
+      "title": "化简多重符号（奇负偶正法则）",
+      "exampleTitle": "化简：① $-[-(-2)]$；② $-\\{+[+(-4)]\\}$",
+      "exampleFormula": "① $3$ 个负号（奇）$\\to -2$；② $2$ 个负号（偶）$\\to 4$",
+      "totalDuration": 24.0,
+      "scratchpadIdleHint": "旁白草稿演算区（同步展示“去正号 → 数负号 → 奇负偶正”三步法）",
+      "practiceSectionTitle": "多重符号化简跟做练习",
+      "practiceSectionSub": "完成以下两道练习，检验是否熟练掌握“忽略正号、数清负号、奇负偶正”",
+      "steps": [
+        {
+          "step": 1,
+          "name": "忽略所有正号“$+$”",
+          "tStart": 0.0,
+          "tEnd": 7.5,
+          "explanation": "正号“$+$”不改变原数符号，直接忽略第②式中的两个正号，只保留负号与数字。"
+        },
+        {
+          "step": 2,
+          "name": "数清全部负号“$-$”的总个数",
+          "tStart": 7.5,
+          "tEnd": 15.5,
+          "explanation": "连同最内层括号里数字自带的负号一起数：① $-[-(-2)]$ 共 $3$ 个负号；② $-\\{+[+(-4)]\\}$ 共 $2$ 个负号。"
+        },
+        {
+          "step": 3,
+          "name": "按“奇负偶正”一步写出最简结果",
+          "tStart": 15.5,
+          "tEnd": 24.0,
+          "explanation": "① $3$ 个负号（奇数）得 $-2$；② $2$ 个负号（偶数）得 $+4$（简写为 $4$）。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 忽略所有正号“+”"
+        },
+        {
+          "time": 9.0,
+          "step": 2,
+          "label": "2.1 连同内层负号数清总个数"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 按“奇负偶正”一步写出 -2 与 4"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p99_row_0",
+          "stepBadge": "原式",
+          "appearAt": 0.0,
+          "tokens": [
+            {
+              "id": "p99_r0_1",
+              "math": "① $-[-(-2)]$　　② $-\\{+[+(-4)]\\}$",
+              "appearAt": 0.0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p99_row_1",
+          "stepBadge": "第 1 步 · 忽略正号",
+          "appearAt": 2.0,
+          "tokens": [
+            {
+              "id": "p99_r1_1",
+              "math": "正号不改符号，② 中略去两个“$+$”号",
+              "appearAt": 2.2,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p99_row_2",
+          "stepBadge": "第 2 步 · 统计负号总数",
+          "appearAt": 8.5,
+          "tokens": [
+            {
+              "id": "p99_r2_1",
+              "math": "① 共 $3$ 个“$-$”（奇数个）；",
+              "appearAt": 8.6,
+              "dur": 0.45
+            },
+            {
+              "id": "p99_r2_2",
+              "math": "② 共 $2$ 个“$-$”（偶数个）",
+              "appearAt": 12.2,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p99_row_3",
+          "stepBadge": "第 3 步 · 奇负偶正结论",
+          "appearAt": 16.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p99_r3_conc",
+              "math": "① $-[-(-2)] = -2$；　② $-\\{+[+(-4)]\\} = 4$",
+              "appearAt": 16.8,
+              "dur": 0.55
+            }
+          ]
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p99_sp_1",
+          "title": "核心口诀 · 奇负偶正",
+          "showStart": 0.8,
+          "showEnd": 23.8,
+          "tokens": [
+            {
+              "id": "p99_sp1_t1",
+              "math": "负号个数为奇数 $\\implies -$；为偶数 $\\implies +$",
+              "appearAt": 1.4,
+              "dur": 0.4
+            },
+            {
+              "id": "p99_sp1_t2",
+              "math": "注意：最内层 $(-2)$、$(-4)$ 自带的负号必须算进去！",
+              "appearAt": 9.0,
+              "dur": 0.45
+            }
+          ],
+          "note": "含字母提醒：-(-m) = m，因 m 正负未知，不能断定它一定是正数"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p99_r1_1",
+          "tStart": 2.2,
+          "tEnd": 8.0,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p99_r2_1",
+          "tStart": 8.6,
+          "tEnd": 16.0,
+          "color": "rose"
+        },
+        {
+          "tokenId": "p99_r3_conc",
+          "tStart": 16.8,
+          "tEnd": 23.5,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p99_svg_1",
+          "type": "arrow",
+          "fromToken": "p99_r2_1",
+          "toToken": "p99_r3_conc",
+          "label": "奇负偶正",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 16.2,
+          "tDrawEnd": 17.0,
+          "tFadeStart": 22.8,
+          "tEnd": 23.5
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.5,
+          "text": "第一步忽略所有正号，因为在一个数前面添上正号不改变原数的值。",
+          "focusToken": "p99_r1_1"
+        },
+        {
+          "tStart": 7.5,
+          "tEnd": 15.5,
+          "text": "第二步数清负号总个数，注意连最内层括号里的负号一起数：①有 $3$ 个，②有 $2$ 个。",
+          "focusToken": "p99_r2_1"
+        },
+        {
+          "tStart": 15.5,
+          "tEnd": 24.0,
+          "text": "第三步应用“奇负偶正”：奇数 $3$ 个负号得 $-2$，偶数 $2$ 个负号得 $4$。",
+          "focusToken": "p99_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "$\\{-\\{-\\{-[-(-25)]\\}\\}\\}$ 化简的结果是（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $-25$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $25$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $-\\frac{1}{25}$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！数清负号总个数再按奇负偶正定号：",
+            "calcLines": [
+              "$25$ 前共有 $5$ 个负号（奇数个）$\\implies -25$"
+            ],
+            "summary": "多重符号只改变正负号，不改变数值大小。"
+          },
+          "wrongTitle": "提示：逐个数清 $25$ 前共有几个负号（含最内层的负号）",
+          "wrongFeedback": "共有 $5$ 个负号（奇数个），由奇负偶正得 $-25$，应选 A。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "化简：$-[-(+3.5)] =$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "原式 =",
+          "input1Placeholder": "如 3.5",
+          "input1Suffix": "",
+          "expectedX": "3.5",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $3.5$。",
+          "correctDetail": "忽略正号后共有 $2$ 个负号（偶数个），由奇负偶正得 $3.5$。",
+          "wrongFeedback": "忽略正号后共 $2$ 个负号，偶数个负号结果为正，故为 $3.5$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "-3.5",
+              "hint": "共有 $2$ 个负号（偶数个），结果应为正数 $3.5$。"
+            }
+          ]
+        }
+      }
+    },
+    "P100": {
+      "procedureId": "P100",
+      "title": "用科学记数法表示大数与还原原数",
+      "exampleTitle": "① 将 $215$ 亿用科学记数法表示；② 将 $1.462 \\times 10^{5}$ 还原为原数并判位数",
+      "exampleFormula": "$215\\text{ 亿} = 2.15 \\times 10^{10}$；$1.462 \\times 10^{5} = 146200$（$6$ 位数）",
+      "totalDuration": 24.0,
+      "scratchpadIdleHint": "旁白草稿演算区（同步展示 $a$ 的范围校验、指数合并与小数点右移还原）",
+      "practiceSectionTitle": "科学记数法双向转化跟做练习",
+      "practiceSectionSub": "完成以下两道练习，检验大数转科学记数法及由科学记数法还原原数",
+      "steps": [
+        {
+          "step": 1,
+          "name": "确定 $a$（$1 \\le |a| \\lt 10$）并转化计数单位",
+          "tStart": 0.0,
+          "tEnd": 7.5,
+          "explanation": "先把“亿”写成 $10^{8}$，即 $215 \\times 10^{8}$；再将 $215$ 改写为 $2.15 \\times 10^{2}$，确保 $1 \\le 2.15 \\lt 10$。"
+        },
+        {
+          "step": 2,
+          "name": "合并指数 $n$ 写出 $a \\times 10^{n}$",
+          "tStart": 7.5,
+          "tEnd": 15.5,
+          "explanation": "把小数点左移的 $2$ 位与“亿”的 $8$ 位相加：$2 + 8 = 10$，得到 $215\\text{ 亿} = 2.15 \\times 10^{10}$。"
+        },
+        {
+          "step": 3,
+          "name": "小数点右移 $n$ 位还原原数，整数位数 $= n + 1$",
+          "tStart": 15.5,
+          "tEnd": 24.0,
+          "explanation": "还原 $1.462 \\times 10^{5}$ 时，把 $1.462$ 的小数点右移 $5$ 位（已有 $3$ 位小数，再补 $2$ 个 $0$）得 $146200$，整数位数为 $5 + 1 = 6$ 位。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 215 亿先拆为 215×10⁸，定 a = 2.15"
+        },
+        {
+          "time": 9.0,
+          "step": 2,
+          "label": "2.1 合并指数 2+8=10，得 2.15×10¹⁰"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 小数点右移 5 位补 2 个 0 得 146200"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p100_row_0",
+          "stepBadge": "第 1 步 · 定 a 与单位",
+          "appearAt": 0.0,
+          "tokens": [
+            {
+              "id": "p100_r0_1",
+              "math": "$215\\text{ 亿} = 215 \\times 10^{8} = 2.15 \\times 10^{2} \\times 10^{8}$",
+              "appearAt": 0.0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p100_row_1",
+          "stepBadge": "第 2 步 · 合并指数",
+          "appearAt": 8.0,
+          "tokens": [
+            {
+              "id": "p100_r1_1",
+              "math": "$= 2.15 \\times 10^{2+8} = 2.15 \\times 10^{10}$",
+              "appearAt": 8.2,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p100_row_2",
+          "stepBadge": "第 3 步 · 右移还原",
+          "appearAt": 16.0,
+          "tokens": [
+            {
+              "id": "p100_r2_1",
+              "math": "$1.462 \\times 10^{5}$：小数点右移 $5$ 位（补 $2$ 个 $0$）",
+              "appearAt": 16.2,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p100_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 19.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p100_r3_conc",
+              "math": "① $2.15 \\times 10^{10}$；　② 原数为 $146200$（$6$ 位数）。",
+              "appearAt": 19.6,
+              "dur": 0.55
+            }
+          ]
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p100_sp_1",
+          "title": "核心口诀 · 定 a、算 n、防多补 0",
+          "showStart": 0.8,
+          "showEnd": 23.8,
+          "tokens": [
+            {
+              "id": "p100_sp1_t1",
+              "math": "规范条件：$1 \\le |a| \\lt 10$；$1\\text{ 万}=10^{4}$，$1\\text{ 亿}=10^{8}$",
+              "appearAt": 1.4,
+              "dur": 0.4
+            },
+            {
+              "id": "p100_sp1_t2",
+              "math": "还原验证：原数整数位数 $= n + 1$",
+              "appearAt": 16.4,
+              "dur": 0.45
+            }
+          ],
+          "note": "易错提醒：切勿把 215 亿写成 215×10⁸，也勿把 1.462×10⁵ 错补 5 个 0"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p100_r0_1",
+          "tStart": 0.5,
+          "tEnd": 7.5,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p100_r1_1",
+          "tStart": 8.2,
+          "tEnd": 15.2,
+          "color": "blue"
+        },
+        {
+          "tokenId": "p100_r3_conc",
+          "tStart": 19.6,
+          "tEnd": 23.5,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p100_svg_1",
+          "type": "arrow",
+          "fromToken": "p100_r0_1",
+          "toToken": "p100_r1_1",
+          "label": "指数相加 2+8=10",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 8.0,
+          "tDrawEnd": 8.8,
+          "tFadeStart": 22.8,
+          "tEnd": 23.5
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.5,
+          "text": "第一步把 215 亿拆为 $215 \\times 10^{8}$，再把 $215$ 化为满足 $1 \\le a \\lt 10$ 的 $2.15 \\times 10^{2}$。",
+          "focusToken": "p100_r0_1"
+        },
+        {
+          "tStart": 7.5,
+          "tEnd": 15.5,
+          "text": "第二步合并 $10$ 的指数：$2 + 8 = 10$，得到标准科学记数法 $2.15 \\times 10^{10}$。",
+          "focusToken": "p100_r1_1"
+        },
+        {
+          "tStart": 15.5,
+          "tEnd": 24.0,
+          "text": "第三步还原 $1.462 \\times 10^{5}$：小数点右移 $5$ 位补 $2$ 个 $0$ 得 $146200$，共 $5 + 1 = 6$ 位数。",
+          "focusToken": "p100_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "将数据“$59$ 亿”用科学记数法表示为（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $5.9 \\times 10^{9}$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $5.9 \\times 10^{8}$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $0.59 \\times 10^{10}$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！先把“亿”转为 $10^{8}$ 再合并指数：",
+            "calcLines": [
+              "$59\\text{ 亿} = 59 \\times 10^{8} = 5.9 \\times 10^{1} \\times 10^{8} = 5.9 \\times 10^{9}$"
+            ],
+            "summary": "注意 $0.59 \\lt 1$ 不符合规范，$5.9 \\times 10^{8}$ 漏加了 $1$ 位。"
+          },
+          "wrongTitle": "提示：$1$ 亿 $= 10^{8}$，$59 = 5.9 \\times 10^{1}$",
+          "wrongFeedback": "$59$ 亿 $= 5.9 \\times 10^{1+8} = 5.9 \\times 10^{9}$，应选 A。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "用科学记数法表示的数 $6 \\times 10^{8}$ 的原数是 ______ 位数．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "原数是",
+          "input1Placeholder": "如 9",
+          "input1Suffix": "位数",
+          "expectedX": "9",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $9$。",
+          "correctDetail": "对于 $a \\times 10^{n}$（$1 \\le |a| \\lt 10$），原数的整数位数 $= n + 1 = 8 + 1 = 9$ 位。",
+          "wrongFeedback": "整数位数 $= n + 1$，当 $n = 8$ 时原数是 $8 + 1 = 9$ 位数。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "8",
+              "hint": "别忘了加 $1$！$6 \\times 10^{8} = 600000000$，是 $8 + 1 = 9$ 位数。"
+            }
+          ]
+        }
+      }
+    },
+    "P101": {
+      "procedureId": "P101",
+      "title": "判断近似数的精确度与按要求四舍五入取近似数",
+      "exampleTitle": "① 判 $7.81 \\times 10^{4}$ 精确到哪一位；② 将 $33700000$ 精确到百万位并用科学记数法表示",
+      "exampleFormula": "$7.81 \\times 10^{4} = 78100$（百位）；$33700000 \\approx 3.4 \\times 10^{7}$",
+      "totalDuration": 24.0,
+      "scratchpadIdleHint": "旁白草稿演算区（同步展示还原判精确度与高位近似转科学记数法）",
+      "practiceSectionTitle": "近似数精确度与四舍五入跟做练习",
+      "practiceSectionSub": "完成以下两道练习，检验精确度还原判定与末尾 $0$ 保留规则",
+      "steps": [
+        {
+          "step": 1,
+          "name": "还原原数，看系数末位数字对应数位",
+          "tStart": 0.0,
+          "tEnd": 7.5,
+          "explanation": "把 $7.81 \\times 10^{4}$ 还原为 $78100$，找到系数 $7.81$ 的末位数字 $1$，它在原数中位于百位，故精确到百位。"
+        },
+        {
+          "step": 2,
+          "name": "大数高位取近似数：先化科学记数法并定位目标位",
+          "tStart": 7.5,
+          "tEnd": 15.5,
+          "explanation": "要求把 $33700000$ 精确到百万位（高于个位），先写成科学记数法 $3.37 \\times 10^{7}$，其中百万位对应小数点后第一位数字 $3$。"
+        },
+        {
+          "step": 3,
+          "name": "只看后一位四舍五入并规范写出结果",
+          "tStart": 15.5,
+          "tEnd": 24.0,
+          "explanation": "看百万位 $3$ 后面的十万位数字 $7$（$7 \\ge 5$），向百万位进 $1$ 得 $3.4 \\times 10^{7}$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 还原 7.81×10⁴ = 78100，末位 1 在百位"
+        },
+        {
+          "time": 9.0,
+          "step": 2,
+          "label": "2.1 化为 3.37×10⁷ 并锁定百万位数字 3"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 看后一位 7 进 1 得 3.4×10⁷"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p101_row_0",
+          "stepBadge": "第 1 步 · 还原判精确度",
+          "appearAt": 0.0,
+          "tokens": [
+            {
+              "id": "p101_r0_1",
+              "math": "$7.81 \\times 10^{4} = 78100$，末位 $1$ 在百位 $\\implies$ 精确到百位",
+              "appearAt": 0.0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p101_row_1",
+          "stepBadge": "第 2 步 · 先化科学记数法",
+          "appearAt": 8.0,
+          "tokens": [
+            {
+              "id": "p101_r1_1",
+              "math": "$33700000 = 3.37 \\times 10^{7}$（百万位是 $3$）",
+              "appearAt": 8.2,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p101_row_2",
+          "stepBadge": "第 3 步 · 看后一位四舍五入",
+          "appearAt": 16.0,
+          "tokens": [
+            {
+              "id": "p101_r2_1",
+              "math": "后一位是 $7 \\ge 5$，进 $1$ 得 $3.4 \\times 10^{7}$",
+              "appearAt": 16.2,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p101_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 19.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p101_r3_conc",
+              "math": "① 精确到百位；　② 近似数为 $3.4 \\times 10^{7}$。",
+              "appearAt": 19.6,
+              "dur": 0.55
+            }
+          ]
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p101_sp_1",
+          "title": "避坑法则 · 精确度三铁律",
+          "showStart": 0.8,
+          "showEnd": 23.8,
+          "tokens": [
+            {
+              "id": "p101_sp1_t1",
+              "math": "① 带万/亿与 $a \\times 10^{n}$ 必须先还原，看 $a$ 的末位数位",
+              "appearAt": 1.4,
+              "dur": 0.4
+            },
+            {
+              "id": "p101_sp1_t2",
+              "math": "② 末尾的 $0$ 代表精确度，四舍五入后绝不能省（如 $3.10$）",
+              "appearAt": 16.2,
+              "dur": 0.45
+            }
+          ],
+          "note": "易错提醒：精确到十位/千位/百万位等高于个位时，必须用科学记数法表示"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p101_r0_1",
+          "tStart": 0.5,
+          "tEnd": 7.5,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p101_r1_1",
+          "tStart": 8.2,
+          "tEnd": 15.2,
+          "color": "blue"
+        },
+        {
+          "tokenId": "p101_r3_conc",
+          "tStart": 19.6,
+          "tEnd": 23.5,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p101_svg_1",
+          "type": "arrow",
+          "fromToken": "p101_r1_1",
+          "toToken": "p101_r2_1",
+          "label": "看十万位 7 进 1",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 15.8,
+          "tDrawEnd": 16.6,
+          "tFadeStart": 22.8,
+          "tEnd": 23.5
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.5,
+          "text": "第一步判精确度：把 $7.81 \\times 10^{4}$ 还原成 $78100$，系数末位 $1$ 落在百位，所以精确到百位。",
+          "focusToken": "p101_r0_1"
+        },
+        {
+          "tStart": 7.5,
+          "tEnd": 15.5,
+          "text": "第二步把 $33700000$ 精确到百万位，先写成 $3.37 \\times 10^{7}$，锁定百万位上的数字 $3$。",
+          "focusToken": "p101_r1_1"
+        },
+        {
+          "tStart": 15.5,
+          "tEnd": 24.0,
+          "text": "第三步只看后一位 $7$，满 $5$ 进 $1$，规范写作 $3.4 \\times 10^{7}$。",
+          "focusToken": "p101_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "近似数 $5.78$ 万精确到（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. 百位",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. 百分位",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. 万位",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！先还原成原数再看末位数字位置：",
+            "calcLines": [
+              "$5.78\\text{ 万} = 57800$，数字 $8$ 在百位 $\\implies$ 精确到百位"
+            ],
+            "summary": "带“万”“亿”单位的近似数，切勿只看小数位数而误选百分位。"
+          },
+          "wrongTitle": "提示：先把 5.78 万还原为 57800，再看数字 8 在哪一位",
+          "wrongFeedback": "$5.78$ 万 $= 57800$，末位 $8$ 在百位，故精确到百位，应选 A。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "将 $3.1025$ 精确到 $0.01$ 为 ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "结果为",
+          "input1Placeholder": "如 3.10",
+          "input1Suffix": "",
+          "expectedX": "3.10",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $3.10$。",
+          "correctDetail": "精确到 $0.01$ 即保留两位小数，看千分位 $2$ 舍去，百分位上的 $0$ 必须保留，得 $3.10$。",
+          "wrongFeedback": "精确到 $0.01$ 须保留两位小数，末尾的 $0$ 不可省略，应填 $3.10$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "3.1",
+              "hint": "$3.1$ 只精确到 $0.1$，精确到 $0.01$ 必须保留末尾的 $0$ 写为 $3.10$。"
+            }
+          ]
+        }
+      }
+    },
+    "P102": {
+      "procedureId": "P102",
+      "title": "运用有理数加法法则计算两数相加",
+      "exampleTitle": "计算：① $(-18)+(-20)$；② $(-12)+25$；③ $\\left(-\\frac{2}{3}\\right)+\\frac{3}{4}$",
+      "exampleFormula": "① $-38$；② $13$；③ $\\frac{1}{12}$",
+      "totalDuration": 24.0,
+      "scratchpadIdleHint": "旁白草稿演算区（同步展示“先判类型 → 再定符号 → 后算绝对值”三步法）",
+      "practiceSectionTitle": "有理数加法法则跟做练习",
+      "practiceSectionSub": "完成以下两道练习，检验同号与异号两数相加的符号与绝对值计算",
+      "steps": [
+        {
+          "step": 1,
+          "name": "判定两加数符号类型",
+          "tStart": 0.0,
+          "tEnd": 7.5,
+          "explanation": "① $(-18)+(-20)$ 是同号两负相加；② $(-12)+25$ 与 ③ $\\left(-\\frac{2}{3}\\right)+\\frac{3}{4}$ 均为异号两数相加。"
+        },
+        {
+          "step": 2,
+          "name": "先定和的正负号",
+          "tStart": 7.5,
+          "tEnd": 15.5,
+          "explanation": "① 同号取负号；② $|25| \\gt |-12|$ 取正号；③ 通分为 $-\\frac{8}{12}+\\frac{9}{12}$，因 $\\frac{9}{12} \\gt \\frac{8}{12}$ 取正号。"
+        },
+        {
+          "step": 3,
+          "name": "再算绝对值的和或差",
+          "tStart": 15.5,
+          "tEnd": 24.0,
+          "explanation": "① $-(18+20)=-38$；② $+(25-12)=13$；③ $+\\left(\\frac{9}{12}-\\frac{8}{12}\\right)=\\frac{1}{12}$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 区分同号与异号相加"
+        },
+        {
+          "time": 9.0,
+          "step": 2,
+          "label": "2.1 先定和的符号（同取原、异取大）"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 同号加绝对值，异号大减小"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p102_row_0",
+          "stepBadge": "原式",
+          "appearAt": 0.0,
+          "tokens": [
+            {
+              "id": "p102_r0_1",
+              "math": "① $(-18)+(-20)$　② $(-12)+25$　③ $\\left(-\\frac{2}{3}\\right)+\\frac{3}{4}$",
+              "appearAt": 0.0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p102_row_1",
+          "stepBadge": "第 1–2 步 · 定符号",
+          "appearAt": 7.8,
+          "tokens": [
+            {
+              "id": "p102_r1_1",
+              "math": "① 同负取“$-$”；② $|25|\\gt |-12|$ 取“$+$”；",
+              "appearAt": 8.0,
+              "dur": 0.45
+            },
+            {
+              "id": "p102_r1_2",
+              "math": "③ $-\\frac{8}{12}+\\frac{9}{12}$ 取“$+$”",
+              "appearAt": 11.8,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p102_row_2",
+          "stepBadge": "第 3 步 · 算绝对值",
+          "appearAt": 16.0,
+          "tokens": [
+            {
+              "id": "p102_r2_1",
+              "math": "① $-(18+20)$；② $+(25-12)$；③ $+\\left(\\frac{9}{12}-\\frac{8}{12}\\right)$",
+              "appearAt": 16.2,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p102_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 19.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p102_r3_conc",
+              "math": "① $-38$；　② $13$；　③ $\\frac{1}{12}$。",
+              "appearAt": 19.6,
+              "dur": 0.55
+            }
+          ]
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p102_sp_1",
+          "title": "核心口诀 · 先定符号再算绝对值",
+          "showStart": 0.8,
+          "showEnd": 23.8,
+          "tokens": [
+            {
+              "id": "p102_sp1_t1",
+              "math": "同号相加：取相同符号，绝对值相加",
+              "appearAt": 1.4,
+              "dur": 0.4
+            },
+            {
+              "id": "p102_sp1_t2",
+              "math": "异号相加：取绝对值较大者的符号，大绝对值减小绝对值",
+              "appearAt": 9.0,
+              "dur": 0.45
+            }
+          ],
+          "note": "易错提醒：两负数相加结果仍为负，切勿套用乘法“负负得正”"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p102_r1_1",
+          "tStart": 8.0,
+          "tEnd": 15.2,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p102_r3_conc",
+          "tStart": 19.6,
+          "tEnd": 23.5,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p102_svg_1",
+          "type": "arrow",
+          "fromToken": "p102_r1_1",
+          "toToken": "p102_r2_1",
+          "label": "先定号再算值",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 15.8,
+          "tDrawEnd": 16.6,
+          "tFadeStart": 22.8,
+          "tEnd": 23.5
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.5,
+          "text": "第一步先判断符号类型：①同为负数，②和③为异号两数相加。",
+          "focusToken": "p102_r0_1"
+        },
+        {
+          "tStart": 7.5,
+          "tEnd": 15.5,
+          "text": "第二步先定符号：①取负号，②和③取绝对值较大加数的正号。",
+          "focusToken": "p102_r1_1"
+        },
+        {
+          "tStart": 15.5,
+          "tEnd": 24.0,
+          "text": "第三步算绝对值：同号相加、异号相减，依次得 $-38$、$13$ 和 $\\frac{1}{12}$。",
+          "focusToken": "p102_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "下列各式的结果，符号为正的是（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $(-5)+6$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $(-3)+(-2)$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $(-5)+5$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！异号相加取绝对值较大者的符号：",
+            "calcLines": [
+              "$(-5)+6 = +(6-5) = 1 \\gt 0$"
+            ],
+            "summary": "$(-3)+(-2)=-5$ 为负，$(-5)+5=0$ 非正非负。"
+          },
+          "wrongTitle": "提示：比较绝对值大小，取绝对值较大加数的符号",
+          "wrongFeedback": "$(-5)+6 = 1 \\gt 0$，应选 A。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "计算：$(-10) + (+4) =$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "结果 =",
+          "input1Placeholder": "如 -6",
+          "input1Suffix": "",
+          "expectedX": "-6",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $-6$。",
+          "correctDetail": "异号相加，$|-10| \\gt |+4|$ 取负号，$-(10-4) = -6$。",
+          "wrongFeedback": "异号相加取绝对值较大的负号，再用 $10 - 4 = 6$，得 $-6$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "-14",
+              "hint": "异号相加要把绝对值相减而非相加，$-(10-4) = -6$。"
+            }
+          ]
+        }
+      }
+    },
+    "P103": {
+      "procedureId": "P103",
+      "title": "运用有理数减法法则将减法转化为加法计算",
+      "exampleTitle": "计算：① $|-5|-(-1)$；② $(-14)-(-16)$；③ $(-14)-(+15)$",
+      "exampleFormula": "① $6$；② $2$；③ $-29$",
+      "totalDuration": 24.0,
+      "scratchpadIdleHint": "旁白草稿演算区（同步展示“两变一不变”减法转加法程序）",
+      "practiceSectionTitle": "有理数减法法则跟做练习",
+      "practiceSectionSub": "完成以下两道练习，检验“减去一个数等于加上它的相反数”的转化能力",
+      "steps": [
+        {
+          "step": 1,
+          "name": "先化简绝对值，确定被减数与减数",
+          "tStart": 0.0,
+          "tEnd": 7.5,
+          "explanation": "① 先算 $|-5|=5$，化为 $5-(-1)$；②③ 保持被减数 $-14$ 不变。"
+        },
+        {
+          "step": 2,
+          "name": "“两变一不变”转化为加法",
+          "tStart": 7.5,
+          "tEnd": 15.5,
+          "explanation": "减号变加号、减数变相反数：① $5+(+1)$；② $(-14)+(+16)$；③ $(-14)+(-15)$。"
+        },
+        {
+          "step": 3,
+          "name": "按有理数加法法则算出结果",
+          "tStart": 15.5,
+          "tEnd": 24.0,
+          "explanation": "依次调用 P102 算得：① $6$；② $2$；③ $-29$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 先化简 |-5| = 5"
+        },
+        {
+          "time": 9.0,
+          "step": 2,
+          "label": "2.1 减号变加号，减数变相反数"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 按加法法则算出 6、2、-29"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p103_row_0",
+          "stepBadge": "原式",
+          "appearAt": 0.0,
+          "tokens": [
+            {
+              "id": "p103_r0_1",
+              "math": "① $|-5|-(-1)$　② $(-14)-(-16)$　③ $(-14)-(+15)$",
+              "appearAt": 0.0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p103_row_1",
+          "stepBadge": "第 1 步 · 化绝对值",
+          "appearAt": 2.2,
+          "tokens": [
+            {
+              "id": "p103_r1_1",
+              "math": "① 化为 $5 - (-1)$",
+              "appearAt": 2.4,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p103_row_2",
+          "stepBadge": "第 2 步 · 减法转加法",
+          "appearAt": 8.5,
+          "tokens": [
+            {
+              "id": "p103_r2_1",
+              "math": "① $5+(+1)$；② $(-14)+(+16)$；③ $(-14)+(-15)$",
+              "appearAt": 8.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p103_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 17.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p103_r3_conc",
+              "math": "① $6$；　② $2$；　③ $-29$。",
+              "appearAt": 17.6,
+              "dur": 0.55
+            }
+          ]
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p103_sp_1",
+          "title": "核心口诀 · 两变一不变",
+          "showStart": 0.8,
+          "showEnd": 23.8,
+          "tokens": [
+            {
+              "id": "p103_sp1_t1",
+              "math": "被减数不变；减号“$-$”变加号“$+$”",
+              "appearAt": 1.4,
+              "dur": 0.4
+            },
+            {
+              "id": "p103_sp1_t2",
+              "math": "减数变为它的相反数：$a - b = a + (-b)$",
+              "appearAt": 9.0,
+              "dur": 0.45
+            }
+          ],
+          "note": "易错提醒：切勿把 8 - (-8) 错算成 0，也勿误改被减数的符号"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p103_r2_1",
+          "tStart": 8.6,
+          "tEnd": 17.0,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p103_r3_conc",
+          "tStart": 17.6,
+          "tEnd": 23.5,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p103_svg_1",
+          "type": "arrow",
+          "fromToken": "p103_r0_1",
+          "toToken": "p103_r2_1",
+          "label": "两变一不变",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 8.4,
+          "tDrawEnd": 9.2,
+          "tFadeStart": 22.8,
+          "tEnd": 23.5
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.5,
+          "text": "第一步先化简绝对值：把 $|-5|-(-1)$ 整理为 $5-(-1)$。",
+          "focusToken": "p103_r1_1"
+        },
+        {
+          "tStart": 7.5,
+          "tEnd": 15.5,
+          "text": "第二步执行“两变一不变”：被减数不变，减号变加号，减数变成相反数。",
+          "focusToken": "p103_r2_1"
+        },
+        {
+          "tStart": 15.5,
+          "tEnd": 24.0,
+          "text": "第三步按有理数加法法则算出结果，依次为 $6$、$2$ 和 $-29$。",
+          "focusToken": "p103_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "计算：$8 - (-8) =$（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $16$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $0$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $-16$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！减去负数等于加上它的相反数（正数）：",
+            "calcLines": [
+              "$8 - (-8) = 8 + (+8) = 16$"
+            ],
+            "summary": "两变一不变，切勿误抵消成 $0$。"
+          },
+          "wrongTitle": "提示：减去 $-8$ 等于加上 $+8$",
+          "wrongFeedback": "$8 - (-8) = 8 + 8 = 16$，应选 A。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "计算：$3 - |-6| =$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "结果 =",
+          "input1Placeholder": "如 -3",
+          "input1Suffix": "",
+          "expectedX": "-3",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $-3$。",
+          "correctDetail": "先算 $|-6| = 6$，再算 $3 - 6 = 3 + (-6) = -3$。",
+          "wrongFeedback": "先化简 $|-6|=6$，再算 $3 - 6 = -3$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "9",
+              "hint": "先算绝对值 $|-6|=6$，原式是 $3 - 6 = -3$ 而非 $3 - (-6)$。"
+            }
+          ]
+        }
+      }
+    },
+    "P104": {
+      "procedureId": "P104",
+      "title": "求有理数的倒数与判定互为倒数",
+      "exampleTitle": "求下列各数的倒数：① $-3\\frac{1}{5}$；② $0.75$；③ $|-3|$",
+      "exampleFormula": "① $-\\frac{5}{16}$；② $\\frac{4}{3}$；③ $\\frac{1}{3}$",
+      "totalDuration": 24.0,
+      "scratchpadIdleHint": "旁白草稿演算区（同步展示“化假分数 → 符号不变颠倒分子分母 → 验积为 1”）",
+      "practiceSectionTitle": "有理数倒数求法跟做练习",
+      "practiceSectionSub": "完成以下两道练习，检验带分数、负数及绝对值化简后求倒数",
+      "steps": [
+        {
+          "step": 1,
+          "name": "先化简符号/绝对值并化为假分数",
+          "tStart": 0.0,
+          "tEnd": 7.5,
+          "explanation": "① $-3\\frac{1}{5} = -\\frac{16}{5}$；② $0.75 = \\frac{3}{4}$；③ $|-3| = 3 = \\frac{3}{1}$。"
+        },
+        {
+          "step": 2,
+          "name": "符号不变，分子分母颠倒位置",
+          "tStart": 7.5,
+          "tEnd": 15.5,
+          "explanation": "负数的倒数仍是负数、正数的倒数仍是正数：分别颠倒得 $-\\frac{5}{16}$、$\\frac{4}{3}$、$\\frac{1}{3}$。"
+        },
+        {
+          "step": 3,
+          "name": "验算两数乘积等于 $1$ 定结论",
+          "tStart": 15.5,
+          "tEnd": 24.0,
+          "explanation": "核对三组原数与倒数相乘结果均为 $+1$，且牢记 $0$ 没有倒数。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 带分数化假分数，小数化分数"
+        },
+        {
+          "time": 9.0,
+          "step": 2,
+          "label": "2.1 保持符号不变，分子分母颠倒"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 核对乘积为 1，得出倒数"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p104_row_0",
+          "stepBadge": "原数",
+          "appearAt": 0.0,
+          "tokens": [
+            {
+              "id": "p104_r0_1",
+              "math": "① $-3\\frac{1}{5}$　　② $0.75$　　③ $|-3|$",
+              "appearAt": 0.0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p104_row_1",
+          "stepBadge": "第 1 步 · 统一分数形式",
+          "appearAt": 2.2,
+          "tokens": [
+            {
+              "id": "p104_r1_1",
+              "math": "① $-\\frac{16}{5}$；　② $\\frac{3}{4}$；　③ $\\frac{3}{1}$",
+              "appearAt": 2.4,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p104_row_2",
+          "stepBadge": "第 2 步 · 颠倒分子分母",
+          "appearAt": 8.5,
+          "tokens": [
+            {
+              "id": "p104_r2_1",
+              "math": "符号不变：① $-\\frac{5}{16}$；② $\\frac{4}{3}$；③ $\\frac{1}{3}$",
+              "appearAt": 8.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p104_row_3",
+          "stepBadge": "第 3 步 · 验积为 1",
+          "appearAt": 17.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p104_r3_conc",
+              "math": "倒数依次为 $-\\frac{5}{16}$、$\\frac{4}{3}$、$\\frac{1}{3}$（乘积均为 $1$）。",
+              "appearAt": 17.6,
+              "dur": 0.55
+            }
+          ]
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p104_sp_1",
+          "title": "核心口诀 · 倒数不变号",
+          "showStart": 0.8,
+          "showEnd": 23.8,
+          "tokens": [
+            {
+              "id": "p104_sp1_t1",
+              "math": "带分数先化假分数，小数先化最简分数",
+              "appearAt": 1.4,
+              "dur": 0.4
+            },
+            {
+              "id": "p104_sp1_t2",
+              "math": "正负号保持不变，分子分母颠倒；$0$ 没有倒数",
+              "appearAt": 9.0,
+              "dur": 0.45
+            }
+          ],
+          "note": "易错提醒：切勿把带分数直接颠倒分数部分，也勿把负数倒数的负号弄丢"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p104_r1_1",
+          "tStart": 2.4,
+          "tEnd": 8.2,
+          "color": "amber"
+        },
+        {
+          "tokenId": "p104_r3_conc",
+          "tStart": 17.6,
+          "tEnd": 23.5,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p104_svg_1",
+          "type": "arrow",
+          "fromToken": "p104_r1_1",
+          "toToken": "p104_r2_1",
+          "label": "符号不变颠倒分子分母",
+          "color": "#0F766E",
+          "curveOffset": 24,
+          "tStart": 8.4,
+          "tDrawEnd": 9.2,
+          "tFadeStart": 22.8,
+          "tEnd": 23.5
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.5,
+          "text": "第一步先把带分数化假分数、小数化最简分数、绝对值先化简。",
+          "focusToken": "p104_r1_1"
+        },
+        {
+          "tStart": 7.5,
+          "tEnd": 15.5,
+          "text": "第二步保持原来的正负号不变，将分子与分母颠倒位置。",
+          "focusToken": "p104_r2_1"
+        },
+        {
+          "tStart": 15.5,
+          "tEnd": 24.0,
+          "text": "第三步用原数乘以倒数核对结果等于 $1$，确认无误。",
+          "focusToken": "p104_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "$-3$ 的倒数的相反数是（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $\\frac{1}{3}$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $-\\frac{1}{3}$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $3$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！分两步依次转化：",
+            "calcLines": [
+              "$-3$ 的倒数是 $-\\frac{1}{3}$ $\\implies$ 再取相反数得 $\\frac{1}{3}$"
+            ],
+            "summary": "先求倒数（不变号），再求相反数（变号）。"
+          },
+          "wrongTitle": "提示：先求 -3 的倒数得 -1/3，再求它的相反数",
+          "wrongFeedback": "$-3$ 的倒数是 $-\\frac{1}{3}$，它的相反数是 $\\frac{1}{3}$，应选 A。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "$-1\\frac{2}{3}$ 的倒数是 ______（填假分数，如 -3/5）．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "倒数 =",
+          "input1Placeholder": "如 -3/5",
+          "input1Suffix": "",
+          "expectedX": "-3/5",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $-\\frac{3}{5}$。",
+          "correctDetail": "先化假分数 $-1\\frac{2}{3} = -\\frac{5}{3}$，符号不变颠倒分子分母得 $-\\frac{3}{5}$。",
+          "wrongFeedback": "先化为假分数 $-\\frac{5}{3}$，再颠倒分子分母得 $-\\frac{3}{5}$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "3/5",
+              "hint": "负数的倒数仍是负数，别漏掉负号，应为 -3/5。"
+            }
+          ]
+        }
+      }
+    },
+    "P105": {
+      "procedureId": "P105",
+      "title": "运用有理数除法法则（除变乘倒数）与分数符号化简",
+      "exampleTitle": "计算：① $(-0.25)\\div \\frac{5}{8}$；② 化简 $\\frac{-(-2)}{-6}$；③ $3\\div 2\\times \\left(-\\frac{1}{2}\\right)$",
+      "exampleFormula": "① $-\\frac{2}{5}$；② $-\\frac{1}{3}$；③ $-\\frac{3}{4}$",
+      "totalDuration": 24.0,
+      "scratchpadIdleHint": "旁白草稿演算区（同步展示“除变乘倒数、分数定号约分、同级从左到右”）",
+      "practiceSectionTitle": "有理数除法与分数化简跟做练习",
+      "practiceSectionSub": "完成以下两道练习，检验除法转乘法与乘除同级顺序",
+      "steps": [
+        {
+          "step": 1,
+          "name": "化简符号与绝对值，统一化分数",
+          "tStart": 0.0,
+          "tEnd": 7.5,
+          "explanation": "① $-0.25 = -\\frac{1}{4}$；② 分子 $-(-2) = 2$，化为 $\\frac{2}{-6}$。"
+        },
+        {
+          "step": 2,
+          "name": "从左到右除变乘倒数，分数同异号定号",
+          "tStart": 7.5,
+          "tEnd": 15.5,
+          "explanation": "① $\\left(-\\frac{1}{4}\\right)\\times \\frac{8}{5}$；② 异号得负 $-\\frac{2}{6}$；③ 从左到右化为 $3\\times \\frac{1}{2}\\times \\left(-\\frac{1}{2}\\right)$。"
+        },
+        {
+          "step": 3,
+          "name": "定整体符号并约分算出最简结果",
+          "tStart": 15.5,
+          "tEnd": 24.0,
+          "explanation": "交叉约分得：① $-\\frac{2}{5}$；② $-\\frac{1}{3}$；③ $-\\frac{3}{4}$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 小数化分数，化简分子多重符号"
+        },
+        {
+          "time": 9.0,
+          "step": 2,
+          "label": "2.1 除变乘倒数，同级必须从左到右"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 先定符号再约分写出最简分数"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p105_row_0",
+          "stepBadge": "原式",
+          "appearAt": 0.0,
+          "tokens": [
+            {
+              "id": "p105_r0_1",
+              "math": "① $(-0.25)\\div \\frac{5}{8}$　② $\\frac{-(-2)}{-6}$　③ $3\\div 2\\times \\left(-\\frac{1}{2}\\right)$",
+              "appearAt": 0.0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p105_row_1",
+          "stepBadge": "第 1–2 步 · 除变乘与定号",
+          "appearAt": 7.8,
+          "tokens": [
+            {
+              "id": "p105_r1_1",
+              "math": "① $\\left(-\\frac{1}{4}\\right)\\times \\frac{8}{5}$；② $-\\frac{2}{6}$；",
+              "appearAt": 8.0,
+              "dur": 0.45
+            },
+            {
+              "id": "p105_r1_2",
+              "math": "③ $3\\times \\frac{1}{2}\\times \\left(-\\frac{1}{2}\\right)$",
+              "appearAt": 11.8,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p105_row_2",
+          "stepBadge": "第 3 步 · 约分定结论",
+          "appearAt": 17.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p105_r2_conc",
+              "math": "① $-\\frac{2}{5}$；　② $-\\frac{1}{3}$；　③ $-\\frac{3}{4}$。",
+              "appearAt": 17.6,
+              "dur": 0.55
+            }
+          ]
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p105_sp_1",
+          "title": "防错铁律 · 同级从左到右",
+          "showStart": 0.8,
+          "showEnd": 23.8,
+          "tokens": [
+            {
+              "id": "p105_sp1_t1",
+              "math": "除以非零数 $=$ 乘以它的倒数；分数同号正、异号负",
+              "appearAt": 1.4,
+              "dur": 0.4
+            },
+            {
+              "id": "p105_sp1_t2",
+              "math": "乘除同级 $a\\div b\\times c = a\\times \\frac{1}{b}\\times c$（严禁先算 $b\\times c$）",
+              "appearAt": 9.0,
+              "dur": 0.45
+            }
+          ],
+          "note": "高频易错点：3÷2×(-1/2) 切勿先算后面的 2×(-1/2) = -1"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p105_r1_2",
+          "tStart": 11.8,
+          "tEnd": 17.2,
+          "color": "rose"
+        },
+        {
+          "tokenId": "p105_r2_conc",
+          "tStart": 17.6,
+          "tEnd": 23.5,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p105_svg_1",
+          "type": "arrow",
+          "fromToken": "p105_r1_2",
+          "toToken": "p105_r2_conc",
+          "label": "从左到右连乘",
+          "color": "#BE123C",
+          "curveOffset": 24,
+          "tStart": 16.0,
+          "tDrawEnd": 16.8,
+          "tFadeStart": 22.8,
+          "tEnd": 23.5
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.5,
+          "text": "第一步把小数化分数，同时化简分数分子中的多重符号 $-(-2)=2$。",
+          "focusToken": "p105_r0_1"
+        },
+        {
+          "tStart": 7.5,
+          "tEnd": 15.5,
+          "text": "第二步按从左到右把所有除法改成乘以倒数，分数按同号正、异号负定号。",
+          "focusToken": "p105_r1_2"
+        },
+        {
+          "tStart": 15.5,
+          "tEnd": 24.0,
+          "text": "第三步约分算出最简结果，依次得 $-\\frac{2}{5}$、$-\\frac{1}{3}$ 和 $-\\frac{3}{4}$。",
+          "focusToken": "p105_r2_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "若 $(-2)\\times \\square = 6$，则 $\\square$ 内的数字是（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $-3$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $3$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $-\\frac{1}{3}$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！由除法定义得：",
+            "calcLines": [
+              "$\\square = 6 \\div (-2) = -3$"
+            ],
+            "summary": "异号相除得负，绝对值 $6 \\div 2 = 3$。"
+          },
+          "wrongTitle": "提示：用积 $6$ 除以已知因数 $-2$",
+          "wrongFeedback": "$6 \\div (-2) = -3$，应选 A。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "化简分数：$\\frac{-6}{-0.3} =$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "结果 =",
+          "input1Placeholder": "如 20",
+          "input1Suffix": "",
+          "expectedX": "20",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $20$。",
+          "correctDetail": "分子分母同为负数得正，$6 \\div 0.3 = 60 \\div 3 = 20$。",
+          "wrongFeedback": "同号相除得正，$6 \\div 0.3 = 20$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "-20",
+              "hint": "分子分母同为负数，同号相除得正数 $20$。"
+            }
+          ]
+        }
+      }
+    },
+    "P106": {
+      "procedureId": "P106",
+      "title": "识别有理数乘方的底数与指数并按符号规律计算乘方",
+      "exampleTitle": "对比计算：① $(-3)^{2}$ 与 $-3^{2}$；② $\\left(-\\frac{3}{4}\\right)^{2}$ 与 $-\\frac{3^{2}}{4}$；③ $-\\left(-\\frac{1}{2}\\right)^{5}$",
+      "exampleFormula": "① $9$ 与 $-9$；② $\\frac{9}{16}$ 与 $-\\frac{9}{4}$；③ $\\frac{1}{32}$",
+      "totalDuration": 24.0,
+      "scratchpadIdleHint": "旁白草稿演算区（同步对比带括号与不带括号的底数及奇偶次幂符号）",
+      "practiceSectionTitle": "有理数乘方概念与符号规律跟做练习",
+      "practiceSectionSub": "完成以下两道练习，检验底数识别与乘方符号计算",
+      "steps": [
+        {
+          "step": 1,
+          "name": "看清括号位置，锁定底数与指数",
+          "tStart": 0.0,
+          "tEnd": 7.5,
+          "explanation": "$(-3)^{2}$ 底数是 $-3$，而 $-3^{2}$ 底数是 $3$；$\\left(-\\frac{3}{4}\\right)^{2}$ 整个分数平方，$-\\frac{3^{2}}{4}$ 仅分子 $3$ 平方。"
+        },
+        {
+          "step": 2,
+          "name": "按奇偶次幂规律确定符号",
+          "tStart": 7.5,
+          "tEnd": 15.5,
+          "explanation": "负数的偶次幂为正、奇次幂为负；$-a^{n}$ 负号在乘方外恒为负；$-\\left(-\\frac{1}{2}\\right)^{5}$ 内部奇次幂为负，加外层负号得正。"
+        },
+        {
+          "step": 3,
+          "name": "算出绝对值幂次写出结果",
+          "tStart": 15.5,
+          "tEnd": 24.0,
+          "explanation": "① $9$ 与 $-9$；② $\\frac{9}{16}$ 与 $-\\frac{9}{4}$；③ $-\\left(-\\frac{1}{32}\\right)=\\frac{1}{32}$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 严分 (-3)² 与 -3² 的底数"
+        },
+        {
+          "time": 9.0,
+          "step": 2,
+          "label": "2.1 负数偶正奇负，外层负号最后算"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 写出各组最终结果"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p106_row_0",
+          "stepBadge": "对比原式",
+          "appearAt": 0.0,
+          "tokens": [
+            {
+              "id": "p106_r0_1",
+              "math": "① $(-3)^{2}$ vs $-3^{2}$　② $\\left(-\\frac{3}{4}\\right)^{2}$ vs $-\\frac{3^{2}}{4}$　③ $-\\left(-\\frac{1}{2}\\right)^{5}$",
+              "appearAt": 0.0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p106_row_1",
+          "stepBadge": "第 1 步 · 辨底数",
+          "appearAt": 2.2,
+          "tokens": [
+            {
+              "id": "p106_r1_1",
+              "math": "有括号底含负号；无括号负号在乘方外",
+              "appearAt": 2.4,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p106_row_2",
+          "stepBadge": "第 2 步 · 定符号",
+          "appearAt": 8.5,
+          "tokens": [
+            {
+              "id": "p106_r2_1",
+              "math": "① $+9$ 与 $-9$；② $+\\frac{9}{16}$ 与 $-\\frac{9}{4}$；③ $-\\left(-\\frac{1}{32}\\right)$",
+              "appearAt": 8.6,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p106_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 17.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p106_r3_conc",
+              "math": "① $9$ 与 $-9$；　② $\\frac{9}{16}$ 与 $-\\frac{9}{4}$；　③ $\\frac{1}{32}$。",
+              "appearAt": 17.6,
+              "dur": 0.55
+            }
+          ]
+        }
+      ],
+      "scratchpadCards": [
+        {
+          "id": "p106_sp_1",
+          "title": "防错对照 · 括号决定底数",
+          "showStart": 0.8,
+          "showEnd": 23.8,
+          "tokens": [
+            {
+              "id": "p106_sp1_t1",
+              "math": "$(-a)^{2k} = a^{2k}$；$(-a)^{2k+1} = -a^{2k+1}$",
+              "appearAt": 1.4,
+              "dur": 0.4
+            },
+            {
+              "id": "p106_sp1_t2",
+              "math": "$-a^{n} = -(a^{n})$（负号不参与乘方，结果恒为负）",
+              "appearAt": 9.0,
+              "dur": 0.45
+            }
+          ],
+          "note": "易错提醒：-1⁶ = -1 而非 +1；-6² 的底数是 6 而非 -6"
+        }
+      ],
+      "tokenHighlights": [
+        {
+          "tokenId": "p106_r1_1",
+          "tStart": 2.4,
+          "tEnd": 8.2,
+          "color": "rose"
+        },
+        {
+          "tokenId": "p106_r3_conc",
+          "tStart": 17.6,
+          "tEnd": 23.5,
+          "color": "teal"
+        }
+      ],
+      "svgAnnotations": [
+        {
+          "id": "p106_svg_1",
+          "type": "arrow",
+          "fromToken": "p106_r1_1",
+          "toToken": "p106_r2_1",
+          "label": "括号定底数",
+          "color": "#BE123C",
+          "curveOffset": 24,
+          "tStart": 8.4,
+          "tDrawEnd": 9.2,
+          "tFadeStart": 22.8,
+          "tEnd": 23.5
+        }
+      ],
+      "subtitles": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.5,
+          "text": "第一步紧盯括号位置：括号括住负号和分母时它们才一起参与乘方。",
+          "focusToken": "p106_r1_1"
+        },
+        {
+          "tStart": 7.5,
+          "tEnd": 15.5,
+          "text": "第二步按负数偶次幂为正、奇次幂为负定号，乘方外层的负号留到最后变号。",
+          "focusToken": "p106_r2_1"
+        },
+        {
+          "tStart": 15.5,
+          "tEnd": 24.0,
+          "text": "第三步算出结果：$(-3)^{2}=9$、$-3^{2}=-9$，$-\\left(-\\frac{1}{2}\\right)^{5}=\\frac{1}{32}$。",
+          "focusToken": "p106_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "计算：$-1^{6} =$（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $-1$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $1$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $-6$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！不带括号时底数是 $1$，负号在乘方外：",
+            "calcLines": [
+              "$-1^{6} = -(1^{6}) = -1$"
+            ],
+            "summary": "注意与 $(-1)^{6} = 1$ 严格区分。"
+          },
+          "wrongTitle": "提示：$-1^{6}$ 没有括号，表示 $1^{6}$ 的相反数",
+          "wrongFeedback": "$-1^{6} = -(1^{6}) = -1$，应选 A。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "$-6^{2}$ 的底数是 ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "底数 =",
+          "input1Placeholder": "如 6",
+          "input1Suffix": "",
+          "expectedX": "6",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $6$。",
+          "correctDetail": "$-6^{2}$ 中没有括号，负号不参与乘方，底数是 $6$、指数是 $2$。",
+          "wrongFeedback": "因为没有括号，负号在乘方外面，所以底数是 $6$ 而非 $-6$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "-6",
+              "hint": "只有在 $(-6)^{2}$ 中底数才是 $-6$；$-6^{2}$ 的底数是 $6$。"
+            }
+          ]
+        }
+      }
     }
   };
 

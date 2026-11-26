@@ -16,11 +16,11 @@
 
 | 数据源 | 存储文件 | 公式总数 | 命令种类 | KaTeX 异常 | 备用渲染不足 | Word 转换异常 | 缺失定界符(明确) | 括号/环境错误 | HTML 混排异常 | 字段规范异常 | 疑似未加 `$` (纯文本提示) |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1. 数学题库主数据 | `js/data/questions.js` | 83639 | 72 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| 2. 程序性知识正文 | `js/data/procedural-knowledge.js & question-procedures.js` | 5521 | 50 | 1 | 1 | 1 | 0 | 0 | 0 | 0 | 24 |
-| 3. 程序性知识动态演示数据 | `js/data/procedural-dynamic-demos.js` | 7429 | 44 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 1. 数学题库主数据 | `js/data/questions.js` | 86003 | 72 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 2. 程序性知识正文 | `js/data/procedural-knowledge.js & question-procedures.js` | 6400 | 50 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 24 |
+| 3. 程序性知识动态演示数据 | `js/data/procedural-dynamic-demos.js` | 8396 | 51 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | 4. 数学知识图谱数据 | `js/data/knowledge-nodes.js & knowledge-relations.js & question-knowledge.js` | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| 5. Word 组卷及导出内容 | `js/modules/docx-export.js (window.QUESTION_BANK 导出字段)` | 82821 | 72 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 5. Word 组卷及导出内容 | `js/modules/docx-export.js (window.QUESTION_BANK 导出字段)` | 85185 | 72 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 ## 三、错误与疑似项明细定位
 
@@ -28,12 +28,6 @@
 - **明确错误：0 项**；**疑似项：0 项**。
 
 ### 2. 程序性知识正文 (`js/data/procedural-knowledge.js & question-procedures.js`)
-- **[明确错误 - katexErrors]** 共 1 项：
-  - `2. 程序性知识正文.proceduralKnowledge[56].steps[2].formula`: `x_i \mapsto y_i = \frac{k}{x_i}`
-- **[明确错误 - fallbackErrors]** 共 1 项：
-  - `2. 程序性知识正文.proceduralKnowledge[56].steps[2].formula`: `x_i \mapsto y_i = \frac{k}{x_i}`
-- **[明确错误 - wordOmmlErrors]** 共 1 项：
-  - `2. 程序性知识正文.proceduralKnowledge[56].steps[2].formula`: `x_i \mapsto y_i = \frac{k}{x_i}`
 - **[疑似项（纯文本说明，用于区分非渲染区如 title 属性）]** 共 24 项：
   - `2. 程序性知识正文.questionProcedures[94].operationSummary`: `判定分子k^2+1>0；得图象位于第一、三象限。`
   - `2. 程序性知识正文.questionProcedures[95].operationSummary`: `由k^2>=0得k^2+1>0；得图象位于第一、三象限。`

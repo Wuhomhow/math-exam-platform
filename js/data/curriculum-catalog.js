@@ -289,6 +289,20 @@
           fallback: false
         },
         {
+          id: 'g8_c18_s4',
+          code: '18.4',
+          title: '18.4 整数指数幂',
+          procedureIds: [],
+          fallback: false
+        },
+        {
+          id: 'g8_c18_s5',
+          code: '18.5',
+          title: '18.5 分式方程',
+          procedureIds: [],
+          fallback: false
+        },
+        {
           id: 'g8_c18_fallback',
           code: '18.综合',
           title: '第十八章 综合与待细化',
@@ -310,21 +324,21 @@
           id: 'g7_c1_s1',
           code: '1.1',
           title: '1.1 正数和负数',
-          procedureIds: [],
+          procedureIds: ['P94'],
           fallback: false
         },
         {
           id: 'g7_c1_s2_1',
           code: '1.2.1–1.2.3',
           title: '1.2.1–1.2.3 有理数概念与数轴',
-          procedureIds: [],
+          procedureIds: ['P95', 'P96', 'P97'],
           fallback: false
         },
         {
           id: 'g7_c1_s2_4',
           code: '1.2.4',
           title: '1.2.4 相反数与符号化简',
-          procedureIds: [],
+          procedureIds: ['P98', 'P99'],
           fallback: false
         },
         {
@@ -362,28 +376,28 @@
           id: 'g7_c2_s1',
           code: '2.1',
           title: '2.1 有理数的加减法',
-          procedureIds: ['P39'],
+          procedureIds: ['P102', 'P103', 'P39'],
           fallback: false
         },
         {
           id: 'g7_c2_s2',
           code: '2.2',
           title: '2.2 有理数的乘除法',
-          procedureIds: ['P40'],
+          procedureIds: ['P40', 'P104', 'P105'],
           fallback: false
         },
         {
           id: 'g7_c2_s3_1',
           code: '2.3.1',
           title: '2.3.1 有理数的乘方与混合运算',
-          procedureIds: ['P32'],
+          procedureIds: ['P106', 'P32'],
           fallback: false
         },
         {
           id: 'g7_c2_s3_2',
           code: '2.3.2–2.3.3',
           title: '2.3.2–2.3.3 科学记数法与近似数',
-          procedureIds: [],
+          procedureIds: ['P100', 'P101'],
           fallback: false
         },
         {

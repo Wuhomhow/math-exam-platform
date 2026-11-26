@@ -110,11 +110,13 @@ python3 scripts/check-math-quality.py
 2. **原始数据只读**：严禁修改 `js/data/questions.js` 中的原始题干、选项、标准答案或原始题目结构。
 3. **禁止物理复制**：程序性题目集合仅通过 `js/data/question-procedures.js` 中的引用 ID（`questionId` + `partId`）动态映射生成，严禁在集合中重复拷贝原题正文。
 4. **共享目录架构**：严格沿用 `js/data/curriculum-catalog.js` 既有小节目录，不得自造平行目录。
+5. **动态演示必配**：每一个程序性知识（`Pxx`）都必须在 `js/data/procedural-dynamic-demos.js` 中配备对应的动态黑板分步演示，确保与 `steps` 核心操作一一呼应，不得遗漏。
 
 | 规范字段 / 标签 | 本项目落库位置与字段映射 | 说明 |
 | :--- | :--- | :--- |
 | `sectionId` / `collectionName` | `js/data/procedural-knowledge.js`（`chapter`、`name`） | 沿用共享小节目录；统一以当前阶段**最新引入的核心知识**命名 |
 | `dependencies` | `js/data/procedural-knowledge.js`（`prerequisites`、`prerequisiteProcedureIds`） | 解题中用到的旧知识不参与命名，仅记录为前置依赖 |
+| 动态黑板演示（必配） | `js/data/procedural-dynamic-demos.js` | 每个 `Pxx` 均须配备完整的分步动态演示，覆盖率保持 100% |
 | `纯程序性`（`proceduralSet`） | `js/data/question-procedures.js`（默认展示条目） | 写入 `questionId`、`procedureId`、`partId`（单问 `null`，多问如 `'(1)'`）、连续递增的 `sortOrder`/`order`、`subType`（对应 `similarityGroup`）、`operationSummary` |
 | `程序性扩充`（`divertedItems`） | `js/data/question-procedures.js`（`visibility: 'bank_only'`） | 属于纯程序性训练，但因极相似题已满 3 道或属同类变式巩固，不入主集合，供题库补充调用 |
 | `综合拓展`（`divertedItems`） | 不写入程序性主集合 | 含额外建模、跨知识点综合或非纯步骤训练，剔除出主集合，归入综合训练体系 |
@@ -127,12 +129,13 @@ python3 scripts/check-math-quality.py
 4. **极相似题限流（上限 3 道）**：同一程序性知识点下，题型结构、运算路径与考查方式高度相似的题目（同一 `similarityGroup` / `subType`），主集合**最多保留 3 道**（优先保留步骤最标准、覆盖常见易错点或数值最简洁的 3 道），其余分流至 `程序性扩充`。
 5. **全量标签分流（不丢弃任何题目）**：每道题（或每个 `partId`）必须且只能标注 `纯程序性`、`程序性扩充`、`综合拓展` 三者之一，并记录具体分流/剔除原因。
 
-**落库前强制自检（5 项须全部 `PASS`）**：
+**落库前强制自检（须全部 `PASS`）**：
 * **`[依据核查]`**：解题拆解是否 100% 源自原标准答案，且未改动原始数据？
 * **`[纯度核查]`**：主集合中是否已彻底剔除含建模或综合性质的题目？
 * **`[去重核查]`**：单个知识点下极相似题是否严格不超过 3 道？
 * **`[关联核查]`**：多小问题是否已精确绑定 `partId`？集合是否仅存引用且 `order`/`sortOrder` 显式连续？
 * **`[分流核查]`**：所有未入选主集合的题目是否均已标注 `程序性扩充` 或 `综合拓展`？
+* **`[演示核查]`**：该 `Pxx` 是否已在 `js/data/procedural-dynamic-demos.js` 中配备完整的动态黑板分步演示？
 
 ### 3. 自动化筛选与质检标准 Prompt 模板
 
@@ -236,5 +239,5 @@ python3 scripts/check-math-quality.py
 ### 4. 落库与验收闭环
 1. 在 `js/data/procedural-knowledge.js` 中新增或更新对应 `Pxx` 卡片（含 `steps`、`procedure`、`prerequisites`、`prerequisiteProcedureIds`、`pitfalls`、`exampleQuestionId`、`exampleStepMapping`、`graphNodeId`）。
 2. 按质检通过后的 JSON 将映射写入 `js/data/question-procedures.js`（主集合正常展示，`程序性扩充` 标记 `visibility: 'bank_only'`，`综合拓展` 不入主集合）。
-3. 如需配套动态黑板演示，在 `js/data/procedural-dynamic-demos.js` 中补充对应 `Pxx` 分步演示。
-4. 运行 `python3 scripts/check-math-quality.py` 确认零报错后提交推送。
+3. **必配动态黑板演示**：在 `js/data/procedural-dynamic-demos.js` 中为每个新增或更新的 `Pxx` 补充完整的分步动态演示，确保所有程序性知识 **100% 覆盖动态演示**。
+4. 运行 `python3 scripts/check-math-quality.py` 确认零报错，并核验 `procedural-knowledge.js` 与 `procedural-dynamic-demos.js` 覆盖一致后提交推送。

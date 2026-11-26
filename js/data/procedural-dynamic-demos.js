@@ -25299,6 +25299,374 @@
           ]
         }
       }
+    },
+    "P107": {
+      "procedureId": "P107",
+      "title": "运用同底数幂除法、零指数幂与单项式除以单项式法则运算",
+      "exampleTitle": "计算：$(-3x^{2}y)^{2}\\cdot 6xy^{3}\\div 9x^{3}y^{4}$",
+      "exampleFormula": "$6x^{2}y$",
+      "totalDuration": 24.0,
+      "scratchpadIdleHint": "旁白草稿演算区（先算积的乘方，再按系数相除与同底数幂指数相减计算）",
+      "practiceSectionTitle": "同底数幂除法与单项式除以单项式跟做练习",
+      "practiceSectionSub": "完成以下两道练习，检验同底数幂除法与单项式除以单项式法则",
+      "steps": [
+        {
+          "step": 1,
+          "name": "先算积的乘方，统一各项形式",
+          "tStart": 0.0,
+          "tEnd": 8.0,
+          "explanation": "先算 $(-3x^{2}y)^{2}=(-3)^{2}(x^{2})^{2}y^{2}=9x^{4}y^{2}$，切勿漏掉系数的平方。"
+        },
+        {
+          "step": 2,
+          "name": "从左到右先乘后除，系数与同底数幂分别运算",
+          "tStart": 8.0,
+          "tEnd": 16.0,
+          "explanation": "先算乘法 $9x^{4}y^{2}\\cdot 6xy^{3}=54x^{5}y^{5}$，再除以 $9x^{3}y^{4}$：系数 $54\\div 9=6$，指数分别相减。"
+        },
+        {
+          "step": 3,
+          "name": "合并写出最简单项式结果",
+          "tStart": 16.0,
+          "tEnd": 24.0,
+          "explanation": "$x^{5-3}=x^{2}$，$y^{5-4}=y$，最终结果为 $6x^{2}y$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 先算积的乘方 (-3x²y)² = 9x⁴y²"
+        },
+        {
+          "time": 9.0,
+          "step": 2,
+          "label": "2.1 系数相除、同底数幂指数相减"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 写出最终商式 6x²y"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p107_row_0",
+          "stepBadge": "原式",
+          "appearAt": 0.0,
+          "tokens": [
+            {
+              "id": "p107_r0_1",
+              "math": "$(-3x^{2}y)^{2}\\cdot 6xy^{3}\\div 9x^{3}y^{4}$",
+              "appearAt": 0.0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p107_row_1",
+          "stepBadge": "第 1 步 · 算乘方",
+          "appearAt": 2.2,
+          "tokens": [
+            {
+              "id": "p107_r1_1",
+              "math": "$= 9x^{4}y^{2}\\cdot 6xy^{3}\\div 9x^{3}y^{4}$",
+              "appearAt": 2.4,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p107_row_2",
+          "stepBadge": "第 2 步 · 乘除运算",
+          "appearAt": 9.0,
+          "tokens": [
+            {
+              "id": "p107_r2_1",
+              "math": "$= 54x^{5}y^{5}\\div 9x^{3}y^{4} = (54\\div 9)x^{5-3}y^{5-4}$",
+              "appearAt": 9.2,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p107_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 17.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p107_r3_conc",
+              "math": "$= 6x^{2}y$",
+              "appearAt": 17.6,
+              "dur": 0.45
+            }
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "tStart": 0.0,
+          "tEnd": 8.0,
+          "text": "第一步先算积的乘方：$(-3x^{2}y)^{2}=9x^{4}y^{2}$。",
+          "focusToken": "p107_r1_1"
+        },
+        {
+          "tStart": 8.0,
+          "tEnd": 16.0,
+          "text": "第二步先乘得 $54x^{5}y^{5}$，再按系数相除、同底数幂指数相减除以 $9x^{3}y^{4}$。",
+          "focusToken": "p107_r2_1"
+        },
+        {
+          "tStart": 16.0,
+          "tEnd": 24.0,
+          "text": "第三步整理得最终结果 $6x^{2}y$。",
+          "focusToken": "p107_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "计算：$3m^{2}n^{3}\\div (mn)^{2} =$（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $3$",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. $3m$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $3n$",
+              "isCorrect": true
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！先算积的乘方再相除：",
+            "calcLines": [
+              "$3m^{2}n^{3}\\div m^{2}n^{2} = 3m^{2-2}n^{3-2} = 3n$"
+            ],
+            "summary": "牢记先算乘方再做除法，同底数幂相除底数不变指数相减。"
+          },
+          "wrongTitle": "提示：先将 $(mn)^{2}$ 展开为 $m^{2}n^{2}$",
+          "wrongFeedback": "$3m^{2}n^{3}\\div m^{2}n^{2}=3n$，应选 C。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "若 $2a^{5}b^{2}\\div a = 2a^{m}b^{2}$，则 $m =$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "m =",
+          "input1Placeholder": "如 4",
+          "input1Suffix": "",
+          "expectedX": "4",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $4$。",
+          "correctDetail": "$a^{5}\\div a = a^{5-1} = a^{4}$，故 $m = 4$。",
+          "wrongFeedback": "同底数幂相除，底数不变指数相减：$5 - 1 = 4$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "5",
+              "hint": "$a$ 的指数是 $1$，相除后指数应为 $5 - 1 = 4$。"
+            }
+          ]
+        }
+      }
+    },
+    "P108": {
+      "procedureId": "P108",
+      "title": "运用多项式除以单项式法则化简整式",
+      "exampleTitle": "计算：$(8x^{3}-4x^{2}+2x)\\div (2x)$",
+      "exampleFormula": "$4x^{2}-2x+1$",
+      "totalDuration": 24.0,
+      "scratchpadIdleHint": "旁白草稿演算区（带符号逐项除以单项式，特别警惕与除式相同的项商为 1）",
+      "practiceSectionTitle": "多项式除以单项式跟做练习",
+      "practiceSectionSub": "完成以下两道练习，检验逐项相除、不漏项不错号",
+      "steps": [
+        {
+          "step": 1,
+          "name": "带符号拆分多项式的每一项",
+          "tStart": 0.0,
+          "tEnd": 7.5,
+          "explanation": "被除多项式有 $3$ 项：$8x^{3}$、$-4x^{2}$、$+2x$，商式也应有 $3$ 项。"
+        },
+        {
+          "step": 2,
+          "name": "各项分别除以单项式 $2x$",
+          "tStart": 7.5,
+          "tEnd": 16.0,
+          "explanation": "分别计算 $8x^{3}\\div 2x=4x^{2}$、$-4x^{2}\\div 2x=-2x$、$+2x\\div 2x=+1$，切勿漏掉最后的 $+1$。"
+        },
+        {
+          "step": 3,
+          "name": "把所得商相加并核对项数",
+          "tStart": 16.0,
+          "tEnd": 24.0,
+          "explanation": "合并写出 $4x^{2}-2x+1$，商式共 $3$ 项，与被除多项式项数一致。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1.0,
+          "step": 1,
+          "label": "1.1 带符号拆出 3 个被除项"
+        },
+        {
+          "time": 9.0,
+          "step": 2,
+          "label": "2.1 逐项除以 2x，末项商为 +1"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 核对项数写出 4x²-2x+1"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p108_row_0",
+          "stepBadge": "原式",
+          "appearAt": 0.0,
+          "tokens": [
+            {
+              "id": "p108_r0_1",
+              "math": "$(8x^{3}-4x^{2}+2x)\\div (2x)$",
+              "appearAt": 0.0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p108_row_1",
+          "stepBadge": "第 1 步 · 逐项拆分",
+          "appearAt": 2.2,
+          "tokens": [
+            {
+              "id": "p108_r1_1",
+              "math": "$= 8x^{3}\\div 2x - 4x^{2}\\div 2x + 2x\\div 2x$",
+              "appearAt": 2.4,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p108_row_2",
+          "stepBadge": "第 2 步 · 逐项求商",
+          "appearAt": 9.0,
+          "tokens": [
+            {
+              "id": "p108_r2_1",
+              "math": "$4x^{2}$、$-2x$、$+1$（勿漏 $+1$！）",
+              "appearAt": 9.2,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p108_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 17.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p108_r3_conc",
+              "math": "$= 4x^{2}-2x+1$",
+              "appearAt": 17.6,
+              "dur": 0.45
+            }
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "tStart": 0.0,
+          "tEnd": 7.5,
+          "text": "第一步按正负号将多项式拆成三项，分别准备除以 $2x$。",
+          "focusToken": "p108_r1_1"
+        },
+        {
+          "tStart": 7.5,
+          "tEnd": 16.0,
+          "text": "第二步逐项相除，特别注意 $+2x\\div 2x = +1$ 不能省略。",
+          "focusToken": "p108_r2_1"
+        },
+        {
+          "tStart": 16.0,
+          "tEnd": 24.0,
+          "text": "第三步核对商式共 $3$ 项，得到最终结果 $4x^{2}-2x+1$。",
+          "focusToken": "p108_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "计算：$(6a^{3}-3a^{2}+3a)\\div (3a) =$（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $2a^{2}-a$",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. $2a^{2}-a+1$",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. $2a^{2}+a+1$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！三项分别除以 $3a$：",
+            "calcLines": [
+              "$6a^{3}\\div 3a - 3a^{2}\\div 3a + 3a\\div 3a = 2a^{2}-a+1$"
+            ],
+            "summary": "核对商式项数与被除多项式项数一致，防止漏写常数项 $+1$。"
+          },
+          "wrongTitle": "提示：注意末项 $+3a\\div 3a = +1$ 以及中间项符号",
+          "wrongFeedback": "逐项相除得 $2a^{2}-a+1$，应选 B。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "若 $(6x^{4}-2x^{2-n})\\div (2x^{3}) = 3x-x^{2}$，则 $n =$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "n =",
+          "input1Placeholder": "如 -3",
+          "input1Suffix": "",
+          "expectedX": "-3",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $-3$。",
+          "correctDetail": "第二项指数满足 $(2-n)-3=2$，解得 $-n-1=2$，即 $n=-3$。",
+          "wrongFeedback": "同底数幂相除指数相减：$(2-n)-3=2$，解得 $n=-3$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "3",
+              "hint": "注意移项符号：$-n=2+1=3$，所以 $n=-3$。"
+            }
+          ]
+        }
+      }
     }
   };
 

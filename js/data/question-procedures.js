@@ -5427,7 +5427,8 @@
       role: 'primary',
       subType: 'P27_monomial_poly_simplify',
       operationSummary: '第(1)问：用 (-1/2ab) 乘遍三项式，算得 -(1/3)a²b³+a²b²-(3/2)ab。',
-      status: 'published'
+      status: 'published',
+      visibility: 'bank_only'
     },
     {
       questionId: 'ch16_2_2_13',
@@ -5451,7 +5452,8 @@
       role: 'primary',
       subType: 'P27_monomial_poly_simplify',
       operationSummary: '第(3)问：分别展开单项式乘多项式与积的乘方得 2x³y²-6x²y³-8x³y²，合并同类项得 -6x³y²-6x²y³。',
-      status: 'published'
+      status: 'published',
+      visibility: 'bank_only'
     },
     {
       questionId: 'ch16_2_2_13',
@@ -5511,7 +5513,8 @@
       role: 'primary',
       subType: 'P27_polynomial_mul_polynomial',
       operationSummary: '逐项展开合并四个选项，由 (2x-y)(x-2y)=2x²-4xy-xy+2y²=2x²-5xy+2y² 选出正确因式。',
-      status: 'published'
+      status: 'published',
+      visibility: 'bank_only'
     },
     {
       questionId: 'ch16_2_3_2',
@@ -6400,7 +6403,7 @@
       sortOrder: 18,
       order: 18,
       role: 'primary',
-      subType: 'P30_unify_base_eval',
+      subType: 'P30_G1_化同底数幂整体代入求值',
       operationSummary: '将 8ᵐ·4ⁿ 化为同底数幂 (2³)ᵐ·(2²)ⁿ=2^(3m+2n)，代入 3m+2n=5 得 2⁵=32。',
       status: 'published'
     },
@@ -6424,7 +6427,7 @@
       order: 20,
       partOrder: 1,
       role: 'primary',
-      subType: 'P30_unify_base_eval',
+      subType: 'P30_G2_化同底数幂对比指数解方程',
       operationSummary: '第(1)问：将 4ʸ 化为 2^(2y)，由 2^(x+2y)=2⁸ 直接得出 x+2y=8。',
       status: 'published'
     },
@@ -6436,7 +6439,7 @@
       order: 20,
       partOrder: 2,
       role: 'primary',
-      subType: 'P30_unify_base_eval',
+      subType: 'P30_G1_化同底数幂整体代入求值',
       operationSummary: '第(2)问：将 4ˣ·32ʸ 化为 2^(2x+5y)，代入 2x+5y=3 算得 2³=8。',
       status: 'published'
     },
@@ -6450,7 +6453,8 @@
       role: 'primary',
       subType: 'P30_unify_base_eval',
       operationSummary: '第(3)问：由 2ᵃ=16=2⁴ 得 a=4，再由 4ᵇ=16=4² 得 b=2，算得 a+2b=8。',
-      status: 'published'
+      status: 'published',
+      visibility: 'bank_only'
     },
     {
       questionId: 'ch16_1_2_13',
@@ -6512,7 +6516,7 @@
       order: 22,
       partOrder: 1,
       role: 'primary',
-      subType: 'P30_unify_base_eval',
+      subType: 'P30_G2_化同底数幂对比指数解方程',
       operationSummary: '第(1)问：将 27ˣ 化为 (3³)ˣ=3^(3x)=3⁹，解得 x=3。',
       status: 'published'
     },
@@ -6524,7 +6528,7 @@
       order: 22,
       partOrder: 2,
       role: 'primary',
-      subType: 'P30_unify_base_eval',
+      subType: 'P30_G2_化同底数幂对比指数解方程',
       operationSummary: '第(2)问：将 2×8ˣ×16ˣ 化为 2^(1+3x+4x)=2²²，解得 x=3。',
       status: 'published'
     },
@@ -6538,7 +6542,8 @@
       role: 'primary',
       subType: 'P30_unify_base_eval',
       operationSummary: '第(3)问：化为同底数幂对比指数，解得 x=1.5。',
-      status: 'published'
+      status: 'published',
+      visibility: 'bank_only'
     },
     {
       questionId: 'g8_df_mid_q16',
@@ -25493,6 +25498,175 @@
       role: 'primary',
       subType: 'P50_G1_与某字母取值无关求参数',
       operationSummary: '先去括号合并同类项，再令目标字母对应项系数为零求参数（同类超限扩充）。',
+      status: 'published',
+      visibility: 'bank_only'
+    },
+    {
+      questionId: 'ch16_2_4_1',
+      procedureId: 'P107',
+      partId: null,
+      sortOrder: 1,
+      order: 1,
+      role: 'primary',
+      subType: 'P107_G1_同底数幂除法与逆用求值',
+      operationSummary: '先算 $(-a)^{4}=a^{4}$，再按同底数幂除法底数不变指数相减得 $(-a^{8})\\div a^{4}=-a^{4}$，选 B。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch16_2_4_3',
+      procedureId: 'P107',
+      partId: null,
+      sortOrder: 2,
+      order: 2,
+      role: 'primary',
+      subType: 'P107_G1_同底数幂除法与逆用求值',
+      operationSummary: '先用幂的乘方化为 $x^{8}$，再连用同底数幂除法得 $x^{8-2-4}=x^{2}$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch16_2_4_2',
+      procedureId: 'P107',
+      partId: null,
+      sortOrder: 3,
+      order: 3,
+      role: 'primary',
+      subType: 'P107_G1_同底数幂除法与逆用求值',
+      operationSummary: '逆用同底数幂乘除法与幂的乘方将 $8^{m+2n-k}$ 拆为 $(2^{m})^{3}\\cdot (4^{n})^{3}\\div 8^{k}$，代入算得 $54$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch16_2_4_6',
+      procedureId: 'P107',
+      partId: null,
+      sortOrder: 4,
+      order: 4,
+      role: 'primary',
+      subType: 'P107_G2_单项式除以单项式与乘除混合',
+      operationSummary: '先算积的乘方 $(mn)^{2}=m^{2}n^{2}$，再按系数相除、同底数幂相除得 $3n$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch16_2_4_7',
+      procedureId: 'P107',
+      partId: null,
+      sortOrder: 5,
+      order: 5,
+      role: 'primary',
+      subType: 'P107_G2_单项式除以单项式与乘除混合',
+      operationSummary: '按单项式除以单项式算得 $2a^{4}b^{2}$，对比指数得 $m=4,n=2$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch16_2_4_10',
+      procedureId: 'P107',
+      partId: null,
+      sortOrder: 6,
+      order: 6,
+      role: 'primary',
+      subType: 'P107_G2_单项式除以单项式与乘除混合',
+      operationSummary: '第(1)问先算积的乘方再从左到右乘除得 $6x^{2}y$；第(2)问分项算乘除乘方再合并同类项得 $10a^{4}$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch16_2_4_4',
+      procedureId: 'P107',
+      partId: null,
+      sortOrder: 7,
+      order: 7,
+      role: 'primary',
+      subType: 'P107_G3_零指数幂与幂值为1分类求参',
+      operationSummary: '分指数为零且底数不为零、底数为 $1$、底数为 $-1$ 且指数为偶三类讨论，得 $a=-2$ 或 $2$ 或 $0$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch16_2_4_5',
+      procedureId: 'P107',
+      partId: null,
+      sortOrder: 8,
+      order: 8,
+      role: 'primary',
+      subType: 'P107_G1_同底数幂除法与逆用求值',
+      operationSummary: '逆用同底数幂乘除法与幂的乘方求值并由 $2^{a}\\cdot(2^{b})^{2}=75=2^{c}$ 说明 $a+2b=c$（同类扩充）。',
+      status: 'published',
+      visibility: 'bank_only'
+    },
+    {
+      questionId: 'ch16_2_5_1',
+      procedureId: 'P108',
+      partId: null,
+      sortOrder: 1,
+      order: 1,
+      role: 'primary',
+      subType: 'P108_G1_多项式除以单项式直接运算与求参',
+      operationSummary: '逐项用多项式每一项除以单项式，辨析选项 B 漏除末项 $+2x\\div 2x=+1$ 的典型错误。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch16_2_5_3',
+      procedureId: 'P108',
+      partId: null,
+      sortOrder: 2,
+      order: 2,
+      role: 'primary',
+      subType: 'P108_G1_多项式除以单项式直接运算与求参',
+      operationSummary: '用多项式各项分别除以 $2x^{3}$ 得 $3x-x^{2-n-3}$，对照商式指数 $2-n-3=2$ 解得 $n=-3$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch16_2_5_4',
+      procedureId: 'P108',
+      partId: null,
+      sortOrder: 3,
+      order: 3,
+      role: 'primary',
+      subType: 'P108_G1_多项式除以单项式直接运算与求参',
+      operationSummary: '由除式等于被除式除以商，计算 $(4x^{6}y^{4}+6x^{3}y^{2})\\div(2x^{2}y)=2x^{4}y^{3}+3xy$。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch16_2_5_2',
+      procedureId: 'P108',
+      partId: null,
+      sortOrder: 4,
+      order: 4,
+      role: 'primary',
+      subType: 'P108_G2_多项式除以单项式与整式乘法化简求值',
+      operationSummary: '先按多项式除以单项式化简条件方程解得 $a=\\frac{1}{2}$，再展开目标整式代入求值。',
+      status: 'published'
+    },
+    {
+      questionId: 'ch16_test_b_q4',
+      procedureId: 'P23',
+      partId: null,
+      sortOrder: 18,
+      order: 18,
+      role: 'primary',
+      subType: 'P23_direct_expand',
+      operationSummary: '将 $102^{2}$ 拆为 $(100+2)^{2}$ 并按完全平方公式展开变形（同类超限扩充）。',
+      status: 'published',
+      visibility: 'bank_only'
+    },
+    {
+      questionId: 'ch16_3_2_2_q2',
+      procedureId: 'P23',
+      partId: null,
+      sortOrder: 19,
+      order: 19,
+      role: 'primary',
+      subType: 'P23_expand_and_simplify',
+      operationSummary: '逐项核对完全平方公式、平方差公式与整式乘法运算正误（同类超限扩充）。',
+      status: 'published',
+      visibility: 'bank_only'
+    },
+    {
+      questionId: 'ch16_1_2_14',
+      procedureId: 'P27',
+      partId: null,
+      sortOrder: 29,
+      order: 29,
+      role: 'primary',
+      subType: 'P27_monomial_mul_polynomial',
+      operationSummary: '按单项式乘单项式法则系数相乘、同底数幂指数相加完成计算（同类超限扩充）。',
       status: 'published',
       visibility: 'bank_only'
     }

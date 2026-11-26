@@ -193,7 +193,7 @@
           id: 'g8_c16_s2',
           code: '16.2',
           title: '16.2 整式的乘法与除法',
-          procedureIds: ['P27'],
+          procedureIds: ['P27', 'P107', 'P108'],
           fallback: false
         },
         {

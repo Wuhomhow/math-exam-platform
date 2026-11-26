@@ -16,11 +16,11 @@
 
 | 数据源 | 存储文件 | 公式总数 | 命令种类 | KaTeX 异常 | 备用渲染不足 | Word 转换异常 | 缺失定界符(明确) | 括号/环境错误 | HTML 混排异常 | 字段规范异常 | 疑似未加 `$` (纯文本提示) |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1. 数学题库主数据 | `js/data/questions.js` | 81935 | 72 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| 2. 程序性知识正文 | `js/data/procedural-knowledge.js & question-procedures.js` | 5521 | 50 | 1 | 1 | 1 | 0 | 0 | 0 | 0 | 21 |
+| 1. 数学题库主数据 | `js/data/questions.js` | 83639 | 72 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 2. 程序性知识正文 | `js/data/procedural-knowledge.js & question-procedures.js` | 5521 | 50 | 1 | 1 | 1 | 0 | 0 | 0 | 0 | 24 |
 | 3. 程序性知识动态演示数据 | `js/data/procedural-dynamic-demos.js` | 7429 | 44 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | 4. 数学知识图谱数据 | `js/data/knowledge-nodes.js & knowledge-relations.js & question-knowledge.js` | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| 5. Word 组卷及导出内容 | `js/modules/docx-export.js (window.QUESTION_BANK 导出字段)` | 81117 | 72 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 5. Word 组卷及导出内容 | `js/modules/docx-export.js (window.QUESTION_BANK 导出字段)` | 82821 | 72 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 ## 三、错误与疑似项明细定位
 
@@ -34,17 +34,17 @@
   - `2. 程序性知识正文.proceduralKnowledge[56].steps[2].formula`: `x_i \mapsto y_i = \frac{k}{x_i}`
 - **[明确错误 - wordOmmlErrors]** 共 1 项：
   - `2. 程序性知识正文.proceduralKnowledge[56].steps[2].formula`: `x_i \mapsto y_i = \frac{k}{x_i}`
-- **[疑似项（纯文本说明，用于区分非渲染区如 title 属性）]** 共 21 项：
-  - `2. 程序性知识正文.questionProcedures[95].operationSummary`: `判定分子k^2+1>0；得图象位于第一、三象限。`
-  - `2. 程序性知识正文.questionProcedures[96].operationSummary`: `由k^2>=0得k^2+1>0；得图象位于第一、三象限。`
-  - `2. 程序性知识正文.questionProcedures[543].operationSummary`: `逐项核对同底数幂乘法（底数不变指数相加），选出结果为 2^(3a) 的算式。`
-  - `2. 程序性知识正文.questionProcedures[545].operationSummary`: `由同底数幂乘法得 a^(3n+1)=a⁷，对比指数 3n+1=7 解得 n=2。`
-  - `2. 程序性知识正文.questionProcedures[546].operationSummary`: `将 16 化为 2⁴，由 2ˣ·2ˣ·2⁴=2^(2x+4)=2¹² 列 2x+4=12 解得 x=4。`
-  - `2. 程序性知识正文.questionProcedures[547].operationSummary`: `将 625 化为 5⁴，由 5^(3m+1)=5⁴ 解得 m=1，再算 (-1)²⁰²³=-1。`
-  - `2. 程序性知识正文.questionProcedures[548].operationSummary`: `将 100 化为 10²，由 10^(a+2b)=10² 得 a+2b=2，整体代入得 a+2b+3=5。`
-  - `2. 程序性知识正文.questionProcedures[550].operationSummary`: `由偶次幂 (-3)^(2n)=3^(2n)、奇次幂 (-3)^(2n+1)=-3^(2n+1) 统一底数，合并得 -3^(2n+1)+3^(2n+1)=0。`
-  - `2. 程序性知识正文.questionProcedures[551].operationSummary`: `逆用同底数幂乘法 5^(m+n+3)=5ᵐ·5ⁿ·5³，代入 5ᵐ=x, 5ⁿ=y 得 125xy。`
-  - `2. 程序性知识正文.questionProcedures[552].operationSummary`: `由 2ᵃ·2ᶜ=8×6=48=2×24=2¹·2ᵇ 得 2^(a+c)=2^(b+1)，推出 a+c=b+1。`
+- **[疑似项（纯文本说明，用于区分非渲染区如 title 属性）]** 共 24 项：
+  - `2. 程序性知识正文.questionProcedures[94].operationSummary`: `判定分子k^2+1>0；得图象位于第一、三象限。`
+  - `2. 程序性知识正文.questionProcedures[95].operationSummary`: `由k^2>=0得k^2+1>0；得图象位于第一、三象限。`
+  - `2. 程序性知识正文.questionProcedures[203].operationSummary`: `展开移项得x^2-x=0并提x；解得x1=0,x2=1。`
+  - `2. 程序性知识正文.questionProcedures[204].operationSummary`: `化一般式2x^2-x=0并提x；解得x1=0,x2=1/2。`
+  - `2. 程序性知识正文.questionProcedures[226].operationSummary`: `移项得x^2-x-56=0并十字相乘；得(x-8)(x+7)=0解得8或-7选D。`
+  - `2. 程序性知识正文.questionProcedures[531].operationSummary`: `逐项核对同底数幂乘法（底数不变指数相加），选出结果为 2^(3a) 的算式。`
+  - `2. 程序性知识正文.questionProcedures[533].operationSummary`: `由同底数幂乘法得 a^(3n+1)=a⁷，对比指数 3n+1=7 解得 n=2。`
+  - `2. 程序性知识正文.questionProcedures[534].operationSummary`: `将 16 化为 2⁴，由 2ˣ·2ˣ·2⁴=2^(2x+4)=2¹² 列 2x+4=12 解得 x=4。`
+  - `2. 程序性知识正文.questionProcedures[535].operationSummary`: `将 625 化为 5⁴，由 5^(3m+1)=5⁴ 解得 m=1，再算 (-1)²⁰²³=-1。`
+  - `2. 程序性知识正文.questionProcedures[536].operationSummary`: `将 100 化为 10²，由 10^(a+2b)=10² 得 a+2b=2，整体代入得 a+2b+3=5。`
 
 ### 3. 程序性知识动态演示数据 (`js/data/procedural-dynamic-demos.js`)
 - **明确错误：0 项**；**疑似项：0 项**。

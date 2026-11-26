@@ -542,7 +542,7 @@
           id: 'g9_c25_s9',
           code: '25.9–25.10',
           title: '25.9–25.10 一元二次方程的实际与几何应用',
-          procedureIds: [],
+          procedureIds: ['P92', 'P93'],
           fallback: false
         },
         {

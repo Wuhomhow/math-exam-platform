@@ -965,7 +965,7 @@
         }
       ],
       prerequisiteProcedureIds: ['P46', 'P07', 'P31'],
-      subsequentProcedureIds: ['P12', 'P13'],
+      subsequentProcedureIds: ['P12', 'P13', 'P57', 'P58'],
       relatedProcedureIds: ['P07'],
       pitfalls: [
         '由指数等于 $-1$ 解出两个参数值后，忽略比例系数 $k\\neq 0$ 的限制条件，忘记舍去使系数等于 $0$ 的增根。',
@@ -1079,7 +1079,7 @@
         }
       ],
       prerequisiteProcedureIds: ['P11', 'P07'],
-      subsequentProcedureIds: ['P13', 'P14', 'P15'],
+      subsequentProcedureIds: ['P13', 'P14', 'P15', 'P62', 'P63', 'P66'],
       relatedProcedureIds: ['P07'],
       pitfalls: [
         '代入含负数的点坐标（如 $(-2,3)$ 或 $(a,-4)$）时漏掉负号，导致比例系数 $k$ 或所求坐标的符号错误。',
@@ -1190,10 +1190,12 @@
           id: null,
           name: '实数偶次方的非负性（$k^{2}\\ge 0$）',
           type: 'concept'
-        }
+        },
+        { id: 'P12', name: '用待定系数法求反比例函数解析式', type: 'procedural_knowledge' },
+        { id: 'P57', name: '绘制反比例函数图象', type: 'procedural_knowledge' }
       ],
-      prerequisiteProcedureIds: ['P11'],
-      subsequentProcedureIds: ['P14'],
+      prerequisiteProcedureIds: ['P11', 'P12', 'P57'],
+      subsequentProcedureIds: ['P14', 'P59', 'P60', 'P61', 'P63'],
       relatedProcedureIds: ['P12'],
       pitfalls: [
         '忽略“在每一个象限内（或 $x \\gt 0$ / $x \\lt 0$）”的前提条件，误认为当 $k \\gt 0$ 时在整个定义域上 $y$ 都随 $x$ 的增大而减小。',
@@ -1294,9 +1296,10 @@
           id: 'P33',
           name: '比较有理数的大小',
           type: 'procedural_knowledge'
-        }
+        },
+        { id: 'P57', name: '绘制反比例函数图象', type: 'procedural_knowledge' }
       ],
-      prerequisiteProcedureIds: ['P13', 'P33'],
+      prerequisiteProcedureIds: ['P13', 'P12', 'P57', 'P33'],
       subsequentProcedureIds: [],
       relatedProcedureIds: ['P12', 'P15'],
       pitfalls: [
@@ -2683,10 +2686,11 @@
           id: 'P30',
           name: '运用同底数幂乘法、幂的乘方与积的乘方法则运算',
           type: 'procedural_knowledge'
-        }
+        },
+        { id: 'P40', name: '运用有理数乘除法法则、倒数及乘法运算律计算', type: 'procedural_knowledge' }
       ],
-      prerequisiteProcedureIds: ['P34', 'P28', 'P30'],
-      subsequentProcedureIds: ['P02', 'P19', 'P23', 'P26', 'P107', 'P108'],
+      prerequisiteProcedureIds: ['P34', 'P28', 'P30', 'P40'],
+      subsequentProcedureIds: ['P02', 'P19', 'P23', 'P26', 'P92', 'P107', 'P108'],
       relatedProcedureIds: ['P23', 'P24', 'P26', 'P28'],
       pitfalls: [
         '混淆系数相乘与指数相加：如将 $2a^{3}\\cdot 3a^{2}$ 的指数相乘误写为 $6a^{6}$（应为 $6a^{5}$），或将 $5x^{3}\\cdot 3x^{4}$ 的系数相加误写为 $8x^{7}$（应为 $15x^{7}$）。',
@@ -2963,7 +2967,7 @@
         }
       ],
       prerequisiteProcedureIds: ['P28', 'P32'],
-      subsequentProcedureIds: ['P26', 'P27', 'P107'],
+      subsequentProcedureIds: ['P26', 'P27', 'P35', 'P107'],
       relatedProcedureIds: ['P26', 'P27', 'P32', 'P107'],
       pitfalls: [
         '混淆同底数幂乘法与幂的乘方：误将 $a^{3}\\cdot a^{3}$ 的指数相乘写成 $a^{9}$（正确为 $a^{3+3}=a^{6}$），或误将 $(a^{2})^{3}$ 的指数相加写成 $a^{5}$（正确为 $a^{2\\times 3}=a^{6}$）。',
@@ -5503,7 +5507,7 @@
         { id: null, name: '平面直角坐标系四个象限的符号特征', type: 'concept' }
       ],
       prerequisiteProcedureIds: ['P11'],
-      subsequentProcedureIds: ['P13', 'P14'],
+      subsequentProcedureIds: ['P13', 'P14', 'P60'],
       relatedProcedureIds: ['P12', 'P13'],
       pitfalls: [
         '图象有两个分支，切勿只取 $x \\gt 0$ 而漏画另一象限的分支。',

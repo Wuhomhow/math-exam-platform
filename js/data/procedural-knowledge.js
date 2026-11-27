@@ -76,9 +76,10 @@
           id: null,
           name: '最简二次根式的化简（如 $\\sqrt{8}=2\\sqrt{2}$）',
           type: 'operation'
-        }
+        },
+        { id: 'P19', name: '识别一元二次方程、化一般形式与由定义求参数', type: 'procedural_knowledge' }
       ],
-      prerequisiteProcedureIds: ['P22'],
+      prerequisiteProcedureIds: ['P22', 'P19'],
       subsequentProcedureIds: ['P02'],
       relatedProcedureIds: [],
       pitfalls: [
@@ -199,10 +200,11 @@
           name: '运用单项式与多项式乘法法则展开整式',
           type: 'procedural_knowledge'
         },
-        { id: 'P34', name: '识别单项式与多项式、确定系数次数项数及由次数项数求参数', type: 'procedural_knowledge' }
+        { id: 'P34', name: '识别单项式与多项式、确定系数次数项数及由次数项数求参数', type: 'procedural_knowledge' },
+        { id: 'P19', name: '识别一元二次方程、化一般形式与由定义求参数', type: 'procedural_knowledge' }
       ],
-      prerequisiteProcedureIds: ['P01', 'P23', 'P25', 'P27', 'P34'],
-      subsequentProcedureIds: ['P16', 'P17'],
+      prerequisiteProcedureIds: ['P01', 'P23', 'P25', 'P27', 'P34', 'P19'],
+      subsequentProcedureIds: ['P16', 'P17', 'P71'],
       relatedProcedureIds: ['P03', 'P18'],
       pitfalls: [
         '配方时只在等号左边加上 $(\\frac{p}{2})^{2}$，忘记在等号右边同时加上同一个数，导致等式失衡。',
@@ -317,7 +319,7 @@
         }
       ],
       prerequisiteProcedureIds: ['P23', 'P24'],
-      subsequentProcedureIds: ['P16'],
+      subsequentProcedureIds: ['P16', 'P73'],
       relatedProcedureIds: ['P02'],
       pitfalls: [
         '将代数式恒等配方误当作方程求解，擅自把代数式令为 $0$ 并在两边同加或直接除以二次项系数，改变了原代数式的值。',
@@ -847,7 +849,7 @@
             }
         ],
         "prerequisiteProcedureIds": ["P37"],
-        "subsequentProcedureIds": [],
+        "subsequentProcedureIds": ["P38"],
         "relatedProcedureIds": [],
         "pitfalls": [
             "误将等腰三角形“腰上的高、腰上的中线、底角平分线”当作三线合一使用（非等边三角形中，仅底边上的三线重合）。",
@@ -1510,10 +1512,11 @@
           id: null,
           name: '一元一次不等式的解法',
           type: 'operation'
-        }
+        },
+        { id: 'P19', name: '识别一元二次方程、化一般形式与由定义求参数', type: 'procedural_knowledge' }
       ],
-      prerequisiteProcedureIds: ['P02', 'P03'],
-      subsequentProcedureIds: ['P17'],
+      prerequisiteProcedureIds: ['P02', 'P03', 'P19'],
+      subsequentProcedureIds: ['P17', 'P21', 'P75', 'P93'],
       relatedProcedureIds: ['P02', 'P03'],
       pitfalls: [
         '未先将方程移项化为右边为 $0$ 的一般形式（如对 $x^{2}=3x-1$ 直接把 $b=3,c=-1$ 代入），导致 $b,c$ 的正负号提取错误。',
@@ -1619,9 +1622,11 @@
           id: null,
           name: '最简二次根式的化简',
           type: 'operation'
-        }
+        },
+        { id: 'P19', name: '识别一元二次方程、化一般形式与由定义求参数', type: 'procedural_knowledge' },
+        { id: 'P22', name: '利用去括号、移项与合并同类项解一元一次方程', type: 'procedural_knowledge' }
       ],
-      prerequisiteProcedureIds: ['P02', 'P16', 'P31'],
+      prerequisiteProcedureIds: ['P02', 'P16', 'P31', 'P19', 'P22'],
       subsequentProcedureIds: [],
       relatedProcedureIds: ['P01', 'P02', 'P18'],
       pitfalls: [
@@ -1728,10 +1733,11 @@
           id: 'P22',
           name: '利用去括号、移项与合并同类项解一元一次方程',
           type: 'procedural_knowledge'
-        }
+        },
+        { id: 'P19', name: '识别一元二次方程、化一般形式与由定义求参数', type: 'procedural_knowledge' }
       ],
-      prerequisiteProcedureIds: ['P22', 'P24', 'P25'],
-      subsequentProcedureIds: [],
+      prerequisiteProcedureIds: ['P22', 'P24', 'P25', 'P19'],
+      subsequentProcedureIds: ['P92', 'P93'],
       relatedProcedureIds: ['P01', 'P02', 'P17'],
       pitfalls: [
         '面对 $x^{2}=2x$ 或 $2(x-1)=(x-1)^{2}$ 时，未考虑 $x=0$ 或 $x-1=0$ 的情况而直接在等式两边同除以 $x$ 或 $(x-1)$，导致严重漏根！',
@@ -1943,9 +1949,10 @@
           id: 'P08',
           name: '代入字母数值求代数式的值',
           type: 'procedural_knowledge'
-        }
+        },
+        { id: 'P22', name: '利用去括号、移项与合并同类项解一元一次方程', type: 'procedural_knowledge' }
       ],
-      prerequisiteProcedureIds: ['P08', 'P09', 'P19'],
+      prerequisiteProcedureIds: ['P08', 'P09', 'P19', 'P22'],
       subsequentProcedureIds: ['P21'],
       relatedProcedureIds: ['P09', 'P19'],
       pitfalls: [
@@ -2058,9 +2065,11 @@
           name: '判定分式有意义/值为0条件及运用分式基本性质约分通分',
           type: 'procedural_knowledge'
         },
-        { id: 'P36', name: '运用分式加减与混合运算法则化简求值', type: 'procedural_knowledge' }
+        { id: 'P36', name: '运用分式加减与混合运算法则化简求值', type: 'procedural_knowledge' },
+        { id: 'P20', name: '利用一元二次方程的根的定义代入求参数与整体降次求值', type: 'procedural_knowledge' },
+        { id: 'P22', name: '利用去括号、移项与合并同类项解一元一次方程', type: 'procedural_knowledge' }
       ],
-      prerequisiteProcedureIds: ['P09', 'P16', 'P19', 'P23', 'P31', 'P36'],
+      prerequisiteProcedureIds: ['P09', 'P16', 'P19', 'P23', 'P31', 'P36', 'P20', 'P22'],
       subsequentProcedureIds: [],
       relatedProcedureIds: ['P16', 'P17', 'P18', 'P20'],
       pitfalls: [
@@ -2157,9 +2166,11 @@
           id: 'P28',
           name: '运用去括号与合并同类项法则进行整式加减及无关型求值',
           type: 'procedural_knowledge'
-        }
+        },
+        { id: 'P39', name: '运用有理数加减法则与运算律进行加减混合运算', type: 'procedural_knowledge' },
+        { id: 'P40', name: '运用有理数乘除法法则、倒数及乘法运算律计算', type: 'procedural_knowledge' }
       ],
-      prerequisiteProcedureIds: ['P28', 'P29'],
+      prerequisiteProcedureIds: ['P28', 'P29', 'P39', 'P40'],
       subsequentProcedureIds: ['P01', 'P17', 'P18', 'P20', 'P21', 'P49', 'P50'],
       relatedProcedureIds: ['P08'],
       pitfalls: [
@@ -2374,7 +2385,7 @@
         }
       ],
       prerequisiteProcedureIds: ['P28', 'P107', 'P108'],
-      subsequentProcedureIds: ['P03', 'P18', 'P25'],
+      subsequentProcedureIds: ['P03', 'P18', 'P25', 'P31', 'P35', 'P36'],
       relatedProcedureIds: ['P09', 'P18', 'P25'],
       pitfalls: [
         '当多项式的某一项恰好等于公因式本身时，提取公因式后漏掉了商“$1$”（如将 $8m^{2}n-2mn$ 错分解为 $2mn(4m)$，或将 $-4a^{3}b^{3}+6a^{2}b-2ab$ 漏写末尾的 $+1$）。',
@@ -2478,7 +2489,7 @@
         }
       ],
       prerequisiteProcedureIds: ['P23', 'P24', 'P26'],
-      subsequentProcedureIds: ['P02', 'P18'],
+      subsequentProcedureIds: ['P02', 'P18', 'P31', 'P35', 'P36'],
       relatedProcedureIds: ['P02', 'P03', 'P18', 'P23', 'P24'],
       pitfalls: [
         '分解不够彻底：如将 $16-b^{4}$ 分解到 $(4+b^{2})(4-b^{2})$ 就停止，忘记对 $4-b^{2}$ 继续用平方差公式分解为 $(2+b)(2-b)$；或将 $x^{4}-2x^{2}y^{2}+y^{4}$ 分解到 $(x^{2}-y^{2})^{2}$ 就停止，未继续化为 $(x+y)^{2}(x-y)^{2}$。',
@@ -3066,7 +3077,7 @@
         }
       ],
       prerequisiteProcedureIds: ['P24', 'P25'],
-      subsequentProcedureIds: ['P11', 'P17', 'P21'],
+      subsequentProcedureIds: ['P11', 'P17', 'P21', 'P35', 'P36'],
       relatedProcedureIds: ['P24', 'P25'],
       pitfalls: [
         '求分式值为 $0$ 时只令分子等于 $0$ 而忘记检验分母不为 $0$（如 $\\frac{x^{2}-1}{(x+1)(x-3)}=0$ 误保留使分母为 $0$ 的 $x=-1$）。',
@@ -3182,9 +3193,11 @@
           id: 'P106',
           name: '识别有理数乘方的底数与指数并按符号规律计算乘方',
           type: 'procedural_knowledge'
-        }
+        },
+        { id: 'P55', name: '运用绝对值的代数性质判断字母符号范围', type: 'procedural_knowledge' },
+        { id: 'P56', name: '运用绝对值的非负性求值与最值', type: 'procedural_knowledge' }
       ],
-      prerequisiteProcedureIds: ['P54', 'P33', 'P39', 'P40', 'P105', 'P106'],
+      prerequisiteProcedureIds: ['P54', 'P33', 'P39', 'P40', 'P105', 'P106', 'P55', 'P56'],
       subsequentProcedureIds: ['P08', 'P09', 'P28', 'P30', 'P100'],
       relatedProcedureIds: ['P08', 'P28', 'P30', 'P33'],
       pitfalls: [
@@ -3299,7 +3312,7 @@
         }
       ],
       prerequisiteProcedureIds: ['P54', 'P96', 'P98', 'P99'],
-      subsequentProcedureIds: ['P14', 'P32'],
+      subsequentProcedureIds: ['P14', 'P32', 'P39', 'P102'],
       relatedProcedureIds: ['P54', 'P14', 'P32'],
       pitfalls: [
         '比较两个负数大小时忘记反转不等号：如因为 $\\frac{3}{4} \\gt \\frac{2}{3}$ 而误写成 $-\\frac{3}{4} \\gt -\\frac{2}{3}$（正确应为 $-\\frac{3}{4} \\lt -\\frac{2}{3}$）。',
@@ -3726,9 +3739,11 @@
         { id: 'P41', name: '运用线段垂直平分线的性质与判定进行线段转化、周长计算及尺规作图识别', type: 'procedural_knowledge' },
         { id: null, name: '三角形内角和定理（$180^{\\circ}$）', type: 'concept' },
         { id: null, name: '三角形外角定理', type: 'concept' },
-        { id: null, name: '平行线的性质', type: 'concept' }
+        { id: null, name: '平行线的性质', type: 'concept' },
+        { id: 'P42', name: '运用全等三角形的性质（对应边相等、对应角相等）求线段长与角度', type: 'procedural_knowledge' },
+        { id: 'P44', name: '运用角平分线的性质与判定进行距离转化、面积计算及尺规作图识别', type: 'procedural_knowledge' }
       ],
-      prerequisiteProcedureIds: ['P43', 'P41'],
+      prerequisiteProcedureIds: ['P43', 'P41', 'P42', 'P44'],
       subsequentProcedureIds: ['P10', 'P38'],
       relatedProcedureIds: ['P10', 'P22', 'P38'],
       pitfalls: [
@@ -3833,9 +3848,12 @@
       ],
       prerequisites: [
         { id: 'P37', name: '运用等腰三角形“等边对等角”与“等角对等边”进行边角转化及判定', type: 'procedural_knowledge' },
-        { id: 'P10', name: '利用等腰三角形“三线合一”求解与构造辅助线', type: 'procedural_knowledge' }
+        { id: 'P10', name: '利用等腰三角形“三线合一”求解与构造辅助线', type: 'procedural_knowledge' },
+        { id: 'P41', name: '运用线段垂直平分线的性质与判定进行线段转化、周长计算及尺规作图识别', type: 'procedural_knowledge' },
+        { id: 'P42', name: '运用全等三角形的性质（对应边相等、对应角相等）求线段长与角度', type: 'procedural_knowledge' },
+        { id: 'P43', name: '选用 SAS、ASA、AAS、SSS 判定三角形全等并导出边角相等', type: 'procedural_knowledge' }
       ],
-      prerequisiteProcedureIds: ['P37', 'P10'],
+      prerequisiteProcedureIds: ['P37', 'P10', 'P41', 'P42', 'P43'],
       subsequentProcedureIds: [],
       relatedProcedureIds: ['P10', 'P37'],
       pitfalls: [
@@ -3947,7 +3965,7 @@
         { id: 'P103', name: '运用有理数减法法则将减法转化为加法计算', type: 'procedural_knowledge' }
       ],
       prerequisiteProcedureIds: ['P54', 'P33', 'P99', 'P102', 'P103'],
-      subsequentProcedureIds: ['P22', 'P28', 'P32'],
+      subsequentProcedureIds: ['P22', 'P28', 'P32', 'P40'],
       relatedProcedureIds: ['P22', 'P28', 'P32', 'P33', 'P40'],
       pitfalls: [
         '使用加法交换律移动各项位置时漏带前面的负号（例如把 $-2 + 3 - 5$ 错交换为 $-2 + 5 - 3$，正确应为 $-2 - 5 + 3$）。',
@@ -4163,9 +4181,10 @@
         { id: 'P42', name: '运用全等三角形的性质（对应边相等、对应角相等）求线段长与角度', type: 'procedural_knowledge' },
         { id: null, name: '线段中点的定义', type: 'concept' },
         { id: null, name: '垂线的定义', type: 'concept' },
-        { id: null, name: '轴对称图形的基本定义', type: 'concept' }
+        { id: null, name: '轴对称图形的基本定义', type: 'concept' },
+        { id: 'P44', name: '运用角平分线的性质与判定进行距离转化、面积计算及尺规作图识别', type: 'procedural_knowledge' }
       ],
-      prerequisiteProcedureIds: ['P43', 'P42'],
+      prerequisiteProcedureIds: ['P43', 'P42', 'P44'],
       subsequentProcedureIds: ['P37', 'P38'],
       relatedProcedureIds: ['P10', 'P37', 'P38'],
       pitfalls: [
@@ -4264,7 +4283,7 @@
         { id: null, name: '平行线的性质', type: 'concept' }
       ],
       prerequisiteProcedureIds: [],
-      subsequentProcedureIds: ['P43', 'P37', 'P38', 'P41'],
+      subsequentProcedureIds: ['P43', 'P37', 'P38', 'P41', 'P44'],
       relatedProcedureIds: ['P43'],
       pitfalls: [
         '忽略全等符号“$\\cong$”的顶点顺序要求，仅凭图形长相误配对应边或对应角（如在 $\\triangle ABC \\cong \\triangle DEC$ 中误将 $AC$ 对应 $CE$ 而非 $DC$）。',
@@ -4371,7 +4390,7 @@
         { id: 'P42', name: '运用全等三角形的性质（对应边相等、对应角相等）求线段长与角度', type: 'procedural_knowledge' }
       ],
       prerequisiteProcedureIds: ['P42'],
-      subsequentProcedureIds: ['P37', 'P38', 'P41'],
+      subsequentProcedureIds: ['P37', 'P38', 'P41', 'P44'],
       relatedProcedureIds: ['P10', 'P42'],
       pitfalls: [
         '误把“两边和其中一边的对角相等（$\\text{SSA}$）”当作 $\\text{SAS}$ 判定全等（必须检查该角是否夹在两条已知边之间）。',
@@ -5138,7 +5157,7 @@
         { id: null, name: '三角形三边关系：三角形任意两边之和大于第三边', type: 'concept' }
       ],
       prerequisiteProcedureIds: [],
-      subsequentProcedureIds: ['P53'],
+      subsequentProcedureIds: ['P53', 'P83', 'P85'],
       relatedProcedureIds: ['P53'],
       pitfalls: [
         '数图中弦的条数时误把半径（如 $OA$、$OB$）算作弦，或漏数经过圆心的直径（直径本身也是弦）。',
@@ -5208,7 +5227,7 @@
         { id: 'P52', name: '识别圆的弦、直径、优弧与劣弧，并依据“直径是最长的弦”确定弦长范围', type: 'procedural_knowledge' }
       ],
       prerequisiteProcedureIds: ['P52'],
-      subsequentProcedureIds: [],
+      subsequentProcedureIds: ['P81'],
       relatedProcedureIds: ['P52'],
       pitfalls: [
         '把题目给出的“直径”直接当成半径 $r$ 与 $d$ 比较（如直径为 $6$、$d=4$，误算 $4 \\lt 6$ 判成圆内，实际 $r=3 \\lt 4$ 应在圆外）。',
@@ -5289,7 +5308,7 @@
         { id: 'P99', name: '化简多重符号（奇负偶正法则）', type: 'procedural_knowledge' }
       ],
       prerequisiteProcedureIds: ['P96', 'P97', 'P98', 'P99'],
-      subsequentProcedureIds: ['P55', 'P56', 'P33', 'P32', 'P39', 'P40', 'P48'],
+      subsequentProcedureIds: ['P55', 'P56', 'P33', 'P32', 'P39', 'P40', 'P48', 'P102', 'P103', 'P104'],
       relatedProcedureIds: ['P55', 'P56', 'P33'],
       pitfalls: [
         '由 $|m| = 5$ 只写出正数解 $m = 5$，漏掉负数解 $m = -5$。',
@@ -5413,9 +5432,10 @@
         { step: 3, action: '解出各字母值或确定最小值', detail: '解简单一次方程得出结果，注意移项变号。' }
       ],
       prerequisites: [
-        { id: 'P54', name: '求有理数的绝对值与由绝对值反求原数', type: 'procedural_knowledge' }
+        { id: 'P54', name: '求有理数的绝对值与由绝对值反求原数', type: 'procedural_knowledge' },
+        { id: 'P55', name: '运用绝对值的代数性质判断字母符号范围', type: 'procedural_knowledge' }
       ],
-      prerequisiteProcedureIds: ['P54'],
+      prerequisiteProcedureIds: ['P54', 'P55'],
       subsequentProcedureIds: ['P08', 'P32'],
       relatedProcedureIds: ['P54', 'P55', 'P08'],
       pitfalls: [
@@ -9369,11 +9389,9 @@
         "P96",
         "P97"
       ],
-      "subsequentProcedureIds": [
-        "P99",
+      "subsequentProcedureIds": ["P99",
         "P54",
-        "P33"
-      ],
+        "P33", "P102", "P103"],
       "relatedProcedureIds": [
         "P99",
         "P54"
@@ -9478,11 +9496,9 @@
         "P98",
         "P95"
       ],
-      "subsequentProcedureIds": [
-        "P54",
+      "subsequentProcedureIds": ["P54",
         "P33",
-        "P39"
-      ],
+        "P39", "P104", "P106"],
       "relatedProcedureIds": [
         "P98",
         "P54"

@@ -79,7 +79,7 @@
           id: 'g8_c15_s1_1',
           code: '15.1.1',
           title: '15.1.1 轴对称及其性质',
-          procedureIds: [],
+          procedureIds: ['P118'],
           fallback: false
         },
         {
@@ -93,7 +93,7 @@
           id: 'g8_c15_s2',
           code: '15.2',
           title: '15.2 画轴对称的图形',
-          procedureIds: [],
+          procedureIds: ['P119'],
           fallback: false
         },
         {
@@ -114,7 +114,7 @@
           id: 'g8_c15_s4',
           code: '15.4',
           title: '15.4 最短路径问题（将军饮马）',
-          procedureIds: [],
+          procedureIds: ['P120'],
           fallback: false
         },
         {

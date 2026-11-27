@@ -27357,6 +27357,584 @@
         "svgHtml": "<svg viewBox=\"0 0 280 175\" class=\"w-full max-w-[280px] h-auto\" xmlns=\"http://www.w3.org/2000/svg\">\n        <circle cx=\"140\" cy=\"88\" r=\"62\" fill=\"#F0FDFA\" stroke=\"#94A3B8\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/>\n        <polygon points=\"140,26 199,69 176,138 104,138 81,69\" fill=\"#FFFFFF\" fill-opacity=\"0.7\" stroke=\"#0F766E\" stroke-width=\"2\"/>\n        <circle cx=\"140\" cy=\"88\" r=\"2.8\" fill=\"#0F172A\"/><text x=\"135\" y=\"102\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">O</text>\n        <line class=\"proc-geo-anim\" data-appear-at=\"2.0\" data-dur=\"0.6\" x1=\"140\" y1=\"88\" x2=\"140\" y2=\"26\" stroke=\"#0284C7\" stroke-width=\"2\" style=\"opacity:0;\"/>\n        <line class=\"proc-geo-anim\" data-appear-at=\"2.0\" data-dur=\"0.6\" x1=\"140\" y1=\"88\" x2=\"199\" y2=\"69\" stroke=\"#0284C7\" stroke-width=\"2\" style=\"opacity:0;\"/>\n        <text class=\"proc-geo-anim\" data-appear-at=\"2.6\" data-dur=\"0.4\" x=\"150\" y=\"72\" font-size=\"11\" font-weight=\"700\" fill=\"#E11D48\" style=\"opacity:0;\">72°</text>\n        <text class=\"proc-geo-anim\" data-appear-at=\"9.4\" data-dur=\"0.5\" x=\"210\" y=\"54\" font-size=\"10.5\" font-weight=\"700\" fill=\"#0F766E\" style=\"opacity:0;\">n=5</text>\n        <text class=\"proc-geo-anim\" data-appear-at=\"17.2\" data-dur=\"0.5\" x=\"172\" y=\"130\" font-size=\"10.5\" font-weight=\"700\" fill=\"#D97706\" style=\"opacity:0;\">108°</text>\n      </svg>"
       },
       "svgAnnotations": []
+    },
+    P118: {
+      "procedureId": "P118",
+      "title": "识别轴对称图形与利用轴对称性质求角、求线段长",
+      "exampleTitle": "$\\triangle ABC$ 与 $\\triangle A'B'C'$ 关于直线 $l$ 对称，$\\angle A=50^{\\circ}$，$\\angle B'=30^{\\circ}$，求 $\\angle C$",
+      "exampleFormula": "$100^{\\circ}$",
+      "totalDuration": 24,
+      "scratchpadIdleHint": "旁白草稿演算区（成轴对称的两个图形全等：对应边相等、对应角相等）",
+      "practiceSectionTitle": "轴对称性质跟做练习",
+      "practiceSectionSub": "完成以下两道练习，巩固轴对称对应角与折线周长转化",
+      "geometryDiagram": {
+        "title": "动态几何图：成轴对称的两个三角形全等",
+        "caption": "点击播放观察：沿直线 $l$ 翻折重合 $\\Rightarrow \\angle B=\\angle B'=30^{\\circ}$ → 内角和得 $\\angle C=100^{\\circ}$",
+        "svgHtml": "<svg viewBox=\"0 0 280 175\" class=\"w-full max-w-[280px] h-auto\" xmlns=\"http://www.w3.org/2000/svg\">\n        <line x1=\"140\" y1=\"14\" x2=\"140\" y2=\"160\" stroke=\"#0F766E\" stroke-width=\"2\" stroke-dasharray=\"5 3\"/>\n        <text x=\"145\" y=\"24\" font-size=\"11\" font-weight=\"700\" fill=\"#0F766E\">l</text>\n        <polygon points=\"118,38 42,132 118,132\" fill=\"#F0FDFA\" stroke=\"#334155\" stroke-width=\"2\"/>\n        <polygon points=\"162,38 238,132 162,132\" fill=\"#FFF1F2\" stroke=\"#E11D48\" stroke-width=\"2\"/>\n        <text x=\"112\" y=\"33\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">A</text>\n        <text x=\"30\" y=\"138\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">B</text>\n        <text x=\"121\" y=\"146\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">C</text>\n        <text x=\"160\" y=\"33\" font-size=\"11\" font-weight=\"700\" fill=\"#E11D48\">A'</text>\n        <text x=\"241\" y=\"138\" font-size=\"11\" font-weight=\"700\" fill=\"#E11D48\">B'</text>\n        <text x=\"152\" y=\"146\" font-size=\"11\" font-weight=\"700\" fill=\"#E11D48\">C'</text>\n        <text x=\"96\" y=\"66\" font-size=\"10\" font-weight=\"700\" fill=\"#0284C7\">50°</text>\n        <text x=\"202\" y=\"126\" font-size=\"10\" font-weight=\"700\" fill=\"#E11D48\">30°</text>\n        <line class=\"proc-geo-anim\" data-appear-at=\"2.0\" data-dur=\"0.6\" x1=\"42\" y1=\"132\" x2=\"238\" y2=\"132\" stroke=\"#D97706\" stroke-width=\"1.4\" stroke-dasharray=\"3 2\" style=\"opacity:0;\"/>\n        <text class=\"proc-geo-anim\" data-appear-at=\"9.2\" data-dur=\"0.5\" x=\"62\" y=\"126\" font-size=\"10.5\" font-weight=\"700\" fill=\"#D97706\" style=\"opacity:0;\">30°</text>\n        <text class=\"proc-geo-anim\" data-appear-at=\"17.2\" data-dur=\"0.5\" x=\"92\" y=\"126\" font-size=\"10.5\" font-weight=\"700\" fill=\"#0F766E\" style=\"opacity:0;\">100°</text>\n      </svg>"
+      },
+      "svgAnnotations": [],
+      "steps": [
+        {
+          "step": 1,
+          "name": "找准对称轴 $l$ 与对应角关系",
+          "tStart": 0,
+          "tEnd": 8,
+          "explanation": "两个三角形关于直线 $l$ 对称，对应顶点为 $A\\leftrightarrow A'$、$B\\leftrightarrow B'$、$C\\leftrightarrow C'$。"
+        },
+        {
+          "step": 2,
+          "name": "由轴对称性质转化已知角",
+          "tStart": 8,
+          "tEnd": 16,
+          "explanation": "成轴对称的两个图形全等，对应角相等，故 $\\angle B=\\angle B'=30^{\\circ}$。"
+        },
+        {
+          "step": 3,
+          "name": "用三角形内角和算出 $\\angle C$",
+          "tStart": 16,
+          "tEnd": 24,
+          "explanation": "在 $\\triangle ABC$ 中，$\\angle C=180^{\\circ}-50^{\\circ}-30^{\\circ}=100^{\\circ}$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1,
+          "step": 1,
+          "label": "1.1 明确对称点与对应角关系"
+        },
+        {
+          "time": 9.5,
+          "step": 2,
+          "label": "2.1 由对应角相等得 ∠B=∠B'=30°"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 内角和算出 ∠C=100°"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p118_row_0",
+          "stepBadge": "条件",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p118_r0_1",
+              "math": "$\\triangle ABC$ 与 $\\triangle A'B'C'$ 关于 $l$ 对称，$\\angle A=50^{\\circ},\\angle B'=30^{\\circ}$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p118_row_1",
+          "stepBadge": "第 1 步 · 找对应",
+          "appearAt": 2.2,
+          "tokens": [
+            {
+              "id": "p118_r1_1",
+              "math": "$\\triangle ABC \\cong \\triangle A'B'C'$",
+              "appearAt": 2.4,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p118_row_2",
+          "stepBadge": "第 2 步 · 转对应角",
+          "appearAt": 9.5,
+          "tokens": [
+            {
+              "id": "p118_r2_1",
+              "math": "$\\angle B = \\angle B' = 30^{\\circ}$",
+              "appearAt": 9.7,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p118_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 17.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p118_r3_conc",
+              "math": "$\\angle C = 180^{\\circ}-50^{\\circ}-30^{\\circ}=100^{\\circ}$",
+              "appearAt": 17.7,
+              "dur": 0.45
+            }
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "tStart": 0,
+          "tEnd": 8,
+          "text": "第一步根据轴对称确定全等对应关系。",
+          "focusToken": "p118_r1_1"
+        },
+        {
+          "tStart": 8,
+          "tEnd": 16,
+          "text": "第二步利用对应角相等，把 $\\angle B'=30^{\\circ}$ 转到 $\\triangle ABC$ 中得 $\\angle B=30^{\\circ}$。",
+          "focusToken": "p118_r2_1"
+        },
+        {
+          "tStart": 16,
+          "tEnd": 24,
+          "text": "第三步用内角和算出 $\\angle C=100^{\\circ}$。",
+          "focusToken": "p118_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "如图，点 $C_1, C_2$ 分别是 $C$ 关于 $OA, OB$ 的对称点，$C_1C_2=9\\text{ cm}$，则 $\\triangle CDE$ 的周长为（　　）",
+          "diagramSvg": "<svg viewBox=\"0 0 220 125\" class=\"w-full max-w-[220px] h-auto\" xmlns=\"http://www.w3.org/2000/svg\">\n          <line x1=\"25\" y1=\"105\" x2=\"185\" y2=\"25\" stroke=\"#0F766E\" stroke-width=\"1.8\"/>\n          <line x1=\"25\" y1=\"105\" x2=\"200\" y2=\"105\" stroke=\"#0F766E\" stroke-width=\"1.8\"/>\n          <circle cx=\"115\" cy=\"82\" r=\"2.6\" fill=\"#0F172A\"/><text x=\"120\" y=\"80\" font-size=\"10.5\" font-weight=\"700\" fill=\"#0F172A\">C</text>\n          <circle cx=\"88\" cy=\"30\" r=\"2.6\" fill=\"#E11D48\"/><text x=\"72\" y=\"27\" font-size=\"10.5\" font-weight=\"700\" fill=\"#E11D48\">C₁</text>\n          <circle cx=\"115\" cy=\"122\" r=\"2.6\" fill=\"#E11D48\"/><text x=\"121\" y=\"122\" font-size=\"10.5\" font-weight=\"700\" fill=\"#E11D48\">C₂</text>\n          <line x1=\"88\" y1=\"30\" x2=\"115\" y2=\"122\" stroke=\"#E11D48\" stroke-width=\"1.8\"/>\n          <polygon points=\"115,82 99,68 110,105\" fill=\"#F0FDFA\" fill-opacity=\"0.7\" stroke=\"#0284C7\" stroke-width=\"1.6\"/>\n          <text x=\"86\" y=\"72\" font-size=\"10\" font-weight=\"700\" fill=\"#0284C7\">D</text>\n          <text x=\"98\" y=\"116\" font-size=\"10\" font-weight=\"700\" fill=\"#0284C7\">E</text>\n          <text x=\"14\" y=\"110\" font-size=\"10.5\" font-weight=\"700\" fill=\"#0F766E\">O</text>\n          <text x=\"184\" y=\"22\" font-size=\"10.5\" font-weight=\"700\" fill=\"#0F766E\">A</text>\n          <text x=\"196\" y=\"99\" font-size=\"10.5\" font-weight=\"700\" fill=\"#0F766E\">B</text>\n        </svg>",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $4.5\\text{ cm}$",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. $9\\text{ cm}$",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. $18\\text{ cm}$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "由对称得 $DC=DC_1,\\ EC=EC_2$",
+              "$C_{\\triangle CDE}=DC+DE+EC=DC_1+DE+EC_2=C_1C_2=9\\text{ cm}$"
+            ],
+            "summary": "轴对称将折线周长直接拉直成线段 $C_1C_2$。"
+          },
+          "wrongTitle": "提示：对称轴垂直平分对应点连线，故 DC=DC₁、EC=EC₂",
+          "wrongFeedback": "周长等于 $DC_1+DE+EC_2=C_1C_2=9\\text{ cm}$，选 B。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "如图，$\\triangle ABC$ 中 $\\angle BAC=56^{\\circ}$，分别作 $D$ 关于 $AB, AC$ 的对称点 $E, F$，则 $\\angle EAF =$ ______$^{\\circ}$．",
+          "diagramSvg": "<svg viewBox=\"0 0 220 120\" class=\"w-full max-w-[220px] h-auto\" xmlns=\"http://www.w3.org/2000/svg\">\n          <polygon points=\"110,18 65,102 155,102\" fill=\"#F8FAFC\" stroke=\"#334155\" stroke-width=\"1.8\"/>\n          <line x1=\"110\" y1=\"18\" x2=\"104\" y2=\"102\" stroke=\"#0284C7\" stroke-width=\"1.6\" stroke-dasharray=\"3 2\"/>\n          <line x1=\"110\" y1=\"18\" x2=\"36\" y2=\"66\" stroke=\"#E11D48\" stroke-width=\"1.8\"/>\n          <line x1=\"110\" y1=\"18\" x2=\"188\" y2=\"64\" stroke=\"#E11D48\" stroke-width=\"1.8\"/>\n          <text x=\"106\" y=\"13\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">A</text>\n          <text x=\"56\" y=\"114\" font-size=\"10.5\" font-weight=\"700\" fill=\"#0F172A\">B</text>\n          <text x=\"157\" y=\"114\" font-size=\"10.5\" font-weight=\"700\" fill=\"#0F172A\">C</text>\n          <text x=\"100\" y=\"114\" font-size=\"10.5\" font-weight=\"700\" fill=\"#0284C7\">D</text>\n          <text x=\"24\" y=\"68\" font-size=\"10.5\" font-weight=\"700\" fill=\"#E11D48\">E</text>\n          <text x=\"191\" y=\"68\" font-size=\"10.5\" font-weight=\"700\" fill=\"#E11D48\">F</text>\n          <text x=\"101\" y=\"45\" font-size=\"9.5\" font-weight=\"700\" fill=\"#0F766E\">56°</text>\n        </svg>",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "∠EAF =",
+          "input1Placeholder": "如 112",
+          "input1Suffix": "°",
+          "expectedX": "112",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $112^{\\circ}$。",
+          "correctDetail": "由对称得 $\\angle EAB=\\angle DAB$、$\\angle FAC=\\angle DAC$，故 $\\angle EAF=2\\angle BAC=2\\times 56^{\\circ}=112^{\\circ}$。",
+          "wrongFeedback": "两组对称角各自翻倍，得 $\\angle EAF=2\\angle BAC=112^{\\circ}$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "56",
+              "hint": "别忘记两侧各对称一次，角度翻倍为 $2\\times 56^{\\circ}=112^{\\circ}$。"
+            }
+          ]
+        }
+      }
+    },
+    P119: {
+      "procedureId": "P119",
+      "title": "画轴对称图形与求关于坐标轴对称的点的坐标",
+      "exampleTitle": "在平面直角坐标系中，求点 $P(3,-2)$ 关于 $x$ 轴、$y$ 轴对称的点的坐标",
+      "exampleFormula": "关于 $x$ 轴：$(3,2)$；关于 $y$ 轴：$(-3,-2)$",
+      "totalDuration": 24,
+      "scratchpadIdleHint": "旁白草稿演算区（口诀：关于谁对称，谁的坐标不变，另一个坐标变相反数）",
+      "practiceSectionTitle": "坐标轴对称与画图跟做练习",
+      "practiceSectionSub": "完成以下两道练习，检验坐标轴对称口诀与含参求解",
+      "geometryDiagram": {
+        "title": "动态坐标系：点 $P(3,-2)$ 关于 $x$ 轴与 $y$ 轴的对称点",
+        "caption": "点击播放观察：关于 $x$ 轴横不变纵相反得 $(3,2)$，关于 $y$ 轴纵不变横相反得 $(-3,-2)$",
+        "svgHtml": "<svg viewBox=\"0 0 280 175\" class=\"w-full max-w-[280px] h-auto\" xmlns=\"http://www.w3.org/2000/svg\">\n        <line x1=\"24\" y1=\"88\" x2=\"256\" y2=\"88\" stroke=\"#475569\" stroke-width=\"1.6\"/>\n        <polygon points=\"256,88 249,84 249,92\" fill=\"#475569\"/><text x=\"250\" y=\"102\" font-size=\"10.5\" font-weight=\"700\" fill=\"#475569\">x</text>\n        <line x1=\"140\" y1=\"162\" x2=\"140\" y2=\"14\" stroke=\"#475569\" stroke-width=\"1.6\"/>\n        <polygon points=\"140,14 136,21 144,21\" fill=\"#475569\"/><text x=\"146\" y=\"23\" font-size=\"10.5\" font-weight=\"700\" fill=\"#475569\">y</text>\n        <text x=\"128\" y=\"100\" font-size=\"10\" fill=\"#64748B\">O</text>\n        <circle cx=\"200\" cy=\"128\" r=\"3.4\" fill=\"#0F172A\"/><text x=\"206\" y=\"132\" font-size=\"10.5\" font-weight=\"700\" fill=\"#0F172A\">P(3,-2)</text>\n        <line class=\"proc-geo-anim\" data-appear-at=\"8.8\" data-dur=\"0.6\" x1=\"200\" y1=\"128\" x2=\"200\" y2=\"48\" stroke=\"#0F766E\" stroke-width=\"1.6\" stroke-dasharray=\"4 2\" style=\"opacity:0;\"/>\n        <circle class=\"proc-geo-anim\" data-appear-at=\"9.3\" data-dur=\"0.4\" cx=\"200\" cy=\"48\" r=\"3.4\" fill=\"#0F766E\" style=\"opacity:0;\"/>\n        <text class=\"proc-geo-anim\" data-appear-at=\"9.5\" data-dur=\"0.4\" x=\"206\" y=\"51\" font-size=\"10.5\" font-weight=\"700\" fill=\"#0F766E\" style=\"opacity:0;\">P₁(3,2)</text>\n        <line class=\"proc-geo-anim\" data-appear-at=\"16.8\" data-dur=\"0.6\" x1=\"200\" y1=\"128\" x2=\"80\" y2=\"128\" stroke=\"#E11D48\" stroke-width=\"1.6\" stroke-dasharray=\"4 2\" style=\"opacity:0;\"/>\n        <circle class=\"proc-geo-anim\" data-appear-at=\"17.3\" data-dur=\"0.4\" cx=\"80\" cy=\"128\" r=\"3.4\" fill=\"#E11D48\" style=\"opacity:0;\"/>\n        <text class=\"proc-geo-anim\" data-appear-at=\"17.5\" data-dur=\"0.4\" x=\"20\" y=\"144\" font-size=\"10.5\" font-weight=\"700\" fill=\"#E11D48\" style=\"opacity:0;\">P₂(-3,-2)</text>\n      </svg>"
+      },
+      "svgAnnotations": [],
+      "steps": [
+        {
+          "step": 1,
+          "name": "定位原点的横纵坐标 $P(3,-2)$",
+          "tStart": 0,
+          "tEnd": 8,
+          "explanation": "点 $P(3,-2)$ 位于第四象限，横坐标 $x=3$，纵坐标 $y=-2$。"
+        },
+        {
+          "step": 2,
+          "name": "关于 $x$ 轴对称：横不变、纵相反",
+          "tStart": 8,
+          "tEnd": 16,
+          "explanation": "翻折跨过 $x$ 轴，横坐标 $3$ 不变，纵坐标 $-2$ 变为 $+2$，得 $P_1(3,2)$。"
+        },
+        {
+          "step": 3,
+          "name": "关于 $y$ 轴对称：纵不变、横相反",
+          "tStart": 16,
+          "tEnd": 24,
+          "explanation": "翻折跨过 $y$ 轴，纵坐标 $-2$ 不变，横坐标 $3$ 变为 $-3$，得 $P_2(-3,-2)$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1,
+          "step": 1,
+          "label": "1.1 标出第四象限点 P(3,-2)"
+        },
+        {
+          "time": 9.5,
+          "step": 2,
+          "label": "2.1 关于 x 轴对称得 P₁(3,2)"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 关于 y 轴对称得 P₂(-3,-2)"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p119_row_0",
+          "stepBadge": "原点",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p119_r0_1",
+              "math": "$P(3,-2)$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p119_row_1",
+          "stepBadge": "第 1 步 · 对称口诀",
+          "appearAt": 2.2,
+          "tokens": [
+            {
+              "id": "p119_r1_1",
+              "math": "关于谁对称，谁不变，另一变相反数",
+              "appearAt": 2.4,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p119_row_2",
+          "stepBadge": "第 2 步 · 关于 $x$ 轴",
+          "appearAt": 9.5,
+          "tokens": [
+            {
+              "id": "p119_r2_1",
+              "math": "$(3,-2) \\rightarrow (3,2)$",
+              "appearAt": 9.7,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p119_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 17.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p119_r3_conc",
+              "math": "$(3,-2) \\rightarrow (-3,-2)$",
+              "appearAt": 17.7,
+              "dur": 0.45
+            }
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "tStart": 0,
+          "tEnd": 8,
+          "text": "第一步标出 $P(3,-2)$，牢记口诀“关于谁对称，谁的坐标不变”。",
+          "focusToken": "p119_r1_1"
+        },
+        {
+          "tStart": 8,
+          "tEnd": 16,
+          "text": "第二步关于 $x$ 轴对称，横坐标不变、纵坐标变号得 $(3,2)$。",
+          "focusToken": "p119_r2_1"
+        },
+        {
+          "tStart": 16,
+          "tEnd": 24,
+          "text": "第三步关于 $y$ 轴对称，纵坐标不变、横坐标变号得 $(-3,-2)$。",
+          "focusToken": "p119_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "在平面直角坐标系中，点 $P(3,-2)$ 关于 $x$ 轴对称的点的坐标是（　　）",
+          "diagramSvg": "<svg viewBox=\"0 0 220 115\" class=\"w-full max-w-[220px] h-auto\" xmlns=\"http://www.w3.org/2000/svg\">\n          <line x1=\"20\" y1=\"58\" x2=\"200\" y2=\"58\" stroke=\"#475569\" stroke-width=\"1.5\"/>\n          <polygon points=\"200,58 193,54 193,62\" fill=\"#475569\"/><text x=\"194\" y=\"71\" font-size=\"10\" font-weight=\"700\" fill=\"#475569\">x</text>\n          <line x1=\"110\" y1=\"108\" x2=\"110\" y2=\"10\" stroke=\"#475569\" stroke-width=\"1.5\"/>\n          <polygon points=\"110,10 106,17 114,17\" fill=\"#475569\"/><text x=\"115\" y=\"18\" font-size=\"10\" font-weight=\"700\" fill=\"#475569\">y</text>\n          <circle cx=\"158\" cy=\"88\" r=\"3\" fill=\"#0F172A\"/><text x=\"162\" y=\"92\" font-size=\"10\" font-weight=\"700\" fill=\"#0F172A\">P(3,-2)</text>\n          <line x1=\"158\" y1=\"88\" x2=\"158\" y2=\"28\" stroke=\"#0F766E\" stroke-width=\"1.5\" stroke-dasharray=\"3 2\"/>\n          <circle cx=\"158\" cy=\"28\" r=\"3\" fill=\"#E11D48\"/><text x=\"162\" y=\"31\" font-size=\"10\" font-weight=\"700\" fill=\"#E11D48\">P'(?,?)</text>\n        </svg>",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $(3,2)$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $(-3,2)$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $(-3,-2)$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "关于 $x$ 轴对称：横坐标 $3$ 不变，纵坐标 $-2$ 变为 $2$"
+            ],
+            "summary": "对称点在第一象限 $(3,2)$。"
+          },
+          "wrongTitle": "提示：关于 x 轴对称，x 坐标不变，y 坐标变相反数",
+          "wrongFeedback": "横坐标不变仍为 $3$，纵坐标变为 $2$，选 A。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "已知点 $P(a,3)$ 与点 $Q(-2,b)$ 关于 $y$ 轴对称，则 $a+b =$ ______．",
+          "diagramSvg": "<svg viewBox=\"0 0 220 110\" class=\"w-full max-w-[220px] h-auto\" xmlns=\"http://www.w3.org/2000/svg\">\n          <line x1=\"20\" y1=\"85\" x2=\"200\" y2=\"85\" stroke=\"#475569\" stroke-width=\"1.5\"/>\n          <polygon points=\"200,85 193,81 193,89\" fill=\"#475569\"/><text x=\"194\" y=\"98\" font-size=\"10\" font-weight=\"700\" fill=\"#475569\">x</text>\n          <line x1=\"110\" y1=\"102\" x2=\"110\" y2=\"10\" stroke=\"#0F766E\" stroke-width=\"1.8\"/>\n          <polygon points=\"110,10 106,17 114,17\" fill=\"#0F766E\"/><text x=\"115\" y=\"18\" font-size=\"10\" font-weight=\"700\" fill=\"#0F766E\">y</text>\n          <circle cx=\"70\" cy=\"40\" r=\"3\" fill=\"#0284C7\"/><text x=\"26\" y=\"34\" font-size=\"10\" font-weight=\"700\" fill=\"#0284C7\">Q(-2,b)</text>\n          <circle cx=\"150\" cy=\"40\" r=\"3\" fill=\"#E11D48\"/><text x=\"154\" y=\"34\" font-size=\"10\" font-weight=\"700\" fill=\"#E11D48\">P(a,3)</text>\n          <line x1=\"70\" y1=\"40\" x2=\"150\" y2=\"40\" stroke=\"#D97706\" stroke-width=\"1.5\" stroke-dasharray=\"3 2\"/>\n        </svg>",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "a+b =",
+          "input1Placeholder": "如 5",
+          "input1Suffix": "",
+          "expectedX": "5",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $5$。",
+          "correctDetail": "关于 $y$ 轴对称，纵坐标相等 $b=3$，横坐标互为相反数 $a=2$，故 $a+b=5$。",
+          "wrongFeedback": "由关于 $y$ 轴对称得 $a=2, b=3$，相加得 $5$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "1",
+              "hint": "横坐标互为相反数，$a=-(-2)=2$，不是 $-2$。"
+            }
+          ]
+        }
+      }
+    },
+    P120: {
+      "procedureId": "P120",
+      "title": "利用轴对称作图求解“将军饮马”最短路径问题",
+      "exampleTitle": "坐标系中 $A(0,2), B(2,1)$，在 $x$ 轴上找点 $M$ 使 $MA+MB$ 最小，求最小值",
+      "exampleFormula": "$\\sqrt{13}$",
+      "totalDuration": 24,
+      "scratchpadIdleHint": "旁白草稿演算区（动点在谁上就关于谁作对称点 → 连结对称点与另一定点 → 勾股算线段长）",
+      "practiceSectionTitle": "将军饮马最短路径跟做练习",
+      "practiceSectionSub": "完成以下两道练习，巩固作对称点转化与等腰高线求最小值",
+      "geometryDiagram": {
+        "title": "动态几何图：作对称点 $A'(0,-2)$ 化折为直",
+        "caption": "点击播放观察：作 $A'(0,-2)$ → 连 $A'B$ 交 $x$ 轴于 $M$ → 勾股算 $A'B=\\sqrt{2^2+3^2}=\\sqrt{13}$",
+        "svgHtml": "<svg viewBox=\"0 0 280 175\" class=\"w-full max-w-[280px] h-auto\" xmlns=\"http://www.w3.org/2000/svg\">\n        <line x1=\"25\" y1=\"88\" x2=\"255\" y2=\"88\" stroke=\"#0F766E\" stroke-width=\"1.8\"/>\n        <polygon points=\"255,88 248,84 248,92\" fill=\"#0F766E\"/><text x=\"248\" y=\"102\" font-size=\"10.5\" font-weight=\"700\" fill=\"#0F766E\">x</text>\n        <line x1=\"95\" y1=\"164\" x2=\"95\" y2=\"12\" stroke=\"#64748B\" stroke-width=\"1.5\"/>\n        <polygon points=\"95,12 91,19 99,19\" fill=\"#64748B\"/><text x=\"101\" y=\"22\" font-size=\"10.5\" font-weight=\"700\" fill=\"#64748B\">y</text>\n        <circle cx=\"95\" cy=\"36\" r=\"3.2\" fill=\"#0F172A\"/><text x=\"102\" y=\"38\" font-size=\"10.5\" font-weight=\"700\" fill=\"#0F172A\">A(0,2)</text>\n        <circle cx=\"155\" cy=\"62\" r=\"3.2\" fill=\"#0F172A\"/><text x=\"162\" y=\"62\" font-size=\"10.5\" font-weight=\"700\" fill=\"#0F172A\">B(2,1)</text>\n        <circle class=\"proc-geo-anim\" data-appear-at=\"2.2\" data-dur=\"0.5\" cx=\"95\" cy=\"140\" r=\"3.2\" fill=\"#E11D48\" style=\"opacity:0;\"/>\n        <text class=\"proc-geo-anim\" data-appear-at=\"2.4\" data-dur=\"0.4\" x=\"102\" y=\"145\" font-size=\"10.5\" font-weight=\"700\" fill=\"#E11D48\" style=\"opacity:0;\">A'(0,-2)</text>\n        <line class=\"proc-geo-anim\" data-appear-at=\"9.0\" data-dur=\"0.7\" x1=\"95\" y1=\"140\" x2=\"155\" y2=\"62\" stroke=\"#E11D48\" stroke-width=\"2.2\" style=\"opacity:0;\"/>\n        <circle class=\"proc-geo-anim\" data-appear-at=\"9.5\" data-dur=\"0.4\" cx=\"135\" cy=\"88\" r=\"3.2\" fill=\"#D97706\" style=\"opacity:0;\"/>\n        <text class=\"proc-geo-anim\" data-appear-at=\"9.6\" data-dur=\"0.4\" x=\"139\" y=\"102\" font-size=\"10.5\" font-weight=\"700\" fill=\"#D97706\" style=\"opacity:0;\">M</text>\n        <line class=\"proc-geo-anim\" data-appear-at=\"9.6\" data-dur=\"0.5\" x1=\"95\" y1=\"36\" x2=\"135\" y2=\"88\" stroke=\"#0284C7\" stroke-width=\"1.6\" stroke-dasharray=\"4 2\" style=\"opacity:0;\"/>\n        <polyline class=\"proc-geo-anim\" data-appear-at=\"17.0\" data-dur=\"0.6\" points=\"95,140 155,140 155,62\" fill=\"none\" stroke=\"#0284C7\" stroke-width=\"1.6\" stroke-dasharray=\"3 2\" style=\"opacity:0;\"/>\n        <text class=\"proc-geo-anim\" data-appear-at=\"17.4\" data-dur=\"0.4\" x=\"120\" y=\"154\" font-size=\"10\" font-weight=\"700\" fill=\"#0284C7\" style=\"opacity:0;\">2</text>\n        <text class=\"proc-geo-anim\" data-appear-at=\"17.4\" data-dur=\"0.4\" x=\"160\" y=\"108\" font-size=\"10\" font-weight=\"700\" fill=\"#0284C7\" style=\"opacity:0;\">3</text>\n      </svg>"
+      },
+      "svgAnnotations": [],
+      "steps": [
+        {
+          "step": 1,
+          "name": "作定点 $A$ 关于动点所在直线 $x$ 轴的对称点",
+          "tStart": 0,
+          "tEnd": 8,
+          "explanation": "动点 $M$ 在 $x$ 轴上，作 $A(0,2)$ 关于 $x$ 轴的对称点 $A'(0,-2)$，于是对任意 $M$ 恒有 $MA=MA'$。"
+        },
+        {
+          "step": 2,
+          "name": "连结 $A'B$ 交 $x$ 轴于最优动点 $M$",
+          "tStart": 8,
+          "tEnd": 16,
+          "explanation": "连结 $A'B$ 交 $x$ 轴于 $M$，由两点之间线段最短知 $MA+MB=MA'+MB\\ge A'B$。"
+        },
+        {
+          "step": 3,
+          "name": "用勾股定理算出最短路径 $A'B$",
+          "tStart": 16,
+          "tEnd": 24,
+          "explanation": "水平差 $2-0=2$，竖直差 $1-(-2)=3$，由勾股定理得 $A'B=\\sqrt{2^{2}+3^{2}}=\\sqrt{13}$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1,
+          "step": 1,
+          "label": "1.1 作 A(0,2) 关于 x 轴对称点 A'(0,-2)"
+        },
+        {
+          "time": 9.5,
+          "step": 2,
+          "label": "2.1 连结 A'B 交 x 轴得最短点 M"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 勾股定理算得 √(2²+3²)=√13"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p120_row_0",
+          "stepBadge": "条件",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p120_r0_1",
+              "math": "$A(0,2),\\ B(2,1)$，$M$ 在 $x$ 轴上，求 $MA+MB$ 最小值",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p120_row_1",
+          "stepBadge": "第 1 步 · 作对称点",
+          "appearAt": 2.2,
+          "tokens": [
+            {
+              "id": "p120_r1_1",
+              "math": "$A(0,2) \\rightarrow A'(0,-2)$",
+              "appearAt": 2.4,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p120_row_2",
+          "stepBadge": "第 2 步 · 化折为直",
+          "appearAt": 9.5,
+          "tokens": [
+            {
+              "id": "p120_r2_1",
+              "math": "$(MA+MB)_{\\min} = A'B$",
+              "appearAt": 9.7,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p120_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 17.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p120_r3_conc",
+              "math": "$A'B = \\sqrt{(2-0)^{2}+[1-(-2)]^{2}} = \\sqrt{13}$",
+              "appearAt": 17.7,
+              "dur": 0.45
+            }
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "tStart": 0,
+          "tEnd": 8,
+          "text": "第一步动点在 $x$ 轴上，就作 $A(0,2)$ 关于 $x$ 轴的对称点 $A'(0,-2)$。",
+          "focusToken": "p120_r1_1"
+        },
+        {
+          "tStart": 8,
+          "tEnd": 16,
+          "text": "第二步连结 $A'B$ 交 $x$ 轴于 $M$，把折线和转化为直线段 $A'B$。",
+          "focusToken": "p120_r2_1"
+        },
+        {
+          "tStart": 16,
+          "tEnd": 24,
+          "text": "第三步构造直角边为 $2$ 和 $3$ 的直角三角形，算得最小值 $\\sqrt{13}$。",
+          "focusToken": "p120_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "如图，等腰 $\\triangle ABC$ 中 $AB=AC$，$BC=6$，$S_{\\triangle ABC}=27$，$EF$ 垂直平分 $AB$，$D$ 为 $BC$ 中点，$M$ 在 $EF$ 上，则 $MB+MD$ 最小值为（　　）",
+          "diagramSvg": "<svg viewBox=\"0 0 220 125\" class=\"w-full max-w-[220px] h-auto\" xmlns=\"http://www.w3.org/2000/svg\">\n          <polygon points=\"110,16 55,108 165,108\" fill=\"#F8FAFC\" stroke=\"#334155\" stroke-width=\"1.8\"/>\n          <line x1=\"110\" y1=\"16\" x2=\"110\" y2=\"108\" stroke=\"#E11D48\" stroke-width=\"1.8\"/>\n          <line x1=\"45\" y1=\"42\" x2=\"155\" y2=\"96\" stroke=\"#0F766E\" stroke-width=\"1.6\" stroke-dasharray=\"4 2\"/>\n          <circle cx=\"110\" cy=\"74\" r=\"2.8\" fill=\"#D97706\"/><text x=\"115\" y=\"72\" font-size=\"10\" font-weight=\"700\" fill=\"#D97706\">M</text>\n          <line x1=\"55\" y1=\"108\" x2=\"110\" y2=\"74\" stroke=\"#0284C7\" stroke-width=\"1.5\" stroke-dasharray=\"3 2\"/>\n          <text x=\"106\" y=\"12\" font-size=\"10.5\" font-weight=\"700\" fill=\"#0F172A\">A</text>\n          <text x=\"44\" y=\"114\" font-size=\"10.5\" font-weight=\"700\" fill=\"#0F172A\">B</text>\n          <text x=\"169\" y=\"114\" font-size=\"10.5\" font-weight=\"700\" fill=\"#0F172A\">C</text>\n          <text x=\"106\" y=\"120\" font-size=\"10.5\" font-weight=\"700\" fill=\"#E11D48\">D</text>\n          <text x=\"34\" y=\"42\" font-size=\"10\" font-weight=\"700\" fill=\"#0F766E\">E</text>\n          <text x=\"157\" y=\"98\" font-size=\"10\" font-weight=\"700\" fill=\"#0F766E\">F</text>\n        </svg>",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $6$",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. $9$",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. $12$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "由 $EF$ 垂直平分 $AB$ 得 $MB=MA$",
+              "$(MB+MD)_{\\min}=AD=\\frac{2\\times 27}{6}=9$"
+            ],
+            "summary": "垂直平分线天然充当对称轴，直接转化为底边上的高 $AD$。"
+          },
+          "wrongTitle": "提示：由垂直平分线得 MB=MA，故最小值为底边上的高 AD",
+          "wrongFeedback": "由面积公式 $\\frac{1}{2}\\times 6\\times AD=27$ 得 $AD=9$，选 B。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "在平面直角坐标系中，$A(0,1)$，$B(3,3)$，$M$ 为 $x$ 轴上一动点，则 $MA+MB$ 的最小值为 ______．",
+          "diagramSvg": "<svg viewBox=\"0 0 220 120\" class=\"w-full max-w-[220px] h-auto\" xmlns=\"http://www.w3.org/2000/svg\">\n          <line x1=\"20\" y1=\"78\" x2=\"200\" y2=\"78\" stroke=\"#0F766E\" stroke-width=\"1.6\"/>\n          <polygon points=\"200,78 193,74 193,82\" fill=\"#0F766E\"/><text x=\"194\" y=\"91\" font-size=\"10\" font-weight=\"700\" fill=\"#0F766E\">x</text>\n          <line x1=\"72\" y1=\"112\" x2=\"72\" y2=\"10\" stroke=\"#64748B\" stroke-width=\"1.4\"/>\n          <polygon points=\"72,10 68,17 76,17\" fill=\"#64748B\"/><text x=\"77\" y=\"18\" font-size=\"10\" font-weight=\"700\" fill=\"#64748B\">y</text>\n          <circle cx=\"72\" cy=\"58\" r=\"2.8\" fill=\"#0F172A\"/><text x=\"32\" y=\"57\" font-size=\"10\" font-weight=\"700\" fill=\"#0F172A\">A(0,1)</text>\n          <circle cx=\"132\" cy=\"18\" r=\"2.8\" fill=\"#0F172A\"/><text x=\"137\" y=\"21\" font-size=\"10\" font-weight=\"700\" fill=\"#0F172A\">B(3,3)</text>\n          <circle cx=\"72\" cy=\"98\" r=\"2.8\" fill=\"#E11D48\"/><text x=\"22\" y=\"102\" font-size=\"10\" font-weight=\"700\" fill=\"#E11D48\">A'(0,-1)</text>\n          <line x1=\"72\" y1=\"98\" x2=\"132\" y2=\"18\" stroke=\"#E11D48\" stroke-width=\"1.8\" stroke-dasharray=\"4 2\"/>\n        </svg>",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "最小值 =",
+          "input1Placeholder": "如 5",
+          "input1Suffix": "",
+          "expectedX": "5",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $5$。",
+          "correctDetail": "作 $A'(0,-1)$，水平差 $3-0=3$，竖直差 $3-(-1)=4$，勾股定理得 $\\sqrt{3^{2}+4^{2}}=5$。",
+          "wrongFeedback": "作 $A(0,1)$ 关于 $x$ 轴对称点 $A'(0,-1)$，算 $A'B=\\sqrt{3^{2}+4^{2}}=5$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "7",
+              "hint": "斜边长用勾股定理 $\\sqrt{3^{2}+4^{2}}=5$，不是两直角边直接相加。"
+            }
+          ]
+        }
+      }
     }
   };
 

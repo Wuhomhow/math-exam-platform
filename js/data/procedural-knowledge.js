@@ -410,7 +410,7 @@
         { id: null, name: '分数与除法的关系', type: 'operation' }
       ],
       prerequisiteProcedureIds: [],
-      subsequentProcedureIds: ['P05', 'P29'],
+      subsequentProcedureIds: ['P05', 'P29', 'P34'],
       relatedProcedureIds: [],
       pitfalls: [
         '把公式或等式（如 $S=\\frac{1}{2}ab$、$v=\\frac{4}{3}\\pi r^{3}$）误判为代数式。',
@@ -492,7 +492,7 @@
         { id: null, name: '十进制多位数按数位表示的方法', type: 'concept' }
       ],
       prerequisiteProcedureIds: ['P04'],
-      subsequentProcedureIds: ['P08', 'P45'],
+      subsequentProcedureIds: ['P06', 'P07', 'P08', 'P45', 'P46', 'P92', 'P93'],
       relatedProcedureIds: ['P06', 'P46', 'P07'],
       pitfalls: [
         '混淆运算顺序导致漏加括号（如将“$a,b$ 两数和的平方”错写为 $a^{2}+b^{2}$，或将“$x$ 与 $y$ 的和的倒数”错写为 $\\frac{1}{x}+y$）。',
@@ -688,10 +688,11 @@
       ],
       prerequisites: [
         { id: 'P05', name: '根据文字与简单数量关系列代数式', type: 'procedural_knowledge' },
-        { id: 'P32', name: '运用有理数乘方符号法则与混合运算顺序计算', type: 'procedural_knowledge' }
+        { id: 'P32', name: '运用有理数乘方符号法则与混合运算顺序计算', type: 'procedural_knowledge' },
+        { id: 'P56', name: '运用绝对值的非负性求值与最值', type: 'procedural_knowledge' }
       ],
-      prerequisiteProcedureIds: ['P05', 'P32'],
-      subsequentProcedureIds: ['P09', 'P20', 'P28', 'P29'],
+      prerequisiteProcedureIds: ['P05', 'P32', 'P56'],
+      subsequentProcedureIds: ['P09', 'P20', 'P28', 'P29', 'P45', 'P51'],
       relatedProcedureIds: ['P09'],
       pitfalls: [
         '代入负数计算乘方时漏加括号（如当 $y=-3$ 时，将 $y^{2}$ 错写成 $-3^{2}=-9$，正确应为 $(-3)^{2}=9$）。',
@@ -759,7 +760,7 @@
         { id: null, name: '添括号变号法则', type: 'operation' }
       ],
       prerequisiteProcedureIds: ['P08', 'P32'],
-      subsequentProcedureIds: ['P20'],
+      subsequentProcedureIds: ['P20', 'P21', 'P23'],
       relatedProcedureIds: ['P08'],
       pitfalls: [
         '提取负因数添括号时，括号内第二项忘记变号（如将 $12-2x+4y$ 错误变形为 $12-2(x+2y)$，正确应为 $12-2(x-2y)$）。',
@@ -2156,7 +2157,7 @@
         }
       ],
       prerequisiteProcedureIds: ['P28', 'P29'],
-      subsequentProcedureIds: ['P01', 'P17', 'P18', 'P20', 'P21'],
+      subsequentProcedureIds: ['P01', 'P17', 'P18', 'P20', 'P21', 'P49', 'P50'],
       relatedProcedureIds: ['P08'],
       pitfalls: [
         '去括号时漏乘括号内的第二项（如将 $2(x-3)$ 错写成 $2x-3$），或括号前是负号时第二项忘记变号（如将 $-2(x-3)$ 错写成 $-2x-6$）。',
@@ -2765,10 +2766,11 @@
         { id: 'P49', name: '识别同类项与由同类项定义求参数', type: 'procedural_knowledge' },
         { id: 'P51', name: '运用合并同类项法则化简整式与直接代入求值', type: 'procedural_knowledge' },
         { id: 'P08', name: '直接代入字母数值求代数式的值', type: 'procedural_knowledge' },
-        { id: 'P32', name: '运用有理数乘方符号法则与混合运算顺序计算', type: 'procedural_knowledge' }
+        { id: 'P32', name: '运用有理数乘方符号法则与混合运算顺序计算', type: 'procedural_knowledge' },
+        { id: 'P39', name: '运用有理数加减法则与运算律进行加减混合运算', type: 'procedural_knowledge' }
       ],
-      prerequisiteProcedureIds: ['P47', 'P49', 'P51', 'P08', 'P32'],
-      subsequentProcedureIds: ['P50', 'P45', 'P15', 'P19', 'P22', 'P24', 'P27', 'P29'],
+      prerequisiteProcedureIds: ['P47', 'P49', 'P51', 'P08', 'P32', 'P39'],
+      subsequentProcedureIds: ['P50', 'P45', 'P15', 'P19', 'P22', 'P24', 'P26', 'P27', 'P29', 'P30', 'P36'],
       relatedProcedureIds: ['P51', 'P50', 'P45'],
       pitfalls: [
         '括号前是负号或负系数时，只给括号内第一项变号而漏改后面项的符号（如将 $-4(x-x^{2}+\\frac{1}{2})$ 错写成 $-4x-4x^{2}+2$）。',
@@ -3387,7 +3389,7 @@
         { id: 'P04', name: '识别代数式与判断规范书写', type: 'procedural_knowledge' }
       ],
       prerequisiteProcedureIds: ['P04'],
-      subsequentProcedureIds: ['P47', 'P48', 'P49', 'P27'],
+      subsequentProcedureIds: ['P47', 'P48', 'P49', 'P27', 'P02', 'P19'],
       relatedProcedureIds: ['P04', 'P47', 'P48'],
       pitfalls: [
         '误把圆周率 $\\pi$ 当作未知字母，漏将 $\\pi$ 计入系数或误把 $\\pi$ 的次数 $1$ 算进单项式次数（如把 $\\frac{3\\pi x^{2}y^{3}}{5}$ 的次数错算为 $6$）。',
@@ -4712,7 +4714,7 @@
         { id: 'P34', name: '识别单项式并确定单项式的系数与次数', type: 'procedural_knowledge' }
       ],
       prerequisiteProcedureIds: ['P34'],
-      subsequentProcedureIds: ['P48', 'P28'],
+      subsequentProcedureIds: ['P48', 'P28', 'P51'],
       relatedProcedureIds: ['P34', 'P48'],
       pitfalls: [
         '把多项式的次数误算成“所有项的次数之和”（正确应为各单项式次数中的最大值）。',

@@ -26561,7 +26561,8 @@
             "summary": "距离小于半径则直线与圆相交。"
           },
           "wrongTitle": "提示：比较 d=3 与 r=5 的大小",
-          "wrongFeedback": "$d=3<r=5$，直线与圆相交，选 C。"
+          "wrongFeedback": "$d=3<r=5$，直线与圆相交，选 C。",
+          "diagramSvg": "<svg viewBox=\"0 0 220 120\" class=\"w-full max-w-[220px] h-auto\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"110\" cy=\"52\" r=\"40\" fill=\"#F0FDFA\" stroke=\"#0F766E\" stroke-width=\"2\"/>\n      <circle cx=\"110\" cy=\"52\" r=\"2.5\" fill=\"#0F172A\"/><text x=\"100\" y=\"47\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">O</text>\n      <line x1=\"110\" y1=\"52\" x2=\"150\" y2=\"52\" stroke=\"#0284C7\" stroke-width=\"1.8\"/>\n      <text x=\"124\" y=\"47\" font-size=\"10\" font-weight=\"700\" fill=\"#0284C7\">r=5</text>\n      <line x1=\"35\" y1=\"76\" x2=\"185\" y2=\"76\" stroke=\"#E11D48\" stroke-width=\"2\"/><text x=\"178\" y=\"71\" font-size=\"10\" font-weight=\"700\" fill=\"#E11D48\">l</text>\n      <line x1=\"110\" y1=\"52\" x2=\"110\" y2=\"76\" stroke=\"#D97706\" stroke-width=\"1.8\" stroke-dasharray=\"3 2\"/>\n      <rect x=\"110\" y=\"69\" width=\"7\" height=\"7\" fill=\"none\" stroke=\"#D97706\" stroke-width=\"1.2\"/>\n      <text x=\"116\" y=\"67\" font-size=\"10\" font-weight=\"700\" fill=\"#D97706\">d=3</text>\n    </svg>"
         },
         "practice2": {
           "title": "练习二",
@@ -26584,9 +26585,16 @@
               "val": "2.5",
               "hint": "$2.5$ 是外接圆半径（斜边一半），切线半径应等于斜边上的高 $2.4$。"
             }
-          ]
+          ],
+          "diagramSvg": "<svg viewBox=\"0 0 230 130\" class=\"w-full max-w-[230px] h-auto\" xmlns=\"http://www.w3.org/2000/svg\">\n      <polygon points=\"45,105 185,105 45,30\" fill=\"#F8FAFC\" stroke=\"#334155\" stroke-width=\"2\"/>\n      <rect x=\"45\" y=\"96\" width=\"9\" height=\"9\" fill=\"none\" stroke=\"#334155\" stroke-width=\"1.4\"/>\n      <line x1=\"45\" y1=\"105\" x2=\"77\" y2=\"47\" stroke=\"#E11D48\" stroke-width=\"1.8\" stroke-dasharray=\"4 2\"/>\n      <circle cx=\"45\" cy=\"105\" r=\"2.5\" fill=\"#0F766E\"/>\n      <text x=\"32\" y=\"114\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">C</text>\n      <text x=\"34\" y=\"25\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">A</text>\n      <text x=\"189\" y=\"112\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">B</text>\n      <text x=\"26\" y=\"72\" font-size=\"10.5\" font-weight=\"700\" fill=\"#0284C7\">3</text>\n      <text x=\"112\" y=\"119\" font-size=\"10.5\" font-weight=\"700\" fill=\"#0284C7\">4</text>\n      <text x=\"68\" y=\"84\" font-size=\"10.5\" font-weight=\"700\" fill=\"#E11D48\">r=d?</text>\n    </svg>"
         }
-      }
+      },
+      "geometryDiagram": {
+        "title": "动态几何图：直线与圆相交（$0\\le d < r$）",
+        "caption": "点击播放观察：直径 $8\\Rightarrow r=4$，有 $2$ 个公共点即相交，垂距 $d$ 满足 $0\\le d<4$",
+        "svgHtml": "<svg viewBox=\"0 0 280 175\" class=\"w-full max-w-[280px] h-auto\" xmlns=\"http://www.w3.org/2000/svg\">\n        <circle cx=\"140\" cy=\"78\" r=\"52\" fill=\"#F0FDFA\" stroke=\"#0F766E\" stroke-width=\"2\"/>\n        <circle cx=\"140\" cy=\"78\" r=\"2.8\" fill=\"#0F172A\"/>\n        <text x=\"132\" y=\"72\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">O</text>\n        <line class=\"proc-geo-anim\" data-appear-at=\"2.0\" data-dur=\"0.6\" x1=\"140\" y1=\"78\" x2=\"192\" y2=\"78\" stroke=\"#0284C7\" stroke-width=\"2\" style=\"opacity:0;\"/>\n        <text class=\"proc-geo-anim\" data-appear-at=\"2.4\" data-dur=\"0.4\" x=\"158\" y=\"72\" font-size=\"11\" font-weight=\"700\" fill=\"#0284C7\" style=\"opacity:0;\">r=4</text>\n        <line class=\"proc-geo-anim\" data-appear-at=\"8.8\" data-dur=\"0.7\" x1=\"40\" y1=\"108\" x2=\"240\" y2=\"108\" stroke=\"#E11D48\" stroke-width=\"2.2\" style=\"opacity:0;\"/>\n        <text class=\"proc-geo-anim\" data-appear-at=\"9.2\" data-dur=\"0.4\" x=\"232\" y=\"102\" font-size=\"11\" font-weight=\"700\" fill=\"#E11D48\" style=\"opacity:0;\">l</text>\n        <circle class=\"proc-geo-anim\" data-appear-at=\"9.5\" data-dur=\"0.4\" cx=\"97.5\" cy=\"108\" r=\"3.2\" fill=\"#E11D48\" style=\"opacity:0;\"/>\n        <circle class=\"proc-geo-anim\" data-appear-at=\"9.5\" data-dur=\"0.4\" cx=\"182.5\" cy=\"108\" r=\"3.2\" fill=\"#E11D48\" style=\"opacity:0;\"/>\n        <line class=\"proc-geo-anim\" data-appear-at=\"16.8\" data-dur=\"0.6\" x1=\"140\" y1=\"78\" x2=\"140\" y2=\"108\" stroke=\"#D97706\" stroke-width=\"2\" stroke-dasharray=\"4 2\" style=\"opacity:0;\"/>\n        <rect class=\"proc-geo-anim\" data-appear-at=\"17.2\" data-dur=\"0.4\" x=\"140\" y=\"100\" width=\"8\" height=\"8\" fill=\"none\" stroke=\"#D97706\" stroke-width=\"1.3\" style=\"opacity:0;\"/>\n        <text class=\"proc-geo-anim\" data-appear-at=\"17.4\" data-dur=\"0.4\" x=\"146\" y=\"96\" font-size=\"11\" font-weight=\"700\" fill=\"#D97706\" style=\"opacity:0;\">d &lt; 4</text>\n        <text x=\"140\" y=\"160\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#475569\">2个公共点 ⇔ 相交 ⇔ 0 ≤ d &lt; r</text>\n      </svg>"
+      },
+      "svgAnnotations": []
     },
     P114: {
       "procedureId": "P114",
@@ -26745,7 +26753,8 @@
             "summary": "过半径外端且垂直于半径的直线是圆的切线。"
           },
           "wrongTitle": "提示：检验 5²+12² 与 13² 是否相等",
-          "wrongFeedback": "由勾股逆定理得 $OA\\perp PA$，故 $PA$ 与 $\\odot O$ 相切，选 B。"
+          "wrongFeedback": "由勾股逆定理得 $OA\\perp PA$，故 $PA$ 与 $\\odot O$ 相切，选 B。",
+          "diagramSvg": "<svg viewBox=\"0 0 230 125\" class=\"w-full max-w-[230px] h-auto\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"80\" cy=\"65\" r=\"38\" fill=\"#F0FDFA\" stroke=\"#0F766E\" stroke-width=\"2\"/>\n      <circle cx=\"80\" cy=\"65\" r=\"2.5\" fill=\"#0F172A\"/><text x=\"68\" y=\"70\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">O</text>\n      <line x1=\"80\" y1=\"65\" x2=\"80\" y2=\"27\" stroke=\"#0284C7\" stroke-width=\"2\"/>\n      <line x1=\"80\" y1=\"27\" x2=\"195\" y2=\"27\" stroke=\"#E11D48\" stroke-width=\"2\"/>\n      <line x1=\"80\" y1=\"65\" x2=\"195\" y2=\"27\" stroke=\"#334155\" stroke-width=\"1.8\"/>\n      <circle cx=\"80\" cy=\"27\" r=\"2.6\" fill=\"#E11D48\"/><text x=\"74\" y=\"20\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">A</text>\n      <circle cx=\"195\" cy=\"27\" r=\"2.6\" fill=\"#0F172A\"/><text x=\"199\" y=\"30\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">P</text>\n      <text x=\"84\" y=\"50\" font-size=\"10\" font-weight=\"700\" fill=\"#0284C7\">5</text>\n      <text x=\"132\" y=\"22\" font-size=\"10\" font-weight=\"700\" fill=\"#E11D48\">12</text>\n      <text x=\"138\" y=\"58\" font-size=\"10\" font-weight=\"700\" fill=\"#334155\">13</text>\n    </svg>"
         },
         "practice2": {
           "title": "练习二",
@@ -26768,9 +26777,16 @@
               "val": "30",
               "hint": "$30^{\\circ}$ 是 $\\angle OAB$，题目求的是 $\\angle BAC=90^{\\circ}-30^{\\circ}=60^{\\circ}$。"
             }
-          ]
+          ],
+          "diagramSvg": "<svg viewBox=\"0 0 220 125\" class=\"w-full max-w-[220px] h-auto\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"105\" cy=\"68\" r=\"42\" fill=\"#F0FDFA\" stroke=\"#0F766E\" stroke-width=\"2\"/>\n      <circle cx=\"105\" cy=\"68\" r=\"2.5\" fill=\"#0F172A\"/><text x=\"100\" y=\"83\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">O</text>\n      <line x1=\"105\" y1=\"68\" x2=\"105\" y2=\"26\" stroke=\"#0284C7\" stroke-width=\"1.8\"/>\n      <line x1=\"105\" y1=\"68\" x2=\"141\" y2=\"89\" stroke=\"#0284C7\" stroke-width=\"1.8\"/>\n      <line x1=\"105\" y1=\"26\" x2=\"141\" y2=\"89\" stroke=\"#334155\" stroke-width=\"1.8\"/>\n      <line x1=\"65\" y1=\"26\" x2=\"178\" y2=\"26\" stroke=\"#E11D48\" stroke-width=\"2\"/>\n      <text x=\"100\" y=\"19\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">A</text>\n      <text x=\"146\" y=\"96\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">B</text>\n      <text x=\"172\" y=\"20\" font-size=\"11\" font-weight=\"700\" fill=\"#E11D48\">C</text>\n      <text x=\"111\" y=\"66\" font-size=\"10\" font-weight=\"700\" fill=\"#D97706\">120°</text>\n    </svg>"
         }
-      }
+      },
+      "geometryDiagram": {
+        "title": "动态几何图：见切点 $B$ 连半径 $OB\\perp PB$",
+        "caption": "点击播放观察：连半径 $OB$ 得 $\\angle OBP=90^{\\circ}$ → 算 $\\angle POB=50^{\\circ}$ → 圆周角 $\\angle A=25^{\\circ}$",
+        "svgHtml": "<svg viewBox=\"0 0 280 175\" class=\"w-full max-w-[280px] h-auto\" xmlns=\"http://www.w3.org/2000/svg\">\n        <circle cx=\"115\" cy=\"95\" r=\"52\" fill=\"#F0FDFA\" stroke=\"#0F766E\" stroke-width=\"2\"/>\n        <circle cx=\"115\" cy=\"95\" r=\"2.6\" fill=\"#0F172A\"/><text x=\"109\" y=\"110\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">O</text>\n        <line x1=\"63\" y1=\"95\" x2=\"245\" y2=\"95\" stroke=\"#334155\" stroke-width=\"1.8\"/>\n        <circle cx=\"63\" cy=\"95\" r=\"2.6\" fill=\"#334155\"/><text x=\"50\" y=\"99\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">A</text>\n        <circle cx=\"240\" cy=\"95\" r=\"2.6\" fill=\"#E11D48\"/><text x=\"244\" y=\"99\" font-size=\"11\" font-weight=\"700\" fill=\"#E11D48\">P</text>\n        <line x1=\"240\" y1=\"95\" x2=\"128\" y2=\"41\" stroke=\"#E11D48\" stroke-width=\"2\"/>\n        <circle cx=\"148\" cy=\"55\" r=\"2.8\" fill=\"#E11D48\"/><text x=\"148\" y=\"45\" font-size=\"11\" font-weight=\"700\" fill=\"#E11D48\">B</text>\n        <line x1=\"63\" y1=\"95\" x2=\"148\" y2=\"55\" stroke=\"#334155\" stroke-width=\"1.6\"/>\n        <text x=\"206\" y=\"91\" font-size=\"10\" font-weight=\"700\" fill=\"#E11D48\">40°</text>\n        <line class=\"proc-geo-anim\" data-appear-at=\"2.0\" data-dur=\"0.7\" x1=\"115\" y1=\"95\" x2=\"148\" y2=\"55\" stroke=\"#0284C7\" stroke-width=\"2.2\" stroke-dasharray=\"4 2\" style=\"opacity:0;\"/>\n        <text class=\"proc-geo-anim\" data-appear-at=\"2.6\" data-dur=\"0.4\" x=\"137\" y=\"68\" font-size=\"9.5\" font-weight=\"700\" fill=\"#0284C7\" style=\"opacity:0;\">90°</text>\n        <text class=\"proc-geo-anim\" data-appear-at=\"9.2\" data-dur=\"0.5\" x=\"128\" y=\"91\" font-size=\"10\" font-weight=\"700\" fill=\"#D97706\" style=\"opacity:0;\">50°</text>\n        <text class=\"proc-geo-anim\" data-appear-at=\"17.2\" data-dur=\"0.5\" x=\"76\" y=\"91\" font-size=\"10.5\" font-weight=\"700\" fill=\"#0F766E\" style=\"opacity:0;\">25°</text>\n      </svg>"
+      },
+      "svgAnnotations": []
     },
     P115: {
       "procedureId": "P115",
@@ -26929,7 +26945,8 @@
             "summary": "圆外同一点到两切点线段长相等。"
           },
           "wrongTitle": "提示：由切线长定理得 AP=AC=4，BP=BD",
-          "wrongFeedback": "$BD=BP=AB-AP=7-4=3$，选 A。"
+          "wrongFeedback": "$BD=BP=AB-AP=7-4=3$，选 A。",
+          "diagramSvg": "<svg viewBox=\"0 0 220 125\" class=\"w-full max-w-[220px] h-auto\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"145\" cy=\"64\" r=\"38\" fill=\"#F0FDFA\" stroke=\"#0F766E\" stroke-width=\"2\"/>\n      <line x1=\"55\" y1=\"26\" x2=\"145\" y2=\"26\" stroke=\"#334155\" stroke-width=\"2\"/>\n      <line x1=\"55\" y1=\"102\" x2=\"145\" y2=\"102\" stroke=\"#334155\" stroke-width=\"2\"/>\n      <line x1=\"95\" y1=\"26\" x2=\"115\" y2=\"102\" stroke=\"#E11D48\" stroke-width=\"2\"/>\n      <circle cx=\"107\" cy=\"64\" r=\"2.6\" fill=\"#D97706\"/><text x=\"113\" y=\"67\" font-size=\"10.5\" font-weight=\"700\" fill=\"#D97706\">P</text>\n      <text x=\"90\" y=\"20\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">A</text>\n      <text x=\"143\" y=\"20\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">C</text>\n      <text x=\"110\" y=\"116\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">B</text>\n      <text x=\"143\" y=\"116\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">D</text>\n      <text x=\"116\" y=\"22\" font-size=\"9.5\" font-weight=\"700\" fill=\"#0284C7\">4</text>\n      <text x=\"84\" y=\"67\" font-size=\"9.5\" font-weight=\"700\" fill=\"#E11D48\">AB=7</text>\n    </svg>"
         },
         "practice2": {
           "title": "练习二",
@@ -26952,9 +26969,16 @@
               "val": "12",
               "hint": "别漏掉第三边 $AB=6$，周长为 $6\\times 3=18$。"
             }
-          ]
+          ],
+          "diagramSvg": "<svg viewBox=\"0 0 220 120\" class=\"w-full max-w-[220px] h-auto\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"145\" cy=\"60\" r=\"36\" fill=\"#F0FDFA\" stroke=\"#0F766E\" stroke-width=\"2\"/>\n      <line x1=\"40\" y1=\"60\" x2=\"127\" y2=\"29\" stroke=\"#334155\" stroke-width=\"2\"/>\n      <line x1=\"40\" y1=\"60\" x2=\"127\" y2=\"91\" stroke=\"#334155\" stroke-width=\"2\"/>\n      <line x1=\"127\" y1=\"29\" x2=\"127\" y2=\"91\" stroke=\"#E11D48\" stroke-width=\"2\"/>\n      <text x=\"28\" y=\"64\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">P</text>\n      <text x=\"128\" y=\"23\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">A</text>\n      <text x=\"128\" y=\"105\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">B</text>\n      <text x=\"60\" y=\"64\" font-size=\"10\" font-weight=\"700\" fill=\"#D97706\">60°</text>\n      <text x=\"72\" y=\"40\" font-size=\"10\" font-weight=\"700\" fill=\"#0284C7\">6</text>\n    </svg>"
         }
-      }
+      },
+      "geometryDiagram": {
+        "title": "动态几何图：切线长等量代换转化周长",
+        "caption": "点击播放观察：$CA=CE$、$DB=DE \\Rightarrow C_{\\triangle PCD}=PA+PB=20$",
+        "svgHtml": "<svg viewBox=\"0 0 280 175\" class=\"w-full max-w-[280px] h-auto\" xmlns=\"http://www.w3.org/2000/svg\">\n        <circle cx=\"195\" cy=\"88\" r=\"48\" fill=\"#F0FDFA\" stroke=\"#0F766E\" stroke-width=\"2\"/>\n        <circle cx=\"195\" cy=\"88\" r=\"2.5\" fill=\"#0F172A\"/><text x=\"201\" y=\"92\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">O</text>\n        <line x1=\"35\" y1=\"88\" x2=\"175\" y2=\"43\" stroke=\"#334155\" stroke-width=\"2\"/>\n        <line x1=\"35\" y1=\"88\" x2=\"175\" y2=\"133\" stroke=\"#334155\" stroke-width=\"2\"/>\n        <circle cx=\"35\" cy=\"88\" r=\"2.8\" fill=\"#0F172A\"/><text x=\"22\" y=\"92\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">P</text>\n        <circle cx=\"175\" cy=\"43\" r=\"2.6\" fill=\"#0284C7\"/><text x=\"175\" y=\"34\" font-size=\"11\" font-weight=\"700\" fill=\"#0284C7\">A</text>\n        <circle cx=\"175\" cy=\"133\" r=\"2.6\" fill=\"#0284C7\"/><text x=\"175\" y=\"149\" font-size=\"11\" font-weight=\"700\" fill=\"#0284C7\">B</text>\n        <line class=\"proc-geo-anim\" data-appear-at=\"2.0\" data-dur=\"0.7\" x1=\"147\" y1=\"52\" x2=\"147\" y2=\"124\" stroke=\"#E11D48\" stroke-width=\"2.2\" style=\"opacity:0;\"/>\n        <circle class=\"proc-geo-anim\" data-appear-at=\"2.4\" data-dur=\"0.4\" cx=\"147\" cy=\"52\" r=\"2.6\" fill=\"#E11D48\" style=\"opacity:0;\"/>\n        <text class=\"proc-geo-anim\" data-appear-at=\"2.5\" data-dur=\"0.4\" x=\"136\" y=\"47\" font-size=\"11\" font-weight=\"700\" fill=\"#E11D48\" style=\"opacity:0;\">C</text>\n        <circle class=\"proc-geo-anim\" data-appear-at=\"2.4\" data-dur=\"0.4\" cx=\"147\" cy=\"124\" r=\"2.6\" fill=\"#E11D48\" style=\"opacity:0;\"/>\n        <text class=\"proc-geo-anim\" data-appear-at=\"2.5\" data-dur=\"0.4\" x=\"136\" y=\"138\" font-size=\"11\" font-weight=\"700\" fill=\"#E11D48\" style=\"opacity:0;\">D</text>\n        <circle class=\"proc-geo-anim\" data-appear-at=\"2.6\" data-dur=\"0.4\" cx=\"147\" cy=\"88\" r=\"2.6\" fill=\"#D97706\" style=\"opacity:0;\"/>\n        <text class=\"proc-geo-anim\" data-appear-at=\"2.7\" data-dur=\"0.4\" x=\"152\" y=\"92\" font-size=\"10.5\" font-weight=\"700\" fill=\"#D97706\" style=\"opacity:0;\">E</text>\n        <text class=\"proc-geo-anim\" data-appear-at=\"9.2\" data-dur=\"0.5\" x=\"82\" y=\"61\" font-size=\"10\" font-weight=\"700\" fill=\"#0F766E\" style=\"opacity:0;\">PA=10</text>\n        <text class=\"proc-geo-anim\" data-appear-at=\"17.2\" data-dur=\"0.5\" x=\"45\" y=\"164\" font-size=\"10.5\" font-weight=\"700\" fill=\"#E11D48\" style=\"opacity:0;\">周长 = PA + PB = 20</text>\n      </svg>"
+      },
+      "svgAnnotations": []
     },
     P116: {
       "procedureId": "P116",
@@ -27113,7 +27137,8 @@
             "summary": "内心是角平分线交点。"
           },
           "wrongTitle": "提示：套用内心角度公式 ∠BIC=90°+∠A/2",
-          "wrongFeedback": "$\\angle BIC=90^{\\circ}+30^{\\circ}=120^{\\circ}$，选 B。"
+          "wrongFeedback": "$\\angle BIC=90^{\\circ}+30^{\\circ}=120^{\\circ}$，选 B。",
+          "diagramSvg": "<svg viewBox=\"0 0 220 125\" class=\"w-full max-w-[220px] h-auto\" xmlns=\"http://www.w3.org/2000/svg\">\n      <polygon points=\"110,16 36,108 184,108\" fill=\"#F8FAFC\" stroke=\"#334155\" stroke-width=\"2\"/>\n      <circle cx=\"110\" cy=\"76\" r=\"2.8\" fill=\"#E11D48\"/><text x=\"115\" y=\"74\" font-size=\"11\" font-weight=\"700\" fill=\"#E11D48\">I</text>\n      <line x1=\"36\" y1=\"108\" x2=\"110\" y2=\"76\" stroke=\"#0F766E\" stroke-width=\"1.8\" stroke-dasharray=\"4 2\"/>\n      <line x1=\"184\" y1=\"108\" x2=\"110\" y2=\"76\" stroke=\"#0F766E\" stroke-width=\"1.8\" stroke-dasharray=\"4 2\"/>\n      <text x=\"106\" y=\"12\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">A</text>\n      <text x=\"23\" y=\"114\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">B</text>\n      <text x=\"188\" y=\"114\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">C</text>\n      <text x=\"102\" y=\"38\" font-size=\"10\" font-weight=\"700\" fill=\"#0284C7\">60°</text>\n      <text x=\"102\" y=\"96\" font-size=\"10\" font-weight=\"700\" fill=\"#E11D48\">∠BIC?</text>\n    </svg>"
         },
         "practice2": {
           "title": "练习二",
@@ -27136,9 +27161,16 @@
               "val": "27",
               "hint": "$27^{\\circ}$ 是 $\\frac{1}{2}\\angle A$，别忘记乘以 $2$ 得 $54^{\\circ}$。"
             }
-          ]
+          ],
+          "diagramSvg": "<svg viewBox=\"0 0 220 125\" class=\"w-full max-w-[220px] h-auto\" xmlns=\"http://www.w3.org/2000/svg\">\n      <polygon points=\"110,16 36,108 184,108\" fill=\"#F8FAFC\" stroke=\"#334155\" stroke-width=\"2\"/>\n      <circle cx=\"110\" cy=\"77\" r=\"30\" fill=\"#F0FDFA\" fill-opacity=\"0.7\" stroke=\"#0F766E\" stroke-width=\"1.6\"/>\n      <circle cx=\"110\" cy=\"77\" r=\"2.6\" fill=\"#0F766E\"/><text x=\"115\" y=\"74\" font-size=\"10.5\" font-weight=\"700\" fill=\"#0F766E\">O</text>\n      <line x1=\"36\" y1=\"108\" x2=\"110\" y2=\"77\" stroke=\"#E11D48\" stroke-width=\"1.8\"/>\n      <line x1=\"184\" y1=\"108\" x2=\"110\" y2=\"77\" stroke=\"#E11D48\" stroke-width=\"1.8\"/>\n      <text x=\"106\" y=\"12\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">A</text>\n      <text x=\"23\" y=\"114\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">B</text>\n      <text x=\"188\" y=\"114\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">C</text>\n      <text x=\"98\" y=\"98\" font-size=\"10\" font-weight=\"700\" fill=\"#E11D48\">117°</text>\n    </svg>"
         }
-      }
+      },
+      "geometryDiagram": {
+        "title": "动态几何图：直角三角形内切圆 $r=\\frac{a+b-c}{2}$",
+        "caption": "点击播放观察：勾股得斜边 $10$，圆心到三边垂距均为 $r$，套用公式得 $r=2$",
+        "svgHtml": "<svg viewBox=\"0 0 280 175\" class=\"w-full max-w-[280px] h-auto\" xmlns=\"http://www.w3.org/2000/svg\">\n        <polygon points=\"55,140 215,140 55,20\" fill=\"#F8FAFC\" stroke=\"#334155\" stroke-width=\"2\"/>\n        <rect x=\"55\" y=\"130\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#334155\" stroke-width=\"1.4\"/>\n        <text x=\"42\" y=\"148\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">C</text>\n        <text x=\"42\" y=\"22\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">A</text>\n        <text x=\"220\" y=\"146\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">B</text>\n        <text x=\"37\" y=\"84\" font-size=\"11\" font-weight=\"700\" fill=\"#0284C7\">6</text>\n        <text x=\"132\" y=\"156\" font-size=\"11\" font-weight=\"700\" fill=\"#0284C7\">8</text>\n        <text class=\"proc-geo-anim\" data-appear-at=\"2.2\" data-dur=\"0.5\" x=\"142\" y=\"72\" font-size=\"11\" font-weight=\"700\" fill=\"#D97706\" style=\"opacity:0;\">AB=10</text>\n        <circle class=\"proc-geo-anim\" data-appear-at=\"9.2\" data-dur=\"0.7\" cx=\"95\" cy=\"100\" r=\"40\" fill=\"#F0FDFA\" fill-opacity=\"0.75\" stroke=\"#0F766E\" stroke-width=\"2\" style=\"opacity:0;\"/>\n        <circle class=\"proc-geo-anim\" data-appear-at=\"9.4\" data-dur=\"0.4\" cx=\"95\" cy=\"100\" r=\"2.6\" fill=\"#0F766E\" style=\"opacity:0;\"/>\n        <text class=\"proc-geo-anim\" data-appear-at=\"9.5\" data-dur=\"0.4\" x=\"99\" y=\"96\" font-size=\"10.5\" font-weight=\"700\" fill=\"#0F766E\" style=\"opacity:0;\">I</text>\n        <line class=\"proc-geo-anim\" data-appear-at=\"17.0\" data-dur=\"0.6\" x1=\"95\" y1=\"100\" x2=\"95\" y2=\"140\" stroke=\"#E11D48\" stroke-width=\"2\" stroke-dasharray=\"3 2\" style=\"opacity:0;\"/>\n        <line class=\"proc-geo-anim\" data-appear-at=\"17.0\" data-dur=\"0.6\" x1=\"95\" y1=\"100\" x2=\"55\" y2=\"100\" stroke=\"#E11D48\" stroke-width=\"2\" stroke-dasharray=\"3 2\" style=\"opacity:0;\"/>\n        <text class=\"proc-geo-anim\" data-appear-at=\"17.4\" data-dur=\"0.4\" x=\"100\" y=\"124\" font-size=\"11\" font-weight=\"700\" fill=\"#E11D48\" style=\"opacity:0;\">r=2</text>\n      </svg>"
+      },
+      "svgAnnotations": []
     },
     P117: {
       "procedureId": "P117",
@@ -27297,7 +27329,8 @@
             "summary": "正六边形的边长等于其外接圆半径。"
           },
           "wrongTitle": "提示：正六边形的边长等于外接圆半径 R=2",
-          "wrongFeedback": "外接圆半径 $R=2$，面积为 $\\pi\\times 2^{2}=4\\pi$，选 B。"
+          "wrongFeedback": "外接圆半径 $R=2$，面积为 $\\pi\\times 2^{2}=4\\pi$，选 B。",
+          "diagramSvg": "<svg viewBox=\"0 0 220 125\" class=\"w-full max-w-[220px] h-auto\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"110\" cy=\"62\" r=\"48\" fill=\"#F0FDFA\" stroke=\"#94A3B8\" stroke-width=\"1.4\" stroke-dasharray=\"3 2\"/>\n      <polygon points=\"158,62 134,104 86,104 62,62 86,20 134,20\" fill=\"#FFFFFF\" fill-opacity=\"0.7\" stroke=\"#0F766E\" stroke-width=\"2\"/>\n      <circle cx=\"110\" cy=\"62\" r=\"2.5\" fill=\"#0F172A\"/><text x=\"103\" y=\"58\" font-size=\"10.5\" font-weight=\"700\" fill=\"#0F172A\">O</text>\n      <line x1=\"110\" y1=\"62\" x2=\"134\" y2=\"20\" stroke=\"#0284C7\" stroke-width=\"1.8\"/>\n      <line x1=\"110\" y1=\"62\" x2=\"158\" y2=\"62\" stroke=\"#0284C7\" stroke-width=\"1.8\"/>\n      <text x=\"138\" y=\"38\" font-size=\"10\" font-weight=\"700\" fill=\"#E11D48\">a=2</text>\n      <text x=\"128\" y=\"75\" font-size=\"10\" font-weight=\"700\" fill=\"#0284C7\">R=?</text>\n      <text x=\"119\" y=\"57\" font-size=\"9.5\" font-weight=\"700\" fill=\"#D97706\">60°</text>\n    </svg>"
         },
         "practice2": {
           "title": "练习二",
@@ -27314,9 +27347,16 @@
           "correctFeedback": "正确答案为 $10$。",
           "correctDetail": "$n=360^{\\circ}\\div 36^{\\circ}=10$。",
           "wrongFeedback": "用 $360^{\\circ}$ 除以中心角 $36^{\\circ}$，得 $n=10$。",
-          "specificWrongHints": []
+          "specificWrongHints": [],
+          "diagramSvg": "<svg viewBox=\"0 0 220 120\" class=\"w-full max-w-[220px] h-auto\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"110\" cy=\"62\" r=\"46\" fill=\"#F0FDFA\" stroke=\"#0F766E\" stroke-width=\"1.8\" stroke-dasharray=\"4 3\"/>\n      <circle cx=\"110\" cy=\"62\" r=\"2.6\" fill=\"#0F172A\"/><text x=\"104\" y=\"77\" font-size=\"10.5\" font-weight=\"700\" fill=\"#0F172A\">O</text>\n      <line x1=\"110\" y1=\"62\" x2=\"148\" y2=\"36\" stroke=\"#0284C7\" stroke-width=\"2\"/>\n      <line x1=\"110\" y1=\"62\" x2=\"156\" y2=\"62\" stroke=\"#0284C7\" stroke-width=\"2\"/>\n      <line x1=\"148\" y1=\"36\" x2=\"156\" y2=\"62\" stroke=\"#E11D48\" stroke-width=\"2.2\"/>\n      <text x=\"126\" y=\"57\" font-size=\"10\" font-weight=\"700\" fill=\"#E11D48\">36°</text>\n      <text x=\"58\" y=\"65\" font-size=\"10.5\" font-weight=\"700\" fill=\"#0F766E\">正 n 边形</text>\n    </svg>"
         }
-      }
+      },
+      "geometryDiagram": {
+        "title": "动态几何图：正五边形中心角 $\\alpha=72^{\\circ}$",
+        "caption": "点击播放观察：中心角 $\\alpha=\\frac{360^{\\circ}}{n}=72^{\\circ}\\Rightarrow n=5$，每个内角 $180^{\\circ}-72^{\\circ}=108^{\\circ}$",
+        "svgHtml": "<svg viewBox=\"0 0 280 175\" class=\"w-full max-w-[280px] h-auto\" xmlns=\"http://www.w3.org/2000/svg\">\n        <circle cx=\"140\" cy=\"88\" r=\"62\" fill=\"#F0FDFA\" stroke=\"#94A3B8\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/>\n        <polygon points=\"140,26 199,69 176,138 104,138 81,69\" fill=\"#FFFFFF\" fill-opacity=\"0.7\" stroke=\"#0F766E\" stroke-width=\"2\"/>\n        <circle cx=\"140\" cy=\"88\" r=\"2.8\" fill=\"#0F172A\"/><text x=\"135\" y=\"102\" font-size=\"11\" font-weight=\"700\" fill=\"#0F172A\">O</text>\n        <line class=\"proc-geo-anim\" data-appear-at=\"2.0\" data-dur=\"0.6\" x1=\"140\" y1=\"88\" x2=\"140\" y2=\"26\" stroke=\"#0284C7\" stroke-width=\"2\" style=\"opacity:0;\"/>\n        <line class=\"proc-geo-anim\" data-appear-at=\"2.0\" data-dur=\"0.6\" x1=\"140\" y1=\"88\" x2=\"199\" y2=\"69\" stroke=\"#0284C7\" stroke-width=\"2\" style=\"opacity:0;\"/>\n        <text class=\"proc-geo-anim\" data-appear-at=\"2.6\" data-dur=\"0.4\" x=\"150\" y=\"72\" font-size=\"11\" font-weight=\"700\" fill=\"#E11D48\" style=\"opacity:0;\">72°</text>\n        <text class=\"proc-geo-anim\" data-appear-at=\"9.4\" data-dur=\"0.5\" x=\"210\" y=\"54\" font-size=\"10.5\" font-weight=\"700\" fill=\"#0F766E\" style=\"opacity:0;\">n=5</text>\n        <text class=\"proc-geo-anim\" data-appear-at=\"17.2\" data-dur=\"0.5\" x=\"172\" y=\"130\" font-size=\"10.5\" font-weight=\"700\" fill=\"#D97706\" style=\"opacity:0;\">108°</text>\n      </svg>"
+      },
+      "svgAnnotations": []
     }
   };
 

@@ -25667,6 +25667,742 @@
           ]
         }
       }
+    },
+    P109: {
+      "procedureId": "P109",
+      "title": "负整数指数幂与整数指数幂混合运算",
+      "exampleTitle": "计算：$(a^{2}b^{2})^{-2}\\div (2a^{-2}b^{-1})^{-3}$（结果只含正整数指数幂）",
+      "exampleFormula": "$\\frac{8}{a^{10}b^{7}}$",
+      "totalDuration": 24,
+      "scratchpadIdleHint": "旁白草稿演算区（负指数表示取倒数，先算乘方再合并同底数幂，最后化正指数）",
+      "practiceSectionTitle": "整数指数幂跟做练习",
+      "practiceSectionSub": "完成以下两道练习，巩固负指数定义与正整数指数化简",
+      "steps": [
+        {
+          "step": 1,
+          "name": "先算积的乘方与幂的乘方",
+          "tStart": 0,
+          "tEnd": 8,
+          "explanation": "分别展开 $(a^{2}b^{2})^{-2}=a^{-4}b^{-4}$ 与 $(2a^{-2}b^{-1})^{-3}=2^{-3}a^{6}b^{3}=\\frac{1}{8}a^{6}b^{3}$。"
+        },
+        {
+          "step": 2,
+          "name": "系数相除、同底数幂指数相减",
+          "tStart": 8,
+          "tEnd": 16,
+          "explanation": "系数 $1\\div \\frac{1}{8}=8$，字母 $a^{-4-6}=a^{-10}$、$b^{-4-3}=b^{-7}$，得 $8a^{-10}b^{-7}$。"
+        },
+        {
+          "step": 3,
+          "name": "将负指数化为正整数指数幂分式",
+          "tStart": 16,
+          "tEnd": 24,
+          "explanation": "利用 $a^{-n}=\\frac{1}{a^{n}}$ 将 $a^{-10}$、$b^{-7}$ 移至分母，得最终结果 $\\frac{8}{a^{10}b^{7}}$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1,
+          "step": 1,
+          "label": "1.1 分别展开积的乘方与幂的乘方"
+        },
+        {
+          "time": 9.5,
+          "step": 2,
+          "label": "2.1 系数相除、同底数幂指数相减"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 负指数移至分母化正指数"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p109_row_0",
+          "stepBadge": "原式",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p109_r0_1",
+              "math": "$(a^{2}b^{2})^{-2}\\div (2a^{-2}b^{-1})^{-3}$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p109_row_1",
+          "stepBadge": "第 1 步 · 展开乘方",
+          "appearAt": 2.2,
+          "tokens": [
+            {
+              "id": "p109_r1_1",
+              "math": "$= a^{-4}b^{-4}\\div \\left(\\frac{1}{8}a^{6}b^{3}\\right)$",
+              "appearAt": 2.4,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p109_row_2",
+          "stepBadge": "第 2 步 · 指数相减",
+          "appearAt": 9.5,
+          "tokens": [
+            {
+              "id": "p109_r2_1",
+              "math": "$= 8a^{-4-6}b^{-4-3} = 8a^{-10}b^{-7}$",
+              "appearAt": 9.7,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p109_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 17.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p109_r3_conc",
+              "math": "$= \\frac{8}{a^{10}b^{7}}$",
+              "appearAt": 17.7,
+              "dur": 0.45
+            }
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "tStart": 0,
+          "tEnd": 8,
+          "text": "第一步先算积的乘方，特别注意 $2^{-3}=\\frac{1}{8}$ 而不是 $-8$。",
+          "focusToken": "p109_r1_1"
+        },
+        {
+          "tStart": 8,
+          "tEnd": 16,
+          "text": "第二步按同底数幂除法底数不变、指数相减，得 $8a^{-10}b^{-7}$。",
+          "focusToken": "p109_r2_1"
+        },
+        {
+          "tStart": 16,
+          "tEnd": 24,
+          "text": "第三步把负指数因子改写成分母正指数形式，得 $\\frac{8}{a^{10}b^{7}}$。",
+          "focusToken": "p109_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "计算：$\\left(-\\frac{1}{2}\\right)^{-2} =$（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $-4$",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. $4$",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. $-\\frac{1}{4}$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "$\\left(-\\frac{1}{2}\\right)^{-2} = (-2)^{2} = 4$"
+            ],
+            "summary": "底数取倒数后偶次幂为正。"
+          },
+          "wrongTitle": "提示：先取底数倒数再算偶次幂",
+          "wrongFeedback": "$\\left(-\\frac{1}{2}\\right)^{-2} = (-2)^{2} = 4$，应选 B。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "计算：$\\left(\\frac{1}{3}\\right)^{-2} =$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "结果 =",
+          "input1Placeholder": "如 9",
+          "input1Suffix": "",
+          "expectedX": "9",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $9$。",
+          "correctDetail": "$\\left(\\frac{1}{3}\\right)^{-2} = 3^{2} = 9$。",
+          "wrongFeedback": "负指数先取倒数：$\\left(\\frac{1}{3}\\right)^{-2} = 3^{2} = 9$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "-9",
+              "hint": "负指数不改变正负号，结果为正数 $9$。"
+            }
+          ]
+        }
+      }
+    },
+    P110: {
+      "procedureId": "P110",
+      "title": "用科学记数法表示绝对值小于 1 的数与还原小数",
+      "exampleTitle": "用科学记数法表示：$0.000036$",
+      "exampleFormula": "$3.6\\times 10^{-5}$",
+      "totalDuration": 24,
+      "scratchpadIdleHint": "旁白草稿演算区（定 $1\\le |a|<10$，数第一个非零数字前所有 0 的个数即得 n）",
+      "practiceSectionTitle": "负指数科学记数法跟做练习",
+      "practiceSectionSub": "完成以下两道练习，检验正向改写与小数还原",
+      "steps": [
+        {
+          "step": 1,
+          "name": "确定有效数字部分 $a$",
+          "tStart": 0,
+          "tEnd": 8,
+          "explanation": "把小数点移到第一个非零数字 $3$ 的右边，得 $a=3.6$（满足 $1\\le 3.6<10$）。"
+        },
+        {
+          "step": 2,
+          "name": "数第一个非零数字前 $0$ 的总个数定 $-n$",
+          "tStart": 8,
+          "tEnd": 16,
+          "explanation": "在 $0.000036$ 中，数字 $3$ 前面共有 $5$ 个 $0$（含小数点前的 $0$），故 $n=5$，指数为 $-5$。"
+        },
+        {
+          "step": 3,
+          "name": "规范写出 $a\\times 10^{-n}$",
+          "tStart": 16,
+          "tEnd": 24,
+          "explanation": "组合写出最终结果 $3.6\\times 10^{-5}$，可反推左移 $5$ 位验证。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1,
+          "step": 1,
+          "label": "1.1 小数点移到 3 后得 a=3.6"
+        },
+        {
+          "time": 9.5,
+          "step": 2,
+          "label": "2.1 数出 3 前共有 5 个 0，定 -5"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 规范写出 3.6×10⁻⁵"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p110_row_0",
+          "stepBadge": "原数",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p110_r0_1",
+              "math": "$0.000036$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p110_row_1",
+          "stepBadge": "第 1 步 · 定 $a$",
+          "appearAt": 2.2,
+          "tokens": [
+            {
+              "id": "p110_r1_1",
+              "math": "$a = 3.6\\ (1\\le a<10)$",
+              "appearAt": 2.4,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p110_row_2",
+          "stepBadge": "第 2 步 · 数前导 $0$",
+          "appearAt": 9.5,
+          "tokens": [
+            {
+              "id": "p110_r2_1",
+              "math": "数字 $3$ 前共 $5$ 个 $0 \\Rightarrow n = 5$",
+              "appearAt": 9.7,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p110_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 17.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p110_r3_conc",
+              "math": "$0.000036 = 3.6\\times 10^{-5}$",
+              "appearAt": 17.7,
+              "dur": 0.45
+            }
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "tStart": 0,
+          "tEnd": 8,
+          "text": "第一步把小数点移到第一个非零数字 $3$ 之后，确定 $a=3.6$。",
+          "focusToken": "p110_r1_1"
+        },
+        {
+          "tStart": 8,
+          "tEnd": 16,
+          "text": "第二步连同小数点前的 $0$ 一起数，$3$ 前共有 $5$ 个 $0$，指数就是 $-5$。",
+          "focusToken": "p110_r2_1"
+        },
+        {
+          "tStart": 16,
+          "tEnd": 24,
+          "text": "第三步写出标准形式 $3.6\\times 10^{-5}$。",
+          "focusToken": "p110_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "用科学记数法表示 $0.000069$ 为（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $6.9\\times 10^{-4}$",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. $6.9\\times 10^{-5}$",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. $69\\times 10^{-6}$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "$0.000069$ 中 $6$ 前共有 $5$ 个 $0$，故为 $6.9\\times 10^{-5}$"
+            ],
+            "summary": "牢记 $1\\le |a|<10$ 且包含小数点前的 $0$。"
+          },
+          "wrongTitle": "提示：数清 6 前所有 0 的个数（含小数点前的 0）",
+          "wrongFeedback": "$6$ 前共有 $5$ 个 $0$，应写为 $6.9\\times 10^{-5}$，选 B。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "将 $3.05\\times 10^{-4}$ 还原为小数为 ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "原数 =",
+          "input1Placeholder": "如 0.000305",
+          "input1Suffix": "",
+          "expectedX": "0.000305",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $0.000305$。",
+          "correctDetail": "指数为 $-4$，小数点左移 $4$ 位（$3$ 前共 $4$ 个 $0$），得 $0.000305$。",
+          "wrongFeedback": "指数为 $-4$ 表示 $3$ 前面有 $4$ 个 $0$，即 $0.000305$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "0.00305",
+              "hint": "少补了一个 $0$，$-4$ 对应小数点前 $1$ 个 $0$ 加小数点后 $3$ 个 $0$。"
+            }
+          ]
+        }
+      }
+    },
+    P111: {
+      "procedureId": "P111",
+      "title": "去分母解分式方程与验根",
+      "exampleTitle": "解分式方程：$\\frac{x}{x-2}-1=\\frac{4}{x^{2}-4}$",
+      "exampleFormula": "$x=0$",
+      "totalDuration": 26,
+      "scratchpadIdleHint": "旁白草稿演算区（先分解找最简公分母，常数项别漏乘，解完必代最简公分母验根）",
+      "practiceSectionTitle": "解分式方程跟做练习",
+      "practiceSectionSub": "完成以下两道练习，检验去分母不漏乘与验根规范",
+      "steps": [
+        {
+          "step": 1,
+          "name": "分解分母确定最简公分母",
+          "tStart": 0,
+          "tEnd": 8,
+          "explanation": "将 $x^{2}-4$ 分解为 $(x+2)(x-2)$，确定最简公分母为 $(x+2)(x-2)$。"
+        },
+        {
+          "step": 2,
+          "name": "两边同乘最简公分母化为整式方程",
+          "tStart": 8,
+          "tEnd": 17,
+          "explanation": "各项同乘 $(x+2)(x-2)$，特别注意 $-1$ 不漏乘，得 $x(x+2)-(x+2)(x-2)=4$，展开化简得 $2x+4=4$。"
+        },
+        {
+          "step": 3,
+          "name": "求解并代入最简公分母验根",
+          "tStart": 17,
+          "tEnd": 26,
+          "explanation": "解得 $x=0$；检验当 $x=0$ 时，$(x+2)(x-2)=-4\\neq 0$，故 $x=0$ 是原分式方程的解。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1,
+          "step": 1,
+          "label": "1.1 分解 x²-4 得最简公分母 (x+2)(x-2)"
+        },
+        {
+          "time": 9.5,
+          "step": 2,
+          "label": "2.1 去分母（-1 不漏乘）化为 2x+4=4"
+        },
+        {
+          "time": 18.5,
+          "step": 3,
+          "label": "3.1 解得 x=0 并验根不为 0"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p111_row_0",
+          "stepBadge": "原方程",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p111_r0_1",
+              "math": "$\\frac{x}{x-2}-1=\\frac{4}{x^{2}-4}$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p111_row_1",
+          "stepBadge": "第 1 步 · 最简公分母",
+          "appearAt": 2.2,
+          "tokens": [
+            {
+              "id": "p111_r1_1",
+              "math": "$x^{2}-4=(x+2)(x-2)$",
+              "appearAt": 2.4,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p111_row_2",
+          "stepBadge": "第 2 步 · 去分母化简",
+          "appearAt": 9.5,
+          "tokens": [
+            {
+              "id": "p111_r2_1",
+              "math": "$x(x+2)-(x^{2}-4)=4 \\Rightarrow 2x+4=4$",
+              "appearAt": 9.7,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p111_row_3",
+          "stepBadge": "第 3 步 · 求解与验根",
+          "appearAt": 18.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p111_r3_conc",
+              "math": "$x=0$，检验 $(0+2)(0-2)=-4\\neq 0$，故 $x=0$",
+              "appearAt": 18.7,
+              "dur": 0.45
+            }
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "tStart": 0,
+          "tEnd": 8,
+          "text": "第一步分解 $x^{2}-4=(x+2)(x-2)$，确定最简公分母。",
+          "focusToken": "p111_r1_1"
+        },
+        {
+          "tStart": 8,
+          "tEnd": 17,
+          "text": "第二步两边同乘最简公分母，常数项 $-1$ 也要乘，化简得 $2x+4=4$。",
+          "focusToken": "p111_r2_1"
+        },
+        {
+          "tStart": 17,
+          "tEnd": 26,
+          "text": "第三步解得 $x=0$，代入最简公分母得 $-4\\neq 0$，确认是原方程的解。",
+          "focusToken": "p111_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "解分式方程 $\\frac{1}{x-1}+\\frac{2x}{x+1}=2$ 时，去分母正确的是（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $(x+1)+2x(x-1)=2$",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. $(x+1)+2x(x-1)=2(x+1)(x-1)$",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. $(x-1)+2x(x+1)=2(x+1)(x-1)$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "两边同乘 $(x+1)(x-1)$，右边常数 $2$ 也要乘 $(x+1)(x-1)$"
+            ],
+            "summary": "去分母切忌漏乘整式项。"
+          },
+          "wrongTitle": "提示：最简公分母为 (x+1)(x-1)，常数项 2 不可漏乘",
+          "wrongFeedback": "去分母后得 $(x+1)+2x(x-1)=2(x+1)(x-1)$，选 B。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "方程 $\\frac{3}{x-4}=1$ 的解为 $x =$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "x =",
+          "input1Placeholder": "如 7",
+          "input1Suffix": "",
+          "expectedX": "7",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $x=7$。",
+          "correctDetail": "两边同乘 $x-4$ 得 $3=x-4$，解得 $x=7$，检验 $7-4=3\\neq 0$。",
+          "wrongFeedback": "去分母得 $3=x-4$，移项得 $x=7$，且 $7-4\\neq 0$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "-1",
+              "hint": "移项变号：$x=3+4=7$。"
+            }
+          ]
+        }
+      }
+    },
+    P112: {
+      "procedureId": "P112",
+      "title": "由分式方程的增根、无解或解的符号求参数",
+      "exampleTitle": "若关于 $x$ 的分式方程 $\\frac{2}{x-3}=2+\\frac{x+m}{x-3}$ 有增根，求 $m$ 的值",
+      "exampleFormula": "$m=-1$",
+      "totalDuration": 24,
+      "scratchpadIdleHint": "旁白草稿演算区（先去分母化整式方程，再求增根代入整式方程求参）",
+      "practiceSectionTitle": "含参分式方程跟做练习",
+      "practiceSectionSub": "完成以下两道练习，掌握增根代回整式方程与排除增根条件",
+      "steps": [
+        {
+          "step": 1,
+          "name": "去分母化为含参整式方程",
+          "tStart": 0,
+          "tEnd": 8,
+          "explanation": "方程两边同乘最简公分母 $(x-3)$，得整式方程 $2=2(x-3)+(x+m)$。"
+        },
+        {
+          "step": 2,
+          "name": "令最简公分母为 $0$ 求出增根",
+          "tStart": 8,
+          "tEnd": 16,
+          "explanation": "分式方程有增根说明最简公分母 $x-3=0$，故增根为 $x=3$。"
+        },
+        {
+          "step": 3,
+          "name": "将增根代入整式方程求出参数",
+          "tStart": 16,
+          "tEnd": 24,
+          "explanation": "把 $x=3$ 代入 $2=2(x-3)+(x+m)$，得 $2=0+3+m$，解得 $m=-1$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1,
+          "step": 1,
+          "label": "1.1 两边同乘 (x-3) 得整式方程"
+        },
+        {
+          "time": 9.5,
+          "step": 2,
+          "label": "2.1 令 x-3=0 确定增根 x=3"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 代入整式方程解得 m=-1"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p112_row_0",
+          "stepBadge": "原方程",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p112_r0_1",
+              "math": "$\\frac{2}{x-3}=2+\\frac{x+m}{x-3}$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p112_row_1",
+          "stepBadge": "第 1 步 · 化整式方程",
+          "appearAt": 2.2,
+          "tokens": [
+            {
+              "id": "p112_r1_1",
+              "math": "$2=2(x-3)+x+m$",
+              "appearAt": 2.4,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p112_row_2",
+          "stepBadge": "第 2 步 · 求增根",
+          "appearAt": 9.5,
+          "tokens": [
+            {
+              "id": "p112_r2_1",
+              "math": "令 $x-3=0 \\Rightarrow$ 增根 $x=3$",
+              "appearAt": 9.7,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p112_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 17.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p112_r3_conc",
+              "math": "代入得 $2=3+m \\Rightarrow m=-1$",
+              "appearAt": 17.7,
+              "dur": 0.45
+            }
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "tStart": 0,
+          "tEnd": 8,
+          "text": "第一步两边同乘 $(x-3)$ 得到整式方程 $2=2(x-3)+x+m$。",
+          "focusToken": "p112_r1_1"
+        },
+        {
+          "tStart": 8,
+          "tEnd": 16,
+          "text": "第二步由最简公分母为 $0$，确定增根为 $x=3$。",
+          "focusToken": "p112_r2_1"
+        },
+        {
+          "tStart": 16,
+          "tEnd": 24,
+          "text": "第三步将增根 $x=3$ 代入整式方程，迅速解出 $m=-1$。",
+          "focusToken": "p112_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "若关于 $x$ 的方程 $\\frac{x}{x-1}-2=\\frac{-3k}{1-x}$ 有增根，则 $k =$（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $-\\frac{1}{3}$",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. $1$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $\\frac{1}{3}$",
+              "isCorrect": true
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "去分母得 $x-2(x-1)=3k$，代入增根 $x=1$ 得 $1=3k\\Rightarrow k=\\frac{1}{3}$"
+            ],
+            "summary": "注意右边 $1-x=-(x-1)$ 变号。"
+          },
+          "wrongTitle": "提示：先将 1-x 化为 -(x-1)，再代入增根 x=1",
+          "wrongFeedback": "去分母得 $x-2(x-1)=3k$，代入 $x=1$ 得 $k=\\frac{1}{3}$，选 C。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "若关于 $x$ 的分式方程 $\\frac{2x-a}{x-1}-\\frac{1}{1-x}=3$ 有增根，则 $a =$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "a =",
+          "input1Placeholder": "如 3",
+          "input1Suffix": "",
+          "expectedX": "3",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $a=3$。",
+          "correctDetail": "去分母得 $(2x-a)+1=3(x-1)$，代入增根 $x=1$ 得 $2-a+1=0$，解得 $a=3$。",
+          "wrongFeedback": "去分母得 $2x-a+1=3(x-1)$，代入增根 $x=1$ 解得 $a=3$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "1",
+              "hint": "注意 $-\\frac{1}{1-x} = +\\frac{1}{x-1}$，左边是 $+1$ 不是 $-1$。"
+            }
+          ]
+        }
+      }
     }
   };
 

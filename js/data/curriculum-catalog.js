@@ -292,14 +292,14 @@
           id: 'g8_c18_s4',
           code: '18.4',
           title: '18.4 整数指数幂',
-          procedureIds: [],
+          procedureIds: ['P109', 'P110'],
           fallback: false
         },
         {
           id: 'g8_c18_s5',
           code: '18.5',
           title: '18.5 分式方程',
-          procedureIds: [],
+          procedureIds: ['P111', 'P112'],
           fallback: false
         },
         {

@@ -951,9 +951,9 @@
           type: 'procedural_knowledge'
         },
         {
-          id: null,
-          name: '负整数指数幂的意义（$x^{-1}=\\frac{1}{x}\\ (x\\neq 0)$）',
-          type: 'concept'
+          id: 'P109',
+          name: '负整数指数幂与整数指数幂混合运算',
+          type: 'procedural_knowledge'
         },
         {
           id: null,
@@ -966,7 +966,7 @@
           type: 'operation'
         }
       ],
-      prerequisiteProcedureIds: ['P46', 'P07', 'P31'],
+      prerequisiteProcedureIds: ['P46', 'P07', 'P31', 'P109'],
       subsequentProcedureIds: ['P12', 'P13', 'P57', 'P58'],
       relatedProcedureIds: ['P07'],
       pitfalls: [
@@ -1075,12 +1075,12 @@
           type: 'operation'
         },
         {
-          id: null,
-          name: '简单分式方程的求解',
-          type: 'operation'
+          id: 'P111',
+          name: '去分母解分式方程与验根',
+          type: 'procedural_knowledge'
         }
       ],
-      prerequisiteProcedureIds: ['P11', 'P07'],
+      prerequisiteProcedureIds: ['P11', 'P07', 'P111'],
       subsequentProcedureIds: ['P13', 'P14', 'P15', 'P62', 'P63', 'P66'],
       relatedProcedureIds: ['P07'],
       pitfalls: [
@@ -2171,7 +2171,7 @@
         { id: 'P40', name: '运用有理数乘除法法则、倒数及乘法运算律计算', type: 'procedural_knowledge' }
       ],
       prerequisiteProcedureIds: ['P28', 'P29', 'P39', 'P40'],
-      subsequentProcedureIds: ['P01', 'P17', 'P18', 'P20', 'P21', 'P49', 'P50'],
+      subsequentProcedureIds: ['P01', 'P17', 'P18', 'P20', 'P21', 'P49', 'P50', 'P111', 'P112'],
       relatedProcedureIds: ['P08'],
       pitfalls: [
         '去括号时漏乘括号内的第二项（如将 $2(x-3)$ 错写成 $2x-3$），或括号前是负号时第二项忘记变号（如将 $-2(x-3)$ 错写成 $-2x-6$）。',
@@ -2978,7 +2978,7 @@
         }
       ],
       prerequisiteProcedureIds: ['P28', 'P32'],
-      subsequentProcedureIds: ['P26', 'P27', 'P35', 'P107'],
+      subsequentProcedureIds: ['P26', 'P27', 'P35', 'P107', 'P109'],
       relatedProcedureIds: ['P26', 'P27', 'P32', 'P107'],
       pitfalls: [
         '混淆同底数幂乘法与幂的乘方：误将 $a^{3}\\cdot a^{3}$ 的指数相乘写成 $a^{9}$（正确为 $a^{3+3}=a^{6}$），或误将 $(a^{2})^{3}$ 的指数相加写成 $a^{5}$（正确为 $a^{2\\times 3}=a^{6}$）。',
@@ -3077,7 +3077,7 @@
         }
       ],
       prerequisiteProcedureIds: ['P24', 'P25'],
-      subsequentProcedureIds: ['P11', 'P17', 'P21', 'P35', 'P36'],
+      subsequentProcedureIds: ['P11', 'P17', 'P21', 'P35', 'P36', 'P111'],
       relatedProcedureIds: ['P24', 'P25'],
       pitfalls: [
         '求分式值为 $0$ 时只令分子等于 $0$ 而忘记检验分母不为 $0$（如 $\\frac{x^{2}-1}{(x+1)(x-3)}=0$ 误保留使分母为 $0$ 的 $x=-1$）。',
@@ -3626,7 +3626,7 @@
         { id: 'P28', name: '运用去括号与合并同类项法则进行整式加减及无关型求值', type: 'procedural_knowledge' }
       ],
       prerequisiteProcedureIds: ['P31', 'P35', 'P24', 'P25', 'P28'],
-      subsequentProcedureIds: ['P21'],
+      subsequentProcedureIds: ['P21', 'P111'],
       relatedProcedureIds: ['P21', 'P24', 'P25', 'P28', 'P31', 'P35'],
       pitfalls: [
         '把分式加减化简与解分式方程混淆，通分后直接把最简公分母丢掉（化简必须全程保留分母）。',
@@ -9704,7 +9704,7 @@
       "prerequisiteProcedureIds": [
         "P100"
       ],
-      "subsequentProcedureIds": [],
+      "subsequentProcedureIds": ["P110"],
       "relatedProcedureIds": [
         "P100"
       ],
@@ -10328,10 +10328,8 @@
         "P30",
         "P27"
       ],
-      "subsequentProcedureIds": [
-        "P108",
-        "P24"
-      ],
+      "subsequentProcedureIds": ["P108",
+        "P24", "P109"],
       "relatedProcedureIds": [
         "P30",
         "P27",
@@ -10447,6 +10445,296 @@
         }
       ],
       "graphNodeId": "cnm_163",
+      "status": "published"
+    },
+    {
+      "id": "P109",
+      "name": "负整数指数幂与整数指数幂混合运算",
+      "grade": "八年级",
+      "subject": "数学",
+      "chapterGroup": "第十八章 分式",
+      "chapter": "18.4 整数指数幂",
+      "description": "依据负整数指数幂定义 $a^{-n}=\\frac{1}{a^{n}}\\ (a\\neq 0)$ 及推论 $\\left(\\frac{a}{b}\\right)^{-n}=\\left(\\frac{b}{a}\\right)^{n}$，先转化负指数与零指数幂，再将正整数指数幂的运算法则推广至全体整数指数幂进行乘除乘方化简，并按要求把结果化为只含正整数指数幂的形式。",
+      "purpose": "攻克“把 $a^{-n}$ 误算为 $-a^{n}$”“底数为负分数时忘保留负号或忘取倒数”“最终结果残留负指数未化分式”三大高频错点。",
+      "applicability": [
+        "直接计算负整数指数幂、零指数幂及简单有理数加减混合运算。",
+        "运用同底数幂乘除、幂的乘方与积的乘方法则化简含负整数指数的代数式，并把结果化为正整数指数幂形式。"
+      ],
+      "conditions": [
+        "底数不为 $0$，且运算聚焦整数指数幂定义与幂的运算法则",
+        "不含无理数根式实数综合或跨章公式综合题"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "按定义转化负指数幂与零指数幂",
+          "detail": "将 $a^{-n}$ 化为 $\\frac{1}{a^{n}}$，分数底数 $\\left(\\frac{a}{b}\\right)^{-n}$ 直接取倒数化为 $\\left(\\frac{b}{a}\\right)^{n}$，同时处理 $a^{0}=1\\ (a\\neq 0)$。"
+        },
+        {
+          "step": 2,
+          "action": "先算积与幂的乘方，再算同底数幂乘除",
+          "detail": "沿用整数指数幂运算法则：先按 $(ab)^{n}=a^{n}b^{n}$ 与 $(a^{m})^{n}=a^{mn}$ 去括号定符号，再按底数不变、指数相加减合并同底数幂。"
+        },
+        {
+          "step": 3,
+          "action": "将结果化为只含正整数指数幂的形式",
+          "detail": "检查化简结果中是否仍有负指数因子，利用 $a^{-p}=\\frac{1}{a^{p}}$ 将其移至分母写成最简分式。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P30",
+          "name": "运用同底数幂乘法、幂的乘方与积的乘方法则运算",
+          "type": "procedural_knowledge"
+        },
+        {
+          "id": "P107",
+          "name": "运用同底数幂除法、零指数幂与单项式除以单项式法则运算",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P30",
+        "P107"
+      ],
+      "subsequentProcedureIds": [
+        "P110",
+        "P11"
+      ],
+      "relatedProcedureIds": [
+        "P110",
+        "P107",
+        "P30"
+      ],
+      "pitfalls": [
+        "把 $2^{-3}$ 误写成 $-2^{3}=-8$（负指数表示取倒数，不改变原数符号）。",
+        "计算 $\\left(-\\frac{1}{2}\\right)^{-2}$ 时丢掉负号或写成 $-4$（应为 $(-2)^{2}=4$）。",
+        "多项因子相乘后忘记按题目要求将 $a^{-p}$ 改写为 $\\frac{1}{a^{p}}$。"
+      ],
+      "exampleQuestionId": "ch18_4_l1_t_q13",
+      "exampleStepMapping": [
+        "第 1 步：先算积的乘方得 $a^{-4}b^{-4}\\div (\\frac{1}{8}a^{6}b^{3})$。",
+        "第 2 步：系数相除 $1\\div \\frac{1}{8}=8$，同底数幂相除指数相减得 $8a^{-10}b^{-7}$。",
+        "第 3 步：把负整数指数化为正整数指数幂分式形式 $\\frac{8}{a^{10}b^{7}}$。"
+      ],
+      "graphNodeId": "cnm_164",
+      "status": "published"
+    },
+    {
+      "id": "P110",
+      "name": "用科学记数法表示绝对值小于 1 的数与还原小数",
+      "grade": "八年级",
+      "subject": "数学",
+      "chapterGroup": "第十八章 分式",
+      "chapter": "18.4 整数指数幂",
+      "description": "将绝对值小于 $1$ 的正数或负数表示为 $a\\times 10^{-n}$（$1\\le |a|<10$，$n$ 为正整数），并能将 $a\\times 10^{-n}$ 准确还原为原小数。",
+      "purpose": "通过“数第一个非零数字前 $0$ 的总个数（含小数点前那个 $0$）”这一机械计数法，彻底杜绝指数 $n$ 多 $1$ 或少 $1$ 的常见失误。",
+      "applicability": [
+        "将微小长度、质量或纯小数改写为 $a\\times 10^{-n}$ 的标准科学记数法形式。",
+        "将用负指数科学记数法表示的数还原为普通小数。"
+      ],
+      "conditions": [
+        "给定纯小数或负指数科学记数法直接互化",
+        "不含复杂多级古代单位换算、近似数精确度或项目探究综合题"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "确定有效数字部分 $a$（$1\\le |a|<10$）",
+          "detail": "将小数点移至第一个非零数字的右侧得到 $a$，保留原数的正负号，确保整数部分只有一位非零数字。"
+        },
+        {
+          "step": 2,
+          "action": "数小数点右移位数确定负指数 $-n$",
+          "detail": "数出原数第一个非零数字前面所有 $0$ 的总个数（包含小数点前面的 $0$），该个数即为 $n$，指数记为 $-n$。"
+        },
+        {
+          "step": 3,
+          "action": "规范写出 $a\\times 10^{-n}$ 或反向左移 $n$ 位还原小数",
+          "detail": "正向写作 $a\\times 10^{-n}$；若为还原题，则将 $a$ 的小数点向左移动 $n$ 位，位数不够用 $0$ 补足并核对前导 $0$ 个数。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P101",
+          "name": "用科学记数法表示较大数与按要求取近似数",
+          "type": "procedural_knowledge"
+        },
+        {
+          "id": "P109",
+          "name": "负整数指数幂与整数指数幂混合运算",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P101",
+        "P109"
+      ],
+      "subsequentProcedureIds": [],
+      "relatedProcedureIds": [
+        "P109",
+        "P101"
+      ],
+      "pitfalls": [
+        "把 $a$ 写成小于 $1$ 或大于等于 $10$ 的数（如将 $0.000036$ 误写为 $36\\times 10^{-6}$）。",
+        "漏数小数点前面的那个 $0$，导致指数少 $1$（如将 $0.000036$ 误写为 $3.6\\times 10^{-4}$）。",
+        "还原负数科学记数法时丢掉负号。"
+      ],
+      "exampleQuestionId": "ch18_4_l2_b_q8",
+      "exampleStepMapping": [
+        "第 1 步：把小数点移到第一个非零数字 $3$ 后，得 $a=3.6$。",
+        "第 2 步：数 $3$ 前面共有 $5$ 个 $0$（含小数点前的 $0$），确定 $n=5$。",
+        "第 3 步：写出标准科学记数法 $3.6\\times 10^{-5}$。"
+      ],
+      "graphNodeId": "cnm_164",
+      "status": "published"
+    },
+    {
+      "id": "P111",
+      "name": "去分母解分式方程与验根",
+      "grade": "八年级",
+      "subject": "数学",
+      "chapterGroup": "第十八章 分式",
+      "chapter": "18.5 分式方程",
+      "description": "识别分母含未知数的分式方程，先对各分母因式分解找出最简公分母，方程两边同乘最简公分母化为整式方程求解，并必须将所得根代入最简公分母检验是否为增根。",
+      "purpose": "规范“一找最简公分母、二去分母（常数项不漏乘）、三解整式方程、四代入最简公分母验根”四步闭环，避免漏乘整式项与忘记验根。",
+      "applicability": [
+        "依据“分母含未知数”判别分式方程与整式方程。",
+        "可化为一元一次方程的分式方程求解与增根判定。"
+      ],
+      "conditions": [
+        "分式方程去分母后可化为一元一次方程",
+        "不含实际情境应用建模题或含参讨论题"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "分解分母并确定最简公分母",
+          "detail": "将可因式分解的分母（如 $x^{2}-4=(x+2)(x-2)$）分解，并把互为相反数的分母（如 $2-x=-(x-2)$）统一符号，找出最简公分母。"
+        },
+        {
+          "step": 2,
+          "action": "方程两边同乘最简公分母化为整式方程",
+          "detail": "每一项（含单独的常数项如 $1$、$-1$）都乘以最简公分母，分子为多项式时务必加括号防变号错。"
+        },
+        {
+          "step": 3,
+          "action": "解整式方程并代入最简公分母验根",
+          "detail": "解得 $x$ 的值后代入最简公分母：若不为 $0$，则是原分式方程的解；若等于 $0$，则为增根，原分式方程无解。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P22",
+          "name": "利用去括号、移项与合并同类项解一元一次方程",
+          "type": "procedural_knowledge"
+        },
+        {
+          "id": "P31",
+          "name": "判定分式有意义/值为0条件及运用分式基本性质约分通分",
+          "type": "procedural_knowledge"
+        },
+        {
+          "id": "P36",
+          "name": "运用分式加减与混合运算法则化简求值",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P22",
+        "P31",
+        "P36"
+      ],
+      "subsequentProcedureIds": [
+        "P112",
+        "P12"
+      ],
+      "relatedProcedureIds": [
+        "P112",
+        "P31",
+        "P36"
+      ],
+      "pitfalls": [
+        "去分母时漏乘方程中不含分母的整数项（如 $-1$ 未乘 $(x+2)(x-2)$）。",
+        "分母互为相反数（如 $x-2$ 与 $2-x$）转化时漏改分数前面的符号。",
+        "解出整式方程的根后忘记代入最简公分母验根，误把增根当作原方程的解。"
+      ],
+      "exampleQuestionId": "ch18_5_l1_b_q12",
+      "exampleStepMapping": [
+        "第 1 步：分解 $x^{2}-4=(x+2)(x-2)$，确定最简公分母为 $(x+2)(x-2)$。",
+        "第 2 步：两边同乘最简公分母得 $x(x+2)-(x+2)(x-2)=4$，展开化简得 $2x+4=4$。",
+        "第 3 步：解得 $x=0$，检验 $(0+2)(0-2)=-4\\neq 0$，故 $x=0$ 是原方程的解。"
+      ],
+      "graphNodeId": "cnm_165",
+      "status": "published"
+    },
+    {
+      "id": "P112",
+      "name": "由分式方程的增根、无解或解的符号求参数",
+      "grade": "八年级",
+      "subject": "数学",
+      "chapterGroup": "第十八章 分式",
+      "chapter": "18.5 分式方程",
+      "description": "将含参分式方程去分母化为含参整式方程，根据“已知方程的解”“存在增根”“方程无解”或“解为正数/非负数”等条件列方程或不等式求参数，并严格排除使最简公分母为 $0$ 的参数值。",
+      "purpose": "突破“由增根求参不会代回整式方程”与“解为正数/非负数时漏掉排除增根条件”两大高频失分点。",
+      "applicability": [
+        "已知分式方程的解直接代入求参数值。",
+        "已知分式方程有增根或无解，求参数值。",
+        "已知分式方程的解为正数、负数或非负数，求参数的取值范围（并扣除增根对应参数）。"
+      ],
+      "conditions": [
+        "含单一未知参数的线性分式方程",
+        "不含复杂应用题或不等式组方案决策综合题"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "去分母化为含参整式方程",
+          "detail": "找准最简公分母，方程两边同乘最简公分母，整理出形如 $Ax=B$ 的含参整式方程。"
+        },
+        {
+          "step": 2,
+          "action": "按条件（已知解 / 增根 / 解的符号）列式求参",
+          "detail": "①已知解直接代入；②有增根时先令最简公分母为 $0$ 求出增根，再代入整式方程求参；③限定解的符号时先用参数表示 $x$，再列不等式。"
+        },
+        {
+          "step": 3,
+          "action": "检验并排除使最简公分母为 $0$ 的参数值",
+          "detail": "对于解的范围类问题，必须补充“$x\\neq$ 增根”条件解出禁用参数值，写出完整参数范围。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P111",
+          "name": "去分母解分式方程与验根",
+          "type": "procedural_knowledge"
+        },
+        {
+          "id": "P22",
+          "name": "利用去括号、移项与合并同类项解一元一次方程",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P111",
+        "P22"
+      ],
+      "subsequentProcedureIds": [],
+      "relatedProcedureIds": [
+        "P111",
+        "P22"
+      ],
+      "pitfalls": [
+        "求增根对应参数时，错误地把增根代回原分式方程（分母为 $0$ 无意义），应代入去分母后的整式方程。",
+        "已知解为非负数或正数求参数范围时，忘记附加“解不等于增根”导致漏挖点。"
+      ],
+      "exampleQuestionId": "ch18_5_l1_g_q7",
+      "exampleStepMapping": [
+        "第 1 步：两边同乘 $(x-3)$ 得整式方程 $2=2(x-3)+(x+m)$。",
+        "第 2 步：由最简公分母 $x-3=0$ 得增根 $x=3$，代入整式方程得 $2=0+3+m$。",
+        "第 3 步：解得 $m=-1$。"
+      ],
+      "graphNodeId": "cnm_165",
       "status": "published"
     }
   ];

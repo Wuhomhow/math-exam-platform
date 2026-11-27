@@ -5227,7 +5227,7 @@
         { id: 'P52', name: '识别圆的弦、直径、优弧与劣弧，并依据“直径是最长的弦”确定弦长范围', type: 'procedural_knowledge' }
       ],
       prerequisiteProcedureIds: ['P52'],
-      subsequentProcedureIds: ['P81'],
+      subsequentProcedureIds: ['P81', 'P113'],
       relatedProcedureIds: ['P52'],
       pitfalls: [
         '把题目给出的“直径”直接当成半径 $r$ 与 $d$ 比较（如直径为 $6$、$d=4$，误算 $4 \\lt 6$ 判成圆内，实际 $r=3 \\lt 4$ 应在圆外）。',
@@ -7856,9 +7856,7 @@
       "prerequisiteProcedureIds": [
         "P52"
       ],
-      "subsequentProcedureIds": [
-        "P84"
-      ],
+      "subsequentProcedureIds": ["P84", "P117"],
       "relatedProcedureIds": [
         "P52",
         "P84",
@@ -8048,10 +8046,8 @@
       "prerequisiteProcedureIds": [
         "P52"
       ],
-      "subsequentProcedureIds": [
-        "P86",
-        "P89"
-      ],
+      "subsequentProcedureIds": ["P86",
+        "P89", "P117"],
       "relatedProcedureIds": [
         "P52",
         "P83",
@@ -8147,10 +8143,8 @@
       "prerequisiteProcedureIds": [
         "P85"
       ],
-      "subsequentProcedureIds": [
-        "P87",
-        "P88"
-      ],
+      "subsequentProcedureIds": ["P87",
+        "P88", "P114"],
       "relatedProcedureIds": [
         "P85",
         "P87",
@@ -10735,6 +10729,336 @@
         "第 3 步：解得 $m=-1$。"
       ],
       "graphNodeId": "cnm_165",
+      "status": "published"
+    },
+    {
+      "id": "P113",
+      "name": "由圆心到直线距离 $d$ 与半径 $r$ 判定直线与圆的位置关系及求参",
+      "grade": "九年级",
+      "subject": "数学",
+      "chapterGroup": "第三十章 直线与圆的位置关系",
+      "chapter": "30.1.1 直线与圆相离、相切、相交",
+      "description": "依据直线与圆位置关系的判定准则（$d<r\\Leftrightarrow$ 相交、$d=r\\Leftrightarrow$ 相切、$d>r\\Leftrightarrow$ 相离），先提取或计算圆心到直线的垂线段长 $d$ 与圆半径 $r$，再通过比较 $d$ 与 $r$ 判定位置关系，或由已知交点个数反求 $d$ 与 $r$ 的取值范围。",
+      "purpose": "建立“先找半径 $r$（防直径陷阱）、再求垂距 $d$、最后比较 $d$ 与 $r$”的规范步骤，杜绝把直径当半径或漏写 $d\\ge 0$ 下界的失误。",
+      "applicability": [
+        "已知半径（或直径）与圆心到直线距离，直接判定直线与圆相交、相切或相离。",
+        "已知直线与圆的位置关系（或公共点个数），反求半径 $r$ 或距离 $d$ 的取值范围。",
+        "在直角三角形中用等面积法或 $30^{\\circ}$ 性质求斜边高 $d$ 后判定与圆的位置关系。"
+      ],
+      "conditions": [
+        "聚焦圆心到直线的距离 $d$ 与半径 $r$ 的比较或范围反求",
+        "不含一次函数动圆综合或梯形动点多情形讨论题"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "确定圆的半径 $r$ 与圆心到直线的距离 $d$",
+          "detail": "若题目给出直径需先除以 $2$ 得半径 $r$；几何图形中过圆心作直线垂线，用勾股定理或等面积法算出垂线段长 $d$。"
+        },
+        {
+          "step": 2,
+          "action": "比较 $d$ 与 $r$ 的大小判定位置关系",
+          "detail": "严格对照：$d<r$（2 个公共点，相交）、$d=r$（1 个公共点，相切）、$d>r$（0 个公共点，相离）。"
+        },
+        {
+          "step": 3,
+          "action": "反求 $d$ 或 $r$ 的取值范围并核对非负边界",
+          "detail": "相交时距离 $0\\le d<r$（切勿漏写 $0\\le$），相离时 $d>r$，相切时 $d=r$。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P53",
+          "name": "比较点到圆心的距离 $d$ 与半径 $r$，判定点与圆的位置关系及求半径范围",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P53"
+      ],
+      "subsequentProcedureIds": [
+        "P114"
+      ],
+      "relatedProcedureIds": [
+        "P53",
+        "P114"
+      ],
+      "pitfalls": [
+        "题干给的是圆的直径而非半径，直接拿直径与 $d$ 比较导致判错。",
+        "已知相交求圆心到直线距离 $d$ 的范围时，漏写下界 $0\\le d<r$。"
+      ],
+      "exampleQuestionId": "ch30_1_1_b_q1",
+      "exampleStepMapping": [
+        "第 1 步：提取半径 $r=5\\text{ cm}$，圆心到直线距离 $d=3\\text{ cm}$。",
+        "第 2 步：比较大小得 $d=3<r=5$。",
+        "第 3 步：判定 $\\odot O$ 与直线 $l$ 相交。"
+      ],
+      "graphNodeId": "cnm_260",
+      "status": "published"
+    },
+    {
+      "id": "P114",
+      "name": "运用切线的性质与判定定理求角、求长与证切线",
+      "grade": "九年级",
+      "subject": "数学",
+      "chapterGroup": "第三十章 直线与圆的位置关系",
+      "chapter": "30.1.2 圆的切线",
+      "description": "运用切线性质定理“圆的切线垂直于过切点的半径”辅助添线构造直角三角形求角求长，并依据切线判定定理（有公共点“连半径、证垂直”，无明确公共点“作垂直、证 $d=r$”）证明直线是圆的切线。",
+      "purpose": "固化“见切点，连半径，得垂直”和“证切线，分两类”的标准辅助线策略，避免凭肉眼猜垂直或漏证点在圆上。",
+      "applicability": [
+        "已知直线与圆相切，连结圆心与切点构成直角三角形，结合圆周角定理、等腰三角形或勾股定理求角与线段长。",
+        "判定或证明某条直线是圆的切线（含勾股定理逆定理证垂直、三线合一证垂直等）。"
+      ],
+      "conditions": [
+        "聚焦单条切线的性质计算或切线判定证明",
+        "不含复杂尺规作图探究或动态阴影面积综合题"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "遇切点连半径得 $90^{\\circ}$ 直角（或定证切线路径）",
+          "detail": "性质题直接连结圆心与切点得 $OA\\perp l$；判定题若直线过圆上已知点则“连半径，证垂直”，否则“作垂直，证 $d=r$”。"
+        },
+        {
+          "step": 2,
+          "action": "在直角三角形中结合圆的性质转角算边",
+          "detail": "利用直角三角形两锐角互余、等边对等角（半径相等）、圆周角定理或勾股定理列出等量关系。"
+        },
+        {
+          "step": 3,
+          "action": "得出所求角度/长度或写出切线判定结论",
+          "detail": "证明题须写明“半径 + 垂直”双条件，再由切线判定定理得出结论。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P113",
+          "name": "由圆心到直线距离 $d$ 与半径 $r$ 判定直线与圆的位置关系及求参",
+          "type": "procedural_knowledge"
+        },
+        {
+          "id": "P86",
+          "name": "运用圆周角定理及同弧/等弧所对圆周角相等求角与推理证明",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P113",
+        "P86"
+      ],
+      "subsequentProcedureIds": [
+        "P115"
+      ],
+      "relatedProcedureIds": [
+        "P113",
+        "P115",
+        "P86"
+      ],
+      "pitfalls": [
+        "已知切线时忘记连结圆心与切点，导致找不到 $90^{\\circ}$ 直角条件。",
+        "证明切线时只证了垂直却未说明垂足（交点）在圆上（即该线段是半径）。"
+      ],
+      "exampleQuestionId": "ch30_1_2_l1_b_q4",
+      "exampleStepMapping": [
+        "第 1 步：连结切点半径 $OC$，由切线性质得 $OC\\perp PC$，即 $\\angle OCP=90^{\\circ}$。",
+        "第 2 步：在 $Rt\\triangle OCP$ 中求圆心角 $\\angle COP$，再由 $OA=OC$ 得等腰底角。",
+        "第 3 步：利用三角形外角或内角和算出目标角 $120^{\\circ}$。"
+      ],
+      "graphNodeId": "cnm_262",
+      "status": "published"
+    },
+    {
+      "id": "P115",
+      "name": "运用切线长定理求线段长、周长与角度",
+      "grade": "九年级",
+      "subject": "数学",
+      "chapterGroup": "第三十章 直线与圆的位置关系",
+      "chapter": "30.1.2 圆的切线",
+      "description": "运用切线长定理“从圆外一点引圆的两条切线，它们的切线长相等，且圆心和这一点的连线平分两条切线的夹角”，将折线周长转化为两条切线长之和，或结合直角三角形与圆周角求线段长与角度。",
+      "purpose": "掌握“切线长等量代换”与“$PO$ 平分夹角构造含特殊角直角三角形”两大核心模型，快速化繁为简。",
+      "applicability": [
+        "利用 $PA=PB$ 转化外切折线或三角形周长（如 $C_{\\triangle PCD}=PA+PB=2PA$）。",
+        "利用 $PA=PB$、$PO$ 平分 $\\angle APB$ 及 $OA\\perp PA$ 求解等边三角形、含 $30^{\\circ}$ 直角三角形及圆周角问题。"
+      ],
+      "conditions": [
+        "从圆外一点（或多个顶点）向同一圆引切线的长度、周长与角度计算",
+        "不含复杂尺规作图或网格无刻度直尺作图题"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "识别圆外同一点引出的成对切线",
+          "detail": "标出所有切点，将同一圆外点到两个切点的切线长标记为相等（如 $PA=PB$、$CA=CE$、$DB=DE$）。"
+        },
+        {
+          "step": 2,
+          "action": "等量代换转化周长，或连圆心构直角求角求边",
+          "detail": "周长题把中间切线段拆成两段代换到两侧切线上；角度/长度题连结半径与圆心连线，利用 $OA\\perp PA$ 与 $\\angle APO=\\angle BPO$ 计算。"
+        },
+        {
+          "step": 3,
+          "action": "合并等式或解方程得出线段长、周长或角度",
+          "detail": "三边已知求各切线长时设未知数 $x$ 列方程求解并检验。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P114",
+          "name": "运用切线的性质与判定定理求角、求长与证切线",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P114"
+      ],
+      "subsequentProcedureIds": [
+        "P116"
+      ],
+      "relatedProcedureIds": [
+        "P114",
+        "P116"
+      ],
+      "pitfalls": [
+        "混淆“切线（直线，不可度量）”与“切线长（圆外点到切点的线段长）”。",
+        "计算切线夹角对应的圆周角时，漏用四边形内角和 $360^{\\circ}$ 先求圆心角 $\\angle AOB=180^{\\circ}-\\angle P$。"
+      ],
+      "exampleQuestionId": "ch30_1_2_l2_b_q11",
+      "exampleStepMapping": [
+        "第 1 步：由切线长定理得 $PA=PB=10$，$CA=CE$，$DB=DE$（设 $E$ 为 $CD$ 切点）。",
+        "第 2 步：将 $\\triangle PCD$ 周长拆写为 $PC+CE+DE+PD=(PC+CA)+(PD+DB)=PA+PB$。",
+        "第 3 步：代入算得周长为 $10+10=20$。"
+      ],
+      "graphNodeId": "cnm_263",
+      "status": "published"
+    },
+    {
+      "id": "P116",
+      "name": "求三角形内切圆半径与内心角度",
+      "grade": "九年级",
+      "subject": "数学",
+      "chapterGroup": "第三十章 直线与圆的位置关系",
+      "chapter": "30.2 三角形的内切圆",
+      "description": "利用三角形内心是三条内角平分线交点的性质求内心张角 $\\angle BIC=90^{\\circ}+\\frac{1}{2}\\angle A$，并运用等面积法 $S=\\frac{1}{2}(a+b+c)r$ 或直角三角形内切圆半径公式 $r=\\frac{a+b-c}{2}$ 求内切圆半径与三角形面积。",
+      "purpose": "区分内心（角平分线交点，到三边距离相等）与外心（垂直平分线交点），熟练运用“等面积法”和“直角切线长公式”一步求半径。",
+      "applicability": [
+        "已知三角形内角求内心所成角 $\\angle BIC$，或由 $\\angle BIC$ 反求顶角 $\\angle A$。",
+        "已知三边长或周长求一般三角形、直角三角形的内切圆半径 $r$ 或面积 $S$。"
+      ],
+      "conditions": [
+        "聚焦三角形内心角度计算、内切圆半径与周长面积关系",
+        "不含尺规作图综合、内外心距离综合或复杂折叠平移压轴题"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "明确内心双重性质（角平分线 + 到三边等距 $r$）",
+          "detail": "求角时标出 $BI, CI$ 平分 $\\angle ABC, \\angle ACB$；求半径/面积时连结 $IA, IB, IC$ 将三角形分为三个以 $r$ 为高的小三角形。"
+        },
+        {
+          "step": 2,
+          "action": "套用内心角度公式或等面积法/直角半径公式",
+          "detail": "角度题用 $\\angle BIC=90^{\\circ}+\\frac{1}{2}\\angle A$；一般三角形用 $S=\\frac{1}{2}Cr$，直角三角形优先用 $r=\\frac{a+b-c}{2}$。"
+        },
+        {
+          "step": 3,
+          "action": "代入已知数据计算并核对单位与合理性",
+          "detail": "先用勾股定理补全缺失斜边（如 $6, 8\\Rightarrow 10$），再代入公式算出最终值。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P115",
+          "name": "运用切线长定理求线段长、周长与角度",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P115"
+      ],
+      "subsequentProcedureIds": [],
+      "relatedProcedureIds": [
+        "P115",
+        "P81"
+      ],
+      "pitfalls": [
+        "将内心张角 $\\angle BIC=90^{\\circ}+\\frac{1}{2}\\angle A$ 与外心圆心角 $\\angle BOC=2\\angle A$ 混淆。",
+        "套用 $S=\\frac{1}{2}Cr$ 时忘记乘 $\\frac{1}{2}$，导致半径算小一半或面积算大一倍。"
+      ],
+      "exampleQuestionId": "ch30_2_b_q1",
+      "exampleStepMapping": [
+        "第 1 步：由点 $I$ 是内心知 $BI, CI$ 分别平分 $\\angle ABC, \\angle ACB$。",
+        "第 2 步：利用 $\\angle IBC+\\angle ICB=\\frac{1}{2}(180^{\\circ}-\\angle A)=60^{\\circ}$。",
+        "第 3 步：算出 $\\angle BIC=180^{\\circ}-60^{\\circ}=120^{\\circ}$。"
+      ],
+      "graphNodeId": "cnm_264",
+      "status": "published"
+    },
+    {
+      "id": "P117",
+      "name": "正多边形与圆（中心角、边数、半径与边心距计算）",
+      "grade": "九年级",
+      "subject": "数学",
+      "chapterGroup": "第三十章 直线与圆的位置关系",
+      "chapter": "30.3 正多边形与圆",
+      "description": "利用正 $n$ 边形的中心角等于外角（$\\alpha=\\frac{360^{\\circ}}{n}$）正逆求中心角与边数，并通过连结中心与顶点、作边心距，把正多边形（尤其是正三角形、正方形、正六边形）的计算转化为含特殊角的直角三角形求解。",
+      "purpose": "把正多边形的半径 $R$、边长 $a$、边心距 $r$ 与中心角 $\\alpha$ 全部统一到一个特征直角三角形中，尤其牢记“正六边形的边长等于外接圆半径”。",
+      "applicability": [
+        "已知正 $n$ 边形边数求中心角，或已知中心角（及圆周角）反求边数 $n$ 与每个内角。",
+        "求正六边形、正方形、正三角形的外接圆半径 $R$、边心距 $r$、周长与面积。"
+      ],
+      "conditions": [
+        "聚焦正多边形中心角、边数、半径、边长与边心距的计算",
+        "不含尺规作正多边形、无刻度直尺网格作图或动点综合压轴题"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "利用中心角公式 $\\alpha=\\frac{360^{\\circ}}{n}$ 建立边数与角度关系",
+          "detail": "正求中心角直接用 $360^{\\circ}\\div n$；已知中心角反求边数用 $n=360^{\\circ}\\div \\alpha$；每个内角为 $180^{\\circ}-\\alpha$。"
+        },
+        {
+          "step": 2,
+          "action": "连半径作边心距，构造特征直角三角形",
+          "detail": "连结中心 $O$ 与相邻顶点得等腰三角形，作边心距 $OM\\perp AB$ 得直角三角形，满足 $R^{2}=r^{2}+\\left(\\frac{a}{2}\\right)^{2}$ 且 $\\angle AOM=\\frac{180^{\\circ}}{n}$。"
+        },
+        {
+          "step": 3,
+          "action": "代入正六边形（$R=a$）等特殊关系算出半径、周长或面积",
+          "detail": "正六边形中心角 $60^{\\circ}$ 构成等边三角形（$R=a$，$r=\\frac{\\sqrt{3}}{2}R$），直接代值求解。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "P85",
+          "name": "运用同圆或等圆中弧、弦、圆心角的等量关系进行转化、求角与证明",
+          "type": "procedural_knowledge"
+        },
+        {
+          "id": "P83",
+          "name": "运用垂径定理及勾股定理构造直角三角形求半径、弦长与弦心距（含双弦分类）",
+          "type": "procedural_knowledge"
+        }
+      ],
+      "prerequisiteProcedureIds": [
+        "P85",
+        "P83"
+      ],
+      "subsequentProcedureIds": [],
+      "relatedProcedureIds": [
+        "P85",
+        "P83"
+      ],
+      "pitfalls": [
+        "误把正 $n$ 边形的内角当成中心角代入 $\\frac{360^{\\circ}}{n}$。",
+        "求正六边形外接圆半径时忽略等边三角形性质，绕弯计算出错。"
+      ],
+      "exampleQuestionId": "ch30_3_l1_b_q3",
+      "exampleStepMapping": [
+        "第 1 步：明确正 $n$ 边形中心角公式为 $\\frac{360^{\\circ}}{n}$。",
+        "第 2 步：代入中心角 $72^{\\circ}$ 列式 $n=360^{\\circ}\\div 72^{\\circ}$。",
+        "第 3 步：算得边数 $n=5$。"
+      ],
+      "graphNodeId": "cnm_266",
       "status": "published"
     }
   ];

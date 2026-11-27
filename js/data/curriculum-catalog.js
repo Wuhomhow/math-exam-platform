@@ -762,28 +762,28 @@
           id: 'g9_c30_s1_1',
           code: '30.1.1',
           title: '30.1.1 直线与圆相离、相切、相交',
-          procedureIds: [],
+          procedureIds: ['P113'],
           fallback: false
         },
         {
           id: 'g9_c30_s1_2',
           code: '30.1.2',
           title: '30.1.2 圆的切线',
-          procedureIds: [],
+          procedureIds: ['P114', 'P115'],
           fallback: false
         },
         {
           id: 'g9_c30_s2',
           code: '30.2',
           title: '30.2 三角形的内切圆',
-          procedureIds: [],
+          procedureIds: ['P116'],
           fallback: false
         },
         {
           id: 'g9_c30_s3',
           code: '30.3',
           title: '30.3 正多边形与圆',
-          procedureIds: [],
+          procedureIds: ['P117'],
           fallback: false
         },
         {

@@ -26403,6 +26403,920 @@
           ]
         }
       }
+    },
+    P113: {
+      "procedureId": "P113",
+      "title": "由圆心到直线距离 $d$ 与半径 $r$ 判定直线与圆的位置关系及求参",
+      "exampleTitle": "已知 $\\odot O$ 直径为 $8\\text{ cm}$，直线 $l$ 与 $\\odot O$ 有 $2$ 个公共点，求 $d$ 的范围",
+      "exampleFormula": "$0\\le d<4$",
+      "totalDuration": 24,
+      "scratchpadIdleHint": "旁白草稿演算区（先由直径算半径 r，再对照 d<r 相交、d=r 相切、d>r 相离）",
+      "practiceSectionTitle": "直线与圆位置关系跟做练习",
+      "practiceSectionSub": "完成以下两道练习，检验半径换算与距离范围判定",
+      "steps": [
+        {
+          "step": 1,
+          "name": "先由直径算出半径 $r$",
+          "tStart": 0,
+          "tEnd": 8,
+          "explanation": "题干给出直径为 $8\\text{ cm}$，务必先除以 $2$ 得半径 $r=4\\text{ cm}$。"
+        },
+        {
+          "step": 2,
+          "name": "由公共点个数确定位置关系",
+          "tStart": 8,
+          "tEnd": 16,
+          "explanation": "直线与圆有 $2$ 个公共点，说明直线与圆相交，对应条件 $d<r$。"
+        },
+        {
+          "step": 3,
+          "name": "补齐非负下界写出范围",
+          "tStart": 16,
+          "tEnd": 24,
+          "explanation": "距离非负且小于半径 $4$，得出 $0\\le d<4\\text{ cm}$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1,
+          "step": 1,
+          "label": "1.1 直径 8 化为半径 r=4"
+        },
+        {
+          "time": 9.5,
+          "step": 2,
+          "label": "2.1 2 个公共点对应相交 d<r"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 补非负下界得 0≤d<4"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p113_row_0",
+          "stepBadge": "条件",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p113_r0_1",
+              "math": "直径 $=8\\text{ cm}$，公共点 $2$ 个",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p113_row_1",
+          "stepBadge": "第 1 步 · 定半径",
+          "appearAt": 2.2,
+          "tokens": [
+            {
+              "id": "p113_r1_1",
+              "math": "$r = 8\\div 2 = 4\\text{ cm}$",
+              "appearAt": 2.4,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p113_row_2",
+          "stepBadge": "第 2 步 · 判位置",
+          "appearAt": 9.5,
+          "tokens": [
+            {
+              "id": "p113_r2_1",
+              "math": "相交 $\\Leftrightarrow d < r$",
+              "appearAt": 9.7,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p113_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 17.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p113_r3_conc",
+              "math": "$0\\le d < 4\\text{ cm}$",
+              "appearAt": 17.7,
+              "dur": 0.45
+            }
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "tStart": 0,
+          "tEnd": 8,
+          "text": "第一步警惕直径陷阱，先算半径 $r=4\\text{ cm}$。",
+          "focusToken": "p113_r1_1"
+        },
+        {
+          "tStart": 8,
+          "tEnd": 16,
+          "text": "第二步由 $2$ 个公共点判定为相交，即 $d<r$。",
+          "focusToken": "p113_r2_1"
+        },
+        {
+          "tStart": 16,
+          "tEnd": 24,
+          "text": "第三步补上距离非负下界，得 $0\\le d<4\\text{ cm}$。",
+          "focusToken": "p113_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "$\\odot O$ 半径为 $5\\text{ cm}$，圆心到直线 $l$ 距离 $d=3\\text{ cm}$，位置关系为（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. 相离",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. 相切",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. 相交",
+              "isCorrect": true
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "$d=3<r=5 \\Rightarrow$ 相交"
+            ],
+            "summary": "距离小于半径则直线与圆相交。"
+          },
+          "wrongTitle": "提示：比较 d=3 与 r=5 的大小",
+          "wrongFeedback": "$d=3<r=5$，直线与圆相交，选 C。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "在 $Rt\\triangle ABC$ 中，$\\angle C=90^{\\circ}$，$AC=3$，$BC=4$，以 $C$ 为圆心与 $AB$ 相切，则半径 $r =$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "r =",
+          "input1Placeholder": "如 2.4",
+          "input1Suffix": "",
+          "expectedX": "2.4",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $2.4$。",
+          "correctDetail": "由勾股定理得 $AB=5$，等面积法得斜边高 $d=\\frac{3\\times 4}{5}=2.4$，相切时 $r=d=2.4$。",
+          "wrongFeedback": "先求斜边 $AB=5$，再用等面积法得 $r=d=\\frac{3\\times 4}{5}=2.4$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "2.5",
+              "hint": "$2.5$ 是外接圆半径（斜边一半），切线半径应等于斜边上的高 $2.4$。"
+            }
+          ]
+        }
+      }
+    },
+    P114: {
+      "procedureId": "P114",
+      "title": "运用切线的性质与判定定理求角、求长与证切线",
+      "exampleTitle": "$PB$ 切 $\\odot O$ 于 $B$，圆心 $O$ 在 $PA$ 上，$\\angle P=40^{\\circ}$，求 $\\angle A$",
+      "exampleFormula": "$25^{\\circ}$",
+      "totalDuration": 24,
+      "scratchpadIdleHint": "旁白草稿演算区（见切点连半径得 90°，再结合直角三角形与圆周角/等腰三角形转角）",
+      "practiceSectionTitle": "圆的切线跟做练习",
+      "practiceSectionSub": "完成以下两道练习，巩固“连半径得垂直”与勾股逆定理证切线",
+      "steps": [
+        {
+          "step": 1,
+          "name": "连结切点半径 $OB$ 得直角",
+          "tStart": 0,
+          "tEnd": 8,
+          "explanation": "因为 $PB$ 与 $\\odot O$ 相切于点 $B$，连结 $OB$ 即得 $OB\\perp PB$，$\\angle OBP=90^{\\circ}$。"
+        },
+        {
+          "step": 2,
+          "name": "在 $Rt\\triangle OBP$ 中求圆心角 $\\angle POB$",
+          "tStart": 8,
+          "tEnd": 16,
+          "explanation": "在 $Rt\\triangle OBP$ 中，$\\angle POB=90^{\\circ}-\\angle P=90^{\\circ}-40^{\\circ}=50^{\\circ}$。"
+        },
+        {
+          "step": 3,
+          "name": "由圆周角定理（或 $OA=OB$）求 $\\angle A$",
+          "tStart": 16,
+          "tEnd": 24,
+          "explanation": "同弧所对圆周角等于圆心角的一半，得 $\\angle A=\\frac{1}{2}\\angle POB=25^{\\circ}$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1,
+          "step": 1,
+          "label": "1.1 见切点 B 连半径 OB 得 90°"
+        },
+        {
+          "time": 9.5,
+          "step": 2,
+          "label": "2.1 在 Rt△OBP 中算得 ∠POB=50°"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 圆周角定理得 ∠A=25°"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p114_row_0",
+          "stepBadge": "条件",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p114_r0_1",
+              "math": "$PB$ 切 $\\odot O$ 于 $B$，$\\angle P=40^{\\circ}$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p114_row_1",
+          "stepBadge": "第 1 步 · 连半径",
+          "appearAt": 2.2,
+          "tokens": [
+            {
+              "id": "p114_r1_1",
+              "math": "连结 $OB \\Rightarrow \\angle OBP=90^{\\circ}$",
+              "appearAt": 2.4,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p114_row_2",
+          "stepBadge": "第 2 步 · 求圆心角",
+          "appearAt": 9.5,
+          "tokens": [
+            {
+              "id": "p114_r2_1",
+              "math": "$\\angle POB = 90^{\\circ}-40^{\\circ}=50^{\\circ}$",
+              "appearAt": 9.7,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p114_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 17.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p114_r3_conc",
+              "math": "$\\angle A = \\frac{1}{2}\\angle POB = 25^{\\circ}$",
+              "appearAt": 17.7,
+              "dur": 0.45
+            }
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "tStart": 0,
+          "tEnd": 8,
+          "text": "第一步见切点 $B$ 立即连半径 $OB$，得到 $\\angle OBP=90^{\\circ}$。",
+          "focusToken": "p114_r1_1"
+        },
+        {
+          "tStart": 8,
+          "tEnd": 16,
+          "text": "第二步在直角三角形中用余角算出圆心角 $\\angle POB=50^{\\circ}$。",
+          "focusToken": "p114_r2_1"
+        },
+        {
+          "tStart": 16,
+          "tEnd": 24,
+          "text": "第三步由圆周角定理得 $\\angle A=25^{\\circ}$。",
+          "focusToken": "p114_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "点 $A$ 在 $\\odot O$ 上，$OA=5$，$PA=12$，$PO=13$，则 $PA$ 与 $\\odot O$（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. 相交",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. 相切",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. 相离",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "$5^{2}+12^{2}=13^{2} \\Rightarrow OA\\perp PA$，且 $A$ 在圆上 $\\Rightarrow$ 相切"
+            ],
+            "summary": "过半径外端且垂直于半径的直线是圆的切线。"
+          },
+          "wrongTitle": "提示：检验 5²+12² 与 13² 是否相等",
+          "wrongFeedback": "由勾股逆定理得 $OA\\perp PA$，故 $PA$ 与 $\\odot O$ 相切，选 B。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "$A, B$ 在 $\\odot O$ 上，$\\angle AOB=120^{\\circ}$，要使直线 $AC$ 为切线，则锐角 $\\angle BAC =$ ______$^{\\circ}$．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "∠BAC =",
+          "input1Placeholder": "如 60",
+          "input1Suffix": "°",
+          "expectedX": "60",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $60^{\\circ}$。",
+          "correctDetail": "由 $OA=OB$ 得 $\\angle OAB=30^{\\circ}$，切线需 $\\angle OAC=90^{\\circ}$，故 $\\angle BAC=90^{\\circ}-30^{\\circ}=60^{\\circ}$。",
+          "wrongFeedback": "先由等腰得 $\\angle OAB=30^{\\circ}$，再用 $90^{\\circ}-30^{\\circ}=60^{\\circ}$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "30",
+              "hint": "$30^{\\circ}$ 是 $\\angle OAB$，题目求的是 $\\angle BAC=90^{\\circ}-30^{\\circ}=60^{\\circ}$。"
+            }
+          ]
+        }
+      }
+    },
+    P115: {
+      "procedureId": "P115",
+      "title": "运用切线长定理求线段长、周长与角度",
+      "exampleTitle": "$PA, PB$ 切 $\\odot O$ 于 $A, B$，$PA=10$，切线 $CD$ 交 $PA, PB$ 于 $C, D$，求 $C_{\\triangle PCD}$",
+      "exampleFormula": "$20$",
+      "totalDuration": 24,
+      "scratchpadIdleHint": "旁白草稿演算区（从圆外同一点引出的两条切线长相等，把折线周长化整为零）",
+      "practiceSectionTitle": "切线长定理跟做练习",
+      "practiceSectionSub": "完成以下两道练习，巩固等量代换转化周长与线段求长",
+      "steps": [
+        {
+          "step": 1,
+          "name": "标出三组相等的切线长",
+          "tStart": 0,
+          "tEnd": 8,
+          "explanation": "设 $CD$ 与圆切于点 $E$，由切线长定理得 $PA=PB=10$，$CA=CE$，$DB=DE$。"
+        },
+        {
+          "step": 2,
+          "name": "将 $\\triangle PCD$ 周长拆段等量代换",
+          "tStart": 8,
+          "tEnd": 16,
+          "explanation": "$C_{\\triangle PCD}=PC+CE+DE+PD=(PC+CA)+(PD+DB)=PA+PB$。"
+        },
+        {
+          "step": 3,
+          "name": "代入 $PA=10$ 算出周长",
+          "tStart": 16,
+          "tEnd": 24,
+          "explanation": "直接得 $C_{\\triangle PCD}=10+10=20$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1,
+          "step": 1,
+          "label": "1.1 标出 PA=PB, CA=CE, DB=DE"
+        },
+        {
+          "time": 9.5,
+          "step": 2,
+          "label": "2.1 周长代换为 PA+PB"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 算得周长 20"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p115_row_0",
+          "stepBadge": "条件",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p115_r0_1",
+              "math": "$PA, PB, CD$ 均为切线，$PA=10$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p115_row_1",
+          "stepBadge": "第 1 步 · 等切线长",
+          "appearAt": 2.2,
+          "tokens": [
+            {
+              "id": "p115_r1_1",
+              "math": "$PA=PB=10,\\ CA=CE,\\ DB=DE$",
+              "appearAt": 2.4,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p115_row_2",
+          "stepBadge": "第 2 步 · 转化周长",
+          "appearAt": 9.5,
+          "tokens": [
+            {
+              "id": "p115_r2_1",
+              "math": "$C_{\\triangle PCD}=(PC+CA)+(PD+DB)=PA+PB$",
+              "appearAt": 9.7,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p115_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 17.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p115_r3_conc",
+              "math": "$C_{\\triangle PCD} = 10+10 = 20$",
+              "appearAt": 17.7,
+              "dur": 0.45
+            }
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "tStart": 0,
+          "tEnd": 8,
+          "text": "第一步按切线长定理标出 $PA=PB$、$CA=CE$、$DB=DE$。",
+          "focusToken": "p115_r1_1"
+        },
+        {
+          "tStart": 8,
+          "tEnd": 16,
+          "text": "第二步把折线 $CD$ 拆为 $CE+DE$ 并分别代换到 $CA$ 和 $DB$ 上。",
+          "focusToken": "p115_r2_1"
+        },
+        {
+          "tStart": 16,
+          "tEnd": 24,
+          "text": "第三步化简为 $PA+PB=20$，一步出答案。",
+          "focusToken": "p115_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "$AB, AC, BD$ 切 $\\odot O$ 于 $P, C, D$，$AB=7$，$AC=4$，则 $BD =$（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $3$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $4$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $5$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "$AP=AC=4 \\Rightarrow BD=BP=7-4=3$"
+            ],
+            "summary": "圆外同一点到两切点线段长相等。"
+          },
+          "wrongTitle": "提示：由切线长定理得 AP=AC=4，BP=BD",
+          "wrongFeedback": "$BD=BP=AB-AP=7-4=3$，选 A。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "$PA, PB$ 切 $\\odot O$ 于 $A, B$，$\\angle APB=60^{\\circ}$，$PA=6$，则 $\\triangle PAB$ 的周长为 ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "周长 =",
+          "input1Placeholder": "如 18",
+          "input1Suffix": "",
+          "expectedX": "18",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $18$。",
+          "correctDetail": "由 $PA=PB=6$ 且 $\\angle APB=60^{\\circ}$ 知 $\\triangle PAB$ 是等边三角形，周长为 $6\\times 3=18$。",
+          "wrongFeedback": "$PA=PB$ 且顶角 $60^{\\circ}$ 构成等边三角形，周长为 $18$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "12",
+              "hint": "别漏掉第三边 $AB=6$，周长为 $6\\times 3=18$。"
+            }
+          ]
+        }
+      }
+    },
+    P116: {
+      "procedureId": "P116",
+      "title": "求三角形内切圆半径与内心角度",
+      "exampleTitle": "在 $Rt\\triangle ABC$ 中，$\\angle C=90^{\\circ}$，$AC=6$，$BC=8$，求内切圆半径 $r$",
+      "exampleFormula": "$r=2$",
+      "totalDuration": 24,
+      "scratchpadIdleHint": "旁白草稿演算区（内心角度用 90°+∠A/2；半径一般用 S=Cr/2，直角优先用 r=(a+b-c)/2）",
+      "practiceSectionTitle": "三角形内切圆跟做练习",
+      "practiceSectionSub": "完成以下两道练习，巩固内心角度与半径公式",
+      "steps": [
+        {
+          "step": 1,
+          "name": "由勾股定理求斜边 $AB$",
+          "tStart": 0,
+          "tEnd": 8,
+          "explanation": "在 $Rt\\triangle ABC$ 中，$AB=\\sqrt{6^{2}+8^{2}}=10$。"
+        },
+        {
+          "step": 2,
+          "name": "套用直角三角形内切圆半径公式",
+          "tStart": 8,
+          "tEnd": 16,
+          "explanation": "由切线长定理可得直角三角形内切圆半径 $r=\\frac{a+b-c}{2}$（或等面积法 $r=\\frac{ab}{a+b+c}$）。"
+        },
+        {
+          "step": 3,
+          "name": "代入三边算出 $r$",
+          "tStart": 16,
+          "tEnd": 24,
+          "explanation": "代入得 $r=\\frac{6+8-10}{2}=2$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1,
+          "step": 1,
+          "label": "1.1 勾股定理求斜边 AB=10"
+        },
+        {
+          "time": 9.5,
+          "step": 2,
+          "label": "2.1 套用 r=(a+b-c)/2"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 算得内切圆半径 r=2"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p116_row_0",
+          "stepBadge": "条件",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p116_r0_1",
+              "math": "$Rt\\triangle ABC,\\ AC=6,\\ BC=8$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p116_row_1",
+          "stepBadge": "第 1 步 · 求斜边",
+          "appearAt": 2.2,
+          "tokens": [
+            {
+              "id": "p116_r1_1",
+              "math": "$AB = \\sqrt{6^{2}+8^{2}} = 10$",
+              "appearAt": 2.4,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p116_row_2",
+          "stepBadge": "第 2 步 · 套公式",
+          "appearAt": 9.5,
+          "tokens": [
+            {
+              "id": "p116_r2_1",
+              "math": "$r = \\frac{a+b-c}{2} = \\frac{6+8-10}{2}$",
+              "appearAt": 9.7,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p116_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 17.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p116_r3_conc",
+              "math": "$r = 2$",
+              "appearAt": 17.7,
+              "dur": 0.45
+            }
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "tStart": 0,
+          "tEnd": 8,
+          "text": "第一步用勾股定理补全斜边 $AB=10$。",
+          "focusToken": "p116_r1_1"
+        },
+        {
+          "tStart": 8,
+          "tEnd": 16,
+          "text": "第二步套用直角三角形内切圆半径公式 $r=\\frac{a+b-c}{2}$。",
+          "focusToken": "p116_r2_1"
+        },
+        {
+          "tStart": 16,
+          "tEnd": 24,
+          "text": "第三步代入算得 $r=2$（也可用等面积法 $\\frac{48}{24}=2$ 验算）。",
+          "focusToken": "p116_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "点 $I$ 是 $\\triangle ABC$ 的内心，$\\angle A=60^{\\circ}$，则 $\\angle BIC =$（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $110^{\\circ}$",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. $120^{\\circ}$",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. $130^{\\circ}$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "$\\angle BIC = 90^{\\circ}+\\frac{1}{2}\\times 60^{\\circ}=120^{\\circ}$"
+            ],
+            "summary": "内心是角平分线交点。"
+          },
+          "wrongTitle": "提示：套用内心角度公式 ∠BIC=90°+∠A/2",
+          "wrongFeedback": "$\\angle BIC=90^{\\circ}+30^{\\circ}=120^{\\circ}$，选 B。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "$\\odot O$ 是 $\\triangle ABC$ 的内切圆，$\\angle BOC=117^{\\circ}$，则 $\\angle A =$ ______$^{\\circ}$．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "∠A =",
+          "input1Placeholder": "如 54",
+          "input1Suffix": "°",
+          "expectedX": "54",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $54^{\\circ}$。",
+          "correctDetail": "由 $90^{\\circ}+\\frac{1}{2}\\angle A=117^{\\circ}$ 得 $\\frac{1}{2}\\angle A=27^{\\circ}$，故 $\\angle A=54^{\\circ}$。",
+          "wrongFeedback": "由 $90^{\\circ}+\\frac{1}{2}\\angle A=117^{\\circ}$ 反解得 $\\angle A=54^{\\circ}$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "27",
+              "hint": "$27^{\\circ}$ 是 $\\frac{1}{2}\\angle A$，别忘记乘以 $2$ 得 $54^{\\circ}$。"
+            }
+          ]
+        }
+      }
+    },
+    P117: {
+      "procedureId": "P117",
+      "title": "正多边形与圆（中心角、边数、半径与边心距计算）",
+      "exampleTitle": "已知正多边形的中心角是 $72^{\\circ}$，求边数 $n$ 及每个内角的度数",
+      "exampleFormula": "$n=5$，每个内角 $108^{\\circ}$",
+      "totalDuration": 24,
+      "scratchpadIdleHint": "旁白草稿演算区（中心角 α=360°/n，内角=180°-α；正六边形牢记半径 R=边长 a）",
+      "practiceSectionTitle": "正多边形与圆跟做练习",
+      "practiceSectionSub": "完成以下两道练习，巩固中心角公式与正六边形半径关系",
+      "steps": [
+        {
+          "step": 1,
+          "name": "写出正 $n$ 边形中心角公式",
+          "tStart": 0,
+          "tEnd": 8,
+          "explanation": "正 $n$ 边形把圆周 $360^{\\circ}$ 等分成 $n$ 份，中心角 $\\alpha=\\frac{360^{\\circ}}{n}$。"
+        },
+        {
+          "step": 2,
+          "name": "代入中心角反求边数 $n$",
+          "tStart": 8,
+          "tEnd": 16,
+          "explanation": "由 $\\frac{360^{\\circ}}{n}=72^{\\circ}$，解得边数 $n=360^{\\circ}\\div 72^{\\circ}=5$（正五边形）。"
+        },
+        {
+          "step": 3,
+          "name": "利用互补关系求每个内角",
+          "tStart": 16,
+          "tEnd": 24,
+          "explanation": "正多边形每个内角与中心角互补，得每个内角为 $180^{\\circ}-72^{\\circ}=108^{\\circ}$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1,
+          "step": 1,
+          "label": "1.1 中心角公式 α=360°/n"
+        },
+        {
+          "time": 9.5,
+          "step": 2,
+          "label": "2.1 代入 72° 反求得 n=5"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 互补得每个内角 108°"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p117_row_0",
+          "stepBadge": "条件",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p117_r0_1",
+              "math": "正 $n$ 边形中心角 $\\alpha=72^{\\circ}$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p117_row_1",
+          "stepBadge": "第 1 步 · 中心角公式",
+          "appearAt": 2.2,
+          "tokens": [
+            {
+              "id": "p117_r1_1",
+              "math": "$\\alpha = \\frac{360^{\\circ}}{n} = 72^{\\circ}$",
+              "appearAt": 2.4,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p117_row_2",
+          "stepBadge": "第 2 步 · 反求边数",
+          "appearAt": 9.5,
+          "tokens": [
+            {
+              "id": "p117_r2_1",
+              "math": "$n = 360^{\\circ}\\div 72^{\\circ} = 5$",
+              "appearAt": 9.7,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p117_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 17.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p117_r3_conc",
+              "math": "边数 $n=5$，每个内角 $108^{\\circ}$",
+              "appearAt": 17.7,
+              "dur": 0.45
+            }
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "tStart": 0,
+          "tEnd": 8,
+          "text": "第一步写出正 $n$ 边形的中心角公式 $\\alpha=\\frac{360^{\\circ}}{n}$。",
+          "focusToken": "p117_r1_1"
+        },
+        {
+          "tStart": 8,
+          "tEnd": 16,
+          "text": "第二步用 $360^{\\circ}\\div 72^{\\circ}$ 立即反求出边数 $n=5$。",
+          "focusToken": "p117_r2_1"
+        },
+        {
+          "tStart": 16,
+          "tEnd": 24,
+          "text": "第三步用 $180^{\\circ}-\\alpha$ 得出每个内角为 $108^{\\circ}$。",
+          "focusToken": "p117_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "若正六边形的边长为 $2$，则它的外接圆面积为（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $2\\pi$",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. $4\\pi$",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. $6\\pi$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！",
+            "calcLines": [
+              "正六边形半径 $R=a=2 \\Rightarrow S=\\pi R^{2}=4\\pi$"
+            ],
+            "summary": "正六边形的边长等于其外接圆半径。"
+          },
+          "wrongTitle": "提示：正六边形的边长等于外接圆半径 R=2",
+          "wrongFeedback": "外接圆半径 $R=2$，面积为 $\\pi\\times 2^{2}=4\\pi$，选 B。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "一个正多边形的中心角是 $36^{\\circ}$，那么它的边数为 ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "n =",
+          "input1Placeholder": "如 10",
+          "input1Suffix": "",
+          "expectedX": "10",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $10$。",
+          "correctDetail": "$n=360^{\\circ}\\div 36^{\\circ}=10$。",
+          "wrongFeedback": "用 $360^{\\circ}$ 除以中心角 $36^{\\circ}$，得 $n=10$。",
+          "specificWrongHints": []
+        }
+      }
     }
   };
 

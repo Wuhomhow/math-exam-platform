@@ -1241,14 +1241,14 @@
                     <div class="flex items-center justify-between pb-1.5 border-b border-teal-100">
                       <span class="text-xs font-bold text-[#0F766E] inline-flex items-center gap-1.5">
                         <span class="w-2 h-2 rounded-full bg-[#0F766E]"></span>
-                        <span>${escapeHtml(demoData.geometryDiagram.title || '动态几何图形')}</span>
+                        <span>${renderMathText(demoData.geometryDiagram.title || '动态几何图形')}</span>
                       </span>
                       <span class="px-1.5 py-0.5 rounded bg-[#F0FDFA] text-[#0F766E] text-[10px] font-bold">实时几何联动</span>
                     </div>
                     <div class="flex justify-center items-center bg-[#F8FAFC] rounded-lg p-2 border border-slate-100">
                       ${demoData.geometryDiagram.svgHtml}
                     </div>
-                    ${demoData.geometryDiagram.caption ? `<div class="text-[11px] text-slate-500 text-center leading-relaxed">${escapeHtml(demoData.geometryDiagram.caption)}</div>` : ''}
+                    ${demoData.geometryDiagram.caption ? `<div class="text-[11px] text-slate-500 text-center leading-relaxed">${renderMathText(demoData.geometryDiagram.caption)}</div>` : ''}
                   </div>
                 ` : ''}
                 ${scratchpadCardsHtml}
@@ -1293,6 +1293,8 @@
                   ${prac1.givenFormula ? `<div>${escapeHtml(prac1.givenLabel !== undefined ? prac1.givenLabel : '已知：')}${renderMathText(prac1.givenFormula)}</div>` : ''}
                   ${prac1.extractedFormula ? `<div>${escapeHtml(prac1.extractedLabel !== undefined ? prac1.extractedLabel : '整理变形后：')}${renderMathText(prac1.extractedFormula)}</div>` : ''}
                   ${prac1.questionText ? `<div class="font-bold text-slate-900 pt-1">${renderMathText(prac1.questionText)}</div>` : ''}
+                  ${prac1.diagramSvg ? `<div class="flex justify-center items-center bg-[#F8FAFC] rounded-lg p-2.5 mt-2 border border-slate-100">${prac1.diagramSvg}</div>` : ''}
+                  ${prac1.diagramImage ? `<div class="flex justify-center items-center bg-[#F8FAFC] rounded-lg p-2 mt-2 border border-slate-100"><img src="${escapeHtml(prac1.diagramImage)}" alt="练习配图" class="max-w-[260px] max-h-[180px] h-auto rounded"></div>` : ''}
                 </div>
 
                 <div class="space-y-2" id="prac1OptionsList">
@@ -1328,6 +1330,8 @@
                 <div class="p-3 rounded-lg bg-white border border-slate-200 space-y-1.5 text-xs sm:text-sm text-slate-800">
                   ${prac2.givenFormula ? `<div>${escapeHtml(prac2.givenLabel !== undefined ? prac2.givenLabel : '给出条件：')}${renderMathText(prac2.givenFormula)}</div>` : ''}
                   ${prac2.questionText ? `<div class="font-bold text-slate-900 pt-1">${renderMathText(prac2.questionText)}</div>` : ''}
+                  ${prac2.diagramSvg ? `<div class="flex justify-center items-center bg-[#F8FAFC] rounded-lg p-2.5 mt-2 border border-slate-100">${prac2.diagramSvg}</div>` : ''}
+                  ${prac2.diagramImage ? `<div class="flex justify-center items-center bg-[#F8FAFC] rounded-lg p-2 mt-2 border border-slate-100"><img src="${escapeHtml(prac2.diagramImage)}" alt="练习配图" class="max-w-[260px] max-h-[180px] h-auto rounded"></div>` : ''}
                 </div>
 
                 <div class="p-3.5 rounded-lg bg-white border border-slate-200 space-y-3 text-xs sm:text-sm">

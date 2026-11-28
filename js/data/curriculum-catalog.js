@@ -127,6 +127,52 @@
       ]
     },
     {
+      id: 'g8_c13',
+      grade: '初二',
+      procGrade: '八年级',
+      semester: '上册',
+      chapterGroup: '第十三章 三角形',
+      aliases: ['第13章 三角形', '第十三章 三角形'],
+      includeFinishedPapers: ['13.1三角形单元测试卷'],
+      sections: [
+        {
+          id: 'g8_c13_s1',
+          code: '13.1',
+          title: '13.1 三角形的概念',
+          procedureIds: ['P127'],
+          fallback: false
+        },
+        {
+          id: 'g8_c13_s2_1',
+          code: '13.2.1',
+          title: '13.2.1 三角形的边',
+          procedureIds: ['P128'],
+          fallback: false
+        },
+        {
+          id: 'g8_c13_s2_2',
+          code: '13.2.2',
+          title: '13.2.2 三角形的中线、角平分线、高',
+          procedureIds: ['P129'],
+          fallback: false
+        },
+        {
+          id: 'g8_c13_s3',
+          code: '13.3',
+          title: '13.3 三角形的内角与外角',
+          procedureIds: ['P130', 'P131', 'P132'],
+          fallback: false
+        },
+        {
+          id: 'g8_c13_fallback',
+          code: '13.综合',
+          title: '第十三章 综合与待细化',
+          procedureIds: [],
+          fallback: true
+        }
+      ]
+    },
+    {
       id: 'g8_c14',
       grade: '初二',
       procGrade: '八年级',
@@ -475,14 +521,14 @@
           id: 'g7_c5_s2',
           code: '5.2',
           title: '5.2 解一元一次方程',
-          procedureIds: ['P22'],
+          procedureIds: ['P22', 'P122'],
           fallback: false
         },
         {
           id: 'g7_c5_s3',
           code: '5.3',
           title: '5.3 实际问题与一元一次方程',
-          procedureIds: [],
+          procedureIds: ['P123', 'P124', 'P125', 'P126'],
           fallback: false
         },
         {

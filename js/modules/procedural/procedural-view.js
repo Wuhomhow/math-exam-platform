@@ -743,42 +743,50 @@
       }
 
       bodyEl.innerHTML = `
-        <div class="flex flex-wrap items-center gap-2 text-xs">
-          <span class="q-meta-chapter">${escapeHtml(q.chapter)}</span>
-          <span class="q-meta-type">${escapeHtml(q.typeName)}</span>
-          <span class="${diffColor}">${escapeHtml(q.difficulty)}</span>
-          <span class="text-slate-400">编号：${escapeHtml(q.id)}</span>
-        </div>
-
-        ${(window.GraphData ? window.GraphData.getDisplayKnowledgeName(q) : q.knowledge) ? `
-          <div class="text-xs text-slate-500 bg-slate-50 px-3 py-2 rounded-lg border border-slate-100">
-            <span class="font-semibold text-slate-600">考点：</span>${escapeHtml(window.GraphData ? window.GraphData.getDisplayKnowledgeName(q) : q.knowledge)}
+        <div id="procDrawerCaptureCard" class="space-y-4 bg-white rounded-xl">
+          <div class="flex flex-wrap items-center gap-2 text-xs">
+            <span class="q-meta-chapter">${escapeHtml(q.chapter)}</span>
+            <span class="q-meta-type">${escapeHtml(q.typeName)}</span>
+            <span class="${diffColor}">${escapeHtml(q.difficulty)}</span>
+            <span class="text-slate-400">编号：${escapeHtml(q.id)}</span>
           </div>
-        ` : ''}
 
-        <div class="p-4 rounded-xl bg-white border border-slate-200 text-sm leading-relaxed text-slate-900 space-y-2">
-          <div class="q-stem-content">${renderMathText(q.stem)}</div>
-          ${imgHtml}
-          ${optionsHtml}
-        </div>
-
-        <div class="q-analysis-panel text-sm space-y-2">
-          ${typeof window.renderQuestionAnalysisBoxHtml === 'function' ? window.renderQuestionAnalysisBoxHtml(q) : `
-            <div class="flex items-baseline gap-2 font-bold text-slate-900">
-              <span class="w-1.5 h-1.5 rounded-full bg-[#0F766E] shrink-0"></span>
-              <span class="whitespace-nowrap shrink-0">参考答案：</span>
-              <span class="text-[#0F766E] font-semibold text-sm">${renderMathText(q.answer)}</span>
+          ${(window.GraphData ? window.GraphData.getDisplayKnowledgeName(q) : q.knowledge) ? `
+            <div class="text-xs text-slate-500 bg-slate-50 px-3 py-2 rounded-lg border border-slate-100">
+              <span class="font-semibold text-slate-600">考点：</span>${escapeHtml(window.GraphData ? window.GraphData.getDisplayKnowledgeName(q) : q.knowledge)}
             </div>
-            ${q.analysis ? `<div class="text-slate-600"><b class="text-slate-800">【分析】</b>${renderMathText(q.analysis)}</div>` : ''}
-            ${q.detail && q.detail !== '略' ? `<div class="text-slate-700 pt-1.5 border-t border-slate-200/70 leading-relaxed"><b class="text-slate-800">【详解】</b>${renderMathText(q.detail)}</div>` : ''}
-          `}
+          ` : ''}
+
+          <div class="p-4 rounded-xl bg-white border border-slate-200 text-sm leading-relaxed text-slate-900 space-y-2">
+            <div class="q-stem-content">${renderMathText(q.stem)}</div>
+            ${imgHtml}
+            ${optionsHtml}
+          </div>
+
+          <div class="q-analysis-panel text-sm space-y-2">
+            ${typeof window.renderQuestionAnalysisBoxHtml === 'function' ? window.renderQuestionAnalysisBoxHtml(q) : `
+              <div class="flex items-baseline gap-2 font-bold text-slate-900">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#0F766E] shrink-0"></span>
+                <span class="whitespace-nowrap shrink-0">参考答案：</span>
+                <span class="text-[#0F766E] font-semibold text-sm">${renderMathText(q.answer)}</span>
+              </div>
+              ${q.analysis ? `<div class="text-slate-600"><b class="text-slate-800">【分析】</b>${renderMathText(q.analysis)}</div>` : ''}
+              ${q.detail && q.detail !== '略' ? `<div class="text-slate-700 pt-1.5 border-t border-slate-200/70 leading-relaxed"><b class="text-slate-800">【详解】</b>${renderMathText(q.detail)}</div>` : ''}
+            `}
+          </div>
         </div>
       `;
 
       footerEl.innerHTML = `
-        <button type="button" id="btnProcDrawerLocateBank" class="btn-secondary px-3.5 py-2 rounded-lg text-xs font-semibold inline-flex items-center gap-1.5">
-          <span>在题库选题中定位 &rarr;</span>
-        </button>
+        <div class="flex flex-wrap items-center gap-2">
+          <button type="button" id="btnProcDrawerLocateBank" class="btn-secondary px-3 py-2 rounded-lg text-xs font-semibold inline-flex items-center gap-1.5">
+            <span>在题库中定位 &rarr;</span>
+          </button>
+          <button type="button" id="btnProcDrawerScreenshot" class="btn-secondary px-3 py-2 rounded-lg text-xs font-semibold inline-flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 text-[#0F766E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"></path></svg>
+            <span class="screenshot-btn-text">截图复制</span>
+          </button>
+        </div>
         <button type="button" id="btnProcDrawerToggleCart" class="btn-toggle-cart ${isSelected ? 'is-remove' : ''} px-4 py-2 rounded-lg text-xs font-semibold inline-flex items-center gap-1.5">
           ${isSelected ? `
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
@@ -793,6 +801,20 @@
       footerEl.querySelector('#btnProcDrawerLocateBank')?.addEventListener('click', () => {
         this.closeQuestionDrawer();
         this.openQuestionInBankDetail(q.id, q.chapter);
+      });
+
+      footerEl.querySelector('#btnProcDrawerScreenshot')?.addEventListener('click', (e) => {
+        const captureCard = document.getElementById('procDrawerCaptureCard');
+        const btn = e.currentTarget;
+        if (captureCard && typeof window.captureElementScreenshot === 'function') {
+          window.captureElementScreenshot(captureCard, btn, {
+            label: `原题 ${q.id}`,
+            modeLabel: '（含答案解析）',
+            fileName: `原题_${q.id}_含解析.png`,
+            padding: '16px 20px',
+            backgroundColor: '#ffffff'
+          });
+        }
       });
 
       footerEl.querySelector('#btnProcDrawerToggleCart')?.addEventListener('click', () => {
@@ -1227,6 +1249,10 @@
                 <span class="w-2.5 h-2.5 rounded-full bg-[#0F766E]"></span>
                 <span class="font-bold text-slate-800">${renderMathText(demoData.exampleTitle)}</span>
               </div>
+              <button type="button" id="btnProcWbScreenshot" data-html2canvas-ignore="true" class="q-aux-btn" title="将当前演示白板画面高清截图并复制到剪贴板">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"></path></svg>
+                <span class="screenshot-btn-text">截图复制</span>
+              </button>
             </div>
 
             <div class="grid grid-cols-1 xl:grid-cols-12 gap-4 items-start relative z-10 min-h-[240px]">
@@ -1283,10 +1309,16 @@
 
             <div class="grid grid-cols-1 xl:grid-cols-2 gap-4 items-start">
               <!-- 练习一 -->
-              <div class="p-4 rounded-xl bg-slate-50/80 border border-slate-200 space-y-3">
-                <div class="flex items-center justify-between">
+              <div id="procPrac1Card" class="p-4 rounded-xl bg-slate-50/80 border border-slate-200 space-y-3">
+                <div class="flex items-center justify-between gap-2">
                   <span class="text-xs sm:text-sm font-bold text-slate-900">${escapeHtml(prac1.title)}</span>
-                  <button type="button" id="btnPrac1Reset" class="text-xs text-[#0F766E] hover:underline font-medium">重新作答</button>
+                  <div data-html2canvas-ignore="true" class="flex items-center gap-2 shrink-0">
+                    <button type="button" id="btnPrac1Screenshot" class="q-aux-btn" title="截图复制练习一">
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"></path></svg>
+                      <span class="screenshot-btn-text">截图复制</span>
+                    </button>
+                    <button type="button" id="btnPrac1Reset" class="text-xs text-[#0F766E] hover:underline font-medium">重新作答</button>
+                  </div>
                 </div>
 
                 <div class="p-3 rounded-lg bg-white border border-slate-200 space-y-1.5 text-xs sm:text-sm text-slate-800">
@@ -1321,10 +1353,16 @@
               </div>
 
               <!-- 练习二 -->
-              <div class="p-4 rounded-xl bg-slate-50/80 border border-slate-200 space-y-3">
-                <div class="flex items-center justify-between">
+              <div id="procPrac2Card" class="p-4 rounded-xl bg-slate-50/80 border border-slate-200 space-y-3">
+                <div class="flex items-center justify-between gap-2">
                   <span class="text-xs sm:text-sm font-bold text-slate-900">${escapeHtml(prac2.title)}</span>
-                  <button type="button" id="btnPrac2Reset" class="text-xs text-[#0F766E] hover:underline font-medium">重新作答</button>
+                  <div data-html2canvas-ignore="true" class="flex items-center gap-2 shrink-0">
+                    <button type="button" id="btnPrac2Screenshot" class="q-aux-btn" title="截图复制练习二">
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"></path></svg>
+                      <span class="screenshot-btn-text">截图复制</span>
+                    </button>
+                    <button type="button" id="btnPrac2Reset" class="text-xs text-[#0F766E] hover:underline font-medium">重新作答</button>
+                  </div>
                 </div>
 
                 <div class="p-3 rounded-lg bg-white border border-slate-200 space-y-1.5 text-xs sm:text-sm text-slate-800">
@@ -2108,6 +2146,34 @@
         prac2WrongEl?.classList.add('hidden');
       });
 
+      // 白板与跟做练习一键截图复制
+      container.querySelector('#btnProcWbScreenshot')?.addEventListener('click', (e) => {
+        if (wbStage && typeof window.captureElementScreenshot === 'function') {
+          window.captureElementScreenshot(wbStage, e.currentTarget, {
+            label: '演示白板',
+            fileName: `演示白板_${demoData.title || '步骤'}.png`
+          });
+        }
+      });
+      container.querySelector('#btnPrac1Screenshot')?.addEventListener('click', (e) => {
+        const card = container.querySelector('#procPrac1Card');
+        if (card && typeof window.captureElementScreenshot === 'function') {
+          window.captureElementScreenshot(card, e.currentTarget, {
+            label: demoData.practices.practice1.title || '跟做练习一',
+            fileName: `${demoData.practices.practice1.title || '跟做练习一'}.png`
+          });
+        }
+      });
+      container.querySelector('#btnPrac2Screenshot')?.addEventListener('click', (e) => {
+        const card = container.querySelector('#procPrac2Card');
+        if (card && typeof window.captureElementScreenshot === 'function') {
+          window.captureElementScreenshot(card, e.currentTarget, {
+            label: demoData.practices.practice2.title || '跟做练习二',
+            fileName: `${demoData.practices.practice2.title || '跟做练习二'}.png`
+          });
+        }
+      });
+
       // 默认展开初始化到当前时间帧（首次为 00:00.0）
       renderTimelineAt(ProceduralState.currentTime || 0.0, true);
       requestAnimationFrame(() => {
@@ -2194,11 +2260,15 @@
               ${typeof window.renderQuestionAnalysisBoxHtml === 'function' ? window.renderQuestionAnalysisBoxHtml(q) : ''}
             </div>
 
-            <div class="q-card-footer flex flex-wrap items-center justify-between gap-2">
+            <div data-html2canvas-ignore="true" class="q-card-footer flex flex-wrap items-center justify-between gap-2">
               <div class="flex flex-wrap items-center gap-2 text-xs">
                 <button type="button" class="btn-proc-toggle-analysis q-aux-btn" data-id="${escapeHtml(q.id)}">
                   <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
                   <span class="analysis-btn-text">${isAnalysisOpen ? '收起答案' : '查看答案'}</span>
+                </button>
+                <button type="button" class="btn-proc-screenshot q-aux-btn" data-id="${escapeHtml(q.id)}" data-number="${seqNum}">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"></path></svg>
+                  <span class="screenshot-btn-text">截图复制</span>
                 </button>
                 <button type="button" class="btn-proc-preview-drawer q-aux-btn text-[#0F766E] font-semibold" data-preview-q="${escapeHtml(q.id)}">
                   <span>详情</span>
@@ -2292,6 +2362,16 @@
             } else {
               ProceduralState.expandedAnalysisIds = ProceduralState.expandedAnalysisIds.filter(id => id !== qid);
             }
+          }
+        });
+      });
+
+      blockEl.querySelectorAll('.btn-proc-screenshot').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const card = btn.closest('.question-card');
+          const qNum = btn.getAttribute('data-number') || '';
+          if (card && typeof window.captureQuestionCard === 'function') {
+            window.captureQuestionCard(card, btn, qNum);
           }
         });
       });
@@ -2433,13 +2513,19 @@
         <!-- 区块 2 & 3：默认展开的动态演示白板 + 跟着操作 -->
         <section id="procDemoAnchor" class="scroll-mt-36">
           ${demoData ? this.buildDynamicTeachingModuleHtml(demoData) : `
-            <div class="ui-card p-5 space-y-4">
+            <div id="procStaticStepsCard" class="ui-card p-5 space-y-4">
               <div class="flex items-center justify-between gap-2 pb-2.5 border-b border-slate-100">
                 <div class="flex items-center gap-2">
                   <span class="px-2 py-0.5 rounded bg-[#0F766E] text-white text-xs font-bold">核心操作步骤</span>
                   <h3 class="text-sm font-bold text-slate-900">${renderMathText(p.name)}</h3>
                 </div>
-                <span class="text-[11px] text-slate-400">标准程序性操作指引</span>
+                <div data-html2canvas-ignore="true" class="flex items-center gap-2 shrink-0">
+                  <span class="text-[11px] text-slate-400 hidden sm:inline">标准程序性操作指引</span>
+                  <button type="button" id="btnProcStaticStepsScreenshot" class="q-aux-btn" title="截图复制核心操作步骤">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"></path></svg>
+                    <span class="screenshot-btn-text">截图复制</span>
+                  </button>
+                </div>
               </div>
               ${Array.isArray(p.steps) && p.steps.length > 0 ? `
                 <ol class="space-y-2.5">
@@ -2473,6 +2559,16 @@
 
       if (demoData) {
         this.bindDynamicTeachingEvents(container, demoData);
+      } else {
+        container.querySelector('#btnProcStaticStepsScreenshot')?.addEventListener('click', (e) => {
+          const card = container.querySelector('#procStaticStepsCard');
+          if (card && typeof window.captureElementScreenshot === 'function') {
+            window.captureElementScreenshot(card, e.currentTarget, {
+              label: p.name || '核心操作步骤',
+              fileName: `${p.name || '核心操作步骤'}_步骤指引.png`
+            });
+          }
+        });
       }
 
       this.renderRelatedQuestionsBlock();

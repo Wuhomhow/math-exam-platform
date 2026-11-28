@@ -626,7 +626,24 @@ function initEvents() {
   document.getElementById('btnDrawerOrderByAdded')?.addEventListener('click', () => setPaperOrderMode('added'));
   document.getElementById('btnDrawerOrderByType')?.addEventListener('click', () => setPaperOrderMode('type'));
 
-  // 打印与 Word 导出（Word 导出引擎按需加载）
+  // 整卷截图复制、打印与 Word 导出（Word 导出引擎按需加载）
+  document.getElementById('btnScreenshotPaper')?.addEventListener('click', () => {
+    const selected = typeof getSelectedQuestions === 'function' ? getSelectedQuestions() : [];
+    if (!selected.length) {
+      if (typeof showToast === 'function') showToast('试题篮为空，请先选题后再截图', 'warn');
+      return;
+    }
+    const printArea = document.getElementById('printArea');
+    const btn = document.getElementById('btnScreenshotPaper');
+    const isTeacher = state.paperViewMode === 'teacher';
+    if (printArea && typeof window.captureElementScreenshot === 'function') {
+      window.captureElementScreenshot(printArea, btn, {
+        label: '排版试卷',
+        modeLabel: isTeacher ? '（教师解析版）' : '（学生版）',
+        fileName: `排版试卷_${isTeacher ? '教师版' : '学生版'}.png`
+      });
+    }
+  });
   document.getElementById('btnPrintPaper').addEventListener('click', () => {
     window.print();
   });

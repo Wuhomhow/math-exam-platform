@@ -34783,6 +34783,2030 @@
           ]
         }
       }
+    },
+    "P122": {
+      "procedureId": "P122",
+      "title": "利用去分母法解含分数（或小数）系数的一元一次方程",
+      "exampleTitle": "解方程：$\\frac{x-2}{2}+1=\\frac{2x-1}{3}$",
+      "exampleFormula": "$x = 2$",
+      "totalDuration": 24,
+      "scratchpadIdleHint": "旁白草稿演算区（先乘最小公倍数去分母，常数项勿漏乘、分子多项式加括号）",
+      "practiceSectionTitle": "去分母解一元一次方程跟做练习",
+      "practiceSectionSub": "完成以下两道练习，检验去分母不漏乘、不漏括号的核心规范",
+      "steps": [
+        {
+          "step": 1,
+          "name": "两边同乘最小公倍数 6 去分母",
+          "tStart": 0,
+          "tEnd": 8,
+          "explanation": "分母 $2$ 与 $3$ 的最小公倍数是 $6$，方程两边每一项同乘 $6$（常数项 $+1$ 也要乘 $6$），得 $3(x-2)+6=2(2x-1)$。"
+        },
+        {
+          "step": 2,
+          "name": "去括号、移项并合并同类项",
+          "tStart": 8,
+          "tEnd": 16,
+          "explanation": "去括号得 $3x-6+6=4x-2$，移项合并得 $3x-4x=-2$，即 $-x=-2$。"
+        },
+        {
+          "step": 3,
+          "name": "系数化为 1，得出方程的解",
+          "tStart": 16,
+          "tEnd": 24,
+          "explanation": "两边同除以 $-1$，解得 $x=2$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1,
+          "step": 1,
+          "label": "1.1 两边同乘最小公倍数 6（常数项同步乘 6）"
+        },
+        {
+          "time": 9,
+          "step": 2,
+          "label": "2.1 去括号并移项合并为 -x = -2"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 系数化为 1 得 x = 2"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p122_row_0",
+          "stepBadge": "原方程",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p122_r0_1",
+              "math": "$\\frac{x-2}{2} + 1 = \\frac{2x-1}{3}$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p122_row_1",
+          "stepBadge": "第 1 步 · 去分母",
+          "appearAt": 2.2,
+          "tokens": [
+            {
+              "id": "p122_r1_1",
+              "math": "$3(x-2) + 6 = 2(2x-1)$",
+              "appearAt": 2.4,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p122_row_2",
+          "stepBadge": "第 2 步 · 去括号移项",
+          "appearAt": 9,
+          "tokens": [
+            {
+              "id": "p122_r2_1",
+              "math": "$3x - 6 + 6 = 4x - 2 \\implies -x = -2$",
+              "appearAt": 9.2,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p122_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 17.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p122_r3_conc",
+              "math": "$x = 2$",
+              "appearAt": 17.6,
+              "dur": 0.45
+            }
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "tStart": 0,
+          "tEnd": 8,
+          "text": "第一步方程两边同乘分母最小公倍数 $6$，注意常数项 $1$ 也要乘 $6$，分子加括号。",
+          "focusToken": "p122_r1_1"
+        },
+        {
+          "tStart": 8,
+          "tEnd": 16,
+          "text": "第二步去括号、移项并合并同类项，化简为 $-x=-2$。",
+          "focusToken": "p122_r2_1"
+        },
+        {
+          "tStart": 16,
+          "tEnd": 24,
+          "text": "第三步两边同除以 $-1$，解得 $x=2$。",
+          "focusToken": "p122_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "把方程 $\\frac{x+1}{2}-1=\\frac{2-3x}{3}$ 去分母，正确的是（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $3(x+1)-1=2(2-3x)$",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. $3(x+1)-6=2(2-3x)$",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. $3x+1-6=4-3x$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！两边同乘 6 且常数项不漏乘：",
+            "calcLines": [
+              "$3(x+1)-6=2(2-3x)$"
+            ],
+            "summary": "牢记每一项都要乘最小公倍数，分子是多项式时整体加括号。"
+          },
+          "wrongTitle": "提示：检查常数项 -1 是否乘了 6，分子是否加了括号",
+          "wrongFeedback": "两边同乘 $6$ 得 $3(x+1)-6=2(2-3x)$，应选 B。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "方程 $\\frac{x-1}{2}=1$ 的解是 $x =$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "x =",
+          "input1Placeholder": "如 3",
+          "input1Suffix": "",
+          "expectedX": "3",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $3$。",
+          "correctDetail": "两边同乘 $2$ 得 $x-1=2$，移项得 $x=3$。",
+          "wrongFeedback": "两边同乘 $2$ 得 $x-1=2$，故 $x=3$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "2",
+              "hint": "常数项 $1$ 也要乘 $2$ 得 $x-1=2$，再加 $1$ 得 $3$。"
+            }
+          ]
+        }
+      }
+    },
+    "P123": {
+      "procedureId": "P123",
+      "title": "列一元一次方程解决配套与工程问题",
+      "exampleTitle": "车间 45 人，每人每天加工桌面 5 个或桌腿 12 条，1 桌面配 3 桌腿，安排多少人加工桌面？",
+      "exampleFormula": "$x = 20$",
+      "totalDuration": 24,
+      "scratchpadIdleHint": "旁白草稿演算区（配套问题抓交叉相乘比例，工程问题设总工作量为 1）",
+      "practiceSectionTitle": "配套与工程问题跟做练习",
+      "practiceSectionSub": "完成以下两道练习，检验配套比例列式与工程效率求和",
+      "steps": [
+        {
+          "step": 1,
+          "name": "设未知数并表示桌面与桌腿总产量",
+          "tStart": 0,
+          "tEnd": 8,
+          "explanation": "设安排 $x$ 名工人加工桌面，则 $(45-x)$ 人加工桌腿；每天加工桌面 $5x$ 个，桌腿 $12(45-x)$ 条。"
+        },
+        {
+          "step": 2,
+          "name": "按 1:3 配套比交叉相乘列方程",
+          "tStart": 8,
+          "tEnd": 16,
+          "explanation": "$1$ 个桌面配 $3$ 条桌腿，即桌腿数是桌面数的 $3$ 倍，列方程 $3\\times 5x = 12(45-x)$。"
+        },
+        {
+          "step": 3,
+          "name": "解方程并检验实际意义",
+          "tStart": 16,
+          "tEnd": 24,
+          "explanation": "化简得 $15x=540-12x \\implies 27x=540 \\implies x=20$（名），符合题意。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1,
+          "step": 1,
+          "label": "1.1 设 x 人做桌面，(45-x) 人做桌腿"
+        },
+        {
+          "time": 9,
+          "step": 2,
+          "label": "2.1 1:3 配套交叉相乘列 3×5x = 12(45-x)"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 解得 x = 20 并检验"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p123_row_0",
+          "stepBadge": "设未知数",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p123_r0_1",
+              "math": "$\\text{桌面 }5x\\text{ 个，桌腿 }12(45-x)\\text{ 条}$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p123_row_1",
+          "stepBadge": "第 1 步 · 配套比",
+          "appearAt": 2.2,
+          "tokens": [
+            {
+              "id": "p123_r1_1",
+              "math": "$5x : 12(45-x) = 1 : 3$",
+              "appearAt": 2.4,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p123_row_2",
+          "stepBadge": "第 2 步 · 列解方程",
+          "appearAt": 9,
+          "tokens": [
+            {
+              "id": "p123_r2_1",
+              "math": "$3\\times 5x = 12(45-x) \\implies 27x = 540$",
+              "appearAt": 9.2,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p123_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 17.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p123_r3_conc",
+              "math": "$x = 20\\text{（名）}$",
+              "appearAt": 17.6,
+              "dur": 0.45
+            }
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "tStart": 0,
+          "tEnd": 8,
+          "text": "第一步设 $x$ 人加工桌面，用 $(45-x)$ 表示加工桌腿人数，写出两种部件总产量。",
+          "focusToken": "p123_r1_1"
+        },
+        {
+          "tStart": 8,
+          "tEnd": 16,
+          "text": "第二步按 $1:3$ 配套比交叉相乘，列方程 $3\\times 5x=12(45-x)$。",
+          "focusToken": "p123_r2_1"
+        },
+        {
+          "tStart": 16,
+          "tEnd": 24,
+          "text": "第三步解得 $x=20$，检验为正整数且小于 $45$。",
+          "focusToken": "p123_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "某工程甲独做需 $12$ 天，乙独做需 $8$ 天，甲先做 $1$ 天后两人合作 $x$ 天完成，可列方程为（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $\\frac{1}{12}+\\left(\\frac{1}{12}+\\frac{1}{8}\\right)x=1$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $\\frac{x}{12}+\\frac{x}{8}=1$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $\\frac{1}{8}+\\left(\\frac{1}{12}+\\frac{1}{8}\\right)x=1$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！各阶段工作量之和等于 1：",
+            "calcLines": [
+              "$\\frac{1}{12}+\\left(\\frac{1}{12}+\\frac{1}{8}\\right)x=1$"
+            ],
+            "summary": "设总工作量为 1，各阶段工作量相加等于 1。"
+          },
+          "wrongTitle": "提示：甲先独做 1 天完成 1/12，再两人合作 x 天",
+          "wrongFeedback": "甲先做 $1$ 天工作量为 $\\frac{1}{12}$，合作 $x$ 天为 $(\\frac{1}{12}+\\frac{1}{8})x$，之和为 $1$，应选 A。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "20 名工人生产氧、氢原子模型，每人每小时做氧 60 个或氢 80 个，1 氧配 2 氢，应安排 ______ 人做氧模型．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "人数 =",
+          "input1Placeholder": "如 8",
+          "input1Suffix": "",
+          "expectedX": "8",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $8$。",
+          "correctDetail": "列 $2\\times 60x=80(20-x)$，得 $200x=1600 \\implies x=8$。",
+          "wrongFeedback": "由 $1$ 氧配 $2$ 氢得 $2\\times 60x=80(20-x)$，解得 $x=8$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "12",
+              "hint": "$12$ 是做氢原子模型的人数，题目求做氧模型的人数为 $8$。"
+            }
+          ]
+        }
+      }
+    },
+    "P124": {
+      "procedureId": "P124",
+      "title": "列一元一次方程解决销售打折与盈亏问题",
+      "exampleTitle": "某商品进价 100 元，按标价八折销售后每件获利 20 元，求该商品标价",
+      "exampleFormula": "$x = 150\\text{ 元}$",
+      "totalDuration": 24,
+      "scratchpadIdleHint": "旁白草稿演算区（售价 = 标价 × 折扣，利润 = 售价 - 进价 = 进价 × 利润率）",
+      "practiceSectionTitle": "销售打折与盈亏问题跟做练习",
+      "practiceSectionSub": "完成以下两道练习，检验标价、折扣、利润率的核心公式链",
+      "steps": [
+        {
+          "step": 1,
+          "name": "设标价为 $x$ 元并表示实际售价",
+          "tStart": 0,
+          "tEnd": 8,
+          "explanation": "已知进价 $100$ 元、利润 $20$ 元、打八折；设标价为 $x$ 元，则打八折后的实际售价为 $0.8x$ 元。"
+        },
+        {
+          "step": 2,
+          "name": "按“售价 $-$ 进价 $=$ 利润”列方程",
+          "tStart": 8,
+          "tEnd": 16,
+          "explanation": "代入公式 $\\text{售价}-\\text{进价}=\\text{利润}$，列方程 $0.8x-100=20$。"
+        },
+        {
+          "step": 3,
+          "name": "解方程求出商品标价",
+          "tStart": 16,
+          "tEnd": 24,
+          "explanation": "移项得 $0.8x=120$，两边同除以 $0.8$ 解得 $x=150$（元）。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1,
+          "step": 1,
+          "label": "1.1 设标价为 x 元，八折售价为 0.8x 元"
+        },
+        {
+          "time": 9,
+          "step": 2,
+          "label": "2.1 列方程 0.8x - 100 = 20"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 解得标价 x = 150 元"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p124_row_0",
+          "stepBadge": "量关系",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p124_r0_1",
+              "math": "$\\text{进价 }100\\text{ 元，八折售价 }0.8x\\text{ 元，利润 }20\\text{ 元}$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p124_row_1",
+          "stepBadge": "第 1 步 · 列方程",
+          "appearAt": 2.2,
+          "tokens": [
+            {
+              "id": "p124_r1_1",
+              "math": "$0.8x - 100 = 20$",
+              "appearAt": 2.4,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p124_row_2",
+          "stepBadge": "第 2 步 · 移项求解",
+          "appearAt": 9,
+          "tokens": [
+            {
+              "id": "p124_r2_1",
+              "math": "$0.8x = 120 \\implies x = 120 \\div 0.8$",
+              "appearAt": 9.2,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p124_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 17.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p124_r3_conc",
+              "math": "$x = 150\\text{（元）}$",
+              "appearAt": 17.6,
+              "dur": 0.45
+            }
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "tStart": 0,
+          "tEnd": 8,
+          "text": "第一步设标价为 $x$ 元，打八折即乘 $0.8$，实际售价为 $0.8x$ 元。",
+          "focusToken": "p124_r1_1"
+        },
+        {
+          "tStart": 8,
+          "tEnd": 16,
+          "text": "第二步按“售价 $-$ 进价 $=$ 利润”列方程 $0.8x-100=20$。",
+          "focusToken": "p124_r2_1"
+        },
+        {
+          "tStart": 16,
+          "tEnd": 24,
+          "text": "第三步解得标价 $x=150$ 元。",
+          "focusToken": "p124_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "商品按进价提高 $50\\%$ 标价，再打八折售价 $240$ 元，设进价 $x$ 元，列方程为（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $x(1+50\\%)\\times 0.8=240$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $x\\times 50\\%\\times 0.8=240$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $x(1+50\\%)\\times 8=240$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！标价再打八折：",
+            "calcLines": [
+              "$x(1+50\\%)\\times 0.8=240$"
+            ],
+            "summary": "提高 50% 标价是乘以 (1+50%)，打八折是乘以 0.8。"
+          },
+          "wrongTitle": "提示：提高 50% 后的标价是 (1+50%)x，八折乘 0.8",
+          "wrongFeedback": "标价 $(1+50\\%)x$ 再乘 $0.8$ 等于售价 $240$，应选 A。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "一件衣服标价 $150$ 元，打八折出售仍赚 $20\\%$，则进价为 ______ 元．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "进价 =",
+          "input1Placeholder": "如 100",
+          "input1Suffix": "",
+          "expectedX": "100",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $100$。",
+          "correctDetail": "售价 $150\\times 0.8=120$ 元，列 $(1+20\\%)x=120 \\implies x=100$。",
+          "wrongFeedback": "由 $(1+20\\%)x=150\\times 0.8=120$ 解得 $x=100$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "96",
+              "hint": "利润率 $20\\%$ 以进价为基数，不是用 $120\\times(1-20\\%)$。"
+            }
+          ]
+        }
+      }
+    },
+    "P125": {
+      "procedureId": "P125",
+      "title": "列一元一次方程解决球赛与竞赛积分问题",
+      "exampleTitle": "足球赛胜 3 分、平 1 分、负 0 分，某队赛 10 场、负 4 场、共得 12 分，求胜了几场",
+      "exampleFormula": "$x = 3\\text{ 场}$",
+      "totalDuration": 24,
+      "scratchpadIdleHint": "旁白草稿演算区（总场次表各类场次，各类得分之和 = 总积分，验非负整数解）",
+      "practiceSectionTitle": "球赛与竞赛积分问题跟做练习",
+      "practiceSectionSub": "完成以下两道练习，检验总场次设元与扣分符号处理",
+      "steps": [
+        {
+          "step": 1,
+          "name": "设胜场数为 $x$ 并表示平场数",
+          "tStart": 0,
+          "tEnd": 8,
+          "explanation": "总场次 $10$ 场、负 $4$ 场，设胜 $x$ 场，则平的场次为 $10-4-x=6-x$ 场。"
+        },
+        {
+          "step": 2,
+          "name": "按胜平负分值列总积分方程",
+          "tStart": 8,
+          "tEnd": 16,
+          "explanation": "胜一场 $3$ 分、平一场 $1$ 分、负一场 $0$ 分，列方程 $3x+1\\times(6-x)+0\\times 4=12$。"
+        },
+        {
+          "step": 3,
+          "name": "解方程并检验非负整数解",
+          "tStart": 16,
+          "tEnd": 24,
+          "explanation": "化简得 $2x+6=12 \\implies 2x=6 \\implies x=3$，为非负整数且不超过 $6$，符合题意。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1,
+          "step": 1,
+          "label": "1.1 设胜 x 场，则平 (6 - x) 场"
+        },
+        {
+          "time": 9,
+          "step": 2,
+          "label": "2.1 列总积分方程 3x + (6 - x) = 12"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 解得 x = 3 并验非负整数"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p125_row_0",
+          "stepBadge": "场次关系",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p125_r0_1",
+              "math": "$\\text{胜 }x\\text{ 场，平 }(10-4-x)\\text{ 场，负 }4\\text{ 场}$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p125_row_1",
+          "stepBadge": "第 1 步 · 列方程",
+          "appearAt": 2.2,
+          "tokens": [
+            {
+              "id": "p125_r1_1",
+              "math": "$3x + 1\\times(6-x) + 0\\times 4 = 12$",
+              "appearAt": 2.4,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p125_row_2",
+          "stepBadge": "第 2 步 · 合并求解",
+          "appearAt": 9,
+          "tokens": [
+            {
+              "id": "p125_r2_1",
+              "math": "$2x + 6 = 12 \\implies 2x = 6$",
+              "appearAt": 9.2,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p125_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 17.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p125_r3_conc",
+              "math": "$x = 3\\text{（场）}$",
+              "appearAt": 17.6,
+              "dur": 0.45
+            }
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "tStart": 0,
+          "tEnd": 8,
+          "text": "第一步由总场次 $10$ 场、负 $4$ 场，设胜 $x$ 场，则平 $(6-x)$ 场。",
+          "focusToken": "p125_r1_1"
+        },
+        {
+          "tStart": 8,
+          "tEnd": 16,
+          "text": "第二步列总积分方程 $3x+(6-x)=12$，合并得 $2x=6$。",
+          "focusToken": "p125_r2_1"
+        },
+        {
+          "tStart": 16,
+          "tEnd": 24,
+          "text": "第三步解得 $x=3$，检验为非负整数。",
+          "focusToken": "p125_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "知识竞赛共 $20$ 题，答对得 $10$ 分、答错或不答扣 $5$ 分，小华得 $140$ 分，他答对了（　　）题",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $15$",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. $16$",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. $17$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！倒扣分取负号：",
+            "calcLines": [
+              "$10x-5(20-x)=140 \\implies 15x=240 \\implies x=16$"
+            ],
+            "summary": "答错倒扣分一定要用减号。"
+          },
+          "wrongTitle": "提示：设答对 x 题，列 10x - 5(20 - x) = 140",
+          "wrongFeedback": "化简得 $15x=240 \\implies x=16$，应选 B。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "足球赛胜 3 分、平 1 分，某队赛 11 场保持不败共得 25 分，该队胜了 ______ 场．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "胜场 =",
+          "input1Placeholder": "如 7",
+          "input1Suffix": "",
+          "expectedX": "7",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $7$。",
+          "correctDetail": "列 $3x+(11-x)=25 \\implies 2x=14 \\implies x=7$。",
+          "wrongFeedback": "保持不败即负 $0$ 场，平 $(11-x)$ 场，列 $3x+(11-x)=25$ 解得 $x=7$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "4",
+              "hint": "$4$ 是平场数，题目求胜场数为 $7$。"
+            }
+          ]
+        }
+      }
+    },
+    "P126": {
+      "procedureId": "P126",
+      "title": "列一元一次方程解决分段计费与方案选择问题",
+      "exampleTitle": "月用水不超 10t 每吨 2 元，超出部分每吨 3.5 元；某月交水费 34 元，求该月用水量",
+      "exampleFormula": "$x = 14\\text{ t}$",
+      "totalDuration": 24,
+      "scratchpadIdleHint": "旁白草稿演算区（先算临界费用定区间，再按基础段 + 超出段列方程）",
+      "practiceSectionTitle": "分段计费与方案选择跟做练习",
+      "practiceSectionSub": "完成以下两道练习，检验分段区间判定与方案等值临界点列式",
+      "steps": [
+        {
+          "step": 1,
+          "name": "先算临界点费用，确定用水量区间",
+          "tStart": 0,
+          "tEnd": 8,
+          "explanation": "用水满 $10\\text{ t}$ 需水费 $10\\times 2=20$ 元；因 $34>20$，故该月用水量 $x>10$。"
+        },
+        {
+          "step": 2,
+          "name": "按“基础段 $+$ 超出段 $=$ 总费用”列方程",
+          "tStart": 8,
+          "tEnd": 16,
+          "explanation": "超出 $10\\text{ t}$ 的部分为 $(x-10)\\text{ t}$，列方程 $10\\times 2 + 3.5(x-10) = 34$。"
+        },
+        {
+          "step": 3,
+          "name": "解方程并检验区间合理性",
+          "tStart": 16,
+          "tEnd": 24,
+          "explanation": "得 $3.5(x-10)=14 \\implies x-10=4 \\implies x=14$（满足 $14>10$）。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1,
+          "step": 1,
+          "label": "1.1 算 10t 临界费 20 元 < 34 元，定位 x > 10"
+        },
+        {
+          "time": 9,
+          "step": 2,
+          "label": "2.1 列分段方程 20 + 3.5(x - 10) = 34"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 解得 x = 14t 并检验"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p126_row_0",
+          "stepBadge": "定区间",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p126_r0_1",
+              "math": "$10\\times 2 = 20 < 34 \\implies x > 10$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p126_row_1",
+          "stepBadge": "第 1 步 · 列方程",
+          "appearAt": 2.2,
+          "tokens": [
+            {
+              "id": "p126_r1_1",
+              "math": "$20 + 3.5(x - 10) = 34$",
+              "appearAt": 2.4,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p126_row_2",
+          "stepBadge": "第 2 步 · 化简求解",
+          "appearAt": 9,
+          "tokens": [
+            {
+              "id": "p126_r2_1",
+              "math": "$3.5(x - 10) = 14 \\implies x - 10 = 4$",
+              "appearAt": 9.2,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p126_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 17.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p126_r3_conc",
+              "math": "$x = 14\\text{（t）}$",
+              "appearAt": 17.6,
+              "dur": 0.45
+            }
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "tStart": 0,
+          "tEnd": 8,
+          "text": "第一步先算 $10\\text{ t}$ 临界水费 $20$ 元小于 $34$ 元，确定用水量 $x>10$。",
+          "focusToken": "p126_r1_1"
+        },
+        {
+          "tStart": 8,
+          "tEnd": 16,
+          "text": "第二步超出量为 $(x-10)\\text{ t}$，列分段方程 $20+3.5(x-10)=34$。",
+          "focusToken": "p126_r2_1"
+        },
+        {
+          "tStart": 16,
+          "tEnd": 24,
+          "text": "第三步解得 $x=14\\text{ t}$，检验满足 $x>10$。",
+          "focusToken": "p126_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "游泳会员证 $100$ 元后每次 $5$ 元，不办证每次 $9$ 元；去（　　）次时两种花费相同",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $20$",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. $25$",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. $30$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！令两方案费用相等：",
+            "calcLines": [
+              "$100+5x=9x \\implies 4x=100 \\implies x=25$"
+            ],
+            "summary": "方案选择核心是先列两式相等求临界点。"
+          },
+          "wrongTitle": "提示：令 100 + 5x = 9x 求解",
+          "wrongFeedback": "由 $100+5x=9x$ 得 $4x=100 \\implies x=25$，应选 B。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "用水不超 $10\\text{ m}^{3}$ 每方 $2$ 元，超出部分每方 $4$ 元，缴水费 $36$ 元，实际用水 ______ $\\text{m}^{3}$．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "用水量 =",
+          "input1Placeholder": "如 14",
+          "input1Suffix": "",
+          "expectedX": "14",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $14$。",
+          "correctDetail": "$10\\times 2+4(x-10)=36 \\implies 4(x-10)=16 \\implies x=14$。",
+          "wrongFeedback": "由 $20+4(x-10)=36$ 解得 $x=14$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "9",
+              "hint": "超出部分才按 $4$ 元/方计费，不能直接用 $36\\div 4$。"
+            }
+          ]
+        }
+      }
+    },
+    "P127": {
+      "procedureId": "P127",
+      "title": "识别三角形元素、按规则数个数与按角/边分类",
+      "exampleTitle": "若 $\\triangle ABC$ 三个内角的度数比为 $1:2:3$，判断 $\\triangle ABC$ 的形状",
+      "exampleFormula": "直角三角形",
+      "totalDuration": 24,
+      "scratchpadIdleHint": "旁白草稿演算区（按角分类必算最大内角，与 90° 比较定形状）",
+      "practiceSectionTitle": "三角形概念与分类跟做练习",
+      "practiceSectionSub": "完成以下两道练习，检验最大内角判定分类的核心步骤",
+      "steps": [
+        {
+          "step": 1,
+          "name": "设一份为 $x$，表示三个内角",
+          "tStart": 0,
+          "tEnd": 8,
+          "explanation": "由 $\\angle A:\\angle B:\\angle C=1:2:3$，设三个内角分别为 $x, 2x, 3x$。"
+        },
+        {
+          "step": 2,
+          "name": "由内角和 $180^{\\circ}$ 求出最大内角",
+          "tStart": 8,
+          "tEnd": 16,
+          "explanation": "列 $x+2x+3x=180^{\\circ}$ 得 $6x=180^{\\circ} \\implies x=30^{\\circ}$，最大角 $3x=90^{\\circ}$。"
+        },
+        {
+          "step": 3,
+          "name": "对照 $90^{\\circ}$ 判定三角形形状",
+          "tStart": 16,
+          "tEnd": 24,
+          "explanation": "最大内角等于 $90^{\\circ}$，故 $\\triangle ABC$ 为直角三角形。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1,
+          "step": 1,
+          "label": "1.1 设三角为 x, 2x, 3x"
+        },
+        {
+          "time": 9,
+          "step": 2,
+          "label": "2.1 由 6x = 180° 求最大角 3x = 90°"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 最大角 = 90° 判定为直角三角形"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p127_row_0",
+          "stepBadge": "已知条件",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p127_r0_1",
+              "math": "$\\angle A : \\angle B : \\angle C = 1 : 2 : 3$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p127_row_1",
+          "stepBadge": "第 1 步 · 设元列式",
+          "appearAt": 2.2,
+          "tokens": [
+            {
+              "id": "p127_r1_1",
+              "math": "$x + 2x + 3x = 180^{\\circ} \\implies x = 30^{\\circ}$",
+              "appearAt": 2.4,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p127_row_2",
+          "stepBadge": "第 2 步 · 求最大角",
+          "appearAt": 9,
+          "tokens": [
+            {
+              "id": "p127_r2_1",
+              "math": "$\\angle C = 3x = 90^{\\circ}$",
+              "appearAt": 9.2,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p127_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 17.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p127_r3_conc",
+              "math": "$\\triangle ABC \\text{ 是直角三角形}$",
+              "appearAt": 17.6,
+              "dur": 0.45
+            }
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "tStart": 0,
+          "tEnd": 8,
+          "text": "第一步按比例 $1:2:3$ 设三内角为 $x, 2x, 3x$，由内角和列 $6x=180^{\\circ}$。",
+          "focusToken": "p127_r1_1"
+        },
+        {
+          "tStart": 8,
+          "tEnd": 16,
+          "text": "第二步解得 $x=30^{\\circ}$，算出最大内角为 $3x=90^{\\circ}$。",
+          "focusToken": "p127_r2_1"
+        },
+        {
+          "tStart": 16,
+          "tEnd": 24,
+          "text": "第三步因最大角等于 $90^{\\circ}$，判定为直角三角形。",
+          "focusToken": "p127_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "三角形两个内角分别为 $50^{\\circ}$ 和 $30^{\\circ}$，则这个三角形是（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. 锐角三角形",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. 直角三角形",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. 钝角三角形",
+              "isCorrect": true
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！先算第三角再分类：",
+            "calcLines": [
+              "$180^{\\circ}-50^{\\circ}-30^{\\circ}=100^{\\circ} > 90^{\\circ}$"
+            ],
+            "summary": "不能只看前两个锐角，必须算出最大内角。"
+          },
+          "wrongTitle": "提示：先算出第三个内角 180° - 50° - 30°",
+          "wrongFeedback": "第三角为 $100^{\\circ}>90^{\\circ}$，故为钝角三角形，应选 C。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "若 $\\triangle ABC$ 三内角比为 $2:3:7$，则最大内角的度数为 ______ $^{\\circ}$．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "最大角 =",
+          "input1Placeholder": "如 105",
+          "input1Suffix": "°",
+          "expectedX": "105",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $105^{\\circ}$。",
+          "correctDetail": "$180^{\\circ}\\times\\frac{7}{2+3+7}=15^{\\circ}\\times 7=105^{\\circ}$。",
+          "wrongFeedback": "每份为 $180^{\\circ}\\div 12=15^{\\circ}$，最大角占 $7$ 份为 $105^{\\circ}$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "15",
+              "hint": "$15^{\\circ}$ 是 1 份，最大角占 7 份为 $15^{\\circ}\\times 7=105^{\\circ}$。"
+            }
+          ]
+        }
+      }
+    },
+    "P128": {
+      "procedureId": "P128",
+      "title": "运用三角形三边关系判定成三角形、求第三边范围与等腰分类",
+      "exampleTitle": "已知等腰三角形的两边长分别为 $3\\text{ cm}$ 和 $6\\text{ cm}$，求此三角形的周长",
+      "exampleFormula": "$15\\text{ cm}$",
+      "totalDuration": 24,
+      "scratchpadIdleHint": "旁白草稿演算区（等腰分类讨论后，必须用“较小两边之和 > 最长边”验真）",
+      "practiceSectionTitle": "三角形三边关系与等腰分类跟做练习",
+      "practiceSectionSub": "完成以下两道练习，检验三边关系不等式与等腰验真步骤",
+      "steps": [
+        {
+          "step": 1,
+          "name": "分类列出“$3$ 为腰”与“$6$ 为腰”两种三边组合",
+          "tStart": 0,
+          "tEnd": 8,
+          "explanation": "未指明腰与底，分两类：①腰为 $3$ 时三边为 $3,3,6$；②腰为 $6$ 时三边为 $6,6,3$。"
+        },
+        {
+          "step": 2,
+          "name": "用“较小两边之和 $>$ 最长边”逐一验真",
+          "tStart": 8,
+          "tEnd": 16,
+          "explanation": "① $3+3=6$ 不大于 $6$，不能构成三角形，舍去；② $3+6=9>6$，能构成三角形。"
+        },
+        {
+          "step": 3,
+          "name": "计算合法三角形的周长",
+          "tStart": 16,
+          "tEnd": 24,
+          "explanation": "周长为 $6+6+3=15\\text{ cm}$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1,
+          "step": 1,
+          "label": "1.1 分两类：(3,3,6) 与 (6,6,3)"
+        },
+        {
+          "time": 9,
+          "step": 2,
+          "label": "2.1 验真：3+3=6 舍去，3+6>6 保留"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 周长 = 6 + 6 + 3 = 15 cm"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p128_row_0",
+          "stepBadge": "分类讨论",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p128_r0_1",
+              "math": "$\\text{情况①：}3,3,6\\quad\\text{情况②：}6,6,3$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p128_row_1",
+          "stepBadge": "第 1 步 · 验情况①",
+          "appearAt": 2.2,
+          "tokens": [
+            {
+              "id": "p128_r1_1",
+              "math": "$3 + 3 = 6 \\le 6 \\implies \\text{舍去}$",
+              "appearAt": 2.4,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p128_row_2",
+          "stepBadge": "第 2 步 · 验情况②",
+          "appearAt": 9,
+          "tokens": [
+            {
+              "id": "p128_r2_1",
+              "math": "$3 + 6 = 9 > 6 \\implies \\text{成立}$",
+              "appearAt": 9.2,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p128_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 17.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p128_r3_conc",
+              "math": "$\\text{周长} = 6 + 6 + 3 = 15\\text{ cm}$",
+              "appearAt": 17.6,
+              "dur": 0.45
+            }
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "tStart": 0,
+          "tEnd": 8,
+          "text": "第一步对腰与底分类，列出 $(3,3,6)$ 与 $(6,6,3)$ 两种组合。",
+          "focusToken": "p128_r1_1"
+        },
+        {
+          "tStart": 8,
+          "tEnd": 16,
+          "text": "第二步用三边关系验真：$3+3=6$ 不成立须舍去，仅保留 $(6,6,3)$。",
+          "focusToken": "p128_r2_1"
+        },
+        {
+          "tStart": 16,
+          "tEnd": 24,
+          "text": "第三步求合法三角形周长为 $15\\text{ cm}$。",
+          "focusToken": "p128_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "三角形两边长分别为 $6$ 和 $9$，则第三边长可能是（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $3$",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. $10$",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. $15$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！两边之差 < 第三边 < 两边之和：",
+            "calcLines": [
+              "$9-6 < c < 9+6 \\implies 3 < c < 15$"
+            ],
+            "summary": "注意严格不等号，3 和 15 均不可取。"
+          },
+          "wrongTitle": "提示：第三边必须严格大于 9-6=3 且小于 9+6=15",
+          "wrongFeedback": "范围是 $3<c<15$，只有 $10$ 符合，应选 B。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "三角形三边为 $a=2, b=5$，若第三边 $c$ 为奇数，则 $c =$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "c =",
+          "input1Placeholder": "如 5",
+          "input1Suffix": "",
+          "expectedX": "5",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $5$。",
+          "correctDetail": "$5-2<c<5+2 \\implies 3<c<7$，其中唯一奇数为 $5$。",
+          "wrongFeedback": "先求范围 $3<c<7$，再取其中的奇数得 $c=5$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "3",
+              "hint": "$c$ 必须严格大于 $5-2=3$，不能取 $3$。"
+            }
+          ]
+        }
+      }
+    },
+    "P129": {
+      "procedureId": "P129",
+      "title": "运用三角形的高、中线与角平分线求面积、周长差与角度",
+      "exampleTitle": "$AD$ 是 $\\triangle ABC$ 的中线，$E$ 是 $AD$ 的中点，若 $S_{\\triangle ABC}=24$，求 $S_{\\triangle ABE}$",
+      "exampleFormula": "$6$",
+      "totalDuration": 24,
+      "scratchpadIdleHint": "旁白草稿演算区（中线平分三角形面积，中线分两小三角形周长差等于另两边之差）",
+      "practiceSectionTitle": "三角形中线、高与角平分线跟做练习",
+      "practiceSectionSub": "完成以下两道练习，检验中线平分面积与中线周长差公式",
+      "steps": [
+        {
+          "step": 1,
+          "name": "识别中线 $AD$ 平分 $\\triangle ABC$ 面积",
+          "tStart": 0,
+          "tEnd": 8,
+          "explanation": "$AD$ 为 $\\triangle ABC$ 中线，等底同高得 $S_{\\triangle ABD}=\\frac{1}{2}S_{\\triangle ABC}=\\frac{1}{2}\\times 24=12$。"
+        },
+        {
+          "step": 2,
+          "name": "识别中点 $E$ 使 $BE$ 平分 $\\triangle ABD$ 面积",
+          "tStart": 8,
+          "tEnd": 16,
+          "explanation": "$E$ 是 $AD$ 中点，故 $BE$ 是 $\\triangle ABD$ 的中线，得 $S_{\\triangle ABE}=\\frac{1}{2}S_{\\triangle ABD}$。"
+        },
+        {
+          "step": 3,
+          "name": "代入算出最终面积",
+          "tStart": 16,
+          "tEnd": 24,
+          "explanation": "$S_{\\triangle ABE}=\\frac{1}{2}\\times 12=6$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1,
+          "step": 1,
+          "label": "1.1 AD 为中线 → S△ABD = 1/2 × 24 = 12"
+        },
+        {
+          "time": 9,
+          "step": 2,
+          "label": "2.1 E 为 AD 中点 → S△ABE = 1/2 S△ABD"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 算得 S△ABE = 6"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p129_row_0",
+          "stepBadge": "已知条件",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p129_r0_1",
+              "math": "$AD\\text{ 为中线，}E\\text{ 为 }AD\\text{ 中点，}S_{\\triangle ABC}=24$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p129_row_1",
+          "stepBadge": "第 1 步 · 一次平分",
+          "appearAt": 2.2,
+          "tokens": [
+            {
+              "id": "p129_r1_1",
+              "math": "$S_{\\triangle ABD} = \\frac{1}{2}S_{\\triangle ABC} = 12$",
+              "appearAt": 2.4,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p129_row_2",
+          "stepBadge": "第 2 步 · 二次平分",
+          "appearAt": 9,
+          "tokens": [
+            {
+              "id": "p129_r2_1",
+              "math": "$S_{\\triangle ABE} = \\frac{1}{2}S_{\\triangle ABD} = \\frac{1}{2}\\times 12$",
+              "appearAt": 9.2,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p129_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 17.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p129_r3_conc",
+              "math": "$S_{\\triangle ABE} = 6$",
+              "appearAt": 17.6,
+              "dur": 0.45
+            }
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "tStart": 0,
+          "tEnd": 8,
+          "text": "第一步由中线 $AD$ 平分面积，得 $S_{\\triangle ABD}=12$。",
+          "focusToken": "p129_r1_1"
+        },
+        {
+          "tStart": 8,
+          "tEnd": 16,
+          "text": "第二步再由中点 $E$ 平分 $\\triangle ABD$ 面积，得 $S_{\\triangle ABE}=\\frac{1}{2}S_{\\triangle ABD}$。",
+          "focusToken": "p129_r2_1"
+        },
+        {
+          "tStart": 16,
+          "tEnd": 24,
+          "text": "第三步算得 $S_{\\triangle ABE}=6$。",
+          "focusToken": "p129_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "$AD$ 是 $\\triangle ABC$ 的中线，$AB=12, AC=10$，则 $\\triangle ABD$ 与 $\\triangle ACD$ 的周长差为（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $1$",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. $2$",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. $4$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！消去公共边与等分边：",
+            "calcLines": [
+              "$C_{\\triangle ABD}-C_{\\triangle ACD}=AB-AC=12-10=2$"
+            ],
+            "summary": "中线分得两小三角形的周长差等于另两边之差。"
+          },
+          "wrongTitle": "提示：AD 是公共边且 BD = CD，周长差即 AB - AC",
+          "wrongFeedback": "周长差 $=AB-AC=12-10=2$，应选 B。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "在 $\\triangle ABC$ 中，$AD$ 是高，$AE$ 是中线，$AD=6, S_{\\triangle ABC}=18$，则 $BE =$ ______．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "BE =",
+          "input1Placeholder": "如 3",
+          "input1Suffix": "",
+          "expectedX": "3",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $3$。",
+          "correctDetail": "由 $\\frac{1}{2}BC\\cdot 6=18$ 得 $BC=6$，中线平分得 $BE=\\frac{1}{2}BC=3$。",
+          "wrongFeedback": "先由面积求 $BC=6$，再由中线平分对边得 $BE=3$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "6",
+              "hint": "$6$ 是底边 $BC$ 的长，$BE$ 是它的一半，为 $3$。"
+            }
+          ]
+        }
+      }
+    },
+    "P130": {
+      "procedureId": "P130",
+      "title": "运用三角形内角和定理求角度（含比例、平行线与角平分线）",
+      "exampleTitle": "在 $\\triangle ABC$ 中，$AD$ 为角平分线，$\\angle B=40^{\\circ}, \\angle C=60^{\\circ}$，求 $\\angle ADC$",
+      "exampleFormula": "$\\angle ADC = 80^{\\circ}$",
+      "totalDuration": 24,
+      "scratchpadIdleHint": "旁白草稿演算区（先在大三角形用内角和求顶角，平分后再在小三角形用内角和求解）",
+      "practiceSectionTitle": "三角形内角和定理跟做练习",
+      "practiceSectionSub": "完成以下两道练习，检验内角和直接求角与比例方程求角",
+      "steps": [
+        {
+          "step": 1,
+          "name": "在 $\\triangle ABC$ 中用内角和求 $\\angle BAC$",
+          "tStart": 0,
+          "tEnd": 8,
+          "explanation": "$\\angle BAC=180^{\\circ}-\\angle B-\\angle C=180^{\\circ}-40^{\\circ}-60^{\\circ}=80^{\\circ}$。"
+        },
+        {
+          "step": 2,
+          "name": "由角平分线 $AD$ 求 $\\angle DAC$",
+          "tStart": 8,
+          "tEnd": 16,
+          "explanation": "因为 $AD$ 平分 $\\angle BAC$，所以 $\\angle DAC=\\frac{1}{2}\\angle BAC=40^{\\circ}$。"
+        },
+        {
+          "step": 3,
+          "name": "在 $\\triangle ADC$ 中再用内角和求 $\\angle ADC$",
+          "tStart": 16,
+          "tEnd": 24,
+          "explanation": "$\\angle ADC=180^{\\circ}-\\angle DAC-\\angle C=180^{\\circ}-40^{\\circ}-60^{\\circ}=80^{\\circ}$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1,
+          "step": 1,
+          "label": "1.1 ∠BAC = 180° - 40° - 60° = 80°"
+        },
+        {
+          "time": 9,
+          "step": 2,
+          "label": "2.1 AD 平分 ∠BAC → ∠DAC = 40°"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 ∠ADC = 180° - 40° - 60° = 80°"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p130_row_0",
+          "stepBadge": "已知条件",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p130_r0_1",
+              "math": "$\\angle B=40^{\\circ},\\ \\angle C=60^{\\circ},\\ AD\\text{ 平分 }\\angle BAC$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p130_row_1",
+          "stepBadge": "第 1 步 · 求顶角",
+          "appearAt": 2.2,
+          "tokens": [
+            {
+              "id": "p130_r1_1",
+              "math": "$\\angle BAC = 180^{\\circ} - 40^{\\circ} - 60^{\\circ} = 80^{\\circ}$",
+              "appearAt": 2.4,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p130_row_2",
+          "stepBadge": "第 2 步 · 角平分",
+          "appearAt": 9,
+          "tokens": [
+            {
+              "id": "p130_r2_1",
+              "math": "$\\angle DAC = \\frac{1}{2}\\angle BAC = 40^{\\circ}$",
+              "appearAt": 9.2,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p130_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 17.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p130_r3_conc",
+              "math": "$\\angle ADC = 180^{\\circ} - 40^{\\circ} - 60^{\\circ} = 80^{\\circ}$",
+              "appearAt": 17.6,
+              "dur": 0.45
+            }
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "tStart": 0,
+          "tEnd": 8,
+          "text": "第一步在 $\\triangle ABC$ 中用内角和 $180^{\\circ}$ 求出 $\\angle BAC=80^{\\circ}$。",
+          "focusToken": "p130_r1_1"
+        },
+        {
+          "tStart": 8,
+          "tEnd": 16,
+          "text": "第二步由角平分线定义得 $\\angle DAC=40^{\\circ}$。",
+          "focusToken": "p130_r2_1"
+        },
+        {
+          "tStart": 16,
+          "tEnd": 24,
+          "text": "第三步在 $\\triangle ADC$ 中再用内角和算出 $\\angle ADC=80^{\\circ}$。",
+          "focusToken": "p130_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "在 $\\triangle ABC$ 中，$\\angle A=60^{\\circ}, \\angle B=55^{\\circ}$，则 $\\angle C$ 的度数为（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $55^{\\circ}$",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. $65^{\\circ}$",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. $75^{\\circ}$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！内角和减已知两角：",
+            "calcLines": [
+              "$\\angle C=180^{\\circ}-60^{\\circ}-55^{\\circ}=65^{\\circ}$"
+            ],
+            "summary": "牢记三角形内角和恒等于 180°。"
+          },
+          "wrongTitle": "提示：180° - 60° - 55° = 65°",
+          "wrongFeedback": "$180^{\\circ}-60^{\\circ}-55^{\\circ}=65^{\\circ}$，应选 B。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "在 $\\triangle ABC$ 中，$\\angle A:\\angle B:\\angle C=2:3:4$，则 $\\angle A =$ ______ $^{\\circ}$．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "∠A =",
+          "input1Placeholder": "如 40",
+          "input1Suffix": "°",
+          "expectedX": "40",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $40^{\\circ}$。",
+          "correctDetail": "$180^{\\circ}\\times\\frac{2}{2+3+4}=40^{\\circ}$。",
+          "wrongFeedback": "总份数 $2+3+4=9$，每份 $20^{\\circ}$，$\\angle A$ 占 $2$ 份为 $40^{\\circ}$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "20",
+              "hint": "$20^{\\circ}$ 是 1 份，$\\angle A$ 占 2 份应为 $40^{\\circ}$。"
+            }
+          ]
+        }
+      }
+    },
+    "P131": {
+      "procedureId": "P131",
+      "title": "运用直角三角形两锐角互余及同角/等角余角相等求角与判定",
+      "exampleTitle": "已知 $AB\\parallel CD, DE\\perp BC, \\angle ABC=70^{\\circ}$，求 $\\angle EDC$",
+      "exampleFormula": "$\\angle EDC = 20^{\\circ}$",
+      "totalDuration": 24,
+      "scratchpadIdleHint": "旁白草稿演算区（先由平行线转角入直角三角形，再用 90° 减锐角得余角）",
+      "practiceSectionTitle": "直角三角形两锐角互余跟做练习",
+      "practiceSectionSub": "完成以下两道练习，检验直角三角形互余与双垂直倒角",
+      "steps": [
+        {
+          "step": 1,
+          "name": "由平行线内错角相等转移已知角",
+          "tStart": 0,
+          "tEnd": 8,
+          "explanation": "因为 $AB\\parallel CD$，所以内错角 $\\angle ECD=\\angle ABC=70^{\\circ}$。"
+        },
+        {
+          "step": 2,
+          "name": "由垂线锁定 $Rt\\triangle CED$ 的互余关系",
+          "tStart": 8,
+          "tEnd": 16,
+          "explanation": "因为 $DE\\perp BC$，所以 $\\angle CED=90^{\\circ}$，故 $\\angle EDC+\\angle ECD=90^{\\circ}$。"
+        },
+        {
+          "step": 3,
+          "name": "用 $90^{\\circ}$ 减去已知锐角得答案",
+          "tStart": 16,
+          "tEnd": 24,
+          "explanation": "$\\angle EDC=90^{\\circ}-70^{\\circ}=20^{\\circ}$。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1,
+          "step": 1,
+          "label": "1.1 AB∥CD → ∠ECD = ∠ABC = 70°"
+        },
+        {
+          "time": 9,
+          "step": 2,
+          "label": "2.1 DE⊥BC → Rt△CED 中两锐角互余"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 ∠EDC = 90° - 70° = 20°"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p131_row_0",
+          "stepBadge": "已知条件",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p131_r0_1",
+              "math": "$AB\\parallel CD,\\ DE\\perp BC,\\ \\angle ABC=70^{\\circ}$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p131_row_1",
+          "stepBadge": "第 1 步 · 平行转角",
+          "appearAt": 2.2,
+          "tokens": [
+            {
+              "id": "p131_r1_1",
+              "math": "$\\angle ECD = \\angle ABC = 70^{\\circ}$",
+              "appearAt": 2.4,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p131_row_2",
+          "stepBadge": "第 2 步 · 互余关系",
+          "appearAt": 9,
+          "tokens": [
+            {
+              "id": "p131_r2_1",
+              "math": "$\\angle EDC + \\angle ECD = 90^{\\circ}$",
+              "appearAt": 9.2,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p131_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 17.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p131_r3_conc",
+              "math": "$\\angle EDC = 90^{\\circ} - 70^{\\circ} = 20^{\\circ}$",
+              "appearAt": 17.6,
+              "dur": 0.45
+            }
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "tStart": 0,
+          "tEnd": 8,
+          "text": "第一步利用 $AB\\parallel CD$，把 $70^{\\circ}$ 转移到直角三角形的内角 $\\angle ECD$。",
+          "focusToken": "p131_r1_1"
+        },
+        {
+          "tStart": 8,
+          "tEnd": 16,
+          "text": "第二步在 $Rt\\triangle CED$ 中，两锐角互余得 $\\angle EDC+\\angle ECD=90^{\\circ}$。",
+          "focusToken": "p131_r2_1"
+        },
+        {
+          "tStart": 16,
+          "tEnd": 24,
+          "text": "第三步算得 $\\angle EDC=20^{\\circ}$。",
+          "focusToken": "p131_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "在 $Rt\\triangle ABC$ 中，$\\angle C=90^{\\circ}, \\angle B=34^{\\circ}$，则 $\\angle A$ 的度数为（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $46^{\\circ}$",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "B. $56^{\\circ}$",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "C. $66^{\\circ}$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！两锐角互余：",
+            "calcLines": [
+              "$\\angle A=90^{\\circ}-34^{\\circ}=56^{\\circ}$"
+            ],
+            "summary": "直角三角形两锐角之和恒为 90°。"
+          },
+          "wrongTitle": "提示：90° - 34° = 56°",
+          "wrongFeedback": "$\\angle A=90^{\\circ}-34^{\\circ}=56^{\\circ}$，应选 B。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "直角三角板 $ABC$（$\\angle C=90^{\\circ}$）摆在直线 $l$ 上，若 $\\angle 2=40^{\\circ}$，则与它互余的 $\\angle 1 =$ ______ $^{\\circ}$．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "∠1 =",
+          "input1Placeholder": "如 50",
+          "input1Suffix": "°",
+          "expectedX": "50",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $50^{\\circ}$。",
+          "correctDetail": "$\\angle 1=90^{\\circ}-40^{\\circ}=50^{\\circ}$。",
+          "wrongFeedback": "利用平角 $180^{\\circ}$ 减直角 $90^{\\circ}$ 得 $\\angle 1+\\angle 2=90^{\\circ}$，故 $\\angle 1=50^{\\circ}$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "140",
+              "hint": "$\\angle 1$ 与 $\\angle 2$ 互余（和为 $90^{\\circ}$），不是互补。"
+            }
+          ]
+        }
+      }
+    },
+    "P132": {
+      "procedureId": "P132",
+      "title": "运用三角形外角性质（外角等于不相邻两内角和）倒角求解",
+      "exampleTitle": "$\\angle DAC$ 是 $\\triangle ABC$ 的外角，$\\angle B=48^{\\circ}, \\angle C=27^{\\circ}$，求 $\\angle DAC$",
+      "exampleFormula": "$\\angle DAC = 75^{\\circ}$",
+      "totalDuration": 24,
+      "scratchpadIdleHint": "旁白草稿演算区（找准外角所属三角形，直接等于不相邻两内角之和）",
+      "practiceSectionTitle": "三角形外角性质跟做练习",
+      "practiceSectionSub": "完成以下两道练习，检验正向求外角与逆向求内角",
+      "steps": [
+        {
+          "step": 1,
+          "name": "定位外角与不相邻的两个内角",
+          "tStart": 0,
+          "tEnd": 8,
+          "explanation": "$\\angle DAC$ 是 $\\triangle ABC$ 的外角，与它不相邻的两个内角是 $\\angle B$ 和 $\\angle C$。"
+        },
+        {
+          "step": 2,
+          "name": "直接套用外角等于不相邻两内角和",
+          "tStart": 8,
+          "tEnd": 16,
+          "explanation": "一步列式 $\\angle DAC=\\angle B+\\angle C=48^{\\circ}+27^{\\circ}$。"
+        },
+        {
+          "step": 3,
+          "name": "算出外角度数",
+          "tStart": 16,
+          "tEnd": 24,
+          "explanation": "$48^{\\circ}+27^{\\circ}=75^{\\circ}$，无需先求相邻内角再用 $180^{\\circ}$ 减。"
+        }
+      ],
+      "microBeats": [
+        {
+          "time": 1,
+          "step": 1,
+          "label": "1.1 定位外角 ∠DAC 及不相邻内角 ∠B, ∠C"
+        },
+        {
+          "time": 9,
+          "step": 2,
+          "label": "2.1 列式 ∠DAC = ∠B + ∠C"
+        },
+        {
+          "time": 17.5,
+          "step": 3,
+          "label": "3.1 算得 ∠DAC = 75°"
+        }
+      ],
+      "boardRows": [
+        {
+          "rowId": "p132_row_0",
+          "stepBadge": "识别外角",
+          "appearAt": 0,
+          "tokens": [
+            {
+              "id": "p132_r0_1",
+              "math": "$\\angle DAC\\text{ 是 }\\triangle ABC\\text{ 外角，}\\angle B=48^{\\circ},\\ \\angle C=27^{\\circ}$",
+              "appearAt": 0,
+              "dur": 0.01
+            }
+          ]
+        },
+        {
+          "rowId": "p132_row_1",
+          "stepBadge": "第 1 步 · 外角性质",
+          "appearAt": 2.2,
+          "tokens": [
+            {
+              "id": "p132_r1_1",
+              "math": "$\\angle DAC = \\angle B + \\angle C$",
+              "appearAt": 2.4,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p132_row_2",
+          "stepBadge": "第 2 步 · 代入计算",
+          "appearAt": 9,
+          "tokens": [
+            {
+              "id": "p132_r2_1",
+              "math": "$\\angle DAC = 48^{\\circ} + 27^{\\circ}$",
+              "appearAt": 9.2,
+              "dur": 0.45
+            }
+          ]
+        },
+        {
+          "rowId": "p132_row_3",
+          "stepBadge": "最终结论",
+          "appearAt": 17.5,
+          "isConclusion": true,
+          "tokens": [
+            {
+              "id": "p132_r3_conc",
+              "math": "$\\angle DAC = 75^{\\circ}$",
+              "appearAt": 17.6,
+              "dur": 0.45
+            }
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "tStart": 0,
+          "tEnd": 8,
+          "text": "第一步锁定外角 $\\angle DAC$ 与它不相邻的两内角 $\\angle B, \\angle C$。",
+          "focusToken": "p132_r1_1"
+        },
+        {
+          "tStart": 8,
+          "tEnd": 16,
+          "text": "第二步直接运用外角性质得 $\\angle DAC=48^{\\circ}+27^{\\circ}$。",
+          "focusToken": "p132_r2_1"
+        },
+        {
+          "tStart": 16,
+          "tEnd": 24,
+          "text": "第三步算得 $\\angle DAC=75^{\\circ}$。",
+          "focusToken": "p132_r3_conc"
+        }
+      ],
+      "practices": {
+        "practice1": {
+          "title": "练习一",
+          "givenLabel": "",
+          "givenFormula": "$\\angle ACD$ 是 $\\triangle ABC$ 的外角，$\\angle ACD=122^{\\circ}, \\angle A=73^{\\circ}$，则 $\\angle B=$（　　）",
+          "extractedLabel": "",
+          "extractedFormula": "",
+          "questionText": "",
+          "options": [
+            {
+              "key": "A",
+              "text": "A. $49^{\\circ}$",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "text": "B. $58^{\\circ}$",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "text": "C. $59^{\\circ}$",
+              "isCorrect": false
+            }
+          ],
+          "correctFeedback": {
+            "title": "回答正确！逆用外角性质求内角：",
+            "calcLines": [
+              "$\\angle B=\\angle ACD-\\angle A=122^{\\circ}-73^{\\circ}=49^{\\circ}$"
+            ],
+            "summary": "不相邻内角 = 外角 - 另一不相邻内角。"
+          },
+          "wrongTitle": "提示：用外角 122° 减去不相邻内角 73°",
+          "wrongFeedback": "$\\angle B=122^{\\circ}-73^{\\circ}=49^{\\circ}$，应选 A。"
+        },
+        "practice2": {
+          "title": "练习二",
+          "givenLabel": "",
+          "givenFormula": "在 $\\triangle ABC$ 中，$\\angle B=27^{\\circ}$，外角 $\\angle CAD=70^{\\circ}$，则 $\\angle C =$ ______ $^{\\circ}$．",
+          "questionText": "",
+          "singleInput": true,
+          "input1Prefix": "∠C =",
+          "input1Placeholder": "如 43",
+          "input1Suffix": "°",
+          "expectedX": "43",
+          "expectedMin": "",
+          "allowOrderSwap": false,
+          "correctFeedback": "正确答案为 $43^{\\circ}$。",
+          "correctDetail": "$\\angle C=\\angle CAD-\\angle B=70^{\\circ}-27^{\\circ}=43^{\\circ}$。",
+          "wrongFeedback": "由外角性质 $\\angle CAD=\\angle B+\\angle C$ 得 $\\angle C=70^{\\circ}-27^{\\circ}=43^{\\circ}$。",
+          "specificWrongHints": [
+            {
+              "checkType": "firstVal",
+              "val": "97",
+              "hint": "$\\angle CAD$ 是外角，求内角 $\\angle C$ 应用减法 $70^{\\circ}-27^{\\circ}=43^{\\circ}$。"
+            }
+          ]
+        }
+      }
     }
   };
 

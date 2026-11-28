@@ -1,5 +1,5 @@
 // 题典网「题目图谱」题目与知识点关联数据表 (V2.0)
-// 覆盖全库 5157 道题目，支持一题多考点与考查角色 (primary/secondary/comprehensive)
+// 覆盖全库 5640 道题目，支持一题多考点与考查角色 (primary/secondary/comprehensive)
 window.QUESTION_KNOWLEDGE = window.QUESTION_KNOWLEDGE_MAP = [
   {
     "questionId": "g6_up_43",
@@ -56722,6 +56722,4974 @@ window.QUESTION_KNOWLEDGE = window.QUESTION_KNOWLEDGE_MAP = [
     "roles": {
       "cnm_049": "primary",
       "cnm_045": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_b_q1",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_b_q2",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_b_q3",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_b_q4",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_b_q5",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_b_q6",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_b_q7",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_b_q8",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_b_q9",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_b_q10",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_b_q11",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_b_q12",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_b_q13",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_b_q14",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_b_q15",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_b_q16",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_b_q17",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_b_q18",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_b_q19",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_b_q20",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_b_q21",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_b_q22",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_b_q23",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_g_q1",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_g_q2",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_g_q3",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_g_q4",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_g_q5",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_g_q6",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_g_q7",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_g_q8",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_g_q9",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_g_q10",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_g_q11",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_g_q12",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_g_q13",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_g_q14",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_g_q15",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_g_q16",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_g_q17",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_g_q18",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_g_q19",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_g_q20",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_g_q21",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_g_q22",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_g_q23",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_t_q1",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_t_q2",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_t_q3",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_t_q4",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_t_q5",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_t_q6",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_t_q7",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_t_q8",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_t_q9",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_t_q10",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_t_q11",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_t_q12",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_t_q13",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_t_q14",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_t_q15",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_t_q16",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_t_q17",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_t_q18",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_t_q19",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_t_q20",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_t_q21",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_t_q22",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_1_t_q23",
+    "knowledgeIds": [
+      "cnm_110"
+    ],
+    "roles": {
+      "cnm_110": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_b_q1",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_b_q2",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_b_q3",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_b_q4",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_b_q5",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_b_q6",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_b_q7",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_b_q8",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_b_q9",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_b_q10",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_b_q11",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_b_q12",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_b_q13",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_b_q14",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_b_q15",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_b_q16",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_b_q17",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_b_q18",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_b_q19",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_b_q20",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_b_q21",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_b_q22",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_b_q23",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_g_q1",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_g_q2",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_g_q3",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_g_q4",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_g_q5",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_g_q6",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_g_q7",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_g_q8",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_g_q9",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_g_q10",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_g_q11",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_g_q12",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_g_q13",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_g_q14",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_g_q15",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_g_q16",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_g_q17",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_g_q18",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_g_q19",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_g_q20",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_g_q21",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_g_q22",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_g_q23",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_t_q1",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_t_q2",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_t_q3",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_t_q4",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_t_q5",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_t_q6",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_t_q7",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_t_q8",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_t_q9",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_t_q10",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_t_q11",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_t_q12",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_t_q13",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_t_q14",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_t_q15",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_t_q16",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_t_q17",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_t_q18",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_t_q19",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_t_q20",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_t_q21",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_t_q22",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_1_t_q23",
+    "knowledgeIds": [
+      "cnm_111"
+    ],
+    "roles": {
+      "cnm_111": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_b_q1",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_b_q2",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_b_q3",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_b_q4",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_b_q5",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_b_q6",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_b_q7",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_b_q8",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_b_q9",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_b_q10",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_b_q11",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_b_q12",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_b_q13",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_b_q14",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_b_q15",
+    "knowledgeIds": [
+      "cnm_114"
+    ],
+    "roles": {
+      "cnm_114": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_b_q16",
+    "knowledgeIds": [
+      "cnm_114"
+    ],
+    "roles": {
+      "cnm_114": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_b_q17",
+    "knowledgeIds": [
+      "cnm_114"
+    ],
+    "roles": {
+      "cnm_114": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_b_q18",
+    "knowledgeIds": [
+      "cnm_112"
+    ],
+    "roles": {
+      "cnm_112": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_b_q19",
+    "knowledgeIds": [
+      "cnm_112"
+    ],
+    "roles": {
+      "cnm_112": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_b_q20",
+    "knowledgeIds": [
+      "cnm_112"
+    ],
+    "roles": {
+      "cnm_112": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_b_q21",
+    "knowledgeIds": [
+      "cnm_112"
+    ],
+    "roles": {
+      "cnm_112": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_b_q22",
+    "knowledgeIds": [
+      "cnm_112"
+    ],
+    "roles": {
+      "cnm_112": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_b_q23",
+    "knowledgeIds": [
+      "cnm_112"
+    ],
+    "roles": {
+      "cnm_112": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_g_q1",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_g_q2",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_g_q3",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_g_q4",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_g_q5",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_g_q6",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_g_q7",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_g_q8",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_g_q9",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_g_q10",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_g_q11",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_g_q12",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_g_q13",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_g_q14",
+    "knowledgeIds": [
+      "cnm_114"
+    ],
+    "roles": {
+      "cnm_114": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_g_q15",
+    "knowledgeIds": [
+      "cnm_114"
+    ],
+    "roles": {
+      "cnm_114": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_g_q16",
+    "knowledgeIds": [
+      "cnm_114"
+    ],
+    "roles": {
+      "cnm_114": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_g_q17",
+    "knowledgeIds": [
+      "cnm_112"
+    ],
+    "roles": {
+      "cnm_112": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_g_q18",
+    "knowledgeIds": [
+      "cnm_112"
+    ],
+    "roles": {
+      "cnm_112": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_g_q19",
+    "knowledgeIds": [
+      "cnm_112"
+    ],
+    "roles": {
+      "cnm_112": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_g_q20",
+    "knowledgeIds": [
+      "cnm_112"
+    ],
+    "roles": {
+      "cnm_112": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_g_q21",
+    "knowledgeIds": [
+      "cnm_112"
+    ],
+    "roles": {
+      "cnm_112": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_g_q22",
+    "knowledgeIds": [
+      "cnm_112"
+    ],
+    "roles": {
+      "cnm_112": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_g_q23",
+    "knowledgeIds": [
+      "cnm_112"
+    ],
+    "roles": {
+      "cnm_112": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_t_q1",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_t_q2",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_t_q3",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_t_q4",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_t_q5",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_t_q6",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_t_q7",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_t_q8",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_t_q9",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_t_q10",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_t_q11",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_t_q12",
+    "knowledgeIds": [
+      "cnm_113"
+    ],
+    "roles": {
+      "cnm_113": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_t_q13",
+    "knowledgeIds": [
+      "cnm_114"
+    ],
+    "roles": {
+      "cnm_114": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_t_q14",
+    "knowledgeIds": [
+      "cnm_114"
+    ],
+    "roles": {
+      "cnm_114": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_t_q15",
+    "knowledgeIds": [
+      "cnm_114"
+    ],
+    "roles": {
+      "cnm_114": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_t_q16",
+    "knowledgeIds": [
+      "cnm_112"
+    ],
+    "roles": {
+      "cnm_112": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_t_q17",
+    "knowledgeIds": [
+      "cnm_112"
+    ],
+    "roles": {
+      "cnm_112": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_t_q18",
+    "knowledgeIds": [
+      "cnm_112"
+    ],
+    "roles": {
+      "cnm_112": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_t_q19",
+    "knowledgeIds": [
+      "cnm_112"
+    ],
+    "roles": {
+      "cnm_112": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_t_q20",
+    "knowledgeIds": [
+      "cnm_112"
+    ],
+    "roles": {
+      "cnm_112": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_t_q21",
+    "knowledgeIds": [
+      "cnm_112"
+    ],
+    "roles": {
+      "cnm_112": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_t_q22",
+    "knowledgeIds": [
+      "cnm_112"
+    ],
+    "roles": {
+      "cnm_112": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_2_2_t_q23",
+    "knowledgeIds": [
+      "cnm_112"
+    ],
+    "roles": {
+      "cnm_112": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_b_q1",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_b_q2",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_b_q3",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_b_q4",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_b_q5",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_b_q6",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_b_q7",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_b_q8",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_b_q9",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_b_q10",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_b_q11",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_b_q12",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_b_q13",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_b_q14",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_b_q15",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_b_q16",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_b_q17",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_b_q18",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_b_q19",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_b_q20",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_b_q21",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_b_q22",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_b_q23",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_g_q1",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_g_q2",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_g_q3",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_g_q4",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_g_q5",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_g_q6",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_g_q7",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_g_q8",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_g_q9",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_g_q10",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_g_q11",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_g_q12",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_g_q13",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_g_q14",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_g_q15",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_g_q16",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_g_q17",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_g_q18",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_g_q19",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_g_q20",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_g_q21",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_g_q22",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_g_q23",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_t_q1",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_t_q2",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_t_q3",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_t_q4",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_t_q5",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_t_q6",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_t_q7",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_t_q8",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_t_q9",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_t_q10",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_t_q11",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_t_q12",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_t_q13",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_t_q14",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_t_q15",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_t_q16",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_t_q17",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_t_q18",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_t_q19",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_t_q20",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_t_q21",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_t_q22",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l1_t_q23",
+    "knowledgeIds": [
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_115": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_b_q1",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_b_q2",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_b_q3",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_b_q4",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_b_q5",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_b_q6",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_b_q7",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_b_q8",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_b_q9",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_b_q10",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_b_q11",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_b_q12",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_b_q13",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_b_q14",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_b_q15",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_b_q16",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_b_q17",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_b_q18",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_b_q19",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_b_q20",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_b_q21",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_b_q22",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_b_q23",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_g_q1",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_g_q2",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_g_q3",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_g_q4",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_g_q5",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_g_q6",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_g_q7",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_g_q8",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_g_q9",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_g_q10",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_g_q11",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_g_q12",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_g_q13",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_g_q14",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_g_q15",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_g_q16",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_g_q17",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_g_q18",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_g_q19",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_g_q20",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_g_q21",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_g_q22",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_g_q23",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_t_q1",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_t_q2",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_t_q3",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_t_q4",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_t_q5",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_t_q6",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_t_q7",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_t_q8",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_t_q9",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_t_q10",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_t_q11",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_t_q12",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_t_q13",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_t_q14",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_t_q15",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_t_q16",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_t_q17",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_t_q18",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_t_q19",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_t_q20",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_t_q21",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_t_q22",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_1_l2_t_q23",
+    "knowledgeIds": [
+      "cnm_116",
+      "cnm_115"
+    ],
+    "roles": {
+      "cnm_116": "primary",
+      "cnm_115": "secondary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_b_q1",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_b_q2",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_b_q3",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_b_q4",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_b_q5",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_b_q6",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_b_q7",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_b_q8",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_b_q9",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_b_q10",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_b_q11",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_b_q12",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_b_q13",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_b_q14",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_b_q15",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_b_q16",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_b_q17",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_b_q18",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_b_q19",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_b_q20",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_b_q21",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_b_q22",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_b_q23",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_g_q1",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_g_q2",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_g_q3",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_g_q4",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_g_q5",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_g_q6",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_g_q7",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_g_q8",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_g_q9",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_g_q10",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_g_q11",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_g_q12",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_g_q13",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_g_q14",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_g_q15",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_g_q16",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_g_q17",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_g_q18",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_g_q19",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_g_q20",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_g_q21",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_g_q22",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_g_q23",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_t_q1",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_t_q2",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_t_q3",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_t_q4",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_t_q5",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_t_q6",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_t_q7",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_t_q8",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_t_q9",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_t_q10",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_t_q11",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_t_q12",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_t_q13",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_t_q14",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_t_q15",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_t_q16",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_t_q17",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_t_q18",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_t_q19",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_t_q20",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_t_q21",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_t_q22",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch13_3_2_t_q23",
+    "knowledgeIds": [
+      "cnm_117"
+    ],
+    "roles": {
+      "cnm_117": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_b_q1",
+    "knowledgeIds": [
+      "cnm_120"
+    ],
+    "roles": {
+      "cnm_120": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_b_q2",
+    "knowledgeIds": [
+      "cnm_120"
+    ],
+    "roles": {
+      "cnm_120": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_b_q4",
+    "knowledgeIds": [
+      "cnm_120"
+    ],
+    "roles": {
+      "cnm_120": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_b_q5",
+    "knowledgeIds": [
+      "cnm_120"
+    ],
+    "roles": {
+      "cnm_120": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_b_q6",
+    "knowledgeIds": [
+      "cnm_120"
+    ],
+    "roles": {
+      "cnm_120": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_b_q7",
+    "knowledgeIds": [
+      "cnm_120"
+    ],
+    "roles": {
+      "cnm_120": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_b_q8",
+    "knowledgeIds": [
+      "cnm_120"
+    ],
+    "roles": {
+      "cnm_120": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_b_q9",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_b_q10",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_b_q11",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_b_q12",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_b_q13",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_b_q14",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_b_q15",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_b_q16",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_b_q17",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_b_q18",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_b_q19",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_b_q20",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_b_q21",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_b_q22",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_b_q23",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_g_q1",
+    "knowledgeIds": [
+      "cnm_120"
+    ],
+    "roles": {
+      "cnm_120": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_g_q2",
+    "knowledgeIds": [
+      "cnm_120"
+    ],
+    "roles": {
+      "cnm_120": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_g_q3",
+    "knowledgeIds": [
+      "cnm_120"
+    ],
+    "roles": {
+      "cnm_120": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_g_q4",
+    "knowledgeIds": [
+      "cnm_120"
+    ],
+    "roles": {
+      "cnm_120": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_g_q5",
+    "knowledgeIds": [
+      "cnm_120"
+    ],
+    "roles": {
+      "cnm_120": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_g_q6",
+    "knowledgeIds": [
+      "cnm_120"
+    ],
+    "roles": {
+      "cnm_120": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_g_q7",
+    "knowledgeIds": [
+      "cnm_120"
+    ],
+    "roles": {
+      "cnm_120": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_g_q8",
+    "knowledgeIds": [
+      "cnm_120"
+    ],
+    "roles": {
+      "cnm_120": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_g_q9",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_g_q10",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_g_q11",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_g_q12",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_g_q13",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_g_q14",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_g_q15",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_g_q16",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_g_q17",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_g_q18",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_g_q19",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_g_q20",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_g_q21",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_g_q22",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_g_q23",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_t_q1",
+    "knowledgeIds": [
+      "cnm_120"
+    ],
+    "roles": {
+      "cnm_120": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_t_q2",
+    "knowledgeIds": [
+      "cnm_120"
+    ],
+    "roles": {
+      "cnm_120": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_t_q3",
+    "knowledgeIds": [
+      "cnm_120"
+    ],
+    "roles": {
+      "cnm_120": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_t_q4",
+    "knowledgeIds": [
+      "cnm_120"
+    ],
+    "roles": {
+      "cnm_120": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_t_q5",
+    "knowledgeIds": [
+      "cnm_120"
+    ],
+    "roles": {
+      "cnm_120": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_t_q6",
+    "knowledgeIds": [
+      "cnm_120"
+    ],
+    "roles": {
+      "cnm_120": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_t_q7",
+    "knowledgeIds": [
+      "cnm_120"
+    ],
+    "roles": {
+      "cnm_120": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_t_q8",
+    "knowledgeIds": [
+      "cnm_120"
+    ],
+    "roles": {
+      "cnm_120": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_t_q9",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_t_q10",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_t_q11",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_t_q12",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_t_q13",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_t_q14",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_t_q15",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_t_q16",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_t_q17",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_t_q18",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_t_q19",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_t_q20",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_t_q21",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_t_q22",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_t_q23",
+    "knowledgeIds": [
+      "cnm_121"
+    ],
+    "roles": {
+      "cnm_121": "primary"
+    },
+    "status": "reviewed"
+  },
+  {
+    "questionId": "ch14_1_b_q3",
+    "knowledgeIds": [
+      "cnm_120"
+    ],
+    "roles": {
+      "cnm_120": "primary"
     },
     "status": "reviewed"
   }

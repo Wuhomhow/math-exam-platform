@@ -832,11 +832,17 @@ function getDifficultyBadgeClass(diff) {
             </div>
 
             <!-- Card Footer Actions -->
-            <div class="q-card-footer flex flex-wrap items-center justify-between gap-2">
-              <button class="btn-sim-toggle-analysis q-aux-btn" data-id="${sq.id}">
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                <span class="sim-analysis-btn-text">查看答案解析</span>
-              </button>
+            <div data-html2canvas-ignore="true" class="q-card-footer flex flex-wrap items-center justify-between gap-2">
+              <div class="flex flex-wrap items-center gap-1 sm:gap-2 text-xs">
+                <button class="btn-sim-toggle-analysis q-aux-btn" data-id="${sq.id}">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                  <span class="sim-analysis-btn-text">查看答案解析</span>
+                </button>
+                <button class="btn-sim-screenshot q-aux-btn" data-id="${sq.id}" data-label="变式 ${idx + 1}">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"></path></svg>
+                  <span class="screenshot-btn-text">截图复制</span>
+                </button>
+              </div>
 
               <div class="flex items-center space-x-2">
                 <button class="btn-sim-toggle-cart ${isSelected ? 'is-remove' : ''} px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all flex items-center space-x-1.5" data-id="${sq.id}">
@@ -864,6 +870,20 @@ function getDifficultyBadgeClass(diff) {
           const isHidden = panel.classList.contains('hidden');
           panel.classList.toggle('hidden', !isHidden);
           if (textSpan) textSpan.textContent = isHidden ? '收起答案解析' : '查看答案解析';
+        });
+      });
+
+      bodyEl.querySelectorAll('.btn-sim-screenshot').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const card = btn.closest('.similar-question-card');
+          const label = btn.getAttribute('data-label') || '变式题';
+          if (!card) return;
+          const hasAnalysis = !card.querySelector('.q-analysis-panel')?.classList.contains('hidden');
+          captureElementScreenshot(card, btn, {
+            label,
+            fileName: `${label.replace(/\s+/g, '')}截图${hasAnalysis ? '_含解析' : ''}.png`,
+            modeLabel: hasAnalysis ? '（含答案解析）' : ''
+          });
         });
       });
 
@@ -1019,127 +1039,191 @@ function getDifficultyBadgeClass(diff) {
       }
     }
 
+    const SCREENSHOT_IGNORE_SELECTOR = '[data-html2canvas-ignore], .katex-mathml, .q-card-footer, .proc-teacher-pen, .proc-stream-cursor';
+
+    // Create an offscreen clean clone with ignored elements removed BEFORE measuring or capturing,
+    // so the screenshot wraps tightly around actual content with no bottom blank space
+    function createCleanScreenshotClone(targetEl, options = {}) {
+      const origRect = targetEl.getBoundingClientRect();
+      const width = Math.ceil(origRect.width);
+      const extraSelectors = Array.isArray(options.extraIgnoreSelectors) ? options.extraIgnoreSelectors : [];
+      const ignoreSelector = [SCREENSHOT_IGNORE_SELECTOR, ...extraSelectors].filter(Boolean).join(', ');
+
+      const host = document.createElement('div');
+      host.setAttribute('data-screenshot-clone-host', 'true');
+      host.style.cssText = [
+        'position: fixed',
+        'left: -99999px',
+        'top: 0',
+        `width: ${width}px`,
+        'margin: 0',
+        'padding: 0',
+        'pointer-events: none',
+        'z-index: -1',
+        'background: transparent'
+      ].join(';');
+
+      const clone = targetEl.cloneNode(true);
+      clone.querySelectorAll(ignoreSelector).forEach(el => el.remove());
+
+      clone.style.margin = '0';
+      clone.style.width = `${width}px`;
+      clone.style.height = 'auto';
+      clone.style.minHeight = '0';
+      clone.style.maxHeight = 'none';
+      clone.style.overflow = 'visible';
+      clone.style.transform = 'none';
+      clone.style.boxShadow = 'none';
+      clone.style.boxSizing = 'border-box';
+      if (options.padding) {
+        clone.style.padding = options.padding;
+      }
+      if (options.backgroundColor) {
+        clone.style.backgroundColor = options.backgroundColor;
+      }
+
+      host.appendChild(clone);
+      document.body.appendChild(host);
+
+      const measuredHeight = Math.ceil(clone.getBoundingClientRect().height);
+
+      return {
+        host,
+        clone,
+        width,
+        height: measuredHeight > 0 ? measuredHeight : Math.ceil(origRect.height),
+        ignoreSelector,
+        cleanup: () => {
+          if (host.parentNode) host.parentNode.removeChild(host);
+        }
+      };
+    }
+
     // Zero-dependency native SVG foreignObject -> Canvas renderer (fallback if CDN libraries fail)
-    async function renderCardViaNativeSvg(cardEl, scale = 2.5) {
-      await inlineCardImagesWithBase64(cardEl);
-      const rect = cardEl.getBoundingClientRect();
-      const width = Math.ceil(rect.width);
-      const height = Math.ceil(rect.height);
+    async function renderCardViaNativeSvg(targetEl, scale = 2.5, options = {}) {
+      await inlineCardImagesWithBase64(targetEl);
+      const bgColor = options.backgroundColor || '#ffffff';
+      const { clone, width, height, cleanup } = createCleanScreenshotClone(targetEl, options);
 
-      const clone = cardEl.cloneNode(true);
-      clone.querySelectorAll('[data-html2canvas-ignore], .katex-mathml, .q-card-footer').forEach(el => el.remove());
+      try {
+        const cloneRect = clone.getBoundingClientRect();
 
-      // Explicitly lock rendered dimensions on cloned images so SVG foreignObject never collapses them
-      const origImgs = Array.from(cardEl.querySelectorAll('img'));
-      const cloneImgs = Array.from(clone.querySelectorAll('img'));
-      cloneImgs.forEach((cImg, idx) => {
-        const oImg = origImgs[idx];
-        if (oImg) {
-          const r = oImg.getBoundingClientRect();
+        // Explicitly lock rendered dimensions on cloned images so SVG foreignObject never collapses them
+        const cloneImgs = Array.from(clone.querySelectorAll('img'));
+        cloneImgs.forEach((cImg) => {
+          const r = cImg.getBoundingClientRect();
           if (r.width > 0 && r.height > 0) {
             cImg.setAttribute('width', Math.round(r.width));
             cImg.setAttribute('height', Math.round(r.height));
             cImg.style.width = Math.round(r.width) + 'px';
             cImg.style.height = Math.round(r.height) + 'px';
           }
-        }
-      });
-
-      clone.style.margin = '0';
-      clone.style.width = width + 'px';
-      clone.style.height = height + 'px';
-      clone.style.backgroundColor = '#ffffff';
-      clone.style.boxSizing = 'border-box';
-      clone.setAttribute('xmlns', 'http://www.w3.org/1999/xhtml');
-
-      // Collect all active document stylesheets to embed into SVG
-      let cssRulesText = '';
-      try {
-        for (const sheet of document.styleSheets) {
-          try {
-            const rules = sheet.cssRules || sheet.rules;
-            if (rules) {
-              for (const rule of rules) {
-                cssRulesText += rule.cssText + '\n';
-              }
-            }
-          } catch (_) {}
-        }
-      } catch (_) {}
-
-      // Extra CSS patch for fraction lines and SVG alignment
-      cssRulesText += `
-        * { box-sizing: border-box; }
-        .katex .frac-line {
-          display: block !important;
-          min-height: 1.5px !important;
-          height: 1.5px !important;
-          background-color: currentColor !important;
-          border: none !important;
-          margin: 2px 0 !important;
-        }
-        .katex .sqrt > .sqrt-line {
-          display: block !important;
-          min-height: 1.5px !important;
-          height: 1.5px !important;
-          background-color: currentColor !important;
-          border: none !important;
-        }
-      `;
-
-      const serialized = new XMLSerializer().serializeToString(clone);
-      const svgStr = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}"><defs><style type="text/css"><![CDATA[${cssRulesText}]]></style></defs><foreignObject width="100%" height="100%">${serialized}</foreignObject></svg>`;
-      const svgDataUrl = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgStr);
-
-      const img = new Image();
-      await new Promise((resolve, reject) => {
-        img.onload = resolve;
-        img.onerror = reject;
-        img.src = svgDataUrl;
-      });
-
-      const canvas = document.createElement('canvas');
-      canvas.width = Math.round(width * scale);
-      canvas.height = Math.round(height * scale);
-      const ctx = canvas.getContext('2d');
-      ctx.fillStyle = '#ffffff';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.save();
-      ctx.scale(scale, scale);
-      ctx.drawImage(img, 0, 0);
-      ctx.restore();
-
-      // Explicitly composite all visible card images onto the 2D canvas as well
-      const origCardImgs = Array.from(cardEl.querySelectorAll('img'));
-      for (const oImg of origCardImgs) {
-        const r = oImg.getBoundingClientRect();
-        const style = window.getComputedStyle(oImg);
-        const visible = r.width > 0 && r.height > 0 && style.display !== 'none' && style.visibility !== 'hidden' && !oImg.closest('.hidden, [data-html2canvas-ignore], .q-card-footer');
-        if (!visible) continue;
-        const src = oImg.getAttribute('src') || oImg.src;
-        if (!src) continue;
-        await new Promise(resolve => {
-          const im = new Image();
-          im.onload = () => {
-            try {
-              const x = Math.round((r.left - rect.left) * scale);
-              const y = Math.round((r.top - rect.top) * scale);
-              const w = Math.round(r.width * scale);
-              const h = Math.round(r.height * scale);
-              ctx.fillStyle = '#ffffff';
-              ctx.fillRect(x, y, w, h);
-              ctx.drawImage(im, x, y, w, h);
-            } catch (_) {}
-            resolve();
-          };
-          im.onerror = () => resolve();
-          im.src = src;
         });
-      }
 
-      return await new Promise((resolve, reject) => {
-        canvas.toBlob(b => b ? resolve(b) : reject(new Error('Native SVG canvas toBlob failed')), 'image/png');
-      });
+        // Pre-compute visible image overlays relative to the trimmed clone before removing host
+        const visibleCloneImgs = cloneImgs.map((cImg) => {
+          const r = cImg.getBoundingClientRect();
+          const style = window.getComputedStyle(cImg);
+          const visible = r.width > 0 && r.height > 0 && style.display !== 'none' && style.visibility !== 'hidden' && !cImg.closest('.hidden, [data-html2canvas-ignore], .q-card-footer');
+          if (!visible) return null;
+          return {
+            src: cImg.getAttribute('src') || cImg.src,
+            x: r.left - cloneRect.left,
+            y: r.top - cloneRect.top,
+            width: r.width,
+            height: r.height
+          };
+        }).filter(Boolean);
+
+        clone.style.height = height + 'px';
+        if (!clone.style.backgroundColor) clone.style.backgroundColor = bgColor;
+        clone.setAttribute('xmlns', 'http://www.w3.org/1999/xhtml');
+
+        // Collect all active document stylesheets to embed into SVG
+        let cssRulesText = '';
+        try {
+          for (const sheet of document.styleSheets) {
+            try {
+              const rules = sheet.cssRules || sheet.rules;
+              if (rules) {
+                for (const rule of rules) {
+                  cssRulesText += rule.cssText + '\n';
+                }
+              }
+            } catch (_) {}
+          }
+        } catch (_) {}
+
+        // Extra CSS patch for fraction lines and SVG alignment
+        cssRulesText += `
+          * { box-sizing: border-box; }
+          .katex .frac-line {
+            display: block !important;
+            min-height: 1.5px !important;
+            height: 1.5px !important;
+            background-color: currentColor !important;
+            border: none !important;
+            margin: 2px 0 !important;
+          }
+          .katex .sqrt > .sqrt-line {
+            display: block !important;
+            min-height: 1.5px !important;
+            height: 1.5px !important;
+            background-color: currentColor !important;
+            border: none !important;
+          }
+        `;
+
+        const serialized = new XMLSerializer().serializeToString(clone);
+        const svgStr = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}"><defs><style type="text/css"><![CDATA[${cssRulesText}]]></style></defs><foreignObject width="100%" height="100%">${serialized}</foreignObject></svg>`;
+        const svgDataUrl = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgStr);
+
+        const img = new Image();
+        await new Promise((resolve, reject) => {
+          img.onload = resolve;
+          img.onerror = reject;
+          img.src = svgDataUrl;
+        });
+
+        const canvas = document.createElement('canvas');
+        canvas.width = Math.round(width * scale);
+        canvas.height = Math.round(height * scale);
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = bgColor;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.save();
+        ctx.scale(scale, scale);
+        ctx.drawImage(img, 0, 0);
+        ctx.restore();
+
+        // Explicitly composite all visible card images onto the 2D canvas as well
+        for (const item of visibleCloneImgs) {
+          if (!item.src) continue;
+          await new Promise(resolve => {
+            const im = new Image();
+            im.onload = () => {
+              try {
+                const x = Math.round(item.x * scale);
+                const y = Math.round(item.y * scale);
+                const w = Math.round(item.width * scale);
+                const h = Math.round(item.height * scale);
+                ctx.fillStyle = '#ffffff';
+                ctx.fillRect(x, y, w, h);
+                ctx.drawImage(im, x, y, w, h);
+              } catch (_) {}
+              resolve();
+            };
+            im.onerror = () => resolve();
+            im.src = item.src;
+          });
+        }
+
+        return await new Promise((resolve, reject) => {
+          canvas.toBlob(b => b ? resolve(b) : reject(new Error('Native SVG canvas toBlob failed')), 'image/png');
+        });
+      } finally {
+        cleanup();
+      }
     }
 
     // Load backup screenshot CDN on demand only when primary CDN failed
@@ -1174,11 +1258,11 @@ function getDifficultyBadgeClass(diff) {
       }));
     }
 
-    // Generate PNG Blob of Question Card across 3 fallback engines (html-to-image primary)
-    async function generateQuestionCardBlob(cardEl) {
+    // Generate PNG Blob of any card/panel across 3 fallback engines (html-to-image primary)
+    async function generateQuestionCardBlob(targetEl, options = {}) {
       await ensureScreenshotEnginesReady();
-      // Ensure all images in the card are inlined as base64 data URIs and fully decoded before capture
-      await inlineCardImagesWithBase64(cardEl);
+      // Ensure all images in the element are inlined as base64 data URIs and fully decoded before capture
+      await inlineCardImagesWithBase64(targetEl);
 
       // Give the browser a layout frame to settle image dimensions if any src was updated
       await new Promise(res => requestAnimationFrame(() => requestAnimationFrame(res)));
@@ -1188,190 +1272,228 @@ function getDifficultyBadgeClass(diff) {
         try { await document.fonts.ready; } catch (_) {}
       }
 
-      // High-DPI Retina scaling for ultra-crisp formulas
-      const dpr = Math.max(window.devicePixelRatio || 2, 2.5);
-
+      const bgColor = options.backgroundColor || '#ffffff';
+      const extraSelectors = Array.isArray(options.extraIgnoreSelectors) ? options.extraIgnoreSelectors : [];
       const filterFn = (node) => {
         if (!node) return true;
         if (node.hasAttribute && (node.hasAttribute('data-html2canvas-ignore') || node.getAttribute('data-html2canvas-ignore') === 'true')) return false;
-        if (node.classList && (node.classList.contains('katex-mathml') || node.classList.contains('q-card-footer'))) return false;
+        if (node.classList && (node.classList.contains('katex-mathml') || node.classList.contains('q-card-footer') || node.classList.contains('proc-teacher-pen') || node.classList.contains('proc-stream-cursor'))) return false;
+        if (extraSelectors.length > 0 && typeof node.matches === 'function') {
+          for (const sel of extraSelectors) {
+            try { if (node.matches(sel)) return false; } catch (_) {}
+          }
+        }
         return true;
       };
 
-      // Pre-compute rendered rects & base64 data URLs of all visible images inside cardEl
-      // so we can composite them directly onto the 2D canvas if SVG foreignObject omits external/base64 <img> tags (WebKit/Safari quirk)
-      const cardRect = cardEl.getBoundingClientRect();
-      const imageOverlays = Array.from(cardEl.querySelectorAll('img')).map(img => {
-        const r = img.getBoundingClientRect();
-        const style = window.getComputedStyle(img);
-        const visible = r.width > 0 && r.height > 0 && style.display !== 'none' && style.visibility !== 'hidden' && !img.closest('.hidden, [data-html2canvas-ignore], .q-card-footer');
-        if (!visible) return null;
-        return {
-          src: img.getAttribute('src') || img.src,
-          x: r.left - cardRect.left,
-          y: r.top - cardRect.top,
-          width: r.width,
-          height: r.height
-        };
-      }).filter(Boolean);
+      // Build an offscreen clean clone with footer & ignored elements already stripped so measured height has zero bottom blank space
+      const { clone, width, height: initialHeight, ignoreSelector, cleanup } = createCleanScreenshotClone(targetEl, options);
 
-      // Helper: explicitly stamp all card images onto a rendered canvas and return a PNG Blob
-      async function compositeImagesAndToBlob(baseCanvas) {
-        if (imageOverlays.length > 0) {
-          const ctx = baseCanvas.getContext('2d');
-          await Promise.all(imageOverlays.map(item => new Promise(resolve => {
-            if (!item.src) return resolve();
-            const im = new Image();
-            im.onload = () => {
-              try {
-                // Clear white behind the image rect first so transparent PNGs look crisp and never double-blend
-                ctx.fillStyle = '#ffffff';
-                ctx.fillRect(
-                  Math.round(item.x * dpr),
-                  Math.round(item.y * dpr),
-                  Math.round(item.width * dpr),
-                  Math.round(item.height * dpr)
-                );
-                ctx.drawImage(
-                  im,
-                  Math.round(item.x * dpr),
-                  Math.round(item.y * dpr),
-                  Math.round(item.width * dpr),
-                  Math.round(item.height * dpr)
-                );
-              } catch (_) {}
-              resolve();
-            };
-            im.onerror = () => resolve();
-            im.src = item.src;
-          })));
-        }
-        return await new Promise((resolve, reject) => {
-          baseCanvas.toBlob(b => b ? resolve(b) : reject(new Error('Canvas toBlob returned null')), 'image/png');
-        });
-      }
+      try {
+        await new Promise(res => requestAnimationFrame(res));
+        const cloneRect = clone.getBoundingClientRect();
+        const targetHeight = Math.ceil(cloneRect.height) || initialHeight;
 
-      // Engine 1: html-to-image -> toCanvas + direct 2D image compositing (100% pixel-perfect KaTeX + guaranteed images on Safari/Chrome)
-      if (typeof window.htmlToImage === 'object' && typeof window.htmlToImage.toCanvas === 'function') {
-        try {
-          // Warm up font cache first to prevent blank glyphs on KaTeX WebFonts
-          try {
-            await window.htmlToImage.toCanvas(cardEl, {
-              backgroundColor: '#ffffff',
-              pixelRatio: 1,
-              cacheBust: false,
-              filter: filterFn
-            });
-          } catch (_) {}
+        // Cap scale slightly for very tall full-paper captures to avoid exceeding browser canvas pixel limits
+        const baseDpr = Math.max(window.devicePixelRatio || 2, 2.5);
+        const dpr = targetHeight > 3200 ? Math.min(baseDpr, 1.8) : baseDpr;
 
-          const canvas = await window.htmlToImage.toCanvas(cardEl, {
-            backgroundColor: '#ffffff',
-            pixelRatio: dpr,
-            cacheBust: false,
-            filter: filterFn,
-            style: {
-              margin: '0',
-              transform: 'none',
-              boxShadow: 'none'
-            }
-          });
-          if (canvas) {
-            const blob = await compositeImagesAndToBlob(canvas);
-            if (blob) return blob;
+        // Pre-compute rendered rects & base64 data URLs of all visible images inside the trimmed clone
+        // so we can composite them directly onto the 2D canvas if SVG foreignObject omits external/base64 <img> tags (WebKit/Safari quirk)
+        const imageOverlays = Array.from(clone.querySelectorAll('img')).map(img => {
+          const r = img.getBoundingClientRect();
+          const style = window.getComputedStyle(img);
+          const visible = r.width > 0 && r.height > 0 && style.display !== 'none' && style.visibility !== 'hidden' && !img.closest('.hidden, [data-html2canvas-ignore], .q-card-footer');
+          if (!visible) return null;
+          return {
+            src: img.getAttribute('src') || img.src,
+            x: r.left - cloneRect.left,
+            y: r.top - cloneRect.top,
+            width: r.width,
+            height: r.height
+          };
+        }).filter(Boolean);
+
+        // Helper: explicitly stamp all card images onto a rendered canvas and return a PNG Blob
+        async function compositeImagesAndToBlob(baseCanvas) {
+          if (imageOverlays.length > 0) {
+            const ctx = baseCanvas.getContext('2d');
+            await Promise.all(imageOverlays.map(item => new Promise(resolve => {
+              if (!item.src) return resolve();
+              const im = new Image();
+              im.onload = () => {
+                try {
+                  // Clear white behind the image rect first so transparent PNGs look crisp and never double-blend
+                  ctx.fillStyle = '#ffffff';
+                  ctx.fillRect(
+                    Math.round(item.x * dpr),
+                    Math.round(item.y * dpr),
+                    Math.round(item.width * dpr),
+                    Math.round(item.height * dpr)
+                  );
+                  ctx.drawImage(
+                    im,
+                    Math.round(item.x * dpr),
+                    Math.round(item.y * dpr),
+                    Math.round(item.width * dpr),
+                    Math.round(item.height * dpr)
+                  );
+                } catch (_) {}
+                resolve();
+              };
+              im.onerror = () => resolve();
+              im.src = item.src;
+            })));
           }
-        } catch (err1) {
-          console.warn('Engine 1 (html-to-image with fonts) failed, trying skipFonts:', err1);
+          return await new Promise((resolve, reject) => {
+            baseCanvas.toBlob(b => b ? resolve(b) : reject(new Error('Canvas toBlob returned null')), 'image/png');
+          });
+        }
+
+        // Engine 1: html-to-image -> toCanvas on trimmed clone + direct 2D image compositing (100% pixel-perfect KaTeX + guaranteed images on Safari/Chrome)
+        if (typeof window.htmlToImage === 'object' && typeof window.htmlToImage.toCanvas === 'function') {
+          const htiStyle = {
+            margin: '0',
+            width: `${width}px`,
+            height: `${targetHeight}px`,
+            minHeight: '0',
+            transform: 'none',
+            boxShadow: 'none'
+          };
+          if (options.padding) htiStyle.padding = options.padding;
           try {
-            const canvas = await window.htmlToImage.toCanvas(cardEl, {
-              backgroundColor: '#ffffff',
+            // Warm up font cache first to prevent blank glyphs on KaTeX WebFonts
+            try {
+              await window.htmlToImage.toCanvas(clone, {
+                backgroundColor: bgColor,
+                width,
+                height: targetHeight,
+                pixelRatio: 1,
+                cacheBust: false,
+                filter: filterFn
+              });
+            } catch (_) {}
+
+            const canvas = await window.htmlToImage.toCanvas(clone, {
+              backgroundColor: bgColor,
+              width,
+              height: targetHeight,
               pixelRatio: dpr,
-              skipFonts: true,
               cacheBust: false,
               filter: filterFn,
-              style: {
-                margin: '0',
-                transform: 'none',
-                boxShadow: 'none'
+              style: htiStyle
+            });
+            if (canvas) {
+              const blob = await compositeImagesAndToBlob(canvas);
+              if (blob) return blob;
+            }
+          } catch (err1) {
+            console.warn('Engine 1 (html-to-image with fonts) failed, trying skipFonts:', err1);
+            try {
+              const canvas = await window.htmlToImage.toCanvas(clone, {
+                backgroundColor: bgColor,
+                width,
+                height: targetHeight,
+                pixelRatio: dpr,
+                skipFonts: true,
+                cacheBust: false,
+                filter: filterFn,
+                style: htiStyle
+              });
+              if (canvas) {
+                const blob = await compositeImagesAndToBlob(canvas);
+                if (blob) return blob;
+              }
+            } catch (err1b) {
+              console.warn('Engine 1b (html-to-image skipFonts) failed, falling back to Engine 2:', err1b);
+            }
+          }
+        }
+
+        // Engine 2: html2canvas with explicit trimmed height, KaTeX CSS repair + direct 2D image compositing
+        if (typeof window.html2canvas === 'function') {
+          try {
+            const canvas = await window.html2canvas(targetEl, {
+              scale: dpr,
+              width,
+              height: targetHeight,
+              backgroundColor: bgColor,
+              useCORS: true,
+              allowTaint: true,
+              logging: false,
+              imageTimeout: 8000,
+              onclone: (clonedDoc, clonedTarget) => {
+                clonedDoc.querySelectorAll('[data-screenshot-clone-host]').forEach(el => el.remove());
+                if (clonedTarget) {
+                  clonedTarget.querySelectorAll(ignoreSelector).forEach(el => el.remove());
+                  clonedTarget.style.height = 'auto';
+                  clonedTarget.style.minHeight = '0';
+                  clonedTarget.style.maxHeight = 'none';
+                  clonedTarget.style.boxShadow = 'none';
+                  if (options.padding) clonedTarget.style.padding = options.padding;
+                }
+                const fixStyle = clonedDoc.createElement('style');
+                fixStyle.textContent = `
+                  img { display: inline-block !important; }
+                  /* KaTeX horizontal line and radical fixes for html2canvas */
+                  .katex .frac-line {
+                    display: block !important;
+                    min-height: 1.5px !important;
+                    height: 1.5px !important;
+                    background-color: currentColor !important;
+                    border: none !important;
+                    margin: 2px 0 !important;
+                  }
+                  .katex .sqrt > .sqrt-line {
+                    display: block !important;
+                    min-height: 1.5px !important;
+                    height: 1.5px !important;
+                    background-color: currentColor !important;
+                    border: none !important;
+                  }
+                  .katex .sqrt > .sqrt-sign {
+                    display: inline-block !important;
+                    vertical-align: baseline !important;
+                  }
+                  .katex .sqrt > .sqrt-sign svg {
+                    display: inline-block !important;
+                    vertical-align: baseline !important;
+                  }
+                  .katex .vlist-t, .katex .vlist-r {
+                    display: inline-table !important;
+                    vertical-align: middle !important;
+                  }
+                `;
+                clonedDoc.head.appendChild(fixStyle);
+              },
+              ignoreElements: (el) => {
+                if (!el || !el.classList) return false;
+                return el.classList.contains('katex-mathml') || el.hasAttribute('data-html2canvas-ignore') || el.classList.contains('q-card-footer') || el.classList.contains('proc-teacher-pen') || el.classList.contains('proc-stream-cursor');
               }
             });
             if (canvas) {
               const blob = await compositeImagesAndToBlob(canvas);
               if (blob) return blob;
             }
-          } catch (err1b) {
-            console.warn('Engine 1b (html-to-image skipFonts) failed, falling back to Engine 2:', err1b);
+          } catch (err2) {
+            console.warn('Engine 2 (html2canvas) failed, falling back to Engine 3:', err2);
           }
         }
-      }
-
-      // Engine 2: html2canvas with explicit KaTeX CSS repair + direct 2D image compositing
-      if (typeof window.html2canvas === 'function') {
-        try {
-          const canvas = await window.html2canvas(cardEl, {
-            scale: dpr,
-            backgroundColor: '#ffffff',
-            useCORS: true,
-            allowTaint: true,
-            logging: false,
-            imageTimeout: 8000,
-            onclone: (clonedDoc) => {
-              const fixStyle = clonedDoc.createElement('style');
-              fixStyle.textContent = `
-                img { display: inline-block !important; }
-                /* KaTeX horizontal line and radical fixes for html2canvas */
-                .katex .frac-line {
-                  display: block !important;
-                  min-height: 1.5px !important;
-                  height: 1.5px !important;
-                  background-color: currentColor !important;
-                  border: none !important;
-                  margin: 2px 0 !important;
-                }
-                .katex .sqrt > .sqrt-line {
-                  display: block !important;
-                  min-height: 1.5px !important;
-                  height: 1.5px !important;
-                  background-color: currentColor !important;
-                  border: none !important;
-                }
-                .katex .sqrt > .sqrt-sign {
-                  display: inline-block !important;
-                  vertical-align: baseline !important;
-                }
-                .katex .sqrt > .sqrt-sign svg {
-                  display: inline-block !important;
-                  vertical-align: baseline !important;
-                }
-                .katex .vlist-t, .katex .vlist-r {
-                  display: inline-table !important;
-                  vertical-align: middle !important;
-                }
-              `;
-              clonedDoc.head.appendChild(fixStyle);
-            },
-            ignoreElements: (el) => {
-              if (!el || !el.classList) return false;
-              return el.classList.contains('katex-mathml') || el.hasAttribute('data-html2canvas-ignore') || el.classList.contains('q-card-footer');
-            }
-          });
-          if (canvas) {
-            const blob = await compositeImagesAndToBlob(canvas);
-            if (blob) return blob;
-          }
-        } catch (err2) {
-          console.warn('Engine 2 (html2canvas) failed, falling back to Engine 3:', err2);
-        }
+      } finally {
+        cleanup();
       }
 
       // Engine 3: Zero-dependency native SVG foreignObject renderer
-      return await renderCardViaNativeSvg(cardEl, dpr);
+      return await renderCardViaNativeSvg(targetEl, Math.max(window.devicePixelRatio || 2, 2.5), options);
     }
 
     // Show interactive screenshot preview modal with 1-click clipboard copy
-    function showScreenshotPreviewModal(blob, qNumber, hasAnalysis) {
+    function showScreenshotPreviewModal(blob, titleText, fileName) {
       const old = document.getElementById('screenshotPreviewModal');
       if (old) old.remove();
 
+      const safeTitle = titleText || '高清截图预览';
+      const safeFileName = fileName || '题典网截图.png';
       const url = URL.createObjectURL(blob);
       const modal = document.createElement('div');
       modal.id = 'screenshotPreviewModal';
@@ -1379,11 +1501,11 @@ function getDifficultyBadgeClass(diff) {
       modal.innerHTML = `
         <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full overflow-hidden border border-slate-200">
           <div class="px-5 py-3.5 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
-            <div class="text-sm font-bold text-slate-800">第 ${qNumber} 题高清截图预览</div>
+            <div class="text-sm font-bold text-slate-800">${safeTitle}</div>
             <button id="closeScreenshotModalBtn" class="text-slate-400 hover:text-slate-600 text-lg leading-none px-2 py-1">✕</button>
           </div>
           <div class="p-5 max-h-[70vh] overflow-y-auto bg-slate-100/60 flex justify-center">
-            <img src="${url}" alt="第 ${qNumber} 题截图" class="max-w-full h-auto rounded-lg shadow-sm border border-slate-200 bg-white">
+            <img src="${url}" alt="${safeTitle}" class="max-w-full h-auto rounded-lg shadow-sm border border-slate-200 bg-white">
           </div>
           <div class="px-5 py-3 bg-slate-50 border-t border-slate-200 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500">
             <span>提示：点击右侧【复制到剪贴板】或在图片上右键选择【复制图片】</span>
@@ -1392,7 +1514,7 @@ function getDifficultyBadgeClass(diff) {
                 <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
                 <span>复制到剪贴板</span>
               </button>
-              <a href="${url}" download="第${qNumber}题截图${hasAnalysis ? '_含解析' : ''}.png" class="btn-primary px-3.5 py-1.5 rounded-lg font-semibold transition">下载保存图片</a>
+              <a href="${url}" download="${safeFileName}" class="btn-primary px-3.5 py-1.5 rounded-lg font-semibold transition">下载保存图片</a>
             </div>
           </div>
         </div>
@@ -1428,20 +1550,22 @@ function getDifficultyBadgeClass(diff) {
       });
     }
 
-    // Capture Question Card as PNG and Copy to Clipboard
-    async function captureQuestionCard(cardEl, btnEl, qNumber) {
-      if (btnEl.disabled) return;
-      const textSpan = btnEl.querySelector('.screenshot-btn-text');
+    // Universal screenshot-and-copy helper for any question card, whiteboard, practice card, drawer, or exam paper
+    async function captureElementScreenshot(targetEl, btnEl, options = {}) {
+      if (!targetEl) return;
+      if (btnEl && btnEl.disabled) return;
+      const textSpan = btnEl ? btnEl.querySelector('.screenshot-btn-text') : null;
       const origText = textSpan ? textSpan.textContent : '截图复制';
-      btnEl.disabled = true;
+      if (btnEl) btnEl.disabled = true;
       if (textSpan) textSpan.textContent = '截图中...';
 
-      try {
-        const hasAnalysis = !cardEl.querySelector('[id^="analysis_"]')?.classList.contains('hidden');
-        const modeLabel = hasAnalysis ? '（含答案解析）' : '';
+      const label = options.label || '内容';
+      const modeLabel = options.modeLabel || '';
+      const fileName = options.fileName || `${label.replace(/[\\/:*?"<>|\s]+/g, '')}截图.png`;
 
+      try {
         // Start generating the Blob promise immediately (preserves user gesture in Safari/WebKit)
-        const blobPromise = generateQuestionCardBlob(cardEl);
+        const blobPromise = generateQuestionCardBlob(targetEl, options);
 
         let copied = false;
 
@@ -1472,20 +1596,36 @@ function getDifficultyBadgeClass(diff) {
         }
 
         if (copied) {
-          showToast(`第 ${qNumber} 题高清截图${modeLabel}已成功复制到剪贴板！可直接粘贴`, 'success');
+          showToast(`${label}高清截图${modeLabel}已成功复制到剪贴板！可直接粘贴`, 'success');
         } else {
           // If browser blocks clipboard API (e.g. strict file:// restriction), open preview modal for 1-click right-click copy & download
-          showScreenshotPreviewModal(blob, qNumber, hasAnalysis);
-          showToast(`已生成第 ${qNumber} 题高清截图，右键图片即可复制或下载！`, 'info');
+          showScreenshotPreviewModal(blob, `${label}高清截图预览`, fileName);
+          showToast(`已生成${label}高清截图，右键图片即可复制或下载！`, 'info');
         }
       } catch (err) {
         console.error('Screenshot capture failed:', err);
         showToast(`截图失败：${err && err.message ? err.message : '请刷新页面后重试'}`, 'warn');
       } finally {
-        btnEl.disabled = false;
+        if (btnEl) btnEl.disabled = false;
         if (textSpan) textSpan.textContent = origText;
       }
     }
+    window.captureElementScreenshot = captureElementScreenshot;
+
+    // Capture Question Card as PNG and Copy to Clipboard (used by Question Bank, Knowledge Graph & Procedural Views)
+    async function captureQuestionCard(cardEl, btnEl, qNumber) {
+      if (!cardEl) return;
+      const analysisEl = cardEl.querySelector('.q-analysis-panel, [id^="analysis_"], [id^="graph_analysis_"], [id^="sim_analysis_"], [id^="proc_q_analysis_"]');
+      const hasAnalysis = Boolean(analysisEl && !analysisEl.classList.contains('hidden'));
+      const numText = String(qNumber || '').trim();
+      const label = numText ? `第 ${numText} 题` : '题目';
+      return captureElementScreenshot(cardEl, btnEl, {
+        label,
+        modeLabel: hasAnalysis ? '（含答案解析）' : '',
+        fileName: `${label.replace(/\s+/g, '')}截图${hasAnalysis ? '_含解析' : ''}.png`
+      });
+    }
+    window.captureQuestionCard = captureQuestionCard;
 
     // Toggle Cart Item
     function toggleCartItem(id) {
@@ -1630,7 +1770,11 @@ function getDifficultyBadgeClass(diff) {
                 }
 
                 return `
-                  <div class="question-item text-sm leading-relaxed mb-4">
+                  <div class="question-item group relative text-sm leading-relaxed mb-4" data-paper-q-idx="${idx}">
+                    <button type="button" data-html2canvas-ignore="true" class="btn-paper-q-screenshot no-print opacity-0 group-hover:opacity-100 focus:opacity-100 transition-opacity absolute -top-1 right-0 z-10 inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-white/95 border border-slate-200 text-[11px] font-sans font-medium text-slate-600 hover:text-[#0F766E] hover:border-[#99F6E4] hover:bg-[#F0FDFA] shadow-sm" data-paper-q-idx="${idx}" title="单独截图复制第 ${idx} 题">
+                      <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"></path></svg>
+                      <span class="screenshot-btn-text">截图复制</span>
+                    </button>
                     <div>
                       <span class="font-bold mr-1">${idx}.</span><span>${formatMathHtml(q.stem)}</span>
                       ${imgHtml}
@@ -1645,6 +1789,7 @@ function getDifficultyBadgeClass(diff) {
         `;
 
         container.innerHTML = html;
+        bindPaperQuestionScreenshots(container, isTeacher);
         renderMath();
         return;
       }
@@ -1654,6 +1799,13 @@ function getDifficultyBadgeClass(diff) {
       const blanks = selected.filter(q => q.type === 'blank');
       const judges = selected.filter(q => q.type === 'judge');
       const calcs = selected.filter(q => q.type === 'calc');
+
+      const renderPaperQScreenshotBtn = (idx) => `
+        <button type="button" data-html2canvas-ignore="true" class="btn-paper-q-screenshot no-print opacity-0 group-hover:opacity-100 focus:opacity-100 transition-opacity absolute -top-1 right-0 z-10 inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-white/95 border border-slate-200 text-[11px] font-sans font-medium text-slate-600 hover:text-[#0F766E] hover:border-[#99F6E4] hover:bg-[#F0FDFA] shadow-sm" data-paper-q-idx="${idx}" title="单独截图复制第 ${idx} 题">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"></path></svg>
+          <span class="screenshot-btn-text">截图复制</span>
+        </button>
+      `;
 
       // Part 1: Choice
       if (choices.length > 0) {
@@ -1680,7 +1832,8 @@ function getDifficultyBadgeClass(diff) {
                 ` : '';
 
                 return `
-                  <div class="question-item text-sm leading-relaxed mb-4">
+                  <div class="question-item group relative text-sm leading-relaxed mb-4" data-paper-q-idx="${idx}">
+                    ${renderPaperQScreenshotBtn(idx)}
                     <div>
                       <span class="font-bold mr-1">${idx}.</span><span>${formatMathHtml(q.stem)}</span>
                       ${imgHtml}
@@ -1714,7 +1867,8 @@ function getDifficultyBadgeClass(diff) {
                 ` : '';
 
                 return `
-                  <div class="question-item text-sm leading-relaxed mb-4">
+                  <div class="question-item group relative text-sm leading-relaxed mb-4" data-paper-q-idx="${idx}">
+                    ${renderPaperQScreenshotBtn(idx)}
                     <div>
                       <span class="font-bold mr-1">${idx}.</span><span>${formatMathHtml(q.stem)}</span>
                       ${teacherHtml}
@@ -1746,7 +1900,8 @@ function getDifficultyBadgeClass(diff) {
                 ` : '';
 
                 return `
-                  <div class="question-item text-sm leading-relaxed mb-4">
+                  <div class="question-item group relative text-sm leading-relaxed mb-4" data-paper-q-idx="${idx}">
+                    ${renderPaperQScreenshotBtn(idx)}
                     <div>
                       <span class="font-bold mr-1">${idx}.</span><span>${formatMathHtml(q.stem)}</span>
                       ${teacherHtml}
@@ -1783,7 +1938,8 @@ if (calcs.length > 0) {
                 `;
 
                 return `
-                  <div class="question-item text-sm leading-relaxed">
+                  <div class="question-item group relative text-sm leading-relaxed" data-paper-q-idx="${idx}">
+                    ${renderPaperQScreenshotBtn(idx)}
                     <div>
                       <span class="font-bold mr-1">${idx}.</span><span>${formatMathHtml(q.stem)}</span>
                       ${teacherHtml}
@@ -1797,5 +1953,25 @@ if (calcs.length > 0) {
       }
 
       container.innerHTML = html;
+      bindPaperQuestionScreenshots(container, isTeacher);
       renderMath();
+    }
+
+    function bindPaperQuestionScreenshots(container, isTeacher) {
+      if (!container) return;
+      container.querySelectorAll('.btn-paper-q-screenshot').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const itemEl = btn.closest('.question-item');
+          const idx = btn.getAttribute('data-paper-q-idx') || '';
+          if (!itemEl) return;
+          captureElementScreenshot(itemEl, btn, {
+            label: idx ? `试卷第 ${idx} 题` : '试卷题目',
+            modeLabel: isTeacher ? '（含答案解析）' : '',
+            fileName: `试卷第${idx || ''}题截图${isTeacher ? '_含解析' : ''}.png`,
+            padding: '14px 18px',
+            backgroundColor: '#ffffff'
+          });
+        });
+      });
     }

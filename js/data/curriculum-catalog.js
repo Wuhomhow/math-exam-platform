@@ -193,7 +193,7 @@
           id: 'g8_c16_s2',
           code: '16.2',
           title: '16.2 整式的乘法与除法',
-          procedureIds: ['P27', 'P107', 'P108'],
+          procedureIds: ['P27', 'P121', 'P107', 'P108'],
           fallback: false
         },
         {
@@ -476,6 +476,13 @@
           code: '5.2',
           title: '5.2 解一元一次方程',
           procedureIds: ['P22'],
+          fallback: false
+        },
+        {
+          id: 'g7_c5_s3',
+          code: '5.3',
+          title: '5.3 实际问题与一元一次方程',
+          procedureIds: [],
           fallback: false
         },
         {
